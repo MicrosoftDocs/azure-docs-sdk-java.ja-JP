@@ -1,0 +1,1 @@
+Azure での Java アプリの作成とデプロイの詳細については、[Java デベロッパー センター](https://docs.microsoft.com/java/api)を参照してください。
