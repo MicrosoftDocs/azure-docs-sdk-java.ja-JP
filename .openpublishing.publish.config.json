@@ -9,7 +9,7 @@
       "build_output_subfolder": "azure/sdk/java",
       "locale": "ja-JP",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -17,7 +17,18 @@
         "LandingData": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+	  "customized_template_paths": [
+         "_dependentPackages/memberpage.plugins/content"
+      ],
+	  "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/splitToc/tools/run.ps1",
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      },
+      "version": 0
     }
   ],
   "notification_subscribers": [],
@@ -44,7 +55,6 @@
       }
     }
   ],
-  "need_generate_pdf_url_template": false,
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
@@ -60,7 +70,7 @@
       "target_framework": "net45",
       "version": "latest"
     },
-    {
+	{
       "id": "memberpage.plugins",
       "nuget_feed": "https://www.myget.org/F/docfx/api/v2",
       "path_to_root": "_dependentPackages/memberpage.plugins",
@@ -78,9 +88,7 @@
       "HideEmptyNode": true,
       "OutputFolder": "docs-ref-autogen/overview/azure",
       "ContainerPageMetadata": {
-        "langs": [
-          "java"
-        ],
+        "langs": ["java"],
         "open_to_public_contributors": false
       }
     }
@@ -88,5 +96,7 @@
   "DiffFolder": [
     "docs-ref-autogen/overview/azure"
   ],
-  "toc_path_need_to_split": "docs-ref-autogen/toc.yml"
+  "toc_path_need_to_split": "docs-ref-autogen/toc.yml",
+  "need_generate_pdf_url_template": false,
+  "enable_incremental_build": false
 }
