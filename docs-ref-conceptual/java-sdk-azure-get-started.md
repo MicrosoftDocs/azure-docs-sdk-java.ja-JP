@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 4278a777178f0848d27fd6173efcf920e9a4884c
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: c9b654ea927563e8255f5d189ddc84733a1202e2
+ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="get-started-with-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリの概要
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/28/2017
 
 - Azure アカウント。 所有していない場合は、[無料試用版を入手](https://azure.microsoft.com/free/)してください。
 - [Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) または [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
-- [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Azure Cloud Shell に付属)
+- [Java 8](https://www.azul.com/downloads/zulu/) (Azure Cloud Shell に付属)
 - [Maven 3](http://maven.apache.org/download.cgi) (Azure Cloud Shell に付属)
 
 ## <a name="set-up-authentication"></a>認証の設定
@@ -97,7 +97,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=testAzureApp  \
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 <dependency>
     <groupId>com.microsoft.azure</groupId>

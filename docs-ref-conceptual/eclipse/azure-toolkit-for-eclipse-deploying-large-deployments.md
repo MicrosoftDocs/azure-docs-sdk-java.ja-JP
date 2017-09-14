@@ -4,7 +4,7 @@ description: "Azure Toolkit for Eclipse を使用して大規模なデプロイ�
 services: 
 documentationcenter: java
 author: rmcmurray
-manager: erikre
+manager: routlaw
 editor: 
 ms.assetid: 5e18bace-5df0-4af8-ad86-6151ea8bd823
 ms.service: multiple
@@ -12,25 +12,27 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 04/14/2017
+ms.date: 09/11/2017
 ms.author: robmcm
-ms.openlocfilehash: e12e379e2b6727653e2377b1760c3745596a1e9c
-ms.sourcegitcommit: f537befafb079256fba0529ee554c034d73f36b0
-ms.translationtype: MT
+ms.openlocfilehash: 0e367e74d038043f1626dbf19aab87db6451bc02
+ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="deploying-large-deployments"></a>大規模なデプロイ
+
 デプロイの規模が大きすぎて既定の approot フォルダーに格納できない場合は、JDK とアプリケーション サーバーのデプロイ ルート フォルダーとしてローカル ストレージ リソースを使用できます。
 
 ## <a name="to-use-a-local-storage-resource-as-the-deployment-root-folder-for-large-deployments"></a>大規模なデプロイのデプロイ ルート フォルダーとしてローカル ストレージ リソースを使用するには
+
 1. 新しいローカル ストレージ リソースを作成します。 リソースの名前は問いません。 ストレージ リソースはロール レベルで定義されます。 新しいローカル ストレージ リソースを作成するためのローカル ストレージ構成ダイアログにアクセスする最も簡単な方法は、次の手順に従うことです。**[Project Explorer (プロジェクト エクスプローラー)]** ビューでロールを右クリックします (ロールが表示されていない場合は、Azure プロジェクト ノードを展開します)。**[Azure]** をクリックし、**[Local Storage (ローカル ストレージ)]** をクリックします。 **[Local Storage (ローカル ストレージ)]** ダイアログで、**[Add (追加)]** をクリックして新しいローカル ストレージ リソースを作成します。
 
-2. 2048 MB 以上の目的のサイズを設定します (このサイズより小さくすると、approot のように同一ファイル サイズ問題が発生する可能性があります)。
+1. 2048 MB 以上の目的のサイズを設定します (このサイズより小さくすると、approot のように同一ファイル サイズ問題が発生する可能性があります)。
 
-3. **[Clean the contents when the role instance is recycled (ロール インスタンスをリサイクルするときにコンテンツをクリーニングする)]** がオンになっていることを確認します。これで、ロール インスタンスがリサイクルされるときに、デプロイのスタートアップ ロジックがリソース内の既存のファイルと競合することを防止できます。
+1. **[Clean the contents when the role instance is recycled (ロール インスタンスをリサイクルするときにコンテンツをクリーニングする)]** がオンになっていることを確認します。これで、ロール インスタンスがリサイクルされるときに、デプロイのスタートアップ ロジックがリソース内の既存のファイルと競合することを防止できます。
 
-4. **[Environment variable storing the resource's directory path after deployment (デプロイ後にリソースのディレクトリ パスを格納する環境変数)]** の値が文字列 **DEPLOYROOT** に設定されていることを確認します。 ローカル ストレージ リソース ダイアログは次のようになります。
+1. **[Environment variable storing the resource's directory path after deployment (デプロイ後にリソースのディレクトリ パスを格納する環境変数)]** の値が文字列 **DEPLOYROOT** に設定されていることを確認します。 ローカル ストレージ リソース ダイアログは次のようになります。
 
    ![][ic667943]
 
@@ -38,14 +40,9 @@ ms.lasthandoff: 07/11/2017
 
 ローカル ストレージ リソースの作成に関する追加情報については、「[ローカル ストレージのプロパティ][Local storage properties]」を参照してください。
 
-## <a name="see-also"></a>関連項目
-[Azure Toolkit for Eclipse][Azure Toolkit for Eclipse]
+## <a name="next-steps"></a>次のステップ
 
-[Azure 向け Hello World アプリケーションを Eclipse で作成する][Creating a Hello World Application for Azure in Eclipse]
-
-[Azure Toolkit for Eclipse のインストール][Installing the Azure Toolkit for Eclipse] 
-
-Java での Azure の使用の詳細については、[Azure Java デベロッパー センター][Azure Java Developer Center]を参照してください。
+[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
 
 <!-- URL List -->
 
@@ -57,6 +54,6 @@ Java での Azure の使用の詳細については、[Azure Java デベロッ�
 
 <!-- IMG List -->
 
-[ic667943]: ./media/azure-toolkit-for-eclipse-deploying-large-deployments/ic667943.png
+[ic667943]: media/azure-toolkit-for-eclipse-deploying-large-deployments/ic667943.png
 
 <!-- Legacy MSDN URL = https://msdn.microsoft.com/library/azure/dn268601.aspx -->

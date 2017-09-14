@@ -2,5 +2,5 @@
 
 **Azure Explorer** のツール ウィンドウが IntelliJ に表示されていない場合は、**[View (ビュー)]**、**[Tool Windows (ツール ウィンドウ)]**、**[Azure Explorer]** の順にクリックします。
 
-![Azure Explorer のツール ウィンドウの表示](./media/azure-toolkit-for-intellij-show-azure-explorer/show-az-exp-01.png)
+![Azure Explorer のツール ウィンドウの表示](media/azure-toolkit-for-intellij-show-azure-explorer/show-az-exp-01.png)
 

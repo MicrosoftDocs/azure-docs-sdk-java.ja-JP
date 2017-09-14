@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: fa748db254aafc9a54b9819faf7a7b7caec92deb
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 838d46caebc73b59029eb876a53c2bcd536472fd
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Azure Active Directory Libraries for Java
 
@@ -65,7 +65,7 @@ Management API で、[ロール ベースのアクセス制御](/azure/active-di
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-graph-rbac</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 

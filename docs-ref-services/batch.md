@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: batch
-ms.openlocfilehash: dfc14b08ee39a1422cb54a3b9a80fa579e704499
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: ebf86e358ff541632e2d1f9503ebae593bdbdb3c
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-batch-libraries-for-java"></a>Azure Batch Libraries for Java
 
@@ -67,7 +67,7 @@ Batch アカウントの作成と削除、Batch アカウント キーの読み�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-batch</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 

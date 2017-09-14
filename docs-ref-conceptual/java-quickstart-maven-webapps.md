@@ -13,11 +13,11 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 03/17/2017
 ms.author: routlaw
-ms.openlocfilehash: 9c3d39e12b00dd1dd3d5f76162ce0f387c7a947c
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 1adc0a104ba22bcd353664e68323165890e46c64
+ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/12/2017
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>Maven で Java アプリを作成して Azure にデプロイする
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/28/2017
 開始する前に、次の設定を行います。
 
 - [Git](https://git-scm.com/)
-- [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+- [Java 8](https://www.azul.com/downloads/zulu/)
 - [Maven 3](http://maven.apache.org/download.cgi)
 - [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
 

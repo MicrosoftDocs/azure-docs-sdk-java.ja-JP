@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: a2f4abb1602e6b8ea61ea8c6a48c167754c2836f
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 12b5f218008c208bfa85ef02820c56bbcf0b224a
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="service-bus-libraries-for-java"></a>Service Bus Libraries for Java
 
@@ -128,7 +128,7 @@ Management API で名前空間、トピック、キュー、およびサブス�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-servicebus</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 

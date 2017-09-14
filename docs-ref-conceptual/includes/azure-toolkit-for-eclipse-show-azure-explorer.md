@@ -4,9 +4,9 @@
 
 1. **[Window]\(ウィンドウ\)**、**[Show View]\(ビューの表示\)**、**[Other]\(その他\)** の順にクリックします。
 
-   ![[Show View]\(ビューの表示\) コマンド](./media/azure-toolkit-for-eclipse-show-azure-explorer/show-az-exp-01.png)
+   ![[Show View]\(ビューの表示\) コマンド](media/azure-toolkit-for-eclipse-show-azure-explorer/show-az-exp-01.png)
 
 2. **[Show View]\(ビューの表示\)** ダイアログ ボックスで **[Azure Explorer]** を選択して **[OK]** をクリックします。
 
-   ![[Show View]\(ビューの表示\) ダイアログ ボックス](./media/azure-toolkit-for-eclipse-show-azure-explorer/show-az-exp-02.png)
+   ![[Show View]\(ビューの表示\) ダイアログ ボックス](media/azure-toolkit-for-eclipse-show-azure-explorer/show-az-exp-02.png)
 

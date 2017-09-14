@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: e4605b1a7dd7fe34d191337acb2f20cbca2e7037
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: db9fb8a9a8f9f21061f1e16b77e3145d1fb1b119
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-cdn-libraries-for-java"></a>Azure CDN Libraries for Java
 
@@ -35,7 +35,7 @@ CDN プロファイルを作成して、エンドポイントを定義し、Mana
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-cdn</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```   
 

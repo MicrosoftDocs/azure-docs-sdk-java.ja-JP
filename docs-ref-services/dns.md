@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: 7b4f26fe6d99620207e3a53c8262180cccc66fd6
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 123f61004c473bc060f0360f0fcb027d1591523e
+ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/09/2017
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Azure Traffic Manager Libraries for Java
 
@@ -35,7 +35,7 @@ DNS ゾーンを作成し、Management API を使用してゾーンにレコー�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-dns</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.1</version>
 </dependency>
 ```   
 
