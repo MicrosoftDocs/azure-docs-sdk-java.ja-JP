@@ -178,7 +178,7 @@ Azure Toolkit により、Docker コンテナーでの Azure への Web アプ�
 
    ![アーティファクトの [名前] ボックス][ART03]
 
-IntelliJ でのアーティファクトの作成の詳細については、JetBrains Web サイトの「[Configuring Artifacts (アーティファクトの構成)]」を参照してください。
+IntelliJ でのアーティファクトの作成の詳細については、JetBrains Web サイトの「[アーティファクトの構成]」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

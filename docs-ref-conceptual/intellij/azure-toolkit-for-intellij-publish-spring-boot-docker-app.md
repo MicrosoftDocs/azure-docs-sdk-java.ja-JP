@@ -155,7 +155,7 @@ Spring Boot アプリを発行するには、デプロイの準備ができた�
    ![[プロジェクト構造] ダイアログ ボックスを閉じる][ART05]
 
 > [!NOTE]
-> IntelliJ のアーティファクトの作成について詳しくは、JetBrains の Web サイトの「[Configuring Artifacts (アーティファクトの構成)]」をご覧ください。
+> IntelliJ のアーティファクトの作成について詳しくは、JetBrains の Web サイトの「[アーティファクトの構成]」をご覧ください。
 >
 
 ### <a name="build-the-artifact-for-deployment"></a>デプロイ用のアーティファクトのビルド
