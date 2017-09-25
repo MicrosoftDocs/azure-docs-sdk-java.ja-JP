@@ -735,19 +735,6 @@ references:
   summary: <p>The template for an application update operation, containing all the settings that can be modified. </p>
   syntax:
     content: public interface Update extends Appliable<ActiveDirectoryApplication>,ActiveDirectoryApplication.UpdateStages.WithSignOnUrl,ActiveDirectoryApplication.UpdateStages.WithIdentifierUrl,ActiveDirectoryApplication.UpdateStages.WithReplyUrl,ActiveDirectoryApplication.UpdateStages.WithCredential,ActiveDirectoryApplication.UpdateStages.WithMultiTenant
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._update_definition
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._update_definition.yml
-  name: CertificateCredential.UpdateDefinition<ParentT>
-  nameWithType: CertificateCredential.UpdateDefinition<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.UpdateDefinition<ParentT>
-  type: Interface
-  summary: <p>The entirety of a credential definition as part of a application or service principal update. </p>
-  syntax:
-    content: public interface UpdateDefinition<ParentT> extends CertificateCredential.UpdateDefinitionStages.Blank<ParentT>,CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>,CertificateCredential.UpdateDefinitionStages.WithPublicKey<ParentT>,CertificateCredential.UpdateDefinitionStages.WithSymmetricKey<ParentT>,CertificateCredential.UpdateDefinitionStages.WithAttach<ParentT>,CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificate<ParentT>,CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificatePassword<ParentT>
-    typeParameters:
-    - type: 18a275b1
-      description: <p>the return type of the final <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">UpdateDefinitionStages.WithAttach#attach()</xref></p>
 - uid: com.microsoft.azure.management.graphrbac._password_credential._update_definition
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._password_credential._update_definition.yml
@@ -758,6 +745,19 @@ references:
   summary: <p>The entirety of a credential definition as part of a application or service principal update. </p>
   syntax:
     content: public interface UpdateDefinition<ParentT> extends PasswordCredential.UpdateDefinitionStages.Blank<ParentT>,PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
+    typeParameters:
+    - type: 18a275b1
+      description: <p>the return type of the final <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">UpdateDefinitionStages.WithAttach#attach()</xref></p>
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._update_definition
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._update_definition.yml
+  name: CertificateCredential.UpdateDefinition<ParentT>
+  nameWithType: CertificateCredential.UpdateDefinition<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.UpdateDefinition<ParentT>
+  type: Interface
+  summary: <p>The entirety of a credential definition as part of a application or service principal update. </p>
+  syntax:
+    content: public interface UpdateDefinition<ParentT> extends CertificateCredential.UpdateDefinitionStages.Blank<ParentT>,CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>,CertificateCredential.UpdateDefinitionStages.WithPublicKey<ParentT>,CertificateCredential.UpdateDefinitionStages.WithSymmetricKey<ParentT>,CertificateCredential.UpdateDefinitionStages.WithAttach<ParentT>,CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificate<ParentT>,CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificatePassword<ParentT>
     typeParameters:
     - type: 18a275b1
       description: <p>the return type of the final <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">UpdateDefinitionStages.WithAttach#attach()</xref></p>
@@ -811,6 +811,22 @@ references:
   summary: <p>The stage of role assignment definition allowing specifying the assignee information. </p>
   syntax:
     content: public interface WithAssignee
+- uid: com.microsoft.azure.management.graphrbac._password_credential._update7560088925a96efb6003d04e81f1c6a5
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._password_credential._update7560088925a96efb6003d04e81f1c6a5.yml
+  name: PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
+  nameWithType: PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
+  type: Interface
+  summary: >-
+    <p>The final stage of the credential definition. </p>
+
+    <p>At this stage, more settings can be specified, or the credential definition can be attached to the parent application / service principal definition using <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref>. </p>
+  syntax:
+    content: public interface WithAttach<ParentT> extends Attachable<ParentT>.InUpdate,PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>,PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>,PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
+    typeParameters:
+    - type: 18a275b1
+      description: <p>the return type of <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref></p>
 - uid: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_attach
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_attach.yml
@@ -859,28 +875,12 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the return type of <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref></p>
-- uid: com.microsoft.azure.management.graphrbac._password_credential._update7560088925a96efb6003d04e81f1c6a5
+- uid: com.microsoft.azure.management.graphrbac._password_credential._update5cb8054b41d2449c8f6c3cef6ced05b2
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._password_credential._update7560088925a96efb6003d04e81f1c6a5.yml
-  name: PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
-  nameWithType: PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithAttach<ParentT>
-  type: Interface
-  summary: >-
-    <p>The final stage of the credential definition. </p>
-
-    <p>At this stage, more settings can be specified, or the credential definition can be attached to the parent application / service principal definition using <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref>. </p>
-  syntax:
-    content: public interface WithAttach<ParentT> extends Attachable<ParentT>.InUpdate,PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>,PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>,PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
-    typeParameters:
-    - type: 18a275b1
-      description: <p>the return type of <xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_update.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref></p>
-- uid: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_auth_file
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_auth_file.yml
-  name: PasswordCredential.DefinitionStages.WithAuthFile<ParentT>
-  nameWithType: PasswordCredential.DefinitionStages.WithAuthFile<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.DefinitionStages.WithAuthFile<ParentT>
+  href: com.microsoft.azure.management.graphrbac._password_credential._update5cb8054b41d2449c8f6c3cef6ced05b2.yml
+  name: PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
+  nameWithType: PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
   type: Interface
   summary: <p>A credential definition stage allowing exporting the auth file for the service principal. </p>
   syntax:
@@ -899,12 +899,12 @@ references:
     content: public interface WithAuthFile<ParentT>
     typeParameters:
     - type: 18a275b1
-- uid: com.microsoft.azure.management.graphrbac._password_credential._update5cb8054b41d2449c8f6c3cef6ced05b2
+- uid: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_auth_file
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._password_credential._update5cb8054b41d2449c8f6c3cef6ced05b2.yml
-  name: PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
-  nameWithType: PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithAuthFile<ParentT>
+  href: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_auth_file.yml
+  name: PasswordCredential.DefinitionStages.WithAuthFile<ParentT>
+  nameWithType: PasswordCredential.DefinitionStages.WithAuthFile<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.DefinitionStages.WithAuthFile<ParentT>
   type: Interface
   summary: <p>A credential definition stage allowing exporting the auth file for the service principal. </p>
   syntax:
@@ -923,24 +923,24 @@ references:
     content: public interface WithAuthFile<ParentT>
     typeParameters:
     - type: 18a275b1
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._def61b3031213cf0a46e5999f7e4fb12c57
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._def61b3031213cf0a46e5999f7e4fb12c57.yml
-  name: CertificateCredential.DefinitionStages.WithAuthFileCertificate<ParentT>
-  nameWithType: CertificateCredential.DefinitionStages.WithAuthFileCertificate<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithAuthFileCertificate<ParentT>
-  type: Interface
-  summary: <p>A credential definition stage allowing specifying the private key for exporting an auth file. </p>
-  syntax:
-    content: public interface WithAuthFileCertificate<ParentT>
-    typeParameters:
-    - type: 18a275b1
 - uid: com.microsoft.azure.management.graphrbac._certificate_credential._upd561f68d7dfc239677982a8c277bb8669
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._certificate_credential._upd561f68d7dfc239677982a8c277bb8669.yml
   name: CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificate<ParentT>
   nameWithType: CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificate<ParentT>
   fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.UpdateDefinitionStages.WithAuthFileCertificate<ParentT>
+  type: Interface
+  summary: <p>A credential definition stage allowing specifying the private key for exporting an auth file. </p>
+  syntax:
+    content: public interface WithAuthFileCertificate<ParentT>
+    typeParameters:
+    - type: 18a275b1
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._def61b3031213cf0a46e5999f7e4fb12c57
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._def61b3031213cf0a46e5999f7e4fb12c57.yml
+  name: CertificateCredential.DefinitionStages.WithAuthFileCertificate<ParentT>
+  nameWithType: CertificateCredential.DefinitionStages.WithAuthFileCertificate<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithAuthFileCertificate<ParentT>
   type: Interface
   summary: <p>A credential definition stage allowing specifying the private key for exporting an auth file. </p>
   syntax:
@@ -971,19 +971,6 @@ references:
     content: public interface WithAuthFileCertificatePassword<ParentT>
     typeParameters:
     - type: 18a275b1
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._upd4cdfbf126f7f92685d799caa116e1e2a
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._upd4cdfbf126f7f92685d799caa116e1e2a.yml
-  name: CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>
-  nameWithType: CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>
-  type: Interface
-  summary: <p>The credential definition stage allowing the certificate type to be set. </p>
-  syntax:
-    content: public interface WithCertificateType<ParentT>
-    typeParameters:
-    - type: 18a275b1
-      description: <p>the stage of the parent definition to return to after attaching this definition </p>
 - uid: com.microsoft.azure.management.graphrbac._certificate_credential._def70fcf2818b2aec81cfdb271b88c46ac6
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._certificate_credential._def70fcf2818b2aec81cfdb271b88c46ac6.yml
@@ -997,16 +984,19 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._active_directory_application_1c742998c7e80d2288ef2bdfb3e374c2e
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._upd4cdfbf126f7f92685d799caa116e1e2a
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._active_directory_application_1c742998c7e80d2288ef2bdfb3e374c2e.yml
-  name: ActiveDirectoryApplication.DefinitionStages.WithCreate
-  nameWithType: ActiveDirectoryApplication.DefinitionStages.WithCreate
-  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithCreate
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._upd4cdfbf126f7f92685d799caa116e1e2a.yml
+  name: CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>
+  nameWithType: CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.UpdateDefinitionStages.WithCertificateType<ParentT>
   type: Interface
-  summary: <p>An application definition with sufficient inputs to create a new application in the cloud, but exposing additional optional inputs to specify. </p>
+  summary: <p>The credential definition stage allowing the certificate type to be set. </p>
   syntax:
-    content: public interface WithCreate extends Creatable<ActiveDirectoryApplication>,ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl,ActiveDirectoryApplication.DefinitionStages.WithReplyUrl,ActiveDirectoryApplication.DefinitionStages.WithCredential,ActiveDirectoryApplication.DefinitionStages.WithMultiTenant
+    content: public interface WithCertificateType<ParentT>
+    typeParameters:
+    - type: 18a275b1
+      description: <p>the stage of the parent definition to return to after attaching this definition </p>
 - uid: com.microsoft.azure.management.graphrbac._role_assignment._definition_stages._with_create
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._role_assignment._definition_stages._with_create.yml
@@ -1017,6 +1007,16 @@ references:
   summary: <p>An role assignment definition with sufficient inputs to create a new role assignment in the cloud, but exposing additional optional inputs to specify. </p>
   syntax:
     content: public interface WithCreate extends Creatable<RoleAssignment>
+- uid: com.microsoft.azure.management.graphrbac._active_directory_application_1c742998c7e80d2288ef2bdfb3e374c2e
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._active_directory_application_1c742998c7e80d2288ef2bdfb3e374c2e.yml
+  name: ActiveDirectoryApplication.DefinitionStages.WithCreate
+  nameWithType: ActiveDirectoryApplication.DefinitionStages.WithCreate
+  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithCreate
+  type: Interface
+  summary: <p>An application definition with sufficient inputs to create a new application in the cloud, but exposing additional optional inputs to specify. </p>
+  syntax:
+    content: public interface WithCreate extends Creatable<ActiveDirectoryApplication>,ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl,ActiveDirectoryApplication.DefinitionStages.WithReplyUrl,ActiveDirectoryApplication.DefinitionStages.WithCredential,ActiveDirectoryApplication.DefinitionStages.WithMultiTenant
 - uid: com.microsoft.azure.management.graphrbac._service_principal._definition_stages._with_create
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._service_principal._definition_stages._with_create.yml
@@ -1027,6 +1027,16 @@ references:
   summary: <p>A service principal definition with sufficient inputs to create a new service principal in the cloud, but exposing additional optional inputs to specify. </p>
   syntax:
     content: public interface WithCreate extends Creatable<ServicePrincipal>,ServicePrincipal.DefinitionStages.WithCredential,ServicePrincipal.DefinitionStages.WithRoleAssignment
+- uid: com.microsoft.azure.management.graphrbac._service_principal._definition_stages._with_credential
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._service_principal._definition_stages._with_credential.yml
+  name: ServicePrincipal.DefinitionStages.WithCredential
+  nameWithType: ServicePrincipal.DefinitionStages.WithCredential
+  fullName: com.microsoft.azure.management.graphrbac.ServicePrincipal.DefinitionStages.WithCredential
+  type: Interface
+  summary: <p>A service principal definition allowing credentials to be specified. </p>
+  syntax:
+    content: public interface WithCredential
 - uid: com.microsoft.azure.management.graphrbac._active_directory_application_1f94717e8330836cb878e27411356246f
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._active_directory_application_1f94717e8330836cb878e27411356246f.yml
@@ -1047,35 +1057,12 @@ references:
   summary: <p>The stage of application definition allowing specifying identifier keys. </p>
   syntax:
     content: public interface WithCredential
-- uid: com.microsoft.azure.management.graphrbac._service_principal._definition_stages._with_credential
+- uid: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_duration
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._service_principal._definition_stages._with_credential.yml
-  name: ServicePrincipal.DefinitionStages.WithCredential
-  nameWithType: ServicePrincipal.DefinitionStages.WithCredential
-  fullName: com.microsoft.azure.management.graphrbac.ServicePrincipal.DefinitionStages.WithCredential
-  type: Interface
-  summary: <p>A service principal definition allowing credentials to be specified. </p>
-  syntax:
-    content: public interface WithCredential
-- uid: com.microsoft.azure.management.graphrbac._password_credential._update96d83febd04a92fea39f1dccb0b508a6
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._password_credential._update96d83febd04a92fea39f1dccb0b508a6.yml
-  name: PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>
-  nameWithType: PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>
-  type: Interface
-  summary: <p>The credential definition stage allowing the duration of key validity to be set. </p>
-  syntax:
-    content: public interface WithDuration<ParentT>
-    typeParameters:
-    - type: 18a275b1
-      description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._def0ab699ec8b35c55ad588e5658cb68ce1
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._def0ab699ec8b35c55ad588e5658cb68ce1.yml
-  name: CertificateCredential.DefinitionStages.WithDuration<ParentT>
-  nameWithType: CertificateCredential.DefinitionStages.WithDuration<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithDuration<ParentT>
+  href: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_duration.yml
+  name: PasswordCredential.DefinitionStages.WithDuration<ParentT>
+  nameWithType: PasswordCredential.DefinitionStages.WithDuration<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.DefinitionStages.WithDuration<ParentT>
   type: Interface
   summary: <p>The credential definition stage allowing the duration of key validity to be set. </p>
   syntax:
@@ -1096,12 +1083,12 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_duration
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._def0ab699ec8b35c55ad588e5658cb68ce1
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._password_credential._definition_stages._with_duration.yml
-  name: PasswordCredential.DefinitionStages.WithDuration<ParentT>
-  nameWithType: PasswordCredential.DefinitionStages.WithDuration<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.DefinitionStages.WithDuration<ParentT>
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._def0ab699ec8b35c55ad588e5658cb68ce1.yml
+  name: CertificateCredential.DefinitionStages.WithDuration<ParentT>
+  nameWithType: CertificateCredential.DefinitionStages.WithDuration<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithDuration<ParentT>
   type: Interface
   summary: <p>The credential definition stage allowing the duration of key validity to be set. </p>
   syntax:
@@ -1109,16 +1096,19 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._active_directory_application_1347dca719b59560f5e3fb8bbde62c3f6
+- uid: com.microsoft.azure.management.graphrbac._password_credential._update96d83febd04a92fea39f1dccb0b508a6
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._active_directory_application_1347dca719b59560f5e3fb8bbde62c3f6.yml
-  name: ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl
-  nameWithType: ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl
-  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl
+  href: com.microsoft.azure.management.graphrbac._password_credential._update96d83febd04a92fea39f1dccb0b508a6.yml
+  name: PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>
+  nameWithType: PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithDuration<ParentT>
   type: Interface
-  summary: <p>The stage of application definition allowing specifying identifier URLs. </p>
+  summary: <p>The credential definition stage allowing the duration of key validity to be set. </p>
   syntax:
-    content: public interface WithIdentifierUrl
+    content: public interface WithDuration<ParentT>
+    typeParameters:
+    - type: 18a275b1
+      description: <p>the stage of the parent definition to return to after attaching this definition </p>
 - uid: com.microsoft.azure.management.graphrbac._active_directory_application_1aa01fe78287d588c340bb8287939377d
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._active_directory_application_1aa01fe78287d588c340bb8287939377d.yml
@@ -1127,6 +1117,16 @@ references:
   fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.UpdateStages.WithIdentifierUrl
   type: Interface
   summary: <p>The stage of application update allowing specifying identifier URLs. </p>
+  syntax:
+    content: public interface WithIdentifierUrl
+- uid: com.microsoft.azure.management.graphrbac._active_directory_application_1347dca719b59560f5e3fb8bbde62c3f6
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._active_directory_application_1347dca719b59560f5e3fb8bbde62c3f6.yml
+  name: ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl
+  nameWithType: ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl
+  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithIdentifierUrl
+  type: Interface
+  summary: <p>The stage of application definition allowing specifying identifier URLs. </p>
   syntax:
     content: public interface WithIdentifierUrl
 - uid: com.microsoft.azure.management.graphrbac._password_credential._update_definition_stages._with_key
@@ -1155,16 +1155,6 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._active_directory_application_14d1fb9299b73358cc455e6b3dd05f2fa
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._active_directory_application_14d1fb9299b73358cc455e6b3dd05f2fa.yml
-  name: ActiveDirectoryApplication.UpdateStages.WithMultiTenant
-  nameWithType: ActiveDirectoryApplication.UpdateStages.WithMultiTenant
-  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.UpdateStages.WithMultiTenant
-  type: Interface
-  summary: <p>The stage of application update allowing specifying if the application can be used in multiple tenants. </p>
-  syntax:
-    content: public interface WithMultiTenant
 - uid: com.microsoft.azure.management.graphrbac._active_directory_application_12fc5de9e1556deb1f237f735fdb65712
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._active_directory_application_12fc5de9e1556deb1f237f735fdb65712.yml
@@ -1175,19 +1165,16 @@ references:
   summary: <p>The stage of application definition allowing specifying if the application can be used in multiple tenants. </p>
   syntax:
     content: public interface WithMultiTenant
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._defccb82f63b3402e1bf8b0f6c592a87af9
+- uid: com.microsoft.azure.management.graphrbac._active_directory_application_14d1fb9299b73358cc455e6b3dd05f2fa
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._defccb82f63b3402e1bf8b0f6c592a87af9.yml
-  name: CertificateCredential.DefinitionStages.WithPublicKey<ParentT>
-  nameWithType: CertificateCredential.DefinitionStages.WithPublicKey<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithPublicKey<ParentT>
+  href: com.microsoft.azure.management.graphrbac._active_directory_application_14d1fb9299b73358cc455e6b3dd05f2fa.yml
+  name: ActiveDirectoryApplication.UpdateStages.WithMultiTenant
+  nameWithType: ActiveDirectoryApplication.UpdateStages.WithMultiTenant
+  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.UpdateStages.WithMultiTenant
   type: Interface
-  summary: <p>The credential definition stage allowing the public key to be set. </p>
+  summary: <p>The stage of application update allowing specifying if the application can be used in multiple tenants. </p>
   syntax:
-    content: public interface WithPublicKey<ParentT>
-    typeParameters:
-    - type: 18a275b1
-      description: <p>the stage of the parent definition to return to after attaching this definition </p>
+    content: public interface WithMultiTenant
 - uid: com.microsoft.azure.management.graphrbac._certificate_credential._upd0ec9f695efc56b96a486f0ef8a7fcfac
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._certificate_credential._upd0ec9f695efc56b96a486f0ef8a7fcfac.yml
@@ -1201,16 +1188,19 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._active_directory_application_13e0e42ae98d0eb15f2095941e7c08e7c
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._defccb82f63b3402e1bf8b0f6c592a87af9
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._active_directory_application_13e0e42ae98d0eb15f2095941e7c08e7c.yml
-  name: ActiveDirectoryApplication.UpdateStages.WithReplyUrl
-  nameWithType: ActiveDirectoryApplication.UpdateStages.WithReplyUrl
-  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.UpdateStages.WithReplyUrl
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._defccb82f63b3402e1bf8b0f6c592a87af9.yml
+  name: CertificateCredential.DefinitionStages.WithPublicKey<ParentT>
+  nameWithType: CertificateCredential.DefinitionStages.WithPublicKey<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithPublicKey<ParentT>
   type: Interface
-  summary: <p>The stage of application update allowing specifying reply URLs. </p>
+  summary: <p>The credential definition stage allowing the public key to be set. </p>
   syntax:
-    content: public interface WithReplyUrl
+    content: public interface WithPublicKey<ParentT>
+    typeParameters:
+    - type: 18a275b1
+      description: <p>the stage of the parent definition to return to after attaching this definition </p>
 - uid: com.microsoft.azure.management.graphrbac._active_directory_application_1334d89c5c909052bcc2917894c51657f
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._active_directory_application_1334d89c5c909052bcc2917894c51657f.yml
@@ -1219,6 +1209,16 @@ references:
   fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithReplyUrl
   type: Interface
   summary: <p>The stage of application definition allowing specifying reply URLs. </p>
+  syntax:
+    content: public interface WithReplyUrl
+- uid: com.microsoft.azure.management.graphrbac._active_directory_application_13e0e42ae98d0eb15f2095941e7c08e7c
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._active_directory_application_13e0e42ae98d0eb15f2095941e7c08e7c.yml
+  name: ActiveDirectoryApplication.UpdateStages.WithReplyUrl
+  nameWithType: ActiveDirectoryApplication.UpdateStages.WithReplyUrl
+  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.UpdateStages.WithReplyUrl
+  type: Interface
+  summary: <p>The stage of application update allowing specifying reply URLs. </p>
   syntax:
     content: public interface WithReplyUrl
 - uid: com.microsoft.azure.management.graphrbac._role_assignment._definition_stages._with_role
@@ -1251,16 +1251,6 @@ references:
   summary: <p>The stage of role assignment definition allowing specifying the scope of the assignment. </p>
   syntax:
     content: public interface WithScope
-- uid: com.microsoft.azure.management.graphrbac._active_directory_application_14bd963766bb56eda89957905c86bb73d
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._active_directory_application_14bd963766bb56eda89957905c86bb73d.yml
-  name: ActiveDirectoryApplication.DefinitionStages.WithSignOnUrl
-  nameWithType: ActiveDirectoryApplication.DefinitionStages.WithSignOnUrl
-  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithSignOnUrl
-  type: Interface
-  summary: <p>The stage of application definition allowing specifying the sign on URL. </p>
-  syntax:
-    content: public interface WithSignOnUrl
 - uid: com.microsoft.azure.management.graphrbac._active_directory_application_1abe766796d1e614ad3e0f761baaf6b27
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._active_directory_application_1abe766796d1e614ad3e0f761baaf6b27.yml
@@ -1271,12 +1261,22 @@ references:
   summary: <p>The stage of application update allowing specifying the sign on URL. </p>
   syntax:
     content: public interface WithSignOnUrl
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._def56ba5e70b0dfc816379f9520e61cbf46
+- uid: com.microsoft.azure.management.graphrbac._active_directory_application_14bd963766bb56eda89957905c86bb73d
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._def56ba5e70b0dfc816379f9520e61cbf46.yml
-  name: CertificateCredential.DefinitionStages.WithStartDate<ParentT>
-  nameWithType: CertificateCredential.DefinitionStages.WithStartDate<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithStartDate<ParentT>
+  href: com.microsoft.azure.management.graphrbac._active_directory_application_14bd963766bb56eda89957905c86bb73d.yml
+  name: ActiveDirectoryApplication.DefinitionStages.WithSignOnUrl
+  nameWithType: ActiveDirectoryApplication.DefinitionStages.WithSignOnUrl
+  fullName: com.microsoft.azure.management.graphrbac.ActiveDirectoryApplication.DefinitionStages.WithSignOnUrl
+  type: Interface
+  summary: <p>The stage of application definition allowing specifying the sign on URL. </p>
+  syntax:
+    content: public interface WithSignOnUrl
+- uid: com.microsoft.azure.management.graphrbac._password_credential._update27b0fa66f3f1bf64ca4ef9d38103e6ba
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._password_credential._update27b0fa66f3f1bf64ca4ef9d38103e6ba.yml
+  name: PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>
+  nameWithType: PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>
   type: Interface
   summary: <p>The credential definition stage allowing start date to be set. </p>
   syntax:
@@ -1297,6 +1297,19 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._def56ba5e70b0dfc816379f9520e61cbf46
+  parent: com.microsoft.azure.management.graphrbac
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._def56ba5e70b0dfc816379f9520e61cbf46.yml
+  name: CertificateCredential.DefinitionStages.WithStartDate<ParentT>
+  nameWithType: CertificateCredential.DefinitionStages.WithStartDate<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithStartDate<ParentT>
+  type: Interface
+  summary: <p>The credential definition stage allowing start date to be set. </p>
+  syntax:
+    content: public interface WithStartDate<ParentT>
+    typeParameters:
+    - type: 18a275b1
+      description: <p>the stage of the parent definition to return to after attaching this definition </p>
 - uid: com.microsoft.azure.management.graphrbac._certificate_credential._upd5828c04bdb186917fd6be1be8ba7df00
   parent: com.microsoft.azure.management.graphrbac
   href: com.microsoft.azure.management.graphrbac._certificate_credential._upd5828c04bdb186917fd6be1be8ba7df00.yml
@@ -1310,16 +1323,16 @@ references:
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._password_credential._update27b0fa66f3f1bf64ca4ef9d38103e6ba
+- uid: com.microsoft.azure.management.graphrbac._certificate_credential._deffd4ccc6eebc4eeb2969fafcd5992bdd2
   parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._password_credential._update27b0fa66f3f1bf64ca4ef9d38103e6ba.yml
-  name: PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>
-  nameWithType: PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.PasswordCredential.UpdateDefinitionStages.WithStartDate<ParentT>
+  href: com.microsoft.azure.management.graphrbac._certificate_credential._deffd4ccc6eebc4eeb2969fafcd5992bdd2.yml
+  name: CertificateCredential.DefinitionStages.WithSymmetricKey<ParentT>
+  nameWithType: CertificateCredential.DefinitionStages.WithSymmetricKey<ParentT>
+  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithSymmetricKey<ParentT>
   type: Interface
-  summary: <p>The credential definition stage allowing start date to be set. </p>
+  summary: <p>The credential definition stage allowing the secret key to be set. </p>
   syntax:
-    content: public interface WithStartDate<ParentT>
+    content: public interface WithSymmetricKey<ParentT>
     typeParameters:
     - type: 18a275b1
       description: <p>the stage of the parent definition to return to after attaching this definition </p>
@@ -1329,19 +1342,6 @@ references:
   name: CertificateCredential.UpdateDefinitionStages.WithSymmetricKey<ParentT>
   nameWithType: CertificateCredential.UpdateDefinitionStages.WithSymmetricKey<ParentT>
   fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.UpdateDefinitionStages.WithSymmetricKey<ParentT>
-  type: Interface
-  summary: <p>The credential definition stage allowing the secret key to be set. </p>
-  syntax:
-    content: public interface WithSymmetricKey<ParentT>
-    typeParameters:
-    - type: 18a275b1
-      description: <p>the stage of the parent definition to return to after attaching this definition </p>
-- uid: com.microsoft.azure.management.graphrbac._certificate_credential._deffd4ccc6eebc4eeb2969fafcd5992bdd2
-  parent: com.microsoft.azure.management.graphrbac
-  href: com.microsoft.azure.management.graphrbac._certificate_credential._deffd4ccc6eebc4eeb2969fafcd5992bdd2.yml
-  name: CertificateCredential.DefinitionStages.WithSymmetricKey<ParentT>
-  nameWithType: CertificateCredential.DefinitionStages.WithSymmetricKey<ParentT>
-  fullName: com.microsoft.azure.management.graphrbac.CertificateCredential.DefinitionStages.WithSymmetricKey<ParentT>
   type: Interface
   summary: <p>The credential definition stage allowing the secret key to be set. </p>
   syntax:
