@@ -49,7 +49,7 @@ Azure Toolkit for Eclipse には、Azure アカウントにサインインする
 
    ![[Azure Log In (Azure ログイン)] ダイアログ ボックス][A03]
 
-1. **[Create authentication files (認証ファイルの作成)] ** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、宛先ディレクトリを選んでから、**[開始]** をクリックします。
+1. **[Create authentication files (認証ファイルの作成)]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、宛先ディレクトリを選んでから、**[開始]** をクリックします。
 
    ![[Azure Log In (Azure ログイン)] ダイアログ ボックス][A04]
 
