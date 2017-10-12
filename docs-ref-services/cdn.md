@@ -11,37 +11,37 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cdn
-ms.openlocfilehash: db9fb8a9a8f9f21061f1e16b77e3145d1fb1b119
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 91df958d2d78fb4fd959c228b28c6ae003716be6
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
-# <a name="azure-cdn-libraries-for-java"></a><span data-ttu-id="9c589-104">Azure CDN Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="9c589-104">Azure CDN libraries for Java</span></span>
+# <a name="azure-cdn-libraries-for-java"></a><span data-ttu-id="45a01-104">Azure CDN Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="45a01-104">Azure CDN libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="9c589-105">概要</span><span class="sxs-lookup"><span data-stu-id="9c589-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="45a01-105">概要</span><span class="sxs-lookup"><span data-stu-id="45a01-105">Overview</span></span>
 
-<span data-ttu-id="9c589-106">[Azure Content Delivery Network](/azure/cdn/cdn-overview) (CDN) を使用して、戦略的に配置された場所に静的 Web コンテンツをキャッシュし、ユーザーへのスループットを最大化します。</span><span class="sxs-lookup"><span data-stu-id="9c589-106">Cache static web content at strategically placed locations to provide maximum throughput for users with [Azure Content Delivery Network](/azure/cdn/cdn-overview) (CDN).</span></span>
+<span data-ttu-id="45a01-106">[Azure Content Delivery Network](/azure/cdn/cdn-overview) (CDN) を使用して、戦略的に配置された場所に静的 Web コンテンツをキャッシュし、ユーザーへのスループットを最大化します。</span><span class="sxs-lookup"><span data-stu-id="45a01-106">Cache static web content at strategically placed locations to provide maximum throughput for users with [Azure Content Delivery Network](/azure/cdn/cdn-overview) (CDN).</span></span>
 
-<span data-ttu-id="9c589-107">Azure CDN を導入するには、「[Azure CDN の概要](/azure/cdn/cdn-create-new-endpoint)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9c589-107">To get started with Azure CDN, see [Getting started with Azure CDN](/azure/cdn/cdn-create-new-endpoint).</span></span>
+<span data-ttu-id="45a01-107">Azure CDN を導入するには、「[Azure CDN の概要](/azure/cdn/cdn-create-new-endpoint)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="45a01-107">To get started with Azure CDN, see [Getting started with Azure CDN](/azure/cdn/cdn-create-new-endpoint).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="9c589-108">Management API</span><span class="sxs-lookup"><span data-stu-id="9c589-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="45a01-108">Management API</span><span class="sxs-lookup"><span data-stu-id="45a01-108">Management API</span></span>
 
-<span data-ttu-id="9c589-109">CDN プロファイルを作成して、エンドポイントを定義し、Management API を使用して CDN にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="9c589-109">Create CDN profiles, define endpoints, and add content to the CDN using the management API.</span></span>
+<span data-ttu-id="45a01-109">CDN プロファイルを作成して、エンドポイントを定義し、Management API を使用して CDN にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="45a01-109">Create CDN profiles, define endpoints, and add content to the CDN using the management API.</span></span>
 
-<span data-ttu-id="9c589-110">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="9c589-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="45a01-110">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="45a01-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-cdn</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="9c589-111">例</span><span class="sxs-lookup"><span data-stu-id="9c589-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="45a01-111">例</span><span class="sxs-lookup"><span data-stu-id="45a01-111">Example</span></span>
 
-<span data-ttu-id="9c589-112">CDN プロファイルを作成して、エンドポイントを割り当て、コンテンツを CDN に読み込みます。</span><span class="sxs-lookup"><span data-stu-id="9c589-112">Create a CDN profile, assign endpoints, and load content into the CDN.</span></span>
+<span data-ttu-id="45a01-112">CDN プロファイルを作成して、エンドポイントを割り当て、コンテンツを CDN に読み込みます。</span><span class="sxs-lookup"><span data-stu-id="45a01-112">Create a CDN profile, assign endpoints, and load content into the CDN.</span></span>
 
 ```java
 CdnProfile profile = azure.cdnProfiles().define("testCDN")
@@ -62,10 +62,10 @@ for (CdnEndpoint endpoint : profile.endpoints().values()) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9c589-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="9c589-113">Explore the Management APIs</span></span>](/java/api/overview/azure/cdn/managementapi)
+> [<span data-ttu-id="45a01-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="45a01-113">Explore the Management APIs</span></span>](/java/api/overview/azure/cdn/managementapi)
 
-## <a name="samples"></a><span data-ttu-id="9c589-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="9c589-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="45a01-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="45a01-114">Samples</span></span>
 
-[<span data-ttu-id="9c589-115">Java で CDN を管理する</span><span class="sxs-lookup"><span data-stu-id="9c589-115">Manage CDNs with Java</span></span>](https://github.com/Azure-Samples/cdn-java-manage-cdn)
+[<span data-ttu-id="45a01-115">Java で CDN を管理する</span><span class="sxs-lookup"><span data-stu-id="45a01-115">Manage CDNs with Java</span></span>](https://github.com/Azure-Samples/cdn-java-manage-cdn)
 
-<span data-ttu-id="9c589-116">アプリで利用できる [Azure CDN のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="9c589-116">Explore more [sample Java code for Azure CDN](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn) you can use in your apps.</span></span>
+<span data-ttu-id="45a01-116">アプリで利用できる [Azure CDN のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="45a01-116">Explore more [sample Java code for Azure CDN](https://azure.microsoft.com/resources/samples/?platform=java&term=cdn) you can use in your apps.</span></span>

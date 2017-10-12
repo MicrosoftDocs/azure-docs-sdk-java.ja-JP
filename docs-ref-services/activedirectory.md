@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 838d46caebc73b59029eb876a53c2bcd536472fd
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 6226cf0f94b6403ac81ff344eba022420f5e20ea
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
-# <a name="azure-active-directory-libraries-for-java"></a><span data-ttu-id="ea5c7-104">Azure Active Directory Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="ea5c7-104">Azure Active Directory libraries for Java</span></span>
+# <a name="azure-active-directory-libraries-for-java"></a><span data-ttu-id="f3ec3-104">Azure Active Directory Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="f3ec3-104">Azure Active Directory libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="ea5c7-105">概要</span><span class="sxs-lookup"><span data-stu-id="ea5c7-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="f3ec3-105">概要</span><span class="sxs-lookup"><span data-stu-id="f3ec3-105">Overview</span></span>
 
-<span data-ttu-id="ea5c7-106">[Azure Active Directory](/azure/active-directory/active-directory-whatis) でユーザーのサインオンを行い、アプリケーションと API へのアクセスを制御します。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-106">Sign-on users and control access to applications and APIs with [Azure Active Directory](/azure/active-directory/active-directory-whatis).</span></span>
+<span data-ttu-id="f3ec3-106">[Azure Active Directory](/azure/active-directory/active-directory-whatis) でユーザーのサインオンを行い、アプリケーションと API へのアクセスを制御します。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-106">Sign-on users and control access to applications and APIs with [Azure Active Directory](/azure/active-directory/active-directory-whatis).</span></span>
 
-<span data-ttu-id="ea5c7-107">Azure AD の使用を開始するには、「[Azure AD を使用した Java Web アプリへのサインインおよびサインアウト](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-107">To get started with Azure AD, see [Java web app sign-in and sign-out with Azure AD](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java).</span></span>
+<span data-ttu-id="f3ec3-107">Azure AD の使用を開始するには、「[Azure AD を使用した Java Web アプリへのサインインおよびサインアウト](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-107">To get started with Azure AD, see [Java web app sign-in and sign-out with Azure AD](/azure/active-directory/develop/active-directory-devquickstarts-webapp-java).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="ea5c7-108">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="ea5c7-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="f3ec3-108">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="f3ec3-108">Client library</span></span>
 
-<span data-ttu-id="ea5c7-109">[Java 用 Azure Active Directory 認証ライブラリ (ADAL)](https://github.com/AzureAD/azure-activedirectory-library-for-java) で、OAuth2、OpenID Connect、または Active Directory Graph 認証と [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) シングル サインオンを構成します。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-109">Configure OAuth2, OpenID Connect, or Active Directory Graph authentication and [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) single-sign on with the [Azure Active Directory authentication library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java).</span></span>
+<span data-ttu-id="f3ec3-109">[Java 用 Azure Active Directory 認証ライブラリ (ADAL)](https://github.com/AzureAD/azure-activedirectory-library-for-java) で、OAuth2、OpenID Connect、または Active Directory Graph 認証と [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) シングル サインオンを構成します。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-109">Configure OAuth2, OpenID Connect, or Active Directory Graph authentication and [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-saml-protocol-reference) single-sign on with the [Azure Active Directory authentication library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java).</span></span>
 
-<span data-ttu-id="ea5c7-110">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
+<span data-ttu-id="f3ec3-110">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -39,9 +39,9 @@ ms.lasthandoff: 09/09/2017
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="ea5c7-111">例</span><span class="sxs-lookup"><span data-stu-id="ea5c7-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="f3ec3-111">例</span><span class="sxs-lookup"><span data-stu-id="f3ec3-111">Example</span></span>
 
-<span data-ttu-id="ea5c7-112">Azure Active Directory の [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api) を使用して、Active Directory テナント内のユーザーの JSON Web トークン (JWT) を取得します。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-112">Retrieve a JSON Web Token (JWT) for a user in your an Active Directory tenant using Azure Active Directory's [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api).</span></span> <span data-ttu-id="ea5c7-113">このトークンは、後でアプリケーションまたは API でのユーザーの認証に使用できます。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-113">This token can then be used to authenticate the user with an application or API.</span></span>
+<span data-ttu-id="f3ec3-112">Azure Active Directory の [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api) を使用して、Active Directory テナント内のユーザーの JSON Web トークン (JWT) を取得します。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-112">Retrieve a JSON Web Token (JWT) for a user in your an Active Directory tenant using Azure Active Directory's [Graph API](https://docs.microsoft.com/azure/active-directory/develop/active-directory-graph-api).</span></span> <span data-ttu-id="f3ec3-113">このトークンは、後でアプリケーションまたは API でのユーザーの認証に使用できます。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-113">This token can then be used to authenticate the user with an application or API.</span></span>
 
 ```java
 ExecutorService service = Executors.newFixedThreadPool(1);
@@ -55,23 +55,23 @@ System.out.println("Refresh Token - " + result.getRefreshToken());
 System.out.println("ID Token - " + result.getIdToken());
 ```
 
-## <a name="management-api"></a><span data-ttu-id="ea5c7-114">Management API</span><span class="sxs-lookup"><span data-stu-id="ea5c7-114">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="f3ec3-114">Management API</span><span class="sxs-lookup"><span data-stu-id="f3ec3-114">Management API</span></span>
 
-<span data-ttu-id="ea5c7-115">Management API で、[ロール ベースのアクセス制御](/azure/active-directory/role-based-access-control-what-is)を構成し、それらのロールに ID (ユーザー、[サービス プリンシパル](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-objects)など) を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-115">Configure [role based access control](/azure/active-directory/role-based-access-control-what-is) and assign identities (such as users and [service principals](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-objects)) to those roles with the management API.</span></span> 
+<span data-ttu-id="f3ec3-115">Management API で、[ロール ベースのアクセス制御](/azure/active-directory/role-based-access-control-what-is)を構成し、それらのロールに ID (ユーザー、[サービス プリンシパル](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-objects)など) を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-115">Configure [role based access control](/azure/active-directory/role-based-access-control-what-is) and assign identities (such as users and [service principals](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-objects)) to those roles with the management API.</span></span> 
 
-<span data-ttu-id="ea5c7-116">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="f3ec3-116">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-graph-rbac</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
-### <a name="example"></a><span data-ttu-id="ea5c7-117">例</span><span class="sxs-lookup"><span data-stu-id="ea5c7-117">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="f3ec3-117">例</span><span class="sxs-lookup"><span data-stu-id="f3ec3-117">Example</span></span> 
 
-<span data-ttu-id="ea5c7-118">新しいサービス プリンシパルを作成し、共同作成者ロールに割り当てます。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-118">Create a new service principal and assign it the Contributor role.</span></span>
+<span data-ttu-id="f3ec3-118">新しいサービス プリンシパルを作成し、共同作成者ロールに割り当てます。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-118">Create a new service principal and assign it the Contributor role.</span></span>
 
 ```java
 ServicePrincipal sp = Azure.servicePrincipals().define(spName)
@@ -86,14 +86,14 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ea5c7-119">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="ea5c7-119">Explore the Management APIs</span></span>](/java/api/overview/azure/activedirectory/managementapi)
+> [<span data-ttu-id="f3ec3-119">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="f3ec3-119">Explore the Management APIs</span></span>](/java/api/overview/azure/activedirectory/managementapi)
 
 
-## <a name="samples"></a><span data-ttu-id="ea5c7-120">サンプル</span><span class="sxs-lookup"><span data-stu-id="ea5c7-120">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="f3ec3-120">サンプル</span><span class="sxs-lookup"><span data-stu-id="f3ec3-120">Samples</span></span>
 
-<span data-ttu-id="ea5c7-121">[グループ、ユーザー、およびロールを管理する](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)  </span><span class="sxs-lookup"><span data-stu-id="ea5c7-121">[Manage groups, users, and roles](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)  </span></span>  
-<span data-ttu-id="ea5c7-122">[Java Web アプリでユーザーのサインインとサインアウトを行う](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span><span class="sxs-lookup"><span data-stu-id="ea5c7-122">[Sign-in and sign-out users in a Java web app](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span></span>  
-<span data-ttu-id="ea5c7-123">[コマンド ライン アプリを使用して Azure AD で API にアクセスする](https://github.com/Azure-Samples/active-directory-java-native-headless) </span><span class="sxs-lookup"><span data-stu-id="ea5c7-123">[Access an API with Azure AD using a command line app](https://github.com/Azure-Samples/active-directory-java-native-headless) </span></span>  
-[<span data-ttu-id="ea5c7-124">Java Web アプリから Active AD Graph API を呼び出す</span><span class="sxs-lookup"><span data-stu-id="ea5c7-124">Call the Active AD Graph API from your Java web app</span></span>](https://github.com/Azure-Samples/active-directory-java-graphapi-web/)  
+<span data-ttu-id="f3ec3-121">[グループ、ユーザー、およびロールを管理する](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)  </span><span class="sxs-lookup"><span data-stu-id="f3ec3-121">[Manage groups, users, and roles](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)  </span></span>  
+<span data-ttu-id="f3ec3-122">[Java Web アプリでユーザーのサインインとサインアウトを行う](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span><span class="sxs-lookup"><span data-stu-id="f3ec3-122">[Sign-in and sign-out users in a Java web app](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  </span></span>  
+<span data-ttu-id="f3ec3-123">[コマンド ライン アプリを使用して Azure AD で API にアクセスする](https://github.com/Azure-Samples/active-directory-java-native-headless) </span><span class="sxs-lookup"><span data-stu-id="f3ec3-123">[Access an API with Azure AD using a command line app](https://github.com/Azure-Samples/active-directory-java-native-headless) </span></span>  
+[<span data-ttu-id="f3ec3-124">Java Web アプリから Active AD Graph API を呼び出す</span><span class="sxs-lookup"><span data-stu-id="f3ec3-124">Call the Active AD Graph API from your Java web app</span></span>](https://github.com/Azure-Samples/active-directory-java-graphapi-web/)  
 
-<span data-ttu-id="ea5c7-125">アプリで使用できる [Azure AD 用の Java コードのサンプル](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ea5c7-125">Explore more [sample Java code for Azure AD](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java) you can use in your apps.</span></span>
+<span data-ttu-id="f3ec3-125">アプリで使用できる [Azure AD 用の Java コードのサンプル](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f3ec3-125">Explore more [sample Java code for Azure AD](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java) you can use in your apps.</span></span>
