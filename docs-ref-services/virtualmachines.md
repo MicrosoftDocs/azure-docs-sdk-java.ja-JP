@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: compute
-ms.openlocfilehash: b414f4dc9289958c2562ddc6d41133279f47a45e
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: f9a816d5787e41a4ee4643b1bc66bf21192ea298
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 
@@ -35,7 +35,7 @@ Azure の Windows 仮想マシンと Linux 仮想マシンは、コードから 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-compute</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```   
 

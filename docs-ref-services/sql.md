@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 4c16d602d33b8d2c75e2b9de8f5f11ace138c25d
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 3ae4015ae57e5eac4dafb30f4a42881986501853
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>Azure SQL Database Libraries for Java
 
@@ -64,7 +64,7 @@ Management API を使用すると、ご利用のサブスクリプションの A
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-sql</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 

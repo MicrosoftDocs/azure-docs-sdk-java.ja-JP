@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: appservice
-ms.openlocfilehash: e5d2a66dc984d34fb9a6668d2ea3bf1ee6164e70
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 7e1d7eed9d8fa8d2f872f2902e2ce3f2b3dab7b6
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-app-service-libraries-for-java"></a>Azure App Service Libraries for Java
 
@@ -35,7 +35,7 @@ Azure App Service におけるアプリケーションのデプロイ、スケ�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-appservice</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```   
 

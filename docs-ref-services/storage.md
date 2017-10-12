@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: 4223fed718e4ff3f89d3979ba97a892c2aba12e8
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 7ac746105d9add6c96f84389ba0016f4864247f3
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-storage-libraries-for-java"></a>Azure Storage Libraries for Java
 
@@ -71,7 +71,7 @@ Azure ストレージ アカウントと接続キーの作成と管理は、Mana
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-storage</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency
 ```   
 

@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: networking
-ms.openlocfilehash: de03cf7c073c3a0dd636e23a4554987e7cad11f7
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 6eed6f45ee239db1286e94f210341febb189378d
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-network-libraries-for-java"></a>Azure Network Libraries for Java
 
@@ -35,7 +35,7 @@ Management API で Azure [仮想ネットワーク](/azure/virtual-network/virtu
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-network</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```   
 

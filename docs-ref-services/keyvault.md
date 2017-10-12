@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: d87ad458eeefb090a23529662695c4faa4a75b38
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 51ac51f5436397a0c9f1a4572dcf79a40f10b538
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Azure Key Vault Libraries for Java
 
@@ -63,7 +63,7 @@ JsonWebKey jsonKey = returnedKeyBundle.key();
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-keyvault</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 

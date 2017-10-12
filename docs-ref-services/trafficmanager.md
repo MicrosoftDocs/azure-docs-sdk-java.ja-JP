@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: traffic-manager
-ms.openlocfilehash: a38db9a0d92d7dedc5ff49b83ad2658aa61729dd
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 9e13f97c6ddb763fb162b3de0c8d09c77eae1ccb
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Azure Traffic Manager Libraries for Java
 
@@ -35,7 +35,7 @@ Management API を使用して、Traffic Manager プロファイルの作成、�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-mgmt-trafficmanager</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```   
 
