@@ -10,25 +10,25 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: c0d5c4b3702d3bee4e93de51cec36e72aeaf598f
-ms.sourcegitcommit: ae39830d5a54fedceac78d8df1718e77741e03fa
+ms.openlocfilehash: 015cb0615c28711ebb8feb5cea584a8a3779fa54
+ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="release-notes"></a>リリース ノート 
 
-## <a name="june-30-2017---110"></a>2017 年 6 月 30 日 - 1.1.0 
+## <a name="october-5-2017---130"></a>2017 年 10 月 5 日 - 1.3.0 
 
-V1.0 で一般提供 (安定) 段階に達したパブリック ユース向け API に関して、V1.1 には V1.0 との下位互換性があります。
+バージョン 1.3.0 は、以前のリリースで一般提供 (安定) 段階に達したサービスおよび機能の使用について、以前のバージョンと下位互換性があります。
 
-V.0 で @Beta の注釈を使ってマークされた API には、いくつかの重大な変更が導入されました。
+これらのサービスに関する以前のバージョンからの重大な変更には、@Beta という注釈が付いています。
 
-コードを 1.1.0 に移行する場合は、[こちらの注意事項](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.1.0.md)を参照して、1.0.0 から 1.1.0 にコードを対応させてください。
+コードを 1.3.0 に移行する場合は、[こちらの注意事項](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md)を参照して、既存のコードを 1.3 バージョンに対応させてください。
 
-### <a name="generally-availabile-in-v11"></a>V1.1 で一般提供
+### <a name="generally-availabile-in-v13"></a>V1.3 での一般提供
 
-V1.0 でベータ版のままとなっている一部の API が、V1.1 で GA になりました。具体的な内容は次のとおりです。
+以前のリリースではまだベータ版だった一部の API が GA になりました。具体的な内容は次のとおりです。
 
 - 非同期メソッド
 - これまで Beta 版であった CDN のすべてのメソッド
@@ -36,14 +36,16 @@ V1.0 でベータ版のままとなっている一部の API が、V1.1 で GA �
 
  ライブラリの一部については引き続きプレビューとなります。 現在のライブラリの状態については、次の表を参照してください。
 
-サービスまたは機能 | GA として利用可能 | プレビューとして利用可能  | 近日対応予定 |
----------|---------|---------|---------|
-コンピューティング  | 仮想マシンと VM の拡張機能、仮想マシン スケール セット、管理ディスク   | Azure Container Service、Azure Container Registry |    |
-Storage   |  ストレージ アカウント       |         |   暗号化      |
-SQL Database  | データベース、ファイアウォール、エラスティック プール        |         |   その他の機能      |
-ネットワーク    |  仮想ネットワーク、ネットワーク インターフェイス、IP アドレス、ルーティング テーブル、ネットワーク セキュリティ グループ、DNS、Traffic Manager、Application Gateway  |    ロード バランサー     |   VPN、Network Watcher   |
-その他のサービス    |  リソース マネージャー、Key Vault、Redis、CDN、Batch       |  Web Apps、Function App、Service Bus、Graph RBAC、DocumentDB   | Monitor、Scheduler、Functions 管理、Search、Graph RBAC の各種機能        |
-基礎     |   認証 - コア、非同期メソッド       |      |         |
+サービスまたは機能 | GA として利用可能 | プレビューとして利用可能 
+---------|---------|---------|-
+コンピューティング  | 仮想マシンと VM の拡張機能、仮想マシン スケール セット、管理ディスク   | Azure Container Service、Azure Container Registry 
+ストレージ   |  ストレージ アカウント       |    暗号化     
+SQL Database  | データベース、ファイアウォール、エラスティック プール              
+ネットワーク    |  仮想ネットワーク、ネットワーク インターフェイス、IP アドレス、ルーティング テーブル、ネットワーク セキュリティ グループ、DNS、Traffic Manager、Application Gateway  |    ロード バランサー、ネットワーク ピアリング、仮想ネットワーク ゲートウェイ、ネットワーク ウォッチャー 
+その他のサービス    |  リソース マネージャー、Key Vault、Redis、CDN、Batch       |  Web アプリ、関数アプリ、Service Bus、Graph RBAC、Cosmos DB、検索  
+基礎     |   認証 - コア、非同期メソッド、管理対象サービス ID      |      |
+
+> ライブラリのクラス、インターフェイス、メソッド レベルでは、プレビュー機能に `@Beta` という注釈が付いています。 これらの機能は、変更されることがあります。 将来的に、何らかの変更が行われたり、削除されたりする可能性があります。
 
 ### <a name="import-with-maven"></a>Maven でのインポート
 
@@ -51,16 +53,12 @@ SQL Database  | データベース、ファイアウォール、エラスティ�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
 ### <a name="get-help-and-give-feedback"></a>質問とフィードバック
 
 自分のコードでライブラリを使用する方法についてご不明な点がありましたら、[Stack Overflow](http://stackoverflow.com/questions/tagged/azure-java-sdk) コミュニティのサイトを参照してください。 バグを見つけた場合や、これらのライブラリの改善に向けた提案がある場合は、[GitHub](https://github.com/Azure/azure-sdk-for-java/issues) 経由でお寄せください。
-
-### <a name="migrate-from-previous-releases"></a>以前のリリースからの移行
-
-[1.0.0-beta5 からの移行](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.0.0.md)  [1.1.0 からの移行](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.1.0.md)
 
 
