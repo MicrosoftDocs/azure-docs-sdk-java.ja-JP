@@ -11,17 +11,17 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 4b73f6b03258e7d99bcca235cc2728d5e085b32a
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 56199b87fa64e9cbf0a14716a58c01f11f0e433b
+ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/14/2017
 ---
 # <a name="azure-resource-manager-libraries-for-java"></a>Azure Resource Manager Libraries for Java
 
 ## <a name="overview"></a>概要
 
-[Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview) を使用して、グループ内のリソースをデプロイ、監視、管理します。
+[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) を使用して、グループ内のリソースをデプロイ、監視、管理します。
 
 ## <a name="management-api"></a>Management API
 
