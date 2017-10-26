@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm
-ms.openlocfilehash: 2d94dfa4467bc79d6155321a9966358b79e9e960
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 1da5cc058038830ca09710a1dc8eede71bb67387
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する
 
@@ -52,7 +52,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
       ![[Publish as Docker Container]\(Docker コンテナーとして発行\) コマンド][PUB02]  
     **Deploy Docker Container on Azure (Azure に Docker コンテナーをデプロイ)** ウィザードが開かれます。
 
-   ![[Deploy Docker Container on Azure] (Azure への Docker コンテナーのデプロイ) ウィザード][PUB03]
+   ![[Deploy Docker Container on Azure] \(Azure への Docker コンテナーのデプロイ) ウィザード][PUB03]
 
 3. **[Type image name, select artifact's path and check Docker host to be used] \(イメージ名を入力し、アーティファクトのパスを選択して、使用される Docker ホストを確認する)** ウィンドウで、以下の手順を実行します。 
 
@@ -178,7 +178,7 @@ Azure Toolkit により、Docker コンテナーでの Azure への Web アプ�
 
    ![アーティファクトの [名前] ボックス][ART03]
 
-IntelliJ でのアーティファクトの作成の詳細については、JetBrains Web サイトの「[アーティファクトの構成]」を参照してください。
+IntelliJ でのアーティファクトの作成の詳細については、JetBrains Web サイトの「[Configuring Artifacts (アーティファクトの構成)]」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -189,7 +189,7 @@ Docker の他のリソースについては、公式の [Docker の Web サイ�
 <!-- URL List -->
 
 [Docker の Web サイト]: https://www.docker.com/
-[アーティファクトの構成]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Configuring Artifacts (アーティファクトの構成)]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 
 <!-- IMG List -->
 
