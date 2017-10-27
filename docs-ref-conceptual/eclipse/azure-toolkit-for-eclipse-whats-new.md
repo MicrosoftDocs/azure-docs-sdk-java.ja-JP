@@ -14,16 +14,21 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 09/11/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 31af7e6494f978f341e1f99a30117c57ef30a05b
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: ed21f4308b2f6e45f022608a2ba32fe7db6922d3
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse の新機能
 
 ## <a name="azure-toolkit-for-eclipse-releases"></a>Azure Toolkit for Eclipse のリリース
 この記事では、Azure Toolkit for Eclipse の各種リリースと最新情報について記載しています。
+
+> [!NOTE]
+> 最新情報については、次の Web ページを参照してください。
+> 
+> <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE]
 > IntelliJ IDE 用の Azure Toolkit もあります。 詳細については、「 [Azure Toolkit for IntelliJ]」をご覧ください。

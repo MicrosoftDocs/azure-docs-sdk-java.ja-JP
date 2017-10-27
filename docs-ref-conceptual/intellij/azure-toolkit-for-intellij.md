@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 10/19/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 61cf858f2f118650c34c299634fc0c47c22fd6a5
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: dc93b0b490eb61baa2b7cf86c7df7ac13925305f
+ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ
 Azure Toolkit for IntelliJ は、IntelliJ 統合開発環境 (IDE) を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。 これはオープン ソース プロジェクトであり、そのソース コードは、[プロジェクト サイトから MIT License](https://github.com/microsoft/azure-tools-for-java) で入手できます。
@@ -31,13 +31,11 @@ Azure Toolkit for IntelliJ は、IntelliJ 統合開発環境 (IDE) を使って 
 ## <a name="get-started-with-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ の概要
 次の記事では、Azure Toolkit for IntelliJ の使用方法について説明します。
 
-* [Azure Toolkit for IntelliJ の新機能](azure-toolkit-for-intellij-whats-new.md)
-
 * [Azure Toolkit for IntelliJ のインストール](azure-toolkit-for-intellij-installation.md)
 
 * [Azure Toolkit for IntelliJ のサインイン手順](azure-toolkit-for-intellij-sign-in-instructions.md)
 
-* [IntelliJ で Azure 用の Hello World Web アプリを作成する](/azure/app-service-web/app-service-web-intellij-create-hello-world-web-app)
+* [IntelliJ で Azure 用の Hello World Web アプリを作成する](azure-toolkit-for-intellij-create-hello-world-web-app.md)
 
 ## <a name="use-the-azure-toolkit-for-intellij-with-your-java-projects"></a>Java プロジェクトでの Azure Toolkit for IntelliJ の使用
 次の記事では、Azure Toolkit for IntelliJ を使用して Azure 機能を Java プロジェクトに追加する方法について説明します。
@@ -60,6 +58,12 @@ Azure Toolkit for IntelliJ は、IntelliJ 統合開発環境 (IDE) を使って 
 * [Azure Explorer for IntelliJ を使用して仮想マシンを管理する](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
 
 ## <a name="next-steps"></a>次のステップ
+
+Azure Toolkit for IntelliJ の詳細については、以下のページを参照してください。
+
+* [Azure Toolkit のリリース ノート](https://github.com/Microsoft/azure-tools-for-java/releases)
+
+* [JetBrains Plugins リポジトリの Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
 
 Azure での Java の使用の詳細については、[Azure Java デベロッパー センター](https://azure.microsoft.com/develop/java/)と [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
 

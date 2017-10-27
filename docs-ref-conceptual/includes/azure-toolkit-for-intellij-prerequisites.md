@@ -1,7 +1,7 @@
 ## <a name="prerequisites"></a>前提条件
-Azure Toolkit for IntelliJ には、以下のソフトウェア コンポーネントが必要です。
+この記事の手順を完了するには、Azure Toolkit for IntelliJ をインストールする必要があります。これには、次のソフトウェア コンポーネントが必要です。
 
-* IntelliJ IDEA Ultimate Edition ([JetBrains の Web サイト](https://www.jetbrains.com/idea/download/)からダウンロードできます)。
+* IntelliJ IDEA Ultimate Edition または Community Edition ([JetBrains の Web サイト](https://www.jetbrains.com/idea/download/)からダウンロードできます)。
 
 * Java Developer Kit (JDK) バージョン 1.8 以降。
 

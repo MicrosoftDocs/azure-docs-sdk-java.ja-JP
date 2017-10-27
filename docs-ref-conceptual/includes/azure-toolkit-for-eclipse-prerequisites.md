@@ -1,5 +1,5 @@
 ## <a name="prerequisites"></a>前提条件
-Azure Toolkit for Eclipse には、以下のソフトウェア コンポーネントが必要です。
+この記事の手順を完了するには、Azure Toolkit for Eclipse をインストールする必要があります。これには、次のソフトウェア コンポーネントが必要です。
 
 * Eclipse IDE for Java EE Developers Mars 以降。 [Eclipse の Web サイト](http://www.eclipse.org/downloads/)からダウンロードできます。
 
