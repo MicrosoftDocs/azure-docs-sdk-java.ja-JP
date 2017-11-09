@@ -11,15 +11,15 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: b386612741e222fcaeb7b6c38753d0cb7d616239
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: c1af3dae0fe37eb4919db02da87beed193c547a7
+ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="azure-iot-libraries-for-java"></a>Azure IoT Libraries for Java
 
-モノのインターネット資産の接続、監視、制御は、[Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-what-is-iot-hub) で行います。
+モノのインターネット資産の接続、監視、制御は、[Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub/iot-hub-what-is-iot-hub) で行います。
 
 Azure IoT Hub の概要については、「[Java を使用してデバイスを IoT ハブに接続する](/azure/iot-hub/iot-hub-java-java-getstarted)」を参照してください。
 
