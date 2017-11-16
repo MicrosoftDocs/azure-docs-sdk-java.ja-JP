@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cosmosdb
-ms.openlocfilehash: 249907528c24395b0da5d64e4dc06e3422894cfe
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 393f57df0ea2076c6ee7045b56883ee088716fad
+ms.sourcegitcommit: 93107ca9ed76a29573a5faf8f39737c85e6bbaff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="azure-cosmos-db-libraries-for-java"></a>Azure Cosmos DB Libraries for Java
 
@@ -44,7 +44,7 @@ Cosmos DB を使い始めるには、Azure Cosmos DB の [Java と Azure Portal 
 SQL クエリ構文を使用して、Cosmos DB 内で一致する JSON ドキュメントを選択します。
 
 ```java
-DocumentClient client = new DocumentClient(new DocumentClient("https://contoso.documents.azure.com:443",
+DocumentClient client = new DocumentClient("https://contoso.documents.azure.com:443",
                 "contosoCosmosDBKey", 
                 new ConnectionPolicy(),
                 ConsistencyLevel.Session);
