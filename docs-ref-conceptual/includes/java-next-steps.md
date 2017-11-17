@@ -1,0 +1,1 @@
+<span data-ttu-id="dde72-101">Azure での Java アプリの作成とデプロイの詳細については、[Java デベロッパー センター](https://docs.microsoft.com/java/api)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dde72-101">For more information on creating and deploying Java apps on Azure, visit the [Java developer center](https://docs.microsoft.com/java/api).</span></span>
