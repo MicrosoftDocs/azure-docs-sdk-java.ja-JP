@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 6d7a28bb98c945f9471a590681514c128f567b3f
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: b715ffb97a4ca2b13e8020d354341139be4be45b
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a>Azure Explorer for IntelliJ を使用して Redis Cache を管理する
 
@@ -96,7 +96,7 @@ Azure Redis Cache、構成設定、および料金について詳しくは、次
 * [Redis Cache の価格]
 * [Azure Redis Cache の構成方法]
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 

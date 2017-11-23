@@ -12,13 +12,13 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 6894c319a74c3dba6972f2c78b597cd87b49cc66
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: a2aa6b0aa0689893143073be94539345e229e5f2
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 ### <a name="import-the-public-repository"></a>パブリック リポジトリのインポート
 
-次の手順では、IntelliJ を使用して、ローカル コンピューターに Spring Boot Docker リポジトリを複製する方法について説明します。 コマンド ラインの使用が適している場合は、「[Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする][Deploy Spring Boot on Linux in ACS]」をご覧ください。
+次の手順では、IntelliJ を使用して、ローカル コンピューターに Spring Boot Docker リポジトリを複製する方法について説明します。 コマンド ラインの使用が適している場合は、「[Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする][Deploy Spring Boot on Linux in AKS]」をご覧ください。
 
 1. Eclipse を開きます。
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 09/13/2017
 
 1. **[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。
 
-   a. [**Git**] を展開します。
+   a. **[Git]** を展開します。
 
    b. **[Projects from Git]\(Git のプロジェクト\)** を選択します。
    
@@ -204,12 +204,12 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 Docker の他のリソースについては、公式の Docker Web サイトを参照してください。
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 
 [Azure Management Portal]: http://go.microsoft.com/fwlink/?LinkID=512959
-[Deploy Spring Boot on Linux in ACS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
+[Deploy Spring Boot on Linux in AKS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: azure-toolkit-for-eclipse-publish-as-docker-container.md
 [Spring Boot]: http://projects.spring.io/spring-boot/

@@ -13,13 +13,13 @@ ms.workload: na
 ms.tgt_pltfrm: cache-redis
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: ce8202b48c6759a80560616492eab018434e9307
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: c5e9a9214762e014e463dd3277671fc56237d4a0
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Redis Cache を使用するように Spring Boot Initializer アプリを構成する方法
 
@@ -118,10 +118,19 @@ ms.lasthandoff: 10/24/2017
 
    ![application.properties ファイルの編集][RE02]
 
-   > [!NOTE]
-   >
-   > SSL を有効にする Jedis のような異なる Redis クライアントを使用している場合は、*application.properties* ファイルでポート 6380 を指定します。 詳細については、「[Java で Azure Redis Cache を使用する方法][Redis Cache with Java]」をご覧ください。
-   >
+   > [!NOTE] 
+   > 
+   > SSL を有効にする Jedis のような異なる Redis クライアントを使用している場合は、*application.properties* ファイルでポート 6380 を指定します。 For example:
+   > 
+   > ```yaml
+   > spring.redis.host=myspringbootcache.redis.cache.windows.net
+   > spring.redis.password=57686f6120447564652c2049495320526f636b73=
+   > spring.redis.ssl=true
+   > spring.redis.port=6380
+   > ```
+   > 
+   > 詳細については、「[Java で Azure Redis Cache を使用する方法][Redis Cache with Java]」をご覧ください。 
+   > 
 
 1. *application.properties* ファイルを保存して閉じます。
 
