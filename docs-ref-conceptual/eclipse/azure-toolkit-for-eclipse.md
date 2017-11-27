@@ -12,20 +12,20 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: d3f91a7b501adfd9496991e955024298b637b90d
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: f94900ab5fa25a5d9dac19f665705b970db7c8b7
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse
-Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。 これはオープン ソース プロジェクトであり、そのソース コードは、[プロジェクト サイトから MIT License](https://github.com/microsoft/azure-tools-for-java) で入手できます。
+Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。
 
 > [!NOTE]
-> IntelliJ IDE 用の Azure Toolkit もあります。 詳細については、「 [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md)」をご覧ください。
 > 
+> IntelliJ IDE 用の Azure Toolkit もあります。 詳細については、「 [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md)」をご覧ください。
 > 
 
 ## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse の概要
@@ -67,7 +67,12 @@ Azure Toolkit for Eclipse の詳細については、以下のページを参照
 
 Azure での Java の使用の詳細については、[Azure Java デベロッパー センター](https://azure.microsoft.com/develop/java/)と [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
 
-<!-- [!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)] -->
+<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+
+> [!NOTE]
+> 
+> Azure Toolkit for Eclipse はオープン ソース プロジェクトで、そのソース コードは、[プロジェクト サイトの MIT ライセンス](https://github.com/microsoft/azure-tools-for-java)で入手できます。
+> 
 
 <!-- URL List -->
 

@@ -12,20 +12,26 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 10/19/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 497aba02f55383bf0b32461752d6681867cdfac8
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: e15a03a7d10d67217565895103e5e58e807a3976
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ のインストール
-Azure Toolkit for IntelliJ は、IntelliJ IDEA 開発環境を使って Azure アプリケーションを簡単に作成、開発、テスト、デプロイできるテンプレートと機能を提供します。 Azure Toolkit for IntelliJ はオープン ソース プロジェクトであり、そのソース コードは、GitHub のプロジェクト サイトから MIT License で入手できます。URL は次のとおりです。
 
-<https://github.com/microsoft/azure-tools-for-java>
+Azure Toolkit for IntelliJ は、IntelliJ IDEA 開発環境を使って Azure アプリケーションを簡単に作成、開発、テスト、デプロイできるテンプレートと機能を提供します。
 
-Azure Toolkit for IntelliJ には 2 とおりのインストール方法があります。[Settings]\(設定) ダイアログ ボックスを使用する方法と、スタート画面の [Configure]\(構成) メニューを使用する方法です。その両方のインストール方法を以降の手順で説明します。
+> [!NOTE] 
+> 
+> Azure Toolkit for IntelliJ はオープン ソース プロジェクトであり、そのソース コードは、GitHub のプロジェクト サイトから MIT License で入手できます。URL は次のとおりです。 
+> 
+> <https://github.com/microsoft/azure-tools-for-java> 
+> 
+
+Azure Toolkit for IntelliJ には 2 とおりのインストール方法があります。**[設定]** ダイアログ ボックスを使用する方法と、スタート画面の **[構成]** メニューを使用する方法です。 以降の手順では、両方のインストール方法を説明します。
 
 [!INCLUDE [azure-toolkit-for-IntelliJ-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
 
@@ -91,7 +97,7 @@ Azure Toolkit for IntelliJ には 2 とおりのインストール方法があ�
 
 ## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
 <!-- URL List -->
 

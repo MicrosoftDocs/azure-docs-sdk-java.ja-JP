@@ -13,14 +13,14 @@ ms.workload: web
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: asirveda;robmcm
 ms.custom: mvc
-ms.openlocfilehash: 515192f2b8f7741f99ec86cda8584aecfdd28104
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 8f7b2cbf66c9ceda6f723a9c9d423d94586fc777
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 
 **[Docker]** は、開発者が、コンテナーで実行されるアプリケーションのデプロイ、スケーリング、管理を自動化することを支援するオープン ソース ソリューションです。
 
-このチュートリアルでは、Docker を使用して Spring Boot アプリケーションを開発し、[Azure Container Service (ACS)] の Linux ホストにデプロイする手順について説明します。
+このチュートリアルでは、Docker を使用して Spring Boot アプリケーションを開発し、[Azure Container Service (AKS)] の Linux ホストにデプロイする手順について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -239,7 +239,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 >
 > 5. **[App settings]\(アプリ設定\)** セクションで、**PORT** という名前の新しい環境変数を追加して、この値にカスタム ポート番号を入力します。 (下の図の項目 #4 を参照。)
 >
-> 6. [ **Save**] をクリックします。 (下の図の項目 #5 を参照。)
+> 6. **[Save]** をクリックします。 (下の図の項目 #5 を参照。)
 >
 > ![Azure Portal でのカスタム ポート番号の保存][LX03]
 >
@@ -285,7 +285,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
-[Azure Container Service (ACS)]: https://azure.microsoft.com/services/container-service/
+[Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure Java デベロッパー センター]: https://azure.microsoft.com/develop/java/
 [Azure ポータル]: https://portal.azure.com/
 [Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal

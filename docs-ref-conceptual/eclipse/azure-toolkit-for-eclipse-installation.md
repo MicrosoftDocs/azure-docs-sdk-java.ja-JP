@@ -12,17 +12,24 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: Java
 ms.topic: article
-ms.date: 09/11/2017
+ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 59a8bfb6ab4db8ea8c6c9025ca3ced8a13192628
-ms.sourcegitcommit: 256044d7cbce16dcb8dc4e195d0f63c10cb44d4e
+ms.openlocfilehash: 1f06b02a4c0b23d98ecd394d42f41f7148b6c8e8
+ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installing-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse のインストール
 
-Azure Toolkit for Eclipse は、Eclipse 開発環境を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。 Azure Toolkit for Eclipse はオープン ソース プロジェクトです。 ソース コードは MIT ライセンスで <https://github.com/microsoft/azure-tools-for-java> から入手できます。
+Azure Toolkit for Eclipse は、Eclipse 開発環境を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。
+
+> [!NOTE] 
+> 
+> Azure Toolkit for Eclipse はオープン ソース プロジェクトであり、そのソース コードは、GitHub のプロジェクト サイトから MIT License で入手できます。URL は次のとおりです。 
+> 
+> <https://github.com/microsoft/azure-tools-for-java> 
+> 
 
 次の手順は、Azure Toolkit for Eclipse をインストールする方法を示しています。
 
@@ -42,17 +49,17 @@ Azure Toolkit for Eclipse は、Eclipse 開発環境を使って Azure アプリ
    
    ![Azure Toolkit for Eclipse のインストール][02]
 
-1. **Azure Toolkit for Eclipse** を展開すると、次のような項目が表示されます。
-   
-   * **Application Insights Plugin for Java**: このコンポーネントによって、アプリケーションとサーバー インスタンスに対する Azure のテレメトリ ログと分析サービスを使用できます。
-   * **Azure Access Control Services Filter**: Azure ACS を使用するアプリケーション ユーザーの認証を支援するコンポーネントです。シングル サインオンの利用形態が可能となり、ID のロジックをアプリケーションから切り離すことができます。
-   * **Azure Common Plugin**: 他のツールキット コンポーネント全般で必要となる機能を備えたコンポーネントです。
-   * **Azure Explorer for Eclipse**: 他のツールキット コンポーネント全般で必要となる機能を備えたコンポーネントです。
-   * **Azure Plugin for Eclipse with Java**: Microsoft Azure クラウド向け Java アプリケーションを Eclipse やコマンド ラインによってビルド、テスト、デプロイできるプロジェクトの開発を支援するコンポーネントです。
-   * **Azure Web Apps Plugin with Java**: Microsoft Azure Web アプリ コンテナーへの Java Web アプリケーションのデプロイを支援するコンポーネントです。
-   * **Microsoft JDBC Driver 4.2 for SQL Server**: SQL Server と Microsoft Azure SQL Database 向けに、Java Platform Enterprise Edition 8 の JDBC API を提供するコンポーネントです。
-   * **Package for Apache Qpid Client Libraries for JMS**: Apache Qpid プロジェクトの JMS クライアント ライブラリを備えたコンポーネントです。Microsoft Azure でアプリケーションから AMQP メッセージングを利用するには、このコンポーネントを使用します。
-   * **Package for Microsoft Azure Libraries for Java**: Microsoft Azure の各種サービス (ストレージ、Service Bus、サービス ランタイムなど) にアクセスするための API を備えたコンポーネントです。
+1. **Azure Toolkit for Eclipse** を展開すると、インストールされるコンポーネントの一覧が表示されます。次に例を示します。
+
+   | 機能 | 説明 | 
+   |---|---| 
+   | **Application Insights Plugin for Java** | アプリケーションとサーバー インスタンスに対する Azure のテレメトリ ログと分析サービスを使用できるようにします。 | 
+   | **Azure Common Plugin** | 他のツールキット コンポーネントで必要な一般的な機能を提供します。 | 
+   | **Azure Container Tools for Eclipse** | .WAR を Docker コンテナーとして Docker マシンに構築およびデプロイできるようにします。 | 
+   | **Azure Containers for Eclipse** | .WAR または.JAR アーティファクトを Docker コンテナーとして Azure 仮想マシンにデプロイできるようにします。 | 
+   | **Azure Explorer for Eclipse** | Azure リソースを管理するためのエクスプローラー スタイルのインターフェイスを提供します。 | 
+   | **Microsoft JDBC Driver 6.1 for SQL Server** | SQL Server と Microsoft Azure SQL Database 向けに、Java Platform Enterprise Edition 8 の JDBC API を提供します。 | 
+   | **Package for Microsoft Azure Libraries for Java** | Microsoft Azure の各種サービス (ストレージ、Service Bus、サービス ランタイムなど) にアクセスするための API を提供します。 | 
 
 1. **[次へ]** をクリックします。 (ツールキットのインストール時に異常な遅延が発生する場合は、**[Contact all update sites during install to find required software (インストール中にすべての更新サイトに接続して必要なソフトウェアを調べる)]** がオフになっていることを確認してください)。
 
@@ -74,7 +81,7 @@ Azure Toolkit for Eclipse は、Eclipse 開発環境を使って Azure アプリ
 
 ## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE [azure-toolkit-additional-resources](../includes/azure-toolkit-additional-resources.md)]
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 <!-- URL List -->
 

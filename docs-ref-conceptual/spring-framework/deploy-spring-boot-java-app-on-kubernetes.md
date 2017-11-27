@@ -13,14 +13,14 @@ ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 11/01/2017
 ms.author: asirveda;robmcm
 ms.custom: mvc
-ms.openlocfilehash: 44c20e9084d53fa366137fc191726aaa4be177f2
-ms.sourcegitcommit: 7f8538e41c833deb69c300ad3431a431136a1f3e
+ms.openlocfilehash: 7f72a0eaeb932b400cd12a3ccc43706e890aebf6
+ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 
 **[Kubernetes]** と **[Docker]** は、開発者が、コンテナーで実行されるアプリケーションのデプロイ、スケーリング、および管理を自動化することを支援するオープン ソース ソリューションです。
 
-このチュートリアルでは、これら 2 つの一般的なオープンソース テクノロジを組み合わせて Spring Boot アプリケーションを開発し、Microsoft Azure にデプロイする方法について説明します。 具体的には、アプリケーション開発で *[Spring Boot]* を、コンテナーのデプロイで *[Kubernetes]* を、アプリケーションのホストとして [Azure Container Service (ACS)] を使用します。
+このチュートリアルでは、これら 2 つの一般的なオープンソース テクノロジを組み合わせて Spring Boot アプリケーションを開発し、Microsoft Azure にデプロイする方法について説明します。 具体的には、アプリケーション開発で *[Spring Boot]* を、コンテナーのデプロイで *[Kubernetes]* を、アプリケーションのホストとして [Azure Container Service (AKS)] を使用します。
 
 ### <a name="prerequisites"></a>前提条件
 
@@ -189,7 +189,7 @@ ms.lasthandoff: 10/24/2017
 >
 > `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
 
-## <a name="create-a-kubernetes-cluster-on-acs-using-the-azure-cli"></a>Azure CLI を使用して ACS で Kubernetes クラスターを作成する
+## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Azure CLI を使用して AKS で Kubernetes クラスターを作成する
 
 1. Azure Container Service で Kubernetes クラスターを作成します。 次のコマンドは、*kubernetes* クラスターを *wingtiptoys-kubernetes* リソース グループ内に作成します。クラスター名として *wingtiptoys-containerservice* を、DNS プレフィックスとして *wingtiptoys-kubernetes* を使用します。
    ```azurecli
@@ -326,7 +326,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
-[Azure Container Service (ACS)]: https://azure.microsoft.com/services/container-service/
+[Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure Java デベロッパー センター]: https://azure.microsoft.com/develop/java/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
