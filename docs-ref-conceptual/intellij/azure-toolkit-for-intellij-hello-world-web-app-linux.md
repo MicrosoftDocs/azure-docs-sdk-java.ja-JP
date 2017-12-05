@@ -44,7 +44,7 @@ ms.lasthandoff: 11/18/2017
    
    ![新しいプロジェクトの作成][file-new-project]
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、**[Maven]**、**[maven-archetype-webapp]** の順に選択し、**[次へ]** をクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、 **maven-archetype-webapp** の順に選択し、 **[次へ]** をクリックします。
    
    ![Maven アーキタイプ Web アプリの選択][maven-archetype-webapp]
    
