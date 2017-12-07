@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 2c0bfc581b5bb033f301d5a1e632377442821392
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 421241b12d8bd9027d4bef8564e1c1ab5a01993a
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="run-a-hello-world-web-app-in-a-linux-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Linux コンテナーで Hello World Web アプリを実行する
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/18/2017
    
    ![新しいプロジェクトの作成][file-new-project]
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、 **maven-archetype-webapp** の順に選択し、 **[次へ]** をクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスで、**[Maven]**、**[maven-archetype-webapp]** の順に選択し、**[次へ]** をクリックします。
    
    ![Maven アーキタイプ Web アプリの選択][maven-archetype-webapp]
    
@@ -141,7 +141,7 @@ Docker の他のリソースについては、公式の [Docker の Web サイ�
 
 [Azure ポータル]: https://portal.azure.com/
 [Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Create Docker Registry using Azure CLI]: /azure/container-registry/container-registry-get-started-azure-cli
 

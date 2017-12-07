@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda;martinsawicki
-ms.openlocfilehash: 40d93306b840736bd7eb860933cdbfe03c82691c
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 14d9b4630546dbcb16506834678b86fa56a69c76
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ の新機能
 
@@ -85,6 +85,6 @@ Azure Toolkit for IntelliJ - April 2016 リリースでは、次の点が強化�
 [Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する]: ./azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
 [Azure Explorer for IntelliJ を使用して仮想マシンを管理する]: ./azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 
 [IntelliJ 用の HDInsight Tools プラグイン]: /azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin
