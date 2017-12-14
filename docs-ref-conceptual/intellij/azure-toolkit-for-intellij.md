@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 630bb80190b8821778d1855d5edf5f943b14d6d1
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 4b24b5c776cb951a093515de9c11c30ea97f3a50
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ
 Azure Toolkit for IntelliJ は、IntelliJ 統合開発環境 (IDE) を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。
@@ -65,7 +65,7 @@ Azure Toolkit for IntelliJ の詳細については、以下のページを参�
 
 * [JetBrains Plugins リポジトリの Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij)
 
-Azure での Java の使用の詳細については、[Azure Java デベロッパー センター](https://azure.microsoft.com/develop/java/)と [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
+Azure での Java の使用の詳細については、「[Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/)」および [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
 
 > [!NOTE]
 > 
@@ -76,7 +76,7 @@ Azure での Java の使用の詳細については、[Azure Java デベロッ�
 
 <!-- URL List -->
 
-[Azure Java Developer Center]: https://azure.microsoft.com/develop/java/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->

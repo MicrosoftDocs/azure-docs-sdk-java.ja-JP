@@ -6,21 +6,19 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Maven
 ms.assetid: 
-ms.service: container-service
+ms.service: multiple
 ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: yuwzho;robmcm
-ms.custom: 
-ms.openlocfilehash: 6c0e0e233b44b2b54e869b443edf3a255e7fbfb4
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 6e33c43d3fb4b63cff1f1c7c04cbf9523aa97770
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
 
@@ -511,7 +509,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、 [Azure Java デベロッパー センター] と[Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Spring Boot on Docker Getting Started]に関するページを参照してください。
 
@@ -525,7 +523,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure Java デベロッパー センター]: https://azure.microsoft.com/develop/java/
+[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image

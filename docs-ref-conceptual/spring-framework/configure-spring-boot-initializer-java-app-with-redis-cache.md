@@ -6,38 +6,58 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Spring Starter, Redis Cache
 ms.assetid: 
 ms.service: cache
 ms.workload: na
 ms.tgt_pltfrm: cache-redis
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: c5e9a9214762e014e463dd3277671fc56237d4a0
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Redis Cache を使用するように Spring Boot Initializer アプリを構成する方法
 
 ## <a name="overview"></a>概要
 
-**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
-
-この記事では、Azure Portal を使用した Redis キャッシュの作成と、カスタム アプリケーションを作成するための **Spring Initializr** の使用、さらに Redis キャッシュを使用してデータを保管および取得する Java Web アプリケーションの作成について説明します。
+この記事では、Azure Portal を使用した Redis Cache の作成、**[Spring Initializr]** を使用したカスタム アプリケーションの作成、Redis Cache を使用してデータを保存および取得する Java Web アプリケーションの作成について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
 この記事の手順に従うには、次の前提条件が必要です。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
-
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
-
 * [Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。
+
+## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
+
+1. <https://start.spring.io/> に移動します。
+
+1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
+
+   ![基本的な Spring Initializr オプション][SI01]
+
+   > [!NOTE]
+   >
+   > Spring Initializr では、**[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** の名前を使用してパッケージ名を作成します (例: *com.contoso.myazuredemo*)。
+   >
+
+1. 下にスクロールして **[Web]** セクションに移動し、**[Web]** チェック ボックスをオンにし、下にスクロールして **[NoSQL]** セクションに移動し、**[Redis]** チェック ボックスをオンにします。その後、ページの下部までスクロールし、**[Generate Project]\(プロジェクトの生成\)** ボタンをクリックします。
+
+   ![すべての Spring Initializr オプション][SI02]
+
+1. メッセージが表示されたら、ローカル コンピューター上のパスにプロジェクトをダウンロードします。
+
+   ![カスタム Spring Boot プロジェクトのダウンロード][SI03]
+
+1. ファイルをローカル システム上に展開したら、カスタム Spring Boot アプリケーションの編集を開始できます。
+
+   ![カスタム Spring Boot プロジェクト ファイル][SI04]
 
 ## <a name="create-a-redis-cache-on-azure"></a>Azure で Redis Cache を作成する
 
@@ -66,36 +86,11 @@ ms.lasthandoff: 11/18/2017
 
 1. キャッシュが作成されると、Azure の**ダッシュボード**のほか、**[すべてのリソース]** ブレードと **[Redis Cach]** ページにも作成したキャッシュが表示されます。 これらのいずれかの場所でキャッシュをクリックすると、そのキャッシュのプロパティ ページを開くことができます。
 
-   ![Azure ポータル][AZ04]
+   ![Azure Portal][AZ04]
 
 1. キャッシュのプロパティの一覧が含まれているページが表示されたら、**[アクセス キー]** をクリックし、キャッシュのアクセス キーをコピーします。
 
-   ![Azure ポータル][AZ05]
-
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
-
-1. <https://start.spring.io/> に移動します。
-
-1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
-
-   ![基本的な Spring Initializr オプション][SI01]
-
-   > [!NOTE]
-   >
-   > Spring Initializr では、**[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** の名前を使用してパッケージ名を作成します (例: *com.contoso.myazuredemo*)。
-   >
-
-1. 下にスクロールして **[Web]** セクションに移動し、**[Web]** チェック ボックスをオンにし、下にスクロールして **[NoSQL]** セクションに移動し、**[Redis]** チェック ボックスをオンにします。その後、ページの下部までスクロールし、**[Generate Project]\(プロジェクトの生成\)** ボタンをクリックします。
-
-   ![すべての Spring Initializr オプション][SI02]
-
-1. メッセージが表示されたら、ローカル コンピューター上のパスにプロジェクトをダウンロードします。
-
-   ![カスタム Spring Boot プロジェクトのダウンロード][SI03]
-
-1. ファイルをローカル システム上に展開したら、カスタム Spring Boot アプリケーションの編集を開始できます。
-
-   ![カスタム Spring Boot プロジェクト ファイル][SI04]
+   ![Azure Portal][AZ05]
 
 ## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a>Redis Cache を使用するようにカスタム Spring Boot を構成する
 
@@ -206,13 +201,15 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、 [Azure Java デベロッパー センター] と[Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
 Azure 上の Java での Redis Cache の使用開始の詳細については、「[Java で Azure Redis Cache を使用する方法][Redis Cache with Java]」を参照してください。
 
+**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
+
 <!-- URL List -->
 
-[Azure Java デベロッパー センター]: https://azure.microsoft.com/develop/java/
+[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

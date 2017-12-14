@@ -6,26 +6,23 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework
 ms.assetid: 
 ms.service: multiple
 ms.workload: na
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 7a4234aefd4eb33f80c1978fb84721f2dbcb2e4f
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Spring Boot アプリケーションを Azure App Service にデプロイする
 
-**[Spring Framework]** は、Java 開発者がエンタープライズ レベルのアプリケーションを作成するのに役立つオープン ソースのソリューションであり、そのプラットフォームの上に構築されたより一般的なプロジェクトの 1 つが、スタンドアロンの Java アプリケーションを作成するための簡略化されたアプローチを提供する [Spring Boot] です。
-
-このチュートリアルでは、サンプルの Spring Boot Getting Started Web アプリを作成し、それを [Azure App Service] にデプロイする方法について説明します。
+このチュートリアルでは、サンプルの [Spring Boot] Getting Started Web アプリを作成し、それを [Azure App Service] にデプロイする方法について説明します。
 
 ### <a name="prerequisites"></a>前提条件
 
@@ -199,7 +196,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、 [Azure Java デベロッパー センター] と[Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
 FTP を使用した Azure への Web アプリのデプロイの詳細については、「[FTP/S を使用した Azure App Service へのアプリのデプロイ]」を参照してください。
 
@@ -213,7 +210,7 @@ Web アプリの追加設定の構成の詳細については、「[Configure we
 
 [Azure App Service]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
-[Azure Java デベロッパー センター]: https://azure.microsoft.com/develop/java/
+[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Configure web apps in Azure App Service (Azure App Service で Web アプリを構成する)]: /azure/app-service/web-sites-configure
 [FTP/S を使用した Azure App Service へのアプリのデプロイ]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp

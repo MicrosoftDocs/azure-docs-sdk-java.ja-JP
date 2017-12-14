@@ -1,6 +1,6 @@
 ---
-title: "Azure Management Libraries for Java の使用上の概念とパターン"
-description: 
+title: "Java 用 Azure 管理ライブラリ開発者ガイド"
+description: "Java 用管理ライブラリを使用して Azure でクラウド リソースを管理する際のパターンと概念。"
 keywords: "Azure, Java, SDK, API, Maven, Gradle, 認証, active directory, サービス プリンシパル"
 author: rloutlaw
 ms.author: routlaw
@@ -12,13 +12,15 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.openlocfilehash: 052c4de1e8f9ff0ece5f36d1c3514bad8c04cfec
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
+ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="azure-management-library-concepts"></a>Azure 管理ライブラリの概念
+# <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使用した開発のパターンとベスト プラクティス 
+
+この記事では、プロジェクトで Java 用 Azure ライブラリを使用する際の一連のパターンとベスト プラクティスを示します。 これらのパターンやガイドラインに従って開発すると、管理するコードの量が減り、管理ライブラリの今後の更新時にリソースの追加や構成が容易になります。
 
 ## <a name="build-resources-through-a-fluent-interface"></a>fluent インターフェイスを通じたリソースの作成
 
@@ -75,7 +77,7 @@ for (VirtualMachine vm : vms) {
 
 ## <a name="actionable-verbs"></a>アクション可能な動詞
 
-名前に動詞を含んだメソッドを実行すると、Azure で何らかのアクションが直ちに実行されます。 これらのメソッドは同期的に実行されるため、現在のスレッドで実行されている処理は、メソッドが完了するまでブロックされます。 
+名前に動詞を含んだメソッドを実行すると、Azure で何らかのアクションが直ちに実行されます。 これらのメソッドは同期的に動作するため、現在のスレッドで実行されている処理は、メソッドが完了するまでブロックされます。 
 
 | 動詞   |  使用例 |
 |--------|---------------|

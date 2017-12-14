@@ -6,39 +6,34 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: 
-keywords: Spring, Spring Boot, Spring Framework, Spring Starter, Cosmos DB, DocumentDB
 ms.assetid: 
 ms.service: cosmos-db
 ms.workload: data-services
 ms.tgt_pltfrm: multiple
 ms.devlang: java
 ms.topic: article
-ms.date: 11/01/2017
+ms.date: 12/01/2017
 ms.author: robmcm;yungez;kevinzha
-ms.openlocfilehash: a80ac6be1064e40cd0b693ac4e6c0b1a9723cfc4
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.openlocfilehash: 06553920aebb5f27e4d02279e7024d6766e0be94
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-azure-cosmos-db-documentdb-api"></a>Azure Cosmos DB DocumentDB API で Spring Boot Starter を使用する方法
 
 ## <a name="overview"></a>概要
 
-**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
-
 Azure Cosmos DB は、開発者が DocumentDB、MongoDB、Graph、Table API などのさまざまな標準 API を使用してデータを操作できるようにするグローバル分散型データベース サービスです。 Microsoft の Spring Boot Starter を使用すると、開発者は、DocumentDB API を使用して Azure Cosmos DB と簡単に統合できる Spring Boot アプリケーションを使用できます。
 
-この記事では、Azure Portal を使用して Azure Cosmos DB を作成してから、**Spring Initializr** を使用してカスタム Java アプリケーションを作成し、さらにカスタム アプリケーションに Spring Boot Starter 機能を追加して、DocumentDB API を使用して Azure Cosmos DB にデータを格納またはデータを取得する方法を示します。
+この記事では、Azure Portal を使用して Azure Cosmos DB を作成する方法、**[Spring Initializr]** を使用してカスタム Java アプリケーションを作成する方法、カスタム アプリケーションに Spring Boot Starter 機能を追加し、DocumentDB API を使用して Azure Cosmos DB にデータを格納またはデータを取得する方法を示します。
 
 ## <a name="prerequisites"></a>前提条件
 
 この記事の手順に従うには、次の前提条件が必要です。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
-
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
-
 * [Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。
 
 ## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a>Azure Portal を使用して Azure Cosmos DB を作成する
@@ -310,12 +305,14 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、 [Azure Java デベロッパー センター] と[Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+
+**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
 
 <!-- URL List -->
 
 [Azure Cosmos DB のドキュメント]: /azure/cosmos-db/
-[Azure Java デベロッパー センター]: https://azure.microsoft.com/develop/java/
+[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Build a DocumentDB API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/

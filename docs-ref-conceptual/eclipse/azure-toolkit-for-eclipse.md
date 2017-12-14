@@ -14,11 +14,11 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: f94900ab5fa25a5d9dac19f665705b970db7c8b7
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
+ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse
 Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。
@@ -35,7 +35,7 @@ Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) を使って Az
 
 * [Azure Toolkit for Eclipse のサインイン手順](azure-toolkit-for-eclipse-sign-in-instructions.md)
 
-* [Eclipse で Azure 用の Hello World Web アプリを作成する](/azure/app-service-web/app-service-web-eclipse-create-hello-world-web-app)
+* [Eclipse で Azure 用の Hello World Web アプリを作成する](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
 ## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a>Java プロジェクトでの Azure Toolkit for Eclipse の使用
 次の記事では、Azure Toolkit for Eclipse を使用して Azure 機能を Java プロジェクトに追加する方法について説明します。
@@ -65,7 +65,7 @@ Azure Toolkit for Eclipse の詳細については、以下のページを参照
 
 * [Eclipse Marketplace の Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
 
-Azure での Java の使用の詳細については、[Azure Java デベロッパー センター](https://azure.microsoft.com/develop/java/)と [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
+Azure での Java の使用の詳細については、「[Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/)」および [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
 
 <!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
 
@@ -76,7 +76,7 @@ Azure での Java の使用の詳細については、[Azure Java デベロッ�
 
 <!-- URL List -->
 
-[Azure Java Developer Center]: https://docs.microsoft.com/java/azure
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->

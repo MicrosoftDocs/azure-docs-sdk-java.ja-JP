@@ -1,39 +1,37 @@
 ---
-title: "Java 用 Azure ライブラリの概要"
-description: "Azure クラウド リソースを作成し、それらのリソースに接続して Java アプリケーションで使用する方法について説明します。"
+title: "Intellij を使用して Java 用 Azure ライブラリの使用を開始する"
+description: "ご利用の Azure サブスクリプションで Java 用 Azure ライブラリを使用するための基本的な事柄について説明します。"
 keywords: "Azure, Java, SDK, API, 認証, 概要"
-author: rloutlaw
-ms.author: routlaw
-manager: douge
-ms.date: 04/16/2017
+author: roygara
+ms.author: v-rogara
+manager: timlt
+ms.date: 10/30/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: multiple
-ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 69c75984f6274b5423614bd51c40957d3d509802
-ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
+ms.openlocfilehash: 1e10a7c5a46ed0e36143fd4a99decc037c04e1fe
+ms.sourcegitcommit: fcf1189ede712ae30f8c7626bde50c9b8bb561bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使用したクラウド開発の開始
+# <a name="get-started-with-the-azure-libraries-using-intellij"></a>Intellij を使用して Azure ライブラリの使用を開始する
 
-このガイドでは、Java での Azure 開発用の開発環境を設定する手順について説明します。 Azure リソースをいくつか作成し、それらのリソースに接続して基本的なタスク (ファイルのアップロードや Web アプリケーションのデプロイなど) を実行します。 作業が完了すると、独自の Java アプリケーションで Azure サービスの使用を開始できるようになります。
+このガイドでは、開発環境を設定し、Java 用 Azure ライブラリを使用する手順について説明します。 Azure で認証するためのサービス プリンシパルを作成し、サブスクリプションの Azure リソースを作成および使用するサンプル コードを実行します。 Azure での Java 開発で Intellij の使用は任意です。 Maven が統合された IDE であれば動作します。 IDE を使用しない場合は、Maven を使用してコマンド ラインからコードを実行することもできます。
 
 ## <a name="prerequisites"></a>前提条件
 
 - Azure アカウント。 所有していない場合は、[無料試用版を入手](https://azure.microsoft.com/free/)してください。
 - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) または [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。
-- [Java 8](https://www.azul.com/downloads/zulu/) (Azure Cloud Shell に付属)
-- [Maven 3](http://maven.apache.org/download.cgi) (Azure Cloud Shell に付属)
+- 最新の安定バージョンの [Intellij](https://www.jetbrains.com/idea/)。
 
 ## <a name="set-up-authentication"></a>認証の設定
 
 このチュートリアルのサンプル コードを実行する Java アプリケーションには、Azure サブスクリプションの読み取りと作成のアクセス許可が必要です。 サービス プリンシパルを作成し、その資格情報で動作するようにアプリケーションを構成してください。 サービス プリンシパルによって、自分の ID に関連付けられた非対話型のアカウントを作成し、アプリの実行に必要な権限だけを付与することができます。
 
-[Azure CLI 2.0 を使ってサービス プリンシパルを作成](/cli/azure/create-an-azure-service-principal-azure-cli)し、その出力をキャプチャしてください。 password 引数には、`MY_SECURE_PASSWORD` ではなく、[セキュリティで保護されたパスワード](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)を指定します。 パスワードは 8 ～ 16 文字にし、次の 4 つの条件のうち少なくとも 3 つの条件に一致する必要があります。
+[サービス プリンシパルを作成](/cli/azure/create-an-azure-service-principal-azure-cli)して、アカウントの資格情報を直接使用せずに、サブスクリプションのリソースを作成および更新するアクセス許可をコードに付与します。 出力を必ずキャプチャしてください。 password 引数には、`MY_SECURE_PASSWORD` ではなく、[セキュリティで保護されたパスワード](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)を指定します。 パスワードは 8 ～ 16 文字にし、次の 4 つの条件のうち少なくとも 3 つの条件に一致する必要があります。
 
 * 小文字が含まれている
 * 大文字が含まれている
@@ -78,9 +76,9 @@ graphURL=https\://graph.windows.net/
 - key: サービス プリンシパルの出力から得られる *password* 値を使用します。
 - tenant: サービス プリンシパルの出力から得られる *tenant* 値を使用します。
 
-このファイルは、コードで読み取ることができるシステム上の安全な場所に保存してください。 このファイルは今後のコードに使用できるため、この記事のアプリケーションの外部の場所に保存することをお勧めします。
+このファイルは、コードで読み取ることができるシステム上の安全な場所に保存してください。 このファイルは今後のコードに使用できるため、この記事のアプリケーションの外部の場所に保存することをお勧めします。 
 
-ご利用のシェルから、認証ファイルの完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。   
+ご利用のシェルから、認証ファイルの完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。  
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
@@ -97,18 +95,16 @@ Windows 環境で作業している場合は、システムのプロパティに
 > [!NOTE]
 > このガイドでは、Maven ビルド ツールを使って、サンプル コードをビルドして実行していますが、Java 用 Azure ライブラリは他のビルド ツール (Gradle など) で使用することもできます。 
 
-コマンド ラインを使って、ご利用のシステム上の新しいディレクトリに Maven プロジェクトを作成します。
+Intellij を開き、[File]\(ファイル\)、[New]\(新規\)、[Project...]\(プロジェクト...\) の順に選択します。次の画面に進みます。
 
-```
-mkdir java-azure-test
-cd java-azure-test
-mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \ 
--DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-```
+groupID として「com.fabrikam」と入力し、任意の artifactID を入力します。
 
-これにより、基本的な Maven プロジェクトが `testAzureApp` フォルダーに作成されます。 プロジェクトの `pom.xml` に次のエントリを追加して、このチュートリアルのサンプル コードで使用するライブラリをインポートします。
+最後の画面まで進み、プロジェクトの作成を完了します。
+
+次に、pom.xml ファイルを開きます。 次のコードを追加します。
 
 ```XML
+<dependencies>
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure</artifactId>
@@ -124,35 +120,34 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
     <artifactId>mssql-jdbc</artifactId>
     <version>6.2.1.jre8</version>
 </dependency>
+</dependencies>
 ```
 
-[maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) を使ってサンプルを実行するために、最上位の `project` 要素に `build` エントリを追加します。
-
-```XML
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <configuration>
-                <mainClass>com.fabrikam.testAzureApp.AzureApp</mainClass>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
- ```
+pom.xml を保存します。
    
+## <a name="install-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ をインストールする
+
+Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](azure-toolkit-for-intellij-installation.md) が必要です。 インストール プロセスの概要を次に示します。 詳しい手順については、「[Azure Toolkit for IntelliJ のインストール](azure-toolkit-for-intellij-installation.md)」をご覧ください。
+
+**[File]\(ファイル\)** メニューを選択し、**[Settings...]\(設定...\)** を選択します。 
+
+**[Browse repositories...]\(リポジトリを参照...\)** を選択し、"Azure" を検索して、**Azure Toolkit for Intellij** をインストールします。
+
+Intellij を再起動します。
+
 ## <a name="create-a-linux-virtual-machine"></a>Linux 仮想マシンの作成
 
 プロジェクトの `src/main/java` ディレクトリに `AzureApp.java` という名前の新しいファイルを作成し、次のコード ブロックを貼り付けます。 `userName` 変数と `sshKey` 変数は、ご利用のマシンの実際の値に置き換えてください。 このコードによって、米国東部 Azure リージョンで実行されるリソース グループ `sampleResourceGroup` に、`testLinuxVM` という名前の新しい Linux VM が作成されます。
 
+`sshkey` を作成するには、Azure Cloud Shell を開き、「`ssh-keygen -t rsa -b 2048`」と入力します。 ファイル名を入力し、.public ファイルにアクセスして、次のコードで使用するキーを取得します。キーをコピーして変数 `sshKey` に貼り付けます。
+
 ```java
-package com.fabrikam.AzureApp;
 
 import com.microsoft.azure.management.Azure;
 import com.microsoft.azure.management.compute.VirtualMachine;
 import com.microsoft.azure.management.compute.KnownLinuxVirtualMachineImage;
 import com.microsoft.azure.management.compute.VirtualMachineSizeTypes;
+import com.microsoft.azure.management.appservice.PricingTier;
 import com.microsoft.azure.management.appservice.WebApp;
 import com.microsoft.azure.management.storage.StorageAccount;
 import com.microsoft.azure.management.storage.SkuName;
@@ -172,6 +167,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 
 public class AzureApp {
 
@@ -212,11 +208,6 @@ public class AzureApp {
 }
 ```
 
-コマンド ラインでサンプルを実行します。
-
-```
-mvn compile exec:java
-```
 
 コンソールには、REST の要求と応答がいくつか表示されます。これは、SDK が内部的に Azure REST API を呼び出して、仮想マシンとそのリソースを構成しているためです。 プログラムの実行が完了したら、サブスクリプション内の仮想マシンを Azure CLI 2.0 で確認します。
 
@@ -266,16 +257,11 @@ az group delete --name sampleVmResourceGroup
 
 先ほどと同様、このコードも Maven を使用して実行します。
 
-```
-mvn clean compile exec:java
-```
-
 ブラウザーを開いてアプリケーションにアクセスします。CLI から次のコマンドを入力してください。
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
-
 デプロイを検証したら、Web アプリとプランをサブスクリプションから削除します。
 
 ```azurecli-interactive
@@ -417,10 +403,6 @@ public static void main(String[] args) {
 
 コマンド ラインでサンプルを実行します。
 
-```
-mvn clean compile exec:java
-```
-
 ストレージ アカウント内の `helloazure.txt` ファイルは、Azure Portal または [Azure ストレージ エクスプローラー](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)から参照することができます。
 
 CLI で次のコマンドを入力して、ストレージ アカウントをクリーンアップします。
@@ -431,7 +413,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="explore-more-samples"></a>その他のサンプルを探す
 
-Azure Management Libraries for Java を使ってリソースを管理したりタスクを自動化したりする方法をさらに詳しく知るには、[仮想マシン](java-sdk-azure-virtual-machine-samples.md)、[Web アプリ](java-sdk-azure-web-apps-samples.md)、[SQL データベース](java-sdk-azure-sql-database-samples.md)に関するサンプル コードを参照してください。
+Azure Management Libraries for Java を使ってリソースを管理したりタスクを自動化したりする方法をさらに詳しく知るには、[仮想マシン](../java-sdk-azure-virtual-machine-samples.md)、[Web アプリ](../java-sdk-azure-web-apps-samples.md)、[SQL データベース](../java-sdk-azure-sql-database-samples.md)に関するサンプル コードを参照してください。
 
 ## <a name="reference-and-release-notes"></a>リファレンスとリリース ノート
 
