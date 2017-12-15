@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table._entity_resolver
+    id: _entity_resolver
+    parent: com.microsoft.azure.storage.table
+    children:
+      - 'com.microsoft.azure.storage.table._entity_resolver.resolve(String,String,Date,HashMap<String, EntityProperty>,String)'
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    langs:
+      - java
+    name: EntityResolver<T>
+    nameWithType: EntityResolver<T>
+    fullName: com.microsoft.azure.storage.table.EntityResolver<T>
+    type: Interface
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/EntityResolver.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/EntityResolver.java
+      startLine: 36
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
+      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public interface EntityResolver<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>
+  - uid: 'com.microsoft.azure.storage.table._entity_resolver.resolve(String,String,Date,HashMap<String, EntityProperty>,String)'
+    id: 'resolve(String,String,Date,HashMap<String, EntityProperty>,String)'
+    parent: com.microsoft.azure.storage.table._entity_resolver
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    langs:
+      - java
+    name: 'resolve(String partitionKey, String rowKey, Date timeStamp, HashMap<String, EntityProperty> properties, String etag)'
+    nameWithType: 'EntityResolver<T>.resolve(String partitionKey, String rowKey, Date timeStamp, HashMap<String, EntityProperty> properties, String etag)'
+    fullName: 'T com.microsoft.azure.storage.table.EntityResolver<T>.resolve(String partitionKey, String rowKey, Date timeStamp, HashMap<String, EntityProperty> properties, String etag)'
+    overload: com.microsoft.azure.storage.table._entity_resolver.resolve*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/EntityResolver.java
+      startLine: 58
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>指定したテーブル エンティティのデータの予測を含む型の新しいオブジェクト インスタンスへの参照を返します。</p>
+      <p></p>
+    syntax:
+      content: 'public T resolve(String partitionKey, String rowKey, Date timeStamp, HashMap<String, EntityProperty> properties, String etag)'
+      parameters:
+        - id: partitionKey
+          type: '26831127'
+          description: <p>A<code>String</code>エンティティの PartitionKey 値を格納します。 </p>
+        - id: rowKey
+          type: '26831127'
+          description: <p>A<code>String</code>エンティティの RowKey 値を格納します。 </p>
+        - id: timeStamp
+          type: '12977444'
+          description: <p>A<code>java.util.Date</code>エンティティのタイムスタンプ値を格納します。 </p>
+        - id: properties
+          type: 292b5718com.microsoft.azure.storage.table._entity_propertya08ddfce
+          description: <p><code>java.util.HashMap</code>の<code>String</code>プロパティの名前を<xref uid="com.microsoft.azure.storage.table._entity_property" data-throw-if-not-resolved="false">EntityProperty</xref>テーブル エンティティのデータを表すデータ型と値のペア。 </p>
+        - id: etag
+          type: '26831127'
+          description: <p>A<code>String</code>エンティティの Etag が含まれています。 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>型のオブジェクト インスタンスへの参照を<code>T</code>テーブル エンティティのパラメーターの投影として構築します。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、操作中にエラーが発生します。 </p>
+references:
+  - uid: 8ce1ecb9
+    spec.java:
+      - name: T
+        fullName: T
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: '12977444'
+    spec.java:
+      - name: Date
+        fullName: Date
+  - uid: 292b5718com.microsoft.azure.storage.table._entity_propertya08ddfce
+    spec.java:
+      - name: 'HashMap<String, '
+        fullName: 'HashMap<String, '
+      - uid: com.microsoft.azure.storage.table._entity_property
+        name: EntityProperty
+        fullName: com.microsoft.azure.storage.table.EntityProperty
+        href: com.microsoft.azure.storage.table._entity_property.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.table._entity_resolver.resolve*
+    name: resolve
+    nameWithType: EntityResolver<T>.resolve
+    fullName: T com.microsoft.azure.storage.table.EntityResolver<T>.resolve
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._entity_property
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_property.yml
+    name: EntityProperty
+    nameWithType: EntityProperty
+    fullName: com.microsoft.azure.storage.table.EntityProperty
+    type: Class
+    summary: "<p>テーブル エンティティの単一の型指定されたプロパティ値を表すクラス。 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>ストアのデータ型として、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>です。 可能性のあるオブジェクトの型がプリミティブ型ではなく、値がシリアル化およびとして格納されている、します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>のサポートされている値の型のオーバー ロードされたコンス トラクターとメソッドのオーバー ロードを提供します。 コンス トラクターまたはメソッドのセットの各オーバー ロードされた、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>とパラメーターの型に基づいて、適切な値をシリアル化します。 </p>\n\n<p>いずれかを使用して、<em>型</em>逆シリアル化する方法、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>として適切な Java の型。 メソッドがスローされます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ParseException</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>場合、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> Java の型として逆シリアル化することはできません。 </p>"
+    syntax:
+      content: public class EntityProperty
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: com.microsoft.azure.storage.table._entity_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    name: EntityResolver<T>
+    nameWithType: EntityResolver<T>
+    fullName: com.microsoft.azure.storage.table.EntityResolver<T>
+    type: Interface
+    summary: |-
+      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
+      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p></p>
+    syntax: *ref_1

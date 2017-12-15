@@ -1,0 +1,362 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table
+    id: table
+    children:
+      - com.microsoft.azure.storage.table._cloud_table
+      - com.microsoft.azure.storage.table._cloud_table_client
+      - com.microsoft.azure.storage.table._dynamic_table_entity
+      - com.microsoft.azure.storage.table._edm_type
+      - com.microsoft.azure.storage.table._encrypt
+      - com.microsoft.azure.storage.table._entity_property
+      - com.microsoft.azure.storage.table._entity_resolver
+      - com.microsoft.azure.storage.table._ignore
+      - com.microsoft.azure.storage.table._query_table_operation
+      - com.microsoft.azure.storage.table._shared_access_table_permissions
+      - com.microsoft.azure.storage.table._shared_access_table_policy
+      - com.microsoft.azure.storage.table._store_as
+      - com.microsoft.azure.storage.table._table_batch_operation
+      - com.microsoft.azure.storage.table._table_encryption_policy
+      - com.microsoft.azure.storage.table._table_entity
+      - com.microsoft.azure.storage.table._table_operation
+      - com.microsoft.azure.storage.table._table_payload_format
+      - com.microsoft.azure.storage.table._table_permissions
+      - com.microsoft.azure.storage.table._table_query
+      - com.microsoft.azure.storage.table._table_query._operators
+      - com.microsoft.azure.storage.table._table_query._query_comparisons
+      - com.microsoft.azure.storage.table._table_request_options
+      - com.microsoft.azure.storage.table._table_request_options._encryption_resolver
+      - com.microsoft.azure.storage.table._table_request_options._property_resolver
+      - com.microsoft.azure.storage.table._table_result
+      - com.microsoft.azure.storage.table._table_service_entity
+      - com.microsoft.azure.storage.table._table_service_exception
+    href: com.microsoft.azure.storage.table.yml
+    langs:
+      - java
+    name: com.microsoft.azure.storage.table
+    nameWithType: com.microsoft.azure.storage.table
+    fullName: com.microsoft.azure.storage.table
+    type: Namespace
+    source:
+      remote:
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/CloudTable.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/CloudTable.java
+      startLine: 14
+    syntax:
+      content: package com.microsoft.azure.storage.table
+references:
+  - uid: com.microsoft.azure.storage.table._cloud_table
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._cloud_table.yml
+    name: CloudTable
+    nameWithType: CloudTable
+    fullName: com.microsoft.azure.storage.table.CloudTable
+    type: Class
+    summary: <p>Microsoft Azure テーブル サービスでテーブルを表します。 </p>
+    syntax:
+      content: public class CloudTable
+  - uid: com.microsoft.azure.storage.table._cloud_table_client
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._cloud_table_client.yml
+    name: CloudTableClient
+    nameWithType: CloudTableClient
+    fullName: com.microsoft.azure.storage.table.CloudTableClient
+    type: Class
+    summary: |-
+      <p>Microsoft Azure テーブル サービスにアクセスするためには、サービス クライアントを提供します。 </p>
+      <p><xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クラスは、テーブル サービスのエンドポイントのベース URI およびストレージ アカウントにアクセスするための資格情報をカプセル化しを実行するメソッドと同様に作成、削除、一覧、およびテーブルを照会する方法を提供操作とテーブル エンティティに対するクエリ。 これらのメソッドは、要求を作成し、返される結果を取得する記憶域サービスの REST API 操作を呼び出します。 </p>
+      <p>テーブル サービスのエンドポイントは、ストレージ アカウントの DNS 名を含む、テーブル サービス リソースのベース URI を示します。 <br /><br />
+
+       詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">テーブル サービス リソースのアドレス指定</ulink>です。 </p>
+
+      <p>資格情報は、ストレージ アカウント名と、キー、または共有アクセス署名の組み合わせにすることができます。 詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">ストレージ アカウントへのアクセスの認証</ulink>です。 </p>
+    syntax:
+      content: public class CloudTableClient extends ServiceClient
+  - uid: com.microsoft.azure.storage.table._dynamic_table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._dynamic_table_entity.yml
+    name: DynamicTableEntity
+    nameWithType: DynamicTableEntity
+    fullName: com.microsoft.azure.storage.table.DynamicTableEntity
+    type: Class
+    summary: <p>A <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>呼び出し元のエンティティのプロパティ マップに直接アクセスを許可する型。 このクラスは拡張<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>をシリアル化と逆シリアル化のリフレクションの使用を排除します。 </p>
+    syntax:
+      content: public class DynamicTableEntity extends TableServiceEntity
+  - uid: com.microsoft.azure.storage.table._edm_type
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._edm_type.yml
+    name: EdmType
+    nameWithType: EdmType
+    fullName: com.microsoft.azure.storage.table.EdmType
+    type: Enum
+    summary: |-
+      <p>Open Data Protocol (OData) で Entity Data Model (EDM) のプリミティブ型を表すために使用する列挙です。 EDM は、OData サービスで使用される基になる抽象データ モデルです。 <xref uid="com.microsoft.azure.storage.table._edm_type" data-throw-if-not-resolved="false">EdmType</xref>列挙が含まれています、 <xref uid="com.microsoft.azure.storage.table._edm_type.parse(final String)" data-throw-if-not-resolved="false">parse(String)</xref> EDM データ型に変換するメソッドが列挙型に名前し、上書き、 <xref uid="com.microsoft.azure.storage.table._edm_type.toString()" data-throw-if-not-resolved="false">toString()</xref>メソッドを生成するために、EDM データ型の名前。 </p>
+      <p>OData の詳細については、次を参照してください。、 <ulink url="http://www.odata.org/">Open Data Protocol</ulink> web サイトです。 </p>
+      <p>使用できる EDM プリミティブ データ型と名の概要については、次を参照してください。、<ulink url="http://www.odata.org/developers/protocols/overview#AbstractTypeSystem">プリミティブ データ型</ulink>のセクションで、 <ulink url="http://www.odata.org/developers/protocols/overview">OData プロトコルの概要</ulink>です。 </p>
+      <p>OData によってサポートされるプリミティブ型の定義に使用される抽象型システムがで詳細に定義されている<ulink url="http://msdn.microsoft.com/en-us/library/dd541474.aspx">MC-CSDL</ulink>です。 </p>
+    syntax:
+      content: public enum EdmType
+  - uid: com.microsoft.azure.storage.table._encrypt
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._encrypt.yml
+    name: Encrypt
+    nameWithType: Encrypt
+    fullName: com.microsoft.azure.storage.table.Encrypt
+    type: Interface
+    summary: |-
+      <p>エンティティ プロパティを暗号化するかどうかを示すために使用できるカスタム属性を表します。 この注釈を使用して、setter メソッドによって保存されたデータを暗号化するかどうかを指定するか、実装するクラスの get アクセス操作子メソッドによって取得されたデータを復号化<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public interface Encrypt
+  - uid: com.microsoft.azure.storage.table._entity_property
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_property.yml
+    name: EntityProperty
+    nameWithType: EntityProperty
+    fullName: com.microsoft.azure.storage.table.EntityProperty
+    type: Class
+    summary: "<p>テーブル エンティティの単一の型指定されたプロパティ値を表すクラス。 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>ストアのデータ型として、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>です。 可能性のあるオブジェクトの型がプリミティブ型ではなく、値がシリアル化およびとして格納されている、します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>のサポートされている値の型のオーバー ロードされたコンス トラクターとメソッドのオーバー ロードを提供します。 コンス トラクターまたはメソッドのセットの各オーバー ロードされた、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>とパラメーターの型に基づいて、適切な値をシリアル化します。 </p>\n\n<p>いずれかを使用して、<em>型</em>逆シリアル化する方法、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>として適切な Java の型。 メソッドがスローされます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ParseException</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>場合、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> Java の型として逆シリアル化することはできません。 </p>"
+    syntax:
+      content: public class EntityProperty
+  - uid: com.microsoft.azure.storage.table._entity_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    name: EntityResolver<T>
+    nameWithType: EntityResolver<T>
+    fullName: com.microsoft.azure.storage.table.EntityResolver<T>
+    type: Interface
+    summary: |-
+      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
+      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p></p>
+    syntax:
+      content: public interface EntityResolver<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>
+  - uid: com.microsoft.azure.storage.table._ignore
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._ignore.yml
+    name: Ignore
+    nameWithType: Ignore
+    fullName: com.microsoft.azure.storage.table.Ignore
+    type: Interface
+    summary: |-
+      <p>注釈リフレクションによってプロパティをシリアル化または逆の使用を防ぐためのメソッドに設定します。 実装するクラスのメソッドに注釈を適用<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>させるはリフレクション ベースのシリアル化および逆シリアル化中に無視されます。 ドキュメントを参照して<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>詳細についてはリフレクション ベースのシリアル化および逆シリアル化を使用します。</p>
+      <p></p>
+    syntax:
+      content: public interface Ignore
+  - uid: com.microsoft.azure.storage.table._query_table_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._query_table_operation.yml
+    name: QueryTableOperation
+    nameWithType: QueryTableOperation
+    fullName: com.microsoft.azure.storage.table.QueryTableOperation
+    type: Class
+    summary: <p>拡張するクラス<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>を 1 つのテーブル エンティティを取得するクエリを実装します。 実行する、 <xref uid="com.microsoft.azure.storage.table._query_table_operation" data-throw-if-not-resolved="false">QueryTableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 直接、またはの一部として、この操作を実行することができます、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._query_table_operation" data-throw-if-not-resolved="false">QueryTableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax:
+      content: public class QueryTableOperation extends TableOperation
+  - uid: com.microsoft.azure.storage.table._shared_access_table_permissions
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._shared_access_table_permissions.yml
+    name: SharedAccessTablePermissions
+    nameWithType: SharedAccessTablePermissions
+    fullName: com.microsoft.azure.storage.table.SharedAccessTablePermissions
+    type: Enum
+    summary: <p>共有アクセス テーブル ポリシーのアクセス許可のセットを指定します。 </p>
+    syntax:
+      content: public enum SharedAccessTablePermissions
+  - uid: com.microsoft.azure.storage.table._shared_access_table_policy
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._shared_access_table_policy.yml
+    name: SharedAccessTablePolicy
+    nameWithType: SharedAccessTablePolicy
+    fullName: com.microsoft.azure.storage.table.SharedAccessTablePolicy
+    type: Class
+    summary: <p>開始時刻、有効期限、および共有アクセス署名のアクセス許可を指定する共有アクセス ポリシーを表します。 </p>
+    syntax:
+      content: public class SharedAccessTablePolicy extends SharedAccessPolicy
+  - uid: com.microsoft.azure.storage.table._store_as
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._store_as.yml
+    name: StoreAs
+    nameWithType: StoreAs
+    fullName: com.microsoft.azure.storage.table.StoreAs
+    type: Interface
+    summary: |-
+      <p>注釈名プロパティをオーバーライドするために使用がシリアル化されでリフレクションを使用して逆シリアル化します。 この注釈を使用して、set アクセス操作子メソッドによって保存または実装するクラスの get アクセス操作子メソッドによって取得されたデータに関連付けるプロパティ名を指定<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>リフレクション ベースのシリアル化と逆シリアル化を使用します。 名前"PartitionKey"、"RowKey"、"Timestamp"、"Etag"は予約されている場合は無視されますが、注釈設定することに注意してください。 </p>
+      <p>例: </p>
+      <p></p>
+      <p></p>
+      <p>この例では、メソッドを取得し、エンティティ プロパティの設定の名前付け方法<em>ObjectPropertyName</em> 、既定のケースを取得し、名前付きエンティティのプロパティを設定する注釈ことができます<em>EntityPropertyName</em>です。 ドキュメントを参照して<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>詳細についてはリフレクション ベースのシリアル化および逆シリアル化を使用します。</p>
+      <p></p>
+    syntax:
+      content: public interface StoreAs
+  - uid: com.microsoft.azure.storage.table._table_batch_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    name: TableBatchOperation
+    nameWithType: TableBatchOperation
+    fullName: com.microsoft.azure.storage.table.TableBatchOperation
+    type: Class
+    summary: |-
+      <p>バッチ操作を表すクラス。 呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。 </p>
+      <p>バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。 取得操作のバッチには、他の操作を含めることはできません。 バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。 </p>
+    syntax:
+      content: public class TableBatchOperation
+  - uid: com.microsoft.azure.storage.table._table_encryption_policy
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_encryption_policy.yml
+    name: TableEncryptionPolicy
+    nameWithType: TableEncryptionPolicy
+    fullName: com.microsoft.azure.storage.table.TableEncryptionPolicy
+    type: Class
+    summary: <p>Azure テーブル エンティティのエンベロープの暗号化/復号化に使用されるテーブルの暗号化ポリシーを表します。 </p>
+    syntax:
+      content: public class TableEncryptionPolicy
+  - uid: com.microsoft.azure.storage.table._table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_entity.yml
+    name: TableEntity
+    nameWithType: TableEntity
+    fullName: com.microsoft.azure.storage.table.TableEntity
+    type: Interface
+    summary: "<p>テーブルのエンティティ型に必要なインターフェイスです。 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。 実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。 </p>\n<p>ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。 使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。 また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。 </p>\n\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。 </p>\n\n<p>実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。 クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。 </p>\n<p></p>"
+    syntax:
+      content: public interface TableEntity
+  - uid: com.microsoft.azure.storage.table._table_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    name: TableOperation
+    nameWithType: TableOperation
+    fullName: com.microsoft.azure.storage.table.TableOperation
+    type: Class
+    summary: |-
+      <p>1 つのテーブル操作を表すクラス。 </p>
+      <p>構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。 実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax:
+      content: public class TableOperation
+  - uid: com.microsoft.azure.storage.table._table_payload_format
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_payload_format.yml
+    name: TablePayloadFormat
+    nameWithType: TablePayloadFormat
+    fullName: com.microsoft.azure.storage.table.TablePayloadFormat
+    type: Enum
+    summary: <p>テーブルに対してサポートされているペイロード形式をについて説明します。 </p>
+    syntax:
+      content: public enum TablePayloadFormat
+  - uid: com.microsoft.azure.storage.table._table_permissions
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_permissions.yml
+    name: TablePermissions
+    nameWithType: TablePermissions
+    fullName: com.microsoft.azure.storage.table.TablePermissions
+    type: Class
+    summary: <p>テーブルに対する権限を表します。 </p>
+    syntax:
+      content: public class TablePermissions extends Permissions<SharedAccessTablePolicy>
+  - uid: com.microsoft.azure.storage.table._table_query
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: TableQuery<T>
+    nameWithType: TableQuery<T>
+    fullName: com.microsoft.azure.storage.table.TableQuery<T>
+    type: Class
+    summary: |-
+      <p>指定されたテーブルに対するクエリを表すクラス。 A <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスは、クエリが実行されるときに使用するクエリ パラメーターを集計します。 いずれか、またはメソッドの<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クエリの実行に呼び出す必要があります。 パラメーターはエンコードされ、テーブルのクエリを実行すると、サーバーに渡されます。 </p>
+      <p>Fluent の構文を使用してテーブルのクエリを作成する、<xref uid="com.microsoft.azure.storage.table._table_query.from(final Class&lt;T&gt;)" data-throw-if-not-resolved="false">から</xref>静的ファクトリ メソッドと<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>、<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>、および<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>ミューテーター メソッド各は、1 つの式にチェーンできるオブジェクトへの参照を返します。 使用して、 <xref uid="" data-throw-if-not-resolved="false">from(Class)</xref>の指定されたエンティティを名前付きのテーブルで実行されるインスタンスを作成するファクトリ メソッドを静的クラス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>型を実装します。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>エンティティのフィルター式を指定するメソッドが返されます。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>を返すテーブル エンティティのプロパティを指定します。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>に、クエリによって返されるエンティティの数を制限する方法です。 注実行の順序で発生した最後で何も禁止されているに保存するのでの値を複数回これらのメソッドを呼び出すことです。 </p>
+      <p>例として、fluent 構文を使用してテーブル クエリを構築する可能性があります。 </p>
+      <p></p>
+      <p>この例は、すべてのエンティティが PartitionKey 値"ProductsMNO"であり RowKey 値より大きいか等しい「ナプキン」には、共通プロパティのみを選択すると、エンティティに一致する最初の 25 が要求の"Products"テーブルにクエリを作成し、プロパティが"InventoryCount"という名前し、そのまま返します<xref uid="com.microsoft.azure.storage.table._dynamic_table_entity" data-throw-if-not-resolved="false">DynamicTableEntity</xref>オブジェクト。 </p>
+      <p>フィルター式で使用するため、<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>メソッドまたは<xref uid="com.microsoft.azure.storage.table._table_query.setFilterString(final String)" data-throw-if-not-resolved="false">setFilterString</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid="com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)" data-throw-if-not-resolved="false">generateFilterCondition</xref>メソッドと<xref uid="com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)" data-throw-if-not-resolved="false">combineFilters</xref>で定義されている比較演算子を使用して、メソッド<xref uid="" data-throw-if-not-resolved="false">QueryComparisons</xref>と論理演算子で定義されている<xref uid="" data-throw-if-not-resolved="false">演算子</xref>. プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 </p>
+      <p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx">クエリを実行するテーブルおよびエンティティ</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>
+      <p><xref uid="" data-throw-if-not-resolved="false">TableQuery#TableQuery(Class)</xref>コンス トラクターと<xref uid="" data-throw-if-not-resolved="false">TableQuery#from(Class)</xref>静的ファクトリ メソッドを実装するクラス型を必要と<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>と引数がないコンス トラクターが含まれています。 使用して、クエリが実行する場合、 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>、呼び出し元指定<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>クラス型として。</p>
+      <p></p>
+    syntax:
+      content: public class TableQuery<T extends TableEntity>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: '<p>クラスの型を実装する<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>引数がないコンス トラクターが含まれています。 注: をクラス型を定義する内部クラスを使用する場合は、静的クラスをマークします。 </p>'
+  - uid: com.microsoft.azure.storage.table._table_request_options
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_request_options.yml
+    name: TableRequestOptions
+    nameWithType: TableRequestOptions
+    fullName: com.microsoft.azure.storage.table.TableRequestOptions
+    type: Class
+    summary: <p>タイムアウト、ペイロード形式、およびテーブルの操作要求の指定可能性のある再試行ポリシー オプションのセットを表します。 </p>
+    syntax:
+      content: public class TableRequestOptions extends RequestOptions
+  - uid: com.microsoft.azure.storage.table._table_result
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_result.yml
+    name: TableResult
+    nameWithType: TableResult
+    fullName: com.microsoft.azure.storage.table.TableResult
+    type: Class
+    summary: <p>テーブル操作の結果を表すクラス。 <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>クラスは、HTTP 応答と、特定のという記憶域サービスの REST API 操作によって返されるテーブル エンティティ結果をカプセル化<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>です。 </p>
+    syntax:
+      content: public class TableResult
+  - uid: com.microsoft.azure.storage.table._table_service_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_service_entity.yml
+    name: TableServiceEntity
+    nameWithType: TableServiceEntity
+    fullName: com.microsoft.azure.storage.table.TableServiceEntity
+    type: Class
+    summary: "<p><xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>クラスは、ストレージ サービス内のテーブル エンティティの基本オブジェクト型を表します。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の基本実装を提供、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>を提供するインターフェイスとメソッドを既定ではおよびリフレクションを使用してすべてのプロパティを逆シリアル化します。 テーブル エンティティ クラスがこのクラスを拡張し、オーバーライド、および提供するメソッドをカスタマイズしたかより多くのパフォーマンスの高いシリアル化ロジック。 </p>\n<p>リフレクションの使用によりのサブクラス<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>シリアル化を実装することがなく逆シリアル化およびシリアル化のコードそのものです。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 活用するために、自動のシリアル化コード、テーブル エンティティ クラスは、対応するテーブル内のエンティティ Microsoft Azure テーブル ストレージ内の各プロパティの getter および setter メソッドを提供する必要があります。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 Java 対応するプロパティの型のマップは、次の表を参照してください。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>サブクラスで注釈。 </p>\n<p>次の表は、Microsoft Azure ストレージでサポートされているプロパティのデータ型と逆シリアル化したときに、対応する Java 型を示します。 <table rows=\"9\" cols=\"4\"><row><entry thead=\"yes\"><p>ストレージの種類 </p></entry><entry thead=\"yes\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>値 </p></entry><entry thead=\"yes\"><p>Java の型 </p></entry><entry thead=\"yes\"><p>説明  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Binary</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.BINARY\" data-throw-if-not-resolved=\"false\">EdmType #BINARY</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>バイト配列のサイズは最大 64 KB です。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Boolean</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.BOOLEAN\" data-throw-if-not-resolved=\"false\">EdmType #BOOLEAN</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>ブール値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.DateTime</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.DATE_TIME\" data-throw-if-not-resolved=\"false\">EdmType # 日付 _ 時刻</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>世界協定時刻 (UTC) を表す 64 ビット値。 サポートされている範囲は、西暦 1601 年 1 月 1 日深夜 12時 00分から始まります 始まります。 この範囲は 9999 年 12 月 31 日に終了します。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Double</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.DOUBLE\" data-throw-if-not-resolved=\"false\">EdmType #DOUBLE</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>64 ビット倍精度浮動小数点値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Guid</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.GUID\" data-throw-if-not-resolved=\"false\">EdmType #GUID</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>グローバルで一意となる 128 ビットの識別子。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Int32</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.INT32\" data-throw-if-not-resolved=\"false\">EdmType # INT32</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>32 ビット整数値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Int64</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.INT64\" data-throw-if-not-resolved=\"false\">EdmType # INT64</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>64 ビット整数値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.String</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.STRING\" data-throw-if-not-resolved=\"false\">EdmType #STRING</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>UTF-16 エンコードの値。 文字列値には、最大 64 KB の可能性があります。  </p></entry></row></table></p>\n<p>MSDN のトピックを参照してください<ulink url=\"http://msdn.microsoft.com//library/azure/dd179338.aspx\">テーブル サービス データ モデルについて</ulink>テーブル、エンティティ、および Microsoft Azure ストレージ サービスで使用されているプロパティの概要についてはします。 </p>\n<p>使用できる EDM プリミティブ データ型と名前の概要については、次を参照してください、。</p>\n<p>\r\n\r\n  <ulink url=\"http://www.odata.org/developers/protocols/overview#AbstractTypeSystem\">プリミティブ データ型</ulink>のセクションで、 <ulink url=\"http://www.odata.org/developers/protocols/overview\">OData プロトコルの概要</ulink>です。 </p>\n\n<p></p>"
+    syntax:
+      content: public class TableServiceEntity implements TableEntity
+  - uid: com.microsoft.azure.storage.table._table_service_exception
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    name: TableServiceException
+    nameWithType: TableServiceException
+    fullName: com.microsoft.azure.storage.table.TableServiceException
+    type: Class
+    summary: <p>テーブル ストレージ サービスの操作が正常に実行できない場合に発生する例外。 </p>
+    syntax:
+      content: public class TableServiceException extends StorageException
+  - uid: com.microsoft.azure.storage.table._table_request_options._encryption_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_request_options._encryption_resolver.yml
+    name: TableRequestOptions.EncryptionResolver
+    nameWithType: TableRequestOptions.EncryptionResolver
+    fullName: com.microsoft.azure.storage.table.TableRequestOptions.EncryptionResolver
+    type: Interface
+    summary: <p>プロパティを暗号化するか、パーティション キー、行キー、およびプロパティの名前を付与しないかどうかを示す値を取得する関数が使用されるインターフェイス。 </p>
+    syntax:
+      content: public interface EncryptionResolver
+  - uid: com.microsoft.azure.storage.table._table_query._operators
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_query._operators.yml
+    name: TableQuery.Operators
+    nameWithType: TableQuery.Operators
+    fullName: com.microsoft.azure.storage.table.TableQuery.Operators
+    type: Class
+    summary: <p>フィルター式の演算子に識別子をマップする静的クラスです。 </p>
+    syntax:
+      content: public class Operators
+  - uid: com.microsoft.azure.storage.table._table_request_options._property_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_request_options._property_resolver.yml
+    name: TableRequestOptions.PropertyResolver
+    nameWithType: TableRequestOptions.PropertyResolver
+    fullName: com.microsoft.azure.storage.table.TableRequestOptions.PropertyResolver
+    type: Interface
+    summary: <p>その機能を使用して、取得、インターフェイス、 <xref uid="com.microsoft.azure.storage.table._edm_type" data-throw-if-not-resolved="false">EdmType</xref>インターフェイスが実装されている場合、パーティション キー、行、キー、およびプロパティ名を指定されたエンティティ プロパティ </p>
+    syntax:
+      content: public interface PropertyResolver
+  - uid: com.microsoft.azure.storage.table._table_query._query_comparisons
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_query._query_comparisons.yml
+    name: TableQuery.QueryComparisons
+    nameWithType: TableQuery.QueryComparisons
+    fullName: com.microsoft.azure.storage.table.TableQuery.QueryComparisons
+    type: Class
+    summary: <p>プロパティの比較演算子をフィルター処理する識別子をマップする静的クラスです。 </p>
+    syntax:
+      content: public class QueryComparisons

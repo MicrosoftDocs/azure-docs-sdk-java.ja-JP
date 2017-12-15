@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._partition_health
+    id: _partition_health
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._partition_health.getPartitionId()
+      - system.fabric.health._partition_health.getReplicaHealthState()
+    href: system.fabric.health._partition_health.yml
+    langs:
+      - java
+    name: PartitionHealth
+    nameWithType: PartitionHealth
+    fullName: system.fabric.health.PartitionHealth
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealth.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealth.java
+      startLine: 10
+    package: system.fabric.health
+    summary: '<p>によって返されるパーティションの正常性を説明<xref uid="system.fabric._health_client.getPartitionHealthAsync(PartitionHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getPartitionHealthAsync(PartitionHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class PartitionHealth extends EntityHealth
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._entity_health
+    inheritedMembers:
+      - 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+      - system.fabric.health._entity_health.getAggregatedHealthState()
+      - system.fabric.health._entity_health.getHealthEvents()
+      - system.fabric.health._entity_health.getUnhealthyEvaluations()
+  - uid: system.fabric.health._partition_health.getPartitionId()
+    id: getPartitionId()
+    parent: system.fabric.health._partition_health
+    href: system.fabric.health._partition_health.yml
+    langs:
+      - java
+    name: getPartitionId()
+    nameWithType: PartitionHealth.getPartitionId()
+    fullName: UUID system.fabric.health.PartitionHealth.getPartitionId()
+    overload: system.fabric.health._partition_health.getPartitionId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealth.java
+      startLine: 36
+    package: system.fabric.health
+    summary: |-
+      <p>パーティションを一意に識別する、パーティション ID を取得します。</p>
+      <p></p>
+    syntax:
+      content: public UUID getPartitionId()
+      return:
+        type: add9545a
+        description: <p>パーティションの id。 </p>
+  - uid: system.fabric.health._partition_health.getReplicaHealthState()
+    id: getReplicaHealthState()
+    parent: system.fabric.health._partition_health
+    href: system.fabric.health._partition_health.yml
+    langs:
+      - java
+    name: getReplicaHealthState()
+    nameWithType: PartitionHealth.getReplicaHealthState()
+    fullName: List<ReplicaHealthState> system.fabric.health.PartitionHealth.getReplicaHealthState()
+    overload: system.fabric.health._partition_health.getReplicaHealthState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealth.java
+      startLine: 49
+    package: system.fabric.health
+    summary: |-
+      <p>Health store に、検出されるように、現在のパーティションのレプリカの正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<ReplicaHealthState> getReplicaHealthState()
+      return:
+        type: 5618da2dsystem.fabric.health._replica_health_statea08ddfce
+        description: '<p>Health store に検出されるよう、現在のパーティションのレプリカです。 尊重レプリカのみ、 <xref uid="system.fabric._partition_health_query_description.getReplicaHealthStatesFilter()" data-throw-if-not-resolved="false">system.fabric.PartitionHealthQueryDescription#getReplicaHealthStatesFilter()</xref> (指定した場合) が返されます。 入力のフィルターが指定されていない場合は、すべてのレプリカが返されます。 すべてのレプリカを評価すると、集計されたパーティションの正常性を決定します。 </p>'
+references:
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: system.fabric.health._partition_health.getPartitionId*
+    name: getPartitionId
+    nameWithType: PartitionHealth.getPartitionId
+    fullName: UUID system.fabric.health.PartitionHealth.getPartitionId
+    package: system.fabric.health
+  - uid: 5618da2dsystem.fabric.health._replica_health_statea08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: system.fabric.health._replica_health_state
+        name: ReplicaHealthState
+        fullName: system.fabric.health.ReplicaHealthState
+        href: system.fabric.health._replica_health_state.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric.health._partition_health.getReplicaHealthState*
+    name: getReplicaHealthState
+    nameWithType: PartitionHealth.getReplicaHealthState
+    fullName: List<ReplicaHealthState> system.fabric.health.PartitionHealth.getReplicaHealthState
+    package: system.fabric.health
+  - uid: 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: 'EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    nameWithType: 'EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    fullName: 'system.fabric.health.EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    type: Constructor
+    syntax:
+      content: 'protected EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+      parameters:
+        - id: aggregatedHealthState
+          type: f75371fa
+        - id: healthEvents
+          type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        - id: unhealthyEvaluations
+          type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+  - uid: system.fabric.health._entity_health.getAggregatedHealthState()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealth.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealth.getAggregatedHealthState()
+    type: Method
+    summary: |-
+      <p>エンティティで集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState</xref>に基づいて Health Manager によって計算された集計された正常性状態を表す (存在する場合)、エンティティとその子でイベントを報告し、正常性ポリシーを必要に応じて。 </p>"
+  - uid: system.fabric.health._entity_health.getHealthEvents()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getHealthEvents()
+    nameWithType: EntityHealth.getHealthEvents()
+    fullName: List<HealthEvent> system.fabric.health.EntityHealth.getHealthEvents()
+    type: Method
+    summary: "<p>エンティティで報告される正常性イベントを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>正常性イベントは、正常性ストアに送信される正常性レポートをに基づいて作成されます。 正常性ストアによって追加された追加のメタデータが含まれます。 </p>"
+    syntax:
+      content: public List<HealthEvent> getHealthEvents()
+      return:
+        type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        description: <p>エンティティの正常性イベントが報告されました。 </p>
+  - uid: system.fabric.health._entity_health.getUnhealthyEvaluations()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getUnhealthyEvaluations()
+    nameWithType: EntityHealth.getUnhealthyEvaluations()
+    fullName: List<HealthEvaluation> system.fabric.health.EntityHealth.getUnhealthyEvaluations()
+    type: Method
+    summary: |-
+      <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を示す異常な評価を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<HealthEvaluation> getUnhealthyEvaluations()
+      return:
+        type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+        description: <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を説明する異常な評価。 </p>
+  - uid: system.fabric.health._entity_health
+    parent: system.fabric.health
+    href: system.fabric.health._entity_health.yml
+    name: EntityHealth
+    nameWithType: EntityHealth
+    fullName: system.fabric.health.EntityHealth
+    type: Class
+    summary: <p>関連するクラスをすべてのエンティティのヘルスの基本クラスを表します。 </p>
+    syntax:
+      content: public class EntityHealth
+  - uid: system.fabric.health._replica_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_state.yml
+    name: ReplicaHealthState
+    nameWithType: ReplicaHealthState
+    fullName: system.fabric.health.ReplicaHealthState
+    type: Class
+    summary: <p>ステートフル サービス レプリカまたはステートレス サービス インスタンスのヘルス状態の基本クラスを表します。 </p>
+    syntax:
+      content: public class ReplicaHealthState
+  - uid: system.fabric.health._health_event
+    parent: system.fabric.health
+    href: system.fabric.health._health_event.yml
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax:
+      content: public class HealthEvent
+  - uid: system.fabric.health._health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._health_evaluation.yml
+    name: HealthEvaluation
+    nameWithType: HealthEvaluation
+    fullName: system.fabric.health.HealthEvaluation
+    type: Class
+    summary: <p>データとエンティティのヘルスを評価する正常性ストアによって使用されるアルゴリズムを記述する正常性評価を表します。 </p>
+    syntax:
+      content: public class HealthEvaluation
+  - uid: system.fabric._partition_health_query_description.getReplicaHealthStatesFilter()
+    parent: system.fabric._partition_health_query_description
+    href: system.fabric._partition_health_query_description.yml
+    name: getReplicaHealthStatesFilter()
+    nameWithType: PartitionHealthQueryDescription.getReplicaHealthStatesFilter()
+    fullName: ReplicaHealthStatesFilter system.fabric.PartitionHealthQueryDescription.getReplicaHealthStatesFilter()
+    type: Method
+    summary: "<p>フィルターを取得<xref uid=\"system.fabric.health._replica_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.ReplicaHealthState</xref>子。 フィルターに一致する子のみが返されます。 すべての子は、パーティションの集計された正常性状態の評価に使用されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>フィルターに一致する子のみが返されます。 すべての子は、パーティションの集計された正常性状態の評価に使用されます。 フィルターが指定されていない場合は、パーティションのすべての子が返されます。 </p>"
+    syntax:
+      content: public ReplicaHealthStatesFilter getReplicaHealthStatesFilter()
+      return:
+        type: system.fabric._replica_health_states_filter
+        description: <p><xref uid="system.fabric._replica_health_states_filter" data-throw-if-not-resolved="false">System.fabric.ReplicaHealthStatesFilter</xref>返されたレプリカをフィルター処理するために使用します。 </p>
+  - uid: system.fabric._health_client.getPartitionHealthAsync(PartitionHealthQueryDescription)
+    parent: system.fabric._health_client
+    href: system.fabric._health_client.yml
+    name: getPartitionHealthAsync(PartitionHealthQueryDescription queryDescription)
+    nameWithType: HealthClient.getPartitionHealthAsync(PartitionHealthQueryDescription queryDescription)
+    fullName: CompletableFuture<PartitionHealth> system.fabric.HealthClient.getPartitionHealthAsync(PartitionHealthQueryDescription queryDescription)
+    type: Method
+    summary: |-
+      <p>指定したタイムアウト時間を使用して、Service Fabric パーティションの正常性を非同期に取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<PartitionHealth> getPartitionHealthAsync(PartitionHealthQueryDescription queryDescription)
+      parameters:
+        - id: queryDescription
+          type: system.fabric._partition_health_query_description
+          description: <p>クエリの説明。 </p>
+      return:
+        type: 9cdf14d0system.fabric.health._partition_healtha08ddfce
+        description: <p>Service Fabric パーティションの正常性。 </p>

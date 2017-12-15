@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights.extensibility._telemetry_initializer
+    id: _telemetry_initializer
+    parent: com.microsoft.applicationinsights.extensibility
+    children:
+      - com.microsoft.applicationinsights.extensibility._telemetry_initializer.initialize(Telemetry)
+    href: com.microsoft.applicationinsights.extensibility._telemetry_initializer.yml
+    langs:
+      - java
+    name: TelemetryInitializer
+    nameWithType: TelemetryInitializer
+    fullName: com.microsoft.applicationinsights.extensibility.TelemetryInitializer
+    type: Interface
+    source:
+      remote: &ref_0
+        path: core/src/main/java/com/microsoft/applicationinsights/extensibility/TelemetryInitializer.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/extensibility/TelemetryInitializer.java
+      startLine: 29
+    package: com.microsoft.applicationinsights.extensibility
+    summary: <p>製品利用統計情報 intitializers のインターフェイス </p>
+    syntax:
+      content: public interface TelemetryInitializer
+  - uid: com.microsoft.applicationinsights.extensibility._telemetry_initializer.initialize(Telemetry)
+    id: initialize(Telemetry)
+    parent: com.microsoft.applicationinsights.extensibility._telemetry_initializer
+    href: com.microsoft.applicationinsights.extensibility._telemetry_initializer.yml
+    langs:
+      - java
+    name: initialize(Telemetry telemetry)
+    nameWithType: TelemetryInitializer.initialize(Telemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.extensibility.TelemetryInitializer.initialize(Telemetry telemetry)
+    overload: com.microsoft.applicationinsights.extensibility._telemetry_initializer.initialize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/extensibility/TelemetryInitializer.java
+      startLine: 34
+    package: com.microsoft.applicationinsights.extensibility
+    summary: <p>指定したオブジェクトのプロパティを初期化します。 </p>
+    syntax:
+      content: public void initialize(Telemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._telemetry
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.Telemetry</xref>を初期化します。 </p>
+references:
+  - uid: com.microsoft.applicationinsights.extensibility._telemetry_initializer.initialize*
+    name: initialize
+    nameWithType: TelemetryInitializer.initialize
+    fullName: void com.microsoft.applicationinsights.extensibility.TelemetryInitializer.initialize
+    package: com.microsoft.applicationinsights.extensibility
+  - uid: com.microsoft.applicationinsights.extensibility.initializer.docker._docker_context_initializer
+    parent: com.microsoft.applicationinsights.extensibility.initializer.docker
+    href: com.microsoft.applicationinsights.extensibility.initializer.docker._docker_context_initializer.yml
+    name: DockerContextInitializer
+    nameWithType: DockerContextInitializer
+    fullName: com.microsoft.applicationinsights.extensibility.initializer.docker.DockerContextInitializer
+    type: Class
+    summary: '<p>この初期化子は、Docker 認識させる必要があります。 初期化子が 2 つの目標: 1) の Docker のコンテキストに Docker コンテナーと初期化 telemetries Application Insight によって挿入された識別 Docker コンテキスト ファイル。 Docker コンテナーの Application Insights の統合の SDK にコンテナーの検出し、パフォーマンスの送信を停止することができます 2) 書き込み SDK コンテキスト ファイルは、(SDK には、OOB パフォーマンス カウンターが用意されています) の場合もそのカウンターします。 </p>'
+    syntax:
+      content: public class DockerContextInitializer implements TelemetryInitializer
+  - uid: com.microsoft.applicationinsights.extensibility.initializer._sequence_property_initializer
+    parent: com.microsoft.applicationinsights.extensibility.initializer
+    href: com.microsoft.applicationinsights.extensibility.initializer._sequence_property_initializer.yml
+    name: SequencePropertyInitializer
+    nameWithType: SequencePropertyInitializer
+    fullName: com.microsoft.applicationinsights.extensibility.initializer.SequencePropertyInitializer
+    type: Class
+    summary: <p><xref uid="com.microsoft.applicationinsights.extensibility._telemetry_initializer" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.extensibility.TelemetryInitializer</xref>ことを確認するシーケンスのプロパティを設定する実装は、ポータルで製品利用統計情報の順序を解決します。 </p>
+    syntax:
+      content: public class SequencePropertyInitializer implements TelemetryInitializer
+  - uid: com.microsoft.applicationinsights.extensibility.initializer._timestamp_property_initializer
+    parent: com.microsoft.applicationinsights.extensibility.initializer
+    href: com.microsoft.applicationinsights.extensibility.initializer._timestamp_property_initializer.yml
+    name: TimestampPropertyInitializer
+    nameWithType: TimestampPropertyInitializer
+    fullName: com.microsoft.applicationinsights.extensibility.initializer.TimestampPropertyInitializer
+    type: Class
+    summary: <p><xref uid="com.microsoft.applicationinsights.extensibility._telemetry_initializer" data-throw-if-not-resolved="false">TelemetryInitializer</xref>にタイムスタンプを設定する実装、 <xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">com.microsoft.applicationinsights.telemetry.Telemetry</xref>タイムスタンプは既に設定されている場合を除き、します。 </p>
+    syntax:
+      content: public class TimestampPropertyInitializer
+  - uid: com.microsoft.applicationinsights.extensibility.initializer._timestamp_property_initializer.initialize(Telemetry)
+    parent: com.microsoft.applicationinsights.extensibility.initializer._timestamp_property_initializer
+    href: com.microsoft.applicationinsights.extensibility.initializer._timestamp_property_initializer.yml
+    name: initialize(Telemetry telemetry)
+    nameWithType: TimestampPropertyInitializer.initialize(Telemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.extensibility.initializer.TimestampPropertyInitializer.initialize(Telemetry telemetry)
+    type: Method
+    summary: <p>タイムスタンプは既に設定されている場合を除き、'now' にタイムスタンプを設定します。 </p>
+    syntax:
+      content: public void initialize(Telemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._telemetry
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.Telemetry</xref>を初期化します。 </p>
+  - uid: com.microsoft.applicationinsights.extensibility.initializer._sequence_property_initializer.initialize(Telemetry)
+    parent: com.microsoft.applicationinsights.extensibility.initializer._sequence_property_initializer
+    href: com.microsoft.applicationinsights.extensibility.initializer._sequence_property_initializer.yml
+    name: initialize(Telemetry telemetry)
+    nameWithType: SequencePropertyInitializer.initialize(Telemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.extensibility.initializer.SequencePropertyInitializer.initialize(Telemetry telemetry)
+    type: Method
+    summary: <p>そのシーケンスが null または空の場合は、製品利用統計情報のシーケンスを設定します。 </p>
+    syntax:
+      content: public void initialize(Telemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._telemetry
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.Telemetry</xref>を初期化します。 </p>
+  - uid: com.microsoft.applicationinsights.extensibility.initializer.docker._docker_context_initializer.initialize(Telemetry)
+    parent: com.microsoft.applicationinsights.extensibility.initializer.docker._docker_context_initializer
+    href: com.microsoft.applicationinsights.extensibility.initializer.docker._docker_context_initializer.yml
+    name: initialize(Telemetry telemetry)
+    nameWithType: DockerContextInitializer.initialize(Telemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.extensibility.initializer.docker.DockerContextInitializer.initialize(Telemetry telemetry)
+    type: Method
+    summary: <p>Docker のコンテキストに指定された製品利用統計情報を初期化します。 </p>
+    syntax:
+      content: public void initialize(Telemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._telemetry
+          description: <p>初期化するために遠隔測定します。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    name: Telemetry
+    nameWithType: Telemetry
+    fullName: com.microsoft.applicationinsights.telemetry.Telemetry
+    type: Interface
+    summary: <p>Application insights の基本製品利用統計情報の種類のインターフェイスです。 </p>
+    syntax:
+      content: public interface Telemetry extends JsonSerializable

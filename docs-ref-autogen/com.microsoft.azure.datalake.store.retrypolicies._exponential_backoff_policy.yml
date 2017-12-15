@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
+    id: _exponential_backoff_policy
+    parent: com.microsoft.azure.datalake.store.retrypolicies
+    children:
+      - com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy()
+      - 'com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy(int,int,int)'
+      - 'com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.shouldRetry(int,Exception)'
+    href: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.yml
+    langs:
+      - java
+    name: ExponentialBackoffPolicy
+    nameWithType: ExponentialBackoffPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+        branch: master
+        repo: 'https://github.com/azure/azure-data-lake-store-java'
+      path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+      startLine: 17
+    package: com.microsoft.azure.datalake.store.retrypolicies
+    summary: |-
+      <p>別の実装には、エラーに基づき意思決定が再試行してください。</p>
+      <p>
+
+        <itemizedlist>
+
+          <listitem>
+
+            <p>Nonretryable エラー (3 xx、ほとんどの 4 xx、およびリターン コードの一部の 5 xx) には、再試行はありません。 </p>
+
+          </listitem>
+
+          <listitem>
+
+            <p>エラーを調整するには、指数バックオフによる再試行の操作を行います </p>
+
+          </listitem>
+
+          <listitem>
+
+            <p>その他のすべてのエラーの場合は、線形バックオフによる再試行の操作を行います </p>
+
+          </listitem>
+
+        </itemizedlist>
+
+      </p>
+    syntax:
+      content: public class ExponentialBackoffPolicy implements RetryPolicy
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy()
+    id: ExponentialBackoffPolicy()
+    parent: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
+    href: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.yml
+    langs:
+      - java
+    name: ExponentialBackoffPolicy()
+    nameWithType: ExponentialBackoffPolicy.ExponentialBackoffPolicy()
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy.ExponentialBackoffPolicy()
+    overload: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+      startLine: 24
+    package: com.microsoft.azure.datalake.store.retrypolicies
+    syntax:
+      content: public ExponentialBackoffPolicy()
+  - uid: 'com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy(int,int,int)'
+    id: 'ExponentialBackoffPolicy(int,int,int)'
+    parent: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
+    href: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.yml
+    langs:
+      - java
+    name: 'ExponentialBackoffPolicy(int maxRetries, int linearRetryInterval, int exponentialRetryInterval)'
+    nameWithType: 'ExponentialBackoffPolicy.ExponentialBackoffPolicy(int maxRetries, int linearRetryInterval, int exponentialRetryInterval)'
+    fullName: 'com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy.ExponentialBackoffPolicy(int maxRetries, int linearRetryInterval, int exponentialRetryInterval)'
+    overload: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+      startLine: 32
+    package: com.microsoft.azure.datalake.store.retrypolicies
+    syntax:
+      content: 'public ExponentialBackoffPolicy(int maxRetries, int linearRetryInterval, int exponentialRetryInterval)'
+      parameters:
+        - id: maxRetries
+          type: f75371fa
+          description: <p>再試行の最大数 </p>
+        - id: linearRetryInterval
+          type: f75371fa
+          description: <p>間隔 (ミリ秒単位) の線形の再試行を使用するには </p>
+        - id: exponentialRetryInterval
+          type: f75371fa
+          description: <p>指数バックオフ再試行 (ミリ秒単位) を使用する (開始) の間隔 </p>
+  - uid: 'com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.shouldRetry(int,Exception)'
+    id: 'shouldRetry(int,Exception)'
+    parent: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
+    href: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.yml
+    langs:
+      - java
+    name: 'shouldRetry(int httpResponseCode, Exception lastException)'
+    nameWithType: 'ExponentialBackoffPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
+    fullName: 'boolean com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
+    overload: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.shouldRetry*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+      startLine: 37
+    package: com.microsoft.azure.datalake.store.retrypolicies
+    summary: "<p>失敗した要求を再試行するかどうかを示すブール値。 実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。 </p>\n<p>再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。 つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。 </p>\n\n<p></p>"
+    syntax:
+      content: 'public boolean shouldRetry(int httpResponseCode, Exception lastException)'
+      parameters:
+        - id: httpResponseCode
+          type: f75371fa
+          description: <p>受信した HTTP 応答コード </p>
+        - id: lastException
+          type: 8a99d4b0
+          description: <p>最後の要求の処理中に発生したすべての例外 </p>
+      return:
+        type: 4fc6e284
+        description: <p>要求を再試行するかどうかを示すブール値 </p>
+    overridden: 'com.microsoft.azure.datalake.store.retrypolicies._retry_policy.shouldRetry(int,Exception)'
+references:
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.ExponentialBackoffPolicy*
+    name: ExponentialBackoffPolicy
+    nameWithType: ExponentialBackoffPolicy.ExponentialBackoffPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy.ExponentialBackoffPolicy
+    package: com.microsoft.azure.datalake.store.retrypolicies
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: 8a99d4b0
+    spec.java:
+      - name: Exception
+        fullName: Exception
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.shouldRetry*
+    name: shouldRetry
+    nameWithType: ExponentialBackoffPolicy.shouldRetry
+    fullName: boolean com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy.shouldRetry
+    package: com.microsoft.azure.datalake.store.retrypolicies
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+    parent: com.microsoft.azure.datalake.store.retrypolicies
+    href: com.microsoft.azure.datalake.store.retrypolicies._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.RetryPolicy
+    type: Interface
+    summary: |-
+      <p><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。 </p>
+      <p>このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。 </p>
+    syntax:
+      content: public interface RetryPolicy
+  - uid: 'com.microsoft.azure.datalake.store.retrypolicies._retry_policy.shouldRetry(int,Exception)'
+    parent: com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+    href: com.microsoft.azure.datalake.store.retrypolicies._retry_policy.yml
+    name: 'shouldRetry(int httpResponseCode, Exception lastException)'
+    nameWithType: 'RetryPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
+    fullName: 'boolean com.microsoft.azure.datalake.store.retrypolicies.RetryPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
+    type: Method
+    summary: "<p>失敗した要求を再試行するかどうかを示すブール値。 実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。 </p>\n<p>再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。 つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。 </p>\n\n<p></p>"
+    syntax:
+      content: 'public boolean shouldRetry(int httpResponseCode, Exception lastException)'
+      parameters:
+        - id: httpResponseCode
+          type: f75371fa
+          description: <p>受信した HTTP 応答コード </p>
+        - id: lastException
+          type: 8a99d4b0
+          description: <p>最後の要求の処理中に発生したすべての例外 </p>
+      return:
+        type: 4fc6e284
+        description: <p>要求を再試行するかどうかを示すブール値 </p>

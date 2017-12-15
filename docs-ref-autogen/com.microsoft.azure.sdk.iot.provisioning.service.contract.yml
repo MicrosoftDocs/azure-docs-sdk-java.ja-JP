@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.contract
+    id: contract
+    children:
+      - com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http
+    href: com.microsoft.azure.sdk.iot.provisioning.service.contract.yml
+    langs:
+      - java
+    name: com.microsoft.azure.sdk.iot.provisioning.service.contract
+    nameWithType: com.microsoft.azure.sdk.iot.provisioning.service.contract
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.contract
+    type: Namespace
+    source:
+      remote:
+        path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/contract/ContractApiHttp.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/contract/ContractApiHttp.java
+      startLine: 3
+    syntax:
+      content: package com.microsoft.azure.sdk.iot.provisioning.service.contract
+references:
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.contract
+    href: com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http.yml
+    name: ContractApiHttp
+    nameWithType: ContractApiHttp
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.contract.ContractApiHttp
+    type: Class
+    summary: |-
+      <p>このクライアントは、デバイスのプロビジョニング サービスの HTTP 通信を処理します。</p>
+      <p>このクラスは、プロビジョニング サービス クライアントとデバイスのプロビジョニング サービス間の HTTPS コントラクトを実装します。 サービス クライアントのプロビジョニングのパブリック Api を実装する、マネージャーによって呼び出されます。 パブリック Api にアクセスするを参照してください、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>です。</p>
+      <p>次の図では、これら 3 つのレイヤー、サービス クライアントの間の関係について説明します。</p>
+      <p>
+
+        <pre>
+
+          <code>          +-------------------------------------------------------------------+           +------------+
+
+                    |                        ProvisioningServiceClient                  |           |    Query   |
+
+                    +-----+----------------------------+--------------------------+-----+           +--+---+-----+
+
+                         /                             |                           \                   |   |
+
+                        /                              |                            \                  |   |
+
+          +------------+----------------+  +-----------+------------+  +-------------+-------------+   |   |
+
+          | IndividualEnrollmentManager |  | EnrollmentGroupManager |  | RegistrationStatusManager |   |   |
+
+          +------------+--------+-------+  +-----------+------+-----+  +-------------+-------+-----+   |   |
+
+                       |         \                     |       \                     |        \        |   |
+
+                       |          +-----------------------------+------------------------------+-------+   |
+
+                       |                               |                             |                     |
+
+          +------------+-------------------------------+-----------------------------+---------------------+---+
+
+          |                                       ContractApiHttp                                              |
+
+          +------------------------------------------------+---------------------------------------------------+
+
+                                                           |
+
+                                                           |
+
+                     +-------------------------------------+------------------------------------------+
+
+                     |                 com.microsoft.azure.sdk.iot.deps.transport.http                |
+
+                     +--------------------------------------------------------------------------------+
+
+          </code>
+
+        </pre>
+
+      </p>
+    syntax:
+      content: public class ContractApiHttp

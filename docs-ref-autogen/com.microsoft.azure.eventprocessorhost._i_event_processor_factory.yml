@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor_factory
+    id: _i_event_processor_factory
+    parent: com.microsoft.azure.eventprocessorhost
+    children:
+      - com.microsoft.azure.eventprocessorhost._i_event_processor_factory.createEventProcessor(PartitionContext)
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor_factory.yml
+    langs:
+      - java
+    name: IEventProcessorFactory<T>
+    nameWithType: IEventProcessorFactory<T>
+    fullName: com.microsoft.azure.eventprocessorhost.IEventProcessorFactory<T>
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessorFactory.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-event-hubs-java'
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessorFactory.java
+      startLine: 16
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>イベント プロセッサ ファクトリ クラスで実装する必要がありますのあるインターフェイスです。</p>
+      <p>だけを持つ新しいパラメーターなしのコンス トラクターのよりも多く作業が必要なイベント プロセッサ オブジェクトを作成する場合は、ユーザー指定のファクトリが必要です。</p>
+      <p></p>
+    syntax:
+      content: public interface IEventProcessorFactory<T extends IEventProcessor>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>イベント プロセッサ オブジェクトの種類がこのファクトリでは、実装する必要がありますによって生成される<xref uid="com.microsoft.azure.eventprocessorhost._i_event_processor" data-throw-if-not-resolved="false">IEventProcessor</xref></p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor_factory.createEventProcessor(PartitionContext)
+    id: createEventProcessor(PartitionContext)
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor_factory
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor_factory.yml
+    langs:
+      - java
+    name: createEventProcessor(PartitionContext context)
+    nameWithType: IEventProcessorFactory<T>.createEventProcessor(PartitionContext context)
+    fullName: T com.microsoft.azure.eventprocessorhost.IEventProcessorFactory<T extends IEventProcessor>.createEventProcessor(PartitionContext context)
+    overload: com.microsoft.azure.eventprocessorhost._i_event_processor_factory.createEventProcessor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessorFactory.java
+      startLine: 25
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>特定のパーティションに対して、イベント プロセッサを作成するには、呼び出されます。</p>
+      <p></p>
+    syntax:
+      content: public T createEventProcessor(PartitionContext context)
+      parameters:
+        - id: context
+          type: com.microsoft.azure.eventprocessorhost._partition_context
+          description: <p>イベント プロセッサからのイベントを処理するパーティションに関する情報です。 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>イベント プロセッサ オブジェクトです。 </p>
+    exceptions:
+      - type: 8a99d4b0
+references:
+  - uid: 8ce1ecb9
+    spec.java:
+      - name: T
+        fullName: T
+  - uid: 8a99d4b0
+    spec.java:
+      - name: Exception
+        fullName: Exception
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor_factory.createEventProcessor*
+    name: createEventProcessor
+    nameWithType: IEventProcessorFactory<T>.createEventProcessor
+    fullName: T com.microsoft.azure.eventprocessorhost.IEventProcessorFactory<T extends IEventProcessor>.createEventProcessor
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    name: IEventProcessor
+    nameWithType: IEventProcessor
+    fullName: com.microsoft.azure.eventprocessorhost.IEventProcessor
+    type: Interface
+    summary: "<p>イベント プロセッサ クラスで実装する必要があるインターフェイスです。</p>\n<p>イベント プロセッサ クラスのインスタンスには、1 つのイベント ハブの 1 つのパーティションからのイベントのみが処理されます。 A <xref uid=\"com.microsoft.azure.eventprocessorhost._partition_context\" data-throw-if-not-resolved=\"false\">PartitionContext</xref>は、いくつかのパラメーターを変更する可能性がありますが、同じパーティションは常にため、イベント プロセッサへの各呼び出しで提供されています。 </p>\n<p><xref uid=\"com.microsoft.azure.eventprocessorhost._event_processor_host\" data-throw-if-not-resolved=\"false\">EventProcessorHost</xref>がマルチ スレッド、プロセッサのイベント クラスの特定のインスタンスへの呼び出しはシリアル化以外の<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)\" data-throw-if-not-resolved=\"false\">onError()</xref>です。 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen(PartitionContext)\" data-throw-if-not-resolved=\"false\">onOpen()</xref>最初に呼び出され、し<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable&lt;EventData&gt;)\" data-throw-if-not-resolved=\"false\">onEvents()</xref> 0 回以上が呼び出されます。 エラーがどこか、またはパーティションのリースが失われているために、シャット ダウン、かどうかをイベント プロセッサが必要な場合、または、プロセッサ全体のホストがシャット ダウン、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)\" data-throw-if-not-resolved=\"false\">onClose()</xref>最後後に呼び出されます<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable&lt;EventData&gt;)\" data-throw-if-not-resolved=\"false\">onEvents()</xref>呼び出しを返します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)\" data-throw-if-not-resolved=\"false\">onError()</xref>呼び出すことが中に<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable&lt;EventData&gt;)\" data-throw-if-not-resolved=\"false\">onEvents()</xref>または<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)\" data-throw-if-not-resolved=\"false\">onClose()</xref>を実行します。 可能性のあるデッドロックを回避するためには、同期は行われません。 </p>"
+    syntax:
+      content: public interface IEventProcessor
+  - uid: com.microsoft.azure.eventprocessorhost._partition_context
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._partition_context.yml
+    name: PartitionContext
+    nameWithType: PartitionContext
+    fullName: com.microsoft.azure.eventprocessorhost.PartitionContext
+    type: Class
+    syntax:
+      content: public class PartitionContext

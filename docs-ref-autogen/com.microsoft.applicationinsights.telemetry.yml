@@ -1,0 +1,251 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights.telemetry
+    id: telemetry
+    children:
+      - com.microsoft.applicationinsights.telemetry._base_sample_source_telemetry
+      - com.microsoft.applicationinsights.telemetry._base_telemetry
+      - com.microsoft.applicationinsights.telemetry._duration
+      - com.microsoft.applicationinsights.telemetry._event_telemetry
+      - com.microsoft.applicationinsights.telemetry._exception_handled_at
+      - com.microsoft.applicationinsights.telemetry._exception_telemetry
+      - com.microsoft.applicationinsights.telemetry._json_serializable
+      - com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+      - com.microsoft.applicationinsights.telemetry._metric_telemetry
+      - com.microsoft.applicationinsights.telemetry._page_view_telemetry
+      - com.microsoft.applicationinsights.telemetry._performance_counter_telemetry
+      - com.microsoft.applicationinsights.telemetry._remote_dependency_telemetry
+      - com.microsoft.applicationinsights.telemetry._request_telemetry
+      - com.microsoft.applicationinsights.telemetry._session_state
+      - com.microsoft.applicationinsights.telemetry._session_state_telemetry
+      - com.microsoft.applicationinsights.telemetry._severity_level
+      - com.microsoft.applicationinsights.telemetry._support_sampling
+      - com.microsoft.applicationinsights.telemetry._telemetry
+      - com.microsoft.applicationinsights.telemetry._telemetry_context
+      - com.microsoft.applicationinsights.telemetry._trace_telemetry
+    href: com.microsoft.applicationinsights.telemetry.yml
+    langs:
+      - java
+    name: com.microsoft.applicationinsights.telemetry
+    nameWithType: com.microsoft.applicationinsights.telemetry
+    fullName: com.microsoft.applicationinsights.telemetry
+    type: Namespace
+    source:
+      remote:
+        path: core/src/main/java/com/microsoft/applicationinsights/telemetry/BaseSampleSourceTelemetry.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/BaseSampleSourceTelemetry.java
+    syntax:
+      content: package com.microsoft.applicationinsights.telemetry
+references:
+  - uid: com.microsoft.applicationinsights.telemetry._base_sample_source_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_sample_source_telemetry.yml
+    name: BaseSampleSourceTelemetry<T>
+    nameWithType: BaseSampleSourceTelemetry<T>
+    fullName: com.microsoft.applicationinsights.telemetry.BaseSampleSourceTelemetry<T>
+    type: Class
+    summary: <p>12/4/2016 gupele によって作成されます。 </p>
+    syntax:
+      content: public class BaseSampleSourceTelemetry<T extends Domain> extends BaseTelemetry<T> implements SupportSampling
+      typeParameters:
+        - type: 8ce1ecb9
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: BaseTelemetry<T>
+    nameWithType: BaseTelemetry<T>
+    fullName: com.microsoft.applicationinsights.telemetry.BaseTelemetry<T>
+    type: Class
+    summary: <p>すべてのテレメトリ データ クラスをスーパークラスします。 </p>
+    syntax:
+      content: public class BaseTelemetry<T extends Domain> implements Telemetry
+      typeParameters:
+        - type: 8ce1ecb9
+  - uid: com.microsoft.applicationinsights.telemetry._duration
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._duration.yml
+    name: Duration
+    nameWithType: Duration
+    fullName: com.microsoft.applicationinsights.telemetry.Duration
+    type: Class
+    summary: |-
+      <p>このクラスは、日、時間、分、秒、ミリ秒単位の観点から定義できる時間の間隔を定義するには、そのユーザーを使用します。</p>
+      <p>ユーザーが簡単に時間の間隔を定義できるようにするさまざまなコンス トラクターがあります。 </p>
+    syntax:
+      content: public class Duration
+  - uid: com.microsoft.applicationinsights.telemetry._event_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._event_telemetry.yml
+    name: EventTelemetry
+    nameWithType: EventTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.EventTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights のカスタム イベントを追跡するために使用される型。 </p>"
+    syntax:
+      content: public class EventTelemetry extends BaseSampleSourceTelemetry<EventData>
+  - uid: com.microsoft.applicationinsights.telemetry._exception_handled_at
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._exception_handled_at.yml
+    name: ExceptionHandledAt
+    nameWithType: ExceptionHandledAt
+    fullName: com.microsoft.applicationinsights.telemetry.ExceptionHandledAt
+    type: Enum
+    summary: |-
+      <p>この列挙はによって使用<xref uid="com.microsoft.applicationinsights.telemetry._exception_telemetry" data-throw-if-not-resolved="false">ExceptionTelemetry</xref>場合と、例外が処理された場所を識別します。</p>
+      <p>この列挙型が使用されなくなりました。 <xrefsect id="deprecated_1_deprecated000021"><xreftitle>非推奨</xreftitle><xrefdescription><p>1.0.11 時点で </p></xrefdescription></xrefsect></p>
+    syntax:
+      content: public enum ExceptionHandledAt
+  - uid: com.microsoft.applicationinsights.telemetry._exception_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._exception_telemetry.yml
+    name: ExceptionTelemetry
+    nameWithType: ExceptionTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.ExceptionTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights に送信された例外を追跡するために使用される型。 </p>"
+    syntax:
+      content: public class ExceptionTelemetry extends BaseSampleSourceTelemetry<ExceptionData>
+  - uid: com.microsoft.applicationinsights.telemetry._json_serializable
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._json_serializable.yml
+    name: JsonSerializable
+    nameWithType: JsonSerializable
+    fullName: com.microsoft.applicationinsights.telemetry.JsonSerializable
+    type: Interface
+    summary: <p>JSON にシリアル化をサポートするオブジェクトを表します。 </p>
+    syntax:
+      content: public interface JsonSerializable
+  - uid: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer.yml
+    name: JsonTelemetryDataSerializer
+    nameWithType: JsonTelemetryDataSerializer
+    fullName: com.microsoft.applicationinsights.telemetry.JsonTelemetryDataSerializer
+    type: Class
+    summary: <p>このクラスに関連するデータを変換する方法を知っている<xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">テレメトリ</xref>インスタンスを JSON にします。 </p>
+    syntax:
+      content: public class JsonTelemetryDataSerializer
+  - uid: com.microsoft.applicationinsights.telemetry._metric_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._metric_telemetry.yml
+    name: MetricTelemetry
+    nameWithType: MetricTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.MetricTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights に送信されるメトリックを追跡するために使用される型。 </p>"
+    syntax:
+      content: public class MetricTelemetry extends BaseTelemetry<MetricData>
+  - uid: com.microsoft.applicationinsights.telemetry._page_view_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._page_view_telemetry.yml
+    name: PageViewTelemetry
+    nameWithType: PageViewTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.PageViewTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>ページ ビューを追跡するために使用される型。</p>\n\n<p>'TrackPageView' メソッドにこのクラスのインスタンスを渡すことによって、アプリケーションに Application Insights で表示したページに関する情報を送信することができます、 <xref uid=\"com.microsoft.applicationinsights._telemetry_client\" data-throw-if-not-resolved=\"false\">com.microsoft.applicationinsights.TelemetryClient</xref></p>"
+    syntax:
+      content: public class PageViewTelemetry extends BaseSampleSourceTelemetry<PageViewData>
+  - uid: com.microsoft.applicationinsights.telemetry._performance_counter_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._performance_counter_telemetry.yml
+    name: PerformanceCounterTelemetry
+    nameWithType: PerformanceCounterTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.PerformanceCounterTelemetry
+    type: Class
+    summary: <p>パフォーマンス カウンターに関する情報を表すクラスです。 </p>
+    syntax:
+      content: public class PerformanceCounterTelemetry extends BaseTelemetry<PerformanceCounterData>
+  - uid: com.microsoft.applicationinsights.telemetry._remote_dependency_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._remote_dependency_telemetry.yml
+    name: RemoteDependencyTelemetry
+    nameWithType: RemoteDependencyTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.RemoteDependencyTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>の依存関係について、つまり、データベースまたは REST Api などの外部サービスにアプリケーションからの呼び出しを Azure Application Insights に送信します。 </p>"
+    syntax:
+      content: public class RemoteDependencyTelemetry extends BaseSampleSourceTelemetry<RemoteDependencyData>
+  - uid: com.microsoft.applicationinsights.telemetry._request_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._request_telemetry.yml
+    name: RequestTelemetry
+    nameWithType: RequestTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.RequestTelemetry
+    type: Class
+    summary: |-
+      <p>Web 要求がアプリケーションによって処理に関する情報をカプセル化します。</p>
+      <p>このクラスのインスタンスの 'trackRequest' メソッドに渡すことによって、web アプリケーションに Application Insights によって処理された要求に関する情報を送信することができます、 <xref uid="com.microsoft.applicationinsights._telemetry_client" data-throw-if-not-resolved="false">com.microsoft.applicationinsights.TelemetryClient</xref></p>
+    syntax:
+      content: public class RequestTelemetry extends BaseSampleSourceTelemetry<RequestData>
+  - uid: com.microsoft.applicationinsights.telemetry._session_state
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._session_state.yml
+    name: SessionState
+    nameWithType: SessionState
+    fullName: com.microsoft.applicationinsights.telemetry.SessionState
+    type: Enum
+    summary: <p>セッション状態。 </p>
+    syntax:
+      content: public enum SessionState
+  - uid: com.microsoft.applicationinsights.telemetry._session_state_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._session_state_telemetry.yml
+    name: SessionStateTelemetry
+    nameWithType: SessionStateTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.SessionStateTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights でのユーザー セッションを追跡するために使用される型。 </p>"
+    syntax:
+      content: public class SessionStateTelemetry extends BaseTelemetry<SessionStateData>
+  - uid: com.microsoft.applicationinsights.telemetry._severity_level
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._severity_level.yml
+    name: SeverityLevel
+    nameWithType: SeverityLevel
+    fullName: com.microsoft.applicationinsights.telemetry.SeverityLevel
+    type: Enum
+    summary: <p>Enum<xref uid="com.microsoft.applicationinsights.telemetry._severity_level" data-throw-if-not-resolved="false">重大度レベル</xref>です。 </p>
+    syntax:
+      content: public enum SeverityLevel
+  - uid: com.microsoft.applicationinsights.telemetry._support_sampling
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._support_sampling.yml
+    name: SupportSampling
+    nameWithType: SupportSampling
+    fullName: com.microsoft.applicationinsights.telemetry.SupportSampling
+    type: Interface
+    summary: <p>2016 11 月 2 日に gupele によって作成します。 </p>
+    syntax:
+      content: public interface SupportSampling
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    name: Telemetry
+    nameWithType: Telemetry
+    fullName: com.microsoft.applicationinsights.telemetry.Telemetry
+    type: Interface
+    summary: <p>Application insights の基本製品利用統計情報の種類のインターフェイスです。 </p>
+    syntax:
+      content: public interface Telemetry extends JsonSerializable
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry_context
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry_context.yml
+    name: TelemetryContext
+    nameWithType: TelemetryContext
+    fullName: com.microsoft.applicationinsights.telemetry.TelemetryContext
+    type: Class
+    summary: <p>テレメトリを Application Insights サービスに送信するためのコンテキストを表します。 コンテキストは、すべてのテレメトリ項目と共に送信されるデータを保持します。 インストルメンテーション キーが含まれています操作の現在の id を関連付けるために関連するテレメトリのアイテムです。ユーザー、セッション、およびデバイスのデータです。 このコンテキストを使用できる遠隔測定をフィルター処理するポータルで製品利用統計情報のすべての項目に追加され、使用できるプロパティを設定することもできます。 </p>
+    syntax:
+      content: public class TelemetryContext
+  - uid: com.microsoft.applicationinsights.telemetry._trace_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._trace_telemetry.yml
+    name: TraceTelemetry
+    nameWithType: TraceTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.TraceTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>使用されるログ メッセージの種類。 </p>"
+    syntax:
+      content: public class TraceTelemetry extends BaseSampleSourceTelemetry<MessageData>

@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights.telemetry._json_serializable
+    id: _json_serializable
+    parent: com.microsoft.applicationinsights.telemetry
+    children:
+      - com.microsoft.applicationinsights.telemetry._json_serializable.serialize(JsonTelemetryDataSerializer)
+    href: com.microsoft.applicationinsights.telemetry._json_serializable.yml
+    langs:
+      - java
+    name: JsonSerializable
+    nameWithType: JsonSerializable
+    fullName: com.microsoft.applicationinsights.telemetry.JsonSerializable
+    type: Interface
+    source:
+      remote: &ref_0
+        path: core/src/main/java/com/microsoft/applicationinsights/telemetry/JsonSerializable.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/JsonSerializable.java
+      startLine: 28
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>JSON にシリアル化をサポートするオブジェクトを表します。 </p>
+    syntax:
+      content: public interface JsonSerializable
+  - uid: com.microsoft.applicationinsights.telemetry._json_serializable.serialize(JsonTelemetryDataSerializer)
+    id: serialize(JsonTelemetryDataSerializer)
+    parent: com.microsoft.applicationinsights.telemetry._json_serializable
+    href: com.microsoft.applicationinsights.telemetry._json_serializable.yml
+    langs:
+      - java
+    name: serialize(JsonTelemetryDataSerializer serializer)
+    nameWithType: JsonSerializable.serialize(JsonTelemetryDataSerializer serializer)
+    fullName: void com.microsoft.applicationinsights.telemetry.JsonSerializable.serialize(JsonTelemetryDataSerializer serializer)
+    overload: com.microsoft.applicationinsights.telemetry._json_serializable.serialize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/JsonSerializable.java
+      startLine: 35
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>オブジェクトの JSON 表現を指定されたライターに書き込みます。 </p>
+    syntax:
+      content: public void serialize(JsonTelemetryDataSerializer serializer)
+      parameters:
+        - id: serializer
+          type: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.JsonTelemetryDataSerializer</xref> JSON 形式にシリアル化するために使用されます </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>シリアル化中にスローされる例外。 </p>
+references:
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: com.microsoft.applicationinsights.telemetry._json_serializable.serialize*
+    name: serialize
+    nameWithType: JsonSerializable.serialize
+    fullName: void com.microsoft.applicationinsights.telemetry.JsonSerializable.serialize
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    name: Telemetry
+    nameWithType: Telemetry
+    fullName: com.microsoft.applicationinsights.telemetry.Telemetry
+    type: Interface
+    summary: <p>Application insights の基本製品利用統計情報の種類のインターフェイスです。 </p>
+    syntax:
+      content: public interface Telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.serialize(JsonTelemetryDataSerializer)
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    name: serialize(JsonTelemetryDataSerializer writer)
+    nameWithType: Telemetry.serialize(JsonTelemetryDataSerializer writer)
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.serialize(JsonTelemetryDataSerializer writer)
+    type: Method
+    summary: <p>Json を使用するシリアル化自体、 <xref uid="com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer" data-throw-if-not-resolved="false">JsonTelemetryDataSerializer</xref></p>
+    syntax:
+      content: public void serialize(JsonTelemetryDataSerializer writer)
+      parameters:
+        - id: writer
+          type: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+          description: <p>Json 形式にシリアル化に使用されるライター </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.serialize(JsonTelemetryDataSerializer)
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: serialize(JsonTelemetryDataSerializer writer)
+    nameWithType: BaseTelemetry<T>.serialize(JsonTelemetryDataSerializer writer)
+    fullName: void com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.serialize(JsonTelemetryDataSerializer writer)
+    type: Method
+    summary: |-
+      <p>このオブジェクトを JSON 形式でシリアル化します。</p>
+      <p></p>
+    syntax:
+      content: public void serialize(JsonTelemetryDataSerializer writer)
+      parameters:
+        - id: writer
+          type: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+          description: <p>Json 形式にシリアル化に使用されるライター </p>
+  - uid: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer.yml
+    name: JsonTelemetryDataSerializer
+    nameWithType: JsonTelemetryDataSerializer
+    fullName: com.microsoft.applicationinsights.telemetry.JsonTelemetryDataSerializer
+    type: Class
+    summary: <p>このクラスに関連するデータを変換する方法を知っている<xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">テレメトリ</xref>インスタンスを JSON にします。 </p>
+    syntax:
+      content: public class JsonTelemetryDataSerializer

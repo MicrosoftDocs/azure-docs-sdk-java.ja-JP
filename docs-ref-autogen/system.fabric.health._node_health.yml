@@ -1,0 +1,175 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._node_health
+    id: _node_health
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._node_health.getNodeName()
+    href: system.fabric.health._node_health.yml
+    langs:
+      - java
+    name: NodeHealth
+    nameWithType: NodeHealth
+    fullName: system.fabric.health.NodeHealth
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/NodeHealth.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/NodeHealth.java
+      startLine: 8
+    package: system.fabric.health
+    summary: '<p>によって返されるノードの正常性を示します<xref uid="system.fabric._health_client.getNodeHealthAsync(NodeHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getNodeHealthAsync(NodeHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class NodeHealth extends EntityHealth
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._entity_health
+    inheritedMembers:
+      - 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+      - system.fabric.health._entity_health.getAggregatedHealthState()
+      - system.fabric.health._entity_health.getHealthEvents()
+      - system.fabric.health._entity_health.getUnhealthyEvaluations()
+  - uid: system.fabric.health._node_health.getNodeName()
+    id: getNodeName()
+    parent: system.fabric.health._node_health
+    href: system.fabric.health._node_health.yml
+    langs:
+      - java
+    name: getNodeName()
+    nameWithType: NodeHealth.getNodeName()
+    fullName: String system.fabric.health.NodeHealth.getNodeName()
+    overload: system.fabric.health._node_health.getNodeName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/NodeHealth.java
+      startLine: 29
+    package: system.fabric.health
+    summary: |-
+      <p>ノード名を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getNodeName()
+      return:
+        type: '26831127'
+        description: <p>ノード名。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: system.fabric.health._node_health.getNodeName*
+    name: getNodeName
+    nameWithType: NodeHealth.getNodeName
+    fullName: String system.fabric.health.NodeHealth.getNodeName
+    package: system.fabric.health
+  - uid: 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: 'EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    nameWithType: 'EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    fullName: 'system.fabric.health.EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    type: Constructor
+    syntax:
+      content: 'protected EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+      parameters:
+        - id: aggregatedHealthState
+          type: f75371fa
+        - id: healthEvents
+          type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        - id: unhealthyEvaluations
+          type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+  - uid: system.fabric.health._entity_health.getAggregatedHealthState()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealth.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealth.getAggregatedHealthState()
+    type: Method
+    summary: |-
+      <p>エンティティで集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState</xref>に基づいて Health Manager によって計算された集計された正常性状態を表す (存在する場合)、エンティティとその子でイベントを報告し、正常性ポリシーを必要に応じて。 </p>"
+  - uid: system.fabric.health._entity_health.getHealthEvents()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getHealthEvents()
+    nameWithType: EntityHealth.getHealthEvents()
+    fullName: List<HealthEvent> system.fabric.health.EntityHealth.getHealthEvents()
+    type: Method
+    summary: "<p>エンティティで報告される正常性イベントを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>正常性イベントは、正常性ストアに送信される正常性レポートをに基づいて作成されます。 正常性ストアによって追加された追加のメタデータが含まれます。 </p>"
+    syntax:
+      content: public List<HealthEvent> getHealthEvents()
+      return:
+        type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        description: <p>エンティティの正常性イベントが報告されました。 </p>
+  - uid: system.fabric.health._entity_health.getUnhealthyEvaluations()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getUnhealthyEvaluations()
+    nameWithType: EntityHealth.getUnhealthyEvaluations()
+    fullName: List<HealthEvaluation> system.fabric.health.EntityHealth.getUnhealthyEvaluations()
+    type: Method
+    summary: |-
+      <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を示す異常な評価を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<HealthEvaluation> getUnhealthyEvaluations()
+      return:
+        type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+        description: <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を説明する異常な評価。 </p>
+  - uid: system.fabric.health._entity_health
+    parent: system.fabric.health
+    href: system.fabric.health._entity_health.yml
+    name: EntityHealth
+    nameWithType: EntityHealth
+    fullName: system.fabric.health.EntityHealth
+    type: Class
+    summary: <p>関連するクラスをすべてのエンティティのヘルスの基本クラスを表します。 </p>
+    syntax:
+      content: public class EntityHealth
+  - uid: system.fabric.health._health_event
+    parent: system.fabric.health
+    href: system.fabric.health._health_event.yml
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax:
+      content: public class HealthEvent
+  - uid: system.fabric.health._health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._health_evaluation.yml
+    name: HealthEvaluation
+    nameWithType: HealthEvaluation
+    fullName: system.fabric.health.HealthEvaluation
+    type: Class
+    summary: <p>データとエンティティのヘルスを評価する正常性ストアによって使用されるアルゴリズムを記述する正常性評価を表します。 </p>
+    syntax:
+      content: public class HealthEvaluation
+  - uid: system.fabric._health_client.getNodeHealthAsync(NodeHealthQueryDescription)
+    parent: system.fabric._health_client
+    href: system.fabric._health_client.yml
+    name: getNodeHealthAsync(NodeHealthQueryDescription queryDescription)
+    nameWithType: HealthClient.getNodeHealthAsync(NodeHealthQueryDescription queryDescription)
+    fullName: CompletableFuture<NodeHealth> system.fabric.HealthClient.getNodeHealthAsync(NodeHealthQueryDescription queryDescription)
+    type: Method
+    summary: |-
+      <p>非同期的に Service Fabric ノードの正常性、指定したタイムアウト時間および取り消しを使用してトークン取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<NodeHealth> getNodeHealthAsync(NodeHealthQueryDescription queryDescription)
+      parameters:
+        - id: queryDescription
+          type: system.fabric._node_health_query_description
+          description: <p>正常性ポリシーのようにパラメーターを定義するクエリの説明がなどにフィルター処理します。 </p>
+      return:
+        type: 9cdf14d0system.fabric.health._node_healtha08ddfce
+        description: <p>Service Fabric ノードの正常性。 </p>

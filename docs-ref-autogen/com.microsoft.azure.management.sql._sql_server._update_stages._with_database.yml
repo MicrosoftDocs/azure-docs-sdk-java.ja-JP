@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.sql._sql_server._update_stages._with_database
+    id: _with_database
+    parent: com.microsoft.azure.management.sql
+    children:
+      - com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withNewDatabase(String)
+      - com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withoutDatabase(String)
+    href: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.yml
+    langs:
+      - java
+    name: SqlServer.UpdateStages.WithDatabase
+    nameWithType: SqlServer.UpdateStages.WithDatabase
+    fullName: com.microsoft.azure.management.sql.SqlServer.UpdateStages.WithDatabase
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-sql/src/main/java/com/microsoft/azure/management/sql/SqlServer.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-sql/src/main/java/com/microsoft/azure/management/sql/SqlServer.java
+      startLine: 413
+    package: com.microsoft.azure.management.sql
+    summary: <p>データベースを指定するための SQL Server 定義します。 </p>
+    syntax:
+      content: public interface WithDatabase
+  - uid: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withNewDatabase(String)
+    id: withNewDatabase(String)
+    parent: com.microsoft.azure.management.sql._sql_server._update_stages._with_database
+    href: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.yml
+    langs:
+      - java
+    name: withNewDatabase(String databaseName)
+    nameWithType: SqlServer.UpdateStages.WithDatabase.withNewDatabase(String databaseName)
+    fullName: Update com.microsoft.azure.management.sql.SqlServer.UpdateStages.WithDatabase.withNewDatabase(String databaseName)
+    overload: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withNewDatabase*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-sql/src/main/java/com/microsoft/azure/management/sql/SqlServer.java
+      startLine: 419
+    package: com.microsoft.azure.management.sql
+    summary: <p>SQL Server で新しいデータベースを作成します。 </p>
+    syntax:
+      content: public Update withNewDatabase(String databaseName)
+      parameters:
+        - id: databaseName
+          type: '26831127'
+          description: <p>作成するデータベースの名前 </p>
+      return:
+        type: com.microsoft.azure.management.sql._sql_server._update
+        description: <p>SQL Server 更新プログラムの次のステージ </p>
+  - uid: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withoutDatabase(String)
+    id: withoutDatabase(String)
+    parent: com.microsoft.azure.management.sql._sql_server._update_stages._with_database
+    href: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.yml
+    langs:
+      - java
+    name: withoutDatabase(String databaseName)
+    nameWithType: SqlServer.UpdateStages.WithDatabase.withoutDatabase(String databaseName)
+    fullName: Update com.microsoft.azure.management.sql.SqlServer.UpdateStages.WithDatabase.withoutDatabase(String databaseName)
+    overload: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withoutDatabase*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-sql/src/main/java/com/microsoft/azure/management/sql/SqlServer.java
+      startLine: 426
+    package: com.microsoft.azure.management.sql
+    summary: <p>SQL Server からデータベースを削除します。 </p>
+    syntax:
+      content: public Update withoutDatabase(String databaseName)
+      parameters:
+        - id: databaseName
+          type: '26831127'
+          description: <p>削除するデータベースの名前 </p>
+      return:
+        type: com.microsoft.azure.management.sql._sql_server._update
+        description: <p>SQL Server 更新プログラムの次のステージ </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withNewDatabase*
+    name: withNewDatabase
+    nameWithType: SqlServer.UpdateStages.WithDatabase.withNewDatabase
+    fullName: Update com.microsoft.azure.management.sql.SqlServer.UpdateStages.WithDatabase.withNewDatabase
+    package: com.microsoft.azure.management.sql
+  - uid: com.microsoft.azure.management.sql._sql_server._update_stages._with_database.withoutDatabase*
+    name: withoutDatabase
+    nameWithType: SqlServer.UpdateStages.WithDatabase.withoutDatabase
+    fullName: Update com.microsoft.azure.management.sql.SqlServer.UpdateStages.WithDatabase.withoutDatabase
+    package: com.microsoft.azure.management.sql
+  - uid: com.microsoft.azure.management.sql._sql_server._update
+    parent: com.microsoft.azure.management.sql
+    href: com.microsoft.azure.management.sql._sql_server._update.yml
+    name: SqlServer.Update
+    nameWithType: SqlServer.Update
+    fullName: com.microsoft.azure.management.sql.SqlServer.Update
+    type: Interface
+    summary: <p>変更可能なすべての設定を含む、sql Server の更新操作のテンプレートです。 </p>
+    syntax:
+      content: 'public interface Update extends Appliable<SqlServer>,SqlServer.UpdateStages.WithAdministratorPassword,SqlServer.UpdateStages.WithElasticPool,SqlServer.UpdateStages.WithDatabase,SqlServer.UpdateStages.WithFirewallRule'

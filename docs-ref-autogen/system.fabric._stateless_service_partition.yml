@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._stateless_service_partition
+    id: _stateless_service_partition
+    parent: system.fabric
+    children:
+      - system.fabric._stateless_service_partition.reportInstanceHealth(HealthInformation)
+    href: system.fabric._stateless_service_partition.yml
+    langs:
+      - java
+    name: StatelessServicePartition
+    nameWithType: StatelessServicePartition
+    fullName: system.fabric.StatelessServicePartition
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServicePartition.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServicePartition.java
+      startLine: 11
+    package: system.fabric
+    summary: "<p>ステートレス サービス インスタンスに関連付けられているパーティションを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>をパラメーターとして、ステートレスなサービスを提供、 <xref uid=\"system.fabric._service_partition\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition</xref>です。 </p>"
+    syntax:
+      content: public interface StatelessServicePartition extends ServicePartition
+    inheritedMembers:
+      - system.fabric._service_partition.getPartitionInfo()
+      - system.fabric._service_partition.reportFault(FaultType)
+      - system.fabric._service_partition.reportLoad(Collection<LoadMetric>)
+      - system.fabric._service_partition.reportMoveCost(MoveCost)
+      - system.fabric._service_partition.reportPartitionHealth(HealthInformation)
+  - uid: system.fabric._stateless_service_partition.reportInstanceHealth(HealthInformation)
+    id: reportInstanceHealth(HealthInformation)
+    parent: system.fabric._stateless_service_partition
+    href: system.fabric._stateless_service_partition.yml
+    langs:
+      - java
+    name: reportInstanceHealth(HealthInformation healthInfo)
+    nameWithType: StatelessServicePartition.reportInstanceHealth(HealthInformation healthInfo)
+    fullName: void system.fabric.StatelessServicePartition.reportInstanceHealth(HealthInformation healthInfo)
+    overload: system.fabric._stateless_service_partition.reportInstanceHealth*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServicePartition.java
+      startLine: 18
+    package: system.fabric
+    summary: |-
+      <p>このパーティションに関連付けられている現在のインスタンスの正常性を報告します。</p>
+      <p></p>
+    syntax:
+      content: public void reportInstanceHealth(HealthInformation healthInfo)
+      parameters:
+        - id: healthInfo
+          type: system.fabric.health._health_information
+          description: <p>ヘルス情報をレポートします。 </p>
+references:
+  - uid: system.fabric._stateless_service_partition.reportInstanceHealth*
+    name: reportInstanceHealth
+    nameWithType: StatelessServicePartition.reportInstanceHealth
+    fullName: void system.fabric.StatelessServicePartition.reportInstanceHealth
+    package: system.fabric
+  - uid: system.fabric._service_partition.getPartitionInfo()
+    parent: system.fabric._service_partition
+    href: system.fabric._service_partition.yml
+    name: getPartitionInfo()
+    nameWithType: ServicePartition.getPartitionInfo()
+    fullName: ServicePartitionInformation system.fabric.ServicePartition.getPartitionInfo()
+    type: Method
+    summary: |-
+      <p>アクセスできるように、 <xref uid="system.fabric._service_partition_information" data-throw-if-not-resolved="false">system.fabric.ServicePartitionInformation</xref>パーティションの種類および ID を格納する、サービスの</p>
+      <p></p>
+    syntax:
+      content: public ServicePartitionInformation getPartitionInfo()
+      return:
+        type: system.fabric._service_partition_information
+        description: <p>返します<xref uid="system.fabric._service_partition_information" data-throw-if-not-resolved="false">system.fabric.ServicePartitionInformation</xref>です。 </p>
+  - uid: system.fabric._service_partition.reportFault(FaultType)
+    parent: system.fabric._service_partition
+    href: system.fabric._service_partition.yml
+    name: reportFault(FaultType faultType)
+    nameWithType: ServicePartition.reportFault(FaultType faultType)
+    fullName: void system.fabric.ServicePartition.reportFault(FaultType faultType)
+    type: Method
+    summary: "<p>負荷分散のメトリックのセットの負荷を報告します。 いつでも、負荷を報告することができます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.Collection</xref>の<xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">LoadMetric</xref>メソッドの 1 つまたは複数のプロパティを提供し、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>メソッド.</p>\n<p>\r\n\r\n  <b>注釈:</b>エラーは通常報告サービス コードが検出したときに回復できませんから一部を発行します。 </p>"
+    syntax:
+      content: public void reportFault(FaultType faultType)
+      parameters:
+        - id: faultType
+          type: system.fabric._fault_type
+          description: <p><xref uid="system.fabric._load_metric" data-throw-if-not-resolved="false">System.fabric.LoadMetric</xref>サービスで検出されました。 </p>
+  - uid: system.fabric._service_partition.reportLoad(Collection<LoadMetric>)
+    parent: system.fabric._service_partition
+    href: system.fabric._service_partition.yml
+    name: reportLoad(Collection<LoadMetric> metrics)
+    nameWithType: ServicePartition.reportLoad(Collection<LoadMetric> metrics)
+    fullName: void system.fabric.ServicePartition.reportLoad(Collection<LoadMetric> metrics)
+    type: Method
+    summary: "<p>負荷分散のメトリックのセットの負荷を報告します。 いつでも、負荷を報告することができます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.Collection</xref>の<xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">LoadMetric</xref>メソッドの 1 つまたは複数のプロパティを提供し、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>メソッド.</p>\n<p>\r\n\r\n  <b>注釈:</b>に用意されているものに対応する、報告されたメトリック、 <xref uid=\"system.fabric._service_load_metric_description\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription</xref>の一部として、 <xref uid=\"system.fabric._service_description\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceDescription</xref>サービスの作成に使用されます。 説明には存在しない負荷メトリックは無視されます。 カスタム メトリックを報告機能では、サービスを分散させる追加のカスタム情報を基にした Service Fabric を使用します。 </p>"
+    syntax:
+      content: public void reportLoad(Collection<LoadMetric> metrics)
+      parameters:
+        - id: metrics
+          type: 12ebb11asystem.fabric._load_metrica08ddfce
+          description: <p>コレクション<xref uid="system.fabric._load_metric" data-throw-if-not-resolved="false">system.fabric.LoadMetric</xref>の負荷を報告します。 </p>
+  - uid: system.fabric._service_partition.reportMoveCost(MoveCost)
+    parent: system.fabric._service_partition
+    href: system.fabric._service_partition.yml
+    name: reportMoveCost(MoveCost moveCost)
+    nameWithType: ServicePartition.reportMoveCost(MoveCost moveCost)
+    fullName: void system.fabric.ServicePartition.reportMoveCost(MoveCost moveCost)
+    type: Method
+    summary: "<p>レプリカの移動コストを報告します。</p>\n<p>\r\n\r\n  <b>注釈:</b>Services は、このメソッドを使用してレプリカの移動コストをレポートできます。 サービス ファブリック リソース残高は、クラスター内の最適なバランスを検索するときに、読み込み情報と、各レプリカの移動コストの両方を調べます。 リソースの残高は分散を実現するために低コストでレプリカを移動たいとします。 </p>"
+    syntax:
+      content: public void reportMoveCost(MoveCost moveCost)
+      parameters:
+        - id: moveCost
+          type: system.fabric._move_cost
+          description: <p>報告<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">system.fabric.MoveCost</xref>です。 </p>
+  - uid: system.fabric._service_partition.reportPartitionHealth(HealthInformation)
+    parent: system.fabric._service_partition
+    href: system.fabric._service_partition.yml
+    name: reportPartitionHealth(HealthInformation healthInfo)
+    nameWithType: ServicePartition.reportPartitionHealth(HealthInformation healthInfo)
+    fullName: void system.fabric.ServicePartition.reportPartitionHealth(HealthInformation healthInfo)
+    type: Method
+    summary: |-
+      <p>現在のパーティションの正常性を報告します。</p>
+      <p></p>
+    syntax:
+      content: public void reportPartitionHealth(HealthInformation healthInfo)
+      parameters:
+        - id: healthInfo
+          type: system.fabric.health._health_information
+          description: <p><xref uid="" data-throw-if-not-resolved="false">HealthInformation</xref></p>
+  - uid: system.fabric._service_partition
+    parent: system.fabric
+    href: system.fabric._service_partition.yml
+    name: ServicePartition
+    nameWithType: ServicePartition
+    fullName: system.fabric.ServicePartition
+    type: Interface
+    summary: <p>パーティションに属しを実行時に、システムとの対話をサービスのメソッドを提供に関する情報をサービスを提供します。 </p>
+    syntax:
+      content: public interface ServicePartition
+  - uid: system.fabric._j_stateless_service_partition
+  - uid: system.fabric.health._health_information
+    parent: system.fabric.health
+    href: system.fabric.health._health_information.yml
+    name: HealthInformation
+    nameWithType: HealthInformation
+    fullName: system.fabric.health.HealthInformation
+    type: Class
+    summary: <p>エンティティのヘルス情報が含まれています。 この情報は、正常性レポートに含まれています。 正常性イベントの一部としても提供されます。 </p>
+    syntax:
+      content: public class HealthInformation

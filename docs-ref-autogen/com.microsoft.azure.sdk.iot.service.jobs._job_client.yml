@@ -1,0 +1,667 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    id: _job_client
+    parent: com.microsoft.azure.sdk.iot.service.jobs
+    children:
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.cancelJob(String)
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.createFromConnectionString(String)
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.getJob(String)
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.getNextJob(Query)
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.hasNextJob(Query)
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.JobClient()
+      - com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob(String)
+      - 'com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob(String,Integer)'
+      - 'com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse(JobType,JobStatus)'
+      - 'com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse(JobType,JobStatus,Integer)'
+      - 'com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleDeviceMethod(String,String,String,Long,Long,Object,Date,long)'
+      - 'com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleUpdateTwin(String,String,DeviceTwinDevice,Date,long)'
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: JobClient
+    nameWithType: JobClient
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 24
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.service.jobs._job_client\" data-throw-if-not-resolved=\"false\">JobClient</xref>サービス クライアントをスケジュールし、iot Hub を使用してデバイスのグループのジョブを取り消すことができます。 </p>"
+    syntax: &ref_1
+      content: public class JobClient
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.cancelJob(String)
+    id: cancelJob(String)
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: cancelJob(String jobId)
+    nameWithType: JobClient.cancelJob(String jobId)
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.cancelJob(String jobId)
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.cancelJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 251
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: |-
+      <p>Iot Hub で現在 jod を取り消す</p>
+      <p></p>
+    syntax:
+      content: public synchronized JobResult cancelJob(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>このジョブの一意のジョブ Id </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.jobs._job_result
+        description: <p>jobResult オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>場合は、ジョブ Id が無効です。 </p>
+      - type: cbf33bbe
+        description: <p>関数は、ジョブでは、URL を作成することはできませんか、要求で、IO が失敗した場合 </p>
+      - type: 0d494ee6
+        description: <p>http 要求が失敗した場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.createFromConnectionString(String)
+    id: createFromConnectionString(String)
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: createFromConnectionString(String connectionString)
+    nameWithType: JobClient.createFromConnectionString(String connectionString)
+    fullName: static JobClient com.microsoft.azure.sdk.iot.service.jobs.JobClient.createFromConnectionString(String connectionString)
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.createFromConnectionString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 42
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: |-
+      <p>接続文字列からインスタンスを作成する静的コンス トラクター</p>
+      <p></p>
+    syntax:
+      content: public static JobClient createFromConnectionString(String connectionString)
+      parameters:
+        - id: connectionString
+          type: '26831127'
+          description: <p>Iot ハブの接続文字列 </p>
+      return:
+        type: com.microsoft.azure.sdk.iot.service.jobs._job_client
+        description: <p>インスタンス<xref uid="com.microsoft.azure.sdk.iot.service.jobs._job_client" data-throw-if-not-resolved="false">JobClient</xref></p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>オブジェクトの作成に失敗した場合 </p>
+      - type: 3c87bd19
+        description: "<p>指定された接続文字列が場合<code>null \r\n\r\n    </code>または空 </p>"
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.getJob(String)
+    id: getJob(String)
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: getJob(String jobId)
+    nameWithType: JobClient.getJob(String jobId)
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.getJob(String jobId)
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.getJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 212
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: |-
+      <p>Iot Hub 上の現在のジョブを取得します。</p>
+      <p></p>
+    syntax:
+      content: public synchronized JobResult getJob(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>このジョブの一意のジョブ Id </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.jobs._job_result
+        description: <p>jobResult オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>場合は、ジョブ Id が無効です。 </p>
+      - type: cbf33bbe
+        description: <p>関数は、ジョブでは、URL を作成することはできませんか、要求で、IO が失敗した場合 </p>
+      - type: 0d494ee6
+        description: <p>http 要求が失敗した場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.getNextJob(Query)
+    id: getNextJob(Query)
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: getNextJob(Query query)
+    nameWithType: JobClient.getNextJob(Query query)
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.getNextJob(Query query)
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.getNextJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 400
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: <p>応答には、次のジョブの結果を返します。 クエリの詳細ページのサイズが満たされているし、は次が呼び出されなかった場合 </p>
+    syntax:
+      content: public synchronized JobResult getNextJob(Query query)
+      parameters:
+        - id: query
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query
+          description: <p>次のジョブ応答を検索するためのクエリ </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.jobs._job_result
+        description: <p>使用可能な場合、次のジョブ結果 </p>
+    exceptions:
+      - type: 0d494ee6
+        description: <p>Iot Hub が応答に失敗した日時 </p>
+      - type: cbf33bbe
+        description: <p>入力パラメーターのいずれかが正しくない場合 </p>
+      - type: 05807805
+        description: <p>さらに応答が残っていないときに呼び出された場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.hasNextJob(Query)
+    id: hasNextJob(Query)
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: hasNextJob(Query query)
+    nameWithType: JobClient.hasNextJob(Query query)
+    fullName: synchronized boolean com.microsoft.azure.sdk.iot.service.jobs.JobClient.hasNextJob(Query query)
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.hasNextJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 381
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: <p>応答には、次のジョブの結果の可用性を返します。 クエリのページ サイズが満たされている場合はこれ以上。 </p>
+    syntax:
+      content: public synchronized boolean hasNextJob(Query query)
+      parameters:
+        - id: query
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query
+          description: <p>次のジョブ応答を検索するためのクエリ </p>
+      return:
+        type: 85b427c6
+        description: '<p>[次へ] の場合は true。 ジョブの結果が利用可能な場合は false それ以外の場合 </p>'
+    exceptions:
+      - type: 0d494ee6
+        description: <p>Iot Hub が応答に失敗した日時 </p>
+      - type: cbf33bbe
+        description: <p>入力パラメーターのいずれかが正しくない場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.JobClient()
+    id: JobClient()
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: JobClient()
+    nameWithType: JobClient.JobClient()
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobClient.JobClient()
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.JobClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 464
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    syntax:
+      content: protected JobClient()
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob(String)
+    id: queryDeviceJob(String)
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: queryDeviceJob(String sqlQuery)
+    nameWithType: JobClient.queryDeviceJob(String sqlQuery)
+    fullName: synchronized Query com.microsoft.azure.sdk.iot.service.jobs.JobClient.queryDeviceJob(String sqlQuery)
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 368
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: <p>デバイス応答の 100 の既定のページ サイズによって制限するジョブのクエリ </p>
+    syntax:
+      content: public synchronized Query queryDeviceJob(String sqlQuery)
+      parameters:
+        - id: sqlQuery
+          type: '26831127'
+          description: <p>device.jobs 経由で sql スタイルのクエリ </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+        description: <p>このクエリのクエリ オブジェクト </p>
+    exceptions:
+      - type: 0d494ee6
+        description: <p>Iot Hub が応答に失敗した日時 </p>
+      - type: cbf33bbe
+        description: <p>いずれかのパラメーターが正しくありません。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob(String,Integer)'
+    id: 'queryDeviceJob(String,Integer)'
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: 'queryDeviceJob(String sqlQuery, Integer pageSize)'
+    nameWithType: 'JobClient.queryDeviceJob(String sqlQuery, Integer pageSize)'
+    fullName: 'synchronized Query com.microsoft.azure.sdk.iot.service.jobs.JobClient.queryDeviceJob(String sqlQuery, Integer pageSize)'
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 339
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: <p>デバイス ジョブのクエリ </p>
+    syntax:
+      content: 'public synchronized Query queryDeviceJob(String sqlQuery, Integer pageSize)'
+      parameters:
+        - id: sqlQuery
+          type: '26831127'
+          description: <p>device.jobs 経由で sql スタイルのクエリ </p>
+        - id: pageSize
+          type: 08effaa0
+          description: <p>あたりによってクエリの応答のサイズを制限する値。 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+        description: <p>このクエリのクエリ オブジェクト </p>
+    exceptions:
+      - type: 0d494ee6
+        description: <p>Iot Hub が応答に失敗した日時 </p>
+      - type: cbf33bbe
+        description: <p>いずれかのパラメーターが正しくありません。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse(JobType,JobStatus)'
+    id: 'queryJobResponse(JobType,JobStatus)'
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: 'queryJobResponse(JobType jobType, JobStatus jobStatus)'
+    nameWithType: 'JobClient.queryJobResponse(JobType jobType, JobStatus jobStatus)'
+    fullName: 'synchronized Query com.microsoft.azure.sdk.iot.service.jobs.JobClient.queryJobResponse(JobType jobType, JobStatus jobStatus)'
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 457
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: <p>ジョブ応答を iot hub をクエリします。 クエリの応答は、接続試行ごとの既定のページ サイズによって制限されます。 </p>
+    syntax:
+      content: 'public synchronized Query queryJobResponse(JobType jobType, JobStatus jobStatus)'
+      parameters:
+        - id: jobType
+          type: com.microsoft.azure.sdk.iot.service.jobs._job_type
+          description: <p>クエリの実行にジョブの種類 </p>
+        - id: jobStatus
+          type: com.microsoft.azure.sdk.iot.service.jobs._job_status
+          description: <p>クエリの実行にジョブの状態 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+        description: <p>応答での検索対象のクエリ オブジェクト </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>入力パラメーターのいずれかが正しくない場合 </p>
+      - type: 0d494ee6
+        description: <p>Iot Hub が応答に失敗した場合 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse(JobType,JobStatus,Integer)'
+    id: 'queryJobResponse(JobType,JobStatus,Integer)'
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: 'queryJobResponse(JobType jobType, JobStatus jobStatus, Integer pageSize)'
+    nameWithType: 'JobClient.queryJobResponse(JobType jobType, JobStatus jobStatus, Integer pageSize)'
+    fullName: 'synchronized Query com.microsoft.azure.sdk.iot.service.jobs.JobClient.queryJobResponse(JobType jobType, JobStatus jobStatus, Integer pageSize)'
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 432
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: <p>ジョブ応答を iot hub をクエリします。 クエリの応答は、接続試行ごとのページ サイズによって制限されます。 </p>
+    syntax:
+      content: 'public synchronized Query queryJobResponse(JobType jobType, JobStatus jobStatus, Integer pageSize)'
+      parameters:
+        - id: jobType
+          type: com.microsoft.azure.sdk.iot.service.jobs._job_type
+          description: <p>クエリの実行にジョブの種類 </p>
+        - id: jobStatus
+          type: com.microsoft.azure.sdk.iot.service.jobs._job_status
+          description: <p>クエリの実行にジョブの状態 </p>
+        - id: pageSize
+          type: 08effaa0
+          description: <p>によってジョブ応答のサイズを制限する値 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+        description: <p>応答での検索対象のクエリ オブジェクト </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>入力パラメーターのいずれかが正しくない場合 </p>
+      - type: 0d494ee6
+        description: <p>Iot Hub が応答に失敗した場合 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleDeviceMethod(String,String,String,Long,Long,Object,Date,long)'
+    id: 'scheduleDeviceMethod(String,String,String,Long,Long,Object,Date,long)'
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: 'scheduleDeviceMethod(String jobId, String queryCondition, String methodName, Long responseTimeoutInSeconds, Long connectTimeoutInSeconds, Object payload, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    nameWithType: 'JobClient.scheduleDeviceMethod(String jobId, String queryCondition, String methodName, Long responseTimeoutInSeconds, Long connectTimeoutInSeconds, Object payload, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    fullName: 'synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.scheduleDeviceMethod(String jobId, String queryCondition, String methodName, Long responseTimeoutInSeconds, Long connectTimeoutInSeconds, Object payload, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleDeviceMethod*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 145
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: |-
+      <p>1 つまたは複数のデバイスでメソッドを呼び出すための新しいジョブを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public synchronized JobResult scheduleDeviceMethod(String jobId, String queryCondition, String methodName, Long responseTimeoutInSeconds, Long connectTimeoutInSeconds, Object payload, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>このジョブの一意のジョブ Id </p>
+        - id: queryCondition
+          type: '26831127'
+          description: "<p>ジョブを実行するデバイスを評価する条件をクエリします。 できます<code>null \r\n\r\n    </code>または空 </p>"
+        - id: methodName
+          type: '26831127'
+          description: <p>呼び出されるメソッドの名前 </p>
+        - id: responseTimeoutInSeconds
+          type: 34f09483
+          description: "<p>時間 (秒)、直接的なメソッドが応答を待機する最長間隔。 できます<code>null \r\n\r\n    </code>です。 </p>"
+        - id: connectTimeoutInSeconds
+          type: 34f09483
+          description: "<p>接続の直接的なメソッドが待機する秒単位の時間の最大間隔。 できます<code>null \r\n\r\n    </code>です。 </p>"
+        - id: payload
+          type: '79317049'
+          description: "<p>ユーザーが定義されているペイロードを含むオブジェクトです。 できます<code>null \r\n\r\n    </code>です。 </p>"
+        - id: startTimeUtc
+          type: '12977444'
+          description: <p>ジョブを開始する Utc の日付時刻 </p>
+        - id: maxExecutionTimeInSeconds
+          type: 0364520f
+          description: <p>最大実行時間 (秒)、つまり、ttl 期間のジョブを実行できます。 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.jobs._job_result
+        description: <p>jobResult オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定されたパラメーターのいずれかが有効ではない場合 </p>
+      - type: cbf33bbe
+        description: <p>関数は、ジョブでは、URL を作成することはできませんか、要求で、IO が失敗した場合 </p>
+      - type: 0d494ee6
+        description: <p>http 要求が失敗した場合 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleUpdateTwin(String,String,DeviceTwinDevice,Date,long)'
+    id: 'scheduleUpdateTwin(String,String,DeviceTwinDevice,Date,long)'
+    parent: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    langs:
+      - java
+    name: 'scheduleUpdateTwin(String jobId, String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    nameWithType: 'JobClient.scheduleUpdateTwin(String jobId, String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    fullName: 'synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.scheduleUpdateTwin(String jobId, String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    overload: com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleUpdateTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/jobs/JobClient.java
+      startLine: 72
+    package: com.microsoft.azure.sdk.iot.service.jobs
+    summary: |-
+      <p>対になったタグと 1 つまたは複数のデバイスで必要なプロパティを更新する、新しいジョブを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public synchronized JobResult scheduleUpdateTwin(String jobId, String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>このジョブの一意のジョブ Id </p>
+        - id: queryCondition
+          type: '26831127'
+          description: "<p>ジョブを実行するデバイスを評価する条件をクエリします。 できます<code>null \r\n\r\n    </code>または空 </p>"
+        - id: updateTwin
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>対になったオブジェクトの更新を使用するには </p>
+        - id: startTimeUtc
+          type: '12977444'
+          description: <p>ジョブを開始する Utc の日付時刻 </p>
+        - id: maxExecutionTimeInSeconds
+          type: 0364520f
+          description: <p>最大実行時間 (秒)、つまり、ttl 期間のジョブを実行できます。 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.jobs._job_result
+        description: <p>jobResult オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定されたパラメーターのいずれかが有効ではない場合 </p>
+      - type: cbf33bbe
+        description: <p>関数は、ジョブの URL を作成できない場合 </p>
+      - type: 0d494ee6
+        description: <p>http 要求が失敗した場合 </p>
+references:
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.createFromConnectionString*
+    name: createFromConnectionString
+    nameWithType: JobClient.createFromConnectionString
+    fullName: static JobClient com.microsoft.azure.sdk.iot.service.jobs.JobClient.createFromConnectionString
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: 0d494ee6
+    spec.java:
+      - name: IotHubException
+        fullName: IotHubException
+  - uid: '12977444'
+    spec.java:
+      - name: Date
+        fullName: Date
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: cffad4f2com.microsoft.azure.sdk.iot.service.jobs._job_result
+    spec.java:
+      - name: 'synchronized '
+        fullName: 'synchronized '
+      - uid: com.microsoft.azure.sdk.iot.service.jobs._job_result
+        name: JobResult
+        fullName: com.microsoft.azure.sdk.iot.service.jobs.JobResult
+        href: com.microsoft.azure.sdk.iot.service.jobs._job_result.yml
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleUpdateTwin*
+    name: scheduleUpdateTwin
+    nameWithType: JobClient.scheduleUpdateTwin
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.scheduleUpdateTwin
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: 34f09483
+    spec.java:
+      - name: Long
+        fullName: Long
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.scheduleDeviceMethod*
+    name: scheduleDeviceMethod
+    nameWithType: JobClient.scheduleDeviceMethod
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.scheduleDeviceMethod
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.getJob*
+    name: getJob
+    nameWithType: JobClient.getJob
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.getJob
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.cancelJob*
+    name: cancelJob
+    nameWithType: JobClient.cancelJob
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.cancelJob
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: 08effaa0
+    spec.java:
+      - name: Integer
+        fullName: Integer
+  - uid: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+    spec.java:
+      - name: 'synchronized '
+        fullName: 'synchronized '
+      - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query
+        name: Query
+        fullName: com.microsoft.azure.sdk.iot.service.devicetwin.Query
+        href: com.microsoft.azure.sdk.iot.service.devicetwin._query.yml
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryDeviceJob*
+    name: queryDeviceJob
+    nameWithType: JobClient.queryDeviceJob
+    fullName: synchronized Query com.microsoft.azure.sdk.iot.service.jobs.JobClient.queryDeviceJob
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: 85b427c6
+    spec.java:
+      - name: synchronized boolean
+        fullName: synchronized boolean
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.hasNextJob*
+    name: hasNextJob
+    nameWithType: JobClient.hasNextJob
+    fullName: synchronized boolean com.microsoft.azure.sdk.iot.service.jobs.JobClient.hasNextJob
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: 05807805
+    spec.java:
+      - name: NoSuchElementException
+        fullName: NoSuchElementException
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.getNextJob*
+    name: getNextJob
+    nameWithType: JobClient.getNextJob
+    fullName: synchronized JobResult com.microsoft.azure.sdk.iot.service.jobs.JobClient.getNextJob
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.queryJobResponse*
+    name: queryJobResponse
+    nameWithType: JobClient.queryJobResponse
+    fullName: synchronized Query com.microsoft.azure.sdk.iot.service.jobs.JobClient.queryJobResponse
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client.JobClient*
+    name: JobClient
+    nameWithType: JobClient.JobClient
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobClient.JobClient
+    package: com.microsoft.azure.sdk.iot.service.jobs
+  - uid: com.microsoft.azure.sdk.iot.service._iot_hub_connection_string
+    parent: com.microsoft.azure.sdk.iot.service
+    href: com.microsoft.azure.sdk.iot.service._iot_hub_connection_string.yml
+    name: IotHubConnectionString
+    nameWithType: IotHubConnectionString
+    fullName: com.microsoft.azure.sdk.iot.service.IotHubConnectionString
+    type: Class
+    summary: <p>すべての接続文字列プロパティとユーザー、デバイス、および接続文字列のシリアル化のためのメソッドを公開します。 </p>
+    syntax:
+      content: public class IotHubConnectionString extends IotHubConnectionStringBuilder
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_client
+    parent: com.microsoft.azure.sdk.iot.service.jobs
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_client.yml
+    name: JobClient
+    nameWithType: JobClient
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobClient
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.service.jobs._job_client\" data-throw-if-not-resolved=\"false\">JobClient</xref>サービス クライアントをスケジュールし、iot Hub を使用してデバイスのグループのジョブを取り消すことができます。 </p>"
+    syntax: *ref_1
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_result
+    parent: com.microsoft.azure.sdk.iot.service.jobs
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_result.yml
+    name: JobResult
+    nameWithType: JobResult
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobResult
+    type: Class
+    summary: <p>ジョブ操作の結果を持つコレクション。 </p>
+    syntax:
+      content: public class JobResult
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device.yml
+    name: DeviceTwinDevice
+    nameWithType: DeviceTwinDevice
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwinDevice
+    type: Class
+    syntax:
+      content: public class DeviceTwinDevice
+  - uid: com.microsoft.azure.sdk.iot.service.exceptions._iot_hub_exception
+    parent: com.microsoft.azure.sdk.iot.service.exceptions
+    href: com.microsoft.azure.sdk.iot.service.exceptions._iot_hub_exception.yml
+    name: IotHubException
+    nameWithType: IotHubException
+    fullName: com.microsoft.azure.sdk.iot.service.exceptions.IotHubException
+    type: Class
+    summary: <p>Iot Hub の例外のスーパー クラス </p>
+    syntax:
+      content: public class IotHubException
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._query.yml
+    name: Query
+    nameWithType: Query
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.Query
+    type: Class
+    syntax:
+      content: public class Query
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_type
+    parent: com.microsoft.azure.sdk.iot.service.jobs
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_type.yml
+    name: JobType
+    nameWithType: JobType
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobType
+    type: Enum
+    syntax:
+      content: public enum JobType
+  - uid: com.microsoft.azure.sdk.iot.service.jobs._job_status
+    parent: com.microsoft.azure.sdk.iot.service.jobs
+    href: com.microsoft.azure.sdk.iot.service.jobs._job_status.yml
+    name: JobStatus
+    nameWithType: JobStatus
+    fullName: com.microsoft.azure.sdk.iot.service.jobs.JobStatus
+    type: Enum
+    syntax:
+      content: public enum JobStatus
+  - uid: com.microsoft.azure.sdk.iot.deps.serializer._twin_parser
+    parent: com.microsoft.azure.sdk.iot.deps.serializer
+    href: com.microsoft.azure.sdk.iot.deps.serializer._twin_parser.yml
+    name: TwinParser
+    nameWithType: TwinParser
+    fullName: com.microsoft.azure.sdk.iot.deps.serializer.TwinParser
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.deps.serializer._twin_parser\" data-throw-if-not-resolved=\"false\">TwinParser</xref>など、対になったコレクションの Json シリアライザーとデシリアライザー表現します。 </p>"
+    syntax:
+      content: public class TwinParser
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._pair
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._pair.yml
+    name: Pair
+    nameWithType: Pair
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.Pair
+    type: Class
+    syntax:
+      content: public class Pair

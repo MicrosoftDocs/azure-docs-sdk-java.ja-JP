@@ -1,0 +1,1112 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.batch.protocol._applications
+    id: _applications
+    parent: com.microsoft.azure.batch.protocol
+    children:
+      - com.microsoft.azure.batch.protocol._applications.get(String)
+      - 'com.microsoft.azure.batch.protocol._applications.get(String,ApplicationGetOptions)'
+      - com.microsoft.azure.batch.protocol._applications.getAsync(String)
+      - 'com.microsoft.azure.batch.protocol._applications.getAsync(String,ApplicationGetOptions)'
+      - 'com.microsoft.azure.batch.protocol._applications.getAsync(String,ApplicationGetOptions,final ServiceCallback<ApplicationSummary>)'
+      - 'com.microsoft.azure.batch.protocol._applications.getAsync(String,final ServiceCallback<ApplicationSummary>)'
+      - com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync(String)
+      - 'com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync(String,ApplicationGetOptions)'
+      - com.microsoft.azure.batch.protocol._applications.list()
+      - com.microsoft.azure.batch.protocol._applications.list(final ApplicationListOptions)
+      - com.microsoft.azure.batch.protocol._applications.listAsync()
+      - com.microsoft.azure.batch.protocol._applications.listAsync(final ApplicationListOptions)
+      - 'com.microsoft.azure.batch.protocol._applications.listAsync(final ApplicationListOptions,final ListOperationCallback<ApplicationSummary>)'
+      - com.microsoft.azure.batch.protocol._applications.listAsync(final ListOperationCallback<ApplicationSummary>)
+      - com.microsoft.azure.batch.protocol._applications.listNext(final String)
+      - 'com.microsoft.azure.batch.protocol._applications.listNext(final String,final ApplicationListNextOptions)'
+      - com.microsoft.azure.batch.protocol._applications.listNextAsync(final String)
+      - 'com.microsoft.azure.batch.protocol._applications.listNextAsync(final String,final ApplicationListNextOptions)'
+      - 'com.microsoft.azure.batch.protocol._applications.listNextAsync(final String,final ApplicationListNextOptions,final ServiceFuture<List<ApplicationSummary>>,final ListOperationCallback<ApplicationSummary>)'
+      - 'com.microsoft.azure.batch.protocol._applications.listNextAsync(final String,final ServiceFuture<List<ApplicationSummary>>,final ListOperationCallback<ApplicationSummary>)'
+      - com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync(final String)
+      - 'com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync(final String,final ApplicationListNextOptions)'
+      - com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync()
+      - com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync(final ApplicationListOptions)
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: Applications
+    nameWithType: Applications
+    fullName: com.microsoft.azure.batch.protocol.Applications
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-batch-sdk-for-java'
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 31
+    package: com.microsoft.azure.batch.protocol
+    summary: <p>このクラスのインスタンスで定義されているすべての操作へのアクセスを提供する<xref uid="com.microsoft.azure.batch.protocol._applications" data-throw-if-not-resolved="false">アプリケーション</xref>です。 </p>
+    syntax: &ref_1
+      content: public interface Applications
+  - uid: com.microsoft.azure.batch.protocol._applications.get(String)
+    id: get(String)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: get(String applicationId)
+    nameWithType: Applications.get(String applicationId)
+    fullName: ApplicationSummary com.microsoft.azure.batch.protocol.Applications.get(String applicationId)
+    overload: com.microsoft.azure.batch.protocol._applications.get*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 123
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public ApplicationSummary get(String applicationId)
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._application_summary
+        description: <p>成功した場合は、ApplicationSummary オブジェクト。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: 9b2a4515
+        description: <p>送信する要求が失敗した場合は、チェックされた例外をラップされた他のすべての </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.get(String,ApplicationGetOptions)'
+    id: 'get(String,ApplicationGetOptions)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'get(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    nameWithType: 'Applications.get(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    fullName: 'ApplicationSummary com.microsoft.azure.batch.protocol.Applications.get(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.get*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 166
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ApplicationSummary get(String applicationId, ApplicationGetOptions applicationGetOptions)'
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+        - id: applicationGetOptions
+          type: com.microsoft.azure.batch.protocol.models._application_get_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._application_summary
+        description: <p>成功した場合は、ApplicationSummary オブジェクト。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: 9b2a4515
+        description: <p>送信する要求が失敗した場合は、チェックされた例外をラップされた他のすべての </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.getAsync(String)
+    id: getAsync(String)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: getAsync(String applicationId)
+    nameWithType: Applications.getAsync(String applicationId)
+    fullName: Observable<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.getAsync(String applicationId)
+    overload: com.microsoft.azure.batch.protocol._applications.getAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 144
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<ApplicationSummary> getAsync(String applicationId)
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+      return:
+        type: c2d0e8c6com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p>ApplicationSummary オブジェクトに観測可能なオブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.getAsync(String,ApplicationGetOptions)'
+    id: 'getAsync(String,ApplicationGetOptions)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'getAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    nameWithType: 'Applications.getAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    fullName: 'Observable<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.getAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.getAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 189
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ApplicationSummary> getAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+        - id: applicationGetOptions
+          type: com.microsoft.azure.batch.protocol.models._application_get_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: c2d0e8c6com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p>ApplicationSummary オブジェクトに観測可能なオブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.getAsync(String,ApplicationGetOptions,final ServiceCallback<ApplicationSummary>)'
+    id: 'getAsync(String,ApplicationGetOptions,final ServiceCallback<ApplicationSummary>)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'getAsync(String applicationId, ApplicationGetOptions applicationGetOptions, final ServiceCallback<ApplicationSummary> serviceCallback)'
+    nameWithType: 'Applications.getAsync(String applicationId, ApplicationGetOptions applicationGetOptions, final ServiceCallback<ApplicationSummary> serviceCallback)'
+    fullName: 'ServiceFuture<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.getAsync(String applicationId, ApplicationGetOptions applicationGetOptions, final ServiceCallback<ApplicationSummary> serviceCallback)'
+    overload: com.microsoft.azure.batch.protocol._applications.getAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 178
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<ApplicationSummary> getAsync(String applicationId, ApplicationGetOptions applicationGetOptions, final ServiceCallback<ApplicationSummary> serviceCallback)'
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+        - id: applicationGetOptions
+          type: com.microsoft.azure.batch.protocol.models._application_get_options
+          description: <p>操作の追加パラメーター </p>
+        - id: serviceCallback
+          type: 897eb10acom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+          description: <p>非同期 ServiceCallback を成功と失敗の応答を処理します。 </p>
+      return:
+        type: c522ce07com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p><xref uid="" data-throw-if-not-resolved="false">ServiceFuture</xref>オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.getAsync(String,final ServiceCallback<ApplicationSummary>)'
+    id: 'getAsync(String,final ServiceCallback<ApplicationSummary>)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'getAsync(String applicationId, final ServiceCallback<ApplicationSummary> serviceCallback)'
+    nameWithType: 'Applications.getAsync(String applicationId, final ServiceCallback<ApplicationSummary> serviceCallback)'
+    fullName: 'ServiceFuture<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.getAsync(String applicationId, final ServiceCallback<ApplicationSummary> serviceCallback)'
+    overload: com.microsoft.azure.batch.protocol._applications.getAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 134
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<ApplicationSummary> getAsync(String applicationId, final ServiceCallback<ApplicationSummary> serviceCallback)'
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+        - id: serviceCallback
+          type: 897eb10acom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+          description: <p>非同期 ServiceCallback を成功と失敗の応答を処理します。 </p>
+      return:
+        type: c522ce07com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p><xref uid="" data-throw-if-not-resolved="false">ServiceFuture</xref>オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync(String)
+    id: getWithServiceResponseAsync(String)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: getWithServiceResponseAsync(String applicationId)
+    nameWithType: Applications.getWithServiceResponseAsync(String applicationId)
+    fullName: 'Observable<ServiceResponseWithHeaders<ApplicationSummary, ApplicationGetHeaders>> com.microsoft.azure.batch.protocol.Applications.getWithServiceResponseAsync(String applicationId)'
+    overload: com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 154
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ServiceResponseWithHeaders<ApplicationSummary, ApplicationGetHeaders>> getWithServiceResponseAsync(String applicationId)'
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+      return:
+        type: cc516622com.microsoft.azure.batch.protocol.models._application_summaryb33c76fccom.microsoft.azure.batch.protocol.models._application_get_headerse7daa122
+        description: <p>ApplicationSummary オブジェクトに観測可能なオブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync(String,ApplicationGetOptions)'
+    id: 'getWithServiceResponseAsync(String,ApplicationGetOptions)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'getWithServiceResponseAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    nameWithType: 'Applications.getWithServiceResponseAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    fullName: 'Observable<ServiceResponseWithHeaders<ApplicationSummary, ApplicationGetHeaders>> com.microsoft.azure.batch.protocol.Applications.getWithServiceResponseAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 200
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>指定されたアプリケーションに関する情報を取得します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ServiceResponseWithHeaders<ApplicationSummary, ApplicationGetHeaders>> getWithServiceResponseAsync(String applicationId, ApplicationGetOptions applicationGetOptions)'
+      parameters:
+        - id: applicationId
+          type: '26831127'
+          description: <p>アプリケーションの ID。 </p>
+        - id: applicationGetOptions
+          type: com.microsoft.azure.batch.protocol.models._application_get_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: cc516622com.microsoft.azure.batch.protocol.models._application_summaryb33c76fccom.microsoft.azure.batch.protocol.models._application_get_headerse7daa122
+        description: <p>ApplicationSummary オブジェクトに観測可能なオブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.list()
+    id: list()
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: list()
+    nameWithType: Applications.list()
+    fullName: PagedList<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.list()
+    overload: com.microsoft.azure.batch.protocol._applications.list*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 41
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<ApplicationSummary> list()
+      return:
+        type: 36b27be0com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p>PagedList&lt;ApplicationSummary&gt;正常終了した場合のオブジェクト。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: 9b2a4515
+        description: <p>送信する要求が失敗した場合は、チェックされた例外をラップされた他のすべての </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.list(final ApplicationListOptions)
+    id: list(final ApplicationListOptions)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: list(final ApplicationListOptions applicationListOptions)
+    nameWithType: Applications.list(final ApplicationListOptions applicationListOptions)
+    fullName: PagedList<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.list(final ApplicationListOptions applicationListOptions)
+    overload: com.microsoft.azure.batch.protocol._applications.list*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 80
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<ApplicationSummary> list(final ApplicationListOptions applicationListOptions)
+      parameters:
+        - id: applicationListOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: 36b27be0com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p>PagedList&lt;ApplicationSummary&gt;正常終了した場合のオブジェクト。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: 9b2a4515
+        description: <p>送信する要求が失敗した場合は、チェックされた例外をラップされた他のすべての </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listAsync()
+    id: listAsync()
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listAsync()
+    nameWithType: Applications.listAsync()
+    fullName: Observable<Page<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listAsync()
+    overload: com.microsoft.azure.batch.protocol._applications.listAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 60
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<Page<ApplicationSummary>> listAsync()
+      return:
+        type: 32da0907com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listAsync(final ApplicationListOptions)
+    id: listAsync(final ApplicationListOptions)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listAsync(final ApplicationListOptions applicationListOptions)
+    nameWithType: Applications.listAsync(final ApplicationListOptions applicationListOptions)
+    fullName: Observable<Page<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listAsync(final ApplicationListOptions applicationListOptions)
+    overload: com.microsoft.azure.batch.protocol._applications.listAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 101
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<Page<ApplicationSummary>> listAsync(final ApplicationListOptions applicationListOptions)
+      parameters:
+        - id: applicationListOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: 32da0907com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.listAsync(final ApplicationListOptions,final ListOperationCallback<ApplicationSummary>)'
+    id: 'listAsync(final ApplicationListOptions,final ListOperationCallback<ApplicationSummary>)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'listAsync(final ApplicationListOptions applicationListOptions, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    nameWithType: 'Applications.listAsync(final ApplicationListOptions applicationListOptions, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    fullName: 'ServiceFuture<List<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listAsync(final ApplicationListOptions applicationListOptions, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    overload: com.microsoft.azure.batch.protocol._applications.listAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 91
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<List<ApplicationSummary>> listAsync(final ApplicationListOptions applicationListOptions, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+      parameters:
+        - id: applicationListOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_options
+          description: <p>操作の追加パラメーター </p>
+        - id: serviceCallback
+          type: 3c4303efcom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+          description: <p>非同期 ServiceCallback を成功と失敗の応答を処理します。 </p>
+      return:
+        type: b7698b59com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p><xref uid="" data-throw-if-not-resolved="false">ServiceFuture</xref>オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listAsync(final ListOperationCallback<ApplicationSummary>)
+    id: listAsync(final ListOperationCallback<ApplicationSummary>)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listAsync(final ListOperationCallback<ApplicationSummary> serviceCallback)
+    nameWithType: Applications.listAsync(final ListOperationCallback<ApplicationSummary> serviceCallback)
+    fullName: ServiceFuture<List<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listAsync(final ListOperationCallback<ApplicationSummary> serviceCallback)
+    overload: com.microsoft.azure.batch.protocol._applications.listAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 51
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public ServiceFuture<List<ApplicationSummary>> listAsync(final ListOperationCallback<ApplicationSummary> serviceCallback)
+      parameters:
+        - id: serviceCallback
+          type: 3c4303efcom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+          description: <p>非同期 ServiceCallback を成功と失敗の応答を処理します。 </p>
+      return:
+        type: b7698b59com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p><xref uid="" data-throw-if-not-resolved="false">ServiceFuture</xref>オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listNext(final String)
+    id: listNext(final String)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listNext(final String nextPageLink)
+    nameWithType: Applications.listNext(final String nextPageLink)
+    fullName: PagedList<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.listNext(final String nextPageLink)
+    overload: com.microsoft.azure.batch.protocol._applications.listNext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 212
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<ApplicationSummary> listNext(final String nextPageLink)
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+      return:
+        type: 36b27be0com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p>PagedList&lt;ApplicationSummary&gt;正常終了した場合のオブジェクト。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: 9b2a4515
+        description: <p>送信する要求が失敗した場合は、チェックされた例外をラップされた他のすべての </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.listNext(final String,final ApplicationListNextOptions)'
+    id: 'listNext(final String,final ApplicationListNextOptions)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'listNext(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    nameWithType: 'Applications.listNext(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    fullName: 'PagedList<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.listNext(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.listNext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 256
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public PagedList<ApplicationSummary> listNext(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+        - id: applicationListNextOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_next_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: 36b27be0com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+        description: <p>PagedList&lt;ApplicationSummary&gt;正常終了した場合のオブジェクト。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: 9b2a4515
+        description: <p>送信する要求が失敗した場合は、チェックされた例外をラップされた他のすべての </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listNextAsync(final String)
+    id: listNextAsync(final String)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listNextAsync(final String nextPageLink)
+    nameWithType: Applications.listNextAsync(final String nextPageLink)
+    fullName: Observable<Page<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listNextAsync(final String nextPageLink)
+    overload: com.microsoft.azure.batch.protocol._applications.listNextAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 234
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<Page<ApplicationSummary>> listNextAsync(final String nextPageLink)
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+      return:
+        type: 32da0907com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.listNextAsync(final String,final ApplicationListNextOptions)'
+    id: 'listNextAsync(final String,final ApplicationListNextOptions)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    nameWithType: 'Applications.listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    fullName: 'Observable<Page<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.listNextAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 280
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<Page<ApplicationSummary>> listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+        - id: applicationListNextOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_next_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: 32da0907com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.listNextAsync(final String,final ApplicationListNextOptions,final ServiceFuture<List<ApplicationSummary>>,final ListOperationCallback<ApplicationSummary>)'
+    id: 'listNextAsync(final String,final ApplicationListNextOptions,final ServiceFuture<List<ApplicationSummary>>,final ListOperationCallback<ApplicationSummary>)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    nameWithType: 'Applications.listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    fullName: 'ServiceFuture<List<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    overload: com.microsoft.azure.batch.protocol._applications.listNextAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 269
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<List<ApplicationSummary>> listNextAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+        - id: applicationListNextOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_next_options
+          description: <p>操作の追加パラメーター </p>
+        - id: serviceFuture
+          type: bd82102acom.microsoft.azure.batch.protocol.models._application_summarye7daa122
+          description: <p>改良呼び出しを追跡 ServiceFuture オブジェクト </p>
+        - id: serviceCallback
+          type: 3c4303efcom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+          description: <p>非同期 ServiceCallback を成功と失敗の応答を処理します。 </p>
+      return:
+        type: b7698b59com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p><xref uid="" data-throw-if-not-resolved="false">ServiceFuture</xref>オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.listNextAsync(final String,final ServiceFuture<List<ApplicationSummary>>,final ListOperationCallback<ApplicationSummary>)'
+    id: 'listNextAsync(final String,final ServiceFuture<List<ApplicationSummary>>,final ListOperationCallback<ApplicationSummary>)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'listNextAsync(final String nextPageLink, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    nameWithType: 'Applications.listNextAsync(final String nextPageLink, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    fullName: 'ServiceFuture<List<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listNextAsync(final String nextPageLink, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+    overload: com.microsoft.azure.batch.protocol._applications.listNextAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 224
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<List<ApplicationSummary>> listNextAsync(final String nextPageLink, final ServiceFuture<List<ApplicationSummary>> serviceFuture, final ListOperationCallback<ApplicationSummary> serviceCallback)'
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+        - id: serviceFuture
+          type: bd82102acom.microsoft.azure.batch.protocol.models._application_summarye7daa122
+          description: <p>改良呼び出しを追跡 ServiceFuture オブジェクト </p>
+        - id: serviceCallback
+          type: 3c4303efcom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+          description: <p>非同期 ServiceCallback を成功と失敗の応答を処理します。 </p>
+      return:
+        type: b7698b59com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+        description: <p><xref uid="" data-throw-if-not-resolved="false">ServiceFuture</xref>オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync(final String)
+    id: listNextWithServiceResponseAsync(final String)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listNextWithServiceResponseAsync(final String nextPageLink)
+    nameWithType: Applications.listNextWithServiceResponseAsync(final String nextPageLink)
+    fullName: 'Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> com.microsoft.azure.batch.protocol.Applications.listNextWithServiceResponseAsync(final String nextPageLink)'
+    overload: com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 244
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> listNextWithServiceResponseAsync(final String nextPageLink)'
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+      return:
+        type: 442ed5e5com.microsoft.azure.batch.protocol.models._application_summary8135b5ebcom.microsoft.azure.batch.protocol.models._application_list_headerse7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync(final String,final ApplicationListNextOptions)'
+    id: 'listNextWithServiceResponseAsync(final String,final ApplicationListNextOptions)'
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: 'listNextWithServiceResponseAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    nameWithType: 'Applications.listNextWithServiceResponseAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    fullName: 'Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> com.microsoft.azure.batch.protocol.Applications.listNextWithServiceResponseAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 291
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> listNextWithServiceResponseAsync(final String nextPageLink, final ApplicationListNextOptions applicationListNextOptions)'
+      parameters:
+        - id: nextPageLink
+          type: 3d93591e
+          description: <p>一覧表示操作に成功した呼び出しからの NextLink です。 </p>
+        - id: applicationListNextOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_next_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: 442ed5e5com.microsoft.azure.batch.protocol.models._application_summary8135b5ebcom.microsoft.azure.batch.protocol.models._application_list_headerse7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync()
+    id: listWithServiceResponseAsync()
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listWithServiceResponseAsync()
+    nameWithType: Applications.listWithServiceResponseAsync()
+    fullName: 'Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> com.microsoft.azure.batch.protocol.Applications.listWithServiceResponseAsync()'
+    overload: com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 69
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> listWithServiceResponseAsync()'
+      return:
+        type: 442ed5e5com.microsoft.azure.batch.protocol.models._application_summary8135b5ebcom.microsoft.azure.batch.protocol.models._application_list_headerse7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync(final ApplicationListOptions)
+    id: listWithServiceResponseAsync(final ApplicationListOptions)
+    parent: com.microsoft.azure.batch.protocol._applications
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    langs:
+      - java
+    name: listWithServiceResponseAsync(final ApplicationListOptions applicationListOptions)
+    nameWithType: Applications.listWithServiceResponseAsync(final ApplicationListOptions applicationListOptions)
+    fullName: 'Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> com.microsoft.azure.batch.protocol.Applications.listWithServiceResponseAsync(final ApplicationListOptions applicationListOptions)'
+    overload: com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/protocol/Applications.java
+      startLine: 111
+    package: com.microsoft.azure.batch.protocol
+    summary: |-
+      <p>すべての指定したアカウントで利用できるアプリケーションの一覧を表示します。 この操作は、アプリケーションとコンピューティング ノードで使用可能なバージョンのみを返します。つまり、アプリケーション パッケージの参照で使用できます。 管理者についてアプリケーションとはまだ計算ノードに使用できるバージョンは、Azure ポータルまたは Azure リソース マネージャー API を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> listWithServiceResponseAsync(final ApplicationListOptions applicationListOptions)'
+      parameters:
+        - id: applicationListOptions
+          type: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_options
+          description: <p>操作の追加パラメーター </p>
+      return:
+        type: 442ed5e5com.microsoft.azure.batch.protocol.models._application_summary8135b5ebcom.microsoft.azure.batch.protocol.models._application_list_headerse7daa122
+        description: <p>観測可能なオブジェクトを PagedList&lt;ApplicationSummary&gt;オブジェクト </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>パラメーターの検証に失敗した場合にスローされます。 </p>
+references:
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: c8683d81
+    spec.java:
+      - name: BatchErrorException
+        fullName: BatchErrorException
+  - uid: 9b2a4515
+    spec.java:
+      - name: RuntimeException
+        fullName: RuntimeException
+  - uid: 36b27be0com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+    spec.java:
+      - name: PagedList<
+        fullName: PagedList<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.batch.protocol._applications.list*
+    name: list
+    nameWithType: Applications.list
+    fullName: PagedList<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.list
+    package: com.microsoft.azure.batch.protocol
+  - uid: 3c4303efcom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+    spec.java:
+      - name: final ListOperationCallback<
+        fullName: final ListOperationCallback<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>'
+        fullName: '>'
+  - uid: b7698b59com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+    spec.java:
+      - name: ServiceFuture<List<
+        fullName: ServiceFuture<List<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.batch.protocol._applications.listAsync*
+    name: listAsync
+    nameWithType: Applications.listAsync
+    fullName: ServiceFuture<List<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listAsync
+    package: com.microsoft.azure.batch.protocol
+  - uid: 32da0907com.microsoft.azure.batch.protocol.models._application_summarye7daa122
+    spec.java:
+      - name: Observable<Page<
+        fullName: Observable<Page<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: 442ed5e5com.microsoft.azure.batch.protocol.models._application_summary8135b5ebcom.microsoft.azure.batch.protocol.models._application_list_headerse7daa122
+    spec.java:
+      - name: Observable<ServiceResponseWithHeaders<Page<
+        fullName: Observable<ServiceResponseWithHeaders<Page<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>, '
+        fullName: '>, '
+      - uid: com.microsoft.azure.batch.protocol.models._application_list_headers
+        name: ApplicationListHeaders
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationListHeaders
+        href: com.microsoft.azure.batch.protocol.models._application_list_headers.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.batch.protocol._applications.listWithServiceResponseAsync*
+    name: listWithServiceResponseAsync
+    nameWithType: Applications.listWithServiceResponseAsync
+    fullName: 'Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> com.microsoft.azure.batch.protocol.Applications.listWithServiceResponseAsync'
+    package: com.microsoft.azure.batch.protocol
+  - uid: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_options
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.batch.protocol.models._application_list_options
+        name: ApplicationListOptions
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationListOptions
+        href: com.microsoft.azure.batch.protocol.models._application_list_options.yml
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.batch.protocol._applications.get*
+    name: get
+    nameWithType: Applications.get
+    fullName: ApplicationSummary com.microsoft.azure.batch.protocol.Applications.get
+    package: com.microsoft.azure.batch.protocol
+  - uid: 897eb10acom.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+    spec.java:
+      - name: final ServiceCallback<
+        fullName: final ServiceCallback<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>'
+        fullName: '>'
+  - uid: c522ce07com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+    spec.java:
+      - name: ServiceFuture<
+        fullName: ServiceFuture<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.batch.protocol._applications.getAsync*
+    name: getAsync
+    nameWithType: Applications.getAsync
+    fullName: ServiceFuture<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.getAsync
+    package: com.microsoft.azure.batch.protocol
+  - uid: c2d0e8c6com.microsoft.azure.batch.protocol.models._application_summarya08ddfce
+    spec.java:
+      - name: Observable<
+        fullName: Observable<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>'
+        fullName: '>'
+  - uid: cc516622com.microsoft.azure.batch.protocol.models._application_summaryb33c76fccom.microsoft.azure.batch.protocol.models._application_get_headerse7daa122
+    spec.java:
+      - name: Observable<ServiceResponseWithHeaders<
+        fullName: Observable<ServiceResponseWithHeaders<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: ', '
+        fullName: ', '
+      - uid: com.microsoft.azure.batch.protocol.models._application_get_headers
+        name: ApplicationGetHeaders
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationGetHeaders
+        href: com.microsoft.azure.batch.protocol.models._application_get_headers.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.batch.protocol._applications.getWithServiceResponseAsync*
+    name: getWithServiceResponseAsync
+    nameWithType: Applications.getWithServiceResponseAsync
+    fullName: 'Observable<ServiceResponseWithHeaders<ApplicationSummary, ApplicationGetHeaders>> com.microsoft.azure.batch.protocol.Applications.getWithServiceResponseAsync'
+    package: com.microsoft.azure.batch.protocol
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: com.microsoft.azure.batch.protocol._applications.listNext*
+    name: listNext
+    nameWithType: Applications.listNext
+    fullName: PagedList<ApplicationSummary> com.microsoft.azure.batch.protocol.Applications.listNext
+    package: com.microsoft.azure.batch.protocol
+  - uid: bd82102acom.microsoft.azure.batch.protocol.models._application_summarye7daa122
+    spec.java:
+      - name: final ServiceFuture<List<
+        fullName: final ServiceFuture<List<
+      - uid: com.microsoft.azure.batch.protocol.models._application_summary
+        name: ApplicationSummary
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+        href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.batch.protocol._applications.listNextAsync*
+    name: listNextAsync
+    nameWithType: Applications.listNextAsync
+    fullName: ServiceFuture<List<ApplicationSummary>> com.microsoft.azure.batch.protocol.Applications.listNextAsync
+    package: com.microsoft.azure.batch.protocol
+  - uid: com.microsoft.azure.batch.protocol._applications.listNextWithServiceResponseAsync*
+    name: listNextWithServiceResponseAsync
+    nameWithType: Applications.listNextWithServiceResponseAsync
+    fullName: 'Observable<ServiceResponseWithHeaders<Page<ApplicationSummary>, ApplicationListHeaders>> com.microsoft.azure.batch.protocol.Applications.listNextWithServiceResponseAsync'
+    package: com.microsoft.azure.batch.protocol
+  - uid: 93de0ef9com.microsoft.azure.batch.protocol.models._application_list_next_options
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.batch.protocol.models._application_list_next_options
+        name: ApplicationListNextOptions
+        fullName: com.microsoft.azure.batch.protocol.models.ApplicationListNextOptions
+        href: com.microsoft.azure.batch.protocol.models._application_list_next_options.yml
+  - uid: com.microsoft.azure.batch.protocol.models._application_summary
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._application_summary.yml
+    name: ApplicationSummary
+    nameWithType: ApplicationSummary
+    fullName: com.microsoft.azure.batch.protocol.models.ApplicationSummary
+    type: Class
+    summary: <p>Azure Batch アカウントに、アプリケーションの情報が含まれています。 </p>
+    syntax:
+      content: public class ApplicationSummary
+  - uid: com.microsoft.azure.batch.protocol.models._application_list_headers
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._application_list_headers.yml
+    name: ApplicationListHeaders
+    nameWithType: ApplicationListHeaders
+    fullName: com.microsoft.azure.batch.protocol.models.ApplicationListHeaders
+    type: Class
+    summary: <p>一覧表示操作のヘッダーを定義します。 </p>
+    syntax:
+      content: public class ApplicationListHeaders
+  - uid: com.microsoft.azure.batch.protocol.models._application_list_options
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._application_list_options.yml
+    name: ApplicationListOptions
+    nameWithType: ApplicationListOptions
+    fullName: com.microsoft.azure.batch.protocol.models.ApplicationListOptions
+    type: Class
+    summary: <p>Application_list 操作のパラメーターを追加します。 </p>
+    syntax:
+      content: public class ApplicationListOptions
+  - uid: com.microsoft.azure.batch.protocol.models._application_get_headers
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._application_get_headers.yml
+    name: ApplicationGetHeaders
+    nameWithType: ApplicationGetHeaders
+    fullName: com.microsoft.azure.batch.protocol.models.ApplicationGetHeaders
+    type: Class
+    summary: <p>取得操作のヘッダーを定義します。 </p>
+    syntax:
+      content: public class ApplicationGetHeaders
+  - uid: com.microsoft.azure.batch.protocol.models._application_get_options
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._application_get_options.yml
+    name: ApplicationGetOptions
+    nameWithType: ApplicationGetOptions
+    fullName: com.microsoft.azure.batch.protocol.models.ApplicationGetOptions
+    type: Class
+    summary: <p>Application_get 操作のパラメーターを追加します。 </p>
+    syntax:
+      content: public class ApplicationGetOptions
+  - uid: com.microsoft.azure.batch.protocol.models._application_list_next_options
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._application_list_next_options.yml
+    name: ApplicationListNextOptions
+    nameWithType: ApplicationListNextOptions
+    fullName: com.microsoft.azure.batch.protocol.models.ApplicationListNextOptions
+    type: Class
+    summary: <p>ListNext 操作のパラメーターを追加します。 </p>
+    syntax:
+      content: public class ApplicationListNextOptions
+  - uid: com.microsoft.azure.batch.protocol._applications
+    parent: com.microsoft.azure.batch.protocol
+    href: com.microsoft.azure.batch.protocol._applications.yml
+    name: Applications
+    nameWithType: Applications
+    fullName: com.microsoft.azure.batch.protocol.Applications
+    type: Interface
+    summary: <p>このクラスのインスタンスで定義されているすべての操作へのアクセスを提供する<xref uid="com.microsoft.azure.batch.protocol._applications" data-throw-if-not-resolved="false">アプリケーション</xref>です。 </p>
+    syntax: *ref_1

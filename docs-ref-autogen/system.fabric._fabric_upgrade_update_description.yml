@@ -1,0 +1,652 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._fabric_upgrade_update_description
+    id: _fabric_upgrade_update_description
+    parent: system.fabric
+    children:
+      - system.fabric._fabric_upgrade_update_description.FabricUpgradeUpdateDescription()
+      - system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation()
+      - system.fabric._fabric_upgrade_update_description.getHealthPolicy()
+      - system.fabric._fabric_upgrade_update_description.getUpgradeHealthPolicy()
+      - system.fabric._fabric_upgrade_update_description.setEnableDeltaHealthEvaluation(Boolean)
+      - system.fabric._fabric_upgrade_update_description.setHealthPolicy(ClusterHealthPolicy)
+      - system.fabric._fabric_upgrade_update_description.setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy)
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: FabricUpgradeUpdateDescription
+    nameWithType: FabricUpgradeUpdateDescription
+    fullName: system.fabric.FabricUpgradeUpdateDescription
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 9
+    package: system.fabric
+    summary: '<p>クラスターのアップグレードの動作を記述するアップグレード パラメーターを変更するために使用します。 参照してください<xref uid="system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ClusterManagementClient#updateFabricUpgradeAsync(system.fabric.FabricUpgradeUpdateDescription)</xref></p>'
+    syntax: &ref_2
+      content: public class FabricUpgradeUpdateDescription extends UpgradeUpdateDescriptionBase
+    inheritance:
+      - java.lang.Object
+      - system.fabric._upgrade_update_description_base
+    inheritedMembers:
+      - system.fabric._upgrade_update_description_base.getFailureAction()
+      - system.fabric._upgrade_update_description_base.getForceRestart()
+      - system.fabric._upgrade_update_description_base.getHealthCheckRetryTimeout()
+      - system.fabric._upgrade_update_description_base.getHealthCheckStableDuration()
+      - system.fabric._upgrade_update_description_base.getHealthCheckWaitDuration()
+      - system.fabric._upgrade_update_description_base.getUpgradeDomainTimeout()
+      - system.fabric._upgrade_update_description_base.getUpgradeMode()
+      - system.fabric._upgrade_update_description_base.getUpgradeReplicaSetCheckTimeout()
+      - system.fabric._upgrade_update_description_base.getUpgradeTimeout()
+      - system.fabric._upgrade_update_description_base.setFailureAction(UpgradeFailureAction)
+      - system.fabric._upgrade_update_description_base.setForceRestart(Boolean)
+      - system.fabric._upgrade_update_description_base.setHealthCheckRetryTimeout(Duration)
+      - system.fabric._upgrade_update_description_base.setHealthCheckStableDuration(Duration)
+      - system.fabric._upgrade_update_description_base.setHealthCheckWaitDuration(Duration)
+      - system.fabric._upgrade_update_description_base.setUpgradeDomainTimeout(Duration)
+      - system.fabric._upgrade_update_description_base.setUpgradeMode(RollingUpgradeMode)
+      - system.fabric._upgrade_update_description_base.setUpgradeReplicaSetCheckTimeout(Duration)
+      - system.fabric._upgrade_update_description_base.setUpgradeTimeout(Duration)
+      - system.fabric._upgrade_update_description_base.UpgradeUpdateDescriptionBase()
+  - uid: system.fabric._fabric_upgrade_update_description.FabricUpgradeUpdateDescription()
+    id: FabricUpgradeUpdateDescription()
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: FabricUpgradeUpdateDescription()
+    nameWithType: FabricUpgradeUpdateDescription.FabricUpgradeUpdateDescription()
+    fullName: system.fabric.FabricUpgradeUpdateDescription.FabricUpgradeUpdateDescription()
+    overload: system.fabric._fabric_upgrade_update_description.FabricUpgradeUpdateDescription*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 16
+    package: system.fabric
+    syntax:
+      content: public FabricUpgradeUpdateDescription()
+  - uid: system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation()
+    id: getEnableDeltaHealthEvaluation()
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: getEnableDeltaHealthEvaluation()
+    nameWithType: FabricUpgradeUpdateDescription.getEnableDeltaHealthEvaluation()
+    fullName: Boolean system.fabric.FabricUpgradeUpdateDescription.getEnableDeltaHealthEvaluation()
+    overload: system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 87
+    package: system.fabric
+    summary: "<p>デルタの評価が有効になっているかどうかを示すフラグを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>デルタ評価を有効にすると、クラスターの正常性評価は制限が許容されるは、正常性の面のパフォーマンスの低下がグローバルに、すべてのノードとごとに評価される各アップグレード ドメインの両方でことにより、します。 指定された許容しきい値<xref uid=\"system.fabric.health._cluster_upgrade_health_policy\" data-throw-if-not-resolved=\"false\">system.fabric.health.ClusterUpgradeHealthPolicy</xref>です。 デルタの評価は既定では無効にします。 </p>"
+    syntax: &ref_1
+      content: public Boolean getEnableDeltaHealthEvaluation()
+      return:
+        type: 866c2227
+        description: <p>デルタの正常性評価が有効である場合は truefalse それ以外の場合。 </p>
+  - uid: system.fabric._fabric_upgrade_update_description.getHealthPolicy()
+    id: getHealthPolicy()
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: getHealthPolicy()
+    nameWithType: FabricUpgradeUpdateDescription.getHealthPolicy()
+    fullName: ClusterHealthPolicy system.fabric.FabricUpgradeUpdateDescription.getHealthPolicy()
+    overload: system.fabric._fabric_upgrade_update_description.getHealthPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 28
+    package: system.fabric
+    summary: |-
+      <p>取得、 <xref uid="system.fabric._monitored_rolling_fabric_upgrade_policy_description.getHealthPolicy()" data-throw-if-not-resolved="false">system.fabric.MonitoredRollingFabricUpgradePolicyDescription#getHealthPolicy()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public ClusterHealthPolicy getHealthPolicy()
+      return:
+        type: system.fabric._cluster_health_policy
+        description: <p>クラスターの正常性ポリシーはアップグレード中にクラスターの正常性を評価するために使用します。 </p>
+  - uid: system.fabric._fabric_upgrade_update_description.getUpgradeHealthPolicy()
+    id: getUpgradeHealthPolicy()
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: getUpgradeHealthPolicy()
+    nameWithType: FabricUpgradeUpdateDescription.getUpgradeHealthPolicy()
+    fullName: ClusterUpgradeHealthPolicy system.fabric.FabricUpgradeUpdateDescription.getUpgradeHealthPolicy()
+    overload: system.fabric._fabric_upgrade_update_description.getUpgradeHealthPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 54
+    package: system.fabric
+    summary: '<p>取得、 <xref uid="system.fabric._monitored_rolling_fabric_upgrade_policy_description.getUpgradeHealthPolicy()" data-throw-if-not-resolved="false">system.fabric.MonitoredRollingFabricUpgradePolicyDescription#getUpgradeHealthPolicy()</xref><b>解説:</b>アップグレードのヘルス ポリシーを使用するときに<xref uid="system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation()" data-throw-if-not-resolved="false">system.fabric.FabricUpgradeUpdateDescription#getEnableDeltaHealthEvaluation()</xref>設定が true に設定します。 デルタの評価は既定では無効です。 </p>'
+    syntax:
+      content: public ClusterUpgradeHealthPolicy getUpgradeHealthPolicy()
+      return:
+        type: system.fabric.health._cluster_upgrade_health_policy
+        description: <p>クラスターのアップグレードのヘルス ポリシーはアップグレード中にクラスターの正常性を評価するために使用します。 </p>
+  - uid: system.fabric._fabric_upgrade_update_description.setEnableDeltaHealthEvaluation(Boolean)
+    id: setEnableDeltaHealthEvaluation(Boolean)
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: setEnableDeltaHealthEvaluation(Boolean enableDeltaHealthEvaluation)
+    nameWithType: FabricUpgradeUpdateDescription.setEnableDeltaHealthEvaluation(Boolean enableDeltaHealthEvaluation)
+    fullName: void system.fabric.FabricUpgradeUpdateDescription.setEnableDeltaHealthEvaluation(Boolean enableDeltaHealthEvaluation)
+    overload: system.fabric._fabric_upgrade_update_description.setEnableDeltaHealthEvaluation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 104
+    package: system.fabric
+    summary: "<p>デルタの評価が有効になっているかどうかを示すフラグを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>デルタ評価を有効にすると、クラスターの正常性評価は制限が許容されるは、正常性の面のパフォーマンスの低下がグローバルに、すべてのノードとごとに評価される各アップグレード ドメインの両方でことにより、します。 指定された許容しきい値<xref uid=\"system.fabric.health._cluster_upgrade_health_policy\" data-throw-if-not-resolved=\"false\">system.fabric.health.ClusterUpgradeHealthPolicy</xref>です。 デルタの評価は既定では無効にします。 </p>"
+    syntax:
+      content: public void setEnableDeltaHealthEvaluation(Boolean enableDeltaHealthEvaluation)
+      parameters:
+        - id: enableDeltaHealthEvaluation
+          type: 866c2227
+          description: <p>デルタの正常性評価が有効である場合は truefalse それ以外の場合。 </p>
+  - uid: system.fabric._fabric_upgrade_update_description.setHealthPolicy(ClusterHealthPolicy)
+    id: setHealthPolicy(ClusterHealthPolicy)
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: setHealthPolicy(ClusterHealthPolicy healthPolicy)
+    nameWithType: FabricUpgradeUpdateDescription.setHealthPolicy(ClusterHealthPolicy healthPolicy)
+    fullName: void system.fabric.FabricUpgradeUpdateDescription.setHealthPolicy(ClusterHealthPolicy healthPolicy)
+    overload: system.fabric._fabric_upgrade_update_description.setHealthPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 38
+    package: system.fabric
+    summary: |-
+      <p>セット、 <xref uid="system.fabric._monitored_rolling_fabric_upgrade_policy_description" data-throw-if-not-resolved="false">system.fabric.MonitoredRollingFabricUpgradePolicyDescription</xref>の healthPolicy します。</p>
+      <p></p>
+    syntax:
+      content: public void setHealthPolicy(ClusterHealthPolicy healthPolicy)
+      parameters:
+        - id: healthPolicy
+          type: system.fabric._cluster_health_policy
+          description: <p>クラスターの正常性ポリシーはアップグレード中にクラスターの正常性を評価するために使用します。 </p>
+  - uid: system.fabric._fabric_upgrade_update_description.setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy)
+    id: setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy)
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    langs:
+      - java
+    name: setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy upgradeHealthPolicy)
+    nameWithType: FabricUpgradeUpdateDescription.setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy upgradeHealthPolicy)
+    fullName: void system.fabric.FabricUpgradeUpdateDescription.setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy upgradeHealthPolicy)
+    overload: system.fabric._fabric_upgrade_update_description.setUpgradeHealthPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricUpgradeUpdateDescription.java
+      startLine: 71
+    package: system.fabric
+    summary: '<p>セット、 <xref uid="system.fabric._monitored_rolling_fabric_upgrade_policy_description.getUpgradeHealthPolicy()" data-throw-if-not-resolved="false">system.fabric.MonitoredRollingFabricUpgradePolicyDescription#getUpgradeHealthPolicy()</xref><b>解説:</b>アップグレードのヘルス ポリシーを使用するときに<xref uid="system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation()" data-throw-if-not-resolved="false">system.fabric.FabricUpgradeUpdateDescription#getEnableDeltaHealthEvaluation()</xref>設定が true に設定します。 デルタの評価は既定では無効です。 </p>'
+    syntax:
+      content: public void setUpgradeHealthPolicy(ClusterUpgradeHealthPolicy upgradeHealthPolicy)
+      parameters:
+        - id: upgradeHealthPolicy
+          type: system.fabric.health._cluster_upgrade_health_policy
+          description: <p>クラスターのアップグレードのヘルス ポリシーはアップグレード中にクラスターの正常性を評価するために使用します。 </p>
+references:
+  - uid: system.fabric._fabric_upgrade_update_description.FabricUpgradeUpdateDescription*
+    name: FabricUpgradeUpdateDescription
+    nameWithType: FabricUpgradeUpdateDescription.FabricUpgradeUpdateDescription
+    fullName: system.fabric.FabricUpgradeUpdateDescription.FabricUpgradeUpdateDescription
+    package: system.fabric
+  - uid: system.fabric._fabric_upgrade_update_description.getHealthPolicy*
+    name: getHealthPolicy
+    nameWithType: FabricUpgradeUpdateDescription.getHealthPolicy
+    fullName: ClusterHealthPolicy system.fabric.FabricUpgradeUpdateDescription.getHealthPolicy
+    package: system.fabric
+  - uid: system.fabric._fabric_upgrade_update_description.setHealthPolicy*
+    name: setHealthPolicy
+    nameWithType: FabricUpgradeUpdateDescription.setHealthPolicy
+    fullName: void system.fabric.FabricUpgradeUpdateDescription.setHealthPolicy
+    package: system.fabric
+  - uid: system.fabric._fabric_upgrade_update_description.getUpgradeHealthPolicy*
+    name: getUpgradeHealthPolicy
+    nameWithType: FabricUpgradeUpdateDescription.getUpgradeHealthPolicy
+    fullName: ClusterUpgradeHealthPolicy system.fabric.FabricUpgradeUpdateDescription.getUpgradeHealthPolicy
+    package: system.fabric
+  - uid: system.fabric._fabric_upgrade_update_description.setUpgradeHealthPolicy*
+    name: setUpgradeHealthPolicy
+    nameWithType: FabricUpgradeUpdateDescription.setUpgradeHealthPolicy
+    fullName: void system.fabric.FabricUpgradeUpdateDescription.setUpgradeHealthPolicy
+    package: system.fabric
+  - uid: 866c2227
+    spec.java:
+      - name: Boolean
+        fullName: Boolean
+  - uid: system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation*
+    name: getEnableDeltaHealthEvaluation
+    nameWithType: FabricUpgradeUpdateDescription.getEnableDeltaHealthEvaluation
+    fullName: Boolean system.fabric.FabricUpgradeUpdateDescription.getEnableDeltaHealthEvaluation
+    package: system.fabric
+  - uid: system.fabric._fabric_upgrade_update_description.setEnableDeltaHealthEvaluation*
+    name: setEnableDeltaHealthEvaluation
+    nameWithType: FabricUpgradeUpdateDescription.setEnableDeltaHealthEvaluation
+    fullName: void system.fabric.FabricUpgradeUpdateDescription.setEnableDeltaHealthEvaluation
+    package: system.fabric
+  - uid: system.fabric._upgrade_update_description_base.getFailureAction()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getFailureAction()
+    nameWithType: UpgradeUpdateDescriptionBase.getFailureAction()
+    fullName: UpgradeFailureAction system.fabric.UpgradeUpdateDescriptionBase.getFailureAction()
+    type: Method
+    summary: |-
+      <p>値を取得<xref uid="system.fabric._upgrade_failure_action" data-throw-if-not-resolved="false">system.fabric.UpgradeFailureAction</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public UpgradeFailureAction getFailureAction()
+      return:
+        type: system.fabric._upgrade_failure_action
+        description: <p>値<xref uid="system.fabric._upgrade_failure_action" data-throw-if-not-resolved="false">system.fabric.UpgradeFailureAction</xref>です。 </p>
+  - uid: system.fabric._upgrade_update_description_base.getForceRestart()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getForceRestart()
+    nameWithType: UpgradeUpdateDescriptionBase.getForceRestart()
+    fullName: Boolean system.fabric.UpgradeUpdateDescriptionBase.getForceRestart()
+    type: Method
+    summary: |-
+      <p>ForceRestart の値を取得します。</p>
+      <p></p>
+    syntax:
+      content: public Boolean getForceRestart()
+      return:
+        type: 866c2227
+        description: <p>ForceRestart の値。 </p>
+  - uid: system.fabric._upgrade_update_description_base.getHealthCheckRetryTimeout()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getHealthCheckRetryTimeout()
+    nameWithType: UpgradeUpdateDescriptionBase.getHealthCheckRetryTimeout()
+    fullName: Duration system.fabric.UpgradeUpdateDescriptionBase.getHealthCheckRetryTimeout()
+    type: Method
+    summary: |-
+      <p>新しい値を取得<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckRetryTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckRetryTimeout()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public Duration getHealthCheckRetryTimeout()
+      return:
+        type: e02a2de0
+        description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckRetryTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckRetryTimeout()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.getHealthCheckStableDuration()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getHealthCheckStableDuration()
+    nameWithType: UpgradeUpdateDescriptionBase.getHealthCheckStableDuration()
+    fullName: Duration system.fabric.UpgradeUpdateDescriptionBase.getHealthCheckStableDuration()
+    type: Method
+    summary: |-
+      <p>新しい値を取得<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckStableDuration()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckStableDuration()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public Duration getHealthCheckStableDuration()
+      return:
+        type: e02a2de0
+        description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckStableDuration()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckStableDuration()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.getHealthCheckWaitDuration()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getHealthCheckWaitDuration()
+    nameWithType: UpgradeUpdateDescriptionBase.getHealthCheckWaitDuration()
+    fullName: Duration system.fabric.UpgradeUpdateDescriptionBase.getHealthCheckWaitDuration()
+    type: Method
+    summary: |-
+      <p>HealthCheckWaitDuration の値を取得します。</p>
+      <p></p>
+    syntax:
+      content: public Duration getHealthCheckWaitDuration()
+      return:
+        type: e02a2de0
+        description: <p>HealthCheckWaitDuration の値。 </p>
+  - uid: system.fabric._upgrade_update_description_base.getUpgradeDomainTimeout()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getUpgradeDomainTimeout()
+    nameWithType: UpgradeUpdateDescriptionBase.getUpgradeDomainTimeout()
+    fullName: Duration system.fabric.UpgradeUpdateDescriptionBase.getUpgradeDomainTimeout()
+    type: Method
+    summary: |-
+      <p>新しい値を取得<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeDomainTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeDomainTimeout()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public Duration getUpgradeDomainTimeout()
+      return:
+        type: e02a2de0
+        description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeDomainTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeDomainTimeout()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.getUpgradeMode()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getUpgradeMode()
+    nameWithType: UpgradeUpdateDescriptionBase.getUpgradeMode()
+    fullName: RollingUpgradeMode system.fabric.UpgradeUpdateDescriptionBase.getUpgradeMode()
+    type: Method
+    summary: |-
+      <p>新しい値を取得<xref uid="system.fabric._rolling_upgrade_mode" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMode</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public RollingUpgradeMode getUpgradeMode()
+      return:
+        type: system.fabric._rolling_upgrade_mode
+        description: <p>新しい値<xref uid="system.fabric._rolling_upgrade_mode" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMode</xref>です。 </p>
+  - uid: system.fabric._upgrade_update_description_base.getUpgradeReplicaSetCheckTimeout()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getUpgradeReplicaSetCheckTimeout()
+    nameWithType: UpgradeUpdateDescriptionBase.getUpgradeReplicaSetCheckTimeout()
+    fullName: Duration system.fabric.UpgradeUpdateDescriptionBase.getUpgradeReplicaSetCheckTimeout()
+    type: Method
+    summary: |-
+      <p>UpgradeReplicaSetCheckTimeout の値を取得します。</p>
+      <p></p>
+    syntax:
+      content: public Duration getUpgradeReplicaSetCheckTimeout()
+      return:
+        type: e02a2de0
+        description: <p>UpgradeReplicaSetCheckTimeout の値。 </p>
+  - uid: system.fabric._upgrade_update_description_base.getUpgradeTimeout()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: getUpgradeTimeout()
+    nameWithType: UpgradeUpdateDescriptionBase.getUpgradeTimeout()
+    fullName: Duration system.fabric.UpgradeUpdateDescriptionBase.getUpgradeTimeout()
+    type: Method
+    summary: |-
+      <p>新しい値を取得<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeTimeout()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public Duration getUpgradeTimeout()
+      return:
+        type: e02a2de0
+        description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeTimeout()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.setFailureAction(UpgradeFailureAction)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setFailureAction(UpgradeFailureAction failureAction)
+    nameWithType: UpgradeUpdateDescriptionBase.setFailureAction(UpgradeFailureAction failureAction)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setFailureAction(UpgradeFailureAction failureAction)
+    type: Method
+    summary: |-
+      <p>値を設定<xref uid="system.fabric._upgrade_failure_action" data-throw-if-not-resolved="false">system.fabric.UpgradeFailureAction</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setFailureAction(UpgradeFailureAction failureAction)
+      parameters:
+        - id: failureAction
+          type: system.fabric._upgrade_failure_action
+          description: <p>値<xref uid="system.fabric._upgrade_failure_action" data-throw-if-not-resolved="false">system.fabric.UpgradeFailureAction</xref>です。 </p>
+  - uid: system.fabric._upgrade_update_description_base.setForceRestart(Boolean)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setForceRestart(Boolean forceRestart)
+    nameWithType: UpgradeUpdateDescriptionBase.setForceRestart(Boolean forceRestart)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setForceRestart(Boolean forceRestart)
+    type: Method
+    summary: |-
+      <p>ForceRestart の新しい値を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setForceRestart(Boolean forceRestart)
+      parameters:
+        - id: forceRestart
+          type: 866c2227
+          description: <p>ForceRestart の新しい値。 </p>
+  - uid: system.fabric._upgrade_update_description_base.setHealthCheckRetryTimeout(Duration)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setHealthCheckRetryTimeout(Duration healthCheckRetryTimeout)
+    nameWithType: UpgradeUpdateDescriptionBase.setHealthCheckRetryTimeout(Duration healthCheckRetryTimeout)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setHealthCheckRetryTimeout(Duration healthCheckRetryTimeout)
+    type: Method
+    summary: |-
+      <p>新しい値を設定<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckRetryTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckRetryTimeout()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setHealthCheckRetryTimeout(Duration healthCheckRetryTimeout)
+      parameters:
+        - id: healthCheckRetryTimeout
+          type: e02a2de0
+          description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckRetryTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckRetryTimeout()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.setHealthCheckStableDuration(Duration)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setHealthCheckStableDuration(Duration healthCheckStableDuration)
+    nameWithType: UpgradeUpdateDescriptionBase.setHealthCheckStableDuration(Duration healthCheckStableDuration)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setHealthCheckStableDuration(Duration healthCheckStableDuration)
+    type: Method
+    summary: |-
+      <p>新しい値を設定<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckStableDuration()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckStableDuration()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setHealthCheckStableDuration(Duration healthCheckStableDuration)
+      parameters:
+        - id: healthCheckStableDuration
+          type: e02a2de0
+          description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckStableDuration()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckStableDuration()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.setHealthCheckWaitDuration(Duration)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setHealthCheckWaitDuration(Duration healthCheckWaitDuration)
+    nameWithType: UpgradeUpdateDescriptionBase.setHealthCheckWaitDuration(Duration healthCheckWaitDuration)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setHealthCheckWaitDuration(Duration healthCheckWaitDuration)
+    type: Method
+    summary: |-
+      <p>新しい値を設定<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckWaitDuration()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckWaitDuration()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setHealthCheckWaitDuration(Duration healthCheckWaitDuration)
+      parameters:
+        - id: healthCheckWaitDuration
+          type: e02a2de0
+          description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getHealthCheckWaitDuration()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getHealthCheckWaitDuration()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.setUpgradeDomainTimeout(Duration)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setUpgradeDomainTimeout(Duration upgradeDomainTimeout)
+    nameWithType: UpgradeUpdateDescriptionBase.setUpgradeDomainTimeout(Duration upgradeDomainTimeout)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setUpgradeDomainTimeout(Duration upgradeDomainTimeout)
+    type: Method
+    summary: |-
+      <p>新しい値を設定<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeDomainTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeDomainTimeout()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setUpgradeDomainTimeout(Duration upgradeDomainTimeout)
+      parameters:
+        - id: upgradeDomainTimeout
+          type: e02a2de0
+          description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeDomainTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeDomainTimeout()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.setUpgradeMode(RollingUpgradeMode)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setUpgradeMode(RollingUpgradeMode upgradeMode)
+    nameWithType: UpgradeUpdateDescriptionBase.setUpgradeMode(RollingUpgradeMode upgradeMode)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setUpgradeMode(RollingUpgradeMode upgradeMode)
+    type: Method
+    summary: |-
+      <p>新しい値を設定<xref uid="system.fabric._rolling_upgrade_mode" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMode</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setUpgradeMode(RollingUpgradeMode upgradeMode)
+      parameters:
+        - id: upgradeMode
+          type: system.fabric._rolling_upgrade_mode
+          description: <p>新しい値<xref uid="system.fabric._rolling_upgrade_mode" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMode</xref>です。 </p>
+  - uid: system.fabric._upgrade_update_description_base.setUpgradeReplicaSetCheckTimeout(Duration)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setUpgradeReplicaSetCheckTimeout(Duration upgradeReplicaSetCheckTimeout)
+    nameWithType: UpgradeUpdateDescriptionBase.setUpgradeReplicaSetCheckTimeout(Duration upgradeReplicaSetCheckTimeout)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setUpgradeReplicaSetCheckTimeout(Duration upgradeReplicaSetCheckTimeout)
+    type: Method
+    summary: |-
+      <p>UpgradeReplicaSetCheckTimeout の新しい値を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setUpgradeReplicaSetCheckTimeout(Duration upgradeReplicaSetCheckTimeout)
+      parameters:
+        - id: upgradeReplicaSetCheckTimeout
+          type: e02a2de0
+          description: <p>UpgradeReplicaSetCheckTimeout の新しい値。 </p>
+  - uid: system.fabric._upgrade_update_description_base.setUpgradeTimeout(Duration)
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: setUpgradeTimeout(Duration upgradeTimeout)
+    nameWithType: UpgradeUpdateDescriptionBase.setUpgradeTimeout(Duration upgradeTimeout)
+    fullName: void system.fabric.UpgradeUpdateDescriptionBase.setUpgradeTimeout(Duration upgradeTimeout)
+    type: Method
+    summary: |-
+      <p>新しい値を設定<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeTimeout()</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public void setUpgradeTimeout(Duration upgradeTimeout)
+      parameters:
+        - id: upgradeTimeout
+          type: e02a2de0
+          description: '<p>新しい値<xref uid="system.fabric._rolling_upgrade_monitoring_policy.getUpgradeTimeout()" data-throw-if-not-resolved="false">system.fabric.RollingUpgradeMonitoringPolicy#getUpgradeTimeout()</xref>です。 </p>'
+  - uid: system.fabric._upgrade_update_description_base.UpgradeUpdateDescriptionBase()
+    parent: system.fabric._upgrade_update_description_base
+    href: system.fabric._upgrade_update_description_base.yml
+    name: UpgradeUpdateDescriptionBase()
+    nameWithType: UpgradeUpdateDescriptionBase.UpgradeUpdateDescriptionBase()
+    fullName: system.fabric.UpgradeUpdateDescriptionBase.UpgradeUpdateDescriptionBase()
+    type: Constructor
+    summary: <p>新しいインスタンスを初期化、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.UpgradeUpdateDescriptionBase</xref>クラスです。 </p>
+    syntax:
+      content: protected UpgradeUpdateDescriptionBase()
+  - uid: system.fabric._upgrade_update_description_base
+    parent: system.fabric
+    href: system.fabric._upgrade_update_description_base.yml
+    name: UpgradeUpdateDescriptionBase
+    nameWithType: UpgradeUpdateDescriptionBase
+    fullName: system.fabric.UpgradeUpdateDescriptionBase
+    type: Class
+    summary: '<p>基本クラスを表します<xref uid="system.fabric._application_upgrade_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpgradeUpdateDescription</xref>と<xref uid="system.fabric._fabric_upgrade_update_description" data-throw-if-not-resolved="false">system.fabric.FabricUpgradeUpdateDescription</xref>です。 アプリケーションまたはクラスターのアップグレードの動作を記述するアップグレード パラメーターを変更するために使用します。 参照してください<xref uid="" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationUpgradeAsync(system.fabric.ApplicationUpgradeUpdateDescription)</xref>と<xref uid="system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ClusterManagementClient#updateFabricUpgradeAsync(system.fabric.FabricUpgradeUpdateDescription)</xref></p>'
+    syntax:
+      content: public class UpgradeUpdateDescriptionBase
+  - uid: system.fabric._cluster_health_policy
+    parent: system.fabric
+    href: system.fabric._cluster_health_policy.yml
+    name: ClusterHealthPolicy
+    nameWithType: ClusterHealthPolicy
+    fullName: system.fabric.ClusterHealthPolicy
+    type: Class
+    summary: <p>クラスターまたはクラスター ノードの正常性を評価する正常性ポリシーを定義します。 </p>
+    syntax:
+      content: public class ClusterHealthPolicy
+  - uid: system.fabric.health._cluster_upgrade_health_policy
+    parent: system.fabric.health
+    href: system.fabric.health._cluster_upgrade_health_policy.yml
+    name: ClusterUpgradeHealthPolicy
+    nameWithType: ClusterUpgradeHealthPolicy
+    fullName: system.fabric.health.ClusterUpgradeHealthPolicy
+    type: Class
+    summary: "<p>クラスターのアップグレードには、特定のクラスターの正常性を評価する正常性ポリシーを定義します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>取ります™ と共に使用される s <xref uid=\"system.fabric._cluster_health_policy\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterHealthPolicy</xref>をクラスターの正常性を評価し、監視対象のクラスターのアップグレードが成功したかロールバックする必要があるかを判断します。 </p>"
+    syntax:
+      content: public class ClusterUpgradeHealthPolicy
+  - uid: system.fabric._monitored_rolling_fabric_upgrade_policy_description.getHealthPolicy()
+    parent: system.fabric._monitored_rolling_fabric_upgrade_policy_description
+    href: system.fabric._monitored_rolling_fabric_upgrade_policy_description.yml
+    name: getHealthPolicy()
+    nameWithType: MonitoredRollingFabricUpgradePolicyDescription.getHealthPolicy()
+    fullName: ClusterHealthPolicy system.fabric.MonitoredRollingFabricUpgradePolicyDescription.getHealthPolicy()
+    type: Method
+    summary: "<p>このローリングの fabric アップグレードの正常性ポリシーを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>クラスターの正常性ポリシーを使用してクラスターの正常性を評価します。 </p>"
+    syntax:
+      content: public ClusterHealthPolicy getHealthPolicy()
+      return:
+        type: system.fabric._cluster_health_policy
+        description: <p>このローリングのファブリックの正常性ポリシーをアップグレードします。 </p>
+  - uid: system.fabric._monitored_rolling_fabric_upgrade_policy_description
+    parent: system.fabric
+    href: system.fabric._monitored_rolling_fabric_upgrade_policy_description.yml
+    name: MonitoredRollingFabricUpgradePolicyDescription
+    nameWithType: MonitoredRollingFabricUpgradePolicyDescription
+    fullName: system.fabric.MonitoredRollingFabricUpgradePolicyDescription
+    type: Class
+    summary: <p>監視対象ローリング Service Fabric アップグレード ポリシーをカプセル化するクラス。 </p>
+    syntax:
+      content: public class MonitoredRollingFabricUpgradePolicyDescription
+  - uid: system.fabric._monitored_rolling_fabric_upgrade_policy_description.getUpgradeHealthPolicy()
+    parent: system.fabric._monitored_rolling_fabric_upgrade_policy_description
+    href: system.fabric._monitored_rolling_fabric_upgrade_policy_description.yml
+    name: getUpgradeHealthPolicy()
+    nameWithType: MonitoredRollingFabricUpgradePolicyDescription.getUpgradeHealthPolicy()
+    fullName: ClusterUpgradeHealthPolicy system.fabric.MonitoredRollingFabricUpgradePolicyDescription.getUpgradeHealthPolicy()
+    type: Method
+    summary: "<p>このローリングの fabric アップグレードのアップグレードのヘルス ポリシーを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>EnableDeltaHealthEvaluation が設定されている場合、アップグレードのヘルス ポリシーが使用されるを true にします。 デルタの評価は既定では無効です。 </p>"
+    syntax:
+      content: public ClusterUpgradeHealthPolicy getUpgradeHealthPolicy()
+      return:
+        type: system.fabric.health._cluster_upgrade_health_policy
+        description: <p>クラスターのアップグレードのヘルス ポリシーはアップグレード中にクラスターの正常性を評価するために使用します。 </p>
+  - uid: system.fabric._fabric_upgrade_update_description.getEnableDeltaHealthEvaluation()
+    parent: system.fabric._fabric_upgrade_update_description
+    href: system.fabric._fabric_upgrade_update_description.yml
+    name: getEnableDeltaHealthEvaluation()
+    nameWithType: FabricUpgradeUpdateDescription.getEnableDeltaHealthEvaluation()
+    fullName: Boolean system.fabric.FabricUpgradeUpdateDescription.getEnableDeltaHealthEvaluation()
+    type: Method
+    summary: "<p>デルタの評価が有効になっているかどうかを示すフラグを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>デルタ評価を有効にすると、クラスターの正常性評価は制限が許容されるは、正常性の面のパフォーマンスの低下がグローバルに、すべてのノードとごとに評価される各アップグレード ドメインの両方でことにより、します。 指定された許容しきい値<xref uid=\"system.fabric.health._cluster_upgrade_health_policy\" data-throw-if-not-resolved=\"false\">system.fabric.health.ClusterUpgradeHealthPolicy</xref>です。 デルタの評価は既定では無効にします。 </p>"
+    syntax: *ref_1
+  - uid: system.fabric._fabric_upgrade_update_description
+    parent: system.fabric
+    href: system.fabric._fabric_upgrade_update_description.yml
+    name: FabricUpgradeUpdateDescription
+    nameWithType: FabricUpgradeUpdateDescription
+    fullName: system.fabric.FabricUpgradeUpdateDescription
+    type: Class
+    summary: '<p>クラスターのアップグレードの動作を記述するアップグレード パラメーターを変更するために使用します。 参照してください<xref uid="system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ClusterManagementClient#updateFabricUpgradeAsync(system.fabric.FabricUpgradeUpdateDescription)</xref></p>'
+    syntax: *ref_2
+  - uid: system.fabric._pin_collection
+    parent: system.fabric
+    href: system.fabric._pin_collection.yml
+    name: PinCollection
+    nameWithType: PinCollection
+    fullName: system.fabric.PinCollection
+    type: Class
+    syntax:
+      content: public class PinCollection
+  - uid: system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    name: updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+    nameWithType: ClusterManagementClient.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+    type: Method
+    summary: |-
+      <p>現在のクラスターのアップグレードの動作を記述するアップグレード パラメーターを変更します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+      parameters:
+        - id: description
+          type: system.fabric._fabric_upgrade_update_description
+          description: <p>パラメーターの説明を新しいアップグレードを適用します。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>現在のクラスターのアップグレード。 </p>

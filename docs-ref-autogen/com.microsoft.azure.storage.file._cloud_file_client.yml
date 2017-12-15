@@ -1,0 +1,1023 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.file._cloud_file_client
+    id: _cloud_file_client
+    parent: com.microsoft.azure.storage.file
+    children:
+      - 'com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient(final URI,StorageCredentials)'
+      - 'com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient(StorageUri,StorageCredentials)'
+      - com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties()
+      - 'com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties(FileRequestOptions,OperationContext)'
+      - com.microsoft.azure.storage.file._cloud_file_client.getDefaultRequestOptions()
+      - com.microsoft.azure.storage.file._cloud_file_client.getShareReference(final String)
+      - 'com.microsoft.azure.storage.file._cloud_file_client.getShareReference(final String,String)'
+      - com.microsoft.azure.storage.file._cloud_file_client.isUsePathStyleUris()
+      - com.microsoft.azure.storage.file._cloud_file_client.listShares()
+      - com.microsoft.azure.storage.file._cloud_file_client.listShares(final String)
+      - 'com.microsoft.azure.storage.file._cloud_file_client.listShares(final String,final EnumSet<ShareListingDetails>,final FileRequestOptions,final OperationContext)'
+      - com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented()
+      - com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented(final String)
+      - 'com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented(final String,final EnumSet<ShareListingDetails>,final Integer,final ResultContinuation,final FileRequestOptions,final OperationContext)'
+      - com.microsoft.azure.storage.file._cloud_file_client.setDefaultRequestOptions(FileRequestOptions)
+      - com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties(final FileServiceProperties)
+      - 'com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties(final FileServiceProperties,FileRequestOptions,OperationContext)'
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: CloudFileClient
+    nameWithType: CloudFileClient
+    fullName: com.microsoft.azure.storage.file.CloudFileClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 46
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>Microsoft Azure ファイル サービスにアクセスするため、クライアントを提供します。 </p>
+      <p>このクラスは、ファイル サービスへのアクセス ポイントを提供します。 サービス クライアントは、ファイル サービスのベース URI をカプセル化します。 また、ストレージ アカウントにアクセスするための資格情報をカプセル化します。 </p>
+    syntax: &ref_1
+      content: public class CloudFileClient extends ServiceClient
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.storage._service_client
+    inheritedMembers:
+      - com.microsoft.azure.storage._service_client.credentials
+      - 'com.microsoft.azure.storage._service_client.downloadServicePropertiesImpl(final RequestOptions,final boolean)'
+      - com.microsoft.azure.storage._service_client.getCredentials()
+      - com.microsoft.azure.storage._service_client.getEndpoint()
+      - 'com.microsoft.azure.storage._service_client.getServiceStatsImpl(final RequestOptions,final boolean)'
+      - com.microsoft.azure.storage._service_client.getStorageUri()
+      - 'com.microsoft.azure.storage._service_client.ServiceClient(final StorageUri,final StorageCredentials)'
+      - com.microsoft.azure.storage._service_client.setCredentials(final StorageCredentials)
+      - com.microsoft.azure.storage._service_client.setStorageUri(final StorageUri)
+      - 'com.microsoft.azure.storage._service_client.uploadServicePropertiesImpl(final ServiceProperties,final RequestOptions,final OperationContext,final boolean)'
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient(final URI,StorageCredentials)'
+    id: 'CloudFileClient(final URI,StorageCredentials)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'CloudFileClient(final URI baseUri, StorageCredentials credentials)'
+    nameWithType: 'CloudFileClient.CloudFileClient(final URI baseUri, StorageCredentials credentials)'
+    fullName: 'com.microsoft.azure.storage.file.CloudFileClient.CloudFileClient(final URI baseUri, StorageCredentials credentials)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 63
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>指定されたファイル サービス エンドポイントとアカウントの資格情報を使用してクラスのインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudFileClient(final URI baseUri, StorageCredentials credentials)'
+      parameters:
+        - id: baseUri
+          type: bac42120
+          description: <p>A<code>java.net.URI</code>クライアントの作成に使用されるファイル サービスのエンドポイントを表すオブジェクト。 </p>
+        - id: credentials
+          type: com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>アカウントの資格情報を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient(StorageUri,StorageCredentials)'
+    id: 'CloudFileClient(StorageUri,StorageCredentials)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'CloudFileClient(StorageUri storageUri, StorageCredentials credentials)'
+    nameWithType: 'CloudFileClient.CloudFileClient(StorageUri storageUri, StorageCredentials credentials)'
+    fullName: 'com.microsoft.azure.storage.file.CloudFileClient.CloudFileClient(StorageUri storageUri, StorageCredentials credentials)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 77
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>指定されたファイル サービス エンドポイントとアカウントの資格情報を使用してクラスのインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudFileClient(StorageUri storageUri, StorageCredentials credentials)'
+      parameters:
+        - id: storageUri
+          type: com.microsoft.azure.storage._storage_uri
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>クライアントの作成に使用されるファイル サービスのエンドポイントを表すオブジェクト。 </p>
+        - id: credentials
+          type: com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>アカウントの資格情報を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties()
+    id: downloadServiceProperties()
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: downloadServiceProperties()
+    nameWithType: CloudFileClient.downloadServiceProperties()
+    fullName: final FileServiceProperties com.microsoft.azure.storage.file.CloudFileClient.downloadServiceProperties()
+    overload: com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 421
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>現在取得<xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>指定されたストレージ サービスに対してです。 これには、CORS の構成がカプセル化します。</p>
+      <p></p>
+    syntax:
+      content: public final FileServiceProperties downloadServiceProperties()
+      return:
+        type: 93de0ef9com.microsoft.azure.storage.file._file_service_properties
+        description: <p>A <xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>サービスの現在の構成を表すオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties(FileRequestOptions,OperationContext)'
+    id: 'downloadServiceProperties(FileRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'downloadServiceProperties(FileRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudFileClient.downloadServiceProperties(FileRequestOptions options, OperationContext opContext)'
+    fullName: 'final FileServiceProperties com.microsoft.azure.storage.file.CloudFileClient.downloadServiceProperties(FileRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 444
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>現在取得<xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>指定されたストレージ サービスに対してです。 これには、CORS の構成がカプセル化します。</p>
+      <p></p>
+    syntax:
+      content: 'public final FileServiceProperties downloadServiceProperties(FileRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: options
+          type: com.microsoft.azure.storage.file._file_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して (<xref uid="com.microsoft.azure.storage.file._cloud_file_client" data-throw-if-not-resolved="false">CloudFileClient</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: 93de0ef9com.microsoft.azure.storage.file._file_service_properties
+        description: <p>A <xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>サービスの現在の構成を表すオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.getDefaultRequestOptions()
+    id: getDefaultRequestOptions()
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: getDefaultRequestOptions()
+    nameWithType: CloudFileClient.getDefaultRequestOptions()
+    fullName: FileRequestOptions com.microsoft.azure.storage.file.CloudFileClient.getDefaultRequestOptions()
+    overload: com.microsoft.azure.storage.file._cloud_file_client.getDefaultRequestOptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 514
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>取得、 <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>これに関連付けられている要求に使用されます。 </p>
+      <p></p>
+    syntax:
+      content: public FileRequestOptions getDefaultRequestOptions()
+      return:
+        type: com.microsoft.azure.storage.file._file_request_options
+        description: <p><xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>で使用される値を含むオブジェクト<code><xref uid="com.microsoft.azure.storage.file._cloud_file_client" data-throw-if-not-resolved="false">CloudFileClient</xref></code></p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.getShareReference(final String)
+    id: getShareReference(final String)
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: getShareReference(final String shareName)
+    nameWithType: CloudFileClient.getShareReference(final String shareName)
+    fullName: CloudFileShare com.microsoft.azure.storage.file.CloudFileClient.getShareReference(final String shareName)
+    overload: com.microsoft.azure.storage.file._cloud_file_client.getShareReference*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 101
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>取得、 <xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>指定の名前を持つオブジェクト。</p>
+      <p></p>
+    syntax:
+      content: public CloudFileShare getShareReference(final String shareName)
+      parameters:
+        - id: shareName
+          type: 3d93591e
+          description: <p>共有の名前付け規則に従う必要があります共有の名前です。 共有名は、任意のパス区切り記号 (/) を含めないでください。 共有名は、小文字、長さは 3 ~ 63 文字にする必要があり、文字または数字で始める必要があります。 共有名には、文字、数字、およびダッシュ (-) 文字のみを含めることがあります。</p>
+      return:
+        type: com.microsoft.azure.storage.file._cloud_file_share
+        description: <p>参照、 <xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>オブジェクト。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+      - type: '44102508'
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.getShareReference(final String,String)'
+    id: 'getShareReference(final String,String)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'getShareReference(final String shareName, String snapshotID)'
+    nameWithType: 'CloudFileClient.getShareReference(final String shareName, String snapshotID)'
+    fullName: 'CloudFileShare com.microsoft.azure.storage.file.CloudFileClient.getShareReference(final String shareName, String snapshotID)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.getShareReference*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 123
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>取得、 <xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>指定の名前を持つオブジェクト。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudFileShare getShareReference(final String shareName, String snapshotID)'
+      parameters:
+        - id: shareName
+          type: 3d93591e
+          description: <p>共有の名前付け規則に従う必要があります共有の名前です。 共有名は、任意のパス区切り記号 (/) を含めないでください。 共有名は、小文字、長さは 3 ~ 63 文字にする必要があり、文字または数字で始める必要があります。 共有名には、文字、数字、およびダッシュ (-) 文字のみを含めることがあります。 </p>
+        - id: snapshotID
+          type: '26831127'
+          description: <p>A<code>String</code>共有のスナップショットの ID を表すです。 </p>
+      return:
+        type: com.microsoft.azure.storage.file._cloud_file_share
+        description: <p>参照、 <xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>オブジェクト。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+      - type: '44102508'
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.isUsePathStyleUris()
+    id: isUsePathStyleUris()
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: isUsePathStyleUris()
+    nameWithType: CloudFileClient.isUsePathStyleUris()
+    fullName: boolean com.microsoft.azure.storage.file.CloudFileClient.isUsePathStyleUris()
+    overload: com.microsoft.azure.storage.file._cloud_file_client.isUsePathStyleUris*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 536
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>示すかどうかパス スタイルの Uri が使用されています。</p>
+      <p></p>
+    syntax:
+      content: protected boolean isUsePathStyleUris()
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>パス スタイルを使用する場合の Uri です。それ以外の場合、<code>false</code>です。 </p>"
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.listShares()
+    id: listShares()
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: listShares()
+    nameWithType: CloudFileClient.listShares()
+    fullName: Iterable<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listShares()
+    overload: com.microsoft.azure.storage.file._cloud_file_client.listShares*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 135
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>このファイル サービス クライアントの共有の列挙可能なコレクションを返します。</p>
+      <p></p>
+    syntax:
+      content: public Iterable<CloudFileShare> listShares()
+      return:
+        type: 2a13b5a5com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+        description: <p>列挙可能なコレクション<xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>遅れて取得するこのクライアントの共有を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.listShares(final String)
+    id: listShares(final String)
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: listShares(final String prefix)
+    nameWithType: CloudFileClient.listShares(final String prefix)
+    fullName: Iterable<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listShares(final String prefix)
+    overload: com.microsoft.azure.storage.file._cloud_file_client.listShares*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 150
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>このファイル サービス クライアントの名前が指定したプレフィックスで始まる共有の列挙可能なコレクションを返します。</p>
+      <p></p>
+    syntax:
+      content: public Iterable<CloudFileShare> listShares(final String prefix)
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>共有名のプレフィックスを表すです。</p>
+      return:
+        type: 2a13b5a5com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+        description: <p>列挙可能なコレクション<xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>遅れて取得した名前が指定したプレフィックスで始まるこのクライアントの共有を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.listShares(final String,final EnumSet<ShareListingDetails>,final FileRequestOptions,final OperationContext)'
+    id: 'listShares(final String,final EnumSet<ShareListingDetails>,final FileRequestOptions,final OperationContext)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'listShares(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final FileRequestOptions options, final OperationContext opContext)'
+    nameWithType: 'CloudFileClient.listShares(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final FileRequestOptions options, final OperationContext opContext)'
+    fullName: 'Iterable<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listShares(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final FileRequestOptions options, final OperationContext opContext)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.listShares*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 176
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>このファイル サービスを使用してクライアント設定の指定した詳細を要求のオプション、および操作コンテキストの指定したプレフィックスで名前が始まる共有の列挙可能なコレクションを返します。</p>
+      <p></p>
+    syntax:
+      content: 'public Iterable<CloudFileShare> listShares(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final FileRequestOptions options, final OperationContext opContext)'
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>共有名のプレフィックスを表すです。 </p>
+        - id: detailsIncluded
+          type: 7f216280com.microsoft.azure.storage.file._share_listing_detailsa08ddfce
+          description: <p>A<code>java.util.EnumSet</code>オブジェクトを含む<xref uid="com.microsoft.azure.storage.file._share_listing_details" data-throw-if-not-resolved="false">ShareListingDetails</xref>共有スナップショットやメタデータが返されるかどうかを示す値。 </p>
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage.file._file_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="com.microsoft.azure.storage.file._cloud_file_client" data-throw-if-not-resolved="false">CloudFileClient</xref>)。 </p>
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: 2a13b5a5com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+        description: <p>列挙可能なコレクション<xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>遅れて取得した、このクライアントの共有を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented()
+    id: listSharesSegmented()
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: listSharesSegmented()
+    nameWithType: CloudFileClient.listSharesSegmented()
+    fullName: ResultSegment<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listSharesSegmented()
+    overload: com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 191
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>このファイル サービス クライアントの共有の列挙可能なコレクションの結果セグメントを返します。</p>
+      <p></p>
+    syntax:
+      content: public ResultSegment<CloudFileShare> listSharesSegmented()
+      return:
+        type: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+        description: <p>A <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>の列挙可能なコレクションのセグメントが含まれるオブジェクト<xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>このクライアントの共有を表すオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented(final String)
+    id: listSharesSegmented(final String)
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: listSharesSegmented(final String prefix)
+    nameWithType: CloudFileClient.listSharesSegmented(final String prefix)
+    fullName: ResultSegment<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listSharesSegmented(final String prefix)
+    overload: com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 211
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>このファイル サービス クライアントの名前が指定したプレフィックスで始まる共有の列挙可能なコレクションの結果セグメントを返します。</p>
+      <p></p>
+    syntax:
+      content: public ResultSegment<CloudFileShare> listSharesSegmented(final String prefix)
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>共有名のプレフィックスを表すです。</p>
+      return:
+        type: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+        description: <p>A <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>の列挙可能なコレクションのセグメントが含まれるオブジェクト<xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>名前が指定したプレフィックスで始まる共有を表すオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented(final String,final EnumSet<ShareListingDetails>,final Integer,final ResultContinuation,final FileRequestOptions,final OperationContext)'
+    id: 'listSharesSegmented(final String,final EnumSet<ShareListingDetails>,final Integer,final ResultContinuation,final FileRequestOptions,final OperationContext)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'listSharesSegmented(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, final FileRequestOptions options, final OperationContext opContext)'
+    nameWithType: 'CloudFileClient.listSharesSegmented(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, final FileRequestOptions options, final OperationContext opContext)'
+    fullName: 'ResultSegment<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listSharesSegmented(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, final FileRequestOptions options, final OperationContext opContext)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 247
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>名前が指定された一覧の詳細オプション、要求のオプション、および操作コンテキストを使用して、指定したプレフィックスで始まる共有の列挙可能なコレクションの結果セグメントを返します。</p>
+      <p></p>
+    syntax:
+      content: 'public ResultSegment<CloudFileShare> listSharesSegmented(final String prefix, final EnumSet<ShareListingDetails> detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, final FileRequestOptions options, final OperationContext opContext)'
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>共有名のプレフィックスを表すです。 </p>
+        - id: detailsIncluded
+          type: 7f216280com.microsoft.azure.storage.file._share_listing_detailsa08ddfce
+          description: <p>A<code>java.util.EnumSet</code>オブジェクトを含む<xref uid="com.microsoft.azure.storage.file._share_listing_details" data-throw-if-not-resolved="false">ShareListingDetails</xref>共有スナップショットやメタデータが返されるかどうかを示す値。 </p>
+        - id: maxResults
+          type: 3437983f
+          description: '<p>取得する結果の最大数。 場合<code>null</code>5000 より大きいか、サーバーは最大 5,000 項目を返します。 1 以上でなければなりません。 </p>'
+        - id: continuationToken
+          type: 93de0ef9com.microsoft.azure.storage._result_continuation
+          description: <p>A <xref uid="com.microsoft.azure.storage._result_continuation" data-throw-if-not-resolved="false">ResultContinuation</xref>を前の一覧作成操作によって返された継続トークンを表すオブジェクト。 </p>
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage.file._file_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="com.microsoft.azure.storage.file._cloud_file_client" data-throw-if-not-resolved="false">CloudFileClient</xref>)。 </p>
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+        description: <p>A <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>の列挙可能なコレクションのセグメントが含まれるオブジェクト<xref uid="com.microsoft.azure.storage.file._cloud_file_share" data-throw-if-not-resolved="false">CloudFileShare</xref>このクライアントの共有を表すオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.setDefaultRequestOptions(FileRequestOptions)
+    id: setDefaultRequestOptions(FileRequestOptions)
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: setDefaultRequestOptions(FileRequestOptions defaultRequestOptions)
+    nameWithType: CloudFileClient.setDefaultRequestOptions(FileRequestOptions defaultRequestOptions)
+    fullName: void com.microsoft.azure.storage.file.CloudFileClient.setDefaultRequestOptions(FileRequestOptions defaultRequestOptions)
+    overload: com.microsoft.azure.storage.file._cloud_file_client.setDefaultRequestOptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 525
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>セット、 <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>このオブジェクトに関連付けられているすべての要求に対して使用されます。</p>
+      <p></p>
+    syntax:
+      content: public void setDefaultRequestOptions(FileRequestOptions defaultRequestOptions)
+      parameters:
+        - id: defaultRequestOptions
+          type: com.microsoft.azure.storage.file._file_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>オブジェクトを使用するオプションを指定します。 </p>
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties(final FileServiceProperties)
+    id: uploadServiceProperties(final FileServiceProperties)
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: uploadServiceProperties(final FileServiceProperties properties)
+    nameWithType: CloudFileClient.uploadServiceProperties(final FileServiceProperties properties)
+    fullName: void com.microsoft.azure.storage.file.CloudFileClient.uploadServiceProperties(final FileServiceProperties properties)
+    overload: com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 469
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>新しいアップロード<xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>指定されたストレージ サービスを構成します。 これには、CORS の構成がカプセル化します。</p>
+      <p></p>
+    syntax:
+      content: public void uploadServiceProperties(final FileServiceProperties properties)
+      parameters:
+        - id: properties
+          type: 93de0ef9com.microsoft.azure.storage.file._file_service_properties
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>アップロード サービスのプロパティを指定するオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties(final FileServiceProperties,FileRequestOptions,OperationContext)'
+    id: 'uploadServiceProperties(final FileServiceProperties,FileRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.file._cloud_file_client
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    langs:
+      - java
+    name: 'uploadServiceProperties(final FileServiceProperties properties, FileRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudFileClient.uploadServiceProperties(final FileServiceProperties properties, FileRequestOptions options, OperationContext opContext)'
+    fullName: 'void com.microsoft.azure.storage.file.CloudFileClient.uploadServiceProperties(final FileServiceProperties properties, FileRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/file/CloudFileClient.java
+      startLine: 492
+    package: com.microsoft.azure.storage.file
+    summary: |-
+      <p>新しいアップロード<xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>指定されたストレージ サービスを構成します。 これには、CORS の構成がカプセル化します。</p>
+      <p></p>
+    syntax:
+      content: 'public void uploadServiceProperties(final FileServiceProperties properties, FileRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: properties
+          type: 93de0ef9com.microsoft.azure.storage.file._file_service_properties
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_service_properties" data-throw-if-not-resolved="false">FileServiceProperties</xref>アップロード サービスのプロパティを指定するオブジェクト。 </p>
+        - id: options
+          type: com.microsoft.azure.storage.file._file_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.file._file_request_options" data-throw-if-not-resolved="false">FileRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して (<xref uid="com.microsoft.azure.storage.file._cloud_file_client" data-throw-if-not-resolved="false">CloudFileClient</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+references:
+  - uid: bac42120
+    spec.java:
+      - name: final URI
+        fullName: final URI
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.CloudFileClient*
+    name: CloudFileClient
+    nameWithType: CloudFileClient.CloudFileClient
+    fullName: com.microsoft.azure.storage.file.CloudFileClient.CloudFileClient
+    package: com.microsoft.azure.storage.file
+  - uid: '44102508'
+    spec.java:
+      - name: URISyntaxException
+        fullName: URISyntaxException
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.getShareReference*
+    name: getShareReference
+    nameWithType: CloudFileClient.getShareReference
+    fullName: CloudFileShare com.microsoft.azure.storage.file.CloudFileClient.getShareReference
+    package: com.microsoft.azure.storage.file
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 2a13b5a5com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+    spec.java:
+      - name: Iterable<
+        fullName: Iterable<
+      - uid: com.microsoft.azure.storage.file._cloud_file_share
+        name: CloudFileShare
+        fullName: com.microsoft.azure.storage.file.CloudFileShare
+        href: com.microsoft.azure.storage.file._cloud_file_share.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.listShares*
+    name: listShares
+    nameWithType: CloudFileClient.listShares
+    fullName: Iterable<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listShares
+    package: com.microsoft.azure.storage.file
+  - uid: 7f216280com.microsoft.azure.storage.file._share_listing_detailsa08ddfce
+    spec.java:
+      - name: final EnumSet<
+        fullName: final EnumSet<
+      - uid: com.microsoft.azure.storage.file._share_listing_details
+        name: ShareListingDetails
+        fullName: com.microsoft.azure.storage.file.ShareListingDetails
+        href: com.microsoft.azure.storage.file._share_listing_details.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 93de0ef9com.microsoft.azure.storage.file._file_request_options
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.file._file_request_options
+        name: FileRequestOptions
+        fullName: com.microsoft.azure.storage.file.FileRequestOptions
+        href: com.microsoft.azure.storage.file._file_request_options.yml
+  - uid: 93de0ef9com.microsoft.azure.storage._operation_context
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._operation_context
+        name: OperationContext
+        fullName: com.microsoft.azure.storage.OperationContext
+        href: com.microsoft.azure.storage._operation_context.yml
+  - uid: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.file._cloud_file_sharea08ddfce
+    spec.java:
+      - uid: com.microsoft.azure.storage._result_segment
+        name: ResultSegment
+        fullName: com.microsoft.azure.storage.ResultSegment
+        href: com.microsoft.azure.storage._result_segment.yml
+      - name: <
+        fullName: <
+      - uid: com.microsoft.azure.storage.file._cloud_file_share
+        name: CloudFileShare
+        fullName: com.microsoft.azure.storage.file.CloudFileShare
+        href: com.microsoft.azure.storage.file._cloud_file_share.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.listSharesSegmented*
+    name: listSharesSegmented
+    nameWithType: CloudFileClient.listSharesSegmented
+    fullName: ResultSegment<CloudFileShare> com.microsoft.azure.storage.file.CloudFileClient.listSharesSegmented
+    package: com.microsoft.azure.storage.file
+  - uid: 3437983f
+    spec.java:
+      - name: final Integer
+        fullName: final Integer
+  - uid: 93de0ef9com.microsoft.azure.storage._result_continuation
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._result_continuation
+        name: ResultContinuation
+        fullName: com.microsoft.azure.storage.ResultContinuation
+        href: com.microsoft.azure.storage._result_continuation.yml
+  - uid: 93de0ef9com.microsoft.azure.storage.file._file_service_properties
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.file._file_service_properties
+        name: FileServiceProperties
+        fullName: com.microsoft.azure.storage.file.FileServiceProperties
+        href: com.microsoft.azure.storage.file._file_service_properties.yml
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.downloadServiceProperties*
+    name: downloadServiceProperties
+    nameWithType: CloudFileClient.downloadServiceProperties
+    fullName: final FileServiceProperties com.microsoft.azure.storage.file.CloudFileClient.downloadServiceProperties
+    package: com.microsoft.azure.storage.file
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.uploadServiceProperties*
+    name: uploadServiceProperties
+    nameWithType: CloudFileClient.uploadServiceProperties
+    fullName: void com.microsoft.azure.storage.file.CloudFileClient.uploadServiceProperties
+    package: com.microsoft.azure.storage.file
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.getDefaultRequestOptions*
+    name: getDefaultRequestOptions
+    nameWithType: CloudFileClient.getDefaultRequestOptions
+    fullName: FileRequestOptions com.microsoft.azure.storage.file.CloudFileClient.getDefaultRequestOptions
+    package: com.microsoft.azure.storage.file
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.setDefaultRequestOptions*
+    name: setDefaultRequestOptions
+    nameWithType: CloudFileClient.setDefaultRequestOptions
+    fullName: void com.microsoft.azure.storage.file.CloudFileClient.setDefaultRequestOptions
+    package: com.microsoft.azure.storage.file
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.storage.file._cloud_file_client.isUsePathStyleUris*
+    name: isUsePathStyleUris
+    nameWithType: CloudFileClient.isUsePathStyleUris
+    fullName: boolean com.microsoft.azure.storage.file.CloudFileClient.isUsePathStyleUris
+    package: com.microsoft.azure.storage.file
+  - uid: com.microsoft.azure.storage._service_client.credentials
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: credentials
+    nameWithType: ServiceClient.credentials
+    fullName: StorageCredentials com.microsoft.azure.storage.ServiceClient.credentials
+    type: Field
+    summary: <p>保持、 <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>このサービスのクライアントに関連付けられています。 </p>
+    syntax:
+      content: protected StorageCredentials credentials
+      return:
+        type: com.microsoft.azure.storage._storage_credentials
+  - uid: 'com.microsoft.azure.storage._service_client.downloadServicePropertiesImpl(final RequestOptions,final boolean)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+    nameWithType: 'ServiceClient.downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+    fullName: 'StorageRequest<ServiceClient, Void, ServiceProperties> com.microsoft.azure.storage.ServiceClient.downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+    type: Method
+    syntax:
+      content: 'protected StorageRequest<ServiceClient, Void, ServiceProperties> downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+      parameters:
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage._request_options
+        - id: signAsTable
+          type: 4dda0764
+      return:
+        type: com.microsoft.azure.storage.core._storage_request78504a52com.microsoft.azure.storage._service_client74f86c16com.microsoft.azure.storage._service_propertiesa08ddfce
+  - uid: com.microsoft.azure.storage._service_client.getCredentials()
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: getCredentials()
+    nameWithType: ServiceClient.getCredentials()
+    fullName: final StorageCredentials com.microsoft.azure.storage.ServiceClient.getCredentials()
+    type: Method
+    summary: |-
+      <p>このサービスのクライアントに関連付けられているストレージの資格情報を返します。</p>
+      <p></p>
+    syntax:
+      content: public final StorageCredentials getCredentials()
+      return:
+        type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+        description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>をこのクライアントに関連付けられているストレージの資格情報を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._service_client.getEndpoint()
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: getEndpoint()
+    nameWithType: ServiceClient.getEndpoint()
+    fullName: final URI com.microsoft.azure.storage.ServiceClient.getEndpoint()
+    type: Method
+    summary: |-
+      <p>このサービス クライアントのベース URI を返します。</p>
+      <p></p>
+    syntax:
+      content: public final URI getEndpoint()
+      return:
+        type: bac42120
+        description: <p>A<code>java.net.URI</code>サービス クライアントのベース URI を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage._service_client.getServiceStatsImpl(final RequestOptions,final boolean)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+    nameWithType: 'ServiceClient.getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+    fullName: 'StorageRequest<ServiceClient, Void, ServiceStats> com.microsoft.azure.storage.ServiceClient.getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+    type: Method
+    syntax:
+      content: 'protected StorageRequest<ServiceClient, Void, ServiceStats> getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+      parameters:
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage._request_options
+        - id: signAsTable
+          type: 4dda0764
+      return:
+        type: com.microsoft.azure.storage.core._storage_request78504a52com.microsoft.azure.storage._service_client74f86c16com.microsoft.azure.storage._service_statsa08ddfce
+  - uid: com.microsoft.azure.storage._service_client.getStorageUri()
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: getStorageUri()
+    nameWithType: ServiceClient.getStorageUri()
+    fullName: final StorageUri com.microsoft.azure.storage.ServiceClient.getStorageUri()
+    type: Method
+    summary: |-
+      <p>すべての場所の Uri の一覧を返します。</p>
+      <p></p>
+    syntax:
+      content: public final StorageUri getStorageUri()
+      return:
+        type: 93de0ef9com.microsoft.azure.storage._storage_uri
+        description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>をすべての場所の Uri の一覧を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage._service_client.ServiceClient(final StorageUri,final StorageCredentials)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+    nameWithType: 'ServiceClient.ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+    fullName: 'com.microsoft.azure.storage.ServiceClient.ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+    type: Constructor
+    summary: |-
+      <p>指定したサービス エンドポイントとアカウントの資格情報を使用してクラスのインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'protected ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+      parameters:
+        - id: storageUri
+          type: 93de0ef9com.microsoft.azure.storage._storage_uri
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>をクライアントの作成に使用されるサービス エンドポイントを表すオブジェクト。 </p>
+        - id: credentials
+          type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>をアカウントの資格情報を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._service_client.setCredentials(final StorageCredentials)
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: setCredentials(final StorageCredentials credentials)
+    nameWithType: ServiceClient.setCredentials(final StorageCredentials credentials)
+    fullName: final void com.microsoft.azure.storage.ServiceClient.setCredentials(final StorageCredentials credentials)
+    type: Method
+    summary: |-
+      <p>このサービス クライアントで使用する資格情報を設定します。</p>
+      <p></p>
+    syntax:
+      content: protected final void setCredentials(final StorageCredentials credentials)
+      parameters:
+        - id: credentials
+          type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>サービス クライアントの割り当てられている資格情報を表すオブジェクト。 </p>
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.storage._service_client.setStorageUri(final StorageUri)
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: setStorageUri(final StorageUri storageUri)
+    nameWithType: ServiceClient.setStorageUri(final StorageUri storageUri)
+    fullName: final void com.microsoft.azure.storage.ServiceClient.setStorageUri(final StorageUri storageUri)
+    type: Method
+    summary: |-
+      <p>すべての場所の Uri の一覧を設定します。</p>
+      <p></p>
+    syntax:
+      content: protected final void setStorageUri(final StorageUri storageUri)
+      parameters:
+        - id: storageUri
+          type: 93de0ef9com.microsoft.azure.storage._storage_uri
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>をすべての場所の Uri の一覧を表すオブジェクト。 </p>
+      return:
+        type: 3f6357ce
+  - uid: 'com.microsoft.azure.storage._service_client.uploadServicePropertiesImpl(final ServiceProperties,final RequestOptions,final OperationContext,final boolean)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+    nameWithType: 'ServiceClient.uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+    fullName: 'StorageRequest<ServiceClient, Void, Void> com.microsoft.azure.storage.ServiceClient.uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+    type: Method
+    syntax:
+      content: 'protected StorageRequest<ServiceClient, Void, Void> uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+      parameters:
+        - id: properties
+          type: 93de0ef9com.microsoft.azure.storage._service_properties
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage._request_options
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+        - id: signAsTable
+          type: 4dda0764
+      return:
+        type: com.microsoft.azure.storage.core._storage_request78504a52com.microsoft.azure.storage._service_client6cfcae0a
+  - uid: com.microsoft.azure.storage._service_client
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._service_client.yml
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: com.microsoft.azure.storage.ServiceClient
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスにアクセスするため、クライアントを提供します。 </p>
+    syntax:
+      content: public class ServiceClient
+  - uid: com.microsoft.azure.storage.file._file_request_options
+    parent: com.microsoft.azure.storage.file
+    href: com.microsoft.azure.storage.file._file_request_options.yml
+    name: FileRequestOptions
+    nameWithType: FileRequestOptions
+    fullName: com.microsoft.azure.storage.file.FileRequestOptions
+    type: Class
+    summary: <p>要求時に指定できるオプションのセットを表します。 </p>
+    syntax:
+      content: public class FileRequestOptions
+  - uid: com.microsoft.azure.storage._storage_credentials
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_credentials.yml
+    name: StorageCredentials
+    nameWithType: StorageCredentials
+    fullName: com.microsoft.azure.storage.StorageCredentials
+    type: Class
+    summary: <p>Microsoft Azure ストレージ アカウントへのアクセスの認証に使用される資格情報のセットを表します。 これは、基本クラスを<xref uid="com.microsoft.azure.storage._storage_credentials_account_and_key" data-throw-if-not-resolved="false">StorageCredentialsAccountAndKey</xref>と<xref uid="com.microsoft.azure.storage._storage_credentials_shared_access_signature" data-throw-if-not-resolved="false">StorageCredentialsSharedAccessSignature</xref>クラスです。 </p>
+    syntax:
+      content: public class StorageCredentials
+  - uid: com.microsoft.azure.storage.file._cloud_file_client
+    parent: com.microsoft.azure.storage.file
+    href: com.microsoft.azure.storage.file._cloud_file_client.yml
+    name: CloudFileClient
+    nameWithType: CloudFileClient
+    fullName: com.microsoft.azure.storage.file.CloudFileClient
+    type: Class
+    summary: |-
+      <p>Microsoft Azure ファイル サービスにアクセスするため、クライアントを提供します。 </p>
+      <p>このクラスは、ファイル サービスへのアクセス ポイントを提供します。 サービス クライアントは、ファイル サービスのベース URI をカプセル化します。 また、ストレージ アカウントにアクセスするための資格情報をカプセル化します。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage._storage_uri
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_uri.yml
+    name: StorageUri
+    nameWithType: StorageUri
+    fullName: com.microsoft.azure.storage.StorageUri
+    type: Class
+    summary: <p>記憶域リソースを表す Uri の一覧を保持します。 </p>
+    syntax:
+      content: public class StorageUri
+  - uid: com.microsoft.azure.storage.file._cloud_file_share
+    parent: com.microsoft.azure.storage.file
+    href: com.microsoft.azure.storage.file._cloud_file_share.yml
+    name: CloudFileShare
+    nameWithType: CloudFileShare
+    fullName: com.microsoft.azure.storage.file.CloudFileShare
+    type: Class
+    summary: |-
+      <p>Microsoft Azure ファイル サービス内の共有を表します。 </p>
+      <p>共有としてカプセル化されるディレクトリを保持する<xref uid="com.microsoft.azure.storage.file._cloud_file_directory" data-throw-if-not-resolved="false">CloudFileDirectory</xref>オブジェクト、およびディレクトリのファイルを保持します。 ディレクトリは、サブディレクトリを含めることもできます。 </p>
+    syntax:
+      content: public class CloudFileShare
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: com.microsoft.azure.storage.file._share_listing_details
+    parent: com.microsoft.azure.storage.file
+    href: com.microsoft.azure.storage.file._share_listing_details.yml
+    name: ShareListingDetails
+    nameWithType: ShareListingDetails
+    fullName: com.microsoft.azure.storage.file.ShareListingDetails
+    type: Enum
+    summary: <p>このストレージ アカウント内の共有を一覧表示するときに含める詳細を指定します。 </p>
+    syntax:
+      content: public enum ShareListingDetails
+  - uid: com.microsoft.azure.storage._operation_context
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._operation_context.yml
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: com.microsoft.azure.storage.OperationContext
+    type: Class
+    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    syntax:
+      content: public class OperationContext
+  - uid: com.microsoft.azure.storage._result_segment
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._result_segment.yml
+    name: ResultSegment<T>
+    nameWithType: ResultSegment<T>
+    fullName: com.microsoft.azure.storage.ResultSegment<T>
+    type: Class
+    summary: |-
+      <p>結果のセグメントを表し、継続と改ページの情報が含まれています。</p>
+      <p></p>
+    syntax:
+      content: public class ResultSegment<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>セグメントに含まれている結果の型。 </p>
+  - uid: com.microsoft.azure.storage._result_continuation
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._result_continuation.yml
+    name: ResultContinuation
+    nameWithType: ResultContinuation
+    fullName: com.microsoft.azure.storage.ResultContinuation
+    type: Class
+    summary: '<p>一覧作成操作の継続トークンを表します。 継続トークンを返すメソッドで使用されます、 <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>などのオブジェクト<xref uid="com.microsoft.azure.storage.blob._cloud_blob_directory.listBlobsSegmented()" data-throw-if-not-resolved="false">CloudBlobDirectory #listBlobsSegmented</xref>です。 </p>'
+    syntax:
+      content: public class ResultContinuation
+  - uid: com.microsoft.azure.storage.file._file_service_properties
+    parent: com.microsoft.azure.storage.file
+    href: com.microsoft.azure.storage.file._file_service_properties.yml
+    name: FileServiceProperties
+    nameWithType: FileServiceProperties
+    fullName: com.microsoft.azure.storage.file.FileServiceProperties
+    type: Class
+    summary: <p>Azure ファイル サービスに関連するプロパティのセットを表すクラスです。 </p>
+    syntax:
+      content: public class FileServiceProperties
+  - uid: com.microsoft.azure.storage.core._storage_request
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._storage_request.yml
+    name: 'StorageRequest<C,P,R>'
+    nameWithType: 'StorageRequest<C,P,R>'
+    fullName: 'com.microsoft.azure.storage.core.StorageRequest<C,P,R>'
+    type: Class
+    summary: |-
+      <p>内部使用のために予約されています。 特定のストレージ操作の実行をカプセル化するクラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public class StorageRequest<C,P,R>'
+      typeParameters:
+        - type: 37f8610d
+          description: <p>サービス クライアントの種類 </p>
+        - type: db9ec244
+          description: <p>DownloadAttributes などの CloudBlobContainer などは、親オブジェクトの型。 </p>
+        - type: d4d3e1e1
+          description: <p>予期される結果の種類 </p>
+  - uid: com.microsoft.azure.storage.core._segmented_storage_request
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._segmented_storage_request.yml
+    name: SegmentedStorageRequest
+    nameWithType: SegmentedStorageRequest
+    fullName: com.microsoft.azure.storage.core.SegmentedStorageRequest
+    type: Class
+    syntax:
+      content: public class SegmentedStorageRequest

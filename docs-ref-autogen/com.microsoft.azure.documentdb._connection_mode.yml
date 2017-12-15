@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.documentdb._connection_mode
+    id: _connection_mode
+    parent: com.microsoft.azure.documentdb
+    children:
+      - com.microsoft.azure.documentdb._connection_mode.DirectHttps
+      - com.microsoft.azure.documentdb._connection_mode.Gateway
+    href: com.microsoft.azure.documentdb._connection_mode.yml
+    langs:
+      - java
+    name: ConnectionMode
+    nameWithType: ConnectionMode
+    fullName: com.microsoft.azure.documentdb.ConnectionMode
+    type: Enum
+    source:
+      remote: &ref_0
+        path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConnectionMode.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-documentdb-java-pr'
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConnectionMode.java
+      startLine: 14
+    package: com.microsoft.azure.documentdb
+    summary: |-
+      <p>Azure DocumentDB データベース サービスでクライアントによって使用される接続モードを表します。 </p>
+      <p>ダイレクトとゲートウェイの接続モードはサポートされています。 ゲートウェイは、既定値です。 参照してください&lt;を参照してください&gt;<ulink url="http://azure.microsoft.com/documentation/articles/documentdb-">http://azure.microsoft.com/documentation/articles/documentdb-</ulink>の相互作用-使用-リソース/# 接続-オプション&lt;を参照してください/&gt;さらに詳細です。 </p>
+    syntax:
+      content: public enum ConnectionMode
+    inheritance:
+      - java.lang.Object
+      - java.lang.Enum<ConnectionMode>
+  - uid: com.microsoft.azure.documentdb._connection_mode.DirectHttps
+    id: DirectHttps
+    parent: com.microsoft.azure.documentdb._connection_mode
+    href: com.microsoft.azure.documentdb._connection_mode.yml
+    langs:
+      - java
+    name: DirectHttps
+    nameWithType: ConnectionMode.DirectHttps
+    fullName: com.microsoft.azure.documentdb.ConnectionMode.DirectHttps
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConnectionMode.java
+      startLine: 34
+    package: com.microsoft.azure.documentdb
+    summary: |-
+      <p>サーバーのリソースへの要求が HTTPS 経由のデータ ノードに直接行われたことを指定します。 </p>
+      <p>DirectHttps モードですべての要求を格納されているドキュメントなど、コレクション内のサーバー リソース プロシージャおよびユーザー定義関数などが、HTTPS トランスポート プロトコルを使用してターゲット DocumentDB 内のデータのノードに直接行われました。 DirectHttps より効率が下がりますが、直接、ゲートウェイよりも効率的です。 </p>
+      <p>アカウントまたはデータベース レベルなど、リソース データベース、コレクションとユーザーなどの特定の操作は常に HTTPS を使用して、ゲートウェイを介してルーティングされます。 </p>
+    syntax:
+      content: public DirectHttps
+  - uid: com.microsoft.azure.documentdb._connection_mode.Gateway
+    id: Gateway
+    parent: com.microsoft.azure.documentdb._connection_mode
+    href: com.microsoft.azure.documentdb._connection_mode.yml
+    langs:
+      - java
+    name: Gateway
+    nameWithType: ConnectionMode.Gateway
+    fullName: com.microsoft.azure.documentdb.ConnectionMode.Gateway
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConnectionMode.java
+      startLine: 21
+    package: com.microsoft.azure.documentdb
+    summary: |-
+      <p>HTTPS を使用して、ゲートウェイのプロキシを介してサーバー リソースへの要求が行われることを指定します。 </p>
+      <p>ゲートウェイのモードでは、すべての要求はプロキシ ゲートウェイを通じて行われます。 </p>
+    syntax:
+      content: public Gateway
+references: []

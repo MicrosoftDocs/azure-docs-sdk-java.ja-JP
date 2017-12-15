@@ -1,0 +1,527 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table._table_service_exception
+    id: _table_service_exception
+    parent: com.microsoft.azure.storage.table
+    children:
+      - 'com.microsoft.azure.storage.table._table_service_exception.generateTableServiceException(RequestResult,TableOperation,InputStream,TablePayloadFormat)'
+      - com.microsoft.azure.storage.table._table_service_exception.getOperation()
+      - com.microsoft.azure.storage.table._table_service_exception.setOperation(final TableOperation)
+      - 'com.microsoft.azure.storage.table._table_service_exception.TableServiceException(final int,final String,final TableOperation,final Reader,final TablePayloadFormat)'
+      - 'com.microsoft.azure.storage.table._table_service_exception.TableServiceException(final String,final String,final int,final StorageExtendedErrorInformation,final Exception)'
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    langs:
+      - java
+    name: TableServiceException
+    nameWithType: TableServiceException
+    fullName: com.microsoft.azure.storage.table.TableServiceException
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+      startLine: 28
+    package: com.microsoft.azure.storage.table
+    summary: <p>テーブル ストレージ サービスの操作が正常に実行できない場合に発生する例外。 </p>
+    syntax: &ref_1
+      content: public class TableServiceException extends StorageException
+    inheritance:
+      - java.lang.Object
+      - Exception
+      - com.microsoft.azure.storage._storage_exception
+    inheritedMembers:
+      - com.microsoft.azure.storage._storage_exception.errorCode
+      - com.microsoft.azure.storage._storage_exception.extendedErrorInformation
+      - com.microsoft.azure.storage._storage_exception.getErrorCode()
+      - com.microsoft.azure.storage._storage_exception.getExtendedErrorInformation()
+      - com.microsoft.azure.storage._storage_exception.getHttpStatusCode()
+      - 'com.microsoft.azure.storage._storage_exception.StorageException(final String,final String,final Exception)'
+      - 'com.microsoft.azure.storage._storage_exception.StorageException(final String,final String,final int,final StorageExtendedErrorInformation,final Exception)'
+      - com.microsoft.azure.storage._storage_exception.translateClientException(final Exception)
+      - 'com.microsoft.azure.storage._storage_exception.translateException(final StorageRequest<?, ?, ?>,final Exception,final OperationContext)'
+      - 'com.microsoft.azure.storage._storage_exception.translateFromHttpStatus(final int,final String,final Exception)'
+  - uid: 'com.microsoft.azure.storage.table._table_service_exception.generateTableServiceException(RequestResult,TableOperation,InputStream,TablePayloadFormat)'
+    id: 'generateTableServiceException(RequestResult,TableOperation,InputStream,TablePayloadFormat)'
+    parent: com.microsoft.azure.storage.table._table_service_exception
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    langs:
+      - java
+    name: 'generateTableServiceException(RequestResult res, TableOperation op, InputStream inStream, TablePayloadFormat format)'
+    nameWithType: 'TableServiceException.generateTableServiceException(RequestResult res, TableOperation op, InputStream inStream, TablePayloadFormat format)'
+    fullName: 'static TableServiceException com.microsoft.azure.storage.table.TableServiceException.generateTableServiceException(RequestResult res, TableOperation op, InputStream inStream, TablePayloadFormat format)'
+    overload: com.microsoft.azure.storage.table._table_service_exception.generateTableServiceException*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+      startLine: 49
+    package: com.microsoft.azure.storage.table
+    summary: <p>内部使用のために予約されています。 静的ファクトリを作成する方法、 <xref uid="com.microsoft.azure.storage.table._table_service_exception" data-throw-if-not-resolved="false">TableServiceException</xref>インスタンスの指定のパラメーターを使用します。 </p>
+    syntax:
+      content: 'protected static TableServiceException generateTableServiceException(RequestResult res, TableOperation op, InputStream inStream, TablePayloadFormat format)'
+      parameters:
+        - id: res
+          type: com.microsoft.azure.storage._request_result
+          description: <p>A <xref uid="com.microsoft.azure.storage._request_result" data-throw-if-not-resolved="false">RequestResult</xref>テーブル記憶域のサービス操作の結果を格納します。 </p>
+        - id: op
+          type: com.microsoft.azure.storage.table._table_operation
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>例外の原因となったテーブルの操作を表すです。 </p>
+        - id: inStream
+          type: 76fcb9b7
+          description: <p><code>java.io.InputStream</code>テーブル操作の要求からのエラー応答のです。 </p>
+        - id: format
+          type: com.microsoft.azure.storage.table._table_payload_format
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_payload_format" data-throw-if-not-resolved="false">TablePayloadFormat</xref>解析に使用するには</p>
+      return:
+        type: com.microsoft.azure.storage.table._table_service_exception
+        description: <p>A <xref uid="com.microsoft.azure.storage.table._table_service_exception" data-throw-if-not-resolved="false">TableServiceException</xref>インスタンスは、入力パラメーターの値で初期化します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_service_exception.getOperation()
+    id: getOperation()
+    parent: com.microsoft.azure.storage.table._table_service_exception
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    langs:
+      - java
+    name: getOperation()
+    nameWithType: TableServiceException.getOperation()
+    fullName: TableOperation com.microsoft.azure.storage.table.TableServiceException.getOperation()
+    overload: com.microsoft.azure.storage.table._table_service_exception.getOperation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+      startLine: 116
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>原因となったテーブルの操作を取得がスローされます。</p>
+      <p></p>
+    syntax:
+      content: public TableOperation getOperation()
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>この原因となったテーブルの操作を表すオブジェクトを<xref uid="com.microsoft.azure.storage.table._table_service_exception" data-throw-if-not-resolved="false">TableServiceException</xref>がスローされます。 </p>
+  - uid: com.microsoft.azure.storage.table._table_service_exception.setOperation(final TableOperation)
+    id: setOperation(final TableOperation)
+    parent: com.microsoft.azure.storage.table._table_service_exception
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    langs:
+      - java
+    name: setOperation(final TableOperation operation)
+    nameWithType: TableServiceException.setOperation(final TableOperation operation)
+    fullName: void com.microsoft.azure.storage.table.TableServiceException.setOperation(final TableOperation operation)
+    overload: com.microsoft.azure.storage.table._table_service_exception.setOperation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+      startLine: 128
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 原因となったテーブルの操作を設定がスローされます。</p>
+      <p></p>
+    syntax:
+      content: protected void setOperation(final TableOperation operation)
+      parameters:
+        - id: operation
+          type: 93de0ef9com.microsoft.azure.storage.table._table_operation
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>この原因となったテーブルの操作を表すオブジェクトを<xref uid="com.microsoft.azure.storage.table._table_service_exception" data-throw-if-not-resolved="false">TableServiceException</xref>がスローされます。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_service_exception.TableServiceException(final int,final String,final TableOperation,final Reader,final TablePayloadFormat)'
+    id: 'TableServiceException(final int,final String,final TableOperation,final Reader,final TablePayloadFormat)'
+    parent: com.microsoft.azure.storage.table._table_service_exception
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    langs:
+      - java
+    name: 'TableServiceException(final int httpStatusCode, final String message, final TableOperation operation, final Reader reader, final TablePayloadFormat format)'
+    nameWithType: 'TableServiceException.TableServiceException(final int httpStatusCode, final String message, final TableOperation operation, final Reader reader, final TablePayloadFormat format)'
+    fullName: 'com.microsoft.azure.storage.table.TableServiceException.TableServiceException(final int httpStatusCode, final String message, final TableOperation operation, final Reader reader, final TablePayloadFormat format)'
+    overload: com.microsoft.azure.storage.table._table_service_exception.TableServiceException*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+      startLine: 93
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 指定された HTTP 状態コード、メッセージ、操作、およびストリーム リーダーを使用してインスタンスを構築します。</p>
+      <p></p>
+    syntax:
+      content: 'protected TableServiceException(final int httpStatusCode, final String message, final TableOperation operation, final Reader reader, final TablePayloadFormat format)'
+      parameters:
+        - id: httpStatusCode
+          type: cd225469
+          description: <p><code>int</code>例外の原因となったテーブルの操作によって返される HTTP ステータス コード値。 </p>
+        - id: message
+          type: 3d93591e
+          description: <p>A<code>String</code>例外の原因となったエラーの説明。 </p>
+        - id: operation
+          type: 93de0ef9com.microsoft.azure.storage.table._table_operation
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>例外が発生したときに、進行中であったテーブル操作を表すオブジェクト。 </p>
+        - id: reader
+          type: 89d5029e
+          description: <p><code>Java.IO.Stream</code>存在する場合は、テーブルの操作によって返される HTTP 要求の結果のストリーム リーダーを派生します。 </p>
+        - id: format
+          type: 93de0ef9com.microsoft.azure.storage.table._table_payload_format
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_payload_format" data-throw-if-not-resolved="false">TablePayloadFormat</xref>解析に使用するには </p>
+  - uid: 'com.microsoft.azure.storage.table._table_service_exception.TableServiceException(final String,final String,final int,final StorageExtendedErrorInformation,final Exception)'
+    id: 'TableServiceException(final String,final String,final int,final StorageExtendedErrorInformation,final Exception)'
+    parent: com.microsoft.azure.storage.table._table_service_exception
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    langs:
+      - java
+    name: 'TableServiceException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+    nameWithType: 'TableServiceException.TableServiceException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+    fullName: 'com.microsoft.azure.storage.table.TableServiceException.TableServiceException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+    overload: com.microsoft.azure.storage.table._table_service_exception.TableServiceException*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableServiceException.java
+      startLine: 71
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>指定されたエラー コード、メッセージ、状態コード、エラーの詳細情報と内部例外を使用してインスタンスを構築します。</p>
+      <p></p>
+    syntax:
+      content: 'public TableServiceException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+      parameters:
+        - id: errorCode
+          type: 3d93591e
+          description: <p>A<code>String</code>を表すテーブルの操作によって返されたエラー コード。 </p>
+        - id: message
+          type: 3d93591e
+          description: <p>A<code>String</code>テーブル操作によって返されるエラー メッセージを表すです。 </p>
+        - id: statusCode
+          type: cd225469
+          description: <p>、<code>int&gt;/code&gt; which represents the HTTP status code returned by the table operation. </code></p>
+        - id: extendedErrorInfo
+          type: 93de0ef9com.microsoft.azure.storage._storage_extended_error_information
+          description: |-
+            <p>
+
+              <code> A <xref uid="com.microsoft.azure.storage._storage_extended_error_information" data-throw-if-not-resolved="false">StorageExtendedErrorInformation</xref> object that represents the extended error information returned by the table operation. </code>
+
+            </p>
+        - id: innerException
+          type: 0e0204bc
+          description: |-
+            <p>
+
+              <code> An <code>Exception</code> object that represents a reference to the initial exception, if one exists. </code>
+
+            </p>
+references:
+  - uid: 76fcb9b7
+    spec.java:
+      - name: InputStream
+        fullName: InputStream
+  - uid: com.microsoft.azure.storage.table._table_service_exception.generateTableServiceException*
+    name: generateTableServiceException
+    nameWithType: TableServiceException.generateTableServiceException
+    fullName: static TableServiceException com.microsoft.azure.storage.table.TableServiceException.generateTableServiceException
+    package: com.microsoft.azure.storage.table
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 93de0ef9com.microsoft.azure.storage._storage_extended_error_information
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._storage_extended_error_information
+        name: StorageExtendedErrorInformation
+        fullName: com.microsoft.azure.storage.StorageExtendedErrorInformation
+        href: com.microsoft.azure.storage._storage_extended_error_information.yml
+  - uid: 0e0204bc
+    spec.java:
+      - name: final Exception
+        fullName: final Exception
+  - uid: com.microsoft.azure.storage.table._table_service_exception.TableServiceException*
+    name: TableServiceException
+    nameWithType: TableServiceException.TableServiceException
+    fullName: com.microsoft.azure.storage.table.TableServiceException.TableServiceException
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_service_exception.getOperation*
+    name: getOperation
+    nameWithType: TableServiceException.getOperation
+    fullName: TableOperation com.microsoft.azure.storage.table.TableServiceException.getOperation
+    package: com.microsoft.azure.storage.table
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_operation
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_operation
+        name: TableOperation
+        fullName: com.microsoft.azure.storage.table.TableOperation
+        href: com.microsoft.azure.storage.table._table_operation.yml
+  - uid: 89d5029e
+    spec.java:
+      - name: final Reader
+        fullName: final Reader
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_payload_format
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_payload_format
+        name: TablePayloadFormat
+        fullName: com.microsoft.azure.storage.table.TablePayloadFormat
+        href: com.microsoft.azure.storage.table._table_payload_format.yml
+  - uid: com.microsoft.azure.storage.table._table_service_exception.setOperation*
+    name: setOperation
+    nameWithType: TableServiceException.setOperation
+    fullName: void com.microsoft.azure.storage.table.TableServiceException.setOperation
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage._storage_exception.errorCode
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: errorCode
+    nameWithType: StorageException.errorCode
+    fullName: String com.microsoft.azure.storage.StorageException.errorCode
+    type: Field
+    summary: <p>操作によって返されたエラー コードを表します。 </p>
+    syntax:
+      content: protected String errorCode
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.storage._storage_exception.extendedErrorInformation
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: extendedErrorInformation
+    nameWithType: StorageException.extendedErrorInformation
+    fullName: StorageExtendedErrorInformation com.microsoft.azure.storage.StorageException.extendedErrorInformation
+    type: Field
+    summary: |-
+      <p>操作によって返される拡張エラー情報を表します。</p>
+      <p></p>
+    syntax:
+      content: protected StorageExtendedErrorInformation extendedErrorInformation
+      return:
+        type: com.microsoft.azure.storage._storage_extended_error_information
+  - uid: com.microsoft.azure.storage._storage_exception.getErrorCode()
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: getErrorCode()
+    nameWithType: StorageException.getErrorCode()
+    fullName: String com.microsoft.azure.storage.StorageException.getErrorCode()
+    type: Method
+    summary: |-
+      <p>操作によって返されたエラー コードを取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getErrorCode()
+      return:
+        type: '26831127'
+        description: <p>errorCode </p>
+  - uid: com.microsoft.azure.storage._storage_exception.getExtendedErrorInformation()
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: getExtendedErrorInformation()
+    nameWithType: StorageException.getExtendedErrorInformation()
+    fullName: StorageExtendedErrorInformation com.microsoft.azure.storage.StorageException.getExtendedErrorInformation()
+    type: Method
+    summary: |-
+      <p>操作によって返される拡張エラー情報を取得します。</p>
+      <p></p>
+    syntax:
+      content: public StorageExtendedErrorInformation getExtendedErrorInformation()
+      return:
+        type: com.microsoft.azure.storage._storage_extended_error_information
+        description: <p>extendedErrorInformation </p>
+  - uid: com.microsoft.azure.storage._storage_exception.getHttpStatusCode()
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: getHttpStatusCode()
+    nameWithType: StorageException.getHttpStatusCode()
+    fullName: int com.microsoft.azure.storage.StorageException.getHttpStatusCode()
+    type: Method
+    summary: |-
+      <p>操作によって返される HTTP ステータス コードを取得します。</p>
+      <p></p>
+    syntax:
+      content: public int getHttpStatusCode()
+      return:
+        type: f75371fa
+        description: <p>httpStatusCode </p>
+  - uid: 'com.microsoft.azure.storage._storage_exception.StorageException(final String,final String,final Exception)'
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: 'StorageException(final String errorCode, final String message, final Exception innerException)'
+    nameWithType: 'StorageException.StorageException(final String errorCode, final String message, final Exception innerException)'
+    fullName: 'com.microsoft.azure.storage.StorageException.StorageException(final String errorCode, final String message, final Exception innerException)'
+    type: Constructor
+    summary: |-
+      <p>指定されたパラメーターを使用してクラスのインスタンスを作成します。 ステータス コード 306 拡張エラー情報の場合は null とクライアント側の例外を表すためになります。</p>
+      <p></p>
+    syntax:
+      content: 'public StorageException(final String errorCode, final String message, final Exception innerException)'
+      parameters:
+        - id: errorCode
+          type: 3d93591e
+          description: <p>A<code>String</code>操作によって返されたエラー コードを表すです。 </p>
+        - id: message
+          type: 3d93591e
+          description: <p>A<code>String</code>操作によって返されるエラー メッセージを表すです。 </p>
+        - id: innerException
+          type: 0e0204bc
+          description: <p><code>Exception</code>が存在する場合は、最初の例外への参照を表すオブジェクト。</p>
+  - uid: 'com.microsoft.azure.storage._storage_exception.StorageException(final String,final String,final int,final StorageExtendedErrorInformation,final Exception)'
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: 'StorageException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+    nameWithType: 'StorageException.StorageException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+    fullName: 'com.microsoft.azure.storage.StorageException.StorageException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+    type: Constructor
+    summary: |-
+      <p>指定されたパラメーターを使用してクラスのインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public StorageException(final String errorCode, final String message, final int statusCode, final StorageExtendedErrorInformation extendedErrorInfo, final Exception innerException)'
+      parameters:
+        - id: errorCode
+          type: 3d93591e
+          description: <p>A<code>String</code>操作によって返されたエラー コードを表すです。 </p>
+        - id: message
+          type: 3d93591e
+          description: <p>A<code>String</code>操作によって返されるエラー メッセージを表すです。 </p>
+        - id: statusCode
+          type: cd225469
+          description: <p>操作によって返される HTTP ステータス コード。 </p>
+        - id: extendedErrorInfo
+          type: 93de0ef9com.microsoft.azure.storage._storage_extended_error_information
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_extended_error_information" data-throw-if-not-resolved="false">StorageExtendedErrorInformation</xref>操作によって返される拡張エラー情報を表すオブジェクト。 </p>
+        - id: innerException
+          type: 0e0204bc
+          description: <p><code>Exception</code>が存在する場合は、最初の例外への参照を表すオブジェクト。</p>
+  - uid: com.microsoft.azure.storage._storage_exception.translateClientException(final Exception)
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: translateClientException(final Exception cause)
+    nameWithType: StorageException.translateClientException(final Exception cause)
+    fullName: static StorageException com.microsoft.azure.storage.StorageException.translateClientException(final Exception cause)
+    type: Method
+    summary: |-
+      <p>内部使用のために予約されています。 記憶域例外に指定された例外を変換します。</p>
+      <p></p>
+    syntax:
+      content: public static StorageException translateClientException(final Exception cause)
+      parameters:
+        - id: cause
+          type: 0e0204bc
+          description: <p><code>Exception</code>を変換する例外を表すオブジェクト。</p>
+      return:
+        type: com.microsoft.azure.storage._storage_exception
+        description: <p>A<code><xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref></code>を表すオブジェクトが例外を変換します。 </p>
+  - uid: 'com.microsoft.azure.storage._storage_exception.translateException(final StorageRequest<?, ?, ?>,final Exception,final OperationContext)'
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: 'translateException(final StorageRequest<?, ?, ?> request, final Exception cause, final OperationContext opContext)'
+    nameWithType: 'StorageException.translateException(final StorageRequest<?, ?, ?> request, final Exception cause, final OperationContext opContext)'
+    fullName: 'static StorageException com.microsoft.azure.storage.StorageException.translateException(final StorageRequest<?, ?, ?> request, final Exception cause, final OperationContext opContext)'
+    type: Method
+    summary: |-
+      <p>内部使用のために予約されています。 記憶域例外に指定された例外を変換します。</p>
+      <p></p>
+    syntax:
+      content: 'public static StorageException translateException(final StorageRequest<?, ?, ?> request, final Exception cause, final OperationContext opContext)'
+      parameters:
+        - id: request
+          type: 93de0ef9com.microsoft.azure.storage.core._storage_request0d4f45c4
+          description: <p><code>HttpURLConnection</code>が例外を翻訳されている要求を表すオブジェクト。 </p>
+        - id: cause
+          type: 0e0204bc
+          description: <p><code>Exception</code>を変換する例外を表すオブジェクト。</p>
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+      return:
+        type: com.microsoft.azure.storage._storage_exception
+        description: <p>A<code><xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref></code>を表すオブジェクトが例外を変換します。 </p>
+  - uid: 'com.microsoft.azure.storage._storage_exception.translateFromHttpStatus(final int,final String,final Exception)'
+    parent: com.microsoft.azure.storage._storage_exception
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: 'translateFromHttpStatus(final int statusCode, final String statusDescription, final Exception inner)'
+    nameWithType: 'StorageException.translateFromHttpStatus(final int statusCode, final String statusDescription, final Exception inner)'
+    fullName: 'static StorageException com.microsoft.azure.storage.StorageException.translateFromHttpStatus(final int statusCode, final String statusDescription, final Exception inner)'
+    type: Method
+    summary: |-
+      <p>指定された HTTP 状態コードを storage の例外に変換します。</p>
+      <p></p>
+    syntax:
+      content: 'protected static StorageException translateFromHttpStatus(final int statusCode, final String statusDescription, final Exception inner)'
+      parameters:
+        - id: statusCode
+          type: cd225469
+          description: <p>操作によって返される HTTP ステータス コード。 </p>
+        - id: statusDescription
+          type: 3d93591e
+          description: <p>A<code>String</code>ステータスの説明を表すです。 </p>
+        - id: inner
+          type: 0e0204bc
+          description: <p><code>Exception</code>が存在する場合は、最初の例外への参照を表すオブジェクト。</p>
+      return:
+        type: com.microsoft.azure.storage._storage_exception
+        description: <p>A<code><xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref></code>を表すオブジェクトが例外を変換します。 </p>
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: com.microsoft.azure.storage.table._table_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    name: TableOperation
+    nameWithType: TableOperation
+    fullName: com.microsoft.azure.storage.table.TableOperation
+    type: Class
+    summary: |-
+      <p>1 つのテーブル操作を表すクラス。 </p>
+      <p>構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。 実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax:
+      content: public class TableOperation
+  - uid: com.microsoft.azure.storage.table._table_service_exception
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_service_exception.yml
+    name: TableServiceException
+    nameWithType: TableServiceException
+    fullName: com.microsoft.azure.storage.table.TableServiceException
+    type: Class
+    summary: <p>テーブル ストレージ サービスの操作が正常に実行できない場合に発生する例外。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage._request_result
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._request_result.yml
+    name: RequestResult
+    nameWithType: RequestResult
+    fullName: com.microsoft.azure.storage.RequestResult
+    type: Class
+    summary: <p>物理的な要求の結果を表します。 </p>
+    syntax:
+      content: public class RequestResult
+  - uid: com.microsoft.azure.storage.table._table_payload_format
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_payload_format.yml
+    name: TablePayloadFormat
+    nameWithType: TablePayloadFormat
+    fullName: com.microsoft.azure.storage.table.TablePayloadFormat
+    type: Enum
+    summary: <p>テーブルに対してサポートされているペイロード形式をについて説明します。 </p>
+    syntax:
+      content: public enum TablePayloadFormat
+  - uid: com.microsoft.azure.storage._storage_extended_error_information
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_extended_error_information.yml
+    name: StorageExtendedErrorInformation
+    nameWithType: StorageExtendedErrorInformation
+    fullName: com.microsoft.azure.storage.StorageExtendedErrorInformation
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスによって返されたエラー情報の拡張を表します。 </p>
+    syntax:
+      content: public class StorageExtendedErrorInformation

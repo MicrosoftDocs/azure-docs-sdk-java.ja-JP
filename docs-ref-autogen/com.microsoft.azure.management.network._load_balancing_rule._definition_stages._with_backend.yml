@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend
+    id: _with_backend
+    parent: com.microsoft.azure.management.network
+    children:
+      - com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend.toBackend(String)
+    href: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend.yml
+    langs:
+      - java
+    name: LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>
+    nameWithType: LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>
+    fullName: com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancingRule.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancingRule.java
+      startLine: 108
+    package: com.microsoft.azure.management.network
+    summary: <p>負荷分散に規則を関連付けるには、バックエンドの指定を許可するルールの定義の段階です。 </p>
+    syntax:
+      content: public interface WithBackend<ReturnT> extends LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>
+      typeParameters:
+        - type: c1a5ebc4
+          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>
+    inheritedMembers:
+      - com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.toExistingVirtualMachines(HasNetworkInterfaces...)
+      - com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.toExistingVirtualMachines(Collection<HasNetworkInterfaces>)
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend.toBackend(String)
+    id: toBackend(String)
+    parent: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend
+    href: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend.yml
+    langs:
+      - java
+    name: toBackend(String backendName)
+    nameWithType: LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>.toBackend(String backendName)
+    fullName: WithBackendPort<ReturnT> com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>.toBackend(String backendName)
+    overload: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend.toBackend*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancingRule.java
+      startLine: 116
+    package: com.microsoft.azure.management.network
+    summary: |-
+      <p>ネットワーク トラフィックを送信するには、このロード バランサーのバックエンドを指定します。 </p>
+      <p>このロード バランサーでも、指定した名前のバックエンドがまだ存在しない場合、自動的に作成されます。 </p>
+    syntax:
+      content: public WithBackendPort<ReturnT> toBackend(String backendName)
+      parameters:
+        - id: backendName
+          type: '26831127'
+          description: <p>バックエンドの名前 </p>
+      return:
+        type: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port5b94c421
+        description: <p>定義の次のステージ </p>
+references:
+  - uid: c1a5ebc4
+    spec.java:
+      - name: ReturnT
+        fullName: ReturnT
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port5b94c421
+    spec.java:
+      - uid: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port
+        name: LoadBalancingRule.DefinitionStages.WithBackendPort
+        fullName: com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithBackendPort
+        href: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port.yml
+      - name: <ReturnT>
+        fullName: <ReturnT>
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend.toBackend*
+    name: toBackend
+    nameWithType: LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>.toBackend
+    fullName: WithBackendPort<ReturnT> com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>.toBackend
+    package: com.microsoft.azure.management.network
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.toExistingVirtualMachines(HasNetworkInterfaces...)
+    parent: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea
+    href: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.yml
+    name: toExistingVirtualMachines(HasNetworkInterfaces...vms)
+    nameWithType: LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>.toExistingVirtualMachines(HasNetworkInterfaces...vms)
+    fullName: WithBackendPort<ReturnT> com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>.toExistingVirtualMachines(HasNetworkInterfaces...vms)
+    type: Method
+    summary: |-
+      <p>指定したと仮定して、同じ可用性セットから、この負荷分散の規則に関連付けられる新しいバックエンド アドレス プールに仮想マシンのセットを追加します。 </p>
+      <p>これにより、仮想マシンの指定された一連のプライマリ ネットワーク インターフェイスのプライマリ IP 構成への参照が追加されます。 </p>
+      <p>仮想マシンが同じ可用性セットにない場合は、それらでは、バックエンドとの関連付けはできません。 </p>
+      <p>仮想マシンのみは既存のネットワーク インターフェイスが既にあるロード バランサーに関連付けられます。 ネットワーク インターフェイスを持たない仮想マシンはスキップされます。 </p>
+    syntax:
+      content: public WithBackendPort<ReturnT> toExistingVirtualMachines(HasNetworkInterfaces...vms)
+      parameters:
+        - id: vms
+          type: 6bb6a610
+          description: <p>既存の仮想マシン </p>
+      return:
+        type: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port5b94c421
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.toExistingVirtualMachines(Collection<HasNetworkInterfaces>)
+    parent: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea
+    href: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.yml
+    name: toExistingVirtualMachines(Collection<HasNetworkInterfaces> vms)
+    nameWithType: LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>.toExistingVirtualMachines(Collection<HasNetworkInterfaces> vms)
+    fullName: WithBackendPort<ReturnT> com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>.toExistingVirtualMachines(Collection<HasNetworkInterfaces> vms)
+    type: Method
+    summary: |-
+      <p>指定したと仮定して、同じ可用性セットから、この負荷分散の規則に関連付けられる新しいバックエンド アドレス プールに仮想マシンのセットを追加します。 </p>
+      <p>これにより、仮想マシンの指定された一連のプライマリ ネットワーク インターフェイスのプライマリ IP 構成への参照が追加されます。 </p>
+      <p>仮想マシンが同じ可用性セットにない場合は、それらでは、バックエンドとの関連付けはできません。 </p>
+      <p>仮想マシンのみは既存のネットワーク インターフェイスが既にあるロード バランサーに関連付けられます。 ネットワーク インターフェイスを持たない仮想マシンはスキップされます。 </p>
+    syntax:
+      content: public WithBackendPort<ReturnT> toExistingVirtualMachines(Collection<HasNetworkInterfaces> vms)
+      parameters:
+        - id: vms
+          type: 12ebb11acom.microsoft.azure.management.network.model._has_network_interfacesa08ddfce
+          description: <p>既存の仮想マシン </p>
+      return:
+        type: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port5b94c421
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._load_balancing_rule._definiti0b98ad9c3e671ce4aa4410b3bbafa9ea.yml
+    name: LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>
+    nameWithType: LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>
+    fullName: com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithVirtualMachine<ReturnT>
+    type: Interface
+    summary: <p>負荷分散できるように、ネットワーク トラフィックの負荷を分散するバーチャル マシンのセットを選択するルールの定義の段階です。 </p>
+    syntax:
+      content: public interface WithVirtualMachine<ReturnT>
+      typeParameters:
+        - type: c1a5ebc4
+          description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definition
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._load_balancing_rule._definition.yml
+    name: LoadBalancingRule.Definition<ReturnT>
+    nameWithType: LoadBalancingRule.Definition<ReturnT>
+    fullName: com.microsoft.azure.management.network.LoadBalancingRule.Definition<ReturnT>
+    type: Interface
+    summary: <p>負荷分散のルールの定義の全体です。 </p>
+    syntax:
+      content: 'public interface Definition<ReturnT> extends LoadBalancingRule.DefinitionStages.Blank<ReturnT>,LoadBalancingRule.DefinitionStages.WithAttach<ReturnT>,LoadBalancingRule.DefinitionStages.WithProtocol<ReturnT>,LoadBalancingRule.DefinitionStages.WithFrontendPort<ReturnT>,LoadBalancingRule.DefinitionStages.WithFrontend<ReturnT>,LoadBalancingRule.DefinitionStages.WithBackend<ReturnT>,LoadBalancingRule.DefinitionStages.WithBackendPort<ReturnT>'
+      typeParameters:
+        - type: c1a5ebc4
+          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>
+  - uid: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._load_balancing_rule._definition_stages._with_backend_port.yml
+    name: LoadBalancingRule.DefinitionStages.WithBackendPort<ReturnT>
+    nameWithType: LoadBalancingRule.DefinitionStages.WithBackendPort<ReturnT>
+    fullName: com.microsoft.azure.management.network.LoadBalancingRule.DefinitionStages.WithBackendPort<ReturnT>
+    type: Interface
+    summary: <p>負荷分散できるようにする負荷分散されたトラフィックを送信するバックエンド ポートを指定するルールの定義の段階です。 </p>
+    syntax:
+      content: public interface WithBackendPort<ReturnT>
+      typeParameters:
+        - type: c1a5ebc4
+          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>

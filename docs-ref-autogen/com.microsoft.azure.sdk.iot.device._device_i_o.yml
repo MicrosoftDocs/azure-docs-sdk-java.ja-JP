@@ -1,0 +1,712 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o
+    id: _device_i_o
+    parent: com.microsoft.azure.sdk.iot.device
+    children:
+      - com.microsoft.azure.sdk.iot.device._device_i_o.close()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.getProtocol()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.getReceivePeriodInMilliseconds()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.getSendPeriodInMilliseconds()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.isEmpty()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.isOpen()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.multiplexClose()
+      - com.microsoft.azure.sdk.iot.device._device_i_o.multiplexOpen(List<DeviceClient>)
+      - com.microsoft.azure.sdk.iot.device._device_i_o.open()
+      - 'com.microsoft.azure.sdk.iot.device._device_i_o.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+      - 'com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync(Message,IotHubEventCallback,Object,IotHubConnectionString)'
+      - 'com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync(Message,IotHubResponseCallback,Object,IotHubConnectionString)'
+      - com.microsoft.azure.sdk.iot.device._device_i_o.setReceivePeriodInMilliseconds(long)
+      - com.microsoft.azure.sdk.iot.device._device_i_o.setSendPeriodInMilliseconds(long)
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: DeviceIO
+    nameWithType: DeviceIO
+    fullName: com.microsoft.azure.sdk.iot.device.DeviceIO
+    type: Class
+    source:
+      remote: &ref_0
+        path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 67
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>Iot Hub で標準の I/O インターフェイスを実装します。 <verbatim>+-------------------------------------+                  +-----------------------------------+ |                                    |                 |                                  | |            DeviceClient |--- + DeviceClientConfig | |                                    |                 |                                  |+-------------------------------------+                  +-----------------------------------+
+
+         |                        |
+
+         |                       \/
+
+         |  +---------------------------------------------------------------------------------------------+
+
+         | |サービス |
+
+         |  |  +-----------+    +------------+    +--------------+                        +------------+  |
+
+         | | |製品利用統計情報 |   |DeviceTwin |   |DeviceMethod |                       |ファイルアップロード | |
+
+         |  |  +-----------+    +------------+    +--------------+                        +---------+--+  |
+
+         |  +---------------------------------------------------------------------------------------|-----+
+
+         |                                    |                                                     |
+
+        \/                                   \/                                                     |
+
+      #####################################################################################         |
+      # <a name="deviceio-----------------------------------------------------------------------------------"></a>DeviceIO # |
+      #  <a name="------------------------------------------------------------------------------------"></a>+----------------+    +-------------------------------------+    +------------+  #         |
+      #  <a name="------------------------------------open--------------------------------------------"></a>|               |   |               開く |   |           | #         |
+      #  <a name="-sendeventasync-----------------------------------------------close---------------"></a>|sendEventAsync |   |                  +---------------+ |   |  閉じる | #         |
+      #  <a name="----------------------------------------taskscheduler-----------------------------"></a>|               |   |                  |taskScheduler | |   |           | #         |
+      #  <a name="-----------------------------------------------------------------------------"></a>+--------+-------+    +--+----------------+--+---------+--+-+    +--------+---+  #         |
+      ############<a name="---------"></a>|###############|###################|#########|##################|#######         |
+
+                  |               |                   |         |                  |                |
+
+                  |               |                  \/        \/                  |                |
+
+                  |               |    +----------------+   +-------------------+  |                |
+
+                  |               |    | IoTHubSendTask |   | IoTHubReceiveTask |  |                |
+
+                  |               |    |   +--------+   |   |    +---------+    |  |                |
+
+                  |               |    |   |   Run  |   |   |    |   Run   |    |  |                |
+
+                  |               |    +---+---+----+---+   +----+----+----+----+  |                |
+
+      </verbatim>IotHubTransport ||||||+------<mdash></mdash>|------------<mdash></mdash>|---------<mdash></mdash>|-------------------<mdash></mdash>|---------<mdash></mdash>|-----<mdash></mdash>+ +-------------------------------------------<mdash></mdash>+ |\/ \/ \/ \/ \/ | |IoTHubTransportManager | |+---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | |+ ---<mdash></mdash>+ + ---<mdash></mdash>+ + ---<mdash></mdash>+ + ---<mdash></mdash>+ | | | addMessage | |開いている | |sendMessages | |handleMessage | |閉じる | | |開いている | |閉じる | |送信 | |受信 | | |+---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | |+---<mdash></mdash>+ +----<mdash></mdash>+ +---<mdash></mdash>+ +------<mdash></mdash>+ | +-------<mdash></mdash>+-----------------------------<mdash></mdash>+----------------------<mdash></mdash>+----------<mdash></mdash>+ +<mdash></mdash>+---------------------------------------<mdash></mdash>+ | | | |\/ \/ \/ \/ +----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +---------------<mdash></mdash>+ +--------------------<mdash></mdash>+ |AmqpsTransport | |MqttTransport | |HttpsTransport | |HttpsTransportManager |+----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ |AmqpsIotHubConnection | |MqttIotHubConnection | |HttpsIotHubConnection |+----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ </p>
+    syntax:
+      content: public class DeviceIO
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.close()
+    id: close()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: DeviceIO.close()
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.close()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 239
+    package: com.microsoft.azure.sdk.iot.device
+    summary: "<p>現在未処理のすべての要求を完了し、IoT Hub クライアントを閉じます。 IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。 後に<code>close() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。 クライアントは既に閉じられている場合、関数は何もしないものとします。</p>\n\n<p></p>"
+    syntax:
+      content: public void close()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、IoT Hub への接続を閉じることができません。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.getProtocol()
+    id: getProtocol()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: getProtocol()
+    nameWithType: DeviceIO.getProtocol()
+    fullName: IotHubClientProtocol com.microsoft.azure.sdk.iot.device.DeviceIO.getProtocol()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.getProtocol*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 450
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>トランスポート プロトコルの get アクセス操作子にします。</p>
+      <p></p>
+    syntax:
+      content: public IotHubClientProtocol getProtocol()
+      return:
+        type: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol
+        description: <p>トランスポート プロトコルです。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.getReceivePeriodInMilliseconds()
+    id: getReceivePeriodInMilliseconds()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: getReceivePeriodInMilliseconds()
+    nameWithType: DeviceIO.getReceivePeriodInMilliseconds()
+    fullName: long com.microsoft.azure.sdk.iot.device.DeviceIO.getReceivePeriodInMilliseconds()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.getReceivePeriodInMilliseconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 364
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>受信時間 (ミリ秒単位) を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getReceivePeriodInMilliseconds()
+      return:
+        type: 0364520f
+        description: <p>までのミリ秒数の長さを受け取ります。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.getSendPeriodInMilliseconds()
+    id: getSendPeriodInMilliseconds()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: getSendPeriodInMilliseconds()
+    nameWithType: DeviceIO.getSendPeriodInMilliseconds()
+    fullName: long com.microsoft.azure.sdk.iot.device.DeviceIO.getSendPeriodInMilliseconds()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.getSendPeriodInMilliseconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 407
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>ミリ秒単位で送信期間を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getSendPeriodInMilliseconds()
+      return:
+        type: 0364520f
+        description: <p>までのミリ秒数の長さを送信します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.isEmpty()
+    id: isEmpty()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: isEmpty()
+    nameWithType: DeviceIO.isEmpty()
+    fullName: boolean com.microsoft.azure.sdk.iot.device.DeviceIO.isEmpty()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.isEmpty*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 471
+    package: com.microsoft.azure.sdk.iot.device
+    summary: <p>トランスポートの空のキューを取得します。 </p>
+    syntax:
+      content: public boolean isEmpty()
+      return:
+        type: 4fc6e284
+        description: <p>場合はブール値 true トランスポート キューは、空、または送信するメッセージがある場合は false。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.isOpen()
+    id: isOpen()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: isOpen()
+    nameWithType: DeviceIO.isOpen()
+    fullName: boolean com.microsoft.azure.sdk.iot.device.DeviceIO.isOpen()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.isOpen*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 461
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>接続状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public boolean isOpen()
+      return:
+        type: 4fc6e284
+        description: <p>ブール値 true の場合に、接続は、開く、または閉じられている場合は false です。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.multiplexClose()
+    id: multiplexClose()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: multiplexClose()
+    nameWithType: DeviceIO.multiplexClose()
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.multiplexClose()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.multiplexClose*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 266
+    package: com.microsoft.azure.sdk.iot.device
+    summary: "<p>現在未処理のすべての要求を完了し、IoT Hub クライアントを閉じます。 IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。 後に<code>close() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。 クライアントは既に閉じられている場合、関数は何もしないものとします。</p>\n\n<p></p>"
+    syntax:
+      content: public void multiplexClose()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、IoT Hub への接続を閉じることができません。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.multiplexOpen(List<DeviceClient>)
+    id: multiplexOpen(List<DeviceClient>)
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: multiplexOpen(List<DeviceClient> deviceClientList)
+    nameWithType: DeviceIO.multiplexOpen(List<DeviceClient> deviceClientList)
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.multiplexOpen(List<DeviceClient> deviceClientList)
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.multiplexOpen*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 190
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>非同期的に送信して、多重化を使用して、IoT Hub からメッセージを受信開始します。 クライアントが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void multiplexOpen(List<DeviceClient> deviceClientList)
+      parameters:
+        - id: deviceClientList
+          type: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+          description: <p>トランスポートの初期化するためにデバイス クライアントの一覧。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、IoT Hub への接続を確立できません。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.open()
+    id: open()
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: open()
+    nameWithType: DeviceIO.open()
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.open()
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.open*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 165
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>非同期的に送信して、IoT Hub からメッセージを受信開始します。 クライアントが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void open()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、IoT Hub への接続を確立できません。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.device._device_i_o.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    id: 'registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: 'registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    nameWithType: 'DeviceIO.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.DeviceIO.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.registerConnectionStateCallback*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 484
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>デバイスへの接続が失われたか、確立されるたびに実行する構成済みトランスポートを使用して、コールバックを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+      parameters:
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+          description: <p>呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+  - uid: 'com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync(Message,IotHubEventCallback,Object,IotHubConnectionString)'
+    id: 'sendEventAsync(Message,IotHubEventCallback,Object,IotHubConnectionString)'
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: 'sendEventAsync(Message message, IotHubEventCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+    nameWithType: 'DeviceIO.sendEventAsync(Message message, IotHubEventCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+    fullName: 'synchronized void com.microsoft.azure.sdk.iot.device.DeviceIO.sendEventAsync(Message message, IotHubEventCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 285
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>IoT Hub にイベント メッセージを非同期的に送信します。</p>
+      <p></p>
+    syntax:
+      content: 'public synchronized void sendEventAsync(Message message, IotHubEventCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+          description: "<p>応答が受信したときに呼び出されるコールバック。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+        - id: callbackContext
+          type: '79317049'
+          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+        - id: iotHubConnectionString
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_string
+          description: <p>送信者の接続文字列です。</p>
+      return:
+        type: 5c0b90ca
+    exceptions:
+      - type: 3c87bd19
+        description: "<p>メッセージが提供される場合は<code>null \r\n\r\n    </code>します。 </p>"
+      - type: 12fe80de
+        description: <p>場合は、クライアントがまだ開かれていないかは既に閉じられています。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync(Message,IotHubResponseCallback,Object,IotHubConnectionString)'
+    id: 'sendEventAsync(Message,IotHubResponseCallback,Object,IotHubConnectionString)'
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: 'sendEventAsync(Message message, IotHubResponseCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+    nameWithType: 'DeviceIO.sendEventAsync(Message message, IotHubResponseCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+    fullName: 'synchronized void com.microsoft.azure.sdk.iot.device.DeviceIO.sendEventAsync(Message message, IotHubResponseCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 330
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>IoT Hub にイベント メッセージを非同期的に送信します。 使用して<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_response_callback" data-throw-if-not-resolved="false">IotHubResponseCallback</xref>場合は、メッセージのペイロードの状態と共に、送信されたメッセージの応答として受信する必要があります。</p>
+      <p></p>
+    syntax:
+      content: 'public synchronized void sendEventAsync(Message message, IotHubResponseCallback callback, Object callbackContext, IotHubConnectionString iotHubConnectionString)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+          description: "<p>応答が受信したときに呼び出されるコールバック。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+        - id: callbackContext
+          type: '79317049'
+          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+        - id: iotHubConnectionString
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_string
+          description: <p>送信者の接続文字列です。</p>
+      return:
+        type: 5c0b90ca
+    exceptions:
+      - type: 3c87bd19
+        description: "<p>メッセージが提供される場合は<code>null \r\n\r\n    </code>します。 </p>"
+      - type: 12fe80de
+        description: <p>場合は、クライアントがまだ開かれていないかは既に閉じられています。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.setReceivePeriodInMilliseconds(long)
+    id: setReceivePeriodInMilliseconds(long)
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: setReceivePeriodInMilliseconds(long newIntervalInMilliseconds)
+    nameWithType: DeviceIO.setReceivePeriodInMilliseconds(long newIntervalInMilliseconds)
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.setReceivePeriodInMilliseconds(long newIntervalInMilliseconds)
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.setReceivePeriodInMilliseconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 377
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>受信期間 (ミリ秒単位) の set アクセス操作子にします。</p>
+      <p></p>
+    syntax:
+      content: public void setReceivePeriodInMilliseconds(long newIntervalInMilliseconds)
+      parameters:
+        - id: newIntervalInMilliseconds
+          type: 0364520f
+          description: <p>新しい間隔 (ミリ秒単位) です。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>タスクのスケジュールが存在するが、受信タスク関数を呼び出すが存在しない場合。 </p>
+      - type: 3c87bd19
+        description: <p>指定した間隔が有効な場合 (0 または負の値)。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.setSendPeriodInMilliseconds(long)
+    id: setSendPeriodInMilliseconds(long)
+    parent: com.microsoft.azure.sdk.iot.device._device_i_o
+    href: com.microsoft.azure.sdk.iot.device._device_i_o.yml
+    langs:
+      - java
+    name: setSendPeriodInMilliseconds(long newIntervalInMilliseconds)
+    nameWithType: DeviceIO.setSendPeriodInMilliseconds(long newIntervalInMilliseconds)
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.setSendPeriodInMilliseconds(long newIntervalInMilliseconds)
+    overload: com.microsoft.azure.sdk.iot.device._device_i_o.setSendPeriodInMilliseconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceIO.java
+      startLine: 420
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>ミリ秒単位で送信期間の set アクセス操作子にします。</p>
+      <p></p>
+    syntax:
+      content: public void setSendPeriodInMilliseconds(long newIntervalInMilliseconds)
+      parameters:
+        - id: newIntervalInMilliseconds
+          type: 0364520f
+          description: <p>新しい間隔 (ミリ秒単位) です。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>タスクのスケジュールが存在するが、送信タスクの関数を呼び出すが存在しない場合。 </p>
+      - type: 3c87bd19
+        description: <p>指定した間隔が有効な場合 (0 または負の値)。 </p>
+references:
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.open*
+    name: open
+    nameWithType: DeviceIO.open
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.open
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.sdk.iot.device._device_client
+        name: DeviceClient
+        fullName: com.microsoft.azure.sdk.iot.device.DeviceClient
+        href: com.microsoft.azure.sdk.iot.device._device_client.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.multiplexOpen*
+    name: multiplexOpen
+    nameWithType: DeviceIO.multiplexOpen
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.multiplexOpen
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.close*
+    name: close
+    nameWithType: DeviceIO.close
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.close
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.multiplexClose*
+    name: multiplexClose
+    nameWithType: DeviceIO.multiplexClose
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.multiplexClose
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: 12fe80de
+    spec.java:
+      - name: IllegalStateException
+        fullName: IllegalStateException
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: 5c0b90ca
+    spec.java:
+      - name: synchronized void
+        fullName: synchronized void
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.sendEventAsync*
+    name: sendEventAsync
+    nameWithType: DeviceIO.sendEventAsync
+    fullName: synchronized void com.microsoft.azure.sdk.iot.device.DeviceIO.sendEventAsync
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.getReceivePeriodInMilliseconds*
+    name: getReceivePeriodInMilliseconds
+    nameWithType: DeviceIO.getReceivePeriodInMilliseconds
+    fullName: long com.microsoft.azure.sdk.iot.device.DeviceIO.getReceivePeriodInMilliseconds
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.setReceivePeriodInMilliseconds*
+    name: setReceivePeriodInMilliseconds
+    nameWithType: DeviceIO.setReceivePeriodInMilliseconds
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.setReceivePeriodInMilliseconds
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.getSendPeriodInMilliseconds*
+    name: getSendPeriodInMilliseconds
+    nameWithType: DeviceIO.getSendPeriodInMilliseconds
+    fullName: long com.microsoft.azure.sdk.iot.device.DeviceIO.getSendPeriodInMilliseconds
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.setSendPeriodInMilliseconds*
+    name: setSendPeriodInMilliseconds
+    nameWithType: DeviceIO.setSendPeriodInMilliseconds
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.setSendPeriodInMilliseconds
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.getProtocol*
+    name: getProtocol
+    nameWithType: DeviceIO.getProtocol
+    fullName: IotHubClientProtocol com.microsoft.azure.sdk.iot.device.DeviceIO.getProtocol
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.isOpen*
+    name: isOpen
+    nameWithType: DeviceIO.isOpen
+    fullName: boolean com.microsoft.azure.sdk.iot.device.DeviceIO.isOpen
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.isEmpty*
+    name: isEmpty
+    nameWithType: DeviceIO.isEmpty
+    fullName: boolean com.microsoft.azure.sdk.iot.device.DeviceIO.isEmpty
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o.registerConnectionStateCallback*
+    name: registerConnectionStateCallback
+    nameWithType: DeviceIO.registerConnectionStateCallback
+    fullName: void com.microsoft.azure.sdk.iot.device.DeviceIO.registerConnectionStateCallback
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._custom_logger
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._custom_logger.yml
+    name: CustomLogger
+    nameWithType: CustomLogger
+    fullName: com.microsoft.azure.sdk.iot.device.CustomLogger
+    type: Class
+    syntax:
+      content: public class CustomLogger
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    parent: com.microsoft.azure.sdk.iot.device.transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    name: IotHubTransport
+    nameWithType: IotHubTransport
+    fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubTransport
+    type: Interface
+    summary: <p>IoT ハブ トランスポートのインターフェイスです。 </p>
+    syntax:
+      content: public interface IotHubTransport
+  - uid: com.microsoft.azure.sdk.iot.device._device_client_config
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._device_client_config.yml
+    name: DeviceClientConfig
+    nameWithType: DeviceClientConfig
+    fullName: com.microsoft.azure.sdk.iot.device.DeviceClientConfig
+    type: Class
+    summary: <p>IoT Hub クライアントの構成設定。 ユーザー定義のすべての設定を検証します。 </p>
+    syntax:
+      content: public class DeviceClientConfig
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_send_task
+    parent: com.microsoft.azure.sdk.iot.device.transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_send_task.yml
+    name: IotHubSendTask
+    nameWithType: IotHubSendTask
+    fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubSendTask
+    type: Class
+    summary: <p>バッチ処理されたメッセージを送信し、完了した要求のコールバックを呼び出します。 継続的に run() を呼び出す実行プログラムで使用するためのものです。 </p>
+    syntax:
+      content: public class IotHubSendTask
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_receive_task
+    parent: com.microsoft.azure.sdk.iot.device.transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_receive_task.yml
+    name: IotHubReceiveTask
+    nameWithType: IotHubReceiveTask
+    fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubReceiveTask
+    type: Class
+    summary: <p>メッセージの IoT Hub をポーリングして、見つかった場合は、コールバックを呼び出します。 継続的に run() を呼び出す実行プログラムで使用するためのものです。 </p>
+    syntax:
+      content: public class IotHubReceiveTask
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol.yml
+    name: IotHubClientProtocol
+    nameWithType: IotHubClientProtocol
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubClientProtocol
+    type: Enum
+    summary: <p>IoT Hub と通信するクライアントによって使用されるアプリケーション レイヤー プロトコルです。 </p>
+    syntax:
+      content: public enum IotHubClientProtocol
+  - uid: com.microsoft.azure.sdk.iot.device._device_i_o._iot_hub_client_state
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._device_i_o._iot_hub_client_state.yml
+    name: DeviceIO.IotHubClientState
+    nameWithType: DeviceIO.IotHubClientState
+    fullName: com.microsoft.azure.sdk.iot.device.DeviceIO.IotHubClientState
+    type: Enum
+    summary: <p>IoT Hub との IoT ハブ クライアントの接続の状態。 </p>
+    syntax:
+      content: protected enum IotHubClientState
+  - uid: com.microsoft.azure.sdk.iot.device._device_client
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._device_client.yml
+    name: DeviceClient
+    nameWithType: DeviceClient
+    fullName: com.microsoft.azure.sdk.iot.device.DeviceClient
+    type: Class
+    summary: |-
+      <p>公開された API です。 IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。 IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。 </p>
+      <p>これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。 </p>
+      <p>クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。 通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。 </p>
+      <p>クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。 </p>
+    syntax:
+      content: public class DeviceClient
+  - uid: com.microsoft.azure.sdk.iot.device._message
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._message.yml
+    name: Message
+    nameWithType: Message
+    fullName: com.microsoft.azure.sdk.iot.device.Message
+    type: Class
+    syntax:
+      content: public class Message
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.yml
+    name: IotHubEventCallback
+    nameWithType: IotHubEventCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubEventCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub イベント コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+    syntax:
+      content: public interface IotHubEventCallback
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_connection_string
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_connection_string.yml
+    name: IotHubConnectionString
+    nameWithType: IotHubConnectionString
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubConnectionString
+    type: Class
+    summary: <p>Iot Hub の接続文字列のパーサー。 </p>
+    syntax:
+      content: public class IotHubConnectionString
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.yml
+    name: IotHubResponseCallback
+    nameWithType: IotHubResponseCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubResponseCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub 応答コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.execute(ResponseMessage,Object)" data-throw-if-not-resolved="false">IotHubResponseCallback #execute(ResponseMessage, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+    syntax:
+      content: public interface IotHubResponseCallback
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback.yml
+    name: IotHubConnectionStateCallback
+    nameWithType: IotHubConnectionStateCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubConnectionStateCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub 接続状態コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback #execute(IotHubConnectionState, Object)</xref>接続の状態 (ダウン、成功した場合など) に渡します。 </p>
+    syntax:
+      content: public interface IotHubConnectionStateCallback

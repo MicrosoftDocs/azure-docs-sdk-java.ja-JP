@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.data._backup_version
+    id: _backup_version
+    parent: microsoft.servicefabric.data
+    children:
+      - microsoft.servicefabric.data._backup_version.epoch()
+      - microsoft.servicefabric.data._backup_version.invalidBackupVersion
+      - microsoft.servicefabric.data._backup_version.lsn()
+    href: microsoft.servicefabric.data._backup_version.yml
+    langs:
+      - java
+    name: BackupVersion
+    nameWithType: BackupVersion
+    fullName: microsoft.servicefabric.data.BackupVersion
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/BackupVersion.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/BackupVersion.java
+      startLine: 4
+    package: microsoft.servicefabric.data
+    syntax: &ref_1
+      content: public class BackupVersion
+    inheritance:
+      - java.lang.Object
+  - uid: microsoft.servicefabric.data._backup_version.epoch()
+    id: epoch()
+    parent: microsoft.servicefabric.data._backup_version
+    href: microsoft.servicefabric.data._backup_version.yml
+    langs:
+      - java
+    name: epoch()
+    nameWithType: BackupVersion.epoch()
+    fullName: Epoch microsoft.servicefabric.data.BackupVersion.epoch()
+    overload: microsoft.servicefabric.data._backup_version.epoch*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/BackupVersion.java
+      startLine: 22
+    package: microsoft.servicefabric.data
+    summary: |-
+      <p>バックアップが行われたエポックです。</p>
+      <p></p>
+    syntax:
+      content: public Epoch epoch()
+      return:
+        type: system.fabric._epoch
+        description: <p>エポックです。 </p>
+  - uid: microsoft.servicefabric.data._backup_version.invalidBackupVersion
+    id: invalidBackupVersion
+    parent: microsoft.servicefabric.data._backup_version
+    href: microsoft.servicefabric.data._backup_version.yml
+    langs:
+      - java
+    name: invalidBackupVersion
+    nameWithType: BackupVersion.invalidBackupVersion
+    fullName: final BackupVersion microsoft.servicefabric.data.BackupVersion.invalidBackupVersion
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/BackupVersion.java
+      startLine: 8
+    package: microsoft.servicefabric.data
+    summary: <p>バックアップのバージョンが無効です。 </p>
+    syntax:
+      content: 'public static final BackupVersion invalidBackupVersion= new BackupVersion(new Epoch(-1, -1), -1)'
+      return:
+        type: 93de0ef9microsoft.servicefabric.data._backup_version
+  - uid: microsoft.servicefabric.data._backup_version.lsn()
+    id: lsn()
+    parent: microsoft.servicefabric.data._backup_version
+    href: microsoft.servicefabric.data._backup_version.yml
+    langs:
+      - java
+    name: lsn()
+    nameWithType: BackupVersion.lsn()
+    fullName: long microsoft.servicefabric.data.BackupVersion.lsn()
+    overload: microsoft.servicefabric.data._backup_version.lsn*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/BackupVersion.java
+      startLine: 33
+    package: microsoft.servicefabric.data
+    summary: |-
+      <p>バックアップに含まれる最後のコミットの論理シーケンス番号。</p>
+      <p></p>
+    syntax:
+      content: public long lsn()
+      return:
+        type: 0364520f
+        description: <p>Lsn です。 </p>
+references:
+  - uid: 93de0ef9microsoft.servicefabric.data._backup_version
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: microsoft.servicefabric.data._backup_version
+        name: BackupVersion
+        fullName: microsoft.servicefabric.data.BackupVersion
+        href: microsoft.servicefabric.data._backup_version.yml
+  - uid: microsoft.servicefabric.data._backup_version.epoch*
+    name: epoch
+    nameWithType: BackupVersion.epoch
+    fullName: Epoch microsoft.servicefabric.data.BackupVersion.epoch
+    package: microsoft.servicefabric.data
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: microsoft.servicefabric.data._backup_version.lsn*
+    name: lsn
+    nameWithType: BackupVersion.lsn
+    fullName: long microsoft.servicefabric.data.BackupVersion.lsn
+    package: microsoft.servicefabric.data
+  - uid: microsoft.servicefabric.data._backup_version
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._backup_version.yml
+    name: BackupVersion
+    nameWithType: BackupVersion
+    fullName: microsoft.servicefabric.data.BackupVersion
+    type: Class
+    syntax: *ref_1
+  - uid: system.fabric._epoch
+    parent: system.fabric
+    href: system.fabric._epoch.yml
+    name: Epoch
+    nameWithType: Epoch
+    fullName: system.fabric.Epoch
+    type: Class
+    summary: "<p>Service Fabric でパーティションの現在のバージョンを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>、<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>パーティション全体の構成番号です。 レプリカの構成は、たとえば、プライマリ レプリカが変更されたときに、変更を設定すると、新しいプライマリ レプリカからレプリケートされた操作と呼ばれます新しい<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>、古いプライマリによって送信された 1 つからレプリカです。 プライマリが変更されたというは、通常、元のプライマリ レプリカの影響を受ける失敗によって影響を受けませんセカンダリ レプリカに直接表示されません。 プライマリ レプリカが変更されたことを追跡するために、セカンダリ レプリカに伝達するがします。 使用してこのような通信が発生した、 <xref uid=\"system.fabric._state_provider.updateEpochAsync(Epoch,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#updateEpochAsync (system.fabric.Epoch、system.fabric.SequenceNumber、system.fabric.CancellationToken)</xref>メソッドです。 ほとんどのサービスがの内部フィールドの詳細を無視することができます、<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>ことを知っておく通常で十分ですので、<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>が変更されたと操作の相対順序を判別するエポックを比較してシステム内のイベント。 比較操作は、この目的で提供されます。 </p>"
+    syntax:
+      content: public class Epoch

@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._service_health_report
+    id: _service_health_report
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._service_health_report.getServiceName()
+      - 'system.fabric.health._service_health_report.ServiceHealthReport(URI,HealthInformation)'
+    href: system.fabric.health._service_health_report.yml
+    langs:
+      - java
+    name: ServiceHealthReport
+    nameWithType: ServiceHealthReport
+    fullName: system.fabric.health.ServiceHealthReport
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthReport.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthReport.java
+      startLine: 12
+    package: system.fabric.health
+    summary: '<p>サービス正常性エンティティに適用される正常性レポートを表します。 使用して正常性ストアに、レポートが送信される<xref uid="system.fabric._health_client.reportHealth(HealthReport)" data-throw-if-not-resolved="false">system.fabric.HealthClient#reportHealth(system.fabric.health.HealthReport)</xref>です。 </p>'
+    syntax:
+      content: public class ServiceHealthReport extends HealthReport
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._health_report
+    inheritedMembers:
+      - system.fabric.health._health_report.getHealthInformation()
+      - system.fabric.health._health_report.getHealthReportKind()
+      - 'system.fabric.health._health_report.HealthReport(HealthReportKind,HealthInformation)'
+  - uid: system.fabric.health._service_health_report.getServiceName()
+    id: getServiceName()
+    parent: system.fabric.health._service_health_report
+    href: system.fabric.health._service_health_report.yml
+    langs:
+      - java
+    name: getServiceName()
+    nameWithType: ServiceHealthReport.getServiceName()
+    fullName: URI system.fabric.health.ServiceHealthReport.getServiceName()
+    overload: system.fabric.health._service_health_report.getServiceName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthReport.java
+      startLine: 39
+    package: system.fabric.health
+    summary: |-
+      <p>サービスの名前を取得します。</p>
+      <p></p>
+    syntax:
+      content: public URI getServiceName()
+      return:
+        type: '62304784'
+        description: <p>サービスの名前。 </p>
+  - uid: 'system.fabric.health._service_health_report.ServiceHealthReport(URI,HealthInformation)'
+    id: 'ServiceHealthReport(URI,HealthInformation)'
+    parent: system.fabric.health._service_health_report
+    href: system.fabric.health._service_health_report.yml
+    langs:
+      - java
+    name: 'ServiceHealthReport(URI serviceName, HealthInformation healthInformation)'
+    nameWithType: 'ServiceHealthReport.ServiceHealthReport(URI serviceName, HealthInformation healthInformation)'
+    fullName: 'system.fabric.health.ServiceHealthReport.ServiceHealthReport(URI serviceName, HealthInformation healthInformation)'
+    overload: system.fabric.health._service_health_report.ServiceHealthReport*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthReport.java
+      startLine: 25
+    package: system.fabric.health
+    summary: |-
+      <p>新しいインスタンスを初期化<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.ServiceHealthReport</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceHealthReport(URI serviceName, HealthInformation healthInformation)'
+      parameters:
+        - id: serviceName
+          type: '62304784'
+          description: <p>サービスの名前。 必須。 </p>
+        - id: healthInformation
+          type: system.fabric.health._health_information
+          description: <p><xref uid="system.fabric.health._health_information" data-throw-if-not-resolved="false">HealthInformation</xref> sourceId、プロパティ、ヘルス状態と同様に、レポート フィールドを記述します。 必須。 </p>
+references:
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: system.fabric.health._service_health_report.ServiceHealthReport*
+    name: ServiceHealthReport
+    nameWithType: ServiceHealthReport.ServiceHealthReport
+    fullName: system.fabric.health.ServiceHealthReport.ServiceHealthReport
+    package: system.fabric.health
+  - uid: system.fabric.health._service_health_report.getServiceName*
+    name: getServiceName
+    nameWithType: ServiceHealthReport.getServiceName
+    fullName: URI system.fabric.health.ServiceHealthReport.getServiceName
+    package: system.fabric.health
+  - uid: system.fabric.health._health_report.getHealthInformation()
+    parent: system.fabric.health._health_report
+    href: system.fabric.health._health_report.yml
+    name: getHealthInformation()
+    nameWithType: HealthReport.getHealthInformation()
+    fullName: HealthInformation system.fabric.health.HealthReport.getHealthInformation()
+    type: Method
+    summary: "<p>一般的な正常性のフィールドを記述するヘルス情報を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>内 health store に正常性に関する情報が永続化、 <xref uid=\"system.fabric.health._health_event\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthEvent</xref>です。 </p>"
+    syntax:
+      content: public HealthInformation getHealthInformation()
+      return:
+        type: system.fabric.health._health_information
+        description: <p>正常性については、一般的な正常性のフィールドについて説明します。 </p>
+  - uid: system.fabric.health._health_report.getHealthReportKind()
+    parent: system.fabric.health._health_report
+    href: system.fabric.health._health_report.yml
+    name: getHealthReportKind()
+    nameWithType: HealthReport.getHealthReportKind()
+    fullName: HealthReportKind system.fabric.health.HealthReport.getHealthReportKind()
+    type: Method
+    summary: |-
+      <p>正常性レポートの種類を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthReportKind getHealthReportKind()
+      return:
+        type: system.fabric.health._health_report_kind
+        description: <p>正常性レポートの種類。 </p>
+  - uid: 'system.fabric.health._health_report.HealthReport(HealthReportKind,HealthInformation)'
+    parent: system.fabric.health._health_report
+    href: system.fabric.health._health_report.yml
+    name: 'HealthReport(HealthReportKind kind, HealthInformation healthInformation)'
+    nameWithType: 'HealthReport.HealthReport(HealthReportKind kind, HealthInformation healthInformation)'
+    fullName: 'system.fabric.health.HealthReport.HealthReport(HealthReportKind kind, HealthInformation healthInformation)'
+    type: Constructor
+    summary: |-
+      <p>新しいインスタンスを初期化、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthReport</xref>クラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public HealthReport(HealthReportKind kind, HealthInformation healthInformation)'
+      parameters:
+        - id: kind
+          type: system.fabric.health._health_report_kind
+          description: <p>正常性レポートの種類。 </p>
+        - id: healthInformation
+          type: system.fabric.health._health_information
+          description: <p><xref uid="system.fabric.health._health_information" data-throw-if-not-resolved="false">System.fabric.health.HealthInformation</xref> sourceId、プロパティ、ヘルス状態と同様に、レポート フィールドを記述します。 必須。 </p>
+  - uid: system.fabric.health._health_report
+    parent: system.fabric.health
+    href: system.fabric.health._health_report.yml
+    name: HealthReport
+    nameWithType: HealthReport
+    fullName: system.fabric.health.HealthReport
+    type: Class
+    summary: "<p>\r\n\r\n  <b>注釈:</b>レポートは、正常性を使用してストアに送信できます<xref uid=\"system.fabric._health_client.reportHealth(HealthReport)\" data-throw-if-not-resolved=\"false\">system.fabric.HealthClient#reportHealth(system.fabric.health.HealthReport)</xref>です。 </p>"
+    syntax:
+      content: public class HealthReport
+  - uid: system.fabric.health._health_information
+    parent: system.fabric.health
+    href: system.fabric.health._health_information.yml
+    name: HealthInformation
+    nameWithType: HealthInformation
+    fullName: system.fabric.health.HealthInformation
+    type: Class
+    summary: <p>エンティティのヘルス情報が含まれています。 この情報は、正常性レポートに含まれています。 正常性イベントの一部としても提供されます。 </p>
+    syntax:
+      content: public class HealthInformation
+  - uid: system.fabric._health_client.reportHealth(HealthReport)
+    parent: system.fabric._health_client
+    href: system.fabric._health_client.yml
+    name: reportHealth(HealthReport healthReport)
+    nameWithType: HealthClient.reportHealth(HealthReport healthReport)
+    fullName: void system.fabric.HealthClient.reportHealth(HealthReport healthReport)
+    type: Method
+    summary: |-
+      <p>Service Fabric エンティティのヘルスをレポートします。</p>
+      <p></p>
+    syntax:
+      content: public void reportHealth(HealthReport healthReport)
+      parameters:
+        - id: healthReport
+          type: system.fabric.health._health_report
+          description: <p>送信する正常性レポートします。 </p>

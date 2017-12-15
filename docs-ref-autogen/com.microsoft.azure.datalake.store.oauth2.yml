@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.datalake.store.oauth2
+    id: oauth2
+    children:
+      - com.microsoft.azure.datalake.store.oauth2._access_token_provider
+      - com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator
+      - com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
+      - com.microsoft.azure.datalake.store.oauth2._client_creds_token_provider
+      - com.microsoft.azure.datalake.store.oauth2._device_code_token_provider
+      - com.microsoft.azure.datalake.store.oauth2._msi_token_provider
+      - com.microsoft.azure.datalake.store.oauth2._refresh_token_based_token_provider
+      - com.microsoft.azure.datalake.store.oauth2._refresh_token_info
+      - com.microsoft.azure.datalake.store.oauth2._user_password_token_provider
+    href: com.microsoft.azure.datalake.store.oauth2.yml
+    langs:
+      - java
+    name: com.microsoft.azure.datalake.store.oauth2
+    nameWithType: com.microsoft.azure.datalake.store.oauth2
+    fullName: com.microsoft.azure.datalake.store.oauth2
+    type: Namespace
+    source:
+      remote:
+        path: src/main/java/com/microsoft/azure/datalake/store/oauth2/AccessTokenProvider.java
+        branch: master
+        repo: 'https://github.com/azure/azure-data-lake-store-java'
+      path: src/main/java/com/microsoft/azure/datalake/store/oauth2/AccessTokenProvider.java
+      startLine: 6
+    summary: <p>フェッチのヘルプし、Azure active Directory のトークンを管理するクラス </p>
+    syntax:
+      content: package com.microsoft.azure.datalake.store.oauth2
+references:
+  - uid: com.microsoft.azure.datalake.store.oauth2._access_token_provider
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._access_token_provider.yml
+    name: AccessTokenProvider
+    nameWithType: AccessTokenProvider
+    fullName: com.microsoft.azure.datalake.store.oauth2.AccessTokenProvider
+    type: Class
+    summary: |-
+      <p>要求されたときに、Azure Active Directory トークンを返します。 プロバイダーは、既に取得したいずれかの場合、トークンをキャッシュできます。 その場合、プロバイダーは有効期限をチェックし、必要に応じて更新を担当します。 </p>
+      <p>つまり、これはキャッシュされたトークンの有効期限が切れた場合に要求された場合、トークンをフェッチするトークンのキャッシュです。 </p>
+    syntax:
+      content: public class AccessTokenProvider
+  - uid: com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator.yml
+    name: AzureADAuthenticator
+    nameWithType: AzureADAuthenticator
+    fullName: com.microsoft.azure.datalake.store.oauth2.AzureADAuthenticator
+    type: Class
+    summary: '<p>このクラスは、AAD トークンを取得するための便利なメソッドを提供します。 便利で、中に、これらのメソッドを使用して、トークンを取得する必要はありません。 顧客が他のメソッドを使用できます (例: adal4j クライアントを使用して) トークンを取得します。 </p>'
+    syntax:
+      content: public class AzureADAuthenticator
+  - uid: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token.yml
+    name: AzureADToken
+    nameWithType: AzureADToken
+    fullName: com.microsoft.azure.datalake.store.oauth2.AzureADToken
+    type: Class
+    summary: <p>オブジェクトの represnting AAD アクセス トークンを Azure データ Lake ストレージへの HTTP 要求を行うときに使用します。 </p>
+    syntax:
+      content: public class AzureADToken
+  - uid: com.microsoft.azure.datalake.store.oauth2._client_creds_token_provider
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._client_creds_token_provider.yml
+    name: ClientCredsTokenProvider
+    nameWithType: ClientCredsTokenProvider
+    fullName: com.microsoft.azure.datalake.store.oauth2.ClientCredsTokenProvider
+    type: Class
+    summary: <p>クライアントの資格情報に基づくトークンを提供します。 </p>
+    syntax:
+      content: public class ClientCredsTokenProvider extends AccessTokenProvider
+  - uid: com.microsoft.azure.datalake.store.oauth2._device_code_token_provider
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._device_code_token_provider.yml
+    name: DeviceCodeTokenProvider
+    nameWithType: DeviceCodeTokenProvider
+    fullName: com.microsoft.azure.datalake.store.oauth2.DeviceCodeTokenProvider
+    type: Class
+    summary: <p>コンテキストをブラウザー以外の対話型ログインを有効に基づいています。 指定されたリンクとコードを使用して、ブラウザーを使用してログインするユーザーを求めるメッセージが表示されます。 </p>
+    syntax:
+      content: public class DeviceCodeTokenProvider extends AccessTokenProvider
+  - uid: com.microsoft.azure.datalake.store.oauth2._msi_token_provider
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._msi_token_provider.yml
+    name: MsiTokenProvider
+    nameWithType: MsiTokenProvider
+    fullName: com.microsoft.azure.datalake.store.oauth2.MsiTokenProvider
+    type: Class
+    summary: <p>Azure VM の管理サービス Id に基づくトークンを提供します。 </p>
+    syntax:
+      content: public class MsiTokenProvider extends AccessTokenProvider
+  - uid: com.microsoft.azure.datalake.store.oauth2._refresh_token_based_token_provider
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._refresh_token_based_token_provider.yml
+    name: RefreshTokenBasedTokenProvider
+    nameWithType: RefreshTokenBasedTokenProvider
+    fullName: com.microsoft.azure.datalake.store.oauth2.RefreshTokenBasedTokenProvider
+    type: Class
+    summary: <p>更新トークンに基づくトークンを提供します。 </p>
+    syntax:
+      content: public class RefreshTokenBasedTokenProvider extends AccessTokenProvider
+  - uid: com.microsoft.azure.datalake.store.oauth2._refresh_token_info
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._refresh_token_info.yml
+    name: RefreshTokenInfo
+    nameWithType: RefreshTokenInfo
+    fullName: com.microsoft.azure.datalake.store.oauth2.RefreshTokenInfo
+    type: Class
+    summary: <p>更新トークンと関連付けられているアクセス トークンに関する情報 </p>
+    syntax:
+      content: public class RefreshTokenInfo
+  - uid: com.microsoft.azure.datalake.store.oauth2._user_password_token_provider
+    parent: com.microsoft.azure.datalake.store.oauth2
+    href: com.microsoft.azure.datalake.store.oauth2._user_password_token_provider.yml
+    name: UserPasswordTokenProvider
+    nameWithType: UserPasswordTokenProvider
+    fullName: com.microsoft.azure.datalake.store.oauth2.UserPasswordTokenProvider
+    type: Class
+    summary: <p>ユーザー名とパスワードに基づくトークンを提供します。 </p>
+    syntax:
+      content: public class UserPasswordTokenProvider extends AccessTokenProvider

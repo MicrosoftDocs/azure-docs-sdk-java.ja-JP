@@ -1,0 +1,334 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    id: _schema_info_collection
+    parent: com.microsoft.azure.elasticdb.shard.schema
+    children:
+      - 'com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.add(String,SchemaInfo)'
+      - com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.get(String)
+      - com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.iterator()
+      - com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.remove(String)
+      - 'com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.replace(String,SchemaInfo)'
+      - com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.SchemaInfoCollection(ShardMapManager)
+      - 'com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.tryGet(String,ReferenceObjectHelper<SchemaInfo>)'
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: SchemaInfoCollection
+    nameWithType: SchemaInfoCollection
+    fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 29
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: <p>分割スキームに関連付けられたや保存、更新、またはスキーマ情報の取得のクライアントに記憶域サービスを提供し、情報の個々 のバケットに名前を割り当てます。 クラスは、分割スキームとメタデータのユニット間の関連付けを格納しません。 マッピングを維持するために、呼び出し元の役割です。 </p>
+    syntax: &ref_1
+      content: public class SchemaInfoCollection
+    inheritance:
+      - java.lang.Object
+      - 'java.util.ArrayList<Map.Entry<String, SchemaInfo>>'
+  - uid: 'com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.add(String,SchemaInfo)'
+    id: 'add(String,SchemaInfo)'
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: 'add(String shardMapName, SchemaInfo schemaInfo)'
+    nameWithType: 'SchemaInfoCollection.add(String shardMapName, SchemaInfo schemaInfo)'
+    fullName: 'final void com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.add(String shardMapName, SchemaInfo schemaInfo)'
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.add*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 64
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>追加、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>指定 ShardMap 名に関連付けられています。 関連付けられているデータには、シャーディングされたテーブルと参照テーブルに関する情報が含まれています。 追加しようとする場合、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref> 、既存の名前と、名前が競合例外がスローされます</p>
+      <p></p>
+    syntax:
+      content: 'public final void add(String shardMapName, SchemaInfo schemaInfo)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>ShardMap の名前を<xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>が関連付けられる </p>
+        - id: schemaInfo
+          type: com.microsoft.azure.elasticdb.shard.schema._schema_info
+          description: <p>シャーディングのスキーマ情報。 </p>
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.get(String)
+    id: get(String)
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: get(String shardMapName)
+    nameWithType: SchemaInfoCollection.get(String shardMapName)
+    fullName: final SchemaInfo com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.get(String shardMapName)
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.get*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 146
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>フェッチ、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>指定 ShardMap 名前と共に保存します。</p>
+      <p></p>
+    syntax:
+      content: public final SchemaInfo get(String shardMapName)
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>取得する ShardMap の名前。 </p>
+      return:
+        type: 93de0ef9com.microsoft.azure.elasticdb.shard.schema._schema_info
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.schema._schema_info\" data-throw-if-not-resolved=\"false\">SchemaInfo</xref>オブジェクト。 </p>"
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.iterator()
+    id: iterator()
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: iterator()
+    nameWithType: SchemaInfoCollection.iterator()
+    fullName: 'final Iterator<Map.Entry<String, SchemaInfo>> com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.iterator()'
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.iterator*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 190
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>反復処理する列挙子を返します、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info_collection" data-throw-if-not-resolved="false">SchemaInfoCollection</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public final Iterator<Map.Entry<String, SchemaInfo>> iterator()'
+      return:
+        type: bbcb92afcom.microsoft.azure.elasticdb.shard.schema._schema_infoe7daa122
+        description: <p>名前のキー/値ペアの列挙子と<xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>オブジェクト。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.remove(String)
+    id: remove(String)
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: remove(String shardMapName)
+    nameWithType: SchemaInfoCollection.remove(String shardMapName)
+    fullName: final void com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.remove(String shardMapName)
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.remove*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 173
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>削除、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>指定された ShardMap 名。</p>
+      <p></p>
+    syntax:
+      content: public final void remove(String shardMapName)
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>ShardMap の名前が<xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>は削除されます </p>
+      return:
+        type: 3f6357ce
+  - uid: 'com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.replace(String,SchemaInfo)'
+    id: 'replace(String,SchemaInfo)'
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: 'replace(String shardMapName, SchemaInfo schemaInfo)'
+    nameWithType: 'SchemaInfoCollection.replace(String shardMapName, SchemaInfo schemaInfo)'
+    fullName: 'final void com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.replace(String shardMapName, SchemaInfo schemaInfo)'
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.replace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 88
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>置換、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>指定された ShardMap 名。</p>
+      <p></p>
+    syntax:
+      content: 'public final void replace(String shardMapName, SchemaInfo schemaInfo)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>ShardMap の名前が<xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>は置き換えられます。 </p>
+        - id: schemaInfo
+          type: com.microsoft.azure.elasticdb.shard.schema._schema_info
+          description: <p>シャーディングのスキーマ情報。 </p>
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.SchemaInfoCollection(ShardMapManager)
+    id: SchemaInfoCollection(ShardMapManager)
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: SchemaInfoCollection(ShardMapManager shardMapManager)
+    nameWithType: SchemaInfoCollection.SchemaInfoCollection(ShardMapManager shardMapManager)
+    fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.SchemaInfoCollection(ShardMapManager shardMapManager)
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.SchemaInfoCollection*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 42
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>スキーマ情報のコレクションのインスタンスを構築します。</p>
+      <p></p>
+    syntax:
+      content: public SchemaInfoCollection(ShardMapManager shardMapManager)
+      parameters:
+        - id: shardMapManager
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+          description: <p>シャードのマップ マネージャー オブジェクトです。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.tryGet(String,ReferenceObjectHelper<SchemaInfo>)'
+    id: 'tryGet(String,ReferenceObjectHelper<SchemaInfo>)'
+    parent: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    langs:
+      - java
+    name: 'tryGet(String shardMapName, ReferenceObjectHelper<SchemaInfo> schemaInfo)'
+    nameWithType: 'SchemaInfoCollection.tryGet(String shardMapName, ReferenceObjectHelper<SchemaInfo> schemaInfo)'
+    fullName: 'final boolean com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.tryGet(String shardMapName, ReferenceObjectHelper<SchemaInfo> schemaInfo)'
+    overload: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.tryGet*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/schema/SchemaInfoCollection.java
+      startLine: 113
+    package: com.microsoft.azure.elasticdb.shard.schema
+    summary: |-
+      <p>フェッチしようとする、 <xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>指定された ShardMap 名データが存在しない場合は、任意の例外を生成せずします。</p>
+      <p></p>
+    syntax:
+      content: 'public final boolean tryGet(String shardMapName, ReferenceObjectHelper<SchemaInfo> schemaInfo)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>ShardMap の名前が<xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>がフェッチされます </p>
+        - id: schemaInfo
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.schema._schema_infoa08ddfce
+          description: <p><xref uid="com.microsoft.azure.elasticdb.shard.schema._schema_info" data-throw-if-not-resolved="false">SchemaInfo</xref>フェッチや取得が失敗した場合は、null でした </p>
+      return:
+        type: 4dda0764
+        description: <p>指定した名前、false スキーマ情報がそれが存在する場合は true。 </p>
+references:
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.SchemaInfoCollection*
+    name: SchemaInfoCollection
+    nameWithType: SchemaInfoCollection.SchemaInfoCollection
+    fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.SchemaInfoCollection
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 3f6357ce
+    spec.java:
+      - name: final void
+        fullName: final void
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.add*
+    name: add
+    nameWithType: SchemaInfoCollection.add
+    fullName: final void com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.add
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.replace*
+    name: replace
+    nameWithType: SchemaInfoCollection.replace
+    fullName: final void com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.replace
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: 2695f77dcom.microsoft.azure.elasticdb.shard.schema._schema_infoa08ddfce
+    spec.java:
+      - name: ReferenceObjectHelper<
+        fullName: ReferenceObjectHelper<
+      - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info
+        name: SchemaInfo
+        fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfo
+        href: com.microsoft.azure.elasticdb.shard.schema._schema_info.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 4dda0764
+    spec.java:
+      - name: final boolean
+        fullName: final boolean
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.tryGet*
+    name: tryGet
+    nameWithType: SchemaInfoCollection.tryGet
+    fullName: final boolean com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.tryGet
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: 93de0ef9com.microsoft.azure.elasticdb.shard.schema._schema_info
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info
+        name: SchemaInfo
+        fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfo
+        href: com.microsoft.azure.elasticdb.shard.schema._schema_info.yml
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.get*
+    name: get
+    nameWithType: SchemaInfoCollection.get
+    fullName: final SchemaInfo com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.get
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.remove*
+    name: remove
+    nameWithType: SchemaInfoCollection.remove
+    fullName: final void com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.remove
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: bbcb92afcom.microsoft.azure.elasticdb.shard.schema._schema_infoe7daa122
+    spec.java:
+      - name: 'final Iterator<Map.Entry<String, '
+        fullName: 'final Iterator<Map.Entry<String, '
+      - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info
+        name: SchemaInfo
+        fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfo
+        href: com.microsoft.azure.elasticdb.shard.schema._schema_info.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.iterator*
+    name: iterator
+    nameWithType: SchemaInfoCollection.iterator
+    fullName: 'final Iterator<Map.Entry<String, SchemaInfo>> com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection.iterator'
+    package: com.microsoft.azure.elasticdb.shard.schema
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    name: ShardMapManager
+    nameWithType: ShardMapManager
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager
+    type: Class
+    summary: <p>シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。 </p>
+    syntax:
+      content: public class ShardMapManager
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info
+    parent: com.microsoft.azure.elasticdb.shard.schema
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info.yml
+    name: SchemaInfo
+    nameWithType: SchemaInfo
+    fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfo
+    type: Class
+    summary: <p>シャーディングされたテーブルの一覧と、分割スキームに関連付けられている参照テーブルの一覧を特定する情報を表します。 参照テーブルは、シャード間でレプリケートされます。 このクラスは、スレッド セーフです。 </p>
+    syntax:
+      content: public class SchemaInfo
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    parent: com.microsoft.azure.elasticdb.shard.schema
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    name: SchemaInfoCollection
+    nameWithType: SchemaInfoCollection
+    fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection
+    type: Class
+    summary: <p>分割スキームに関連付けられたや保存、更新、またはスキーマ情報の取得のクライアントに記憶域サービスを提供し、情報の個々 のバケットに名前を割り当てます。 クラスは、分割スキームとメタデータのユニット間の関連付けを格納しません。 マッピングを維持するために、呼び出し元の役割です。 </p>
+    syntax: *ref_1

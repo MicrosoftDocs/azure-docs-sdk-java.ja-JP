@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.services.remoting._service_remoting_listener
+    id: _service_remoting_listener
+    parent: microsoft.servicefabric.services.remoting
+    href: microsoft.servicefabric.services.remoting._service_remoting_listener.yml
+    langs:
+      - java
+    name: ServiceRemotingListener
+    nameWithType: ServiceRemotingListener
+    fullName: microsoft.servicefabric.services.remoting.ServiceRemotingListener
+    type: Interface
+    source:
+      remote:
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/remoting/ServiceRemotingListener.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/remoting/ServiceRemotingListener.java
+      startLine: 7
+    package: microsoft.servicefabric.services.remoting
+    summary: <p>ステートレスおよびステートフルなサービスのインターフェイスのリモート処理を有効にするための基本の通信インターフェイスを定義します。 </p>
+    syntax:
+      content: public interface ServiceRemotingListener extends CommunicationListener
+    inheritedMembers:
+      - microsoft.servicefabric.services.communication.runtime._communication_listener.abort()
+      - microsoft.servicefabric.services.communication.runtime._communication_listener.closeAsync(CancellationToken)
+      - microsoft.servicefabric.services.communication.runtime._communication_listener.openAsync(CancellationToken)
+references:
+  - uid: microsoft.servicefabric.services.communication.runtime._communication_listener.abort()
+    parent: microsoft.servicefabric.services.communication.runtime._communication_listener
+    href: microsoft.servicefabric.services.communication.runtime._communication_listener.yml
+    name: abort()
+    nameWithType: CommunicationListener.abort()
+    fullName: void microsoft.servicefabric.services.communication.runtime.CommunicationListener.abort()
+    type: Method
+    syntax:
+      content: public void abort()
+  - uid: microsoft.servicefabric.services.communication.runtime._communication_listener.closeAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.communication.runtime._communication_listener
+    href: microsoft.servicefabric.services.communication.runtime._communication_listener.yml
+    name: closeAsync(CancellationToken cancellationToken)
+    nameWithType: CommunicationListener.closeAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.communication.runtime.CommunicationListener.closeAsync(CancellationToken cancellationToken)
+    type: Method
+    summary: |-
+      <p>このメソッドによって、通信リスナーを閉じます。 終了が終了状態と、このメソッドは、安全な方法でこの状態に遷移する通信リスナーを使用します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<?> closeAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>未処理の操作を表す CompletableFuture です。 </p>
+  - uid: microsoft.servicefabric.services.communication.runtime._communication_listener.openAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.communication.runtime._communication_listener
+    href: microsoft.servicefabric.services.communication.runtime._communication_listener.yml
+    name: openAsync(CancellationToken cancellationToken)
+    nameWithType: CommunicationListener.openAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<String> microsoft.servicefabric.services.communication.runtime.CommunicationListener.openAsync(CancellationToken cancellationToken)
+    type: Method
+    summary: |-
+      <p>このメソッドによって、通信リスナーを開くことができません。 Open が完了すると、通信リスナーが使用可能になります - 受け付けるし、メッセージを送信します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<String> openAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 06be942d
+        description: <p>未処理の操作を表す CompletableFuture です。 タスクの結果は、エンドポイントの文字列です。 </p>
+  - uid: microsoft.servicefabric.services.communication.runtime._communication_listener
+    parent: microsoft.servicefabric.services.communication.runtime
+    href: microsoft.servicefabric.services.communication.runtime._communication_listener.yml
+    name: CommunicationListener
+    nameWithType: CommunicationListener
+    fullName: microsoft.servicefabric.services.communication.runtime.CommunicationListener
+    type: Interface
+    summary: <p>基底インターフェイスおよび状態のマシン コントラクト Service Fabric サービスの通信リスナーを定義します。 </p>
+    syntax:
+      content: public interface CommunicationListener
+  - uid: microsoft.servicefabric.services.remoting.fabrictransport.runtime._fabric198c971d5cab31d2511f0c386313959d
+    parent: microsoft.servicefabric.services.remoting.fabrictransport.runtime
+    href: microsoft.servicefabric.services.remoting.fabrictransport.runtime._fabric198c971d5cab31d2511f0c386313959d.yml
+    name: FabricTransportServiceRemotingListener
+    nameWithType: FabricTransportServiceRemotingListener
+    fullName: microsoft.servicefabric.services.remoting.fabrictransport.runtime.FabricTransportServiceRemotingListener
+    type: Class
+    summary: <p><xref uid="microsoft.servicefabric.services.remoting._service_remoting_listener" data-throw-if-not-resolved="false">ServiceRemotingListener</xref>ステートレスおよびステートフルなサービスのインターフェイスのリモート処理を提供するファブリック TCP トランスポートを使用します。 </p>
+    syntax:
+      content: public class FabricTransportServiceRemotingListener implements ServiceRemotingListener

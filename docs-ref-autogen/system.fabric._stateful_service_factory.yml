@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._stateful_service_factory
+    id: _stateful_service_factory
+    parent: system.fabric
+    children:
+      - 'system.fabric._stateful_service_factory.createReplica(String,URI,byte [],UUID,long)'
+    href: system.fabric._stateful_service_factory.yml
+    langs:
+      - java
+    name: StatefulServiceFactory
+    nameWithType: StatefulServiceFactory
+    fullName: system.fabric.StatefulServiceFactory
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceFactory.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceFactory.java
+      startLine: 14
+    package: system.fabric
+    summary: '<p>ステートフル サービスの特定の種類のレプリカの作成を担当するステートフルなサービス ファクトリを表します。 ステートフルなサービス ファクトリに登録されている、 <xref uid="system.fabric._fabric_runtime" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>を介してサービス ホストによって<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactory (java.lang.String,system.fabric.StatefulServiceFactory)</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactoryAsync(java.lang.String,system.fabric.StatefulServiceFactory,java.time.Duration)</xref></p>'
+    syntax:
+      content: public interface StatefulServiceFactory
+  - uid: 'system.fabric._stateful_service_factory.createReplica(String,URI,byte [],UUID,long)'
+    id: 'createReplica(String,URI,byte [],UUID,long)'
+    parent: system.fabric._stateful_service_factory
+    href: system.fabric._stateful_service_factory.yml
+    langs:
+      - java
+    name: 'createReplica(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long replicaId)'
+    nameWithType: 'StatefulServiceFactory.createReplica(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long replicaId)'
+    fullName: 'StatefulServiceReplica system.fabric.StatefulServiceFactory.createReplica(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long replicaId)'
+    overload: system.fabric._stateful_service_factory.createReplica*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceFactory.java
+      startLine: 35
+    package: system.fabric
+    summary: |-
+      <p>特定のサービスのステートフル サービス レプリカの作成に Service Fabric によって呼び出されます。</p>
+      <p></p>
+    syntax:
+      content: 'public StatefulServiceReplica createReplica(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long replicaId)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>Service Fabric は、作成するように要求するサービスの種類。 </p>
+        - id: serviceName
+          type: '62304784'
+          description: '<p>ファブリック: (Uri) をこのレプリカが関連付けられているサービスの名前/です。 </p>'
+        - id: initializationData
+          type: ccd9418d
+          description: <p>このサービスの一部として渡された最初の初期化データを格納するバイト配列<xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">system.fabric.ServiceDescription</xref>です。 </p>
+        - id: partitionId
+          type: add9545a
+          description: <p>このレプリカが関連付けられている GUID の種類のパーティション ID です。 </p>
+        - id: replicaId
+          type: 0364520f
+          description: <p>レプリカ ID 型のこのレプリカの長さ。 </p>
+      return:
+        type: system.fabric._stateful_service_replica
+        description: <p>返します<xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>です。 </p>
+    exceptions:
+      - type: 84fa3863
+        description: <p>インスタンスの作成の失敗時に </p>
+      - type: '81e09942'
+        description: <p>アクセス voilation 上 </p>
+references:
+  - uid: 84fa3863
+    spec.java:
+      - name: InstantiationException
+        fullName: InstantiationException
+  - uid: '81e09942'
+    spec.java:
+      - name: IllegalAccessException
+        fullName: IllegalAccessException
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric._stateful_service_factory.createReplica*
+    name: createReplica
+    nameWithType: StatefulServiceFactory.createReplica
+    fullName: StatefulServiceReplica system.fabric.StatefulServiceFactory.createReplica
+    package: system.fabric
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_replica_factory
+  - uid: system.fabric._default_service_factory
+  - uid: system.fabric._stateful_service_replica
+    parent: system.fabric
+    href: system.fabric._stateful_service_replica.yml
+    name: StatefulServiceReplica
+    nameWithType: StatefulServiceReplica
+    fullName: system.fabric.StatefulServiceReplica
+    type: Interface
+    summary: "<p>スタートアップ、初期化、ロールの変更、およびシャット ダウンなど、レプリカのライフ サイクルを制御する動作を定義します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ステートフル サービスの種類は、このインターフェイスを実装する必要があります。 ステートフルなサービスの種類のロジックには、プライマリ レプリカ上で呼び出される動作とセカンダリ レプリカで呼び出される動作が含まれています。 サービスの作成者が作成する場合は、指定された使用<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、サービスを実装する必要がありますも、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> の実装を使用する<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>はによって提供される<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></p>"
+    syntax:
+      content: public interface StatefulServiceReplica
+  - uid: system.fabric._service_description
+    parent: system.fabric
+    href: system.fabric._service_description.yml
+    name: ServiceDescription
+    nameWithType: ServiceDescription
+    fullName: system.fabric.ServiceDescription
+    type: Class
+    summary: <p>A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。 </p>
+    syntax:
+      content: public class ServiceDescription
+  - uid: system.fabric._fabric_runtime
+    parent: system.fabric
+    href: system.fabric._fabric_runtime.yml
+    name: FabricRuntime
+    nameWithType: FabricRuntime
+    fullName: system.fabric.FabricRuntime
+    type: Class
+    summary: '<p>ユーザーが作成したホストを取得できるように、 <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>、必要なサービス ファクトリを登録したり、[ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>、 <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] または直接のサービスの種類。 </p>'
+    syntax:
+      content: public class FabricRuntime

@@ -1,0 +1,254 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._service_health_state_filter
+    id: _service_health_state_filter
+    parent: system.fabric
+    children:
+      - system.fabric._service_health_state_filter.getHealthStateFilter()
+      - system.fabric._service_health_state_filter.getPartitionFilters()
+      - system.fabric._service_health_state_filter.getServiceNameFilter()
+      - system.fabric._service_health_state_filter.ServiceHealthStateFilter()
+      - system.fabric._service_health_state_filter.setHealthStateFilter(HealthStateFilter)
+      - system.fabric._service_health_state_filter.setServiceNameFilter(URI)
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: ServiceHealthStateFilter
+    nameWithType: ServiceHealthStateFilter
+    fullName: system.fabric.ServiceHealthStateFilter
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 18
+    package: system.fabric
+    summary: "<p>フィルター処理<xref uid=\"system.fabric.health._service_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.ServiceHealthState</xref>オブジェクト。 </p>\n<p>\r\n\r\n  <b>注釈:</b>エンティティ ヘルス状態のチャンク クエリでは、粒度が細かい選択クエリの結果に含める必要があるサービスにフィルター処理サービスの一覧を指定できます。 渡されるフィルターに関係なく、正常性状態を集計、サービスは、親の評価に使用されるすべてことに注意してください。 </p>"
+    syntax: &ref_1
+      content: public class ServiceHealthStateFilter
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric._service_health_state_filter.getHealthStateFilter()
+    id: getHealthStateFilter()
+    parent: system.fabric._service_health_state_filter
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: getHealthStateFilter()
+    nameWithType: ServiceHealthStateFilter.getHealthStateFilter()
+    fullName: HealthStateFilter system.fabric.ServiceHealthStateFilter.getHealthStateFilter()
+    overload: system.fabric._service_health_state_filter.getHealthStateFilter*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 77
+    package: system.fabric
+    summary: "<p>集計された正常性状態のフィルターを取得、 <xref uid=\"system.fabric.health._service_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.ServiceHealthState</xref>コレクション内のエントリ。</p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態フィルター値はメンバーまたはのメンバーのビットごとの組み合わせから取得<xref uid=\"\" data-throw-if-not-resolved=\"false\">HealthStateFilter</xref>です。 フィルターに一致するサービスの集計された正常性状態は、指定したヘルス状態のフィルターを一致しなければなりません。 </p>"
+    syntax:
+      content: public HealthStateFilter getHealthStateFilter()
+      return:
+        type: system.fabric.health._health_state_filter
+        description: <p>集計された正常性状態のフィルター、 <xref uid="system.fabric.health._service_health_state" data-throw-if-not-resolved="false">system.fabric.health.ServiceHealthState</xref>コレクション内のエントリ。 </p>
+  - uid: system.fabric._service_health_state_filter.getPartitionFilters()
+    id: getPartitionFilters()
+    parent: system.fabric._service_health_state_filter
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: getPartitionFilters()
+    nameWithType: ServiceHealthStateFilter.getPartitionFilters()
+    fullName: List<PartitionHealthStateFilter> system.fabric.ServiceHealthStateFilter.getPartitionFilters()
+    overload: system.fabric._service_health_state_filter.getPartitionFilters*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 111
+    package: system.fabric
+    summary: "<p>一覧を取得<xref uid=\"system.fabric._partition_health_state_filter\" data-throw-if-not-resolved=\"false\">PartitionHealthStateFilter</xref>パーティションの子の正常性状態に適用します。</p>\n<p>\r\n\r\n  <b>注釈:</b>一覧は、1 つの既定のパーティションのフィルター処理やクエリによって返される粒度が細かいエンティティに特定のパーティションのパーティションのフィルターを含めることができます。 フィルターに一致するすべてのパーティションの子は、サービスの子として返されます。 空の場合、既定では子は返されません。 </p>"
+    syntax:
+      content: public List<PartitionHealthStateFilter> getPartitionFilters()
+      return:
+        type: 5618da2dsystem.fabric._partition_health_state_filtera08ddfce
+        description: <p>一連の<xref uid="system.fabric._partition_health_state_filter" data-throw-if-not-resolved="false">PartitionHealthStateFilter</xref>パーティションの子の正常性状態に適用します。 </p>
+  - uid: system.fabric._service_health_state_filter.getServiceNameFilter()
+    id: getServiceNameFilter()
+    parent: system.fabric._service_health_state_filter
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: getServiceNameFilter()
+    nameWithType: ServiceHealthStateFilter.getServiceNameFilter()
+    fullName: URI system.fabric.ServiceHealthStateFilter.getServiceNameFilter()
+    overload: system.fabric._service_health_state_filter.getServiceNameFilter*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 45
+    package: system.fabric
+    summary: "<p>サービス名のフィルターを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>親フィルター (指定されている場合) と指定したヘルス状態のフィルターに一致するすべてのサービスが、フィルターに一致が指定されていない場合。 それ以外の場合、フィルターは、指定されたサービスにのみ適用されます。 すべての他のメンバーのフィルター、ヘルス状態のフィルターと同様には、このサービスに適用されます。 </p>"
+    syntax:
+      content: public URI getServiceNameFilter()
+      return:
+        type: '62304784'
+        description: <p>サービス名のフィルターです。 </p>
+  - uid: system.fabric._service_health_state_filter.ServiceHealthStateFilter()
+    id: ServiceHealthStateFilter()
+    parent: system.fabric._service_health_state_filter
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: ServiceHealthStateFilter()
+    nameWithType: ServiceHealthStateFilter.ServiceHealthStateFilter()
+    fullName: system.fabric.ServiceHealthStateFilter.ServiceHealthStateFilter()
+    overload: system.fabric._service_health_state_filter.ServiceHealthStateFilter*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 29
+    package: system.fabric
+    syntax:
+      content: public ServiceHealthStateFilter()
+  - uid: system.fabric._service_health_state_filter.setHealthStateFilter(HealthStateFilter)
+    id: setHealthStateFilter(HealthStateFilter)
+    parent: system.fabric._service_health_state_filter
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: setHealthStateFilter(HealthStateFilter healthStateFilter)
+    nameWithType: ServiceHealthStateFilter.setHealthStateFilter(HealthStateFilter healthStateFilter)
+    fullName: void system.fabric.ServiceHealthStateFilter.setHealthStateFilter(HealthStateFilter healthStateFilter)
+    overload: system.fabric._service_health_state_filter.setHealthStateFilter*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 94
+    package: system.fabric
+    summary: "<p>集計された正常性状態のセットのフィルター、 <xref uid=\"system.fabric.health._service_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.ServiceHealthState</xref>コレクション内のエントリ。</p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態フィルター値はメンバーまたはのメンバーのビットごとの組み合わせから取得<xref uid=\"\" data-throw-if-not-resolved=\"false\">HealthStateFilter</xref>です。 フィルターに一致するサービスの集計された正常性状態は、指定したヘルス状態のフィルターを一致しなければなりません。 </p>"
+    syntax:
+      content: public void setHealthStateFilter(HealthStateFilter healthStateFilter)
+      parameters:
+        - id: healthStateFilter
+          type: system.fabric.health._health_state_filter
+          description: <p>集計された正常性状態のフィルター、 <xref uid="system.fabric.health._service_health_state" data-throw-if-not-resolved="false">system.fabric.health.ServiceHealthState</xref>コレクション内のエントリ。 </p>
+  - uid: system.fabric._service_health_state_filter.setServiceNameFilter(URI)
+    id: setServiceNameFilter(URI)
+    parent: system.fabric._service_health_state_filter
+    href: system.fabric._service_health_state_filter.yml
+    langs:
+      - java
+    name: setServiceNameFilter(URI serviceNameFilter)
+    nameWithType: ServiceHealthStateFilter.setServiceNameFilter(URI serviceNameFilter)
+    fullName: void system.fabric.ServiceHealthStateFilter.setServiceNameFilter(URI serviceNameFilter)
+    overload: system.fabric._service_health_state_filter.setServiceNameFilter*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceHealthStateFilter.java
+      startLine: 61
+    package: system.fabric
+    summary: "<p>サービス名のフィルターを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>親フィルター (指定されている場合) と指定したヘルス状態のフィルターに一致するすべてのサービスが、フィルターに一致が指定されていない場合。 それ以外の場合、フィルターは、指定されたサービスにのみ適用されます。 すべての他のメンバーのフィルター、ヘルス状態のフィルターと同様には、このサービスに適用されます。 </p>"
+    syntax:
+      content: public void setServiceNameFilter(URI serviceNameFilter)
+      parameters:
+        - id: serviceNameFilter
+          type: '62304784'
+          description: <p>サービス名のフィルターです。 </p>
+references:
+  - uid: system.fabric._service_health_state_filter.ServiceHealthStateFilter*
+    name: ServiceHealthStateFilter
+    nameWithType: ServiceHealthStateFilter.ServiceHealthStateFilter
+    fullName: system.fabric.ServiceHealthStateFilter.ServiceHealthStateFilter
+    package: system.fabric
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: system.fabric._service_health_state_filter.getServiceNameFilter*
+    name: getServiceNameFilter
+    nameWithType: ServiceHealthStateFilter.getServiceNameFilter
+    fullName: URI system.fabric.ServiceHealthStateFilter.getServiceNameFilter
+    package: system.fabric
+  - uid: system.fabric._service_health_state_filter.setServiceNameFilter*
+    name: setServiceNameFilter
+    nameWithType: ServiceHealthStateFilter.setServiceNameFilter
+    fullName: void system.fabric.ServiceHealthStateFilter.setServiceNameFilter
+    package: system.fabric
+  - uid: system.fabric._service_health_state_filter.getHealthStateFilter*
+    name: getHealthStateFilter
+    nameWithType: ServiceHealthStateFilter.getHealthStateFilter
+    fullName: HealthStateFilter system.fabric.ServiceHealthStateFilter.getHealthStateFilter
+    package: system.fabric
+  - uid: system.fabric._service_health_state_filter.setHealthStateFilter*
+    name: setHealthStateFilter
+    nameWithType: ServiceHealthStateFilter.setHealthStateFilter
+    fullName: void system.fabric.ServiceHealthStateFilter.setHealthStateFilter
+    package: system.fabric
+  - uid: 5618da2dsystem.fabric._partition_health_state_filtera08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: system.fabric._partition_health_state_filter
+        name: PartitionHealthStateFilter
+        fullName: system.fabric.PartitionHealthStateFilter
+        href: system.fabric._partition_health_state_filter.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._service_health_state_filter.getPartitionFilters*
+    name: getPartitionFilters
+    nameWithType: ServiceHealthStateFilter.getPartitionFilters
+    fullName: List<PartitionHealthStateFilter> system.fabric.ServiceHealthStateFilter.getPartitionFilters
+    package: system.fabric
+  - uid: system.fabric._partition_health_state_filter
+    parent: system.fabric
+    href: system.fabric._partition_health_state_filter.yml
+    name: PartitionHealthStateFilter
+    nameWithType: PartitionHealthStateFilter
+    fullName: system.fabric.PartitionHealthStateFilter
+    type: Class
+    summary: "<p>フィルター処理<xref uid=\"system.fabric.health._partition_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.PartitionHealthState</xref>オブジェクト。 </p>\n<p>\r\n\r\n  <b>注釈:</b>正常性の状態のチャンクのクエリでは、粒度が細かい選択クエリの結果に含める必要があるパーティションにフィルター処理のパーティションの一覧を指定できます。 渡されるフィルターに関係なく、正常性状態を集計すべてのパーティションが親の評価に使用されることに注意してください。 </p>"
+    syntax:
+      content: public class PartitionHealthStateFilter
+  - uid: system.fabric.health._health_state_filter
+    parent: system.fabric.health
+    href: system.fabric.health._health_state_filter.yml
+    name: HealthStateFilter
+    nameWithType: HealthStateFilter
+    fullName: system.fabric.health.HealthStateFilter
+    type: Enum
+    syntax:
+      content: public enum HealthStateFilter
+  - uid: system.fabric.health._service_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_state.yml
+    name: ServiceHealthState
+    nameWithType: ServiceHealthState
+    fullName: system.fabric.health.ServiceHealthState
+    type: Class
+    summary: <p>サービスの識別子とその集計された正常性状態を含むサービスのヘルス状態を表します。 </p>
+    syntax:
+      content: public class ServiceHealthState extends EntityHealthState
+  - uid: system.fabric._pin_collection
+    parent: system.fabric
+    href: system.fabric._pin_collection.yml
+    name: PinCollection
+    nameWithType: PinCollection
+    fullName: system.fabric.PinCollection
+    type: Class
+    syntax:
+      content: public class PinCollection
+  - uid: system.fabric._service_health_state_filter
+    parent: system.fabric
+    href: system.fabric._service_health_state_filter.yml
+    name: ServiceHealthStateFilter
+    nameWithType: ServiceHealthStateFilter
+    fullName: system.fabric.ServiceHealthStateFilter
+    type: Class
+    summary: "<p>フィルター処理<xref uid=\"system.fabric.health._service_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.ServiceHealthState</xref>オブジェクト。 </p>\n<p>\r\n\r\n  <b>注釈:</b>エンティティ ヘルス状態のチャンク クエリでは、粒度が細かい選択クエリの結果に含める必要があるサービスにフィルター処理サービスの一覧を指定できます。 渡されるフィルターに関係なく、正常性状態を集計、サービスは、親の評価に使用されるすべてことに注意してください。 </p>"
+    syntax: *ref_1

@@ -1,0 +1,829 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    id: _in_memory_lease_manager
+    parent: com.microsoft.azure.eventprocessorhost
+    children:
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.acquireLease(Lease)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseIfNotExists(String)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseStoreIfNotExists()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLease(Lease)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLeaseStore()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getAllLeases()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseDurationInMilliseconds()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseRenewIntervalInMilliseconds()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.initialize(EventProcessorHost)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.InMemoryLeaseManager()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.leaseStoreExists()
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.releaseLease(Lease)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.renewLease(Lease)
+      - com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.updateLease(Lease)
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: InMemoryLeaseManager
+    nameWithType: InMemoryLeaseManager
+    fullName: com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-event-hubs-java'
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 36
+    package: com.microsoft.azure.eventprocessorhost
+    syntax:
+      content: public class InMemoryLeaseManager implements ILeaseManager
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.eventprocessorhost._i_lease_manager
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.acquireLease(Lease)
+    id: acquireLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: acquireLease(Lease lease)
+    nameWithType: InMemoryLeaseManager.acquireLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.acquireLease(Lease lease)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.acquireLease*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 179
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>この目的のパーティションでリースを取得<xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>です。</p>
+      <p>別のホストによって既に所有されているリースを取得することに注意してください。 リース スティー リングは、他のホストが開始されたときにパーティションが再配布方法です。</p>
+      <p></p>
+    syntax: &ref_2
+      content: public Future<Boolean> acquireLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>から適切なパーティションの情報が、以前に取得<xref uid=\"com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)\" data-throw-if-not-resolved=\"false\">getLease()</xref></p>"
+      return:
+        type: ec0e250a
+        description: <p>リースは、その以外の場合は、正常に取得した場合は true。 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.acquireLease(Lease)
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseIfNotExists(String)
+    id: createLeaseIfNotExists(String)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: createLeaseIfNotExists(String partitionId)
+    nameWithType: InMemoryLeaseManager.createLeaseIfNotExists(String partitionId)
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.createLeaseIfNotExists(String partitionId)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseIfNotExists*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 137
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>ストアに、リースの情報を作成、特定のパーティションが存在しない場合。 何も実行しない、ストアに既に存在しています。</p>
+      <p></p>
+    syntax:
+      content: public Future<Lease> createLeaseIfNotExists(String partitionId)
+      parameters:
+        - id: partitionId
+          type: '26831127'
+          description: <p>リース情報を作成するパーティションの id </p>
+      return:
+        type: 9b3030f6com.microsoft.azure.eventprocessorhost._leasea08ddfce
+        description: <p>パーティションの既存または新規に作成されたリース情報 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.createLeaseIfNotExists(String)
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseStoreIfNotExists()
+    id: createLeaseStoreIfNotExists()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: createLeaseStoreIfNotExists()
+    nameWithType: InMemoryLeaseManager.createLeaseStoreIfNotExists()
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.createLeaseStoreIfNotExists()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseStoreIfNotExists*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 79
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>リースのストアを作成することがない場合、何も存在する場合は。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> createLeaseStoreIfNotExists()
+      return:
+        type: ec0e250a
+        description: <p>ストアが既にリース場合は true が存在するか、正常に作成されました、false 以外の場合 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.createLeaseStoreIfNotExists()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLease(Lease)
+    id: deleteLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: deleteLease(Lease lease)
+    nameWithType: InMemoryLeaseManager.deleteLease(Lease lease)
+    fullName: Future<Void> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.deleteLease(Lease lease)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLease*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 166
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>ストアから特定のパーティションのリース情報を削除します。 成功として扱われる特定のパーティションに対するストアドのリースがない場合。</p>
+      <p></p>
+    syntax:
+      content: public Future<Void> deleteLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>から適切なパーティションの情報が、以前に取得<xref uid=\"com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)\" data-throw-if-not-resolved=\"false\">getLease()</xref></p>"
+      return:
+        type: 075d0a89
+        description: <p>取り消し </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.deleteLease(Lease)
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLeaseStore()
+    id: deleteLeaseStore()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: deleteLeaseStore()
+    nameWithType: InMemoryLeaseManager.deleteLeaseStore()
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.deleteLeaseStore()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLeaseStore*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 91
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>によって使用される not <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>が便利な関数は、テストに必要です。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> deleteLeaseStore()
+      return:
+        type: ec0e250a
+        description: <p>リース ストアは、その以外の場合は、正常に削除された場合は true。 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.deleteLeaseStore()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getAllLeases()
+    id: getAllLeases()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: getAllLeases()
+    nameWithType: InMemoryLeaseManager.getAllLeases()
+    fullName: Iterable<Future<Lease>> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getAllLeases()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getAllLeases*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 125
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>すべてのパーティションのリース情報を返します。</p>
+      <p>一般的な実装を呼び出す<xref uid="com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)" data-throw-if-not-resolved="false">getLease()</xref>すべてのパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public Iterable<Future<Lease>> getAllLeases()
+      return:
+        type: 1f5dfe8ecom.microsoft.azure.eventprocessorhost._leasee7daa122
+        description: <p>リース情報の反復可能な一覧です。 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.getAllLeases()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)
+    id: getLease(String)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: getLease(String partitionId)
+    nameWithType: InMemoryLeaseManager.getLease(String partitionId)
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLease(String partitionId)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 103
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>指定されたパーティションのリース情報を返します。 指定したパーティションのストアにリースが作成されていない場合は null を返すことができます。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public Future<Lease> getLease(String partitionId)
+      parameters:
+        - id: partitionId
+          type: '26831127'
+          description: <p>リースを取得するパーティションの id </p>
+      return:
+        type: 9b3030f6com.microsoft.azure.eventprocessorhost._leasea08ddfce
+        description: <p>パーティション、または null の情報をリース </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.getLease(String)
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseDurationInMilliseconds()
+    id: getLeaseDurationInMilliseconds()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: getLeaseDurationInMilliseconds()
+    nameWithType: InMemoryLeaseManager.getLeaseDurationInMilliseconds()
+    fullName: int com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLeaseDurationInMilliseconds()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseDurationInMilliseconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 62
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>テストのほとんどの場合に役立ちます。</p>
+      <p></p>
+    syntax:
+      content: public int getLeaseDurationInMilliseconds()
+      return:
+        type: f75371fa
+        description: <p>更新されないと、有効期限が切れる前に、リースの期間です。 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.getLeaseDurationInMilliseconds()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseRenewIntervalInMilliseconds()
+    id: getLeaseRenewIntervalInMilliseconds()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: getLeaseRenewIntervalInMilliseconds()
+    nameWithType: InMemoryLeaseManager.getLeaseRenewIntervalInMilliseconds()
+    fullName: int com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLeaseRenewIntervalInMilliseconds()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseRenewIntervalInMilliseconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 56
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>リースをスキャンし、それらを更新か頻度 PartitionManager を指定するリース マネージャーの実装を使用できます。 ホストが動作を中断した後に適切なタイミングでリースを再配布するためには、10 秒などの比較的短い間隔お勧めします。 言うまでもなく偶発的な有効期限を防ぐために、リース期間の半分未満でなければなりません。</p>
+      <p></p>
+    syntax:
+      content: public int getLeaseRenewIntervalInMilliseconds()
+      return:
+        type: f75371fa
+        description: <p>スリープ スキャン間隔をミリ秒単位で指定します。 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.getLeaseRenewIntervalInMilliseconds()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.initialize(EventProcessorHost)
+    id: initialize(EventProcessorHost)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: initialize(EventProcessorHost host)
+    nameWithType: InMemoryLeaseManager.initialize(EventProcessorHost host)
+    fullName: void com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.initialize(EventProcessorHost host)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.initialize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 50
+    package: com.microsoft.azure.eventprocessorhost
+    syntax:
+      content: public void initialize(EventProcessorHost host)
+      parameters:
+        - id: host
+          type: com.microsoft.azure.eventprocessorhost._event_processor_host
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.InMemoryLeaseManager()
+    id: InMemoryLeaseManager()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: InMemoryLeaseManager()
+    nameWithType: InMemoryLeaseManager.InMemoryLeaseManager()
+    fullName: com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.InMemoryLeaseManager()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.InMemoryLeaseManager*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 43
+    package: com.microsoft.azure.eventprocessorhost
+    syntax:
+      content: public InMemoryLeaseManager()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.leaseStoreExists()
+    id: leaseStoreExists()
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: leaseStoreExists()
+    nameWithType: InMemoryLeaseManager.leaseStoreExists()
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.leaseStoreExists()
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.leaseStoreExists*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 68
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>リース ストアが存在しますか。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> leaseStoreExists()
+      return:
+        type: ec0e250a
+        description: <p>true の場合は、false 以外の場合 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.leaseStoreExists()
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.releaseLease(Lease)
+    id: releaseLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: releaseLease(Lease lease)
+    nameWithType: InMemoryLeaseManager.releaseLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.releaseLease(Lease lease)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.releaseLease*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 276
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>このホストで現在保持されている、リースを付けます。</p>
+      <p>場合は、リースが盗難にあったされたり有効期限が切れて、解放が必要に応じてでありしようとした場合は失敗します。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> releaseLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>を中止します。 </p>"
+      return:
+        type: ec0e250a
+        description: <p>リースは、その以外の場合は、正常にリリースされた場合は true。 </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.releaseLease(Lease)
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.renewLease(Lease)
+    id: renewLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: renewLease(Lease lease)
+    nameWithType: InMemoryLeaseManager.renewLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.renewLease(Lease lease)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.renewLease*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 235
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>このホストで現在保持されているリースを更新します。</p>
+      <p>リースが盗難にあった場合または期限切れにした場合リリースされた、更新して更新することはできません。 呼び出す必要が<xref uid="com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)" data-throw-if-not-resolved="false">getLease()</xref>し<xref uid="com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.acquireLease(Lease)" data-throw-if-not-resolved="false">acquireLease()</xref>もう一度です。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> renewLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>を更新します。 </p>"
+      return:
+        type: ec0e250a
+        description: <p>true の場合、リースは、その以外の場合は、正常に更新されました </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.renewLease(Lease)
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.updateLease(Lease)
+    id: updateLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    langs:
+      - java
+    name: updateLease(Lease lease)
+    nameWithType: InMemoryLeaseManager.updateLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.updateLease(Lease lease)
+    overload: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.updateLease*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/InMemoryLeaseManager.java
+      startLine: 314
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>指定されたリースの情報と、ストアを更新します。</p>
+      <p>更新するために現在のリースを保持する必要があります。 リースが盗まれた、または有効期限が切れた、またはリリースを更新できません。 更新プロセス中にリースの有効期限を避けるために、更新プログラムを実行する前にリースを更新する必要があります。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> updateLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: <p>新しいリース情報を格納します。 </p>
+      return:
+        type: ec0e250a
+        description: <p>更新後に実行された場合は、正常にされていない場合は true </p>
+    overridden: com.microsoft.azure.eventprocessorhost._i_lease_manager.updateLease(Lease)
+references:
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.InMemoryLeaseManager*
+    name: InMemoryLeaseManager
+    nameWithType: InMemoryLeaseManager.InMemoryLeaseManager
+    fullName: com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.InMemoryLeaseManager
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.initialize*
+    name: initialize
+    nameWithType: InMemoryLeaseManager.initialize
+    fullName: void com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.initialize
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseRenewIntervalInMilliseconds*
+    name: getLeaseRenewIntervalInMilliseconds
+    nameWithType: InMemoryLeaseManager.getLeaseRenewIntervalInMilliseconds
+    fullName: int com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLeaseRenewIntervalInMilliseconds
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLeaseDurationInMilliseconds*
+    name: getLeaseDurationInMilliseconds
+    nameWithType: InMemoryLeaseManager.getLeaseDurationInMilliseconds
+    fullName: int com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLeaseDurationInMilliseconds
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: ec0e250a
+    spec.java:
+      - name: Future<Boolean>
+        fullName: Future<Boolean>
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.leaseStoreExists*
+    name: leaseStoreExists
+    nameWithType: InMemoryLeaseManager.leaseStoreExists
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.leaseStoreExists
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseStoreIfNotExists*
+    name: createLeaseStoreIfNotExists
+    nameWithType: InMemoryLeaseManager.createLeaseStoreIfNotExists
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.createLeaseStoreIfNotExists
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLeaseStore*
+    name: deleteLeaseStore
+    nameWithType: InMemoryLeaseManager.deleteLeaseStore
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.deleteLeaseStore
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 9b3030f6com.microsoft.azure.eventprocessorhost._leasea08ddfce
+    spec.java:
+      - name: Future<
+        fullName: Future<
+      - uid: com.microsoft.azure.eventprocessorhost._lease
+        name: Lease
+        fullName: com.microsoft.azure.eventprocessorhost.Lease
+        href: com.microsoft.azure.eventprocessorhost._lease.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease*
+    name: getLease
+    nameWithType: InMemoryLeaseManager.getLease
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLease
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: 1f5dfe8ecom.microsoft.azure.eventprocessorhost._leasee7daa122
+    spec.java:
+      - name: Iterable<Future<
+        fullName: Iterable<Future<
+      - uid: com.microsoft.azure.eventprocessorhost._lease
+        name: Lease
+        fullName: com.microsoft.azure.eventprocessorhost.Lease
+        href: com.microsoft.azure.eventprocessorhost._lease.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getAllLeases*
+    name: getAllLeases
+    nameWithType: InMemoryLeaseManager.getAllLeases
+    fullName: Iterable<Future<Lease>> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getAllLeases
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.createLeaseIfNotExists*
+    name: createLeaseIfNotExists
+    nameWithType: InMemoryLeaseManager.createLeaseIfNotExists
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.createLeaseIfNotExists
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: 075d0a89
+    spec.java:
+      - name: Future<Void>
+        fullName: Future<Void>
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.deleteLease*
+    name: deleteLease
+    nameWithType: InMemoryLeaseManager.deleteLease
+    fullName: Future<Void> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.deleteLease
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.acquireLease*
+    name: acquireLease
+    nameWithType: InMemoryLeaseManager.acquireLease
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.acquireLease
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.renewLease*
+    name: renewLease
+    nameWithType: InMemoryLeaseManager.renewLease
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.renewLease
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.releaseLease*
+    name: releaseLease
+    nameWithType: InMemoryLeaseManager.releaseLease
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.releaseLease
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.updateLease*
+    name: updateLease
+    nameWithType: InMemoryLeaseManager.updateLease
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.updateLease
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: ILeaseManager
+    nameWithType: ILeaseManager
+    fullName: com.microsoft.azure.eventprocessorhost.ILeaseManager
+    type: Interface
+    syntax:
+      content: public interface ILeaseManager
+  - uid: com.microsoft.azure.eventprocessorhost._event_processor_host
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._event_processor_host.yml
+    name: EventProcessorHost
+    nameWithType: EventProcessorHost
+    fullName: com.microsoft.azure.eventprocessorhost.EventProcessorHost
+    type: Class
+    syntax:
+      content: public class EventProcessorHost
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.getLeaseRenewIntervalInMilliseconds()
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: getLeaseRenewIntervalInMilliseconds()
+    nameWithType: ILeaseManager.getLeaseRenewIntervalInMilliseconds()
+    fullName: int com.microsoft.azure.eventprocessorhost.ILeaseManager.getLeaseRenewIntervalInMilliseconds()
+    type: Method
+    summary: |-
+      <p>リースをスキャンし、それらを更新か頻度 PartitionManager を指定するリース マネージャーの実装を使用できます。 ホストが動作を中断した後に適切なタイミングでリースを再配布するためには、10 秒などの比較的短い間隔お勧めします。 言うまでもなく偶発的な有効期限を防ぐために、リース期間の半分未満でなければなりません。</p>
+      <p></p>
+    syntax:
+      content: public int getLeaseRenewIntervalInMilliseconds()
+      return:
+        type: f75371fa
+        description: <p>スリープ スキャン間隔をミリ秒単位で指定します。 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.getLeaseDurationInMilliseconds()
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: getLeaseDurationInMilliseconds()
+    nameWithType: ILeaseManager.getLeaseDurationInMilliseconds()
+    fullName: int com.microsoft.azure.eventprocessorhost.ILeaseManager.getLeaseDurationInMilliseconds()
+    type: Method
+    summary: |-
+      <p>テストのほとんどの場合に役立ちます。</p>
+      <p></p>
+    syntax:
+      content: public int getLeaseDurationInMilliseconds()
+      return:
+        type: f75371fa
+        description: <p>更新されないと、有効期限が切れる前に、リースの期間です。 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.leaseStoreExists()
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: leaseStoreExists()
+    nameWithType: ILeaseManager.leaseStoreExists()
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.leaseStoreExists()
+    type: Method
+    summary: |-
+      <p>リース ストアが存在しますか。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> leaseStoreExists()
+      return:
+        type: ec0e250a
+        description: <p>true の場合は、false 以外の場合 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.createLeaseStoreIfNotExists()
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: createLeaseStoreIfNotExists()
+    nameWithType: ILeaseManager.createLeaseStoreIfNotExists()
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.createLeaseStoreIfNotExists()
+    type: Method
+    summary: |-
+      <p>リースのストアを作成することがない場合、何も存在する場合は。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> createLeaseStoreIfNotExists()
+      return:
+        type: ec0e250a
+        description: <p>ストアが既にリース場合は true が存在するか、正常に作成されました、false 以外の場合 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.deleteLeaseStore()
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: deleteLeaseStore()
+    nameWithType: ILeaseManager.deleteLeaseStore()
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.deleteLeaseStore()
+    type: Method
+    summary: |-
+      <p>によって使用される not <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>が便利な関数は、テストに必要です。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> deleteLeaseStore()
+      return:
+        type: ec0e250a
+        description: <p>リース ストアは、その以外の場合は、正常に削除された場合は true。 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._lease
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._lease.yml
+    name: Lease
+    nameWithType: Lease
+    fullName: com.microsoft.azure.eventprocessorhost.Lease
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>クラスがパブリックで上級ユーザーを実装できるように、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_lease_manager\" data-throw-if-not-resolved=\"false\">ILeaseManager</xref>です。 実装している場合を除き、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_lease_manager\" data-throw-if-not-resolved=\"false\">ILeaseManager</xref>このクラスのオブジェクトに対処する必要はありませんか、クラスを直接派生します。 </p>\n\n<p>実装する場合、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_lease_manager\" data-throw-if-not-resolved=\"false\">ILeaseManager</xref>詳細持ち運びし、isExpired をオーバーライドするには、このクラスから派生する必要があります。 データ フィールドが残されていますプライベートの代わりに、完全なセットがあるために、保護の getter および setter (partitionId は不変) を除くを同等のアクセスを提供します。 AzureBlobLease を実装する場合などがなかった、get アクセス操作子以上のアクセス権の必要性と set アクセス操作子を提供します。 </p>\n<p>なお、<xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>オブジェクトには、パーティション リースに関する情報が含まれているのみです。 取得/更新/解放する機能、リースがすべてで、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_lease_manager\" data-throw-if-not-resolved=\"false\">ILeaseManager</xref>です。 </p>"
+    syntax:
+      content: public class Lease
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.getLease(String)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: getLease(String partitionId)
+    nameWithType: ILeaseManager.getLease(String partitionId)
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.ILeaseManager.getLease(String partitionId)
+    type: Method
+    summary: |-
+      <p>指定されたパーティションのリース情報を返します。 指定したパーティションのストアにリースが作成されていない場合は null を返すことができます。</p>
+      <p></p>
+    syntax:
+      content: public Future<Lease> getLease(String partitionId)
+      parameters:
+        - id: partitionId
+          type: '26831127'
+          description: <p>リースを取得するパーティションの id </p>
+      return:
+        type: 9b3030f6com.microsoft.azure.eventprocessorhost._leasea08ddfce
+        description: <p>パーティション、または null の情報をリース </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.getAllLeases()
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: getAllLeases()
+    nameWithType: ILeaseManager.getAllLeases()
+    fullName: Iterable<Future<Lease>> com.microsoft.azure.eventprocessorhost.ILeaseManager.getAllLeases()
+    type: Method
+    summary: |-
+      <p>すべてのパーティションのリース情報を返します。</p>
+      <p>一般的な実装を呼び出す<xref uid="com.microsoft.azure.eventprocessorhost._i_lease_manager.getLease(String)" data-throw-if-not-resolved="false">getLease()</xref>すべてのパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public Iterable<Future<Lease>> getAllLeases()
+      return:
+        type: 1f5dfe8ecom.microsoft.azure.eventprocessorhost._leasee7daa122
+        description: <p>リース情報の反復可能な一覧です。 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.getLease(String)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    name: getLease(String partitionId)
+    nameWithType: InMemoryLeaseManager.getLease(String partitionId)
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.getLease(String partitionId)
+    type: Method
+    summary: |-
+      <p>指定されたパーティションのリース情報を返します。 指定したパーティションのストアにリースが作成されていない場合は null を返すことができます。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.createLeaseIfNotExists(String)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: createLeaseIfNotExists(String partitionId)
+    nameWithType: ILeaseManager.createLeaseIfNotExists(String partitionId)
+    fullName: Future<Lease> com.microsoft.azure.eventprocessorhost.ILeaseManager.createLeaseIfNotExists(String partitionId)
+    type: Method
+    summary: |-
+      <p>ストアに、リースの情報を作成、特定のパーティションが存在しない場合。 何も実行しない、ストアに既に存在しています。</p>
+      <p></p>
+    syntax:
+      content: public Future<Lease> createLeaseIfNotExists(String partitionId)
+      parameters:
+        - id: partitionId
+          type: '26831127'
+          description: <p>リース情報を作成するパーティションの id </p>
+      return:
+        type: 9b3030f6com.microsoft.azure.eventprocessorhost._leasea08ddfce
+        description: <p>パーティションの既存または新規に作成されたリース情報 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.deleteLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: deleteLease(Lease lease)
+    nameWithType: ILeaseManager.deleteLease(Lease lease)
+    fullName: Future<Void> com.microsoft.azure.eventprocessorhost.ILeaseManager.deleteLease(Lease lease)
+    type: Method
+    summary: |-
+      <p>ストアから特定のパーティションのリース情報を削除します。 成功として扱われる特定のパーティションに対するストアドのリースがない場合。</p>
+      <p></p>
+    syntax:
+      content: public Future<Void> deleteLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>から適切なパーティションの情報が、以前に取得<xref uid=\"com.microsoft.azure.eventprocessorhost._i_lease_manager.getLease(String)\" data-throw-if-not-resolved=\"false\">getLease()</xref></p>"
+      return:
+        type: 075d0a89
+        description: <p>取り消し </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.acquireLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: acquireLease(Lease lease)
+    nameWithType: ILeaseManager.acquireLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.acquireLease(Lease lease)
+    type: Method
+    summary: |-
+      <p>この目的のパーティションでリースを取得<xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>です。</p>
+      <p>別のホストによって既に所有されているリースを取得することに注意してください。 リース スティー リングは、他のホストが開始されたときにパーティションが再配布方法です。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> acquireLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>から適切なパーティションの情報が、以前に取得<xref uid=\"com.microsoft.azure.eventprocessorhost._i_lease_manager.getLease(String)\" data-throw-if-not-resolved=\"false\">getLease()</xref></p>"
+      return:
+        type: ec0e250a
+        description: <p>リースは、その以外の場合は、正常に取得した場合は true。 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.renewLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: renewLease(Lease lease)
+    nameWithType: ILeaseManager.renewLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.renewLease(Lease lease)
+    type: Method
+    summary: |-
+      <p>このホストで現在保持されているリースを更新します。</p>
+      <p>リースが盗難にあった場合または期限切れにした場合リリースされた、更新して更新することはできません。 呼び出す必要が<xref uid="com.microsoft.azure.eventprocessorhost._i_lease_manager.getLease(String)" data-throw-if-not-resolved="false">getLease()</xref>し<xref uid="com.microsoft.azure.eventprocessorhost._i_lease_manager.acquireLease(Lease)" data-throw-if-not-resolved="false">acquireLease()</xref>もう一度です。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> renewLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>を更新します。 </p>"
+      return:
+        type: ec0e250a
+        description: <p>true の場合、リースは、その以外の場合は、正常に更新されました </p>
+  - uid: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.acquireLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._in_memory_lease_manager.yml
+    name: acquireLease(Lease lease)
+    nameWithType: InMemoryLeaseManager.acquireLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.InMemoryLeaseManager.acquireLease(Lease lease)
+    type: Method
+    summary: |-
+      <p>この目的のパーティションでリースを取得<xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>です。</p>
+      <p>別のホストによって既に所有されているリースを取得することに注意してください。 リース スティー リングは、他のホストが開始されたときにパーティションが再配布方法です。</p>
+      <p></p>
+    syntax: *ref_2
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.releaseLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: releaseLease(Lease lease)
+    nameWithType: ILeaseManager.releaseLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.releaseLease(Lease lease)
+    type: Method
+    summary: |-
+      <p>このホストで現在保持されている、リースを付けます。</p>
+      <p>場合は、リースが盗難にあったされたり有効期限が切れて、解放が必要に応じてでありしようとした場合は失敗します。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> releaseLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._lease\" data-throw-if-not-resolved=\"false\">リース</xref>を中止します。 </p>"
+      return:
+        type: ec0e250a
+        description: <p>リースは、その以外の場合は、正常にリリースされた場合は true。 </p>
+  - uid: com.microsoft.azure.eventprocessorhost._i_lease_manager.updateLease(Lease)
+    parent: com.microsoft.azure.eventprocessorhost._i_lease_manager
+    href: com.microsoft.azure.eventprocessorhost._i_lease_manager.yml
+    name: updateLease(Lease lease)
+    nameWithType: ILeaseManager.updateLease(Lease lease)
+    fullName: Future<Boolean> com.microsoft.azure.eventprocessorhost.ILeaseManager.updateLease(Lease lease)
+    type: Method
+    summary: |-
+      <p>指定されたリースの情報と、ストアを更新します。</p>
+      <p>更新するために現在のリースを保持する必要があります。 リースが盗まれた、または有効期限が切れた、またはリリースを更新できません。 更新プロセス中にリースの有効期限を避けるために、更新プログラムを実行する前にリースを更新する必要があります。</p>
+      <p></p>
+    syntax:
+      content: public Future<Boolean> updateLease(Lease lease)
+      parameters:
+        - id: lease
+          type: com.microsoft.azure.eventprocessorhost._lease
+          description: <p>新しいリース情報を格納します。 </p>
+      return:
+        type: ec0e250a
+        description: <p>更新後に実行された場合は、正常にされていない場合は true </p>

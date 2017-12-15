@@ -1,0 +1,702 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._stateful_service_description
+    id: _stateful_service_description
+    parent: system.fabric
+    children:
+      - system.fabric._stateful_service_description.getFailoverSettings()
+      - system.fabric._stateful_service_description.getMinReplicaSetSize()
+      - system.fabric._stateful_service_description.getTargetReplicaSetSize()
+      - system.fabric._stateful_service_description.hasPersistedState()
+      - system.fabric._stateful_service_description.hasPersistedState(boolean)
+      - system.fabric._stateful_service_description.setMinReplicaSetSize(long)
+      - system.fabric._stateful_service_description.setTargetReplicaSetSize(long)
+      - system.fabric._stateful_service_description.StatefulServiceDescription()
+      - system.fabric._stateful_service_description.toString()
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: StatefulServiceDescription
+    nameWithType: StatefulServiceDescription
+    fullName: system.fabric.StatefulServiceDescription
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 9
+    package: system.fabric
+    syntax:
+      content: public class StatefulServiceDescription extends ServiceDescription
+    inheritance:
+      - java.lang.Object
+      - system.fabric._service_description
+    inheritedMembers:
+      - system.fabric._service_description.getApplicationName()
+      - system.fabric._service_description.getCorrelations()
+      - system.fabric._service_description.getDefaultMoveCost()
+      - system.fabric._service_description.getInitializationData()
+      - system.fabric._service_description.getMetrics()
+      - system.fabric._service_description.getPartitionDescription()
+      - system.fabric._service_description.getPartitionScheme()
+      - system.fabric._service_description.getPartitionSchemeDescription()
+      - system.fabric._service_description.getPlacementConstraints()
+      - system.fabric._service_description.getPolicyList()
+      - system.fabric._service_description.getServiceKind()
+      - system.fabric._service_description.getServiceName()
+      - system.fabric._service_description.getServiceTypeName()
+      - system.fabric._service_description.isDefaultMoveCostSpecified()
+      - 'system.fabric._service_description.ServiceDescription(ServiceDescriptionKind,String,String,String,String,byte [],int,String,ServiceCorrelationDescription [],ServiceLoadMetricDescription [],ServicePlacementPolicyDescription [],boolean,int)'
+      - system.fabric._service_description.ServiceDescription(ServiceDescription)
+      - system.fabric._service_description.ServiceDescription(ServiceDescriptionKind)
+      - system.fabric._service_description.setApplicationName(URI)
+      - 'system.fabric._service_description.setInitializationData(byte [])'
+      - system.fabric._service_description.setPartitionSchemeDescription(String)
+      - system.fabric._service_description.setPlacementConstraints(String)
+      - system.fabric._service_description.setServiceName(URI)
+      - system.fabric._service_description.setServiceTypeName(String)
+  - uid: system.fabric._stateful_service_description.getFailoverSettings()
+    id: getFailoverSettings()
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: getFailoverSettings()
+    nameWithType: StatefulServiceDescription.getFailoverSettings()
+    fullName: StatefulServiceFailoverSettings system.fabric.StatefulServiceDescription.getFailoverSettings()
+    overload: system.fabric._stateful_service_description.getFailoverSettings*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 224
+    package: system.fabric
+    syntax:
+      content: public StatefulServiceFailoverSettings getFailoverSettings()
+      return:
+        type: system.fabric._stateful_service_failover_settings
+  - uid: system.fabric._stateful_service_description.getMinReplicaSetSize()
+    id: getMinReplicaSetSize()
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: getMinReplicaSetSize()
+    nameWithType: StatefulServiceDescription.getMinReplicaSetSize()
+    fullName: long system.fabric.StatefulServiceDescription.getMinReplicaSetSize()
+    overload: system.fabric._stateful_service_description.getMinReplicaSetSize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 144
+    package: system.fabric
+    summary: "<p>このサービスの最小の許可されているレプリカ セットのサイズを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>Service Fabric が、特定のパーティションのレプリカ セットのビューで保持するレプリカの最小数を定義します。 たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref>は 5 (5) 通常 (失敗) なし、そこに設定されて、レプリカ セットのビューに 5 つのレプリカになります。 ただし、この数は障害中に低下します。 <xref uid=\"\" data-throw-if-not-resolved=\"false\">System.fabric.StatefulServiceDescription#minReplicaSetSize</xref>ビューでは、レプリカの最小数を定義たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> 5 と<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> 、3 つは、(を実行している残りの 2 つのレプリカでその結果、) 次の 3 つの同時実行エラーがあってもが、レプリカのビューに 3 つのレプリカ設定 (2 つおよび 1 つ下)。 以降のマジョリティのクォーラムは、このビューで保持されるレプリカの数のマジョリティのクォーラムを使用、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>最小レベルのすべての操作の信頼性は、: 前の例では、ターゲット = 5 と Min = 3, 3 つの同時障害には、2 つのレプリカ (およびそれを 1 つ) の残りおよび 3 のマジョリティ クォーラム (、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) は 2 です。 つまり、プライマリ、引き続き操作をレプリケートすること、および、進捗 (パーティション) を設定する残りのセカンダリ レプリカがレプリカの順序で操作を適用する必要があります。 レプリカの合計数を下回るマジョリティ クォーラムのかどうか、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>以降に書き込みを禁止する、します。 </p>"
+    syntax:
+      content: public long getMinReplicaSetSize()
+      return:
+        type: 0364520f
+        description: <p>最小値には、このサービスのレプリカ セットのサイズが許可されています。 </p>
+  - uid: system.fabric._stateful_service_description.getTargetReplicaSetSize()
+    id: getTargetReplicaSetSize()
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: getTargetReplicaSetSize()
+    nameWithType: StatefulServiceDescription.getTargetReplicaSetSize()
+    fullName: long system.fabric.StatefulServiceDescription.getTargetReplicaSetSize()
+    overload: system.fabric._stateful_service_description.getTargetReplicaSetSize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 95
+    package: system.fabric
+    summary: "<p>レプリカ セットのターゲット サイズを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>システムを作成し、このサービスの各パーティションを保持するレプリカの数。 </p>"
+    syntax:
+      content: public long getTargetReplicaSetSize()
+      return:
+        type: 0364520f
+        description: <p>レプリカのターゲット サイズを設定します。 </p>
+  - uid: system.fabric._stateful_service_description.hasPersistedState()
+    id: hasPersistedState()
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: hasPersistedState()
+    nameWithType: StatefulServiceDescription.hasPersistedState()
+    fullName: boolean system.fabric.StatefulServiceDescription.hasPersistedState()
+    overload: system.fabric._stateful_service_description.hasPersistedState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 199
+    package: system.fabric
+    summary: "<p>このインスタンスの状態が永続化するかどうかを示す値を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>ときに、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>でセカンダリ レプリカが永続的なサービスの操作を受け取り、それを送信前に、データが保持されていることを確認するサービスを待つ必要がありますその受信確認のプライマリにフェールバックします。 非永続的なサービスでは、操作受信を確認できますすぐに受信したときにします。 永続的なサービスのレプリカが失敗した場合、Service Fabric すぐには考慮されませんそのレプリカを損失としてそのレプリカの永続的な状態がまだ存在するため。 レプリカを復旧した場合を再作成できます永続化された状態を使用します。 これに対し、代替レプリカをすぐにビルドを開始してがありますコストと、不要なエラーは一時的な場合は特にです。 </p>"
+    syntax:
+      content: public boolean hasPersistedState()
+      return:
+        type: 4fc6e284
+        description: <p>インスタンスの状態が保持している場合は true。それ以外の場合は false です。 </p>
+  - uid: system.fabric._stateful_service_description.hasPersistedState(boolean)
+    id: hasPersistedState(boolean)
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: hasPersistedState(boolean hasPersistedState)
+    nameWithType: StatefulServiceDescription.hasPersistedState(boolean hasPersistedState)
+    fullName: void system.fabric.StatefulServiceDescription.hasPersistedState(boolean hasPersistedState)
+    overload: system.fabric._stateful_service_description.hasPersistedState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 220
+    package: system.fabric
+    summary: "<p>このインスタンスの状態が永続化するかどうかを示す値を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>ときに、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>でセカンダリ レプリカが永続的なサービスの操作を受け取り、それを送信前に、データが保持されていることを確認するサービスを待つ必要がありますその受信確認のプライマリにフェールバックします。 非永続的なサービスでは、操作受信を確認できますすぐに受信したときにします。 永続的なサービスのレプリカが失敗した場合、Service Fabric すぐには考慮されませんそのレプリカを損失としてそのレプリカの永続的な状態がまだ存在するため。 レプリカを復旧した場合を再作成できます永続化された状態を使用します。 これに対し、代替レプリカをすぐにビルドを開始してがありますコストと、不要なエラーは一時的な場合は特にです。 </p>"
+    syntax:
+      content: public void hasPersistedState(boolean hasPersistedState)
+      parameters:
+        - id: hasPersistedState
+          type: 4fc6e284
+          description: <p>インスタンスの状態が保持している場合は true。それ以外の場合は false です。 </p>
+  - uid: system.fabric._stateful_service_description.setMinReplicaSetSize(long)
+    id: setMinReplicaSetSize(long)
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: setMinReplicaSetSize(long minReplicaSetSize)
+    nameWithType: StatefulServiceDescription.setMinReplicaSetSize(long minReplicaSetSize)
+    fullName: void system.fabric.StatefulServiceDescription.setMinReplicaSetSize(long minReplicaSetSize)
+    overload: system.fabric._stateful_service_description.setMinReplicaSetSize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 179
+    package: system.fabric
+    summary: "<p>このサービスに許可されている最小のレプリカ セットのサイズを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>Service Fabric が、特定のパーティションのレプリカ セットのビューで保持するレプリカの最小数を定義します。 たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref>は 5 (5) 通常 (失敗) なし、そこに設定されて、レプリカ セットのビューに 5 つのレプリカになります。 ただし、この数は障害中に低下します。 <xref uid=\"\" data-throw-if-not-resolved=\"false\">System.fabric.StatefulServiceDescription#minReplicaSetSize</xref>ビューでは、レプリカの最小数を定義たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> 5 と<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> 、3 つは、(を実行している残りの 2 つのレプリカでその結果、) 次の 3 つの同時実行エラーがあってもが、レプリカのビューに 3 つのレプリカ設定 (2 つおよび 1 つ下)。 以降のマジョリティのクォーラムは、このビューで保持されるレプリカの数のマジョリティのクォーラムを使用、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>最小レベルのすべての操作の信頼性は、: 前の例では、ターゲット = 5 と Min = 3, 3 つの同時障害には、2 つのレプリカ (およびそれを 1 つ) の残りおよび 3 のマジョリティ クォーラム (、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) は 2 です。 つまり、プライマリ、引き続き操作をレプリケートすること、および、進捗 (パーティション) を設定する残りのセカンダリ レプリカがレプリカの順序で操作を適用する必要があります。 レプリカの合計数を下回るマジョリティ クォーラムのかどうか、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>以降に書き込みを禁止する、します。 </p>"
+    syntax:
+      content: public void setMinReplicaSetSize(long minReplicaSetSize)
+      parameters:
+        - id: minReplicaSetSize
+          type: 0364520f
+          description: <p>最小値には、このサービスのレプリカ セットのサイズが許可されています。 </p>
+  - uid: system.fabric._stateful_service_description.setTargetReplicaSetSize(long)
+    id: setTargetReplicaSetSize(long)
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: setTargetReplicaSetSize(long targetReplicaSetSize)
+    nameWithType: StatefulServiceDescription.setTargetReplicaSetSize(long targetReplicaSetSize)
+    fullName: void system.fabric.StatefulServiceDescription.setTargetReplicaSetSize(long targetReplicaSetSize)
+    overload: system.fabric._stateful_service_description.setTargetReplicaSetSize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 109
+    package: system.fabric
+    summary: "<p>レプリカ セットのターゲット サイズを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>システムを作成し、このサービスの各パーティションを保持するレプリカの数。 </p>"
+    syntax:
+      content: public void setTargetReplicaSetSize(long targetReplicaSetSize)
+      parameters:
+        - id: targetReplicaSetSize
+          type: 0364520f
+          description: <p>レプリカのターゲット サイズを設定します。 </p>
+  - uid: system.fabric._stateful_service_description.StatefulServiceDescription()
+    id: StatefulServiceDescription()
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: StatefulServiceDescription()
+    nameWithType: StatefulServiceDescription.StatefulServiceDescription()
+    fullName: system.fabric.StatefulServiceDescription.StatefulServiceDescription()
+    overload: system.fabric._stateful_service_description.StatefulServiceDescription*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 80
+    package: system.fabric
+    syntax:
+      content: public StatefulServiceDescription()
+  - uid: system.fabric._stateful_service_description.toString()
+    id: toString()
+    parent: system.fabric._stateful_service_description
+    href: system.fabric._stateful_service_description.yml
+    langs:
+      - java
+    name: toString()
+    nameWithType: StatefulServiceDescription.toString()
+    fullName: String system.fabric.StatefulServiceDescription.toString()
+    overload: system.fabric._stateful_service_description.toString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
+      startLine: 286
+    package: system.fabric
+    syntax:
+      content: public String toString()
+      return:
+        type: '26831127'
+references:
+  - uid: system.fabric._stateful_service_description.StatefulServiceDescription*
+    name: StatefulServiceDescription
+    nameWithType: StatefulServiceDescription.StatefulServiceDescription
+    fullName: system.fabric.StatefulServiceDescription.StatefulServiceDescription
+    package: system.fabric
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric._stateful_service_description.getTargetReplicaSetSize*
+    name: getTargetReplicaSetSize
+    nameWithType: StatefulServiceDescription.getTargetReplicaSetSize
+    fullName: long system.fabric.StatefulServiceDescription.getTargetReplicaSetSize
+    package: system.fabric
+  - uid: system.fabric._stateful_service_description.setTargetReplicaSetSize*
+    name: setTargetReplicaSetSize
+    nameWithType: StatefulServiceDescription.setTargetReplicaSetSize
+    fullName: void system.fabric.StatefulServiceDescription.setTargetReplicaSetSize
+    package: system.fabric
+  - uid: system.fabric._stateful_service_description.getMinReplicaSetSize*
+    name: getMinReplicaSetSize
+    nameWithType: StatefulServiceDescription.getMinReplicaSetSize
+    fullName: long system.fabric.StatefulServiceDescription.getMinReplicaSetSize
+    package: system.fabric
+  - uid: system.fabric._stateful_service_description.setMinReplicaSetSize*
+    name: setMinReplicaSetSize
+    nameWithType: StatefulServiceDescription.setMinReplicaSetSize
+    fullName: void system.fabric.StatefulServiceDescription.setMinReplicaSetSize
+    package: system.fabric
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: system.fabric._stateful_service_description.hasPersistedState*
+    name: hasPersistedState
+    nameWithType: StatefulServiceDescription.hasPersistedState
+    fullName: boolean system.fabric.StatefulServiceDescription.hasPersistedState
+    package: system.fabric
+  - uid: system.fabric._stateful_service_description.getFailoverSettings*
+    name: getFailoverSettings
+    nameWithType: StatefulServiceDescription.getFailoverSettings
+    fullName: StatefulServiceFailoverSettings system.fabric.StatefulServiceDescription.getFailoverSettings
+    package: system.fabric
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: system.fabric._stateful_service_description.toString*
+    name: toString
+    nameWithType: StatefulServiceDescription.toString
+    fullName: String system.fabric.StatefulServiceDescription.toString
+    package: system.fabric
+  - uid: system.fabric._service_description.getApplicationName()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getApplicationName()
+    nameWithType: ServiceDescription.getApplicationName()
+    fullName: URI system.fabric.ServiceDescription.getApplicationName()
+    type: Method
+    summary: "<p>取得またはアプリケーションの名前を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>注釈: このアプリケーションの一意の名前は、グループのサービスを一緒の管理に使用します。 スキームである必要があります\"fabric://\"アプリケーション名は、サービス名のプレフィックスをする必要があります。 </p>"
+    syntax:
+      content: public URI getApplicationName()
+      return:
+        type: '62304784'
+        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>. </p>
+  - uid: system.fabric._service_description.getCorrelations()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getCorrelations()
+    nameWithType: ServiceDescription.getCorrelations()
+    fullName: List<ServiceCorrelationDescription> system.fabric.ServiceDescription.getCorrelations()
+    type: Method
+    summary: |-
+      <p>他のサービスとサービスの相関関係を記述した一覧です。</p>
+      <p></p>
+    syntax:
+      content: public List<ServiceCorrelationDescription> getCorrelations()
+      return:
+        type: 5618da2dsystem.fabric._service_correlation_descriptiona08ddfce
+        description: <p>一覧を返します。 </p>
+  - uid: system.fabric._service_description.getDefaultMoveCost()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getDefaultMoveCost()
+    nameWithType: ServiceDescription.getDefaultMoveCost()
+    fullName: MoveCost system.fabric.ServiceDescription.getDefaultMoveCost()
+    type: Method
+    summary: |-
+      <p>取得または設定のサービスの DefaultMoveCost、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref></p>
+      <p></p>
+    syntax:
+      content: public MoveCost getDefaultMoveCost()
+      return:
+        type: system.fabric._move_cost
+        description: <p>値を既定値<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>サービスは、サービスの場合に設定する必要があります、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。 </p>
+  - uid: system.fabric._service_description.getInitializationData()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getInitializationData()
+    nameWithType: ServiceDescription.getInitializationData()
+    fullName: 'byte [] system.fabric.ServiceDescription.getInitializationData()'
+    type: Method
+    summary: |-
+      <p>取得または作成するときは、渡される初期化データをサービス インスタンスまたはレプリカに設定します。</p>
+      <p></p>
+    syntax:
+      content: 'public byte [] getInitializationData()'
+      return:
+        type: ccd9418d
+        description: <p>バイトの配列を返します。 </p>
+  - uid: system.fabric._service_description.getMetrics()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getMetrics()
+    nameWithType: ServiceDescription.getMetrics()
+    fullName: List<ServiceLoadMetricDescription> system.fabric.ServiceDescription.getMetrics()
+    type: Method
+    summary: |-
+      <p>取得またはこのサービスの ServiceLoadMetricDescriptionCollection を設定します。 LoadMetricDescriptionCollection が含まれています、 <xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>s このサービスに関連します。</p>
+      <p></p>
+    syntax:
+      content: public List<ServiceLoadMetricDescription> getMetrics()
+      return:
+        type: 5618da2dsystem.fabric._service_load_metric_descriptiona08ddfce
+        description: <p>コレクションを返します<xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>です。 </p>
+  - uid: system.fabric._service_description.getPartitionDescription()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getPartitionDescription()
+    nameWithType: ServiceDescription.getPartitionDescription()
+    fullName: String system.fabric.ServiceDescription.getPartitionDescription()
+    type: Method
+    syntax:
+      content: public String getPartitionDescription()
+      return:
+        type: '26831127'
+  - uid: system.fabric._service_description.getPartitionScheme()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getPartitionScheme()
+    nameWithType: ServiceDescription.getPartitionScheme()
+    fullName: PartitionScheme system.fabric.ServiceDescription.getPartitionScheme()
+    type: Method
+    syntax:
+      content: public PartitionScheme getPartitionScheme()
+      return:
+        type: system.fabric.interop._partition_scheme
+  - uid: system.fabric._service_description.getPartitionSchemeDescription()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getPartitionSchemeDescription()
+    nameWithType: ServiceDescription.getPartitionSchemeDescription()
+    fullName: String system.fabric.ServiceDescription.getPartitionSchemeDescription()
+    type: Method
+    summary: |-
+      <p>サービスに使用するパーティション構成をについて説明します。</p>
+      <p></p>
+    syntax:
+      content: public String getPartitionSchemeDescription()
+      return:
+        type: '26831127'
+        description: <p>文字列を返します。 </p>
+  - uid: system.fabric._service_description.getPlacementConstraints()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getPlacementConstraints()
+    nameWithType: ServiceDescription.getPlacementConstraints()
+    fullName: String system.fabric.ServiceDescription.getPlacementConstraints()
+    type: Method
+    summary: "<p>取得またはこのサービスの配置に関する制約を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>配置制約は、サービスを特定のノード プロパティ (およびそれらのプロパティの値) は、配置を制御するために選択できるようにするステートメントをブール値。 ノードのプロパティは、通常、ノードのハードウェア機能に関連して、ノードに関するいくつか追加のメタデータを定義するキー値のペアです。 ノードのプロパティとして公開される可能性がハードウェアの特性には、\"HasDisk\"、\"%memorysize\"、\"StorageSize\"、\"NumberOfCores\"などがあります。サービスを展開するときに、管理者は、サービスに配慮してプロパティに加え、これらのプロパティの値の要件を定義する簡単なブール演算子を定義できます。 例: (HasDisk = = true &amp; &amp; %memorysize&gt;= 2048)。 実行時に Service Fabric 負荷分散のみを配置するサービスをサービスによる要求に一致する値を持つプロパティを持つノード。 </p>"
+    syntax:
+      content: public String getPlacementConstraints()
+      return:
+        type: '26831127'
+        description: <p>配置制約。 </p>
+  - uid: system.fabric._service_description.getPolicyList()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getPolicyList()
+    nameWithType: ServiceDescription.getPolicyList()
+    fullName: List<ServicePlacementPolicyDescription> system.fabric.ServiceDescription.getPolicyList()
+    type: Method
+    summary: |-
+      <p>属する ServicePlacementPolicyDescriptions の一覧を取得、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public List<ServicePlacementPolicyDescription> getPolicyList()
+      return:
+        type: 5618da2dsystem.fabric._service_placement_policy_descriptiona08ddfce
+        description: <p>属する ServicePlacementPolicyDescriptions の一覧、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。 </p>
+  - uid: system.fabric._service_description.getServiceKind()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getServiceKind()
+    nameWithType: ServiceDescription.getServiceKind()
+    fullName: ServiceDescriptionKind system.fabric.ServiceDescription.getServiceKind()
+    type: Method
+    summary: |-
+      <p>サービスの種類 (つまり、ステートフル、ステートレスおよびなど) について説明します</p>
+      <p></p>
+    syntax:
+      content: public ServiceDescriptionKind getServiceKind()
+      return:
+        type: system.fabric._service_description_kind
+        description: <p>返します<xref uid="system.fabric._service_description_kind" data-throw-if-not-resolved="false">system.fabric.ServiceDescriptionKind</xref>です。 </p>
+  - uid: system.fabric._service_description.getServiceName()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getServiceName()
+    nameWithType: ServiceDescription.getServiceName()
+    fullName: URI system.fabric.ServiceDescription.getServiceName()
+    type: Method
+    summary: |-
+      <p>サービスの URI 名です。</p>
+      <p></p>
+    syntax:
+      content: public URI getServiceName()
+      return:
+        type: '62304784'
+        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>です。 </p>
+  - uid: system.fabric._service_description.getServiceTypeName()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: getServiceTypeName()
+    nameWithType: ServiceDescription.getServiceTypeName()
+    fullName: String system.fabric.ServiceDescription.getServiceTypeName()
+    type: Method
+    summary: |-
+      <p>サービスの種類の名前。</p>
+      <p></p>
+    syntax:
+      content: public String getServiceTypeName()
+      return:
+        type: '26831127'
+        description: <p>文字列を返します。 </p>
+  - uid: system.fabric._service_description.isDefaultMoveCostSpecified()
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: isDefaultMoveCostSpecified()
+    nameWithType: ServiceDescription.isDefaultMoveCostSpecified()
+    fullName: boolean system.fabric.ServiceDescription.isDefaultMoveCostSpecified()
+    type: Method
+    summary: |-
+      <p>かどうか、既定値を取得<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>が指定されて、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public boolean isDefaultMoveCostSpecified()
+      return:
+        type: 4fc6e284
+        description: <p>示すフラグかどうか、既定値<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>が指定されて、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。 </p>
+  - uid: 'system.fabric._service_description.ServiceDescription(ServiceDescriptionKind,String,String,String,String,byte [],int,String,ServiceCorrelationDescription [],ServiceLoadMetricDescription [],ServicePlacementPolicyDescription [],boolean,int)'
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: 'ServiceDescription(ServiceDescriptionKind serviceKind, String placementConstraints, String serviceTypeName, String applicationName, String serviceName, byte[] initializationData, int partitionScheme, String partitionSchemeDescription, ServiceCorrelationDescription[] correlations, ServiceLoadMetricDescription[] metrics, ServicePlacementPolicyDescription[] policyList, boolean isDefaultMoveCostSpecified, int defaultMoveCost)'
+    nameWithType: 'ServiceDescription.ServiceDescription(ServiceDescriptionKind serviceKind, String placementConstraints, String serviceTypeName, String applicationName, String serviceName, byte[] initializationData, int partitionScheme, String partitionSchemeDescription, ServiceCorrelationDescription[] correlations, ServiceLoadMetricDescription[] metrics, ServicePlacementPolicyDescription[] policyList, boolean isDefaultMoveCostSpecified, int defaultMoveCost)'
+    fullName: 'system.fabric.ServiceDescription.ServiceDescription(ServiceDescriptionKind serviceKind, String placementConstraints, String serviceTypeName, String applicationName, String serviceName, byte[] initializationData, int partitionScheme, String partitionSchemeDescription, ServiceCorrelationDescription[] correlations, ServiceLoadMetricDescription[] metrics, ServicePlacementPolicyDescription[] policyList, boolean isDefaultMoveCostSpecified, int defaultMoveCost)'
+    type: Constructor
+    syntax:
+      content: 'protected ServiceDescription(ServiceDescriptionKind serviceKind, String placementConstraints, String serviceTypeName, String applicationName, String serviceName, byte[] initializationData, int partitionScheme, String partitionSchemeDescription, ServiceCorrelationDescription[] correlations, ServiceLoadMetricDescription[] metrics, ServicePlacementPolicyDescription[] policyList, boolean isDefaultMoveCostSpecified, int defaultMoveCost)'
+      parameters:
+        - id: serviceKind
+          type: system.fabric._service_description_kind
+        - id: placementConstraints
+          type: '26831127'
+        - id: serviceTypeName
+          type: '26831127'
+        - id: applicationName
+          type: '26831127'
+        - id: serviceName
+          type: '26831127'
+        - id: initializationData
+          type: ccd9418d
+        - id: partitionScheme
+          type: f75371fa
+        - id: partitionSchemeDescription
+          type: '26831127'
+        - id: correlations
+          type: system.fabric._service_correlation_descriptione5b41c5f
+        - id: metrics
+          type: system.fabric._service_load_metric_descriptione5b41c5f
+        - id: policyList
+          type: system.fabric._service_placement_policy_descriptione5b41c5f
+        - id: isDefaultMoveCostSpecified
+          type: 4fc6e284
+        - id: defaultMoveCost
+          type: f75371fa
+  - uid: system.fabric._service_description.ServiceDescription(ServiceDescription)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: ServiceDescription(ServiceDescription other)
+    nameWithType: ServiceDescription.ServiceDescription(ServiceDescription other)
+    fullName: system.fabric.ServiceDescription.ServiceDescription(ServiceDescription other)
+    type: Constructor
+    syntax:
+      content: protected ServiceDescription(ServiceDescription other)
+      parameters:
+        - id: other
+          type: system.fabric._service_description
+  - uid: system.fabric._service_description.ServiceDescription(ServiceDescriptionKind)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: ServiceDescription(ServiceDescriptionKind kind)
+    nameWithType: ServiceDescription.ServiceDescription(ServiceDescriptionKind kind)
+    fullName: system.fabric.ServiceDescription.ServiceDescription(ServiceDescriptionKind kind)
+    type: Constructor
+    syntax:
+      content: protected ServiceDescription(ServiceDescriptionKind kind)
+      parameters:
+        - id: kind
+          type: system.fabric._service_description_kind
+  - uid: system.fabric._service_description.setApplicationName(URI)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: setApplicationName(URI applicationName)
+    nameWithType: ServiceDescription.setApplicationName(URI applicationName)
+    fullName: void system.fabric.ServiceDescription.setApplicationName(URI applicationName)
+    type: Method
+    syntax:
+      content: public void setApplicationName(URI applicationName)
+      parameters:
+        - id: applicationName
+          type: '62304784'
+  - uid: 'system.fabric._service_description.setInitializationData(byte [])'
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: 'setInitializationData(byte[] initializationData)'
+    nameWithType: 'ServiceDescription.setInitializationData(byte[] initializationData)'
+    fullName: 'void system.fabric.ServiceDescription.setInitializationData(byte[] initializationData)'
+    type: Method
+    syntax:
+      content: 'public void setInitializationData(byte[] initializationData)'
+      parameters:
+        - id: initializationData
+          type: ccd9418d
+  - uid: system.fabric._service_description.setPartitionSchemeDescription(String)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: setPartitionSchemeDescription(String partitionSchemeDescription)
+    nameWithType: ServiceDescription.setPartitionSchemeDescription(String partitionSchemeDescription)
+    fullName: void system.fabric.ServiceDescription.setPartitionSchemeDescription(String partitionSchemeDescription)
+    type: Method
+    syntax:
+      content: public void setPartitionSchemeDescription(String partitionSchemeDescription)
+      parameters:
+        - id: partitionSchemeDescription
+          type: '26831127'
+  - uid: system.fabric._service_description.setPlacementConstraints(String)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: setPlacementConstraints(String placementConstraints)
+    nameWithType: ServiceDescription.setPlacementConstraints(String placementConstraints)
+    fullName: void system.fabric.ServiceDescription.setPlacementConstraints(String placementConstraints)
+    type: Method
+    syntax:
+      content: public void setPlacementConstraints(String placementConstraints)
+      parameters:
+        - id: placementConstraints
+          type: '26831127'
+  - uid: system.fabric._service_description.setServiceName(URI)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: setServiceName(URI serviceName)
+    nameWithType: ServiceDescription.setServiceName(URI serviceName)
+    fullName: void system.fabric.ServiceDescription.setServiceName(URI serviceName)
+    type: Method
+    syntax:
+      content: public void setServiceName(URI serviceName)
+      parameters:
+        - id: serviceName
+          type: '62304784'
+  - uid: system.fabric._service_description.setServiceTypeName(String)
+    parent: system.fabric._service_description
+    href: system.fabric._service_description.yml
+    name: setServiceTypeName(String serviceTypeName)
+    nameWithType: ServiceDescription.setServiceTypeName(String serviceTypeName)
+    fullName: void system.fabric.ServiceDescription.setServiceTypeName(String serviceTypeName)
+    type: Method
+    syntax:
+      content: public void setServiceTypeName(String serviceTypeName)
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+  - uid: system.fabric._service_description
+    parent: system.fabric
+    href: system.fabric._service_description.yml
+    name: ServiceDescription
+    nameWithType: ServiceDescription
+    fullName: system.fabric.ServiceDescription
+    type: Class
+    summary: <p>A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。 </p>
+    syntax:
+      content: public class ServiceDescription
+  - uid: system.fabric._stateful_service_failover_settings
+    parent: system.fabric
+    href: system.fabric._stateful_service_failover_settings.yml
+    name: StatefulServiceFailoverSettings
+    nameWithType: StatefulServiceFailoverSettings
+    fullName: system.fabric.StatefulServiceFailoverSettings
+    type: Class
+    syntax:
+      content: public class StatefulServiceFailoverSettings
+  - uid: system.fabric._service_correlation_description
+    parent: system.fabric
+    href: system.fabric._service_correlation_description.yml
+    name: ServiceCorrelationDescription
+    nameWithType: ServiceCorrelationDescription
+    fullName: system.fabric.ServiceCorrelationDescription
+    type: Class
+    summary: <p>サービス間の特定の相関関係を作成します。 </p>
+    syntax:
+      content: public class ServiceCorrelationDescription
+  - uid: system.fabric._service_load_metric_description
+    parent: system.fabric
+    href: system.fabric._service_load_metric_description.yml
+    name: ServiceLoadMetricDescription
+    nameWithType: ServiceLoadMetricDescription
+    fullName: system.fabric.ServiceLoadMetricDescription
+    type: Class
+    summary: "<p>\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。 高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。 </p>"
+    syntax:
+      content: public class ServiceLoadMetricDescription
+  - uid: system.fabric._service_placement_policy_description
+    parent: system.fabric
+    href: system.fabric._service_placement_policy_description.yml
+    name: ServicePlacementPolicyDescription
+    nameWithType: ServicePlacementPolicyDescription
+    fullName: system.fabric.ServicePlacementPolicyDescription
+    type: Class
+    syntax:
+      content: public class ServicePlacementPolicyDescription
+  - uid: system.fabric._fabric_replicator
+    parent: system.fabric
+    href: system.fabric._fabric_replicator.yml
+    name: FabricReplicator
+    nameWithType: FabricReplicator
+    fullName: system.fabric.FabricReplicator
+    type: Class
+    summary: "<p>高可用性と信頼性のレプリケート状態です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。 インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。 </p>"
+    syntax:
+      content: public class FabricReplicator implements Replicator
+  - uid: system.fabric._pin_collection
+    parent: system.fabric
+    href: system.fabric._pin_collection.yml
+    name: PinCollection
+    nameWithType: PinCollection
+    fullName: system.fabric.PinCollection
+    type: Class
+    syntax:
+      content: public class PinCollection

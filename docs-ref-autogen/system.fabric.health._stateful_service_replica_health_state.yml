@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._stateful_service_replica_health_state
+    id: _stateful_service_replica_health_state
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._stateful_service_replica_health_state.getReplicaId()
+    href: system.fabric.health._stateful_service_replica_health_state.yml
+    langs:
+      - java
+    name: StatefulServiceReplicaHealthState
+    nameWithType: StatefulServiceReplicaHealthState
+    fullName: system.fabric.health.StatefulServiceReplicaHealthState
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/StatefulServiceReplicaHealthState.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/StatefulServiceReplicaHealthState.java
+      startLine: 10
+    package: system.fabric.health
+    summary: <p>集計された正常性状態およびレプリカを含むステートフル サービス レプリカの正常性の状態を表します。 </p>
+    syntax:
+      content: public class StatefulServiceReplicaHealthState extends ReplicaHealthState
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._entity_health_state
+      - system.fabric.health._replica_health_state
+    inheritedMembers:
+      - system.fabric.health._entity_health_state.EntityHealthState(HealthState)
+      - system.fabric.health._entity_health_state.getAggregatedHealthState()
+      - system.fabric.health._replica_health_state.getId()
+      - system.fabric.health._replica_health_state.getKind()
+      - system.fabric.health._replica_health_state.getPartitionId()
+      - 'system.fabric.health._replica_health_state.ReplicaHealthState(ServiceKind,HealthState,UUID,long)'
+  - uid: system.fabric.health._stateful_service_replica_health_state.getReplicaId()
+    id: getReplicaId()
+    parent: system.fabric.health._stateful_service_replica_health_state
+    href: system.fabric.health._stateful_service_replica_health_state.yml
+    langs:
+      - java
+    name: getReplicaId()
+    nameWithType: StatefulServiceReplicaHealthState.getReplicaId()
+    fullName: long system.fabric.health.StatefulServiceReplicaHealthState.getReplicaId()
+    overload: system.fabric.health._stateful_service_replica_health_state.getReplicaId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/StatefulServiceReplicaHealthState.java
+      startLine: 21
+    package: system.fabric.health
+    summary: |-
+      <p>レプリカ ID を取得します</p>
+      <p></p>
+    syntax:
+      content: public long getReplicaId()
+      return:
+        type: 0364520f
+        description: <p>replicaId です。 </p>
+references:
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric.health._stateful_service_replica_health_state.getReplicaId*
+    name: getReplicaId
+    nameWithType: StatefulServiceReplicaHealthState.getReplicaId
+    fullName: long system.fabric.health.StatefulServiceReplicaHealthState.getReplicaId
+    package: system.fabric.health
+  - uid: system.fabric.health._entity_health_state.EntityHealthState(HealthState)
+    parent: system.fabric.health._entity_health_state
+    href: system.fabric.health._entity_health_state.yml
+    name: EntityHealthState(HealthState aggregatedHealthState)
+    nameWithType: EntityHealthState.EntityHealthState(HealthState aggregatedHealthState)
+    fullName: system.fabric.health.EntityHealthState.EntityHealthState(HealthState aggregatedHealthState)
+    type: Constructor
+    syntax:
+      content: protected EntityHealthState(HealthState aggregatedHealthState)
+      parameters:
+        - id: aggregatedHealthState
+          type: system.fabric.health._health_state
+  - uid: system.fabric.health._entity_health_state.getAggregatedHealthState()
+    parent: system.fabric.health._entity_health_state
+    href: system.fabric.health._entity_health_state.yml
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealthState.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealthState.getAggregatedHealthState()
+    type: Method
+    summary: |-
+      <p>報告されたすべてのイベントと、目的のポリシーに基づいて Health Manager によって計算された集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: <p>ヘルス マネージャーによって計算された集計の正常性状態。 </p>
+  - uid: system.fabric.health._replica_health_state.getId()
+    parent: system.fabric.health._replica_health_state
+    href: system.fabric.health._replica_health_state.yml
+    name: getId()
+    nameWithType: ReplicaHealthState.getId()
+    fullName: long system.fabric.health.ReplicaHealthState.getId()
+    type: Method
+    summary: |-
+      <p>ステートフルなレプリカ ID またはステートレス サービス インスタンス ID を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getId()
+      return:
+        type: 0364520f
+        description: <p>レプリカまたはインスタンスの id。 </p>
+  - uid: system.fabric.health._replica_health_state.getKind()
+    parent: system.fabric.health._replica_health_state
+    href: system.fabric.health._replica_health_state.yml
+    name: getKind()
+    nameWithType: ReplicaHealthState.getKind()
+    fullName: ServiceKind system.fabric.health.ReplicaHealthState.getKind()
+    type: Method
+    summary: |-
+      <p>サービス レプリカの種類を取得します。</p>
+      <p></p>
+    syntax:
+      content: public ServiceKind getKind()
+      return:
+        type: system.fabric.query._service_kind
+        description: <p>サービス レプリカの種類。 </p>
+  - uid: system.fabric.health._replica_health_state.getPartitionId()
+    parent: system.fabric.health._replica_health_state
+    href: system.fabric.health._replica_health_state.yml
+    name: getPartitionId()
+    nameWithType: ReplicaHealthState.getPartitionId()
+    fullName: UUID system.fabric.health.ReplicaHealthState.getPartitionId()
+    type: Method
+    summary: |-
+      <p>パーティション ID を取得します</p>
+      <p></p>
+    syntax:
+      content: public UUID getPartitionId()
+      return:
+        type: add9545a
+        description: <p>パーティションの id。 </p>
+  - uid: 'system.fabric.health._replica_health_state.ReplicaHealthState(ServiceKind,HealthState,UUID,long)'
+    parent: system.fabric.health._replica_health_state
+    href: system.fabric.health._replica_health_state.yml
+    name: 'ReplicaHealthState(ServiceKind kind, HealthState aggregatedHealthState, UUID partitionId, long id)'
+    nameWithType: 'ReplicaHealthState.ReplicaHealthState(ServiceKind kind, HealthState aggregatedHealthState, UUID partitionId, long id)'
+    fullName: 'system.fabric.health.ReplicaHealthState.ReplicaHealthState(ServiceKind kind, HealthState aggregatedHealthState, UUID partitionId, long id)'
+    type: Constructor
+    syntax:
+      content: 'protected ReplicaHealthState(ServiceKind kind, HealthState aggregatedHealthState, UUID partitionId, long id)'
+      parameters:
+        - id: kind
+          type: system.fabric.query._service_kind
+        - id: aggregatedHealthState
+          type: system.fabric.health._health_state
+        - id: partitionId
+          type: add9545a
+        - id: id
+          type: 0364520f
+  - uid: system.fabric.health._replica_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_state.yml
+    name: ReplicaHealthState
+    nameWithType: ReplicaHealthState
+    fullName: system.fabric.health.ReplicaHealthState
+    type: Class
+    summary: <p>ステートフル サービス レプリカまたはステートレス サービス インスタンスのヘルス状態の基本クラスを表します。 </p>
+    syntax:
+      content: public class ReplicaHealthState extends EntityHealthState

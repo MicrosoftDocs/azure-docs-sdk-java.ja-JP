@@ -1,0 +1,123 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task
+    id: _file_upload_task
+    parent: com.microsoft.azure.sdk.iot.device.fileupload
+    children:
+      - com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.run()
+    href: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.yml
+    langs:
+      - java
+    name: FileUploadTask
+    nameWithType: FileUploadTask
+    fullName: com.microsoft.azure.sdk.iot.device.fileupload.FileUploadTask
+    type: Class
+    source:
+      remote: &ref_0
+        path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/fileupload/FileUploadTask.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/fileupload/FileUploadTask.java
+      startLine: 48
+    package: com.microsoft.azure.sdk.iot.device.fileupload
+    summary: "<p>Iot Hub を使用して、Azure ストレージにファイルの非同期アップロードするための手段を提供します。</p>\n<p>ファイルのアップロード プロセスは、次の図の 3 つの手順で構成されます。 +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+|デバイス | |Iot Hub | |記憶域 | |サービス |+-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+ <table rows=\"3\" cols=\"3\"><row><entry thead=\"yes\"><p></p></entry><entry thead=\"yes\"><p></p></entry><entry thead=\"yes\"><p></p></entry></row><row><entry thead=\"no\"><p>REQUEST_BLOB </p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p></p></entry></row><row><entry thead=\"no\"><p>+<mdash></mdash>要求の blob<mdash></mdash>&gt;</p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p></p></entry></row></table>\r\n|&lt;<ndash></ndash>blob の SAS トークン<ndash> </ndash> + ||||||UPLOAD_FILE | | |+-<mdash> </mdash>ファイルを指定された blob にアップロード<mdash> </mdash> &gt;| | +&lt; --- <mdash> </mdash>を---アップロードの末尾<mdash></mdash> + | | |NOTIFY_IOTHUB | | |+<mdash> </mdash>ステータスを通知する<ndash> </ndash> &gt;| | | + ---<mdash> </mdash> ---使用可能な新しいファイルを通知する<mdash></mdash>&gt;| | | </p>"
+    syntax:
+      content: public class FileUploadTask
+    inheritance:
+      - java.lang.Object
+      - Runnable
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.run()
+    id: run()
+    parent: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task
+    href: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.yml
+    langs:
+      - java
+    name: run()
+    nameWithType: FileUploadTask.run()
+    fullName: void com.microsoft.azure.sdk.iot.device.fileupload.FileUploadTask.run()
+    overload: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.run*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/fileupload/FileUploadTask.java
+      startLine: 131
+    package: com.microsoft.azure.sdk.iot.device.fileupload
+    summary: <p>実行可能 </p>
+    syntax:
+      content: public void run()
+references:
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.run*
+    name: run
+    nameWithType: FileUploadTask.run
+    fullName: void com.microsoft.azure.sdk.iot.device.fileupload.FileUploadTask.run
+    package: com.microsoft.azure.sdk.iot.device.fileupload
+  - uid: com.microsoft.azure.sdk.iot.device._custom_logger
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._custom_logger.yml
+    name: CustomLogger
+    nameWithType: CustomLogger
+    fullName: com.microsoft.azure.sdk.iot.device.CustomLogger
+    type: Class
+    syntax:
+      content: public class CustomLogger
+  - uid: com.microsoft.azure.sdk.iot.device._object_lock
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._object_lock.yml
+    name: ObjectLock
+    nameWithType: ObjectLock
+    fullName: com.microsoft.azure.sdk.iot.device.ObjectLock
+    type: Class
+    summary: <p>このクラスは基底クラスの待機のモック作成を有効にし、関数を通知します。 </p>
+    syntax:
+      content: public class ObjectLock
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport_manager
+    parent: com.microsoft.azure.sdk.iot.device.transport.https
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport_manager.yml
+    name: HttpsTransportManager
+    nameWithType: HttpsTransportManager
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransportManager
+    type: Class
+    summary: <p>Https 用のトランスポート マネージャーの実装です。 </p>
+    syntax:
+      content: public class HttpsTransportManager
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.yml
+    name: IotHubEventCallback
+    nameWithType: IotHubEventCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubEventCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub イベント コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+    syntax:
+      content: public interface IotHubEventCallback
+  - uid: com.microsoft.azure.sdk.iot.device._message
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._message.yml
+    name: Message
+    nameWithType: Message
+    fullName: com.microsoft.azure.sdk.iot.device.Message
+    type: Class
+    syntax:
+      content: public class Message
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_status_code
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_status_code.yml
+    name: IotHubStatusCode
+    nameWithType: IotHubStatusCode
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubStatusCode
+    type: Enum
+    summary: <p>IoT Hub ステータス コードの場合は。 デバイスを IoT Hub からのメッセージに含まれています。 </p>
+    syntax:
+      content: public enum IotHubStatusCode
+  - uid: com.microsoft.azure.sdk.iot.deps.serializer._file_upload_status_parser
+    parent: com.microsoft.azure.sdk.iot.deps.serializer
+    href: com.microsoft.azure.sdk.iot.deps.serializer._file_upload_status_parser.yml
+    name: FileUploadStatusParser
+    nameWithType: FileUploadStatusParser
+    fullName: com.microsoft.azure.sdk.iot.deps.serializer.FileUploadStatusParser
+    type: Class
+    summary: '<p>Json シリアライザーでファイルのアップロードの 1 つのファイルのステータスの表現。 JSON 形式の Ex: {「correlationId」:"{相関 ID が受信した最初の要求から}"、"isSuccess": bool"statusCode": XXX"statusDescription":"状態の説明"} </p>'
+    syntax:
+      content: public class FileUploadStatusParser

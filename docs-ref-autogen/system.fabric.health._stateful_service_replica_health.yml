@@ -1,0 +1,224 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._stateful_service_replica_health
+    id: _stateful_service_replica_health
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._stateful_service_replica_health.getReplicaId()
+    href: system.fabric.health._stateful_service_replica_health.yml
+    langs:
+      - java
+    name: StatefulServiceReplicaHealth
+    nameWithType: StatefulServiceReplicaHealth
+    fullName: system.fabric.health.StatefulServiceReplicaHealth
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/StatefulServiceReplicaHealth.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/StatefulServiceReplicaHealth.java
+      startLine: 12
+    package: system.fabric.health
+    summary: <p>によって返されるステートフル サービス レプリカの正常性を示します<xref uid="system.fabric._health_client.getReplicaHealthAsync(ReplicaHealthQueryDescription)" data-throw-if-not-resolved="false">getReplicaHealthAsync</xref>メソッドです。 </p>
+    syntax:
+      content: public class StatefulServiceReplicaHealth extends ReplicaHealth
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._entity_health
+      - system.fabric.health._replica_health
+    inheritedMembers:
+      - 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+      - system.fabric.health._entity_health.getAggregatedHealthState()
+      - system.fabric.health._entity_health.getHealthEvents()
+      - system.fabric.health._replica_health.getId()
+      - system.fabric.health._replica_health.getKind()
+      - system.fabric.health._replica_health.getPartitionId()
+      - system.fabric.health._entity_health.getUnhealthyEvaluations()
+  - uid: system.fabric.health._stateful_service_replica_health.getReplicaId()
+    id: getReplicaId()
+    parent: system.fabric.health._stateful_service_replica_health
+    href: system.fabric.health._stateful_service_replica_health.yml
+    langs:
+      - java
+    name: getReplicaId()
+    nameWithType: StatefulServiceReplicaHealth.getReplicaId()
+    fullName: long system.fabric.health.StatefulServiceReplicaHealth.getReplicaId()
+    overload: system.fabric.health._stateful_service_replica_health.getReplicaId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/StatefulServiceReplicaHealth.java
+      startLine: 33
+    package: system.fabric.health
+    summary: |-
+      <p>取得レプリカ id。</p>
+      <p></p>
+    syntax:
+      content: public long getReplicaId()
+      return:
+        type: 0364520f
+        description: <p>レプリカ id です。 </p>
+references:
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric.health._stateful_service_replica_health.getReplicaId*
+    name: getReplicaId
+    nameWithType: StatefulServiceReplicaHealth.getReplicaId
+    fullName: long system.fabric.health.StatefulServiceReplicaHealth.getReplicaId
+    package: system.fabric.health
+  - uid: 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: 'EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    nameWithType: 'EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    fullName: 'system.fabric.health.EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    type: Constructor
+    syntax:
+      content: 'protected EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+      parameters:
+        - id: aggregatedHealthState
+          type: f75371fa
+        - id: healthEvents
+          type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        - id: unhealthyEvaluations
+          type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+  - uid: system.fabric.health._entity_health.getAggregatedHealthState()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealth.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealth.getAggregatedHealthState()
+    type: Method
+    summary: |-
+      <p>エンティティで集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState</xref>に基づいて Health Manager によって計算された集計された正常性状態を表す (存在する場合)、エンティティとその子でイベントを報告し、正常性ポリシーを必要に応じて。 </p>"
+  - uid: system.fabric.health._entity_health.getHealthEvents()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getHealthEvents()
+    nameWithType: EntityHealth.getHealthEvents()
+    fullName: List<HealthEvent> system.fabric.health.EntityHealth.getHealthEvents()
+    type: Method
+    summary: "<p>エンティティで報告される正常性イベントを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>正常性イベントは、正常性ストアに送信される正常性レポートをに基づいて作成されます。 正常性ストアによって追加された追加のメタデータが含まれます。 </p>"
+    syntax:
+      content: public List<HealthEvent> getHealthEvents()
+      return:
+        type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        description: <p>エンティティの正常性イベントが報告されました。 </p>
+  - uid: system.fabric.health._replica_health.getId()
+    parent: system.fabric.health._replica_health
+    href: system.fabric.health._replica_health.yml
+    name: getId()
+    nameWithType: ReplicaHealth.getId()
+    fullName: long system.fabric.health.ReplicaHealth.getId()
+    type: Method
+    summary: |-
+      <p>ステートフルなレプリカ ID またはステートレス サービス インスタンス ID を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getId()
+      return:
+        type: 0364520f
+        description: <p>ステートフルなレプリカ ID またはステートレスなインスタンス id。 </p>
+  - uid: system.fabric.health._replica_health.getKind()
+    parent: system.fabric.health._replica_health
+    href: system.fabric.health._replica_health.yml
+    name: getKind()
+    nameWithType: ReplicaHealth.getKind()
+    fullName: ServiceKind system.fabric.health.ReplicaHealth.getKind()
+    type: Method
+    summary: |-
+      <p>ステートレスまたはステートフルなレプリカの種類を取得します。 これに基づき、レプリカの正常性に変換できるか<xref uid="system.fabric.health._stateful_service_replica_health" data-throw-if-not-resolved="false">system.fabric.health.StatefulServiceReplicaHealth</xref>または<xref uid="system.fabric.health._stateless_service_instance_health" data-throw-if-not-resolved="false">system.fabric.health.StatelessServiceInstanceHealth</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public ServiceKind getKind()
+      return:
+        type: system.fabric.query._service_kind
+        description: <p>サービスの種類、レプリカがステートフルなまたはステートレスかどうかを示します。 </p>
+  - uid: system.fabric.health._replica_health.getPartitionId()
+    parent: system.fabric.health._replica_health
+    href: system.fabric.health._replica_health.yml
+    name: getPartitionId()
+    nameWithType: ReplicaHealth.getPartitionId()
+    fullName: UUID system.fabric.health.ReplicaHealth.getPartitionId()
+    type: Method
+    summary: |-
+      <p>パーティション識別子を取得します。</p>
+      <p></p>
+    syntax:
+      content: public UUID getPartitionId()
+      return:
+        type: add9545a
+        description: <p>パーティションの id。 </p>
+  - uid: system.fabric.health._entity_health.getUnhealthyEvaluations()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getUnhealthyEvaluations()
+    nameWithType: EntityHealth.getUnhealthyEvaluations()
+    fullName: List<HealthEvaluation> system.fabric.health.EntityHealth.getUnhealthyEvaluations()
+    type: Method
+    summary: |-
+      <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を示す異常な評価を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<HealthEvaluation> getUnhealthyEvaluations()
+      return:
+        type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+        description: <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を説明する異常な評価。 </p>
+  - uid: system.fabric.health._replica_health
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health.yml
+    name: ReplicaHealth
+    nameWithType: ReplicaHealth
+    fullName: system.fabric.health.ReplicaHealth
+    type: Class
+    summary: '<p>によって返されるステートフル サービス レプリカまたはステートレス サービス インスタンスの正常性を示します<xref uid="system.fabric._health_client.getReplicaHealthAsync(ReplicaHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getReplicaHealthAsync(ReplicaHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class ReplicaHealth extends EntityHealth
+  - uid: system.fabric.health._health_event
+    parent: system.fabric.health
+    href: system.fabric.health._health_event.yml
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax:
+      content: public class HealthEvent
+  - uid: system.fabric.health._health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._health_evaluation.yml
+    name: HealthEvaluation
+    nameWithType: HealthEvaluation
+    fullName: system.fabric.health.HealthEvaluation
+    type: Class
+    summary: <p>データとエンティティのヘルスを評価する正常性ストアによって使用されるアルゴリズムを記述する正常性評価を表します。 </p>
+    syntax:
+      content: public class HealthEvaluation
+  - uid: system.fabric._health_client.getReplicaHealthAsync(ReplicaHealthQueryDescription)
+    parent: system.fabric._health_client
+    href: system.fabric._health_client.yml
+    name: getReplicaHealthAsync(ReplicaHealthQueryDescription queryDescription)
+    nameWithType: HealthClient.getReplicaHealthAsync(ReplicaHealthQueryDescription queryDescription)
+    fullName: CompletableFuture<ReplicaHealth> system.fabric.HealthClient.getReplicaHealthAsync(ReplicaHealthQueryDescription queryDescription)
+    type: Method
+    summary: |-
+      <p>Service Fabric レプリカの正常性を非同期に取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<ReplicaHealth> getReplicaHealthAsync(ReplicaHealthQueryDescription queryDescription)
+      parameters:
+        - id: queryDescription
+          type: system.fabric._replica_health_query_description
+          description: <p>クエリの説明。 </p>
+      return:
+        type: 9cdf14d0system.fabric.health._replica_healtha08ddfce
+        description: <p>Service Fabric レプリカの正常性。 </p>

@@ -1,0 +1,197 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._actor_runtime
+    id: _actor_runtime
+    parent: microsoft.servicefabric.actors
+    children:
+      - 'microsoft.servicefabric.actors._actor_runtime.registerActorAsync(Class<T>,BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService>,Duration)'
+      - 'microsoft.servicefabric.actors._actor_runtime.registerActorAsync(Class<T>,Duration)'
+    href: microsoft.servicefabric.actors._actor_runtime.yml
+    langs:
+      - java
+    name: ActorRuntime
+    nameWithType: ActorRuntime
+    fullName: microsoft.servicefabric.actors.ActorRuntime
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorRuntime.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorRuntime.java
+      startLine: 16
+    package: microsoft.servicefabric.actors
+    summary: <p>Service Fabric ランタイムにアクターの種類を登録するメソッドが含まれています。 </p>
+    syntax: &ref_1
+      content: public class ActorRuntime
+    inheritance:
+      - java.lang.Object
+  - uid: 'microsoft.servicefabric.actors._actor_runtime.registerActorAsync(Class<T>,BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService>,Duration)'
+    id: 'registerActorAsync(Class<T>,BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService>,Duration)'
+    parent: microsoft.servicefabric.actors._actor_runtime
+    href: microsoft.servicefabric.actors._actor_runtime.yml
+    langs:
+      - java
+    name: 'registerActorAsync(Class<T> actorType, BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService> actorServiceFactory, Duration timeout)'
+    nameWithType: 'ActorRuntime.registerActorAsync(Class<T> actorType, BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService> actorServiceFactory, Duration timeout)'
+    fullName: 'static <T extends ActorBase> CompletableFuture<?> microsoft.servicefabric.actors.ActorRuntime.registerActorAsync(Class<T> actorType, BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService> actorServiceFactory, Duration timeout)'
+    overload: microsoft.servicefabric.actors._actor_runtime.registerActorAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorRuntime.java
+      startLine: 63
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>Service Fabric ランタイムにアクター型を登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public static static<T extends ActorBase> CompletableFuture<?> registerActorAsync(Class<T> actorType, BiFunction<StatefulServiceContext, ActorTypeInformation, FabricActorService> actorServiceFactory, Duration timeout)'
+      parameters:
+        - id: actorType
+          type: ffb09d2d
+          description: <p>実装するアクター クラス<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>インターフェイス </p>
+        - id: actorServiceFactory
+          type: 8ead6242system.fabric._stateful_service_contextb33c76fcmicrosoft.servicefabric.actors._actor_type_informationb33c76fcmicrosoft.servicefabric.actors._fabric_actor_servicea08ddfce
+          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>サービスの実装を作成する<xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>です。 参照してください<xref uid=\"microsoft.servicefabric.actors._fabric_actor_service\" data-throw-if-not-resolved=\"false\">FabricActorService</xref></p>"
+        - id: timeout
+          type: e02a2de0
+          description: <p>登録操作のキャンセルするまでのタイムアウト期間。 </p>
+      return:
+        type: 1e2c6103microsoft.servicefabric.actors._actor_basea598367f
+        description: <p>Service Fabric ランタイムにアクターの種類を登録する非同期操作を表すタスク。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_runtime.registerActorAsync(Class<T>,Duration)'
+    id: 'registerActorAsync(Class<T>,Duration)'
+    parent: microsoft.servicefabric.actors._actor_runtime
+    href: microsoft.servicefabric.actors._actor_runtime.yml
+    langs:
+      - java
+    name: 'registerActorAsync(Class<T> actorType, Duration timeout)'
+    nameWithType: 'ActorRuntime.registerActorAsync(Class<T> actorType, Duration timeout)'
+    fullName: 'static <T extends ActorBase> CompletableFuture<?> microsoft.servicefabric.actors.ActorRuntime.registerActorAsync(Class<T> actorType, Duration timeout)'
+    overload: microsoft.servicefabric.actors._actor_runtime.registerActorAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorRuntime.java
+      startLine: 40
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>Service Fabric ランタイムにアクター型を登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public static static<T extends ActorBase> CompletableFuture<?> registerActorAsync(Class<T> actorType, Duration timeout)'
+      parameters:
+        - id: actorType
+          type: ffb09d2d
+          description: <p>実装するアクター クラス<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.Actor</xref>インターフェイス </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>登録操作のキャンセルするまでのタイムアウト期間。 </p>
+      return:
+        type: 1e2c6103microsoft.servicefabric.actors._actor_basea598367f
+        description: <p>Service Fabric ランタイムにアクターの種類を登録する非同期操作を表すタスク。 </p>
+references:
+  - uid: ffb09d2d
+    spec.java:
+      - name: Class<T>
+        fullName: Class<T>
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: 1e2c6103microsoft.servicefabric.actors._actor_basea598367f
+    spec.java:
+      - name: 'static<T extends '
+        fullName: 'static<T extends '
+      - uid: microsoft.servicefabric.actors._actor_base
+        name: ActorBase
+        fullName: microsoft.servicefabric.actors.ActorBase
+        href: microsoft.servicefabric.actors._actor_base.yml
+      - name: '> CompletableFuture<?>'
+        fullName: '> CompletableFuture<?>'
+  - uid: microsoft.servicefabric.actors._actor_runtime.registerActorAsync*
+    name: registerActorAsync
+    nameWithType: ActorRuntime.registerActorAsync
+    fullName: static <T extends ActorBase> CompletableFuture<?> microsoft.servicefabric.actors.ActorRuntime.registerActorAsync
+    package: microsoft.servicefabric.actors
+  - uid: 8ead6242system.fabric._stateful_service_contextb33c76fcmicrosoft.servicefabric.actors._actor_type_informationb33c76fcmicrosoft.servicefabric.actors._fabric_actor_servicea08ddfce
+    spec.java:
+      - name: BiFunction<
+        fullName: BiFunction<
+      - uid: system.fabric._stateful_service_context
+        name: StatefulServiceContext
+        fullName: system.fabric.StatefulServiceContext
+        href: system.fabric._stateful_service_context.yml
+      - name: ', '
+        fullName: ', '
+      - uid: microsoft.servicefabric.actors._actor_type_information
+        name: ActorTypeInformation
+        fullName: microsoft.servicefabric.actors.ActorTypeInformation
+        href: microsoft.servicefabric.actors._actor_type_information.yml
+      - name: ', '
+        fullName: ', '
+      - uid: microsoft.servicefabric.actors._fabric_actor_service
+        name: FabricActorService
+        fullName: microsoft.servicefabric.actors.FabricActorService
+        href: microsoft.servicefabric.actors._fabric_actor_service.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.actors._actor_runtime
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_runtime.yml
+    name: ActorRuntime
+    nameWithType: ActorRuntime
+    fullName: microsoft.servicefabric.actors.ActorRuntime
+    type: Class
+    summary: <p>Service Fabric ランタイムにアクターの種類を登録するメソッドが含まれています。 </p>
+    syntax: *ref_1
+  - uid: microsoft.servicefabric.actors._actor_base
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: ActorBase
+    nameWithType: ActorBase
+    fullName: microsoft.servicefabric.actors.ActorBase
+    type: Class
+    summary: "<p>アクターの基本クラスを表します。 <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref></p>\n<p>\r\n\r\n  <b>注釈:</b>アクターの基本データ型は、共通するアクターから派生するアクターによって実装された機能を提供<xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アクター ガベージ コレクションとのフェールオーバーの制限が、状態が保持されます。 状態の取得と格納がアクター状態プロバイダーによって提供される<xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>です。 </p>"
+    syntax:
+      content: public class ActorBase
+  - uid: microsoft.servicefabric.actors._actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor.yml
+    name: Actor
+    nameWithType: Actor
+    fullName: microsoft.servicefabric.actors.Actor
+    type: Interface
+    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    syntax:
+      content: public interface Actor
+  - uid: system.fabric._stateful_service_context
+    parent: system.fabric
+    href: system.fabric._stateful_service_context.yml
+    name: StatefulServiceContext
+    nameWithType: StatefulServiceContext
+    fullName: system.fabric.StatefulServiceContext
+    type: Class
+    syntax:
+      content: public class StatefulServiceContext
+  - uid: microsoft.servicefabric.actors._actor_type_information
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_type_information.yml
+    name: ActorTypeInformation
+    nameWithType: ActorTypeInformation
+    fullName: microsoft.servicefabric.actors.ActorTypeInformation
+    type: Class
+    summary: <p>アクターを実装する型についてを説明します。 </p>
+    syntax:
+      content: public class ActorTypeInformation
+  - uid: microsoft.servicefabric.actors._fabric_actor_service
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: FabricActorService
+    nameWithType: FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService
+    type: Class
+    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    syntax:
+      content: public class FabricActorService

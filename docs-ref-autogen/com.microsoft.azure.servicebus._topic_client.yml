@@ -1,0 +1,1347 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.servicebus._topic_client
+    id: _topic_client
+    parent: com.microsoft.azure.servicebus
+    children:
+      - com.microsoft.azure.servicebus._topic_client.cancelScheduledMessage(long)
+      - com.microsoft.azure.servicebus._topic_client.cancelScheduledMessageAsync(long)
+      - com.microsoft.azure.servicebus._topic_client.getEntityPath()
+      - com.microsoft.azure.servicebus._topic_client.getTopicName()
+      - com.microsoft.azure.servicebus._topic_client.onClose()
+      - com.microsoft.azure.servicebus._topic_client.peek()
+      - com.microsoft.azure.servicebus._topic_client.peek(long)
+      - com.microsoft.azure.servicebus._topic_client.peekAsync()
+      - com.microsoft.azure.servicebus._topic_client.peekAsync(long)
+      - com.microsoft.azure.servicebus._topic_client.peekBatch(int)
+      - 'com.microsoft.azure.servicebus._topic_client.peekBatch(long,int)'
+      - com.microsoft.azure.servicebus._topic_client.peekBatchAsync(int)
+      - 'com.microsoft.azure.servicebus._topic_client.peekBatchAsync(long,int)'
+      - 'com.microsoft.azure.servicebus._topic_client.scheduleMessage(IMessage,Instant)'
+      - 'com.microsoft.azure.servicebus._topic_client.scheduleMessageAsync(IMessage,Instant)'
+      - com.microsoft.azure.servicebus._topic_client.send(IMessage)
+      - com.microsoft.azure.servicebus._topic_client.sendAsync(IMessage)
+      - com.microsoft.azure.servicebus._topic_client.sendBatch(Collection<? extends IMessage>)
+      - com.microsoft.azure.servicebus._topic_client.sendBatchAsync(Collection<? extends IMessage>)
+      - com.microsoft.azure.servicebus._topic_client.TopicClient(ConnectionStringBuilder)
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: TopicClient
+    nameWithType: TopicClient
+    fullName: com.microsoft.azure.servicebus.TopicClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-service-bus-java'
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 20
+    package: com.microsoft.azure.servicebus
+    summary: <p>Service bus トピックと連携するトピック クライアント。 </p>
+    syntax:
+      content: public class TopicClient implements ITopicClient
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.servicebus.primitives._client_entity
+      - com.microsoft.azure.servicebus.InitializableEntity
+    inheritedMembers:
+      - 'com.microsoft.azure.servicebus.primitives._client_entity.ClientEntity(final String,final ClientEntity)'
+      - com.microsoft.azure.servicebus.primitives._client_entity.close()
+      - com.microsoft.azure.servicebus._i_closeable.close()
+      - com.microsoft.azure.servicebus.primitives._client_entity.closeAsync()
+      - com.microsoft.azure.servicebus._i_closeable.closeAsync()
+      - com.microsoft.azure.servicebus.primitives._client_entity.finalize()
+      - com.microsoft.azure.servicebus.primitives._client_entity.getClientId()
+      - com.microsoft.azure.servicebus.primitives._client_entity.getIsClosed()
+      - com.microsoft.azure.servicebus.primitives._client_entity.getIsClosingOrClosed()
+      - 'com.microsoft.azure.servicebus._initializable_entity.InitializableEntity(String,ClientEntity)'
+      - com.microsoft.azure.servicebus.primitives._client_entity.setClosed()
+      - com.microsoft.azure.servicebus.primitives._client_entity.throwIfClosed(Throwable)
+  - uid: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessage(long)
+    id: cancelScheduledMessage(long)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: cancelScheduledMessage(long sequenceNumber)
+    nameWithType: TopicClient.cancelScheduledMessage(long sequenceNumber)
+    fullName: void com.microsoft.azure.servicebus.TopicClient.cancelScheduledMessage(long sequenceNumber)
+    overload: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 81
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void cancelScheduledMessage(long sequenceNumber)
+      parameters:
+        - id: sequenceNumber
+          type: 0364520f
+          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+    overridden: com.microsoft.azure.servicebus._i_message_sender.cancelScheduledMessage(long)
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>スケジュールされたメッセージはキャンセルできませんでした。 場合、 </p>
+  - uid: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessageAsync(long)
+    id: cancelScheduledMessageAsync(long)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: cancelScheduledMessageAsync(long sequenceNumber)
+    nameWithType: TopicClient.cancelScheduledMessageAsync(long sequenceNumber)
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.cancelScheduledMessageAsync(long sequenceNumber)
+    overload: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessageAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 71
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Void> cancelScheduledMessageAsync(long sequenceNumber)
+      parameters:
+        - id: sequenceNumber
+          type: 0364520f
+          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+      return:
+        type: db03ee24
+        description: <p>保留中の取り消しを表す CompletableFuture </p>
+    overridden: com.microsoft.azure.servicebus._i_message_sender.cancelScheduledMessageAsync(long)
+  - uid: com.microsoft.azure.servicebus._topic_client.getEntityPath()
+    id: getEntityPath()
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: getEntityPath()
+    nameWithType: TopicClient.getEntityPath()
+    fullName: String com.microsoft.azure.servicebus.TopicClient.getEntityPath()
+    overload: com.microsoft.azure.servicebus._topic_client.getEntityPath*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 86
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>メッセージが送信または受信側のメッセージをこのクライアントは、エンティティのパスを取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getEntityPath()
+      return:
+        type: '26831127'
+        description: <p>このクライアントが接続するエンティティのパス </p>
+    overridden: com.microsoft.azure.servicebus._i_message_entity_client.getEntityPath()
+  - uid: com.microsoft.azure.servicebus._topic_client.getTopicName()
+    id: getTopicName()
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: getTopicName()
+    nameWithType: TopicClient.getTopicName()
+    fullName: String com.microsoft.azure.servicebus.TopicClient.getTopicName()
+    overload: com.microsoft.azure.servicebus._topic_client.getTopicName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 142
+    package: com.microsoft.azure.servicebus
+    summary: <p>トピックの名前を取得します。 </p>
+    syntax:
+      content: public String getTopicName()
+      return:
+        type: '26831127'
+        description: <p>トピックの名前 </p>
+    overridden: com.microsoft.azure.servicebus._i_topic_client.getTopicName()
+  - uid: com.microsoft.azure.servicebus._topic_client.onClose()
+    id: onClose()
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: onClose()
+    nameWithType: TopicClient.onClose()
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.onClose()
+    overload: com.microsoft.azure.servicebus._topic_client.onClose*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 137
+    package: com.microsoft.azure.servicebus
+    syntax:
+      content: protected CompletableFuture<Void> onClose()
+      return:
+        type: db03ee24
+  - uid: com.microsoft.azure.servicebus._topic_client.peek()
+    id: peek()
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: peek()
+    nameWithType: TopicClient.peek()
+    fullName: IMessage com.microsoft.azure.servicebus.TopicClient.peek()
+    overload: com.microsoft.azure.servicebus._topic_client.peek*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 91
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。 最初に呼び出す<xref uid="com.microsoft.azure.servicebus._i_message_browser.peek()" data-throw-if-not-resolved="false">IMessageBrowser#peek()</xref>この受信者の最初の作業中のメッセージをフェッチします。 後続の各呼び出しは、エンティティの後続のメッセージをフェッチします。</p>
+      <p></p>
+    syntax:
+      content: public IMessage peek()
+      return:
+        type: com.microsoft.azure.servicebus._i_message
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+    overridden: com.microsoft.azure.servicebus._i_message_browser.peek()
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>ピークが失敗した場合 </p>
+  - uid: com.microsoft.azure.servicebus._topic_client.peek(long)
+    id: peek(long)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: peek(long fromSequenceNumber)
+    nameWithType: TopicClient.peek(long fromSequenceNumber)
+    fullName: IMessage com.microsoft.azure.servicebus.TopicClient.peek(long fromSequenceNumber)
+    overload: com.microsoft.azure.servicebus._topic_client.peek*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 96
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public IMessage peek(long fromSequenceNumber)
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+      return:
+        type: com.microsoft.azure.servicebus._i_message
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+    overridden: com.microsoft.azure.servicebus._i_message_browser.peek(long)
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>ピークが失敗した場合 </p>
+  - uid: com.microsoft.azure.servicebus._topic_client.peekAsync()
+    id: peekAsync()
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: peekAsync()
+    nameWithType: TopicClient.peekAsync()
+    fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.TopicClient.peekAsync()
+    overload: com.microsoft.azure.servicebus._topic_client.peekAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 111
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージを非同期に読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<IMessage> peekAsync()
+      return:
+        type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+    overridden: com.microsoft.azure.servicebus._i_message_browser.peekAsync()
+  - uid: com.microsoft.azure.servicebus._topic_client.peekAsync(long)
+    id: peekAsync(long)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: peekAsync(long fromSequenceNumber)
+    nameWithType: TopicClient.peekAsync(long fromSequenceNumber)
+    fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.TopicClient.peekAsync(long fromSequenceNumber)
+    overload: com.microsoft.azure.servicebus._topic_client.peekAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 116
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>非同期的にメッセージを読み取ります次にアクティブな受信側またはメッセージの送信元の状態を変更することがなく。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<IMessage> peekAsync(long fromSequenceNumber)
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+      return:
+        type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
+        description: <p>返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+    overridden: com.microsoft.azure.servicebus._i_message_browser.peekAsync(long)
+  - uid: com.microsoft.azure.servicebus._topic_client.peekBatch(int)
+    id: peekBatch(int)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: peekBatch(int messageCount)
+    nameWithType: TopicClient.peekBatch(int messageCount)
+    fullName: Collection<IMessage> com.microsoft.azure.servicebus.TopicClient.peekBatch(int messageCount)
+    overload: com.microsoft.azure.servicebus._topic_client.peekBatch*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 101
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public Collection<IMessage> peekBatch(int messageCount)
+      parameters:
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
+        description: <p>バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク </p>
+    overridden: com.microsoft.azure.servicebus._i_message_browser.peekBatch(int)
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>ピークが失敗した場合 </p>
+  - uid: 'com.microsoft.azure.servicebus._topic_client.peekBatch(long,int)'
+    id: 'peekBatch(long,int)'
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: 'peekBatch(long fromSequenceNumber, int messageCount)'
+    nameWithType: 'TopicClient.peekBatch(long fromSequenceNumber, int messageCount)'
+    fullName: 'Collection<IMessage> com.microsoft.azure.servicebus.TopicClient.peekBatch(long fromSequenceNumber, int messageCount)'
+    overload: com.microsoft.azure.servicebus._topic_client.peekBatch*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 106
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</p>
+      <p></p>
+    syntax:
+      content: 'public Collection<IMessage> peekBatch(long fromSequenceNumber, int messageCount)'
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
+        description: <p>バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク </p>
+    overridden: 'com.microsoft.azure.servicebus._i_message_browser.peekBatch(long,int)'
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>ピークが失敗した場合 </p>
+  - uid: com.microsoft.azure.servicebus._topic_client.peekBatchAsync(int)
+    id: peekBatchAsync(int)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: peekBatchAsync(int messageCount)
+    nameWithType: TopicClient.peekBatchAsync(int messageCount)
+    fullName: CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.TopicClient.peekBatchAsync(int messageCount)
+    overload: com.microsoft.azure.servicebus._topic_client.peekBatchAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 121
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Collection<IMessage>> peekBatchAsync(int messageCount)
+      parameters:
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
+        description: <p>バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+    overridden: com.microsoft.azure.servicebus._i_message_browser.peekBatchAsync(int)
+  - uid: 'com.microsoft.azure.servicebus._topic_client.peekBatchAsync(long,int)'
+    id: 'peekBatchAsync(long,int)'
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: 'peekBatchAsync(long fromSequenceNumber, int messageCount)'
+    nameWithType: 'TopicClient.peekBatchAsync(long fromSequenceNumber, int messageCount)'
+    fullName: 'CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.TopicClient.peekBatchAsync(long fromSequenceNumber, int messageCount)'
+    overload: com.microsoft.azure.servicebus._topic_client.peekBatchAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 126
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Collection<IMessage>> peekBatchAsync(long fromSequenceNumber, int messageCount)'
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
+        description: <p>バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+    overridden: 'com.microsoft.azure.servicebus._i_message_browser.peekBatchAsync(long,int)'
+  - uid: 'com.microsoft.azure.servicebus._topic_client.scheduleMessage(IMessage,Instant)'
+    id: 'scheduleMessage(IMessage,Instant)'
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: 'scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    nameWithType: 'TopicClient.scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    fullName: 'long com.microsoft.azure.servicebus.TopicClient.scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    overload: com.microsoft.azure.servicebus._topic_client.scheduleMessage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 76
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public long scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+        - id: scheduledEnqueueTimeUtc
+          type: 328f8254
+          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+      return:
+        type: 0364520f
+        description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+    overridden: 'com.microsoft.azure.servicebus._i_message_sender.scheduleMessage(IMessage,Instant)'
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>場合は、エンティティにメッセージを送信できませんでした。 </p>
+  - uid: 'com.microsoft.azure.servicebus._topic_client.scheduleMessageAsync(IMessage,Instant)'
+    id: 'scheduleMessageAsync(IMessage,Instant)'
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: 'scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    nameWithType: 'TopicClient.scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    fullName: 'CompletableFuture<Long> com.microsoft.azure.servicebus.TopicClient.scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    overload: com.microsoft.azure.servicebus._topic_client.scheduleMessageAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 66
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。 完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Long> scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+        - id: scheduledEnqueueTimeUtc
+          type: 328f8254
+          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+      return:
+        type: 30822cb1
+        description: '<p>スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。 このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。 </p>'
+    overridden: 'com.microsoft.azure.servicebus._i_message_sender.scheduleMessageAsync(IMessage,Instant)'
+  - uid: com.microsoft.azure.servicebus._topic_client.send(IMessage)
+    id: send(IMessage)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: send(IMessage message)
+    nameWithType: TopicClient.send(IMessage message)
+    fullName: void com.microsoft.azure.servicebus.TopicClient.send(IMessage message)
+    overload: com.microsoft.azure.servicebus._topic_client.send*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 46
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void send(IMessage message)
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+    overridden: com.microsoft.azure.servicebus._i_message_sender.send(IMessage)
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>場合は、エンティティにメッセージを送信できませんでした。 </p>
+  - uid: com.microsoft.azure.servicebus._topic_client.sendAsync(IMessage)
+    id: sendAsync(IMessage)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: sendAsync(IMessage message)
+    nameWithType: TopicClient.sendAsync(IMessage message)
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.sendAsync(IMessage message)
+    overload: com.microsoft.azure.servicebus._topic_client.sendAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 56
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Void> sendAsync(IMessage message)
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+      return:
+        type: db03ee24
+        description: <p>保留中の送信を表す CompletableFuture </p>
+    overridden: com.microsoft.azure.servicebus._i_message_sender.sendAsync(IMessage)
+  - uid: com.microsoft.azure.servicebus._topic_client.sendBatch(Collection<? extends IMessage>)
+    id: sendBatch(Collection<? extends IMessage>)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: sendBatch(Collection<? extends IMessage> messages)
+    nameWithType: TopicClient.sendBatch(Collection<? extends IMessage> messages)
+    fullName: void com.microsoft.azure.servicebus.TopicClient.sendBatch(Collection<? extends IMessage> messages)
+    overload: com.microsoft.azure.servicebus._topic_client.sendBatch*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 51
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 このメソッドは、バッチが、エンティティに送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void sendBatch(Collection<? extends IMessage> messages)
+      parameters:
+        - id: messages
+          type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
+          description: <p>エンティティに送信されるメッセージのコレクション </p>
+    overridden: com.microsoft.azure.servicebus._i_message_sender.sendBatch(Collection<? extends IMessage>)
+    exceptions:
+      - type: 8256ba40
+        description: <p>現在のスレッドが待機中に中断された場合 </p>
+      - type: 73fec9fb
+        description: <p>場合は、エンティティにバッチを送信できませんでした。 </p>
+  - uid: com.microsoft.azure.servicebus._topic_client.sendBatchAsync(Collection<? extends IMessage>)
+    id: sendBatchAsync(Collection<? extends IMessage>)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: sendBatchAsync(Collection<? extends IMessage> messages)
+    nameWithType: TopicClient.sendBatchAsync(Collection<? extends IMessage> messages)
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.sendBatchAsync(Collection<? extends IMessage> messages)
+    overload: com.microsoft.azure.servicebus._topic_client.sendBatchAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 61
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Void> sendBatchAsync(Collection<? extends IMessage> messages)
+      parameters:
+        - id: messages
+          type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
+          description: <p>エンティティに送信されるメッセージのコレクション </p>
+      return:
+        type: db03ee24
+        description: <p>保留中の送信を表す CompletableFuture </p>
+    overridden: com.microsoft.azure.servicebus._i_message_sender.sendBatchAsync(Collection<? extends IMessage>)
+  - uid: com.microsoft.azure.servicebus._topic_client.TopicClient(ConnectionStringBuilder)
+    id: TopicClient(ConnectionStringBuilder)
+    parent: com.microsoft.azure.servicebus._topic_client
+    href: com.microsoft.azure.servicebus._topic_client.yml
+    langs:
+      - java
+    name: TopicClient(ConnectionStringBuilder amqpConnectionStringBuilder)
+    nameWithType: TopicClient.TopicClient(ConnectionStringBuilder amqpConnectionStringBuilder)
+    fullName: com.microsoft.azure.servicebus.TopicClient.TopicClient(ConnectionStringBuilder amqpConnectionStringBuilder)
+    overload: com.microsoft.azure.servicebus._topic_client.TopicClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/TopicClient.java
+      startLine: 29
+    package: com.microsoft.azure.servicebus
+    syntax:
+      content: public TopicClient(ConnectionStringBuilder amqpConnectionStringBuilder)
+      parameters:
+        - id: amqpConnectionStringBuilder
+          type: com.microsoft.azure.servicebus.primitives._connection_string_builder
+references:
+  - uid: com.microsoft.azure.servicebus._topic_client.TopicClient*
+    name: TopicClient
+    nameWithType: TopicClient.TopicClient
+    fullName: com.microsoft.azure.servicebus.TopicClient.TopicClient
+    package: com.microsoft.azure.servicebus
+  - uid: 8256ba40
+    spec.java:
+      - name: InterruptedException
+        fullName: InterruptedException
+  - uid: 73fec9fb
+    spec.java:
+      - name: ServiceBusException
+        fullName: ServiceBusException
+  - uid: com.microsoft.azure.servicebus._topic_client.send*
+    name: send
+    nameWithType: TopicClient.send
+    fullName: void com.microsoft.azure.servicebus.TopicClient.send
+    package: com.microsoft.azure.servicebus
+  - uid: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
+    spec.java:
+      - name: 'Collection<? extends '
+        fullName: 'Collection<? extends '
+      - uid: com.microsoft.azure.servicebus._i_message
+        name: IMessage
+        fullName: com.microsoft.azure.servicebus.IMessage
+        href: com.microsoft.azure.servicebus._i_message.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.servicebus._topic_client.sendBatch*
+    name: sendBatch
+    nameWithType: TopicClient.sendBatch
+    fullName: void com.microsoft.azure.servicebus.TopicClient.sendBatch
+    package: com.microsoft.azure.servicebus
+  - uid: db03ee24
+    spec.java:
+      - name: CompletableFuture<Void>
+        fullName: CompletableFuture<Void>
+  - uid: com.microsoft.azure.servicebus._topic_client.sendAsync*
+    name: sendAsync
+    nameWithType: TopicClient.sendAsync
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.sendAsync
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._topic_client.sendBatchAsync*
+    name: sendBatchAsync
+    nameWithType: TopicClient.sendBatchAsync
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.sendBatchAsync
+    package: com.microsoft.azure.servicebus
+  - uid: 328f8254
+    spec.java:
+      - name: Instant
+        fullName: Instant
+  - uid: 30822cb1
+    spec.java:
+      - name: CompletableFuture<Long>
+        fullName: CompletableFuture<Long>
+  - uid: com.microsoft.azure.servicebus._topic_client.scheduleMessageAsync*
+    name: scheduleMessageAsync
+    nameWithType: TopicClient.scheduleMessageAsync
+    fullName: CompletableFuture<Long> com.microsoft.azure.servicebus.TopicClient.scheduleMessageAsync
+    package: com.microsoft.azure.servicebus
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessageAsync*
+    name: cancelScheduledMessageAsync
+    nameWithType: TopicClient.cancelScheduledMessageAsync
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.cancelScheduledMessageAsync
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._topic_client.scheduleMessage*
+    name: scheduleMessage
+    nameWithType: TopicClient.scheduleMessage
+    fullName: long com.microsoft.azure.servicebus.TopicClient.scheduleMessage
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessage*
+    name: cancelScheduledMessage
+    nameWithType: TopicClient.cancelScheduledMessage
+    fullName: void com.microsoft.azure.servicebus.TopicClient.cancelScheduledMessage
+    package: com.microsoft.azure.servicebus
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.servicebus._topic_client.getEntityPath*
+    name: getEntityPath
+    nameWithType: TopicClient.getEntityPath
+    fullName: String com.microsoft.azure.servicebus.TopicClient.getEntityPath
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._topic_client.peek*
+    name: peek
+    nameWithType: TopicClient.peek
+    fullName: IMessage com.microsoft.azure.servicebus.TopicClient.peek
+    package: com.microsoft.azure.servicebus
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
+    spec.java:
+      - name: Collection<
+        fullName: Collection<
+      - uid: com.microsoft.azure.servicebus._i_message
+        name: IMessage
+        fullName: com.microsoft.azure.servicebus.IMessage
+        href: com.microsoft.azure.servicebus._i_message.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.servicebus._topic_client.peekBatch*
+    name: peekBatch
+    nameWithType: TopicClient.peekBatch
+    fullName: Collection<IMessage> com.microsoft.azure.servicebus.TopicClient.peekBatch
+    package: com.microsoft.azure.servicebus
+  - uid: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: com.microsoft.azure.servicebus._i_message
+        name: IMessage
+        fullName: com.microsoft.azure.servicebus.IMessage
+        href: com.microsoft.azure.servicebus._i_message.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.servicebus._topic_client.peekAsync*
+    name: peekAsync
+    nameWithType: TopicClient.peekAsync
+    fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.TopicClient.peekAsync
+    package: com.microsoft.azure.servicebus
+  - uid: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
+    spec.java:
+      - name: CompletableFuture<Collection<
+        fullName: CompletableFuture<Collection<
+      - uid: com.microsoft.azure.servicebus._i_message
+        name: IMessage
+        fullName: com.microsoft.azure.servicebus.IMessage
+        href: com.microsoft.azure.servicebus._i_message.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: com.microsoft.azure.servicebus._topic_client.peekBatchAsync*
+    name: peekBatchAsync
+    nameWithType: TopicClient.peekBatchAsync
+    fullName: CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.TopicClient.peekBatchAsync
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._topic_client.getTopicName*
+    name: getTopicName
+    nameWithType: TopicClient.getTopicName
+    fullName: String com.microsoft.azure.servicebus.TopicClient.getTopicName
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._topic_client.onClose*
+    name: onClose
+    nameWithType: TopicClient.onClose
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.onClose
+    package: com.microsoft.azure.servicebus
+  - uid: 'com.microsoft.azure.servicebus.primitives._client_entity.ClientEntity(final String,final ClientEntity)'
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: 'ClientEntity(final String clientId, final ClientEntity parent)'
+    nameWithType: 'ClientEntity.ClientEntity(final String clientId, final ClientEntity parent)'
+    fullName: 'com.microsoft.azure.servicebus.primitives.ClientEntity.ClientEntity(final String clientId, final ClientEntity parent)'
+    type: Constructor
+    syntax:
+      content: 'protected ClientEntity(final String clientId, final ClientEntity parent)'
+      parameters:
+        - id: clientId
+          type: 3d93591e
+        - id: parent
+          type: 93de0ef9com.microsoft.azure.servicebus.primitives._client_entity
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.close()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: close()
+    nameWithType: ClientEntity.close()
+    fullName: final void com.microsoft.azure.servicebus.primitives.ClientEntity.close()
+    type: Method
+    syntax:
+      content: public final void close()
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.servicebus._i_closeable.close()
+    parent: com.microsoft.azure.servicebus._i_closeable
+    href: com.microsoft.azure.servicebus._i_closeable.yml
+    name: close()
+    nameWithType: ICloseable.close()
+    fullName: void com.microsoft.azure.servicebus.ICloseable.close()
+    type: Method
+    summary: <p>同期的に終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。 このメソッドを呼び出すことは、呼び出し元のと同じです。 このメソッドはブロックされるまでオブジェクトが閉じられます。 </p>
+    syntax:
+      content: public void close()
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.closeAsync()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: closeAsync()
+    nameWithType: ClientEntity.closeAsync()
+    fullName: final CompletableFuture<Void> com.microsoft.azure.servicebus.primitives.ClientEntity.closeAsync()
+    type: Method
+    syntax:
+      content: public final CompletableFuture<Void> closeAsync()
+      return:
+        type: fc984e6f
+  - uid: com.microsoft.azure.servicebus._i_closeable.closeAsync()
+    parent: com.microsoft.azure.servicebus._i_closeable
+    href: com.microsoft.azure.servicebus._i_closeable.yml
+    name: closeAsync()
+    nameWithType: ICloseable.closeAsync()
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.ICloseable.closeAsync()
+    type: Method
+    summary: <p>終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。 閉じられた後、オブジェクトを使用できません。 これは、すぐに、CompletableFuture を返す非同期メソッドです。 このオブジェクトは、返された CompletableFuture が完了したときに完全に閉じられます。 </p>
+    syntax:
+      content: public CompletableFuture<Void> closeAsync()
+      return:
+        type: db03ee24
+        description: <p>このオブジェクトの終了を表す CompletableFuture です。 </p>
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.finalize()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: finalize()
+    nameWithType: ClientEntity.finalize()
+    fullName: void com.microsoft.azure.servicebus.primitives.ClientEntity.finalize()
+    type: Method
+    syntax:
+      content: protected void finalize()
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.getClientId()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: getClientId()
+    nameWithType: ClientEntity.getClientId()
+    fullName: String com.microsoft.azure.servicebus.primitives.ClientEntity.getClientId()
+    type: Method
+    syntax:
+      content: public String getClientId()
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.getIsClosed()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: getIsClosed()
+    nameWithType: ClientEntity.getIsClosed()
+    fullName: boolean com.microsoft.azure.servicebus.primitives.ClientEntity.getIsClosed()
+    type: Method
+    syntax:
+      content: protected boolean getIsClosed()
+      return:
+        type: 4fc6e284
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.getIsClosingOrClosed()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: getIsClosingOrClosed()
+    nameWithType: ClientEntity.getIsClosingOrClosed()
+    fullName: boolean com.microsoft.azure.servicebus.primitives.ClientEntity.getIsClosingOrClosed()
+    type: Method
+    syntax:
+      content: protected boolean getIsClosingOrClosed()
+      return:
+        type: 4fc6e284
+  - uid: 'com.microsoft.azure.servicebus._initializable_entity.InitializableEntity(String,ClientEntity)'
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.setClosed()
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: setClosed()
+    nameWithType: ClientEntity.setClosed()
+    fullName: final void com.microsoft.azure.servicebus.primitives.ClientEntity.setClosed()
+    type: Method
+    syntax:
+      content: protected final void setClosed()
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.servicebus.primitives._client_entity.throwIfClosed(Throwable)
+    parent: com.microsoft.azure.servicebus.primitives._client_entity
+    href: com.microsoft.azure.servicebus.primitives._client_entity.yml
+    name: throwIfClosed(Throwable cause)
+    nameWithType: ClientEntity.throwIfClosed(Throwable cause)
+    fullName: final void com.microsoft.azure.servicebus.primitives.ClientEntity.throwIfClosed(Throwable cause)
+    type: Method
+    syntax:
+      content: protected final void throwIfClosed(Throwable cause)
+      parameters:
+        - id: cause
+          type: a04fafd7
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.servicebus._i_topic_client
+    parent: com.microsoft.azure.servicebus
+    href: com.microsoft.azure.servicebus._i_topic_client.yml
+    name: ITopicClient
+    nameWithType: ITopicClient
+    fullName: com.microsoft.azure.servicebus.ITopicClient
+    type: Interface
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._topic_client\" data-throw-if-not-resolved=\"false\">TopicClient</xref> Service Bus トピックのすべての基本的な通信に使用できます。 <code></code></p>"
+    syntax:
+      content: 'public interface ITopicClient extends IMessageSender,IMessageBrowser,IMessageEntityClient'
+  - uid: com.microsoft.azure.servicebus._i_message_sender
+    parent: com.microsoft.azure.servicebus
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: IMessageSender
+    nameWithType: IMessageSender
+    fullName: com.microsoft.azure.servicebus.IMessageSender
+    type: Interface
+    summary: |-
+      <p>Azure Service Bus にメッセージを送信するメッセージの送信者を表します。</p>
+      <p></p>
+    syntax:
+      content: public interface IMessageSender extends IMessageEntityClient
+  - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder
+    parent: com.microsoft.azure.servicebus.primitives
+    href: com.microsoft.azure.servicebus.primitives._connection_string_builder.yml
+    name: ConnectionStringBuilder
+    nameWithType: ConnectionStringBuilder
+    fullName: com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder
+    type: Class
+    summary: |-
+      <p>このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。 既存の接続文字列で基本的な検証を実行するも使用できます。 </p>
+      <p>サンプル コードに示します。 <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
+
+                                                   "ServiceBusNamespaceName", 
+
+                                                   "ServiceBusEntityName", // QueueName or TopicName or SubscriptionPath
+
+                                                   "SharedAccessSignatureKeyName", 
+
+                                                   "SharedAccessSignatureKey");
+
+           
+
+          String connectionString = connectionStringBuilder.toString();
+
+          </code></pre></p>
+
+      <p>接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。 基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem><p>エンドポイントで servicebus 名前空間を指す URL </p></listitem><listitem><p>EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。 キューおよびトピックでは、エンティティの名前だけです。 サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p></listitem><listitem><p>SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。 </p></listitem><listitem><p>SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。 </p></listitem><listitem><p>SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。 </p></listitem><listitem><p>OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。 </p></listitem><listitem><p><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。 </p></listitem></itemizedlist></p>
+    syntax:
+      content: public class ConnectionStringBuilder
+  - uid: com.microsoft.azure.servicebus.primitives._service_bus_exception
+    parent: com.microsoft.azure.servicebus.primitives
+    href: com.microsoft.azure.servicebus.primitives._service_bus_exception.yml
+    name: ServiceBusException
+    nameWithType: ServiceBusException
+    fullName: com.microsoft.azure.servicebus.primitives.ServiceBusException
+    type: Class
+    summary: <p>これは、すべてのエラーの場合のサービス バスを生成する基本例外です。 </p>
+    syntax:
+      content: public class ServiceBusException
+  - uid: com.microsoft.azure.servicebus._i_message_sender.send(IMessage)
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: send(IMessage message)
+    nameWithType: IMessageSender.send(IMessage message)
+    fullName: void com.microsoft.azure.servicebus.IMessageSender.send(IMessage message)
+    type: Method
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void send(IMessage message)
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+  - uid: com.microsoft.azure.servicebus._i_message
+    parent: com.microsoft.azure.servicebus
+    href: com.microsoft.azure.servicebus._i_message.yml
+    name: IMessage
+    nameWithType: IMessage
+    fullName: com.microsoft.azure.servicebus.IMessage
+    type: Interface
+    summary: |-
+      <p>Azure Service Bus とクライアント間で交換されるメッセージを表します。</p>
+      <p></p>
+    syntax:
+      content: public interface IMessage
+  - uid: com.microsoft.azure.servicebus._i_message_sender.sendBatch(Collection<? extends IMessage>)
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: sendBatch(Collection<? extends IMessage> messages)
+    nameWithType: IMessageSender.sendBatch(Collection<? extends IMessage> messages)
+    fullName: void com.microsoft.azure.servicebus.IMessageSender.sendBatch(Collection<? extends IMessage> messages)
+    type: Method
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 このメソッドは、バッチが、エンティティに送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void sendBatch(Collection<? extends IMessage> messages)
+      parameters:
+        - id: messages
+          type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
+          description: <p>エンティティに送信されるメッセージのコレクション </p>
+  - uid: com.microsoft.azure.servicebus._i_message_sender.sendAsync(IMessage)
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: sendAsync(IMessage message)
+    nameWithType: IMessageSender.sendAsync(IMessage message)
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageSender.sendAsync(IMessage message)
+    type: Method
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Void> sendAsync(IMessage message)
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+      return:
+        type: db03ee24
+        description: <p>保留中の送信を表す CompletableFuture </p>
+  - uid: com.microsoft.azure.servicebus._i_message_sender.sendBatchAsync(Collection<? extends IMessage>)
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: sendBatchAsync(Collection<? extends IMessage> messages)
+    nameWithType: IMessageSender.sendBatchAsync(Collection<? extends IMessage> messages)
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageSender.sendBatchAsync(Collection<? extends IMessage> messages)
+    type: Method
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Void> sendBatchAsync(Collection<? extends IMessage> messages)
+      parameters:
+        - id: messages
+          type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
+          description: <p>エンティティに送信されるメッセージのコレクション </p>
+      return:
+        type: db03ee24
+        description: <p>保留中の送信を表す CompletableFuture </p>
+  - uid: 'com.microsoft.azure.servicebus._i_message_sender.scheduleMessageAsync(IMessage,Instant)'
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: 'scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    nameWithType: 'IMessageSender.scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    fullName: 'CompletableFuture<Long> com.microsoft.azure.servicebus.IMessageSender.scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    type: Method
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。 完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Long> scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+        - id: scheduledEnqueueTimeUtc
+          type: 328f8254
+          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+      return:
+        type: 30822cb1
+        description: '<p>スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。 このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。 </p>'
+  - uid: com.microsoft.azure.servicebus._i_message_sender.cancelScheduledMessageAsync(long)
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: cancelScheduledMessageAsync(long sequenceNumber)
+    nameWithType: IMessageSender.cancelScheduledMessageAsync(long sequenceNumber)
+    fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageSender.cancelScheduledMessageAsync(long sequenceNumber)
+    type: Method
+    summary: |-
+      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Void> cancelScheduledMessageAsync(long sequenceNumber)
+      parameters:
+        - id: sequenceNumber
+          type: 0364520f
+          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+      return:
+        type: db03ee24
+        description: <p>保留中の取り消しを表す CompletableFuture </p>
+  - uid: 'com.microsoft.azure.servicebus._i_message_sender.scheduleMessage(IMessage,Instant)'
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: 'scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    nameWithType: 'IMessageSender.scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    fullName: 'long com.microsoft.azure.servicebus.IMessageSender.scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+    type: Method
+    summary: |-
+      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public long scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.servicebus._i_message
+          description: <p>エンティティに送信されるメッセージ </p>
+        - id: scheduledEnqueueTimeUtc
+          type: 328f8254
+          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+      return:
+        type: 0364520f
+        description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+  - uid: com.microsoft.azure.servicebus._i_message_sender.cancelScheduledMessage(long)
+    parent: com.microsoft.azure.servicebus._i_message_sender
+    href: com.microsoft.azure.servicebus._i_message_sender.yml
+    name: cancelScheduledMessage(long sequenceNumber)
+    nameWithType: IMessageSender.cancelScheduledMessage(long sequenceNumber)
+    fullName: void com.microsoft.azure.servicebus.IMessageSender.cancelScheduledMessage(long sequenceNumber)
+    type: Method
+    summary: |-
+      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void cancelScheduledMessage(long sequenceNumber)
+      parameters:
+        - id: sequenceNumber
+          type: 0364520f
+          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+  - uid: com.microsoft.azure.servicebus._i_message_entity_client.getEntityPath()
+    parent: com.microsoft.azure.servicebus._i_message_entity_client
+    href: com.microsoft.azure.servicebus._i_message_entity_client.yml
+    name: getEntityPath()
+    nameWithType: IMessageEntityClient.getEntityPath()
+    fullName: String com.microsoft.azure.servicebus.IMessageEntityClient.getEntityPath()
+    type: Method
+    summary: |-
+      <p>メッセージが送信または受信側のメッセージをこのクライアントは、エンティティのパスを取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getEntityPath()
+      return:
+        type: '26831127'
+        description: <p>このクライアントが接続するエンティティのパス </p>
+  - uid: com.microsoft.azure.servicebus._i_message_browser.peek()
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: peek()
+    nameWithType: IMessageBrowser.peek()
+    fullName: IMessage com.microsoft.azure.servicebus.IMessageBrowser.peek()
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。 最初に呼び出す<xref uid="com.microsoft.azure.servicebus._i_message_browser.peek()" data-throw-if-not-resolved="false">IMessageBrowser#peek()</xref>この受信者の最初の作業中のメッセージをフェッチします。 後続の各呼び出しは、エンティティの後続のメッセージをフェッチします。</p>
+      <p></p>
+    syntax:
+      content: public IMessage peek()
+      return:
+        type: com.microsoft.azure.servicebus._i_message
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+  - uid: com.microsoft.azure.servicebus._message
+    parent: com.microsoft.azure.servicebus
+    href: com.microsoft.azure.servicebus._message.yml
+    name: Message
+    nameWithType: Message
+    fullName: com.microsoft.azure.servicebus.Message
+    type: Class
+    syntax:
+      content: public class Message implements IMessage
+  - uid: com.microsoft.azure.servicebus._i_message_browser.peek(long)
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: peek(long fromSequenceNumber)
+    nameWithType: IMessageBrowser.peek(long fromSequenceNumber)
+    fullName: IMessage com.microsoft.azure.servicebus.IMessageBrowser.peek(long fromSequenceNumber)
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public IMessage peek(long fromSequenceNumber)
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+      return:
+        type: com.microsoft.azure.servicebus._i_message
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+  - uid: com.microsoft.azure.servicebus._i_message_browser.peekBatch(int)
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: peekBatch(int messageCount)
+    nameWithType: IMessageBrowser.peekBatch(int messageCount)
+    fullName: Collection<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekBatch(int messageCount)
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public Collection<IMessage> peekBatch(int messageCount)
+      parameters:
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
+        description: <p>バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク </p>
+  - uid: 'com.microsoft.azure.servicebus._i_message_browser.peekBatch(long,int)'
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: 'peekBatch(long fromSequenceNumber, int messageCount)'
+    nameWithType: 'IMessageBrowser.peekBatch(long fromSequenceNumber, int messageCount)'
+    fullName: 'Collection<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekBatch(long fromSequenceNumber, int messageCount)'
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</p>
+      <p></p>
+    syntax:
+      content: 'public Collection<IMessage> peekBatch(long fromSequenceNumber, int messageCount)'
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
+        description: <p>バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク </p>
+  - uid: com.microsoft.azure.servicebus._i_message_browser.peekAsync()
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: peekAsync()
+    nameWithType: IMessageBrowser.peekAsync()
+    fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekAsync()
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージを非同期に読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<IMessage> peekAsync()
+      return:
+        type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+  - uid: com.microsoft.azure.servicebus._i_message_browser.peekAsync(long)
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: peekAsync(long fromSequenceNumber)
+    nameWithType: IMessageBrowser.peekAsync(long fromSequenceNumber)
+    fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekAsync(long fromSequenceNumber)
+    type: Method
+    summary: |-
+      <p>非同期的にメッセージを読み取ります次にアクティブな受信側またはメッセージの送信元の状態を変更することがなく。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<IMessage> peekAsync(long fromSequenceNumber)
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+      return:
+        type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
+        description: <p>返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+  - uid: com.microsoft.azure.servicebus._i_message_browser.peekBatchAsync(int)
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: peekBatchAsync(int messageCount)
+    nameWithType: IMessageBrowser.peekBatchAsync(int messageCount)
+    fullName: CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageBrowser.peekBatchAsync(int messageCount)
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Collection<IMessage>> peekBatchAsync(int messageCount)
+      parameters:
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
+        description: <p>バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+  - uid: 'com.microsoft.azure.servicebus._i_message_browser.peekBatchAsync(long,int)'
+    parent: com.microsoft.azure.servicebus._i_message_browser
+    href: com.microsoft.azure.servicebus._i_message_browser.yml
+    name: 'peekBatchAsync(long fromSequenceNumber, int messageCount)'
+    nameWithType: 'IMessageBrowser.peekBatchAsync(long fromSequenceNumber, int messageCount)'
+    fullName: 'CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageBrowser.peekBatchAsync(long fromSequenceNumber, int messageCount)'
+    type: Method
+    summary: |-
+      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Collection<IMessage>> peekBatchAsync(long fromSequenceNumber, int messageCount)'
+      parameters:
+        - id: fromSequenceNumber
+          type: 0364520f
+          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+        - id: messageCount
+          type: f75371fa
+          description: <p>メッセージの数。 </p>
+      return:
+        type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
+        description: <p>バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+  - uid: com.microsoft.azure.servicebus._i_topic_client.getTopicName()
+    parent: com.microsoft.azure.servicebus._i_topic_client
+    href: com.microsoft.azure.servicebus._i_topic_client.yml
+    name: getTopicName()
+    nameWithType: ITopicClient.getTopicName()
+    fullName: String com.microsoft.azure.servicebus.ITopicClient.getTopicName()
+    type: Method
+    summary: <p>トピックの名前を取得します。 </p>
+    syntax:
+      content: public String getTopicName()
+      return:
+        type: '26831127'
+        description: <p>トピックの名前 </p>
+  - uid: com.microsoft.azure.servicebus.primitives._messaging_factory
+    parent: com.microsoft.azure.servicebus.primitives
+    href: com.microsoft.azure.servicebus.primitives._messaging_factory.yml
+    name: MessagingFactory
+    nameWithType: MessagingFactory
+    fullName: com.microsoft.azure.servicebus.primitives.MessagingFactory
+    type: Class
+    summary: <p>関連するすべての AMQP の詳細を AMQP 接続をカプセル化し、ライフ サイクルを管理の概要は次のサイクルです。 このクラスの各インスタンスは、名前空間への AMQP 接続を 1 つを表します。 アプリケーションでは、複数の送信者、受信者または同じ MessagingFacotry インスタンスを使用してクライアントを作成する場合は、それらの送信者、受信者またはクライアントと名前空間に同じ接続が共有されます。 </p>
+    syntax:
+      content: public class MessagingFactory extends ClientEntity

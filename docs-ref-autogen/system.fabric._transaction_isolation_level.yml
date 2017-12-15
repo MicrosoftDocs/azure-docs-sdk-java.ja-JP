@@ -1,0 +1,181 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._transaction_isolation_level
+    id: _transaction_isolation_level
+    parent: system.fabric
+    children:
+      - system.fabric._transaction_isolation_level.Default
+      - system.fabric._transaction_isolation_level.getValue()
+      - system.fabric._transaction_isolation_level.ReadCommitted
+      - system.fabric._transaction_isolation_level.ReadUncommitted
+      - system.fabric._transaction_isolation_level.RepeatableRead
+      - system.fabric._transaction_isolation_level.Serializable
+      - system.fabric._transaction_isolation_level.Snapshot
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: TransactionIsolationLevel
+    nameWithType: TransactionIsolationLevel
+    fullName: system.fabric.TransactionIsolationLevel
+    type: Enum
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 5
+    package: system.fabric
+    summary: <p>可能な分離レベルのセットを列挙、 <xref uid="system.fabric._transaction" data-throw-if-not-resolved="false">system.fabric.Transaction</xref>です。 </p>
+    syntax:
+      content: public enum TransactionIsolationLevel
+    inheritance:
+      - java.lang.Object
+      - java.lang.Enum<TransactionIsolationLevel>
+  - uid: system.fabric._transaction_isolation_level.Default
+    id: Default
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: Default
+    nameWithType: TransactionIsolationLevel.Default
+    fullName: system.fabric.TransactionIsolationLevel.Default
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 9
+    package: system.fabric
+    summary: <p>ストアの既定の分離レベルを示します。 </p>
+    syntax:
+      content: public Default=(0)
+  - uid: system.fabric._transaction_isolation_level.getValue()
+    id: getValue()
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: getValue()
+    nameWithType: TransactionIsolationLevel.getValue()
+    fullName: int system.fabric.TransactionIsolationLevel.getValue()
+    overload: system.fabric._transaction_isolation_level.getValue*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 49
+    package: system.fabric
+    syntax:
+      content: public int getValue()
+      return:
+        type: f75371fa
+  - uid: system.fabric._transaction_isolation_level.ReadCommitted
+    id: ReadCommitted
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: ReadCommitted
+    nameWithType: TransactionIsolationLevel.ReadCommitted
+    fullName: system.fabric.TransactionIsolationLevel.ReadCommitted
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 19
+    package: system.fabric
+    summary: <p>揮発性のデータは、トランザクション中に読み取ることができませんが、変更できることを示します。 共有ロックがデータの読み取りをダーティ リードを回避するのには、反復不可能読み取りやファントム データになるトランザクションの終了前にデータを変更することができます。 </p>
+    syntax:
+      content: public ReadCommitted=(2)
+  - uid: system.fabric._transaction_isolation_level.ReadUncommitted
+    id: ReadUncommitted
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: ReadUncommitted
+    nameWithType: TransactionIsolationLevel.ReadUncommitted
+    fullName: system.fabric.TransactionIsolationLevel.ReadUncommitted
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 13
+    package: system.fabric
+    summary: <p>トランザクション中に揮発性のデータを読み取ることを示します。 </p>
+    syntax:
+      content: public ReadUncommitted=(1)
+  - uid: system.fabric._transaction_isolation_level.RepeatableRead
+    id: RepeatableRead
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: RepeatableRead
+    nameWithType: TransactionIsolationLevel.RepeatableRead
+    fullName: system.fabric.TransactionIsolationLevel.RepeatableRead
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 26
+    package: system.fabric
+    summary: <p>揮発性データの読み取りが、トランザクション中に変更されないことを示します。 ロックは、その他のユーザーがデータを更新することを防止するクエリで使用されるすべてのデータに配置されます。 新しい行は、データ セットに挿入できるし、それ以降の読み取り、現在のトランザクションに含まれます。 </p>
+    syntax:
+      content: public RepeatableRead=(3)
+  - uid: system.fabric._transaction_isolation_level.Serializable
+    id: Serializable
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: Serializable
+    nameWithType: TransactionIsolationLevel.Serializable
+    fullName: system.fabric.TransactionIsolationLevel.Serializable
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 38
+    package: system.fabric
+    summary: <p>揮発性のデータがシリアル化可能なことを示します。 揮発性のデータを読み取ることができますが、変更しないと、トランザクション中に新しいデータを追加することです。 データ セットでロックが配置される範囲を示します。 ロックでは、トランザクションが終了するまで更新またはデータ セットに挿入を防ぐためです。 </p>
+    syntax:
+      content: public Serializable=(5)
+  - uid: system.fabric._transaction_isolation_level.Snapshot
+    id: Snapshot
+    parent: system.fabric._transaction_isolation_level
+    href: system.fabric._transaction_isolation_level.yml
+    langs:
+      - java
+    name: Snapshot
+    nameWithType: TransactionIsolationLevel.Snapshot
+    fullName: system.fabric.TransactionIsolationLevel.Snapshot
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
+      startLine: 31
+    package: system.fabric
+    summary: <p>揮発性のデータを読み取ることができます、スナップショットのレベルを示します。 読み取られるデータには、トランザクションの開始時に存在していたデータのトランザクション一貫性のあるバージョンがあります。 </p>
+    syntax:
+      content: public Snapshot=(4)
+references:
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: system.fabric._transaction_isolation_level.getValue*
+    name: getValue
+    nameWithType: TransactionIsolationLevel.getValue
+    fullName: int system.fabric.TransactionIsolationLevel.getValue
+    package: system.fabric
+  - uid: system.fabric._transaction
+    parent: system.fabric
+    href: system.fabric._transaction.yml
+    name: Transaction
+    nameWithType: Transaction
+    fullName: system.fabric.Transaction
+    type: Class
+    syntax:
+      content: public class Transaction extends TransactionBase

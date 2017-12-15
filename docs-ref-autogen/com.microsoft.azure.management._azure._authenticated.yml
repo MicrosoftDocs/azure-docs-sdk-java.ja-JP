@@ -1,0 +1,382 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management._azure._authenticated
+    id: _authenticated
+    parent: com.microsoft.azure.management
+    children:
+      - com.microsoft.azure.management._azure._authenticated.subscriptions()
+      - com.microsoft.azure.management._azure._authenticated.tenantId()
+      - com.microsoft.azure.management._azure._authenticated.tenants()
+      - com.microsoft.azure.management._azure._authenticated.withDefaultSubscription()
+      - com.microsoft.azure.management._azure._authenticated.withSubscription(String)
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    langs:
+      - java
+    name: Azure.Authenticated
+    nameWithType: Azure.Authenticated
+    fullName: com.microsoft.azure.management.Azure.Authenticated
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+      startLine: 242
+    package: com.microsoft.azure.management
+    summary: |-
+      <p>認証のサブセットへのアクセスを提供<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref> Api は特定のサブスクリプションを必要としません。 </p>
+      <p>サブスクリプションに固有の Api にアクセスする<xref uid="com.microsoft.azure.management._azure._authenticated.withSubscription(String)" data-throw-if-not-resolved="false">Authenticated#withSubscription(String)</xref>、または<xref uid="com.microsoft.azure.management._azure._authenticated.withDefaultSubscription()" data-throw-if-not-resolved="false">withDefaultSubscription()</xref>既定のサブスクリプションが既に指定されています以前 (の場合以前に指定した認証ファイルの場合など)。 </p>
+    syntax:
+      content: public interface Authenticated extends AccessManagement
+    inheritedMembers:
+      - com.microsoft.azure.management._access_management.activeDirectoryApplications()
+      - com.microsoft.azure.management._access_management.activeDirectoryGroups()
+      - com.microsoft.azure.management._access_management.activeDirectoryUsers()
+      - com.microsoft.azure.management._access_management.roleAssignments()
+      - com.microsoft.azure.management._access_management.roleDefinitions()
+      - com.microsoft.azure.management._access_management.servicePrincipals()
+  - uid: com.microsoft.azure.management._azure._authenticated.subscriptions()
+    id: subscriptions()
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    langs:
+      - java
+    name: subscriptions()
+    nameWithType: Azure.Authenticated.subscriptions()
+    fullName: Subscriptions com.microsoft.azure.management.Azure.Authenticated.subscriptions()
+    overload: com.microsoft.azure.management._azure._authenticated.subscriptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+      startLine: 253
+    package: com.microsoft.azure.management
+    summary: |-
+      <p>サブスクリプション管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public Subscriptions subscriptions()
+      return:
+        type: com.microsoft.azure.management.resources._subscriptions
+        description: <p>サブスクリプションの管理へのアクセスを提供するサブスクリプション インターフェイス </p>
+  - uid: com.microsoft.azure.management._azure._authenticated.tenantId()
+    id: tenantId()
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    langs:
+      - java
+    name: tenantId()
+    nameWithType: Azure.Authenticated.tenantId()
+    fullName: String com.microsoft.azure.management.Azure.Authenticated.tenantId()
+    overload: com.microsoft.azure.management._azure._authenticated.tenantId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+      startLine: 246
+    package: com.microsoft.azure.management
+    syntax:
+      content: public String tenantId()
+      return:
+        type: '26831127'
+        description: <p>このクライアントは、現在選択されているテナント ID の認証を使用するには </p>
+  - uid: com.microsoft.azure.management._azure._authenticated.tenants()
+    id: tenants()
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    langs:
+      - java
+    name: tenants()
+    nameWithType: Azure.Authenticated.tenants()
+    fullName: Tenants com.microsoft.azure.management.Azure.Authenticated.tenants()
+    overload: com.microsoft.azure.management._azure._authenticated.tenants*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+      startLine: 260
+    package: com.microsoft.azure.management
+    summary: |-
+      <p>テナントの管理の Api エントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public Tenants tenants()
+      return:
+        type: com.microsoft.azure.management.resources._tenants
+        description: <p>テナントのテナントの管理アクセスを提供するインターフェイスします。 </p>
+  - uid: com.microsoft.azure.management._azure._authenticated.withDefaultSubscription()
+    id: withDefaultSubscription()
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    langs:
+      - java
+    name: withDefaultSubscription()
+    nameWithType: Azure.Authenticated.withDefaultSubscription()
+    fullName: Azure com.microsoft.azure.management.Azure.Authenticated.withDefaultSubscription()
+    overload: com.microsoft.azure.management._azure._authenticated.withDefaultSubscription*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+      startLine: 281
+    package: com.microsoft.azure.management
+    summary: |-
+      <p>使用する Api のサブスクリプションと、既定のサブスクリプションを選択します。 </p>
+      <p>認証ファイルを使用して、内部で、既定のサブスクリプションを指定できます<xref uid="com.microsoft.azure.management._azure.authenticate(File)" data-throw-if-not-resolved="false">Azure#authenticate(File)</xref>です。 既定のサブスクリプションが既に指定されていない、最初のサブスクリプションによって返される場合<xref uid="com.microsoft.azure.management._azure._authenticated.subscriptions()" data-throw-if-not-resolved="false">Authenticated#subscriptions()</xref>が選択されます。 </p>
+    syntax: &ref_3
+      content: public Azure withDefaultSubscription()
+      return:
+        type: com.microsoft.azure.management._azure
+        description: <p>認証された<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>既定のサブスクリプションを使用するよう構成されたクライアント </p>
+    exceptions:
+      - type: dc385fd4
+        description: <p>スローされた例外<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref></p>
+      - type: cbf33bbe
+        description: <p>シリアル化または逆シリアル化からスローされた例外 </p>
+  - uid: com.microsoft.azure.management._azure._authenticated.withSubscription(String)
+    id: withSubscription(String)
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    langs:
+      - java
+    name: withSubscription(String subscriptionId)
+    nameWithType: Azure.Authenticated.withSubscription(String subscriptionId)
+    fullName: Azure com.microsoft.azure.management.Azure.Authenticated.withSubscription(String subscriptionId)
+    overload: com.microsoft.azure.management._azure._authenticated.withSubscription*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure/src/main/java/com/microsoft/azure/management/Azure.java
+      startLine: 269
+    package: com.microsoft.azure.management
+    summary: |-
+      <p>使用する Api の特定のサブスクリプションを選択します。 </p>
+      <p>ほとんど<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref> Api が特定のサブスクリプションを選択する必要があります。 </p>
+    syntax: &ref_2
+      content: public Azure withSubscription(String subscriptionId)
+      parameters:
+        - id: subscriptionId
+          type: '26831127'
+          description: <p>サブスクリプションの ID </p>
+      return:
+        type: com.microsoft.azure.management._azure
+        description: <p>認証された<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>指定されたサブスクリプションを使用するよう構成されたクライアント </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management._azure._authenticated.tenantId*
+    name: tenantId
+    nameWithType: Azure.Authenticated.tenantId
+    fullName: String com.microsoft.azure.management.Azure.Authenticated.tenantId
+    package: com.microsoft.azure.management
+  - uid: com.microsoft.azure.management._azure._authenticated.subscriptions*
+    name: subscriptions
+    nameWithType: Azure.Authenticated.subscriptions
+    fullName: Subscriptions com.microsoft.azure.management.Azure.Authenticated.subscriptions
+    package: com.microsoft.azure.management
+  - uid: com.microsoft.azure.management._azure._authenticated.tenants*
+    name: tenants
+    nameWithType: Azure.Authenticated.tenants
+    fullName: Tenants com.microsoft.azure.management.Azure.Authenticated.tenants
+    package: com.microsoft.azure.management
+  - uid: com.microsoft.azure.management._azure._authenticated.withSubscription*
+    name: withSubscription
+    nameWithType: Azure.Authenticated.withSubscription
+    fullName: Azure com.microsoft.azure.management.Azure.Authenticated.withSubscription
+    package: com.microsoft.azure.management
+  - uid: dc385fd4
+    spec.java:
+      - name: CloudException
+        fullName: CloudException
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: com.microsoft.azure.management._azure._authenticated.withDefaultSubscription*
+    name: withDefaultSubscription
+    nameWithType: Azure.Authenticated.withDefaultSubscription
+    fullName: Azure com.microsoft.azure.management.Azure.Authenticated.withDefaultSubscription
+    package: com.microsoft.azure.management
+  - uid: com.microsoft.azure.management._access_management.activeDirectoryApplications()
+    parent: com.microsoft.azure.management._access_management
+    href: com.microsoft.azure.management._access_management.yml
+    name: activeDirectoryApplications()
+    nameWithType: AccessManagement.activeDirectoryApplications()
+    fullName: ActiveDirectoryApplications com.microsoft.azure.management.AccessManagement.activeDirectoryApplications()
+    type: Method
+    summary: |-
+      <p>AD アプリケーションの管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public ActiveDirectoryApplications activeDirectoryApplications()
+      return:
+        type: com.microsoft.azure.management.graphrbac._active_directory_applications
+        description: <p>アプリケーション インターフェイスのテナント管理へのアクセスを提供します。 </p>
+  - uid: com.microsoft.azure.management._access_management.activeDirectoryGroups()
+    parent: com.microsoft.azure.management._access_management
+    href: com.microsoft.azure.management._access_management.yml
+    name: activeDirectoryGroups()
+    nameWithType: AccessManagement.activeDirectoryGroups()
+    fullName: ActiveDirectoryGroups com.microsoft.azure.management.AccessManagement.activeDirectoryGroups()
+    type: Method
+    summary: |-
+      <p>AD グループの管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public ActiveDirectoryGroups activeDirectoryGroups()
+      return:
+        type: com.microsoft.azure.management.graphrbac._active_directory_groups
+        description: <p>ActiveDirectoryGroups インターフェイスのテナント管理へのアクセスを提供します。 </p>
+  - uid: com.microsoft.azure.management._access_management.activeDirectoryUsers()
+    parent: com.microsoft.azure.management._access_management
+    href: com.microsoft.azure.management._access_management.yml
+    name: activeDirectoryUsers()
+    nameWithType: AccessManagement.activeDirectoryUsers()
+    fullName: ActiveDirectoryUsers com.microsoft.azure.management.AccessManagement.activeDirectoryUsers()
+    type: Method
+    summary: |-
+      <p>AD ユーザー管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public ActiveDirectoryUsers activeDirectoryUsers()
+      return:
+        type: com.microsoft.azure.management.graphrbac._active_directory_users
+        description: <p>ActiveDirectoryUsers インターフェイスのテナント管理へのアクセスを提供します。 </p>
+  - uid: com.microsoft.azure.management._access_management.roleAssignments()
+    parent: com.microsoft.azure.management._access_management
+    href: com.microsoft.azure.management._access_management.yml
+    name: roleAssignments()
+    nameWithType: AccessManagement.roleAssignments()
+    fullName: RoleAssignments com.microsoft.azure.management.AccessManagement.roleAssignments()
+    type: Method
+    summary: |-
+      <p>ロールの割り当て管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public RoleAssignments roleAssignments()
+      return:
+        type: com.microsoft.azure.management.graphrbac._role_assignments
+        description: <p>RoleAssignments インターフェイスのテナント管理へのアクセスを提供します。 </p>
+  - uid: com.microsoft.azure.management._access_management.roleDefinitions()
+    parent: com.microsoft.azure.management._access_management
+    href: com.microsoft.azure.management._access_management.yml
+    name: roleDefinitions()
+    nameWithType: AccessManagement.roleDefinitions()
+    fullName: RoleDefinitions com.microsoft.azure.management.AccessManagement.roleDefinitions()
+    type: Method
+    summary: |-
+      <p>ロール定義の管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public RoleDefinitions roleDefinitions()
+      return:
+        type: com.microsoft.azure.management.graphrbac._role_definitions
+        description: <p>RoleDefinitions インターフェイスのテナント管理へのアクセスを提供します。 </p>
+  - uid: com.microsoft.azure.management._access_management.servicePrincipals()
+    parent: com.microsoft.azure.management._access_management
+    href: com.microsoft.azure.management._access_management.yml
+    name: servicePrincipals()
+    nameWithType: AccessManagement.servicePrincipals()
+    fullName: ServicePrincipals com.microsoft.azure.management.AccessManagement.servicePrincipals()
+    type: Method
+    summary: |-
+      <p>AD サービス プリンシパルの管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax:
+      content: public ServicePrincipals servicePrincipals()
+      return:
+        type: com.microsoft.azure.management.graphrbac._service_principals
+        description: <p>ServicePrincipals インターフェイスのテナント管理へのアクセスを提供します。 </p>
+  - uid: com.microsoft.azure.management._access_management
+    parent: com.microsoft.azure.management
+    href: com.microsoft.azure.management._access_management.yml
+    name: AccessManagement
+    nameWithType: AccessManagement
+    fullName: com.microsoft.azure.management.AccessManagement
+    type: Interface
+    summary: <p>アクセス許可の管理に関連するメソッドを公開<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>です。 </p>
+    syntax:
+      content: public interface AccessManagement
+  - uid: com.microsoft.azure.management.resources._subscriptions
+    parent: com.microsoft.azure.management.resources
+    href: com.microsoft.azure.management.resources._subscriptions.yml
+    name: Subscriptions
+    nameWithType: Subscriptions
+    fullName: com.microsoft.azure.management.resources.Subscriptions
+    type: Interface
+    summary: <p>サブスクリプション管理 API へのエントリ ポイントです。 </p>
+    syntax:
+      content: public interface Subscriptions
+  - uid: com.microsoft.azure.management.resources._tenants
+    parent: com.microsoft.azure.management.resources
+    href: com.microsoft.azure.management.resources._tenants.yml
+    name: Tenants
+    nameWithType: Tenants
+    fullName: com.microsoft.azure.management.resources.Tenants
+    type: Interface
+    summary: <p>テナント管理 API へのエントリ ポイントです。 </p>
+    syntax:
+      content: public interface Tenants
+  - uid: com.microsoft.azure.management._azure
+    parent: com.microsoft.azure.management
+    href: com.microsoft.azure.management._azure.yml
+    name: Azure
+    nameWithType: Azure
+    fullName: com.microsoft.azure.management.Azure
+    type: Class
+    summary: <p>リソース管理 Api にアクセスするためのエントリ ポイントで<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>です。 </p>
+    syntax:
+      content: public class Azure
+  - uid: com.microsoft.azure.management._azure.authenticate(File)
+    parent: com.microsoft.azure.management._azure
+    href: com.microsoft.azure.management._azure.yml
+    name: authenticate(File credentialsFile)
+    nameWithType: Azure.authenticate(File credentialsFile)
+    fullName: static Authenticated com.microsoft.azure.management.Azure.authenticate(File credentialsFile)
+    type: Method
+    summary: <p>プロパティを必要な資格情報を含むファイルを使用して API アクセスを認証します。 </p>
+    syntax:
+      content: public static Authenticated authenticate(File credentialsFile)
+      parameters:
+        - id: credentialsFile
+          type: 8291270b
+          description: <p>次のキーを持つファイルします形式を標準の Java プロパティ内の資格情報を含むファイル。</p>
+      return:
+        type: com.microsoft.azure.management._azure._authenticated
+        description: <p>認証<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>クライアント </p>
+  - uid: com.microsoft.azure.management._azure._authenticated.subscriptions()
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    name: subscriptions()
+    nameWithType: Azure.Authenticated.subscriptions()
+    fullName: Subscriptions com.microsoft.azure.management.Azure.Authenticated.subscriptions()
+    type: Method
+    summary: |-
+      <p>サブスクリプション管理 Api へのエントリ ポイントです。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.management._azure._authenticated.withSubscription(String)
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    name: withSubscription(String subscriptionId)
+    nameWithType: Azure.Authenticated.withSubscription(String subscriptionId)
+    fullName: Azure com.microsoft.azure.management.Azure.Authenticated.withSubscription(String subscriptionId)
+    type: Method
+    summary: |-
+      <p>使用する Api の特定のサブスクリプションを選択します。 </p>
+      <p>ほとんど<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref> Api が特定のサブスクリプションを選択する必要があります。 </p>
+    syntax: *ref_2
+  - uid: com.microsoft.azure.management._azure._authenticated.withDefaultSubscription()
+    parent: com.microsoft.azure.management._azure._authenticated
+    href: com.microsoft.azure.management._azure._authenticated.yml
+    name: withDefaultSubscription()
+    nameWithType: Azure.Authenticated.withDefaultSubscription()
+    fullName: Azure com.microsoft.azure.management.Azure.Authenticated.withDefaultSubscription()
+    type: Method
+    summary: |-
+      <p>使用する Api のサブスクリプションと、既定のサブスクリプションを選択します。 </p>
+      <p>認証ファイルを使用して、内部で、既定のサブスクリプションを指定できます<xref uid="com.microsoft.azure.management._azure.authenticate(File)" data-throw-if-not-resolved="false">Azure#authenticate(File)</xref>です。 既定のサブスクリプションが既に指定されていない、最初のサブスクリプションによって返される場合<xref uid="com.microsoft.azure.management._azure._authenticated.subscriptions()" data-throw-if-not-resolved="false">Authenticated#subscriptions()</xref>が選択されます。 </p>
+    syntax: *ref_3

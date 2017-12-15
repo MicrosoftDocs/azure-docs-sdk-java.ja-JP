@@ -1,0 +1,1596 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.servicebus._i_message
+    id: _i_message
+    parent: com.microsoft.azure.servicebus
+    children:
+      - com.microsoft.azure.servicebus._i_message.getBody()
+      - com.microsoft.azure.servicebus._i_message.getContentType()
+      - com.microsoft.azure.servicebus._i_message.getCorrelationId()
+      - com.microsoft.azure.servicebus._i_message.getDeadLetterSource()
+      - com.microsoft.azure.servicebus._i_message.getDeliveryCount()
+      - com.microsoft.azure.servicebus._i_message.getEnqueuedTimeUtc()
+      - com.microsoft.azure.servicebus._i_message.getExpiresAtUtc()
+      - com.microsoft.azure.servicebus._i_message.getLabel()
+      - com.microsoft.azure.servicebus._i_message.getLockedUntilUtc()
+      - com.microsoft.azure.servicebus._i_message.getLockToken()
+      - com.microsoft.azure.servicebus._i_message.getMessageId()
+      - com.microsoft.azure.servicebus._i_message.getPartitionKey()
+      - com.microsoft.azure.servicebus._i_message.getProperties()
+      - com.microsoft.azure.servicebus._i_message.getReplyTo()
+      - com.microsoft.azure.servicebus._i_message.getReplyToSessionId()
+      - com.microsoft.azure.servicebus._i_message.getScheduledEnqueuedTimeUtc()
+      - com.microsoft.azure.servicebus._i_message.getSequenceNumber()
+      - com.microsoft.azure.servicebus._i_message.getSessionId()
+      - com.microsoft.azure.servicebus._i_message.getTimeToLive()
+      - com.microsoft.azure.servicebus._i_message.getTo()
+      - 'com.microsoft.azure.servicebus._i_message.setBody(byte [])'
+      - com.microsoft.azure.servicebus._i_message.setContentType(String)
+      - com.microsoft.azure.servicebus._i_message.setCorrelationId(String)
+      - com.microsoft.azure.servicebus._i_message.setLabel(String)
+      - com.microsoft.azure.servicebus._i_message.setMessageId(String)
+      - com.microsoft.azure.servicebus._i_message.setPartitionKey(String)
+      - 'com.microsoft.azure.servicebus._i_message.setProperties(Map<String, String>)'
+      - com.microsoft.azure.servicebus._i_message.setReplyTo(String)
+      - com.microsoft.azure.servicebus._i_message.setReplyToSessionId(String)
+      - com.microsoft.azure.servicebus._i_message.setScheduledEnqueuedTimeUtc(Instant)
+      - com.microsoft.azure.servicebus._i_message.setSessionId(String)
+      - com.microsoft.azure.servicebus._i_message.setTimeToLive(Duration)
+      - com.microsoft.azure.servicebus._i_message.setTo(String)
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: IMessage
+    nameWithType: IMessage
+    fullName: com.microsoft.azure.servicebus.IMessage
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-service-bus-java'
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 15
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>Azure Service Bus とクライアント間で交換されるメッセージを表します。</p>
+      <p></p>
+    syntax:
+      content: public interface IMessage
+  - uid: com.microsoft.azure.servicebus._i_message.getBody()
+    id: getBody()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getBody()
+    nameWithType: IMessage.getBody()
+    fullName: 'byte [] com.microsoft.azure.servicebus.IMessage.getBody()'
+    overload: com.microsoft.azure.servicebus._i_message.getBody*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 127
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>バイト配列としてこのメッセージの本文を取得します。 バイトをデコードするクライアント アプリケーションの責任です。</p>
+      <p></p>
+    syntax:
+      content: 'public byte [] getBody()'
+      return:
+        type: ccd9418d
+        description: <p>このメッセージの本文 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getContentType()
+    id: getContentType()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getContentType()
+    nameWithType: IMessage.getContentType()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getContentType()
+    overload: com.microsoft.azure.servicebus._i_message.getContentType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 56
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのコンテンツの種類を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getContentType()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのコンテンツの種類 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getCorrelationId()
+    id: getCorrelationId()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getCorrelationId()
+    nameWithType: IMessage.getCorrelationId()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getCorrelationId()
+    overload: com.microsoft.azure.servicebus._i_message.getCorrelationId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 155
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの correlationId プロパティを取得します。 クライアントでは、メッセージの相関 id を設定でき、相関関係のフィルターで使用することができます。</p>
+      <p></p>
+    syntax:
+      content: public String getCorrelationId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの相関 Id </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getDeadLetterSource()
+    id: getDeadLetterSource()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getDeadLetterSource()
+    nameWithType: IMessage.getDeadLetterSource()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getDeadLetterSource()
+    overload: com.microsoft.azure.servicebus._i_message.getDeadLetterSource*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 239
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージが配信不能になりましたメッセージの場合は、このメッセージの配信不能メッセージ ソースを取得します。 このプロパティは、このメッセージを配信不能になりましたの原因を把握するのに役立ちます。</p>
+      <p></p>
+    syntax:
+      content: public String getDeadLetterSource()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの配信不能メッセージのソース </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getDeliveryCount()
+    id: getDeliveryCount()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getDeliveryCount()
+    nameWithType: IMessage.getDeliveryCount()
+    fullName: long com.microsoft.azure.servicebus.IMessage.getDeliveryCount()
+    overload: com.microsoft.azure.servicebus._i_message.getDeliveryCount*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 21
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージをクライアントに配信された回数を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getDeliveryCount()
+      return:
+        type: 0364520f
+        description: <p>このメッセージの配信回数。 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getEnqueuedTimeUtc()
+    id: getEnqueuedTimeUtc()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getEnqueuedTimeUtc()
+    nameWithType: IMessage.getEnqueuedTimeUtc()
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getEnqueuedTimeUtc()
+    overload: com.microsoft.azure.servicebus._i_message.getEnqueuedTimeUtc*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 85
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージを Azure Service Bus のキュー内にあった時点を取得します。 通常のメッセージは、Azure Service Bus に送信されるとすぐにエンキューします。 スケジュールされたメッセージとは、スケジュールされたエンキュー時にキュー入れられました。</p>
+      <p></p>
+    syntax:
+      content: public Instant getEnqueuedTimeUtc()
+      return:
+        type: 328f8254
+        description: <p>インスタント メッセージを Azure Service Bus のキュー内にあった </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getExpiresAtUtc()
+    id: getExpiresAtUtc()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getExpiresAtUtc()
+    nameWithType: IMessage.getExpiresAtUtc()
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getExpiresAtUtc()
+    overload: com.microsoft.azure.servicebus._i_message.getExpiresAtUtc*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 70
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージは期限切れになる時点を取得します。 このメソッドは単なる別の形式の<xref uid="com.microsoft.azure.servicebus._i_message.getTimeToLive()" data-throw-if-not-resolved="false">getTimeToLive</xref></p>
+      <p></p>
+    syntax:
+      content: public Instant getExpiresAtUtc()
+      return:
+        type: 328f8254
+        description: <p>このメッセージの有効期限が切れるインスタント </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getLabel()
+    id: getLabel()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getLabel()
+    nameWithType: IMessage.getLabel()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getLabel()
+    overload: com.microsoft.azure.servicebus._i_message.getLabel*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 197
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのラベル プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getLabel()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのラベルのプロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getLockedUntilUtc()
+    id: getLockedUntilUtc()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getLockedUntilUtc()
+    nameWithType: IMessage.getLockedUntilUtc()
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getLockedUntilUtc()
+    overload: com.microsoft.azure.servicebus._i_message.getLockedUntilUtc*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 78
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのロックの有効期限が切れた時点を取得します。 メッセージを受信する<xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode #PEEKLOCK</xref>モードでは、エンティティの説明で指定されたロック期間の間、Azure Service Bus によってロックされています。 メッセージがない完了または破棄するか遅延、配信不能になりました、ロックの有効期限が切れる前に、メッセージを使用できるロックの有効期限では、他の受信者場合。</p>
+      <p></p>
+    syntax:
+      content: public Instant getLockedUntilUtc()
+      return:
+        type: 328f8254
+        description: <p>このメッセージのロックの期限が切れる PEEKLOCK モードを使用して、メッセージを受信した場合、インスタントです。 それ以外の場合 null を返します。 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getLockToken()
+    id: getLockToken()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getLockToken()
+    nameWithType: IMessage.getLockToken()
+    fullName: UUID com.microsoft.azure.servicebus.IMessage.getLockToken()
+    overload: com.microsoft.azure.servicebus._i_message.getLockToken*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 246
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>使用してこのメッセージを受信した場合、ロックのこのメッセージのトークンを取得<xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode #PEEKLOCK</xref>モード。 このトークンを終了または破棄を使用または配信不能か、このメッセージを延期します。</p>
+      <p></p>
+    syntax:
+      content: public UUID getLockToken()
+      return:
+        type: add9545a
+        description: <p>PEEKLOCK モードを使用してこのメッセージを受信した場合は、このメッセージのロック トークンです。 それ以外の場合すべてがゼロのトークンを返します。 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getMessageId()
+    id: getMessageId()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getMessageId()
+    nameWithType: IMessage.getMessageId()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getMessageId()
+    overload: com.microsoft.azure.servicebus._i_message.getMessageId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 28
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの Id を取得します。 クライアントは、メッセージの Id を明示的に設定できます。 それ以外の場合、サービスは、メッセージの id として GUID を生成します。</p>
+      <p></p>
+    syntax:
+      content: public String getMessageId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの id </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getPartitionKey()
+    id: getPartitionKey()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getPartitionKey()
+    nameWithType: IMessage.getPartitionKey()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getPartitionKey()
+    overload: com.microsoft.azure.servicebus._i_message.getPartitionKey*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 225
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのパーティション キーを取得します。 パーティション分割されたエンティティには、このメッセージを送信する場合、このパーティション キーはハッシュされ、エンティティの同じパーティションに同じパーティション キーを持つすべてのメッセージを作成したエンティティの 1 つのパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public String getPartitionKey()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのパーティション キー </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getProperties()
+    id: getProperties()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getProperties()
+    nameWithType: IMessage.getProperties()
+    fullName: 'Map<String, String> com.microsoft.azure.servicebus.IMessage.getProperties()'
+    overload: com.microsoft.azure.servicebus._i_message.getProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 141
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのカスタム アプリケーションのプロパティのマップを取得します。 クライアント アプリケーションは、メッセージに対してこのマップを使用して、カスタム プロパティを設定できます。</p>
+      <p></p>
+    syntax:
+      content: 'public Map<String, String> getProperties()'
+      return:
+        type: 689c8cb5
+        description: <p>このメッセージのカスタム アプリケーションのプロパティのマップ </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getReplyTo()
+    id: getReplyTo()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getReplyTo()
+    nameWithType: IMessage.getReplyTo()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getReplyTo()
+    overload: com.microsoft.azure.servicebus._i_message.getReplyTo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 183
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの ReplyTo プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getReplyTo()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの ReplyTo プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getReplyToSessionId()
+    id: getReplyToSessionId()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getReplyToSessionId()
+    nameWithType: IMessage.getReplyToSessionId()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getReplyToSessionId()
+    overload: com.microsoft.azure.servicebus._i_message.getReplyToSessionId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 211
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの ReplyToSessionId プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getReplyToSessionId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの ReplyToSessionId プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getScheduledEnqueuedTimeUtc()
+    id: getScheduledEnqueuedTimeUtc()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getScheduledEnqueuedTimeUtc()
+    nameWithType: IMessage.getScheduledEnqueuedTimeUtc()
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getScheduledEnqueuedTimeUtc()
+    overload: com.microsoft.azure.servicebus._i_message.getScheduledEnqueuedTimeUtc*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 92
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのエンキューのスケジュールされた時刻を取得します。 スケジュールされたエンキュー時に送信されたメッセージは Azure Service Bus にエンキューなりに対して利用できるように受信者特定エンキュー時にのみされます。</p>
+      <p></p>
+    syntax:
+      content: public Instant getScheduledEnqueuedTimeUtc()
+      return:
+        type: 328f8254
+        description: <p>メッセージで Azure Service Bus にエンキューはされるインスタント </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getSequenceNumber()
+    id: getSequenceNumber()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getSequenceNumber()
+    nameWithType: IMessage.getSequenceNumber()
+    fullName: long com.microsoft.azure.servicebus.IMessage.getSequenceNumber()
+    overload: com.microsoft.azure.servicebus._i_message.getSequenceNumber*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 106
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのシーケンス番号を取得します。 Azure Service Bus は、エンティティ内のすべてのメッセージ エンキューに一意なシーケンス番号を割り当てます。</p>
+      <p></p>
+    syntax:
+      content: public long getSequenceNumber()
+      return:
+        type: 0364520f
+        description: <p>このメッセージのシーケンス番号 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getSessionId()
+    id: getSessionId()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getSessionId()
+    nameWithType: IMessage.getSessionId()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getSessionId()
+    overload: com.microsoft.azure.servicebus._i_message.getSessionId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 113
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>いずれかがある場合は、このメッセージのセッション id を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getSessionId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのセッション id </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getTimeToLive()
+    id: getTimeToLive()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getTimeToLive()
+    nameWithType: IMessage.getTimeToLive()
+    fullName: Duration com.microsoft.azure.servicebus.IMessage.getTimeToLive()
+    overload: com.microsoft.azure.servicebus._i_message.getTimeToLive*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 42
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの有効期限が切れるまでの期間を取得します。 期限切れのメッセージは、キューまたはサブスクリプションから削除されます。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public Duration getTimeToLive()
+      return:
+        type: e02a2de0
+        description: <p>このメッセージのライブの期間を時間 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getTo()
+    id: getTo()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: getTo()
+    nameWithType: IMessage.getTo()
+    fullName: String com.microsoft.azure.servicebus.IMessage.getTo()
+    overload: com.microsoft.azure.servicebus._i_message.getTo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 169
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの To プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getTo()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのプロパティの値を </p>
+  - uid: 'com.microsoft.azure.servicebus._i_message.setBody(byte [])'
+    id: 'setBody(byte [])'
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: 'setBody(byte[] body)'
+    nameWithType: 'IMessage.setBody(byte[] body)'
+    fullName: 'void com.microsoft.azure.servicebus.IMessage.setBody(byte[] body)'
+    overload: com.microsoft.azure.servicebus._i_message.setBody*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 134
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>バイト配列としてこのメッセージの本文を設定します。</p>
+      <p></p>
+    syntax:
+      content: 'public void setBody(byte[] body)'
+      parameters:
+        - id: body
+          type: ccd9418d
+          description: <p>このメッセージの本文 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setContentType(String)
+    id: setContentType(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setContentType(String contentType)
+    nameWithType: IMessage.setContentType(String contentType)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setContentType(String contentType)
+    overload: com.microsoft.azure.servicebus._i_message.setContentType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 63
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのコンテンツの種類を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setContentType(String contentType)
+      parameters:
+        - id: contentType
+          type: '26831127'
+          description: <p>このメッセージのコンテンツの種類 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setCorrelationId(String)
+    id: setCorrelationId(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setCorrelationId(String correlationId)
+    nameWithType: IMessage.setCorrelationId(String correlationId)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setCorrelationId(String correlationId)
+    overload: com.microsoft.azure.servicebus._i_message.setCorrelationId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 162
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの correlationId プロパティを設定します。 クライアントでは、メッセージの相関 id を設定でき、相関関係のフィルターで使用することができます。</p>
+      <p></p>
+    syntax:
+      content: public void setCorrelationId(String correlationId)
+      parameters:
+        - id: correlationId
+          type: '26831127'
+          description: <p>このメッセージの相関 Id </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setLabel(String)
+    id: setLabel(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setLabel(String label)
+    nameWithType: IMessage.setLabel(String label)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setLabel(String label)
+    overload: com.microsoft.azure.servicebus._i_message.setLabel*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 204
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのラベル プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setLabel(String label)
+      parameters:
+        - id: label
+          type: '26831127'
+          description: <p>このメッセージのラベルのプロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setMessageId(String)
+    id: setMessageId(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setMessageId(String messageId)
+    nameWithType: IMessage.setMessageId(String messageId)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setMessageId(String messageId)
+    overload: com.microsoft.azure.servicebus._i_message.setMessageId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 35
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの Id を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setMessageId(String messageId)
+      parameters:
+        - id: messageId
+          type: '26831127'
+          description: <p>このメッセージの id </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setPartitionKey(String)
+    id: setPartitionKey(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setPartitionKey(String partitionKey)
+    nameWithType: IMessage.setPartitionKey(String partitionKey)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setPartitionKey(String partitionKey)
+    overload: com.microsoft.azure.servicebus._i_message.setPartitionKey*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 232
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのパーティション キーを設定します。 パーティション分割されたエンティティには、このメッセージを送信する場合、このパーティション キーはハッシュされ、エンティティの同じパーティションに同じパーティション キーを持つすべてのメッセージを作成したエンティティの 1 つのパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public void setPartitionKey(String partitionKey)
+      parameters:
+        - id: partitionKey
+          type: '26831127'
+          description: <p>このメッセージのパーティション キー </p>
+  - uid: 'com.microsoft.azure.servicebus._i_message.setProperties(Map<String, String>)'
+    id: 'setProperties(Map<String, String>)'
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: 'setProperties(Map<String, String> properties)'
+    nameWithType: 'IMessage.setProperties(Map<String, String> properties)'
+    fullName: 'void com.microsoft.azure.servicebus.IMessage.setProperties(Map<String, String> properties)'
+    overload: com.microsoft.azure.servicebus._i_message.setProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 148
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのカスタム アプリケーションのプロパティのマップを設定します。 クライアント アプリケーションは、メッセージに対してこのマップを使用して、カスタム プロパティを設定できます。</p>
+      <p></p>
+    syntax:
+      content: 'public void setProperties(Map<String, String> properties)'
+      parameters:
+        - id: properties
+          type: 689c8cb5
+          description: <p>このメッセージのカスタム アプリケーションのプロパティのマップ </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setReplyTo(String)
+    id: setReplyTo(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setReplyTo(String replyTo)
+    nameWithType: IMessage.setReplyTo(String replyTo)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setReplyTo(String replyTo)
+    overload: com.microsoft.azure.servicebus._i_message.setReplyTo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 190
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの ReplyTo プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setReplyTo(String replyTo)
+      parameters:
+        - id: replyTo
+          type: '26831127'
+          description: <p>このメッセージの ReplyTo プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setReplyToSessionId(String)
+    id: setReplyToSessionId(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setReplyToSessionId(String replyToSessionId)
+    nameWithType: IMessage.setReplyToSessionId(String replyToSessionId)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setReplyToSessionId(String replyToSessionId)
+    overload: com.microsoft.azure.servicebus._i_message.setReplyToSessionId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 218
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの ReplyToSessionId プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setReplyToSessionId(String replyToSessionId)
+      parameters:
+        - id: replyToSessionId
+          type: '26831127'
+          description: <p>このメッセージの ReplyToSessionId プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setScheduledEnqueuedTimeUtc(Instant)
+    id: setScheduledEnqueuedTimeUtc(Instant)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+    nameWithType: IMessage.setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+    overload: com.microsoft.azure.servicebus._i_message.setScheduledEnqueuedTimeUtc*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 99
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージを Azure Service Bus のキューである必要がありますインスタントを設定します。 スケジュールされたエンキュー時に送信されたメッセージは Azure Service Bus にエンキューなりに対して利用できるように受信者特定エンキュー時にのみされます。</p>
+      <p></p>
+    syntax:
+      content: public void setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type: 328f8254
+          description: <p>開始時点をこのメッセージは Azure Service Bus にエンキューする必要があります。 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setSessionId(String)
+    id: setSessionId(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setSessionId(String sessionId)
+    nameWithType: IMessage.setSessionId(String sessionId)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setSessionId(String sessionId)
+    overload: com.microsoft.azure.servicebus._i_message.setSessionId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 120
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージのセッション id を設定します。 セッション id 文字列は、Azure Service Bus のエンティティ内のセッションを識別します。 同じセッション id を持つすべてのメッセージは、同じセッションに属しています。</p>
+      <p></p>
+    syntax:
+      content: public void setSessionId(String sessionId)
+      parameters:
+        - id: sessionId
+          type: '26831127'
+          description: <p>このメッセージのセッション id </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setTimeToLive(Duration)
+    id: setTimeToLive(Duration)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setTimeToLive(Duration timeToLive)
+    nameWithType: IMessage.setTimeToLive(Duration timeToLive)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setTimeToLive(Duration timeToLive)
+    overload: com.microsoft.azure.servicebus._i_message.setTimeToLive*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 49
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>セットをこのメッセージの前に期間の期限が切れます。 期限切れのメッセージは、キューまたはサブスクリプションから削除されます。</p>
+      <p></p>
+    syntax:
+      content: public void setTimeToLive(Duration timeToLive)
+      parameters:
+        - id: timeToLive
+          type: e02a2de0
+          description: <p>このメッセージのライブの期間を時間 </p>
+  - uid: com.microsoft.azure.servicebus._i_message.setTo(String)
+    id: setTo(String)
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    langs:
+      - java
+    name: setTo(String to)
+    nameWithType: IMessage.setTo(String to)
+    fullName: void com.microsoft.azure.servicebus.IMessage.setTo(String to)
+    overload: com.microsoft.azure.servicebus._i_message.setTo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessage.java
+      startLine: 176
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>このメッセージの To プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setTo(String to)
+      parameters:
+        - id: to
+          type: '26831127'
+          description: <p>このメッセージのプロパティの値を </p>
+references:
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: com.microsoft.azure.servicebus._i_message.getDeliveryCount*
+    name: getDeliveryCount
+    nameWithType: IMessage.getDeliveryCount
+    fullName: long com.microsoft.azure.servicebus.IMessage.getDeliveryCount
+    package: com.microsoft.azure.servicebus
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.servicebus._i_message.getMessageId*
+    name: getMessageId
+    nameWithType: IMessage.getMessageId
+    fullName: String com.microsoft.azure.servicebus.IMessage.getMessageId
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setMessageId*
+    name: setMessageId
+    nameWithType: IMessage.setMessageId
+    fullName: void com.microsoft.azure.servicebus.IMessage.setMessageId
+    package: com.microsoft.azure.servicebus
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: com.microsoft.azure.servicebus._i_message.getTimeToLive*
+    name: getTimeToLive
+    nameWithType: IMessage.getTimeToLive
+    fullName: Duration com.microsoft.azure.servicebus.IMessage.getTimeToLive
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setTimeToLive*
+    name: setTimeToLive
+    nameWithType: IMessage.setTimeToLive
+    fullName: void com.microsoft.azure.servicebus.IMessage.setTimeToLive
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getContentType*
+    name: getContentType
+    nameWithType: IMessage.getContentType
+    fullName: String com.microsoft.azure.servicebus.IMessage.getContentType
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setContentType*
+    name: setContentType
+    nameWithType: IMessage.setContentType
+    fullName: void com.microsoft.azure.servicebus.IMessage.setContentType
+    package: com.microsoft.azure.servicebus
+  - uid: 328f8254
+    spec.java:
+      - name: Instant
+        fullName: Instant
+  - uid: com.microsoft.azure.servicebus._i_message.getExpiresAtUtc*
+    name: getExpiresAtUtc
+    nameWithType: IMessage.getExpiresAtUtc
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getExpiresAtUtc
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getLockedUntilUtc*
+    name: getLockedUntilUtc
+    nameWithType: IMessage.getLockedUntilUtc
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getLockedUntilUtc
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getEnqueuedTimeUtc*
+    name: getEnqueuedTimeUtc
+    nameWithType: IMessage.getEnqueuedTimeUtc
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getEnqueuedTimeUtc
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getScheduledEnqueuedTimeUtc*
+    name: getScheduledEnqueuedTimeUtc
+    nameWithType: IMessage.getScheduledEnqueuedTimeUtc
+    fullName: Instant com.microsoft.azure.servicebus.IMessage.getScheduledEnqueuedTimeUtc
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setScheduledEnqueuedTimeUtc*
+    name: setScheduledEnqueuedTimeUtc
+    nameWithType: IMessage.setScheduledEnqueuedTimeUtc
+    fullName: void com.microsoft.azure.servicebus.IMessage.setScheduledEnqueuedTimeUtc
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getSequenceNumber*
+    name: getSequenceNumber
+    nameWithType: IMessage.getSequenceNumber
+    fullName: long com.microsoft.azure.servicebus.IMessage.getSequenceNumber
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getSessionId*
+    name: getSessionId
+    nameWithType: IMessage.getSessionId
+    fullName: String com.microsoft.azure.servicebus.IMessage.getSessionId
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setSessionId*
+    name: setSessionId
+    nameWithType: IMessage.setSessionId
+    fullName: void com.microsoft.azure.servicebus.IMessage.setSessionId
+    package: com.microsoft.azure.servicebus
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: com.microsoft.azure.servicebus._i_message.getBody*
+    name: getBody
+    nameWithType: IMessage.getBody
+    fullName: 'byte [] com.microsoft.azure.servicebus.IMessage.getBody'
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setBody*
+    name: setBody
+    nameWithType: IMessage.setBody
+    fullName: void com.microsoft.azure.servicebus.IMessage.setBody
+    package: com.microsoft.azure.servicebus
+  - uid: 689c8cb5
+    spec.java:
+      - name: 'Map<String, String>'
+        fullName: 'Map<String, String>'
+  - uid: com.microsoft.azure.servicebus._i_message.getProperties*
+    name: getProperties
+    nameWithType: IMessage.getProperties
+    fullName: 'Map<String, String> com.microsoft.azure.servicebus.IMessage.getProperties'
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setProperties*
+    name: setProperties
+    nameWithType: IMessage.setProperties
+    fullName: void com.microsoft.azure.servicebus.IMessage.setProperties
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getCorrelationId*
+    name: getCorrelationId
+    nameWithType: IMessage.getCorrelationId
+    fullName: String com.microsoft.azure.servicebus.IMessage.getCorrelationId
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setCorrelationId*
+    name: setCorrelationId
+    nameWithType: IMessage.setCorrelationId
+    fullName: void com.microsoft.azure.servicebus.IMessage.setCorrelationId
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getTo*
+    name: getTo
+    nameWithType: IMessage.getTo
+    fullName: String com.microsoft.azure.servicebus.IMessage.getTo
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setTo*
+    name: setTo
+    nameWithType: IMessage.setTo
+    fullName: void com.microsoft.azure.servicebus.IMessage.setTo
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getReplyTo*
+    name: getReplyTo
+    nameWithType: IMessage.getReplyTo
+    fullName: String com.microsoft.azure.servicebus.IMessage.getReplyTo
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setReplyTo*
+    name: setReplyTo
+    nameWithType: IMessage.setReplyTo
+    fullName: void com.microsoft.azure.servicebus.IMessage.setReplyTo
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getLabel*
+    name: getLabel
+    nameWithType: IMessage.getLabel
+    fullName: String com.microsoft.azure.servicebus.IMessage.getLabel
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setLabel*
+    name: setLabel
+    nameWithType: IMessage.setLabel
+    fullName: void com.microsoft.azure.servicebus.IMessage.setLabel
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getReplyToSessionId*
+    name: getReplyToSessionId
+    nameWithType: IMessage.getReplyToSessionId
+    fullName: String com.microsoft.azure.servicebus.IMessage.getReplyToSessionId
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setReplyToSessionId*
+    name: setReplyToSessionId
+    nameWithType: IMessage.setReplyToSessionId
+    fullName: void com.microsoft.azure.servicebus.IMessage.setReplyToSessionId
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getPartitionKey*
+    name: getPartitionKey
+    nameWithType: IMessage.getPartitionKey
+    fullName: String com.microsoft.azure.servicebus.IMessage.getPartitionKey
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.setPartitionKey*
+    name: setPartitionKey
+    nameWithType: IMessage.setPartitionKey
+    fullName: void com.microsoft.azure.servicebus.IMessage.setPartitionKey
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._i_message.getDeadLetterSource*
+    name: getDeadLetterSource
+    nameWithType: IMessage.getDeadLetterSource
+    fullName: String com.microsoft.azure.servicebus.IMessage.getDeadLetterSource
+    package: com.microsoft.azure.servicebus
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: com.microsoft.azure.servicebus._i_message.getLockToken*
+    name: getLockToken
+    nameWithType: IMessage.getLockToken
+    fullName: UUID com.microsoft.azure.servicebus.IMessage.getLockToken
+    package: com.microsoft.azure.servicebus
+  - uid: com.microsoft.azure.servicebus._message
+    parent: com.microsoft.azure.servicebus
+    href: com.microsoft.azure.servicebus._message.yml
+    name: Message
+    nameWithType: Message
+    fullName: com.microsoft.azure.servicebus.Message
+    type: Class
+    syntax:
+      content: public class Message
+  - uid: com.microsoft.azure.servicebus._message.getDeliveryCount()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getDeliveryCount()
+    nameWithType: Message.getDeliveryCount()
+    fullName: long com.microsoft.azure.servicebus.Message.getDeliveryCount()
+    type: Method
+    summary: |-
+      <p>このメッセージをクライアントに配信された回数を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getDeliveryCount()
+      return:
+        type: 0364520f
+        description: <p>このメッセージの配信回数。 </p>
+  - uid: com.microsoft.azure.servicebus._message.getMessageId()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getMessageId()
+    nameWithType: Message.getMessageId()
+    fullName: String com.microsoft.azure.servicebus.Message.getMessageId()
+    type: Method
+    summary: |-
+      <p>このメッセージの Id を取得します。 クライアントは、メッセージの Id を明示的に設定できます。 それ以外の場合、サービスは、メッセージの id として GUID を生成します。</p>
+      <p></p>
+    syntax:
+      content: public String getMessageId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの id </p>
+  - uid: com.microsoft.azure.servicebus._message.setMessageId(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setMessageId(String messageId)
+    nameWithType: Message.setMessageId(String messageId)
+    fullName: void com.microsoft.azure.servicebus.Message.setMessageId(String messageId)
+    type: Method
+    summary: |-
+      <p>このメッセージの Id を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setMessageId(String messageId)
+      parameters:
+        - id: messageId
+          type: '26831127'
+          description: <p>このメッセージの id </p>
+  - uid: com.microsoft.azure.servicebus._message.getTimeToLive()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getTimeToLive()
+    nameWithType: Message.getTimeToLive()
+    fullName: Duration com.microsoft.azure.servicebus.Message.getTimeToLive()
+    type: Method
+    summary: |-
+      <p>このメッセージの有効期限が切れるまでの期間を取得します。 期限切れのメッセージは、キューまたはサブスクリプションから削除されます。</p>
+      <p></p>
+    syntax:
+      content: public Duration getTimeToLive()
+      return:
+        type: e02a2de0
+        description: <p>このメッセージのライブの期間を時間 </p>
+  - uid: com.microsoft.azure.servicebus._message.setTimeToLive(Duration)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setTimeToLive(Duration timeToLive)
+    nameWithType: Message.setTimeToLive(Duration timeToLive)
+    fullName: void com.microsoft.azure.servicebus.Message.setTimeToLive(Duration timeToLive)
+    type: Method
+    summary: |-
+      <p>セットをこのメッセージの前に期間の期限が切れます。 期限切れのメッセージは、キューまたはサブスクリプションから削除されます。</p>
+      <p></p>
+    syntax:
+      content: public void setTimeToLive(Duration timeToLive)
+      parameters:
+        - id: timeToLive
+          type: e02a2de0
+          description: <p>このメッセージのライブの期間を時間 </p>
+  - uid: com.microsoft.azure.servicebus._message.getContentType()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getContentType()
+    nameWithType: Message.getContentType()
+    fullName: String com.microsoft.azure.servicebus.Message.getContentType()
+    type: Method
+    summary: |-
+      <p>このメッセージのコンテンツの種類を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getContentType()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのコンテンツの種類 </p>
+  - uid: com.microsoft.azure.servicebus._message.setContentType(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setContentType(String contentType)
+    nameWithType: Message.setContentType(String contentType)
+    fullName: void com.microsoft.azure.servicebus.Message.setContentType(String contentType)
+    type: Method
+    summary: |-
+      <p>このメッセージのコンテンツの種類を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setContentType(String contentType)
+      parameters:
+        - id: contentType
+          type: '26831127'
+          description: <p>このメッセージのコンテンツの種類 </p>
+  - uid: com.microsoft.azure.servicebus._message.getExpiresAtUtc()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getExpiresAtUtc()
+    nameWithType: Message.getExpiresAtUtc()
+    fullName: Instant com.microsoft.azure.servicebus.Message.getExpiresAtUtc()
+    type: Method
+    summary: |-
+      <p>このメッセージは期限切れになる時点を取得します。 このメソッドは単なる別の形式の<xref uid="com.microsoft.azure.servicebus._message.getTimeToLive()" data-throw-if-not-resolved="false">getTimeToLive</xref></p>
+      <p></p>
+    syntax:
+      content: public Instant getExpiresAtUtc()
+      return:
+        type: 328f8254
+        description: <p>このメッセージの有効期限が切れるインスタント </p>
+  - uid: com.microsoft.azure.servicebus._i_message.getTimeToLive()
+    parent: com.microsoft.azure.servicebus._i_message
+    href: com.microsoft.azure.servicebus._i_message.yml
+    name: getTimeToLive()
+    nameWithType: IMessage.getTimeToLive()
+    fullName: Duration com.microsoft.azure.servicebus.IMessage.getTimeToLive()
+    type: Method
+    summary: |-
+      <p>このメッセージの有効期限が切れるまでの期間を取得します。 期限切れのメッセージは、キューまたはサブスクリプションから削除されます。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.servicebus._message.getLockedUntilUtc()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getLockedUntilUtc()
+    nameWithType: Message.getLockedUntilUtc()
+    fullName: Instant com.microsoft.azure.servicebus.Message.getLockedUntilUtc()
+    type: Method
+    summary: |-
+      <p>このメッセージのロックの有効期限が切れた時点を取得します。 メッセージを受信する<xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode #PEEKLOCK</xref>モードでは、エンティティの説明で指定されたロック期間の間、Azure Service Bus によってロックされています。 メッセージがない完了または破棄するか遅延、配信不能になりました、ロックの有効期限が切れる前に、メッセージを使用できるロックの有効期限では、他の受信者場合。</p>
+      <p></p>
+    syntax:
+      content: public Instant getLockedUntilUtc()
+      return:
+        type: 328f8254
+        description: <p>このメッセージのロックの期限が切れる PEEKLOCK モードを使用して、メッセージを受信した場合、インスタントです。 それ以外の場合 null を返します。 </p>
+  - uid: com.microsoft.azure.servicebus._receive_mode.PEEKLOCK
+    parent: com.microsoft.azure.servicebus._receive_mode
+    href: com.microsoft.azure.servicebus._receive_mode.yml
+    name: PEEKLOCK
+    nameWithType: ReceiveMode.PEEKLOCK
+    fullName: com.microsoft.azure.servicebus.ReceiveMode.PEEKLOCK
+    type: Field
+    summary: <p>このモードでは、キューまたはサブスクリプションから受信したメッセージは削除されません、代わりに一時的にロックされている、受信者は、他の受信者を非表示にすることにします。 3 つのイベントのいずれかのサービスが待機します。<itemizedlist><listitem><p>受信側では、メッセージを正常に処理する場合を呼び出すし、メッセージは削除されます。 </p></listitem><listitem><p>場合は、受信側は、メッセージを正常に処理できないことを決定したらを呼び出すと、メッセージがロックを解除し、他の受信者に使用可能です。 </p></listitem><listitem><p>受信側は、時間で、後の時点へのメッセージの処理を遅延する場合、呼び出しし、メッセージを延期します。 遅延実行だけが受信できる、シーケンス番号。 </p></listitem><listitem><p>受信側は、メッセージを配信不能メッセージを希望する場合を呼び出すし、メッセージは配信不能キューと呼ばれる特別なサブキューに移動されます。 </p></listitem><listitem><p>受信側のこれらのメソッドも構成可能な期間内 (既定では、60 秒) を呼び出す場合、受信側が失敗したサービスが前提とします。 この場合、ように動作、受信側が呼び出されると、他の受信者にメッセージを使用できるようにします。 </p></listitem></itemizedlist></p>
+    syntax:
+      content: public PEEKLOCK
+  - uid: com.microsoft.azure.servicebus._message.getEnqueuedTimeUtc()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getEnqueuedTimeUtc()
+    nameWithType: Message.getEnqueuedTimeUtc()
+    fullName: Instant com.microsoft.azure.servicebus.Message.getEnqueuedTimeUtc()
+    type: Method
+    summary: |-
+      <p>このメッセージを Azure Service Bus のキュー内にあった時点を取得します。 通常のメッセージは、Azure Service Bus に送信されるとすぐにエンキューします。 スケジュールされたメッセージとは、スケジュールされたエンキュー時にキュー入れられました。</p>
+      <p></p>
+    syntax:
+      content: public Instant getEnqueuedTimeUtc()
+      return:
+        type: 328f8254
+        description: <p>インスタント メッセージを Azure Service Bus のキュー内にあった </p>
+  - uid: com.microsoft.azure.servicebus._message.getScheduledEnqueuedTimeUtc()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getScheduledEnqueuedTimeUtc()
+    nameWithType: Message.getScheduledEnqueuedTimeUtc()
+    fullName: Instant com.microsoft.azure.servicebus.Message.getScheduledEnqueuedTimeUtc()
+    type: Method
+    summary: |-
+      <p>このメッセージのエンキューのスケジュールされた時刻を取得します。 スケジュールされたエンキュー時に送信されたメッセージは Azure Service Bus にエンキューなりに対して利用できるように受信者特定エンキュー時にのみされます。</p>
+      <p></p>
+    syntax:
+      content: public Instant getScheduledEnqueuedTimeUtc()
+      return:
+        type: 328f8254
+        description: <p>メッセージで Azure Service Bus にエンキューはされるインスタント </p>
+  - uid: com.microsoft.azure.servicebus._message.setScheduledEnqueuedTimeUtc(Instant)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+    nameWithType: Message.setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+    fullName: void com.microsoft.azure.servicebus.Message.setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+    type: Method
+    summary: |-
+      <p>このメッセージを Azure Service Bus のキューである必要がありますインスタントを設定します。 スケジュールされたエンキュー時に送信されたメッセージは Azure Service Bus にエンキューなりに対して利用できるように受信者特定エンキュー時にのみされます。</p>
+      <p></p>
+    syntax:
+      content: public void setScheduledEnqueuedTimeUtc(Instant scheduledEnqueueTimeUtc)
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type: 328f8254
+          description: <p>開始時点をこのメッセージは Azure Service Bus にエンキューする必要があります。 </p>
+  - uid: com.microsoft.azure.servicebus._message.getSequenceNumber()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getSequenceNumber()
+    nameWithType: Message.getSequenceNumber()
+    fullName: long com.microsoft.azure.servicebus.Message.getSequenceNumber()
+    type: Method
+    summary: |-
+      <p>このメッセージのシーケンス番号を取得します。 Azure Service Bus は、エンティティ内のすべてのメッセージ エンキューに一意なシーケンス番号を割り当てます。</p>
+      <p></p>
+    syntax:
+      content: public long getSequenceNumber()
+      return:
+        type: 0364520f
+        description: <p>このメッセージのシーケンス番号 </p>
+  - uid: com.microsoft.azure.servicebus._message.getSessionId()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getSessionId()
+    nameWithType: Message.getSessionId()
+    fullName: String com.microsoft.azure.servicebus.Message.getSessionId()
+    type: Method
+    summary: |-
+      <p>いずれかがある場合は、このメッセージのセッション id を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getSessionId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのセッション id </p>
+  - uid: com.microsoft.azure.servicebus._message.setSessionId(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setSessionId(String sessionId)
+    nameWithType: Message.setSessionId(String sessionId)
+    fullName: void com.microsoft.azure.servicebus.Message.setSessionId(String sessionId)
+    type: Method
+    summary: |-
+      <p>このメッセージのセッション id を設定します。 セッション id 文字列は、Azure Service Bus のエンティティ内のセッションを識別します。 同じセッション id を持つすべてのメッセージは、同じセッションに属しています。</p>
+      <p></p>
+    syntax:
+      content: public void setSessionId(String sessionId)
+      parameters:
+        - id: sessionId
+          type: '26831127'
+          description: <p>このメッセージのセッション id </p>
+  - uid: com.microsoft.azure.servicebus._message.getBody()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getBody()
+    nameWithType: Message.getBody()
+    fullName: 'byte [] com.microsoft.azure.servicebus.Message.getBody()'
+    type: Method
+    summary: |-
+      <p>バイト配列としてこのメッセージの本文を取得します。 バイトをデコードするクライアント アプリケーションの責任です。</p>
+      <p></p>
+    syntax:
+      content: 'public byte [] getBody()'
+      return:
+        type: ccd9418d
+        description: <p>このメッセージの本文 </p>
+  - uid: 'com.microsoft.azure.servicebus._message.setBody(byte [])'
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: 'setBody(byte[] content)'
+    nameWithType: 'Message.setBody(byte[] content)'
+    fullName: 'void com.microsoft.azure.servicebus.Message.setBody(byte[] content)'
+    type: Method
+    summary: |-
+      <p>バイト配列としてこのメッセージの本文を設定します。</p>
+      <p></p>
+    syntax:
+      content: 'public void setBody(byte[] content)'
+      parameters:
+        - id: body
+          type: ccd9418d
+          description: <p>このメッセージの本文 </p>
+  - uid: com.microsoft.azure.servicebus._message.getProperties()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getProperties()
+    nameWithType: Message.getProperties()
+    fullName: 'Map<String, String> com.microsoft.azure.servicebus.Message.getProperties()'
+    type: Method
+    summary: |-
+      <p>このメッセージのカスタム アプリケーションのプロパティのマップを取得します。 クライアント アプリケーションは、メッセージに対してこのマップを使用して、カスタム プロパティを設定できます。</p>
+      <p></p>
+    syntax:
+      content: 'public Map<String, String> getProperties()'
+      return:
+        type: 689c8cb5
+        description: <p>このメッセージのカスタム アプリケーションのプロパティのマップ </p>
+  - uid: 'com.microsoft.azure.servicebus._message.setProperties(Map<String, String>)'
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: 'setProperties(Map<String, String> properties)'
+    nameWithType: 'Message.setProperties(Map<String, String> properties)'
+    fullName: 'void com.microsoft.azure.servicebus.Message.setProperties(Map<String, String> properties)'
+    type: Method
+    summary: |-
+      <p>このメッセージのカスタム アプリケーションのプロパティのマップを設定します。 クライアント アプリケーションは、メッセージに対してこのマップを使用して、カスタム プロパティを設定できます。</p>
+      <p></p>
+    syntax:
+      content: 'public void setProperties(Map<String, String> properties)'
+      parameters:
+        - id: properties
+          type: 689c8cb5
+          description: <p>このメッセージのカスタム アプリケーションのプロパティのマップ </p>
+  - uid: com.microsoft.azure.servicebus._message.getCorrelationId()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getCorrelationId()
+    nameWithType: Message.getCorrelationId()
+    fullName: String com.microsoft.azure.servicebus.Message.getCorrelationId()
+    type: Method
+    summary: |-
+      <p>このメッセージの correlationId プロパティを取得します。 クライアントでは、メッセージの相関 id を設定でき、相関関係のフィルターで使用することができます。</p>
+      <p></p>
+    syntax:
+      content: public String getCorrelationId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの相関 Id </p>
+  - uid: com.microsoft.azure.servicebus._message.setCorrelationId(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setCorrelationId(String correlationId)
+    nameWithType: Message.setCorrelationId(String correlationId)
+    fullName: void com.microsoft.azure.servicebus.Message.setCorrelationId(String correlationId)
+    type: Method
+    summary: |-
+      <p>このメッセージの correlationId プロパティを設定します。 クライアントでは、メッセージの相関 id を設定でき、相関関係のフィルターで使用することができます。</p>
+      <p></p>
+    syntax:
+      content: public void setCorrelationId(String correlationId)
+      parameters:
+        - id: correlationId
+          type: '26831127'
+          description: <p>このメッセージの相関 Id </p>
+  - uid: com.microsoft.azure.servicebus._message.getTo()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getTo()
+    nameWithType: Message.getTo()
+    fullName: String com.microsoft.azure.servicebus.Message.getTo()
+    type: Method
+    summary: |-
+      <p>このメッセージの To プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getTo()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのプロパティの値を </p>
+  - uid: com.microsoft.azure.servicebus._message.setTo(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setTo(String to)
+    nameWithType: Message.setTo(String to)
+    fullName: void com.microsoft.azure.servicebus.Message.setTo(String to)
+    type: Method
+    summary: |-
+      <p>このメッセージの To プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setTo(String to)
+      parameters:
+        - id: to
+          type: '26831127'
+          description: <p>このメッセージのプロパティの値を </p>
+  - uid: com.microsoft.azure.servicebus._message.getReplyTo()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getReplyTo()
+    nameWithType: Message.getReplyTo()
+    fullName: String com.microsoft.azure.servicebus.Message.getReplyTo()
+    type: Method
+    summary: |-
+      <p>このメッセージの ReplyTo プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getReplyTo()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの ReplyTo プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._message.setReplyTo(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setReplyTo(String replyTo)
+    nameWithType: Message.setReplyTo(String replyTo)
+    fullName: void com.microsoft.azure.servicebus.Message.setReplyTo(String replyTo)
+    type: Method
+    summary: |-
+      <p>このメッセージの ReplyTo プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setReplyTo(String replyTo)
+      parameters:
+        - id: replyTo
+          type: '26831127'
+          description: <p>このメッセージの ReplyTo プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._message.getLabel()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getLabel()
+    nameWithType: Message.getLabel()
+    fullName: String com.microsoft.azure.servicebus.Message.getLabel()
+    type: Method
+    summary: |-
+      <p>このメッセージのラベル プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getLabel()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのラベルのプロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._message.setLabel(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setLabel(String label)
+    nameWithType: Message.setLabel(String label)
+    fullName: void com.microsoft.azure.servicebus.Message.setLabel(String label)
+    type: Method
+    summary: |-
+      <p>このメッセージのラベル プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setLabel(String label)
+      parameters:
+        - id: label
+          type: '26831127'
+          description: <p>このメッセージのラベルのプロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._message.getReplyToSessionId()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getReplyToSessionId()
+    nameWithType: Message.getReplyToSessionId()
+    fullName: String com.microsoft.azure.servicebus.Message.getReplyToSessionId()
+    type: Method
+    summary: |-
+      <p>このメッセージの ReplyToSessionId プロパティを取得します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public String getReplyToSessionId()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの ReplyToSessionId プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._message.setReplyToSessionId(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setReplyToSessionId(String replyToSessionId)
+    nameWithType: Message.setReplyToSessionId(String replyToSessionId)
+    fullName: void com.microsoft.azure.servicebus.Message.setReplyToSessionId(String replyToSessionId)
+    type: Method
+    summary: |-
+      <p>このメッセージの ReplyToSessionId プロパティを設定します。 クライアントは、相関関係のフィルターでこのプロパティを使用します。</p>
+      <p></p>
+    syntax:
+      content: public void setReplyToSessionId(String replyToSessionId)
+      parameters:
+        - id: replyToSessionId
+          type: '26831127'
+          description: <p>このメッセージの ReplyToSessionId プロパティ値 </p>
+  - uid: com.microsoft.azure.servicebus._message.getPartitionKey()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getPartitionKey()
+    nameWithType: Message.getPartitionKey()
+    fullName: String com.microsoft.azure.servicebus.Message.getPartitionKey()
+    type: Method
+    summary: |-
+      <p>このメッセージのパーティション キーを取得します。 パーティション分割されたエンティティには、このメッセージを送信する場合、このパーティション キーはハッシュされ、エンティティの同じパーティションに同じパーティション キーを持つすべてのメッセージを作成したエンティティの 1 つのパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public String getPartitionKey()
+      return:
+        type: '26831127'
+        description: <p>このメッセージのパーティション キー </p>
+  - uid: com.microsoft.azure.servicebus._message.setPartitionKey(String)
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: setPartitionKey(String partitionKey)
+    nameWithType: Message.setPartitionKey(String partitionKey)
+    fullName: void com.microsoft.azure.servicebus.Message.setPartitionKey(String partitionKey)
+    type: Method
+    summary: |-
+      <p>このメッセージのパーティション キーを設定します。 パーティション分割されたエンティティには、このメッセージを送信する場合、このパーティション キーはハッシュされ、エンティティの同じパーティションに同じパーティション キーを持つすべてのメッセージを作成したエンティティの 1 つのパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public void setPartitionKey(String partitionKey)
+      parameters:
+        - id: partitionKey
+          type: '26831127'
+          description: <p>このメッセージのパーティション キー </p>
+  - uid: com.microsoft.azure.servicebus._message.getDeadLetterSource()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getDeadLetterSource()
+    nameWithType: Message.getDeadLetterSource()
+    fullName: String com.microsoft.azure.servicebus.Message.getDeadLetterSource()
+    type: Method
+    summary: |-
+      <p>このメッセージが配信不能になりましたメッセージの場合は、このメッセージの配信不能メッセージ ソースを取得します。 このプロパティは、このメッセージを配信不能になりましたの原因を把握するのに役立ちます。</p>
+      <p></p>
+    syntax:
+      content: public String getDeadLetterSource()
+      return:
+        type: '26831127'
+        description: <p>このメッセージの配信不能メッセージのソース </p>
+  - uid: com.microsoft.azure.servicebus._message.getLockToken()
+    parent: com.microsoft.azure.servicebus._message
+    href: com.microsoft.azure.servicebus._message.yml
+    name: getLockToken()
+    nameWithType: Message.getLockToken()
+    fullName: UUID com.microsoft.azure.servicebus.Message.getLockToken()
+    type: Method
+    summary: |-
+      <p>使用してこのメッセージを受信した場合、ロックのこのメッセージのトークンを取得<xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode #PEEKLOCK</xref>モード。 このトークンを終了または破棄を使用または配信不能か、このメッセージを延期します。</p>
+      <p></p>
+    syntax:
+      content: public UUID getLockToken()
+      return:
+        type: add9545a
+        description: <p>PEEKLOCK モードを使用してこのメッセージを受信した場合は、このメッセージのロック トークンです。 それ以外の場合すべてがゼロのトークンを返します。 </p>

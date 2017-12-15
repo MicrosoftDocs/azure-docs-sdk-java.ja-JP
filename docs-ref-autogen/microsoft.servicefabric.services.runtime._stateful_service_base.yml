@@ -1,0 +1,701 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base
+    id: _stateful_service_base
+    parent: microsoft.servicefabric.services.runtime
+    children:
+      - microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription)
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription,Duration)'
+      - microsoft.servicefabric.services.runtime._stateful_service_base.createServiceReplicaListeners()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getAddresses()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getPartition()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getServiceContext()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getStateProviderReplica()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.onAbort()
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.onChangeRoleAsync(ReplicaRole,CancellationToken)'
+      - microsoft.servicefabric.services.runtime._stateful_service_base.onCloseAsync(CancellationToken)
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.onDataLossAsync(RestoreContext,CancellationToken)'
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.onOpenAsync(ReplicaOpenMode,CancellationToken)'
+      - microsoft.servicefabric.services.runtime._stateful_service_base.runAsync(CancellationToken)
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.setAddresses(Map<String, String>)'
+      - microsoft.servicefabric.services.runtime._stateful_service_base.setPartition(StatefulServicePartition)
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.StatefulServiceBase(StatefulServiceContext,StateProviderReplica)'
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: StatefulServiceBase
+    nameWithType: StatefulServiceBase
+    fullName: microsoft.servicefabric.services.runtime.StatefulServiceBase
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 26
+    package: microsoft.servicefabric.services.runtime
+    summary: <p>ベースのステートフルな信頼性の高いサービスを Microsoft Service Fabric の基本クラスを表します。 </p>
+    syntax: &ref_1
+      content: public class StatefulServiceBase
+    inheritance:
+      - java.lang.Object
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription)
+    id: backupAsync(BackupDescription)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: backupAsync(BackupDescription backupDescription)
+    nameWithType: StatefulServiceBase.backupAsync(BackupDescription backupDescription)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.backupAsync(BackupDescription backupDescription)
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 237
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>これによって管理されるすべての信頼性の高い状態のバックアップを実行<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base" data-throw-if-not-resolved="false">StatefulServiceBase</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<?> backupAsync(BackupDescription backupDescription)
+      parameters:
+        - id: backupDescription
+          type: microsoft.servicefabric.data._backup_description
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">BackupDescription</xref>バックアップ要求を記述します。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription,Duration)'
+    id: 'backupAsync(BackupDescription,Duration)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: 'backupAsync(BackupDescription backupDescription, Duration timeout)'
+    nameWithType: 'StatefulServiceBase.backupAsync(BackupDescription backupDescription, Duration timeout)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.backupAsync(BackupDescription backupDescription, Duration timeout)'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 252
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>これによって管理されるすべての信頼性の高い状態のバックアップを実行<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base" data-throw-if-not-resolved="false">StatefulServiceBase</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> backupAsync(BackupDescription backupDescription, Duration timeout)'
+      parameters:
+        - id: backupDescription
+          type: microsoft.servicefabric.data._backup_description
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">BackupDescription</xref>バックアップ要求を記述します。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>この操作のタイムアウト。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.createServiceReplicaListeners()
+    id: createServiceReplicaListeners()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: createServiceReplicaListeners()
+    nameWithType: StatefulServiceBase.createServiceReplicaListeners()
+    fullName: List<ServiceReplicaListener> microsoft.servicefabric.services.runtime.StatefulServiceBase.createServiceReplicaListeners()
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.createServiceReplicaListeners*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 122
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービス レプリカの通信リスナーを指定するには、このメソッドをオーバーライドします。 通信リスナーのによって返されるエンドポイントが ListenerName の JSON 文字列として格納されているなどの文字列のエンドポイントのペア {「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</p>
+      <p></p>
+    syntax:
+      content: protected List<ServiceReplicaListener> createServiceReplicaListeners()
+      return:
+        type: 5618da2dmicrosoft.servicefabric.services.communication.runtime._service_replica_listenera08ddfce
+        description: <p>ServiceReplicaListeners の一覧 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getAddresses()
+    id: getAddresses()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: getAddresses()
+    nameWithType: StatefulServiceBase.getAddresses()
+    fullName: 'Map<String, String> microsoft.servicefabric.services.runtime.StatefulServiceBase.getAddresses()'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.getAddresses*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 77
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>すべてのアドレスの一覧のこのサービス レプリカとして取得 (ListenerName、エンドポイント) キーと値のペア。</p>
+      <p></p>
+    syntax:
+      content: 'protected Map<String, String> getAddresses()'
+      return:
+        type: 689c8cb5
+        description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>(ListenerName、エンドポイント) とアドレスの一覧を含むキーと値のペア。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getPartition()
+    id: getPartition()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: getPartition()
+    nameWithType: StatefulServiceBase.getPartition()
+    fullName: StatefulServicePartition microsoft.servicefabric.services.runtime.StatefulServiceBase.getPartition()
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.getPartition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 99
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービスを現在のサービスのレプリカが属するパーティションをします。</p>
+      <p></p>
+    syntax:
+      content: protected StatefulServicePartition getPartition()
+      return:
+        type: system.fabric._stateful_service_partition
+        description: <p><xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref>を表す、このサービス レプリカが属しているパーティション。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getServiceContext()
+    id: getServiceContext()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: getServiceContext()
+    nameWithType: StatefulServiceBase.getServiceContext()
+    fullName: StatefulServiceContext microsoft.servicefabric.services.runtime.StatefulServiceBase.getServiceContext()
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.getServiceContext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 66
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このステートフル サービスが動作しているサービス コンテキストを取得します。 ReplicaId、PartitionId ServiceName などのような情報を提供します。</p>
+      <p></p>
+    syntax:
+      content: public StatefulServiceContext getServiceContext()
+      return:
+        type: system.fabric._stateful_service_context
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">StatefulServiceContext</xref>サービス コンテキストをについて説明します。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getStateProviderReplica()
+    id: getStateProviderReplica()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: getStateProviderReplica()
+    nameWithType: StatefulServiceBase.getStateProviderReplica()
+    fullName: StateProviderReplica microsoft.servicefabric.services.runtime.StatefulServiceBase.getStateProviderReplica()
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.getStateProviderReplica*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 55
+    package: microsoft.servicefabric.services.runtime
+    syntax:
+      content: protected StateProviderReplica getStateProviderReplica()
+      return:
+        type: microsoft.servicefabric.data._state_provider_replica
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onAbort()
+    id: onAbort()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: onAbort()
+    nameWithType: StatefulServiceBase.onAbort()
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.onAbort()
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.onAbort*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 203
+    package: microsoft.servicefabric.services.runtime
+    summary: <p>通知サービスを中止しています。 RunAsync は、取り消し処理は中止パスには待機されなかったとして、このメソッドの実行と同時に実行可能性があります。 </p>
+    syntax:
+      content: protected void onAbort()
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.onChangeRoleAsync(ReplicaRole,CancellationToken)'
+    id: 'onChangeRoleAsync(ReplicaRole,CancellationToken)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: 'onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceBase.onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.onChangeRoleAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 159
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このメソッドは、最後の手順として完了する前に<xref uid="system.fabric._stateful_service_replica.changeRoleAsync(ReplicaRole,CancellationToken)" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica#changeRoleAsync (ReplicaRole、CancellationToken)</xref>です。 このレプリカの内部コンポーネントの ChangeRole が完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<?> onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+      parameters:
+        - id: newRole
+          type: system.fabric._replica_role
+          description: <p>このサービス レプリカです。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onCloseAsync(CancellationToken)
+    id: onCloseAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: onCloseAsync(CancellationToken cancellationToken)
+    nameWithType: StatefulServiceBase.onCloseAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onCloseAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.onCloseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 192
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービスを閉じるための最後の手順として、このメソッドが呼び出されます。 このレプリカの内部コンポーネントの終了が完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onCloseAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.onDataLossAsync(RestoreContext,CancellationToken)'
+    id: 'onDataLossAsync(RestoreContext,CancellationToken)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: 'onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceBase.onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<Boolean> microsoft.servicefabric.services.runtime.StatefulServiceBase.onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.onDataLossAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 219
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このメソッドは、疑いのあるデータの消失時に呼び出されます。 データの損失が発生した場合、サービスを復元するには、このメソッドをオーバーライドすることができます。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<Boolean> onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+      parameters:
+        - id: context
+          type: microsoft.servicefabric.data._restore_context
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">RestoreContext</xref>サービスを復元するために使用します。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 7e53ac82
+        description: <p>非同期の復元操作を表すタスク。 True は、状態が復元されていることを示します。 False は、レプリカの状態が変更されていないことを示します。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.onOpenAsync(ReplicaOpenMode,CancellationToken)'
+    id: 'onOpenAsync(ReplicaOpenMode,CancellationToken)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: 'onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceBase.onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.onOpenAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 139
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このメソッドは、サービスを開くの最後の手順として呼び出されます。 このレプリカの内部コンポーネントのオープンが完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<?> onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+      parameters:
+        - id: openMode
+          type: system.fabric._replica_open_mode
+          description: <p>このサービス レプリカです。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.runAsync(CancellationToken)
+    id: runAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: runAsync(CancellationToken cancellationToken)
+    nameWithType: StatefulServiceBase.runAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.runAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.runAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 175
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービスが、プライマリで、書き込みの状態を持つときに実行される処理ループを実装するだけのロジックでこのメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> runAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.setAddresses(Map<String, String>)'
+    id: 'setAddresses(Map<String, String>)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: 'setAddresses(Map<String, String> addresses)'
+    nameWithType: 'StatefulServiceBase.setAddresses(Map<String, String> addresses)'
+    fullName: 'void microsoft.servicefabric.services.runtime.StatefulServiceBase.setAddresses(Map<String, String> addresses)'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.setAddresses*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 89
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>セットの一覧 (ListenerName、エンドポイント) としては、このサービス レプリカのすべてのアドレスのキー/値ペア。</p>
+      <p></p>
+    syntax:
+      content: 'protected void setAddresses(Map<String, String> addresses)'
+      parameters:
+        - id: addresses
+          type: 689c8cb5
+          description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>(ListenerName、エンドポイント) とアドレスの一覧を含むキーと値のペア。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.setPartition(StatefulServicePartition)
+    id: setPartition(StatefulServicePartition)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: setPartition(StatefulServicePartition partition)
+    nameWithType: StatefulServiceBase.setPartition(StatefulServicePartition partition)
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.setPartition(StatefulServicePartition partition)
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.setPartition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 110
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービスを現在のサービスのレプリカが属するパーティションをします。</p>
+      <p></p>
+    syntax:
+      content: protected void setPartition(StatefulServicePartition partition)
+      parameters:
+        - id: partition
+          type: system.fabric._stateful_service_partition
+          description: <p><xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref>を表す、このサービス レプリカが属しているパーティション。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.StatefulServiceBase(StatefulServiceContext,StateProviderReplica)'
+    id: 'StatefulServiceBase(StatefulServiceContext,StateProviderReplica)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    langs:
+      - java
+    name: 'StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+    nameWithType: 'StatefulServiceBase.StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+    fullName: 'microsoft.servicefabric.services.runtime.StatefulServiceBase.StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+    overload: microsoft.servicefabric.services.runtime._stateful_service_base.StatefulServiceBase*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatefulServiceBase.java
+      startLine: 47
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>新たに作成<xref uid="microsoft.servicefabric.services.runtime._stateful_service" data-throw-if-not-resolved="false">StatefulService</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'protected StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+      parameters:
+        - id: serviceContext
+          type: system.fabric._stateful_service_context
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">StatefulServiceContext</xref>サービス コンテキストをについて説明します。 </p>
+        - id: stateProviderReplica
+          type: microsoft.servicefabric.data._state_provider_replica
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">StateProviderReplica</xref>信頼性の高い状態プロバイダーの複製を表すです。 </p>
+references:
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.StatefulServiceBase*
+    name: StatefulServiceBase
+    nameWithType: StatefulServiceBase.StatefulServiceBase
+    fullName: microsoft.servicefabric.services.runtime.StatefulServiceBase.StatefulServiceBase
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getStateProviderReplica*
+    name: getStateProviderReplica
+    nameWithType: StatefulServiceBase.getStateProviderReplica
+    fullName: StateProviderReplica microsoft.servicefabric.services.runtime.StatefulServiceBase.getStateProviderReplica
+    package: microsoft.servicefabric.services.runtime
+  - uid: 689c8cb5
+    spec.java:
+      - name: 'Map<String, String>'
+        fullName: 'Map<String, String>'
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getAddresses*
+    name: getAddresses
+    nameWithType: StatefulServiceBase.getAddresses
+    fullName: 'Map<String, String> microsoft.servicefabric.services.runtime.StatefulServiceBase.getAddresses'
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.setAddresses*
+    name: setAddresses
+    nameWithType: StatefulServiceBase.setAddresses
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.setAddresses
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getPartition*
+    name: getPartition
+    nameWithType: StatefulServiceBase.getPartition
+    fullName: StatefulServicePartition microsoft.servicefabric.services.runtime.StatefulServiceBase.getPartition
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.setPartition*
+    name: setPartition
+    nameWithType: StatefulServiceBase.setPartition
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.setPartition
+    package: microsoft.servicefabric.services.runtime
+  - uid: 5618da2dmicrosoft.servicefabric.services.communication.runtime._service_replica_listenera08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: microsoft.servicefabric.services.communication.runtime._service_replica_listener
+        name: ServiceReplicaListener
+        fullName: microsoft.servicefabric.services.communication.runtime.ServiceReplicaListener
+        href: microsoft.servicefabric.services.communication.runtime._service_replica_listener.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.createServiceReplicaListeners*
+    name: createServiceReplicaListeners
+    nameWithType: StatefulServiceBase.createServiceReplicaListeners
+    fullName: List<ServiceReplicaListener> microsoft.servicefabric.services.runtime.StatefulServiceBase.createServiceReplicaListeners
+    package: microsoft.servicefabric.services.runtime
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onOpenAsync*
+    name: onOpenAsync
+    nameWithType: StatefulServiceBase.onOpenAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onOpenAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onChangeRoleAsync*
+    name: onChangeRoleAsync
+    nameWithType: StatefulServiceBase.onChangeRoleAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onChangeRoleAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.runAsync*
+    name: runAsync
+    nameWithType: StatefulServiceBase.runAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.runAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onCloseAsync*
+    name: onCloseAsync
+    nameWithType: StatefulServiceBase.onCloseAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onCloseAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onAbort*
+    name: onAbort
+    nameWithType: StatefulServiceBase.onAbort
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.onAbort
+    package: microsoft.servicefabric.services.runtime
+  - uid: 7e53ac82
+    spec.java:
+      - name: CompletableFuture<Boolean>
+        fullName: CompletableFuture<Boolean>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onDataLossAsync*
+    name: onDataLossAsync
+    nameWithType: StatefulServiceBase.onDataLossAsync
+    fullName: CompletableFuture<Boolean> microsoft.servicefabric.services.runtime.StatefulServiceBase.onDataLossAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getServiceContext*
+    name: getServiceContext
+    nameWithType: StatefulServiceBase.getServiceContext
+    fullName: StatefulServiceContext microsoft.servicefabric.services.runtime.StatefulServiceBase.getServiceContext
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync*
+    name: backupAsync
+    nameWithType: StatefulServiceBase.backupAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.backupAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: microsoft.servicefabric.actors._fabric_actor_service
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: FabricActorService
+    nameWithType: FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService
+    type: Class
+    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    syntax:
+      content: public class FabricActorService extends StatefulServiceBase implements ActorService
+  - uid: microsoft.servicefabric.services.runtime._stateful_service
+    parent: microsoft.servicefabric.services.runtime
+    href: microsoft.servicefabric.services.runtime._stateful_service.yml
+    name: StatefulService
+    nameWithType: StatefulService
+    fullName: microsoft.servicefabric.services.runtime.StatefulService
+    type: Class
+    summary: <p>Microsoft Service Fabric ベースのステートフルの信頼性の高いサービスを提供する基本クラスを表します、 <xref uid="microsoft.servicefabric.data._reliable_state_manager" data-throw-if-not-resolved="false">microsoft.servicefabric.data.ReliableStateManager</xref>を実装するには、このクラスから派生を状態マネージャー サービスにはMicrosoft Service Fabric は、ステートフルな信頼性の高いサービスを基づいています。 </p>
+    syntax:
+      content: public class StatefulService extends StatefulServiceBase
+  - uid: microsoft.servicefabric.data._restore_context
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._restore_context.yml
+    name: RestoreContext
+    nameWithType: RestoreContext
+    fullName: microsoft.servicefabric.data.RestoreContext
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.data._restore_context\" data-throw-if-not-resolved=\"false\">RestoreContext</xref>が含まれています、 <xref uid=\"microsoft.servicefabric.data._restore_context.restoreAsync(RestoreDescription)\" data-throw-if-not-resolved=\"false\">RestoreContext#restoreAsync(RestoreDescription)</xref>を使用して、レプリカの状態をバックアップから復元をことができます。 </p>"
+    syntax:
+      content: public class RestoreContext
+  - uid: system.fabric._stateful_service_context
+    parent: system.fabric
+    href: system.fabric._stateful_service_context.yml
+    name: StatefulServiceContext
+    nameWithType: StatefulServiceContext
+    fullName: system.fabric.StatefulServiceContext
+    type: Class
+    syntax:
+      content: public class StatefulServiceContext
+  - uid: microsoft.servicefabric.data._state_provider_replica
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: StateProviderReplica
+    nameWithType: StateProviderReplica
+    fullName: microsoft.servicefabric.data.StateProviderReplica
+    type: Interface
+    summary: <p>Service Fabric サービスと対話するの信頼性の高い状態プロバイダーの複製を実装する必要がありますメソッドを定義します。 </p>
+    syntax:
+      content: public interface StateProviderReplica
+  - uid: system.fabric._stateful_service_partition
+    parent: system.fabric
+    href: system.fabric._stateful_service_partition.yml
+    name: StatefulServicePartition
+    nameWithType: StatefulServicePartition
+    fullName: system.fabric.StatefulServicePartition
+    type: Interface
+    syntax:
+      content: public interface StatefulServicePartition
+  - uid: microsoft.servicefabric.services.communication.runtime._service_replica_listener
+    parent: microsoft.servicefabric.services.communication.runtime
+    href: microsoft.servicefabric.services.communication.runtime._service_replica_listener.yml
+    name: ServiceReplicaListener
+    nameWithType: ServiceReplicaListener
+    fullName: microsoft.servicefabric.services.communication.runtime.ServiceReplicaListener
+    type: Class
+    summary: <p>ステートフル サービス レプリカの通信リスナーとそのプロパティを表します。 通信リスナーから与えられたエンドポイントは、通信リスナーの名前に関連付けられます。 </p>
+    syntax:
+      content: public class ServiceReplicaListener
+  - uid: system.fabric._replica_open_mode
+    parent: system.fabric
+    href: system.fabric._replica_open_mode.yml
+    name: ReplicaOpenMode
+    nameWithType: ReplicaOpenMode
+    fullName: system.fabric.ReplicaOpenMode
+    type: Enum
+    syntax:
+      content: public enum ReplicaOpenMode
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: system.fabric._replica_role
+    parent: system.fabric
+    href: system.fabric._replica_role.yml
+    name: ReplicaRole
+    nameWithType: ReplicaRole
+    fullName: system.fabric.ReplicaRole
+    type: Enum
+    summary: <p>レプリカのロールを定義します。 </p>
+    syntax:
+      content: public enum ReplicaRole
+  - uid: 'system.fabric._stateful_service_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
+    parent: system.fabric._stateful_service_replica
+    href: system.fabric._stateful_service_replica.yml
+    name: 'changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<String> system.fabric.StatefulServiceReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    type: Method
+    summary: "<p>プライマリまたはセカンダリ レプリカのロールを変更します。</p>\n<p>\r\n\r\n  <b>注釈:</b>をパラメーターとして、新しいロールが示されます。 ときに、サービス ロールに移行する、新しい、サービスが、現在リッスン アドレスを更新することです。 リッスン アドレスは、クライアントが接続するアドレスです。 クライアントからの通信が予想される場合、ポートなどの一部のリソースを要求のみにプライマリ レプリカであるときに、サービスが有効にします。 </p>"
+    syntax:
+      content: 'public CompletableFuture<String> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+      parameters:
+        - id: newRole
+          type: system.fabric._replica_role
+          description: <p>更新された<xref uid="system.fabric._replica_role" data-throw-if-not-resolved="false">system.fabric.ReplicaRole</xref>このレプリカに遷移させなければならないことです。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 06be942d
+        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>型の<xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>用の â €™ サービス ファブリックの名前付けを使用して、レプリカと関連付けられる s 新しい接続アドレス。 </p>
+  - uid: microsoft.servicefabric.data._backup_description
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._backup_description.yml
+    name: BackupDescription
+    nameWithType: BackupDescription
+    fullName: microsoft.servicefabric.data.BackupDescription
+    type: Class
+    summary: <p>A <xref uid="microsoft.servicefabric.data._backup_description" data-throw-if-not-resolved="false">BackupDescription</xref>ステートフル サービス レプリカのバックアップに必要な情報がすべて含まれます。 </p>
+    syntax:
+      content: public class BackupDescription
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base
+    parent: microsoft.servicefabric.services.runtime
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: StatefulServiceBase
+    nameWithType: StatefulServiceBase
+    fullName: microsoft.servicefabric.services.runtime.StatefulServiceBase
+    type: Class
+    summary: <p>ベースのステートフルな信頼性の高いサービスを Microsoft Service Fabric の基本クラスを表します。 </p>
+    syntax: *ref_1

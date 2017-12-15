@@ -1,0 +1,334 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._cluster_health_policy
+    id: _cluster_health_policy
+    parent: system.fabric
+    children:
+      - system.fabric._cluster_health_policy.ClusterHealthPolicy()
+      - system.fabric._cluster_health_policy.getApplicationTypeHealthPolicyMap()
+      - system.fabric._cluster_health_policy.getConsiderWarningAsError()
+      - system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications()
+      - system.fabric._cluster_health_policy.getMaxPercentUnhealthyNodes()
+      - system.fabric._cluster_health_policy.setConsiderWarningAsError(boolean)
+      - system.fabric._cluster_health_policy.setMaxPercentUnhealthyApplications(byte)
+      - system.fabric._cluster_health_policy.setMaxPercentUnhealthyNodes(byte)
+      - system.fabric._cluster_health_policy.toNative(PinCollection)
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: ClusterHealthPolicy
+    nameWithType: ClusterHealthPolicy
+    fullName: system.fabric.ClusterHealthPolicy
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 5
+    package: system.fabric
+    summary: <p>クラスターまたはクラスター ノードの正常性を評価する正常性ポリシーを定義します。 </p>
+    syntax:
+      content: public class ClusterHealthPolicy
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric._cluster_health_policy.ClusterHealthPolicy()
+    id: ClusterHealthPolicy()
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: ClusterHealthPolicy()
+    nameWithType: ClusterHealthPolicy.ClusterHealthPolicy()
+    fullName: system.fabric.ClusterHealthPolicy.ClusterHealthPolicy()
+    overload: system.fabric._cluster_health_policy.ClusterHealthPolicy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 35
+    package: system.fabric
+    summary: "<p>新しいインスタンスを初期化、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterHealthPolicy</xref>クラスです。 </p>\n<p>\r\n\r\n  <b>注釈:</b>既定では、エラーまたは警告が許容されません。 </p>"
+    syntax:
+      content: public ClusterHealthPolicy()
+  - uid: system.fabric._cluster_health_policy.getApplicationTypeHealthPolicyMap()
+    id: getApplicationTypeHealthPolicyMap()
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: getApplicationTypeHealthPolicyMap()
+    nameWithType: ClusterHealthPolicy.getApplicationTypeHealthPolicyMap()
+    fullName: ApplicationTypeHealthPolicyMap system.fabric.ClusterHealthPolicy.getApplicationTypeHealthPolicyMap()
+    overload: system.fabric._cluster_health_policy.getApplicationTypeHealthPolicyMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 96
+    package: system.fabric
+    summary: "<p>アプリケーションの種類名ごとに MaxPercentUnhealthyApplications でマップを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>MaxPercentUnhealthyApplications 既定値を評価に使用する場合は、アプリケーションの種類名、ポリシーが指定されていません。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>アプリケーションの種類の正常性ポリシー マップは、特殊なアプリケーションの種類を記述するクラスターの正常性評価で使用できます。 既定では、すべてのアプリケーションのプールに配置し、を使用して評価<xref uid=\"system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications()\" data-throw-if-not-resolved=\"false\">ClusterHealthPolicy#getMaxPercentUnhealthyApplications()</xref>です。 1 つまたは複数のアプリケーションの種類の特殊なし、する必要がありますを別の方法で扱われる、グローバル プールから取得およびできますマップで、アプリケーションの型名に関連付けられている割合に対して評価されます。 たとえば、クラスターには、異なる種類の数千ものアプリケーションがあり、特別なアプリケーションの種類の制御アプリケーション インスタンスの数はわずかです。 制御アプリケーションがエラー状態になることはありません。 そのユーザーは、いくつかの障害を許容するように 20% が\"ControlApplicationType\"、MaxPercentUnhealthyApplications を 0 に設定するアプリケーションの種類に対してグローバル MaxPercentUnhealthyApplications を指定できます。 このようにすると、多くのアプリケーションのうちのいくつかが異常でも、グローバルな異常のパーセンテージを下回っている場合、クラスターは警告と評価されます。 警告の正常性状態はクラスターのアップグレードや、エラーの正常性状態によりトリガーされる他の監視には影響しません。 エラーの 1 つでも管理アプリケーションはクラスターの正常性エラーがロールバックまたは、クラスターのアップグレードを妨げるです。 マップで定義されているアプリケーションの種類の場合は、すべてのアプリケーション インスタンスがアプリケーションのグローバル プールから除外されます。 これらは、マップの特定の MaxPercentUnhealthyApplications を使用して、該当するアプリケーションの種類のアプリケーションの総数に基づいて評価されます。 残りのアプリケーションはすべてグローバル プールで保持され、MaxPercentUnhealthyApplications を使用して評価されます。 クラスター マニフェストで特定のアプリケーションの種類のエントリを定義するには、FabricSettings 内には、アプリケーションの種類名を「ApplicationTypeMaxPercentUnhealthyApplications-」の後にプレフィックスによって形成される名前を持つパラメーター エントリを追加します。 アプリケーションの種類のポリシーが指定されていない場合は、既定 MaxPercentUnhealthyApplications が評価に使用します。 EnableApplicationTypeHealthEvaluation 場合は true で、クラスターが構成されている場合にのみ、アプリケーションの種類の正常性評価が行われます。 既定では、設定を無効にします。 </p>"
+    syntax:
+      content: public ApplicationTypeHealthPolicyMap getApplicationTypeHealthPolicyMap()
+      return:
+        type: system.fabric._application_type_health_policy_map
+        description: <p>アプリケーション型正常性ポリシー マップ MaxPercentUnhealthyApplications とアプリケーションの種類名ごとです。 </p>
+  - uid: system.fabric._cluster_health_policy.getConsiderWarningAsError()
+    id: getConsiderWarningAsError()
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: getConsiderWarningAsError()
+    nameWithType: ClusterHealthPolicy.getConsiderWarningAsError()
+    fullName: boolean system.fabric.ClusterHealthPolicy.getConsiderWarningAsError()
+    overload: system.fabric._cluster_health_policy.getConsiderWarningAsError*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 217
+    package: system.fabric
+    summary: |-
+      <p>警告状態を持つ whetherÂ レポートを同じ重大度レベル エラーとして扱う必要がありますを決定するブール値を取得します。</p>
+      <p></p>
+    syntax:
+      content: public boolean getConsiderWarningAsError()
+      return:
+        type: 4fc6e284
+        description: <p>警告状態を持つレポートをエラーとして扱う場合は true。警告をエラーとして扱うことはできない場合は false。 </p>
+  - uid: system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications()
+    id: getMaxPercentUnhealthyApplications()
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: getMaxPercentUnhealthyApplications()
+    nameWithType: ClusterHealthPolicy.getMaxPercentUnhealthyApplications()
+    fullName: byte system.fabric.ClusterHealthPolicy.getMaxPercentUnhealthyApplications()
+    overload: system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 194
+    package: system.fabric
+    summary: "<p>許容される異常なアプリケーションの割合の最大値を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なクラスターがエラーと見なされるまでアプリケーションの最大許容パーセンテージです。 許容パーセンテージ内であっても、1 つ以上の異常なアプリケーションがある場合は、正常性は Warning として評価されます。 これには、計算に含まれているアプリケーションの種類のすべてのアプリケーションの除外、クラスターに配置されたアプリケーションの総数に対して異常なアプリケーションの数で割ることによって、 <xref uid=\"system.fabric._application_type_health_policy_map\" data-throw-if-not-resolved=\"false\">applicationtypehealthpolicymapの値</xref>. 切り上げ計算が実行され、少数のアプリケーションに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>"
+    syntax: &ref_1
+      content: public byte getMaxPercentUnhealthyApplications()
+      return:
+        type: d357ea40
+        description: <p>許容される異常なアプリケーションの割合の最大値。 有効な値は、0 から 100 までの整数値です。 </p>
+  - uid: system.fabric._cluster_health_policy.getMaxPercentUnhealthyNodes()
+    id: getMaxPercentUnhealthyNodes()
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: getMaxPercentUnhealthyNodes()
+    nameWithType: ClusterHealthPolicy.getMaxPercentUnhealthyNodes()
+    fullName: byte system.fabric.ClusterHealthPolicy.getMaxPercentUnhealthyNodes()
+    overload: system.fabric._cluster_health_policy.getMaxPercentUnhealthyNodes*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 147
+    package: system.fabric
+    summary: "<p>異常なノードの最大許容パーセンテージを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なクラスターがエラーと見なされる前にノードの最大許容パーセンテージです。 許容パーセンテージ内であっても、1 つ以上の異常なノードがある場合は、正常性は Warning として評価されます。 これは、クラスター内のノードの総数に対して異常なノードの数で割ることによって計算されます。 切り上げ計算が実行され、少数のノードに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>\n\n<p>大規模なクラスターでは、ダウンしているか修復を必要とするノードがいくつか必ず存在するため、それが許容されるようにこのパーセンテージを構成する必要があります。 </p>"
+    syntax:
+      content: public byte getMaxPercentUnhealthyNodes()
+      return:
+        type: d357ea40
+        description: <p>許容される異常なノードの割合の最大値。 有効な値は、0 から 100 までの整数値です。 </p>
+  - uid: system.fabric._cluster_health_policy.setConsiderWarningAsError(boolean)
+    id: setConsiderWarningAsError(boolean)
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: setConsiderWarningAsError(boolean considerWarningAsError)
+    nameWithType: ClusterHealthPolicy.setConsiderWarningAsError(boolean considerWarningAsError)
+    fullName: void system.fabric.ClusterHealthPolicy.setConsiderWarningAsError(boolean considerWarningAsError)
+    overload: system.fabric._cluster_health_policy.setConsiderWarningAsError*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 206
+    package: system.fabric
+    summary: |-
+      <p>エラーとして重大度が同じでは、whetherÂ を決定するブール値が警告状態を持つレポート セットを扱う必要があります。</p>
+      <p></p>
+    syntax:
+      content: public void setConsiderWarningAsError(boolean considerWarningAsError)
+      parameters:
+        - id: considerWarningAsError
+          type: 4fc6e284
+          description: <p>警告状態を持つレポートをエラーとして扱う場合は true。警告をエラーとして扱うことはできない場合は false。 </p>
+  - uid: system.fabric._cluster_health_policy.setMaxPercentUnhealthyApplications(byte)
+    id: setMaxPercentUnhealthyApplications(byte)
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: setMaxPercentUnhealthyApplications(byte maxPercentUnhealthyApplications)
+    nameWithType: ClusterHealthPolicy.setMaxPercentUnhealthyApplications(byte maxPercentUnhealthyApplications)
+    fullName: void system.fabric.ClusterHealthPolicy.setMaxPercentUnhealthyApplications(byte maxPercentUnhealthyApplications)
+    overload: system.fabric._cluster_health_policy.setMaxPercentUnhealthyApplications*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 169
+    package: system.fabric
+    summary: "<p>許容される異常なアプリケーションの割合の最大値を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なクラスターがエラーと見なされるまでアプリケーションの最大許容パーセンテージです。 許容パーセンテージ内であっても、1 つ以上の異常なアプリケーションがある場合は、正常性は Warning として評価されます。 これには、計算に含まれているアプリケーションの種類のすべてのアプリケーションの除外、クラスターに配置されたアプリケーションの総数に対して異常なアプリケーションの数で割ることによって、 <xref uid=\"system.fabric._application_type_health_policy_map\" data-throw-if-not-resolved=\"false\">applicationtypehealthpolicymapの値</xref>. 切り上げ計算が実行され、少数のアプリケーションに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>"
+    syntax:
+      content: public void setMaxPercentUnhealthyApplications(byte maxPercentUnhealthyApplications)
+      parameters:
+        - id: maxPercentUnhealthyApplications
+          type: d357ea40
+          description: <p>許容される異常なアプリケーションの割合の最大値。 有効な値は、0 から 100 までの整数値です。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定した値は、0 から 100 までの整数値の範囲外でした。 </p>
+  - uid: system.fabric._cluster_health_policy.setMaxPercentUnhealthyNodes(byte)
+    id: setMaxPercentUnhealthyNodes(byte)
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: setMaxPercentUnhealthyNodes(byte maxPercentUnhealthyNodes)
+    nameWithType: ClusterHealthPolicy.setMaxPercentUnhealthyNodes(byte maxPercentUnhealthyNodes)
+    fullName: void system.fabric.ClusterHealthPolicy.setMaxPercentUnhealthyNodes(byte maxPercentUnhealthyNodes)
+    overload: system.fabric._cluster_health_policy.setMaxPercentUnhealthyNodes*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 120
+    package: system.fabric
+    summary: "<p>異常なノードの最大許容パーセンテージを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なクラスターがエラーと見なされる前にノードの最大許容パーセンテージです。 許容パーセンテージ内であっても、1 つ以上の異常なノードがある場合は、正常性は Warning として評価されます。 これは、クラスター内のノードの総数に対して異常なノードの数で割ることによって計算されます。 切り上げ計算が実行され、少数のノードに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>\n\n<p>大規模なクラスターでは、ダウンしているか修復を必要とするノードがいくつか必ず存在するため、それが許容されるようにこのパーセンテージを構成する必要があります。 </p>\n<p></p>"
+    syntax:
+      content: public void setMaxPercentUnhealthyNodes(byte maxPercentUnhealthyNodes)
+      parameters:
+        - id: maxPercentUnhealthyNodes
+          type: d357ea40
+          description: <p>許容される異常なノードの割合の最大値。 有効な値は、0 から 100 までの整数値です。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定した値は、0 から 100 までの整数値の範囲外でした。 </p>
+  - uid: system.fabric._cluster_health_policy.toNative(PinCollection)
+    id: toNative(PinCollection)
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    langs:
+      - java
+    name: toNative(PinCollection pinCollection)
+    nameWithType: ClusterHealthPolicy.toNative(PinCollection pinCollection)
+    fullName: long system.fabric.ClusterHealthPolicy.toNative(PinCollection pinCollection)
+    overload: system.fabric._cluster_health_policy.toNative*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterHealthPolicy.java
+      startLine: 42
+    package: system.fabric
+    syntax:
+      content: public long toNative(PinCollection pinCollection)
+      parameters:
+        - id: pinCollection
+          type: system.fabric._pin_collection
+      return:
+        type: 0364520f
+references:
+  - uid: system.fabric._cluster_health_policy.ClusterHealthPolicy*
+    name: ClusterHealthPolicy
+    nameWithType: ClusterHealthPolicy.ClusterHealthPolicy
+    fullName: system.fabric.ClusterHealthPolicy.ClusterHealthPolicy
+    package: system.fabric
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric._cluster_health_policy.toNative*
+    name: toNative
+    nameWithType: ClusterHealthPolicy.toNative
+    fullName: long system.fabric.ClusterHealthPolicy.toNative
+    package: system.fabric
+  - uid: system.fabric._cluster_health_policy.getApplicationTypeHealthPolicyMap*
+    name: getApplicationTypeHealthPolicyMap
+    nameWithType: ClusterHealthPolicy.getApplicationTypeHealthPolicyMap
+    fullName: ApplicationTypeHealthPolicyMap system.fabric.ClusterHealthPolicy.getApplicationTypeHealthPolicyMap
+    package: system.fabric
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: d357ea40
+    spec.java:
+      - name: byte
+        fullName: byte
+  - uid: system.fabric._cluster_health_policy.setMaxPercentUnhealthyNodes*
+    name: setMaxPercentUnhealthyNodes
+    nameWithType: ClusterHealthPolicy.setMaxPercentUnhealthyNodes
+    fullName: void system.fabric.ClusterHealthPolicy.setMaxPercentUnhealthyNodes
+    package: system.fabric
+  - uid: system.fabric._cluster_health_policy.getMaxPercentUnhealthyNodes*
+    name: getMaxPercentUnhealthyNodes
+    nameWithType: ClusterHealthPolicy.getMaxPercentUnhealthyNodes
+    fullName: byte system.fabric.ClusterHealthPolicy.getMaxPercentUnhealthyNodes
+    package: system.fabric
+  - uid: system.fabric._cluster_health_policy.setMaxPercentUnhealthyApplications*
+    name: setMaxPercentUnhealthyApplications
+    nameWithType: ClusterHealthPolicy.setMaxPercentUnhealthyApplications
+    fullName: void system.fabric.ClusterHealthPolicy.setMaxPercentUnhealthyApplications
+    package: system.fabric
+  - uid: system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications*
+    name: getMaxPercentUnhealthyApplications
+    nameWithType: ClusterHealthPolicy.getMaxPercentUnhealthyApplications
+    fullName: byte system.fabric.ClusterHealthPolicy.getMaxPercentUnhealthyApplications
+    package: system.fabric
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: system.fabric._cluster_health_policy.setConsiderWarningAsError*
+    name: setConsiderWarningAsError
+    nameWithType: ClusterHealthPolicy.setConsiderWarningAsError
+    fullName: void system.fabric.ClusterHealthPolicy.setConsiderWarningAsError
+    package: system.fabric
+  - uid: system.fabric._cluster_health_policy.getConsiderWarningAsError*
+    name: getConsiderWarningAsError
+    nameWithType: ClusterHealthPolicy.getConsiderWarningAsError
+    fullName: boolean system.fabric.ClusterHealthPolicy.getConsiderWarningAsError
+    package: system.fabric
+  - uid: system.fabric._application_type_health_policy_map
+    parent: system.fabric
+    href: system.fabric._application_type_health_policy_map.yml
+    name: ApplicationTypeHealthPolicyMap
+    nameWithType: ApplicationTypeHealthPolicyMap
+    fullName: system.fabric.ApplicationTypeHealthPolicyMap
+    type: Class
+    summary: "<p>クラスターの正常性評価で使用されるアプリケーションの種類の正常性ポリシーのエントリのポリシーのマップを定義します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アプリケーションの種類の正常性ポリシー マップは、特殊なアプリケーションの種類を記述するクラスターの正常性評価で使用できます。 マップに含まれるアプリケーションの種類がグローバルではなく、マップでは、含まれている割合に対して評価されます<xref uid=\"system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications()\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterHealthPolicy#getMaxPercentUnhealthyApplications()</xref>です。 マップで指定されたアプリケーションの種類のアプリケーションは、アプリケーションのグローバル プールに対してはカウントされません。 </p>"
+    syntax:
+      content: public class ApplicationTypeHealthPolicyMap
+  - uid: system.fabric._pin_collection
+    parent: system.fabric
+    href: system.fabric._pin_collection.yml
+    name: PinCollection
+    nameWithType: PinCollection
+    fullName: system.fabric.PinCollection
+    type: Class
+    syntax:
+      content: public class PinCollection
+  - uid: system.fabric._cluster_health_policy.getMaxPercentUnhealthyApplications()
+    parent: system.fabric._cluster_health_policy
+    href: system.fabric._cluster_health_policy.yml
+    name: getMaxPercentUnhealthyApplications()
+    nameWithType: ClusterHealthPolicy.getMaxPercentUnhealthyApplications()
+    fullName: byte system.fabric.ClusterHealthPolicy.getMaxPercentUnhealthyApplications()
+    type: Method
+    summary: "<p>許容される異常なアプリケーションの割合の最大値を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なクラスターがエラーと見なされるまでアプリケーションの最大許容パーセンテージです。 許容パーセンテージ内であっても、1 つ以上の異常なアプリケーションがある場合は、正常性は Warning として評価されます。 これには、計算に含まれているアプリケーションの種類のすべてのアプリケーションの除外、クラスターに配置されたアプリケーションの総数に対して異常なアプリケーションの数で割ることによって、 <xref uid=\"system.fabric._application_type_health_policy_map\" data-throw-if-not-resolved=\"false\">applicationtypehealthpolicymapの値</xref>. 切り上げ計算が実行され、少数のアプリケーションに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>"
+    syntax: *ref_1

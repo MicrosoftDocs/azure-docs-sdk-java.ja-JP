@@ -1,0 +1,912 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    id: _iot_hub_transport
+    parent: com.microsoft.azure.sdk.iot.device.transport
+    children:
+      - 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubEventCallback,Object)'
+      - 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubResponseCallback,Object)'
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.close()
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.handleMessage()
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.invokeCallbacks()
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.isEmpty()
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.multiplexOpen(List<DeviceClient>)
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.open()
+      - 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+      - com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.sendMessages()
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: IotHubTransport
+    nameWithType: IotHubTransport
+    fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubTransport
+    type: Interface
+    source:
+      remote: &ref_0
+        path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 12
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: <p>IoT ハブ トランスポートのインターフェイスです。 </p>
+    syntax:
+      content: public interface IotHubTransport
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubEventCallback,Object)'
+    id: 'addMessage(Message,IotHubEventCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: 'addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    nameWithType: 'IotHubTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 51
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubResponseCallback,Object)'
+    id: 'addMessage(Message,IotHubResponseCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: 'addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    nameWithType: 'IotHubTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 64
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.close()
+    id: close()
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: IotHubTransport.close()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.close()
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 40
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: "<p>IoT Hub と通信するために使用するすべてのリソースを閉じます。 1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。 トランスポートが既に閉じられています関数には何もしないものとします。</p>\n\n<p></p>"
+    syntax:
+      content: public void close()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、トランスポートを閉じるときにエラーが発生します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.handleMessage()
+    id: handleMessage()
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: handleMessage()
+    nameWithType: IotHubTransport.handleMessage()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.handleMessage()
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.handleMessage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 90
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。 </p>
+      <p>メッセージ コールバックが設定されていない場合、関数は何もします。</p>
+      <p></p>
+    syntax:
+      content: public void handleMessage()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、サーバーに到達できませんでした。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.invokeCallbacks()
+    id: invokeCallbacks()
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: invokeCallbacks()
+    nameWithType: IotHubTransport.invokeCallbacks()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.invokeCallbacks()
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.invokeCallbacks*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 78
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: <p>完了したすべての要求のコールバックを呼び出します。 </p>
+    syntax:
+      content: public void invokeCallbacks()
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.isEmpty()
+    id: isEmpty()
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: isEmpty()
+    nameWithType: IotHubTransport.isEmpty()
+    fullName: boolean com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.isEmpty()
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.isEmpty*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 99
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: "<p>返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</p>\n\n<p></p>"
+    syntax:
+      content: public boolean isEmpty()
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。 </p>"
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.multiplexOpen(List<DeviceClient>)
+    id: multiplexOpen(List<DeviceClient>)
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: multiplexOpen(List<DeviceClient> deviceClientList)
+    nameWithType: IotHubTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.multiplexOpen*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 31
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>IoT Hub と通信チャネル usingmultiplexing を確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void multiplexOpen(List<DeviceClient> deviceClientList)
+      parameters:
+        - id: deviceClientList
+          type: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+          description: <p>クライアントの一覧は、同じトランスポートを使用します。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、通信チャネルを確立できません。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.open()
+    id: open()
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: open()
+    nameWithType: IotHubTransport.open()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.open()
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.open*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 21
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>IoT Hub と通信チャネルを確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void open()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、通信チャネルを確立できません。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    id: 'registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: 'registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    nameWithType: 'IotHubTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.registerConnectionStateCallback*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 108
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>IoT Hub への接続が失われた、または確立されるたびに実行されるコールバックを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+      parameters:
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+          description: <p>呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.sendMessages()
+    id: sendMessages()
+    parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
+    href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
+    langs:
+      - java
+    name: sendMessages()
+    nameWithType: IotHubTransport.sendMessages()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.sendMessages()
+    overload: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.sendMessages*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/IotHubTransport.java
+      startLine: 75
+    package: com.microsoft.azure.sdk.iot.device.transport
+    summary: |-
+      <p>トランスポート キューでは、すべてのメッセージを送信します。 前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。</p>
+      <p></p>
+    syntax:
+      content: public void sendMessages()
+    exceptions:
+      - type: cbf33bbe
+        description: <p>場合は、サーバーに到達できませんでした。 </p>
+references:
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.open*
+    name: open
+    nameWithType: IotHubTransport.open
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.open
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.sdk.iot.device._device_client
+        name: DeviceClient
+        fullName: com.microsoft.azure.sdk.iot.device.DeviceClient
+        href: com.microsoft.azure.sdk.iot.device._device_client.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.multiplexOpen*
+    name: multiplexOpen
+    nameWithType: IotHubTransport.multiplexOpen
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.multiplexOpen
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.close*
+    name: close
+    nameWithType: IotHubTransport.close
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.close
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage*
+    name: addMessage
+    nameWithType: IotHubTransport.addMessage
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.addMessage
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.sendMessages*
+    name: sendMessages
+    nameWithType: IotHubTransport.sendMessages
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.sendMessages
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.invokeCallbacks*
+    name: invokeCallbacks
+    nameWithType: IotHubTransport.invokeCallbacks
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.invokeCallbacks
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.handleMessage*
+    name: handleMessage
+    nameWithType: IotHubTransport.handleMessage
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.handleMessage
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.isEmpty*
+    name: isEmpty
+    nameWithType: IotHubTransport.isEmpty
+    fullName: boolean com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.isEmpty
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.registerConnectionStateCallback*
+    name: registerConnectionStateCallback
+    nameWithType: IotHubTransport.registerConnectionStateCallback
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.registerConnectionStateCallback
+    package: com.microsoft.azure.sdk.iot.device.transport
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: AmqpsTransport
+    nameWithType: AmqpsTransport
+    fullName: com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport
+    type: Class
+    summary: |-
+      <p>AMQPS トランスポートの場合。 メッセージを追加して、IoT Hub にメッセージを送信するための機能が含まれています。 IoT Hub によって受信されるまで、未送信のメッセージをバッファーします。 トランスポートは、構築時、次のパラメーターにバインドされて: IoT Hub 名、デバイス ID、デバイスのキー。 </p>
+      <p>トランスポートは、IoT Hub からメッセージを受信し、メッセージとコールバックが見つかった場合はユーザー定義メッセージのコールバックを呼び出します。 </p>
+    syntax:
+      content: 'public class AmqpsTransport implements IotHubTransport,ServerListener'
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    parent: com.microsoft.azure.sdk.iot.device.transport.https
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: HttpsTransport
+    nameWithType: HttpsTransport
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport
+    type: Class
+    summary: |-
+      <p>HTTPS トランスポートをします。 メッセージを追加して、IoT Hub をバッチ処理されたメッセージを送信するための機能が含まれています。 IoT Hub によって受信されるまで、未送信のメッセージをバッファーします。 トランスポートは、構築時、次のパラメーターにバインドされて: IoT Hub 名、デバイス ID、デバイスのキー、およびメッセージの有効な秒数。 </p>
+      <p>トランスポートをメッセージの IoT Hub をポーリングし、ユーザー定義メッセージのコールバックを呼び出す場合、メッセージと、コールバックが見つかりました。 </p>
+    syntax:
+      content: public class HttpsTransport implements IotHubTransport
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: MqttTransport
+    nameWithType: MqttTransport
+    fullName: com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport
+    type: Class
+    summary: |-
+      <p>MQTT トランスポートの場合。 メッセージを追加して、IoT Hub をバッチ処理されたメッセージを送信するための機能が含まれています。 IoT Hub によって受信されるまで、未送信のメッセージをバッファーします。 トランスポートは、構築時、次のパラメーターにバインドされて: IoT Hub 名、デバイス ID、デバイスのキー、およびメッセージの有効な秒数。 </p>
+      <p>トランスポートをメッセージの IoT Hub をポーリングし、ユーザー定義メッセージのコールバックを呼び出す場合、メッセージと、コールバックが見つかりました。 </p>
+    syntax:
+      content: public class MqttTransport
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.open()
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: open()
+    nameWithType: MqttTransport.open()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.open()
+    type: Method
+    summary: |-
+      <p>IoT Hub と通信チャネルを確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void open()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.open()
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: open()
+    nameWithType: AmqpsTransport.open()
+    fullName: synchronized void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.open()
+    type: Method
+    summary: |-
+      <p>IoT Hub と通信チャネルを確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public synchronized void open()
+      return:
+        type: 5c0b90ca
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.open()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: open()
+    nameWithType: HttpsTransport.open()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.open()
+    type: Method
+    summary: |-
+      <p>IoT Hub と通信チャネルを確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void open()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.multiplexOpen(List<DeviceClient>)
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: multiplexOpen(List<DeviceClient> deviceClientList)
+    nameWithType: MqttTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    type: Method
+    summary: |-
+      <p>IoT Hub と通信チャネル usingmultiplexing を確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void multiplexOpen(List<DeviceClient> deviceClientList)
+      parameters:
+        - id: deviceClientList
+          type: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+          description: <p>クライアントの一覧は、同じトランスポートを使用します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.multiplexOpen(List<DeviceClient>)
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: multiplexOpen(List<DeviceClient> deviceClientList)
+    nameWithType: HttpsTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    type: Method
+    summary: |-
+      <p>IoT Hub と通信チャネル usingmultiplexing を確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p></p>
+    syntax:
+      content: public void multiplexOpen(List<DeviceClient> deviceClientList)
+      parameters:
+        - id: deviceClientList
+          type: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+          description: <p>クライアントの一覧は、同じトランスポートを使用します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.multiplexOpen(List<DeviceClient>)
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: multiplexOpen(List<DeviceClient> deviceClientList)
+    nameWithType: AmqpsTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.multiplexOpen(List<DeviceClient> deviceClientList)
+    type: Method
+    summary: |-
+      <p>IoT Hub と共有の通信チャネルを確立します。 チャネルが既に onConnectionInit の場合、関数には何もしないいてはいけない。</p>
+      <p></p>
+    syntax:
+      content: public void multiplexOpen(List<DeviceClient> deviceClientList)
+      parameters:
+        - id: deviceClientList
+          type: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
+  - uid: com.microsoft.azure.sdk.iot.device._device_client
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._device_client.yml
+    name: DeviceClient
+    nameWithType: DeviceClient
+    fullName: com.microsoft.azure.sdk.iot.device.DeviceClient
+    type: Class
+    summary: |-
+      <p>公開された API です。 IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。 IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。 </p>
+      <p>これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。 </p>
+      <p>クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。 通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。 </p>
+      <p>クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。 </p>
+    syntax:
+      content: public class DeviceClient
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.close()
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: close()
+    nameWithType: MqttTransport.close()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.close()
+    type: Method
+    summary: "<p>IoT Hub と通信するために使用するすべてのリソースを閉じます。 1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。 トランスポートが既に閉じられています関数には何もしないものとします。 </p>"
+    syntax:
+      content: public void close()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.close()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: close()
+    nameWithType: HttpsTransport.close()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.close()
+    type: Method
+    summary: "<p>IoT Hub と通信するために使用するすべてのリソースを閉じます。 1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。 トランスポートが既に閉じられています関数には何もしないものとします。</p>\n\n<p></p>"
+    syntax:
+      content: public void close()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.close()
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: close()
+    nameWithType: AmqpsTransport.close()
+    fullName: synchronized void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.close()
+    type: Method
+    summary: "<p>IoT Hub と通信するために使用するすべてのリソースを閉じます。 1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。 トランスポートが既に閉じられています関数には何もしないものとします。</p>\n\n<p></p>"
+    syntax:
+      content: public synchronized void close()
+      return:
+        type: 5c0b90ca
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.addMessage(Message,IotHubEventCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: 'addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    nameWithType: 'MqttTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.https._https_transport.addMessage(Message,IotHubEventCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: 'addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    nameWithType: 'HttpsTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.addMessage(Message,IotHubEventCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: 'addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    nameWithType: 'AmqpsTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+  - uid: com.microsoft.azure.sdk.iot.device._message
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._message.yml
+    name: Message
+    nameWithType: Message
+    fullName: com.microsoft.azure.sdk.iot.device.Message
+    type: Class
+    syntax:
+      content: public class Message
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.yml
+    name: IotHubEventCallback
+    nameWithType: IotHubEventCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubEventCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub イベント コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+    syntax:
+      content: public interface IotHubEventCallback
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.addMessage(Message,IotHubResponseCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: 'addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    nameWithType: 'MqttTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。 !!! この機能はまだサポートされていないを使用してください!</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.https._https_transport.addMessage(Message,IotHubResponseCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: 'addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    nameWithType: 'HttpsTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.addMessage(Message,IotHubResponseCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: 'addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    nameWithType: 'AmqpsTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>トランスポート キューにメッセージを追加します。 !!! この機能はまだサポートされていないを使用してください!</p>
+      <p></p>
+    syntax:
+      content: 'public void addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>送信するメッセージ。 </p>
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.yml
+    name: IotHubResponseCallback
+    nameWithType: IotHubResponseCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubResponseCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub 応答コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.execute(ResponseMessage,Object)" data-throw-if-not-resolved="false">IotHubResponseCallback #execute(ResponseMessage, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+    syntax:
+      content: public interface IotHubResponseCallback
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.sendMessages()
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: sendMessages()
+    nameWithType: MqttTransport.sendMessages()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.sendMessages()
+    type: Method
+    summary: |-
+      <p>一度に 1 つずつトランスポート キューでは、すべてのメッセージを送信します。 前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。 </p>
+      <p>いずれかが既に作成されていない場合、関数は、構成で指定された IoT Hub と MQTT 接続を初期化します。</p>
+      <p></p>
+    syntax:
+      content: public void sendMessages()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.sendMessages()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: sendMessages()
+    nameWithType: HttpsTransport.sendMessages()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.sendMessages()
+    type: Method
+    summary: |-
+      <p>すべてのメッセージを転送キューにバッチ要求として送信します。</p>
+      <p></p>
+    syntax:
+      content: public void sendMessages()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.sendMessages()
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: sendMessages()
+    nameWithType: AmqpsTransport.sendMessages()
+    fullName: synchronized void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.sendMessages()
+    type: Method
+    summary: |-
+      <p>一度に 1 つずつ順番待ちリストからすべてのメッセージを送信します。 前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。 </p>
+      <p></p>
+    syntax:
+      content: public synchronized void sendMessages()
+      return:
+        type: 5c0b90ca
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.invokeCallbacks()
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: invokeCallbacks()
+    nameWithType: MqttTransport.invokeCallbacks()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.invokeCallbacks()
+    type: Method
+    summary: |-
+      <p>完了したすべての要求のコールバックを呼び出します。</p>
+      <p></p>
+    syntax:
+      content: public void invokeCallbacks()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.invokeCallbacks()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: invokeCallbacks()
+    nameWithType: HttpsTransport.invokeCallbacks()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.invokeCallbacks()
+    type: Method
+    summary: |-
+      <p>完了したすべての要求のコールバックを呼び出します。</p>
+      <p></p>
+    syntax:
+      content: public void invokeCallbacks()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.invokeCallbacks()
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: invokeCallbacks()
+    nameWithType: AmqpsTransport.invokeCallbacks()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.invokeCallbacks()
+    type: Method
+    summary: |-
+      <p>完了したすべての要求のコールバックを呼び出します。</p>
+      <p></p>
+    syntax:
+      content: public void invokeCallbacks()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.handleMessage()
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: handleMessage()
+    nameWithType: MqttTransport.handleMessage()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.handleMessage()
+    type: Method
+    summary: |-
+      <p>サーバーからメッセージが到着するたびに、メッセージのコールバックを呼び出します。 IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答します。 </p>
+      <p>メッセージ コールバックが設定されていない場合、関数は何もします。</p>
+      <p></p>
+    syntax:
+      content: public void handleMessage()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.handleMessage()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: handleMessage()
+    nameWithType: HttpsTransport.handleMessage()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.handleMessage()
+    type: Method
+    summary: |-
+      <p>メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。 </p>
+      <p>メッセージ コールバックが設定されていない場合、関数は何もします。</p>
+      <p></p>
+    syntax:
+      content: public void handleMessage()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.handleMessage()
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: handleMessage()
+    nameWithType: AmqpsTransport.handleMessage()
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.handleMessage()
+    type: Method
+    summary: |-
+      <p>メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。 </p>
+      <p>メッセージ コールバックが設定されていない場合、関数は何もします。</p>
+      <p></p>
+    syntax:
+      content: public void handleMessage()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.isEmpty()
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: isEmpty()
+    nameWithType: MqttTransport.isEmpty()
+    fullName: boolean com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.isEmpty()
+    type: Method
+    summary: "<p>返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</p>\n\n<p></p>"
+    syntax:
+      content: public boolean isEmpty()
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。 </p>"
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.isEmpty()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: isEmpty()
+    nameWithType: HttpsTransport.isEmpty()
+    fullName: boolean com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.isEmpty()
+    type: Method
+    summary: |-
+      <p>それ以外の場合、トランスポートはメッセージが表示されない、処理する場合は true と false を返します。</p>
+      <p></p>
+    syntax:
+      content: public boolean isEmpty()
+      return:
+        type: 4fc6e284
+        description: <p>true に設定すると、トランスポートはメッセージが表示されない、ハンドルおよび false をそれ以外の場合は。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.isEmpty()
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: isEmpty()
+    nameWithType: AmqpsTransport.isEmpty()
+    fullName: boolean com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.isEmpty()
+    type: Method
+    summary: "<p>返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</p>\n\n<p></p>"
+    syntax:
+      content: public boolean isEmpty()
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。 </p>"
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.https._https_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_transport.yml
+    name: 'registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    nameWithType: 'HttpsTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>Https 接続が失われたか、確立されるたびに実行されるコールバックを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+      parameters:
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+          description: <p>呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>コールバックに渡されるコンテキスト。 Null にすることができます。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.mqtt._mqtt_transport.yml
+    name: 'registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    nameWithType: 'MqttTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.mqtt.MqttTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>Mqtt 接続が失われたか、確立されるたびに実行されるコールバックを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+      parameters:
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+          description: <p>呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+  - uid: 'com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
+    parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
+    href: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.yml
+    name: 'registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    nameWithType: 'AmqpsTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    fullName: 'void com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>Amqps 接続が失われたか、確立されるたびに実行されるコールバックを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
+      parameters:
+        - id: callback
+          type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+          description: <p>呼び出されるコールバック。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback.yml
+    name: IotHubConnectionStateCallback
+    nameWithType: IotHubConnectionStateCallback
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubConnectionStateCallback
+    type: Interface
+    summary: |-
+      <p>IoT Hub 接続状態コールバックのインターフェイスです。</p>
+      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback #execute(IotHubConnectionState, Object)</xref>接続の状態 (ダウン、成功した場合など) に渡します。 </p>
+    syntax:
+      content: public interface IotHubConnectionStateCallback

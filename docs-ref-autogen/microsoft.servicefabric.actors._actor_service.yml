@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._actor_service
+    id: _actor_service
+    parent: microsoft.servicefabric.actors
+    children:
+      - microsoft.servicefabric.actors._actor_service.deleteActorAsync(ActorId)
+      - microsoft.servicefabric.actors._actor_service.getActorsAsync(ContinuationToken)
+    href: microsoft.servicefabric.actors._actor_service.yml
+    langs:
+      - java
+    name: ActorService
+    nameWithType: ActorService
+    fullName: microsoft.servicefabric.actors.ActorService
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorService.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorService.java
+      startLine: 9
+    package: microsoft.servicefabric.actors
+    summary: <p>呼び出すことができるメソッドを含むインターフェイスを定義する<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス レベルです。 </p>
+    syntax:
+      content: public interface ActorService extends Service
+  - uid: microsoft.servicefabric.actors._actor_service.deleteActorAsync(ActorId)
+    id: deleteActorAsync(ActorId)
+    parent: microsoft.servicefabric.actors._actor_service
+    href: microsoft.servicefabric.actors._actor_service.yml
+    langs:
+      - java
+    name: deleteActorAsync(ActorId actorId)
+    nameWithType: ActorService.deleteActorAsync(ActorId actorId)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorService.deleteActorAsync(ActorId actorId)
+    overload: microsoft.servicefabric.actors._actor_service.deleteActorAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorService.java
+      startLine: 33
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</p>
+      <p>
+      アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。 アクティブでアクターの状態は、状態プロバイダーから削除されます。 このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。 </p>
+    syntax:
+      content: public CompletableFuture<?> deleteActorAsync(ActorId actorId)
+      parameters:
+        - id: actorId
+          type: microsoft.servicefabric.actors._actor_id
+          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。 </p>"
+      return:
+        type: 16409f84
+        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._actor_service.getActorsAsync(ContinuationToken)
+    id: getActorsAsync(ContinuationToken)
+    parent: microsoft.servicefabric.actors._actor_service
+    href: microsoft.servicefabric.actors._actor_service.yml
+    langs:
+      - java
+    name: getActorsAsync(ContinuationToken continuationToken)
+    nameWithType: ActorService.getActorsAsync(ContinuationToken continuationToken)
+    fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.ActorService.getActorsAsync(ContinuationToken continuationToken)
+    overload: microsoft.servicefabric.actors._actor_service.getActorsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorService.java
+      startLine: 19
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクター サービスを照会することによってアクターの一覧を取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<PagedResult<ActorInformation>> getActorsAsync(ContinuationToken continuationToken)
+      parameters:
+        - id: continuationToken
+          type: microsoft.servicefabric.actors._continuation_token
+          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+      return:
+        type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
+        description: <p>サーバーへの呼び出しの非同期操作を表す予定。 </p>
+references:
+  - uid: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: microsoft.servicefabric.actors._paged_result
+        name: PagedResult
+        fullName: microsoft.servicefabric.actors.PagedResult
+        href: microsoft.servicefabric.actors._paged_result.yml
+      - name: <
+        fullName: <
+      - uid: microsoft.servicefabric.actors._actor_information
+        name: ActorInformation
+        fullName: microsoft.servicefabric.actors.ActorInformation
+        href: microsoft.servicefabric.actors._actor_information.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: microsoft.servicefabric.actors._actor_service.getActorsAsync*
+    name: getActorsAsync
+    nameWithType: ActorService.getActorsAsync
+    fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.ActorService.getActorsAsync
+    package: microsoft.servicefabric.actors
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.actors._actor_service.deleteActorAsync*
+    name: deleteActorAsync
+    nameWithType: ActorService.deleteActorAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorService.deleteActorAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.services.remoting._service
+    parent: microsoft.servicefabric.services.remoting
+    href: microsoft.servicefabric.services.remoting._service.yml
+    name: Service
+    nameWithType: Service
+    fullName: microsoft.servicefabric.services.remoting.Service
+    type: Interface
+    summary: <p>これは、サービスのインターフェイスのリモート処理を有効にするためのマーカー インターフェイスです。 <xref uid="microsoft.servicefabric.services.remoting._service_remoting_listener" data-throw-if-not-resolved="false">ServiceRemotingListener</xref>このインターフェイスから派生する、サービスによって実装されたすべてのインターフェイスのリモート処理を提供します。 リモート インターフェイスは、クライアント側プロキシを経由してアクセスできます。 </p>
+    syntax:
+      content: public interface Service
+  - uid: microsoft.servicefabric.actors._fabric_actor_service
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: FabricActorService
+    nameWithType: FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService
+    type: Class
+    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    syntax:
+      content: public class FabricActorService
+  - uid: microsoft.servicefabric.actors._paged_result
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._paged_result.yml
+    name: PagedResult<T>
+    nameWithType: PagedResult<T>
+    fullName: microsoft.servicefabric.actors.PagedResult<T>
+    type: Class
+    summary: |-
+      <p>アクター クエリの呼び出しの結果を表します。</p>
+      <p></p>
+    syntax:
+      content: public class PagedResult<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>このクエリ結果に含まれる項目の種類。 </p>
+  - uid: microsoft.servicefabric.actors._actor_information
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_information.yml
+    name: ActorInformation
+    nameWithType: ActorInformation
+    fullName: microsoft.servicefabric.actors.ActorInformation
+    type: Class
+    summary: <p>によって返されるアクターに関する情報を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>メソッドの呼び出しをクエリします。 </p>
+    syntax:
+      content: public class ActorInformation
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getActorsAsync(ContinuationToken)
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: getActorsAsync(ContinuationToken continuationToken)
+    nameWithType: FabricActorService.getActorsAsync(ContinuationToken continuationToken)
+    fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.FabricActorService.getActorsAsync(ContinuationToken continuationToken)
+    type: Method
+    summary: |-
+      <p>アクター サービスを照会することによってアクターの一覧を取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<PagedResult<ActorInformation>> getActorsAsync(ContinuationToken continuationToken)
+      parameters:
+        - id: continuationToken
+          type: microsoft.servicefabric.actors._continuation_token
+          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+      return:
+        type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>サーバーへの呼び出しの非同期操作を表すです。 </p>
+  - uid: microsoft.servicefabric.actors._continuation_token
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._continuation_token.yml
+    name: ContinuationToken
+    nameWithType: ContinuationToken
+    fullName: microsoft.servicefabric.actors.ContinuationToken
+    type: Class
+    summary: "<p>クエリ操作の継続トークンを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>メソッドを使用して結果のセットの一部を返す可能性があります、 <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref>オブジェクトが使用可能な結果の次のセットを返す、後続の呼び出しで使用できるオブジェクトにも継続トークンを返します。 </p>"
+    syntax:
+      content: public class ContinuationToken
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.deleteActorAsync(ActorId)
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: deleteActorAsync(ActorId actorId)
+    nameWithType: FabricActorService.deleteActorAsync(ActorId actorId)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.deleteActorAsync(ActorId actorId)
+    type: Method
+    summary: |-
+      <p>削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</p>
+      <p>
+      アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。 アクティブでアクターの状態は、状態プロバイダーから削除されます。 このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。 </p>
+    syntax:
+      content: public CompletableFuture<?> deleteActorAsync(ActorId actorId)
+      parameters:
+        - id: actorId
+          type: microsoft.servicefabric.actors._actor_id
+          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。 </p>"
+      return:
+        type: 16409f84
+        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._actor_id
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_id.yml
+    name: ActorId
+    nameWithType: ActorId
+    fullName: microsoft.servicefabric.actors.ActorId
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。 アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。 </p>"
+    syntax:
+      content: public class ActorId
+  - uid: microsoft.servicefabric.actors._actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor.yml
+    name: Actor
+    nameWithType: Actor
+    fullName: microsoft.servicefabric.actors.Actor
+    type: Interface
+    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    syntax:
+      content: public interface Actor

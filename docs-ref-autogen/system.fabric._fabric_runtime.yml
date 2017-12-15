@@ -1,0 +1,614 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._fabric_runtime
+    id: _fabric_runtime
+    parent: system.fabric
+    children:
+      - system.fabric._fabric_runtime.close()
+      - system.fabric._fabric_runtime.create()
+      - system.fabric._fabric_runtime.createAsync(Duration)
+      - 'system.fabric._fabric_runtime.createAsync(Runnable,Duration)'
+      - system.fabric._fabric_runtime.getActivationContext()
+      - system.fabric._fabric_runtime.getActivationContextAsync(Duration)
+      - system.fabric._fabric_runtime.getNodeContext()
+      - system.fabric._fabric_runtime.getNodeContextAsync(Duration)
+      - 'system.fabric._fabric_runtime.registerServiceType(String,Class<?>)'
+      - 'system.fabric._fabric_runtime.registerServiceTypeAsync(String,Class<?>,Duration)'
+      - 'system.fabric._fabric_runtime.registerStatefulServiceFactory(String,StatefulServiceFactory)'
+      - 'system.fabric._fabric_runtime.registerStatefulServiceFactoryAsync(String,StatefulServiceFactory,Duration)'
+      - 'system.fabric._fabric_runtime.registerStatelessServiceFactory(String,StatelessServiceFactory)'
+      - 'system.fabric._fabric_runtime.registerStatelessServiceFactoryAsync(String,StatelessServiceFactory,Duration)'
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: FabricRuntime
+    nameWithType: FabricRuntime
+    fullName: system.fabric.FabricRuntime
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 27
+    package: system.fabric
+    summary: '<p>ユーザーが作成したホストを取得できるように、 <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>、必要なサービス ファクトリを登録したり、[ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>、 <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] または直接のサービスの種類。 </p>'
+    syntax: &ref_1
+      content: public class FabricRuntime
+    inheritance:
+      - java.lang.Object
+      - AutoCloseable
+  - uid: system.fabric._fabric_runtime.close()
+    id: close()
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: FabricRuntime.close()
+    fullName: void system.fabric.FabricRuntime.close()
+    overload: system.fabric._fabric_runtime.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 404
+    package: system.fabric
+    syntax:
+      content: public void close()
+  - uid: system.fabric._fabric_runtime.create()
+    id: create()
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: create()
+    nameWithType: FabricRuntime.create()
+    fullName: static FabricRuntime system.fabric.FabricRuntime.create()
+    overload: system.fabric._fabric_runtime.create*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 116
+    package: system.fabric
+    summary: |-
+      <p>作成、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>オブジェクト。</p>
+      <p></p>
+    syntax:
+      content: public static FabricRuntime create()
+      return:
+        type: system.fabric._fabric_runtime
+        description: <p>新しく作成した<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>オブジェクト。 </p>
+  - uid: system.fabric._fabric_runtime.createAsync(Duration)
+    id: createAsync(Duration)
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: createAsync(Duration timeout)
+    nameWithType: FabricRuntime.createAsync(Duration timeout)
+    fullName: static CompletableFuture<FabricRuntime> system.fabric.FabricRuntime.createAsync(Duration timeout)
+    overload: system.fabric._fabric_runtime.createAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 130
+    package: system.fabric
+    summary: |-
+      <p>作成、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>オブジェクト、指定されたタイムアウト パラメーターを非同期的にします。</p>
+      <p></p>
+    syntax:
+      content: public static CompletableFuture<FabricRuntime> createAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する時間の最大量。 </p>
+      return:
+        type: 9cdf14d0system.fabric._fabric_runtimea08ddfce
+        description: <p>非同期操作を表すタスク。 </p>
+  - uid: 'system.fabric._fabric_runtime.createAsync(Runnable,Duration)'
+    id: 'createAsync(Runnable,Duration)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'createAsync(Runnable fabricExitCallback, Duration timeout)'
+    nameWithType: 'FabricRuntime.createAsync(Runnable fabricExitCallback, Duration timeout)'
+    fullName: 'static CompletableFuture<FabricRuntime> system.fabric.FabricRuntime.createAsync(Runnable fabricExitCallback, Duration timeout)'
+    overload: system.fabric._fabric_runtime.createAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 146
+    package: system.fabric
+    summary: |-
+      <p>作成、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>基になるランタイムが終了または何らかの理由が終了した場合に実行される、指定されたコールバック関数を非同期的に持つオブジェクト。</p>
+      <p></p>
+    syntax:
+      content: 'public static CompletableFuture<FabricRuntime> createAsync(Runnable fabricExitCallback, Duration timeout)'
+      parameters:
+        - id: fabricExitCallback
+          type: 2b8852ea
+          description: <p>ランタイムが終了または終了するときに実行されるアクション。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する時間の最大量。 </p>
+      return:
+        type: 9cdf14d0system.fabric._fabric_runtimea08ddfce
+        description: <p>非同期操作を表すタスク。 </p>
+  - uid: system.fabric._fabric_runtime.getActivationContext()
+    id: getActivationContext()
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: getActivationContext()
+    nameWithType: FabricRuntime.getActivationContext()
+    fullName: static FabricCodePackageActivationContext system.fabric.FabricRuntime.getActivationContext()
+    overload: system.fabric._fabric_runtime.getActivationContext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 156
+    package: system.fabric
+    summary: |-
+      <p>現在取得<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>の<xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public static FabricCodePackageActivationContext getActivationContext()
+      return:
+        type: system.fabric._fabric_code_package_activation_context
+        description: <p>アクティベーション コンテキスト。 </p>
+  - uid: system.fabric._fabric_runtime.getActivationContextAsync(Duration)
+    id: getActivationContextAsync(Duration)
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: getActivationContextAsync(Duration timeout)
+    nameWithType: FabricRuntime.getActivationContextAsync(Duration timeout)
+    fullName: static CompletableFuture<FabricCodePackageActivationContext> system.fabric.FabricRuntime.getActivationContextAsync(Duration timeout)
+    overload: system.fabric._fabric_runtime.getActivationContextAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 170
+    package: system.fabric
+    summary: |-
+      <p>現在取得<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>本™ s <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>指定のパラメーターを非同期的に使用します。</p>
+      <p></p>
+    syntax:
+      content: public static CompletableFuture<FabricCodePackageActivationContext> getActivationContextAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する最長時間 </p>
+      return:
+        type: 9cdf14d0system.fabric._fabric_code_package_activation_contexta08ddfce
+        description: <p>非同期操作を表すタスク。 </p>
+  - uid: system.fabric._fabric_runtime.getNodeContext()
+    id: getNodeContext()
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: getNodeContext()
+    nameWithType: FabricRuntime.getNodeContext()
+    fullName: static NodeContext system.fabric.FabricRuntime.getNodeContext()
+    overload: system.fabric._fabric_runtime.getNodeContext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 184
+    package: system.fabric
+    summary: |-
+      <p>Fabric ノードに関する情報を含むノードのコンテキスト オブジェクトを取得します。</p>
+      <p></p>
+    syntax:
+      content: public static NodeContext getNodeContext()
+      return:
+        type: system.fabric._node_context
+        description: <p>ノードのコンテキスト。 </p>
+  - uid: system.fabric._fabric_runtime.getNodeContextAsync(Duration)
+    id: getNodeContextAsync(Duration)
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: getNodeContextAsync(Duration timeout)
+    nameWithType: FabricRuntime.getNodeContextAsync(Duration timeout)
+    fullName: static CompletableFuture<NodeContext> system.fabric.FabricRuntime.getNodeContextAsync(Duration timeout)
+    overload: system.fabric._fabric_runtime.getNodeContextAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 196
+    package: system.fabric
+    summary: |-
+      <p>ノードのコンテキスト Fabric ノードから非同期的にタイムアウトとキャンセル トークン取得します。</p>
+      <p></p>
+    syntax:
+      content: public static CompletableFuture<NodeContext> getNodeContextAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する最長時間 </p>
+      return:
+        type: 9cdf14d0system.fabric._node_contexta08ddfce
+        description: <p>非同期操作を表すタスク。 </p>
+  - uid: 'system.fabric._fabric_runtime.registerServiceType(String,Class<?>)'
+    id: 'registerServiceType(String,Class<?>)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'registerServiceType(String serviceTypeName, Class<?> serviceTypeImplementation)'
+    nameWithType: 'FabricRuntime.registerServiceType(String serviceTypeName, Class<?> serviceTypeImplementation)'
+    fullName: 'void system.fabric.FabricRuntime.registerServiceType(String serviceTypeName, Class<?> serviceTypeImplementation)'
+    overload: system.fabric._fabric_runtime.registerServiceType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 280
+    package: system.fabric
+    summary: "<p>指定した serviceTypeName を実装する実際のマネージ型に関連付けます。</p>\n<p>\r\n\r\n  <b>注釈:</b>サービス型登録のためには、このメカニズムは、カスタムを必要とされません<xref uid=\"system.fabric._stateless_service_factory\" data-throw-if-not-resolved=\"false\">system.fabric.StatelessServiceFactory</xref>または<xref uid=\"system.fabric._stateful_service_factory\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceFactory</xref>登録時に提供されます。 Service Fabric では、実行時に 1 つを生成し、それを自動的に利用します。 工場出荷時のカスタム実装の必要性がある場合は、実装<xref uid=\"system.fabric._stateless_service_factory\" data-throw-if-not-resolved=\"false\">system.fabric.StatelessServiceFactory</xref>または<xref uid=\"system.fabric._stateful_service_factory\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceFactory</xref>しを使用してそれらを指定します工場出荷時の対応する登録メソッド ( <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime#registerStatelessServiceFactoryAsync (java.lang.String、system.fabric.StatelessServiceFactory、java.time.Duration)</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime#registerStatefulServiceFactoryAsync (java.lang.String、system.fabric.StatefulServiceFactory、java.time.Duration)</xref> ) </p>"
+    syntax:
+      content: 'public void registerServiceType(String serviceTypeName, Class<?> serviceTypeImplementation)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>(文字列) としてサービスの種類の型名。 これは、マニフェストや CreateService コマンドで指定されているサービス グループの種類の型と一致する必要があります。 </p>
+        - id: serviceTypeImplementation
+          type: a19781f8
+          description: <p>修飾サービスは、指定した serviceTypeName を実装する型。 </p>
+  - uid: 'system.fabric._fabric_runtime.registerServiceTypeAsync(String,Class<?>,Duration)'
+    id: 'registerServiceTypeAsync(String,Class<?>,Duration)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'registerServiceTypeAsync(String serviceTypeName, Class<?> serviceTypeImplementation, Duration timeout)'
+    nameWithType: 'FabricRuntime.registerServiceTypeAsync(String serviceTypeName, Class<?> serviceTypeImplementation, Duration timeout)'
+    fullName: 'CompletableFuture<?> system.fabric.FabricRuntime.registerServiceTypeAsync(String serviceTypeName, Class<?> serviceTypeImplementation, Duration timeout)'
+    overload: system.fabric._fabric_runtime.registerServiceTypeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 312
+    package: system.fabric
+    summary: |-
+      <p>タイムアウトを指定して、それを実装する実際のマネージ型と指定した serviceTypeName を非同期的に関連付けます</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> registerServiceTypeAsync(String serviceTypeName, Class<?> serviceTypeImplementation, Duration timeout)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>(文字列) としてサービスの種類の型名。 これは、マニフェストや CreateService コマンドで指定されているサービス グループの種類の型と一致する必要があります。 </p>
+        - id: serviceTypeImplementation
+          type: a19781f8
+          description: <p>修飾サービスは、指定した serviceTypeName を実装する型。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する時間の最大量。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期操作を表すタスク。 </p>
+  - uid: 'system.fabric._fabric_runtime.registerStatefulServiceFactory(String,StatefulServiceFactory)'
+    id: 'registerStatefulServiceFactory(String,StatefulServiceFactory)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'registerStatefulServiceFactory(String serviceTypeName, StatefulServiceFactory factory)'
+    nameWithType: 'FabricRuntime.registerStatefulServiceFactory(String serviceTypeName, StatefulServiceFactory factory)'
+    fullName: 'void system.fabric.FabricRuntime.registerStatefulServiceFactory(String serviceTypeName, StatefulServiceFactory factory)'
+    overload: system.fabric._fabric_runtime.registerStatefulServiceFactory*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 242
+    package: system.fabric
+    summary: |-
+      <p>指定した登録<xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref>指定されたサービスの種類。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerStatefulServiceFactory(String serviceTypeName, StatefulServiceFactory factory)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>(文字列) としてサービスの種類の型名。 これは、マニフェストや CreateService コマンドで指定されているサービス グループの種類の型と一致する必要があります。 </p>
+        - id: factory
+          type: system.fabric._stateful_service_factory
+          description: <p><xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">System.fabric.StatefulServiceFactory</xref>指定されたサービス型を作成することができます。 </p>
+  - uid: 'system.fabric._fabric_runtime.registerStatefulServiceFactoryAsync(String,StatefulServiceFactory,Duration)'
+    id: 'registerStatefulServiceFactoryAsync(String,StatefulServiceFactory,Duration)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'registerStatefulServiceFactoryAsync(String serviceTypeName, StatefulServiceFactory factory, Duration timeout)'
+    nameWithType: 'FabricRuntime.registerStatefulServiceFactoryAsync(String serviceTypeName, StatefulServiceFactory factory, Duration timeout)'
+    fullName: 'CompletableFuture<?> system.fabric.FabricRuntime.registerStatefulServiceFactoryAsync(String serviceTypeName, StatefulServiceFactory factory, Duration timeout)'
+    overload: system.fabric._fabric_runtime.registerStatefulServiceFactoryAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 383
+    package: system.fabric
+    summary: |-
+      <p>指定した登録<xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> cancellationToken と指定したタイムアウト時間で指定されたサービスの型にします。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> registerStatefulServiceFactoryAsync(String serviceTypeName, StatefulServiceFactory factory, Duration timeout)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>(文字列) としてサービスの種類の型名。 これは、マニフェストや CreateService コマンドで指定されているサービス グループの種類の型と一致する必要があります。 </p>
+        - id: factory
+          type: system.fabric._stateful_service_factory
+          description: <p><xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">System.fabric.StatefulServiceFactory</xref>指定されたサービス型を作成することができます。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する時間の最大量。 </p>
+      return:
+        type: 16409f84
+        description: <p>操作を表す非同期です。 </p>
+  - uid: 'system.fabric._fabric_runtime.registerStatelessServiceFactory(String,StatelessServiceFactory)'
+    id: 'registerStatelessServiceFactory(String,StatelessServiceFactory)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'registerStatelessServiceFactory(String serviceTypeName, StatelessServiceFactory factory)'
+    nameWithType: 'FabricRuntime.registerStatelessServiceFactory(String serviceTypeName, StatelessServiceFactory factory)'
+    fullName: 'void system.fabric.FabricRuntime.registerStatelessServiceFactory(String serviceTypeName, StatelessServiceFactory factory)'
+    overload: system.fabric._fabric_runtime.registerStatelessServiceFactory*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 216
+    package: system.fabric
+    summary: |-
+      <p>指定した登録<xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>指定されたサービスの種類。</p>
+      <p></p>
+    syntax:
+      content: 'public void registerStatelessServiceFactory(String serviceTypeName, StatelessServiceFactory factory)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>(文字列) としてサービスの種類の型名。 これは、マニフェストや CreateService コマンドで指定されているサービス グループの種類の型と一致する必要があります。 </p>
+        - id: factory
+          type: system.fabric._stateless_service_factory
+          description: <p><xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">System.fabric.StatelessServiceFactory</xref>指定されたサービス型を作成することができます。 </p>
+  - uid: 'system.fabric._fabric_runtime.registerStatelessServiceFactoryAsync(String,StatelessServiceFactory,Duration)'
+    id: 'registerStatelessServiceFactoryAsync(String,StatelessServiceFactory,Duration)'
+    parent: system.fabric._fabric_runtime
+    href: system.fabric._fabric_runtime.yml
+    langs:
+      - java
+    name: 'registerStatelessServiceFactoryAsync(String serviceTypeName, StatelessServiceFactory factory, Duration timeout)'
+    nameWithType: 'FabricRuntime.registerStatelessServiceFactoryAsync(String serviceTypeName, StatelessServiceFactory factory, Duration timeout)'
+    fullName: 'CompletableFuture<?> system.fabric.FabricRuntime.registerStatelessServiceFactoryAsync(String serviceTypeName, StatelessServiceFactory factory, Duration timeout)'
+    overload: system.fabric._fabric_runtime.registerStatelessServiceFactoryAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricRuntime.java
+      startLine: 348
+    package: system.fabric
+    summary: |-
+      <p>非同期的に、指定した登録<xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref> cancellationToken と指定したタイムアウト時間で、指定したサービス型の</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> registerStatelessServiceFactoryAsync(String serviceTypeName, StatelessServiceFactory factory, Duration timeout)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>(文字列) としてサービスの種類の型名。 これは、マニフェストや CreateService コマンドで指定されているサービス グループの種類の型と一致する必要があります。 </p>
+        - id: factory
+          type: system.fabric._stateless_service_factory
+          description: <p><xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">System.fabric.StatelessServiceFactory</xref>指定されたサービス型を作成することができます。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>Service Fabric は、TimeoutException を返す前に続行するには、この操作を許可する時間の最大量。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期操作を表すタスク。 </p>
+references:
+  - uid: system.fabric._fabric_runtime.create*
+    name: create
+    nameWithType: FabricRuntime.create
+    fullName: static FabricRuntime system.fabric.FabricRuntime.create
+    package: system.fabric
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: 9cdf14d0system.fabric._fabric_runtimea08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._fabric_runtime
+        name: FabricRuntime
+        fullName: system.fabric.FabricRuntime
+        href: system.fabric._fabric_runtime.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._fabric_runtime.createAsync*
+    name: createAsync
+    nameWithType: FabricRuntime.createAsync
+    fullName: static CompletableFuture<FabricRuntime> system.fabric.FabricRuntime.createAsync
+    package: system.fabric
+  - uid: 2b8852ea
+    spec.java:
+      - name: Runnable
+        fullName: Runnable
+  - uid: system.fabric._fabric_runtime.getActivationContext*
+    name: getActivationContext
+    nameWithType: FabricRuntime.getActivationContext
+    fullName: static FabricCodePackageActivationContext system.fabric.FabricRuntime.getActivationContext
+    package: system.fabric
+  - uid: 9cdf14d0system.fabric._fabric_code_package_activation_contexta08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._fabric_code_package_activation_context
+        name: FabricCodePackageActivationContext
+        fullName: system.fabric.FabricCodePackageActivationContext
+        href: system.fabric._fabric_code_package_activation_context.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._fabric_runtime.getActivationContextAsync*
+    name: getActivationContextAsync
+    nameWithType: FabricRuntime.getActivationContextAsync
+    fullName: static CompletableFuture<FabricCodePackageActivationContext> system.fabric.FabricRuntime.getActivationContextAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_runtime.getNodeContext*
+    name: getNodeContext
+    nameWithType: FabricRuntime.getNodeContext
+    fullName: static NodeContext system.fabric.FabricRuntime.getNodeContext
+    package: system.fabric
+  - uid: 9cdf14d0system.fabric._node_contexta08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._node_context
+        name: NodeContext
+        fullName: system.fabric.NodeContext
+        href: system.fabric._node_context.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._fabric_runtime.getNodeContextAsync*
+    name: getNodeContextAsync
+    nameWithType: FabricRuntime.getNodeContextAsync
+    fullName: static CompletableFuture<NodeContext> system.fabric.FabricRuntime.getNodeContextAsync
+    package: system.fabric
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: system.fabric._fabric_runtime.registerStatelessServiceFactory*
+    name: registerStatelessServiceFactory
+    nameWithType: FabricRuntime.registerStatelessServiceFactory
+    fullName: void system.fabric.FabricRuntime.registerStatelessServiceFactory
+    package: system.fabric
+  - uid: system.fabric._fabric_runtime.registerStatefulServiceFactory*
+    name: registerStatefulServiceFactory
+    nameWithType: FabricRuntime.registerStatefulServiceFactory
+    fullName: void system.fabric.FabricRuntime.registerStatefulServiceFactory
+    package: system.fabric
+  - uid: a19781f8
+    spec.java:
+      - name: Class<?>
+        fullName: Class<?>
+  - uid: system.fabric._fabric_runtime.registerServiceType*
+    name: registerServiceType
+    nameWithType: FabricRuntime.registerServiceType
+    fullName: void system.fabric.FabricRuntime.registerServiceType
+    package: system.fabric
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: system.fabric._fabric_runtime.registerServiceTypeAsync*
+    name: registerServiceTypeAsync
+    nameWithType: FabricRuntime.registerServiceTypeAsync
+    fullName: CompletableFuture<?> system.fabric.FabricRuntime.registerServiceTypeAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_runtime.registerStatelessServiceFactoryAsync*
+    name: registerStatelessServiceFactoryAsync
+    nameWithType: FabricRuntime.registerStatelessServiceFactoryAsync
+    fullName: CompletableFuture<?> system.fabric.FabricRuntime.registerStatelessServiceFactoryAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_runtime.registerStatefulServiceFactoryAsync*
+    name: registerStatefulServiceFactoryAsync
+    nameWithType: FabricRuntime.registerStatefulServiceFactoryAsync
+    fullName: CompletableFuture<?> system.fabric.FabricRuntime.registerStatefulServiceFactoryAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_runtime.close*
+    name: close
+    nameWithType: FabricRuntime.close
+    fullName: void system.fabric.FabricRuntime.close
+    package: system.fabric
+  - uid: system.fabric._fabric_code_package_activation_context
+    parent: system.fabric
+    href: system.fabric._fabric_code_package_activation_context.yml
+    name: FabricCodePackageActivationContext
+    nameWithType: FabricCodePackageActivationContext
+    fullName: system.fabric.FabricCodePackageActivationContext
+    type: Class
+    summary: <p>Service Fabric サービスのアクティブ化コンテキストを表します。 これは、ファブリックのアクティブ化サービスでのみ有効です。 </p>
+    syntax:
+      content: public class FabricCodePackageActivationContext implements CodePackageActivationContext
+  - uid: system.fabric._node_context
+    parent: system.fabric
+    href: system.fabric._node_context.yml
+    name: NodeContext
+    nameWithType: NodeContext
+    fullName: system.fabric.NodeContext
+    type: Class
+    summary: <p>ノードのコンテキストをカプセル化するクラス。 </p>
+    syntax:
+      content: public class NodeContext
+  - uid: system.fabric.interop._native_async_callback
+    parent: system.fabric.interop
+    href: system.fabric.interop._native_async_callback.yml
+    name: NativeAsyncCallback
+    nameWithType: NativeAsyncCallback
+    fullName: system.fabric.interop.NativeAsyncCallback
+    type: Interface
+    syntax:
+      content: public interface NativeAsyncCallback
+  - uid: system.fabric._fabric_runtime
+    parent: system.fabric
+    href: system.fabric._fabric_runtime.yml
+    name: FabricRuntime
+    nameWithType: FabricRuntime
+    fullName: system.fabric.FabricRuntime
+    type: Class
+    summary: '<p>ユーザーが作成したホストを取得できるように、 <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>、必要なサービス ファクトリを登録したり、[ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>、 <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] または直接のサービスの種類。 </p>'
+    syntax: *ref_1
+  - uid: system.fabric._code_package_activation_context
+    parent: system.fabric
+    href: system.fabric._code_package_activation_context.yml
+    name: CodePackageActivationContext
+    nameWithType: CodePackageActivationContext
+    fullName: system.fabric.CodePackageActivationContext
+    type: Interface
+    summary: <p>Service Fabric サービスのアクティブ化コンテキストを表します。 これは、ファブリックのアクティブ化サービスでのみ有効です。 </p>
+    syntax:
+      content: public interface CodePackageActivationContext
+  - uid: system.fabric._stateless_service_factory
+    parent: system.fabric
+    href: system.fabric._stateless_service_factory.yml
+    name: StatelessServiceFactory
+    nameWithType: StatelessServiceFactory
+    fullName: system.fabric.StatelessServiceFactory
+    type: Interface
+    summary: "<p>ステートレス サービスの特定の型のインスタンスの作成を担当するステートレス サービス ファクトリを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>にステートレス サービス ファクトリが登録されている、 <xref uid=\"system.fabric._fabric_runtime\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime</xref>を介してサービス ホストによって<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime#registerStatelessServiceFactory (java.lang.String,system.fabric.StatelessServiceFactory)</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime#registerStatelessServiceFactoryAsync (java.lang.String,system.fabric.StatelessServiceFactory、java.time.Duration)</xref></p>"
+    syntax:
+      content: public interface StatelessServiceFactory
+  - uid: system.fabric._stateful_service_factory
+    parent: system.fabric
+    href: system.fabric._stateful_service_factory.yml
+    name: StatefulServiceFactory
+    nameWithType: StatefulServiceFactory
+    fullName: system.fabric.StatefulServiceFactory
+    type: Interface
+    summary: '<p>ステートフル サービスの特定の種類のレプリカの作成を担当するステートフルなサービス ファクトリを表します。 ステートフルなサービス ファクトリに登録されている、 <xref uid="system.fabric._fabric_runtime" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>を介してサービス ホストによって<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactory (java.lang.String,system.fabric.StatefulServiceFactory)</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactoryAsync(java.lang.String,system.fabric.StatefulServiceFactory,java.time.Duration)</xref></p>'
+    syntax:
+      content: public interface StatefulServiceFactory

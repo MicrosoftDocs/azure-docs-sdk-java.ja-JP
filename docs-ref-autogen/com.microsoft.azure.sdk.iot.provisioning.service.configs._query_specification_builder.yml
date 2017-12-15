@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+    id: _query_specification_builder
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    children:
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.createSqlQuery()
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.groupBy(String)
+      - 'com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.QuerySpecificationBuilder(String,FromType)'
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.where(String)
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.yml
+    langs:
+      - java
+    name: QuerySpecificationBuilder
+    nameWithType: QuerySpecificationBuilder
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder
+    type: Class
+    source:
+      remote: &ref_0
+        path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/QuerySpecificationBuilder.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/QuerySpecificationBuilder.java
+      startLine: 35
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: "<p>これは、新しいインスタンスを作成するためのヘルパー、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification\" data-throw-if-not-resolved=\"false\">QuerySpecification</xref>です。</p>\n<p>このヘルパーには、正しい sql 形式を強制するクエリを作成します。 想定、<b>選択</b>と<b>FROM</b>、必要に応じてを受け入れますが、<b>場所</b>と<b>GROUP BY</b>です。 その結果、返されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification\" data-throw-if-not-resolved=\"false\">QuerySpecification</xref>オブジェクトをプロビジョニング サービスによって受け入れられます。</p>\n<p>\r\n\r\n  <b>例:</b>\r\n\r\n</p>\n<p>次の行が作成されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification\" data-throw-if-not-resolved=\"false\">QuerySpecification</xref>です。 <pre><code>QuerySpecification querySpecification = new QuerySpecificationBuilder(\"*\", QuerySpecificationBuilder.FromType.ENROLLMENTS)\n\n            .where(\"iotHubHostName=`ContosoIoTHub.azure-devices.net`\").createSqlQuery();\n\n    </code></pre></p>\n\n<p>Sql クエリが生成されます。 <pre><code>{\n\n        \"query\":\"select * from enrollments where iotHubHostName=`ContosoIoTHub.azure-devices.net`\"\n\n    }\n\n    </code></pre></p>\n\n<p></p>"
+    syntax: &ref_1
+      content: public class QuerySpecificationBuilder
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.createSqlQuery()
+    id: createSqlQuery()
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.yml
+    langs:
+      - java
+    name: createSqlQuery()
+    nameWithType: QuerySpecificationBuilder.createSqlQuery()
+    fullName: QuerySpecification com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.createSqlQuery()
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.createSqlQuery*
+    type: Method
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/QuerySpecificationBuilder.java
+      startLine: 122
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>新しいインスタンスを作成、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification" data-throw-if-not-resolved="false">QuerySpecification</xref>ことで、sql クエリに指定された句を使用しています。</p>
+      <p></p>
+    syntax:
+      content: public QuerySpecification createSqlQuery()
+      return:
+        type: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification
+        description: <p>A <xref uid="com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification" data-throw-if-not-resolved="false">QuerySpecification</xref>提供されている句を指定して、sql クエリを含むです。 </p>
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.groupBy(String)
+    id: groupBy(String)
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.yml
+    langs:
+      - java
+    name: groupBy(String groupBy)
+    nameWithType: QuerySpecificationBuilder.groupBy(String groupBy)
+    fullName: QuerySpecificationBuilder com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.groupBy(String groupBy)
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.groupBy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/QuerySpecificationBuilder.java
+      startLine: 110
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: <p>句の set アクセス操作子にします。 </p>
+    syntax:
+      content: public QuerySpecificationBuilder groupBy(String groupBy)
+      parameters:
+        - id: groupBy
+          type: '26831127'
+          description: "<p><code>String \r\n\r\n    </code>新しい句を使用して<code>group by</code>です。 できます<code>null \r\n\r\n    </code>または空です。 </p>"
+      return:
+        type: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+        description: "<p>同じインスタンス、<code>QuerySpecificationBuilder \r\n\r\n    </code>です。 </p>"
+  - uid: 'com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.QuerySpecificationBuilder(String,FromType)'
+    id: 'QuerySpecificationBuilder(String,FromType)'
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.yml
+    langs:
+      - java
+    name: 'QuerySpecificationBuilder(String selection, FromType fromType)'
+    nameWithType: 'QuerySpecificationBuilder.QuerySpecificationBuilder(String selection, FromType fromType)'
+    fullName: 'com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.QuerySpecificationBuilder(String selection, FromType fromType)'
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.QuerySpecificationBuilder*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/QuerySpecificationBuilder.java
+      startLine: 79
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>コンス トラクター</p>
+      <p>必須のパラメーターを受け取る、ビルダーの新しいインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public QuerySpecificationBuilder(String selection, FromType fromType)'
+      parameters:
+        - id: selection
+          type: '26831127'
+          description: "<p><code>String \r\n\r\n    </code>必須の SELECT 句を使用します。 できません<code>null \r\n\r\n    </code>または空です。 </p>"
+        - id: fromType
+          type: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder._from_type
+          description: "<p><xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder._from_type\" data-throw-if-not-resolved=\"false\">FromType</xref>必須の FROM 句。 できません<code>null \r\n\r\n    </code>です。 </p>"
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定した句のいずれかが有効な場合は。 </p>
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.where(String)
+    id: where(String)
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.yml
+    langs:
+      - java
+    name: where(String where)
+    nameWithType: QuerySpecificationBuilder.where(String where)
+    fullName: QuerySpecificationBuilder com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.where(String where)
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.where*
+    type: Method
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/QuerySpecificationBuilder.java
+      startLine: 98
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>句の set アクセス操作子にします。</p>
+      <p></p>
+    syntax:
+      content: public QuerySpecificationBuilder where(String where)
+      parameters:
+        - id: where
+          type: '26831127'
+          description: "<p><code>String \r\n\r\n    </code>新しい句を使用して<code>where</code>です。 できます<code>null \r\n\r\n    </code>または空です。 </p>"
+      return:
+        type: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+        description: "<p>同じインスタンス、<code>QuerySpecificationBuilder \r\n\r\n    </code>です。 </p>"
+references:
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.QuerySpecificationBuilder*
+    name: QuerySpecificationBuilder
+    nameWithType: QuerySpecificationBuilder.QuerySpecificationBuilder
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.QuerySpecificationBuilder
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.where*
+    name: where
+    nameWithType: QuerySpecificationBuilder.where
+    fullName: QuerySpecificationBuilder com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.where
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.groupBy*
+    name: groupBy
+    nameWithType: QuerySpecificationBuilder.groupBy
+    fullName: QuerySpecificationBuilder com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.groupBy
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.createSqlQuery*
+    name: createSqlQuery
+    nameWithType: QuerySpecificationBuilder.createSqlQuery
+    fullName: QuerySpecification com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.createSqlQuery
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder._from_type
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder._from_type.yml
+    name: QuerySpecificationBuilder.FromType
+    nameWithType: QuerySpecificationBuilder.FromType
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder.FromType
+    type: Enum
+    summary: <p>From 句の<xref uid="com.microsoft.azure.sdk.iot.provisioning.service._query" data-throw-if-not-resolved="false">クエリ</xref></p>
+    syntax:
+      content: public enum FromType
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification_builder.yml
+    name: QuerySpecificationBuilder
+    nameWithType: QuerySpecificationBuilder
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecificationBuilder
+    type: Class
+    summary: "<p>これは、新しいインスタンスを作成するためのヘルパー、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification\" data-throw-if-not-resolved=\"false\">QuerySpecification</xref>です。</p>\n<p>このヘルパーには、正しい sql 形式を強制するクエリを作成します。 想定、<b>選択</b>と<b>FROM</b>、必要に応じてを受け入れますが、<b>場所</b>と<b>GROUP BY</b>です。 その結果、返されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification\" data-throw-if-not-resolved=\"false\">QuerySpecification</xref>オブジェクトをプロビジョニング サービスによって受け入れられます。</p>\n<p>\r\n\r\n  <b>例:</b>\r\n\r\n</p>\n<p>次の行が作成されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification\" data-throw-if-not-resolved=\"false\">QuerySpecification</xref>です。 <pre><code>QuerySpecification querySpecification = new QuerySpecificationBuilder(\"*\", QuerySpecificationBuilder.FromType.ENROLLMENTS)\n\n            .where(\"iotHubHostName=`ContosoIoTHub.azure-devices.net`\").createSqlQuery();\n\n    </code></pre></p>\n\n<p>Sql クエリが生成されます。 <pre><code>{\n\n        \"query\":\"select * from enrollments where iotHubHostName=`ContosoIoTHub.azure-devices.net`\"\n\n    }\n\n    </code></pre></p>\n\n<p></p>"
+    syntax: *ref_1
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._query_specification.yml
+    name: QuerySpecification
+    nameWithType: QuerySpecification
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.QuerySpecification
+    type: Class
+    summary: |-
+      <p>JSON シリアライザーで 1 つのデバイスのプロビジョニング サービス クエリ仕様の表現。</p>
+      <p></p>
+    syntax:
+      content: public class QuerySpecification extends Serializable

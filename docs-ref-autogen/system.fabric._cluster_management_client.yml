@@ -1,0 +1,1477 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._cluster_management_client
+    id: _cluster_management_client
+    parent: system.fabric
+    children:
+      - system.fabric._cluster_management_client.activateNodeAsync(String)
+      - 'system.fabric._cluster_management_client.activateNodeAsync(String,Duration)'
+      - system.fabric._cluster_management_client.close()
+      - 'system.fabric._cluster_management_client.copyClusterPackage(String,String,String,String,String)'
+      - 'system.fabric._cluster_management_client.deactivateNodeAsync(String,NodeDeactivationIntent)'
+      - 'system.fabric._cluster_management_client.deactivateNodeAsync(String,NodeDeactivationIntent,Duration)'
+      - system.fabric._cluster_management_client.getClusterManifestAsync()
+      - system.fabric._cluster_management_client.getClusterManifestAsync(Duration)
+      - system.fabric._cluster_management_client.getFabricUpgradeProgressAsync()
+      - system.fabric._cluster_management_client.getFabricUpgradeProgressAsync(Duration)
+      - system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress)
+      - 'system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress,Duration)'
+      - system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(String)
+      - 'system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(String,Duration)'
+      - 'system.fabric._cluster_management_client.provisionFabricAsync(String,String)'
+      - 'system.fabric._cluster_management_client.provisionFabricAsync(String,String,Duration)'
+      - system.fabric._cluster_management_client.recoverPartitionAsync(UUID)
+      - 'system.fabric._cluster_management_client.recoverPartitionAsync(UUID,Duration)'
+      - system.fabric._cluster_management_client.recoverPartitionsAsync()
+      - system.fabric._cluster_management_client.recoverPartitionsAsync(Duration)
+      - system.fabric._cluster_management_client.recoverServicePartitionsAsync(URI)
+      - 'system.fabric._cluster_management_client.recoverServicePartitionsAsync(URI,Duration)'
+      - system.fabric._cluster_management_client.recoverSystemPartitionsAsync()
+      - system.fabric._cluster_management_client.recoverSystemPartitionsAsync(Duration)
+      - 'system.fabric._cluster_management_client.removeClusterPackage(String,String,String)'
+      - system.fabric._cluster_management_client.removeNodeStateAsync(String)
+      - 'system.fabric._cluster_management_client.removeNodeStateAsync(String,Duration)'
+      - system.fabric._cluster_management_client.resetPartitionLoadAsync(UUID)
+      - 'system.fabric._cluster_management_client.resetPartitionLoadAsync(UUID,Duration)'
+      - system.fabric._cluster_management_client.rollbackFabricUpgradeAsync()
+      - system.fabric._cluster_management_client.rollbackFabricUpgradeAsync(Duration)
+      - system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync(boolean)
+      - 'system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync(boolean,Duration)'
+      - 'system.fabric._cluster_management_client.unprovisionFabricAsync(String,String)'
+      - 'system.fabric._cluster_management_client.unprovisionFabricAsync(String,String,Duration)'
+      - system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)
+      - 'system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription,Duration)'
+      - system.fabric._cluster_management_client.upgradeFabricAsync(FabricUpgradeDescription)
+      - 'system.fabric._cluster_management_client.upgradeFabricAsync(FabricUpgradeDescription,Duration)'
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: ClusterManagementClient
+    nameWithType: ClusterManagementClient
+    fullName: system.fabric.ClusterManagementClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 19
+    package: system.fabric
+    summary: <p>クラスターのメンテナンス操作を実行するには、クラスター管理クライアントを表します。 </p>
+    syntax:
+      content: public class ClusterManagementClient
+    inheritance:
+      - java.lang.Object
+      - AutoCloseable
+  - uid: system.fabric._cluster_management_client.activateNodeAsync(String)
+    id: activateNodeAsync(String)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: activateNodeAsync(String nodeName)
+    nameWithType: ClusterManagementClient.activateNodeAsync(String nodeName)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.activateNodeAsync(String nodeName)
+    overload: system.fabric._cluster_management_client.activateNodeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 402
+    package: system.fabric
+    summary: "<p>現在非アクティブ化されている Service Fabric クラスター ノードをアクティブにします。</p>\n<p>\r\n\r\n  <b>注釈:</b>アクティブ化、ノードはもう一度、新しいレプリカを配置するための有効なターゲットなり、残りのノードですべての閉じたレプリカが開かれるとします。 この API の完了時にアクティブ化することを目的は、システムによって登録されていることを意味します。 アクティブ化が完了したことは限りません。 使用して、操作の進行状況を決定できます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.QueryClient#getNodeListAsync()</xref> API </p>"
+    syntax: &ref_2
+      content: public CompletableFuture<Boolean> activateNodeAsync(String nodeName)
+      parameters:
+        - id: nodeName
+          type: '26831127'
+          description: <p>アクティブ化するノードです。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>要求の非同期受信確認を表すタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.activateNodeAsync(String,Duration)'
+    id: 'activateNodeAsync(String,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'activateNodeAsync(String nodeName, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.activateNodeAsync(String nodeName, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.activateNodeAsync(String nodeName, Duration timeout)'
+    overload: system.fabric._cluster_management_client.activateNodeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 424
+    package: system.fabric
+    summary: "<p>現在非アクティブ化されている Service Fabric クラスター ノードをアクティブにします。</p>\n<p>\r\n\r\n  <b>注釈:</b>アクティブ化、ノードはもう一度、新しいレプリカを配置するための有効なターゲットなり、残りのノードですべての閉じたレプリカが開かれるとします。 この API の完了時にアクティブ化することを目的は、システムによって登録されていることを意味します。 アクティブ化が完了したことは限りません。 使用して、操作の進行状況を決定できます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.QueryClient#getNodeListAsync()</xref> API </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> activateNodeAsync(String nodeName, Duration timeout)'
+      parameters:
+        - id: nodeName
+          type: '26831127'
+          description: <p>アクティブ化するノードです。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>要求の非同期受信確認を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.close()
+    id: close()
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: ClusterManagementClient.close()
+    fullName: void system.fabric.ClusterManagementClient.close()
+    overload: system.fabric._cluster_management_client.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1318
+    package: system.fabric
+    syntax:
+      content: public void close()
+  - uid: 'system.fabric._cluster_management_client.copyClusterPackage(String,String,String,String,String)'
+    id: 'copyClusterPackage(String,String,String,String,String)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'copyClusterPackage(String imageStoreConnectionString, String clusterManifestPath, String clusterManifestPathInImageStore, String codePackagePath, String codePackagePathInImageStore)'
+    nameWithType: 'ClusterManagementClient.copyClusterPackage(String imageStoreConnectionString, String clusterManifestPath, String clusterManifestPathInImageStore, String codePackagePath, String codePackagePathInImageStore)'
+    fullName: 'void system.fabric.ClusterManagementClient.copyClusterPackage(String imageStoreConnectionString, String clusterManifestPath, String clusterManifestPathInImageStore, String codePackagePath, String codePackagePathInImageStore)'
+    overload: system.fabric._cluster_management_client.copyClusterPackage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1113
+    package: system.fabric
+    summary: <p>クラスター マニフェストのファイルやサービス ファブリック MSI ファイルをイメージ ストアにコピーします。 </p>
+    syntax:
+      content: 'public void copyClusterPackage(String imageStoreConnectionString, String clusterManifestPath, String clusterManifestPathInImageStore, String codePackagePath, String codePackagePathInImageStore)'
+      parameters:
+        - id: imageStoreConnectionString
+          type: '26831127'
+          description: <p>クラスター マニフェストで指定されているイメージ ストアの接続文字列。 </p>
+        - id: clusterManifestPath
+          type: '26831127'
+          description: <p>クラスターへの完全パスでは、コピーするファイルをマニフェストします。 </p>
+        - id: clusterManifestPathInImageStore
+          type: '26831127'
+          description: <p>イメージ ストアに変換先のファイル名を指定の相対パス。 ソース クラスター マニフェストのパスを指定すると、このパラメーターが必要です。 </p>
+        - id: codePackagePath
+          type: '26831127'
+          description: <p>コピーになるサービス ファブリック MSI ファイルの完全パスです。 </p>
+        - id: codePackagePathInImageStore
+          type: '26831127'
+          description: <p>イメージ ストアに変換先のファイル名を指定の相対パス。 移行先のコードの相対パスを指定すると、このパラメーターが必要です。 </p>
+    exceptions:
+      - type: 8a99d4b0
+        description: <p>場合、指定したファイルまたはディレクトリが見つかりません。 </p>
+  - uid: 'system.fabric._cluster_management_client.deactivateNodeAsync(String,NodeDeactivationIntent)'
+    id: 'deactivateNodeAsync(String,NodeDeactivationIntent)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent)'
+    nameWithType: 'ClusterManagementClient.deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent)'
+    overload: system.fabric._cluster_management_client.deactivateNodeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 319
+    package: system.fabric
+    summary: "<p>指定した特定のノードを非アクティブ化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>を非アクティブ化することを目的は、システムによって登録されていることを意味この API が完了するとします。 非アクティブ化が完了したことは限りません。 使用して、操作の進行状況を決定できます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.QueryClient#getNodeListAsync()</xref> API の 1 回、非アクティブ化が進行中で、非アクティブ化インテントを「高く」が減少しないことができます (であるノードが非アクティブ化など、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.NodeDeactivationIntent#Pause</xref>インテントを非アクティブ化を指定できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.NodeDeactivationIntent#Restart</xref>ですが、逆はできなくします。 使用してノードを再びアクティブにすることがあります<xref uid=\"system.fabric._cluster_management_client.activateNodeAsync(String)\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterManagementClient#activateNodeAsync(String)</xref>が非アクティブ化した後にいちます。 非アクティブ化が完了していない場合、非アクティブ化を取り消します。 ノードがダウンし、その復帰を非アクティブ化中には、サービスがそのノードに配置される前に再アクティブ化する必要があります。 Service Fabric を非アクティブ化が 'セーフ' プロセスことを確認します。 いくつかの安全性チェックが実行されます (を参照してください<xref uid=\"system.fabric._safety_check_kind\" data-throw-if-not-resolved=\"false\">system.fabric.SafetyCheckKind</xref>) 可用性またはデータの損失がないことを確認するには </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent)'
+      parameters:
+        - id: nodeName
+          type: '26831127'
+          description: <p>非アクティブ化するノードの名前。 </p>
+        - id: nodeDeactivationIntent
+          type: system.fabric._node_deactivation_intent
+          description: <p><xref uid="system.fabric._node_deactivation_intent" data-throw-if-not-resolved="false">System.fabric.NodeDeactivationIntent</xref>をノードを非アクティブ化します。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>要求の非同期受信確認を表すタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.deactivateNodeAsync(String,NodeDeactivationIntent,Duration)'
+    id: 'deactivateNodeAsync(String,NodeDeactivationIntent,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent, Duration timeout)'
+    overload: system.fabric._cluster_management_client.deactivateNodeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 355
+    package: system.fabric
+    summary: "<p>指定した特定のノードを非アクティブ化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>を非アクティブ化することを目的は、システムによって登録されていることを意味この API が完了するとします。 非アクティブ化が完了したことは限りません。 使用して、操作の進行状況を決定できます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.QueryClient#getNodeListAsync()</xref> API の 1 回、非アクティブ化が進行中で、非アクティブ化インテントを「高く」が減少しないことができます (であるノードが非アクティブ化など、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.NodeDeactivationIntent#Pause</xref>インテントを非アクティブ化を指定できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.NodeDeactivationIntent#Restart</xref>ですが、逆はできなくします。 使用してノードを再びアクティブにすることがあります<xref uid=\"system.fabric._cluster_management_client.activateNodeAsync(String)\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterManagementClient#activateNodeAsync(String)</xref>が非アクティブ化した後にいちます。 非アクティブ化が完了していない場合、非アクティブ化を取り消します。 ノードがダウンし、その復帰を非アクティブ化中には、サービスがそのノードに配置される前に再アクティブ化する必要があります。 Service Fabric を非アクティブ化が 'セーフ' プロセスことを確認します。 いくつかの安全性チェックが実行されます (を参照してください<xref uid=\"system.fabric._safety_check_kind\" data-throw-if-not-resolved=\"false\">system.fabric.SafetyCheckKind</xref>) 可用性またはデータの損失がないことを確認するには </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> deactivateNodeAsync(String nodeName, NodeDeactivationIntent nodeDeactivationIntent, Duration timeout)'
+      parameters:
+        - id: nodeName
+          type: '26831127'
+          description: <p>非アクティブ化するノードの名前。 </p>
+        - id: nodeDeactivationIntent
+          type: system.fabric._node_deactivation_intent
+          description: <p><xref uid="system.fabric._node_deactivation_intent" data-throw-if-not-resolved="false">System.fabric.NodeDeactivationIntent</xref>をノードを非アクティブ化します。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>指定した非アクティブ化されたノード<xref uid="system.fabric._node_deactivation_intent" data-throw-if-not-resolved="false">system.fabric.NodeDeactivationIntent</xref>です。 </p>
+  - uid: system.fabric._cluster_management_client.getClusterManifestAsync()
+    id: getClusterManifestAsync()
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: getClusterManifestAsync()
+    nameWithType: ClusterManagementClient.getClusterManifestAsync()
+    fullName: CompletableFuture<String> system.fabric.ClusterManagementClient.getClusterManifestAsync()
+    overload: system.fabric._cluster_management_client.getClusterManifestAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 869
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric クラスター マニフェスト XML ファイルを文字列として取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<String> getClusterManifestAsync()
+      return:
+        type: 06be942d
+        description: <p>Service Fabric クラスター マニフェスト XML ファイルを文字列として。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.getClusterManifestAsync(Duration)
+    id: getClusterManifestAsync(Duration)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: getClusterManifestAsync(Duration timeout)
+    nameWithType: ClusterManagementClient.getClusterManifestAsync(Duration timeout)
+    fullName: CompletableFuture<String> system.fabric.ClusterManagementClient.getClusterManifestAsync(Duration timeout)
+    overload: system.fabric._cluster_management_client.getClusterManifestAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 885
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric クラスター マニフェスト XML ファイルを文字列として取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<String> getClusterManifestAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 06be942d
+        description: <p>Service Fabric クラスター マニフェスト XML ファイルを文字列として。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.getFabricUpgradeProgressAsync()
+    id: getFabricUpgradeProgressAsync()
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: getFabricUpgradeProgressAsync()
+    nameWithType: ClusterManagementClient.getFabricUpgradeProgressAsync()
+    fullName: CompletableFuture<FabricUpgradeProgress> system.fabric.ClusterManagementClient.getFabricUpgradeProgressAsync()
+    overload: system.fabric._cluster_management_client.getFabricUpgradeProgressAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 609
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric アップグレード プロセスの進行状況を返します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<FabricUpgradeProgress> getFabricUpgradeProgressAsync()
+      return:
+        type: 9cdf14d0system.fabric._fabric_upgrade_progressa08ddfce
+        description: <p>Service Fabric の進行状況は、プロセスをアップグレードします。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.getFabricUpgradeProgressAsync(Duration)
+    id: getFabricUpgradeProgressAsync(Duration)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: getFabricUpgradeProgressAsync(Duration timeout)
+    nameWithType: ClusterManagementClient.getFabricUpgradeProgressAsync(Duration timeout)
+    fullName: CompletableFuture<FabricUpgradeProgress> system.fabric.ClusterManagementClient.getFabricUpgradeProgressAsync(Duration timeout)
+    overload: system.fabric._cluster_management_client.getFabricUpgradeProgressAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 625
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric アップグレード プロセスの進行状況を返します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<FabricUpgradeProgress> getFabricUpgradeProgressAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 9cdf14d0system.fabric._fabric_upgrade_progressa08ddfce
+        description: <p>Service Fabric の進行状況は、プロセスをアップグレードします。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress)
+    id: moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress)
+    nameWithType: ClusterManagementClient.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress)
+    overload: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 655
+    package: system.fabric
+    summary: "<p>Service Fabric を現在のアップグレード ドメインが完了した場合、クラスター内の次のアップグレード ドメインをアップグレードするように指示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>に似て<xref uid=\"system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)\" data-throw-if-not-resolved=\"false\">system.fabric.ApplicationManagementClient#moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)</xref></p>"
+    syntax:
+      content: public CompletableFuture<Boolean> moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress)
+      parameters:
+        - id: fabricUpgradeProgress
+          type: system.fabric._fabric_upgrade_progress
+          description: <p>ファブリックは、使用するプロセス オブジェクトをアップグレードします。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターのアップグレード ドメイン。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: 'system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress,Duration)'
+    id: 'moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress, Duration timeout)'
+    overload: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 679
+    package: system.fabric
+    summary: "<p>Service Fabric を現在のアップグレード ドメインが完了した場合、クラスター内の次のアップグレード ドメインをアップグレードするように指示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>に似て<xref uid=\"system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)\" data-throw-if-not-resolved=\"false\">system.fabric.ApplicationManagementClient#moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)</xref></p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> moveNextFabricUpgradeDomainAsync(FabricUpgradeProgress fabricUpgradeProgress, Duration timeout)'
+      parameters:
+        - id: fabricUpgradeProgress
+          type: system.fabric._fabric_upgrade_progress
+          description: <p>ファブリックは、使用するプロセス オブジェクトをアップグレードします。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターのアップグレード ドメイン。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(String)
+    id: moveNextFabricUpgradeDomainAsync(String)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain)
+    nameWithType: ClusterManagementClient.moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain)
+    overload: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 718
+    package: system.fabric
+    summary: "<p>Service Fabric を現在のアップグレード ドメインが完了した場合、クラスター内の次のアップグレード ドメインをアップグレードするように指示します。</p>\n<p></p>\n<p>\r\n\r\n  <b>注釈:</b>に似て<xref uid=\"system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)\" data-throw-if-not-resolved=\"false\">system.fabric.ApplicationManagementClient#moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)</xref></p>"
+    syntax:
+      content: public CompletableFuture<Boolean> moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain)
+      parameters:
+        - id: nextUpgradeDomain
+          type: '26831127'
+          description: <p>ファブリックは、使用するプロセス オブジェクトをアップグレードします。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターのアップグレード ドメイン。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。</p>
+  - uid: 'system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync(String,Duration)'
+    id: 'moveNextFabricUpgradeDomainAsync(String,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain, Duration timeout)'
+    overload: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 743
+    package: system.fabric
+    summary: "<p>Service Fabric を現在のアップグレード ドメインが完了した場合、クラスター内の次のアップグレード ドメインをアップグレードするように指示します。</p>\n<p></p>\n<p>\r\n\r\n  <b>注釈:</b>に似て<xref uid=\"system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)\" data-throw-if-not-resolved=\"false\">system.fabric.ApplicationManagementClient#moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)</xref></p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> moveNextFabricUpgradeDomainAsync(String nextUpgradeDomain, Duration timeout)'
+      parameters:
+        - id: nextUpgradeDomain
+          type: '26831127'
+          description: <p>ファブリックは、使用するプロセス オブジェクトをアップグレードします。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターのアップグレード ドメイン。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。</p>
+  - uid: 'system.fabric._cluster_management_client.provisionFabricAsync(String,String)'
+    id: 'provisionFabricAsync(String,String)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'provisionFabricAsync(String codeFilePath, String clusterManifestFilepath)'
+    nameWithType: 'ClusterManagementClient.provisionFabricAsync(String codeFilePath, String clusterManifestFilepath)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.provisionFabricAsync(String codeFilePath, String clusterManifestFilepath)'
+    overload: system.fabric._cluster_management_client.provisionFabricAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 473
+    package: system.fabric
+    summary: "<p>Service Fabric をプロビジョニングします。</p>\n<p>\r\n\r\n  <b>注釈:</b> * patchFilePath または clusterManifestFilePath パラメーターのいずれかに対して、null 値が許可されています。 Null 値は、両方のパラメーターは使用できません。 イメージ ストアの場所にこの修正プログラム ファイルおよびクラスター マニフェスト ファイルがアップロードされます。 イメージ ストアの場所は、クラスターの作成時に指定されたクラスター マニフェストで構成設定として指定されます。 クラスター マニフェストの検証がこの呼び出しのコンテキスト内で発生します。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> provisionFabricAsync(String codeFilePath, String clusterManifestFilepath)'
+      parameters:
+        - id: codeFilePath
+          type: '26831127'
+          description: <p>更新の修正プログラム ファイルへのパス。 </p>
+        - id: clusterManifestFilepath
+          type: '26831127'
+          description: <p>クラスター マニフェストへのパス。 いずれかの null 値が許可されている、 </p>
+      return:
+        type: 7e53ac82
+        description: <p>プロビジョニング済みの Service Fabric です。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: 'system.fabric._cluster_management_client.provisionFabricAsync(String,String,Duration)'
+    id: 'provisionFabricAsync(String,String,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'provisionFabricAsync(String codeFilePath, String clusterManifestFilepath, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.provisionFabricAsync(String codeFilePath, String clusterManifestFilepath, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.provisionFabricAsync(String codeFilePath, String clusterManifestFilepath, Duration timeout)'
+    overload: system.fabric._cluster_management_client.provisionFabricAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 511
+    package: system.fabric
+    summary: "<p>Service Fabric をプロビジョニングします。</p>\n<p>\r\n\r\n  <b>注釈:</b> * patchFilePath または clusterManifestFilePath パラメーターのいずれかに対して、null 値が許可されています。 Null 値は、両方のパラメーターは使用できません。 イメージ ストアの場所にこの修正プログラム ファイルおよびクラスター マニフェスト ファイルがアップロードされます。 イメージ ストアの場所は、クラスターの作成時に指定されたクラスター マニフェストで構成設定として指定されます。 クラスター マニフェストの検証がこの呼び出しのコンテキスト内で発生します。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> provisionFabricAsync(String codeFilePath, String clusterManifestFilepath, Duration timeout)'
+      parameters:
+        - id: codeFilePath
+          type: '26831127'
+          description: <p>更新の修正プログラム ファイルへのパス。 </p>
+        - id: clusterManifestFilepath
+          type: '26831127'
+          description: <p>クラスター マニフェストへのパス。 いずれかの null 値が許可されている、 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>プロビジョニング済みの Service Fabric です。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.recoverPartitionAsync(UUID)
+    id: recoverPartitionAsync(UUID)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: recoverPartitionAsync(UUID partitionId)
+    nameWithType: ClusterManagementClient.recoverPartitionAsync(UUID partitionId)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverPartitionAsync(UUID partitionId)
+    overload: system.fabric._cluster_management_client.recoverPartitionAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 910
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをすることが現在クォーラム損失にスタックしている特定のパーティションの復元を試行ことを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> recoverPartitionAsync(UUID partitionId)
+      parameters:
+        - id: partitionId
+          type: add9545a
+          description: <p>パーティション id を回復するには </p>
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.recoverPartitionAsync(UUID,Duration)'
+    id: 'recoverPartitionAsync(UUID,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'recoverPartitionAsync(UUID partitionId, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.recoverPartitionAsync(UUID partitionId, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverPartitionAsync(UUID partitionId, Duration timeout)'
+    overload: system.fabric._cluster_management_client.recoverPartitionAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 930
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをすることが現在クォーラム損失にスタックしている特定のパーティションの復元を試行ことを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> recoverPartitionAsync(UUID partitionId, Duration timeout)'
+      parameters:
+        - id: partitionId
+          type: add9545a
+          description: <p>パーティション id を回復するには </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.recoverPartitionsAsync()
+    id: recoverPartitionsAsync()
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: recoverPartitionsAsync()
+    nameWithType: ClusterManagementClient.recoverPartitionsAsync()
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverPartitionsAsync()
+    overload: system.fabric._cluster_management_client.recoverPartitionsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 262
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをすることが、(システム サービスを含む) がクォーラム損失に現在スタックをサービスの回復を試行ことを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> recoverPartitionsAsync()
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.recoverPartitionsAsync(Duration)
+    id: recoverPartitionsAsync(Duration)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: recoverPartitionsAsync(Duration timeout)
+    nameWithType: ClusterManagementClient.recoverPartitionsAsync(Duration timeout)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverPartitionsAsync(Duration timeout)
+    overload: system.fabric._cluster_management_client.recoverPartitionsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 280
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをすることが、(システム サービスを含む) がクォーラム損失に現在スタックをサービスの回復を試行ことを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> recoverPartitionsAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.recoverServicePartitionsAsync(URI)
+    id: recoverServicePartitionsAsync(URI)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: recoverServicePartitionsAsync(URI serviceName)
+    nameWithType: ClusterManagementClient.recoverServicePartitionsAsync(URI serviceName)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverServicePartitionsAsync(URI serviceName)
+    overload: system.fabric._cluster_management_client.recoverServicePartitionsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 965
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをすることが、クォーラム損失に残っている現在、指定されたサービスの回復を試行ことを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> recoverServicePartitionsAsync(URI serviceName)
+      parameters:
+        - id: serviceName
+          type: '62304784'
+          description: <p>回復するサービスの名前。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.recoverServicePartitionsAsync(URI,Duration)'
+    id: 'recoverServicePartitionsAsync(URI,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'recoverServicePartitionsAsync(URI serviceName, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.recoverServicePartitionsAsync(URI serviceName, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverServicePartitionsAsync(URI serviceName, Duration timeout)'
+    overload: system.fabric._cluster_management_client.recoverServicePartitionsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 985
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをすることが、クォーラム損失に残っている現在、指定されたサービスの回復を試行ことを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> recoverServicePartitionsAsync(URI serviceName, Duration timeout)'
+      parameters:
+        - id: serviceName
+          type: '62304784'
+          description: <p>回復するサービスの名前。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.recoverSystemPartitionsAsync()
+    id: recoverSystemPartitionsAsync()
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: recoverSystemPartitionsAsync()
+    nameWithType: ClusterManagementClient.recoverSystemPartitionsAsync()
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverSystemPartitionsAsync()
+    overload: system.fabric._cluster_management_client.recoverSystemPartitionsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1018
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをクォーラム損失にスタックしている現在のシステム サービスを回復しようと、必要があることを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> recoverSystemPartitionsAsync()
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.recoverSystemPartitionsAsync(Duration)
+    id: recoverSystemPartitionsAsync(Duration)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: recoverSystemPartitionsAsync(Duration timeout)
+    nameWithType: ClusterManagementClient.recoverSystemPartitionsAsync(Duration timeout)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverSystemPartitionsAsync(Duration timeout)
+    overload: system.fabric._cluster_management_client.recoverSystemPartitionsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1036
+    package: system.fabric
+    summary: "<p>Service Fabric クラスターをクォーラム損失にスタックしている現在のシステム サービスを回復しようと、必要があることを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この操作は、停止しているレプリカを復旧できないことがわかっている場合にのみ実行する必要があります。 この API を不適切に使用すると、データ損失が発生する可能性があります。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> recoverSystemPartitionsAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>目的の受信確認を表すタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.removeClusterPackage(String,String,String)'
+    id: 'removeClusterPackage(String,String,String)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'removeClusterPackage(String imageStoreConnectionString, String clusterManifestPathInImageStore, String codePackagePathInImageStore)'
+    nameWithType: 'ClusterManagementClient.removeClusterPackage(String imageStoreConnectionString, String clusterManifestPathInImageStore, String codePackagePathInImageStore)'
+    fullName: 'void system.fabric.ClusterManagementClient.removeClusterPackage(String imageStoreConnectionString, String clusterManifestPathInImageStore, String codePackagePathInImageStore)'
+    overload: system.fabric._cluster_management_client.removeClusterPackage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1152
+    package: system.fabric
+    summary: <p>ImageStore から ClusterManifest ファイルやサービス ファブリック MSI ファイルを削除します。 </p>
+    syntax:
+      content: 'public void removeClusterPackage(String imageStoreConnectionString, String clusterManifestPathInImageStore, String codePackagePathInImageStore)'
+      parameters:
+        - id: imageStoreConnectionString
+          type: '26831127'
+          description: <p>クラスター マニフェストで指定されている ImageStore の接続文字列。 </p>
+        - id: clusterManifestPathInImageStore
+          type: '26831127'
+          description: <p>ImageStore に ClusterManifest ファイルの相対パス。 </p>
+        - id: codePackagePathInImageStore
+          type: '26831127'
+          description: <p>ImageStore にサービス ファブリック MSI ファイルの相対パス。 </p>
+    exceptions:
+      - type: 8a99d4b0
+        description: <p>場合、指定したファイルまたはディレクトリが見つかりません。 </p>
+  - uid: system.fabric._cluster_management_client.removeNodeStateAsync(String)
+    id: removeNodeStateAsync(String)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: removeNodeStateAsync(String nodeName)
+    nameWithType: ClusterManagementClient.removeNodeStateAsync(String nodeName)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.removeNodeStateAsync(String nodeName)
+    overload: system.fabric._cluster_management_client.removeNodeStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 199
+    package: system.fabric
+    summary: |-
+      <p>その Service Fabric は失われ回復不可能なとしてサービスまたはそのノードの状態を扱う必要があります、ノードの永続化されたデータは (たとえば、ディスクの障害、または再イメージ化など)、によって失われることを示します。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public CompletableFuture<Boolean> removeNodeStateAsync(String nodeName)
+      parameters:
+        - id: nodeName
+          type: '26831127'
+          description: <p>完全に失われたされているノードの名前。 </p>
+      return:
+        type: 7e53ac82
+        description: |-
+          <p>操作を表すタスク。 <verbatim>    &lt;p&gt;
+
+              &lt;b&gt;Remarks:&lt;/b&gt;After a node goes down, Service Fabric will keep track of replicas of
+
+              persisted services on that node as they have state on that node. In cases where the
+
+              administrator knows that the persisted state on a node has been permanently lost the
+
+              {@link system.fabric.ClusterManagementClient#removeNodeStateAsync(String)} method
+
+              should be called ... to notify Service Fabric that the state on the node is gone (or
+
+              the node can never come back with the state it had). This instructs Service Fabric to
+
+              stop waiting for that node (and any persisted replicas on that node) to recover.
+
+              NOTE: This API must be called only after it has been determined that the state on
+
+              that node has been lost. If this API is called and then the node comes back with its
+
+              state intact it is Undefined Behavior
+
+              &lt;/p&gt;</verbatim></p>
+  - uid: 'system.fabric._cluster_management_client.removeNodeStateAsync(String,Duration)'
+    id: 'removeNodeStateAsync(String,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'removeNodeStateAsync(String nodeName, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.removeNodeStateAsync(String nodeName, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.removeNodeStateAsync(String nodeName, Duration timeout)'
+    overload: system.fabric._cluster_management_client.removeNodeStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 228
+    package: system.fabric
+    summary: "<p>その Service Fabric は失われ回復不可能なとしてサービスまたはそのノードの状態を扱う必要があります、ノードの永続化されたデータは (たとえば、ディスクの障害、または再イメージ化など)、によって失われることを示します。</p>\n<p>\r\n\r\n  <b>注釈:</b>後ノードがダウンすると、Service Fabric はの追跡のノードで永続化されたサービスのレプリカはそのノードの状態がいます。 管理者がノードで永続化された状態が完全に失われたことを認識する場合、 <xref uid=\"system.fabric._cluster_management_client.removeNodeStateAsync(String)\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterManagementClient#removeNodeStateAsync(String)</xref> ... メソッドを呼び出す必要がありますに Service Fabric を通知するにはノードの状態が削除 (またはの状態をノードが返されることはないことができます)。 これは、Service Fabric を回復するノード (とそのノード上の永続化されたレプリカ) の待機を停止を指示します。 注: そのノードの状態が失われたことが決定したが後にのみ、この API を呼び出す必要があります。 この API を呼び出すし、ノードが付属戻るそのままの状態が未定義の動作 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> removeNodeStateAsync(String nodeName, Duration timeout)'
+      parameters:
+        - id: nodeName
+          type: '26831127'
+          description: <p>完全に失われたされているノードの名前。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>操作を表すタスク。 </p>
+  - uid: system.fabric._cluster_management_client.resetPartitionLoadAsync(UUID)
+    id: resetPartitionLoadAsync(UUID)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: resetPartitionLoadAsync(UUID partitionId)
+    nameWithType: ClusterManagementClient.resetPartitionLoadAsync(UUID partitionId)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.resetPartitionLoadAsync(UUID partitionId)
+    overload: system.fabric._cluster_management_client.resetPartitionLoadAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1213
+    package: system.fabric
+    summary: |-
+      <p>特定のパーティションの負荷をリセットします。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> resetPartitionLoadAsync(UUID partitionId)
+      parameters:
+        - id: partitionId
+          type: add9545a
+          description: <p>パーティション Id を Guid として表されます。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>この async メソッドに関連付けられているタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.resetPartitionLoadAsync(UUID,Duration)'
+    id: 'resetPartitionLoadAsync(UUID,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'resetPartitionLoadAsync(UUID partitionId, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.resetPartitionLoadAsync(UUID partitionId, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.resetPartitionLoadAsync(UUID partitionId, Duration timeout)'
+    overload: system.fabric._cluster_management_client.resetPartitionLoadAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1227
+    package: system.fabric
+    summary: |-
+      <p>特定のパーティションの負荷をリセットします。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> resetPartitionLoadAsync(UUID partitionId, Duration timeout)'
+      parameters:
+        - id: partitionId
+          type: add9545a
+          description: <p>パーティション Id を Guid として表されます。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>Async メソッドをメソッドがタイムアウトする順序で完了する必要がありますを時間の長さ。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>この async メソッドに関連付けられているタスク。 </p>
+  - uid: system.fabric._cluster_management_client.rollbackFabricUpgradeAsync()
+    id: rollbackFabricUpgradeAsync()
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: rollbackFabricUpgradeAsync()
+    nameWithType: ClusterManagementClient.rollbackFabricUpgradeAsync()
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.rollbackFabricUpgradeAsync()
+    overload: system.fabric._cluster_management_client.rollbackFabricUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1182
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric アップグレード操作をロールバックします。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> rollbackFabricUpgradeAsync()
+      return:
+        type: 7e53ac82
+        description: <p>Service Fabric アップグレード操作をロールバックします。 </p>
+  - uid: system.fabric._cluster_management_client.rollbackFabricUpgradeAsync(Duration)
+    id: rollbackFabricUpgradeAsync(Duration)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: rollbackFabricUpgradeAsync(Duration timeout)
+    nameWithType: ClusterManagementClient.rollbackFabricUpgradeAsync(Duration timeout)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.rollbackFabricUpgradeAsync(Duration timeout)
+    overload: system.fabric._cluster_management_client.rollbackFabricUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1194
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric アップグレード操作をロールバックします。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> rollbackFabricUpgradeAsync(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>Service Fabric アップグレード操作をロールバックします。 </p>
+  - uid: system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync(boolean)
+    id: toggleVerboseServicePlacementHealthReportingAsync(boolean)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: toggleVerboseServicePlacementHealthReportingAsync(boolean enabled)
+    nameWithType: ClusterManagementClient.toggleVerboseServicePlacementHealthReportingAsync(boolean enabled)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.toggleVerboseServicePlacementHealthReportingAsync(boolean enabled)
+    overload: system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1267
+    package: system.fabric
+    summary: "<p>クラスター Resource Balancer はレプリカを配置することがない場合に警告する正常性を報告するかどうかを切り替えます。</p>\n<p>\r\n\r\n  <b>注釈:</b>このメソッドは値 false を 2 回呼び出されると、それを消去メモリから出力された可能性がありますが、レポートします。 このメソッドは値 true で、レプリカを配置することがあるときに、クラスター Resource Balancer は、状態の警告が報告されます。 このような正常性の警告は、監視対象のアップグレードの正常性チェックをブロックしている場合は、オフに切り替えを切り替えることができます。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> toggleVerboseServicePlacementHealthReportingAsync(boolean enabled)
+      parameters:
+        - id: enabled
+          type: 4fc6e284
+          description: <p>ブール値が true の場合、レプリカが有効にする場合に報告します。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>この async メソッドに関連付けられているタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync(boolean,Duration)'
+    id: 'toggleVerboseServicePlacementHealthReportingAsync(boolean,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'toggleVerboseServicePlacementHealthReportingAsync(boolean enabled, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.toggleVerboseServicePlacementHealthReportingAsync(boolean enabled, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.toggleVerboseServicePlacementHealthReportingAsync(boolean enabled, Duration timeout)'
+    overload: system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1292
+    package: system.fabric
+    summary: "<p>クラスター Resource Balancer はレプリカを配置することがない場合に警告する正常性を報告するかどうかを切り替えます。</p>\n<p>\r\n\r\n  <b>注釈:</b>このメソッドは値 false を 2 回呼び出されると、それを消去メモリから出力された可能性がありますが、レポートします。 このメソッドは値 true で、レプリカを配置することがあるときに、クラスター Resource Balancer は、状態の警告が報告されます。 このような正常性の警告は、監視対象のアップグレードの正常性チェックをブロックしている場合は、オフに切り替えを切り替えることができます。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> toggleVerboseServicePlacementHealthReportingAsync(boolean enabled, Duration timeout)'
+      parameters:
+        - id: enabled
+          type: 4fc6e284
+          description: <p>ブール値が true の場合、レプリカが有効にする場合に報告します。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>Async メソッドをメソッドがタイムアウトする順序で完了する必要がありますを時間の長さ。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>この async メソッドに関連付けられているタスク。 </p>
+  - uid: 'system.fabric._cluster_management_client.unprovisionFabricAsync(String,String)'
+    id: 'unprovisionFabricAsync(String,String)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'unprovisionFabricAsync(String codeVersion, String configVersion)'
+    nameWithType: 'ClusterManagementClient.unprovisionFabricAsync(String codeVersion, String configVersion)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.unprovisionFabricAsync(String codeVersion, String configVersion)'
+    overload: system.fabric._cluster_management_client.unprovisionFabricAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 794
+    package: system.fabric
+    summary: "<p>サービス ファブリックの準備を解除します。</p>\n<p>\r\n\r\n  <b>注釈:</b> codeVersion パラメーターまたは configVersion パラメーターのいずれかに対して、null 値が許可されています。 Null 値は、両方のパラメーターは使用できません。 修正プログラム ファイルおよびクラスター マニフェスト ファイルのイメージ ストアの場所から削除されます。 イメージ ストアの場所は、クラスターの作成時に指定されたクラスター マニフェストで構成設定として指定されます。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> unprovisionFabricAsync(String codeVersion, String configVersion)'
+      parameters:
+        - id: codeVersion
+          type: '26831127'
+          description: <p>コードのバージョンのプロビジョニングを解除します。 </p>
+        - id: configVersion
+          type: '26831127'
+          description: <p>構成のバージョンのプロビジョニングを解除します。 いずれかの null 値が許可されている、 </p>
+      return:
+        type: 7e53ac82
+        description: <p>プロビジョニングが解除された Service Fabric です。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: 'system.fabric._cluster_management_client.unprovisionFabricAsync(String,String,Duration)'
+    id: 'unprovisionFabricAsync(String,String,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'unprovisionFabricAsync(String codeVersion, String configVersion, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.unprovisionFabricAsync(String codeVersion, String configVersion, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.unprovisionFabricAsync(String codeVersion, String configVersion, Duration timeout)'
+    overload: system.fabric._cluster_management_client.unprovisionFabricAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 826
+    package: system.fabric
+    summary: "<p>サービス ファブリックの準備を解除します。</p>\n<p>\r\n\r\n  <b>注釈:</b> codeVersion パラメーターまたは configVersion パラメーターのいずれかに対して、null 値が許可されています。 Null 値は、両方のパラメーターは使用できません。 修正プログラム ファイルおよびクラスター マニフェスト ファイルのイメージ ストアの場所から削除されます。 イメージ ストアの場所は、クラスターの作成時に指定されたクラスター マニフェストで構成設定として指定されます。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> unprovisionFabricAsync(String codeVersion, String configVersion, Duration timeout)'
+      parameters:
+        - id: codeVersion
+          type: '26831127'
+          description: <p>コードのバージョンのプロビジョニングを解除します。 </p>
+        - id: configVersion
+          type: '26831127'
+          description: <p>構成のバージョンのプロビジョニングを解除します。 いずれかの null 値が許可されている、 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>プロビジョニングが解除された Service Fabric です。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)
+    id: updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+    nameWithType: ClusterManagementClient.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+    overload: system.fabric._cluster_management_client.updateFabricUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1056
+    package: system.fabric
+    summary: |-
+      <p>現在のクラスターのアップグレードの動作を記述するアップグレード パラメーターを変更します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description)
+      parameters:
+        - id: description
+          type: system.fabric._fabric_upgrade_update_description
+          description: <p>パラメーターの説明を新しいアップグレードを適用します。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>現在のクラスターのアップグレード。 </p>
+  - uid: 'system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription,Duration)'
+    id: 'updateFabricUpgradeAsync(FabricUpgradeUpdateDescription,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description, Duration timeout)'
+    overload: system.fabric._cluster_management_client.updateFabricUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 1071
+    package: system.fabric
+    summary: |-
+      <p>現在のクラスターのアップグレードの動作を記述するアップグレード パラメーターを変更します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> updateFabricUpgradeAsync(FabricUpgradeUpdateDescription description, Duration timeout)'
+      parameters:
+        - id: description
+          type: system.fabric._fabric_upgrade_update_description
+          description: <p>パラメーターの説明を新しいアップグレードを適用します。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>現在のクラスターのアップグレード。 </p>
+  - uid: system.fabric._cluster_management_client.upgradeFabricAsync(FabricUpgradeDescription)
+    id: upgradeFabricAsync(FabricUpgradeDescription)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: upgradeFabricAsync(FabricUpgradeDescription upgradeDescription)
+    nameWithType: ClusterManagementClient.upgradeFabricAsync(FabricUpgradeDescription upgradeDescription)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.upgradeFabricAsync(FabricUpgradeDescription upgradeDescription)
+    overload: system.fabric._cluster_management_client.upgradeFabricAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 556
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric をアップグレードします。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> upgradeFabricAsync(FabricUpgradeDescription upgradeDescription)
+      parameters:
+        - id: upgradeDescription
+          type: system.fabric._fabric_upgrade_description
+          description: <p>アップグレードの説明です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードされた Service Fabric です。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+  - uid: 'system.fabric._cluster_management_client.upgradeFabricAsync(FabricUpgradeDescription,Duration)'
+    id: 'upgradeFabricAsync(FabricUpgradeDescription,Duration)'
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    langs:
+      - java
+    name: 'upgradeFabricAsync(FabricUpgradeDescription upgradeDescription, Duration timeout)'
+    nameWithType: 'ClusterManagementClient.upgradeFabricAsync(FabricUpgradeDescription upgradeDescription, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ClusterManagementClient.upgradeFabricAsync(FabricUpgradeDescription upgradeDescription, Duration timeout)'
+    overload: system.fabric._cluster_management_client.upgradeFabricAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ClusterManagementClient.java
+      startLine: 574
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric をアップグレードします。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> upgradeFabricAsync(FabricUpgradeDescription upgradeDescription, Duration timeout)'
+      parameters:
+        - id: upgradeDescription
+          type: system.fabric._fabric_upgrade_description
+          description: <p>アップグレードの説明です。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>返す前に続行するには、この操作により、最長時間を定義する timespan、 <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードされた Service Fabric です。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 7e53ac82
+    spec.java:
+      - name: CompletableFuture<Boolean>
+        fullName: CompletableFuture<Boolean>
+  - uid: system.fabric._cluster_management_client.removeNodeStateAsync*
+    name: removeNodeStateAsync
+    nameWithType: ClusterManagementClient.removeNodeStateAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.removeNodeStateAsync
+    package: system.fabric
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: system.fabric._cluster_management_client.recoverPartitionsAsync*
+    name: recoverPartitionsAsync
+    nameWithType: ClusterManagementClient.recoverPartitionsAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverPartitionsAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.deactivateNodeAsync*
+    name: deactivateNodeAsync
+    nameWithType: ClusterManagementClient.deactivateNodeAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.deactivateNodeAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.activateNodeAsync*
+    name: activateNodeAsync
+    nameWithType: ClusterManagementClient.activateNodeAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.activateNodeAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.provisionFabricAsync*
+    name: provisionFabricAsync
+    nameWithType: ClusterManagementClient.provisionFabricAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.provisionFabricAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.upgradeFabricAsync*
+    name: upgradeFabricAsync
+    nameWithType: ClusterManagementClient.upgradeFabricAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.upgradeFabricAsync
+    package: system.fabric
+  - uid: 9cdf14d0system.fabric._fabric_upgrade_progressa08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._fabric_upgrade_progress
+        name: FabricUpgradeProgress
+        fullName: system.fabric.FabricUpgradeProgress
+        href: system.fabric._fabric_upgrade_progress.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._cluster_management_client.getFabricUpgradeProgressAsync*
+    name: getFabricUpgradeProgressAsync
+    nameWithType: ClusterManagementClient.getFabricUpgradeProgressAsync
+    fullName: CompletableFuture<FabricUpgradeProgress> system.fabric.ClusterManagementClient.getFabricUpgradeProgressAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.moveNextFabricUpgradeDomainAsync*
+    name: moveNextFabricUpgradeDomainAsync
+    nameWithType: ClusterManagementClient.moveNextFabricUpgradeDomainAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.moveNextFabricUpgradeDomainAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.unprovisionFabricAsync*
+    name: unprovisionFabricAsync
+    nameWithType: ClusterManagementClient.unprovisionFabricAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.unprovisionFabricAsync
+    package: system.fabric
+  - uid: 06be942d
+    spec.java:
+      - name: CompletableFuture<String>
+        fullName: CompletableFuture<String>
+  - uid: system.fabric._cluster_management_client.getClusterManifestAsync*
+    name: getClusterManifestAsync
+    nameWithType: ClusterManagementClient.getClusterManifestAsync
+    fullName: CompletableFuture<String> system.fabric.ClusterManagementClient.getClusterManifestAsync
+    package: system.fabric
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: system.fabric._cluster_management_client.recoverPartitionAsync*
+    name: recoverPartitionAsync
+    nameWithType: ClusterManagementClient.recoverPartitionAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverPartitionAsync
+    package: system.fabric
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: system.fabric._cluster_management_client.recoverServicePartitionsAsync*
+    name: recoverServicePartitionsAsync
+    nameWithType: ClusterManagementClient.recoverServicePartitionsAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverServicePartitionsAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.recoverSystemPartitionsAsync*
+    name: recoverSystemPartitionsAsync
+    nameWithType: ClusterManagementClient.recoverSystemPartitionsAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.recoverSystemPartitionsAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.updateFabricUpgradeAsync*
+    name: updateFabricUpgradeAsync
+    nameWithType: ClusterManagementClient.updateFabricUpgradeAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.updateFabricUpgradeAsync
+    package: system.fabric
+  - uid: 8a99d4b0
+    spec.java:
+      - name: Exception
+        fullName: Exception
+  - uid: system.fabric._cluster_management_client.copyClusterPackage*
+    name: copyClusterPackage
+    nameWithType: ClusterManagementClient.copyClusterPackage
+    fullName: void system.fabric.ClusterManagementClient.copyClusterPackage
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.removeClusterPackage*
+    name: removeClusterPackage
+    nameWithType: ClusterManagementClient.removeClusterPackage
+    fullName: void system.fabric.ClusterManagementClient.removeClusterPackage
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.rollbackFabricUpgradeAsync*
+    name: rollbackFabricUpgradeAsync
+    nameWithType: ClusterManagementClient.rollbackFabricUpgradeAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.rollbackFabricUpgradeAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.resetPartitionLoadAsync*
+    name: resetPartitionLoadAsync
+    nameWithType: ClusterManagementClient.resetPartitionLoadAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.resetPartitionLoadAsync
+    package: system.fabric
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: system.fabric._cluster_management_client.toggleVerboseServicePlacementHealthReportingAsync*
+    name: toggleVerboseServicePlacementHealthReportingAsync
+    nameWithType: ClusterManagementClient.toggleVerboseServicePlacementHealthReportingAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.toggleVerboseServicePlacementHealthReportingAsync
+    package: system.fabric
+  - uid: system.fabric._cluster_management_client.close*
+    name: close
+    nameWithType: ClusterManagementClient.close
+    fullName: void system.fabric.ClusterManagementClient.close
+    package: system.fabric
+  - uid: system.fabric._fabric_client
+    parent: system.fabric
+    href: system.fabric._fabric_client.yml
+    name: FabricClient
+    nameWithType: FabricClient
+    fullName: system.fabric.FabricClient
+    type: Class
+    summary: "<p>作成し、Service Fabric サービスとその他のエンティティを管理します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>FabricClients できるだけ多くを共有することを強くお勧めします。 これは、ため、 <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">FabricClient</xref>キャッシュなどの複数の最適化があり、バッチ処理することはありませんそれ以外の場合を十分に活用することです。 </p>"
+    syntax:
+      content: public class FabricClient
+  - uid: system.fabric.interop._native_async_callback
+    parent: system.fabric.interop
+    href: system.fabric.interop._native_async_callback.yml
+    name: NativeAsyncCallback
+    nameWithType: NativeAsyncCallback
+    fullName: system.fabric.interop.NativeAsyncCallback
+    type: Interface
+    syntax:
+      content: public interface NativeAsyncCallback
+  - uid: system.fabric._fabric_upgrade_progress
+    parent: system.fabric
+    href: system.fabric._fabric_upgrade_progress.yml
+    name: FabricUpgradeProgress
+    nameWithType: FabricUpgradeProgress
+    fullName: system.fabric.FabricUpgradeProgress
+    type: Class
+    summary: <p>Service Fabric アップグレードの進行状況をカプセル化します。 </p>
+    syntax:
+      content: public class FabricUpgradeProgress
+  - uid: system.fabric._node_deactivation_intent
+    parent: system.fabric
+    href: system.fabric._node_deactivation_intent.yml
+    name: NodeDeactivationIntent
+    nameWithType: NodeDeactivationIntent
+    fullName: system.fabric.NodeDeactivationIntent
+    type: Enum
+    summary: |-
+      <p>使用可能なノードの非アクティブ化インテントを示す列挙型。</p>
+      <p></p>
+    syntax:
+      content: public enum NodeDeactivationIntent
+  - uid: system.fabric._fabric_upgrade_description
+    parent: system.fabric
+    href: system.fabric._fabric_upgrade_description.yml
+    name: FabricUpgradeDescription
+    nameWithType: FabricUpgradeDescription
+    fullName: system.fabric.FabricUpgradeDescription
+    type: Class
+    summary: <p>Service Fabric アップグレードの詳細をカプセル化するクラスを表します。 </p>
+    syntax:
+      content: public class FabricUpgradeDescription
+  - uid: system.fabric._fabric_upgrade_update_description
+    parent: system.fabric
+    href: system.fabric._fabric_upgrade_update_description.yml
+    name: FabricUpgradeUpdateDescription
+    nameWithType: FabricUpgradeUpdateDescription
+    fullName: system.fabric.FabricUpgradeUpdateDescription
+    type: Class
+    summary: '<p>クラスターのアップグレードの動作を記述するアップグレード パラメーターを変更するために使用します。 参照してください<xref uid="system.fabric._cluster_management_client.updateFabricUpgradeAsync(FabricUpgradeUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ClusterManagementClient#updateFabricUpgradeAsync(system.fabric.FabricUpgradeUpdateDescription)</xref></p>'
+    syntax:
+      content: public class FabricUpgradeUpdateDescription
+  - uid: system.fabric._cluster_management_client.removeNodeStateAsync(String)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    name: removeNodeStateAsync(String nodeName)
+    nameWithType: ClusterManagementClient.removeNodeStateAsync(String nodeName)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.removeNodeStateAsync(String nodeName)
+    type: Method
+    summary: |-
+      <p>その Service Fabric は失われ回復不可能なとしてサービスまたはそのノードの状態を扱う必要があります、ノードの永続化されたデータは (たとえば、ディスクの障害、または再イメージ化など)、によって失われることを示します。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: system.fabric._cluster_management_client.activateNodeAsync(String)
+    parent: system.fabric._cluster_management_client
+    href: system.fabric._cluster_management_client.yml
+    name: activateNodeAsync(String nodeName)
+    nameWithType: ClusterManagementClient.activateNodeAsync(String nodeName)
+    fullName: CompletableFuture<Boolean> system.fabric.ClusterManagementClient.activateNodeAsync(String nodeName)
+    type: Method
+    summary: "<p>現在非アクティブ化されている Service Fabric クラスター ノードをアクティブにします。</p>\n<p>\r\n\r\n  <b>注釈:</b>アクティブ化、ノードはもう一度、新しいレプリカを配置するための有効なターゲットなり、残りのノードですべての閉じたレプリカが開かれるとします。 この API の完了時にアクティブ化することを目的は、システムによって登録されていることを意味します。 アクティブ化が完了したことは限りません。 使用して、操作の進行状況を決定できます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.QueryClient#getNodeListAsync()</xref> API </p>"
+    syntax: *ref_2
+  - uid: system.fabric._safety_check_kind
+    parent: system.fabric
+    href: system.fabric._safety_check_kind.yml
+    name: SafetyCheckKind
+    nameWithType: SafetyCheckKind
+    fullName: system.fabric.SafetyCheckKind
+    type: Enum
+    syntax:
+      content: public enum SafetyCheckKind
+  - uid: system.fabric.exception._fabric_object_closed_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_object_closed_exception.yml
+    name: FabricObjectClosedException
+    nameWithType: FabricObjectClosedException
+    fullName: system.fabric.exception.FabricObjectClosedException
+    type: Class
+    syntax:
+      content: public class FabricObjectClosedException
+  - uid: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    name: moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+    nameWithType: ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+    type: Method
+    summary: "<p>Service Fabric を次のアップグレード ドメイン内のアプリケーション インスタンスをアップグレードするように指示します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>は現在更新ドメインのアップグレードが完了した場合、Service Fabric は次のアップグレード ドメインに移動のみです。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+      parameters:
+        - id: upgradeProgress
+          type: system.fabric._application_upgrade_progress
+          description: <p>目的のアプリケーション インスタンスのアップグレードの進行状況。 これは、アップグレード対象として次のアップグレード ドメインに関する情報を提供します。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>

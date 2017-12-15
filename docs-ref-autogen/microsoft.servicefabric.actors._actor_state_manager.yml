@@ -1,0 +1,563 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._actor_state_manager
+    id: _actor_state_manager
+    parent: microsoft.servicefabric.actors
+    children:
+      - 'microsoft.servicefabric.actors._actor_state_manager.addOrUpdateStateAsync(String,T,BiFunction<String, T, T>)'
+      - 'microsoft.servicefabric.actors._actor_state_manager.addStateAsync(String,T)'
+      - microsoft.servicefabric.actors._actor_state_manager.clearCacheAsync()
+      - microsoft.servicefabric.actors._actor_state_manager.containsStateAsync(String)
+      - 'microsoft.servicefabric.actors._actor_state_manager.getOrAddStateAsync(String,T)'
+      - microsoft.servicefabric.actors._actor_state_manager.getStateAsync(String)
+      - microsoft.servicefabric.actors._actor_state_manager.getStateNamesAsync()
+      - microsoft.servicefabric.actors._actor_state_manager.removeStateAsync(String)
+      - microsoft.servicefabric.actors._actor_state_manager.saveStateAsync()
+      - 'microsoft.servicefabric.actors._actor_state_manager.setStateAsync(String,T)'
+      - 'microsoft.servicefabric.actors._actor_state_manager.tryAddStateAsync(String,T)'
+      - microsoft.servicefabric.actors._actor_state_manager.tryGetStateAsync(String)
+      - microsoft.servicefabric.actors._actor_state_manager.tryRemoveStateAsync(String)
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: ActorStateManager
+    nameWithType: ActorStateManager
+    fullName: microsoft.servicefabric.actors.ActorStateManager
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 11
+    package: microsoft.servicefabric.actors
+    summary: <p>インターフェイスのマネージャーの状態を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>を実装します。 </p>
+    syntax: &ref_1
+      content: public interface ActorStateManager
+  - uid: 'microsoft.servicefabric.actors._actor_state_manager.addOrUpdateStateAsync(String,T,BiFunction<String, T, T>)'
+    id: 'addOrUpdateStateAsync(String,T,BiFunction<String, T, T>)'
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: 'addOrUpdateStateAsync(String stateName, T addValue, BiFunction<String, T, T> updateValueFactory)'
+    nameWithType: 'ActorStateManager.addOrUpdateStateAsync(String stateName, T addValue, BiFunction<String, T, T> updateValueFactory)'
+    fullName: '<T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateManager.addOrUpdateStateAsync(String stateName, T addValue, BiFunction<String, T, T> updateValueFactory)'
+    overload: microsoft.servicefabric.actors._actor_state_manager.addOrUpdateStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 138
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクターが追加状態と共に指定された状態名、または存在しないが存在しない場合は、指定された状態の名前と値を更新します。</p>
+      <p></p>
+    syntax:
+      content: 'public <T> CompletableFuture<T> addOrUpdateStateAsync(String stateName, T addValue, BiFunction<String, T, T> updateValueFactory)'
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>追加または取得するアクター状態の名前です。 </p>
+        - id: addValue
+          type: 8ce1ecb9
+          description: <p>存在しないかどうかに追加するアクター状態の値です。 </p>
+        - id: updateValueFactory
+          type: 6d910369
+          description: <p>存在する場合に更新するアクター状態の値を生成するファクトリ関数。 </p>
+      return:
+        type: 6d056e8b
+        description: <p>非同期の追加または更新操作を表すタスク。 T パラメーターの値には、追加/更新がアクター状態の値が含まれています。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_state_manager.addStateAsync(String,T)'
+    id: 'addStateAsync(String,T)'
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: 'addStateAsync(String stateName, T value)'
+    nameWithType: 'ActorStateManager.addStateAsync(String stateName, T value)'
+    fullName: '<T> CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.addStateAsync(String stateName, T value)'
+    overload: microsoft.servicefabric.actors._actor_state_manager.addStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 24
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクターを追加します。 特定の状態の名前と状態。</p>
+      <p></p>
+    syntax:
+      content: 'public <T> CompletableFuture<?> addStateAsync(String stateName, T value)'
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>追加するアクター状態の名前です。 </p>
+        - id: value
+          type: 8ce1ecb9
+          description: <p>追加するアクター状態の値です。 </p>
+      return:
+        type: a5c17814
+        description: <p>表す非同期のタスクは、操作を追加します。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.clearCacheAsync()
+    id: clearCacheAsync()
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: clearCacheAsync()
+    nameWithType: ActorStateManager.clearCacheAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.clearCacheAsync()
+    overload: microsoft.servicefabric.actors._actor_state_manager.clearCacheAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 162
+    package: microsoft.servicefabric.actors
+    summary: "<p>すべてのキャッシュされたアクター状態とで実行される任意のサービス操作をクリア<xref uid=\"microsoft.servicefabric.actors._actor_state_manager\" data-throw-if-not-resolved=\"false\">ActorStateManager</xref>の最新の状態の保存操作以降。</p>\n<p>\r\n\r\n  <b>注釈:</b>で実行されるすべての操作<xref uid=\"microsoft.servicefabric.actors._actor_state_manager\" data-throw-if-not-resolved=\"false\">ActorStateManager</xref>最後に保存操作が、キャッシュをクリアするクリアされ、次の保存操作には含まれません。 </p>"
+    syntax:
+      content: public CompletableFuture<?> clearCacheAsync()
+      return:
+        type: 16409f84
+        description: <p>非同期キャッシュのクリア操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.containsStateAsync(String)
+    id: containsStateAsync(String)
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: containsStateAsync(String stateName)
+    nameWithType: ActorStateManager.containsStateAsync(String stateName)
+    fullName: CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateManager.containsStateAsync(String stateName)
+    overload: microsoft.servicefabric.actors._actor_state_manager.containsStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 106
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>指定した名前のアクター状態が存在するかを確認します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> containsStateAsync(String stateName)
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>アクター状態の名前。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>非同期チェック操作を表すタスク。 T パラメーターの値は、指定した名前の状態には、それ以外の場合の false が存在する場合は true です。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_state_manager.getOrAddStateAsync(String,T)'
+    id: 'getOrAddStateAsync(String,T)'
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: 'getOrAddStateAsync(String stateName, T value)'
+    nameWithType: 'ActorStateManager.getOrAddStateAsync(String stateName, T value)'
+    fullName: '<T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateManager.getOrAddStateAsync(String stateName, T value)'
+    overload: microsoft.servicefabric.actors._actor_state_manager.getOrAddStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 121
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>取得アクターを持つ状態特定の状態名が存在するか、存在する場合、指定された状態の名前、状態と状態を追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public <T> CompletableFuture<T> getOrAddStateAsync(String stateName, T value)'
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>追加/更新には、アクター状態の名前です。 </p>
+        - id: value
+          type: 8ce1ecb9
+          description: <p>/Update を追加するアクター状態の値です。 </p>
+      return:
+        type: 6d056e8b
+        description: <p>非同期の追加または get 操作を表すタスク。 T パラメーターの値には、指定された状態のアクター状態の値が含まれています。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.getStateAsync(String)
+    id: getStateAsync(String)
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: getStateAsync(String stateName)
+    nameWithType: ActorStateManager.getStateAsync(String stateName)
+    fullName: <T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateManager.getStateAsync(String stateName)
+    overload: microsoft.servicefabric.actors._actor_state_manager.getStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 36
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>指定した状態の名前を持つ、アクターの状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public <T> CompletableFuture<T> getStateAsync(String stateName)
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>追加するアクター状態の名前です。 </p>
+      return:
+        type: 6d056e8b
+        description: <p>非同期の get 操作を表すタスク。 T パラメーターの値には、アクターの値が含まれています。 特定の状態の名前と状態。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.getStateNamesAsync()
+    id: getStateNamesAsync()
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: getStateNamesAsync()
+    nameWithType: ActorStateManager.getStateNamesAsync()
+    fullName: CompletableFuture<List<String>> microsoft.servicefabric.actors.ActorStateManager.getStateNamesAsync()
+    overload: microsoft.servicefabric.actors._actor_state_manager.getStateNamesAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 149
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>現在のアクターのすべてのアクターの状態名のリストを作成します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<List<String>> getStateNamesAsync()
+      return:
+        type: d20512af
+        description: <p>非同期の列挙操作を表すタスク。 T パラメーターの値は、すべてのアクターの状態名の列挙です。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.removeStateAsync(String)
+    id: removeStateAsync(String)
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: removeStateAsync(String stateName)
+    nameWithType: ActorStateManager.removeStateAsync(String stateName)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.removeStateAsync(String stateName)
+    overload: microsoft.servicefabric.actors._actor_state_manager.removeStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 59
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクターを持つ状態特定の状態名を指定した値を削除します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<?> removeStateAsync(String stateName)
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>削除するアクター状態の名前です。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期の削除操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.saveStateAsync()
+    id: saveStateAsync()
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: saveStateAsync()
+    nameWithType: ActorStateManager.saveStateAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.saveStateAsync()
+    overload: microsoft.servicefabric.actors._actor_state_manager.saveStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 170
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>キャッシュされた状態の変更を保存 (追加/更新/削除) 最後の呼び出し以降に行われた<xref uid="microsoft.servicefabric.actors._actor_state_manager.saveStateAsync()" data-throw-if-not-resolved="false">ActorStateManager#saveStateAsync()</xref>アクター ランタイムによって、またはユーザーによって明示的にします。</p>
+      <p></p>
+    syntax: &ref_2
+      content: public CompletableFuture<?> saveStateAsync()
+      return:
+        type: 16409f84
+        description: <p>非同期の保存操作を表すタスク。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_state_manager.setStateAsync(String,T)'
+    id: 'setStateAsync(String,T)'
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: 'setStateAsync(String stateName, T value)'
+    nameWithType: 'ActorStateManager.setStateAsync(String stateName, T value)'
+    fullName: '<T> CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.setStateAsync(String stateName, T value)'
+    overload: microsoft.servicefabric.actors._actor_state_manager.setStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 50
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>指定した状態の名前を持つ、アクターの状態を削除します。 指定した名前のアクター状態が存在しない場合が追加されます。</p>
+      <p></p>
+    syntax:
+      content: 'public <T> CompletableFuture<?> setStateAsync(String stateName, T value)'
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>設定するアクター状態の名前です。 </p>
+        - id: value
+          type: 8ce1ecb9
+          description: <p>設定するアクター状態の値です。 </p>
+      return:
+        type: a5c17814
+        description: <p>一連の非同期操作を表すタスク。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_state_manager.tryAddStateAsync(String,T)'
+    id: 'tryAddStateAsync(String,T)'
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: 'tryAddStateAsync(String stateName, T value)'
+    nameWithType: 'ActorStateManager.tryAddStateAsync(String stateName, T value)'
+    fullName: '<T> CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateManager.tryAddStateAsync(String stateName, T value)'
+    overload: microsoft.servicefabric.actors._actor_state_manager.tryAddStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 73
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクターを追加する操作は、特定の状態名を持つ状態します。</p>
+      <p></p>
+    syntax:
+      content: 'public <T> CompletableFuture<Boolean> tryAddStateAsync(String stateName, T value)'
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>追加するアクター状態の名前です。 </p>
+        - id: value
+          type: 8ce1ecb9
+          description: <p>追加するアクター状態の値です。 </p>
+      return:
+        type: 2ebb647c
+        description: <p>表す非同期のタスクは、操作を追加します。 T パラメーターの値は、状態が正常に追加されているかどうかを示します。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.tryGetStateAsync(String)
+    id: tryGetStateAsync(String)
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: tryGetStateAsync(String stateName)
+    nameWithType: ActorStateManager.tryGetStateAsync(String stateName)
+    fullName: <T> CompletableFuture<ConditionalValue<T>> microsoft.servicefabric.actors.ActorStateManager.tryGetStateAsync(String stateName)
+    overload: microsoft.servicefabric.actors._actor_state_manager.tryGetStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 86
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>指定した状態の名前を持つ、アクター状態の取得を試みます。</p>
+      <p></p>
+    syntax:
+      content: public <T> CompletableFuture<ConditionalValue<T>> tryGetStateAsync(String stateName)
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>取得するアクター状態の名前です。 </p>
+      return:
+        type: 013f9378microsoft.servicefabric.data._conditional_value84ce83e6
+        description: <p>非同期の get 操作を表すタスク。 T パラメーターの値が含まれる<xref uid="" data-throw-if-not-resolved="false">ConditionalValue</xref>存在する場合は、アクターの状態が存在するかどうかとアクター状態の値を示すです。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.tryRemoveStateAsync(String)
+    id: tryRemoveStateAsync(String)
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    langs:
+      - java
+    name: tryRemoveStateAsync(String stateName)
+    nameWithType: ActorStateManager.tryRemoveStateAsync(String stateName)
+    fullName: CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateManager.tryRemoveStateAsync(String stateName)
+    overload: microsoft.servicefabric.actors._actor_state_manager.tryRemoveStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorStateManager.java
+      startLine: 96
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>指定した状態の名前を持つ、アクター状態の削除を試みます。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> tryRemoveStateAsync(String stateName)
+      parameters:
+        - id: stateName
+          type: '26831127'
+          description: <p>削除するアクター状態の名前です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>非同期の削除操作を表すタスク。 T パラメーターの値は、状態が正常に削除されたかどうかを示します。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 8ce1ecb9
+    spec.java:
+      - name: T
+        fullName: T
+  - uid: a5c17814
+    spec.java:
+      - name: <T> CompletableFuture<?>
+        fullName: <T> CompletableFuture<?>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.addStateAsync*
+    name: addStateAsync
+    nameWithType: ActorStateManager.addStateAsync
+    fullName: <T> CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.addStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: 6d056e8b
+    spec.java:
+      - name: <T> CompletableFuture<T>
+        fullName: <T> CompletableFuture<T>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.getStateAsync*
+    name: getStateAsync
+    nameWithType: ActorStateManager.getStateAsync
+    fullName: <T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateManager.getStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_state_manager.setStateAsync*
+    name: setStateAsync
+    nameWithType: ActorStateManager.setStateAsync
+    fullName: <T> CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.setStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.removeStateAsync*
+    name: removeStateAsync
+    nameWithType: ActorStateManager.removeStateAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.removeStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: 2ebb647c
+    spec.java:
+      - name: <T> CompletableFuture<Boolean>
+        fullName: <T> CompletableFuture<Boolean>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.tryAddStateAsync*
+    name: tryAddStateAsync
+    nameWithType: ActorStateManager.tryAddStateAsync
+    fullName: <T> CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateManager.tryAddStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: 013f9378microsoft.servicefabric.data._conditional_value84ce83e6
+    spec.java:
+      - name: <T> CompletableFuture<
+        fullName: <T> CompletableFuture<
+      - uid: microsoft.servicefabric.data._conditional_value
+        name: ConditionalValue
+        fullName: microsoft.servicefabric.data.ConditionalValue
+        href: microsoft.servicefabric.data._conditional_value.yml
+      - name: <T>>
+        fullName: <T>>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.tryGetStateAsync*
+    name: tryGetStateAsync
+    nameWithType: ActorStateManager.tryGetStateAsync
+    fullName: <T> CompletableFuture<ConditionalValue<T>> microsoft.servicefabric.actors.ActorStateManager.tryGetStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: 7e53ac82
+    spec.java:
+      - name: CompletableFuture<Boolean>
+        fullName: CompletableFuture<Boolean>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.tryRemoveStateAsync*
+    name: tryRemoveStateAsync
+    nameWithType: ActorStateManager.tryRemoveStateAsync
+    fullName: CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateManager.tryRemoveStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_state_manager.containsStateAsync*
+    name: containsStateAsync
+    nameWithType: ActorStateManager.containsStateAsync
+    fullName: CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateManager.containsStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_state_manager.getOrAddStateAsync*
+    name: getOrAddStateAsync
+    nameWithType: ActorStateManager.getOrAddStateAsync
+    fullName: <T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateManager.getOrAddStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: 6d910369
+    spec.java:
+      - name: 'BiFunction<String, T, T>'
+        fullName: 'BiFunction<String, T, T>'
+  - uid: microsoft.servicefabric.actors._actor_state_manager.addOrUpdateStateAsync*
+    name: addOrUpdateStateAsync
+    nameWithType: ActorStateManager.addOrUpdateStateAsync
+    fullName: <T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateManager.addOrUpdateStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: d20512af
+    spec.java:
+      - name: CompletableFuture<List<String>>
+        fullName: CompletableFuture<List<String>>
+  - uid: microsoft.servicefabric.actors._actor_state_manager.getStateNamesAsync*
+    name: getStateNamesAsync
+    nameWithType: ActorStateManager.getStateNamesAsync
+    fullName: CompletableFuture<List<String>> microsoft.servicefabric.actors.ActorStateManager.getStateNamesAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_state_manager.clearCacheAsync*
+    name: clearCacheAsync
+    nameWithType: ActorStateManager.clearCacheAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.clearCacheAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_state_manager.saveStateAsync*
+    name: saveStateAsync
+    nameWithType: ActorStateManager.saveStateAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.saveStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_state_manager_impl
+  - uid: microsoft.servicefabric.data._conditional_value
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._conditional_value.yml
+    name: ConditionalValue<TValue>
+    nameWithType: ConditionalValue<TValue>
+    fullName: microsoft.servicefabric.data.ConditionalValue<TValue>
+    type: Class
+    summary: |-
+      <p>場合も、値を返さない可能性があります DistributedCollections Api によって返される結果のクラスです。</p>
+      <p></p>
+    syntax:
+      content: public class ConditionalValue<TValue>
+      typeParameters:
+        - type: 649a7377
+          description: <p>取得した結果を初期化する値。 </p>
+  - uid: microsoft.servicefabric.actors._actor_state_manager
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    name: ActorStateManager
+    nameWithType: ActorStateManager
+    fullName: microsoft.servicefabric.actors.ActorStateManager
+    type: Interface
+    summary: <p>インターフェイスのマネージャーの状態を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>を実装します。 </p>
+    syntax: *ref_1
+  - uid: microsoft.servicefabric.actors._actor_state_manager.saveStateAsync()
+    parent: microsoft.servicefabric.actors._actor_state_manager
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    name: saveStateAsync()
+    nameWithType: ActorStateManager.saveStateAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateManager.saveStateAsync()
+    type: Method
+    summary: |-
+      <p>キャッシュされた状態の変更を保存 (追加/更新/削除) 最後の呼び出し以降に行われた<xref uid="microsoft.servicefabric.actors._actor_state_manager.saveStateAsync()" data-throw-if-not-resolved="false">ActorStateManager#saveStateAsync()</xref>アクター ランタイムによって、またはユーザーによって明示的にします。</p>
+      <p></p>
+    syntax: *ref_2
+  - uid: microsoft.servicefabric.actors._actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor.yml
+    name: Actor
+    nameWithType: Actor
+    fullName: microsoft.servicefabric.actors.Actor
+    type: Interface
+    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    syntax:
+      content: public interface Actor

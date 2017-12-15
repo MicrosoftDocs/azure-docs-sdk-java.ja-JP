@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.compute._disk._update_stages._with_size
+    id: _with_size
+    parent: com.microsoft.azure.management.compute
+    children:
+      - com.microsoft.azure.management.compute._disk._update_stages._with_size.withSizeInGB(int)
+    href: com.microsoft.azure.management.compute._disk._update_stages._with_size.yml
+    langs:
+      - java
+    name: Disk.UpdateStages.WithSize
+    nameWithType: Disk.UpdateStages.WithSize
+    fullName: com.microsoft.azure.management.compute.Disk.UpdateStages.WithSize
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-compute/src/main/java/com/microsoft/azure/management/compute/Disk.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-compute/src/main/java/com/microsoft/azure/management/compute/Disk.java
+      startLine: 475
+    package: com.microsoft.azure.management.compute
+    summary: <p>新しいサイズを指定できるように、管理対象ディスク定義の段階です。 </p>
+    syntax:
+      content: public interface WithSize
+  - uid: com.microsoft.azure.management.compute._disk._update_stages._with_size.withSizeInGB(int)
+    id: withSizeInGB(int)
+    parent: com.microsoft.azure.management.compute._disk._update_stages._with_size
+    href: com.microsoft.azure.management.compute._disk._update_stages._with_size.yml
+    langs:
+      - java
+    name: withSizeInGB(int sizeInGB)
+    nameWithType: Disk.UpdateStages.WithSize.withSizeInGB(int sizeInGB)
+    fullName: Update com.microsoft.azure.management.compute.Disk.UpdateStages.WithSize.withSizeInGB(int sizeInGB)
+    overload: com.microsoft.azure.management.compute._disk._update_stages._with_size.withSizeInGB*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-compute/src/main/java/com/microsoft/azure/management/compute/Disk.java
+      startLine: 482
+    package: com.microsoft.azure.management.compute
+    summary: |-
+      <p>ディスクのサイズを指定します。</p>
+      <p></p>
+    syntax:
+      content: public Update withSizeInGB(int sizeInGB)
+      parameters:
+        - id: sizeInGB
+          type: f75371fa
+          description: <p>ディスク サイズ (GB) </p>
+      return:
+        type: com.microsoft.azure.management.compute._disk._update
+        description: <p>更新プログラムの次のステージ </p>
+references:
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.management.compute._disk._update_stages._with_size.withSizeInGB*
+    name: withSizeInGB
+    nameWithType: Disk.UpdateStages.WithSize.withSizeInGB
+    fullName: Update com.microsoft.azure.management.compute.Disk.UpdateStages.WithSize.withSizeInGB
+    package: com.microsoft.azure.management.compute
+  - uid: com.microsoft.azure.management.compute._disk._update
+    parent: com.microsoft.azure.management.compute
+    href: com.microsoft.azure.management.compute._disk._update.yml
+    name: Disk.Update
+    nameWithType: Disk.Update
+    fullName: com.microsoft.azure.management.compute.Disk.Update
+    type: Interface
+    summary: <p>更新操作で変更可能なすべての設定を含むテンプレートです。 </p>
+    syntax:
+      content: 'public interface Update extends Appliable<Disk>,Resource.UpdateWithTags<Disk.Update>,Disk.UpdateStages.WithSku,Disk.UpdateStages.WithSize,Disk.UpdateStages.WithOSSettings'

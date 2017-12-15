@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.documentdb._consistency_level
+    id: _consistency_level
+    parent: com.microsoft.azure.documentdb
+    children:
+      - com.microsoft.azure.documentdb._consistency_level.BoundedStaleness
+      - com.microsoft.azure.documentdb._consistency_level.ConsistentPrefix
+      - com.microsoft.azure.documentdb._consistency_level.Eventual
+      - com.microsoft.azure.documentdb._consistency_level.Session
+      - com.microsoft.azure.documentdb._consistency_level.Strong
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    langs:
+      - java
+    name: ConsistencyLevel
+    nameWithType: ConsistencyLevel
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel
+    type: Enum
+    source:
+      remote: &ref_0
+        path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-documentdb-java-pr'
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+      startLine: 12
+    package: com.microsoft.azure.documentdb
+    summary: |-
+      <p>DocumentDB クライアントの操作、Azure DocumentDB データベース サービスでサポートされる一貫性レベルを表します。 </p>
+      <p>要求された<xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref>一致か、データベース アカウント用にプロビジョニングよりも弱くなりますである必要があります。 強度順一貫性レベルは、厳密な BoundedStaleness、セッションおよび Eventual です。 </p>
+    syntax: &ref_1
+      content: public enum ConsistencyLevel
+    inheritance:
+      - java.lang.Object
+      - java.lang.Enum<ConsistencyLevel>
+  - uid: com.microsoft.azure.documentdb._consistency_level.BoundedStaleness
+    id: BoundedStaleness
+    parent: com.microsoft.azure.documentdb._consistency_level
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    langs:
+      - java
+    name: BoundedStaleness
+    nameWithType: ConsistencyLevel.BoundedStaleness
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel.BoundedStaleness
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+      startLine: 23
+    package: com.microsoft.azure.documentdb
+    summary: <p>境界のある陳腐化では、読み取りがすぎる古くなっていないことを保証します。 これは操作 (MaxStalenessPrefix) または時刻 (MaxStalenessIntervalInSeconds) の数に基づいて構成できます。 </p>
+    syntax:
+      content: public BoundedStaleness
+  - uid: com.microsoft.azure.documentdb._consistency_level.ConsistentPrefix
+    id: ConsistentPrefix
+    parent: com.microsoft.azure.documentdb._consistency_level
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    langs:
+      - java
+    name: ConsistentPrefix
+    nameWithType: ConsistencyLevel.ConsistentPrefix
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel.ConsistentPrefix
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+      startLine: 42
+    package: com.microsoft.azure.documentdb
+    summary: <p>ConsistentPrefix 整合性では、読み取りのギャップのすべての書き込みのいくつかのプレフィックスが返されることを保証します。 すべての書き込みはで最終的に使用できますの読み取り。 </p>
+    syntax:
+      content: public ConsistentPrefix
+  - uid: com.microsoft.azure.documentdb._consistency_level.Eventual
+    id: Eventual
+    parent: com.microsoft.azure.documentdb._consistency_level
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    langs:
+      - java
+    name: Eventual
+    nameWithType: ConsistencyLevel.Eventual
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel.Eventual
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+      startLine: 36
+    package: com.microsoft.azure.documentdb
+    summary: <p>最終的整合性では、読み取りが書き込みのサブセットを返すことを保証します。 すべての書き込みはで最終的に使用できますの読み取り。 </p>
+    syntax:
+      content: public Eventual
+  - uid: com.microsoft.azure.documentdb._consistency_level.Session
+    id: Session
+    parent: com.microsoft.azure.documentdb._consistency_level
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    langs:
+      - java
+    name: Session
+    nameWithType: ConsistencyLevel.Session
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel.Session
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+      startLine: 30
+    package: com.microsoft.azure.documentdb
+    summary: <p>セッションの整合性を保証単調読み取り (、古いデータの読み取りは行わないでください新しい、古い再度)、(書き込みが順序付け) 単調の書き込みと読み取りが単一セッションの中で、書き込み (、書き込みでは、読み取りをすぐに表示)。 </p>
+    syntax:
+      content: public Session
+  - uid: com.microsoft.azure.documentdb._consistency_level.Strong
+    id: Strong
+    parent: com.microsoft.azure.documentdb._consistency_level
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    langs:
+      - java
+    name: Strong
+    nameWithType: ConsistencyLevel.Strong
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel.Strong
+    type: Field
+    source:
+      remote: *ref_0
+      path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
+      startLine: 17
+    package: com.microsoft.azure.documentdb
+    summary: <p>読み取り操作は常に強力な一貫性の保証は、最後に書き込まれた値を返します。 </p>
+    syntax:
+      content: public Strong
+references:
+  - uid: com.microsoft.azure.documentdb._consistency_level
+    parent: com.microsoft.azure.documentdb
+    href: com.microsoft.azure.documentdb._consistency_level.yml
+    name: ConsistencyLevel
+    nameWithType: ConsistencyLevel
+    fullName: com.microsoft.azure.documentdb.ConsistencyLevel
+    type: Enum
+    summary: |-
+      <p>DocumentDB クライアントの操作、Azure DocumentDB データベース サービスでサポートされる一貫性レベルを表します。 </p>
+      <p>要求された<xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref>一致か、データベース アカウント用にプロビジョニングよりも弱くなりますである必要があります。 強度順一貫性レベルは、厳密な BoundedStaleness、セッションおよび Eventual です。 </p>
+    syntax: *ref_1

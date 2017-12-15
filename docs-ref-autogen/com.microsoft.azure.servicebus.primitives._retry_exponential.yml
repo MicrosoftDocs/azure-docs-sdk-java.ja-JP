@@ -1,0 +1,299 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.servicebus.primitives._retry_exponential
+    id: _retry_exponential
+    parent: com.microsoft.azure.servicebus.primitives
+    children:
+      - 'com.microsoft.azure.servicebus.primitives._retry_exponential.onGetNextRetryInterval(final String,final Exception,final Duration,final int)'
+      - 'com.microsoft.azure.servicebus.primitives._retry_exponential.RetryExponential(final Duration,final Duration,final int,final String)'
+    href: com.microsoft.azure.servicebus.primitives._retry_exponential.yml
+    langs:
+      - java
+    name: RetryExponential
+    nameWithType: RetryExponential
+    fullName: com.microsoft.azure.servicebus.primitives.RetryExponential
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/RetryExponential.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-service-bus-java'
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/RetryExponential.java
+      startLine: 14
+    package: com.microsoft.azure.servicebus.primitives
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>実装の再試行の間の遅延が指数の方法で拡張されます。 <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>を使用して、クライアントの操作に対して設定できる<xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>です。 DeltaBackOff (MaximumBackoff - MinimumBackoff) の関数である retryFactor を使用して計算されます RetryIntervals と MaximumRetryCount </p>"
+    syntax:
+      content: public class RetryExponential extends RetryPolicy
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.servicebus.primitives._retry_policy
+    inheritedMembers:
+      - com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()
+      - 'com.microsoft.azure.servicebus.primitives._retry_policy.getNextRetryInterval(String,Exception,Duration)'
+      - com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()
+      - com.microsoft.azure.servicebus.primitives._retry_policy.getRetryCount(String)
+      - com.microsoft.azure.servicebus.primitives._retry_policy.incrementRetryCount(String)
+      - com.microsoft.azure.servicebus.primitives._retry_policy.isRetryableException(Exception)
+      - com.microsoft.azure.servicebus.primitives._retry_policy.resetRetryCount(String)
+      - com.microsoft.azure.servicebus.primitives._retry_policy.RetryPolicy(final String)
+      - com.microsoft.azure.servicebus.primitives._retry_policy.toString()
+  - uid: 'com.microsoft.azure.servicebus.primitives._retry_exponential.onGetNextRetryInterval(final String,final Exception,final Duration,final int)'
+    id: 'onGetNextRetryInterval(final String,final Exception,final Duration,final int)'
+    parent: com.microsoft.azure.servicebus.primitives._retry_exponential
+    href: com.microsoft.azure.servicebus.primitives._retry_exponential.yml
+    langs:
+      - java
+    name: 'onGetNextRetryInterval(final String clientId, final Exception lastException, final Duration remainingTime, final int baseWaitTimeSecs)'
+    nameWithType: 'RetryExponential.onGetNextRetryInterval(final String clientId, final Exception lastException, final Duration remainingTime, final int baseWaitTimeSecs)'
+    fullName: 'Duration com.microsoft.azure.servicebus.primitives.RetryExponential.onGetNextRetryInterval(final String clientId, final Exception lastException, final Duration remainingTime, final int baseWaitTimeSecs)'
+    overload: com.microsoft.azure.servicebus.primitives._retry_exponential.onGetNextRetryInterval*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/RetryExponential.java
+      startLine: 32
+    package: com.microsoft.azure.servicebus.primitives
+    syntax:
+      content: 'protected Duration onGetNextRetryInterval(final String clientId, final Exception lastException, final Duration remainingTime, final int baseWaitTimeSecs)'
+      parameters:
+        - id: clientId
+          type: 3d93591e
+        - id: lastException
+          type: 0e0204bc
+        - id: remainingTime
+          type: 89ac7c4d
+        - id: baseWaitTimeSecs
+          type: cd225469
+      return:
+        type: e02a2de0
+  - uid: 'com.microsoft.azure.servicebus.primitives._retry_exponential.RetryExponential(final Duration,final Duration,final int,final String)'
+    id: 'RetryExponential(final Duration,final Duration,final int,final String)'
+    parent: com.microsoft.azure.servicebus.primitives._retry_exponential
+    href: com.microsoft.azure.servicebus.primitives._retry_exponential.yml
+    langs:
+      - java
+    name: 'RetryExponential(final Duration minimumBackoff, final Duration maximumBackoff, final int maximumRetryCount, final String name)'
+    nameWithType: 'RetryExponential.RetryExponential(final Duration minimumBackoff, final Duration maximumBackoff, final int maximumRetryCount, final String name)'
+    fullName: 'com.microsoft.azure.servicebus.primitives.RetryExponential.RetryExponential(final Duration minimumBackoff, final Duration maximumBackoff, final int maximumRetryCount, final String name)'
+    overload: com.microsoft.azure.servicebus.primitives._retry_exponential.RetryExponential*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/RetryExponential.java
+      startLine: 21
+    package: com.microsoft.azure.servicebus.primitives
+    syntax:
+      content: 'public RetryExponential(final Duration minimumBackoff, final Duration maximumBackoff, final int maximumRetryCount, final String name)'
+      parameters:
+        - id: minimumBackoff
+          type: 89ac7c4d
+        - id: maximumBackoff
+          type: 89ac7c4d
+        - id: maximumRetryCount
+          type: cd225469
+        - id: name
+          type: 3d93591e
+references:
+  - uid: 89ac7c4d
+    spec.java:
+      - name: final Duration
+        fullName: final Duration
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: com.microsoft.azure.servicebus.primitives._retry_exponential.RetryExponential*
+    name: RetryExponential
+    nameWithType: RetryExponential.RetryExponential
+    fullName: com.microsoft.azure.servicebus.primitives.RetryExponential.RetryExponential
+    package: com.microsoft.azure.servicebus.primitives
+  - uid: 0e0204bc
+    spec.java:
+      - name: final Exception
+        fullName: final Exception
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: com.microsoft.azure.servicebus.primitives._retry_exponential.onGetNextRetryInterval*
+    name: onGetNextRetryInterval
+    nameWithType: RetryExponential.onGetNextRetryInterval
+    fullName: Duration com.microsoft.azure.servicebus.primitives.RetryExponential.onGetNextRetryInterval
+    package: com.microsoft.azure.servicebus.primitives
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: getDefault()
+    nameWithType: RetryPolicy.getDefault()
+    fullName: static RetryPolicy com.microsoft.azure.servicebus.primitives.RetryPolicy.getDefault()
+    type: Method
+    summary: <p>連続する各エラーに指数関数的に増加する再試行の間隔を提供するポリシーを再試行してください。 このポリシーは、ほとんどのクライアント アプリケーションを使用して使用するのに適したし、再試行ポリシーが指定されていない場合、既定のポリシーもします。 </p>
+    syntax:
+      content: public static RetryPolicy getDefault()
+      return:
+        type: com.microsoft.azure.servicebus.primitives._retry_policy
+        description: <p>再試行の間隔が指数関数的に増加を提供する再試行ポリシー </p>
+  - uid: 'com.microsoft.azure.servicebus.primitives._retry_policy.getNextRetryInterval(String,Exception,Duration)'
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: 'getNextRetryInterval(String clientId, Exception lastException, Duration remainingTime)'
+    nameWithType: 'RetryPolicy.getNextRetryInterval(String clientId, Exception lastException, Duration remainingTime)'
+    fullName: 'Duration com.microsoft.azure.servicebus.primitives.RetryPolicy.getNextRetryInterval(String clientId, Exception lastException, Duration remainingTime)'
+    type: Method
+    summary: |-
+      <p>その後 nextRetry を実行し、最後の例外が発生しましたに基づく間隔と、操作がタイムアウトするまでの残り時間を取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public Duration getNextRetryInterval(String clientId, Exception lastException, Duration remainingTime)'
+      parameters:
+        - id: clientId
+          type: '26831127'
+          description: <p>例外が発生した送信者または受信者またはクライアント オブジェクトの id。 </p>
+        - id: lastException
+          type: 8a99d4b0
+          description: <p>最後の例外が発生しました </p>
+        - id: remainingTime
+          type: e02a2de0
+          description: <p>操作がタイムアウトする前に再試行する remainingTime </p>
+      return:
+        type: e02a2de0
+        description: <p>操作は再試行するまでの期間です。 操作はいけないとき、null を返しますが再試行されます。 </p>
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: getNoRetry()
+    nameWithType: RetryPolicy.getNoRetry()
+    fullName: static RetryPolicy com.microsoft.azure.servicebus.primitives.RetryPolicy.getNoRetry()
+    type: Method
+    summary: <p>再試行を効果的に無効にすると、すべての操作を再試行しない再試行ポリシーを取得します。 クライアントは、すべての操作を自動的に再試行したくない場合に、この再試行ポリシーを使用できます。 </p>
+    syntax:
+      content: public static RetryPolicy getNoRetry()
+      return:
+        type: com.microsoft.azure.servicebus.primitives._retry_policy
+        description: <p>すべての操作を再試行しない再試行ポリシー </p>
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.getRetryCount(String)
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: getRetryCount(String clientId)
+    nameWithType: RetryPolicy.getRetryCount(String clientId)
+    fullName: int com.microsoft.azure.servicebus.primitives.RetryPolicy.getRetryCount(String clientId)
+    type: Method
+    syntax:
+      content: protected int getRetryCount(String clientId)
+      parameters:
+        - id: clientId
+          type: '26831127'
+      return:
+        type: f75371fa
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.incrementRetryCount(String)
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: incrementRetryCount(String clientId)
+    nameWithType: RetryPolicy.incrementRetryCount(String clientId)
+    fullName: void com.microsoft.azure.servicebus.primitives.RetryPolicy.incrementRetryCount(String clientId)
+    type: Method
+    summary: <p>インクリメントの連続する数値では、クライアントによって試行を再試行してください。 </p>
+    syntax:
+      content: public void incrementRetryCount(String clientId)
+      parameters:
+        - id: clientId
+          type: '26831127'
+          description: <p>失敗した操作を再試行して、クライアントの id </p>
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.isRetryableException(Exception)
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: isRetryableException(Exception exception)
+    nameWithType: RetryPolicy.isRetryableException(Exception exception)
+    fullName: static boolean com.microsoft.azure.servicebus.primitives.RetryPolicy.isRetryableException(Exception exception)
+    type: Method
+    summary: <p>例外が再試行可能かどうかを決定します。 一時的な例外のみを再試行する必要があります。 </p>
+    syntax:
+      content: public static boolean isRetryableException(Exception exception)
+      parameters:
+        - id: exception
+          type: 8a99d4b0
+          description: <p>指定するかどうかは、再試行可能な操作によって発生した例外。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>true は、例外が再試行可能の (ServerBusy やなどの他の一時的な例外)、それ以外の場合は false を返します </p>
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.resetRetryCount(String)
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: resetRetryCount(String clientId)
+    nameWithType: RetryPolicy.resetRetryCount(String clientId)
+    fullName: void com.microsoft.azure.servicebus.primitives.RetryPolicy.resetRetryCount(String clientId)
+    type: Method
+    summary: <p>クライアントによって行われた再試行の回数をリセットします。 再試行の操作が成功したときに、クライアントがこのメソッドが呼び出されます。 </p>
+    syntax:
+      content: public void resetRetryCount(String clientId)
+      parameters:
+        - id: clientId
+          type: '26831127'
+          description: <p>だけで、クライアントの id は、失敗した操作を再試行され、成功しました。 </p>
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.RetryPolicy(final String)
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: RetryPolicy(final String name)
+    nameWithType: RetryPolicy.RetryPolicy(final String name)
+    fullName: com.microsoft.azure.servicebus.primitives.RetryPolicy.RetryPolicy(final String name)
+    type: Constructor
+    summary: <p>インスタンスを作成<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定した名前です。 </p>
+    syntax:
+      content: protected RetryPolicy(final String name)
+      parameters:
+        - id: name
+          type: 3d93591e
+          description: <p>ポリシーの名前 </p>
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy.toString()
+    parent: com.microsoft.azure.servicebus.primitives._retry_policy
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: toString()
+    nameWithType: RetryPolicy.toString()
+    fullName: String com.microsoft.azure.servicebus.primitives.RetryPolicy.toString()
+    type: Method
+    syntax:
+      content: public String toString()
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.servicebus.primitives._retry_policy
+    parent: com.microsoft.azure.servicebus.primitives
+    href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.servicebus.primitives.RetryPolicy
+    type: Class
+    summary: <p>例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。 送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。 クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。 ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。 </p>
+    syntax:
+      content: public class RetryPolicy
+  - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder
+    parent: com.microsoft.azure.servicebus.primitives
+    href: com.microsoft.azure.servicebus.primitives._connection_string_builder.yml
+    name: ConnectionStringBuilder
+    nameWithType: ConnectionStringBuilder
+    fullName: com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder
+    type: Class
+    summary: |-
+      <p>このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。 既存の接続文字列で基本的な検証を実行するも使用できます。 </p>
+      <p>サンプル コードに示します。 <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
+
+                                                   "ServiceBusNamespaceName", 
+
+                                                   "ServiceBusEntityName", // QueueName or TopicName or SubscriptionPath
+
+                                                   "SharedAccessSignatureKeyName", 
+
+                                                   "SharedAccessSignatureKey");
+
+           
+
+          String connectionString = connectionStringBuilder.toString();
+
+          </code></pre></p>
+
+      <p>接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。 基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem><p>エンドポイントで servicebus 名前空間を指す URL </p></listitem><listitem><p>EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。 キューおよびトピックでは、エンティティの名前だけです。 サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p></listitem><listitem><p>SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。 </p></listitem><listitem><p>SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。 </p></listitem><listitem><p>SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。 </p></listitem><listitem><p>OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。 </p></listitem><listitem><p><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。 </p></listitem></itemizedlist></p>
+    syntax:
+      content: public class ConnectionStringBuilder

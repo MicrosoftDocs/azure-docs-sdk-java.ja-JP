@@ -1,0 +1,138 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._service_health_state_chunk
+    id: _service_health_state_chunk
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._service_health_state_chunk.getHealthState()
+      - system.fabric.health._service_health_state_chunk.getPartitionHealthStateChunks()
+      - system.fabric.health._service_health_state_chunk.getServiceName()
+    href: system.fabric.health._service_health_state_chunk.yml
+    langs:
+      - java
+    name: ServiceHealthStateChunk
+    nameWithType: ServiceHealthStateChunk
+    fullName: system.fabric.health.ServiceHealthStateChunk
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthStateChunk.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthStateChunk.java
+      startLine: 8
+    package: system.fabric.health
+    summary: <p>基本的な正常性サービスの情報が含まれているサービスの正常性の状態チャンクを表します。 </p>
+    syntax:
+      content: public class ServiceHealthStateChunk
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric.health._service_health_state_chunk.getHealthState()
+    id: getHealthState()
+    parent: system.fabric.health._service_health_state_chunk
+    href: system.fabric.health._service_health_state_chunk.yml
+    langs:
+      - java
+    name: getHealthState()
+    nameWithType: ServiceHealthStateChunk.getHealthState()
+    fullName: HealthState system.fabric.health.ServiceHealthStateChunk.getHealthState()
+    overload: system.fabric.health._service_health_state_chunk.getHealthState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthStateChunk.java
+      startLine: 43
+    package: system.fabric.health
+    summary: |-
+      <p>報告された状態のすべてのイベント、その子およびアプリケーションの正常性ポリシーに基づく計算、サービスの集計されたヘルス状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: <p>サービスの集計された正常性状態 </p>
+  - uid: system.fabric.health._service_health_state_chunk.getPartitionHealthStateChunks()
+    id: getPartitionHealthStateChunks()
+    parent: system.fabric.health._service_health_state_chunk
+    href: system.fabric.health._service_health_state_chunk.yml
+    langs:
+      - java
+    name: getPartitionHealthStateChunks()
+    nameWithType: ServiceHealthStateChunk.getPartitionHealthStateChunks()
+    fullName: PartitionHealthStateChunkList system.fabric.health.ServiceHealthStateChunk.getPartitionHealthStateChunks()
+    overload: system.fabric.health._service_health_state_chunk.getPartitionHealthStateChunks*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthStateChunk.java
+      startLine: 33
+    package: system.fabric.health
+    summary: "<p>入力のフィルターの適用状態チャンク サービス パーティションの正常性の一覧を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定では、子に含まれていない結果です。 ユーザーは、必要な正常性アドインまたはその他の情報に基づく子の一部を含めるように要求できます。 たとえば、ユーザーは、ヘルス状態のエラーのあるすべてのパーティションを含めるに要求できます。 フィルター値に関係なく、すべての子は、サービスの集計された正常性が計算に使用されます。 </p>"
+    syntax:
+      content: public PartitionHealthStateChunkList getPartitionHealthStateChunks()
+      return:
+        type: system.fabric.health._partition_health_state_chunk_list
+        description: <p>入力フィルターを適用するパーティションのヘルス状態のチャンクの一覧。 </p>
+  - uid: system.fabric.health._service_health_state_chunk.getServiceName()
+    id: getServiceName()
+    parent: system.fabric.health._service_health_state_chunk
+    href: system.fabric.health._service_health_state_chunk.yml
+    langs:
+      - java
+    name: getServiceName()
+    nameWithType: ServiceHealthStateChunk.getServiceName()
+    fullName: URI system.fabric.health.ServiceHealthStateChunk.getServiceName()
+    overload: system.fabric.health._service_health_state_chunk.getServiceName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ServiceHealthStateChunk.java
+      startLine: 52
+    package: system.fabric.health
+    summary: |-
+      <p>サービスを一意に識別するサービス名を取得します。</p>
+      <p></p>
+    syntax:
+      content: public URI getServiceName()
+      return:
+        type: '62304784'
+        description: <p>サービスの名前。 </p>
+references:
+  - uid: system.fabric.health._service_health_state_chunk.getPartitionHealthStateChunks*
+    name: getPartitionHealthStateChunks
+    nameWithType: ServiceHealthStateChunk.getPartitionHealthStateChunks
+    fullName: PartitionHealthStateChunkList system.fabric.health.ServiceHealthStateChunk.getPartitionHealthStateChunks
+    package: system.fabric.health
+  - uid: system.fabric.health._service_health_state_chunk.getHealthState*
+    name: getHealthState
+    nameWithType: ServiceHealthStateChunk.getHealthState
+    fullName: HealthState system.fabric.health.ServiceHealthStateChunk.getHealthState
+    package: system.fabric.health
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: system.fabric.health._service_health_state_chunk.getServiceName*
+    name: getServiceName
+    nameWithType: ServiceHealthStateChunk.getServiceName
+    fullName: URI system.fabric.health.ServiceHealthStateChunk.getServiceName
+    package: system.fabric.health
+  - uid: system.fabric.health._health_state
+    parent: system.fabric.health
+    href: system.fabric.health._health_state.yml
+    name: HealthState
+    nameWithType: HealthState
+    fullName: system.fabric.health.HealthState
+    type: Enum
+    syntax:
+      content: public enum HealthState
+  - uid: system.fabric.health._partition_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health_state_chunk_list.yml
+    name: PartitionHealthStateChunkList
+    nameWithType: PartitionHealthStateChunkList
+    fullName: system.fabric.health.PartitionHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._partition_health_state_chunk\" data-throw-if-not-resolved=\"false\">PartitionHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class PartitionHealthStateChunkList extends HealthStateChunkList<PartitionHealthStateChunk>

@@ -1,0 +1,1711 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.batch._job_operations
+    id: _job_operations
+    parent: com.microsoft.azure.batch
+    children:
+      - com.microsoft.azure.batch._job_operations.createJob(JobAddParameter)
+      - 'com.microsoft.azure.batch._job_operations.createJob(JobAddParameter,Iterable<BatchClientBehavior>)'
+      - 'com.microsoft.azure.batch._job_operations.createJob(String,PoolInformation)'
+      - 'com.microsoft.azure.batch._job_operations.createJob(String,PoolInformation,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.customBehaviors()
+      - com.microsoft.azure.batch._job_operations.deleteJob(String)
+      - 'com.microsoft.azure.batch._job_operations.deleteJob(String,Iterable<BatchClientBehavior>)'
+      - 'com.microsoft.azure.batch._job_operations.disableJob(String,DisableJobOption)'
+      - 'com.microsoft.azure.batch._job_operations.disableJob(String,DisableJobOption,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.enableJob(String)
+      - 'com.microsoft.azure.batch._job_operations.enableJob(String,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics()
+      - com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior>)
+      - com.microsoft.azure.batch._job_operations.getJob(String)
+      - 'com.microsoft.azure.batch._job_operations.getJob(String,DetailLevel)'
+      - 'com.microsoft.azure.batch._job_operations.getJob(String,DetailLevel,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.getTaskCounts(String)
+      - 'com.microsoft.azure.batch._job_operations.getTaskCounts(String,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.listJobs()
+      - com.microsoft.azure.batch._job_operations.listJobs(DetailLevel)
+      - 'com.microsoft.azure.batch._job_operations.listJobs(DetailLevel,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.listJobs(String)
+      - 'com.microsoft.azure.batch._job_operations.listJobs(String,DetailLevel)'
+      - 'com.microsoft.azure.batch._job_operations.listJobs(String,DetailLevel,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus(String)
+      - 'com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus(String,Iterable<BatchClientBehavior>)'
+      - 'com.microsoft.azure.batch._job_operations.patchJob(String,JobPatchParameter)'
+      - 'com.microsoft.azure.batch._job_operations.patchJob(String,JobPatchParameter,Iterable<BatchClientBehavior>)'
+      - 'com.microsoft.azure.batch._job_operations.patchJob(String,OnAllTasksComplete)'
+      - 'com.microsoft.azure.batch._job_operations.patchJob(String,PoolInformation)'
+      - 'com.microsoft.azure.batch._job_operations.patchJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>)'
+      - 'com.microsoft.azure.batch._job_operations.patchJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.terminateJob(String)
+      - 'com.microsoft.azure.batch._job_operations.terminateJob(String,String)'
+      - 'com.microsoft.azure.batch._job_operations.terminateJob(String,String,Iterable<BatchClientBehavior>)'
+      - 'com.microsoft.azure.batch._job_operations.updateJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>)'
+      - 'com.microsoft.azure.batch._job_operations.updateJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>,Iterable<BatchClientBehavior>)'
+      - com.microsoft.azure.batch._job_operations.withCustomBehaviors(Collection<BatchClientBehavior>)
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: JobOperations
+    nameWithType: JobOperations
+    fullName: com.microsoft.azure.batch.JobOperations
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-batch-sdk-for-java'
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 17
+    package: com.microsoft.azure.batch
+    summary: <p>Azure Batch アカウントのジョブに関連する操作を実行します。 </p>
+    syntax:
+      content: public class JobOperations implements IInheritedBehaviors
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.batch._i_inherited_behaviors
+  - uid: com.microsoft.azure.batch._job_operations.createJob(JobAddParameter)
+    id: createJob(JobAddParameter)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: createJob(JobAddParameter job)
+    nameWithType: JobOperations.createJob(JobAddParameter job)
+    fullName: void com.microsoft.azure.batch.JobOperations.createJob(JobAddParameter job)
+    overload: com.microsoft.azure.batch._job_operations.createJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 277
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>Batch アカウントに、ジョブを追加します。</p>
+      <p></p>
+    syntax:
+      content: public void createJob(JobAddParameter job)
+      parameters:
+        - id: job
+          type: com.microsoft.azure.batch.protocol.models._job_add_parameter
+          description: <p>追加するジョブです。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.createJob(JobAddParameter,Iterable<BatchClientBehavior>)'
+    id: 'createJob(JobAddParameter,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'createJob(JobAddParameter job, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.createJob(JobAddParameter job, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.createJob(JobAddParameter job, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.createJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 289
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>Batch アカウントに、ジョブを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void createJob(JobAddParameter job, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: job
+          type: com.microsoft.azure.batch.protocol.models._job_add_parameter
+          description: <p>追加するジョブです。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.createJob(String,PoolInformation)'
+    id: 'createJob(String,PoolInformation)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'createJob(String jobId, PoolInformation poolInfo)'
+    nameWithType: 'JobOperations.createJob(String jobId, PoolInformation poolInfo)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.createJob(String jobId, PoolInformation poolInfo)'
+    overload: com.microsoft.azure.batch._job_operations.createJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 249
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>Batch アカウントに、ジョブを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void createJob(String jobId, PoolInformation poolInfo)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>追加するジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>ジョブのプールに割り当て方法を指定します。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.createJob(String,PoolInformation,Iterable<BatchClientBehavior>)'
+    id: 'createJob(String,PoolInformation,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'createJob(String jobId, PoolInformation poolInfo, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.createJob(String jobId, PoolInformation poolInfo, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.createJob(String jobId, PoolInformation poolInfo, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.createJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 262
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>Batch アカウントに、ジョブを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void createJob(String jobId, PoolInformation poolInfo, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>追加するジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>ジョブのプールに割り当て方法を指定します。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.customBehaviors()
+    id: customBehaviors()
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: customBehaviors()
+    nameWithType: JobOperations.customBehaviors()
+    fullName: Collection<BatchClientBehavior> com.microsoft.azure.batch.JobOperations.customBehaviors()
+    overload: com.microsoft.azure.batch._job_operations.customBehaviors*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 36
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>動作を変更またはカスタマイズする、Batch service への要求のコレクションを取得します。</p>
+      <p></p>
+    syntax:
+      content: public Collection<BatchClientBehavior> customBehaviors()
+      return:
+        type: 12ebb11acom.microsoft.azure.batch._batch_client_behaviora08ddfce
+        description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>インスタンス。 </p>
+    overridden: com.microsoft.azure.batch._i_inherited_behaviors.customBehaviors()
+  - uid: com.microsoft.azure.batch._job_operations.deleteJob(String)
+    id: deleteJob(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: deleteJob(String jobId)
+    nameWithType: JobOperations.deleteJob(String jobId)
+    fullName: void com.microsoft.azure.batch.JobOperations.deleteJob(String jobId)
+    overload: com.microsoft.azure.batch._job_operations.deleteJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 304
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを削除します。</p>
+      <p></p>
+    syntax:
+      content: public void deleteJob(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.deleteJob(String,Iterable<BatchClientBehavior>)'
+    id: 'deleteJob(String,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'deleteJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.deleteJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.deleteJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.deleteJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 316
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public void deleteJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.disableJob(String,DisableJobOption)'
+    id: 'disableJob(String,DisableJobOption)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'disableJob(String jobId, DisableJobOption disableJobOption)'
+    nameWithType: 'JobOperations.disableJob(String jobId, DisableJobOption disableJobOption)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.disableJob(String jobId, DisableJobOption disableJobOption)'
+    overload: com.microsoft.azure.batch._job_operations.disableJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 399
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを無効にします。 無効なジョブは、新しいタスクを実行しないでくださいが、後で再度有効ことがあります。</p>
+      <p></p>
+    syntax:
+      content: 'public void disableJob(String jobId, DisableJobOption disableJobOption)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: disableJobOption
+          type: com.microsoft.azure.batch.protocol.models._disable_job_option
+          description: <p>ジョブに関連付けられているタスクの実行を行うには新機能を指定します。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.disableJob(String,DisableJobOption,Iterable<BatchClientBehavior>)'
+    id: 'disableJob(String,DisableJobOption,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'disableJob(String jobId, DisableJobOption disableJobOption, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.disableJob(String jobId, DisableJobOption disableJobOption, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.disableJob(String jobId, DisableJobOption disableJobOption, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.disableJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 412
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを無効にします。 無効なジョブは、新しいタスクを実行しないでくださいが、後で再度有効ことがあります。</p>
+      <p></p>
+    syntax:
+      content: 'public void disableJob(String jobId, DisableJobOption disableJobOption, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: disableJobOption
+          type: com.microsoft.azure.batch.protocol.models._disable_job_option
+          description: <p>ジョブに関連付けられているタスクの実行を行うには新機能を指定します。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.enableJob(String)
+    id: enableJob(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: enableJob(String jobId)
+    nameWithType: JobOperations.enableJob(String jobId)
+    fullName: void com.microsoft.azure.batch.JobOperations.enableJob(String jobId)
+    overload: com.microsoft.azure.batch._job_operations.enableJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 371
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>新しいタスクの実行を許可する、指定されたジョブを有効にします。</p>
+      <p></p>
+    syntax:
+      content: public void enableJob(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.enableJob(String,Iterable<BatchClientBehavior>)'
+    id: 'enableJob(String,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'enableJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.enableJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.enableJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.enableJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 383
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>新しいタスクの実行を許可する、指定されたジョブを有効にします。</p>
+      <p></p>
+    syntax:
+      content: 'public void enableJob(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics()
+    id: getAllJobsLifetimeStatistics()
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: getAllJobsLifetimeStatistics()
+    nameWithType: JobOperations.getAllJobsLifetimeStatistics()
+    fullName: JobStatistics com.microsoft.azure.batch.JobOperations.getAllJobsLifetimeStatistics()
+    overload: com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 59
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>ジョブの現在のアカウント内のすべての有効期間の概要統計情報を取得します。</p>
+      <p></p>
+    syntax:
+      content: public JobStatistics getAllJobsLifetimeStatistics()
+      return:
+        type: com.microsoft.azure.batch.protocol.models._job_statistics
+        description: <p>集計されたジョブの統計。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior>)
+    id: getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior>)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior> additionalBehaviors)
+    nameWithType: JobOperations.getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior> additionalBehaviors)
+    fullName: JobStatistics com.microsoft.azure.batch.JobOperations.getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior> additionalBehaviors)
+    overload: com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 71
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>ジョブの現在のアカウント内のすべての有効期間の概要統計情報を取得します。</p>
+      <p></p>
+    syntax:
+      content: public JobStatistics getAllJobsLifetimeStatistics(Iterable<BatchClientBehavior> additionalBehaviors)
+      parameters:
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._job_statistics
+        description: <p>集計されたジョブの統計。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.getJob(String)
+    id: getJob(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: getJob(String jobId)
+    nameWithType: JobOperations.getJob(String jobId)
+    fullName: CloudJob com.microsoft.azure.batch.JobOperations.getJob(String jobId)
+    overload: com.microsoft.azure.batch._job_operations.getJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 87
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定された取得<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public CloudJob getJob(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>取得するジョブの ID。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._cloud_job
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>指定した Azure Batch のジョブに関する情報を格納します。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.getJob(String,DetailLevel)'
+    id: 'getJob(String,DetailLevel)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'getJob(String jobId, DetailLevel detailLevel)'
+    nameWithType: 'JobOperations.getJob(String jobId, DetailLevel detailLevel)'
+    fullName: 'CloudJob com.microsoft.azure.batch.JobOperations.getJob(String jobId, DetailLevel detailLevel)'
+    overload: com.microsoft.azure.batch._job_operations.getJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 100
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定された取得<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudJob getJob(String jobId, DetailLevel detailLevel)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>取得するジョブの ID。 </p>
+        - id: detailLevel
+          type: com.microsoft.azure.batch._detail_level
+          description: <p>A <xref uid="com.microsoft.azure.batch._detail_level" data-throw-if-not-resolved="false">DetailLevel</xref>サービスから取得するプロパティを制御するために使用します。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._cloud_job
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>指定した Azure Batch のジョブに関する情報を格納します。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.getJob(String,DetailLevel,Iterable<BatchClientBehavior>)'
+    id: 'getJob(String,DetailLevel,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'getJob(String jobId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.getJob(String jobId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'CloudJob com.microsoft.azure.batch.JobOperations.getJob(String jobId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.getJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 114
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定された取得<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudJob getJob(String jobId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>取得するジョブの ID。 </p>
+        - id: detailLevel
+          type: com.microsoft.azure.batch._detail_level
+          description: <p>A <xref uid="com.microsoft.azure.batch._detail_level" data-throw-if-not-resolved="false">DetailLevel</xref>サービスから取得するプロパティを制御するために使用します。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._cloud_job
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>指定した Azure Batch のジョブに関する情報を格納します。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.getTaskCounts(String)
+    id: getTaskCounts(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: getTaskCounts(String jobId)
+    nameWithType: JobOperations.getTaskCounts(String jobId)
+    fullName: TaskCounts com.microsoft.azure.batch.JobOperations.getTaskCounts(String jobId)
+    overload: com.microsoft.azure.batch._job_operations.getTaskCounts*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 578
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定されたジョブのタスクの数を取得します。 タスクの数は、アクティブな実行中または完了したタスクの状態によって、タスクの数と、成功または失敗したタスクの数を提供します。 準備状態のタスクが実行中としてカウントされます。 ValidationStatus が検証済みでない場合、Batch サービスがされていませんリスト タスク API で報告されるタスクの状態に対して状態の数を確認できません。 ジョブには、200,000 以上のタスクが含まれている場合に、validationStatus を検証できない可能性があります。</p>
+      <p></p>
+    syntax:
+      content: public TaskCounts getTaskCounts(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._task_counts
+        description: <p>成功した場合は、TaskCounts オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.getTaskCounts(String,Iterable<BatchClientBehavior>)'
+    id: 'getTaskCounts(String,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'getTaskCounts(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.getTaskCounts(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'TaskCounts com.microsoft.azure.batch.JobOperations.getTaskCounts(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.getTaskCounts*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 592
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定されたジョブのタスクの数を取得します。 タスクの数は、アクティブな実行中または完了したタスクの状態によって、タスクの数と、成功または失敗したタスクの数を提供します。 準備状態のタスクが実行中としてカウントされます。 ValidationStatus が検証済みでない場合、Batch サービスがされていませんリスト タスク API で報告されるタスクの状態に対して状態の数を確認できません。 ジョブには、200,000 以上のタスクが含まれている場合に、validationStatus を検証できない可能性があります。</p>
+      <p></p>
+    syntax:
+      content: 'public TaskCounts getTaskCounts(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+      return:
+        type: com.microsoft.azure.batch.protocol.models._task_counts
+        description: <p>成功した場合は、TaskCounts オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>要求がサーバーによって拒否された場合にスローされます。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.listJobs()
+    id: listJobs()
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: listJobs()
+    nameWithType: JobOperations.listJobs()
+    fullName: List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs()
+    overload: com.microsoft.azure.batch._job_operations.listJobs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 131
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>一覧表示、<xref uid="" data-throw-if-not-resolved="false">ジョブ</xref>Batch アカウントにします。</p>
+      <p></p>
+    syntax:
+      content: public List<CloudJob> listJobs()
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.listJobs(DetailLevel)
+    id: listJobs(DetailLevel)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: listJobs(DetailLevel detailLevel)
+    nameWithType: JobOperations.listJobs(DetailLevel detailLevel)
+    fullName: List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs(DetailLevel detailLevel)
+    overload: com.microsoft.azure.batch._job_operations.listJobs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 143
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>一覧表示、<xref uid="" data-throw-if-not-resolved="false">ジョブ</xref>Batch アカウントにします。</p>
+      <p></p>
+    syntax:
+      content: public List<CloudJob> listJobs(DetailLevel detailLevel)
+      parameters:
+        - id: detailLevel
+          type: com.microsoft.azure.batch._detail_level
+          description: <p>A <xref uid="com.microsoft.azure.batch._detail_level" data-throw-if-not-resolved="false">DetailLevel</xref>一覧をフィルター処理し、サービスから取得するプロパティを制御するために使用します。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.listJobs(DetailLevel,Iterable<BatchClientBehavior>)'
+    id: 'listJobs(DetailLevel,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'listJobs(DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.listJobs(DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs(DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.listJobs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 156
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>一覧表示、<xref uid="" data-throw-if-not-resolved="false">ジョブ</xref>Batch アカウントにします。</p>
+      <p></p>
+    syntax:
+      content: 'public List<CloudJob> listJobs(DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: detailLevel
+          type: com.microsoft.azure.batch._detail_level
+          description: <p>A <xref uid="com.microsoft.azure.batch._detail_level" data-throw-if-not-resolved="false">DetailLevel</xref>一覧をフィルター処理し、サービスから取得するプロパティを制御するために使用します。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.listJobs(String)
+    id: listJobs(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: listJobs(String jobScheduleId)
+    nameWithType: JobOperations.listJobs(String jobScheduleId)
+    fullName: List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs(String jobScheduleId)
+    overload: com.microsoft.azure.batch._job_operations.listJobs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 174
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>一覧表示、<xref uid="" data-throw-if-not-resolved="false">ジョブ</xref>指定されたジョブのスケジュールの下に作成します。</p>
+      <p></p>
+    syntax:
+      content: public List<CloudJob> listJobs(String jobScheduleId)
+      parameters:
+        - id: jobScheduleId
+          type: '26831127'
+          description: <p>ジョブのスケジュールの ID。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.listJobs(String,DetailLevel)'
+    id: 'listJobs(String,DetailLevel)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'listJobs(String jobScheduleId, DetailLevel detailLevel)'
+    nameWithType: 'JobOperations.listJobs(String jobScheduleId, DetailLevel detailLevel)'
+    fullName: 'List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs(String jobScheduleId, DetailLevel detailLevel)'
+    overload: com.microsoft.azure.batch._job_operations.listJobs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 187
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>一覧表示、<xref uid="" data-throw-if-not-resolved="false">ジョブ</xref>指定されたジョブのスケジュールの下に作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public List<CloudJob> listJobs(String jobScheduleId, DetailLevel detailLevel)'
+      parameters:
+        - id: jobScheduleId
+          type: '26831127'
+          description: <p>ジョブのスケジュールの ID。 </p>
+        - id: detailLevel
+          type: com.microsoft.azure.batch._detail_level
+          description: <p>A <xref uid="com.microsoft.azure.batch._detail_level" data-throw-if-not-resolved="false">DetailLevel</xref>一覧をフィルター処理し、サービスから取得するプロパティを制御するために使用します。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.listJobs(String,DetailLevel,Iterable<BatchClientBehavior>)'
+    id: 'listJobs(String,DetailLevel,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'listJobs(String jobScheduleId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.listJobs(String jobScheduleId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs(String jobScheduleId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.listJobs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 201
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>一覧表示、<xref uid="" data-throw-if-not-resolved="false">ジョブ</xref>指定 jobSchedule の下に作成します。</p>
+      <p></p>
+    syntax:
+      content: 'public List<CloudJob> listJobs(String jobScheduleId, DetailLevel detailLevel, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobScheduleId
+          type: '26831127'
+          description: <p>JobSchedule の ID。 </p>
+        - id: detailLevel
+          type: com.microsoft.azure.batch._detail_level
+          description: <p>A <xref uid="com.microsoft.azure.batch._detail_level" data-throw-if-not-resolved="false">DetailLevel</xref>一覧をフィルター処理し、サービスから取得するプロパティを制御するために使用します。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">CloudJob</xref>オブジェクト。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus(String)
+    id: listPreparationAndReleaseTaskStatus(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: listPreparationAndReleaseTaskStatus(String jobId)
+    nameWithType: JobOperations.listPreparationAndReleaseTaskStatus(String jobId)
+    fullName: List<JobPreparationAndReleaseTaskExecutionInformation> com.microsoft.azure.batch.JobOperations.listPreparationAndReleaseTaskStatus(String jobId)
+    overload: com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 219
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>状態を一覧表示<xref uid="" data-throw-if-not-resolved="false">JobPreparationTask</xref>と<xref uid="" data-throw-if-not-resolved="false">JobReleaseTask</xref>指定されたジョブのタスクです。</p>
+      <p></p>
+    syntax:
+      content: public List<JobPreparationAndReleaseTaskExecutionInformation> listPreparationAndReleaseTaskStatus(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_informationa08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">JobPreparationAndReleaseTaskExecutionInformation</xref>インスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus(String,Iterable<BatchClientBehavior>)'
+    id: 'listPreparationAndReleaseTaskStatus(String,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'listPreparationAndReleaseTaskStatus(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.listPreparationAndReleaseTaskStatus(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'List<JobPreparationAndReleaseTaskExecutionInformation> com.microsoft.azure.batch.JobOperations.listPreparationAndReleaseTaskStatus(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 232
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>状態を一覧表示<xref uid="" data-throw-if-not-resolved="false">JobPreparationTask</xref>と<xref uid="" data-throw-if-not-resolved="false">JobReleaseTask</xref>指定されたジョブのタスクです。</p>
+      <p></p>
+    syntax:
+      content: 'public List<JobPreparationAndReleaseTaskExecutionInformation> listPreparationAndReleaseTaskStatus(String jobId, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_informationa08ddfce
+        description: <p>一連の<xref uid="" data-throw-if-not-resolved="false">JobPreparationAndReleaseTaskExecutionInformation</xref>インスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.patchJob(String,JobPatchParameter)'
+    id: 'patchJob(String,JobPatchParameter)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'patchJob(String jobId, JobPatchParameter jobPatchParameter)'
+    nameWithType: 'JobOperations.patchJob(String jobId, JobPatchParameter jobPatchParameter)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.patchJob(String jobId, JobPatchParameter jobPatchParameter)'
+    overload: com.microsoft.azure.batch._job_operations.patchJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 547
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、null 以外の値で指定されたプロパティのみを置き換えます。</p>
+      <p></p>
+    syntax:
+      content: 'public void patchJob(String jobId, JobPatchParameter jobPatchParameter)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: jobPatchParameter
+          type: com.microsoft.azure.batch.protocol.models._job_patch_parameter
+          description: <p>ジョブに対する変更のセット。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.patchJob(String,JobPatchParameter,Iterable<BatchClientBehavior>)'
+    id: 'patchJob(String,JobPatchParameter,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'patchJob(String jobId, JobPatchParameter jobPatchParameter, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.patchJob(String jobId, JobPatchParameter jobPatchParameter, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.patchJob(String jobId, JobPatchParameter jobPatchParameter, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.patchJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 561
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、null 以外の値で指定されたプロパティのみを置き換えます。</p>
+      <p></p>
+    syntax:
+      content: 'public void patchJob(String jobId, JobPatchParameter jobPatchParameter, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: jobPatchParameter
+          type: com.microsoft.azure.batch.protocol.models._job_patch_parameter
+          description: <p>ジョブを更新するパラメーター。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.patchJob(String,OnAllTasksComplete)'
+    id: 'patchJob(String,OnAllTasksComplete)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'patchJob(String jobId, OnAllTasksComplete onAllTasksComplete)'
+    nameWithType: 'JobOperations.patchJob(String jobId, OnAllTasksComplete onAllTasksComplete)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.patchJob(String jobId, OnAllTasksComplete onAllTasksComplete)'
+    overload: com.microsoft.azure.batch._job_operations.patchJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 490
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、null 以外の値で指定されたプロパティのみを置き換えます。</p>
+      <p></p>
+    syntax:
+      content: 'public void patchJob(String jobId, OnAllTasksComplete onAllTasksComplete)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: onAllTasksComplete
+          type: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete
+          description: <p>ジョブ内のすべてのタスクが完了した状態で、ときにバッチ サービスが行うアクションを指定します。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.patchJob(String,PoolInformation)'
+    id: 'patchJob(String,PoolInformation)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'patchJob(String jobId, PoolInformation poolInfo)'
+    nameWithType: 'JobOperations.patchJob(String jobId, PoolInformation poolInfo)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.patchJob(String jobId, PoolInformation poolInfo)'
+    overload: com.microsoft.azure.batch._job_operations.patchJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 477
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、null 以外の値で指定されたプロパティのみを置き換えます。</p>
+      <p></p>
+    syntax:
+      content: 'public void patchJob(String jobId, PoolInformation poolInfo)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>バッチ サービスがジョブのタスクを実行するプールです。 ジョブが無効になっている場合にのみ、ジョブのプールを変更することがあります。 KeepAlive プロパティのみを更新できる場合は、poolInfo で autoPoolSpecification 仕様を指定すると、し、自動プールのジョブの poolLifetimeOption がある場合のみです。 Null の場合、ジョブは引き続き、現在のプールで実行されます。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.patchJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>)'
+    id: 'patchJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+    nameWithType: 'JobOperations.patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+    overload: com.microsoft.azure.batch._job_operations.patchJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 507
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、null 以外の値で指定されたプロパティのみを置き換えます。</p>
+      <p></p>
+    syntax:
+      content: 'public void patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>バッチ サービスがジョブのタスクを実行するプールです。 ジョブが無効になっている場合にのみ、ジョブのプールを変更することがあります。 KeepAlive プロパティのみを更新できる場合は、poolInfo で autoPoolSpecification 仕様を指定すると、し、自動プールのジョブの poolLifetimeOption がある場合のみです。 Null の場合、ジョブは引き続き、現在のプールで実行されます。 </p>
+        - id: priority
+          type: 08effaa0
+          description: <p>ジョブの優先度です。 優先順位の値の範囲は -1000 から 1000、-1000 が最も低い優先度と 1000 中優先順位が高いです。 Null の場合、ジョブの優先度のままにする場合は変更されません。 </p>
+        - id: constraints
+          type: com.microsoft.azure.batch.protocol.models._job_constraints
+          description: <p>ジョブの実行制約。 Null の場合、制約のままにする既存の実行は変更されません。 </p>
+        - id: onAllTasksComplete
+          type: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete
+          description: <p>ジョブ内のすべてのタスクが完了した状態で、ときにバッチ サービスが行うアクションを指定します。 </p>
+        - id: metadata
+          type: 5618da2dcom.microsoft.azure.batch.protocol.models._metadata_itema08ddfce
+          description: <p>ジョブにメタデータとして関連付けられた名前と値のペアの一覧。 Null の場合、既存のジョブ メタデータのままにする場合は変更されません。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.patchJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>,Iterable<BatchClientBehavior>)'
+    id: 'patchJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.patchJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 526
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、null 以外の値で指定されたプロパティのみを置き換えます。</p>
+      <p></p>
+    syntax:
+      content: 'public void patchJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>バッチ サービスがジョブのタスクを実行するプールです。 ジョブが無効になっている場合にのみ、ジョブのプールを変更することがあります。 KeepAlive プロパティのみを更新できる場合は、poolInfo で autoPoolSpecification 仕様を指定すると、し、自動プールのジョブの poolLifetimeOption がある場合のみです。 Null の場合、ジョブは引き続き、現在のプールで実行されます。 </p>
+        - id: priority
+          type: 08effaa0
+          description: <p>ジョブの優先度です。 優先順位の値の範囲は -1000 から 1000、-1000 が最も低い優先度と 1000 中優先順位が高いです。 Null の場合、ジョブの優先度のままにする場合は変更されません。 </p>
+        - id: constraints
+          type: com.microsoft.azure.batch.protocol.models._job_constraints
+          description: <p>ジョブの実行制約。 Null の場合、制約のままにする既存の実行は変更されません。 </p>
+        - id: onAllTasksComplete
+          type: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete
+          description: <p>ジョブ内のすべてのタスクが完了した状態で、ときにバッチ サービスが行うアクションを指定します。 </p>
+        - id: metadata
+          type: 5618da2dcom.microsoft.azure.batch.protocol.models._metadata_itema08ddfce
+          description: <p>ジョブにメタデータとして関連付けられた名前と値のペアの一覧。 Null の場合、既存のジョブ メタデータのままにする場合は変更されません。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.terminateJob(String)
+    id: terminateJob(String)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: terminateJob(String jobId)
+    nameWithType: JobOperations.terminateJob(String jobId)
+    fullName: void com.microsoft.azure.batch.JobOperations.terminateJob(String jobId)
+    overload: com.microsoft.azure.batch._job_operations.terminateJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 331
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>完了としてマークして、指定されたジョブを終了します。</p>
+      <p></p>
+    syntax:
+      content: public void terminateJob(String jobId)
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.terminateJob(String,String)'
+    id: 'terminateJob(String,String)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'terminateJob(String jobId, String terminateReason)'
+    nameWithType: 'JobOperations.terminateJob(String jobId, String terminateReason)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.terminateJob(String jobId, String terminateReason)'
+    overload: com.microsoft.azure.batch._job_operations.terminateJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 343
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>完了としてマークして、指定されたジョブを終了します。</p>
+      <p></p>
+    syntax:
+      content: 'public void terminateJob(String jobId, String terminateReason)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: terminateReason
+          type: '26831127'
+          description: '<p>ジョブが終了した理由を説明するメッセージ。 呼び出すときに、このテキストが表示されます<xref uid="" data-throw-if-not-resolved="false">JobExecutionInformation#terminateReason()</xref>です。 </p>'
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.terminateJob(String,String,Iterable<BatchClientBehavior>)'
+    id: 'terminateJob(String,String,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'terminateJob(String jobId, String terminateReason, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.terminateJob(String jobId, String terminateReason, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.terminateJob(String jobId, String terminateReason, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.terminateJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 356
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>完了としてマークして、指定されたジョブを終了します。</p>
+      <p></p>
+    syntax:
+      content: 'public void terminateJob(String jobId, String terminateReason, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: terminateReason
+          type: '26831127'
+          description: '<p>ジョブが終了した理由を説明するメッセージ。 呼び出すときに、このテキストが表示されます<xref uid="" data-throw-if-not-resolved="false">JobExecutionInformation#terminateReason()</xref>です。 </p>'
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.updateJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>)'
+    id: 'updateJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+    nameWithType: 'JobOperations.updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+    overload: com.microsoft.azure.batch._job_operations.updateJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 433
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、ジョブのすべての更新可能なプロパティの完全置換を実行します。 たとえば、制約パラメーターが null で、バッチ サービスによって、ジョブの既存の制約を削除し、default 制約と共にに置き換えます。、</p>
+      <p></p>
+    syntax:
+      content: 'public void updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>バッチ サービスがジョブのタスクを実行するプールです。 ジョブが無効になっている場合にのみ、ジョブのプールを変更することがあります。 KeepAlive プロパティのみを更新できる場合は、poolInfo で autoPoolSpecification 仕様を指定すると、し、自動プールのジョブの poolLifetimeOption がある場合のみです。 </p>
+        - id: priority
+          type: 08effaa0
+          description: <p>ジョブの優先度です。 優先順位の値の範囲は -1000 から 1000、-1000 が最も低い優先度と 1000 中優先順位が高いです。 Null の場合、既定値 0 に設定されます。 </p>
+        - id: constraints
+          type: com.microsoft.azure.batch.protocol.models._job_constraints
+          description: <p>ジョブの実行制約。 Null の場合、制約はクリアされます。 </p>
+        - id: onAllTasksComplete
+          type: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete
+          description: <p>ジョブ内のすべてのタスクが完了した状態で、ときにバッチ サービスが行うアクションを指定します。 </p>
+        - id: metadata
+          type: 5618da2dcom.microsoft.azure.batch.protocol.models._metadata_itema08ddfce
+          description: <p>ジョブにメタデータとして関連付けられた名前と値のペアの一覧。 Null の場合、一覧が空の既定値になります実際には、既存のメタデータが削除されます。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: 'com.microsoft.azure.batch._job_operations.updateJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>,Iterable<BatchClientBehavior>)'
+    id: 'updateJob(String,PoolInformation,Integer,JobConstraints,OnAllTasksComplete,List<MetadataItem>,Iterable<BatchClientBehavior>)'
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: 'updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+    nameWithType: 'JobOperations.updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+    fullName: 'void com.microsoft.azure.batch.JobOperations.updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+    overload: com.microsoft.azure.batch._job_operations.updateJob*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 452
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>指定したジョブを更新します。 このメソッドは、ジョブのすべての更新可能なプロパティの完全置換を実行します。 たとえば、制約パラメーターが null で、バッチ サービスによって、ジョブの既存の制約を削除し、default 制約と共にに置き換えます。、</p>
+      <p></p>
+    syntax:
+      content: 'public void updateJob(String jobId, PoolInformation poolInfo, Integer priority, JobConstraints constraints, OnAllTasksComplete onAllTasksComplete, List<MetadataItem> metadata, Iterable<BatchClientBehavior> additionalBehaviors)'
+      parameters:
+        - id: jobId
+          type: '26831127'
+          description: <p>ジョブの ID。 </p>
+        - id: poolInfo
+          type: com.microsoft.azure.batch.protocol.models._pool_information
+          description: <p>バッチ サービスがジョブのタスクを実行するプールです。 ジョブが無効になっている場合にのみ、ジョブのプールを変更することがあります。 KeepAlive プロパティのみを更新できる場合は、poolInfo で autoPoolSpecification 仕様を指定すると、し、自動プールのジョブの poolLifetimeOption がある場合のみです。 </p>
+        - id: priority
+          type: 08effaa0
+          description: <p>ジョブの優先度です。 優先順位の値の範囲は -1000 から 1000、-1000 が最も低い優先度と 1000 中優先順位が高いです。 Null の場合、既定値 0 に設定されます。 </p>
+        - id: constraints
+          type: com.microsoft.azure.batch.protocol.models._job_constraints
+          description: <p>ジョブの実行制約。 Null の場合、制約はクリアされます。 </p>
+        - id: onAllTasksComplete
+          type: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete
+          description: <p>ジョブ内のすべてのタスクが完了した状態で、ときにバッチ サービスが行うアクションを指定します。 </p>
+        - id: metadata
+          type: 5618da2dcom.microsoft.azure.batch.protocol.models._metadata_itema08ddfce
+          description: <p>ジョブにメタデータとして関連付けられた名前と値のペアの一覧。 Null の場合、一覧が空の既定値になります実際には、既存のメタデータが削除されます。 </p>
+        - id: additionalBehaviors
+          type: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>バッチ サービス要求に適用されているインスタンス。 </p>
+    exceptions:
+      - type: c8683d81
+        description: <p>バッチ サービスからエラー応答が受信したときにスローされる例外。 </p>
+      - type: cbf33bbe
+        description: <p>送信されるバッチ サービスから受信したデータのシリアル化/逆シリアル化でエラーがある場合にスローされる例外。 </p>
+  - uid: com.microsoft.azure.batch._job_operations.withCustomBehaviors(Collection<BatchClientBehavior>)
+    id: withCustomBehaviors(Collection<BatchClientBehavior>)
+    parent: com.microsoft.azure.batch._job_operations
+    href: com.microsoft.azure.batch._job_operations.yml
+    langs:
+      - java
+    name: withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+    nameWithType: JobOperations.withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+    fullName: IInheritedBehaviors com.microsoft.azure.batch.JobOperations.withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+    overload: com.microsoft.azure.batch._job_operations.withCustomBehaviors*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/batch/JobOperations.java
+      startLine: 47
+    package: com.microsoft.azure.batch
+    summary: |-
+      <p>動作を変更またはカスタマイズする、Batch service への要求のコレクションを設定します。</p>
+      <p></p>
+    syntax:
+      content: public IInheritedBehaviors withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+      parameters:
+        - id: behaviors
+          type: 12ebb11acom.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>インスタンス。 </p>
+      return:
+        type: com.microsoft.azure.batch._i_inherited_behaviors
+        description: <p>現在のインスタンス。 </p>
+    overridden: com.microsoft.azure.batch._i_inherited_behaviors.withCustomBehaviors(Collection<BatchClientBehavior>)
+references:
+  - uid: 12ebb11acom.microsoft.azure.batch._batch_client_behaviora08ddfce
+    spec.java:
+      - name: Collection<
+        fullName: Collection<
+      - uid: com.microsoft.azure.batch._batch_client_behavior
+        name: BatchClientBehavior
+        fullName: com.microsoft.azure.batch.BatchClientBehavior
+        href: com.microsoft.azure.batch._batch_client_behavior.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.batch._job_operations.customBehaviors*
+    name: customBehaviors
+    nameWithType: JobOperations.customBehaviors
+    fullName: Collection<BatchClientBehavior> com.microsoft.azure.batch.JobOperations.customBehaviors
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.withCustomBehaviors*
+    name: withCustomBehaviors
+    nameWithType: JobOperations.withCustomBehaviors
+    fullName: IInheritedBehaviors com.microsoft.azure.batch.JobOperations.withCustomBehaviors
+    package: com.microsoft.azure.batch
+  - uid: c8683d81
+    spec.java:
+      - name: BatchErrorException
+        fullName: BatchErrorException
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: com.microsoft.azure.batch._job_operations.getAllJobsLifetimeStatistics*
+    name: getAllJobsLifetimeStatistics
+    nameWithType: JobOperations.getAllJobsLifetimeStatistics
+    fullName: JobStatistics com.microsoft.azure.batch.JobOperations.getAllJobsLifetimeStatistics
+    package: com.microsoft.azure.batch
+  - uid: 2a13b5a5com.microsoft.azure.batch._batch_client_behaviora08ddfce
+    spec.java:
+      - name: Iterable<
+        fullName: Iterable<
+      - uid: com.microsoft.azure.batch._batch_client_behavior
+        name: BatchClientBehavior
+        fullName: com.microsoft.azure.batch.BatchClientBehavior
+        href: com.microsoft.azure.batch._batch_client_behavior.yml
+      - name: '>'
+        fullName: '>'
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.batch._job_operations.getJob*
+    name: getJob
+    nameWithType: JobOperations.getJob
+    fullName: CloudJob com.microsoft.azure.batch.JobOperations.getJob
+    package: com.microsoft.azure.batch
+  - uid: 5618da2dcom.microsoft.azure.batch.protocol.models._cloud_joba08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.batch.protocol.models._cloud_job
+        name: CloudJob
+        fullName: com.microsoft.azure.batch.protocol.models.CloudJob
+        href: com.microsoft.azure.batch.protocol.models._cloud_job.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.batch._job_operations.listJobs*
+    name: listJobs
+    nameWithType: JobOperations.listJobs
+    fullName: List<CloudJob> com.microsoft.azure.batch.JobOperations.listJobs
+    package: com.microsoft.azure.batch
+  - uid: 5618da2dcom.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_informationa08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_information
+        name: JobPreparationAndReleaseTaskExecutionInformation
+        fullName: com.microsoft.azure.batch.protocol.models.JobPreparationAndReleaseTaskExecutionInformation
+        href: com.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_information.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.batch._job_operations.listPreparationAndReleaseTaskStatus*
+    name: listPreparationAndReleaseTaskStatus
+    nameWithType: JobOperations.listPreparationAndReleaseTaskStatus
+    fullName: List<JobPreparationAndReleaseTaskExecutionInformation> com.microsoft.azure.batch.JobOperations.listPreparationAndReleaseTaskStatus
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.createJob*
+    name: createJob
+    nameWithType: JobOperations.createJob
+    fullName: void com.microsoft.azure.batch.JobOperations.createJob
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.deleteJob*
+    name: deleteJob
+    nameWithType: JobOperations.deleteJob
+    fullName: void com.microsoft.azure.batch.JobOperations.deleteJob
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.terminateJob*
+    name: terminateJob
+    nameWithType: JobOperations.terminateJob
+    fullName: void com.microsoft.azure.batch.JobOperations.terminateJob
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.enableJob*
+    name: enableJob
+    nameWithType: JobOperations.enableJob
+    fullName: void com.microsoft.azure.batch.JobOperations.enableJob
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.disableJob*
+    name: disableJob
+    nameWithType: JobOperations.disableJob
+    fullName: void com.microsoft.azure.batch.JobOperations.disableJob
+    package: com.microsoft.azure.batch
+  - uid: 08effaa0
+    spec.java:
+      - name: Integer
+        fullName: Integer
+  - uid: 5618da2dcom.microsoft.azure.batch.protocol.models._metadata_itema08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.batch.protocol.models._metadata_item
+        name: MetadataItem
+        fullName: com.microsoft.azure.batch.protocol.models.MetadataItem
+        href: com.microsoft.azure.batch.protocol.models._metadata_item.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.batch._job_operations.updateJob*
+    name: updateJob
+    nameWithType: JobOperations.updateJob
+    fullName: void com.microsoft.azure.batch.JobOperations.updateJob
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.patchJob*
+    name: patchJob
+    nameWithType: JobOperations.patchJob
+    fullName: void com.microsoft.azure.batch.JobOperations.patchJob
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._job_operations.getTaskCounts*
+    name: getTaskCounts
+    nameWithType: JobOperations.getTaskCounts
+    fullName: TaskCounts com.microsoft.azure.batch.JobOperations.getTaskCounts
+    package: com.microsoft.azure.batch
+  - uid: com.microsoft.azure.batch._i_inherited_behaviors
+    parent: com.microsoft.azure.batch
+    href: com.microsoft.azure.batch._i_inherited_behaviors.yml
+    name: IInheritedBehaviors
+    nameWithType: IInheritedBehaviors
+    fullName: com.microsoft.azure.batch.IInheritedBehaviors
+    type: Interface
+    summary: <p>このインターフェイスは、インスタンス化する親オブジェクトから継承するメソッドとプロパティを定義します。 このインターフェイスを実装するクラスは、インスタンスは作成時に動作を継承します。 このモデルでは、コレクションは、独立したが、メンバーは、共有された参照です。 このコレクションのメンバーは、alter または Azure Batch サービスのクライアント オブジェクトのさまざまな動作をカスタマイズします。 これらの動作は、子クラス インスタンスをすべてによって一般に継承されます。 変更は、コレクションの順序で適用されます。 最後には、wins を記述します。 </p>
+    syntax:
+      content: public interface IInheritedBehaviors
+  - uid: com.microsoft.azure.batch._batch_client_behavior
+    parent: com.microsoft.azure.batch
+    href: com.microsoft.azure.batch._batch_client_behavior.yml
+    name: BatchClientBehavior
+    nameWithType: BatchClientBehavior
+    fullName: com.microsoft.azure.batch.BatchClientBehavior
+    type: Class
+    summary: <p>派生したクラス、 <xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>クラスは、Azure Batch のクライアントのオペレーション動作を変更します。 </p>
+    syntax:
+      content: public class BatchClientBehavior
+  - uid: com.microsoft.azure.batch._batch_client
+    parent: com.microsoft.azure.batch
+    href: com.microsoft.azure.batch._batch_client.yml
+    name: BatchClient
+    nameWithType: BatchClient
+    fullName: com.microsoft.azure.batch.BatchClient
+    type: Class
+    summary: <p>バッチ サービスにアクセスするために使用して Azure Batch アカウントのクライアントです。 </p>
+    syntax:
+      content: public class BatchClient
+  - uid: com.microsoft.azure.batch._i_inherited_behaviors.customBehaviors()
+    parent: com.microsoft.azure.batch._i_inherited_behaviors
+    href: com.microsoft.azure.batch._i_inherited_behaviors.yml
+    name: customBehaviors()
+    nameWithType: IInheritedBehaviors.customBehaviors()
+    fullName: Collection<BatchClientBehavior> com.microsoft.azure.batch.IInheritedBehaviors.customBehaviors()
+    type: Method
+    summary: |-
+      <p>動作を変更またはカスタマイズする、Batch service への要求のコレクションを取得します。</p>
+      <p></p>
+    syntax:
+      content: public Collection<BatchClientBehavior> customBehaviors()
+      return:
+        type: 12ebb11acom.microsoft.azure.batch._batch_client_behaviora08ddfce
+        description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>インスタンス。 </p>
+  - uid: com.microsoft.azure.batch._i_inherited_behaviors.withCustomBehaviors(Collection<BatchClientBehavior>)
+    parent: com.microsoft.azure.batch._i_inherited_behaviors
+    href: com.microsoft.azure.batch._i_inherited_behaviors.yml
+    name: withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+    nameWithType: IInheritedBehaviors.withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+    fullName: IInheritedBehaviors com.microsoft.azure.batch.IInheritedBehaviors.withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+    type: Method
+    summary: |-
+      <p>動作を変更またはカスタマイズする、Batch service への要求のコレクションを設定します。</p>
+      <p></p>
+    syntax:
+      content: public IInheritedBehaviors withCustomBehaviors(Collection<BatchClientBehavior> behaviors)
+      parameters:
+        - id: behaviors
+          type: 12ebb11acom.microsoft.azure.batch._batch_client_behaviora08ddfce
+          description: <p>コレクション<xref uid="com.microsoft.azure.batch._batch_client_behavior" data-throw-if-not-resolved="false">BatchClientBehavior</xref>インスタンス。 </p>
+      return:
+        type: com.microsoft.azure.batch._i_inherited_behaviors
+        description: <p>現在のインスタンス。 </p>
+  - uid: com.microsoft.azure.batch.protocol.models._job_statistics
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._job_statistics.yml
+    name: JobStatistics
+    nameWithType: JobStatistics
+    fullName: com.microsoft.azure.batch.protocol.models.JobStatistics
+    type: Class
+    summary: <p>ジョブのリソース使用状況の統計。 </p>
+    syntax:
+      content: public class JobStatistics
+  - uid: com.microsoft.azure.batch.protocol.models._batch_error_exception
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._batch_error_exception.yml
+    name: BatchErrorException
+    nameWithType: BatchErrorException
+    fullName: com.microsoft.azure.batch.protocol.models.BatchErrorException
+    type: Class
+    summary: <p>無効な応答の例外のスロー <xref uid="com.microsoft.azure.batch.protocol.models._batch_error" data-throw-if-not-resolved="false">BatchError</xref>情報。 </p>
+    syntax:
+      content: public class BatchErrorException
+  - uid: com.microsoft.azure.batch.protocol.models._cloud_job
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._cloud_job.yml
+    name: CloudJob
+    nameWithType: CloudJob
+    fullName: com.microsoft.azure.batch.protocol.models.CloudJob
+    type: Class
+    summary: <p>Azure Batch のジョブの場合は。 </p>
+    syntax:
+      content: public class CloudJob
+  - uid: com.microsoft.azure.batch._detail_level
+    parent: com.microsoft.azure.batch
+    href: com.microsoft.azure.batch._detail_level.yml
+    name: DetailLevel
+    nameWithType: DetailLevel
+    fullName: com.microsoft.azure.batch.DetailLevel
+    type: Class
+    summary: <p>一覧表示するか、リソースを取得するときに Azure Batch のサービスから要求される詳細情報の量を制御します。 </p>
+    syntax:
+      content: public class DetailLevel
+  - uid: com.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_information
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._job_preparation_and_release_task_execution_information.yml
+    name: JobPreparationAndReleaseTaskExecutionInformation
+    nameWithType: JobPreparationAndReleaseTaskExecutionInformation
+    fullName: com.microsoft.azure.batch.protocol.models.JobPreparationAndReleaseTaskExecutionInformation
+    type: Class
+    summary: <p>コンピューティング ノードでジョブの準備とジョブのリリース タスクの状態。 </p>
+    syntax:
+      content: public class JobPreparationAndReleaseTaskExecutionInformation
+  - uid: com.microsoft.azure.batch.protocol.models._pool_information
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._pool_information.yml
+    name: PoolInformation
+    nameWithType: PoolInformation
+    fullName: com.microsoft.azure.batch.protocol.models.PoolInformation
+    type: Class
+    summary: <p>ジョブのプールに割り当て方法を指定します。 </p>
+    syntax:
+      content: public class PoolInformation
+  - uid: com.microsoft.azure.batch.protocol.models._job_add_parameter
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._job_add_parameter.yml
+    name: JobAddParameter
+    nameWithType: JobAddParameter
+    fullName: com.microsoft.azure.batch.protocol.models.JobAddParameter
+    type: Class
+    summary: <p>追加するために Azure Batch のジョブです。 </p>
+    syntax:
+      content: public class JobAddParameter
+  - uid: com.microsoft.azure.batch.protocol.models._disable_job_option
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._disable_job_option.yml
+    name: DisableJobOption
+    nameWithType: DisableJobOption
+    fullName: com.microsoft.azure.batch.protocol.models.DisableJobOption
+    type: Enum
+    summary: <p>値を定義<xref uid="com.microsoft.azure.batch.protocol.models._disable_job_option" data-throw-if-not-resolved="false">DisableJobOption</xref>です。 </p>
+    syntax:
+      content: public enum DisableJobOption
+  - uid: com.microsoft.azure.batch.protocol.models._job_constraints
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._job_constraints.yml
+    name: JobConstraints
+    nameWithType: JobConstraints
+    fullName: com.microsoft.azure.batch.protocol.models.JobConstraints
+    type: Class
+    summary: <p>ジョブの実行制約。 </p>
+    syntax:
+      content: public class JobConstraints
+  - uid: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._on_all_tasks_complete.yml
+    name: OnAllTasksComplete
+    nameWithType: OnAllTasksComplete
+    fullName: com.microsoft.azure.batch.protocol.models.OnAllTasksComplete
+    type: Enum
+    summary: <p>値を定義<xref uid="com.microsoft.azure.batch.protocol.models._on_all_tasks_complete" data-throw-if-not-resolved="false">OnAllTasksComplete</xref>です。 </p>
+    syntax:
+      content: public enum OnAllTasksComplete
+  - uid: com.microsoft.azure.batch.protocol.models._metadata_item
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._metadata_item.yml
+    name: MetadataItem
+    nameWithType: MetadataItem
+    fullName: com.microsoft.azure.batch.protocol.models.MetadataItem
+    type: Class
+    summary: <p>バッチ サービスのリソースに関連付けられている名前と値のペア。 バッチ サービスはこのメタデータに意味を割り当てませんこれは、ユーザー コードを使用するためだけです。 </p>
+    syntax:
+      content: public class MetadataItem
+  - uid: com.microsoft.azure.batch.protocol.models._job_patch_parameter
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._job_patch_parameter.yml
+    name: JobPatchParameter
+    nameWithType: JobPatchParameter
+    fullName: com.microsoft.azure.batch.protocol.models.JobPatchParameter
+    type: Class
+    summary: <p>ジョブに対する変更のセット。 </p>
+    syntax:
+      content: public class JobPatchParameter
+  - uid: com.microsoft.azure.batch.protocol.models._task_counts
+    parent: com.microsoft.azure.batch.protocol.models
+    href: com.microsoft.azure.batch.protocol.models._task_counts.yml
+    name: TaskCounts
+    nameWithType: TaskCounts
+    fullName: com.microsoft.azure.batch.protocol.models.TaskCounts
+    type: Class
+    summary: <p>ジョブのタスクをカウントします。 </p>
+    syntax:
+      content: public class TaskCounts

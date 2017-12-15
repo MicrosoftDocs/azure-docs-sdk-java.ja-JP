@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.description._service_correlation_scheme
+    id: _service_correlation_scheme
+    parent: system.fabric.description
+    children:
+      - system.fabric.description._service_correlation_scheme.Affinity
+      - system.fabric.description._service_correlation_scheme.AlignedAffinity
+      - system.fabric.description._service_correlation_scheme.getValue()
+      - system.fabric.description._service_correlation_scheme.Invalid
+      - system.fabric.description._service_correlation_scheme.NonAlignedAffinity
+    href: system.fabric.description._service_correlation_scheme.yml
+    langs:
+      - java
+    name: ServiceCorrelationScheme
+    nameWithType: ServiceCorrelationScheme
+    fullName: system.fabric.description.ServiceCorrelationScheme
+    type: Enum
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+      startLine: 6
+    package: system.fabric.description
+    summary: <p>このサービスが別のサービスに関連付けられていて、そのサービスとの関係について説明することを示します。 </p>
+    syntax:
+      content: public enum ServiceCorrelationScheme
+    inheritance:
+      - java.lang.Object
+      - java.lang.Enum<ServiceCorrelationScheme>
+  - uid: system.fabric.description._service_correlation_scheme.Affinity
+    id: Affinity
+    parent: system.fabric.description._service_correlation_scheme
+    href: system.fabric.description._service_correlation_scheme.yml
+    langs:
+      - java
+    name: Affinity
+    nameWithType: ServiceCorrelationScheme.Affinity
+    fullName: system.fabric.description.ServiceCorrelationScheme.Affinity
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+      startLine: 15
+    package: system.fabric.description
+    summary: <p>このサービスが別のサービスとのアフィニティの関係を持つことを示します。 旧バージョンとの互換性のため、提供、Aligned または NonAlignedAffinity オプションを使い続ける理由を検討してください。 </p>
+    syntax:
+      content: public Affinity=(1)
+  - uid: system.fabric.description._service_correlation_scheme.AlignedAffinity
+    id: AlignedAffinity
+    parent: system.fabric.description._service_correlation_scheme
+    href: system.fabric.description._service_correlation_scheme.yml
+    langs:
+      - java
+    name: AlignedAffinity
+    nameWithType: ServiceCorrelationScheme.AlignedAffinity
+    fullName: system.fabric.description.ServiceCorrelationScheme.AlignedAffinity
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+      startLine: 21
+    package: system.fabric.description
+    summary: <p>アラインされたアフィニティによって、同じノードでアフィニティを設定したサービスのパーティションのプライマリが併置されています。 これは、既定値は、「アフィニティ」スキームを選択すると同じです。 </p>
+    syntax:
+      content: public AlignedAffinity=(2)
+  - uid: system.fabric.description._service_correlation_scheme.getValue()
+    id: getValue()
+    parent: system.fabric.description._service_correlation_scheme
+    href: system.fabric.description._service_correlation_scheme.yml
+    langs:
+      - java
+    name: getValue()
+    nameWithType: ServiceCorrelationScheme.getValue()
+    fullName: int system.fabric.description.ServiceCorrelationScheme.getValue()
+    overload: system.fabric.description._service_correlation_scheme.getValue*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+      startLine: 35
+    package: system.fabric.description
+    syntax:
+      content: public int getValue()
+      return:
+        type: f75371fa
+  - uid: system.fabric.description._service_correlation_scheme.Invalid
+    id: Invalid
+    parent: system.fabric.description._service_correlation_scheme
+    href: system.fabric.description._service_correlation_scheme.yml
+    langs:
+      - java
+    name: Invalid
+    nameWithType: ServiceCorrelationScheme.Invalid
+    fullName: system.fabric.description.ServiceCorrelationScheme.Invalid
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+      startLine: 10
+    package: system.fabric.description
+    summary: <p>無効な相関関係スキームの場合。 使用できません。 </p>
+    syntax:
+      content: public Invalid=(0)
+  - uid: system.fabric.description._service_correlation_scheme.NonAlignedAffinity
+    id: NonAlignedAffinity
+    parent: system.fabric.description._service_correlation_scheme
+    href: system.fabric.description._service_correlation_scheme.yml
+    langs:
+      - java
+    name: NonAlignedAffinity
+    nameWithType: ServiceCorrelationScheme.NonAlignedAffinity
+    fullName: system.fabric.description.ServiceCorrelationScheme.NonAlignedAffinity
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/description/ServiceCorrelationScheme.java
+      startLine: 27
+    package: system.fabric.description
+    summary: <p>非固定アフィニティでは、各サービスのすべてのレプリカが同じノード上に配置することを保証します。 配置のアフィニティとは異なりこれは保証されません特定のロールのレプリカを併置することです。 </p>
+    syntax:
+      content: public NonAlignedAffinity=(3)
+references:
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: system.fabric.description._service_correlation_scheme.getValue*
+    name: getValue
+    nameWithType: ServiceCorrelationScheme.getValue
+    fullName: int system.fabric.description.ServiceCorrelationScheme.getValue
+    package: system.fabric.description

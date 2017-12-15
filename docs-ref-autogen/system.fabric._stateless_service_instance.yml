@@ -1,0 +1,203 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._stateless_service_instance
+    id: _stateless_service_instance
+    parent: system.fabric
+    children:
+      - system.fabric._stateless_service_instance.abort()
+      - system.fabric._stateless_service_instance.closeAsync(CancellationToken)
+      - system.fabric._stateless_service_instance.initialize(StatelessServiceInitializationParameters)
+      - 'system.fabric._stateless_service_instance.openAsync(StatelessServicePartition,CancellationToken)'
+    href: system.fabric._stateless_service_instance.yml
+    langs:
+      - java
+    name: StatelessServiceInstance
+    nameWithType: StatelessServiceInstance
+    fullName: system.fabric.StatelessServiceInstance
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceInstance.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceInstance.java
+      startLine: 12
+    package: system.fabric
+    summary: <p>ステートレス サービスは、Service Fabric で管理が必要な状態がないものです。 ステートレス サービスの種類は、このインターフェイスを実装する必要があります。 </p>
+    syntax:
+      content: public interface StatelessServiceInstance
+  - uid: system.fabric._stateless_service_instance.abort()
+    id: abort()
+    parent: system.fabric._stateless_service_instance
+    href: system.fabric._stateless_service_instance.yml
+    langs:
+      - java
+    name: abort()
+    nameWithType: StatelessServiceInstance.abort()
+    fullName: void system.fabric.StatelessServiceInstance.abort()
+    overload: system.fabric._stateless_service_instance.abort*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceInstance.java
+      startLine: 61
+    package: system.fabric
+    summary: "<p>このインスタンスをこの同期メソッドの呼び出しで異常終了します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>異常終了の例としては、リースが失われると、サービスの使用への応答<xref uid=\"system.fabric._service_partition.reportFault(FaultType)\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportFault(FaultType)</xref>レポートに、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FaultType#Permanent</xref>フォールトします。 サービス インスタンスは、このメソッドを受信すると、必要がありますすぐにリリースしのすべての参照をクリーンアップし、返します。 </p>"
+    syntax:
+      content: public void abort()
+  - uid: system.fabric._stateless_service_instance.closeAsync(CancellationToken)
+    id: closeAsync(CancellationToken)
+    parent: system.fabric._stateless_service_instance
+    href: system.fabric._stateless_service_instance.yml
+    langs:
+      - java
+    name: closeAsync(CancellationToken cancellationToken)
+    nameWithType: StatelessServiceInstance.closeAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> system.fabric.StatelessServiceInstance.closeAsync(CancellationToken cancellationToken)
+    overload: system.fabric._stateless_service_instance.closeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceInstance.java
+      startLine: 50
+    package: system.fabric
+    summary: |-
+      <p>サービス インスタンスがシャット ダウンすると、このサービス インスタンスを適切に閉じます。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<?> closeAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>です。 </p>
+  - uid: system.fabric._stateless_service_instance.initialize(StatelessServiceInitializationParameters)
+    id: initialize(StatelessServiceInitializationParameters)
+    parent: system.fabric._stateless_service_instance
+    href: system.fabric._stateless_service_instance.yml
+    langs:
+      - java
+    name: initialize(StatelessServiceInitializationParameters initializationParameters)
+    nameWithType: StatelessServiceInstance.initialize(StatelessServiceInitializationParameters initializationParameters)
+    fullName: void system.fabric.StatelessServiceInstance.initialize(StatelessServiceInitializationParameters initializationParameters)
+    overload: system.fabric._stateless_service_instance.initialize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceInstance.java
+      startLine: 19
+    package: system.fabric
+    summary: |-
+      <p>新しく作成されたサービス インスタンスを初期化します。</p>
+      <p></p>
+    syntax:
+      content: public void initialize(StatelessServiceInitializationParameters initializationParameters)
+      parameters:
+        - id: initializationParameters
+          type: system.fabric._stateless_service_initialization_parameters
+          description: <p><xref uid="system.fabric._stateless_service_initialization_parameters" data-throw-if-not-resolved="false">System.fabric.StatelessServiceInitializationParameters</xref>このサービスを使用します。 </p>
+  - uid: 'system.fabric._stateless_service_instance.openAsync(StatelessServicePartition,CancellationToken)'
+    id: 'openAsync(StatelessServicePartition,CancellationToken)'
+    parent: system.fabric._stateless_service_instance
+    href: system.fabric._stateless_service_instance.yml
+    langs:
+      - java
+    name: 'openAsync(StatelessServicePartition partition, CancellationToken cancellationToken)'
+    nameWithType: 'StatelessServiceInstance.openAsync(StatelessServicePartition partition, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<String> system.fabric.StatelessServiceInstance.openAsync(StatelessServicePartition partition, CancellationToken cancellationToken)'
+    overload: system.fabric._stateless_service_instance.openAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceInstance.java
+      startLine: 40
+    package: system.fabric
+    summary: "<p>クライアントが接続できるように、初期化されたサービス インスタンスを開きます。</p>\n<p>\r\n\r\n  <b>注釈:</b>インスタンス ステートレスなサービスを開くことを示しますサービスここで解決可能であり、サービス クライアントで検出することです。 返される文字列は、このサービス インスタンスのアドレスです。 アドレスが Service Fabric が名前付けを使用して、サービス名に関連付けられているし、経由でサービスを解決するにはクライアントに返される<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(java.net.URI)</xref></p>"
+    syntax:
+      content: 'public CompletableFuture<String> openAsync(StatelessServicePartition partition, CancellationToken cancellationToken)'
+      parameters:
+        - id: partition
+          type: system.fabric._stateless_service_partition
+          description: <p><xref uid="system.fabric._stateless_service_partition" data-throw-if-not-resolved="false">System.fabric.StatelessServicePartition</xref>このインスタンスに関連付けられています。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 06be942d
+        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>型の<xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>です。 </p>
+references:
+  - uid: system.fabric._stateless_service_instance.initialize*
+    name: initialize
+    nameWithType: StatelessServiceInstance.initialize
+    fullName: void system.fabric.StatelessServiceInstance.initialize
+    package: system.fabric
+  - uid: 06be942d
+    spec.java:
+      - name: CompletableFuture<String>
+        fullName: CompletableFuture<String>
+  - uid: system.fabric._stateless_service_instance.openAsync*
+    name: openAsync
+    nameWithType: StatelessServiceInstance.openAsync
+    fullName: CompletableFuture<String> system.fabric.StatelessServiceInstance.openAsync
+    package: system.fabric
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: system.fabric._stateless_service_instance.closeAsync*
+    name: closeAsync
+    nameWithType: StatelessServiceInstance.closeAsync
+    fullName: CompletableFuture<?> system.fabric.StatelessServiceInstance.closeAsync
+    package: system.fabric
+  - uid: system.fabric._stateless_service_instance.abort*
+    name: abort
+    nameWithType: StatelessServiceInstance.abort
+    fullName: void system.fabric.StatelessServiceInstance.abort
+    package: system.fabric
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_instance_adapter
+  - uid: system.fabric._stateless_service_initialization_parameters
+    parent: system.fabric
+    href: system.fabric._stateless_service_initialization_parameters.yml
+    name: StatelessServiceInitializationParameters
+    nameWithType: StatelessServiceInitializationParameters
+    fullName: system.fabric.StatelessServiceInitializationParameters
+    type: Class
+    summary: <p>ステートレス サービスのサービスの初期化パラメーターを定義します。 </p>
+    syntax:
+      content: public class StatelessServiceInitializationParameters extends ServiceInitializationParameters
+  - uid: system.fabric._stateless_service_partition
+    parent: system.fabric
+    href: system.fabric._stateless_service_partition.yml
+    name: StatelessServicePartition
+    nameWithType: StatelessServicePartition
+    fullName: system.fabric.StatelessServicePartition
+    type: Interface
+    summary: "<p>ステートレス サービス インスタンスに関連付けられているパーティションを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>をパラメーターとして、ステートレスなサービスを提供、 <xref uid=\"system.fabric._service_partition\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition</xref>です。 </p>"
+    syntax:
+      content: public interface StatelessServicePartition
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: system.fabric._service_partition.reportFault(FaultType)
+    parent: system.fabric._service_partition
+    href: system.fabric._service_partition.yml
+    name: reportFault(FaultType faultType)
+    nameWithType: ServicePartition.reportFault(FaultType faultType)
+    fullName: void system.fabric.ServicePartition.reportFault(FaultType faultType)
+    type: Method
+    summary: "<p>負荷分散のメトリックのセットの負荷を報告します。 いつでも、負荷を報告することができます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.Collection</xref>の<xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">LoadMetric</xref>メソッドの 1 つまたは複数のプロパティを提供し、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>メソッド.</p>\n<p>\r\n\r\n  <b>注釈:</b>エラーは通常報告サービス コードが検出したときに回復できませんから一部を発行します。 </p>"
+    syntax:
+      content: public void reportFault(FaultType faultType)
+      parameters:
+        - id: faultType
+          type: system.fabric._fault_type
+          description: <p><xref uid="system.fabric._load_metric" data-throw-if-not-resolved="false">System.fabric.LoadMetric</xref>サービスで検出されました。 </p>

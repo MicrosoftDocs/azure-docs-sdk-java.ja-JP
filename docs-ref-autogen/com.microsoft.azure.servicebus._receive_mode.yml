@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.servicebus._receive_mode
+    id: _receive_mode
+    parent: com.microsoft.azure.servicebus
+    children:
+      - com.microsoft.azure.servicebus._receive_mode.PEEKLOCK
+      - com.microsoft.azure.servicebus._receive_mode.RECEIVEANDDELETE
+    href: com.microsoft.azure.servicebus._receive_mode.yml
+    langs:
+      - java
+    name: ReceiveMode
+    nameWithType: ReceiveMode
+    fullName: com.microsoft.azure.servicebus.ReceiveMode
+    type: Enum
+    source:
+      remote: &ref_0
+        path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ReceiveMode.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-service-bus-java'
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ReceiveMode.java
+      startLine: 10
+    package: com.microsoft.azure.servicebus
+    summary: |-
+      <p>2 つを表す列挙体は、Azure Service Bus をサポートしているモードを受信します。</p>
+      <p></p>
+    syntax:
+      content: public enum ReceiveMode
+    inheritance:
+      - java.lang.Object
+      - java.lang.Enum<ReceiveMode>
+  - uid: com.microsoft.azure.servicebus._receive_mode.PEEKLOCK
+    id: PEEKLOCK
+    parent: com.microsoft.azure.servicebus._receive_mode
+    href: com.microsoft.azure.servicebus._receive_mode.yml
+    langs:
+      - java
+    name: PEEKLOCK
+    nameWithType: ReceiveMode.PEEKLOCK
+    fullName: com.microsoft.azure.servicebus.ReceiveMode.PEEKLOCK
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ReceiveMode.java
+      startLine: 21
+    package: com.microsoft.azure.servicebus
+    summary: <p>このモードでは、キューまたはサブスクリプションから受信したメッセージは削除されません、代わりに一時的にロックされている、受信者は、他の受信者を非表示にすることにします。 3 つのイベントのいずれかのサービスが待機します。<itemizedlist><listitem><p>受信側では、メッセージを正常に処理する場合を呼び出すし、メッセージは削除されます。 </p></listitem><listitem><p>場合は、受信側は、メッセージを正常に処理できないことを決定したらを呼び出すと、メッセージがロックを解除し、他の受信者に使用可能です。 </p></listitem><listitem><p>受信側は、時間で、後の時点へのメッセージの処理を遅延する場合、呼び出しし、メッセージを延期します。 遅延実行だけが受信できる、シーケンス番号。 </p></listitem><listitem><p>受信側は、メッセージを配信不能メッセージを希望する場合を呼び出すし、メッセージは配信不能キューと呼ばれる特別なサブキューに移動されます。 </p></listitem><listitem><p>受信側のこれらのメソッドも構成可能な期間内 (既定では、60 秒) を呼び出す場合、受信側が失敗したサービスが前提とします。 この場合、ように動作、受信側が呼び出されると、他の受信者にメッセージを使用できるようにします。 </p></listitem></itemizedlist></p>
+    syntax:
+      content: public PEEKLOCK
+  - uid: com.microsoft.azure.servicebus._receive_mode.RECEIVEANDDELETE
+    id: RECEIVEANDDELETE
+    parent: com.microsoft.azure.servicebus._receive_mode
+    href: com.microsoft.azure.servicebus._receive_mode.yml
+    langs:
+      - java
+    name: RECEIVEANDDELETE
+    nameWithType: ReceiveMode.RECEIVEANDDELETE
+    fullName: com.microsoft.azure.servicebus.ReceiveMode.RECEIVEANDDELETE
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ReceiveMode.java
+      startLine: 26
+    package: com.microsoft.azure.servicebus
+    summary: <p>このモードでは、受信したメッセージがキューまたはサブスクリプションから削除され、直後に削除されました。 このオプションは単純ですが、メッセージを処理する前に受信者がクラッシュした場合はメッセージが失われます。 メッセージはキューから削除されているため、他の受信者がメッセージにアクセスすることもできません。 </p>
+    syntax:
+      content: public RECEIVEANDDELETE
+references: []

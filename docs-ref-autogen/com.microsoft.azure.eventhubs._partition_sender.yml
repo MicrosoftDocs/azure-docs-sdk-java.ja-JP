@@ -1,0 +1,795 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.eventhubs._partition_sender
+    id: _partition_sender
+    parent: com.microsoft.azure.eventhubs
+    children:
+      - com.microsoft.azure.eventhubs._partition_sender.createBatch()
+      - com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)
+      - com.microsoft.azure.eventhubs._partition_sender.onClose()
+      - com.microsoft.azure.eventhubs._partition_sender.send(EventData)
+      - com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)
+      - com.microsoft.azure.eventhubs._partition_sender.send(Iterable<EventData>)
+      - com.microsoft.azure.eventhubs._partition_sender.sendSync(final EventData)
+      - com.microsoft.azure.eventhubs._partition_sender.sendSync(final EventDataBatch)
+      - com.microsoft.azure.eventhubs._partition_sender.sendSync(final Iterable<EventData>)
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: PartitionSender
+    nameWithType: PartitionSender
+    fullName: com.microsoft.azure.eventhubs.PartitionSender
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-event-hubs-java'
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 18
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>この送信元のクラスは、イベント、特定の EventHub パーティションへの送信の論理表現です。 特定のパーティションにイベントを送信しない場合がある場合、このクラスは使用しません。 代わりに、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient #send</xref>メソッドです。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public class PartitionSender extends ClientEntity
+    see:
+      - type: com.microsoft.azure.eventhubs._event_hub_client.createPartitionSender(final String)
+        description: 'EventHubClient::createPartitionSender(String)'
+      - type: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)
+        description: 'EventHubClient::createFromConnectionString(String)'
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.eventhubs._client_entity
+    inheritedMembers:
+      - 'com.microsoft.azure.eventhubs._client_entity.ClientEntity(final String,final ClientEntity)'
+      - com.microsoft.azure.eventhubs._client_entity.close()
+      - com.microsoft.azure.eventhubs._client_entity.closeSync()
+      - com.microsoft.azure.eventhubs._client_entity.getClientId()
+      - com.microsoft.azure.eventhubs._client_entity.getLastKnownError()
+      - com.microsoft.azure.eventhubs._client_entity.setClosed()
+      - com.microsoft.azure.eventhubs._client_entity.throwIfClosed()
+  - uid: com.microsoft.azure.eventhubs._partition_sender.createBatch()
+    id: createBatch()
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: createBatch()
+    nameWithType: PartitionSender.createBatch()
+    fullName: final EventDataBatch com.microsoft.azure.eventhubs.PartitionSender.createBatch()
+    overload: com.microsoft.azure.eventhubs._partition_sender.createBatch*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 89
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>空のコレクションを作成<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 使用してこれらのイベントを送信中に、同じ partitionKey を使用する必要があります<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)" data-throw-if-not-resolved="false">PartitionSender#send(EventDataBatch)</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public final EventDataBatch createBatch()
+      return:
+        type: 93de0ef9com.microsoft.azure.eventhubs._event_data_batch
+        description: <p>空の<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>、EventHubs サービスとのメッセージの最大サイズがネゴシエートされた後 </p>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)
+    id: createBatch(BatchOptions)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: createBatch(BatchOptions options)
+    nameWithType: PartitionSender.createBatch(BatchOptions options)
+    fullName: EventDataBatch com.microsoft.azure.eventhubs.PartitionSender.createBatch(BatchOptions options)
+    overload: com.microsoft.azure.eventhubs._partition_sender.createBatch*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 63
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>空のコレクションを作成<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 使用してこれらのイベントを送信中に、同じ partitionKey を使用する必要があります<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)" data-throw-if-not-resolved="false">PartitionSender#send(EventDataBatch)</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public EventDataBatch createBatch(BatchOptions options)
+      parameters:
+        - id: options
+          type: com.microsoft.azure.eventhubs._batch_options
+          description: <p>参照してください<xref uid="com.microsoft.azure.eventhubs._batch_options" data-throw-if-not-resolved="false">BatchOptions</xref>詳細の使用方法の詳細 </p>
+      return:
+        type: com.microsoft.azure.eventhubs._event_data_batch
+        description: <p>空の<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>、EventHubs サービスとのメッセージの最大サイズがネゴシエートされた後 </p>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.onClose()
+    id: onClose()
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: onClose()
+    nameWithType: PartitionSender.onClose()
+    fullName: CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.onClose()
+    overload: com.microsoft.azure.eventhubs._partition_sender.onClose*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 281
+    package: com.microsoft.azure.eventhubs
+    syntax:
+      content: public CompletableFuture<Void> onClose()
+      return:
+        type: db03ee24
+  - uid: com.microsoft.azure.eventhubs._partition_sender.send(EventData)
+    id: send(EventData)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: send(EventData data)
+    nameWithType: PartitionSender.send(EventData data)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.send(EventData data)
+    overload: com.microsoft.azure.eventhubs._partition_sender.send*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 141
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>特定 EventHub パーティションにします。 対象パーティションには、あらかじめ定義されたときにこの<xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>作成されました。 この送信パターンは、一般的な可用性と待機時間経過に伴うデータの相関関係を強調します。 </p>
+      <p>EventHubs に送信する 3 つの方法では、(その sendBatch オーバー ロード) と共にメソッドとして公開されている各。 <pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient#send(EventData)</xref>, <xref uid="" data-throw-if-not-resolved="false">EventHubClient#send(Iterable)</xref>, <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventDataBatch)" data-throw-if-not-resolved="false">EventHubClient#send(EventDataBatch)</xref>
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData,final String)" data-throw-if-not-resolved="false">EventHubClient#send(EventData, String)</xref> or <xref uid="" data-throw-if-not-resolved="false">EventHubClient#send(Iterable, String)</xref>
+      iii. <xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">PartitionSender#send(EventData)</xref>, <xref uid="" data-throw-if-not-resolved="false">PartitionSender#send(Iterable)</xref>, or <xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)" data-throw-if-not-resolved="false">PartitionSender#send(EventDataBatch)</xref></pre></p>
+      <p>場合は、この種類の送信を使用します。 <pre>
+      i. The client wants to take direct control of distribution of data across partitions. In this case client is responsible for making sure there is at least one sender per event hub partition.
+      ii. User cannot use partition key as a mean to direct events to specific partition, yet there is a need for data correlation with partitioning scheme.
+      </pre></p>
+      <p></p>
+    syntax: &ref_3
+      content: public final CompletableFuture<Void> send(EventData data)
+      parameters:
+        - id: data
+          type: com.microsoft.azure.eventhubs._event_data
+          description: <p><xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>送出します。 </p>
+      return:
+        type: fc984e6f
+        description: <p>完了できる CompletableFuture 送信操作が完了すると. </p>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)
+    id: send(EventDataBatch)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: send(EventDataBatch eventDatas)
+    nameWithType: PartitionSender.send(EventDataBatch eventDatas)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.send(EventDataBatch eventDatas)
+    overload: com.microsoft.azure.eventhubs._partition_sender.send*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 266
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>送信<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>特定 EventHub パーティションにします。 対象となるパーティションがあらかじめ定義されたときにこの<xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>作成されました。 使用する場合は、partitionKey を設定できません<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>で、 <xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>です。 </p>
+      <p>オーバー ロードを参照してください EventHubs、この特定の種類の送信の理解に送信する 3 つの方法がある<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">send(EventData)</xref>は、同じ種類の送信と 1 つの送信に使用する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>バッチ送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>は、次の場合に便利です。 <pre>
+      i.  Efficient send - sending a batch of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> maximizes the overall throughput by optimally using the number of sessions created to EventHubs' service.
+      ii. Send multiple <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s in a Transaction. To achieve ACID properties, the Gateway Service will forward all <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s in the batch to a single EventHubs' partition.
+      </pre></p>
+      <p></p>
+    syntax: &ref_2
+      content: public final CompletableFuture<Void> send(EventDataBatch eventDatas)
+      parameters:
+        - id: eventDatas
+          type: com.microsoft.azure.eventhubs._event_data_batch
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref> EventHub に送信するには </p>"
+      return:
+        type: fc984e6f
+        description: <p>送信操作が行われるときに完了できる CompletableFuture. </p>
+    exceptions:
+      - type: com.microsoft.azure.eventhubs._event_hub_exception
+        description: <p>Service Bus サービスには、操作中に問題が発生した場合。 </p>
+    see:
+      - type: com.microsoft.azure.eventhubs._event_data_batch
+        description: EventDataBatch
+  - uid: com.microsoft.azure.eventhubs._partition_sender.send(Iterable<EventData>)
+    id: send(Iterable<EventData>)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: send(Iterable<EventData> eventDatas)
+    nameWithType: PartitionSender.send(Iterable<EventData> eventDatas)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.send(Iterable<EventData> eventDatas)
+    overload: com.microsoft.azure.eventhubs._partition_sender.send*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 213
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>特定 EventHub パーティションにします。 対象となるパーティションがあらかじめ定義されたときにこの<xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>作成されました。 </p>
+      <p>オーバー ロードを参照してください EventHubs、この特定の種類の送信の理解に送信する 3 つの方法がある<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">send(EventData)</xref>は、同じ種類の送信と 1 つの送信に使用する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>バッチ送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>は、次の場合に便利です。 <pre>
+      i.  Efficient send - sending a batch of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> maximizes the overall throughput by optimally using the number of sessions created to EventHubs' service.
+      ii. Send multiple <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s in a Transaction. To achieve ACID properties, the Gateway Service will forward all <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s in the batch to a single EventHubs' partition.
+      </pre></p>
+      <p>サンプル コード (サンプル同期バージョンの api を使用するが、概念は同じ)。 <pre>
+      Gson gson = new GsonBuilder().create();
+      <xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref> client = <xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionStringSync(final String)" data-throw-if-not-resolved="false">EventHubClient.createFromConnectionStringSync</xref>("__connection__");
+      <xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref> senderToPartitionOne = client.createPartitionSenderSync("1");</pre></p>
+      <p>
+
+        <pre>while (true)
+
+      {
+
+          LinkedList{&lt;}<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>{&gt;} events = new LinkedList{&lt;}<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>{&gt;}();
+
+          for (int count = 1; count {&lt;} 11; count++)
+
+          {
+
+              PayloadEvent payload = new PayloadEvent(count);
+
+              byte[] payloadBytes = gson.toJson(payload).getBytes(Charset.defaultCharset());
+
+              <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> sendEvent = new EventData(payloadBytes);
+
+              Map{&lt;}String, String{&gt;} applicationProperties = new HashMap{&lt;}String, String{&gt;}();
+
+              applicationProperties.put("from", "javaClient");
+
+              sendEvent.setProperties(applicationProperties);
+
+              events.add(sendEvent);
+
+          }</pre>
+
+      </p>
+      <p>
+
+        <pre>    senderToPartitionOne.sendSync(events);
+
+          System.out.println(String.format("Sent Batch... Size: %s", events.size()));
+
+      }
+      </pre>
+      </p>
+      <p></p>
+    syntax:
+      content: public final CompletableFuture<Void> send(Iterable<EventData> eventDatas)
+      parameters:
+        - id: eventDatas
+          type: 2a13b5a5com.microsoft.azure.eventhubs._event_dataa08ddfce
+          description: <p>EventHub へ送信するイベントのバッチ </p>
+      return:
+        type: fc984e6f
+        description: <p>完了できる CompletableFuture 送信操作が完了すると. </p>
+    exceptions:
+      - type: com.microsoft.azure.eventhubs._payload_size_exceeded_exception
+        description: <p>場合の合計サイズ、 <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>サービスによって設定される定義済みの制限を超えています。 既定値は 256 k バイトです。 </p>
+      - type: com.microsoft.azure.eventhubs._event_hub_exception
+        description: <p>Service Bus サービスには、操作中に問題が発生した場合。 </p>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.sendSync(final EventData)
+    id: sendSync(final EventData)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: sendSync(final EventData data)
+    nameWithType: PartitionSender.sendSync(final EventData data)
+    fullName: final void com.microsoft.azure.eventhubs.PartitionSender.sendSync(final EventData data)
+    overload: com.microsoft.azure.eventhubs._partition_sender.sendSync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 100
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>同期バージョン<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">send(EventData)</xref> Api です。</p>
+      <p></p>
+    syntax:
+      content: public final void sendSync(final EventData data)
+      parameters:
+        - id: data
+          type: 93de0ef9com.microsoft.azure.eventhubs._event_data
+          description: <p><xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>送出します。 </p>
+      return:
+        type: 3f6357ce
+    exceptions:
+      - type: com.microsoft.azure.eventhubs._payload_size_exceeded_exception
+        description: <p>場合の合計サイズ、 <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>サービスによって設定される定義済みの制限を超えています。 既定値は 256 k バイトです。 </p>
+      - type: com.microsoft.azure.eventhubs._event_hub_exception
+        description: <p>Service Bus サービスには、操作中に問題が発生した場合。 </p>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.sendSync(final EventDataBatch)
+    id: sendSync(final EventDataBatch)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: sendSync(final EventDataBatch eventDatas)
+    nameWithType: PartitionSender.sendSync(final EventDataBatch eventDatas)
+    fullName: final void com.microsoft.azure.eventhubs.PartitionSender.sendSync(final EventDataBatch eventDatas)
+    overload: com.microsoft.azure.eventhubs._partition_sender.sendSync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 228
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>同期バージョン<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)" data-throw-if-not-resolved="false">send(EventDataBatch)</xref></p>
+      <p></p>
+    syntax:
+      content: public final void sendSync(final EventDataBatch eventDatas)
+      parameters:
+        - id: eventDatas
+          type: 93de0ef9com.microsoft.azure.eventhubs._event_data_batch
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref> EventHub に送信するには </p>"
+      return:
+        type: 3f6357ce
+    exceptions:
+      - type: com.microsoft.azure.eventhubs._event_hub_exception
+        description: <p>Service Bus サービスには、操作中に問題が発生した場合。 </p>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.sendSync(final Iterable<EventData>)
+    id: sendSync(final Iterable<EventData>)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    langs:
+      - java
+    name: sendSync(final Iterable<EventData> eventDatas)
+    nameWithType: PartitionSender.sendSync(final Iterable<EventData> eventDatas)
+    fullName: final void com.microsoft.azure.eventhubs.PartitionSender.sendSync(final Iterable<EventData> eventDatas)
+    overload: com.microsoft.azure.eventhubs._partition_sender.sendSync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/PartitionSender.java
+      startLine: 151
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>同期バージョン<xref uid="" data-throw-if-not-resolved="false">send(Iterable)</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public final void sendSync(final Iterable<EventData> eventDatas)
+      parameters:
+        - id: eventDatas
+          type: f42d2527com.microsoft.azure.eventhubs._event_dataa08ddfce
+          description: <p>EventHub へ送信するイベントのバッチ </p>
+      return:
+        type: 3f6357ce
+    exceptions:
+      - type: com.microsoft.azure.eventhubs._event_hub_exception
+        description: <p>Service Bus サービスには、操作中に問題が発生した場合。 </p>
+references:
+  - uid: com.microsoft.azure.eventhubs._partition_sender.createBatch*
+    name: createBatch
+    nameWithType: PartitionSender.createBatch
+    fullName: EventDataBatch com.microsoft.azure.eventhubs.PartitionSender.createBatch
+    package: com.microsoft.azure.eventhubs
+  - uid: 93de0ef9com.microsoft.azure.eventhubs._event_data_batch
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.eventhubs._event_data_batch
+        name: EventDataBatch
+        fullName: com.microsoft.azure.eventhubs.EventDataBatch
+        href: com.microsoft.azure.eventhubs._event_data_batch.yml
+  - uid: 93de0ef9com.microsoft.azure.eventhubs._event_data
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.eventhubs._event_data
+        name: EventData
+        fullName: com.microsoft.azure.eventhubs.EventData
+        href: com.microsoft.azure.eventhubs._event_data.yml
+  - uid: 3f6357ce
+    spec.java:
+      - name: final void
+        fullName: final void
+  - uid: com.microsoft.azure.eventhubs._partition_sender.sendSync*
+    name: sendSync
+    nameWithType: PartitionSender.sendSync
+    fullName: final void com.microsoft.azure.eventhubs.PartitionSender.sendSync
+    package: com.microsoft.azure.eventhubs
+  - uid: fc984e6f
+    spec.java:
+      - name: final CompletableFuture<Void>
+        fullName: final CompletableFuture<Void>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.send*
+    name: send
+    nameWithType: PartitionSender.send
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.send
+    package: com.microsoft.azure.eventhubs
+  - uid: f42d2527com.microsoft.azure.eventhubs._event_dataa08ddfce
+    spec.java:
+      - name: final Iterable<
+        fullName: final Iterable<
+      - uid: com.microsoft.azure.eventhubs._event_data
+        name: EventData
+        fullName: com.microsoft.azure.eventhubs.EventData
+        href: com.microsoft.azure.eventhubs._event_data.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 2a13b5a5com.microsoft.azure.eventhubs._event_dataa08ddfce
+    spec.java:
+      - name: Iterable<
+        fullName: Iterable<
+      - uid: com.microsoft.azure.eventhubs._event_data
+        name: EventData
+        fullName: com.microsoft.azure.eventhubs.EventData
+        href: com.microsoft.azure.eventhubs._event_data.yml
+      - name: '>'
+        fullName: '>'
+  - uid: db03ee24
+    spec.java:
+      - name: CompletableFuture<Void>
+        fullName: CompletableFuture<Void>
+  - uid: com.microsoft.azure.eventhubs._partition_sender.onClose*
+    name: onClose
+    nameWithType: PartitionSender.onClose
+    fullName: CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.onClose
+    package: com.microsoft.azure.eventhubs
+  - uid: 'com.microsoft.azure.eventhubs._client_entity.ClientEntity(final String,final ClientEntity)'
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: 'ClientEntity(final String clientId, final ClientEntity parent)'
+    nameWithType: 'ClientEntity.ClientEntity(final String clientId, final ClientEntity parent)'
+    fullName: 'com.microsoft.azure.eventhubs.ClientEntity.ClientEntity(final String clientId, final ClientEntity parent)'
+    type: Constructor
+    syntax:
+      content: 'protected ClientEntity(final String clientId, final ClientEntity parent)'
+      parameters:
+        - id: clientId
+          type: 3d93591e
+        - id: parent
+          type: 93de0ef9com.microsoft.azure.eventhubs._client_entity
+  - uid: com.microsoft.azure.eventhubs._client_entity.close()
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: close()
+    nameWithType: ClientEntity.close()
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.ClientEntity.close()
+    type: Method
+    syntax:
+      content: public final CompletableFuture<Void> close()
+      return:
+        type: fc984e6f
+  - uid: com.microsoft.azure.eventhubs._client_entity.closeSync()
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: closeSync()
+    nameWithType: ClientEntity.closeSync()
+    fullName: final void com.microsoft.azure.eventhubs.ClientEntity.closeSync()
+    type: Method
+    syntax:
+      content: public final void closeSync()
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.eventhubs._client_entity.getClientId()
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: getClientId()
+    nameWithType: ClientEntity.getClientId()
+    fullName: String com.microsoft.azure.eventhubs.ClientEntity.getClientId()
+    type: Method
+    syntax:
+      content: public String getClientId()
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.eventhubs._client_entity.getLastKnownError()
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: getLastKnownError()
+    nameWithType: ClientEntity.getLastKnownError()
+    fullName: Exception com.microsoft.azure.eventhubs.ClientEntity.getLastKnownError()
+    type: Method
+    syntax:
+      content: protected Exception getLastKnownError()
+      return:
+        type: 8a99d4b0
+  - uid: com.microsoft.azure.eventhubs._client_entity.setClosed()
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: setClosed()
+    nameWithType: ClientEntity.setClosed()
+    fullName: final void com.microsoft.azure.eventhubs.ClientEntity.setClosed()
+    type: Method
+    syntax:
+      content: protected final void setClosed()
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.eventhubs._client_entity.throwIfClosed()
+    parent: com.microsoft.azure.eventhubs._client_entity
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: throwIfClosed()
+    nameWithType: ClientEntity.throwIfClosed()
+    fullName: final void com.microsoft.azure.eventhubs.ClientEntity.throwIfClosed()
+    type: Method
+    syntax:
+      content: protected final void throwIfClosed()
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.eventhubs._client_entity
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._client_entity.yml
+    name: ClientEntity
+    nameWithType: ClientEntity
+    fullName: com.microsoft.azure.eventhubs.ClientEntity
+    type: Class
+    summary: '<p>開く、閉じる/中止状態 m と c の主目的を持つすべてのクライアント エンティティのコントラクト: closeAll 関連エンティティ内部クラス </p>'
+    syntax:
+      content: public class ClientEntity
+  - uid: com.microsoft.azure.eventhubs._messaging_factory
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._messaging_factory.yml
+    name: MessagingFactory
+    nameWithType: MessagingFactory
+    fullName: com.microsoft.azure.eventhubs.MessagingFactory
+    type: Class
+    summary: <p>関連するすべての amqp について詳しく説明し、公開 AmqpConnection の要約オブジェクトの管理接続のライフ サイクル </p>
+    syntax:
+      content: 'public class MessagingFactory extends ClientEntity implements IAmqpConnection,ISessionProvider'
+  - uid: com.microsoft.azure.eventhubs._message_sender
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._message_sender.yml
+    name: MessageSender
+    nameWithType: MessageSender
+    fullName: com.microsoft.azure.eventhubs.MessageSender
+    type: Class
+    summary: <p>すべてを抽象化 amqp 関連する詳細非同期送信 Api リアクターのイベント駆動モデルに変換 </p>
+    syntax:
+      content: public class MessageSender extends ClientEntity implements IAmqpSender
+  - uid: com.microsoft.azure.eventhubs._event_hub_exception
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_hub_exception.yml
+    name: EventHubException
+    nameWithType: EventHubException
+    fullName: com.microsoft.azure.eventhubs.EventHubException
+    type: Class
+    summary: <p>これは、基本例外をサービス バスは、すべてのエラー ケースを生成します。 </p>
+    syntax:
+      content: public class EventHubException
+  - uid: com.microsoft.azure.eventhubs._partition_sender
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    name: PartitionSender
+    nameWithType: PartitionSender
+    fullName: com.microsoft.azure.eventhubs.PartitionSender
+    type: Class
+    summary: |-
+      <p>この送信元のクラスは、イベント、特定の EventHub パーティションへの送信の論理表現です。 特定のパーティションにイベントを送信しない場合がある場合、このクラスは使用しません。 代わりに、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient #send</xref>メソッドです。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.eventhubs._event_data_batch
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_data_batch.yml
+    name: EventDataBatch
+    nameWithType: EventDataBatch
+    fullName: com.microsoft.azure.eventhubs.EventDataBatch
+    type: Class
+    summary: <p>バッチ/コレクションを作成するためのヘルパー クラス<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs へ送信中に使用されるオブジェクト </p>
+    syntax:
+      content: public class EventDataBatch
+  - uid: com.microsoft.azure.eventhubs._batch_options
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._batch_options.yml
+    name: BatchOptions
+    nameWithType: BatchOptions
+    fullName: com.microsoft.azure.eventhubs.BatchOptions
+    type: Class
+    summary: "<p>\r\n  <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>作成に使用される<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es です。</p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>partitionKey と maxMessageSize .with() メソッドを使用して設定することができます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>partitionKey が null です。</p></listitem><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem></itemizedlist></p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>、.with() メソッドを使用して maxMessageSize のみ設定できます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem><listitem><p>注: パーティション分割キーを設定した場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>がスローされます。</p></listitem></itemizedlist></p>\n<p>バッチのいずれかの型を構築するために作成、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>オブジェクトし、それを適切な createBatch メソッドに渡します。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>を使用して (<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">PartitionSender#createBatch(BatchOptions)</xref>です。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">EventHubClient#createBatch(BatchOptions)</xref>です。</p>\n<p>\n  <pre>\n    <code>// Note: For all examples, 'client' is an instance of EventHubClient. The usage is the same for PartitionSender,\n    however, you can NOT set a partition key when using PartitionSender\n    \n    // Create EventDataBatch with defaults\n    EventDataBatch edb1 = client.createBatch();\n    \n    // Create EventDataBatch with custom partitionKey\n    BatchOptions options = new BatchOptions().with( options -&gt; options.partitionKey = \"foo\");\n    EventDataBatch edb2 = client.createBatch(options);\n    \n    // Create EventDataBatch with custom partitionKey and maxMessageSize\n    BatchOptions options = new BatchOptions().with ( options -&gt; {\n        options.partitionKey = \"foo\";\n        options.maxMessageSize = 100 * 1024;\n    };\n    EventDataBatch edb3 = client.createBatch(options);\n    </code>\n  </pre>\n</p>"
+    syntax:
+      content: public class BatchOptions
+  - uid: com.microsoft.azure.eventhubs._event_data
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: EventData
+    nameWithType: EventData
+    fullName: com.microsoft.azure.eventhubs.EventData
+    type: Class
+    summary: |-
+      <p>送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。 各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。 </p>
+      <p>ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink><pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> - AMQPMessage.ApplicationProperties section
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref> - if AMQPMessage.Body has Data section
+      iii. <xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">getObject()</xref> - if AMQPMessage.Body has AMQPValue or AMQPSequence sections
+      </pre> Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。 高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+    syntax:
+      content: public class EventData
+  - uid: com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    name: send(EventDataBatch eventDatas)
+    nameWithType: PartitionSender.send(EventDataBatch eventDatas)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.send(EventDataBatch eventDatas)
+    type: Method
+    summary: |-
+      <p>送信<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>特定 EventHub パーティションにします。 対象となるパーティションがあらかじめ定義されたときにこの<xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>作成されました。 使用する場合は、partitionKey を設定できません<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>で、 <xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>です。 </p>
+      <p>オーバー ロードを参照してください EventHubs、この特定の種類の送信の理解に送信する 3 つの方法がある<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">send(EventData)</xref>は、同じ種類の送信と 1 つの送信に使用する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>バッチ送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>は、次の場合に便利です。 <pre>
+      i.  Efficient send - sending a batch of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> maximizes the overall throughput by optimally using the number of sessions created to EventHubs' service.
+      ii. Send multiple <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s in a Transaction. To achieve ACID properties, the Gateway Service will forward all <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s in the batch to a single EventHubs' partition.
+      </pre></p>
+      <p></p>
+    syntax: *ref_2
+  - uid: com.microsoft.azure.eventhubs._partition_sender.send(EventData)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    name: send(EventData data)
+    nameWithType: PartitionSender.send(EventData data)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionSender.send(EventData data)
+    type: Method
+    summary: |-
+      <p>送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>特定 EventHub パーティションにします。 対象パーティションには、あらかじめ定義されたときにこの<xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>作成されました。 この送信パターンは、一般的な可用性と待機時間経過に伴うデータの相関関係を強調します。 </p>
+      <p>EventHubs に送信する 3 つの方法では、(その sendBatch オーバー ロード) と共にメソッドとして公開されている各。 <pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient#send(EventData)</xref>, <xref uid="" data-throw-if-not-resolved="false">EventHubClient#send(Iterable)</xref>, <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventDataBatch)" data-throw-if-not-resolved="false">EventHubClient#send(EventDataBatch)</xref>
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData,final String)" data-throw-if-not-resolved="false">EventHubClient#send(EventData, String)</xref> or <xref uid="" data-throw-if-not-resolved="false">EventHubClient#send(Iterable, String)</xref>
+      iii. <xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">PartitionSender#send(EventData)</xref>, <xref uid="" data-throw-if-not-resolved="false">PartitionSender#send(Iterable)</xref>, or <xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)" data-throw-if-not-resolved="false">PartitionSender#send(EventDataBatch)</xref></pre></p>
+      <p>場合は、この種類の送信を使用します。 <pre>
+      i. The client wants to take direct control of distribution of data across partitions. In this case client is responsible for making sure there is at least one sender per event hub partition.
+      ii. User cannot use partition key as a mean to direct events to specific partition, yet there is a need for data correlation with partitioning scheme.
+      </pre></p>
+      <p></p>
+    syntax: *ref_3
+  - uid: com.microsoft.azure.eventhubs._payload_size_exceeded_exception
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._payload_size_exceeded_exception.yml
+    name: PayloadSizeExceededException
+    nameWithType: PayloadSizeExceededException
+    fullName: com.microsoft.azure.eventhubs.PayloadSizeExceededException
+    type: Class
+    summary: |-
+      <p>ユーザーが、イベント データやサービスによって定義されている許可されたペイロードのサイズを超えました仲介型メッセージを送信しようとした場合、この例外がスローされます。 注バッチのシナリオに制限を送信するには、可能なバッチのオーバーヘッドを含めることができます。</p>
+      <p></p>
+    syntax:
+      content: public class PayloadSizeExceededException
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: send(final EventData data)
+    nameWithType: EventHubClient.send(final EventData data)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.EventHubClient.send(final EventData data)
+    type: Method
+    summary: "<p>送信<xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref> EventHub にします。 送信された<xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>が任意に選択された EventHubs パーティションに入ります。 </p>\n<p>EventHubs に送信する 3 つの方法では、(その sendBatch オーバー ロード) と共にメソッドとして公開されている各。<itemizedlist><listitem><p><xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)\" data-throw-if-not-resolved=\"false\">send(EventData)</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">send(Iterable)</xref>、または<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.send(final EventDataBatch)\" data-throw-if-not-resolved=\"false\">send(EventDataBatch)</xref></p></listitem><listitem><p><xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.send(final EventData,final String)\" data-throw-if-not-resolved=\"false\">(EventData、文字列) を送信</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">(Iterable、文字列) を送信</xref></p></listitem><listitem><p><xref uid=\"com.microsoft.azure.eventhubs._partition_sender.send(EventData)\" data-throw-if-not-resolved=\"false\">PartitionSender#send(EventData)</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">PartitionSender#send(Iterable)</xref>、または<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)\" data-throw-if-not-resolved=\"false\">PartitionSender#send(EventDataBatch)</xref></p></listitem></itemizedlist></p>\n<p>場合は、送信するには、このメソッドを使用します。 <pre>\na)  the send(<xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>) operation should be highly available and\nb)  the data needs to be evenly distributed among all partitions; exception being, when a subset of partitions are unavailable\n</pre></p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)\" data-throw-if-not-resolved=\"false\">send(EventData)</xref>送信の<xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>はどのさらに、転送、サービス ゲートウェイに、 <xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref> EventHubs' パーティションのいずれかにします。 アルゴリズムの転送、メッセージを次に示します。 <pre>\n\ni.  Forward the <xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>'s to EventHub partitions, by equally distributing the data among all partitions (ex: Round-robin the <xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>'s to all EventHubs' partitions)\nii. If one of the EventHub partitions is unavailable for a moment, the Service Gateway will automatically detect it and forward the message to another available partition - making the Send operation highly-available.\n</pre></p>\n<p></p>"
+    syntax:
+      content: public final CompletableFuture<Void> send(final EventData data)
+      parameters:
+        - id: data
+          type: 93de0ef9com.microsoft.azure.eventhubs._event_data
+          description: <p><xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>送出します。 </p>
+      return:
+        type: fc984e6f
+        description: <p>完了できる CompletableFuture 送信操作が完了すると. </p>
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.send(final EventDataBatch)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: send(final EventDataBatch eventDatas)
+    nameWithType: EventHubClient.send(final EventDataBatch eventDatas)
+    fullName: final CompletableFuture<Void> com.microsoft.azure.eventhubs.EventHubClient.send(final EventDataBatch eventDatas)
+    type: Method
+    summary: |-
+      <p>送信<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref> EventHub にします。 送信された<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>に従ってのパーティション キーのセットが入ります、 <xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>です。 パーティション分割キーが設定されていないかどうかは、ラウンド ロビン方式では、 <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>のすべての EventHubs のパーティションにします。</p>
+      <p></p>
+    syntax:
+      content: public final CompletableFuture<Void> send(final EventDataBatch eventDatas)
+      parameters:
+        - id: eventDatas
+          type: 93de0ef9com.microsoft.azure.eventhubs._event_data_batch
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref> EventHub に送信するには </p>"
+      return:
+        type: fc984e6f
+        description: <p>送信操作が完了するときに完了することができます CompleteableFuture </p>
+  - uid: 'com.microsoft.azure.eventhubs._event_hub_client.send(final EventData,final String)'
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: 'send(final EventData eventData, final String partitionKey)'
+    nameWithType: 'EventHubClient.send(final EventData eventData, final String partitionKey)'
+    fullName: 'final CompletableFuture<Void> com.microsoft.azure.eventhubs.EventHubClient.send(final EventData eventData, final String partitionKey)'
+    type: Method
+    summary: |-
+      <p>送信、'<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> partitionKey と ' EventHub にします。 すべて<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>の同じパーティションに契約を獲得する保証は、partitionKey とします。 この送信パターンは、一般的な可用性と待機時間経過に伴うデータの相関関係を強調します。 </p>
+      <p>EventHubs に送信する 3 つの方法では、(その sendBatch オーバー ロード) と共にメソッドとして公開されている各。 <pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">send(EventData)</xref> or <xref uid="" data-throw-if-not-resolved="false">send(Iterable)</xref>
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData,final String)" data-throw-if-not-resolved="false">send(EventData, String)</xref> or <xref uid="" data-throw-if-not-resolved="false">send(Iterable, String)</xref>
+      iii. <xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">PartitionSender#send(EventData)</xref> or <xref uid="" data-throw-if-not-resolved="false">PartitionSender#send(Iterable)</xref></pre></p>
+      <p>場合は、この種類の送信を使用します。 <pre>
+      i.  There is a need for correlation of events based on Sender instance; The sender can generate a UniqueId and set it as partitionKey - which on the received Message can be used for correlation
+      ii. The client wants to take control of distribution of data across partitions.
+      </pre></p>
+      <p>複数の PartitionKey は、1 つのパーティションにマップする可能性があります。 EventHubs サービスは、PartitionKey をパーティション Id にマップするのに、独自のハッシュ アルゴリズムを使用します。 この種類の送信 (特定の partitionKey を使用して送信) を使用する可能性がありますもに均等に分散されていないパーティション。</p>
+      <p></p>
+    syntax:
+      content: 'public final CompletableFuture<Void> send(final EventData eventData, final String partitionKey)'
+      parameters:
+        - id: eventData
+          type: 93de0ef9com.microsoft.azure.eventhubs._event_data
+          description: <p><xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>送出します。 </p>
+        - id: partitionKey
+          type: 3d93591e
+          description: '<p>partitionKey を決定する eventData を送信する partitionId hash''ed になります。 このサービスで受信したメッセージにアクセスできます<xref uid="" data-throw-if-not-resolved="false">EventData.SystemProperties#getPartitionKey()</xref></p>'
+      return:
+        type: fc984e6f
+        description: <p>完了できる CompletableFuture 送信操作が完了すると. </p>
+  - uid: com.microsoft.azure.eventhubs._event_hub_client
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: EventHubClient
+    nameWithType: EventHubClient
+    fullName: com.microsoft.azure.eventhubs.EventHubClient
+    type: Class
+    summary: |-
+      <p>クラスのすべて EventHub クライアントの操作が開始されるは、ここを固定します。</p>
+      <p></p>
+    syntax:
+      content: public class EventHubClient extends ClientEntity implements IEventHubClient
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionStringSync(final String)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: createFromConnectionStringSync(final String connectionString)
+    nameWithType: EventHubClient.createFromConnectionStringSync(final String connectionString)
+    fullName: static EventHubClient com.microsoft.azure.eventhubs.EventHubClient.createFromConnectionStringSync(final String connectionString)
+    type: Method
+    summary: |-
+      <p>同期バージョン<xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)" data-throw-if-not-resolved="false">createFromConnectionString(String)</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public static EventHubClient createFromConnectionStringSync(final String connectionString)
+      parameters:
+        - id: connectionString
+          type: 3d93591e
+          description: <p>使用する接続文字列。 参照してください<xref uid="com.microsoft.azure.eventhubs._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref> connectionString を構築するためにします。 </p>
+      return:
+        type: com.microsoft.azure.eventhubs._event_hub_client
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>送信者と受信者 EventHub への作成に使用できます。 </p>"
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.createPartitionSender(final String)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: createPartitionSender(final String partitionId)
+    nameWithType: EventHubClient.createPartitionSender(final String partitionId)
+    fullName: final CompletableFuture<PartitionSender> com.microsoft.azure.eventhubs.EventHubClient.createPartitionSender(final String partitionId)
+    type: Method
+    summary: |-
+      <p>作成、 <xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>を発行できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>の特定の EventHub パーティション (送信者の種類 iii に直接。 一覧の下)。 </p>
+      <p>3 つのパターン/EventHubs に送信する方法。 <pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">send(EventData)</xref> or <xref uid="" data-throw-if-not-resolved="false">send(Iterable)</xref>
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData,final String)" data-throw-if-not-resolved="false">send(EventData, String)</xref> or <xref uid="" data-throw-if-not-resolved="false">send(Iterable, String)</xref>
+      iii. <xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventData)" data-throw-if-not-resolved="false">PartitionSender#send(EventData)</xref> or <xref uid="" data-throw-if-not-resolved="false">PartitionSender#send(Iterable)</xref></pre></p>
+      <p></p>
+    syntax:
+      content: public final CompletableFuture<PartitionSender> createPartitionSender(final String partitionId)
+      parameters:
+        - id: partitionId
+          type: 3d93591e
+          description: <p>送信する EventHub の partitionId、 <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>のするには </p>
+      return:
+        type: 9971d449com.microsoft.azure.eventhubs._partition_sendera08ddfce
+        description: <p>なる CompletableFuture、 <xref uid="com.microsoft.azure.eventhubs._partition_sender" data-throw-if-not-resolved="false">PartitionSender</xref>が完了するとします。 </p>
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: createFromConnectionString(final String connectionString)
+    nameWithType: EventHubClient.createFromConnectionString(final String connectionString)
+    fullName: static CompletableFuture<EventHubClient> com.microsoft.azure.eventhubs.EventHubClient.createFromConnectionString(final String connectionString)
+    type: Method
+    summary: |-
+      <p>インスタンスを作成するファクトリ メソッド<xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref>指定された接続文字列を使用します。 通常のシナリオ (リダイレクトが有効でない場合) の 1 つ<xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref> Azure ServiceBus EventHubs サービスへの接続を 1 つのインスタンスにマップします。 </p>
+      <p><xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref>これから作成されたメソッドを作成、送信元インスタンス内部的には、によって使用される、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">send(EventData)</xref>メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public static CompletableFuture<EventHubClient> createFromConnectionString(final String connectionString)
+      parameters:
+        - id: connectionString
+          type: 3d93591e
+          description: <p>使用する接続文字列。 参照してください<xref uid="com.microsoft.azure.eventhubs._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref> connectionString を構築するためにします。 </p>
+      return:
+        type: 9cdf14d0com.microsoft.azure.eventhubs._event_hub_clienta08ddfce
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>送信者と受信者 EventHub への作成に使用できます。 </p>"

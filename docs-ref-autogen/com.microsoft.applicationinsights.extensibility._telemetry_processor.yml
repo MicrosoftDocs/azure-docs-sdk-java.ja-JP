@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights.extensibility._telemetry_processor
+    id: _telemetry_processor
+    parent: com.microsoft.applicationinsights.extensibility
+    children:
+      - com.microsoft.applicationinsights.extensibility._telemetry_processor.process(Telemetry)
+    href: com.microsoft.applicationinsights.extensibility._telemetry_processor.yml
+    langs:
+      - java
+    name: TelemetryProcessor
+    nameWithType: TelemetryProcessor
+    fullName: com.microsoft.applicationinsights.extensibility.TelemetryProcessor
+    type: Interface
+    source:
+      remote: &ref_0
+        path: core/src/main/java/com/microsoft/applicationinsights/extensibility/TelemetryProcessor.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/extensibility/TelemetryProcessor.java
+      startLine: 51
+    package: com.microsoft.applicationinsights.extensibility
+    summary: |-
+      <p>メソッドを取得、<xref uid="" data-throw-if-not-resolved="false">テレメトリ</xref>送信する準備ができているインスタンス。 これは、承認または拒否することにご協力です。 'False' を返すことは、'true' により、承認する一方で、製品利用統計情報は送信されないことを意味します。</p>
+      <p>遠隔測定可能性があります通過するその他のフィルターが、その送信を拒否する可能性があります。</p>
+      <p>このプロセッサを有効にするには、次のように ApplicationInsights.xml に追加する必要があります。</p>
+      <p>
+        <pre>
+          <code>&lt;TelemetryProcessors&gt;
+              &lt;CustomProcessors&gt;
+                  &lt;Processor type="full.path.to.Filter"&gt;
+                      &lt;Add name="Property" value="stringValue"/&gt;
+                  &lt;/Processor&gt;
+              &lt;/CustomProcessors&gt;
+          &lt;/TelemetryProcessors&gt;
+          </code> 
+      *</pre>
+      </p>
+      <p>クラスが構成されている ' Property' という名前のプロパティを定義することに注意してください。 構成するすべてのプロパティをこの例では、'setX' のパブリック メソッド 'setProperty' のようにする必要があります<b>フィルターは無視されます、フレームワークによって 'setX' メソッドからスローされる例外をキャッチします。</b></p>
+      <p>7/26/2016 gupele によって作成されます。 </p>
+    syntax:
+      content: public interface TelemetryProcessor
+  - uid: com.microsoft.applicationinsights.extensibility._telemetry_processor.process(Telemetry)
+    id: process(Telemetry)
+    parent: com.microsoft.applicationinsights.extensibility._telemetry_processor
+    href: com.microsoft.applicationinsights.extensibility._telemetry_processor.yml
+    langs:
+      - java
+    name: process(Telemetry telemetry)
+    nameWithType: TelemetryProcessor.process(Telemetry telemetry)
+    fullName: boolean com.microsoft.applicationinsights.extensibility.TelemetryProcessor.process(Telemetry telemetry)
+    overload: com.microsoft.applicationinsights.extensibility._telemetry_processor.process*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/extensibility/TelemetryProcessor.java
+      startLine: 52
+    package: com.microsoft.applicationinsights.extensibility
+    syntax:
+      content: public boolean process(Telemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._telemetry
+      return:
+        type: 4fc6e284
+references:
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.applicationinsights.extensibility._telemetry_processor.process*
+    name: process
+    nameWithType: TelemetryProcessor.process
+    fullName: boolean com.microsoft.applicationinsights.extensibility.TelemetryProcessor.process
+    package: com.microsoft.applicationinsights.extensibility
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    name: Telemetry
+    nameWithType: Telemetry
+    fullName: com.microsoft.applicationinsights.telemetry.Telemetry
+    type: Interface
+    summary: <p>Application insights の基本製品利用統計情報の種類のインターフェイスです。 </p>
+    syntax:
+      content: public interface Telemetry extends JsonSerializable

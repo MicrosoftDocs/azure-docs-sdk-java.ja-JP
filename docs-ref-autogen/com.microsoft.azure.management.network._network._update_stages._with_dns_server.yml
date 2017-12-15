@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.network._network._update_stages._with_dns_server
+    id: _with_dns_server
+    parent: com.microsoft.azure.management.network
+    children:
+      - com.microsoft.azure.management.network._network._update_stages._with_dns_server.withDnsServer(String)
+    href: com.microsoft.azure.management.network._network._update_stages._with_dns_server.yml
+    langs:
+      - java
+    name: Network.UpdateStages.WithDnsServer
+    nameWithType: Network.UpdateStages.WithDnsServer
+    fullName: com.microsoft.azure.management.network.Network.UpdateStages.WithDnsServer
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Network.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Network.java
+      startLine: 233
+    package: com.microsoft.azure.management.network
+    summary: <p>DNS サーバーを指定できるように仮想ネットワークの更新の段階です。 </p>
+    syntax:
+      content: public interface WithDnsServer
+  - uid: com.microsoft.azure.management.network._network._update_stages._with_dns_server.withDnsServer(String)
+    id: withDnsServer(String)
+    parent: com.microsoft.azure.management.network._network._update_stages._with_dns_server
+    href: com.microsoft.azure.management.network._network._update_stages._with_dns_server.yml
+    langs:
+      - java
+    name: withDnsServer(String ipAddress)
+    nameWithType: Network.UpdateStages.WithDnsServer.withDnsServer(String ipAddress)
+    fullName: Update com.microsoft.azure.management.network.Network.UpdateStages.WithDnsServer.withDnsServer(String ipAddress)
+    overload: com.microsoft.azure.management.network._network._update_stages._with_dns_server.withDnsServer*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Network.java
+      startLine: 242
+    package: com.microsoft.azure.management.network
+    summary: |-
+      <p>仮想ネットワークに関連付ける DNS サーバーの IP アドレスを指定します。 </p>
+      <p>このメソッドの効果は加法、つまりそれを使用するたび、新しい DNS サーバーがネットワークに追加 </p>
+    syntax:
+      content: public Update withDnsServer(String ipAddress)
+      parameters:
+        - id: ipAddress
+          type: '26831127'
+          description: <p>DNS サーバーの IP アドレス </p>
+      return:
+        type: com.microsoft.azure.management.network._network._update
+        description: <p>仮想ネットワークの更新の次のステージ </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.network._network._update_stages._with_dns_server.withDnsServer*
+    name: withDnsServer
+    nameWithType: Network.UpdateStages.WithDnsServer.withDnsServer
+    fullName: Update com.microsoft.azure.management.network.Network.UpdateStages.WithDnsServer.withDnsServer
+    package: com.microsoft.azure.management.network
+  - uid: com.microsoft.azure.management.network._network._update
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._network._update.yml
+    name: Network.Update
+    nameWithType: Network.Update
+    fullName: com.microsoft.azure.management.network.Network.Update
+    type: Interface
+    summary: <p>変更可能なすべての設定を含む、仮想ネットワークの更新操作のテンプレートです。 </p>
+    syntax:
+      content: 'public interface Update extends Appliable<Network>,Resource.UpdateWithTags<Update>,Network.UpdateStages.WithSubnet,Network.UpdateStages.WithDnsServer,Network.UpdateStages.WithAddressSpace'

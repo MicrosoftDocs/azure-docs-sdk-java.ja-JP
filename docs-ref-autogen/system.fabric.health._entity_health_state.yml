@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._entity_health_state
+    id: _entity_health_state
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._entity_health_state.EntityHealthState(HealthState)
+      - system.fabric.health._entity_health_state.getAggregatedHealthState()
+    href: system.fabric.health._entity_health_state.yml
+    langs:
+      - java
+    name: EntityHealthState
+    nameWithType: EntityHealthState
+    fullName: system.fabric.health.EntityHealthState
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/EntityHealthState.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/EntityHealthState.java
+      startLine: 9
+    package: system.fabric.health
+    summary: "<p>エンティティ ヘルス状態のすべてのクラスの基底クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>エンティティのヘルス状態には、エンティティの識別子とエンティティで集計された正常性状態が含まれています。 </p>"
+    syntax:
+      content: public class EntityHealthState
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric.health._entity_health_state.EntityHealthState(HealthState)
+    id: EntityHealthState(HealthState)
+    parent: system.fabric.health._entity_health_state
+    href: system.fabric.health._entity_health_state.yml
+    langs:
+      - java
+    name: EntityHealthState(HealthState aggregatedHealthState)
+    nameWithType: EntityHealthState.EntityHealthState(HealthState aggregatedHealthState)
+    fullName: system.fabric.health.EntityHealthState.EntityHealthState(HealthState aggregatedHealthState)
+    overload: system.fabric.health._entity_health_state.EntityHealthState*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/EntityHealthState.java
+      startLine: 12
+    package: system.fabric.health
+    syntax:
+      content: protected EntityHealthState(HealthState aggregatedHealthState)
+      parameters:
+        - id: aggregatedHealthState
+          type: system.fabric.health._health_state
+  - uid: system.fabric.health._entity_health_state.getAggregatedHealthState()
+    id: getAggregatedHealthState()
+    parent: system.fabric.health._entity_health_state
+    href: system.fabric.health._entity_health_state.yml
+    langs:
+      - java
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealthState.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealthState.getAggregatedHealthState()
+    overload: system.fabric.health._entity_health_state.getAggregatedHealthState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/EntityHealthState.java
+      startLine: 22
+    package: system.fabric.health
+    summary: |-
+      <p>報告されたすべてのイベントと、目的のポリシーに基づいて Health Manager によって計算された集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: <p>ヘルス マネージャーによって計算された集計の正常性状態。 </p>
+references:
+  - uid: system.fabric.health._entity_health_state.EntityHealthState*
+    name: EntityHealthState
+    nameWithType: EntityHealthState.EntityHealthState
+    fullName: system.fabric.health.EntityHealthState.EntityHealthState
+    package: system.fabric.health
+  - uid: system.fabric.health._entity_health_state.getAggregatedHealthState*
+    name: getAggregatedHealthState
+    nameWithType: EntityHealthState.getAggregatedHealthState
+    fullName: HealthState system.fabric.health.EntityHealthState.getAggregatedHealthState
+    package: system.fabric.health
+  - uid: system.fabric.health._application_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._application_health_state.yml
+    name: ApplicationHealthState
+    nameWithType: ApplicationHealthState
+    fullName: system.fabric.health.ApplicationHealthState
+    type: Class
+    summary: <p>アプリケーション識別子と、集計された正常性状態を含む、アプリケーションのヘルス状態を表します。 </p>
+    syntax:
+      content: public class ApplicationHealthState extends EntityHealthState
+  - uid: system.fabric.health._deployed_application_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_application_health_state.yml
+    name: DeployedApplicationHealthState
+    nameWithType: DeployedApplicationHealthState
+    fullName: system.fabric.health.DeployedApplicationHealthState
+    type: Class
+    summary: <p>エンティティの識別子を含む配置のアプリケーションの正常性状態と、集計された正常性状態を表します。 </p>
+    syntax:
+      content: public class DeployedApplicationHealthState extends EntityHealthState
+  - uid: system.fabric.health._deployed_service_package_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health_state.yml
+    name: DeployedServicePackageHealthState
+    nameWithType: DeployedServicePackageHealthState
+    fullName: system.fabric.health.DeployedServicePackageHealthState
+    type: Class
+    summary: <p>エンティティの識別子と、集計された正常性状態を含む、展開済みサービス パッケージのヘルス状態を表します。 </p>
+    syntax:
+      content: public class DeployedServicePackageHealthState extends EntityHealthState
+  - uid: system.fabric.health._node_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._node_health_state.yml
+    name: NodeHealthState
+    nameWithType: NodeHealthState
+    fullName: system.fabric.health.NodeHealthState
+    type: Class
+    summary: <p>ノードの id および集計された正常性状態を含むノードのヘルス状態を表します。 </p>
+    syntax:
+      content: public class NodeHealthState
+  - uid: system.fabric.health._partition_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health_state.yml
+    name: PartitionHealthState
+    nameWithType: PartitionHealthState
+    fullName: system.fabric.health.PartitionHealthState
+    type: Class
+    summary: <p>パーティション識別子および集計された正常性状態を含むパーティションのヘルス状態を表します。 </p>
+    syntax:
+      content: public class PartitionHealthState
+  - uid: system.fabric.health._replica_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_state.yml
+    name: ReplicaHealthState
+    nameWithType: ReplicaHealthState
+    fullName: system.fabric.health.ReplicaHealthState
+    type: Class
+    summary: <p>ステートフル サービス レプリカまたはステートレス サービス インスタンスのヘルス状態の基本クラスを表します。 </p>
+    syntax:
+      content: public class ReplicaHealthState
+  - uid: system.fabric.health._service_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_state.yml
+    name: ServiceHealthState
+    nameWithType: ServiceHealthState
+    fullName: system.fabric.health.ServiceHealthState
+    type: Class
+    summary: <p>サービスの識別子とその集計された正常性状態を含むサービスのヘルス状態を表します。 </p>
+    syntax:
+      content: public class ServiceHealthState
+  - uid: system.fabric.health._health_state
+    parent: system.fabric.health
+    href: system.fabric.health._health_state.yml
+    name: HealthState
+    nameWithType: HealthState
+    fullName: system.fabric.health.HealthState
+    type: Enum
+    syntax:
+      content: public enum HealthState

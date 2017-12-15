@@ -1,0 +1,281 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor
+    id: _i_event_processor
+    parent: com.microsoft.azure.eventprocessorhost
+    children:
+      - 'com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)'
+      - 'com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)'
+      - 'com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable<EventData>)'
+      - com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen(PartitionContext)
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    langs:
+      - java
+    name: IEventProcessor
+    nameWithType: IEventProcessor
+    fullName: com.microsoft.azure.eventprocessorhost.IEventProcessor
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessor.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-event-hubs-java'
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessor.java
+      startLine: 27
+    package: com.microsoft.azure.eventprocessorhost
+    summary: "<p>イベント プロセッサ クラスで実装する必要があるインターフェイスです。</p>\n<p>イベント プロセッサ クラスのインスタンスには、1 つのイベント ハブの 1 つのパーティションからのイベントのみが処理されます。 A <xref uid=\"com.microsoft.azure.eventprocessorhost._partition_context\" data-throw-if-not-resolved=\"false\">PartitionContext</xref>は、いくつかのパラメーターを変更する可能性がありますが、同じパーティションは常にため、イベント プロセッサへの各呼び出しで提供されています。 </p>\n<p><xref uid=\"com.microsoft.azure.eventprocessorhost._event_processor_host\" data-throw-if-not-resolved=\"false\">EventProcessorHost</xref>がマルチ スレッド、プロセッサのイベント クラスの特定のインスタンスへの呼び出しはシリアル化以外の<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)\" data-throw-if-not-resolved=\"false\">onError()</xref>です。 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen(PartitionContext)\" data-throw-if-not-resolved=\"false\">onOpen()</xref>最初に呼び出され、し<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable&lt;EventData&gt;)\" data-throw-if-not-resolved=\"false\">onEvents()</xref> 0 回以上が呼び出されます。 エラーがどこか、またはパーティションのリースが失われているために、シャット ダウン、かどうかをイベント プロセッサが必要な場合、または、プロセッサ全体のホストがシャット ダウン、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)\" data-throw-if-not-resolved=\"false\">onClose()</xref>最後後に呼び出されます<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable&lt;EventData&gt;)\" data-throw-if-not-resolved=\"false\">onEvents()</xref>呼び出しを返します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)\" data-throw-if-not-resolved=\"false\">onError()</xref>呼び出すことが中に<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable&lt;EventData&gt;)\" data-throw-if-not-resolved=\"false\">onEvents()</xref>または<xref uid=\"com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)\" data-throw-if-not-resolved=\"false\">onClose()</xref>を実行します。 可能性のあるデッドロックを回避するためには、同期は行われません。 </p>"
+    syntax:
+      content: public interface IEventProcessor
+  - uid: 'com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)'
+    id: 'onClose(PartitionContext,CloseReason)'
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    langs:
+      - java
+    name: 'onClose(PartitionContext context, CloseReason reason)'
+    nameWithType: 'IEventProcessor.onClose(PartitionContext context, CloseReason reason)'
+    fullName: 'void com.microsoft.azure.eventprocessorhost.IEventProcessor.onClose(PartitionContext context, CloseReason reason)'
+    overload: com.microsoft.azure.eventprocessorhost._i_event_processor.onClose*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessor.java
+      startLine: 44
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>イベント プロセッサが停止されていることを示すためにプロセッサ ホストによって呼び出されます。</p>
+      <p></p>
+    syntax: &ref_4
+      content: 'public void onClose(PartitionContext context, CloseReason reason)'
+      parameters:
+        - id: context
+          type: com.microsoft.azure.eventprocessorhost._partition_context
+          description: <p>パーティションに関する情報です。 </p>
+        - id: reason
+          type: com.microsoft.azure.eventprocessorhost._close_reason
+          description: <p>理由は、イベント プロセッサが停止する理由です。 </p>
+    exceptions:
+      - type: 8a99d4b0
+  - uid: 'com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)'
+    id: 'onError(PartitionContext,Throwable)'
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    langs:
+      - java
+    name: 'onError(PartitionContext context, Throwable error)'
+    nameWithType: 'IEventProcessor.onError(PartitionContext context, Throwable error)'
+    fullName: 'void com.microsoft.azure.eventprocessorhost.IEventProcessor.onError(PartitionContext context, Throwable error)'
+    overload: com.microsoft.azure.eventprocessorhost._i_event_processor.onError*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessor.java
+      startLine: 69
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>基になるクライアントが受信中にエラーが発生したときに呼び出されます。 <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>くれますエラーから復旧して、コードから必要なアクションがないため、メッセージをポンプする操作を続行します。 このメソッドは、情報提供を目的に提供されます。</p>
+      <p></p>
+    syntax: &ref_1
+      content: 'public void onError(PartitionContext context, Throwable error)'
+      parameters:
+        - id: context
+          type: com.microsoft.azure.eventprocessorhost._partition_context
+          description: <p>パーティションに関する情報です。 </p>
+        - id: error
+          type: a04fafd7
+          description: <p>発生したエラー。 </p>
+  - uid: 'com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable<EventData>)'
+    id: 'onEvents(PartitionContext,Iterable<EventData>)'
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    langs:
+      - java
+    name: 'onEvents(PartitionContext context, Iterable<EventData> messages)'
+    nameWithType: 'IEventProcessor.onEvents(PartitionContext context, Iterable<EventData> messages)'
+    fullName: 'void com.microsoft.azure.eventprocessorhost.IEventProcessor.onEvents(PartitionContext context, Iterable<EventData> messages)'
+    overload: com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessor.java
+      startLine: 59
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>イベントのバッチが到着したときに、プロセッサ ホストによって呼び出されます。</p>
+      <p>これは、イベント プロセッサの実際の作業が行われます。 1 つまたは複数のイベントが到着したときに通常呼び出されます。 場合、 <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>インスタンスで設定された、 <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_options" data-throw-if-not-resolved="false">EventProcessorOptions</xref> setInvokeProcessorAfterReceiveTimeout(true) が呼び出されると、受信タイムアウトになるが呼び出されます反復可能な空です。 既定では、このオプションが false で、受信タイムアウトには、このメソッドの呼び出しが行われません。</p>
+      <p></p>
+    syntax: &ref_3
+      content: 'public void onEvents(PartitionContext context, Iterable<EventData> messages)'
+      parameters:
+        - id: context
+          type: com.microsoft.azure.eventprocessorhost._partition_context
+          description: <p>パーティションに関する情報です。 </p>
+        - id: messages
+          type: 2a13b5a5com.microsoft.azure.eventhubs._event_dataa08ddfce
+          description: <p>処理するイベントです。 空にすることがあります。 </p>
+    exceptions:
+      - type: 8a99d4b0
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen(PartitionContext)
+    id: onOpen(PartitionContext)
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    langs:
+      - java
+    name: onOpen(PartitionContext context)
+    nameWithType: IEventProcessor.onOpen(PartitionContext context)
+    fullName: void com.microsoft.azure.eventprocessorhost.IEventProcessor.onOpen(PartitionContext context)
+    overload: com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/IEventProcessor.java
+      startLine: 35
+    package: com.microsoft.azure.eventprocessorhost
+    summary: |-
+      <p>イベント プロセッサを初期化するためにプロセッサ ホストによって呼び出されます。</p>
+      <p></p>
+    syntax: &ref_2
+      content: public void onOpen(PartitionContext context)
+      parameters:
+        - id: context
+          type: com.microsoft.azure.eventprocessorhost._partition_context
+          description: <p>このイベント プロセッサからのイベントを処理するパーティションに関する情報です。 </p>
+    exceptions:
+      - type: 8a99d4b0
+references:
+  - uid: 8a99d4b0
+    spec.java:
+      - name: Exception
+        fullName: Exception
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen*
+    name: onOpen
+    nameWithType: IEventProcessor.onOpen
+    fullName: void com.microsoft.azure.eventprocessorhost.IEventProcessor.onOpen
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor.onClose*
+    name: onClose
+    nameWithType: IEventProcessor.onClose
+    fullName: void com.microsoft.azure.eventprocessorhost.IEventProcessor.onClose
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: 2a13b5a5com.microsoft.azure.eventhubs._event_dataa08ddfce
+    spec.java:
+      - name: Iterable<
+        fullName: Iterable<
+      - uid: com.microsoft.azure.eventhubs._event_data
+        name: EventData
+        fullName: com.microsoft.azure.eventhubs.EventData
+        href: com.microsoft.azure.eventhubs._event_data.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents*
+    name: onEvents
+    nameWithType: IEventProcessor.onEvents
+    fullName: void com.microsoft.azure.eventprocessorhost.IEventProcessor.onEvents
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: a04fafd7
+    spec.java:
+      - name: Throwable
+        fullName: Throwable
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor.onError*
+    name: onError
+    nameWithType: IEventProcessor.onError
+    fullName: void com.microsoft.azure.eventprocessorhost.IEventProcessor.onError
+    package: com.microsoft.azure.eventprocessorhost
+  - uid: com.microsoft.azure.eventprocessorhost._partition_context
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._partition_context.yml
+    name: PartitionContext
+    nameWithType: PartitionContext
+    fullName: com.microsoft.azure.eventprocessorhost.PartitionContext
+    type: Class
+    syntax:
+      content: public class PartitionContext
+  - uid: com.microsoft.azure.eventprocessorhost._close_reason
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._close_reason.yml
+    name: CloseReason
+    nameWithType: CloseReason
+    fullName: com.microsoft.azure.eventprocessorhost.CloseReason
+    type: Enum
+    syntax:
+      content: public enum CloseReason
+  - uid: com.microsoft.azure.eventhubs._event_data
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: EventData
+    nameWithType: EventData
+    fullName: com.microsoft.azure.eventhubs.EventData
+    type: Class
+    summary: |-
+      <p>送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。 各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。 </p>
+      <p>ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink><pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> - AMQPMessage.ApplicationProperties section
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref> - if AMQPMessage.Body has Data section
+      iii. <xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">getObject()</xref> - if AMQPMessage.Body has AMQPValue or AMQPSequence sections
+      </pre> Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。 高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+    syntax:
+      content: public class EventData
+  - uid: com.microsoft.azure.eventprocessorhost._event_processor_host
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._event_processor_host.yml
+    name: EventProcessorHost
+    nameWithType: EventProcessorHost
+    fullName: com.microsoft.azure.eventprocessorhost.EventProcessorHost
+    type: Class
+    syntax:
+      content: public class EventProcessorHost
+  - uid: com.microsoft.azure.eventprocessorhost._event_processor_options
+    parent: com.microsoft.azure.eventprocessorhost
+    href: com.microsoft.azure.eventprocessorhost._event_processor_options.yml
+    name: EventProcessorOptions
+    nameWithType: EventProcessorOptions
+    fullName: com.microsoft.azure.eventprocessorhost.EventProcessorOptions
+    type: Class
+    syntax:
+      content: public class EventProcessorOptions
+  - uid: 'com.microsoft.azure.eventprocessorhost._i_event_processor.onError(PartitionContext,Throwable)'
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    name: 'onError(PartitionContext context, Throwable error)'
+    nameWithType: 'IEventProcessor.onError(PartitionContext context, Throwable error)'
+    fullName: 'void com.microsoft.azure.eventprocessorhost.IEventProcessor.onError(PartitionContext context, Throwable error)'
+    type: Method
+    summary: |-
+      <p>基になるクライアントが受信中にエラーが発生したときに呼び出されます。 <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>くれますエラーから復旧して、コードから必要なアクションがないため、メッセージをポンプする操作を続行します。 このメソッドは、情報提供を目的に提供されます。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.eventprocessorhost._i_event_processor.onOpen(PartitionContext)
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    name: onOpen(PartitionContext context)
+    nameWithType: IEventProcessor.onOpen(PartitionContext context)
+    fullName: void com.microsoft.azure.eventprocessorhost.IEventProcessor.onOpen(PartitionContext context)
+    type: Method
+    summary: |-
+      <p>イベント プロセッサを初期化するためにプロセッサ ホストによって呼び出されます。</p>
+      <p></p>
+    syntax: *ref_2
+  - uid: 'com.microsoft.azure.eventprocessorhost._i_event_processor.onEvents(PartitionContext,Iterable<EventData>)'
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    name: 'onEvents(PartitionContext context, Iterable<EventData> messages)'
+    nameWithType: 'IEventProcessor.onEvents(PartitionContext context, Iterable<EventData> messages)'
+    fullName: 'void com.microsoft.azure.eventprocessorhost.IEventProcessor.onEvents(PartitionContext context, Iterable<EventData> messages)'
+    type: Method
+    summary: |-
+      <p>イベントのバッチが到着したときに、プロセッサ ホストによって呼び出されます。</p>
+      <p>これは、イベント プロセッサの実際の作業が行われます。 1 つまたは複数のイベントが到着したときに通常呼び出されます。 場合、 <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_host" data-throw-if-not-resolved="false">EventProcessorHost</xref>インスタンスで設定された、 <xref uid="com.microsoft.azure.eventprocessorhost._event_processor_options" data-throw-if-not-resolved="false">EventProcessorOptions</xref> setInvokeProcessorAfterReceiveTimeout(true) が呼び出されると、受信タイムアウトになるが呼び出されます反復可能な空です。 既定では、このオプションが false で、受信タイムアウトには、このメソッドの呼び出しが行われません。</p>
+      <p></p>
+    syntax: *ref_3
+  - uid: 'com.microsoft.azure.eventprocessorhost._i_event_processor.onClose(PartitionContext,CloseReason)'
+    parent: com.microsoft.azure.eventprocessorhost._i_event_processor
+    href: com.microsoft.azure.eventprocessorhost._i_event_processor.yml
+    name: 'onClose(PartitionContext context, CloseReason reason)'
+    nameWithType: 'IEventProcessor.onClose(PartitionContext context, CloseReason reason)'
+    fullName: 'void com.microsoft.azure.eventprocessorhost.IEventProcessor.onClose(PartitionContext context, CloseReason reason)'
+    type: Method
+    summary: |-
+      <p>イベント プロセッサが停止されていることを示すためにプロセッサ ホストによって呼び出されます。</p>
+      <p></p>
+    syntax: *ref_4

@@ -1,0 +1,197 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils
+    id: _mapping_comparison_utils
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    children:
+      - 'com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.comparePointMappings(StoreShardMap,List<StoreMapping>,List<StoreMapping>)'
+      - 'com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.compareRangeMappings(StoreShardMap,List<StoreMapping>,List<StoreMapping>)'
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.yml
+    langs:
+      - java
+    name: MappingComparisonUtils
+    nameWithType: MappingComparisonUtils
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonUtils
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/MappingComparisonUtils.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/MappingComparisonUtils.java
+      startLine: 32
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: <p>リストまたは範囲のいずれかのシャード マップのマッピングのコレクションの間で比較を実行するためのユーティリティ メソッドが含まれています。 </p>
+    syntax:
+      content: public class MappingComparisonUtils
+    inheritance:
+      - java.lang.Object
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.comparePointMappings(StoreShardMap,List<StoreMapping>,List<StoreMapping>)'
+    id: 'comparePointMappings(StoreShardMap,List<StoreMapping>,List<StoreMapping>)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.yml
+    langs:
+      - java
+    name: 'comparePointMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+    nameWithType: 'MappingComparisonUtils.comparePointMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+    fullName: 'static List<MappingComparisonResult> com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonUtils.comparePointMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.comparePointMappings*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/MappingComparisonUtils.java
+      startLine: 315
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>GsmMappings と lsmMappings 内の地点の和集合から MappingComparisonResults の一覧を作成するヘルパー関数。</p>
+      <p></p>
+    syntax:
+      content: 'public static List<MappingComparisonResult> comparePointMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+      parameters:
+        - id: ssm
+          type: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+          description: <p>生成された MappingComparisonResults で参照されている StoreShardMap </p>
+        - id: gsmMappings
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.store._store_mappinga08ddfce
+          description: <p>GSM からマッピングの一覧です。 </p>
+        - id: lsmMappings
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.store._store_mappinga08ddfce
+          description: <p>LSM からマッピングの一覧です。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_resulta08ddfce
+        description: '<p>一覧の<xref uid="com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result" data-throw-if-not-resolved="false">MappingComparisonResult</xref>: gsmMappings と lsmMappings 内の境界の和集合から発生する各範囲のいずれか。 </p>'
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.compareRangeMappings(StoreShardMap,List<StoreMapping>,List<StoreMapping>)'
+    id: 'compareRangeMappings(StoreShardMap,List<StoreMapping>,List<StoreMapping>)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.yml
+    langs:
+      - java
+    name: 'compareRangeMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+    nameWithType: 'MappingComparisonUtils.compareRangeMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+    fullName: 'static ArrayList<MappingComparisonResult> com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonUtils.compareRangeMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.compareRangeMappings*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/MappingComparisonUtils.java
+      startLine: 45
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>GsmMappings および lsmMappings で範囲の境界の和集合から MappingComparisonResults の一覧を作成するヘルパー関数。</p>
+      <p></p>
+    syntax:
+      content: 'public static ArrayList<MappingComparisonResult> compareRangeMappings(StoreShardMap ssm, List<StoreMapping> gsmMappings, List<StoreMapping> lsmMappings)'
+      parameters:
+        - id: ssm
+          type: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+          description: <p>生成された MappingComparisonResults で参照されている StoreShardMap </p>
+        - id: gsmMappings
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.store._store_mappinga08ddfce
+          description: <p>GSM からマッピングの一覧です。 </p>
+        - id: lsmMappings
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.store._store_mappinga08ddfce
+          description: <p>LSM からマッピングの一覧です。 </p>
+      return:
+        type: 573b1e0bcom.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_resulta08ddfce
+        description: '<p>一覧の<xref uid="com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result" data-throw-if-not-resolved="false">MappingComparisonResult</xref>: gsmMappings と lsmMappings 内の境界の和集合から発生する各範囲のいずれか。 </p>'
+references:
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.store._store_mappinga08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.store._store_mapping
+        name: StoreMapping
+        fullName: com.microsoft.azure.elasticdb.shard.store.StoreMapping
+        href: com.microsoft.azure.elasticdb.shard.store._store_mapping.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 573b1e0bcom.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_resulta08ddfce
+    spec.java:
+      - name: ArrayList<
+        fullName: ArrayList<
+      - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result
+        name: MappingComparisonResult
+        fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonResult
+        href: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.compareRangeMappings*
+    name: compareRangeMappings
+    nameWithType: MappingComparisonUtils.compareRangeMappings
+    fullName: static ArrayList<MappingComparisonResult> com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonUtils.compareRangeMappings
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_resulta08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result
+        name: MappingComparisonResult
+        fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonResult
+        href: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_utils.comparePointMappings*
+    name: comparePointMappings
+    nameWithType: MappingComparisonUtils.comparePointMappings
+    fullName: static List<MappingComparisonResult> com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonUtils.comparePointMappings
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_comparison_result.yml
+    name: MappingComparisonResult
+    nameWithType: MappingComparisonResult
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingComparisonResult
+    type: Class
+    summary: <p>指定された範囲のマッピングを比較モノクロを結果します。 </p>
+    syntax:
+      content: public class MappingComparisonResult
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_shard_map.yml
+    name: StoreShardMap
+    nameWithType: StoreShardMap
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreShardMap
+    type: Class
+    summary: <p>シャード マップの表現を格納します。 </p>
+    syntax:
+      content: public class StoreShardMap
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_mapping
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_mapping.yml
+    name: StoreMapping
+    nameWithType: StoreMapping
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreMapping
+    type: Class
+    summary: <p>マッピング モノクロのストレージ形式は、範囲とシャードをキーします。 </p>
+    syntax:
+      content: public class StoreMapping
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: ShardKey
+    nameWithType: ShardKey
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardKey
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>キーの値。 値と型をラップし、正規化/非正規化のシリアル化を許可します。 </p>"
+    syntax:
+      content: public class ShardKey
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key_type.yml
+    name: ShardKeyType
+    nameWithType: ShardKeyType
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardKeyType
+    type: Enum
+    summary: '<p>シャード キーの型。 現在、のみ Int32、Int64、Guid、および byte[] はシャード キーとしてサポートされるデータ型です。 </p>'
+    syntax:
+      content: public enum ShardKeyType
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    name: ShardRange
+    nameWithType: ShardRange
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+    type: Class
+    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    syntax:
+      content: public class ShardRange

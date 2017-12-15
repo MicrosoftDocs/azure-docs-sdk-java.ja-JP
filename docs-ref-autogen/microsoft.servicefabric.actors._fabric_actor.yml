@@ -1,0 +1,502 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._fabric_actor
+    id: _fabric_actor
+    parent: microsoft.servicefabric.actors
+    children:
+      - 'microsoft.servicefabric.actors._fabric_actor.FabricActor(FabricActorService,ActorId)'
+      - microsoft.servicefabric.actors._fabric_actor.saveStateAsync()
+      - microsoft.servicefabric.actors._fabric_actor.stateManager()
+    href: microsoft.servicefabric.actors._fabric_actor.yml
+    langs:
+      - java
+    name: FabricActor
+    nameWithType: FabricActor
+    fullName: microsoft.servicefabric.actors.FabricActor
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActor.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActor.java
+      startLine: 13
+    package: microsoft.servicefabric.actors
+    summary: "<p>関連付けられている複数の信頼性の高い '名前付き' 状態を持つことができるアクターを表します。 <xref uid=\"microsoft.servicefabric.actors._actor_base\" data-throw-if-not-resolved=\"false\">ActorBase</xref></p>\n<p>\r\n\r\n  <b>注釈:</b>アクター ガベージ コレクションとのフェールオーバーの制限が、状態が保持されます。 状態の取得と格納がアクター状態プロバイダーによって提供される<xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>です。 </p>"
+    syntax: &ref_1
+      content: public class FabricActor extends ActorBase
+    inheritance:
+      - java.lang.Object
+      - microsoft.servicefabric.actors._actor_base
+    inheritedMembers:
+      - microsoft.servicefabric.actors._actor_base.getActorService()
+      - microsoft.servicefabric.actors._actor_base.getApplicationName()
+      - microsoft.servicefabric.actors._actor_base.getId()
+      - microsoft.servicefabric.actors._actor_base.getReminder(String)
+      - microsoft.servicefabric.actors._actor_base.getServiceUri()
+      - microsoft.servicefabric.actors._actor_base.onActivateAsync()
+      - microsoft.servicefabric.actors._actor_base.onDeactivateAsync()
+      - microsoft.servicefabric.actors._actor_base.onPostActorMethodAsync(ActorMethodContext)
+      - microsoft.servicefabric.actors._actor_base.onPreActorMethodAsync(ActorMethodContext)
+      - 'microsoft.servicefabric.actors._actor_base.registerReminderAsync(String,byte [],Duration,Duration)'
+      - 'microsoft.servicefabric.actors._actor_base.registerTimer(Function<Object, CompletableFuture<?>>,Object,Duration,Duration)'
+      - 'microsoft.servicefabric.actors._actor_base.registerTimer(Function<Object, CompletableFuture<?>>,String,Object,Duration,Duration)'
+      - microsoft.servicefabric.actors._actor_base.unregisterReminderAsync(ActorReminder)
+      - microsoft.servicefabric.actors._actor_base.unregisterTimer(ActorTimer)
+  - uid: 'microsoft.servicefabric.actors._fabric_actor.FabricActor(FabricActorService,ActorId)'
+    id: 'FabricActor(FabricActorService,ActorId)'
+    parent: microsoft.servicefabric.actors._fabric_actor
+    href: microsoft.servicefabric.actors._fabric_actor.yml
+    langs:
+      - java
+    name: 'FabricActor(FabricActorService actorService, ActorId actorId)'
+    nameWithType: 'FabricActor.FabricActor(FabricActorService actorService, ActorId actorId)'
+    fullName: 'microsoft.servicefabric.actors.FabricActor.FabricActor(FabricActorService actorService, ActorId actorId)'
+    overload: microsoft.servicefabric.actors._fabric_actor.FabricActor*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActor.java
+      startLine: 25
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>新しいインスタンスを初期化<xref uid="microsoft.servicefabric.actors._fabric_actor" data-throw-if-not-resolved="false">FabricActor</xref></p>
+      <p></p>
+    syntax:
+      content: 'protected FabricActor(FabricActorService actorService, ActorId actorId)'
+      parameters:
+        - id: actorService
+          type: microsoft.servicefabric.actors._fabric_actor_service
+          description: <p><xref uid="microsoft.servicefabric.actors._fabric_actor_service" data-throw-if-not-resolved="false">FabricActorService</xref>はこのアクターのインスタンスをホストします。 </p>
+        - id: actorId
+          type: microsoft.servicefabric.actors._actor_id
+          description: <p><xref uid="microsoft.servicefabric.actors._actor_id" data-throw-if-not-resolved="false">ActorId</xref>アクターのインスタンスのです。 </p>
+  - uid: microsoft.servicefabric.actors._fabric_actor.saveStateAsync()
+    id: saveStateAsync()
+    parent: microsoft.servicefabric.actors._fabric_actor
+    href: microsoft.servicefabric.actors._fabric_actor.yml
+    langs:
+      - java
+    name: saveStateAsync()
+    nameWithType: FabricActor.saveStateAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActor.saveStateAsync()
+    overload: microsoft.servicefabric.actors._fabric_actor.saveStateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActor.java
+      startLine: 48
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>状態の変更を保存 (追加/更新/削除) 最後の呼び出し以降に行われた<xref uid="microsoft.servicefabric.actors._fabric_actor.saveStateAsync()" data-throw-if-not-resolved="false">FabricActor#saveStateAsync()</xref>アクターに関連付けられているアクター状態プロバイダーにします。</p>
+      <p></p>
+    syntax: &ref_2
+      content: protected CompletableFuture<?> saveStateAsync()
+      return:
+        type: 16409f84
+        description: <p>非同期の保存操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._fabric_actor.stateManager()
+    id: stateManager()
+    parent: microsoft.servicefabric.actors._fabric_actor
+    href: microsoft.servicefabric.actors._fabric_actor.yml
+    langs:
+      - java
+    name: stateManager()
+    nameWithType: FabricActor.stateManager()
+    fullName: ActorStateManager microsoft.servicefabric.actors.FabricActor.stateManager()
+    overload: microsoft.servicefabric.actors._fabric_actor.stateManager*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActor.java
+      startLine: 37
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>状態マネージャーを取得<xref uid="microsoft.servicefabric.actors._fabric_actor" data-throw-if-not-resolved="false">FabricActor</xref> get/追加/更新/削除する状態をという名前を使用できます。</p>
+      <p></p>
+    syntax:
+      content: public ActorStateManager stateManager()
+      return:
+        type: microsoft.servicefabric.actors._actor_state_manager
+        description: <p><xref uid="microsoft.servicefabric.actors._actor_state_manager" data-throw-if-not-resolved="false">ActorStateManager</xref>アクター状態の管理に使用できます。 </p>
+references:
+  - uid: microsoft.servicefabric.actors._fabric_actor.FabricActor*
+    name: FabricActor
+    nameWithType: FabricActor.FabricActor
+    fullName: microsoft.servicefabric.actors.FabricActor.FabricActor
+    package: microsoft.servicefabric.actors
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.actors._fabric_actor.saveStateAsync*
+    name: saveStateAsync
+    nameWithType: FabricActor.saveStateAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActor.saveStateAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor.stateManager*
+    name: stateManager
+    nameWithType: FabricActor.stateManager
+    fullName: ActorStateManager microsoft.servicefabric.actors.FabricActor.stateManager
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_base.getActorService()
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: getActorService()
+    nameWithType: ActorBase.getActorService()
+    fullName: FabricActorService microsoft.servicefabric.actors.ActorBase.getActorService()
+    type: Method
+    summary: |-
+      <p>アクターをホストしているステートフル サービス レプリカを取得します。</p>
+      <p></p>
+    syntax:
+      content: public FabricActorService getActorService()
+      return:
+        type: microsoft.servicefabric.actors._fabric_actor_service
+        description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._fabric_actor_service\" data-throw-if-not-resolved=\"false\">microsoft.servicefabric.actors.FabricActorService</xref>ステートフル サービス レプリカをホストしているアクターを表すです。 アクターです。 </p>"
+  - uid: microsoft.servicefabric.actors._actor_base.getApplicationName()
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: getApplicationName()
+    nameWithType: ActorBase.getApplicationName()
+    fullName: String microsoft.servicefabric.actors.ActorBase.getApplicationName()
+    type: Method
+    summary: |-
+      <p>このアクターをホストしているアクター サービスが含まれるアプリケーションの名前を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getApplicationName()
+      return:
+        type: '26831127'
+        description: <p>このアクターをホストしているアクター サービスが含まれるアプリケーションの名前。 </p>
+  - uid: microsoft.servicefabric.actors._actor_base.getId()
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: getId()
+    nameWithType: ActorBase.getId()
+    fullName: ActorId microsoft.servicefabric.actors.ActorBase.getId()
+    type: Method
+    summary: |-
+      <p>アクター サービスとこのアクターの id を取得します。</p>
+      <p></p>
+    syntax:
+      content: public ActorId getId()
+      return:
+        type: microsoft.servicefabric.actors._actor_id
+        description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクターのです。 </p>"
+  - uid: microsoft.servicefabric.actors._actor_base.getReminder(String)
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: getReminder(String reminderName)
+    nameWithType: ActorBase.getReminder(String reminderName)
+    fullName: ActorReminder microsoft.servicefabric.actors.ActorBase.getReminder(String reminderName)
+    type: Method
+    summary: |-
+      <p>指定された通知の名前を持つアクター アラームを取得します。</p>
+      <p></p>
+    syntax:
+      content: protected ActorReminder getReminder(String reminderName)
+      parameters:
+        - id: reminderName
+          type: '26831127'
+          description: <p>取得する通知の名前です。 </p>
+      return:
+        type: microsoft.servicefabric.actors._actor_reminder
+        description: <p><xref uid="microsoft.servicefabric.actors._actor_reminder" data-throw-if-not-resolved="false">ActorReminder</xref>アクター アラームを表すです。 </p>
+  - uid: microsoft.servicefabric.actors._actor_base.getServiceUri()
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: getServiceUri()
+    nameWithType: ActorBase.getServiceUri()
+    fullName: URI microsoft.servicefabric.actors.ActorBase.getServiceUri()
+    type: Method
+    summary: |-
+      <p>このアクターをホストしているアクター サービスの Uri を取得します。</p>
+      <p></p>
+    syntax:
+      content: public URI getServiceUri()
+      return:
+        type: '62304784'
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.net.URI</xref>このアクターをホストしているアクター サービス。 </p>"
+  - uid: microsoft.servicefabric.actors._actor_base.onActivateAsync()
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: onActivateAsync()
+    nameWithType: ActorBase.onActivateAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorBase.onActivateAsync()
+    type: Method
+    summary: |-
+      <p>メンバーを初期化、状態を初期化またはタイマーを登録するには、このメソッドをオーバーライドします。 このメソッドは、アクターがアクティブ化後は、メソッドの前に、上の呼び出しやアラームをディスパッチします。 右呼び出されます。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onActivateAsync()
+      return:
+        type: 16409f84
+        description: <p>未処理の OnActivateAsync 操作を表す CompletableFuture です。 </p>
+  - uid: microsoft.servicefabric.actors._actor_base.onDeactivateAsync()
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: onDeactivateAsync()
+    nameWithType: ActorBase.onDeactivateAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorBase.onDeactivateAsync()
+    type: Method
+    summary: |-
+      <p>タイマーの登録を解除を含むリソースを解放するには、このメソッドをオーバーライドします。 このメソッドは、アクターが非アクティブ化する前に右呼び出されます。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onDeactivateAsync()
+      return:
+        type: 16409f84
+        description: <p>未処理の OnDeactivateAsync 操作を表す CompletableFuture です。 </p>
+  - uid: microsoft.servicefabric.actors._actor_base.onPostActorMethodAsync(ActorMethodContext)
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: onPostActorMethodAsync(ActorMethodContext actorMethodContext)
+    nameWithType: ActorBase.onPostActorMethodAsync(ActorMethodContext actorMethodContext)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorBase.onPostActorMethodAsync(ActorMethodContext actorMethodContext)
+    type: Method
+    summary: |-
+      <p>このメソッドが呼び出されるアクター ランタイムによって、アクター メソッドの実行が完了しました。 アクター メソッドの実行が完了した後、すべてのアクションを実行するためには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onPostActorMethodAsync(ActorMethodContext actorMethodContext)
+      parameters:
+        - id: actorMethodContext
+          type: microsoft.servicefabric.actors._actor_method_context
+          description: <p><xref uid="microsoft.servicefabric.actors._actor_method_context" data-throw-if-not-resolved="false">ActorMethodContext</xref>このメソッドの前にアクター ランタイムによって呼び出されたメソッドについて説明します。 </p>
+      return:
+        type: 16409f84
+        description: |-
+          <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> actor メソッドの操作を表すです。 <verbatim>    &lt;b&gt;解説:&lt;/b&gt;より前のバージョンのアクター ランタイムによってこのメソッドが呼び出されます。
+
+              &lt;ul&gt;
+
+              &lt;li&gt;Invoking an actor interface method when a client request comes.&lt;/li&gt;
+
+              &lt;li&gt;Invoking a method on {@link Remindable} interface when a reminder fires.&lt;/li&gt;
+
+              &lt;li&gt;Invoking a timer callback when timer fires.&lt;/li&gt;
+
+              &lt;/ul&gt;</verbatim></p>
+  - uid: microsoft.servicefabric.actors._actor_base.onPreActorMethodAsync(ActorMethodContext)
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: onPreActorMethodAsync(ActorMethodContext actorMethodContext)
+    nameWithType: ActorBase.onPreActorMethodAsync(ActorMethodContext actorMethodContext)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorBase.onPreActorMethodAsync(ActorMethodContext actorMethodContext)
+    type: Method
+    summary: |-
+      <p>このメソッドはアクター メソッドの呼び出しの直前にアクター ランタイムによって呼び出されます。 前のアクター メソッドが呼び出されるアクションを実行するためには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onPreActorMethodAsync(ActorMethodContext actorMethodContext)
+      parameters:
+        - id: actorMethodContext
+          type: microsoft.servicefabric.actors._actor_method_context
+          description: <p><xref uid="microsoft.servicefabric.actors._actor_method_context" data-throw-if-not-resolved="false">ActorMethodContext</xref>このメソッドの完了後にアクター ランタイムによって呼び出されるメソッドを記述します。 </p>
+      return:
+        type: 16409f84
+        description: |-
+          <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>前 actor メソッドの操作を表すです。 <verbatim>    &lt;b&gt;解説:&lt;/b&gt;より前のバージョンのアクター ランタイムによってこのメソッドが呼び出されます。
+
+              &lt;ul&gt;
+
+              &lt;li&gt;Invoking an actor interface method when a client request comes.&lt;/li&gt;
+
+              &lt;li&gt;Invoking a method on {@link Remindable} interface when a reminder fires.&lt;/li&gt;
+
+              &lt;li&gt;Invoking a timer callback when timer fires.&lt;/li&gt;
+
+              &lt;/ul&gt;</verbatim></p>
+  - uid: 'microsoft.servicefabric.actors._actor_base.registerReminderAsync(String,byte [],Duration,Duration)'
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: 'registerReminderAsync(String reminderName, byte[] state, Duration dueTime, Duration period)'
+    nameWithType: 'ActorBase.registerReminderAsync(String reminderName, byte[] state, Duration dueTime, Duration period)'
+    fullName: 'CompletableFuture<ActorReminder> microsoft.servicefabric.actors.ActorBase.registerReminderAsync(String reminderName, byte[] state, Duration dueTime, Duration period)'
+    type: Method
+    summary: |-
+      <p>アクターを指定した通知を登録します。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<ActorReminder> registerReminderAsync(String reminderName, byte[] state, Duration dueTime, Duration period)'
+      parameters:
+        - id: reminderName
+          type: '26831127'
+          description: <p>登録を求めるメッセージの名前 </p>
+        - id: state
+          type: ccd9418d
+          description: <p>通知に関連付けられている状態です。 </p>
+        - id: dueTime
+          type: e02a2de0
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>するアラームを発生させるまでの遅延時間を表すです。 負の値の発生からアラームを防ぐためにミリ秒 (-1) いずれかを指定します。 アラームを即時にゼロ (0) を指定します。 </p>
+        - id: period
+          type: e02a2de0
+          description: <p>アラームの起動処理の時間間隔。 ミリ秒を指定 (-1) を定期的な起動を無効にします。 </p>
+      return:
+        type: 9cdf14d0microsoft.servicefabric.actors._actor_remindera08ddfce
+        description: <p>非同期の登録操作を表すタスク。 TResult のパラメーターの値は、 <xref uid="microsoft.servicefabric.actors._actor_reminder" data-throw-if-not-resolved="false">ActorReminder</xref>に登録されたアクター アラームを表すです。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_base.registerTimer(Function<Object, CompletableFuture<?>>,Object,Duration,Duration)'
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: 'registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, Object state, Duration dueTime, Duration period)'
+    nameWithType: 'ActorBase.registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, Object state, Duration dueTime, Duration period)'
+    fullName: 'ActorTimer microsoft.servicefabric.actors.ActorBase.registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, Object state, Duration dueTime, Duration period)'
+    type: Method
+    summary: |-
+      <p>アクターのタイマーを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'protected ActorTimer registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, Object state, Duration dueTime, Duration period)'
+      parameters:
+        - id: asyncCallback
+          type: 05842176
+          description: <p>タイマーが発生したときに呼び出されるコールバック。 </p>
+        - id: state
+          type: '79317049'
+          description: <p>タイマー コールバックに渡す状態です。 </p>
+        - id: dueTime
+          type: e02a2de0
+          description: <p>アクターのタイマーが期限最初に TimeSpan です。 </p>
+        - id: period
+          type: e02a2de0
+          description: <p>後続のアクター タイマー呼び出し TimeSpan です。 </p>
+      return:
+        type: microsoft.servicefabric.actors._actor_timer
+        description: <p>返します<xref uid="microsoft.servicefabric.actors._actor_timer" data-throw-if-not-resolved="false">ActorTimer</xref>オブジェクト。 </p>
+  - uid: 'microsoft.servicefabric.actors._actor_base.registerTimer(Function<Object, CompletableFuture<?>>,String,Object,Duration,Duration)'
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: 'registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, String asyncCallbackFunctionName, Object state, Duration dueTime, Duration period)'
+    nameWithType: 'ActorBase.registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, String asyncCallbackFunctionName, Object state, Duration dueTime, Duration period)'
+    fullName: 'ActorTimer microsoft.servicefabric.actors.ActorBase.registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, String asyncCallbackFunctionName, Object state, Duration dueTime, Duration period)'
+    type: Method
+    summary: |-
+      <p>アクターのタイマーを登録します。</p>
+      <p></p>
+    syntax:
+      content: 'protected ActorTimer registerTimer(Function<Object, CompletableFuture<?>> asyncCallback, String asyncCallbackFunctionName, Object state, Duration dueTime, Duration period)'
+      parameters:
+        - id: asyncCallback
+          type: 05842176
+          description: <p>タイマーが発生したときに呼び出されるコールバック。 </p>
+        - id: asyncCallbackFunctionName
+          type: '26831127'
+          description: '<p>AsyncCallBack 関数の名前。 使用できます<xref uid="microsoft.servicefabric.actors._actor_base.onPreActorMethodAsync(ActorMethodContext)" data-throw-if-not-resolved="false">ActorBase#onPreActorMethodAsync(ActorMethodContext)</xref>と<xref uid="microsoft.servicefabric.actors._actor_base.onPostActorMethodAsync(ActorMethodContext)" data-throw-if-not-resolved="false">ActorBase#onPostActorMethodAsync(ActorMethodContext)</xref>これの前と後の呼び出しで、ユーザーのタスクを開始するには関数。 プロパティ<xref uid="microsoft.servicefabric.actors._actor_method_context.getMethodName()" data-throw-if-not-resolved="false">ActorMethodContext#getMethodName()</xref>メソッド名になります。 </p>'
+        - id: state
+          type: '79317049'
+          description: <p>タイマー コールバックに渡す状態です。 </p>
+        - id: dueTime
+          type: e02a2de0
+          description: <p>アクターのタイマーが期限最初に TimeSpan です。 </p>
+        - id: period
+          type: e02a2de0
+          description: <p>後続のアクター タイマー呼び出し TimeSpan です。 </p>
+      return:
+        type: microsoft.servicefabric.actors._actor_timer
+        description: <p>返します<xref uid="microsoft.servicefabric.actors._actor_timer" data-throw-if-not-resolved="false">ActorTimer</xref>オブジェクト。 </p>
+  - uid: microsoft.servicefabric.actors._actor_base.unregisterReminderAsync(ActorReminder)
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: unregisterReminderAsync(ActorReminder reminder)
+    nameWithType: ActorBase.unregisterReminderAsync(ActorReminder reminder)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorBase.unregisterReminderAsync(ActorReminder reminder)
+    type: Method
+    summary: |-
+      <p>アクターを指定した通知を登録解除します。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> unregisterReminderAsync(ActorReminder reminder)
+      parameters:
+        - id: reminder
+          type: microsoft.servicefabric.actors._actor_reminder
+          description: <p>登録を解除するアクター通知します。 </p>
+      return:
+        type: 16409f84
+        description: <p>表す非同期のタスクは、操作を登録解除します。 </p>
+  - uid: microsoft.servicefabric.actors._actor_base.unregisterTimer(ActorTimer)
+    parent: microsoft.servicefabric.actors._actor_base
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: unregisterTimer(ActorTimer timer)
+    nameWithType: ActorBase.unregisterTimer(ActorTimer timer)
+    fullName: void microsoft.servicefabric.actors.ActorBase.unregisterTimer(ActorTimer timer)
+    type: Method
+    summary: |-
+      <p>以前にこのアクターの設定、タイマーの登録を解除します。</p>
+      <p></p>
+    syntax:
+      content: protected void unregisterTimer(ActorTimer timer)
+      parameters:
+        - id: timer
+          type: microsoft.servicefabric.actors._actor_timer
+          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_timer\" data-throw-if-not-resolved=\"false\">ActorTimer</xref>を表すタイマーを登録する必要があります。 </p>"
+  - uid: microsoft.servicefabric.actors._actor_base
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: ActorBase
+    nameWithType: ActorBase
+    fullName: microsoft.servicefabric.actors.ActorBase
+    type: Class
+    summary: "<p>アクターの基本クラスを表します。 <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref></p>\n<p>\r\n\r\n  <b>注釈:</b>アクターの基本データ型は、共通するアクターから派生するアクターによって実装された機能を提供<xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アクター ガベージ コレクションとのフェールオーバーの制限が、状態が保持されます。 状態の取得と格納がアクター状態プロバイダーによって提供される<xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>です。 </p>"
+    syntax:
+      content: public class ActorBase
+  - uid: microsoft.servicefabric.actors._actor_state_manager
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    name: ActorStateManager
+    nameWithType: ActorStateManager
+    fullName: microsoft.servicefabric.actors.ActorStateManager
+    type: Interface
+    summary: <p>インターフェイスのマネージャーの状態を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>を実装します。 </p>
+    syntax:
+      content: public interface ActorStateManager
+  - uid: microsoft.servicefabric.actors._fabric_actor_service
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: FabricActorService
+    nameWithType: FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService
+    type: Class
+    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    syntax:
+      content: public class FabricActorService
+  - uid: microsoft.servicefabric.actors._actor_id
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_id.yml
+    name: ActorId
+    nameWithType: ActorId
+    fullName: microsoft.servicefabric.actors.ActorId
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。 アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。 </p>"
+    syntax:
+      content: public class ActorId
+  - uid: microsoft.servicefabric.actors._fabric_actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._fabric_actor.yml
+    name: FabricActor
+    nameWithType: FabricActor
+    fullName: microsoft.servicefabric.actors.FabricActor
+    type: Class
+    summary: "<p>関連付けられている複数の信頼性の高い '名前付き' 状態を持つことができるアクターを表します。 <xref uid=\"microsoft.servicefabric.actors._actor_base\" data-throw-if-not-resolved=\"false\">ActorBase</xref></p>\n<p>\r\n\r\n  <b>注釈:</b>アクター ガベージ コレクションとのフェールオーバーの制限が、状態が保持されます。 状態の取得と格納がアクター状態プロバイダーによって提供される<xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>です。 </p>"
+    syntax: *ref_1
+  - uid: microsoft.servicefabric.actors._fabric_actor.saveStateAsync()
+    parent: microsoft.servicefabric.actors._fabric_actor
+    href: microsoft.servicefabric.actors._fabric_actor.yml
+    name: saveStateAsync()
+    nameWithType: FabricActor.saveStateAsync()
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActor.saveStateAsync()
+    type: Method
+    summary: |-
+      <p>状態の変更を保存 (追加/更新/削除) 最後の呼び出し以降に行われた<xref uid="microsoft.servicefabric.actors._fabric_actor.saveStateAsync()" data-throw-if-not-resolved="false">FabricActor#saveStateAsync()</xref>アクターに関連付けられているアクター状態プロバイダーにします。</p>
+      <p></p>
+    syntax: *ref_2
+  - uid: microsoft.servicefabric.actors._actor_state_provider
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_state_provider.yml
+    name: ActorStateProvider
+    nameWithType: ActorStateProvider
+    fullName: microsoft.servicefabric.actors.ActorStateProvider
+    type: Interface
+    summary: <p>アクター状態プロバイダーは、アクター ランタイムと通信するために実装する必要があるインターフェイスを表します。 </p>
+    syntax:
+      content: public interface ActorStateProvider extends StateProviderReplica

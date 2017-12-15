@@ -1,0 +1,323 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._application_health_policy
+    id: _application_health_policy
+    parent: system.fabric
+    children:
+      - system.fabric._application_health_policy.ApplicationHealthPolicy()
+      - system.fabric._application_health_policy.getDefaultServiceTypeHealthPolicy()
+      - system.fabric._application_health_policy.getMaxPercentUnhealthyDeployedApplications()
+      - system.fabric._application_health_policy.getServiceTypeHealthPolicyMap()
+      - system.fabric._application_health_policy.isConsiderWarningAsError()
+      - system.fabric._application_health_policy.setConsiderWarningAsError(boolean)
+      - system.fabric._application_health_policy.setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy)
+      - system.fabric._application_health_policy.setMaxPercentUnhealthyDeployedApplications(byte)
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: ApplicationHealthPolicy
+    nameWithType: ApplicationHealthPolicy
+    fullName: system.fabric.ApplicationHealthPolicy
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 14
+    package: system.fabric
+    summary: <p>アプリケーションまたはその子エンティティを 1 つの正常性を評価する正常性ポリシーを定義します。 </p>
+    syntax: &ref_1
+      content: public class ApplicationHealthPolicy
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric._application_health_policy.ApplicationHealthPolicy()
+    id: ApplicationHealthPolicy()
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: ApplicationHealthPolicy()
+    nameWithType: ApplicationHealthPolicy.ApplicationHealthPolicy()
+    fullName: system.fabric.ApplicationHealthPolicy.ApplicationHealthPolicy()
+    overload: system.fabric._application_health_policy.ApplicationHealthPolicy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 59
+    package: system.fabric
+    summary: "<p>新しいインスタンスを初期化、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ApplicationHealthPolicy</xref>クラスです。 </p>\n<p>\r\n\r\n  <b>注釈:</b>既定では、エラーまたは警告が許容されません。 </p>"
+    syntax:
+      content: public ApplicationHealthPolicy()
+  - uid: system.fabric._application_health_policy.getDefaultServiceTypeHealthPolicy()
+    id: getDefaultServiceTypeHealthPolicy()
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: getDefaultServiceTypeHealthPolicy()
+    nameWithType: ApplicationHealthPolicy.getDefaultServiceTypeHealthPolicy()
+    fullName: ServiceTypeHealthPolicy system.fabric.ApplicationHealthPolicy.getDefaultServiceTypeHealthPolicy()
+    overload: system.fabric._application_health_policy.getDefaultServiceTypeHealthPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 166
+    package: system.fabric
+    summary: |-
+      <p>既定では、サービスの種類のヘルスを評価するために使用する正常性ポリシーを取得します。</p>
+      <p></p>
+    syntax: &ref_2
+      content: public ServiceTypeHealthPolicy getDefaultServiceTypeHealthPolicy()
+      return:
+        type: system.fabric._service_type_health_policy
+        description: <p><xref uid="system.fabric._service_type_health_policy" data-throw-if-not-resolved="false">System.fabric.ServiceTypeHealthPolicy</xref>サービスの種類のポリシーが定義されていない場合は、サービスの種類の正常性を評価するために使用します。 </p>
+  - uid: system.fabric._application_health_policy.getMaxPercentUnhealthyDeployedApplications()
+    id: getMaxPercentUnhealthyDeployedApplications()
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: getMaxPercentUnhealthyDeployedApplications()
+    nameWithType: ApplicationHealthPolicy.getMaxPercentUnhealthyDeployedApplications()
+    fullName: byte system.fabric.ApplicationHealthPolicy.getMaxPercentUnhealthyDeployedApplications()
+    overload: system.fabric._application_health_policy.getMaxPercentUnhealthyDeployedApplications*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 129
+    package: system.fabric
+    summary: "<p>異常な展開済みアプリケーションの最大許容パーセンテージを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なアプリケーションがエラーと見なされる前に配置されているアプリケーションの最大許容パーセンテージです。 これは、アプリケーションがクラスター内に展開される現在のノード数にわたって異常な展開済みアプリケーションの数で割ることによって計算されます。 切り上げ計算が実行され、少数のノードに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>"
+    syntax:
+      content: public byte getMaxPercentUnhealthyDeployedApplications()
+      return:
+        type: d357ea40
+        description: <p>許容される異常な展開済みアプリケーションの割合の最大値。 許可される値は 0 から 100 までのバイト値です。 </p>
+  - uid: system.fabric._application_health_policy.getServiceTypeHealthPolicyMap()
+    id: getServiceTypeHealthPolicyMap()
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: getServiceTypeHealthPolicyMap()
+    nameWithType: ApplicationHealthPolicy.getServiceTypeHealthPolicyMap()
+    fullName: 'Map<String, ServiceTypeHealthPolicy> system.fabric.ApplicationHealthPolicy.getServiceTypeHealthPolicyMap()'
+    overload: system.fabric._application_health_policy.getServiceTypeHealthPolicyMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 198
+    package: system.fabric
+    summary: "<p>マップを取得<xref uid=\"system.fabric._service_type_health_policy\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceTypeHealthPolicy</xref>あたりサービス型の名前。</p>\n<p>\r\n\r\n  <b>注釈:</b>サービスの種類を指定された各のマップ内のエントリが既定のサービスの種類の正常性ポリシーを置き換えます。 たとえば、アプリケーションでは、ステートレスなゲートウェイ サービスの種類とステートフル エンジン サービスの種類の両方を含む、ステートレスおよびステートフルなサービスの正常性ポリシー構成できる方法が異なります。 サービスの種類ごとのポリシーには、サービスのヘルスをより細かく制御します。 </p>\n\n<p>サービス型の名前のポリシーが指定されていない場合、 <xref uid=\"system.fabric._application_health_policy.getDefaultServiceTypeHealthPolicy()\" data-throw-if-not-resolved=\"false\">system.fabric.ApplicationHealthPolicy#getDefaultServiceTypeHealthPolicy()</xref>評価に使用します。 </p>"
+    syntax:
+      content: 'public Map<String, ServiceTypeHealthPolicy> getServiceTypeHealthPolicyMap()'
+      return:
+        type: 2108f1f4system.fabric._service_type_health_policya08ddfce
+        description: <p>サービスの種類の正常性ポリシー サービスの種類名ごとにマップします。 </p>
+  - uid: system.fabric._application_health_policy.isConsiderWarningAsError()
+    id: isConsiderWarningAsError()
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: isConsiderWarningAsError()
+    nameWithType: ApplicationHealthPolicy.isConsiderWarningAsError()
+    fullName: boolean system.fabric.ApplicationHealthPolicy.isConsiderWarningAsError()
+    overload: system.fabric._application_health_policy.isConsiderWarningAsError*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 99
+    package: system.fabric
+    summary: |-
+      <p>エラーとして重大度が同じで、警告状態を持つレポートを扱う必要があるかどうかを決定するブール値を取得します。</p>
+      <p></p>
+    syntax:
+      content: public boolean isConsiderWarningAsError()
+      return:
+        type: 4fc6e284
+        description: <p>警告状態を持つレポートをエラーとして扱う場合は true。警告をエラーとして扱うことはできない場合は false。 </p>
+  - uid: system.fabric._application_health_policy.setConsiderWarningAsError(boolean)
+    id: setConsiderWarningAsError(boolean)
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: setConsiderWarningAsError(boolean considerWarningAsError)
+    nameWithType: ApplicationHealthPolicy.setConsiderWarningAsError(boolean considerWarningAsError)
+    fullName: void system.fabric.ApplicationHealthPolicy.setConsiderWarningAsError(boolean considerWarningAsError)
+    overload: system.fabric._application_health_policy.setConsiderWarningAsError*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 111
+    package: system.fabric
+    summary: |-
+      <p>エラーとして重大度が同じで、警告状態を持つレポートを扱う必要があるかどうかを決定するブール値を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setConsiderWarningAsError(boolean considerWarningAsError)
+      parameters:
+        - id: considerWarningAsError
+          type: 4fc6e284
+          description: <p>警告状態を持つレポートをエラーとして扱う場合は true。警告をエラーとして扱うことはできない場合は false。 </p>
+  - uid: system.fabric._application_health_policy.setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy)
+    id: setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy)
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy defaultServiceTypeHealthPolicy)
+    nameWithType: ApplicationHealthPolicy.setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy defaultServiceTypeHealthPolicy)
+    fullName: void system.fabric.ApplicationHealthPolicy.setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy defaultServiceTypeHealthPolicy)
+    overload: system.fabric._application_health_policy.setDefaultServiceTypeHealthPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 177
+    package: system.fabric
+    summary: |-
+      <p>既定では、サービスの種類のヘルスを評価するために使用する正常性ポリシーを設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setDefaultServiceTypeHealthPolicy(ServiceTypeHealthPolicy defaultServiceTypeHealthPolicy)
+      parameters:
+        - id: defaultServiceTypeHealthPolicy
+          type: system.fabric._service_type_health_policy
+          description: <p><xref uid="system.fabric._service_type_health_policy" data-throw-if-not-resolved="false">System.fabric.ServiceTypeHealthPolicy</xref>サービスの種類のポリシーが定義されていない場合は、サービスの種類の正常性を評価するために使用します。 </p>
+  - uid: system.fabric._application_health_policy.setMaxPercentUnhealthyDeployedApplications(byte)
+    id: setMaxPercentUnhealthyDeployedApplications(byte)
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    langs:
+      - java
+    name: setMaxPercentUnhealthyDeployedApplications(byte maxPercentUnhealthyDeployedApplications)
+    nameWithType: ApplicationHealthPolicy.setMaxPercentUnhealthyDeployedApplications(byte maxPercentUnhealthyDeployedApplications)
+    fullName: void system.fabric.ApplicationHealthPolicy.setMaxPercentUnhealthyDeployedApplications(byte maxPercentUnhealthyDeployedApplications)
+    overload: system.fabric._application_health_policy.setMaxPercentUnhealthyDeployedApplications*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationHealthPolicy.java
+      startLine: 150
+    package: system.fabric
+    summary: "<p>許容される異常な展開済みアプリケーションの割合の最大値を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なアプリケーションがエラーと見なされる前に配置されているアプリケーションの最大許容パーセンテージです。 これは、アプリケーションがクラスター内に展開される現在のノード数にわたって異常な展開済みアプリケーションの数で割ることによって計算されます。 切り上げ計算が実行され、少数のノードに対する 1 つのエラーは許容されます。 既定のパーセンテージは 0 です。 </p>\n\n<p></p>"
+    syntax:
+      content: public void setMaxPercentUnhealthyDeployedApplications(byte maxPercentUnhealthyDeployedApplications)
+      parameters:
+        - id: maxPercentUnhealthyDeployedApplications
+          type: d357ea40
+          description: <p>許容される異常な展開済みアプリケーションの割合の最大値。 許可される値は 0 から 100 までのバイト値です。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定した値は、0 から 100 までの整数値の範囲外でした。 </p>
+references:
+  - uid: system.fabric._application_health_policy.ApplicationHealthPolicy*
+    name: ApplicationHealthPolicy
+    nameWithType: ApplicationHealthPolicy.ApplicationHealthPolicy
+    fullName: system.fabric.ApplicationHealthPolicy.ApplicationHealthPolicy
+    package: system.fabric
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: system.fabric._application_health_policy.isConsiderWarningAsError*
+    name: isConsiderWarningAsError
+    nameWithType: ApplicationHealthPolicy.isConsiderWarningAsError
+    fullName: boolean system.fabric.ApplicationHealthPolicy.isConsiderWarningAsError
+    package: system.fabric
+  - uid: system.fabric._application_health_policy.setConsiderWarningAsError*
+    name: setConsiderWarningAsError
+    nameWithType: ApplicationHealthPolicy.setConsiderWarningAsError
+    fullName: void system.fabric.ApplicationHealthPolicy.setConsiderWarningAsError
+    package: system.fabric
+  - uid: d357ea40
+    spec.java:
+      - name: byte
+        fullName: byte
+  - uid: system.fabric._application_health_policy.getMaxPercentUnhealthyDeployedApplications*
+    name: getMaxPercentUnhealthyDeployedApplications
+    nameWithType: ApplicationHealthPolicy.getMaxPercentUnhealthyDeployedApplications
+    fullName: byte system.fabric.ApplicationHealthPolicy.getMaxPercentUnhealthyDeployedApplications
+    package: system.fabric
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: system.fabric._application_health_policy.setMaxPercentUnhealthyDeployedApplications*
+    name: setMaxPercentUnhealthyDeployedApplications
+    nameWithType: ApplicationHealthPolicy.setMaxPercentUnhealthyDeployedApplications
+    fullName: void system.fabric.ApplicationHealthPolicy.setMaxPercentUnhealthyDeployedApplications
+    package: system.fabric
+  - uid: system.fabric._application_health_policy.getDefaultServiceTypeHealthPolicy*
+    name: getDefaultServiceTypeHealthPolicy
+    nameWithType: ApplicationHealthPolicy.getDefaultServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy system.fabric.ApplicationHealthPolicy.getDefaultServiceTypeHealthPolicy
+    package: system.fabric
+  - uid: system.fabric._application_health_policy.setDefaultServiceTypeHealthPolicy*
+    name: setDefaultServiceTypeHealthPolicy
+    nameWithType: ApplicationHealthPolicy.setDefaultServiceTypeHealthPolicy
+    fullName: void system.fabric.ApplicationHealthPolicy.setDefaultServiceTypeHealthPolicy
+    package: system.fabric
+  - uid: 2108f1f4system.fabric._service_type_health_policya08ddfce
+    spec.java:
+      - name: 'Map<String, '
+        fullName: 'Map<String, '
+      - uid: system.fabric._service_type_health_policy
+        name: ServiceTypeHealthPolicy
+        fullName: system.fabric.ServiceTypeHealthPolicy
+        href: system.fabric._service_type_health_policy.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._application_health_policy.getServiceTypeHealthPolicyMap*
+    name: getServiceTypeHealthPolicyMap
+    nameWithType: ApplicationHealthPolicy.getServiceTypeHealthPolicyMap
+    fullName: 'Map<String, ServiceTypeHealthPolicy> system.fabric.ApplicationHealthPolicy.getServiceTypeHealthPolicyMap'
+    package: system.fabric
+  - uid: system.fabric._service_type_health_policy
+    parent: system.fabric
+    href: system.fabric._service_type_health_policy.yml
+    name: ServiceTypeHealthPolicy
+    nameWithType: ServiceTypeHealthPolicy
+    fullName: system.fabric.ServiceTypeHealthPolicy
+    type: Class
+    summary: <p>サービスの種類に属するサービスの正常性を評価するために使用する正常性ポリシーを表します。 </p>
+    syntax:
+      content: public class ServiceTypeHealthPolicy
+  - uid: system.fabric._pin_collection
+    parent: system.fabric
+    href: system.fabric._pin_collection.yml
+    name: PinCollection
+    nameWithType: PinCollection
+    fullName: system.fabric.PinCollection
+    type: Class
+    syntax:
+      content: public class PinCollection
+  - uid: system.fabric._application_health_policy
+    parent: system.fabric
+    href: system.fabric._application_health_policy.yml
+    name: ApplicationHealthPolicy
+    nameWithType: ApplicationHealthPolicy
+    fullName: system.fabric.ApplicationHealthPolicy
+    type: Class
+    summary: <p>アプリケーションまたはその子エンティティを 1 つの正常性を評価する正常性ポリシーを定義します。 </p>
+    syntax: *ref_1
+  - uid: system.fabric._application_health_policy.getDefaultServiceTypeHealthPolicy()
+    parent: system.fabric._application_health_policy
+    href: system.fabric._application_health_policy.yml
+    name: getDefaultServiceTypeHealthPolicy()
+    nameWithType: ApplicationHealthPolicy.getDefaultServiceTypeHealthPolicy()
+    fullName: ServiceTypeHealthPolicy system.fabric.ApplicationHealthPolicy.getDefaultServiceTypeHealthPolicy()
+    type: Method
+    summary: |-
+      <p>既定では、サービスの種類のヘルスを評価するために使用する正常性ポリシーを取得します。</p>
+      <p></p>
+    syntax: *ref_2

@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy
+    id: _blob_encryption_policy
+    parent: com.microsoft.azure.storage.blob
+    children:
+      - 'com.microsoft.azure.storage.blob._blob_encryption_policy.BlobEncryptionPolicy(IKey,IKeyResolver)'
+      - com.microsoft.azure.storage.blob._blob_encryption_policy.getKey()
+      - com.microsoft.azure.storage.blob._blob_encryption_policy.getKeyResolver()
+      - com.microsoft.azure.storage.blob._blob_encryption_policy.keyResolver
+      - com.microsoft.azure.storage.blob._blob_encryption_policy.keyWrapper
+      - com.microsoft.azure.storage.blob._blob_encryption_policy.setKey(IKey)
+      - com.microsoft.azure.storage.blob._blob_encryption_policy.setKeyResolver(IKeyResolver)
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: BlobEncryptionPolicy
+    nameWithType: BlobEncryptionPolicy
+    fullName: com.microsoft.azure.storage.blob.BlobEncryptionPolicy
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 44
+    package: com.microsoft.azure.storage.blob
+    summary: <p>Azure blob のエンベロープの暗号化/復号化されている blob の暗号化ポリシーを表します。 </p>
+    syntax: &ref_1
+      content: public class BlobEncryptionPolicy
+    inheritance:
+      - java.lang.Object
+  - uid: 'com.microsoft.azure.storage.blob._blob_encryption_policy.BlobEncryptionPolicy(IKey,IKeyResolver)'
+    id: 'BlobEncryptionPolicy(IKey,IKeyResolver)'
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: 'BlobEncryptionPolicy(IKey key, IKeyResolver keyResolver)'
+    nameWithType: 'BlobEncryptionPolicy.BlobEncryptionPolicy(IKey key, IKeyResolver keyResolver)'
+    fullName: 'com.microsoft.azure.storage.blob.BlobEncryptionPolicy.BlobEncryptionPolicy(IKey key, IKeyResolver keyResolver)'
+    overload: com.microsoft.azure.storage.blob._blob_encryption_policy.BlobEncryptionPolicy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 70
+    package: com.microsoft.azure.storage.blob
+    summary: |-
+      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.storage.blob._blob_encryption_policy" data-throw-if-not-resolved="false">BlobEncryptionPolicy</xref>クラスを指定したキーとの競合回避モジュールを使用します。 </p>
+      <p>生成されたポリシーは、暗号化に使用するためのもので、ユーザーは予想される場合に、少なくともキーを提供します。 キーがない場合に、暗号化中にスローされる例外が発生します。 生成されたポリシーを復号化に使用する場合は、ユーザーは、keyResolver を指定できます。 クライアント ライブラリが - 1。 キーを取得する指定した場合は、キーの競合回避モジュールを呼び出します。 手順 2. 競合回避モジュールが指定されていませんが、キーが指定されて、キーのキーの id と一致しを使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public BlobEncryptionPolicy(IKey key, IKeyResolver keyResolver)'
+      parameters:
+        - id: key
+          type: com.microsoft.azure.keyvault.core._i_key
+          description: <p>型のオブジェクト<xref uid="" data-throw-if-not-resolved="false">IKey</xref>コンテンツ暗号化キーをラップ/ラップ解除するために使用されます。 </p>
+        - id: keyResolver
+          type: com.microsoft.azure.keyvault.core._i_key_resolver
+          description: <p>キーの競合回避モジュールを既存の blob を解読するための正しいキーを選択します。 </p>
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.getKey()
+    id: getKey()
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: getKey()
+    nameWithType: BlobEncryptionPolicy.getKey()
+    fullName: IKey com.microsoft.azure.storage.blob.BlobEncryptionPolicy.getKey()
+    overload: com.microsoft.azure.storage.blob._blob_encryption_policy.getKey*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 80
+    package: com.microsoft.azure.storage.blob
+    summary: |-
+      <p>取得、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</p>
+      <p></p>
+    syntax:
+      content: public IKey getKey()
+      return:
+        type: com.microsoft.azure.keyvault.core._i_key
+        description: <p><xref uid="" data-throw-if-not-resolved="false">IKey</xref>オブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.getKeyResolver()
+    id: getKeyResolver()
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: getKeyResolver()
+    nameWithType: BlobEncryptionPolicy.getKeyResolver()
+    fullName: IKeyResolver com.microsoft.azure.storage.blob.BlobEncryptionPolicy.getKeyResolver()
+    overload: com.microsoft.azure.storage.blob._blob_encryption_policy.getKeyResolver*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 89
+    package: com.microsoft.azure.storage.blob
+    summary: |-
+      <p>使用して、適切なキーの既存の blob を復号化キーの競合回避モジュールを取得します。</p>
+      <p></p>
+    syntax:
+      content: public IKeyResolver getKeyResolver()
+      return:
+        type: com.microsoft.azure.keyvault.core._i_key_resolver
+        description: <p>競合回避モジュールを返す、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>キー Id を指定します。 </p>
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.keyResolver
+    id: keyResolver
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: keyResolver
+    nameWithType: BlobEncryptionPolicy.keyResolver
+    fullName: IKeyResolver com.microsoft.azure.storage.blob.BlobEncryptionPolicy.keyResolver
+    type: Field
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 49
+    package: com.microsoft.azure.storage.blob
+    summary: <p><xref uid="" data-throw-if-not-resolved="false">IKeyResolver</xref>既存の blob を解読するための正しいキーを選択するために使用します。 </p>
+    syntax:
+      content: public IKeyResolver keyResolver
+      return:
+        type: com.microsoft.azure.keyvault.core._i_key_resolver
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.keyWrapper
+    id: keyWrapper
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: keyWrapper
+    nameWithType: BlobEncryptionPolicy.keyWrapper
+    fullName: IKey com.microsoft.azure.storage.blob.BlobEncryptionPolicy.keyWrapper
+    type: Field
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 54
+    package: com.microsoft.azure.storage.blob
+    summary: <p>型のオブジェクト<xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。 </p>
+    syntax:
+      content: public IKey keyWrapper
+      return:
+        type: com.microsoft.azure.keyvault.core._i_key
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.setKey(IKey)
+    id: setKey(IKey)
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: setKey(IKey key)
+    nameWithType: BlobEncryptionPolicy.setKey(IKey key)
+    fullName: void com.microsoft.azure.storage.blob.BlobEncryptionPolicy.setKey(IKey key)
+    overload: com.microsoft.azure.storage.blob._blob_encryption_policy.setKey*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 99
+    package: com.microsoft.azure.storage.blob
+    summary: |-
+      <p>セット、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</p>
+      <p></p>
+    syntax:
+      content: public void setKey(IKey key)
+      parameters:
+        - id: key
+          type: com.microsoft.azure.keyvault.core._i_key
+          description: <p><xref uid="" data-throw-if-not-resolved="false">IKey</xref>オブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.setKeyResolver(IKeyResolver)
+    id: setKeyResolver(IKeyResolver)
+    parent: com.microsoft.azure.storage.blob._blob_encryption_policy
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    langs:
+      - java
+    name: setKeyResolver(IKeyResolver keyResolver)
+    nameWithType: BlobEncryptionPolicy.setKeyResolver(IKeyResolver keyResolver)
+    fullName: void com.microsoft.azure.storage.blob.BlobEncryptionPolicy.setKeyResolver(IKeyResolver keyResolver)
+    overload: com.microsoft.azure.storage.blob._blob_encryption_policy.setKeyResolver*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
+      startLine: 109
+    package: com.microsoft.azure.storage.blob
+    summary: |-
+      <p>使用して、適切なキーの既存の blob を復号化キーの競合回避モジュールを設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setKeyResolver(IKeyResolver keyResolver)
+      parameters:
+        - id: keyResolver
+          type: com.microsoft.azure.keyvault.core._i_key_resolver
+          description: <p>競合回避モジュールを返す、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>キー Id を指定します。 </p>
+references:
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.BlobEncryptionPolicy*
+    name: BlobEncryptionPolicy
+    nameWithType: BlobEncryptionPolicy.BlobEncryptionPolicy
+    fullName: com.microsoft.azure.storage.blob.BlobEncryptionPolicy.BlobEncryptionPolicy
+    package: com.microsoft.azure.storage.blob
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.getKey*
+    name: getKey
+    nameWithType: BlobEncryptionPolicy.getKey
+    fullName: IKey com.microsoft.azure.storage.blob.BlobEncryptionPolicy.getKey
+    package: com.microsoft.azure.storage.blob
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.getKeyResolver*
+    name: getKeyResolver
+    nameWithType: BlobEncryptionPolicy.getKeyResolver
+    fullName: IKeyResolver com.microsoft.azure.storage.blob.BlobEncryptionPolicy.getKeyResolver
+    package: com.microsoft.azure.storage.blob
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.setKey*
+    name: setKey
+    nameWithType: BlobEncryptionPolicy.setKey
+    fullName: void com.microsoft.azure.storage.blob.BlobEncryptionPolicy.setKey
+    package: com.microsoft.azure.storage.blob
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.setKeyResolver*
+    name: setKeyResolver
+    nameWithType: BlobEncryptionPolicy.setKeyResolver
+    fullName: void com.microsoft.azure.storage.blob.BlobEncryptionPolicy.setKeyResolver
+    package: com.microsoft.azure.storage.blob
+  - uid: com.microsoft.azure.keyvault.core._i_key_resolver
+    parent: com.microsoft.azure.keyvault.core
+    href: com.microsoft.azure.keyvault.core._i_key_resolver.yml
+    name: IKeyResolver
+    nameWithType: IKeyResolver
+    fullName: com.microsoft.azure.keyvault.core.IKeyResolver
+    type: Interface
+    summary: <p>Microsoft Azure Key Vault のライブラリを含むキーの解決操作を表すためのインターフェイスします。 </p>
+    syntax:
+      content: public interface IKeyResolver
+  - uid: com.microsoft.azure.keyvault.core._i_key
+    parent: com.microsoft.azure.keyvault.core
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: IKey
+    nameWithType: IKey
+    fullName: com.microsoft.azure.keyvault.core.IKey
+    type: Interface
+    summary: <p>Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。 </p>
+    syntax:
+      content: public interface IKey
+  - uid: com.microsoft.azure.storage.blob._blob_encryption_policy
+    parent: com.microsoft.azure.storage.blob
+    href: com.microsoft.azure.storage.blob._blob_encryption_policy.yml
+    name: BlobEncryptionPolicy
+    nameWithType: BlobEncryptionPolicy
+    fullName: com.microsoft.azure.storage.blob.BlobEncryptionPolicy
+    type: Class
+    summary: <p>Azure blob のエンベロープの暗号化/復号化されている blob の暗号化ポリシーを表します。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: com.microsoft.azure.storage.blob._cloud_blob
+    parent: com.microsoft.azure.storage.blob
+    href: com.microsoft.azure.storage.blob._cloud_blob.yml
+    name: CloudBlob
+    nameWithType: CloudBlob
+    fullName: com.microsoft.azure.storage.blob.CloudBlob
+    type: Class
+    summary: <p>Microsoft Azure blob を表します。 これは、基本クラスを<xref uid="com.microsoft.azure.storage.blob._cloud_block_blob" data-throw-if-not-resolved="false">CloudBlockBlob</xref>と<xref uid="com.microsoft.azure.storage.blob._cloud_page_blob" data-throw-if-not-resolved="false">CloudPageBlob</xref>クラスです。 </p>
+    syntax:
+      content: public class CloudBlob
+  - uid: com.microsoft.azure.storage.blob._blob_request_options
+    parent: com.microsoft.azure.storage.blob
+    href: com.microsoft.azure.storage.blob._blob_request_options.yml
+    name: BlobRequestOptions
+    nameWithType: BlobRequestOptions
+    fullName: com.microsoft.azure.storage.blob.BlobRequestOptions
+    type: Class
+    summary: <p>要求時に指定できるオプションのセットを表します。 </p>
+    syntax:
+      content: public class BlobRequestOptions

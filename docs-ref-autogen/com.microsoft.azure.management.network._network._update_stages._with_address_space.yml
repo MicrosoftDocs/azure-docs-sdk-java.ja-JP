@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.network._network._update_stages._with_address_space
+    id: _with_address_space
+    parent: com.microsoft.azure.management.network
+    children:
+      - com.microsoft.azure.management.network._network._update_stages._with_address_space.withAddressSpace(String)
+    href: com.microsoft.azure.management.network._network._update_stages._with_address_space.yml
+    langs:
+      - java
+    name: Network.UpdateStages.WithAddressSpace
+    nameWithType: Network.UpdateStages.WithAddressSpace
+    fullName: com.microsoft.azure.management.network.Network.UpdateStages.WithAddressSpace
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Network.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Network.java
+      startLine: 248
+    package: com.microsoft.azure.management.network
+    summary: <p>アドレス空間を指定できるように仮想ネットワークの更新の段階です。 </p>
+    syntax:
+      content: public interface WithAddressSpace
+  - uid: com.microsoft.azure.management.network._network._update_stages._with_address_space.withAddressSpace(String)
+    id: withAddressSpace(String)
+    parent: com.microsoft.azure.management.network._network._update_stages._with_address_space
+    href: com.microsoft.azure.management.network._network._update_stages._with_address_space.yml
+    langs:
+      - java
+    name: withAddressSpace(String cidr)
+    nameWithType: Network.UpdateStages.WithAddressSpace.withAddressSpace(String cidr)
+    fullName: Update com.microsoft.azure.management.network.Network.UpdateStages.WithAddressSpace.withAddressSpace(String cidr)
+    overload: com.microsoft.azure.management.network._network._update_stages._with_address_space.withAddressSpace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Network.java
+      startLine: 259
+    package: com.microsoft.azure.management.network
+    summary: |-
+      <p>仮想ネットワークにアドレス空間が明示的に追加します。 </p>
+      <p>このメソッドの効果は加法、つまりそれを使用するたび、新しいアドレス空間がネットワークに追加します。 </p>
+      <p>このメソッドは、競合をチェックしませんまたはその他のアドレス空間と重複しています。 競合がある場合、更新プログラムが適用された後にクラウド例外がスローされる可能性がします。 </p>
+    syntax:
+      content: public Update withAddressSpace(String cidr)
+      parameters:
+        - id: cidr
+          type: '26831127'
+          description: <p>アドレス空間の CIDR 表記 </p>
+      return:
+        type: com.microsoft.azure.management.network._network._update
+        description: <p>仮想ネットワークの更新の次のステージ </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.network._network._update_stages._with_address_space.withAddressSpace*
+    name: withAddressSpace
+    nameWithType: Network.UpdateStages.WithAddressSpace.withAddressSpace
+    fullName: Update com.microsoft.azure.management.network.Network.UpdateStages.WithAddressSpace.withAddressSpace
+    package: com.microsoft.azure.management.network
+  - uid: com.microsoft.azure.management.network._network._update
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._network._update.yml
+    name: Network.Update
+    nameWithType: Network.Update
+    fullName: com.microsoft.azure.management.network.Network.Update
+    type: Interface
+    summary: <p>変更可能なすべての設定を含む、仮想ネットワークの更新操作のテンプレートです。 </p>
+    syntax:
+      content: 'public interface Update extends Appliable<Network>,Resource.UpdateWithTags<Update>,Network.UpdateStages.WithSubnet,Network.UpdateStages.WithDnsServer,Network.UpdateStages.WithAddressSpace'

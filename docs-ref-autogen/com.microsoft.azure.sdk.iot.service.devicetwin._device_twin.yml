@@ -1,0 +1,786 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    id: _device_twin
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    children:
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.createFromConnectionString(String)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getNextDeviceTwin(Query)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getTwin(DeviceTwinDevice)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNext(QueryCollection)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNextDeviceTwin(Query)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next(QueryCollection)
+      - 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next(QueryCollection,QueryOptions)'
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin(String)
+      - 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin(String,Integer)'
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection(String)
+      - 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection(String,Integer)'
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceDesiredProperties(DeviceTwinDevice)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceTags(DeviceTwinDevice)
+      - 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.scheduleUpdateTwin(String,DeviceTwinDevice,Date,long)'
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateDesiredProperties(DeviceTwinDevice)
+      - com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateTwin(DeviceTwinDevice)
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: DeviceTwin
+    nameWithType: DeviceTwin
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin
+    type: Class
+    source:
+      remote: &ref_0
+        path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 21
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    syntax: &ref_1
+      content: public class DeviceTwin
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.createFromConnectionString(String)
+    id: createFromConnectionString(String)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: createFromConnectionString(String connectionString)
+    nameWithType: DeviceTwin.createFromConnectionString(String connectionString)
+    fullName: static DeviceTwin com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.createFromConnectionString(String connectionString)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.createFromConnectionString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 35
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>接続文字列からインスタンスを作成する静的コンス トラクター</p>
+      <p></p>
+    syntax:
+      content: public static DeviceTwin createFromConnectionString(String connectionString)
+      parameters:
+        - id: connectionString
+          type: '26831127'
+          description: <p>Iot ハブの接続文字列 </p>
+      return:
+        type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+        description: <p>インスタンス<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._device_twin" data-throw-if-not-resolved="false">DeviceTwin</xref></p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>オブジェクトの作成に失敗した場合、この例外がスローされます。 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getNextDeviceTwin(Query)
+    id: getNextDeviceTwin(Query)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: getNextDeviceTwin(Query deviceTwinQuery)
+    nameWithType: DeviceTwin.getNextDeviceTwin(Query deviceTwinQuery)
+    fullName: synchronized DeviceTwinDevice com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.getNextDeviceTwin(Query deviceTwinQuery)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getNextDeviceTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 465
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: <p>次のデバイス対になったドキュメントを返します </p>
+    syntax:
+      content: public synchronized DeviceTwinDevice getNextDeviceTwin(Query deviceTwinQuery)
+      parameters:
+        - id: deviceTwinQuery
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query
+          description: <p>要求のクエリに対応するオブジェクト </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+        description: <p>次のデバイス対になったドキュメントを返します </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>入力パラメーターが正しくない場合 </p>
+      - type: 0d494ee6
+        description: <p>Iot Hub から非正常な応答を受信した場合 </p>
+      - type: 05807805
+        description: <p>その他の要素が存在しない場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getTwin(DeviceTwinDevice)
+    id: getTwin(DeviceTwinDevice)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: getTwin(DeviceTwinDevice device)
+    nameWithType: DeviceTwin.getTwin(DeviceTwinDevice device)
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.getTwin(DeviceTwinDevice device)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 62
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>このメソッドは、指定したデバイスのデバイス ツインを取得します。</p>
+      <p></p>
+    syntax:
+      content: public void getTwin(DeviceTwinDevice device)
+      parameters:
+        - id: device
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>対になったはどのデバイスを取得する有効な id を持つデバイス。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>IO 操作が失敗した場合、この例外がスローされます。 </p>
+      - type: 0d494ee6
+        description: <p>応答の検証に失敗した場合、この例外がスローされます。 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNext(QueryCollection)
+    id: hasNext(QueryCollection)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: hasNext(QueryCollection deviceTwinQueryCollection)
+    nameWithType: DeviceTwin.hasNext(QueryCollection deviceTwinQueryCollection)
+    fullName: synchronized boolean com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.hasNext(QueryCollection deviceTwinQueryCollection)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 494
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: <p>指定された deviceTwinQueryCollection がクエリに次のページがかどうかを返します。 </p>
+    syntax:
+      content: public synchronized boolean hasNext(QueryCollection deviceTwinQueryCollection)
+      parameters:
+        - id: deviceTwinQueryCollection
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+          description: <p>クエリを確認するには </p>
+      return:
+        type: 85b427c6
+        description: <p>True の場合、指定された deviceTwinQueryCollection に次のページのクエリに false それ以外の場合 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定された deviceTwinQueryCollection が null の場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNextDeviceTwin(Query)
+    id: hasNextDeviceTwin(Query)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: hasNextDeviceTwin(Query deviceTwinQuery)
+    nameWithType: DeviceTwin.hasNextDeviceTwin(Query deviceTwinQuery)
+    fullName: synchronized boolean com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.hasNextDeviceTwin(Query deviceTwinQuery)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNextDeviceTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 445
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: <p>クエリ時に次の対になった要素の可用性を返します。 非が見つかった場合、<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query" data-throw-if-not-resolved="false">クエリ</xref>再度経由で送信されると、クエリの応答が見つからなくなるまで、応答が適宜更新します。 </p>
+    syntax:
+      content: public synchronized boolean hasNextDeviceTwin(Query deviceTwinQuery)
+      parameters:
+        - id: deviceTwinQuery
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.service.devicetwin._query\" data-throw-if-not-resolved=\"false\">クエリ</xref>オブジェクトはクエリの作成時に返されます。 </p>"
+      return:
+        type: 85b427c6
+        description: <p>True の場合は、次と使用可能な場合は false には他の賢明です。 </p>
+    exceptions:
+      - type: 0d494ee6
+        description: <p>Iot Hub でしたが正常にクエリに応答しない場合 </p>
+      - type: cbf33bbe
+        description: <p>入力パラメーターが正しくない場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next(QueryCollection)
+    id: next(QueryCollection)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: next(QueryCollection deviceTwinQueryCollection)
+    nameWithType: DeviceTwin.next(QueryCollection deviceTwinQueryCollection)
+    fullName: synchronized QueryCollectionResponse<DeviceTwinDevice> com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.next(QueryCollection deviceTwinQueryCollection)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 517
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>次を返します<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device" data-throw-if-not-resolved="false">DeviceTwinDevice</xref>次のページを照会するために必要な継続トークンと共に、指定したクエリのコレクション。</p>
+      <p>この関数は、返される継続トークンを再入力する必要はありませんので、クエリを続行するには、継続的にローカルの継続トークンを更新いてはいけない。</p>
+      <p></p>
+    syntax:
+      content: public synchronized QueryCollectionResponse<DeviceTwinDevice> next(QueryCollection deviceTwinQueryCollection)
+      parameters:
+        - id: deviceTwinQueryCollection
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+          description: <p>クエリを実行 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response78504a52com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_devicea08ddfce
+        description: "<p>クエリの結果と結果の次のページの継続トークンのページです。 戻り値の値は<code>null \r\n\r\n    </code>次のコレクションが存在しない場合 </p>"
+    exceptions:
+      - type: 0d494ee6
+        description: <p>場合は、IotHubException は、サービスを照会するときに発生します。 </p>
+      - type: cbf33bbe
+        description: <p>サービスを照会するときに、IotHubException が発生した場合、またはそのクエリの結果は予測と一致しない場合は。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next(QueryCollection,QueryOptions)'
+    id: 'next(QueryCollection,QueryOptions)'
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: 'next(QueryCollection deviceTwinQueryCollection, QueryOptions options)'
+    nameWithType: 'DeviceTwin.next(QueryCollection deviceTwinQueryCollection, QueryOptions options)'
+    fullName: 'synchronized QueryCollectionResponse<DeviceTwinDevice> com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.next(QueryCollection deviceTwinQueryCollection, QueryOptions options)'
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 540
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>次を返します<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device" data-throw-if-not-resolved="false">DeviceTwinDevice</xref>次のページを照会するために必要な継続トークンと共に、指定したクエリのコレクション。</p>
+      <p>この関数は、さまざまな開始位置からのクエリを続行するのでない限り、返される継続トークンを再入力する必要はありませんので、クエリを続行するには、継続的にローカルの継続トークンを更新いてはいけない。 実行するには、クエリのオプション オブジェクトに新しい継続トークンを設定します。</p>
+      <p>指定されたオプションのページ サイズはものと、以前に保存したページ サイズをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: 'public synchronized QueryCollectionResponse<DeviceTwinDevice> next(QueryCollection deviceTwinQueryCollection, QueryOptions options)'
+      parameters:
+        - id: deviceTwinQueryCollection
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+          description: <p>クエリを実行 </p>
+        - id: options
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._query_options
+          description: <p>使用してクエリを実行するクエリ オプション。 これらのオプションの継続トークンが null の場合、内部的に保存されている継続トークンに使用できます。 オプションで設定したページ サイズよりも優先されます以前ページ サイズに設定します。 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response78504a52com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_devicea08ddfce
+        description: "<p>クエリの結果と結果の次のページの継続トークンのページです。 戻り値の値は<code>null \r\n\r\n    </code>次のコレクションが存在しない場合。 </p>"
+    exceptions:
+      - type: 0d494ee6
+        description: <p>場合は、IotHubException は、サービスを照会するときに発生します。 </p>
+      - type: cbf33bbe
+        description: <p>サービスを照会するときに、IotHubException が発生した場合、またはそのクエリの結果は予測と一致しない場合は。 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin(String)
+    id: queryTwin(String)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: queryTwin(String sqlQuery)
+    nameWithType: DeviceTwin.queryTwin(String sqlQuery)
+    fullName: synchronized Query com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.queryTwin(String sqlQuery)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 403
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: <p>2 つの Sql スタイルのクエリ </p>
+    syntax:
+      content: public synchronized Query queryTwin(String sqlQuery)
+      parameters:
+        - id: sqlQuery
+          type: '26831127'
+          description: <p>クエリ ツインの iot Hub への Sql クエリ文字列 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.service.devicetwin._query\" data-throw-if-not-resolved=\"false\">クエリ</xref>このクエリの応答を検索するために使用するオブジェクト </p>"
+    exceptions:
+      - type: 0d494ee6
+        description: <p>場合<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query" data-throw-if-not-resolved="false">クエリ</xref>要求に iot Hub で失敗しました </p>
+      - type: cbf33bbe
+        description: <p>入力パラメーターが有効でない場合 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin(String,Integer)'
+    id: 'queryTwin(String,Integer)'
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: 'queryTwin(String sqlQuery, Integer pageSize)'
+    nameWithType: 'DeviceTwin.queryTwin(String sqlQuery, Integer pageSize)'
+    fullName: 'synchronized Query com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.queryTwin(String sqlQuery, Integer pageSize)'
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 373
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: <p>2 つの Sql スタイルのクエリ </p>
+    syntax:
+      content: 'public synchronized Query queryTwin(String sqlQuery, Integer pageSize)'
+      parameters:
+        - id: sqlQuery
+          type: '26831127'
+          description: <p>クエリ ツインの iot Hub への Sql クエリ文字列 </p>
+        - id: pageSize
+          type: 08effaa0
+          description: <p>サイズがクエリ応答を制限するには </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.service.devicetwin._query\" data-throw-if-not-resolved=\"false\">クエリ</xref>このクエリの応答を検索するために使用するオブジェクト </p>"
+    exceptions:
+      - type: 0d494ee6
+        description: <p>場合<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query" data-throw-if-not-resolved="false">クエリ</xref>要求に iot Hub で失敗しました </p>
+      - type: cbf33bbe
+        description: <p>入力パラメーターが有効でない場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection(String)
+    id: queryTwinCollection(String)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: queryTwinCollection(String sqlQuery)
+    nameWithType: DeviceTwin.queryTwinCollection(String sqlQuery)
+    fullName: synchronized QueryCollection com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.queryTwinCollection(String sqlQuery)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 416
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>作成、 <xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query_collection" data-throw-if-not-resolved="false">QueryCollection</xref>クエリ結果の全体のページを同時に使用できるオブジェクト。 <xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query_collection" data-throw-if-not-resolved="false">QueryCollection</xref>オブジェクトからを取得するクエリの継続トークンを指定することも</p>
+      <p></p>
+    syntax:
+      content: public synchronized QueryCollection queryTwinCollection(String sqlQuery)
+      parameters:
+        - id: sqlQuery
+          type: '26831127'
+          description: <p>sql クエリを実行 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+        description: <p>作成された<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query_collection" data-throw-if-not-resolved="false">QueryCollection</xref>サービスのクエリに使用できるオブジェクト </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection(String,Integer)'
+    id: 'queryTwinCollection(String,Integer)'
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: 'queryTwinCollection(String sqlQuery, Integer pageSize)'
+    nameWithType: 'DeviceTwin.queryTwinCollection(String sqlQuery, Integer pageSize)'
+    fullName: 'synchronized QueryCollection com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.queryTwinCollection(String sqlQuery, Integer pageSize)'
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 430
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>作成、 <xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query_collection" data-throw-if-not-resolved="false">QueryCollection</xref>クエリ結果の全体のページを同時に使用できるオブジェクト。 <xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query_collection" data-throw-if-not-resolved="false">QueryCollection</xref>オブジェクトからを取得するクエリの継続トークンを指定することも</p>
+      <p></p>
+    syntax:
+      content: 'public synchronized QueryCollection queryTwinCollection(String sqlQuery, Integer pageSize)'
+      parameters:
+        - id: sqlQuery
+          type: '26831127'
+          description: <p>sql クエリを実行 </p>
+        - id: pageSize
+          type: 08effaa0
+          description: <p>一度に返される結果の数 </p>
+      return:
+        type: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+        description: <p>作成された<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._query_collection" data-throw-if-not-resolved="false">QueryCollection</xref>サービスのクエリに使用できるオブジェクト </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceDesiredProperties(DeviceTwinDevice)
+    id: replaceDesiredProperties(DeviceTwinDevice)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: replaceDesiredProperties(DeviceTwinDevice device)
+    nameWithType: DeviceTwin.replaceDesiredProperties(DeviceTwinDevice device)
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.replaceDesiredProperties(DeviceTwinDevice device)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceDesiredProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 243
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>このメソッドは、指定されたデバイスに必要なプロパティを置き換えます。 デバイスの setDesiredProperties メソッドを使用して、必要なプロパティを入力できます。</p>
+      <p></p>
+    syntax:
+      content: public void replaceDesiredProperties(DeviceTwinDevice device)
+      parameters:
+        - id: device
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>対になったはどのデバイスを更新する有効な id を持つデバイス。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>IO 操作が失敗した場合、この例外がスローされます。 </p>
+      - type: 0d494ee6
+        description: <p>応答の検証に失敗した場合、この例外がスローされます。 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceTags(DeviceTwinDevice)
+    id: replaceTags(DeviceTwinDevice)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: replaceTags(DeviceTwinDevice device)
+    nameWithType: DeviceTwin.replaceTags(DeviceTwinDevice device)
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.replaceTags(DeviceTwinDevice device)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceTags*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 308
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>このメソッドは、指定したデバイスのタグを置き換えます。 デバイスの例えばメソッドを使用してタグを入力できます。</p>
+      <p></p>
+    syntax:
+      content: public void replaceTags(DeviceTwinDevice device)
+      parameters:
+        - id: device
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>対になったはどのデバイスを更新する有効な id を持つデバイス。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>IO 操作が失敗した場合、この例外がスローされます。 </p>
+      - type: 0d494ee6
+        description: <p>応答の検証に失敗した場合、この例外がスローされます。 </p>
+  - uid: 'com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.scheduleUpdateTwin(String,DeviceTwinDevice,Date,long)'
+    id: 'scheduleUpdateTwin(String,DeviceTwinDevice,Date,long)'
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: 'scheduleUpdateTwin(String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    nameWithType: 'DeviceTwin.scheduleUpdateTwin(String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    fullName: 'Job com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.scheduleUpdateTwin(String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.scheduleUpdateTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 579
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>新たに作成<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._job" data-throw-if-not-resolved="false">ジョブ</xref>ツイン タグと 1 つまたは複数のデバイスで必要なプロパティを更新するには</p>
+      <p></p>
+    syntax:
+      content: 'public Job scheduleUpdateTwin(String queryCondition, DeviceTwinDevice updateTwin, Date startTimeUtc, long maxExecutionTimeInSeconds)'
+      parameters:
+        - id: queryCondition
+          type: '26831127'
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.sdk.iot.service.devicetwin._query\" data-throw-if-not-resolved=\"false\">クエリ</xref>ジョブを実行するデバイスを評価する条件。 できます<code>null \r\n\r\n    </code>または空 </p>"
+        - id: updateTwin
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>対になったオブジェクトの更新を使用するには </p>
+        - id: startTimeUtc
+          type: '12977444'
+          description: <p>ジョブを開始する Utc の日付時刻 </p>
+        - id: maxExecutionTimeInSeconds
+          type: 0364520f
+          description: <p>最大実行時間 (秒)、つまり、ttl 期間のジョブを実行できます。 </p>
+      return:
+        type: com.microsoft.azure.sdk.iot.service.devicetwin._job
+        description: <p><xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._job" data-throw-if-not-resolved="false">ジョブ</xref>iot Hub では、このジョブを表すクラス </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>関数に無効なパラメーターが含まれている場合 </p>
+      - type: 0d494ee6
+        description: <p>http 要求が失敗した場合 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateDesiredProperties(DeviceTwinDevice)
+    id: updateDesiredProperties(DeviceTwinDevice)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: updateDesiredProperties(DeviceTwinDevice device)
+    nameWithType: DeviceTwin.updateDesiredProperties(DeviceTwinDevice device)
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.updateDesiredProperties(DeviceTwinDevice device)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateDesiredProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 180
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>このメソッドは、指定されたデバイスに必要なプロパティを更新します。</p>
+      <p></p>
+    syntax:
+      content: public void updateDesiredProperties(DeviceTwinDevice device)
+      parameters:
+        - id: device
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>有効な id を持つデバイスを目的のプロパティは、更新します。 </p>
+    exceptions:
+      - type: cbf33bbe
+        description: <p>IO 操作が失敗した場合、この例外がスローされます。 </p>
+      - type: 0d494ee6
+        description: <p>応答の検証に失敗した場合、この例外がスローされます。 </p>
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateTwin(DeviceTwinDevice)
+    id: updateTwin(DeviceTwinDevice)
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    langs:
+      - java
+    name: updateTwin(DeviceTwinDevice device)
+    nameWithType: DeviceTwin.updateTwin(DeviceTwinDevice device)
+    fullName: synchronized void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.updateTwin(DeviceTwinDevice device)
+    overload: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateTwin*
+    type: Method
+    source:
+      remote: *ref_0
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/devicetwin/DeviceTwin.java
+      startLine: 115
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+    summary: |-
+      <p>このメソッドは、指定したデバイスのデバイス ツインを更新します。</p>
+      <p></p>
+    syntax:
+      content: public synchronized void updateTwin(DeviceTwinDevice device)
+      parameters:
+        - id: device
+          type: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+          description: <p>対になったはどのデバイスを更新する有効な id を持つデバイス。 </p>
+      return:
+        type: 5c0b90ca
+    exceptions:
+      - type: cbf33bbe
+        description: <p>IO 操作が失敗した場合、この例外がスローされます。 </p>
+      - type: 0d494ee6
+        description: <p>応答の検証に失敗した場合、この例外がスローされます。 </p>
+references:
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.createFromConnectionString*
+    name: createFromConnectionString
+    nameWithType: DeviceTwin.createFromConnectionString
+    fullName: static DeviceTwin com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.createFromConnectionString
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: 0d494ee6
+    spec.java:
+      - name: IotHubException
+        fullName: IotHubException
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getTwin*
+    name: getTwin
+    nameWithType: DeviceTwin.getTwin
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.getTwin
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: 5c0b90ca
+    spec.java:
+      - name: synchronized void
+        fullName: synchronized void
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateTwin*
+    name: updateTwin
+    nameWithType: DeviceTwin.updateTwin
+    fullName: synchronized void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.updateTwin
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.updateDesiredProperties*
+    name: updateDesiredProperties
+    nameWithType: DeviceTwin.updateDesiredProperties
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.updateDesiredProperties
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceDesiredProperties*
+    name: replaceDesiredProperties
+    nameWithType: DeviceTwin.replaceDesiredProperties
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.replaceDesiredProperties
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.replaceTags*
+    name: replaceTags
+    nameWithType: DeviceTwin.replaceTags
+    fullName: void com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.replaceTags
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: 08effaa0
+    spec.java:
+      - name: Integer
+        fullName: Integer
+  - uid: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query
+    spec.java:
+      - name: 'synchronized '
+        fullName: 'synchronized '
+      - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query
+        name: Query
+        fullName: com.microsoft.azure.sdk.iot.service.devicetwin.Query
+        href: com.microsoft.azure.sdk.iot.service.devicetwin._query.yml
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwin*
+    name: queryTwin
+    nameWithType: DeviceTwin.queryTwin
+    fullName: synchronized Query com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.queryTwin
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+    spec.java:
+      - name: 'synchronized '
+        fullName: 'synchronized '
+      - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+        name: QueryCollection
+        fullName: com.microsoft.azure.sdk.iot.service.devicetwin.QueryCollection
+        href: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection.yml
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.queryTwinCollection*
+    name: queryTwinCollection
+    nameWithType: DeviceTwin.queryTwinCollection
+    fullName: synchronized QueryCollection com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.queryTwinCollection
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: 85b427c6
+    spec.java:
+      - name: synchronized boolean
+        fullName: synchronized boolean
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNextDeviceTwin*
+    name: hasNextDeviceTwin
+    nameWithType: DeviceTwin.hasNextDeviceTwin
+    fullName: synchronized boolean com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.hasNextDeviceTwin
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: 05807805
+    spec.java:
+      - name: NoSuchElementException
+        fullName: NoSuchElementException
+  - uid: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+    spec.java:
+      - name: 'synchronized '
+        fullName: 'synchronized '
+      - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+        name: DeviceTwinDevice
+        fullName: com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwinDevice
+        href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device.yml
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.getNextDeviceTwin*
+    name: getNextDeviceTwin
+    nameWithType: DeviceTwin.getNextDeviceTwin
+    fullName: synchronized DeviceTwinDevice com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.getNextDeviceTwin
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.hasNext*
+    name: hasNext
+    nameWithType: DeviceTwin.hasNext
+    fullName: synchronized boolean com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.hasNext
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: cffad4f2com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response78504a52com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_devicea08ddfce
+    spec.java:
+      - name: 'synchronized '
+        fullName: 'synchronized '
+      - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response
+        name: QueryCollectionResponse
+        fullName: com.microsoft.azure.sdk.iot.service.devicetwin.QueryCollectionResponse
+        href: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response.yml
+      - name: <
+        fullName: <
+      - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+        name: DeviceTwinDevice
+        fullName: com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwinDevice
+        href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.next*
+    name: next
+    nameWithType: DeviceTwin.next
+    fullName: synchronized QueryCollectionResponse<DeviceTwinDevice> com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.next
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: '12977444'
+    spec.java:
+      - name: Date
+        fullName: Date
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.scheduleUpdateTwin*
+    name: scheduleUpdateTwin
+    nameWithType: DeviceTwin.scheduleUpdateTwin
+    fullName: Job com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin.scheduleUpdateTwin
+    package: com.microsoft.azure.sdk.iot.service.devicetwin
+  - uid: com.microsoft.azure.sdk.iot.service._iot_hub_connection_string
+    parent: com.microsoft.azure.sdk.iot.service
+    href: com.microsoft.azure.sdk.iot.service._iot_hub_connection_string.yml
+    name: IotHubConnectionString
+    nameWithType: IotHubConnectionString
+    fullName: com.microsoft.azure.sdk.iot.service.IotHubConnectionString
+    type: Class
+    summary: <p>すべての接続文字列プロパティとユーザー、デバイス、および接続文字列のシリアル化のためのメソッドを公開します。 </p>
+    syntax:
+      content: public class IotHubConnectionString
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin.yml
+    name: DeviceTwin
+    nameWithType: DeviceTwin
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwin
+    type: Class
+    syntax: *ref_1
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._device_twin_device.yml
+    name: DeviceTwinDevice
+    nameWithType: DeviceTwinDevice
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.DeviceTwinDevice
+    type: Class
+    syntax:
+      content: public class DeviceTwinDevice
+  - uid: com.microsoft.azure.sdk.iot.service.exceptions._iot_hub_exception
+    parent: com.microsoft.azure.sdk.iot.service.exceptions
+    href: com.microsoft.azure.sdk.iot.service.exceptions._iot_hub_exception.yml
+    name: IotHubException
+    nameWithType: IotHubException
+    fullName: com.microsoft.azure.sdk.iot.service.exceptions.IotHubException
+    type: Class
+    summary: <p>Iot Hub の例外のスーパー クラス </p>
+    syntax:
+      content: public class IotHubException
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._query.yml
+    name: Query
+    nameWithType: Query
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.Query
+    type: Class
+    syntax:
+      content: public class Query
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection.yml
+    name: QueryCollection
+    nameWithType: QueryCollection
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.QueryCollection
+    type: Class
+    syntax:
+      content: public class QueryCollection
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._query_collection_response.yml
+    name: QueryCollectionResponse<E>
+    nameWithType: QueryCollectionResponse<E>
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.QueryCollectionResponse<E>
+    type: Class
+    syntax:
+      content: public class QueryCollectionResponse<E>
+      typeParameters:
+        - type: 0ca03e3a
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._query_options
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._query_options.yml
+    name: QueryOptions
+    nameWithType: QueryOptions
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.QueryOptions
+    type: Class
+    syntax:
+      content: public class QueryOptions
+  - uid: com.microsoft.azure.sdk.iot.service.devicetwin._job
+    parent: com.microsoft.azure.sdk.iot.service.devicetwin
+    href: com.microsoft.azure.sdk.iot.service.devicetwin._job.yml
+    name: Job
+    nameWithType: Job
+    fullName: com.microsoft.azure.sdk.iot.service.devicetwin.Job
+    type: Class
+    summary: <p>1 つの表現<xref uid="com.microsoft.azure.sdk.iot.service.devicetwin._job" data-throw-if-not-resolved="false">ジョブ</xref>iot Hub でスケジュールされます。 </p>
+    syntax:
+      content: public class Job

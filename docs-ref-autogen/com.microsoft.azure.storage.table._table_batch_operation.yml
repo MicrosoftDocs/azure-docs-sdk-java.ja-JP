@@ -1,0 +1,874 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table._table_batch_operation
+    id: _table_batch_operation
+    parent: com.microsoft.azure.storage.table
+    children:
+      - 'com.microsoft.azure.storage.table._table_batch_operation.add(final int,final TableOperation)'
+      - com.microsoft.azure.storage.table._table_batch_operation.add(final TableOperation)
+      - 'com.microsoft.azure.storage.table._table_batch_operation.addAll(final int,final java.util.Collection<? extends TableOperation>)'
+      - com.microsoft.azure.storage.table._table_batch_operation.addAll(final java.util.Collection<? extends TableOperation>)
+      - com.microsoft.azure.storage.table._table_batch_operation.clear()
+      - com.microsoft.azure.storage.table._table_batch_operation.delete(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_batch_operation.execute(final CloudTableClient,final String,final TableRequestOptions,final OperationContext)'
+      - com.microsoft.azure.storage.table._table_batch_operation.insert(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_batch_operation.insert(final TableEntity,boolean)'
+      - com.microsoft.azure.storage.table._table_batch_operation.insertOrMerge(final TableEntity)
+      - com.microsoft.azure.storage.table._table_batch_operation.insertOrReplace(final TableEntity)
+      - com.microsoft.azure.storage.table._table_batch_operation.merge(final TableEntity)
+      - com.microsoft.azure.storage.table._table_batch_operation.remove(int)
+      - com.microsoft.azure.storage.table._table_batch_operation.remove(Object)
+      - com.microsoft.azure.storage.table._table_batch_operation.removeAll(java.util.Collection<?>)
+      - 'com.microsoft.azure.storage.table._table_batch_operation.removeRange(int,int)'
+      - com.microsoft.azure.storage.table._table_batch_operation.replace(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_batch_operation.retrieve(final String,final String,final Class<? extends TableEntity>)'
+      - 'com.microsoft.azure.storage.table._table_batch_operation.retrieve(final String,final String,final EntityResolver<?>)'
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: TableBatchOperation
+    nameWithType: TableBatchOperation
+    fullName: com.microsoft.azure.storage.table.TableBatchOperation
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 47
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作を表すクラス。 呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。 </p>
+      <p>バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。 取得操作のバッチには、他の操作を含めることはできません。 バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。 </p>
+    syntax: &ref_1
+      content: public class TableBatchOperation
+    inheritance:
+      - java.lang.Object
+      - java.util.ArrayList<TableOperation>
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.add(final int,final TableOperation)'
+    id: 'add(final int,final TableOperation)'
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'add(final int index, final TableOperation element)'
+    nameWithType: 'TableBatchOperation.add(final int index, final TableOperation element)'
+    fullName: 'void com.microsoft.azure.storage.table.TableBatchOperation.add(final int index, final TableOperation element)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.add*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 64
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作で指定したインデックス位置には、テーブルの操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void add(final int index, final TableOperation element)'
+      parameters:
+        - id: index
+          type: cd225469
+          description: <p><code>int</code>バッチ操作内のインデックスを表す<code>ArrayList</code>でテーブル操作を追加します。 </p>
+        - id: element
+          type: 93de0ef9com.microsoft.azure.storage.table._table_operation
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作を追加します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.add(final TableOperation)
+    id: add(final TableOperation)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: add(final TableOperation element)
+    nameWithType: TableBatchOperation.add(final TableOperation element)
+    fullName: boolean com.microsoft.azure.storage.table.TableBatchOperation.add(final TableOperation element)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.add*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 88
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作には、テーブルの操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public boolean add(final TableOperation element)
+      parameters:
+        - id: element
+          type: 93de0ef9com.microsoft.azure.storage.table._table_operation
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作を追加します。 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。 </p>"
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.addAll(final int,final java.util.Collection<? extends TableOperation>)'
+    id: Collection<? extends TableOperation>)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'addAll(final int index, final java.util.Collection<? extends TableOperation> c)'
+    nameWithType: 'TableBatchOperation.addAll(final int index, final java.util.Collection<? extends TableOperation> c)'
+    fullName: 'boolean com.microsoft.azure.storage.table.TableBatchOperation.addAll(final int index, final java.util.Collection<? extends TableOperation> c)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.addAll*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 117
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>指定したインデックスから始まる、バッチ操作には、テーブル操作のコレクションを追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public boolean addAll(final int index, final java.util.Collection<? extends TableOperation> c)'
+      parameters:
+        - id: index
+          type: cd225469
+          description: <p><code>int</code>バッチ操作内のインデックスを表す<code>ArrayList</code>でテーブル操作を追加します。 </p>
+        - id: c
+          type: 4f93b78dcom.microsoft.azure.storage.table._table_operationa08ddfce
+          description: <p>A<code>java.util.Collection</code>の<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作に追加するオブジェクト。 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。 </p>"
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.addAll(final java.util.Collection<? extends TableOperation>)
+    id: Collection<? extends TableOperation>)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: addAll(final java.util.Collection<? extends TableOperation> c)
+    nameWithType: TableBatchOperation.addAll(final java.util.Collection<? extends TableOperation> c)
+    fullName: boolean com.microsoft.azure.storage.table.TableBatchOperation.addAll(final java.util.Collection<? extends TableOperation> c)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.addAll*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 146
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作には、テーブル操作のコレクションを追加します。</p>
+      <p></p>
+    syntax:
+      content: public boolean addAll(final java.util.Collection<? extends TableOperation> c)
+      parameters:
+        - id: c
+          type: 4f93b78dcom.microsoft.azure.storage.table._table_operationa08ddfce
+          description: <p>A<code>java.util.Collection</code>の<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作に追加するオブジェクト。 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。 </p>"
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.clear()
+    id: clear()
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: clear()
+    nameWithType: TableBatchOperation.clear()
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.clear()
+    overload: com.microsoft.azure.storage.table._table_batch_operation.clear*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 170
+    package: com.microsoft.azure.storage.table
+    summary: <p>バッチ操作からのすべてのテーブル操作をクリアします。 </p>
+    syntax:
+      content: public void clear()
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.delete(final TableEntity)
+    id: delete(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: delete(final TableEntity entity)
+    nameWithType: TableBatchOperation.delete(final TableEntity entity)
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.delete(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.delete*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 181
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定されたエンティティを削除するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public void delete(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を削除します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.execute(final CloudTableClient,final String,final TableRequestOptions,final OperationContext)'
+    id: 'execute(final CloudTableClient,final String,final TableRequestOptions,final OperationContext)'
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'execute(final CloudTableClient client, final String tableName, final TableRequestOptions options, final OperationContext opContext)'
+    nameWithType: 'TableBatchOperation.execute(final CloudTableClient client, final String tableName, final TableRequestOptions options, final OperationContext opContext)'
+    fullName: 'ArrayList<TableResult> com.microsoft.azure.storage.table.TableBatchOperation.execute(final CloudTableClient client, final String tableName, final TableRequestOptions options, final OperationContext opContext)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.execute*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 408
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 指定されたを使用して、指定したテーブルでは、このバッチ操作を実行<xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>と<xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>です。 </p>
+      <p>このメソッドは、テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用して、このバッチ操作を実行するには、ストレージ サービス REST API を呼び出すが、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>オブジェクト。</p>
+      <p></p>
+    syntax:
+      content: 'protected ArrayList<TableResult> execute(final CloudTableClient client, final String tableName, final TableRequestOptions options, final OperationContext opContext)'
+      parameters:
+        - id: client
+          type: 93de0ef9com.microsoft.azure.storage.table._cloud_table_client
+          description: <p>A <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用するを指定します。 </p>
+        - id: tableName
+          type: 3d93591e
+          description: <p>A<code>String</code>テーブルの名前を含むです。 </p>
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage.table._table_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>オプションの再試行の操作のポリシーやタイムアウトの設定などの実行を指定するオブジェクト。 </p>
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>オブジェクトの現在の操作を追跡します。</p>
+      return:
+        type: 573b1e0bcom.microsoft.azure.storage.table._table_resulta08ddfce
+        description: <p><code>ArrayList</code>の<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>操作の実行結果を格納します。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、ストレージ操作でエラーが発生します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.insert(final TableEntity)
+    id: insert(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: insert(final TableEntity entity)
+    nameWithType: TableBatchOperation.insert(final TableEntity entity)
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.insert(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.insert*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 192
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定されたエンティティを挿入するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public void insert(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を挿入します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.insert(final TableEntity,boolean)'
+    id: 'insert(final TableEntity,boolean)'
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'insert(final TableEntity entity, boolean echoContent)'
+    nameWithType: 'TableBatchOperation.insert(final TableEntity entity, boolean echoContent)'
+    fullName: 'void com.microsoft.azure.storage.table.TableBatchOperation.insert(final TableEntity entity, boolean echoContent)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.insert*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 204
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定されたエンティティを挿入するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void insert(final TableEntity entity, boolean echoContent)'
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を挿入します。 </p>
+        - id: echoContent
+          type: 4fc6e284
+          description: <p>ブール型かどうかをメッセージ ペイロードを応答で返される必要があります。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.insertOrMerge(final TableEntity)
+    id: insertOrMerge(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: insertOrMerge(final TableEntity entity)
+    nameWithType: TableBatchOperation.insertOrMerge(final TableEntity entity)
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.insertOrMerge(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.insertOrMerge*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 215
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>挿入またはバッチ操作に指定されたエンティティをマージするテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public void insertOrMerge(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>がない場合に挿入するか、存在する場合にマージします。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.insertOrReplace(final TableEntity)
+    id: insertOrReplace(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: insertOrReplace(final TableEntity entity)
+    nameWithType: TableBatchOperation.insertOrReplace(final TableEntity entity)
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.insertOrReplace(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.insertOrReplace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 226
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>挿入またはバッチ操作に指定されたエンティティを置換するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public void insertOrReplace(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>がない場合に挿入する、または存在する場合を置換します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.merge(final TableEntity)
+    id: merge(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: merge(final TableEntity entity)
+    nameWithType: TableBatchOperation.merge(final TableEntity entity)
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.merge(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.merge*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 237
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定されたエンティティをマージするテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public void merge(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>をマージします。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.remove(int)
+    id: remove(int)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: remove(int index)
+    nameWithType: TableBatchOperation.remove(int index)
+    fullName: TableOperation com.microsoft.azure.storage.table.TableBatchOperation.remove(int index)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.remove*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 283
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作から指定したインデックスにテーブルの操作を削除します。</p>
+      <p></p>
+    syntax:
+      content: public TableOperation remove(int index)
+      parameters:
+        - id: index
+          type: f75371fa
+          description: <p><code>int</code>内のインデックスを表す、<code>ArrayList</code>バッチ操作から削除するテーブル操作のです。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.remove(Object)
+    id: remove(Object)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: remove(Object o)
+    nameWithType: TableBatchOperation.remove(Object o)
+    fullName: boolean com.microsoft.azure.storage.table.TableBatchOperation.remove(Object o)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.remove*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 298
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作から、指定されたを削除します。</p>
+      <p></p>
+    syntax:
+      content: public boolean remove(Object o)
+      parameters:
+        - id: o
+          type: '79317049'
+          description: <p><code>Object</code>バッチ操作から削除します。 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>場合は、オブジェクトが正常に削除されました。 </p>"
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.removeAll(java.util.Collection<?>)
+    id: Collection<?>)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: removeAll(java.util.Collection<?> c)
+    nameWithType: TableBatchOperation.removeAll(java.util.Collection<?> c)
+    fullName: boolean com.microsoft.azure.storage.table.TableBatchOperation.removeAll(java.util.Collection<?> c)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.removeAll*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 313
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作から、指定されたコレクションのすべての要素を削除します。</p>
+      <p></p>
+    syntax:
+      content: public boolean removeAll(java.util.Collection<?> c)
+      parameters:
+        - id: c
+          type: 5c3b993a
+          description: <p>バッチ操作から削除する要素のコレクション。 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>場合は、コレクション内のオブジェクトが正常に削除されました。 </p>"
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.removeRange(int,int)'
+    id: 'removeRange(int,int)'
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'removeRange(int fromIndex, int toIndex)'
+    nameWithType: 'TableBatchOperation.removeRange(int fromIndex, int toIndex)'
+    fullName: 'void com.microsoft.azure.storage.table.TableBatchOperation.removeRange(int fromIndex, int toIndex)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.removeRange*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 575
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 指定した範囲内のインデックスでのすべてのテーブル操作をバッチ操作から削除します。</p>
+      <p></p>
+    syntax:
+      content: 'protected void removeRange(int fromIndex, int toIndex)'
+      parameters:
+        - id: fromIndex
+          type: f75371fa
+          description: <p><code>int</code>の範囲の下限を表す<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作から削除するオブジェクト<code>ArrayList</code>です。 </p>
+        - id: toIndex
+          type: f75371fa
+          description: <p><code>int</code>の範囲の上限を表す<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作から削除するオブジェクト<code>ArrayList</code>です。 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.replace(final TableEntity)
+    id: replace(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: replace(final TableEntity entity)
+    nameWithType: TableBatchOperation.replace(final TableEntity entity)
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.replace(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_batch_operation.replace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 325
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定されたエンティティを置換するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: public void replace(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を置き換えます。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.retrieve(final String,final String,final Class<? extends TableEntity>)'
+    id: 'retrieve(final String,final String,final Class<? extends TableEntity>)'
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+    nameWithType: 'TableBatchOperation.retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+    fullName: 'void com.microsoft.azure.storage.table.TableBatchOperation.retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.retrieve*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 253
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定の PartitionKey と RowKey で指定されたクラス型のエンティティを取得するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+      parameters:
+        - id: partitionKey
+          type: 3d93591e
+          description: <p>A<code>String</code>を取得するエンティティの PartitionKey を格納します。 </p>
+        - id: rowKey
+          type: 3d93591e
+          description: <p>A<code>String</code>を取得するエンティティの RowKey を格納します。 </p>
+        - id: clazzType
+          type: f6d66785com.microsoft.azure.storage.table._table_entitya08ddfce
+          description: <p>クラス、 <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>エンティティの種類を取得します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_batch_operation.retrieve(final String,final String,final EntityResolver<?>)'
+    id: 'retrieve(final String,final String,final EntityResolver<?>)'
+    parent: com.microsoft.azure.storage.table._table_batch_operation
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    langs:
+      - java
+    name: 'retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+    nameWithType: 'TableBatchOperation.retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+    fullName: 'void com.microsoft.azure.storage.table.TableBatchOperation.retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+    overload: com.microsoft.azure.storage.table._table_batch_operation.retrieve*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
+      startLine: 270
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>バッチ操作に指定の PartitionKey と RowKey で指定されたクラス型のエンティティを取得するテーブル操作を追加します。</p>
+      <p></p>
+    syntax:
+      content: 'public void retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+      parameters:
+        - id: partitionKey
+          type: 3d93591e
+          description: <p>A<code>String</code>を取得するエンティティの PartitionKey を格納します。 </p>
+        - id: rowKey
+          type: 3d93591e
+          description: <p>A<code>String</code>を取得するエンティティの RowKey を格納します。 </p>
+        - id: resolver
+          type: 93de0ef9com.microsoft.azure.storage.table._entity_resolver7e6ad1eb
+          description: <p><xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>結果内の特定の型として取得するエンティティを射影する実装。 </p>
+references:
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_operation
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_operation
+        name: TableOperation
+        fullName: com.microsoft.azure.storage.table.TableOperation
+        href: com.microsoft.azure.storage.table._table_operation.yml
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.add*
+    name: add
+    nameWithType: TableBatchOperation.add
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.add
+    package: com.microsoft.azure.storage.table
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: 4f93b78dcom.microsoft.azure.storage.table._table_operationa08ddfce
+    spec.java:
+      - name: 'final java.util.Collection<? extends '
+        fullName: 'final java.util.Collection<? extends '
+      - uid: com.microsoft.azure.storage.table._table_operation
+        name: TableOperation
+        fullName: com.microsoft.azure.storage.table.TableOperation
+        href: com.microsoft.azure.storage.table._table_operation.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.addAll*
+    name: addAll
+    nameWithType: TableBatchOperation.addAll
+    fullName: boolean com.microsoft.azure.storage.table.TableBatchOperation.addAll
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.clear*
+    name: clear
+    nameWithType: TableBatchOperation.clear
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.clear
+    package: com.microsoft.azure.storage.table
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_entity
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_entity
+        name: TableEntity
+        fullName: com.microsoft.azure.storage.table.TableEntity
+        href: com.microsoft.azure.storage.table._table_entity.yml
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.delete*
+    name: delete
+    nameWithType: TableBatchOperation.delete
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.delete
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.insert*
+    name: insert
+    nameWithType: TableBatchOperation.insert
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.insert
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.insertOrMerge*
+    name: insertOrMerge
+    nameWithType: TableBatchOperation.insertOrMerge
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.insertOrMerge
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.insertOrReplace*
+    name: insertOrReplace
+    nameWithType: TableBatchOperation.insertOrReplace
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.insertOrReplace
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.merge*
+    name: merge
+    nameWithType: TableBatchOperation.merge
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.merge
+    package: com.microsoft.azure.storage.table
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: f6d66785com.microsoft.azure.storage.table._table_entitya08ddfce
+    spec.java:
+      - name: 'final Class<? extends '
+        fullName: 'final Class<? extends '
+      - uid: com.microsoft.azure.storage.table._table_entity
+        name: TableEntity
+        fullName: com.microsoft.azure.storage.table.TableEntity
+        href: com.microsoft.azure.storage.table._table_entity.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.retrieve*
+    name: retrieve
+    nameWithType: TableBatchOperation.retrieve
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.retrieve
+    package: com.microsoft.azure.storage.table
+  - uid: 93de0ef9com.microsoft.azure.storage.table._entity_resolver7e6ad1eb
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._entity_resolver
+        name: EntityResolver
+        fullName: com.microsoft.azure.storage.table.EntityResolver
+        href: com.microsoft.azure.storage.table._entity_resolver.yml
+      - name: <?>
+        fullName: <?>
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.remove*
+    name: remove
+    nameWithType: TableBatchOperation.remove
+    fullName: TableOperation com.microsoft.azure.storage.table.TableBatchOperation.remove
+    package: com.microsoft.azure.storage.table
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: 5c3b993a
+    spec.java:
+      - name: java.util.Collection<?>
+        fullName: java.util.Collection<?>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.removeAll*
+    name: removeAll
+    nameWithType: TableBatchOperation.removeAll
+    fullName: boolean com.microsoft.azure.storage.table.TableBatchOperation.removeAll
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.replace*
+    name: replace
+    nameWithType: TableBatchOperation.replace
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.replace
+    package: com.microsoft.azure.storage.table
+  - uid: 93de0ef9com.microsoft.azure.storage.table._cloud_table_client
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._cloud_table_client
+        name: CloudTableClient
+        fullName: com.microsoft.azure.storage.table.CloudTableClient
+        href: com.microsoft.azure.storage.table._cloud_table_client.yml
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_request_options
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_request_options
+        name: TableRequestOptions
+        fullName: com.microsoft.azure.storage.table.TableRequestOptions
+        href: com.microsoft.azure.storage.table._table_request_options.yml
+  - uid: 93de0ef9com.microsoft.azure.storage._operation_context
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._operation_context
+        name: OperationContext
+        fullName: com.microsoft.azure.storage.OperationContext
+        href: com.microsoft.azure.storage._operation_context.yml
+  - uid: 573b1e0bcom.microsoft.azure.storage.table._table_resulta08ddfce
+    spec.java:
+      - name: ArrayList<
+        fullName: ArrayList<
+      - uid: com.microsoft.azure.storage.table._table_result
+        name: TableResult
+        fullName: com.microsoft.azure.storage.table.TableResult
+        href: com.microsoft.azure.storage.table._table_result.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.execute*
+    name: execute
+    nameWithType: TableBatchOperation.execute
+    fullName: ArrayList<TableResult> com.microsoft.azure.storage.table.TableBatchOperation.execute
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_batch_operation.removeRange*
+    name: removeRange
+    nameWithType: TableBatchOperation.removeRange
+    fullName: void com.microsoft.azure.storage.table.TableBatchOperation.removeRange
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    name: TableOperation
+    nameWithType: TableOperation
+    fullName: com.microsoft.azure.storage.table.TableOperation
+    type: Class
+    summary: |-
+      <p>1 つのテーブル操作を表すクラス。 </p>
+      <p>構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。 実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax:
+      content: public class TableOperation
+  - uid: com.microsoft.azure.storage.table._table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_entity.yml
+    name: TableEntity
+    nameWithType: TableEntity
+    fullName: com.microsoft.azure.storage.table.TableEntity
+    type: Interface
+    summary: "<p>テーブルのエンティティ型に必要なインターフェイスです。 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。 実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。 </p>\n<p>ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。 使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。 また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。 </p>\n\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。 </p>\n\n<p>実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。 クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。 </p>\n<p></p>"
+    syntax:
+      content: public interface TableEntity
+  - uid: com.microsoft.azure.storage.table._entity_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    name: EntityResolver<T>
+    nameWithType: EntityResolver<T>
+    fullName: com.microsoft.azure.storage.table.EntityResolver<T>
+    type: Interface
+    summary: |-
+      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
+      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p></p>
+    syntax:
+      content: public interface EntityResolver<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>
+  - uid: com.microsoft.azure.storage.core._storage_request
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._storage_request.yml
+    name: 'StorageRequest<C,P,R>'
+    nameWithType: 'StorageRequest<C,P,R>'
+    fullName: 'com.microsoft.azure.storage.core.StorageRequest<C,P,R>'
+    type: Class
+    summary: |-
+      <p>内部使用のために予約されています。 特定のストレージ操作の実行をカプセル化するクラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public class StorageRequest<C,P,R>'
+      typeParameters:
+        - type: 37f8610d
+          description: <p>サービス クライアントの種類 </p>
+        - type: db9ec244
+          description: <p>DownloadAttributes などの CloudBlobContainer などは、親オブジェクトの型。 </p>
+        - type: d4d3e1e1
+          description: <p>予期される結果の種類 </p>
+  - uid: com.microsoft.azure.storage.table._cloud_table_client
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._cloud_table_client.yml
+    name: CloudTableClient
+    nameWithType: CloudTableClient
+    fullName: com.microsoft.azure.storage.table.CloudTableClient
+    type: Class
+    summary: |-
+      <p>Microsoft Azure テーブル サービスにアクセスするためには、サービス クライアントを提供します。 </p>
+      <p><xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クラスは、テーブル サービスのエンドポイントのベース URI およびストレージ アカウントにアクセスするための資格情報をカプセル化しを実行するメソッドと同様に作成、削除、一覧、およびテーブルを照会する方法を提供操作とテーブル エンティティに対するクエリ。 これらのメソッドは、要求を作成し、返される結果を取得する記憶域サービスの REST API 操作を呼び出します。 </p>
+      <p>テーブル サービスのエンドポイントは、ストレージ アカウントの DNS 名を含む、テーブル サービス リソースのベース URI を示します。 <br /><br />
+
+       詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">テーブル サービス リソースのアドレス指定</ulink>です。 </p>
+
+      <p>資格情報は、ストレージ アカウント名と、キー、または共有アクセス署名の組み合わせにすることができます。 詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">ストレージ アカウントへのアクセスの認証</ulink>です。 </p>
+    syntax:
+      content: public class CloudTableClient extends ServiceClient
+  - uid: com.microsoft.azure.storage.table._table_batch_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    name: TableBatchOperation
+    nameWithType: TableBatchOperation
+    fullName: com.microsoft.azure.storage.table.TableBatchOperation
+    type: Class
+    summary: |-
+      <p>バッチ操作を表すクラス。 呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。 </p>
+      <p>バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。 取得操作のバッチには、他の操作を含めることはできません。 バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage.table._table_result
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_result.yml
+    name: TableResult
+    nameWithType: TableResult
+    fullName: com.microsoft.azure.storage.table.TableResult
+    type: Class
+    summary: <p>テーブル操作の結果を表すクラス。 <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>クラスは、HTTP 応答と、特定のという記憶域サービスの REST API 操作によって返されるテーブル エンティティ結果をカプセル化<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>です。 </p>
+    syntax:
+      content: public class TableResult
+  - uid: com.microsoft.azure.storage.table._table_request_options
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_request_options.yml
+    name: TableRequestOptions
+    nameWithType: TableRequestOptions
+    fullName: com.microsoft.azure.storage.table.TableRequestOptions
+    type: Class
+    summary: <p>タイムアウト、ペイロード形式、およびテーブルの操作要求の指定可能性のある再試行ポリシー オプションのセットを表します。 </p>
+    syntax:
+      content: public class TableRequestOptions
+  - uid: com.microsoft.azure.storage._operation_context
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._operation_context.yml
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: com.microsoft.azure.storage.OperationContext
+    type: Class
+    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    syntax:
+      content: public class OperationContext
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException

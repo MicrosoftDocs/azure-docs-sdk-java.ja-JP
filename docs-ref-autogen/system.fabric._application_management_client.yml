@@ -1,0 +1,1332 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._application_management_client
+    id: _application_management_client
+    parent: system.fabric
+    children:
+      - system.fabric._application_management_client.close()
+      - 'system.fabric._application_management_client.copyApplicationPackage(String,String,String)'
+      - system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)
+      - 'system.fabric._application_management_client.createApplicationAsync(ApplicationDescription,Duration)'
+      - system.fabric._application_management_client.deleteApplicationAsync(URI)
+      - 'system.fabric._application_management_client.deleteApplicationAsync(URI,Duration)'
+      - 'system.fabric._application_management_client.deployServicePackageToNode(String,String,String,PackageSharingPolicyList,String)'
+      - 'system.fabric._application_management_client.deployServicePackageToNode(String,String,String,PackageSharingPolicyList,String,Duration)'
+      - 'system.fabric._application_management_client.getApplicationManifestAsync(String,String)'
+      - 'system.fabric._application_management_client.getApplicationManifestAsync(String,String,Duration)'
+      - system.fabric._application_management_client.getApplicationUpgradeProgressAsync(URI)
+      - 'system.fabric._application_management_client.getApplicationUpgradeProgressAsync(URI,Duration)'
+      - system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)
+      - 'system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress,Duration)'
+      - 'system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(URI,String)'
+      - 'system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(URI,String,Duration)'
+      - system.fabric._application_management_client.provisionApplicationAsync(String)
+      - 'system.fabric._application_management_client.provisionApplicationAsync(String,Duration)'
+      - 'system.fabric._application_management_client.removeApplicationPackage(String,String)'
+      - system.fabric._application_management_client.rollbackApplicationUpgradeAsync(URI)
+      - 'system.fabric._application_management_client.rollbackApplicationUpgradeAsync(URI,Duration)'
+      - 'system.fabric._application_management_client.unprovisionApplicationAsync(String,String)'
+      - 'system.fabric._application_management_client.unprovisionApplicationAsync(String,String,Duration)'
+      - system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)
+      - 'system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription,Duration)'
+      - system.fabric._application_management_client.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription)
+      - 'system.fabric._application_management_client.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription,Duration)'
+      - system.fabric._application_management_client.upgradeApplicationAsync(ApplicationUpgradeDescription)
+      - 'system.fabric._application_management_client.upgradeApplicationAsync(ApplicationUpgradeDescription,Duration)'
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: ApplicationManagementClient
+    nameWithType: ApplicationManagementClient
+    fullName: system.fabric.ApplicationManagementClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 16
+    package: system.fabric
+    summary: <p>展開/解除-展開/作成/削除アプリケーションやサービスに機能を提供します。 </p>
+    syntax:
+      content: public class ApplicationManagementClient
+    inheritance:
+      - java.lang.Object
+      - AutoCloseable
+  - uid: system.fabric._application_management_client.close()
+    id: close()
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: ApplicationManagementClient.close()
+    fullName: void system.fabric.ApplicationManagementClient.close()
+    overload: system.fabric._application_management_client.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1322
+    package: system.fabric
+    syntax:
+      content: public void close()
+  - uid: 'system.fabric._application_management_client.copyApplicationPackage(String,String,String)'
+    id: 'copyApplicationPackage(String,String,String)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'copyApplicationPackage(String imageStoreConnectionString, String applicationPackagePath, String applicationPackagePathInImageStore)'
+    nameWithType: 'ApplicationManagementClient.copyApplicationPackage(String imageStoreConnectionString, String applicationPackagePath, String applicationPackagePathInImageStore)'
+    fullName: 'void system.fabric.ApplicationManagementClient.copyApplicationPackage(String imageStoreConnectionString, String applicationPackagePath, String applicationPackagePathInImageStore)'
+    overload: system.fabric._application_management_client.copyApplicationPackage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1018
+    package: system.fabric
+    summary: |-
+      <p>新しいアプリケーションの種類のプロビジョニングの準備、イメージ ストアにアプリケーション パッケージをアップロードします。</p>
+      <p></p>
+    syntax:
+      content: 'public void copyApplicationPackage(String imageStoreConnectionString, String applicationPackagePath, String applicationPackagePathInImageStore)'
+      parameters:
+        - id: imageStoreConnectionString
+          type: '26831127'
+          description: <p>クラスター マニフェストで指定されているイメージ ストア用の接続文字列。 </p>
+        - id: applicationPackagePath
+          type: '26831127'
+          description: <p>ソース アプリケーション パッケージの完全パスです。 </p>
+        - id: applicationPackagePathInImageStore
+          type: '26831127'
+          description: '<p>イメージ ストアに移行先の相対パス。 この同じ相対パスをそれ以降に渡す必要がある<xref uid="system.fabric._application_management_client.provisionApplicationAsync(String)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#provisionApplicationAsync(String)</xref>呼び出します。 </p>'
+    exceptions:
+      - type: 8a99d4b0
+        description: <p>場合、指定したファイルまたはディレクトリが見つかりません。 </p>
+  - uid: system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)
+    id: createApplicationAsync(ApplicationDescription)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: createApplicationAsync(ApplicationDescription applicationDescription)
+    nameWithType: ApplicationManagementClient.createApplicationAsync(ApplicationDescription applicationDescription)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.createApplicationAsync(ApplicationDescription applicationDescription)
+    overload: system.fabric._application_management_client.createApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 317
+    package: system.fabric
+    summary: "<p>作成し、特定の Service Fabric アプリケーションのインスタンスを作成します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : を作成するアプリケーション要求が要求されたアプリケーションの種類用にプロビジョニングされたマニフェストに対して無効です。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationAlreadyExists</xref> : アプリケーションが既に作成されています。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeNotFound</xref> : 要求されたアプリケーションの種類はまだプロビジョニングされていません。 </p>\n\n<p></p>"
+    syntax:
+      content: public CompletableFuture<Boolean> createApplicationAsync(ApplicationDescription applicationDescription)
+      parameters:
+        - id: applicationDescription
+          type: system.fabric._application_description
+          description: <p>アプリケーションの説明。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>作成された Service Fabric アプリケーションです。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクト。 </p>"
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_already_exists_exception
+      - type: system.fabric.exception._fabric_element_not_found_exception
+      - type: system.fabric.exception._unauthorized_access_exception
+        description: <p>イメージ ストア上のファイルへのアクセス エラーが発生しました。 </p>
+  - uid: 'system.fabric._application_management_client.createApplicationAsync(ApplicationDescription,Duration)'
+    id: 'createApplicationAsync(ApplicationDescription,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'createApplicationAsync(ApplicationDescription applicationDescription, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.createApplicationAsync(ApplicationDescription applicationDescription, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.createApplicationAsync(ApplicationDescription applicationDescription, Duration timeout)'
+    overload: system.fabric._application_management_client.createApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 361
+    package: system.fabric
+    summary: "<p>作成し、特定の Service Fabric アプリケーションのインスタンスを作成します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : を作成するアプリケーション要求が要求されたアプリケーションの種類用にプロビジョニングされたマニフェストに対して無効です。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationAlreadyExists</xref> : アプリケーションが既に作成されています。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeNotFound</xref> : 要求されたアプリケーションの種類はまだプロビジョニングされていません。 </p>\n\n<p></p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> createApplicationAsync(ApplicationDescription applicationDescription, Duration timeout)'
+      parameters:
+        - id: applicationDescription
+          type: system.fabric._application_description
+          description: <p>アプリケーションの説明。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>時刻を返す前に続行するには、この操作により、システムの最大量を定義<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>作成された Service Fabric アプリケーションです。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクト。 </p>"
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_already_exists_exception
+      - type: system.fabric.exception._fabric_element_not_found_exception
+      - type: system.fabric.exception._unauthorized_access_exception
+        description: <p>イメージ ストア上のファイルへのアクセス エラーが発生しました。 </p>
+  - uid: system.fabric._application_management_client.deleteApplicationAsync(URI)
+    id: deleteApplicationAsync(URI)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: deleteApplicationAsync(URI applicationName)
+    nameWithType: ApplicationManagementClient.deleteApplicationAsync(URI applicationName)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.deleteApplicationAsync(URI applicationName)
+    overload: system.fabric._application_management_client.deleteApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 672
+    package: system.fabric
+    summary: "<p>アプリケーション インスタンスをクラスターから削除し、アプリケーションに属するすべてのサービスを削除します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeInProgress</xref> : アプリケーションをアップグレードしています。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>すべてのアプリケーションの状態は失われ、アプリケーションを削除した後に回復できません。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> deleteApplicationAsync(URI applicationName)
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>アプリケーション インスタンス名の URI。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターから削除されたアプリケーションのインスタンス。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_element_not_found_exception
+      - type: system.fabric.exception._fabric_transient_exception
+  - uid: 'system.fabric._application_management_client.deleteApplicationAsync(URI,Duration)'
+    id: 'deleteApplicationAsync(URI,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'deleteApplicationAsync(URI applicationName, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.deleteApplicationAsync(URI applicationName, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.deleteApplicationAsync(URI applicationName, Duration timeout)'
+    overload: system.fabric._application_management_client.deleteApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 705
+    package: system.fabric
+    summary: "<p>アプリケーション インスタンスをクラスターから削除し、アプリケーションに属するすべてのサービスを削除します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeInProgress</xref> : アプリケーションをアップグレードしています。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>すべてのアプリケーションの状態は失われ、アプリケーションを削除した後に回復できません。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> deleteApplicationAsync(URI applicationName, Duration timeout)'
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>アプリケーション インスタンス名の URI。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムが returnin する前に続行するには、この操作を許可する時間の最大量を定義<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターから削除されたアプリケーションのインスタンス。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_element_not_found_exception
+      - type: system.fabric.exception._fabric_transient_exception
+  - uid: 'system.fabric._application_management_client.deployServicePackageToNode(String,String,String,PackageSharingPolicyList,String)'
+    id: 'deployServicePackageToNode(String,String,String,PackageSharingPolicyList,String)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName)'
+    nameWithType: 'ApplicationManagementClient.deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName)'
+    overload: system.fabric._application_management_client.deployServicePackageToNode*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1062
+    package: system.fabric
+    summary: |-
+      <p>指定したノードのイメージ キャッシュにサービス マニフェストに関連付けられているパッケージをダウンロードします。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName)'
+      parameters:
+        - id: applicationTypeName
+          type: '26831127'
+          description: <p>サービス マニフェストをダウンロードするに関連付けられている ApplicationTypeName </p>
+        - id: applicationTypeVersion
+          type: '26831127'
+          description: <p>ApplicationType のバージョン </p>
+        - id: serviceManifestName
+          type: '26831127'
+          description: <p>パッケージをダウンロードする必要があるサービス マニフェストの名前 </p>
+        - id: sharingPolicies
+          type: system.fabric._package_sharing_policy_list
+          description: <p>共有の共有フォルダーにコピーする必要があるパッケージを表すポリシー </p>
+        - id: nodeName
+          type: '26831127'
+          description: <p>パッケージがダウンロードする必要があるノードの名前です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>CompletableFuture </p>
+  - uid: 'system.fabric._application_management_client.deployServicePackageToNode(String,String,String,PackageSharingPolicyList,String,Duration)'
+    id: 'deployServicePackageToNode(String,String,String,PackageSharingPolicyList,String,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName, Duration timeout)'
+    overload: system.fabric._application_management_client.deployServicePackageToNode*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1095
+    package: system.fabric
+    summary: |-
+      <p>指定したノードのイメージ キャッシュにサービス マニフェストに関連付けられているパッケージをダウンロードします。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> deployServicePackageToNode(String applicationTypeName, String applicationTypeVersion, String serviceManifestName, PackageSharingPolicyList sharingPolicies, String nodeName, Duration timeout)'
+      parameters:
+        - id: applicationTypeName
+          type: '26831127'
+          description: <p>サービス マニフェストをダウンロードするに関連付けられている ApplicationTypeName </p>
+        - id: applicationTypeVersion
+          type: '26831127'
+          description: <p>ApplicationType のバージョン </p>
+        - id: serviceManifestName
+          type: '26831127'
+          description: <p>パッケージをダウンロードする必要があるサービス マニフェストの名前 </p>
+        - id: sharingPolicies
+          type: system.fabric._package_sharing_policy_list
+          description: <p>共有の共有フォルダーにコピーする必要があるパッケージを表すポリシー </p>
+        - id: nodeName
+          type: '26831127'
+          description: <p>パッケージがダウンロードする必要があるノードの名前です。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>CompletableFuture </p>
+  - uid: 'system.fabric._application_management_client.getApplicationManifestAsync(String,String)'
+    id: 'getApplicationManifestAsync(String,String)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion)'
+    nameWithType: 'ApplicationManagementClient.getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion)'
+    fullName: 'CompletableFuture<String> system.fabric.ApplicationManagementClient.getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion)'
+    overload: system.fabric._application_management_client.getApplicationManifestAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 840
+    package: system.fabric
+    summary: |-
+      <p>プロビジョニングされたアプリケーション マニフェストのクラスターに格納されている内容を取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<String> getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion)'
+      parameters:
+        - id: applicationTypeName
+          type: '26831127'
+          description: <p>アプリケーション マニフェストで指定された型名。 </p>
+        - id: applicationTypeVersion
+          type: '26831127'
+          description: <p>アプリケーション マニフェストで指定されたタイプのバージョン。 </p>
+      return:
+        type: 06be942d
+        description: <p>生の XML を結果のタスクは、アプリケーション マニフェストの内容を文字列です。 </p>
+  - uid: 'system.fabric._application_management_client.getApplicationManifestAsync(String,String,Duration)'
+    id: 'getApplicationManifestAsync(String,String,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+    fullName: 'CompletableFuture<String> system.fabric.ApplicationManagementClient.getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+    overload: system.fabric._application_management_client.getApplicationManifestAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 861
+    package: system.fabric
+    summary: |-
+      <p>プロビジョニングされたアプリケーション マニフェストのクラスターに格納されている内容を取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<String> getApplicationManifestAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+      parameters:
+        - id: applicationTypeName
+          type: '26831127'
+          description: <p>アプリケーション マニフェストで指定された型名。 </p>
+        - id: applicationTypeVersion
+          type: '26831127'
+          description: <p>アプリケーション マニフェストで指定されたタイプのバージョン。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 06be942d
+        description: <p>生の XML を結果のタスクは、アプリケーション マニフェストの内容を文字列です。 </p>
+  - uid: system.fabric._application_management_client.getApplicationUpgradeProgressAsync(URI)
+    id: getApplicationUpgradeProgressAsync(URI)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: getApplicationUpgradeProgressAsync(URI applicationName)
+    nameWithType: ApplicationManagementClient.getApplicationUpgradeProgressAsync(URI applicationName)
+    fullName: CompletableFuture<ApplicationUpgradeProgress> system.fabric.ApplicationManagementClient.getApplicationUpgradeProgressAsync(URI applicationName)
+    overload: system.fabric._application_management_client.getApplicationUpgradeProgressAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 523
+    package: system.fabric
+    summary: "<p>指定したアプリケーション インスタンスのアップグレードの進行状況を取得します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>"
+    syntax:
+      content: public CompletableFuture<ApplicationUpgradeProgress> getApplicationUpgradeProgressAsync(URI applicationName)
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>アプリケーション インスタンス名の URI。 </p>
+      return:
+        type: 9cdf14d0system.fabric._application_upgrade_progressa08ddfce
+        description: <p>指定したアプリケーション インスタンスのアップグレードの進行状況。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_element_not_found_exception
+  - uid: 'system.fabric._application_management_client.getApplicationUpgradeProgressAsync(URI,Duration)'
+    id: 'getApplicationUpgradeProgressAsync(URI,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'getApplicationUpgradeProgressAsync(URI applicationName, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.getApplicationUpgradeProgressAsync(URI applicationName, Duration timeout)'
+    fullName: 'CompletableFuture<ApplicationUpgradeProgress> system.fabric.ApplicationManagementClient.getApplicationUpgradeProgressAsync(URI applicationName, Duration timeout)'
+    overload: system.fabric._application_management_client.getApplicationUpgradeProgressAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 546
+    package: system.fabric
+    summary: "<p>指定したアプリケーション インスタンスのアップグレードの進行状況を取得します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>"
+    syntax:
+      content: 'public CompletableFuture<ApplicationUpgradeProgress> getApplicationUpgradeProgressAsync(URI applicationName, Duration timeout)'
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>アプリケーション インスタンス名の URI。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 9cdf14d0system.fabric._application_upgrade_progressa08ddfce
+        description: <p>指定したアプリケーション インスタンスのアップグレードの進行状況。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_element_not_found_exception
+  - uid: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)
+    id: moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+    nameWithType: ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+    overload: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 596
+    package: system.fabric
+    summary: "<p>Service Fabric を次のアップグレード ドメイン内のアプリケーション インスタンスをアップグレードするように指示します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>は現在更新ドメインのアップグレードが完了した場合、Service Fabric は次のアップグレード ドメインに移動のみです。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress)
+      parameters:
+        - id: upgradeProgress
+          type: system.fabric._application_upgrade_progress
+          description: <p>目的のアプリケーション インスタンスのアップグレードの進行状況。 これは、アップグレード対象として次のアップグレード ドメインに関する情報を提供します。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_element_not_found_exception
+  - uid: 'system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress,Duration)'
+    id: 'moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress, Duration timeout)'
+    overload: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 624
+    package: system.fabric
+    summary: "<p>Service Fabric を次のアップグレード ドメイン内のアプリケーション インスタンスをアップグレードするように指示します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>は現在更新ドメインのアップグレードが完了した場合、Service Fabric は次のアップグレード ドメインに移動のみです。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> moveNextApplicationUpgradeDomainAsync(ApplicationUpgradeProgress upgradeProgress, Duration timeout)'
+      parameters:
+        - id: upgradeProgress
+          type: system.fabric._application_upgrade_progress
+          description: <p>目的のアプリケーション インスタンスのアップグレードの進行状況。 これは、アップグレード対象として次のアップグレード ドメインに関する情報を提供します。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_element_not_found_exception
+  - uid: 'system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(URI,String)'
+    id: 'moveNextApplicationUpgradeDomainAsync(URI,String)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain)'
+    nameWithType: 'ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain)'
+    overload: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 907
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric を次のアップグレード ドメイン内のアプリケーション インスタンスをアップグレードするように指示します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain)'
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>目的のアプリケーション インスタンスのアップグレードの進行状況。 これは、アップグレード対象として次のアップグレード ドメインに関する情報を提供します。 </p>
+        - id: nextUpgradeDomain
+          type: '26831127'
+          description: <p>次のアップグレード ドメイン名 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>
+  - uid: 'system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync(URI,String,Duration)'
+    id: 'moveNextApplicationUpgradeDomainAsync(URI,String,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain, Duration timeout)'
+    overload: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 929
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric を次のアップグレード ドメイン内のアプリケーション インスタンスをアップグレードするように指示します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> moveNextApplicationUpgradeDomainAsync(URI applicationName, String nextUpgradeDomain, Duration timeout)'
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>目的のアプリケーション インスタンスのアップグレードの進行状況。 これは、アップグレード対象として次のアップグレード ドメインに関する情報を提供します。 </p>
+        - id: nextUpgradeDomain
+          type: '26831127'
+          description: <p>次のアップグレード ドメイン名 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>
+  - uid: system.fabric._application_management_client.provisionApplicationAsync(String)
+    id: provisionApplicationAsync(String)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: provisionApplicationAsync(String applicationBuildPath)
+    nameWithType: ApplicationManagementClient.provisionApplicationAsync(String applicationBuildPath)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.provisionApplicationAsync(String applicationBuildPath)
+    overload: system.fabric._application_management_client.provisionApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 202
+    package: system.fabric
+    summary: "<p>Service Fabric アプリケーションの種類をプロビジョニングするか、クラスターに登録します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : マニフェストのプロビジョニング中にエラーが発生します。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeProvisionInProgress</xref> : アプリケーションの種類の別のバージョンを現在準備中です。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageStoreIOException</xref> : ImageStore と通信する IO エラーが発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeAlreadyExists</xref> : アプリケーションの種類が既にプロビジョニングされています </p>\n\n<p>\r\n\r\n  <b>注釈:</b>アプリケーション インスタンスを作成する前に必須です。 </p>"
+    syntax: &ref_1
+      content: public CompletableFuture<Boolean> provisionApplicationAsync(String applicationBuildPath)
+      parameters:
+        - id: applicationBuildPath
+          type: '26831127'
+          description: <p>クラスター マニフェストで指定された ImageStore 場所でアプリケーション パッケージへの相対パスです。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>登録済みの Service Fabric アプリケーションです。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_already_exists_exception
+      - type: system.fabric.exception._unauthorized_access_exception
+        description: <p>ImageStore でファイルへのアクセス エラーが発生しました。 </p>
+  - uid: 'system.fabric._application_management_client.provisionApplicationAsync(String,Duration)'
+    id: 'provisionApplicationAsync(String,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'provisionApplicationAsync(String applicationBuildPath, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.provisionApplicationAsync(String applicationBuildPath, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.provisionApplicationAsync(String applicationBuildPath, Duration timeout)'
+    overload: system.fabric._application_management_client.provisionApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 252
+    package: system.fabric
+    summary: "<p>Service Fabric アプリケーションの種類をプロビジョニングするか、クラスターに登録します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : マニフェストのプロビジョニング中にエラーが発生します。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeProvisionInProgress</xref> : アプリケーションの種類の別のバージョンを現在準備中です。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageStoreIOException</xref> : ImageStore と通信する IO エラーが発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeAlreadyExists</xref> : アプリケーションの種類が既にプロビジョニングされています </p>\n\n<p>\r\n\r\n  <b>注釈:</b>アプリケーション インスタンスを作成する前に必須です。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> provisionApplicationAsync(String applicationBuildPath, Duration timeout)'
+      parameters:
+        - id: applicationBuildPath
+          type: '26831127'
+          description: <p>クラスター マニフェストで指定された ImageStore 場所でアプリケーション パッケージへの相対パスです。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>登録済みの Service Fabric アプリケーションです。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_already_exists_exception
+      - type: system.fabric.exception._unauthorized_access_exception
+        description: <p>ImageStore でファイルへのアクセス エラーが発生しました。 </p>
+  - uid: 'system.fabric._application_management_client.removeApplicationPackage(String,String)'
+    id: 'removeApplicationPackage(String,String)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'removeApplicationPackage(String imageStoreConnectionString, String applicationPackagePathInImageStore)'
+    nameWithType: 'ApplicationManagementClient.removeApplicationPackage(String imageStoreConnectionString, String applicationPackagePathInImageStore)'
+    fullName: 'void system.fabric.ApplicationManagementClient.removeApplicationPackage(String imageStoreConnectionString, String applicationPackagePathInImageStore)'
+    overload: system.fabric._application_management_client.removeApplicationPackage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1039
+    package: system.fabric
+    summary: |-
+      <p>アプリケーション パッケージをイメージ ストアから削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public void removeApplicationPackage(String imageStoreConnectionString, String applicationPackagePathInImageStore)'
+      parameters:
+        - id: imageStoreConnectionString
+          type: '26831127'
+          description: <p>クラスター マニフェストで指定されているイメージ ストア用の接続文字列。 </p>
+        - id: applicationPackagePathInImageStore
+          type: '26831127'
+          description: <p>イメージ ストアにパッケージの相対パス。 </p>
+    exceptions:
+      - type: 8a99d4b0
+        description: <p>場合、指定したファイルまたはディレクトリが見つかりません。 </p>
+  - uid: system.fabric._application_management_client.rollbackApplicationUpgradeAsync(URI)
+    id: rollbackApplicationUpgradeAsync(URI)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: rollbackApplicationUpgradeAsync(URI applicationName)
+    nameWithType: ApplicationManagementClient.rollbackApplicationUpgradeAsync(URI applicationName)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.rollbackApplicationUpgradeAsync(URI applicationName)
+    overload: system.fabric._application_management_client.rollbackApplicationUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1172
+    package: system.fabric
+    summary: "<p>現在のアプリケーションのアップグレードのロールバックを開始します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotUpgrading</xref> : ロールバックする指定されたアプリケーションに対して保留中のアップグレードはありません。 </p>"
+    syntax:
+      content: public CompletableFuture<Boolean> rollbackApplicationUpgradeAsync(URI applicationName)
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>アプリケーションの名前 </p>
+      return:
+        type: 7e53ac82
+        description: <p>CompletableFuture </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_exception
+  - uid: 'system.fabric._application_management_client.rollbackApplicationUpgradeAsync(URI,Duration)'
+    id: 'rollbackApplicationUpgradeAsync(URI,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'rollbackApplicationUpgradeAsync(URI applicationName, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.rollbackApplicationUpgradeAsync(URI applicationName, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.rollbackApplicationUpgradeAsync(URI applicationName, Duration timeout)'
+    overload: system.fabric._application_management_client.rollbackApplicationUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1190
+    package: system.fabric
+    summary: "<p>現在のアプリケーションのアップグレードのロールバックを開始します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotUpgrading</xref> : ロールバックする指定されたアプリケーションに対して保留中のアップグレードはありません。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> rollbackApplicationUpgradeAsync(URI applicationName, Duration timeout)'
+      parameters:
+        - id: applicationName
+          type: '62304784'
+          description: <p>アプリケーションの名前 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>CompletableFuture </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_exception
+  - uid: 'system.fabric._application_management_client.unprovisionApplicationAsync(String,String)'
+    id: 'unprovisionApplicationAsync(String,String)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion)'
+    nameWithType: 'ApplicationManagementClient.unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion)'
+    overload: system.fabric._application_management_client.unprovisionApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 755
+    package: system.fabric
+    summary: "<p>Service Fabric アプリケーションの種類をクラスターから削除または登録解除します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeInUse</xref> : アプリケーションの種類が 1 つまたは複数のアプリケーションによって使用されています。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>このメソッドは、アプリケーションの種類のすべてのアプリケーション インスタンスが削除されている場合にのみ呼び出すことができます。 アプリケーションの種類が登録解除されると、この特定のアプリケーションの種類に対して新しいアプリケーション インスタンスを作成できません。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion)'
+      parameters:
+        - id: applicationTypeName
+          type: '26831127'
+          description: <p>アプリケーションの種類名。 </p>
+        - id: applicationTypeVersion
+          type: '26831127'
+          description: <p>アプリケーションの種類のバージョン。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターから削除された Service Fabric アプリケーションの種類。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクト。 </p>"
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_not_found_exception
+  - uid: 'system.fabric._application_management_client.unprovisionApplicationAsync(String,String,Duration)'
+    id: 'unprovisionApplicationAsync(String,String,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+    overload: system.fabric._application_management_client.unprovisionApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 795
+    package: system.fabric
+    summary: "<p>Service Fabric アプリケーションの種類をクラスターから削除または登録解除します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeInUse</xref> : アプリケーションの種類が 1 つまたは複数のアプリケーションによって使用されています。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <b>注釈:</b>このメソッドは、アプリケーションの種類のすべてのアプリケーション インスタンスが削除されている場合にのみ呼び出すことができます。 アプリケーションの種類が登録解除されると、この特定のアプリケーションの種類に対して新しいアプリケーション インスタンスを作成できません。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> unprovisionApplicationAsync(String applicationTypeName, String applicationTypeVersion, Duration timeout)'
+      parameters:
+        - id: applicationTypeName
+          type: '26831127'
+          description: <p>アプリケーションの種類名。 </p>
+        - id: applicationTypeVersion
+          type: '26831127'
+          description: <p>アプリケーションの種類のバージョン。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>クラスターから削除された Service Fabric アプリケーションの種類。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">system.fabric.FabricClient</xref>オブジェクト。 </p>"
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_not_found_exception
+  - uid: system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)
+    id: updateApplicationAsync(ApplicationUpdateDescription)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription)
+    nameWithType: ApplicationManagementClient.updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription)
+    overload: system.fabric._application_management_client.updateApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1248
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric アプリケーションを更新します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription)
+      parameters:
+        - id: applicationUpdateDescription
+          type: system.fabric._application_update_description
+          description: <p>アプリケーションの更新プログラムの説明。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>更新済みの Service Fabric アプリケーションです。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_exception
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref>: アプリケーション名が有効な名前付けの URI ではありません。 </p>"
+      - type: system.fabric.exception._fabric_element_not_found_exception
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref>: アプリケーションが存在しません。 </p>"
+      - type: system.fabric.exception._fabric_transient_exception
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeInProgress</xref>: 別のアプリケーションの更新プログラムが既に進行中です。 </p>"
+      - type: 6bd89211
+        description: '<p>指定されたアプリケーションの更新のパラメーターが正しくありません。 参照してください<xref uid="system.fabric._application_update_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMinimumNodes()</xref>、 <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_update_description.getMetrics()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMetrics()</xref>アプリケーション容量パラメーターの正しい仕様です。 可能であればそのパラメーターで<xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>が有効で、無効な組み合わせが生成される既存のアプリケーション容量パラメーターと組み合わせた場合がします。 たとえば、設定<xref uid="system.fabric._application_update_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMinimumNodes()</xref>で指定されているものよりも大きい値に<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>アプリケーションの作成時にします。 </p>'
+  - uid: 'system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription,Duration)'
+    id: 'updateApplicationAsync(ApplicationUpdateDescription,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription, Duration timeout)'
+    overload: system.fabric._application_management_client.updateApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 1286
+    package: system.fabric
+    summary: |-
+      <p>Service Fabric アプリケーションを更新します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<Boolean> updateApplicationAsync(ApplicationUpdateDescription applicationUpdateDescription, Duration timeout)'
+      parameters:
+        - id: applicationUpdateDescription
+          type: system.fabric._application_update_description
+          description: <p>アプリケーションの更新プログラムの説明。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>時刻を返す前に続行するには、この操作により、システムの最大量を定義<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref></p>
+      return:
+        type: 7e53ac82
+        description: <p>更新済みの Service Fabric アプリケーションです。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_exception
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref>: アプリケーション名が有効な名前付けの URI ではありません。 </p>"
+      - type: system.fabric.exception._fabric_element_not_found_exception
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref>: アプリケーションが存在しません。 </p>"
+      - type: system.fabric.exception._fabric_transient_exception
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeInProgress</xref>: 別のアプリケーションの更新プログラムが既に進行中です。 </p>"
+      - type: 6bd89211
+        description: '<p>指定されたアプリケーションの更新のパラメーターが正しくありません。 参照してください<xref uid="system.fabric._application_update_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMinimumNodes()</xref>、 <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_update_description.getMetrics()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMetrics()</xref>アプリケーション容量パラメーターの正しい仕様です。 可能であればそのパラメーターで<xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>が有効で、無効な組み合わせが生成される既存のアプリケーション容量パラメーターと組み合わせた場合がします。 たとえば、設定<xref uid="system.fabric._application_update_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMinimumNodes()</xref>で指定されているものよりも大きい値に<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>アプリケーションの作成時にします。 </p>'
+  - uid: system.fabric._application_management_client.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription)
+    id: updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description)
+    nameWithType: ApplicationManagementClient.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description)
+    overload: system.fabric._application_management_client.updateApplicationUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 966
+    package: system.fabric
+    syntax:
+      content: public CompletableFuture<Boolean> updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description)
+      parameters:
+        - id: description
+          type: system.fabric._application_upgrade_update_description
+      return:
+        type: 7e53ac82
+  - uid: 'system.fabric._application_management_client.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription,Duration)'
+    id: 'updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description, Duration timeout)'
+    overload: system.fabric._application_management_client.updateApplicationUpgradeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 970
+    package: system.fabric
+    syntax:
+      content: 'public CompletableFuture<Boolean> updateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription description, Duration timeout)'
+      parameters:
+        - id: description
+          type: system.fabric._application_upgrade_update_description
+        - id: timeout
+          type: e02a2de0
+      return:
+        type: 7e53ac82
+  - uid: system.fabric._application_management_client.upgradeApplicationAsync(ApplicationUpgradeDescription)
+    id: upgradeApplicationAsync(ApplicationUpgradeDescription)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription)
+    nameWithType: ApplicationManagementClient.upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription)
+    overload: system.fabric._application_management_client.upgradeApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 428
+    package: system.fabric
+    summary: "<p>アプリケーション インスタンスのアップグレードを実行します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : アップグレードがプロビジョニングされているマニフェストに対して有効ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeValidationError</xref> : アプリケーションの種類が存在しません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeInProgress</xref> : アプリケーションは、要求されたバージョンを既にアップグレードされています。 </p>\n\n<p></p>"
+    syntax:
+      content: public CompletableFuture<Boolean> upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription)
+      parameters:
+        - id: upgradeDescription
+          type: system.fabric._application_upgrade_description
+          description: <p>アップグレード ポリシーとアプリケーションをアップグレードできる説明。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_not_found_exception
+      - type: system.fabric.exception._fabric_transient_exception
+      - type: system.fabric.exception._unauthorized_access_exception
+        description: <p>ImageStore でファイルへのアクセス エラーが発生しました。 </p>
+  - uid: 'system.fabric._application_management_client.upgradeApplicationAsync(ApplicationUpgradeDescription,Duration)'
+    id: 'upgradeApplicationAsync(ApplicationUpgradeDescription,Duration)'
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    langs:
+      - java
+    name: 'upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription, Duration timeout)'
+    nameWithType: 'ApplicationManagementClient.upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription, Duration timeout)'
+    fullName: 'CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription, Duration timeout)'
+    overload: system.fabric._application_management_client.upgradeApplicationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationManagementClient.java
+      startLine: 475
+    package: system.fabric
+    summary: "<p>アプリケーション インスタンスのアップグレードを実行します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : アップグレードがプロビジョニングされているマニフェストに対して有効ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeValidationError</xref> : アプリケーションの種類が存在しません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationNotFound</xref> : アプリケーションが存在しません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationUpgradeInProgress</xref> : アプリケーションは、要求されたバージョンを既にアップグレードされています。 </p>\n\n<p></p>"
+    syntax:
+      content: 'public CompletableFuture<Boolean> upgradeApplicationAsync(ApplicationUpgradeDescription upgradeDescription, Duration timeout)'
+      parameters:
+        - id: upgradeDescription
+          type: system.fabric._application_upgrade_description
+          description: <p>アップグレード ポリシーとアプリケーションをアップグレードできる説明。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>システムで返す前に続行するには、この操作は許可最長時間<xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.TimeoutException</xref>です。 </p>
+      return:
+        type: 7e53ac82
+        description: <p>アップグレードしたアプリケーションのインスタンス。 </p>
+    exceptions:
+      - type: system.fabric.exception._fabric_object_closed_exception
+        description: <p><xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">System.fabric.FabricClient</xref>オブジェクトが closed 状態にします。 破棄、 <xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクトを使用しているし、新しいインスタンスを作成する<xref uid="system.fabric._fabric_client" data-throw-if-not-resolved="false">system.fabric.FabricClient</xref>オブジェクト。 </p>
+      - type: system.fabric.exception._fabric_exception
+      - type: system.fabric.exception._fabric_element_not_found_exception
+      - type: system.fabric.exception._fabric_transient_exception
+      - type: system.fabric.exception._unauthorized_access_exception
+        description: <p>ImageStore でファイルへのアクセス エラーが発生しました。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 7e53ac82
+    spec.java:
+      - name: CompletableFuture<Boolean>
+        fullName: CompletableFuture<Boolean>
+  - uid: system.fabric._application_management_client.provisionApplicationAsync*
+    name: provisionApplicationAsync
+    nameWithType: ApplicationManagementClient.provisionApplicationAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.provisionApplicationAsync
+    package: system.fabric
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: system.fabric._application_management_client.createApplicationAsync*
+    name: createApplicationAsync
+    nameWithType: ApplicationManagementClient.createApplicationAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.createApplicationAsync
+    package: system.fabric
+  - uid: system.fabric._application_management_client.upgradeApplicationAsync*
+    name: upgradeApplicationAsync
+    nameWithType: ApplicationManagementClient.upgradeApplicationAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.upgradeApplicationAsync
+    package: system.fabric
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: 9cdf14d0system.fabric._application_upgrade_progressa08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._application_upgrade_progress
+        name: ApplicationUpgradeProgress
+        fullName: system.fabric.ApplicationUpgradeProgress
+        href: system.fabric._application_upgrade_progress.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._application_management_client.getApplicationUpgradeProgressAsync*
+    name: getApplicationUpgradeProgressAsync
+    nameWithType: ApplicationManagementClient.getApplicationUpgradeProgressAsync
+    fullName: CompletableFuture<ApplicationUpgradeProgress> system.fabric.ApplicationManagementClient.getApplicationUpgradeProgressAsync
+    package: system.fabric
+  - uid: system.fabric._application_management_client.moveNextApplicationUpgradeDomainAsync*
+    name: moveNextApplicationUpgradeDomainAsync
+    nameWithType: ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.moveNextApplicationUpgradeDomainAsync
+    package: system.fabric
+  - uid: system.fabric._application_management_client.deleteApplicationAsync*
+    name: deleteApplicationAsync
+    nameWithType: ApplicationManagementClient.deleteApplicationAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.deleteApplicationAsync
+    package: system.fabric
+  - uid: system.fabric._application_management_client.unprovisionApplicationAsync*
+    name: unprovisionApplicationAsync
+    nameWithType: ApplicationManagementClient.unprovisionApplicationAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.unprovisionApplicationAsync
+    package: system.fabric
+  - uid: 06be942d
+    spec.java:
+      - name: CompletableFuture<String>
+        fullName: CompletableFuture<String>
+  - uid: system.fabric._application_management_client.getApplicationManifestAsync*
+    name: getApplicationManifestAsync
+    nameWithType: ApplicationManagementClient.getApplicationManifestAsync
+    fullName: CompletableFuture<String> system.fabric.ApplicationManagementClient.getApplicationManifestAsync
+    package: system.fabric
+  - uid: system.fabric._application_management_client.updateApplicationUpgradeAsync*
+    name: updateApplicationUpgradeAsync
+    nameWithType: ApplicationManagementClient.updateApplicationUpgradeAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.updateApplicationUpgradeAsync
+    package: system.fabric
+  - uid: 8a99d4b0
+    spec.java:
+      - name: Exception
+        fullName: Exception
+  - uid: system.fabric._application_management_client.copyApplicationPackage*
+    name: copyApplicationPackage
+    nameWithType: ApplicationManagementClient.copyApplicationPackage
+    fullName: void system.fabric.ApplicationManagementClient.copyApplicationPackage
+    package: system.fabric
+  - uid: system.fabric._application_management_client.removeApplicationPackage*
+    name: removeApplicationPackage
+    nameWithType: ApplicationManagementClient.removeApplicationPackage
+    fullName: void system.fabric.ApplicationManagementClient.removeApplicationPackage
+    package: system.fabric
+  - uid: system.fabric._application_management_client.deployServicePackageToNode*
+    name: deployServicePackageToNode
+    nameWithType: ApplicationManagementClient.deployServicePackageToNode
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.deployServicePackageToNode
+    package: system.fabric
+  - uid: system.fabric._application_management_client.rollbackApplicationUpgradeAsync*
+    name: rollbackApplicationUpgradeAsync
+    nameWithType: ApplicationManagementClient.rollbackApplicationUpgradeAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.rollbackApplicationUpgradeAsync
+    package: system.fabric
+  - uid: 6bd89211
+    spec.java:
+      - name: java.lang.IllegalArgumentException
+        fullName: java.lang.IllegalArgumentException
+  - uid: system.fabric._application_management_client.updateApplicationAsync*
+    name: updateApplicationAsync
+    nameWithType: ApplicationManagementClient.updateApplicationAsync
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.updateApplicationAsync
+    package: system.fabric
+  - uid: system.fabric._application_management_client.close*
+    name: close
+    nameWithType: ApplicationManagementClient.close
+    fullName: void system.fabric.ApplicationManagementClient.close
+    package: system.fabric
+  - uid: system.fabric._fabric_client
+    parent: system.fabric
+    href: system.fabric._fabric_client.yml
+    name: FabricClient
+    nameWithType: FabricClient
+    fullName: system.fabric.FabricClient
+    type: Class
+    summary: "<p>作成し、Service Fabric サービスとその他のエンティティを管理します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>FabricClients できるだけ多くを共有することを強くお勧めします。 これは、ため、 <xref uid=\"system.fabric._fabric_client\" data-throw-if-not-resolved=\"false\">FabricClient</xref>キャッシュなどの複数の最適化があり、バッチ処理することはありませんそれ以外の場合を十分に活用することです。 </p>"
+    syntax:
+      content: public class FabricClient
+  - uid: system.fabric.interop._native_async_callback
+    parent: system.fabric.interop
+    href: system.fabric.interop._native_async_callback.yml
+    name: NativeAsyncCallback
+    nameWithType: NativeAsyncCallback
+    fullName: system.fabric.interop.NativeAsyncCallback
+    type: Interface
+    syntax:
+      content: public interface NativeAsyncCallback
+  - uid: system.fabric._application_upgrade_progress
+    parent: system.fabric
+    href: system.fabric._application_upgrade_progress.yml
+    name: ApplicationUpgradeProgress
+    nameWithType: ApplicationUpgradeProgress
+    fullName: system.fabric.ApplicationUpgradeProgress
+    type: Class
+    summary: <p>アプリケーション インスタンスのアップグレード状態を表します。 </p>
+    syntax:
+      content: public class ApplicationUpgradeProgress
+  - uid: system.fabric._application_description
+    parent: system.fabric
+    href: system.fabric._application_description.yml
+    name: ApplicationDescription
+    nameWithType: ApplicationDescription
+    fullName: system.fabric.ApplicationDescription
+    type: Class
+    summary: '<p>使用して作成するアプリケーションについて説明<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(system.fabric.ApplicationDescription)</xref></p>'
+    syntax:
+      content: public class ApplicationDescription
+  - uid: system.fabric._application_upgrade_description
+    parent: system.fabric
+    href: system.fabric._application_upgrade_description.yml
+    name: ApplicationUpgradeDescription
+    nameWithType: ApplicationUpgradeDescription
+    fullName: system.fabric.ApplicationUpgradeDescription
+    type: Class
+    summary: <p>アップグレードのポリシーとアプリケーションをアップグレードするについて説明します。 </p>
+    syntax:
+      content: public class ApplicationUpgradeDescription
+  - uid: system.fabric._application_upgrade_update_description
+    parent: system.fabric
+    href: system.fabric._application_upgrade_update_description.yml
+    name: ApplicationUpgradeUpdateDescription
+    nameWithType: ApplicationUpgradeUpdateDescription
+    fullName: system.fabric.ApplicationUpgradeUpdateDescription
+    type: Class
+    summary: <p>アプリケーションのアップグレードの動作を記述するアップグレード パラメーターを変更するために使用します。 </p>
+    syntax:
+      content: public class ApplicationUpgradeUpdateDescription
+  - uid: system.fabric._package_sharing_policy_list
+    parent: system.fabric
+    href: system.fabric._package_sharing_policy_list.yml
+    name: PackageSharingPolicyList
+    nameWithType: PackageSharingPolicyList
+    fullName: system.fabric.PackageSharingPolicyList
+    type: Class
+    summary: <p>一覧を表す<xref uid="system.fabric._package_sharing_policy" data-throw-if-not-resolved="false">PackageSharingPolicy</xref>オブジェクト。 </p>
+    syntax:
+      content: public class PackageSharingPolicyList
+  - uid: system.fabric._application_update_description
+    parent: system.fabric
+    href: system.fabric._application_update_description.yml
+    name: ApplicationUpdateDescription
+    nameWithType: ApplicationUpdateDescription
+    fullName: system.fabric.ApplicationUpdateDescription
+    type: Class
+    summary: '<p>使用して更新されるアプリケーション容量の更新プログラムを説明<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref></p>'
+    syntax:
+      content: public class ApplicationUpdateDescription
+  - uid: system.fabric.exception._fabric_object_closed_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_object_closed_exception.yml
+    name: FabricObjectClosedException
+    nameWithType: FabricObjectClosedException
+    fullName: system.fabric.exception.FabricObjectClosedException
+    type: Class
+    syntax:
+      content: public class FabricObjectClosedException
+  - uid: system.fabric.exception._fabric_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_exception.yml
+    name: FabricException
+    nameWithType: FabricException
+    fullName: system.fabric.exception.FabricException
+    type: Class
+    syntax:
+      content: public class FabricException
+  - uid: system.fabric.exception._fabric_element_already_exists_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_element_already_exists_exception.yml
+    name: FabricElementAlreadyExistsException
+    nameWithType: FabricElementAlreadyExistsException
+    fullName: system.fabric.exception.FabricElementAlreadyExistsException
+    type: Class
+    syntax:
+      content: public class FabricElementAlreadyExistsException
+  - uid: system.fabric.exception._unauthorized_access_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._unauthorized_access_exception.yml
+    name: UnauthorizedAccessException
+    nameWithType: UnauthorizedAccessException
+    fullName: system.fabric.exception.UnauthorizedAccessException
+    type: Class
+    summary: <p>オブジェクトとビジター サービスが期待している必要な資格情報は、ビジターのクライアントを作成中に渡されるアクセス資格情報の不一致を示します。 </p>
+    syntax:
+      content: public class UnauthorizedAccessException
+  - uid: system.fabric.exception._fabric_element_not_found_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_element_not_found_exception.yml
+    name: FabricElementNotFoundException
+    nameWithType: FabricElementNotFoundException
+    fullName: system.fabric.exception.FabricElementNotFoundException
+    type: Class
+    syntax:
+      content: public class FabricElementNotFoundException
+  - uid: system.fabric.exception._fabric_transient_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_transient_exception.yml
+    name: FabricTransientException
+    nameWithType: FabricTransientException
+    fullName: system.fabric.exception.FabricTransientException
+    type: Class
+    syntax:
+      content: public class FabricTransientException
+  - uid: system.fabric._application_management_client.provisionApplicationAsync(String)
+    parent: system.fabric._application_management_client
+    href: system.fabric._application_management_client.yml
+    name: provisionApplicationAsync(String applicationBuildPath)
+    nameWithType: ApplicationManagementClient.provisionApplicationAsync(String applicationBuildPath)
+    fullName: CompletableFuture<Boolean> system.fabric.ApplicationManagementClient.provisionApplicationAsync(String applicationBuildPath)
+    type: Method
+    summary: "<p>Service Fabric アプリケーションの種類をプロビジョニングするか、クラスターに登録します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageBuilderValidationError</xref> : マニフェストのプロビジョニング中にエラーが発生します。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeProvisionInProgress</xref> : アプリケーションの種類の別のバージョンを現在準備中です。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#InvalidNameUri</xref> : アプリケーション名が有効な名前付けの URI ではありません。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#CorruptedImageStoreObjectFound</xref> : ImageStore でファイルの破損が発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ImageStoreIOException</xref> : ImageStore と通信する IO エラーが発生しました。 </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ApplicationTypeAlreadyExists</xref> : アプリケーションの種類が既にプロビジョニングされています </p>\n\n<p>\r\n\r\n  <b>注釈:</b>アプリケーション インスタンスを作成する前に必須です。 </p>"
+    syntax: *ref_1
+  - uid: system.fabric._application_update_description.getMinimumNodes()
+    parent: system.fabric._application_update_description
+    href: system.fabric._application_update_description.yml
+    name: getMinimumNodes()
+    nameWithType: ApplicationUpdateDescription.getMinimumNodes()
+    fullName: Long system.fabric.ApplicationUpdateDescription.getMinimumNodes()
+    type: Method
+    summary: |-
+      <p>ノードの最小数を取得します。</p>
+      <p>
+      ある意味ではありませんこれらすべてのノード上のレプリカを保持するアプリケーションが保証されるに注意してください。 </p>
+      <p>このパラメーターが 0 に設定されている場合は、容量は予約されません。 アプリケーションを更新するときに、このパラメーターが設定されていない場合は、ノードの最小数は変更されません。 </p>
+      <p>このパラメーターがより大きい場合<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>両方のパラメーターが指定されている場合、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>されます場合にスローされる<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref>と呼びます。 </p>
+    syntax:
+      content: public Long getMinimumNodes()
+      return:
+        type: 34f09483
+        description: <p>Service Fabric が、クラスター内のこのアプリケーションを配置する容量を予約、ノードの数。 </p>
+  - uid: system.fabric._application_update_description.getMaximumNodes()
+    parent: system.fabric._application_update_description
+    href: system.fabric._application_update_description.yml
+    name: getMaximumNodes()
+    nameWithType: ApplicationUpdateDescription.getMaximumNodes()
+    fullName: Long system.fabric.ApplicationUpdateDescription.getMaximumNodes()
+    type: Method
+    summary: |-
+      <p>このアプリケーションをインスタンス化するノードの最大数を取得します。</p>
+      <p>
+      ゼロになった場合は、クラスター内のノードの数にかかわらずアプリケーションを配置することができます。 </p>
+      <p>アプリケーションを更新するときにこのパラメーターが指定されていない場合は、ノードの最大数は変更されません。 </p>
+      <p>このパラメーターがより小さい場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref>と呼びます。 </p>
+    syntax:
+      content: public Long getMaximumNodes()
+      return:
+        type: 34f09483
+        description: <p>スパンするこのアプリケーションが許可されているノードの数。 既定値は 0 です。 </p>
+  - uid: system.fabric._application_update_description.getMetrics()
+    parent: system.fabric._application_update_description
+    href: system.fabric._application_update_description.yml
+    name: getMetrics()
+    nameWithType: ApplicationUpdateDescription.getMetrics()
+    fullName: List<ApplicationMetricDescription> system.fabric.ApplicationUpdateDescription.getMetrics()
+    type: Method
+    summary: |-
+      <p>アプリケーションの性能が定義されているメトリックの一覧を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<ApplicationMetricDescription> getMetrics()
+      return:
+        type: 5618da2dsystem.fabric._application_metric_descriptiona08ddfce
+        description: <p>アプリケーションの容量のメトリックを指定します。 各メトリックを使用するための容量が指定された<xref uid="system.fabric._application_metric_description" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription</xref>です。 このパラメーターが設定されていない場合、アプリケーションの容量メトリックは変更されませんアプリケーションを更新する場合。 </p>
+  - uid: system.fabric._application_description.getMaximumNodes()
+    parent: system.fabric._application_description
+    href: system.fabric._application_description.yml
+    name: getMaximumNodes()
+    nameWithType: ApplicationDescription.getMaximumNodes()
+    fullName: long system.fabric.ApplicationDescription.getMaximumNodes()
+    type: Method
+    summary: |-
+      <p>このアプリケーションをインスタンス化するノードの最大数を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getMaximumNodes()
+      return:
+        type: 0364520f
+        description: '<p>スパンするこのアプリケーションが許可されているノードの数。 既定値は 0 です。 0 の場合、アプリケーションは任意の数のクラスター内のノードにまたがることができます。 このパラメーターがより小さい場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref>と呼びます。 </p>'

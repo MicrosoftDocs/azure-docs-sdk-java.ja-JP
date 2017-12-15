@@ -1,0 +1,1001 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    id: _symmetric_key
+    parent: com.microsoft.azure.keyvault.cryptography
+    children:
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.close()
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.DefaultKeySize
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.encryptAsync(final byte [],final byte [],final byte [],final String)'
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultEncryptionAlgorithm()
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultKeyWrapAlgorithm()
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultSignatureAlgorithm()
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.getKid()
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize128
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize192
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize256
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize384
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize512
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.signAsync(final byte [],final String)'
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey()
+      - com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String)
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,byte [])'
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,byte [],Provider)'
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,int)'
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,int,Provider)'
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.unwrapKeyAsync(final byte [],final String)'
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.verifyAsync(final byte [],final byte [],final String)'
+      - 'com.microsoft.azure.keyvault.cryptography._symmetric_key.wrapKeyAsync(final byte [],final String)'
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: SymmetricKey
+    nameWithType: SymmetricKey
+    fullName: com.microsoft.azure.keyvault.cryptography.SymmetricKey
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+        branch: bb950b2a0255c017040501de0c19e4849361ca1d
+        repo: 'https://github.com/Azure/azure-keyvault-java'
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 35
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>単純な対称キーの実装 </p>
+    syntax: &ref_1
+      content: public class SymmetricKey implements IKey
+    inheritance:
+      - java.lang.Object
+      - Closeable
+      - com.microsoft.azure.keyvault.core._i_key
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.close()
+    id: close()
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: SymmetricKey.close()
+    fullName: void com.microsoft.azure.keyvault.cryptography.SymmetricKey.close()
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 386
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public void close()
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
+    id: 'decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+    nameWithType: 'SymmetricKey.decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+    fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.cryptography.SymmetricKey.decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.decryptAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 210
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>指定した暗号テキストを復号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<byte[]> decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+      parameters:
+        - id: ciphertext
+          type: f549433f
+          description: <p>暗号化を解除する暗号テキスト </p>
+        - id: iv
+          type: f549433f
+          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+        - id: authenticationData
+          type: f549433f
+          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+        - id: authenticationTag
+          type: f549433f
+          description: <p>(一部のアルゴリズムで省略可能)、encrypt 操作から認証タグ </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>を使用する暗号化アルゴリズムを指定する必要があります </p>
+      return:
+        type: dfd3b0c8
+        description: <p>プレーン テキストを含む ListenableFuture </p>
+    overridden: 'com.microsoft.azure.keyvault.core._i_key.decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
+    exceptions:
+      - type: 456eb9d1
+        description: <p>アルゴリズムが正しくありません。 </p>
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.DefaultKeySize
+    id: DefaultKeySize
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: DefaultKeySize
+    nameWithType: SymmetricKey.DefaultKeySize
+    fullName: final int com.microsoft.azure.keyvault.cryptography.SymmetricKey.DefaultKeySize
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 45
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public static final int DefaultKeySize= KeySize256
+      return:
+        type: cd225469
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.encryptAsync(final byte [],final byte [],final byte [],final String)'
+    id: 'encryptAsync(final byte [],final byte [],final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+    nameWithType: 'SymmetricKey.encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+    fullName: 'ListenableFuture<Triple<byte[], byte[], String>> com.microsoft.azure.keyvault.cryptography.SymmetricKey.encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.encryptAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 253
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>指定されたプレーン テキストを暗号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Triple<byte[], byte[], String>> encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+      parameters:
+        - id: plaintext
+          type: f549433f
+          description: <p>プレーン テキストを暗号化するには </p>
+        - id: iv
+          type: f549433f
+          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+        - id: authenticationData
+          type: f549433f
+          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>既定値は DefaultEncryptionAlgorithm キーを使用する暗号化アルゴリズム </p>
+      return:
+        type: 7356d169
+        description: <p>暗号化テキスト、認証タグおよび使用されたアルゴリズムを含む ListenableFuture </p>
+    overridden: 'com.microsoft.azure.keyvault.core._i_key.encryptAsync(final byte [],final byte [],final byte [],final String)'
+    exceptions:
+      - type: 456eb9d1
+        description: <p>アルゴリズムが正しくありません。 </p>
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultEncryptionAlgorithm()
+    id: getDefaultEncryptionAlgorithm()
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: getDefaultEncryptionAlgorithm()
+    nameWithType: SymmetricKey.getDefaultEncryptionAlgorithm()
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getDefaultEncryptionAlgorithm()
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultEncryptionAlgorithm*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 150
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の暗号化アルゴリズムです。</p>
+      <p></p>
+    syntax:
+      content: public String getDefaultEncryptionAlgorithm()
+      return:
+        type: '26831127'
+        description: <p>このキーの既定の暗号化アルゴリズムです。 </p>
+    overridden: com.microsoft.azure.keyvault.core._i_key.getDefaultEncryptionAlgorithm()
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultKeyWrapAlgorithm()
+    id: getDefaultKeyWrapAlgorithm()
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: getDefaultKeyWrapAlgorithm()
+    nameWithType: SymmetricKey.getDefaultKeyWrapAlgorithm()
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getDefaultKeyWrapAlgorithm()
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultKeyWrapAlgorithm*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 173
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定のキー ラップ アルゴリズムです。</p>
+      <p></p>
+    syntax:
+      content: public String getDefaultKeyWrapAlgorithm()
+      return:
+        type: '26831127'
+        description: <p>既定のキーは、このキーのアルゴリズムをラップします。 </p>
+    overridden: com.microsoft.azure.keyvault.core._i_key.getDefaultKeyWrapAlgorithm()
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultSignatureAlgorithm()
+    id: getDefaultSignatureAlgorithm()
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: getDefaultSignatureAlgorithm()
+    nameWithType: SymmetricKey.getDefaultSignatureAlgorithm()
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getDefaultSignatureAlgorithm()
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultSignatureAlgorithm*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 198
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の署名アルゴリズムです。</p>
+      <p></p>
+    syntax:
+      content: public String getDefaultSignatureAlgorithm()
+      return:
+        type: '26831127'
+        description: <p>このキーの既定の署名アルゴリズムです。 </p>
+    overridden: com.microsoft.azure.keyvault.core._i_key.getDefaultSignatureAlgorithm()
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getKid()
+    id: getKid()
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: getKid()
+    nameWithType: SymmetricKey.getKid()
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getKid()
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.getKid*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 204
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>このキーの一意のキー識別子。</p>
+      <p></p>
+    syntax:
+      content: public String getKid()
+      return:
+        type: '26831127'
+        description: <p>キー識別子 </p>
+    overridden: com.microsoft.azure.keyvault.core._i_key.getKid()
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize128
+    id: KeySize128
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: KeySize128
+    nameWithType: SymmetricKey.KeySize128
+    fullName: final int com.microsoft.azure.keyvault.cryptography.SymmetricKey.KeySize128
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 39
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public static final int KeySize128= 128>> 3
+      return:
+        type: cd225469
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize192
+    id: KeySize192
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: KeySize192
+    nameWithType: SymmetricKey.KeySize192
+    fullName: final int com.microsoft.azure.keyvault.cryptography.SymmetricKey.KeySize192
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 40
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public static final int KeySize192= 192>> 3
+      return:
+        type: cd225469
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize256
+    id: KeySize256
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: KeySize256
+    nameWithType: SymmetricKey.KeySize256
+    fullName: final int com.microsoft.azure.keyvault.cryptography.SymmetricKey.KeySize256
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 41
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public static final int KeySize256= 256>> 3
+      return:
+        type: cd225469
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize384
+    id: KeySize384
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: KeySize384
+    nameWithType: SymmetricKey.KeySize384
+    fullName: final int com.microsoft.azure.keyvault.cryptography.SymmetricKey.KeySize384
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 42
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public static final int KeySize384= 384>> 3
+      return:
+        type: cd225469
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.KeySize512
+    id: KeySize512
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: KeySize512
+    nameWithType: SymmetricKey.KeySize512
+    fullName: final int com.microsoft.azure.keyvault.cryptography.SymmetricKey.KeySize512
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 43
+    package: com.microsoft.azure.keyvault.cryptography
+    syntax:
+      content: public static final int KeySize512= 512>> 3
+      return:
+        type: cd225469
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.signAsync(final byte [],final String)'
+    id: 'signAsync(final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'signAsync(final byte[] digest, final String algorithm)'
+    nameWithType: 'SymmetricKey.signAsync(final byte[] digest, final String algorithm)'
+    fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.cryptography.SymmetricKey.signAsync(final byte[] digest, final String algorithm)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.signAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 376
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>指定したアルゴリズムが指定されていない場合は、指定したアルゴリズムまたはキー DefaultSignatureAlgorithm を使用してダイジェストに署名します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Pair<byte[], String>> signAsync(final byte[] digest, final String algorithm)'
+      parameters:
+        - id: digest
+          type: f549433f
+          description: <p>署名するダイジェスト </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>使用する署名アルゴリズム </p>
+      return:
+        type: 32be89a6
+        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+    overridden: 'com.microsoft.azure.keyvault.core._i_key.signAsync(final byte [],final String)'
+    exceptions:
+      - type: 456eb9d1
+        description: <p>アルゴリズムが正しくありません。 </p>
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey()
+    id: SymmetricKey()
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: SymmetricKey()
+    nameWithType: SymmetricKey.SymmetricKey()
+    fullName: com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey()
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 55
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._symmetric_key" data-throw-if-not-resolved="false">SymmetricKey</xref>ランダムなキー識別子と DefaultKeySize ビットのランダムなキーを使用します。 </p>
+    syntax:
+      content: public SymmetricKey()
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String)
+    id: SymmetricKey(String)
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: SymmetricKey(String kid)
+    nameWithType: SymmetricKey.SymmetricKey(String kid)
+    fullName: com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey(String kid)
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 65
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._symmetric_key" data-throw-if-not-resolved="false">SymmetricKey</xref>指定したキー識別子と DefaultKeySize ビットのランダムなキーを使用します。 </p>
+    syntax:
+      content: public SymmetricKey(String kid)
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>使用するキー識別子。 </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,byte [])'
+    id: 'SymmetricKey(String,byte [])'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'SymmetricKey(String kid, byte[] keyBytes)'
+    nameWithType: 'SymmetricKey.SymmetricKey(String kid, byte[] keyBytes)'
+    fullName: 'com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey(String kid, byte[] keyBytes)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 116
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._symmetric_key" data-throw-if-not-resolved="false">SymmetricKey</xref>指定したキー識別子とキー マテリアルを使用します。 </p>
+    syntax:
+      content: 'public SymmetricKey(String kid, byte[] keyBytes)'
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>使用するキー識別子。 </p>
+        - id: keyBytes
+          type: ccd9418d
+          description: <p>使用するキー マテリアル。 </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,byte [],Provider)'
+    id: 'SymmetricKey(String,byte [],Provider)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'SymmetricKey(String kid, byte[] keyBytes, Provider provider)'
+    nameWithType: 'SymmetricKey.SymmetricKey(String kid, byte[] keyBytes, Provider provider)'
+    fullName: 'com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey(String kid, byte[] keyBytes, Provider provider)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 130
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._symmetric_key" data-throw-if-not-resolved="false">SymmetricKey</xref>指定したキー識別子と、指定したプロバイダーを使用するキーのマテリアルを使用します。 </p>
+    syntax:
+      content: 'public SymmetricKey(String kid, byte[] keyBytes, Provider provider)'
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>使用するキー識別子。 </p>
+        - id: keyBytes
+          type: ccd9418d
+          description: <p>使用するキー マテリアル。 </p>
+        - id: provider
+          type: 8f3c7027
+          description: <p>(省略可能、既定の null) を使用するプロバイダー </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,int)'
+    id: 'SymmetricKey(String,int)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'SymmetricKey(String kid, int keySizeInBytes)'
+    nameWithType: 'SymmetricKey.SymmetricKey(String kid, int keySizeInBytes)'
+    fullName: 'com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey(String kid, int keySizeInBytes)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 77
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._symmetric_key" data-throw-if-not-resolved="false">SymmetricKey</xref>指定したキー識別子と指定したサイズでランダムなキーを使用します。 </p>
+    syntax:
+      content: 'public SymmetricKey(String kid, int keySizeInBytes)'
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>使用するキー識別子。 </p>
+        - id: keySizeInBytes
+          type: f75371fa
+          description: <p>キーのサイズ (バイト単位) を使用します。 </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey(String,int,Provider)'
+    id: 'SymmetricKey(String,int,Provider)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'SymmetricKey(String kid, int keySizeInBytes, Provider provider)'
+    nameWithType: 'SymmetricKey.SymmetricKey(String kid, int keySizeInBytes, Provider provider)'
+    fullName: 'com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey(String kid, int keySizeInBytes, Provider provider)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 91
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._symmetric_key" data-throw-if-not-resolved="false">SymmetricKey</xref>指定したキー識別子と、指定したプロバイダーを使用する指定したサイズでランダムなキーを使用します。 </p>
+    syntax:
+      content: 'public SymmetricKey(String kid, int keySizeInBytes, Provider provider)'
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>使用するキー識別子。 </p>
+        - id: keySizeInBytes
+          type: f75371fa
+          description: <p>キーのサイズ (バイト単位) を使用します。 </p>
+        - id: provider
+          type: 8f3c7027
+          description: <p>(省略可能、既定の null) を使用するプロバイダー </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.unwrapKeyAsync(final byte [],final String)'
+    id: 'unwrapKeyAsync(final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+    nameWithType: 'SymmetricKey.unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+    fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.cryptography.SymmetricKey.unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.unwrapKeyAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 338
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>(復号化)、指定した暗号化されたキー マテリアルのラップを解除します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<byte[]> unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+      parameters:
+        - id: encryptedKey
+          type: f549433f
+          description: <p>暗号化されたキーの暗号化を解除するには </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+      return:
+        type: dfd3b0c8
+        description: <p>ラップ解除されたキーを含む ListenableFuture </p>
+    overridden: 'com.microsoft.azure.keyvault.core._i_key.unwrapKeyAsync(final byte [],final String)'
+    exceptions:
+      - type: 456eb9d1
+        description: <p>アルゴリズムが正しくありません。 </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.verifyAsync(final byte [],final byte [],final String)'
+    id: 'verifyAsync(final byte [],final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+    nameWithType: 'SymmetricKey.verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+    fullName: 'ListenableFuture<Boolean> com.microsoft.azure.keyvault.cryptography.SymmetricKey.verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.verifyAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 381
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>指定されたダイジェストとアルゴリズムを使用して指定された署名の値を確認します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Boolean> verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+      parameters:
+        - id: digest
+          type: f549433f
+          description: <p>入力ダイジェスト </p>
+        - id: signature
+          type: f549433f
+          description: <p>署名を検証します </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+      return:
+        type: 8779baad
+        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+    overridden: 'com.microsoft.azure.keyvault.core._i_key.verifyAsync(final byte [],final byte [],final String)'
+    exceptions:
+      - type: 456eb9d1
+        description: <p>アルゴリズムが正しくありません。 </p>
+  - uid: 'com.microsoft.azure.keyvault.cryptography._symmetric_key.wrapKeyAsync(final byte [],final String)'
+    id: 'wrapKeyAsync(final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    langs:
+      - java
+    name: 'wrapKeyAsync(final byte[] key, final String algorithm)'
+    nameWithType: 'SymmetricKey.wrapKeyAsync(final byte[] key, final String algorithm)'
+    fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.cryptography.SymmetricKey.wrapKeyAsync(final byte[] key, final String algorithm)'
+    overload: com.microsoft.azure.keyvault.cryptography._symmetric_key.wrapKeyAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/SymmetricKey.java
+      startLine: 302
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>ラップ (暗号化)、指定した対称キー マテリアルが指定されていない場合、指定したアルゴリズムまたはキー DefaultKeyWrapAlgorithm を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Pair<byte[], String>> wrapKeyAsync(final byte[] key, final String algorithm)'
+      parameters:
+        - id: key
+          type: f549433f
+          description: <p>ラップする対称キー </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>使用するには既定値は DefaultKeyWrapAlgorithm キー ラップのアルゴリズム </p>
+      return:
+        type: 32be89a6
+        description: <p>暗号化されたキーと使用されたアルゴリズムを含む ListenableFuture </p>
+    overridden: 'com.microsoft.azure.keyvault.core._i_key.wrapKeyAsync(final byte [],final String)'
+    exceptions:
+      - type: 456eb9d1
+        description: <p>アルゴリズムが正しくありません。 </p>
+references:
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.SymmetricKey*
+    name: SymmetricKey
+    nameWithType: SymmetricKey.SymmetricKey
+    fullName: com.microsoft.azure.keyvault.cryptography.SymmetricKey.SymmetricKey
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: 8f3c7027
+    spec.java:
+      - name: Provider
+        fullName: Provider
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultEncryptionAlgorithm*
+    name: getDefaultEncryptionAlgorithm
+    nameWithType: SymmetricKey.getDefaultEncryptionAlgorithm
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getDefaultEncryptionAlgorithm
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultKeyWrapAlgorithm*
+    name: getDefaultKeyWrapAlgorithm
+    nameWithType: SymmetricKey.getDefaultKeyWrapAlgorithm
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getDefaultKeyWrapAlgorithm
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getDefaultSignatureAlgorithm*
+    name: getDefaultSignatureAlgorithm
+    nameWithType: SymmetricKey.getDefaultSignatureAlgorithm
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getDefaultSignatureAlgorithm
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.getKid*
+    name: getKid
+    nameWithType: SymmetricKey.getKid
+    fullName: String com.microsoft.azure.keyvault.cryptography.SymmetricKey.getKid
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: 456eb9d1
+    spec.java:
+      - name: NoSuchAlgorithmException
+        fullName: NoSuchAlgorithmException
+  - uid: f549433f
+    spec.java:
+      - name: 'final byte []'
+        fullName: 'final byte []'
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: dfd3b0c8
+    spec.java:
+      - name: 'ListenableFuture<byte[]>'
+        fullName: 'ListenableFuture<byte[]>'
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.decryptAsync*
+    name: decryptAsync
+    nameWithType: SymmetricKey.decryptAsync
+    fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.cryptography.SymmetricKey.decryptAsync'
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: 7356d169
+    spec.java:
+      - name: 'ListenableFuture<Triple<byte[], byte[], String>>'
+        fullName: 'ListenableFuture<Triple<byte[], byte[], String>>'
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.encryptAsync*
+    name: encryptAsync
+    nameWithType: SymmetricKey.encryptAsync
+    fullName: 'ListenableFuture<Triple<byte[], byte[], String>> com.microsoft.azure.keyvault.cryptography.SymmetricKey.encryptAsync'
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: 32be89a6
+    spec.java:
+      - name: 'ListenableFuture<Pair<byte[], String>>'
+        fullName: 'ListenableFuture<Pair<byte[], String>>'
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.wrapKeyAsync*
+    name: wrapKeyAsync
+    nameWithType: SymmetricKey.wrapKeyAsync
+    fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.cryptography.SymmetricKey.wrapKeyAsync'
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.unwrapKeyAsync*
+    name: unwrapKeyAsync
+    nameWithType: SymmetricKey.unwrapKeyAsync
+    fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.cryptography.SymmetricKey.unwrapKeyAsync'
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.signAsync*
+    name: signAsync
+    nameWithType: SymmetricKey.signAsync
+    fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.cryptography.SymmetricKey.signAsync'
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: 8779baad
+    spec.java:
+      - name: ListenableFuture<Boolean>
+        fullName: ListenableFuture<Boolean>
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.verifyAsync*
+    name: verifyAsync
+    nameWithType: SymmetricKey.verifyAsync
+    fullName: ListenableFuture<Boolean> com.microsoft.azure.keyvault.cryptography.SymmetricKey.verifyAsync
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key.close*
+    name: close
+    nameWithType: SymmetricKey.close
+    fullName: void com.microsoft.azure.keyvault.cryptography.SymmetricKey.close
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.core._i_key
+    parent: com.microsoft.azure.keyvault.core
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: IKey
+    nameWithType: IKey
+    fullName: com.microsoft.azure.keyvault.core.IKey
+    type: Interface
+    summary: <p>Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。 </p>
+    syntax:
+      content: public interface IKey
+  - uid: com.microsoft.azure.keyvault.cryptography._symmetric_key
+    parent: com.microsoft.azure.keyvault.cryptography
+    href: com.microsoft.azure.keyvault.cryptography._symmetric_key.yml
+    name: SymmetricKey
+    nameWithType: SymmetricKey
+    fullName: com.microsoft.azure.keyvault.cryptography.SymmetricKey
+    type: Class
+    summary: <p>単純な対称キーの実装 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.keyvault.core._i_key.getDefaultEncryptionAlgorithm()
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: getDefaultEncryptionAlgorithm()
+    nameWithType: IKey.getDefaultEncryptionAlgorithm()
+    fullName: String com.microsoft.azure.keyvault.core.IKey.getDefaultEncryptionAlgorithm()
+    type: Method
+    summary: |-
+      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の暗号化アルゴリズムです。</p>
+      <p></p>
+    syntax:
+      content: public String getDefaultEncryptionAlgorithm()
+      return:
+        type: '26831127'
+        description: <p>このキーの既定の暗号化アルゴリズムです。 </p>
+  - uid: com.microsoft.azure.keyvault.core._i_key.getDefaultKeyWrapAlgorithm()
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: getDefaultKeyWrapAlgorithm()
+    nameWithType: IKey.getDefaultKeyWrapAlgorithm()
+    fullName: String com.microsoft.azure.keyvault.core.IKey.getDefaultKeyWrapAlgorithm()
+    type: Method
+    summary: |-
+      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定のキー ラップ アルゴリズムです。</p>
+      <p></p>
+    syntax:
+      content: public String getDefaultKeyWrapAlgorithm()
+      return:
+        type: '26831127'
+        description: <p>既定のキーは、このキーのアルゴリズムをラップします。 </p>
+  - uid: com.microsoft.azure.keyvault.core._i_key.getDefaultSignatureAlgorithm()
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: getDefaultSignatureAlgorithm()
+    nameWithType: IKey.getDefaultSignatureAlgorithm()
+    fullName: String com.microsoft.azure.keyvault.core.IKey.getDefaultSignatureAlgorithm()
+    type: Method
+    summary: |-
+      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の署名アルゴリズムです。</p>
+      <p></p>
+    syntax:
+      content: public String getDefaultSignatureAlgorithm()
+      return:
+        type: '26831127'
+        description: <p>このキーの既定の署名アルゴリズムです。 </p>
+  - uid: com.microsoft.azure.keyvault.core._i_key.getKid()
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: getKid()
+    nameWithType: IKey.getKid()
+    fullName: String com.microsoft.azure.keyvault.core.IKey.getKid()
+    type: Method
+    summary: |-
+      <p>このキーの一意のキー識別子。</p>
+      <p></p>
+    syntax:
+      content: public String getKid()
+      return:
+        type: '26831127'
+        description: <p>キー識別子 </p>
+  - uid: 'com.microsoft.azure.keyvault.core._i_key.decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: 'decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+    nameWithType: 'IKey.decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+    fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.core.IKey.decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+    type: Method
+    summary: |-
+      <p>指定した暗号テキストを復号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<byte[]> decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
+      parameters:
+        - id: ciphertext
+          type: f549433f
+          description: <p>暗号化を解除する暗号テキスト </p>
+        - id: iv
+          type: f549433f
+          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+        - id: authenticationData
+          type: f549433f
+          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+        - id: authenticationTag
+          type: f549433f
+          description: <p>(一部のアルゴリズムで省略可能)、encrypt 操作から認証タグ </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>を使用する暗号化アルゴリズムを指定する必要があります </p>
+      return:
+        type: dfd3b0c8
+        description: <p>プレーン テキストを含む ListenableFuture </p>
+  - uid: 'com.microsoft.azure.keyvault.core._i_key.encryptAsync(final byte [],final byte [],final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: 'encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+    nameWithType: 'IKey.encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+    fullName: 'ListenableFuture<Triple<byte[], byte[], String>> com.microsoft.azure.keyvault.core.IKey.encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+    type: Method
+    summary: |-
+      <p>指定されたプレーン テキストを暗号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Triple<byte[], byte[], String>> encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
+      parameters:
+        - id: plaintext
+          type: f549433f
+          description: <p>プレーン テキストを暗号化するには </p>
+        - id: iv
+          type: f549433f
+          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+        - id: authenticationData
+          type: f549433f
+          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>既定値は DefaultEncryptionAlgorithm キーを使用する暗号化アルゴリズム </p>
+      return:
+        type: 7356d169
+        description: <p>暗号化テキスト、認証タグおよび使用されたアルゴリズムを含む ListenableFuture </p>
+  - uid: 'com.microsoft.azure.keyvault.core._i_key.wrapKeyAsync(final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: 'wrapKeyAsync(final byte[] key, final String algorithm)'
+    nameWithType: 'IKey.wrapKeyAsync(final byte[] key, final String algorithm)'
+    fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.core.IKey.wrapKeyAsync(final byte[] key, final String algorithm)'
+    type: Method
+    summary: |-
+      <p>ラップ (暗号化)、指定した対称キー マテリアルが指定されていない場合、指定したアルゴリズムまたはキー DefaultKeyWrapAlgorithm を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Pair<byte[], String>> wrapKeyAsync(final byte[] key, final String algorithm)'
+      parameters:
+        - id: key
+          type: f549433f
+          description: <p>ラップする対称キー </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>使用するには既定値は DefaultKeyWrapAlgorithm キー ラップのアルゴリズム </p>
+      return:
+        type: 32be89a6
+        description: <p>暗号化されたキーと使用されたアルゴリズムを含む ListenableFuture </p>
+  - uid: 'com.microsoft.azure.keyvault.core._i_key.unwrapKeyAsync(final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: 'unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+    nameWithType: 'IKey.unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+    fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.core.IKey.unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+    type: Method
+    summary: |-
+      <p>(復号化)、指定した暗号化されたキー マテリアルのラップを解除します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<byte[]> unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
+      parameters:
+        - id: encryptedKey
+          type: f549433f
+          description: <p>暗号化されたキーの暗号化を解除するには </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+      return:
+        type: dfd3b0c8
+        description: <p>ラップ解除されたキーを含む ListenableFuture </p>
+  - uid: 'com.microsoft.azure.keyvault.core._i_key.signAsync(final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: 'signAsync(final byte[] digest, final String algorithm)'
+    nameWithType: 'IKey.signAsync(final byte[] digest, final String algorithm)'
+    fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.core.IKey.signAsync(final byte[] digest, final String algorithm)'
+    type: Method
+    summary: |-
+      <p>指定したアルゴリズムが指定されていない場合は、指定したアルゴリズムまたはキー DefaultSignatureAlgorithm を使用してダイジェストに署名します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Pair<byte[], String>> signAsync(final byte[] digest, final String algorithm)'
+      parameters:
+        - id: digest
+          type: f549433f
+          description: <p>署名するダイジェスト </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>使用する署名アルゴリズム </p>
+      return:
+        type: 32be89a6
+        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+  - uid: 'com.microsoft.azure.keyvault.core._i_key.verifyAsync(final byte [],final byte [],final String)'
+    parent: com.microsoft.azure.keyvault.core._i_key
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: 'verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+    nameWithType: 'IKey.verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+    fullName: 'ListenableFuture<Boolean> com.microsoft.azure.keyvault.core.IKey.verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+    type: Method
+    summary: |-
+      <p>指定されたダイジェストとアルゴリズムを使用して指定された署名の値を確認します。</p>
+      <p></p>
+    syntax:
+      content: 'public ListenableFuture<Boolean> verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
+      parameters:
+        - id: digest
+          type: f549433f
+          description: <p>入力ダイジェスト </p>
+        - id: signature
+          type: f549433f
+          description: <p>署名を検証します </p>
+        - id: algorithm
+          type: 3d93591e
+          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+      return:
+        type: 8779baad
+        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>

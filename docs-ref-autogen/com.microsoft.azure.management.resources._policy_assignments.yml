@@ -1,0 +1,375 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.resources._policy_assignments
+    id: _policy_assignments
+    parent: com.microsoft.azure.management.resources
+    children:
+      - com.microsoft.azure.management.resources._policy_assignments.listByResource(final String)
+    href: com.microsoft.azure.management.resources._policy_assignments.yml
+    langs:
+      - java
+    name: PolicyAssignments
+    nameWithType: PolicyAssignments
+    fullName: com.microsoft.azure.management.resources.PolicyAssignments
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/PolicyAssignments.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/PolicyAssignments.java
+      startLine: 20
+    package: com.microsoft.azure.management.resources
+    summary: <p>ポリシー割り当て管理 API へのエントリ ポイントです。 </p>
+    syntax:
+      content: 'public interface PolicyAssignments extends SupportsListing<PolicyAssignment>,SupportsListingByResourceGroup<PolicyAssignment>,SupportsGettingById<PolicyAssignment>,SupportsCreating<PolicyAssignment.DefinitionStages.Blank>,SupportsDeletingById'
+    inheritedMembers:
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.define(String)
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteById(String)
+      - 'com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String,ServiceCallback<Void>)'
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getById(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String)
+      - 'com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String,ServiceCallback<T>)'
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.list()
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.listAsync()
+      - com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroup(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroupAsync(String)
+  - uid: com.microsoft.azure.management.resources._policy_assignments.listByResource(final String)
+    id: listByResource(final String)
+    parent: com.microsoft.azure.management.resources._policy_assignments
+    href: com.microsoft.azure.management.resources._policy_assignments.yml
+    langs:
+      - java
+    name: listByResource(final String resourceId)
+    nameWithType: PolicyAssignments.listByResource(final String resourceId)
+    fullName: PagedList<PolicyAssignment> com.microsoft.azure.management.resources.PolicyAssignments.listByResource(final String resourceId)
+    overload: com.microsoft.azure.management.resources._policy_assignments.listByResource*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/PolicyAssignments.java
+      startLine: 32
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソースのポリシー割り当てを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<PolicyAssignment> listByResource(final String resourceId)
+      parameters:
+        - id: resourceId
+          type: 3d93591e
+          description: <p>リソースの ID </p>
+      return:
+        type: 36b27be0com.microsoft.azure.management.resources._policy_assignmenta08ddfce
+        description: <p>ポリシーの割り当ての一覧 </p>
+references:
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: 36b27be0com.microsoft.azure.management.resources._policy_assignmenta08ddfce
+    spec.java:
+      - name: PagedList<
+        fullName: PagedList<
+      - uid: com.microsoft.azure.management.resources._policy_assignment
+        name: PolicyAssignment
+        fullName: com.microsoft.azure.management.resources.PolicyAssignment
+        href: com.microsoft.azure.management.resources._policy_assignment.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.management.resources._policy_assignments.listByResource*
+    name: listByResource
+    nameWithType: PolicyAssignments.listByResource
+    fullName: PagedList<PolicyAssignment> com.microsoft.azure.management.resources.PolicyAssignments.listByResource
+    package: com.microsoft.azure.management.resources
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.define(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.yml
+    name: define(String name)
+    nameWithType: SupportsCreating<T>.define(String name)
+    fullName: T com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating<T>.define(String name)
+    type: Method
+    summary: |-
+      <p>新しいリソースの定義を開始します。 </p>
+      <p>これは、ビルダーの先頭でトップ レベル リソースを作成するために使用するパターン<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>です。 最終的なメソッド定義を完了して実際のリソースの作成を開始処理<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>は<xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">Creatable#create()</xref>です。 </p>
+      <p>なお、 <xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">Creatable#create()</xref>メソッドは、指定された入力パラメーターの最小セットを持つリソース定義の段階でのみ使用します。 表示されない場合<xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">Creatable#create()</xref>使用可能なメソッドの間では必要なすべての入力設定が指定されていないを意味します。 入力の設定、通常で始まる「に」という単語例:「fluent インターフェイス」スタイルのインターフェイスとして、リソース定義の次のステージを返すとします。 </p>
+    syntax:
+      content: public T define(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>新しいリソースの名前 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>新しいリソース定義の最初の段階 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteById(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: deleteById(String id)
+    nameWithType: SupportsDeletingById.deleteById(String id)
+    fullName: void com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById.deleteById(String id)
+    type: Method
+    summary: |-
+      <p>リソースを削除<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。</p>
+      <p></p>
+    syntax:
+      content: public void deleteById(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>削除するリソースのリソース ID </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String,ServiceCallback<Void>)'
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: 'deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+    nameWithType: 'SupportsDeletingById.deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+    fullName: 'ServiceFuture<Void> com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById.deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+    type: Method
+    summary: |-
+      <p>リソースを非同期に削除<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<Void> deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>削除するリソースのリソース ID </p>
+        - id: callback
+          type: da7fd5ea
+          description: <p>成功または失敗時にコールバック </p>
+      return:
+        type: aa81d378
+        description: <p>キャンセル要求へのハンドル </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: deleteByIdAsync(String id)
+    nameWithType: SupportsDeletingById.deleteByIdAsync(String id)
+    fullName: Completable com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById.deleteByIdAsync(String id)
+    type: Method
+    summary: |-
+      <p>リソースを非同期に削除<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。</p>
+      <p></p>
+    syntax:
+      content: public Completable deleteByIdAsync(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>削除するリソースのリソース ID </p>
+      return:
+        type: '56537e90'
+        description: <p>この呼び出しの遅延の計算の表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getById(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: getById(String id)
+    nameWithType: SupportsGettingById<T>.getById(String id)
+    fullName: T com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>.getById(String id)
+    type: Method
+    summary: |-
+      <p>リソースに関する情報を取得<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース id に基づいています。</p>
+      <p></p>
+    syntax:
+      content: public T getById(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの id。 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>リソースの変更できない表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: getByIdAsync(String id)
+    nameWithType: SupportsGettingById<T>.getByIdAsync(String id)
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>.getByIdAsync(String id)
+    type: Method
+    summary: |-
+      <p>リソースに関する情報を取得<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース id に基づいています。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> getByIdAsync(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの id。 </p>
+      return:
+        type: c4094ba1
+        description: <p>リソースの変更できない表現 </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String,ServiceCallback<T>)'
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: 'getByIdAsync(String id, ServiceCallback<T> callback)'
+    nameWithType: 'SupportsGettingById<T>.getByIdAsync(String id, ServiceCallback<T> callback)'
+    fullName: 'ServiceFuture<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>.getByIdAsync(String id, ServiceCallback<T> callback)'
+    type: Method
+    summary: |-
+      <p>リソースに関する情報を取得<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース id に基づいています。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<T> getByIdAsync(String id, ServiceCallback<T> callback)'
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの id。 </p>
+        - id: callback
+          type: 4b6febe3
+          description: <p>成功または失敗時に呼び出すコールバック </p>
+      return:
+        type: c0371a4e
+        description: <p>リソースの変更できない表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.list()
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.yml
+    name: list()
+    nameWithType: SupportsListing<T>.list()
+    fullName: PagedList<T> com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing<T>.list()
+    type: Method
+    summary: |-
+      <p>現在選択されているサブスクリプションで指定した型のすべてのリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<T> list()
+      return:
+        type: e5f90f8a
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.listAsync()
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.yml
+    name: listAsync()
+    nameWithType: SupportsListing<T>.listAsync()
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing<T>.listAsync()
+    type: Method
+    summary: |-
+      <p>現在選択されているサブスクリプションで指定した型のすべてのリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> listAsync()
+      return:
+        type: c4094ba1
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroup(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.yml
+    name: listByResourceGroup(String resourceGroupName)
+    nameWithType: SupportsListingByResourceGroup<T>.listByResourceGroup(String resourceGroupName)
+    fullName: PagedList<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingByResourceGroup<T>.listByResourceGroup(String resourceGroupName)
+    type: Method
+    summary: |-
+      <p>指定されたリソース グループ内の指定した型のリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<T> listByResourceGroup(String resourceGroupName)
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソースを一覧表示するリソース グループの名前 </p>
+      return:
+        type: e5f90f8a
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroupAsync(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.yml
+    name: listByResourceGroupAsync(String resourceGroupName)
+    nameWithType: SupportsListingByResourceGroup<T>.listByResourceGroupAsync(String resourceGroupName)
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingByResourceGroup<T>.listByResourceGroupAsync(String resourceGroupName)
+    type: Method
+    summary: |-
+      <p>指定されたリソース グループ内の指定した型のリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> listByResourceGroupAsync(String resourceGroupName)
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソースを一覧表示するリソース グループの名前 </p>
+      return:
+        type: c4094ba1
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing
+    parent: com.microsoft.azure.management.resources.fluentcore.collection
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.yml
+    name: SupportsListing<T>
+    nameWithType: SupportsListing<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing<T>
+    type: Interface
+    summary: |-
+      <p>一覧にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>サブスクリプションで特定の種類のリソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsListing<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>リソースの fluent 型 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.yml
+    name: SupportsListingByResourceGroup<T>
+    nameWithType: SupportsListingByResourceGroup<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingByResourceGroup<T>
+    type: Interface
+    summary: |-
+      <p>一覧にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>特定のリソース グループ内の特定の種類のリソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません。)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsListingByResourceGroup<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>登録されているリソースの種類。 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: SupportsGettingById<T>
+    nameWithType: SupportsGettingById<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>
+    type: Interface
+    summary: |-
+      <p>特定の作業にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID に基づいて、リソース </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません。)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsGettingById<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>リソースのコレクションの型 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating
+    parent: com.microsoft.azure.management.resources.fluentcore.collection
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.yml
+    name: SupportsCreating<T>
+    nameWithType: SupportsCreating<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating<T>
+    type: Interface
+    summary: |-
+      <p>作成へのアクセスを提供する<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>トップ レベル リソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません) </p>
+    syntax:
+      content: public interface SupportsCreating<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>最初の空白定義インターフェイス </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    parent: com.microsoft.azure.management.resources.fluentcore.collection
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: SupportsDeletingById
+    nameWithType: SupportsDeletingById
+    fullName: com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById
+    type: Interface
+    summary: |-
+      <p>リソースを削除するのにアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません) </p>
+    syntax:
+      content: public interface SupportsDeletingById
+  - uid: com.microsoft.azure.management.resources._policy_assignment
+    parent: com.microsoft.azure.management.resources
+    href: com.microsoft.azure.management.resources._policy_assignment.yml
+    name: PolicyAssignment
+    nameWithType: PolicyAssignment
+    fullName: com.microsoft.azure.management.resources.PolicyAssignment
+    type: Interface
+    summary: <p>不変のクライアント側表現、 <xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>ポリシーの割り当て。 </p>
+    syntax:
+      content: 'public interface PolicyAssignment extends HasName,HasId,Indexable,Refreshable<PolicyAssignment>,HasInner<PolicyAssignmentInner>'

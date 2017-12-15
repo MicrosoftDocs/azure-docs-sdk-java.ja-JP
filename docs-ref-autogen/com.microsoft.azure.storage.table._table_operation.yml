@@ -1,0 +1,1026 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table._table_operation
+    id: _table_operation
+    parent: com.microsoft.azure.storage.table
+    children:
+      - com.microsoft.azure.storage.table._table_operation.delete(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_operation.execute(final CloudTableClient,final String,TableRequestOptions,OperationContext)'
+      - 'com.microsoft.azure.storage.table._table_operation.generateRequestIdentity(boolean,final String)'
+      - com.microsoft.azure.storage.table._table_operation.generateRequestIdentityWithTable(final String)
+      - com.microsoft.azure.storage.table._table_operation.getEchoContent()
+      - com.microsoft.azure.storage.table._table_operation.getEntity()
+      - com.microsoft.azure.storage.table._table_operation.getOperationType()
+      - com.microsoft.azure.storage.table._table_operation.insert(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_operation.insert(final TableEntity,boolean)'
+      - com.microsoft.azure.storage.table._table_operation.insertOrMerge(final TableEntity)
+      - com.microsoft.azure.storage.table._table_operation.insertOrReplace(final TableEntity)
+      - com.microsoft.azure.storage.table._table_operation.merge(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_operation.parseResponse(final InputStream,final int,String,final OperationContext,final TableRequestOptions)'
+      - com.microsoft.azure.storage.table._table_operation.replace(final TableEntity)
+      - 'com.microsoft.azure.storage.table._table_operation.retrieve(final String,final String,final Class<? extends TableEntity>)'
+      - 'com.microsoft.azure.storage.table._table_operation.retrieve(final String,final String,final EntityResolver<?>)'
+      - com.microsoft.azure.storage.table._table_operation.setEchoContent(boolean)
+      - com.microsoft.azure.storage.table._table_operation.setEntity(final TableEntity)
+      - com.microsoft.azure.storage.table._table_operation.TableOperation()
+      - 'com.microsoft.azure.storage.table._table_operation.TableOperation(final TableEntity,final TableOperationType)'
+      - 'com.microsoft.azure.storage.table._table_operation.TableOperation(final TableEntity,final TableOperationType,final boolean)'
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: TableOperation
+    nameWithType: TableOperation
+    fullName: com.microsoft.azure.storage.table.TableOperation
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 43
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>1 つのテーブル操作を表すクラス。 </p>
+      <p>構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。 実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax: &ref_1
+      content: public class TableOperation
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.storage.table._table_operation.delete(final TableEntity)
+    id: delete(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: delete(final TableEntity entity)
+    nameWithType: TableOperation.delete(final TableEntity entity)
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.delete(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.delete*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 54
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> Microsoft Azure storage から指定されたエンティティを削除するインスタンス。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンスを使用します</p>
+      <p></p>
+    syntax:
+      content: public static TableOperation delete(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティを挿入するインスタンス。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.execute(final CloudTableClient,final String,TableRequestOptions,OperationContext)'
+    id: 'execute(final CloudTableClient,final String,TableRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'execute(final CloudTableClient client, final String tableName, TableRequestOptions options, OperationContext opContext)'
+    nameWithType: 'TableOperation.execute(final CloudTableClient client, final String tableName, TableRequestOptions options, OperationContext opContext)'
+    fullName: 'TableResult com.microsoft.azure.storage.table.TableOperation.execute(final CloudTableClient client, final String tableName, TableRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.table._table_operation.execute*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 668
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 指定されたを使用して、指定したテーブルでは、このテーブル操作を実行<xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>と<xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>です。 </p>
+      <p>このメソッドは、テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用してこのテーブルの操作を実行するには、ストレージ サービス REST API を呼び出すが、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>オブジェクト。</p>
+      <p></p>
+    syntax:
+      content: 'protected TableResult execute(final CloudTableClient client, final String tableName, TableRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: client
+          type: 93de0ef9com.microsoft.azure.storage.table._cloud_table_client
+          description: <p>A <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス テーブル サービスのエンドポイント、ストレージ アカウントの資格情報、およびその他のクエリ パラメーターを指定します。 </p>
+        - id: tableName
+          type: 3d93591e
+          description: <p>A<code>String</code>テーブルの名前を指定します。 </p>
+        - id: options
+          type: com.microsoft.azure.storage.table._table_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>オプションの再試行の操作のポリシーやタイムアウトの設定などの実行を指定するオブジェクト。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>オブジェクトの現在の操作を追跡します。</p>
+      return:
+        type: com.microsoft.azure.storage.table._table_result
+        description: <p>A <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>操作の実行結果を表します。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、ストレージ操作でエラーが発生します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.generateRequestIdentity(boolean,final String)'
+    id: 'generateRequestIdentity(boolean,final String)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'generateRequestIdentity(boolean isSingleIndexEntry, final String entryName)'
+    nameWithType: 'TableOperation.generateRequestIdentity(boolean isSingleIndexEntry, final String entryName)'
+    fullName: 'String com.microsoft.azure.storage.table.TableOperation.generateRequestIdentity(boolean isSingleIndexEntry, final String entryName)'
+    overload: com.microsoft.azure.storage.table._table_operation.generateRequestIdentity*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 715
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 指定されたエントリ名、または操作の対象を識別する、操作から PartitionKey と RowKey のペアから成る、要求 id を生成します。</p>
+      <p></p>
+    syntax:
+      content: 'protected String generateRequestIdentity(boolean isSingleIndexEntry, final String entryName)'
+      parameters:
+        - id: isSingleIndexEntry
+          type: 4fc6e284
+          description: <p>渡す<code>true</code>を使用して、指定した<code>entryName</code>パラメーター、または<code>false</code>要求 id として操作からの PartitionKey と RowKey 値を使用します。 </p>
+        - id: entryName
+          type: 3d93591e
+          description: <p>場合、要求 id として使用する、エントリ名、<code>isSingleIndexEntry</code>パラメーターは<code>true</code>します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>形式の要求の id 文字列を表します。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.generateRequestIdentityWithTable(final String)
+    id: generateRequestIdentityWithTable(final String)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: generateRequestIdentityWithTable(final String tableName)
+    nameWithType: TableOperation.generateRequestIdentityWithTable(final String tableName)
+    fullName: String com.microsoft.azure.storage.table.TableOperation.generateRequestIdentityWithTable(final String tableName)
+    overload: com.microsoft.azure.storage.table._table_operation.generateRequestIdentityWithTable*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 755
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 指定されたテーブルの要求の id 文字列を生成します。 要求 id 文字列は、特定のテーブル エンティティの識別に操作から、PartitionKey と RowKey でテーブル名を結合します。 この要求 id がエンコードでは既にです。</p>
+      <p></p>
+    syntax:
+      content: protected String generateRequestIdentityWithTable(final String tableName)
+      parameters:
+        - id: tableName
+          type: 3d93591e
+          description: <p>A<code>String</code>テーブルの名前を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>指定されたテーブルの書式設定された要求の id 文字列を表します。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+  - uid: com.microsoft.azure.storage.table._table_operation.getEchoContent()
+    id: getEchoContent()
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: getEchoContent()
+    nameWithType: TableOperation.getEchoContent()
+    fullName: boolean com.microsoft.azure.storage.table.TableOperation.getEchoContent()
+    overload: com.microsoft.azure.storage.table._table_operation.getEchoContent*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 845
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>ブール値を表すメッセージ ペイロードを応答で返す必要があるかどうかを取得します。</p>
+      <p></p>
+    syntax:
+      content: protected boolean getEchoContent()
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>応答でメッセージ ペイロードを返す場合それ以外の場合<code>false</code></p>"
+  - uid: com.microsoft.azure.storage.table._table_operation.getEntity()
+    id: getEntity()
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: getEntity()
+    nameWithType: TableOperation.getEntity()
+    fullName: synchronized final TableEntity com.microsoft.azure.storage.table.TableOperation.getEntity()
+    overload: com.microsoft.azure.storage.table._table_operation.getEntity*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 765
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 この操作に関連付けられているテーブルのエンティティを取得します。</p>
+      <p></p>
+    syntax:
+      content: protected synchronized final TableEntity getEntity()
+      return:
+        type: 381eaeebcom.microsoft.azure.storage.table._table_entity
+        description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>この操作に関連付けられているインスタンス。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.getOperationType()
+    id: getOperationType()
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: getOperationType()
+    nameWithType: TableOperation.getOperationType()
+    fullName: synchronized final TableOperationType com.microsoft.azure.storage.table.TableOperation.getOperationType()
+    overload: com.microsoft.azure.storage.table._table_operation.getOperationType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 775
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 この操作の操作の種類を取得します。</p>
+      <p></p>
+    syntax:
+      content: protected synchronized final TableOperationType getOperationType()
+      return:
+        type: 5e042f60
+        description: <p>opType、 <xref uid="" data-throw-if-not-resolved="false">TableOperationType</xref>この操作に関連付けられているインスタンス。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.insert(final TableEntity)
+    id: insert(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: insert(final TableEntity entity)
+    nameWithType: TableOperation.insert(final TableEntity entity)
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.insert(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.insert*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 71
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> Microsoft Azure ストレージに指定されたエンティティを挿入するインスタンス。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンスを使用します</p>
+      <p></p>
+    syntax:
+      content: public static TableOperation insert(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティを挿入するインスタンス。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.insert(final TableEntity,boolean)'
+    id: 'insert(final TableEntity,boolean)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'insert(final TableEntity entity, boolean echoContent)'
+    nameWithType: 'TableOperation.insert(final TableEntity entity, boolean echoContent)'
+    fullName: 'static TableOperation com.microsoft.azure.storage.table.TableOperation.insert(final TableEntity entity, boolean echoContent)'
+    overload: com.microsoft.azure.storage.table._table_operation.insert*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 87
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> Microsoft Azure ストレージに指定されたエンティティを挿入するインスタンス。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンスを使用します</p>
+      <p></p>
+    syntax:
+      content: 'public static TableOperation insert(final TableEntity entity, boolean echoContent)'
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+        - id: echoContent
+          type: 4fc6e284
+          description: <p>ブール型かどうかをメッセージ ペイロードを応答で返される必要があります。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティを挿入するインスタンス。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.insertOrMerge(final TableEntity)
+    id: insertOrMerge(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: insertOrMerge(final TableEntity entity)
+    nameWithType: TableOperation.insertOrMerge(final TableEntity entity)
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.insertOrMerge(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.insertOrMerge*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 104
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> Microsoft Azure ストレージに指定されたエンティティをマージするインスタンスまたはが存在しない場合は、それを挿入します。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで呼び出して、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>テーブル名を持つインスタンスおよび<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>引数として。</p>
+      <p></p>
+    syntax:
+      content: public static TableOperation insertOrMerge(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンスの挿入や、テーブル エンティティをマージします。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.insertOrReplace(final TableEntity)
+    id: insertOrReplace(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: insertOrReplace(final TableEntity entity)
+    nameWithType: TableOperation.insertOrReplace(final TableEntity entity)
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.insertOrReplace(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.insertOrReplace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 121
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンスを Microsoft Azure ストレージ内の指定されたエンティティを置換するかが存在しない場合に挿入します。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで呼び出して、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>テーブル名を持つインスタンスおよび<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>引数として。</p>
+      <p></p>
+    syntax:
+      content: public static TableOperation insertOrReplace(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンスの挿入や、テーブル エンティティを置換します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.merge(final TableEntity)
+    id: merge(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: merge(final TableEntity entity)
+    nameWithType: TableOperation.merge(final TableEntity entity)
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.merge(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.merge*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 136
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> Microsoft Azure ストレージに指定されたテーブルのエンティティをマージするインスタンス。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンスを使用します</p>
+      <p></p>
+    syntax:
+      content: public static TableOperation merge(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティをマージするためのインスタンス。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.parseResponse(final InputStream,final int,String,final OperationContext,final TableRequestOptions)'
+    id: 'parseResponse(final InputStream,final int,String,final OperationContext,final TableRequestOptions)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'parseResponse(final InputStream inStream, final int httpStatusCode, String etagFromHeader, final OperationContext opContext, final TableRequestOptions options)'
+    nameWithType: 'TableOperation.parseResponse(final InputStream inStream, final int httpStatusCode, String etagFromHeader, final OperationContext opContext, final TableRequestOptions options)'
+    fullName: 'TableResult com.microsoft.azure.storage.table.TableOperation.parseResponse(final InputStream inStream, final int httpStatusCode, String etagFromHeader, final OperationContext opContext, final TableRequestOptions options)'
+    overload: com.microsoft.azure.storage.table._table_operation.parseResponse*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 805
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 テーブル操作の応答を解析して、 <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>を返します。</p>
+      <p></p>
+    syntax:
+      content: 'protected TableResult parseResponse(final InputStream inStream, final int httpStatusCode, String etagFromHeader, final OperationContext opContext, final TableRequestOptions options)'
+      parameters:
+        - id: inStream
+          type: ac354e53
+          description: <p><code>InputStream</code> Insert 操作に対する応答を指定します。 </p>
+        - id: httpStatusCode
+          type: cd225469
+          description: <p><code>int</code>操作要求から返される HTTP ステータス コードを表すです。 </p>
+        - id: etagFromHeader
+          type: '26831127'
+          description: <p><code>String</code>操作の応答で返される Etag を指定します。 </p>
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。</p>
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage.table._table_request_options
+      return:
+        type: com.microsoft.azure.storage.table._table_result
+        description: <p><xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>操作の結果を表すです。</p>
+    exceptions:
+      - type: 84fa3863
+        description: <p>オブジェクトの構築でエラーが発生場合します。 </p>
+      - type: '81e09942'
+        description: <p>場合は、オブジェクト型でリフレクションでは、エラーが発生します。 </p>
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、ストレージ操作でエラーが発生します。 </p>
+      - type: cbf33bbe
+        description: <p>アクセス中にエラーが発生した場合、 <xref uid="" data-throw-if-not-resolved="false">InputStream</xref>の Json。 </p>
+      - type: a667ba4c
+        description: <p>場合は、エラーは、Json を使用する場合、Json を解析中に発生します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.replace(final TableEntity)
+    id: replace(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: replace(final TableEntity entity)
+    nameWithType: TableOperation.replace(final TableEntity entity)
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.replace(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.replace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 195
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>を置き換える、指定したテーブル エンティティのインスタンス。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで呼び出して、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public static TableOperation replace(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティを置換するためのインスタンス。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.retrieve(final String,final String,final Class<? extends TableEntity>)'
+    id: 'retrieve(final String,final String,final Class<? extends TableEntity>)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+    nameWithType: 'TableOperation.retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+    fullName: 'static TableOperation com.microsoft.azure.storage.table.TableOperation.retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+    overload: com.microsoft.azure.storage.table._table_operation.retrieve*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 156
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>のインスタンスを指定したテーブル エンティティを取得し、指定された型として返します。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンスを使用します</p>
+      <p></p>
+    syntax:
+      content: 'public static TableOperation retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
+      parameters:
+        - id: partitionKey
+          type: 3d93591e
+          description: <p>A<code>String</code>を取得するエンティティの PartitionKey 値を指定します。 </p>
+        - id: rowKey
+          type: 3d93591e
+          description: <p>A <code>String</code> RowKey 値を取得するエンティティを指定します。 </p>
+        - id: clazzType
+          type: f6d66785com.microsoft.azure.storage.table._table_entitya08ddfce
+          description: <p>取得するテーブルのエンティティ オブジェクトのクラス型。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティを取得するためのインスタンス。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.retrieve(final String,final String,final EntityResolver<?>)'
+    id: 'retrieve(final String,final String,final EntityResolver<?>)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+    nameWithType: 'TableOperation.retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+    fullName: 'static TableOperation com.microsoft.azure.storage.table.TableOperation.retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+    overload: com.microsoft.azure.storage.table._table_operation.retrieve*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 178
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>静的ファクトリ メソッドを返す、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>を指定したテーブルのエンティティを取得し、指定された競合回避モジュールを使用して予測を返すインスタンス。 これを実行する<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、特定のテーブルで呼び出して、 <xref uid="com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)" data-throw-if-not-resolved="false">CloudTable#execute(TableOperation)</xref>メソッドを<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>テーブル名を持つインスタンスおよび<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>引数として。</p>
+      <p></p>
+    syntax:
+      content: 'public static TableOperation retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
+      parameters:
+        - id: partitionKey
+          type: 3d93591e
+          description: <p>A<code>String</code>を取得するエンティティの PartitionKey 値を指定します。 </p>
+        - id: rowKey
+          type: 3d93591e
+          description: <p>A <code>String</code> RowKey 値を取得するエンティティを指定します。 </p>
+        - id: resolver
+          type: 93de0ef9com.microsoft.azure.storage.table._entity_resolver7e6ad1eb
+          description: <p>実装<xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref> t です入力と結果エンティティをプロジェクトに使用するには。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_operation
+        description: <p>新しい<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブル エンティティを取得するためのインスタンス。 </p>
+  - uid: com.microsoft.azure.storage.table._table_operation.setEchoContent(boolean)
+    id: setEchoContent(boolean)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: setEchoContent(boolean echoContent)
+    nameWithType: TableOperation.setEchoContent(boolean echoContent)
+    fullName: void com.microsoft.azure.storage.table.TableOperation.setEchoContent(boolean echoContent)
+    overload: com.microsoft.azure.storage.table._table_operation.setEchoContent*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 856
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>ブール値を表すメッセージ ペイロードを応答で返す必要があるかどうかを設定します。</p>
+      <p></p>
+    syntax:
+      content: protected void setEchoContent(boolean echoContent)
+      parameters:
+        - id: echoContent
+          type: 4fc6e284
+          description: "<p>\r\n\r\n  <code>true</code>応答でメッセージ ペイロードを返す場合それ以外の場合<code>false</code>です。 </p>"
+  - uid: com.microsoft.azure.storage.table._table_operation.setEntity(final TableEntity)
+    id: setEntity(final TableEntity)
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: setEntity(final TableEntity entity)
+    nameWithType: TableOperation.setEntity(final TableEntity entity)
+    fullName: synchronized final void com.microsoft.azure.storage.table.TableOperation.setEntity(final TableEntity entity)
+    overload: com.microsoft.azure.storage.table._table_operation.setEntity*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 836
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 セット、 <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>テーブル操作のインスタンス。</p>
+      <p></p>
+    syntax:
+      content: protected synchronized final void setEntity(final TableEntity entity)
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>インスタンスを設定します。 </p>
+      return:
+        type: 8d07681d
+  - uid: com.microsoft.azure.storage.table._table_operation.TableOperation()
+    id: TableOperation()
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: TableOperation()
+    nameWithType: TableOperation.TableOperation()
+    fullName: com.microsoft.azure.storage.table.TableOperation.TableOperation()
+    overload: com.microsoft.azure.storage.table._table_operation.TableOperation*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 218
+    package: com.microsoft.azure.storage.table
+    summary: <p>引数がない既定のコンス トラクターです。 </p>
+    syntax:
+      content: protected TableOperation()
+  - uid: 'com.microsoft.azure.storage.table._table_operation.TableOperation(final TableEntity,final TableOperationType)'
+    id: 'TableOperation(final TableEntity,final TableOperationType)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'TableOperation(final TableEntity entity, final TableOperationType opType)'
+    nameWithType: 'TableOperation.TableOperation(final TableEntity entity, final TableOperationType opType)'
+    fullName: 'com.microsoft.azure.storage.table.TableOperation.TableOperation(final TableEntity entity, final TableOperationType opType)'
+    overload: com.microsoft.azure.storage.table._table_operation.TableOperation*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 231
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 構築、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>指定したテーブルのエンティティおよび操作の種類を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'protected TableOperation(final TableEntity entity, final TableOperationType opType)'
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+        - id: opType
+          type: ad32c68e
+          description: <p><xref uid="" data-throw-if-not-resolved="false">TableOperationType</xref>操作の種類の列挙値。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_operation.TableOperation(final TableEntity,final TableOperationType,final boolean)'
+    id: 'TableOperation(final TableEntity,final TableOperationType,final boolean)'
+    parent: com.microsoft.azure.storage.table._table_operation
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    langs:
+      - java
+    name: 'TableOperation(final TableEntity entity, final TableOperationType opType, final boolean echoContent)'
+    nameWithType: 'TableOperation.TableOperation(final TableEntity entity, final TableOperationType opType, final boolean echoContent)'
+    fullName: 'com.microsoft.azure.storage.table.TableOperation.TableOperation(final TableEntity entity, final TableOperationType opType, final boolean echoContent)'
+    overload: com.microsoft.azure.storage.table._table_operation.TableOperation*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableOperation.java
+      startLine: 246
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 構築、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>指定したテーブルのエンティティおよび操作の種類を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'protected TableOperation(final TableEntity entity, final TableOperationType opType, final boolean echoContent)'
+      parameters:
+        - id: entity
+          type: 93de0ef9com.microsoft.azure.storage.table._table_entity
+          description: <p>実装するオブジェクト インスタンス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>操作に関連付けます。 </p>
+        - id: opType
+          type: ad32c68e
+          description: <p><xref uid="" data-throw-if-not-resolved="false">TableOperationType</xref>操作の種類の列挙値。 </p>
+        - id: echoContent
+          type: 4dda0764
+          description: <p>ブール型かどうかをメッセージ ペイロードを応答で返される必要があります。 </p>
+references:
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_entity
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_entity
+        name: TableEntity
+        fullName: com.microsoft.azure.storage.table.TableEntity
+        href: com.microsoft.azure.storage.table._table_entity.yml
+  - uid: com.microsoft.azure.storage.table._table_operation.delete*
+    name: delete
+    nameWithType: TableOperation.delete
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.delete
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.insert*
+    name: insert
+    nameWithType: TableOperation.insert
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.insert
+    package: com.microsoft.azure.storage.table
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.storage.table._table_operation.insertOrMerge*
+    name: insertOrMerge
+    nameWithType: TableOperation.insertOrMerge
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.insertOrMerge
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.insertOrReplace*
+    name: insertOrReplace
+    nameWithType: TableOperation.insertOrReplace
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.insertOrReplace
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.merge*
+    name: merge
+    nameWithType: TableOperation.merge
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.merge
+    package: com.microsoft.azure.storage.table
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: f6d66785com.microsoft.azure.storage.table._table_entitya08ddfce
+    spec.java:
+      - name: 'final Class<? extends '
+        fullName: 'final Class<? extends '
+      - uid: com.microsoft.azure.storage.table._table_entity
+        name: TableEntity
+        fullName: com.microsoft.azure.storage.table.TableEntity
+        href: com.microsoft.azure.storage.table._table_entity.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.table._table_operation.retrieve*
+    name: retrieve
+    nameWithType: TableOperation.retrieve
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.retrieve
+    package: com.microsoft.azure.storage.table
+  - uid: 93de0ef9com.microsoft.azure.storage.table._entity_resolver7e6ad1eb
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._entity_resolver
+        name: EntityResolver
+        fullName: com.microsoft.azure.storage.table.EntityResolver
+        href: com.microsoft.azure.storage.table._entity_resolver.yml
+      - name: <?>
+        fullName: <?>
+  - uid: com.microsoft.azure.storage.table._table_operation.replace*
+    name: replace
+    nameWithType: TableOperation.replace
+    fullName: static TableOperation com.microsoft.azure.storage.table.TableOperation.replace
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.TableOperation*
+    name: TableOperation
+    nameWithType: TableOperation.TableOperation
+    fullName: com.microsoft.azure.storage.table.TableOperation.TableOperation
+    package: com.microsoft.azure.storage.table
+  - uid: ad32c68e
+    spec.java:
+      - name: final TableOperationType
+        fullName: final TableOperationType
+  - uid: 4dda0764
+    spec.java:
+      - name: final boolean
+        fullName: final boolean
+  - uid: 93de0ef9com.microsoft.azure.storage.table._cloud_table_client
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._cloud_table_client
+        name: CloudTableClient
+        fullName: com.microsoft.azure.storage.table.CloudTableClient
+        href: com.microsoft.azure.storage.table._cloud_table_client.yml
+  - uid: com.microsoft.azure.storage.table._table_operation.execute*
+    name: execute
+    nameWithType: TableOperation.execute
+    fullName: TableResult com.microsoft.azure.storage.table.TableOperation.execute
+    package: com.microsoft.azure.storage.table
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.storage.table._table_operation.generateRequestIdentity*
+    name: generateRequestIdentity
+    nameWithType: TableOperation.generateRequestIdentity
+    fullName: String com.microsoft.azure.storage.table.TableOperation.generateRequestIdentity
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.generateRequestIdentityWithTable*
+    name: generateRequestIdentityWithTable
+    nameWithType: TableOperation.generateRequestIdentityWithTable
+    fullName: String com.microsoft.azure.storage.table.TableOperation.generateRequestIdentityWithTable
+    package: com.microsoft.azure.storage.table
+  - uid: 381eaeebcom.microsoft.azure.storage.table._table_entity
+    spec.java:
+      - name: 'synchronized final '
+        fullName: 'synchronized final '
+      - uid: com.microsoft.azure.storage.table._table_entity
+        name: TableEntity
+        fullName: com.microsoft.azure.storage.table.TableEntity
+        href: com.microsoft.azure.storage.table._table_entity.yml
+  - uid: com.microsoft.azure.storage.table._table_operation.getEntity*
+    name: getEntity
+    nameWithType: TableOperation.getEntity
+    fullName: synchronized final TableEntity com.microsoft.azure.storage.table.TableOperation.getEntity
+    package: com.microsoft.azure.storage.table
+  - uid: 5e042f60
+    spec.java:
+      - name: synchronized final TableOperationType
+        fullName: synchronized final TableOperationType
+  - uid: com.microsoft.azure.storage.table._table_operation.getOperationType*
+    name: getOperationType
+    nameWithType: TableOperation.getOperationType
+    fullName: synchronized final TableOperationType com.microsoft.azure.storage.table.TableOperation.getOperationType
+    package: com.microsoft.azure.storage.table
+  - uid: 84fa3863
+    spec.java:
+      - name: InstantiationException
+        fullName: InstantiationException
+  - uid: '81e09942'
+    spec.java:
+      - name: IllegalAccessException
+        fullName: IllegalAccessException
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: a667ba4c
+    spec.java:
+      - name: JsonParseException
+        fullName: JsonParseException
+  - uid: ac354e53
+    spec.java:
+      - name: final InputStream
+        fullName: final InputStream
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 93de0ef9com.microsoft.azure.storage._operation_context
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._operation_context
+        name: OperationContext
+        fullName: com.microsoft.azure.storage.OperationContext
+        href: com.microsoft.azure.storage._operation_context.yml
+  - uid: 93de0ef9com.microsoft.azure.storage.table._table_request_options
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.table._table_request_options
+        name: TableRequestOptions
+        fullName: com.microsoft.azure.storage.table.TableRequestOptions
+        href: com.microsoft.azure.storage.table._table_request_options.yml
+  - uid: com.microsoft.azure.storage.table._table_operation.parseResponse*
+    name: parseResponse
+    nameWithType: TableOperation.parseResponse
+    fullName: TableResult com.microsoft.azure.storage.table.TableOperation.parseResponse
+    package: com.microsoft.azure.storage.table
+  - uid: 8d07681d
+    spec.java:
+      - name: synchronized final void
+        fullName: synchronized final void
+  - uid: com.microsoft.azure.storage.table._table_operation.setEntity*
+    name: setEntity
+    nameWithType: TableOperation.setEntity
+    fullName: synchronized final void com.microsoft.azure.storage.table.TableOperation.setEntity
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.getEchoContent*
+    name: getEchoContent
+    nameWithType: TableOperation.getEchoContent
+    fullName: boolean com.microsoft.azure.storage.table.TableOperation.getEchoContent
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_operation.setEchoContent*
+    name: setEchoContent
+    nameWithType: TableOperation.setEchoContent
+    fullName: void com.microsoft.azure.storage.table.TableOperation.setEchoContent
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._query_table_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._query_table_operation.yml
+    name: QueryTableOperation
+    nameWithType: QueryTableOperation
+    fullName: com.microsoft.azure.storage.table.QueryTableOperation
+    type: Class
+    summary: <p>拡張するクラス<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>を 1 つのテーブル エンティティを取得するクエリを実装します。 実行する、 <xref uid="com.microsoft.azure.storage.table._query_table_operation" data-throw-if-not-resolved="false">QueryTableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 直接、またはの一部として、この操作を実行することができます、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._query_table_operation" data-throw-if-not-resolved="false">QueryTableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax:
+      content: public class QueryTableOperation extends TableOperation
+  - uid: com.microsoft.azure.storage.table._table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_entity.yml
+    name: TableEntity
+    nameWithType: TableEntity
+    fullName: com.microsoft.azure.storage.table.TableEntity
+    type: Interface
+    summary: "<p>テーブルのエンティティ型に必要なインターフェイスです。 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。 実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。 </p>\n<p>ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。 使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。 また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。 </p>\n\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。 </p>\n\n<p>実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。 クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。 </p>\n<p></p>"
+    syntax:
+      content: public interface TableEntity
+  - uid: com.microsoft.azure.storage.table._table_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_operation.yml
+    name: TableOperation
+    nameWithType: TableOperation
+    fullName: com.microsoft.azure.storage.table.TableOperation
+    type: Class
+    summary: |-
+      <p>1 つのテーブル操作を表すクラス。 </p>
+      <p>構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。 実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage.table._cloud_table.execute(final TableOperation)
+    parent: com.microsoft.azure.storage.table._cloud_table
+    href: com.microsoft.azure.storage.table._cloud_table.yml
+    name: execute(final TableOperation operation)
+    nameWithType: CloudTable.execute(final TableOperation operation)
+    fullName: TableResult com.microsoft.azure.storage.table.CloudTable.execute(final TableOperation operation)
+    type: Method
+    summary: |-
+      <p>テーブルに対する操作を実行します。 </p>
+      <p>このメソッドを呼び出しますが、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179423.aspx">テーブル サービス REST API</ulink>テーブル サービス エンドポイントとストレージ アカウントの資格情報のこのインスタンスを使用して、テーブルでは、指定の操作を実行します。</p>
+      <p></p>
+    syntax:
+      content: public TableResult execute(final TableOperation operation)
+      parameters:
+        - id: operation
+          type: 93de0ef9com.microsoft.azure.storage.table._table_operation
+          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブルに対して実行する操作を表すオブジェクト。</p>
+      return:
+        type: com.microsoft.azure.storage.table._table_result
+        description: <p>A <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>の実行結果を含む、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>テーブルにします。</p>
+  - uid: com.microsoft.azure.storage.table._cloud_table_client
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._cloud_table_client.yml
+    name: CloudTableClient
+    nameWithType: CloudTableClient
+    fullName: com.microsoft.azure.storage.table.CloudTableClient
+    type: Class
+    summary: |-
+      <p>Microsoft Azure テーブル サービスにアクセスするためには、サービス クライアントを提供します。 </p>
+      <p><xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クラスは、テーブル サービスのエンドポイントのベース URI およびストレージ アカウントにアクセスするための資格情報をカプセル化しを実行するメソッドと同様に作成、削除、一覧、およびテーブルを照会する方法を提供操作とテーブル エンティティに対するクエリ。 これらのメソッドは、要求を作成し、返される結果を取得する記憶域サービスの REST API 操作を呼び出します。 </p>
+      <p>テーブル サービスのエンドポイントは、ストレージ アカウントの DNS 名を含む、テーブル サービス リソースのベース URI を示します。 <br /><br />
+
+       詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">テーブル サービス リソースのアドレス指定</ulink>です。 </p>
+
+      <p>資格情報は、ストレージ アカウント名と、キー、または共有アクセス署名の組み合わせにすることができます。 詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">ストレージ アカウントへのアクセスの認証</ulink>です。 </p>
+    syntax:
+      content: public class CloudTableClient extends ServiceClient
+  - uid: com.microsoft.azure.storage.table._entity_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    name: EntityResolver<T>
+    nameWithType: EntityResolver<T>
+    fullName: com.microsoft.azure.storage.table.EntityResolver<T>
+    type: Interface
+    summary: |-
+      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
+      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p></p>
+    syntax:
+      content: public interface EntityResolver<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>
+  - uid: com.microsoft.azure.storage.table._table_result
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_result.yml
+    name: TableResult
+    nameWithType: TableResult
+    fullName: com.microsoft.azure.storage.table.TableResult
+    type: Class
+    summary: <p>テーブル操作の結果を表すクラス。 <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>クラスは、HTTP 応答と、特定のという記憶域サービスの REST API 操作によって返されるテーブル エンティティ結果をカプセル化<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>です。 </p>
+    syntax:
+      content: public class TableResult
+  - uid: com.microsoft.azure.storage.table._table_request_options
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_request_options.yml
+    name: TableRequestOptions
+    nameWithType: TableRequestOptions
+    fullName: com.microsoft.azure.storage.table.TableRequestOptions
+    type: Class
+    summary: <p>タイムアウト、ペイロード形式、およびテーブルの操作要求の指定可能性のある再試行ポリシー オプションのセットを表します。 </p>
+    syntax:
+      content: public class TableRequestOptions
+  - uid: com.microsoft.azure.storage._operation_context
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._operation_context.yml
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: com.microsoft.azure.storage.OperationContext
+    type: Class
+    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    syntax:
+      content: public class OperationContext
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: com.microsoft.azure.storage.core._storage_request
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._storage_request.yml
+    name: 'StorageRequest<C,P,R>'
+    nameWithType: 'StorageRequest<C,P,R>'
+    fullName: 'com.microsoft.azure.storage.core.StorageRequest<C,P,R>'
+    type: Class
+    summary: |-
+      <p>内部使用のために予約されています。 特定のストレージ操作の実行をカプセル化するクラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public class StorageRequest<C,P,R>'
+      typeParameters:
+        - type: 37f8610d
+          description: <p>サービス クライアントの種類 </p>
+        - type: db9ec244
+          description: <p>DownloadAttributes などの CloudBlobContainer などは、親オブジェクトの型。 </p>
+        - type: d4d3e1e1
+          description: <p>予期される結果の種類 </p>
+  - uid: com.microsoft.azure.storage.table._table_batch_operation
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_batch_operation.yml
+    name: TableBatchOperation
+    nameWithType: TableBatchOperation
+    fullName: com.microsoft.azure.storage.table.TableBatchOperation
+    type: Class
+    summary: |-
+      <p>バッチ操作を表すクラス。 呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。 </p>
+      <p>バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。 取得操作のバッチには、他の操作を含めることはできません。 バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。 </p>
+    syntax:
+      content: public class TableBatchOperation

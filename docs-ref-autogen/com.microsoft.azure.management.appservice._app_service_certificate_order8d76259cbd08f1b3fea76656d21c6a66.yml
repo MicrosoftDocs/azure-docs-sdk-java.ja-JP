@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66
+    id: _app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66
+    parent: com.microsoft.azure.management.appservice
+    children:
+      - com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withExistingKeyVault(Vault)
+      - 'com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withNewKeyVault(String,Region)'
+    href: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.yml
+    langs:
+      - java
+    name: AppServiceCertificateOrder.DefinitionStages.WithKeyVault
+    nameWithType: AppServiceCertificateOrder.DefinitionStages.WithKeyVault
+    fullName: com.microsoft.azure.management.appservice.AppServiceCertificateOrder.DefinitionStages.WithKeyVault
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-appservice/src/main/java/com/microsoft/azure/management/appservice/AppServiceCertificateOrder.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-appservice/src/main/java/com/microsoft/azure/management/appservice/AppServiceCertificateOrder.java
+      startLine: 232
+    package: com.microsoft.azure.management.appservice
+    summary: <p>アプリケーション サービス証明書の順序の定義以上のドメインを設定する検証メソッドを許可します。 </p>
+    syntax:
+      content: public interface WithKeyVault
+  - uid: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withExistingKeyVault(Vault)
+    id: withExistingKeyVault(Vault)
+    parent: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66
+    href: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.yml
+    langs:
+      - java
+    name: withExistingKeyVault(Vault vault)
+    nameWithType: AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withExistingKeyVault(Vault vault)
+    fullName: WithCreate com.microsoft.azure.management.appservice.AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withExistingKeyVault(Vault vault)
+    overload: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withExistingKeyVault*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-appservice/src/main/java/com/microsoft/azure/management/appservice/AppServiceCertificateOrder.java
+      startLine: 245
+    package: com.microsoft.azure.management.appservice
+    summary: |-
+      <p>証明書の秘密キーを格納する、既存のキー コンテナーを指定します。</p>
+      <p>資格情報コンテナーは、機密データの読み取り/書き込みに 2 つのサービス プリンシパルを許可する必要があります: f3c21649-0979-4721-ac85-b0216b2cf413 と abfa0a7c-a6b6-4736-8310-5855508787 cd。 アクセスを持たない場合、試行されますアクセス権を付与します。 Active Directory Graph にアクセスすることがなく、id に記録は、この試行は失敗します。</p>
+      <p></p>
+    syntax:
+      content: public WithCreate withExistingKeyVault(Vault vault)
+      parameters:
+        - id: vault
+          type: com.microsoft.azure.management.keyvault._vault
+          description: <p>秘密キーを格納する資格情報コンテナー </p>
+      return:
+        type: com.microsoft.azure.management.appservice._app_service_certificate_order58063743bbdf7b94bf4879c40d90c213
+        description: <p>定義の次のステージ </p>
+  - uid: 'com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withNewKeyVault(String,Region)'
+    id: 'withNewKeyVault(String,Region)'
+    parent: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66
+    href: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.yml
+    langs:
+      - java
+    name: 'withNewKeyVault(String vaultName, Region region)'
+    nameWithType: 'AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withNewKeyVault(String vaultName, Region region)'
+    fullName: 'WithCreate com.microsoft.azure.management.appservice.AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withNewKeyVault(String vaultName, Region region)'
+    overload: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withNewKeyVault*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-appservice/src/main/java/com/microsoft/azure/management/appservice/AppServiceCertificateOrder.java
+      startLine: 257
+    package: com.microsoft.azure.management.appservice
+    summary: |-
+      <p>証明書の秘密キーを格納する新しい key vault を作成します。</p>
+      <p>Active Directory Graph にアクセスすることがなく、id ログインしている場合は、このメソッドを使用しないでください。</p>
+      <p></p>
+    syntax:
+      content: 'public WithCreate withNewKeyVault(String vaultName, Region region)'
+      parameters:
+        - id: vaultName
+          type: '26831127'
+          description: <p>新しいキー資格情報コンテナーの名前 </p>
+        - id: region
+          type: com.microsoft.azure.management.resources.fluentcore.arm._region
+          description: <p>資格情報コンテナーを作成するためのリージョン </p>
+      return:
+        type: com.microsoft.azure.management.appservice._app_service_certificate_order58063743bbdf7b94bf4879c40d90c213
+        description: <p>定義の次のステージ </p>
+references:
+  - uid: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withExistingKeyVault*
+    name: withExistingKeyVault
+    nameWithType: AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withExistingKeyVault
+    fullName: WithCreate com.microsoft.azure.management.appservice.AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withExistingKeyVault
+    package: com.microsoft.azure.management.appservice
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.appservice._app_service_certificate_order8d76259cbd08f1b3fea76656d21c6a66.withNewKeyVault*
+    name: withNewKeyVault
+    nameWithType: AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withNewKeyVault
+    fullName: WithCreate com.microsoft.azure.management.appservice.AppServiceCertificateOrder.DefinitionStages.WithKeyVault.withNewKeyVault
+    package: com.microsoft.azure.management.appservice
+  - uid: com.microsoft.azure.management.appservice._app_service_certificate_order._definition
+    parent: com.microsoft.azure.management.appservice
+    href: com.microsoft.azure.management.appservice._app_service_certificate_order._definition.yml
+    name: AppServiceCertificateOrder.Definition
+    nameWithType: AppServiceCertificateOrder.Definition
+    fullName: com.microsoft.azure.management.appservice.AppServiceCertificateOrder.Definition
+    type: Interface
+    summary: <p>実装する必要があるすべての定義のコンテナー インターフェイスです。 </p>
+    syntax:
+      content: 'public interface Definition extends AppServiceCertificateOrder.DefinitionStages.Blank,AppServiceCertificateOrder.DefinitionStages.WithHostName,AppServiceCertificateOrder.DefinitionStages.WithCertificateSku,AppServiceCertificateOrder.DefinitionStages.WithDomainVerificationFromWebApp,AppServiceCertificateOrder.DefinitionStages.WithKeyVault,AppServiceCertificateOrder.DefinitionStages.WithCreate'
+  - uid: com.microsoft.azure.management.appservice._app_service_certificate_order58063743bbdf7b94bf4879c40d90c213
+    parent: com.microsoft.azure.management.appservice
+    href: com.microsoft.azure.management.appservice._app_service_certificate_order58063743bbdf7b94bf4879c40d90c213.yml
+    name: AppServiceCertificateOrder.DefinitionStages.WithCreate
+    nameWithType: AppServiceCertificateOrder.DefinitionStages.WithCreate
+    fullName: com.microsoft.azure.management.appservice.AppServiceCertificateOrder.DefinitionStages.WithCreate
+    type: Interface
+    summary: <p>アプリ サービス証明書順序使用した定義で、クラウドを指定する省略可能な追加の入力を公開する新しい app service 証明書の順序を作成するための十分な入力です。 </p>
+    syntax:
+      content: 'public interface WithCreate extends Creatable<AppServiceCertificateOrder>,AppServiceCertificateOrder.DefinitionStages.WithValidYears,AppServiceCertificateOrder.DefinitionStages.WithAutoRenew,Resource.DefinitionWithTags<WithCreate>'
+  - uid: com.microsoft.azure.management.keyvault._vault
+    parent: com.microsoft.azure.management.keyvault
+    href: com.microsoft.azure.management.keyvault._vault.yml
+    name: Vault
+    nameWithType: Vault
+    fullName: com.microsoft.azure.management.keyvault.Vault
+    type: Interface
+    summary: <p>不変のクライアント側表現、 <xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>キー <xref uid="com.microsoft.azure.management.keyvault._vault" data-throw-if-not-resolved="false">Vault</xref>です。 </p>
+    syntax:
+      content: 'public interface Vault extends GroupableResource<KeyVaultManager, VaultInner>,Refreshable<Vault>,Updatable<Vault.Update>'
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm._region
+    parent: com.microsoft.azure.management.resources.fluentcore.arm
+    href: com.microsoft.azure.management.resources.fluentcore.arm._region.yml
+    name: Region
+    nameWithType: Region
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.Region
+    type: Class
+    summary: '<p>列挙体、 <xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>データ センターの地域。 参照してください<ulink url="https://azure.microsoft.com/regions/">https://azure.microsoft.com/regions/</ulink></p>'
+    syntax:
+      content: public class Region

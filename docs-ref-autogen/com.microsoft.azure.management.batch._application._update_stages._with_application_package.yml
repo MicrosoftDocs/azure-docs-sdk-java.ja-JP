@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.batch._application._update_stages._with_application_package
+    id: _with_application_package
+    parent: com.microsoft.azure.management.batch
+    children:
+      - com.microsoft.azure.management.batch._application._update_stages._with_application_package.defineNewApplicationPackage(String)
+      - com.microsoft.azure.management.batch._application._update_stages._with_application_package.withoutApplicationPackage(String)
+    href: com.microsoft.azure.management.batch._application._update_stages._with_application_package.yml
+    langs:
+      - java
+    name: Application.UpdateStages.WithApplicationPackage
+    nameWithType: Application.UpdateStages.WithApplicationPackage
+    fullName: com.microsoft.azure.management.batch.Application.UpdateStages.WithApplicationPackage
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-batch/src/main/java/com/microsoft/azure/management/batch/Application.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-batch/src/main/java/com/microsoft/azure/management/batch/Application.java
+      startLine: 184
+    package: com.microsoft.azure.management.batch
+    summary: <p>アプリケーション パッケージの作成を許可するバッチのアプリケーションの更新の段階です。 </p>
+    syntax:
+      content: public interface WithApplicationPackage
+  - uid: com.microsoft.azure.management.batch._application._update_stages._with_application_package.defineNewApplicationPackage(String)
+    id: defineNewApplicationPackage(String)
+    parent: com.microsoft.azure.management.batch._application._update_stages._with_application_package
+    href: com.microsoft.azure.management.batch._application._update_stages._with_application_package.yml
+    langs:
+      - java
+    name: defineNewApplicationPackage(String version)
+    nameWithType: Application.UpdateStages.WithApplicationPackage.defineNewApplicationPackage(String version)
+    fullName: Update com.microsoft.azure.management.batch.Application.UpdateStages.WithApplicationPackage.defineNewApplicationPackage(String version)
+    overload: com.microsoft.azure.management.batch._application._update_stages._with_application_package.defineNewApplicationPackage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-batch/src/main/java/com/microsoft/azure/management/batch/Application.java
+      startLine: 191
+    package: com.microsoft.azure.management.batch
+    summary: |-
+      <p>Batch アカウントのアプリケーションに新しいアプリケーション パッケージを作成する最初の段階です。</p>
+      <p></p>
+    syntax:
+      content: public Update defineNewApplicationPackage(String version)
+      parameters:
+        - id: version
+          type: '26831127'
+          description: <p>アプリケーションのバージョン </p>
+      return:
+        type: com.microsoft.azure.management.batch._application._update
+        description: <p>アプリケーションの作成に次のステージ。 </p>
+  - uid: com.microsoft.azure.management.batch._application._update_stages._with_application_package.withoutApplicationPackage(String)
+    id: withoutApplicationPackage(String)
+    parent: com.microsoft.azure.management.batch._application._update_stages._with_application_package
+    href: com.microsoft.azure.management.batch._application._update_stages._with_application_package.yml
+    langs:
+      - java
+    name: withoutApplicationPackage(String version)
+    nameWithType: Application.UpdateStages.WithApplicationPackage.withoutApplicationPackage(String version)
+    fullName: Update com.microsoft.azure.management.batch.Application.UpdateStages.WithApplicationPackage.withoutApplicationPackage(String version)
+    overload: com.microsoft.azure.management.batch._application._update_stages._with_application_package.withoutApplicationPackage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-batch/src/main/java/com/microsoft/azure/management/batch/Application.java
+      startLine: 199
+    package: com.microsoft.azure.management.batch
+    summary: |-
+      <p>指定されたアプリケーションからのアプリケーション パッケージを削除します。</p>
+      <p></p>
+    syntax:
+      content: public Update withoutApplicationPackage(String version)
+      parameters:
+        - id: version
+          type: '26831127'
+          description: <p>削除するアプリケーションの参照のバージョン </p>
+      return:
+        type: com.microsoft.azure.management.batch._application._update
+        description: <p>更新可能なバッチ アカウントの定義を表す段階です。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.batch._application._update_stages._with_application_package.defineNewApplicationPackage*
+    name: defineNewApplicationPackage
+    nameWithType: Application.UpdateStages.WithApplicationPackage.defineNewApplicationPackage
+    fullName: Update com.microsoft.azure.management.batch.Application.UpdateStages.WithApplicationPackage.defineNewApplicationPackage
+    package: com.microsoft.azure.management.batch
+  - uid: com.microsoft.azure.management.batch._application._update_stages._with_application_package.withoutApplicationPackage*
+    name: withoutApplicationPackage
+    nameWithType: Application.UpdateStages.WithApplicationPackage.withoutApplicationPackage
+    fullName: Update com.microsoft.azure.management.batch.Application.UpdateStages.WithApplicationPackage.withoutApplicationPackage
+    package: com.microsoft.azure.management.batch
+  - uid: com.microsoft.azure.management.batch._application._update
+    parent: com.microsoft.azure.management.batch
+    href: com.microsoft.azure.management.batch._application._update.yml
+    name: Application.Update
+    nameWithType: Application.Update
+    fullName: com.microsoft.azure.management.batch.Application.Update
+    type: Interface
+    summary: <p>Batch アカウントの更新の一部としてバッチ アプリケーションの更新プログラムの全体です。 </p>
+    syntax:
+      content: 'public interface Update extends Settable<BatchAccount.Update>,Application.UpdateStages.WithOptionalProperties,Application.UpdateStages.WithApplicationPackage'

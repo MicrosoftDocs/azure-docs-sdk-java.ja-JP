@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._remindable
+    id: _remindable
+    parent: microsoft.servicefabric.actors
+    children:
+      - 'microsoft.servicefabric.actors._remindable.receiveReminderAsync(String,byte [],Duration,Duration)'
+    href: microsoft.servicefabric.actors._remindable.yml
+    langs:
+      - java
+    name: Remindable
+    nameWithType: Remindable
+    fullName: microsoft.servicefabric.actors.Remindable
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/Remindable.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/Remindable.java
+      startLine: 8
+    package: microsoft.servicefabric.actors
+    summary: <p>インターフェイス アラームを使用するアクターが実装する必要があります。 </p>
+    syntax:
+      content: public interface Remindable
+  - uid: 'microsoft.servicefabric.actors._remindable.receiveReminderAsync(String,byte [],Duration,Duration)'
+    id: 'receiveReminderAsync(String,byte [],Duration,Duration)'
+    parent: microsoft.servicefabric.actors._remindable
+    href: microsoft.servicefabric.actors._remindable.yml
+    langs:
+      - java
+    name: 'receiveReminderAsync(String reminderName, byte[] context, Duration timeSpan, Duration period)'
+    nameWithType: 'Remindable.receiveReminderAsync(String reminderName, byte[] context, Duration timeSpan, Duration period)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.actors.Remindable.receiveReminderAsync(String reminderName, byte[] context, Duration timeSpan, Duration period)'
+    overload: microsoft.servicefabric.actors._remindable.receiveReminderAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/Remindable.java
+      startLine: 34
+    package: microsoft.servicefabric.actors
+    summary: "<p>アラームの呼び出しが戻るアクター アラームがトリガーされたときに呼び出さです。</p>\n<p>\r\n\r\n  <b>注釈:</b>アクター ランタイムがに対して ReceiveReminderAsync メソッドを呼び出すアラームがトリガーされたときに、<xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>です。 アクターは、複数のアラームを登録できるし、ReceiveReminderAsync メソッドには、いつでもこれらの確認メッセージのいずれかがトリガーが呼び出されます。 アクターは、どのアラームがトリガーされた調べる ReceiveReminderAsync メソッドに渡されるアラーム名を使用できます。 アクター ランタイムは、ReceiveReminderAsync 呼び出しが完了したときにアクターの状態を保存します。 状態の保存中にエラーが発生する場合は、アクター オブジェクトが非アクティブ化し、状態必要なアラームの完了時に保存されていないことを指定する、新しいインスタンスをアクティブ化されます。 </p>"
+    syntax:
+      content: 'public CompletableFuture<?> receiveReminderAsync(String reminderName, byte[] context, Duration timeSpan, Duration period)'
+      parameters:
+        - id: reminderName
+          type: '26831127'
+          description: <p>アラームの名前です。 </p>
+        - id: context
+          type: ccd9418d
+          description: <p>この通知に関連付けられているコンテキストは、通知の作成時にアクター ランタイムに渡されました。 </p>
+        - id: timeSpan
+          type: e02a2de0
+          description: <p>名前 reminderName と共にアラームが期限時刻 </p>
+        - id: period
+          type: e02a2de0
+          description: <p>トリガー名 reminderName と共にアラームの間の時間間隔。 </p>
+      return:
+        type: 16409f84
+        description: <p>このコールバックによって実行される非同期操作を表すタスク。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.actors._remindable.receiveReminderAsync*
+    name: receiveReminderAsync
+    nameWithType: Remindable.receiveReminderAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.Remindable.receiveReminderAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor.yml
+    name: Actor
+    nameWithType: Actor
+    fullName: microsoft.servicefabric.actors.Actor
+    type: Interface
+    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    syntax:
+      content: public interface Actor

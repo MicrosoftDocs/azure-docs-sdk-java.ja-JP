@@ -1,0 +1,1143 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+    id: _shard_range
+    parent: com.microsoft.azure.elasticdb.shard.base
+    children:
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.compareTo(ShardRange)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.contains(ShardKey)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.contains(ShardRange)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.equals(Object)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.equals(ShardRange)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRange(ShardKeyType)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeBinary()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTime()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTimeOffset()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeGuid()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt32()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt64()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeTimeSpan()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getHigh()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getKeyType()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.getLow()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.hashCode()
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.intersect(ShardRange)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.intersects(ShardRange)
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.NULL
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.opEquality(ShardRange,ShardRange)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThan(ShardRange,ShardRange)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThanOrEqual(ShardRange,ShardRange)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.opInequality(ShardRange,ShardRange)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThan(ShardRange,ShardRange)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThanOrEqual(ShardRange,ShardRange)'
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange()
+      - 'com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange(ShardKey,ShardKey)'
+      - com.microsoft.azure.elasticdb.shard.base._shard_range.toString()
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: ShardRange
+    nameWithType: ShardRange
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 26
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    syntax: &ref_1
+      content: public class ShardRange
+    inheritance:
+      - java.lang.Object
+      - Comparable<ShardRange>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.compareTo(ShardRange)
+    id: compareTo(ShardRange)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: compareTo(ShardRange other)
+    nameWithType: ShardRange.compareTo(ShardRange other)
+    fullName: int com.microsoft.azure.elasticdb.shard.base.ShardRange.compareTo(ShardRange other)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.compareTo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 389
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>2 つのシャードの範囲値の間の比較を実行します。</p>
+      <p></p>
+    syntax:
+      content: public int compareTo(ShardRange other)
+      parameters:
+        - id: other
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>このオブジェクトと比較してシャードの範囲です。 </p>
+      return:
+        type: f75371fa
+        description: '<p>-1: この範囲の低い境界がより小さい<em>他の</em>の低い境界;-1: の低い境界値に一致し、この範囲の高い境界値が場合よりも低い<em>他の</em>'' s。 1: 境界がより大きい場合、この範囲の高、<em>他の</em>の高い境界; 1: この範囲の低い境界値がより高いかどうか<em>他の</em>の下限の境界および境界の高この範囲の値より小さい以上で<em>他</em>の高い境界。 0: この範囲と同じ境界がある場合<em>他</em>です。 </p>'
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.contains(ShardKey)
+    id: contains(ShardKey)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: contains(ShardKey key)
+    nameWithType: ShardRange.contains(ShardKey key)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.contains(ShardKey key)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.contains*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 359
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>指定したキーが、範囲内かどうかを確認します。</p>
+      <p></p>
+    syntax:
+      content: public boolean contains(ShardKey key)
+      parameters:
+        - id: key
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key
+          description: <p>チェックするキー </p>
+      return:
+        type: 4fc6e284
+        description: <p>内側、false の場合は true それ以外の場合 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.contains(ShardRange)
+    id: contains(ShardRange)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: contains(ShardRange range)
+    nameWithType: ShardRange.contains(ShardRange range)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.contains(ShardRange range)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.contains*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 372
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>範囲が、範囲内かどうかを確認します。</p>
+      <p></p>
+    syntax:
+      content: public boolean contains(ShardRange range)
+      parameters:
+        - id: range
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>確認する範囲。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>内側、false の場合は true それ以外の場合。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.equals(Object)
+    id: equals(Object)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: equals(Object obj)
+    nameWithType: ShardRange.equals(Object obj)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.equals(Object obj)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.equals*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 337
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>指定したオブジェクトが現在のオブジェクトと等しいかどうかを判断します。</p>
+      <p></p>
+    syntax:
+      content: public boolean equals(Object obj)
+      parameters:
+        - id: obj
+          type: '79317049'
+          description: <p>現在のオブジェクトと比較するオブジェクト。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>指定したオブジェクトが現在のオブジェクトと等しい場合は true。それ以外の場合は false です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.equals(ShardRange)
+    id: equals(ShardRange)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: equals(ShardRange other)
+    nameWithType: ShardRange.equals(ShardRange other)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.equals(ShardRange other)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.equals*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 348
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>他の指定された等値比較を実行<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public boolean equals(ShardRange other)
+      parameters:
+        - id: other
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard_range\" data-throw-if-not-resolved=\"false\">ShardRange</xref>と比較します。 </p>"
+      return:
+        type: 4fc6e284
+        description: <p>True の場合は、同じシャードの範囲、false それ以外の場合。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRange(ShardKeyType)
+    id: getFullRange(ShardKeyType)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRange(ShardKeyType keyType)
+    nameWithType: ShardRange.getFullRange(ShardKeyType keyType)
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRange(ShardKeyType keyType)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRange*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 261
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>指定したキーの種類に対応するシャードの範囲を取得します。</p>
+      <p></p>
+    syntax:
+      content: public static ShardRange getFullRange(ShardKeyType keyType)
+      parameters:
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+          description: <p>キーの型。 </p>
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+        description: <p>全範囲は、キーの種類を指定します。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeBinary()
+    id: getFullRangeBinary()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeBinary()
+    nameWithType: ShardRange.getFullRangeBinary()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeBinary()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeBinary*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 140
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeBinary()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTime()
+    id: getFullRangeDateTime()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeDateTime()
+    nameWithType: ShardRange.getFullRangeDateTime()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeDateTime()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTime*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 147
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeDateTime()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTimeOffset()
+    id: getFullRangeDateTimeOffset()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeDateTimeOffset()
+    nameWithType: ShardRange.getFullRangeDateTimeOffset()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeDateTimeOffset()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTimeOffset*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 161
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeDateTimeOffset()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeGuid()
+    id: getFullRangeGuid()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeGuid()
+    nameWithType: ShardRange.getFullRangeGuid()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeGuid()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeGuid*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 133
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeGuid()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt32()
+    id: getFullRangeInt32()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeInt32()
+    nameWithType: ShardRange.getFullRangeInt32()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeInt32()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt32*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 119
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeInt32()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt64()
+    id: getFullRangeInt64()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeInt64()
+    nameWithType: ShardRange.getFullRangeInt64()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeInt64()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt64*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 126
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeInt64()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeTimeSpan()
+    id: getFullRangeTimeSpan()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getFullRangeTimeSpan()
+    nameWithType: ShardRange.getFullRangeTimeSpan()
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeTimeSpan()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeTimeSpan*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 154
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    syntax:
+      content: public static ShardRange getFullRangeTimeSpan()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getHigh()
+    id: getHigh()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getHigh()
+    nameWithType: ShardRange.getHigh()
+    fullName: ShardKey com.microsoft.azure.elasticdb.shard.base.ShardRange.getHigh()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getHigh*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 293
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public ShardKey getHigh()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getKeyType()
+    id: getKeyType()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getKeyType()
+    nameWithType: ShardRange.getKeyType()
+    fullName: ShardKeyType com.microsoft.azure.elasticdb.shard.base.ShardRange.getKeyType()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getKeyType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 301
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public ShardKeyType getKeyType()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getLow()
+    id: getLow()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: getLow()
+    nameWithType: ShardRange.getLow()
+    fullName: ShardKey com.microsoft.azure.elasticdb.shard.base.ShardRange.getLow()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.getLow*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 285
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public ShardKey getLow()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.hashCode()
+    id: hashCode()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: hashCode()
+    nameWithType: ShardRange.hashCode()
+    fullName: int com.microsoft.azure.elasticdb.shard.base.ShardRange.hashCode()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.hashCode*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 325
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>このインスタンスのハッシュ コードを計算します。</p>
+      <p></p>
+    syntax:
+      content: public int hashCode()
+      return:
+        type: f75371fa
+        description: <p>オブジェクトのハッシュ コード。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.intersect(ShardRange)
+    id: intersect(ShardRange)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: intersect(ShardRange range)
+    nameWithType: ShardRange.intersect(ShardRange range)
+    fullName: ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.intersect(ShardRange range)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.intersect*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 435
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>2 つの範囲の交差部分を返します。</p>
+      <p></p>
+    syntax:
+      content: public ShardRange intersect(ShardRange range)
+      parameters:
+        - id: range
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._range\" data-throw-if-not-resolved=\"false\">範囲</xref>と交差するようにします。 </p>"
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_range
+        description: <p>現在の範囲と範囲の交差しない場合は、null、指定した範囲の交差部分です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.intersects(ShardRange)
+    id: intersects(ShardRange)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: intersects(ShardRange range)
+    nameWithType: ShardRange.intersects(ShardRange range)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.intersects(ShardRange range)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.intersects*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 422
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>範囲が、現在の範囲と交差するかどうかを確認します。</p>
+      <p></p>
+    syntax:
+      content: public boolean intersects(ShardRange range)
+      parameters:
+        - id: range
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>確認する範囲。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>これと交差する場合、False それ以外の場合は true。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.NULL
+    id: 'NULL'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'NULL'
+    nameWithType: ShardRange.NULL
+    fullName: final ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.NULL
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 28
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public static final ShardRange NULL= new ShardRange()
+      return:
+        type: 93de0ef9com.microsoft.azure.elasticdb.shard.base._shard_range
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opEquality(ShardRange,ShardRange)'
+    id: 'opEquality(ShardRange,ShardRange)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'opEquality(ShardRange left, ShardRange right)'
+    nameWithType: 'ShardRange.opEquality(ShardRange left, ShardRange right)'
+    fullName: 'static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opEquality(ShardRange left, ShardRange right)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.opEquality*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 235
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>等値演算子。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean opEquality(ShardRange left, ShardRange right)'
+      parameters:
+        - id: left
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>左側にあります。 </p>
+        - id: right
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>右側にあります。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>2 つのオブジェクトが等しい場合は false 以外の場合は true。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThan(ShardRange,ShardRange)'
+    id: 'opGreaterThan(ShardRange,ShardRange)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'opGreaterThan(ShardRange left, ShardRange right)'
+    nameWithType: 'ShardRange.opGreaterThan(ShardRange left, ShardRange right)'
+    fullName: 'static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opGreaterThan(ShardRange left, ShardRange right)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThan*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 193
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (より大きい) を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean opGreaterThan(ShardRange left, ShardRange right)'
+      parameters:
+        - id: left
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+        - id: right
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>True の場合 lhs&gt; rhs </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThanOrEqual(ShardRange,ShardRange)'
+    id: 'opGreaterThanOrEqual(ShardRange,ShardRange)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'opGreaterThanOrEqual(ShardRange left, ShardRange right)'
+    nameWithType: 'ShardRange.opGreaterThanOrEqual(ShardRange left, ShardRange right)'
+    fullName: 'static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opGreaterThanOrEqual(ShardRange left, ShardRange right)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThanOrEqual*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 221
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (大きいまたは等しい) を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean opGreaterThanOrEqual(ShardRange left, ShardRange right)'
+      parameters:
+        - id: left
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+        - id: right
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>True の場合 lhs&gt;rhs を = </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opInequality(ShardRange,ShardRange)'
+    id: 'opInequality(ShardRange,ShardRange)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'opInequality(ShardRange left, ShardRange right)'
+    nameWithType: 'ShardRange.opInequality(ShardRange left, ShardRange right)'
+    fullName: 'static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opInequality(ShardRange left, ShardRange right)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.opInequality*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 249
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>非等値演算子。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean opInequality(ShardRange left, ShardRange right)'
+      parameters:
+        - id: left
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>左側にあります。 </p>
+        - id: right
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>右側にあります。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>等しい、false の場合は、2 つのオブジェクトがない場合は true。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThan(ShardRange,ShardRange)'
+    id: 'opLessThan(ShardRange,ShardRange)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'opLessThan(ShardRange left, ShardRange right)'
+    nameWithType: 'ShardRange.opLessThan(ShardRange left, ShardRange right)'
+    fullName: 'static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opLessThan(ShardRange left, ShardRange right)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThan*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 174
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序を使用して (より小さい)。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean opLessThan(ShardRange left, ShardRange right)'
+      parameters:
+        - id: left
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+        - id: right
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>True の場合 lhs &lt;rhs </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThanOrEqual(ShardRange,ShardRange)'
+    id: 'opLessThanOrEqual(ShardRange,ShardRange)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'opLessThanOrEqual(ShardRange left, ShardRange right)'
+    nameWithType: 'ShardRange.opLessThanOrEqual(ShardRange left, ShardRange right)'
+    fullName: 'static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opLessThanOrEqual(ShardRange left, ShardRange right)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThanOrEqual*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 207
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (より小さいか等しい) を使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean opLessThanOrEqual(ShardRange left, ShardRange right)'
+      parameters:
+        - id: left
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+        - id: right
+          type: com.microsoft.azure.elasticdb.shard.base._shard_range
+          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>True の場合 lhs &lt;rhs を = </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange()
+    id: ShardRange()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: ShardRange()
+    nameWithType: ShardRange.ShardRange()
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange.ShardRange()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 88
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public ShardRange()
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange(ShardKey,ShardKey)'
+    id: 'ShardRange(ShardKey,ShardKey)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: 'ShardRange(ShardKey low, ShardKey high)'
+    nameWithType: 'ShardRange.ShardRange(ShardKey low, ShardKey high)'
+    fullName: 'com.microsoft.azure.elasticdb.shard.base.ShardRange.ShardRange(ShardKey low, ShardKey high)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 100
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>(包括) の低い境界 (排他) 高の高い境界に、シャードの範囲を構築します。</p>
+      <p></p>
+    syntax:
+      content: 'public ShardRange(ShardKey low, ShardKey high)'
+      parameters:
+        - id: low
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key
+          description: <p>低境界 (包括) </p>
+        - id: high
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key
+          description: <p>高境界 (排他) </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.toString()
+    id: toString()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_range
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    langs:
+      - java
+    name: toString()
+    nameWithType: ShardRange.toString()
+    fullName: String com.microsoft.azure.elasticdb.shard.base.ShardRange.toString()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard_range.toString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
+      startLine: 315
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>オブジェクトを文字列形式に変換します。</p>
+      <p></p>
+    syntax:
+      content: public String toString()
+      return:
+        type: '26831127'
+        description: <p>オブジェクトの文字列表現。 </p>
+references:
+  - uid: 93de0ef9com.microsoft.azure.elasticdb.shard.base._shard_range
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+        name: ShardRange
+        fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+        href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange*
+    name: ShardRange
+    nameWithType: ShardRange.ShardRange
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange.ShardRange
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getLow*
+    name: getLow
+    nameWithType: ShardRange.getLow
+    fullName: ShardKey com.microsoft.azure.elasticdb.shard.base.ShardRange.getLow
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getHigh*
+    name: getHigh
+    nameWithType: ShardRange.getHigh
+    fullName: ShardKey com.microsoft.azure.elasticdb.shard.base.ShardRange.getHigh
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getKeyType*
+    name: getKeyType
+    nameWithType: ShardRange.getKeyType
+    fullName: ShardKeyType com.microsoft.azure.elasticdb.shard.base.ShardRange.getKeyType
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.toString*
+    name: toString
+    nameWithType: ShardRange.toString
+    fullName: String com.microsoft.azure.elasticdb.shard.base.ShardRange.toString
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.hashCode*
+    name: hashCode
+    nameWithType: ShardRange.hashCode
+    fullName: int com.microsoft.azure.elasticdb.shard.base.ShardRange.hashCode
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.equals*
+    name: equals
+    nameWithType: ShardRange.equals
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.equals
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.contains*
+    name: contains
+    nameWithType: ShardRange.contains
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.contains
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.compareTo*
+    name: compareTo
+    nameWithType: ShardRange.compareTo
+    fullName: int com.microsoft.azure.elasticdb.shard.base.ShardRange.compareTo
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.intersects*
+    name: intersects
+    nameWithType: ShardRange.intersects
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.intersects
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.intersect*
+    name: intersect
+    nameWithType: ShardRange.intersect
+    fullName: ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.intersect
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt32*
+    name: getFullRangeInt32
+    nameWithType: ShardRange.getFullRangeInt32
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeInt32
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeInt64*
+    name: getFullRangeInt64
+    nameWithType: ShardRange.getFullRangeInt64
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeInt64
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeGuid*
+    name: getFullRangeGuid
+    nameWithType: ShardRange.getFullRangeGuid
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeGuid
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeBinary*
+    name: getFullRangeBinary
+    nameWithType: ShardRange.getFullRangeBinary
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeBinary
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTime*
+    name: getFullRangeDateTime
+    nameWithType: ShardRange.getFullRangeDateTime
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeDateTime
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeTimeSpan*
+    name: getFullRangeTimeSpan
+    nameWithType: ShardRange.getFullRangeTimeSpan
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeTimeSpan
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeDateTimeOffset*
+    name: getFullRangeDateTimeOffset
+    nameWithType: ShardRange.getFullRangeDateTimeOffset
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRangeDateTimeOffset
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThan*
+    name: opLessThan
+    nameWithType: ShardRange.opLessThan
+    fullName: static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opLessThan
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThan*
+    name: opGreaterThan
+    nameWithType: ShardRange.opGreaterThan
+    fullName: static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opGreaterThan
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThanOrEqual*
+    name: opLessThanOrEqual
+    nameWithType: ShardRange.opLessThanOrEqual
+    fullName: static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opLessThanOrEqual
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThanOrEqual*
+    name: opGreaterThanOrEqual
+    nameWithType: ShardRange.opGreaterThanOrEqual
+    fullName: static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opGreaterThanOrEqual
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.opEquality*
+    name: opEquality
+    nameWithType: ShardRange.opEquality
+    fullName: static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opEquality
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.opInequality*
+    name: opInequality
+    nameWithType: ShardRange.opInequality
+    fullName: static boolean com.microsoft.azure.elasticdb.shard.base.ShardRange.opInequality
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRange*
+    name: getFullRange
+    nameWithType: ShardRange.getFullRange
+    fullName: static ShardRange com.microsoft.azure.elasticdb.shard.base.ShardRange.getFullRange
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    name: ShardRange
+    nameWithType: ShardRange
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+    type: Class
+    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinInt()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinInt()
+    nameWithType: ShardKey.getMinInt()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinInt()
+    type: Method
+    summary: '<p>#endregion </p><p>#地域負の無限大静的な get アクセス操作子を表します。 </p>'
+    syntax:
+      content: public static ShardKey getMinInt()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxInt()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxInt()
+    nameWithType: ShardKey.getMaxInt()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxInt()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxInt()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinLong()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinLong()
+    nameWithType: ShardKey.getMinLong()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinLong()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMinLong()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxLong()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxLong()
+    nameWithType: ShardKey.getMaxLong()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxLong()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxLong()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinGuid()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinGuid()
+    nameWithType: ShardKey.getMinGuid()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinGuid()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMinGuid()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxGuid()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxGuid()
+    nameWithType: ShardKey.getMaxGuid()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxGuid()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxGuid()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinBinary()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinBinary()
+    nameWithType: ShardKey.getMinBinary()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinBinary()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMinBinary()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxBinary()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxBinary()
+    nameWithType: ShardKey.getMaxBinary()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxBinary()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxBinary()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinDateTime()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinDateTime()
+    nameWithType: ShardKey.getMinDateTime()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinDateTime()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMinDateTime()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxDateTime()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxDateTime()
+    nameWithType: ShardKey.getMaxDateTime()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxDateTime()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxDateTime()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinTimeSpan()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinTimeSpan()
+    nameWithType: ShardKey.getMinTimeSpan()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinTimeSpan()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMinTimeSpan()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxTimeSpan()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxTimeSpan()
+    nameWithType: ShardKey.getMaxTimeSpan()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxTimeSpan()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxTimeSpan()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinDateTimeOffset()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMinDateTimeOffset()
+    nameWithType: ShardKey.getMinDateTimeOffset()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinDateTimeOffset()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMinDateTimeOffset()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMaxDateTimeOffset()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard_key
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: getMaxDateTimeOffset()
+    nameWithType: ShardKey.getMaxDateTimeOffset()
+    fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxDateTimeOffset()
+    type: Method
+    summary: <p>負の無限大を表します。 </p>
+    syntax:
+      content: public static ShardKey getMaxDateTimeOffset()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_key
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key.yml
+    name: ShardKey
+    nameWithType: ShardKey
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardKey
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>キーの値。 値と型をラップし、正規化/非正規化のシリアル化を許可します。 </p>"
+    syntax:
+      content: public class ShardKey
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key_type.yml
+    name: ShardKeyType
+    nameWithType: ShardKeyType
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardKeyType
+    type: Enum
+    summary: '<p>シャード キーの型。 現在、のみ Int32、Int64、Guid、および byte[] はシャード キーとしてサポートされるデータ型です。 </p>'
+    syntax:
+      content: public enum ShardKeyType
+  - uid: com.microsoft.azure.elasticdb.shard.base._range
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._range.yml
+    name: Range
+    nameWithType: Range
+    fullName: com.microsoft.azure.elasticdb.shard.base.Range
+    type: Class
+    summary: <p>左包括は右側の排他的な値の範囲を表します。 </p>
+    syntax:
+      content: public class Range

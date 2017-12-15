@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd
+    id: _with_data_snapshot_from_vhd
+    parent: com.microsoft.azure.management.compute
+    children:
+      - com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd.withDataFromVhd(String)
+    href: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd.yml
+    langs:
+      - java
+    name: Snapshot.DefinitionStages.WithDataSnapshotFromVhd
+    nameWithType: Snapshot.DefinitionStages.WithDataSnapshotFromVhd
+    fullName: com.microsoft.azure.management.compute.Snapshot.DefinitionStages.WithDataSnapshotFromVhd
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-compute/src/main/java/com/microsoft/azure/management/compute/Snapshot.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-compute/src/main/java/com/microsoft/azure/management/compute/Snapshot.java
+      startLine: 244
+    package: com.microsoft.azure.management.compute
+    summary: <p>ソース データを選択できるように、管理対象ディスク定義のステージでは、VHD をディスクします。 </p>
+    syntax:
+      content: public interface WithDataSnapshotFromVhd
+  - uid: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd.withDataFromVhd(String)
+    id: withDataFromVhd(String)
+    parent: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd
+    href: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd.yml
+    langs:
+      - java
+    name: withDataFromVhd(String vhdUrl)
+    nameWithType: Snapshot.DefinitionStages.WithDataSnapshotFromVhd.withDataFromVhd(String vhdUrl)
+    fullName: WithCreate com.microsoft.azure.management.compute.Snapshot.DefinitionStages.WithDataSnapshotFromVhd.withDataFromVhd(String vhdUrl)
+    overload: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd.withDataFromVhd*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-compute/src/main/java/com/microsoft/azure/management/compute/Snapshot.java
+      startLine: 251
+    package: com.microsoft.azure.management.compute
+    summary: |-
+      <p>ソース データ VHD を指定します。</p>
+      <p></p>
+    syntax:
+      content: public WithCreate withDataFromVhd(String vhdUrl)
+      parameters:
+        - id: vhdUrl
+          type: '26831127'
+          description: <p>ソース VHD の URL </p>
+      return:
+        type: com.microsoft.azure.management.compute._snapshot._definition_stages._with_create
+        description: <p>定義の次のステージ </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_from_vhd.withDataFromVhd*
+    name: withDataFromVhd
+    nameWithType: Snapshot.DefinitionStages.WithDataSnapshotFromVhd.withDataFromVhd
+    fullName: WithCreate com.microsoft.azure.management.compute.Snapshot.DefinitionStages.WithDataSnapshotFromVhd.withDataFromVhd
+    package: com.microsoft.azure.management.compute
+  - uid: com.microsoft.azure.management.compute._snapshot._definition
+    parent: com.microsoft.azure.management.compute
+    href: com.microsoft.azure.management.compute._snapshot._definition.yml
+    name: Snapshot.Definition
+    nameWithType: Snapshot.Definition
+    fullName: com.microsoft.azure.management.compute.Snapshot.Definition
+    type: Interface
+    summary: <p>管理対象のスナップショットの定義の全体です。 </p>
+    syntax:
+      content: 'public interface Definition extends Snapshot.DefinitionStages.Blank,Snapshot.DefinitionStages.WithGroup,Snapshot.DefinitionStages.WithSnapshotSource,Snapshot.DefinitionStages.WithWindowsSnapshotSource,Snapshot.DefinitionStages.WithLinuxSnapshotSource,Snapshot.DefinitionStages.WithDataSnapshotSource,Snapshot.DefinitionStages.WithDataSnapshotFromVhd,Snapshot.DefinitionStages.WithDataSnapshotFromDisk,Snapshot.DefinitionStages.WithDataSnapshotFromSnapshot,Snapshot.DefinitionStages.WithCreate'
+  - uid: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_source
+    parent: com.microsoft.azure.management.compute
+    href: com.microsoft.azure.management.compute._snapshot._definition_stages._with_data_snapshot_source.yml
+    name: Snapshot.DefinitionStages.WithDataSnapshotSource
+    nameWithType: Snapshot.DefinitionStages.WithDataSnapshotSource
+    fullName: com.microsoft.azure.management.compute.Snapshot.DefinitionStages.WithDataSnapshotSource
+    type: Interface
+    summary: <p>データ ソースの選択を許可する管理対象のスナップショットの定義の段階です。 </p>
+    syntax:
+      content: public interface WithDataSnapshotSource
+  - uid: com.microsoft.azure.management.compute._snapshot._definition_stages._with_create
+    parent: com.microsoft.azure.management.compute
+    href: com.microsoft.azure.management.compute._snapshot._definition_stages._with_create.yml
+    name: Snapshot.DefinitionStages.WithCreate
+    nameWithType: Snapshot.DefinitionStages.WithCreate
+    fullName: com.microsoft.azure.management.compute.Snapshot.DefinitionStages.WithCreate
+    type: Interface
+    summary: <p>含むすべての最低限必要な入力を作成するリソースの定義のステージを指定する省略可能なその他の設定も可能ですが。 </p>
+    syntax:
+      content: 'public interface WithCreate extends Creatable<Snapshot>,Resource.DefinitionWithTags<Snapshot.DefinitionStages.WithCreate>,Snapshot.DefinitionStages.WithSize,Snapshot.DefinitionStages.WithSku'

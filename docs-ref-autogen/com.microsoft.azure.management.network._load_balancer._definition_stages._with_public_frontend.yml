@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend
+    id: _with_public_frontend
+    parent: com.microsoft.azure.management.network
+    children:
+      - com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend.definePublicFrontend(String)
+    href: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend.yml
+    langs:
+      - java
+    name: LoadBalancer.DefinitionStages.WithPublicFrontend
+    nameWithType: LoadBalancer.DefinitionStages.WithPublicFrontend
+    fullName: com.microsoft.azure.management.network.LoadBalancer.DefinitionStages.WithPublicFrontend
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancer.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancer.java
+      startLine: 164
+    package: com.microsoft.azure.management.network
+    summary: <p>インターネットに接続するロード バランサー定義できるようにするという 1 つまたは複数のパブリック フロント エンドを定義する段階です。 </p>
+    syntax:
+      content: public interface WithPublicFrontend
+  - uid: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend.definePublicFrontend(String)
+    id: definePublicFrontend(String)
+    parent: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend
+    href: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend.yml
+    langs:
+      - java
+    name: definePublicFrontend(String name)
+    nameWithType: LoadBalancer.DefinitionStages.WithPublicFrontend.definePublicFrontend(String name)
+    fullName: LoadBalancerPublicFrontend.DefinitionStages.Blank<WithCreate> com.microsoft.azure.management.network.LoadBalancer.DefinitionStages.WithPublicFrontend.definePublicFrontend(String name)
+    overload: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend.definePublicFrontend*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancer.java
+      startLine: 173
+    package: com.microsoft.azure.management.network
+    summary: |-
+      <p>新しいパブリック (インターネット接続) ロード バランサー フロント エンドの明示的な定義を開始します。 </p>
+      <p>(ことのフロント エンドを作成することも暗黙的にバランシング ルール、着信 NAT ルールまたは着信 NAT プール定義では、これらの定義内で既存のパブリック IP アドレスを参照することで負荷の一部としてに注意してください)。 </p>
+    syntax:
+      content: public LoadBalancerPublicFrontend.DefinitionStages.Blank<WithCreate> definePublicFrontend(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>フロント エンドの名前 </p>
+      return:
+        type: 233b2dcdcom.microsoft.azure.management.network._load_balancer._definition_stages._with_createa08ddfce
+        description: <p>新しいフロント エンド定義の最初の段階 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 233b2dcdcom.microsoft.azure.management.network._load_balancer._definition_stages._with_createa08ddfce
+    spec.java:
+      - name: LoadBalancerPublicFrontend.DefinitionStages.Blank<
+        fullName: LoadBalancerPublicFrontend.DefinitionStages.Blank<
+      - uid: com.microsoft.azure.management.network._load_balancer._definition_stages._with_create
+        name: LoadBalancer.DefinitionStages.WithCreate
+        fullName: com.microsoft.azure.management.network.LoadBalancer.DefinitionStages.WithCreate
+        href: com.microsoft.azure.management.network._load_balancer._definition_stages._with_create.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.management.network._load_balancer._definition_stages._with_public_frontend.definePublicFrontend*
+    name: definePublicFrontend
+    nameWithType: LoadBalancer.DefinitionStages.WithPublicFrontend.definePublicFrontend
+    fullName: LoadBalancerPublicFrontend.DefinitionStages.Blank<WithCreate> com.microsoft.azure.management.network.LoadBalancer.DefinitionStages.WithPublicFrontend.definePublicFrontend
+    package: com.microsoft.azure.management.network
+  - uid: com.microsoft.azure.management.network._load_balancer._definition_stages._with_frontend
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._load_balancer._definition_stages._with_frontend.yml
+    name: LoadBalancer.DefinitionStages.WithFrontend
+    nameWithType: LoadBalancer.DefinitionStages.WithFrontend
+    fullName: com.microsoft.azure.management.network.LoadBalancer.DefinitionStages.WithFrontend
+    type: Interface
+    summary: '<p>ロード バランサーのフロント エンドの性質を説明するロード バランサーの定義の段階: 内部またはインターネットに接続します。 </p>'
+    syntax:
+      content: 'public interface WithFrontend extends LoadBalancer.DefinitionStages.WithPublicFrontend,LoadBalancer.DefinitionStages.WithPrivateFrontend'
+  - uid: com.microsoft.azure.management.network._load_balancer._definition_stages._with_create
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._load_balancer._definition_stages._with_create.yml
+    name: LoadBalancer.DefinitionStages.WithCreate
+    nameWithType: LoadBalancer.DefinitionStages.WithCreate
+    fullName: com.microsoft.azure.management.network.LoadBalancer.DefinitionStages.WithCreate
+    type: Interface
+    summary: <p>ロード バランサーの定義を作成するリソースのすべての必須入力を格納しているが、指定する省略可能なその他の設定も行うことがの段階です。 </p>
+    syntax:
+      content: 'public interface WithCreate extends Creatable<LoadBalancer>,Resource.DefinitionWithTags<WithCreate>,LoadBalancer.DefinitionStages.WithBackend,LoadBalancer.DefinitionStages.WithFrontend,LoadBalancer.DefinitionStages.WithProbe,LoadBalancer.DefinitionStages.WithSku'

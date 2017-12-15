@@ -1,0 +1,557 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.eventhubs._event_data
+    id: _event_data
+    parent: com.microsoft.azure.eventhubs
+    children:
+      - 'com.microsoft.azure.eventhubs._event_data.EventData(byte [])'
+      - 'com.microsoft.azure.eventhubs._event_data.EventData(byte [],final int,final int)'
+      - com.microsoft.azure.eventhubs._event_data.EventData(ByteBuffer)
+      - com.microsoft.azure.eventhubs._event_data.getBody()
+      - com.microsoft.azure.eventhubs._event_data.getBodyLength()
+      - com.microsoft.azure.eventhubs._event_data.getBodyOffset()
+      - com.microsoft.azure.eventhubs._event_data.getBytes()
+      - com.microsoft.azure.eventhubs._event_data.getObject()
+      - com.microsoft.azure.eventhubs._event_data.getProperties()
+      - com.microsoft.azure.eventhubs._event_data.getSystemProperties()
+      - 'com.microsoft.azure.eventhubs._event_data.setProperties(final Map<String, Object>)'
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: EventData
+    nameWithType: EventData
+    fullName: com.microsoft.azure.eventhubs.EventData
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-event-hubs-java'
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 47
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。 各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。 </p>
+      <p>ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink><pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> - AMQPMessage.ApplicationProperties section
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref> - if AMQPMessage.Body has Data section
+      iii. <xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">getObject()</xref> - if AMQPMessage.Body has AMQPValue or AMQPSequence sections
+      </pre> Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。 高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+    syntax: &ref_1
+      content: public class EventData
+    inheritance:
+      - java.lang.Object
+      - Serializable
+  - uid: 'com.microsoft.azure.eventhubs._event_data.EventData(byte [])'
+    id: 'EventData(byte [])'
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: 'EventData(byte[] data)'
+    nameWithType: 'EventData.EventData(byte[] data)'
+    fullName: 'com.microsoft.azure.eventhubs.EventData.EventData(byte[] data)'
+    overload: com.microsoft.azure.eventhubs._event_data.EventData*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 141
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>構築<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs に送信します。 一般的なパターンを作成、送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>は。 <pre>
+      i.  Serialize the sending ApplicationEvent to be sent to EventHubs into bytes.
+      ii. If complex serialization logic is involved (for example: multiple types of data) - add a Hint using the <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> for the Consumer.
+      </pre></p>
+      <p>サンプル コードに示します。 <pre><xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> eventData = new EventData(telemetryEventBytes);
+      eventData.getProperties().put("eventType", "com.microsoft.azure.monitoring.EtlEvent");
+      partitionSender.Send(eventData);
+      </pre></p>
+      <p></p>
+    syntax:
+      content: 'public EventData(byte[] data)'
+      parameters:
+        - id: data
+          type: ccd9418d
+          description: <p>EventHubs に送信されるバイトのデータの実際のペイロード。 </p>
+    see:
+      - type: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)
+        description: 'EventHubClient::createFromConnectionString(String)'
+  - uid: 'com.microsoft.azure.eventhubs._event_data.EventData(byte [],final int,final int)'
+    id: 'EventData(byte [],final int,final int)'
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: 'EventData(byte[] data, final int offset, final int length)'
+    nameWithType: 'EventData.EventData(byte[] data, final int offset, final int length)'
+    fullName: 'com.microsoft.azure.eventhubs.EventData.EventData(byte[] data, final int offset, final int length)'
+    overload: com.microsoft.azure.eventhubs._event_data.EventData*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 170
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>構築<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs に送信します。 一般的なパターンを作成、送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>は。 <pre>
+      i.  Serialize the sending ApplicationEvent to be sent to EventHubs into bytes.
+      ii. If complex serialization logic is involved (for example: multiple types of data) - add a Hint using the <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> for the Consumer.
+
+       </pre></p>
+
+      <p>図: <pre><code>EventData eventData = new EventData(telemetryEventBytes, offset, length);
+
+          eventData.getProperties().put("eventType", "com.microsoft.azure.monitoring.EtlEvent");
+
+          partitionSender.Send(eventData);
+
+          </code></pre></p>
+
+      <p></p>
+    syntax:
+      content: 'public EventData(byte[] data, final int offset, final int length)'
+      parameters:
+        - id: data
+          type: ccd9418d
+          description: '<p>EventHubs に送信されるイベントのペイロードが存在 byte[] </p>'
+        - id: offset
+          type: cd225469
+          description: '<p>Byte[] を読み取ったり; 内のオフセットします。包括的なインデックス </p>'
+        - id: length
+          type: cd225469
+          description: '<p>読み取られる byte[] の長さオフセットから開始 </p>'
+    see:
+      - type: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)
+        description: 'EventHubClient::createFromConnectionString(String)'
+  - uid: com.microsoft.azure.eventhubs._event_data.EventData(ByteBuffer)
+    id: EventData(ByteBuffer)
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: EventData(ByteBuffer buffer)
+    nameWithType: EventData.EventData(ByteBuffer buffer)
+    fullName: com.microsoft.azure.eventhubs.EventData.EventData(ByteBuffer buffer)
+    overload: com.microsoft.azure.eventhubs._event_data.EventData*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 197
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>構築<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs に送信します。 一般的なパターンを作成、送信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>は。 <pre>
+      i.  Serialize the sending ApplicationEvent to be sent to EventHubs into bytes.
+      ii. If complex serialization logic is involved (for example: multiple types of data) - add a Hint using the <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> for the Consumer.
+
+       </pre></p>
+
+      <p>図: <pre><code>EventData eventData = new EventData(telemetryEventByteBuffer);
+
+          eventData.getProperties().put("eventType", "com.microsoft.azure.monitoring.EtlEvent");
+
+             partitionSender.Send(eventData);
+
+          </code></pre></p>
+
+      <p></p>
+    syntax:
+      content: public EventData(ByteBuffer buffer)
+      parameters:
+        - id: buffer
+          type: 85310d28
+          description: <p>ByteBuffer EventHubs に送信されるイベントのペイロードを参照します。 </p>
+    see:
+      - type: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)
+        description: 'EventHubClient::createFromConnectionString(String)'
+  - uid: com.microsoft.azure.eventhubs._event_data.getBody()
+    id: getBody()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getBody()
+    nameWithType: EventData.getBody()
+    fullName: 'byte [] com.microsoft.azure.eventhubs.EventData.getBody()'
+    overload: com.microsoft.azure.eventhubs._event_data.getBody*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 230
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>によってラップされた実際のペイロード/データの取得<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 これは、基になる配列およびと組み合わせて使用する必要があります<xref uid="com.microsoft.azure.eventhubs._event_data.getBodyOffset()" data-throw-if-not-resolved="false">getBodyOffset()</xref>と<xref uid="com.microsoft.azure.eventhubs._event_data.getBodyLength()" data-throw-if-not-resolved="false">getBodyLength()</xref>です。</p>
+      <p>
+      AMQP メッセージの本文は、データのセクションを持っていない場合は null <xrefsect id="deprecated_1_deprecated000015"><xreftitle>非推奨</xreftitle><xrefdescription><p>使用して<xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref></p></xrefdescription></xrefsect></p>
+    syntax: &ref_6
+      content: 'public byte [] getBody()'
+      return:
+        type: ccd9418d
+        description: '<p>実際のデータの byte[] </p>'
+  - uid: com.microsoft.azure.eventhubs._event_data.getBodyLength()
+    id: getBodyLength()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getBodyLength()
+    nameWithType: EventData.getBodyLength()
+    fullName: int com.microsoft.azure.eventhubs.EventData.getBodyLength()
+    overload: com.microsoft.azure.eventhubs._event_data.getBodyLength*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 256
+    package: com.microsoft.azure.eventhubs
+    summary: "<p>によって返されるバイト配列内の実際のペイロード/データの長さを取得<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBody()\" data-throw-if-not-resolved=\"false\">getBody()</xref>です。</p>\n<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000017\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref></p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax: &ref_5
+      content: public int getBodyLength()
+      return:
+        type: f75371fa
+        description: '<p>実際のデータの byte[] を返します </p>'
+    see:
+      - type: com.microsoft.azure.eventhubs._event_data.getBody()
+        description: getBody()
+      - type: com.microsoft.azure.eventhubs._event_data.getBodyOffset()
+        description: getBodyOffset()
+  - uid: com.microsoft.azure.eventhubs._event_data.getBodyOffset()
+    id: getBodyOffset()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getBodyOffset()
+    nameWithType: EventData.getBodyOffset()
+    fullName: int com.microsoft.azure.eventhubs.EventData.getBodyOffset()
+    overload: com.microsoft.azure.eventhubs._event_data.getBodyOffset*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 243
+    package: com.microsoft.azure.eventhubs
+    summary: "<p>によって返されるバイト配列内の現在のペイロード/データのオフセットを取得する<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBody()\" data-throw-if-not-resolved=\"false\">getBody()</xref>です。</p>\n<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000016\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref></p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax: &ref_4
+      content: public int getBodyOffset()
+      return:
+        type: f75371fa
+        description: '<p>実際のデータの byte[] を返します </p>'
+    see:
+      - type: com.microsoft.azure.eventhubs._event_data.getBodyLength()
+        description: getBodyLength()
+      - type: com.microsoft.azure.eventhubs._event_data.getBody()
+        description: getBody()
+  - uid: com.microsoft.azure.eventhubs._event_data.getBytes()
+    id: getBytes()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getBytes()
+    nameWithType: EventData.getBytes()
+    fullName: 'byte [] com.microsoft.azure.eventhubs.EventData.getBytes()'
+    overload: com.microsoft.azure.eventhubs._event_data.getBytes*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 267
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>によってラップされた実際のペイロード/データの取得<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</p>
+      <p>
+      メッセージの本文がある byte[] を表さない本体を持つ、相互操作可能な他の AMQP メッセージの場合は null。 その場合は使用<xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">概念</xref>です。 </p>
+    syntax: &ref_3
+      content: 'public byte [] getBytes()'
+      return:
+        type: ccd9418d
+        description: '<p>実際のデータの byte[] </p>'
+  - uid: com.microsoft.azure.eventhubs._event_data.getObject()
+    id: getObject()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getObject()
+    nameWithType: EventData.getObject()
+    fullName: Object com.microsoft.azure.eventhubs.EventData.getObject()
+    overload: com.microsoft.azure.eventhubs._event_data.getObject*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 218
+    package: com.microsoft.azure.eventhubs
+    summary: "<p>このメソッドを使用して、場合にのみ、送信者が、サード パーティ製 AMQP のライブラリを使用してメッセージを送信する可能性があります。 </p>\n<p>EventHub のすべての送信者がリリースされたクライアント ライブラリを使用して、使用して Microsoft Azure EventHubs で管理されている場合<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref>メソッドです。 </p>\n<p>受け取った AMQP メッセージの本体セクションの値を取得<xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>です。 </p>\n<p>AMQP メッセージ本文には、データのセクションが必ず常に場合を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref>メソッドです。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">バイナリ</xref>場合は、本文はデータ セクション </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>本体が AmqpSequence 場合 </p>\n\n<p>パッケージ org.apache.qpid.proton.amqp には、返される各種の AMQP 型が含まれています。 </p>"
+    syntax: &ref_7
+      content: public Object getObject()
+      return:
+        type: '79317049'
+        description: <p>データまたは AmqpValue または AmqpSequence のいずれかを表すオブジェクトを返します。 </p>
+  - uid: com.microsoft.azure.eventhubs._event_data.getProperties()
+    id: getProperties()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getProperties()
+    nameWithType: EventData.getProperties()
+    fullName: 'Map<String, Object> com.microsoft.azure.eventhubs.EventData.getProperties()'
+    overload: com.microsoft.azure.eventhubs._event_data.getProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 280
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>アプリケーションのプロパティ バッグ</p>
+      <p></p>
+    syntax: &ref_2
+      content: 'public Map<String, Object> getProperties()'
+      return:
+        type: e7b06046
+        description: <p>アプリケーションのプロパティを返します。 </p>
+  - uid: com.microsoft.azure.eventhubs._event_data.getSystemProperties()
+    id: getSystemProperties()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: getSystemProperties()
+    nameWithType: EventData.getSystemProperties()
+    fullName: SystemProperties com.microsoft.azure.eventhubs.EventData.getSystemProperties()
+    overload: com.microsoft.azure.eventhubs._event_data.getSystemProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 314
+    package: com.microsoft.azure.eventhubs
+    summary: |-
+      <p>EventHubService によって設定される SystemProperties です。 </p>
+      <p>これらがサービスによって生成される、だけでは、受信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>用途:</p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: public SystemProperties getSystemProperties()
+      return:
+        type: a4d677af
+        description: <p>カプセル化したものに EventHubs サービスにより追加されたすべての SystemProperties <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 <code>null</code>場合、 <xref uid="" data-throw-if-not-resolved="false">EventData()</xref>が受信されないと、パブリック コンス トラクターによって作成します。 </p>
+  - uid: 'com.microsoft.azure.eventhubs._event_data.setProperties(final Map<String, Object>)'
+    id: 'setProperties(final Map<String, Object>)'
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    langs:
+      - java
+    name: 'setProperties(final Map<String, Object> applicationProperties)'
+    nameWithType: 'EventData.setProperties(final Map<String, Object> applicationProperties)'
+    fullName: 'void com.microsoft.azure.eventhubs.EventData.setProperties(final Map<String, Object> applicationProperties)'
+    overload: com.microsoft.azure.eventhubs._event_data.setProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/EventData.java
+      startLine: 295
+    package: com.microsoft.azure.eventhubs
+    summary: "<p>アプリケーション プロパティを設定します。</p>\n<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000018\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getProperties()\" data-throw-if-not-resolved=\"false\">getProperties()</xref>プロパティ バッグを追加するとします。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax:
+      content: 'public void setProperties(final Map<String, Object> applicationProperties)'
+      parameters:
+        - id: applicationProperties
+          type: 0ef16036
+          description: <p>アプリケーションのプロパティ バッグ </p>
+references:
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: com.microsoft.azure.eventhubs._event_data.EventData*
+    name: EventData
+    nameWithType: EventData.EventData
+    fullName: com.microsoft.azure.eventhubs.EventData.EventData
+    package: com.microsoft.azure.eventhubs
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 85310d28
+    spec.java:
+      - name: ByteBuffer
+        fullName: ByteBuffer
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: com.microsoft.azure.eventhubs._event_data.getObject*
+    name: getObject
+    nameWithType: EventData.getObject
+    fullName: Object com.microsoft.azure.eventhubs.EventData.getObject
+    package: com.microsoft.azure.eventhubs
+  - uid: com.microsoft.azure.eventhubs._event_data.getBody*
+    name: getBody
+    nameWithType: EventData.getBody
+    fullName: 'byte [] com.microsoft.azure.eventhubs.EventData.getBody'
+    package: com.microsoft.azure.eventhubs
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.eventhubs._event_data.getBodyOffset*
+    name: getBodyOffset
+    nameWithType: EventData.getBodyOffset
+    fullName: int com.microsoft.azure.eventhubs.EventData.getBodyOffset
+    package: com.microsoft.azure.eventhubs
+  - uid: com.microsoft.azure.eventhubs._event_data.getBodyLength*
+    name: getBodyLength
+    nameWithType: EventData.getBodyLength
+    fullName: int com.microsoft.azure.eventhubs.EventData.getBodyLength
+    package: com.microsoft.azure.eventhubs
+  - uid: com.microsoft.azure.eventhubs._event_data.getBytes*
+    name: getBytes
+    nameWithType: EventData.getBytes
+    fullName: 'byte [] com.microsoft.azure.eventhubs.EventData.getBytes'
+    package: com.microsoft.azure.eventhubs
+  - uid: e7b06046
+    spec.java:
+      - name: 'Map<String, Object>'
+        fullName: 'Map<String, Object>'
+  - uid: com.microsoft.azure.eventhubs._event_data.getProperties*
+    name: getProperties
+    nameWithType: EventData.getProperties
+    fullName: 'Map<String, Object> com.microsoft.azure.eventhubs.EventData.getProperties'
+    package: com.microsoft.azure.eventhubs
+  - uid: 0ef16036
+    spec.java:
+      - name: 'final Map<String, Object>'
+        fullName: 'final Map<String, Object>'
+  - uid: com.microsoft.azure.eventhubs._event_data.setProperties*
+    name: setProperties
+    nameWithType: EventData.setProperties
+    fullName: void com.microsoft.azure.eventhubs.EventData.setProperties
+    package: com.microsoft.azure.eventhubs
+  - uid: a4d677af
+    spec.java:
+      - name: SystemProperties
+        fullName: SystemProperties
+  - uid: com.microsoft.azure.eventhubs._event_data.getSystemProperties*
+    name: getSystemProperties
+    nameWithType: EventData.getSystemProperties
+    fullName: SystemProperties com.microsoft.azure.eventhubs.EventData.getSystemProperties
+    package: com.microsoft.azure.eventhubs
+  - uid: com.microsoft.azure.eventhubs._partition_receiver
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._partition_receiver.yml
+    name: PartitionReceiver
+    nameWithType: PartitionReceiver
+    fullName: com.microsoft.azure.eventhubs.PartitionReceiver
+    type: Class
+    summary: |-
+      <p>これは、EventHub パーティションからの受信の論理表現です。 </p>
+      <p>A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> ConsumerGroup + EventHub パーティションに関連付けられたの組み合わせ。 <itemizedlist><listitem><p>エポック基づいている場合は<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (つまり、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> ! = 0) 作成されると、サービスは、の ConsumerGroup + パーティションごとに、1 つだけのアクティブな受信者が保証されます EventHubs コンボです。 これは、作成する方法をお勧め、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。 </p></listitem><listitem><p>複数の受信者の ConsumerGroup + パーティションあたりコンボを作成するエポック以外の受信側です。 </p></listitem></itemizedlist></p>
+      <p></p>
+    syntax:
+      content: public class PartitionReceiver
+  - uid: com.microsoft.azure.eventhubs._event_data
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: EventData
+    nameWithType: EventData
+    fullName: com.microsoft.azure.eventhubs.EventData
+    type: Class
+    summary: |-
+      <p>送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。 各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      <p>受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。 </p>
+      <p>ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink><pre>
+      i.   <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> - AMQPMessage.ApplicationProperties section
+      ii.  <xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref> - if AMQPMessage.Body has Data section
+      iii. <xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">getObject()</xref> - if AMQPMessage.Body has AMQPValue or AMQPSequence sections
+      </pre> Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。 高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.eventhubs._event_data.getProperties()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: getProperties()
+    nameWithType: EventData.getProperties()
+    fullName: 'Map<String, Object> com.microsoft.azure.eventhubs.EventData.getProperties()'
+    type: Method
+    summary: |-
+      <p>アプリケーションのプロパティ バッグ</p>
+      <p></p>
+    syntax: *ref_2
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: createFromConnectionString(final String connectionString)
+    nameWithType: EventHubClient.createFromConnectionString(final String connectionString)
+    fullName: static CompletableFuture<EventHubClient> com.microsoft.azure.eventhubs.EventHubClient.createFromConnectionString(final String connectionString)
+    type: Method
+    summary: |-
+      <p>インスタンスを作成するファクトリ メソッド<xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref>指定された接続文字列を使用します。 通常のシナリオ (リダイレクトが有効でない場合) の 1 つ<xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref> Azure ServiceBus EventHubs サービスへの接続を 1 つのインスタンスにマップします。 </p>
+      <p><xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref>これから作成されたメソッドを作成、送信元インスタンス内部的には、によって使用される、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">send(EventData)</xref>メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public static CompletableFuture<EventHubClient> createFromConnectionString(final String connectionString)
+      parameters:
+        - id: connectionString
+          type: 3d93591e
+          description: <p>使用する接続文字列。 参照してください<xref uid="com.microsoft.azure.eventhubs._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref> connectionString を構築するためにします。 </p>
+      return:
+        type: 9cdf14d0com.microsoft.azure.eventhubs._event_hub_clienta08ddfce
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>送信者と受信者 EventHub への作成に使用できます。 </p>"
+  - uid: com.microsoft.azure.eventhubs._event_data.getBytes()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: getBytes()
+    nameWithType: EventData.getBytes()
+    fullName: 'byte [] com.microsoft.azure.eventhubs.EventData.getBytes()'
+    type: Method
+    summary: |-
+      <p>によってラップされた実際のペイロード/データの取得<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</p>
+      <p>
+      メッセージの本文がある byte[] を表さない本体を持つ、相互操作可能な他の AMQP メッセージの場合は null。 その場合は使用<xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">概念</xref>です。 </p>
+    syntax: *ref_3
+  - uid: com.microsoft.azure.eventhubs._event_data.getBodyOffset()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: getBodyOffset()
+    nameWithType: EventData.getBodyOffset()
+    fullName: int com.microsoft.azure.eventhubs.EventData.getBodyOffset()
+    type: Method
+    summary: "<p>によって返されるバイト配列内の現在のペイロード/データのオフセットを取得する<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBody()\" data-throw-if-not-resolved=\"false\">getBody()</xref>です。</p>\n<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000016\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref></p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax: *ref_4
+  - uid: com.microsoft.azure.eventhubs._event_data.getBodyLength()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: getBodyLength()
+    nameWithType: EventData.getBodyLength()
+    fullName: int com.microsoft.azure.eventhubs.EventData.getBodyLength()
+    type: Method
+    summary: "<p>によって返されるバイト配列内の実際のペイロード/データの長さを取得<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBody()\" data-throw-if-not-resolved=\"false\">getBody()</xref>です。</p>\n<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000017\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref></p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax: *ref_5
+  - uid: com.microsoft.azure.eventhubs._event_data.getBody()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: getBody()
+    nameWithType: EventData.getBody()
+    fullName: 'byte [] com.microsoft.azure.eventhubs.EventData.getBody()'
+    type: Method
+    summary: |-
+      <p>によってラップされた実際のペイロード/データの取得<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 これは、基になる配列およびと組み合わせて使用する必要があります<xref uid="com.microsoft.azure.eventhubs._event_data.getBodyOffset()" data-throw-if-not-resolved="false">getBodyOffset()</xref>と<xref uid="com.microsoft.azure.eventhubs._event_data.getBodyLength()" data-throw-if-not-resolved="false">getBodyLength()</xref>です。</p>
+      <p>
+      AMQP メッセージの本文は、データのセクションを持っていない場合は null <xrefsect id="deprecated_1_deprecated000015"><xreftitle>非推奨</xreftitle><xrefdescription><p>使用して<xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref></p></xrefdescription></xrefsect></p>
+    syntax: *ref_6
+  - uid: com.microsoft.azure.eventhubs._event_data.getObject()
+    parent: com.microsoft.azure.eventhubs._event_data
+    href: com.microsoft.azure.eventhubs._event_data.yml
+    name: getObject()
+    nameWithType: EventData.getObject()
+    fullName: Object com.microsoft.azure.eventhubs.EventData.getObject()
+    type: Method
+    summary: "<p>このメソッドを使用して、場合にのみ、送信者が、サード パーティ製 AMQP のライブラリを使用してメッセージを送信する可能性があります。 </p>\n<p>EventHub のすべての送信者がリリースされたクライアント ライブラリを使用して、使用して Microsoft Azure EventHubs で管理されている場合<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref>メソッドです。 </p>\n<p>受け取った AMQP メッセージの本体セクションの値を取得<xref uid=\"com.microsoft.azure.eventhubs._event_data\" data-throw-if-not-resolved=\"false\">EventData</xref>です。 </p>\n<p>AMQP メッセージ本文には、データのセクションが必ず常に場合を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_data.getBytes()\" data-throw-if-not-resolved=\"false\">getBytes()</xref>メソッドです。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">バイナリ</xref>場合は、本文はデータ セクション </p>\n\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>本体が AmqpSequence 場合 </p>\n\n<p>パッケージ org.apache.qpid.proton.amqp には、返される各種の AMQP 型が含まれています。 </p>"
+    syntax: *ref_7

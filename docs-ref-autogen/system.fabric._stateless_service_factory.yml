@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._stateless_service_factory
+    id: _stateless_service_factory
+    parent: system.fabric
+    children:
+      - 'system.fabric._stateless_service_factory.createInstance(String,URI,byte [],UUID,long)'
+    href: system.fabric._stateless_service_factory.yml
+    langs:
+      - java
+    name: StatelessServiceFactory
+    nameWithType: StatelessServiceFactory
+    fullName: system.fabric.StatelessServiceFactory
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceFactory.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceFactory.java
+      startLine: 21
+    package: system.fabric
+    summary: "<p>ステートレス サービスの特定の型のインスタンスの作成を担当するステートレス サービス ファクトリを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>にステートレス サービス ファクトリが登録されている、 <xref uid=\"system.fabric._fabric_runtime\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime</xref>を介してサービス ホストによって<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime#registerStatelessServiceFactory (java.lang.String,system.fabric.StatelessServiceFactory)</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricRuntime#registerStatelessServiceFactoryAsync (java.lang.String,system.fabric.StatelessServiceFactory、java.time.Duration)</xref></p>"
+    syntax:
+      content: public interface StatelessServiceFactory
+  - uid: 'system.fabric._stateless_service_factory.createInstance(String,URI,byte [],UUID,long)'
+    id: 'createInstance(String,URI,byte [],UUID,long)'
+    parent: system.fabric._stateless_service_factory
+    href: system.fabric._stateless_service_factory.yml
+    langs:
+      - java
+    name: 'createInstance(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long instanceId)'
+    nameWithType: 'StatelessServiceFactory.createInstance(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long instanceId)'
+    fullName: 'StatelessServiceInstance system.fabric.StatelessServiceFactory.createInstance(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long instanceId)'
+    overload: system.fabric._stateless_service_factory.createInstance*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StatelessServiceFactory.java
+      startLine: 44
+    package: system.fabric
+    summary: |-
+      <p>特定のサービスのステートレス サービス インスタンスを作成します。 このメソッドは、Service Fabric によって呼び出されます。</p>
+      <p></p>
+    syntax:
+      content: 'public StatelessServiceInstance createInstance(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long instanceId)'
+      parameters:
+        - id: serviceTypeName
+          type: '26831127'
+          description: <p>Service Fabric は、作成するように要求するサービスの種類。 </p>
+        - id: serviceName
+          type: '62304784'
+          description: '<p>ファブリック: (Uri) をこのレプリカが関連付けられているサービスの名前/です。 </p>'
+        - id: initializationData
+          type: ccd9418d
+          description: <p>このサービスの一部として渡された最初の初期化データを格納するバイト配列<xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">system.fabric.ServiceDescription</xref>です。 </p>
+        - id: partitionId
+          type: add9545a
+          description: <p>パーティション ID (GUID) このレプリカが関連付けられています。 </p>
+        - id: instanceId
+          type: 0364520f
+          description: <p>Long 型のこのレプリカに対してレプリカ ID です。 </p>
+      return:
+        type: system.fabric._stateless_service_instance
+        description: <p>返します<xref uid="system.fabric._stateless_service_instance" data-throw-if-not-resolved="false">system.fabric.StatelessServiceInstance</xref>です。 </p>
+    exceptions:
+      - type: 84fa3863
+        description: <p>インスタンスの作成の失敗時に </p>
+      - type: '81e09942'
+        description: <p>アクセス voilation 上 </p>
+references:
+  - uid: 84fa3863
+    spec.java:
+      - name: InstantiationException
+        fullName: InstantiationException
+  - uid: '81e09942'
+    spec.java:
+      - name: IllegalAccessException
+        fullName: IllegalAccessException
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric._stateless_service_factory.createInstance*
+    name: createInstance
+    nameWithType: StatelessServiceFactory.createInstance
+    fullName: StatelessServiceInstance system.fabric.StatelessServiceFactory.createInstance
+    package: system.fabric
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_instance_factory
+  - uid: system.fabric._default_service_factory
+  - uid: system.fabric._stateless_service_instance
+    parent: system.fabric
+    href: system.fabric._stateless_service_instance.yml
+    name: StatelessServiceInstance
+    nameWithType: StatelessServiceInstance
+    fullName: system.fabric.StatelessServiceInstance
+    type: Interface
+    summary: <p>ステートレス サービスは、Service Fabric で管理が必要な状態がないものです。 ステートレス サービスの種類は、このインターフェイスを実装する必要があります。 </p>
+    syntax:
+      content: public interface StatelessServiceInstance
+  - uid: system.fabric._service_description
+    parent: system.fabric
+    href: system.fabric._service_description.yml
+    name: ServiceDescription
+    nameWithType: ServiceDescription
+    fullName: system.fabric.ServiceDescription
+    type: Class
+    summary: <p>A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。 </p>
+    syntax:
+      content: public class ServiceDescription
+  - uid: system.fabric._fabric_runtime
+    parent: system.fabric
+    href: system.fabric._fabric_runtime.yml
+    name: FabricRuntime
+    nameWithType: FabricRuntime
+    fullName: system.fabric.FabricRuntime
+    type: Class
+    summary: '<p>ユーザーが作成したホストを取得できるように、 <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>、必要なサービス ファクトリを登録したり、[ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>、 <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] または直接のサービスの種類。 </p>'
+    syntax:
+      content: public class FabricRuntime

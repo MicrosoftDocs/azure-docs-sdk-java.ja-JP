@@ -1,0 +1,266 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._service_type_health_policy
+    id: _service_type_health_policy
+    parent: system.fabric
+    children:
+      - system.fabric._service_type_health_policy.getMaxPercentUnhealthyPartitionsPerService()
+      - system.fabric._service_type_health_policy.getMaxPercentUnhealthyReplicasPerPartition()
+      - system.fabric._service_type_health_policy.getMaxPercentUnhealthyServices()
+      - system.fabric._service_type_health_policy.ServiceTypeHealthPolicy()
+      - system.fabric._service_type_health_policy.setMaxPercentUnhealthyPartitionsPerService(byte)
+      - system.fabric._service_type_health_policy.setMaxPercentUnhealthyReplicasPerPartition(byte)
+      - system.fabric._service_type_health_policy.setMaxPercentUnhealthyServices(byte)
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: ServiceTypeHealthPolicy
+    nameWithType: ServiceTypeHealthPolicy
+    fullName: system.fabric.ServiceTypeHealthPolicy
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 10
+    package: system.fabric
+    summary: <p>サービスの種類に属するサービスの正常性を評価するために使用する正常性ポリシーを表します。 </p>
+    syntax: &ref_1
+      content: public class ServiceTypeHealthPolicy
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric._service_type_health_policy.getMaxPercentUnhealthyPartitionsPerService()
+    id: getMaxPercentUnhealthyPartitionsPerService()
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: getMaxPercentUnhealthyPartitionsPerService()
+    nameWithType: ServiceTypeHealthPolicy.getMaxPercentUnhealthyPartitionsPerService()
+    fullName: byte system.fabric.ServiceTypeHealthPolicy.getMaxPercentUnhealthyPartitionsPerService()
+    overload: system.fabric._service_type_health_policy.getMaxPercentUnhealthyPartitionsPerService*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 145
+    package: system.fabric
+    summary: |-
+      <p>取得またはサービスごとの問題のあるパーティションの最大許容パーセンテージを設定します。</p>
+      <p></p>
+    syntax:
+      content: public byte getMaxPercentUnhealthyPartitionsPerService()
+      return:
+        type: d357ea40
+        description: '<p>許容されるサービスごとの問題のあるパーティションの割合の最大値を返します。 使用できる値は<xref uid="" data-throw-if-not-resolved="false">java.lang.Byte</xref> 0 から 100 までの値<b>解説:</b>割合を表すことのできる正常な状態、サービスがエラーと見なされる前にパーティションの最大許容パーセンテージです。 割合が守られて異常な場合に、少なくとも 1 つのパーティションがある場合は、正常性は警告として評価されます。 これは、サービスのパーティションの総数に対して異常なパーティションの数で割ることによって計算されます。 計算は、パーティション数が少ないで 1 つの障害を許容するように丸めます。 既定のパーセンテージは 0 です。 </p>'
+  - uid: system.fabric._service_type_health_policy.getMaxPercentUnhealthyReplicasPerPartition()
+    id: getMaxPercentUnhealthyReplicasPerPartition()
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: getMaxPercentUnhealthyReplicasPerPartition()
+    nameWithType: ServiceTypeHealthPolicy.getMaxPercentUnhealthyReplicasPerPartition()
+    fullName: byte system.fabric.ServiceTypeHealthPolicy.getMaxPercentUnhealthyReplicasPerPartition()
+    overload: system.fabric._service_type_health_policy.getMaxPercentUnhealthyReplicasPerPartition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 187
+    package: system.fabric
+    summary: |-
+      <p>取得または設定パーティションあたりの異常なレプリカの最大許容パーセンテージです。</p>
+      <p></p>
+    syntax:
+      content: public byte getMaxPercentUnhealthyReplicasPerPartition()
+      return:
+        type: d357ea40
+        description: '<p>許容される異常なレプリカ パーティションあたりの割合の最大値を返します。 使用できる値は<xref uid="" data-throw-if-not-resolved="false">java.lang.Byte</xref> 0 から 100 までの値。 <b>注釈:</b>割合を表すことのできる正常なエラーでは、パーティションは考慮する前にレプリカの最大許容パーセンテージです。 割合が守られて異常な場合に、少なくとも 1 つのレプリカがある場合は、正常性は警告として評価されます。 これは、パーティション内のレプリカの合計数に問題があるレプリカの数で割ることによって計算されます。 計算は、少数のレプリカの 1 つの障害を許容するように丸めます。 既定のパーセンテージは 0 です。 </p>'
+  - uid: system.fabric._service_type_health_policy.getMaxPercentUnhealthyServices()
+    id: getMaxPercentUnhealthyServices()
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: getMaxPercentUnhealthyServices()
+    nameWithType: ServiceTypeHealthPolicy.getMaxPercentUnhealthyServices()
+    fullName: byte system.fabric.ServiceTypeHealthPolicy.getMaxPercentUnhealthyServices()
+    overload: system.fabric._service_type_health_policy.getMaxPercentUnhealthyServices*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 103
+    package: system.fabric
+    summary: "<p>異常なサービスの最大許容パーセンテージを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なアプリケーションがエラーと見なされる前にサービスの最大許容パーセンテージです。 割合が守られて異常な場合に、少なくとも 1 つのサービスがある場合は、正常性は警告として評価されます。 これは、特定のサービス型のサービスの合計数を特定のサービスの種類の問題のあるサービスの数で割ることによって計算されます。 計算は、少数のサービスの 1 つの障害を許容するように丸めます。 既定のパーセンテージは 0 です。 </p>"
+    syntax:
+      content: public byte getMaxPercentUnhealthyServices()
+      return:
+        type: d357ea40
+        description: <p>許容される異常なサービスの割合の最大値を返します。 使用できる値は<xref uid="" data-throw-if-not-resolved="false">java.lang.Byte</xref> 0 から 100 までの値。 </p>
+  - uid: system.fabric._service_type_health_policy.ServiceTypeHealthPolicy()
+    id: ServiceTypeHealthPolicy()
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: ServiceTypeHealthPolicy()
+    nameWithType: ServiceTypeHealthPolicy.ServiceTypeHealthPolicy()
+    fullName: system.fabric.ServiceTypeHealthPolicy.ServiceTypeHealthPolicy()
+    overload: system.fabric._service_type_health_policy.ServiceTypeHealthPolicy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 33
+    package: system.fabric
+    summary: "<p>新しいインスタンスを初期化<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceTypeHealthPolicy</xref>クラスです。 </p>\n<p>\r\n\r\n  <b>注釈:</b>既定では、エラーまたは警告が許容されません。 </p>"
+    syntax:
+      content: public ServiceTypeHealthPolicy()
+  - uid: system.fabric._service_type_health_policy.setMaxPercentUnhealthyPartitionsPerService(byte)
+    id: setMaxPercentUnhealthyPartitionsPerService(byte)
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: setMaxPercentUnhealthyPartitionsPerService(byte maxPercentUnhealthyPartitionsPerService)
+    nameWithType: ServiceTypeHealthPolicy.setMaxPercentUnhealthyPartitionsPerService(byte maxPercentUnhealthyPartitionsPerService)
+    fullName: void system.fabric.ServiceTypeHealthPolicy.setMaxPercentUnhealthyPartitionsPerService(byte maxPercentUnhealthyPartitionsPerService)
+    overload: system.fabric._service_type_health_policy.setMaxPercentUnhealthyPartitionsPerService*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 164
+    package: system.fabric
+    summary: |-
+      <p>許容されるサービスごとの問題のあるパーティションの割合の最大値を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setMaxPercentUnhealthyPartitionsPerService(byte maxPercentUnhealthyPartitionsPerService)
+      parameters:
+        - id: maxPercentUnhealthyPartitionsPerService
+          type: d357ea40
+          description: <p>パーセンテージは、パーティションことのできる正常な状態、サービスがエラーと見なされるまでの最大許容パーセンテージを表します。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: '<p>指定した値は、0 から 100 までの整数値の範囲外でした。 <b>注釈:</b>割合を表すことのできる正常な状態、サービスがエラーと見なされる前にパーティションの最大許容パーセンテージです。 割合が守られて異常な場合に、少なくとも 1 つのパーティションがある場合は、正常性は警告として評価されます。 これは、サービスのパーティションの総数に対して異常なパーティションの数で割ることによって計算されます。 計算は、パーティション数が少ないで 1 つの障害を許容するように丸めます。 既定のパーセンテージは 0 です。 </p>'
+  - uid: system.fabric._service_type_health_policy.setMaxPercentUnhealthyReplicasPerPartition(byte)
+    id: setMaxPercentUnhealthyReplicasPerPartition(byte)
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: setMaxPercentUnhealthyReplicasPerPartition(byte maxPercentUnhealthyReplicasPerPartition)
+    nameWithType: ServiceTypeHealthPolicy.setMaxPercentUnhealthyReplicasPerPartition(byte maxPercentUnhealthyReplicasPerPartition)
+    fullName: void system.fabric.ServiceTypeHealthPolicy.setMaxPercentUnhealthyReplicasPerPartition(byte maxPercentUnhealthyReplicasPerPartition)
+    overload: system.fabric._service_type_health_policy.setMaxPercentUnhealthyReplicasPerPartition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 207
+    package: system.fabric
+    summary: "<p>取得または設定パーティションあたりの異常なレプリカの最大許容パーセンテージです。</p>\n<p>\r\n\r\n  <b>注釈:</b>割合を表すことのできる正常なエラーでは、パーティションは考慮する前にレプリカの最大許容パーセンテージです。 割合が守られて異常な場合に、少なくとも 1 つのレプリカがある場合は、正常性は警告として評価されます。 これは、パーティション内のレプリカの合計数に問題があるレプリカの数で割ることによって計算されます。 計算は、少数のレプリカの 1 つの障害を許容するように丸めます。 既定のパーセンテージは 0 です。 </p>"
+    syntax:
+      content: public void setMaxPercentUnhealthyReplicasPerPartition(byte maxPercentUnhealthyReplicasPerPartition)
+      parameters:
+        - id: maxPercentUnhealthyReplicasPerPartition
+          type: d357ea40
+          description: <p>パーセンテージは、ことのできる正常な状態、サービスがエラーと見なされる前に、パーティション内のレプリカの最大許容パーセンテージを表します。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定した値は、0 から 100 までの整数値の範囲外でした。 </p>
+  - uid: system.fabric._service_type_health_policy.setMaxPercentUnhealthyServices(byte)
+    id: setMaxPercentUnhealthyServices(byte)
+    parent: system.fabric._service_type_health_policy
+    href: system.fabric._service_type_health_policy.yml
+    langs:
+      - java
+    name: setMaxPercentUnhealthyServices(byte maxPercentUnhealthyServices)
+    nameWithType: ServiceTypeHealthPolicy.setMaxPercentUnhealthyServices(byte maxPercentUnhealthyServices)
+    fullName: void system.fabric.ServiceTypeHealthPolicy.setMaxPercentUnhealthyServices(byte maxPercentUnhealthyServices)
+    overload: system.fabric._service_type_health_policy.setMaxPercentUnhealthyServices*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/ServiceTypeHealthPolicy.java
+      startLine: 123
+    package: system.fabric
+    summary: |-
+      <p>許容される異常なサービスの割合の最大値を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setMaxPercentUnhealthyServices(byte maxPercentUnhealthyServices)
+      parameters:
+        - id: maxPercentUnhealthyServices
+          type: d357ea40
+          description: <p>最大値には、正常なことができるサービスの割合が許容されます。 </p>
+    exceptions:
+      - type: 3c87bd19
+        description: '<p>0 より小さい入力または 100 より大きい場合。 <b>注釈:</b>割合を表すことのできる正常なアプリケーションがエラーと見なされる前にサービスの最大許容パーセンテージです。 指定した値は、0 から 100 までの整数値の範囲外でした。 割合が守られて異常な場合に、少なくとも 1 つのサービスがある場合は、正常性は警告として評価されます。 これは、特定のサービス型のサービスの合計数を特定のサービスの種類の問題のあるサービスの数で割ることによって計算されます。 計算は、少数のサービスの 1 つの障害を許容するように丸めます。 既定のパーセンテージは 0 です。 </p>'
+references:
+  - uid: system.fabric._service_type_health_policy.ServiceTypeHealthPolicy*
+    name: ServiceTypeHealthPolicy
+    nameWithType: ServiceTypeHealthPolicy.ServiceTypeHealthPolicy
+    fullName: system.fabric.ServiceTypeHealthPolicy.ServiceTypeHealthPolicy
+    package: system.fabric
+  - uid: d357ea40
+    spec.java:
+      - name: byte
+        fullName: byte
+  - uid: system.fabric._service_type_health_policy.getMaxPercentUnhealthyServices*
+    name: getMaxPercentUnhealthyServices
+    nameWithType: ServiceTypeHealthPolicy.getMaxPercentUnhealthyServices
+    fullName: byte system.fabric.ServiceTypeHealthPolicy.getMaxPercentUnhealthyServices
+    package: system.fabric
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: system.fabric._service_type_health_policy.setMaxPercentUnhealthyServices*
+    name: setMaxPercentUnhealthyServices
+    nameWithType: ServiceTypeHealthPolicy.setMaxPercentUnhealthyServices
+    fullName: void system.fabric.ServiceTypeHealthPolicy.setMaxPercentUnhealthyServices
+    package: system.fabric
+  - uid: system.fabric._service_type_health_policy.getMaxPercentUnhealthyPartitionsPerService*
+    name: getMaxPercentUnhealthyPartitionsPerService
+    nameWithType: ServiceTypeHealthPolicy.getMaxPercentUnhealthyPartitionsPerService
+    fullName: byte system.fabric.ServiceTypeHealthPolicy.getMaxPercentUnhealthyPartitionsPerService
+    package: system.fabric
+  - uid: system.fabric._service_type_health_policy.setMaxPercentUnhealthyPartitionsPerService*
+    name: setMaxPercentUnhealthyPartitionsPerService
+    nameWithType: ServiceTypeHealthPolicy.setMaxPercentUnhealthyPartitionsPerService
+    fullName: void system.fabric.ServiceTypeHealthPolicy.setMaxPercentUnhealthyPartitionsPerService
+    package: system.fabric
+  - uid: system.fabric._service_type_health_policy.getMaxPercentUnhealthyReplicasPerPartition*
+    name: getMaxPercentUnhealthyReplicasPerPartition
+    nameWithType: ServiceTypeHealthPolicy.getMaxPercentUnhealthyReplicasPerPartition
+    fullName: byte system.fabric.ServiceTypeHealthPolicy.getMaxPercentUnhealthyReplicasPerPartition
+    package: system.fabric
+  - uid: system.fabric._service_type_health_policy.setMaxPercentUnhealthyReplicasPerPartition*
+    name: setMaxPercentUnhealthyReplicasPerPartition
+    nameWithType: ServiceTypeHealthPolicy.setMaxPercentUnhealthyReplicasPerPartition
+    fullName: void system.fabric.ServiceTypeHealthPolicy.setMaxPercentUnhealthyReplicasPerPartition
+    package: system.fabric
+  - uid: system.fabric._pin_collection
+    parent: system.fabric
+    href: system.fabric._pin_collection.yml
+    name: PinCollection
+    nameWithType: PinCollection
+    fullName: system.fabric.PinCollection
+    type: Class
+    syntax:
+      content: public class PinCollection
+  - uid: system.fabric._service_type_health_policy
+    parent: system.fabric
+    href: system.fabric._service_type_health_policy.yml
+    name: ServiceTypeHealthPolicy
+    nameWithType: ServiceTypeHealthPolicy
+    fullName: system.fabric.ServiceTypeHealthPolicy
+    type: Class
+    summary: <p>サービスの種類に属するサービスの正常性を評価するために使用する正常性ポリシーを表します。 </p>
+    syntax: *ref_1

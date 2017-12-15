@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry
+    id: _should_retry
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    children:
+      - 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.invoke(int,RuntimeException,ReferenceObjectHelper<Duration>)'
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.yml
+    langs:
+      - java
+    name: ShouldRetry
+    nameWithType: ShouldRetry
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ShouldRetry
+    type: Interface
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/ShouldRetry.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/ShouldRetry.java
+      startLine: 18
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>再試行の条件が見つかるたびに呼び出されるコールバック デリゲートを定義します。 </p>
+    syntax:
+      content: public interface ShouldRetry
+  - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.invoke(int,RuntimeException,ReferenceObjectHelper<Duration>)'
+    id: 'invoke(int,RuntimeException,ReferenceObjectHelper<Duration>)'
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.yml
+    langs:
+      - java
+    name: 'invoke(int retryCount, RuntimeException lastException, ReferenceObjectHelper<Duration> delay)'
+    nameWithType: 'ShouldRetry.invoke(int retryCount, RuntimeException lastException, ReferenceObjectHelper<Duration> delay)'
+    fullName: 'boolean com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ShouldRetry.invoke(int retryCount, RuntimeException lastException, ReferenceObjectHelper<Duration> delay)'
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.invoke*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/ShouldRetry.java
+      startLine: 31
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: |-
+      <p>再試行の条件が見つかるたびに呼び出されるコールバック デリゲートを定義します。</p>
+      <p></p>
+    syntax:
+      content: 'public boolean invoke(int retryCount, RuntimeException lastException, ReferenceObjectHelper<Duration> delay)'
+      parameters:
+        - id: retryCount
+          type: f75371fa
+          description: <p>現在の再試行の試行回数です。 </p>
+        - id: lastException
+          type: 9b2a4515
+          description: <p>再試行の条件が発生する原因となった例外。 </p>
+        - id: delay
+          type: cebb71d5
+          description: <p>次のイテレーションが呼び出される前の現在のスレッドの中断時間の長さを示す遅延。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>再試行できる場合です。それ以外の場合。 </p>
+references:
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: 9b2a4515
+    spec.java:
+      - name: RuntimeException
+        fullName: RuntimeException
+  - uid: cebb71d5
+    spec.java:
+      - name: ReferenceObjectHelper<Duration>
+        fullName: ReferenceObjectHelper<Duration>
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.invoke*
+    name: invoke
+    nameWithType: ShouldRetry.invoke
+    fullName: boolean com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ShouldRetry.invoke
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling

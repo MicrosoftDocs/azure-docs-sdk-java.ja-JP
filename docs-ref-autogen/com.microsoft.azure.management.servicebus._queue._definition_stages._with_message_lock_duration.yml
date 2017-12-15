@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration
+    id: _with_message_lock_duration
+    parent: com.microsoft.azure.management.servicebus
+    children:
+      - com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration.withMessageLockDurationInSeconds(int)
+    href: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration.yml
+    langs:
+      - java
+    name: Queue.DefinitionStages.WithMessageLockDuration
+    nameWithType: Queue.DefinitionStages.WithMessageLockDuration
+    fullName: com.microsoft.azure.management.servicebus.Queue.DefinitionStages.WithMessageLockDuration
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-servicebus/src/main/java/com/microsoft/azure/management/servicebus/Queue.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-servicebus/src/main/java/com/microsoft/azure/management/servicebus/Queue.java
+      startLine: 197
+    package: com.microsoft.azure.management.servicebus
+    summary: <p>メッセージのロックの期間を定義できるように、キューの定義の段階です。 </p>
+    syntax:
+      content: public interface WithMessageLockDuration
+  - uid: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration.withMessageLockDurationInSeconds(int)
+    id: withMessageLockDurationInSeconds(int)
+    parent: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration
+    href: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration.yml
+    langs:
+      - java
+    name: withMessageLockDurationInSeconds(int durationInSeconds)
+    nameWithType: Queue.DefinitionStages.WithMessageLockDuration.withMessageLockDurationInSeconds(int durationInSeconds)
+    fullName: WithCreate com.microsoft.azure.management.servicebus.Queue.DefinitionStages.WithMessageLockDuration.withMessageLockDurationInSeconds(int durationInSeconds)
+    overload: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration.withMessageLockDurationInSeconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-servicebus/src/main/java/com/microsoft/azure/management/servicebus/Queue.java
+      startLine: 206
+    package: com.microsoft.azure.management.servicebus
+    summary: |-
+      <p>他の受信者に対してメッセージをロックする時間を指定します。 注: は明示的にオーバーライドしない限り、既定のロック期間は 60 秒、最大許容値 300 秒です。</p>
+      <p></p>
+    syntax:
+      content: public WithCreate withMessageLockDurationInSeconds(int durationInSeconds)
+      parameters:
+        - id: durationInSeconds
+          type: f75371fa
+          description: <p>秒単位で、ロックの期間 </p>
+      return:
+        type: com.microsoft.azure.management.servicebus._queue._definition_stages._with_create
+        description: <p>キュー定義の次のステージ </p>
+references:
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.management.servicebus._queue._definition_stages._with_message_lock_duration.withMessageLockDurationInSeconds*
+    name: withMessageLockDurationInSeconds
+    nameWithType: Queue.DefinitionStages.WithMessageLockDuration.withMessageLockDurationInSeconds
+    fullName: WithCreate com.microsoft.azure.management.servicebus.Queue.DefinitionStages.WithMessageLockDuration.withMessageLockDurationInSeconds
+    package: com.microsoft.azure.management.servicebus
+  - uid: com.microsoft.azure.management.servicebus._queue._definition_stages._with_create
+    parent: com.microsoft.azure.management.servicebus
+    href: com.microsoft.azure.management.servicebus._queue._definition_stages._with_create.yml
+    name: Queue.DefinitionStages.WithCreate
+    nameWithType: Queue.DefinitionStages.WithCreate
+    fullName: com.microsoft.azure.management.servicebus.Queue.DefinitionStages.WithCreate
+    type: Interface
+    summary: '<p>含むすべての最低限必要な入力を作成するリソースの定義のステージ (を介して<xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">WithCreate#create()</xref>) を指定する省略可能なその他の設定も可能ですが。 </p>'
+    syntax:
+      content: 'public interface WithCreate extends Creatable<Queue>,Queue.DefinitionStages.WithSize,Queue.DefinitionStages.WithPartitioning,Queue.DefinitionStages.WithDeleteOnIdle,Queue.DefinitionStages.WithMessageLockDuration,Queue.DefinitionStages.WithDefaultMessageTTL,Queue.DefinitionStages.WithSession,Queue.DefinitionStages.WithExpressMessage,Queue.DefinitionStages.WithMessageBatching,Queue.DefinitionStages.WithDuplicateMessageDetection,Queue.DefinitionStages.WithExpiredMessageMovedToDeadLetterQueue,Queue.DefinitionStages.WithMessageMovedToDeadLetterQueueOnMaxDeliveryCount,Queue.DefinitionStages.WithAuthorizationRule'

@@ -1,0 +1,717 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.redis._redis_cache._update
+    id: _update
+    parent: com.microsoft.azure.management.redis
+    children:
+      - 'com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(DayOfWeek,int)'
+      - 'com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(DayOfWeek,int,Period)'
+      - com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(List<ScheduleEntry>)
+      - com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(ScheduleEntry)
+      - com.microsoft.azure.management.redis._redis_cache._update.withShardCount(int)
+      - com.microsoft.azure.management.redis._redis_cache._update.withStaticIP(String)
+      - 'com.microsoft.azure.management.redis._redis_cache._update.withSubnet(HasId,String)'
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: RedisCache.Update
+    nameWithType: RedisCache.Update
+    fullName: com.microsoft.azure.management.redis.RedisCache.Update
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 430
+    package: com.microsoft.azure.management.redis
+    summary: <p>変更可能なすべての設定を含む、Redis キャッシュの更新操作のテンプレートです。 </p>
+    syntax: &ref_1
+      content: 'public interface Update extends Appliable<RedisCache>,Resource.UpdateWithTags<Update>,RedisCache.UpdateStages.WithSku,RedisCache.UpdateStages.WithNonSslPort,RedisCache.UpdateStages.WithRedisConfiguration'
+    inheritedMembers:
+      - com.microsoft.azure.management.resources.fluentcore.model._appliable.apply()
+      - com.microsoft.azure.management.resources.fluentcore.model._appliable.applyAsync()
+      - com.microsoft.azure.management.resources.fluentcore.model._appliable.applyAsync(final ServiceCallback<T>)
+      - com.microsoft.azure.management.resources.fluentcore.model._indexable.key()
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withBasicSku(int)
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.withNonSslPort()
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.withoutNonSslPort()
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withoutRedisConfiguration()
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withoutRedisConfiguration(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.withoutTag(String)
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withPremiumSku()
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withPremiumSku(int)
+      - 'com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withRedisConfiguration(Map<String, String>)'
+      - 'com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withRedisConfiguration(String,String)'
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withStandardSku()
+      - com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withStandardSku(int)
+      - 'com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.withTag(String,String)'
+      - 'com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.withTags(Map<String, String>)'
+  - uid: 'com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(DayOfWeek,int)'
+    id: 'withPatchSchedule(DayOfWeek,int)'
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: 'withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc)'
+    nameWithType: 'RedisCache.Update.withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc)'
+    fullName: 'Update com.microsoft.azure.management.redis.RedisCache.Update.withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc)'
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 469
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Premium クラスター キャッシュでスケジュールの更新プログラム。</p>
+      <p></p>
+    syntax:
+      content: 'public Update withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc)'
+      parameters:
+        - id: dayOfWeek
+          type: com.microsoft.azure.management.redis._day_of_week
+          description: <p>キャッシュにパッチできると曜日です。 </p>
+        - id: startHourUtc
+          type: f75371fa
+          description: <p>開始時刻がどのキャッシュ後に修正プログラムの適用開始できます。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis Cache の次のステージを Premium SKU 定義を使用します。 </p>
+  - uid: 'com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(DayOfWeek,int,Period)'
+    id: 'withPatchSchedule(DayOfWeek,int,Period)'
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: 'withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc, Period maintenanceWindow)'
+    nameWithType: 'RedisCache.Update.withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc, Period maintenanceWindow)'
+    fullName: 'Update com.microsoft.azure.management.redis.RedisCache.Update.withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc, Period maintenanceWindow)'
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 479
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Premium クラスター キャッシュを作成するシャードの数。</p>
+      <p></p>
+    syntax:
+      content: 'public Update withPatchSchedule(DayOfWeek dayOfWeek, int startHourUtc, Period maintenanceWindow)'
+      parameters:
+        - id: dayOfWeek
+          type: com.microsoft.azure.management.redis._day_of_week
+          description: <p>キャッシュにパッチできると曜日です。 </p>
+        - id: startHourUtc
+          type: f75371fa
+          description: <p>開始時刻がどのキャッシュ後に修正プログラムの適用開始できます。 </p>
+        - id: maintenanceWindow
+          type: '6e600119'
+          description: <p>ISO8601 timespan をどの程度時間キャッシュ修正プログラムの適用を指定することがかかることができます。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis Cache の次のステージを Premium SKU 定義を使用します。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(List<ScheduleEntry>)
+    id: withPatchSchedule(List<ScheduleEntry>)
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: withPatchSchedule(List<ScheduleEntry> scheduleEntry)
+    nameWithType: RedisCache.Update.withPatchSchedule(List<ScheduleEntry> scheduleEntry)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withPatchSchedule(List<ScheduleEntry> scheduleEntry)
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 495
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Premium クラスター キャッシュでスケジュールの更新プログラム。</p>
+      <p></p>
+    syntax:
+      content: public Update withPatchSchedule(List<ScheduleEntry> scheduleEntry)
+      parameters:
+        - id: scheduleEntry
+          type: 5618da2dcom.microsoft.azure.management.redis._schedule_entrya08ddfce
+          description: <p>Redis Cache の Premium のパッチ スケジュール エントリの一覧です。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis Cache の次のステージを Premium SKU 定義を使用します。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule(ScheduleEntry)
+    id: withPatchSchedule(ScheduleEntry)
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: withPatchSchedule(ScheduleEntry scheduleEntry)
+    nameWithType: RedisCache.Update.withPatchSchedule(ScheduleEntry scheduleEntry)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withPatchSchedule(ScheduleEntry scheduleEntry)
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 487
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Premium クラスター キャッシュでスケジュールの更新プログラム。</p>
+      <p></p>
+    syntax:
+      content: public Update withPatchSchedule(ScheduleEntry scheduleEntry)
+      parameters:
+        - id: scheduleEntry
+          type: com.microsoft.azure.management.redis._schedule_entry
+          description: <p>Redis Cache の Premium のパッチ スケジュール エントリです。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis Cache の次のステージを Premium SKU 定義を使用します。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withShardCount(int)
+    id: withShardCount(int)
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: withShardCount(int shardCount)
+    nameWithType: RedisCache.Update.withShardCount(int shardCount)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withShardCount(int shardCount)
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withShardCount*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 460
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Premium クラスター キャッシュを作成するシャードの数。</p>
+      <p></p>
+    syntax:
+      content: public Update withShardCount(int shardCount)
+      parameters:
+        - id: shardCount
+          type: f75371fa
+          description: <p>設定するシャード数の値。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withStaticIP(String)
+    id: withStaticIP(String)
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: withStaticIP(String staticIP)
+    nameWithType: RedisCache.Update.withStaticIP(String staticIP)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withStaticIP(String staticIP)
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withStaticIP*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 452
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Redis Cache の静的 IP を設定します。 既存の内部 Redis Cache を展開するときに必要な<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>仮想ネットワークです。</p>
+      <p></p>
+    syntax:
+      content: public Update withStaticIP(String staticIP)
+      parameters:
+        - id: staticIP
+          type: '26831127'
+          description: <p>設定する静的 ip アドレスの値。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: 'com.microsoft.azure.management.redis._redis_cache._update.withSubnet(HasId,String)'
+    id: 'withSubnet(HasId,String)'
+    parent: com.microsoft.azure.management.redis._redis_cache._update
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    langs:
+      - java
+    name: 'withSubnet(HasId networkResource, String subnetName)'
+    nameWithType: 'RedisCache.Update.withSubnet(HasId networkResource, String subnetName)'
+    fullName: 'Update com.microsoft.azure.management.redis.RedisCache.Update.withSubnet(HasId networkResource, String subnetName)'
+    overload: com.microsoft.azure.management.redis._redis_cache._update.withSubnet*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-redis/src/main/java/com/microsoft/azure/management/redis/RedisCache.java
+      startLine: 444
+    package: com.microsoft.azure.management.redis
+    summary: |-
+      <p>Redis Cache のこのインスタンスに指定されたサブネットを割り当てます。</p>
+      <p></p>
+    syntax:
+      content: 'public Update withSubnet(HasId networkResource, String subnetName)'
+      parameters:
+        - id: networkResource
+          type: com.microsoft.azure.management.resources.fluentcore.arm.models._has_id
+          description: <p>ネットワークのオブジェクトのインスタンス。 </p>
+        - id: subnetName
+          type: '26831127'
+          description: <p>サブネットの名前。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withSubnet*
+    name: withSubnet
+    nameWithType: RedisCache.Update.withSubnet
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withSubnet
+    package: com.microsoft.azure.management.redis
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withStaticIP*
+    name: withStaticIP
+    nameWithType: RedisCache.Update.withStaticIP
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withStaticIP
+    package: com.microsoft.azure.management.redis
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withShardCount*
+    name: withShardCount
+    nameWithType: RedisCache.Update.withShardCount
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withShardCount
+    package: com.microsoft.azure.management.redis
+  - uid: com.microsoft.azure.management.redis._redis_cache._update.withPatchSchedule*
+    name: withPatchSchedule
+    nameWithType: RedisCache.Update.withPatchSchedule
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.Update.withPatchSchedule
+    package: com.microsoft.azure.management.redis
+  - uid: '6e600119'
+    spec.java:
+      - name: Period
+        fullName: Period
+  - uid: 5618da2dcom.microsoft.azure.management.redis._schedule_entrya08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.management.redis._schedule_entry
+        name: ScheduleEntry
+        fullName: com.microsoft.azure.management.redis.ScheduleEntry
+        href: com.microsoft.azure.management.redis._schedule_entry.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.management.resources.fluentcore.model._appliable.apply()
+    parent: com.microsoft.azure.management.resources.fluentcore.model._appliable
+    href: com.microsoft.azure.management.resources.fluentcore.model._appliable.yml
+    name: apply()
+    nameWithType: Appliable<T>.apply()
+    fullName: T com.microsoft.azure.management.resources.fluentcore.model.Appliable<T>.apply()
+    type: Method
+    summary: |-
+      <p>更新の要求を実行します。</p>
+      <p></p>
+    syntax:
+      content: public T apply()
+      return:
+        type: 8ce1ecb9
+        description: <p>更新済みのリソース </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.model._appliable.applyAsync()
+    parent: com.microsoft.azure.management.resources.fluentcore.model._appliable
+    href: com.microsoft.azure.management.resources.fluentcore.model._appliable.yml
+    name: applyAsync()
+    nameWithType: Appliable<T>.applyAsync()
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.model.Appliable<T>.applyAsync()
+    type: Method
+    summary: |-
+      <p>更新の要求を非同期的に実行します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> applyAsync()
+      return:
+        type: c4094ba1
+        description: <p>REST 呼び出しを識別するハンドル </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.model._appliable.applyAsync(final ServiceCallback<T>)
+    parent: com.microsoft.azure.management.resources.fluentcore.model._appliable
+    href: com.microsoft.azure.management.resources.fluentcore.model._appliable.yml
+    name: applyAsync(final ServiceCallback<T> callback)
+    nameWithType: Appliable<T>.applyAsync(final ServiceCallback<T> callback)
+    fullName: ServiceFuture<T> com.microsoft.azure.management.resources.fluentcore.model.Appliable<T>.applyAsync(final ServiceCallback<T> callback)
+    type: Method
+    summary: |-
+      <p>更新の要求を非同期的に実行します。</p>
+      <p></p>
+    syntax:
+      content: public ServiceFuture<T> applyAsync(final ServiceCallback<T> callback)
+      parameters:
+        - id: callback
+          type: fe95c2b0
+          description: <p>成功および失敗に対してコールバック </p>
+      return:
+        type: c0371a4e
+        description: <p>REST 呼び出しを識別するハンドル </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.model._indexable.key()
+    parent: com.microsoft.azure.management.resources.fluentcore.model._indexable
+    href: com.microsoft.azure.management.resources.fluentcore.model._indexable.yml
+    name: key()
+    nameWithType: Indexable.key()
+    fullName: String com.microsoft.azure.management.resources.fluentcore.model.Indexable.key()
+    type: Method
+    syntax:
+      content: public String key()
+      return:
+        type: '26831127'
+        description: <p>インデックスのキー。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withBasicSku(int)
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.yml
+    name: withBasicSku(int capacity)
+    nameWithType: RedisCache.UpdateStages.WithSku.withBasicSku(int capacity)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithSku.withBasicSku(int capacity)
+    type: Method
+    summary: |-
+      <p>新しい容量で基本的な sku に Redis Cache を更新します。</p>
+      <p></p>
+    syntax:
+      content: public Update withBasicSku(int capacity)
+      parameters:
+        - id: capacity
+          type: f75371fa
+          description: <p>Basic sku の C ファミリ (0、1、2、3、4、5、6) で更新する Redis キャッシュのサイズを指定します。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.withNonSslPort()
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.yml
+    name: withNonSslPort()
+    nameWithType: RedisCache.UpdateStages.WithNonSslPort.withNonSslPort()
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithNonSslPort.withNonSslPort()
+    type: Method
+    summary: |-
+      <p>ポート (6379 を) の Redis サーバーの非 ssl を有効にします。</p>
+      <p></p>
+    syntax:
+      content: public Update withNonSslPort()
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.withoutNonSslPort()
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.yml
+    name: withoutNonSslPort()
+    nameWithType: RedisCache.UpdateStages.WithNonSslPort.withoutNonSslPort()
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithNonSslPort.withoutNonSslPort()
+    type: Method
+    summary: |-
+      <p>ポート (6379 を) の Redis サーバーの非 ssl を無効にします。</p>
+      <p></p>
+    syntax:
+      content: public Update withoutNonSslPort()
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withoutRedisConfiguration()
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.yml
+    name: withoutRedisConfiguration()
+    nameWithType: RedisCache.UpdateStages.WithRedisConfiguration.withoutRedisConfiguration()
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithRedisConfiguration.withoutRedisConfiguration()
+    type: Method
+    summary: |-
+      <p>Redis Cache に設定されているすべての構成設定をクリーンアップします。</p>
+      <p></p>
+    syntax:
+      content: public Update withoutRedisConfiguration()
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withoutRedisConfiguration(String)
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.yml
+    name: withoutRedisConfiguration(String key)
+    nameWithType: RedisCache.UpdateStages.WithRedisConfiguration.withoutRedisConfiguration(String key)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithRedisConfiguration.withoutRedisConfiguration(String key)
+    type: Method
+    summary: |-
+      <p>指定した Redis Cache の構成設定を削除します。</p>
+      <p></p>
+    syntax:
+      content: public Update withoutRedisConfiguration(String key)
+      parameters:
+        - id: key
+          type: '26831127'
+          description: <p>構成名を redis します。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.withoutTag(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.yml
+    name: withoutTag(String key)
+    nameWithType: Resource.UpdateWithTags<T>.withoutTag(String key)
+    fullName: T com.microsoft.azure.management.resources.fluentcore.arm.models.Resource.UpdateWithTags<T>.withoutTag(String key)
+    type: Method
+    summary: <p>リソースからタグを削除します。 </p>
+    syntax:
+      content: public T withoutTag(String key)
+      parameters:
+        - id: key
+          type: '26831127'
+          description: <p>削除するタグのキー </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>リソースの更新の次のステージ </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withPremiumSku()
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.yml
+    name: withPremiumSku()
+    nameWithType: RedisCache.UpdateStages.WithSku.withPremiumSku()
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithSku.withPremiumSku()
+    type: Method
+    summary: |-
+      <p>Premium sku に Redis Cache を更新します。</p>
+      <p></p>
+    syntax:
+      content: public Update withPremiumSku()
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withPremiumSku(int)
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.yml
+    name: withPremiumSku(int capacity)
+    nameWithType: RedisCache.UpdateStages.WithSku.withPremiumSku(int capacity)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithSku.withPremiumSku(int capacity)
+    type: Method
+    summary: |-
+      <p>新しい容量を持つ Premium sku に Redis Cache を更新します。</p>
+      <p></p>
+    syntax:
+      content: public Update withPremiumSku(int capacity)
+      parameters:
+        - id: capacity
+          type: f75371fa
+          description: <p>Premium sku の P ファミリ (1、2、3、4) で更新する Redis キャッシュのサイズを指定します。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: 'com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withRedisConfiguration(Map<String, String>)'
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.yml
+    name: 'withRedisConfiguration(Map<String, String> redisConfiguration)'
+    nameWithType: 'RedisCache.UpdateStages.WithRedisConfiguration.withRedisConfiguration(Map<String, String> redisConfiguration)'
+    fullName: 'Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithRedisConfiguration.withRedisConfiguration(Map<String, String> redisConfiguration)'
+    type: Method
+    summary: |-
+      <p>すべては Redis の設定です。 いくつかの可能なキー: rdb バックアップ-有効になっている、rdb ストレージ接続文字列、rdb のバックアップの頻度、maxmemory デルタ、maxmemory ポリシー、通知 keyspace イベント、maxmemory サンプル slowlog-ログ-低速の設定よりも、slowlog max-len リスト max-ziplist エントリ、リスト max-ziplist 値、ハッシュの最大-ziplist-エントリ、ハッシュ max-ziplist 値、- 最大値-intset-エントリ、zset 最大 ziplist エントリ、zset 最大 ziplist-値などです。</p>
+      <p></p>
+    syntax:
+      content: 'public Update withRedisConfiguration(Map<String, String> redisConfiguration)'
+      parameters:
+        - id: redisConfiguration
+          type: 689c8cb5
+          description: <p>構成名でインデックス付けされたマップとして Redis Cache の構成 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: 'com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.withRedisConfiguration(String,String)'
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.yml
+    name: 'withRedisConfiguration(String key, String value)'
+    nameWithType: 'RedisCache.UpdateStages.WithRedisConfiguration.withRedisConfiguration(String key, String value)'
+    fullName: 'Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithRedisConfiguration.withRedisConfiguration(String key, String value)'
+    type: Method
+    summary: |-
+      <p>Redis の設定を指定します。 rdb バックアップ-有効になっている、rdb ストレージ接続文字列、rdb のバックアップの頻度、maxmemory デルタ、maxmemory ポリシー、通知 keyspace イベント、maxmemory サンプル slowlog-ログ-低速の設定よりも、slowlog max-len リスト max-ziplist エントリ、リスト max-ziplist 値、ハッシュの最大-ziplist-エントリ、ハッシュ max-ziplist 値、- 最大値-intset-エントリ、zset 最大 ziplist エントリ、zset 最大 ziplist-値などです。</p>
+      <p></p>
+    syntax:
+      content: 'public Update withRedisConfiguration(String key, String value)'
+      parameters:
+        - id: key
+          type: '26831127'
+          description: <p>構成名を redis します。 </p>
+        - id: value
+          type: '26831127'
+          description: <p>構成値を redis します。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withStandardSku()
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.yml
+    name: withStandardSku()
+    nameWithType: RedisCache.UpdateStages.WithSku.withStandardSku()
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithSku.withStandardSku()
+    type: Method
+    summary: |-
+      <p>標準の sku に Redis Cache を更新します。</p>
+      <p></p>
+    syntax:
+      content: public Update withStandardSku()
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.withStandardSku(int)
+    parent: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.yml
+    name: withStandardSku(int capacity)
+    nameWithType: RedisCache.UpdateStages.WithSku.withStandardSku(int capacity)
+    fullName: Update com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithSku.withStandardSku(int capacity)
+    type: Method
+    summary: |-
+      <p>新しい容量を持つ、標準の sku に Redis Cache を更新します。</p>
+      <p></p>
+    syntax:
+      content: public Update withStandardSku(int capacity)
+      parameters:
+        - id: capacity
+          type: f75371fa
+          description: <p>C ファミリ (0、1、2、3、4、5、6) と標準の sku に更新する Redis キャッシュのサイズを指定します。 </p>
+      return:
+        type: com.microsoft.azure.management.redis._redis_cache._update
+        description: <p>Redis キャッシュの更新の次のステージ。 </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.withTag(String,String)'
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.yml
+    name: 'withTag(String key, String value)'
+    nameWithType: 'Resource.UpdateWithTags<T>.withTag(String key, String value)'
+    fullName: 'T com.microsoft.azure.management.resources.fluentcore.arm.models.Resource.UpdateWithTags<T>.withTag(String key, String value)'
+    type: Method
+    summary: <p>リソースにタグを追加します。 </p>
+    syntax:
+      content: 'public T withTag(String key, String value)'
+      parameters:
+        - id: key
+          type: '26831127'
+          description: <p>タグのキー </p>
+        - id: value
+          type: '26831127'
+          description: <p>タグの値 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>リソースの更新の次のステージ </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.withTags(Map<String, String>)'
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.yml
+    name: 'withTags(Map<String, String> tags)'
+    nameWithType: 'Resource.UpdateWithTags<T>.withTags(Map<String, String> tags)'
+    fullName: 'T com.microsoft.azure.management.resources.fluentcore.arm.models.Resource.UpdateWithTags<T>.withTags(Map<String, String> tags)'
+    type: Method
+    summary: <p>として、リソースのタグを指定します、<xref uid="" data-throw-if-not-resolved="false">マップ</xref>です。 </p>
+    syntax:
+      content: 'public T withTags(Map<String, String> tags)'
+      parameters:
+        - id: tags
+          type: 689c8cb5
+          description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>タグの </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>リソースの更新の次のステージ </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.model._appliable
+    parent: com.microsoft.azure.management.resources.fluentcore.model
+    href: com.microsoft.azure.management.resources.fluentcore.model._appliable.yml
+    name: Appliable<T>
+    nameWithType: Appliable<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.model.Appliable<T>
+    type: Interface
+    summary: |-
+      <p>更新操作をサポートするすべてのテンプレート インターフェイスの基本インターフェイスです。</p>
+      <p></p>
+    syntax:
+      content: public interface Appliable<T> extends Indexable
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>更新プログラムから返されるリソースの種類。 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._resource._update_with_tags.yml
+    name: Resource.UpdateWithTags<T>
+    nameWithType: Resource.UpdateWithTags<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.models.Resource.UpdateWithTags<T>
+    type: Interface
+    summary: |-
+      <p>リソースの変更をタグで、更新を許可します。</p>
+      <p></p>
+    syntax:
+      content: public interface UpdateWithTags<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>次のステージのリソースの更新の種類 </p>
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku
+    parent: com.microsoft.azure.management.redis
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_sku.yml
+    name: RedisCache.UpdateStages.WithSku
+    nameWithType: RedisCache.UpdateStages.WithSku
+    fullName: com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithSku
+    type: Interface
+    summary: <p>パラメーターを変更できるように、Redis Cache 更新の段階です。 </p>
+    syntax:
+      content: public interface WithSku
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port
+    parent: com.microsoft.azure.management.redis
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_non_ssl_port.yml
+    name: RedisCache.UpdateStages.WithNonSslPort
+    nameWithType: RedisCache.UpdateStages.WithNonSslPort
+    fullName: com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithNonSslPort
+    type: Interface
+    summary: <p>Redis Cache は、有効または無効にすることができますの非 SSL ポートを更新します。 </p>
+    syntax:
+      content: public interface WithNonSslPort
+  - uid: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration
+    parent: com.microsoft.azure.management.redis
+    href: com.microsoft.azure.management.redis._redis_cache._update_stages._with_redis_configuration.yml
+    name: RedisCache.UpdateStages.WithRedisConfiguration
+    nameWithType: RedisCache.UpdateStages.WithRedisConfiguration
+    fullName: com.microsoft.azure.management.redis.RedisCache.UpdateStages.WithRedisConfiguration
+    type: Interface
+    summary: <p>Redis Cache は、変更を許可する Redis 構成を更新します。 </p>
+    syntax:
+      content: public interface WithRedisConfiguration
+  - uid: com.microsoft.azure.management.redis._redis_cache._update
+    parent: com.microsoft.azure.management.redis
+    href: com.microsoft.azure.management.redis._redis_cache._update.yml
+    name: RedisCache.Update
+    nameWithType: RedisCache.Update
+    fullName: com.microsoft.azure.management.redis.RedisCache.Update
+    type: Interface
+    summary: <p>変更可能なすべての設定を含む、Redis キャッシュの更新操作のテンプレートです。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.models._has_id
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._has_id.yml
+    name: HasId
+    nameWithType: HasId
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.models.HasId
+    type: Interface
+    summary: <p>リソース グループ名を含むモデルを表すインターフェイスです。 </p>
+    syntax:
+      content: public interface HasId
+  - uid: com.microsoft.azure.management._azure
+    parent: com.microsoft.azure.management
+    href: com.microsoft.azure.management._azure.yml
+    name: Azure
+    nameWithType: Azure
+    fullName: com.microsoft.azure.management.Azure
+    type: Class
+    summary: <p>リソース管理 Api にアクセスするためのエントリ ポイントで<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>です。 </p>
+    syntax:
+      content: public class Azure
+  - uid: com.microsoft.azure.management.redis._day_of_week
+    parent: com.microsoft.azure.management.redis
+    href: com.microsoft.azure.management.redis._day_of_week.yml
+    name: DayOfWeek
+    nameWithType: DayOfWeek
+    fullName: com.microsoft.azure.management.redis.DayOfWeek
+    type: Enum
+    summary: <p>値を定義<xref uid="com.microsoft.azure.management.redis._day_of_week" data-throw-if-not-resolved="false">DayOfWeek</xref>です。 </p>
+    syntax:
+      content: public enum DayOfWeek
+  - uid: com.microsoft.azure.management.redis._schedule_entry
+    parent: com.microsoft.azure.management.redis
+    href: com.microsoft.azure.management.redis._schedule_entry.yml
+    name: ScheduleEntry
+    nameWithType: ScheduleEntry
+    fullName: com.microsoft.azure.management.redis.ScheduleEntry
+    type: Class
+    summary: <p>Premium Redis Cache のパッチ スケジュール エントリです。 </p>
+    syntax:
+      content: public class ScheduleEntry

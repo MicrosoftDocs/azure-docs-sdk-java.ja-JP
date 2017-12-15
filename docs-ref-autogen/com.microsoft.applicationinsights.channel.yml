@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights.channel
+    id: channel
+    children:
+      - com.microsoft.applicationinsights.channel._telemetry_channel
+      - com.microsoft.applicationinsights.channel._telemetry_sampler
+    href: com.microsoft.applicationinsights.channel.yml
+    langs:
+      - java
+    name: com.microsoft.applicationinsights.channel
+    nameWithType: com.microsoft.applicationinsights.channel
+    fullName: com.microsoft.applicationinsights.channel
+    type: Namespace
+    source:
+      remote:
+        path: core/src/main/java/com/microsoft/applicationinsights/channel/TelemetryChannel.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/channel/TelemetryChannel.java
+      startLine: 21
+    syntax:
+      content: package com.microsoft.applicationinsights.channel
+references:
+  - uid: com.microsoft.applicationinsights.channel._telemetry_channel
+    parent: com.microsoft.applicationinsights.channel
+    href: com.microsoft.applicationinsights.channel._telemetry_channel.yml
+    name: TelemetryChannel
+    nameWithType: TelemetryChannel
+    fullName: com.microsoft.applicationinsights.channel.TelemetryChannel
+    type: Interface
+    summary: <p>Azure の Application Insights にテレメトリを送信するための通信チャネルを表します。 </p>
+    syntax:
+      content: public interface TelemetryChannel
+  - uid: com.microsoft.applicationinsights.channel._telemetry_sampler
+    parent: com.microsoft.applicationinsights.channel
+    href: com.microsoft.applicationinsights.channel._telemetry_sampler.yml
+    name: TelemetrySampler
+    nameWithType: TelemetrySampler
+    fullName: com.microsoft.applicationinsights.channel.TelemetrySampler
+    type: Interface
+    summary: <p>製品利用統計情報のサンプラーは SDK によって送信される telemetries の量を削減するために可能性があります。 サンプリング統計に影響を与えずに製品利用統計情報の量が減少します。 関連するデータ ポイントが一緒に保持されるので、問題の診断時にそれらのデータ ポイント間を移動することができます。 ポータルでは、サンプリングを補正するために合計数が乗算されます。 </p>
+    syntax:
+      content: public interface TelemetrySampler

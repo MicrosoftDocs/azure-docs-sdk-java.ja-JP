@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry
+    id: _telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    children:
+      - com.microsoft.applicationinsights.telemetry._telemetry.getContext()
+      - com.microsoft.applicationinsights.telemetry._telemetry.getProperties()
+      - com.microsoft.applicationinsights.telemetry._telemetry.getSequence()
+      - com.microsoft.applicationinsights.telemetry._telemetry.getTimestamp()
+      - com.microsoft.applicationinsights.telemetry._telemetry.reset()
+      - com.microsoft.applicationinsights.telemetry._telemetry.sanitize()
+      - com.microsoft.applicationinsights.telemetry._telemetry.serialize(JsonTelemetryDataSerializer)
+      - com.microsoft.applicationinsights.telemetry._telemetry.setSequence(String)
+      - com.microsoft.applicationinsights.telemetry._telemetry.setTimestamp(Date)
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: Telemetry
+    nameWithType: Telemetry
+    fullName: com.microsoft.applicationinsights.telemetry.Telemetry
+    type: Interface
+    source:
+      remote: &ref_0
+        path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 30
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>Application insights の基本製品利用統計情報の種類のインターフェイスです。 </p>
+    syntax:
+      content: public interface Telemetry extends JsonSerializable
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getContext()
+    id: getContext()
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: getContext()
+    nameWithType: Telemetry.getContext()
+    fullName: TelemetryContext com.microsoft.applicationinsights.telemetry.Telemetry.getContext()
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.getContext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 67
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>この製品利用統計情報のインスタンスに関連付けられているコンテキストを取得します。 </p>
+    syntax:
+      content: public TelemetryContext getContext()
+      return:
+        type: com.microsoft.applicationinsights.telemetry._telemetry_context
+        description: <p>このインスタンスに関連付けられたコンテキスト。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getProperties()
+    id: getProperties()
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: getProperties()
+    nameWithType: Telemetry.getProperties()
+    fullName: 'Map<String,String> com.microsoft.applicationinsights.telemetry.Telemetry.getProperties()'
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.getProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 73
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>アプリケーション定義のプロパティ名と値のマップを取得します。 </p>
+    syntax:
+      content: 'public Map<String, String> getProperties()'
+      return:
+        type: 689c8cb5
+        description: <p>プロパティのマップ。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getSequence()
+    id: getSequence()
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: getSequence()
+    nameWithType: Telemetry.getSequence()
+    fullName: String com.microsoft.applicationinsights.telemetry.Telemetry.getSequence()
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.getSequence*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 49
+    package: com.microsoft.applicationinsights.telemetry
+    summary: |-
+      <p>絶対順序を追跡するために使用されるシーケンス フィールドには、イベントがアップロードされます。 現在のブート セッションの安定した識別子とアップロードのキューに追加されるイベントごとに増分する識別子を含む 2 部構成値</p>
+      <p>シーケンスは、追跡イベントの数が起動され、イベントの数がアップロードされたされ、アップロードと受信サーバー上のイベントの重複除去の間に失われるデータの識別を有効にします。</p>
+      <p>現在のシーケンスを取得します。 </p>
+    syntax:
+      content: public String getSequence()
+      return:
+        type: '26831127'
+        description: <p>現在のシーケンス。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getTimestamp()
+    id: getTimestamp()
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: getTimestamp()
+    nameWithType: Telemetry.getTimestamp()
+    fullName: Date com.microsoft.applicationinsights.telemetry.Telemetry.getTimestamp()
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.getTimestamp*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 36
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>製品利用統計情報が記録された時刻を取得します。 </p>
+    syntax:
+      content: public Date getTimestamp()
+      return:
+        type: '12977444'
+        description: <p>記録された時刻。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.reset()
+    id: reset()
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: reset()
+    nameWithType: Telemetry.reset()
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.reset()
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.reset*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 89
+    package: com.microsoft.applicationinsights.telemetry
+    syntax:
+      content: public void reset()
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.sanitize()
+    id: sanitize()
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: sanitize()
+    nameWithType: Telemetry.sanitize()
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.sanitize()
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.sanitize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 80
+    package: com.microsoft.applicationinsights.telemetry
+    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000041\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>機能では、配布ポイントの制約に基づく製品利用統計情報項目のプロパティです。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax:
+      content: public void sanitize()
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.serialize(JsonTelemetryDataSerializer)
+    id: serialize(JsonTelemetryDataSerializer)
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: serialize(JsonTelemetryDataSerializer writer)
+    nameWithType: Telemetry.serialize(JsonTelemetryDataSerializer writer)
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.serialize(JsonTelemetryDataSerializer writer)
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.serialize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 87
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>Json を使用するシリアル化自体、 <xref uid="com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer" data-throw-if-not-resolved="false">JsonTelemetryDataSerializer</xref></p>
+    syntax:
+      content: public void serialize(JsonTelemetryDataSerializer writer)
+      parameters:
+        - id: writer
+          type: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+          description: <p>Json 形式にシリアル化に使用されるライター </p>
+    overridden: com.microsoft.applicationinsights.telemetry._json_serializable.serialize(JsonTelemetryDataSerializer)
+    exceptions:
+      - type: cbf33bbe
+        description: <p>考えられる例外 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.setSequence(String)
+    id: setSequence(String)
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: setSequence(String sequence)
+    nameWithType: Telemetry.setSequence(String sequence)
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.setSequence(String sequence)
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.setSequence*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 55
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>シーケンスを設定します。 </p>
+    syntax:
+      content: public void setSequence(String sequence)
+      parameters:
+        - id: sequence
+          type: '26831127'
+          description: <p>シーケンス。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.setTimestamp(Date)
+    id: setTimestamp(Date)
+    parent: com.microsoft.applicationinsights.telemetry._telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    langs:
+      - java
+    name: setTimestamp(Date date)
+    nameWithType: Telemetry.setTimestamp(Date date)
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.setTimestamp(Date date)
+    overload: com.microsoft.applicationinsights.telemetry._telemetry.setTimestamp*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/telemetry/Telemetry.java
+      startLine: 61
+    package: com.microsoft.applicationinsights.telemetry
+    summary: <p>製品利用統計情報が記録された時刻を設定します。 </p>
+    syntax:
+      content: public void setTimestamp(Date date)
+      parameters:
+        - id: date
+          type: '12977444'
+          description: <p>記録された時刻。 </p>
+references:
+  - uid: '12977444'
+    spec.java:
+      - name: Date
+        fullName: Date
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getTimestamp*
+    name: getTimestamp
+    nameWithType: Telemetry.getTimestamp
+    fullName: Date com.microsoft.applicationinsights.telemetry.Telemetry.getTimestamp
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getSequence*
+    name: getSequence
+    nameWithType: Telemetry.getSequence
+    fullName: String com.microsoft.applicationinsights.telemetry.Telemetry.getSequence
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.setSequence*
+    name: setSequence
+    nameWithType: Telemetry.setSequence
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.setSequence
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.setTimestamp*
+    name: setTimestamp
+    nameWithType: Telemetry.setTimestamp
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.setTimestamp
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getContext*
+    name: getContext
+    nameWithType: Telemetry.getContext
+    fullName: TelemetryContext com.microsoft.applicationinsights.telemetry.Telemetry.getContext
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: 689c8cb5
+    spec.java:
+      - name: 'Map<String, String>'
+        fullName: 'Map<String, String>'
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.getProperties*
+    name: getProperties
+    nameWithType: Telemetry.getProperties
+    fullName: 'Map<String,String> com.microsoft.applicationinsights.telemetry.Telemetry.getProperties'
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.sanitize*
+    name: sanitize
+    nameWithType: Telemetry.sanitize
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.sanitize
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: cbf33bbe
+    spec.java:
+      - name: IOException
+        fullName: IOException
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.serialize*
+    name: serialize
+    nameWithType: Telemetry.serialize
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.serialize
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry.reset*
+    name: reset
+    nameWithType: Telemetry.reset
+    fullName: void com.microsoft.applicationinsights.telemetry.Telemetry.reset
+    package: com.microsoft.applicationinsights.telemetry
+  - uid: com.microsoft.applicationinsights.telemetry._json_serializable
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._json_serializable.yml
+    name: JsonSerializable
+    nameWithType: JsonSerializable
+    fullName: com.microsoft.applicationinsights.telemetry.JsonSerializable
+    type: Interface
+    summary: <p>JSON にシリアル化をサポートするオブジェクトを表します。 </p>
+    syntax:
+      content: public interface JsonSerializable
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: BaseTelemetry<T>
+    nameWithType: BaseTelemetry<T>
+    fullName: com.microsoft.applicationinsights.telemetry.BaseTelemetry<T>
+    type: Class
+    summary: <p>すべてのテレメトリ データ クラスをスーパークラスします。 </p>
+    syntax:
+      content: public class BaseTelemetry<T extends Domain> implements Telemetry
+      typeParameters:
+        - type: 8ce1ecb9
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.getTimestamp()
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: getTimestamp()
+    nameWithType: BaseTelemetry<T>.getTimestamp()
+    fullName: Date com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.getTimestamp()
+    type: Method
+    summary: |-
+      <p>イベントが記録されたときの日時を取得します。</p>
+      <p></p>
+    syntax:
+      content: public Date getTimestamp()
+      return:
+        type: '12977444'
+        description: <p>日付とタイムスタンプ </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.getSequence()
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: getSequence()
+    nameWithType: BaseTelemetry<T>.getSequence()
+    fullName: String com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.getSequence()
+    type: Method
+    summary: |-
+      <p>絶対順序を追跡するために使用されるシーケンス フィールドには、イベントがアップロードされます。 現在のブート セッションの安定した識別子とアップロードのキューに追加されるイベントごとに増分する識別子を含む 2 部構成値 </p>
+      <p>シーケンスは、追跡イベントの数が起動され、イベントの数がアップロードされたされ、アップロードと受信サーバー上のイベントの重複除去の間に失われるデータの識別を有効にします。 </p>
+      <p>製品利用統計情報アイテムの絶対順序を定義する値を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getSequence()
+      return:
+        type: '26831127'
+        description: <p>シーケンス、<xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">テレメトリ</xref>です。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.setSequence(String)
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: setSequence(String sequence)
+    nameWithType: BaseTelemetry<T>.setSequence(String sequence)
+    fullName: void com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.setSequence(String sequence)
+    type: Method
+    summary: |-
+      <p>製品利用統計情報アイテムの絶対順序を定義する値を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setSequence(String sequence)
+      parameters:
+        - id: sequence
+          type: '26831127'
+          description: <p>シーケンス、<xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">テレメトリ</xref>です。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.setTimestamp(Date)
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: setTimestamp(Date date)
+    nameWithType: BaseTelemetry<T>.setTimestamp(Date date)
+    fullName: void com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.setTimestamp(Date date)
+    type: Method
+    summary: |-
+      <p>イベントが記録されたときの日時を設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setTimestamp(Date date)
+      parameters:
+        - id: date
+          type: '12977444'
+          description: <p>日付とタイムスタンプ。 </p>
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry_context
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry_context.yml
+    name: TelemetryContext
+    nameWithType: TelemetryContext
+    fullName: com.microsoft.applicationinsights.telemetry.TelemetryContext
+    type: Class
+    summary: <p>テレメトリを Application Insights サービスに送信するためのコンテキストを表します。 コンテキストは、すべてのテレメトリ項目と共に送信されるデータを保持します。 インストルメンテーション キーが含まれています操作の現在の id を関連付けるために関連するテレメトリのアイテムです。ユーザー、セッション、およびデバイスのデータです。 このコンテキストを使用できる遠隔測定をフィルター処理するポータルで製品利用統計情報のすべての項目に追加され、使用できるプロパティを設定することもできます。 </p>
+    syntax:
+      content: public class TelemetryContext
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.getContext()
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: getContext()
+    nameWithType: BaseTelemetry<T>.getContext()
+    fullName: TelemetryContext com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.getContext()
+    type: Method
+    summary: |-
+      <p>現在の製品利用統計情報項目に関連付けられているコンテキストを取得します。</p>
+      <p></p>
+    syntax:
+      content: public TelemetryContext getContext()
+      return:
+        type: com.microsoft.applicationinsights.telemetry._telemetry_context
+        description: <p>コンテキスト </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.getProperties()
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: getProperties()
+    nameWithType: BaseTelemetry<T>.getProperties()
+    fullName: 'Map<String, String> com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.getProperties()'
+    type: Method
+    summary: |-
+      <p>アプリケーションで定義されたプロパティの名前と値がこのイベントに関する追加情報を提供するディクショナリを取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public Map<String, String> getProperties()'
+      return:
+        type: 689c8cb5
+        description: <p>プロパティ </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.sanitize()
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: sanitize()
+    nameWithType: BaseTelemetry<T>.sanitize()
+    fullName: void com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.sanitize()
+    type: Method
+    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000019\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>送信するデータは無効な文字から校正ように適切な長さなどです。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    syntax:
+      content: public void sanitize()
+  - uid: com.microsoft.applicationinsights.telemetry._json_serializable.serialize(JsonTelemetryDataSerializer)
+    parent: com.microsoft.applicationinsights.telemetry._json_serializable
+    href: com.microsoft.applicationinsights.telemetry._json_serializable.yml
+    name: serialize(JsonTelemetryDataSerializer serializer)
+    nameWithType: JsonSerializable.serialize(JsonTelemetryDataSerializer serializer)
+    fullName: void com.microsoft.applicationinsights.telemetry.JsonSerializable.serialize(JsonTelemetryDataSerializer serializer)
+    type: Method
+    summary: <p>オブジェクトの JSON 表現を指定されたライターに書き込みます。 </p>
+    syntax:
+      content: public void serialize(JsonTelemetryDataSerializer serializer)
+      parameters:
+        - id: serializer
+          type: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.JsonTelemetryDataSerializer</xref> JSON 形式にシリアル化するために使用されます </p>
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.serialize(JsonTelemetryDataSerializer)
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: serialize(JsonTelemetryDataSerializer writer)
+    nameWithType: BaseTelemetry<T>.serialize(JsonTelemetryDataSerializer writer)
+    fullName: void com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.serialize(JsonTelemetryDataSerializer writer)
+    type: Method
+    summary: |-
+      <p>このオブジェクトを JSON 形式でシリアル化します。</p>
+      <p></p>
+    syntax:
+      content: public void serialize(JsonTelemetryDataSerializer writer)
+      parameters:
+        - id: writer
+          type: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+          description: <p>Json 形式にシリアル化に使用されるライター </p>
+  - uid: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._json_telemetry_data_serializer.yml
+    name: JsonTelemetryDataSerializer
+    nameWithType: JsonTelemetryDataSerializer
+    fullName: com.microsoft.applicationinsights.telemetry.JsonTelemetryDataSerializer
+    type: Class
+    summary: <p>このクラスに関連するデータを変換する方法を知っている<xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">テレメトリ</xref>インスタンスを JSON にします。 </p>
+    syntax:
+      content: public class JsonTelemetryDataSerializer
+  - uid: com.microsoft.applicationinsights.telemetry._base_telemetry.reset()
+    parent: com.microsoft.applicationinsights.telemetry._base_telemetry
+    href: com.microsoft.applicationinsights.telemetry._base_telemetry.yml
+    name: reset()
+    nameWithType: BaseTelemetry<T>.reset()
+    fullName: void com.microsoft.applicationinsights.telemetry.BaseTelemetry<T extends Domain>.reset()
+    type: Method
+    syntax:
+      content: public void reset()

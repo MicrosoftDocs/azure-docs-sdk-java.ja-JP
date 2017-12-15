@@ -1,0 +1,806 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    id: _reliable_state_manager_replica_impl
+    parent: microsoft.servicefabric.data
+    children:
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.abort()
+      - 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+      - 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+      - 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.changeRoleAsync(ReplicaRole,CancellationToken)'
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.closeAsync(CancellationToken)
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.getTransactionalReplicator()
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.initialize(StatefulServiceInitializationParameters)
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.onOpenAsync(CancellationToken)
+      - 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration)
+      - microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync(String)
+      - 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync(String,RestorePolicy)'
+      - 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: ReliableStateManagerReplicaImpl
+    nameWithType: ReliableStateManagerReplicaImpl
+    fullName: microsoft.servicefabric.data.ReliableStateManagerReplicaImpl
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 16
+    package: microsoft.servicefabric.data
+    syntax:
+      content: public class ReliableStateManagerReplicaImpl implements StateProviderReplica
+    inheritance:
+      - java.lang.Object
+      - StatefulServiceReplicaImpl
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.abort()
+    id: abort()
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: abort()
+    nameWithType: ReliableStateManagerReplicaImpl.abort()
+    fullName: void microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.abort()
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.abort*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 86
+    package: microsoft.servicefabric.data
+    summary: "<p>状態プロバイダーのレプリカを強制的に中止します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>この通常ノードで、永続的な障害が検出されたときにエラーまたは発生 Service Fabric は、内部エラーのため、レプリカのライフ サイクルを確実に管理できません。 </p>"
+    syntax:
+      content: public void abort()
+    overridden: microsoft.servicefabric.data._state_provider_replica.abort()
+  - uid: 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+    id: 'backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: 'backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    nameWithType: 'ReliableStateManagerReplicaImpl.backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 39
+    package: microsoft.servicefabric.data
+    summary: "<p>これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</p>\n<p>\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。 BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。 False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。 また、バックアップはマークされます失敗とします。 </p>"
+    syntax:
+      content: 'public CompletableFuture<?> backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+      parameters:
+        - id: option
+          type: microsoft.servicefabric.data._backup_option
+          description: <p>実行するバックアップの種類。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>この操作のタイムアウト。 </p>
+        - id: backupCallback
+          type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
+          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+    overridden: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+  - uid: 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+    id: 'backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: 'backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    nameWithType: 'ReliableStateManagerReplicaImpl.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 33
+    package: microsoft.servicefabric.data
+    summary: "<p>これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</p>\n<p>\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。 BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。 False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。 また、バックアップはマークされます失敗とします。 </p>"
+    syntax:
+      content: 'public CompletableFuture<?> backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+      parameters:
+        - id: backupCallback
+          type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
+          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+    overridden: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+  - uid: 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.changeRoleAsync(ReplicaRole,CancellationToken)'
+    id: 'changeRoleAsync(ReplicaRole,CancellationToken)'
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: 'changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    nameWithType: 'ReliableStateManagerReplicaImpl.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<String> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.changeRoleAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 76
+    package: microsoft.servicefabric.data
+    summary: |-
+      <p>そのロールが変更される、たとえばプライマリまたはセカンダリに、状態プロバイダーのレプリカを通知します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<String> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+      parameters:
+        - id: newRole
+          type: system.fabric._replica_role
+          description: <p>プライマリまたはセカンダリなど、新しいレプリカ ロール。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 06be942d
+        description: <p>非同期の変更の役割の操作を表すタスク。 </p>
+    overridden: 'microsoft.servicefabric.data._state_provider_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.closeAsync(CancellationToken)
+    id: closeAsync(CancellationToken)
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: closeAsync(CancellationToken cancellationToken)
+    nameWithType: ReliableStateManagerReplicaImpl.closeAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<Void> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.closeAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.closeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 81
+    package: microsoft.servicefabric.data
+    summary: "<p>状態プロバイダーの複製が正常にクローズします。</p>\n<p>\r\n\r\n  <b>注釈:</b>これは、レプリカのコードにアップグレードされている、負荷分散のため、レプリカの移動または一時的なエラーが検出された場合に通常に発生します。 </p>"
+    syntax:
+      content: public CompletableFuture<Void> closeAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: db03ee24
+        description: <p>非同期の close 操作を表すタスク。 </p>
+    overridden: microsoft.servicefabric.data._state_provider_replica.closeAsync(CancellationToken)
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.getTransactionalReplicator()
+    id: getTransactionalReplicator()
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: getTransactionalReplicator()
+    nameWithType: ReliableStateManagerReplicaImpl.getTransactionalReplicator()
+    fullName: JTransactionalReplicator microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.getTransactionalReplicator()
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.getTransactionalReplicator*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 18
+    package: microsoft.servicefabric.data
+    syntax:
+      content: public JTransactionalReplicator getTransactionalReplicator()
+      return:
+        type: e371d27b
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.initialize(StatefulServiceInitializationParameters)
+    id: initialize(StatefulServiceInitializationParameters)
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: initialize(StatefulServiceInitializationParameters initializationParameters)
+    nameWithType: ReliableStateManagerReplicaImpl.initialize(StatefulServiceInitializationParameters initializationParameters)
+    fullName: void microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.initialize(StatefulServiceInitializationParameters initializationParameters)
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.initialize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 57
+    package: microsoft.servicefabric.data
+    summary: "<p>サービスの初期化情報を使用して、状態プロバイダーのレプリカを初期化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>初期化中に複雑な処理を行う必要はありません。 OpenAsync では、高価なまたは実行時間の長いの初期化を行う必要があります。 </p>"
+    syntax:
+      content: public void initialize(StatefulServiceInitializationParameters initializationParameters)
+      parameters:
+        - id: initializationParameters
+          type: system.fabric._stateful_service_initialization_parameters
+          description: <p>サービス名、パーティション id、レプリカの id、およびコード パッケージ情報などのサービスの初期化情報。 </p>
+    overridden: microsoft.servicefabric.data._state_provider_replica.initialize(StatefulServiceInitializationParameters)
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.onOpenAsync(CancellationToken)
+    id: onOpenAsync(CancellationToken)
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: onOpenAsync(CancellationToken cancellationToken)
+    nameWithType: ReliableStateManagerReplicaImpl.onOpenAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<ReliableStateManagerConfiguration> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.onOpenAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.onOpenAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 70
+    package: microsoft.servicefabric.data
+    syntax:
+      content: protected CompletableFuture<ReliableStateManagerConfiguration> onOpenAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 9cdf14d0microsoft.servicefabric.data._reliable_state_manager_configurationa08ddfce
+  - uid: 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
+    id: 'openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: 'openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+    nameWithType: 'ReliableStateManagerReplicaImpl.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<Replicator> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.openAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 62
+    package: microsoft.servicefabric.data
+    summary: "<p>使用するため、状態プロバイダーのレプリカを開きます。</p>\n<p>\r\n\r\n  <b>注釈:</b>拡張状態プロバイダーの初期化タスクを開始できます。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Replicator> openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+      parameters:
+        - id: openMode
+          type: system.fabric._replica_open_mode
+          description: <p>これが新規または既存のレプリカであるかどうかを示します。 </p>
+        - id: partition
+          type: system.fabric._stateful_service_partition
+          description: <p>このレプリカが属しているパーティション。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 9cdf14d0system.fabric._replicatora08ddfce
+        description: <p>非同期の open 操作を表すタスク。 結果には、パーティション内の他の状態プロバイダーのレプリカ間で状態のレプリケーションを担当するレプリケーターが含まれています。 </p>
+    overridden: 'microsoft.servicefabric.data._state_provider_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration)
+    id: ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration)
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration configuration)
+    nameWithType: ReliableStateManagerReplicaImpl.ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration configuration)
+    fullName: microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration configuration)
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.ReliableStateManagerReplicaImpl*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 22
+    package: microsoft.servicefabric.data
+    syntax:
+      content: public ReliableStateManagerReplicaImpl(ReliableStateManagerConfiguration configuration)
+      parameters:
+        - id: configuration
+          type: microsoft.servicefabric.data._reliable_state_manager_configuration
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync(String)
+    id: restoreAsync(String)
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: restoreAsync(String backupFolderPath)
+    nameWithType: ReliableStateManagerReplicaImpl.restoreAsync(String backupFolderPath)
+    fullName: CompletableFuture<?> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.restoreAsync(String backupFolderPath)
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 47
+    package: microsoft.servicefabric.data
+    summary: "<p>作成したバックアップを復元します。</p>\n<p>\r\n\r\n  <b>注釈:</b>安全な復元が実行されて、現在のレプリカの状態は、データを復元する場合、復元は完了のみを意味します。 </p>"
+    syntax:
+      content: public CompletableFuture<?> restoreAsync(String backupFolderPath)
+      parameters:
+        - id: backupFolderPath
+          type: '26831127'
+          description: <p>レプリカがから復元するディレクトリ。 このパラメーターを null にすることはできませんを空または空白のみが含まれています。 UNC パスも指定することがあります。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期の復元操作を表すタスク。 </p>
+    overridden: microsoft.servicefabric.data._state_provider_replica.restoreAsync(String)
+  - uid: 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync(String,RestorePolicy)'
+    id: 'restoreAsync(String,RestorePolicy)'
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: 'restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+    nameWithType: 'ReliableStateManagerReplicaImpl.restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 52
+    package: microsoft.servicefabric.data
+    summary: |-
+      <p>作成したバックアップを復元します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+      parameters:
+        - id: backupFolderPath
+          type: '26831127'
+          description: <p>レプリカがから復元するディレクトリ。 このパラメーターを null にすることはできませんを空または空白のみが含まれています。 UNC パスも指定することがあります。 </p>
+        - id: restorePolicy
+          type: microsoft.servicefabric.data._restore_policy
+          description: <p>復元のポリシー。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期の復元操作を表すタスク。 </p>
+    overridden: 'microsoft.servicefabric.data._state_provider_replica.restoreAsync(String,RestorePolicy)'
+  - uid: 'microsoft.servicefabric.data._reliable_state_manager_replica_impl.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
+    id: 'setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
+    parent: microsoft.servicefabric.data._reliable_state_manager_replica_impl
+    href: microsoft.servicefabric.data._reliable_state_manager_replica_impl.yml
+    langs:
+      - java
+    name: 'setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+    nameWithType: 'ReliableStateManagerReplicaImpl.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+    fullName: 'void microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+    overload: microsoft.servicefabric.data._reliable_state_manager_replica_impl.setOnDataLossCallback*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/data/ReliableStateManagerReplicaImpl.java
+      startLine: 27
+    package: microsoft.servicefabric.data
+    summary: |-
+      <p>疑いのあるデータ損失の可能性の中に呼び出される関数</p>
+      <p></p>
+    syntax:
+      content: 'public void setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+      parameters:
+        - id: onDataLossAsync
+          type: 432ffe41system.fabric._cancellation_token774bd4f0
+          description: <p>TODO です。 疑いのあるデータ損失の処理の一部として呼び出される関数。 関数は、CancellationToken にし、イベントの非同期処理を表す CompletableFuture を返します。 True を返すには、レプリカの状態が復元されていることを示します。 False は、レプリカの状態が変更されていないことを示します。 </p>
+    overridden: 'microsoft.servicefabric.data._state_provider_replica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
+references:
+  - uid: e371d27b
+    spec.java:
+      - name: JTransactionalReplicator
+        fullName: JTransactionalReplicator
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.getTransactionalReplicator*
+    name: getTransactionalReplicator
+    nameWithType: ReliableStateManagerReplicaImpl.getTransactionalReplicator
+    fullName: JTransactionalReplicator microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.getTransactionalReplicator
+    package: microsoft.servicefabric.data
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.ReliableStateManagerReplicaImpl*
+    name: ReliableStateManagerReplicaImpl
+    nameWithType: ReliableStateManagerReplicaImpl.ReliableStateManagerReplicaImpl
+    fullName: microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.ReliableStateManagerReplicaImpl
+    package: microsoft.servicefabric.data
+  - uid: 432ffe41system.fabric._cancellation_token774bd4f0
+    spec.java:
+      - name: Function<
+        fullName: Function<
+      - uid: system.fabric._cancellation_token
+        name: CancellationToken
+        fullName: system.fabric.CancellationToken
+        href: system.fabric._cancellation_token.yml
+      - name: ', CompletableFuture<Boolean>>'
+        fullName: ', CompletableFuture<Boolean>>'
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.setOnDataLossCallback*
+    name: setOnDataLossCallback
+    nameWithType: ReliableStateManagerReplicaImpl.setOnDataLossCallback
+    fullName: void microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.setOnDataLossCallback
+    package: microsoft.servicefabric.data
+  - uid: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
+    spec.java:
+      - name: BiFunction<
+        fullName: BiFunction<
+      - uid: microsoft.servicefabric.data._backup_info
+        name: BackupInfo
+        fullName: microsoft.servicefabric.data.BackupInfo
+        href: microsoft.servicefabric.data._backup_info.yml
+      - name: ', '
+        fullName: ', '
+      - uid: system.fabric._cancellation_token
+        name: CancellationToken
+        fullName: system.fabric.CancellationToken
+        href: system.fabric._cancellation_token.yml
+      - name: ', CompletableFuture<Boolean>>'
+        fullName: ', CompletableFuture<Boolean>>'
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.backupAsync*
+    name: backupAsync
+    nameWithType: ReliableStateManagerReplicaImpl.backupAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.backupAsync
+    package: microsoft.servicefabric.data
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.restoreAsync*
+    name: restoreAsync
+    nameWithType: ReliableStateManagerReplicaImpl.restoreAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.restoreAsync
+    package: microsoft.servicefabric.data
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.initialize*
+    name: initialize
+    nameWithType: ReliableStateManagerReplicaImpl.initialize
+    fullName: void microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.initialize
+    package: microsoft.servicefabric.data
+  - uid: 9cdf14d0system.fabric._replicatora08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._replicator
+        name: Replicator
+        fullName: system.fabric.Replicator
+        href: system.fabric._replicator.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.openAsync*
+    name: openAsync
+    nameWithType: ReliableStateManagerReplicaImpl.openAsync
+    fullName: CompletableFuture<Replicator> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.openAsync
+    package: microsoft.servicefabric.data
+  - uid: 06be942d
+    spec.java:
+      - name: CompletableFuture<String>
+        fullName: CompletableFuture<String>
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.changeRoleAsync*
+    name: changeRoleAsync
+    nameWithType: ReliableStateManagerReplicaImpl.changeRoleAsync
+    fullName: CompletableFuture<String> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.changeRoleAsync
+    package: microsoft.servicefabric.data
+  - uid: db03ee24
+    spec.java:
+      - name: CompletableFuture<Void>
+        fullName: CompletableFuture<Void>
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.closeAsync*
+    name: closeAsync
+    nameWithType: ReliableStateManagerReplicaImpl.closeAsync
+    fullName: CompletableFuture<Void> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.closeAsync
+    package: microsoft.servicefabric.data
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.abort*
+    name: abort
+    nameWithType: ReliableStateManagerReplicaImpl.abort
+    fullName: void microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.abort
+    package: microsoft.servicefabric.data
+  - uid: 9cdf14d0microsoft.servicefabric.data._reliable_state_manager_configurationa08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: microsoft.servicefabric.data._reliable_state_manager_configuration
+        name: ReliableStateManagerConfiguration
+        fullName: microsoft.servicefabric.data.ReliableStateManagerConfiguration
+        href: microsoft.servicefabric.data._reliable_state_manager_configuration.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.data._reliable_state_manager_replica_impl.onOpenAsync*
+    name: onOpenAsync
+    nameWithType: ReliableStateManagerReplicaImpl.onOpenAsync
+    fullName: CompletableFuture<ReliableStateManagerConfiguration> microsoft.servicefabric.data.ReliableStateManagerReplicaImpl.onOpenAsync
+    package: microsoft.servicefabric.data
+  - uid: microsoft.servicefabric.data._state_provider_replica
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: StateProviderReplica
+    nameWithType: StateProviderReplica
+    fullName: microsoft.servicefabric.data.StateProviderReplica
+    type: Interface
+    summary: <p>Service Fabric サービスと対話するの信頼性の高い状態プロバイダーの複製を実装する必要がありますメソッドを定義します。 </p>
+    syntax:
+      content: public interface StateProviderReplica
+  - uid: microsoft.servicefabric.data._reliable_state_manager_configuration
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._reliable_state_manager_configuration.yml
+    name: ReliableStateManagerConfiguration
+    nameWithType: ReliableStateManagerConfiguration
+    fullName: microsoft.servicefabric.data.ReliableStateManagerConfiguration
+    type: Class
+    syntax:
+      content: public class ReliableStateManagerConfiguration
+  - uid: 'microsoft.servicefabric.data._state_provider_replica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: 'setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+    nameWithType: 'StateProviderReplica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+    fullName: 'void microsoft.servicefabric.data.StateProviderReplica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+    type: Method
+    summary: |-
+      <p>疑いのあるデータ損失の可能性の中に呼び出される関数</p>
+      <p></p>
+    syntax:
+      content: 'public void setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
+      parameters:
+        - id: onDataLossAsync
+          type: 432ffe41system.fabric._cancellation_token774bd4f0
+          description: <p>TODO です。 疑いのあるデータ損失の処理の一部として呼び出される関数。 関数は、CancellationToken にし、イベントの非同期処理を表す CompletableFuture を返します。 True を返すには、レプリカの状態が復元されていることを示します。 False は、レプリカの状態が変更されていないことを示します。 </p>
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: 'backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    nameWithType: 'StateProviderReplica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    type: Method
+    summary: "<p>これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</p>\n<p>\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。 BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。 False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。 また、バックアップはマークされます失敗とします。 </p>"
+    syntax:
+      content: 'public CompletableFuture<?> backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+      parameters:
+        - id: backupCallback
+          type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
+          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.data._backup_info
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._backup_info.yml
+    name: BackupInfo
+    nameWithType: BackupInfo
+    fullName: microsoft.servicefabric.data.BackupInfo
+    type: Class
+    summary: <p>バックアップに関する情報を提供します。 </p>
+    syntax:
+      content: public class BackupInfo
+  - uid: microsoft.servicefabric.data._reliable_state_manager
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._reliable_state_manager.yml
+    name: ReliableStateManager
+    nameWithType: ReliableStateManager
+    fullName: microsoft.servicefabric.data.ReliableStateManager
+    type: Interface
+    syntax:
+      content: public interface ReliableStateManager
+  - uid: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: 'backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    nameWithType: 'StateProviderReplica.backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+    type: Method
+    summary: "<p>これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</p>\n<p>\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。 BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。 False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。 また、バックアップはマークされます失敗とします。 </p>"
+    syntax:
+      content: 'public CompletableFuture<?> backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
+      parameters:
+        - id: option
+          type: microsoft.servicefabric.data._backup_option
+          description: <p>実行するバックアップの種類。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>この操作のタイムアウト。 </p>
+        - id: backupCallback
+          type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
+          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.data._backup_option
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._backup_option.yml
+    name: BackupOption
+    nameWithType: BackupOption
+    fullName: microsoft.servicefabric.data.BackupOption
+    type: Enum
+    summary: <p>バックアップの種類を示します。 </p>
+    syntax:
+      content: public enum BackupOption
+  - uid: microsoft.servicefabric.data._state_provider_replica.restoreAsync(String)
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: restoreAsync(String backupFolderPath)
+    nameWithType: StateProviderReplica.restoreAsync(String backupFolderPath)
+    fullName: CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.restoreAsync(String backupFolderPath)
+    type: Method
+    summary: "<p>作成したバックアップを復元します。</p>\n<p>\r\n\r\n  <b>注釈:</b>安全な復元が実行されて、現在のレプリカの状態は、データを復元する場合、復元は完了のみを意味します。 </p>"
+    syntax:
+      content: public CompletableFuture<?> restoreAsync(String backupFolderPath)
+      parameters:
+        - id: backupFolderPath
+          type: '26831127'
+          description: <p>レプリカがから復元するディレクトリ。 このパラメーターを null にすることはできませんを空または空白のみが含まれています。 UNC パスも指定することがあります。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期の復元操作を表すタスク。 </p>
+  - uid: 'microsoft.servicefabric.data._state_provider_replica.restoreAsync(String,RestorePolicy)'
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: 'restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+    nameWithType: 'StateProviderReplica.restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+    type: Method
+    summary: |-
+      <p>作成したバックアップを復元します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
+      parameters:
+        - id: backupFolderPath
+          type: '26831127'
+          description: <p>レプリカがから復元するディレクトリ。 このパラメーターを null にすることはできませんを空または空白のみが含まれています。 UNC パスも指定することがあります。 </p>
+        - id: restorePolicy
+          type: microsoft.servicefabric.data._restore_policy
+          description: <p>復元のポリシー。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期の復元操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.data._restore_policy
+    parent: microsoft.servicefabric.data
+    href: microsoft.servicefabric.data._restore_policy.yml
+    name: RestorePolicy
+    nameWithType: RestorePolicy
+    fullName: microsoft.servicefabric.data.RestorePolicy
+    type: Enum
+    summary: <p>復元操作のポリシーです。 </p>
+    syntax:
+      content: public enum RestorePolicy
+  - uid: microsoft.servicefabric.data._state_provider_replica.initialize(StatefulServiceInitializationParameters)
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: initialize(StatefulServiceInitializationParameters initializationParameters)
+    nameWithType: StateProviderReplica.initialize(StatefulServiceInitializationParameters initializationParameters)
+    fullName: void microsoft.servicefabric.data.StateProviderReplica.initialize(StatefulServiceInitializationParameters initializationParameters)
+    type: Method
+    summary: "<p>サービスの初期化情報を使用して、状態プロバイダーのレプリカを初期化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>初期化中に複雑な処理を行う必要はありません。 OpenAsync では、高価なまたは実行時間の長いの初期化を行う必要があります。 </p>"
+    syntax:
+      content: public void initialize(StatefulServiceInitializationParameters initializationParameters)
+      parameters:
+        - id: initializationParameters
+          type: system.fabric._stateful_service_initialization_parameters
+          description: <p>サービス名、パーティション id、レプリカの id、およびコード パッケージ情報などのサービスの初期化情報。 </p>
+  - uid: system.fabric._stateful_service_initialization_parameters
+    parent: system.fabric
+    href: system.fabric._stateful_service_initialization_parameters.yml
+    name: StatefulServiceInitializationParameters
+    nameWithType: StatefulServiceInitializationParameters
+    fullName: system.fabric.StatefulServiceInitializationParameters
+    type: Class
+    summary: <p>ステートフルなサービスのサービスの初期化パラメーターを定義します。 </p>
+    syntax:
+      content: public class StatefulServiceInitializationParameters
+  - uid: system.fabric._replicator
+    parent: system.fabric
+    href: system.fabric._replicator.yml
+    name: Replicator
+    nameWithType: Replicator
+    fullName: system.fabric.Replicator
+    type: Interface
+    syntax:
+      content: public interface Replicator
+  - uid: 'microsoft.servicefabric.data._state_provider_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: 'openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+    nameWithType: 'StateProviderReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<Replicator> microsoft.servicefabric.data.StateProviderReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+    type: Method
+    summary: "<p>使用するため、状態プロバイダーのレプリカを開きます。</p>\n<p>\r\n\r\n  <b>注釈:</b>拡張状態プロバイダーの初期化タスクを開始できます。 </p>"
+    syntax:
+      content: 'public CompletableFuture<Replicator> openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
+      parameters:
+        - id: openMode
+          type: system.fabric._replica_open_mode
+          description: <p>これが新規または既存のレプリカであるかどうかを示します。 </p>
+        - id: partition
+          type: system.fabric._stateful_service_partition
+          description: <p>このレプリカが属しているパーティション。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 9cdf14d0system.fabric._replicatora08ddfce
+        description: <p>非同期の open 操作を表すタスク。 結果には、パーティション内の他の状態プロバイダーのレプリカ間で状態のレプリケーションを担当するレプリケーターが含まれています。 </p>
+  - uid: system.fabric._replica_open_mode
+    parent: system.fabric
+    href: system.fabric._replica_open_mode.yml
+    name: ReplicaOpenMode
+    nameWithType: ReplicaOpenMode
+    fullName: system.fabric.ReplicaOpenMode
+    type: Enum
+    syntax:
+      content: public enum ReplicaOpenMode
+  - uid: system.fabric._stateful_service_partition
+    parent: system.fabric
+    href: system.fabric._stateful_service_partition.yml
+    name: StatefulServicePartition
+    nameWithType: StatefulServicePartition
+    fullName: system.fabric.StatefulServicePartition
+    type: Interface
+    syntax:
+      content: public interface StatefulServicePartition
+  - uid: 'microsoft.servicefabric.data._state_provider_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: 'changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    nameWithType: 'StateProviderReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    type: Method
+    summary: |-
+      <p>そのロールが変更される、たとえばプライマリまたはセカンダリに、状態プロバイダーのレプリカを通知します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+      parameters:
+        - id: newRole
+          type: system.fabric._replica_role
+          description: <p>プライマリまたはセカンダリなど、新しいレプリカ ロール。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>非同期の変更の役割の操作を表すタスク。 </p>
+  - uid: system.fabric._replica_role
+    parent: system.fabric
+    href: system.fabric._replica_role.yml
+    name: ReplicaRole
+    nameWithType: ReplicaRole
+    fullName: system.fabric.ReplicaRole
+    type: Enum
+    summary: <p>レプリカのロールを定義します。 </p>
+    syntax:
+      content: public enum ReplicaRole
+  - uid: microsoft.servicefabric.data._state_provider_replica.closeAsync(CancellationToken)
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: closeAsync(CancellationToken cancellationToken)
+    nameWithType: StateProviderReplica.closeAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.closeAsync(CancellationToken cancellationToken)
+    type: Method
+    summary: "<p>状態プロバイダーの複製が正常にクローズします。</p>\n<p>\r\n\r\n  <b>注釈:</b>これは、レプリカのコードにアップグレードされている、負荷分散のため、レプリカの移動または一時的なエラーが検出された場合に通常に発生します。 </p>"
+    syntax:
+      content: public CompletableFuture<?> closeAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>非同期の close 操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.data._state_provider_replica.abort()
+    parent: microsoft.servicefabric.data._state_provider_replica
+    href: microsoft.servicefabric.data._state_provider_replica.yml
+    name: abort()
+    nameWithType: StateProviderReplica.abort()
+    fullName: void microsoft.servicefabric.data.StateProviderReplica.abort()
+    type: Method
+    summary: "<p>状態プロバイダーのレプリカを強制的に中止します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>この通常ノードで、永続的な障害が検出されたときにエラーまたは発生 Service Fabric は、内部エラーのため、レプリカのライフ サイクルを確実に管理できません。 </p>"
+    syntax:
+      content: public void abort()

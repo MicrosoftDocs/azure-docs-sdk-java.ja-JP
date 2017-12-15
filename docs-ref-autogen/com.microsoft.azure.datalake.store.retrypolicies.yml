@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.datalake.store.retrypolicies
+    id: retrypolicies
+    children:
+      - com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
+      - com.microsoft.azure.datalake.store.retrypolicies._no_retry_policy
+      - com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+    href: com.microsoft.azure.datalake.store.retrypolicies.yml
+    langs:
+      - java
+    name: com.microsoft.azure.datalake.store.retrypolicies
+    nameWithType: com.microsoft.azure.datalake.store.retrypolicies
+    fullName: com.microsoft.azure.datalake.store.retrypolicies
+    type: Namespace
+    source:
+      remote:
+        path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+        branch: master
+        repo: 'https://github.com/azure/azure-data-lake-store-java'
+      path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/ExponentialBackoffPolicy.java
+      startLine: 6
+    summary: <p>すべての再試行ポリシーです。 </p>
+    syntax:
+      content: package com.microsoft.azure.datalake.store.retrypolicies
+references:
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
+    parent: com.microsoft.azure.datalake.store.retrypolicies
+    href: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.yml
+    name: ExponentialBackoffPolicy
+    nameWithType: ExponentialBackoffPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy
+    type: Class
+    summary: |-
+      <p>別の実装には、エラーに基づき意思決定が再試行してください。</p>
+      <p>
+
+        <itemizedlist>
+
+          <listitem>
+
+            <p>Nonretryable エラー (3 xx、ほとんどの 4 xx、およびリターン コードの一部の 5 xx) には、再試行はありません。 </p>
+
+          </listitem>
+
+          <listitem>
+
+            <p>エラーを調整するには、指数バックオフによる再試行の操作を行います </p>
+
+          </listitem>
+
+          <listitem>
+
+            <p>その他のすべてのエラーの場合は、線形バックオフによる再試行の操作を行います </p>
+
+          </listitem>
+
+        </itemizedlist>
+
+      </p>
+    syntax:
+      content: public class ExponentialBackoffPolicy implements RetryPolicy
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._no_retry_policy
+    parent: com.microsoft.azure.datalake.store.retrypolicies
+    href: com.microsoft.azure.datalake.store.retrypolicies._no_retry_policy.yml
+    name: NoRetryPolicy
+    nameWithType: NoRetryPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.NoRetryPolicy
+    type: Class
+    summary: |-
+      <p>再試行しないことです。 常に false の場合、その erequest いない再試行することを示すを返します。</p>
+      <p>再試行安全ではないとユーザーが呼び出しとほとんどの同時にセマンティクス、は、これを使用してください。 これは、ここでの最後の呼び出しによって返されたエラーは確定示しません呼び出しの成功または失敗非べし等メソッドの場合に便利です。 たとえば、追加がタイムアウトになる、バックエンドで成功した場合は、再試行しています可能性がありますデータ 2 回ファイルに追加します。 </p>
+    syntax:
+      content: public class NoRetryPolicy implements RetryPolicy
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+    parent: com.microsoft.azure.datalake.store.retrypolicies
+    href: com.microsoft.azure.datalake.store.retrypolicies._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.RetryPolicy
+    type: Interface
+    summary: |-
+      <p><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。 </p>
+      <p>このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。 </p>
+    syntax:
+      content: public interface RetryPolicy

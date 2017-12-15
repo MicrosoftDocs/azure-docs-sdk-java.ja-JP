@@ -1,0 +1,1165 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    id: _multi_shard_statement
+    parent: com.microsoft.azure.elasticdb.query.multishard
+    children:
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.cancel()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.close()
+      - 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create(MultiShardConnection,String)'
+      - 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create(MultiShardConnection,String,int)'
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.dispose(boolean)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery(CommandBehavior)
+      - 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery(CommandBehavior,RetryPolicy,MultiShardExecutionPolicy)'
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync(CommandBehavior)
+      - 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync(CommandBehavior,RetryPolicy,MultiShardExecutionPolicy)'
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandText()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeout()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeoutPerShard()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getConnection()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionOptions()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionPolicy()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryBehavior()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryPolicy()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeout()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeoutPerShard()
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandText(String)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeout(int)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeoutPerShard(int)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionOptions(MultiShardExecutionOptions)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionPolicy(MultiShardExecutionPolicy)
+      - 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setParameters(int,int,Object...)'
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryBehavior(RetryBehavior)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryPolicy(RetryPolicy)
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionBegan
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionCanceled
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionFaulted
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionReaderReturned
+      - com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionSucceeded
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: MultiShardStatement
+    nameWithType: MultiShardStatement
+    fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 74
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: '<p>補完、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>接続、ステートメント、および ResultSet の障害を許容するようなコマンド オブジェクトを使用します。 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>の入力としての T-SQL コマンド ステートメントは、そのシャードでそれに対応する指定のコレクション全体のコマンドを実行<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>です。 処理の結果、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref> execute メソッドを通じて利用できる、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 目的: 補完するもの、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>ノートの複数のシャードに対して指定されたコマンドを実行中の作業を抽象し、: このクラスは、スレッド セーフであります。 接続を持つシャードへの接続文字列プロパティを同期 API が内部的に非同期 API が呼び出されるため"コンテキスト接続 = true"はサポートされていません。 トランザクション セマンティクスはサポートされていません。 </p>'
+    syntax: &ref_1
+      content: public class MultiShardStatement
+    inheritance:
+      - java.lang.Object
+      - AutoCloseable
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.cancel()
+    id: cancel()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: cancel()
+    nameWithType: MultiShardStatement.cancel()
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.cancel()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.cancel*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 808
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: '<p>進行中の取り消しを試行<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>とコマンドは、代わりに、シャードの実行が進行中の作業です。 [キャンセル] のすべての例外をスローしたくありません。 だけをキャンセルします。 </p>'
+    syntax:
+      content: public void cancel()
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.close()
+    id: close()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: close()
+    nameWithType: MultiShardStatement.close()
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.close()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.close*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 866
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public void close()
+  - uid: 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create(MultiShardConnection,String)'
+    id: 'create(MultiShardConnection,String)'
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: 'create(MultiShardConnection connection, String commandText)'
+    nameWithType: 'MultiShardStatement.create(MultiShardConnection connection, String commandText)'
+    fullName: 'static MultiShardStatement com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.create(MultiShardConnection connection, String commandText)'
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 220
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>このクラスのインスタンス コンス トラクターです。 300 秒の既定のコマンド タイムアウトが使用されます。</p>
+      <p></p>
+    syntax:
+      content: 'public static MultiShardStatement create(MultiShardConnection connection, String commandText)'
+      parameters:
+        - id: connection
+          type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection
+          description: <p>シャードへの接続 </p>
+        - id: commandText
+          type: '26831127'
+          description: <p>シャードに対して実行するコマンド テキスト </p>
+      return:
+        type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+        description: <p>このクラスのインスタンス。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create(MultiShardConnection,String,int)'
+    id: 'create(MultiShardConnection,String,int)'
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: 'create(MultiShardConnection connection, String commandText, int commandTimeout)'
+    nameWithType: 'MultiShardStatement.create(MultiShardConnection connection, String commandText, int commandTimeout)'
+    fullName: 'static MultiShardStatement com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.create(MultiShardConnection connection, String commandText, int commandTimeout)'
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 236
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>このクラスのインスタンス コンス トラクターです。 既定のコマンドの種類は、テキストです。</p>
+      <p></p>
+    syntax:
+      content: 'public static MultiShardStatement create(MultiShardConnection connection, String commandText, int commandTimeout)'
+      parameters:
+        - id: connection
+          type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection
+          description: <p>シャードへの接続 </p>
+        - id: commandText
+          type: '26831127'
+          description: <p>シャードに対して実行するコマンド テキスト </p>
+        - id: commandTimeout
+          type: f75371fa
+          description: <p>コマンドのタイムアウトをすべてのシャードに対して実行する commandText を指定します。 </p>
+      return:
+        type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+        description: <p>このクラスのインスタンス。 </p>
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.dispose(boolean)
+    id: dispose(boolean)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: dispose(boolean disposing)
+    nameWithType: MultiShardStatement.dispose(boolean disposing)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.dispose(boolean disposing)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.dispose*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 843
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>保持されているアンマネージ マネージ リソースを破棄します。 意図的に例外を無視するとします。 </p>
+    syntax:
+      content: protected void dispose(boolean disposing)
+      parameters:
+        - id: disposing
+          type: 4fc6e284
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery()
+    id: executeQuery()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: executeQuery()
+    nameWithType: MultiShardStatement.executeQuery()
+    fullName: MultiShardResultSet com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQuery()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 376
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>ExecuteReader メソッドの<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>各シャードに指定されたコマンド ステートメントを実行し、シャード内からは個々 の結果の (つまり UNION ALL) を連結したものを返す、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 MultiShardExecutionPolicy を設定して、結果の完全性に関する、実行ポリシーを制御することができます。 既定の実行ポリシーでは、完全な結果を返すためです。</p>
+      <p></p>
+    syntax:
+      content: public MultiShardResultSet executeQuery()
+      return:
+        type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set
+        description: <p><xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>全体とインスタンスの結果セットを連結します。 </p>
+    exceptions:
+      - type: 12fe80de
+        description: <p>commandText が null または空の場合にスローされます。 </p>
+      - type: a19dd706
+        description: <p>完了する前に、CommandTimeout が経過した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery(CommandBehavior)
+    id: executeQuery(CommandBehavior)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: executeQuery(CommandBehavior behavior)
+    nameWithType: MultiShardStatement.executeQuery(CommandBehavior behavior)
+    fullName: MultiShardResultSet com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQuery(CommandBehavior behavior)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 397
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>ExecuteReader メソッドの<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>各シャードに指定されたコマンド ステートメントを実行し、シャード内からは個々 の結果の (つまり UNION ALL) を連結したものを返す、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 MultiShardExecutionPolicy を設定して、結果の完全性に関する、実行ポリシーを制御することができます。 既定の実行ポリシーでは、完全な結果を返すためです。</p>
+      <p></p>
+    syntax:
+      content: public MultiShardResultSet executeQuery(CommandBehavior behavior)
+      parameters:
+        - id: behavior
+          type: com.microsoft.azure.elasticdb.query.logging._command_behavior
+          description: <p>使用する引数を指定します。 </p>
+      return:
+        type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set
+        description: <p><xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>全体とインスタンスが結果セットを連結します。 </p>
+    exceptions:
+      - type: 12fe80de
+        description: <p>commandText が null または空の場合にスローされます。 </p>
+      - type: a19dd706
+        description: <p>完了する前に、CommandTimeout が経過した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery(CommandBehavior,RetryPolicy,MultiShardExecutionPolicy)'
+    id: 'executeQuery(CommandBehavior,RetryPolicy,MultiShardExecutionPolicy)'
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: 'executeQuery(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+    nameWithType: 'MultiShardStatement.executeQuery(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+    fullName: 'MultiShardResultSet com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQuery(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 419
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>すべてのシャードに対して、指定したクエリを実行し、それらの結果を含むリーダーを返します。 デザインの原則のコマンドは、非ブロッキング並列的に実行されます。 でコマンドがすべてのシャードに対して完了するまで、呼び出し元のスレッドのみがブロックされます。</p>
+      <p></p>
+    syntax:
+      content: 'public MultiShardResultSet executeQuery(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+      parameters:
+        - id: behavior
+          type: com.microsoft.azure.elasticdb.query.logging._command_behavior
+          description: <p>使用するコマンドの動作 </p>
+        - id: commandRetryPolicy
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+          description: <p>シャードに対してコマンドを実行するときに使用する再試行ポリシー </p>
+        - id: executionPolicy
+          type: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_policy
+          description: <p>実行ポリシーを使用するには </p>
+      return:
+        type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set\" data-throw-if-not-resolved=\"false\">MultiShardResultSet</xref>すべてのシャードから結果を含むインスタンス </p>"
+    exceptions:
+      - type: 12fe80de
+        description: <p>CommandText が null または空の場合 </p>
+      - type: a19dd706
+        description: <p>完了する前に、commandTimeout が経過した場合 </p>
+      - type: 0a3e89da
+        description: <p>クエリの実行中に 1 つまたは複数のエラーが発生した場合 </p>
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync()
+    id: executeQueryAsync()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: executeQueryAsync()
+    nameWithType: MultiShardStatement.executeQueryAsync()
+    fullName: Callable<MultiShardResultSet> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQueryAsync()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 444
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>ExecuteReader メソッドの<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>各シャードに指定されたコマンド ステートメントを実行し、シャード内からは個々 の結果の (つまり UNION ALL) を連結したものを返す、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 MultiShardExecutionPolicy を設定して、結果の完全性に関する、実行ポリシーを制御することができます。 既定の実行ポリシーでは、完全な結果を返すためです。</p>
+      <p></p>
+    syntax:
+      content: public Callable<MultiShardResultSet> executeQueryAsync()
+      return:
+        type: 7d892192com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_seta08ddfce
+        description: <p>タスクのラッピング、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>全体とインスタンスの結果セットを連結します。 </p>
+    exceptions:
+      - type: 12fe80de
+        description: <p>CloseConnection または SingleRow など、指定したコマンドの動作がサポートされていない場合や、commandText が null または空である場合はスローされます。 </p>
+      - type: a19dd706
+        description: <p>完了する前に、commandTimeout が経過した場合にスローされます。 </p>
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync(CommandBehavior)
+    id: executeQueryAsync(CommandBehavior)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: executeQueryAsync(CommandBehavior behavior)
+    nameWithType: MultiShardStatement.executeQueryAsync(CommandBehavior behavior)
+    fullName: Callable<MultiShardResultSet> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQueryAsync(CommandBehavior behavior)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 462
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>ExecuteReader メソッドの<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>各シャードに指定されたコマンド ステートメントを実行し、シャード内からは個々 の結果の (つまり UNION ALL) を連結したものを返す、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 MultiShardExecutionPolicy を設定して、結果の完全性に関する、実行ポリシーを制御することができます。 既定の実行ポリシーでは、完全な結果を返すためです。</p>
+      <p></p>
+    syntax:
+      content: public Callable<MultiShardResultSet> executeQueryAsync(CommandBehavior behavior)
+      parameters:
+        - id: behavior
+          type: com.microsoft.azure.elasticdb.query.logging._command_behavior
+          description: <p>使用するコマンドの動作 </p>
+      return:
+        type: 7d892192com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_seta08ddfce
+        description: <p>タスクのラッピング、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>全体とインスタンスの結果セットを連結します。 </p>
+    exceptions:
+      - type: 12fe80de
+        description: <p>CloseConnection または SingleRow など、指定したコマンドの動作がサポートされていない場合や、commandText が null または空である場合はスローされます。 </p>
+      - type: a19dd706
+        description: <p>完了する前に、commandTimeout が経過した場合にスローされます。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync(CommandBehavior,RetryPolicy,MultiShardExecutionPolicy)'
+    id: 'executeQueryAsync(CommandBehavior,RetryPolicy,MultiShardExecutionPolicy)'
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: 'executeQueryAsync(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+    nameWithType: 'MultiShardStatement.executeQueryAsync(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+    fullName: 'Callable<MultiShardResultSet> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQueryAsync(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 481
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>すべてのシャードに対して指定されたクエリを非同期的に実行します。</p>
+      <p></p>
+    syntax:
+      content: 'public Callable<MultiShardResultSet> executeQueryAsync(CommandBehavior behavior, RetryPolicy commandRetryPolicy, MultiShardExecutionPolicy executionPolicy)'
+      parameters:
+        - id: behavior
+          type: com.microsoft.azure.elasticdb.query.logging._command_behavior
+          description: <p>使用するコマンドの動作 </p>
+        - id: commandRetryPolicy
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+          description: <p>シャードに対してコマンドを実行するときに使用する再試行ポリシー </p>
+        - id: executionPolicy
+          type: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_policy
+          description: <p>実行ポリシーを使用するには </p>
+      return:
+        type: 7d892192com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_seta08ddfce
+        description: <p>コマンドの実行中の例外が返されたタスクによって与えられるすべてのシャードから結果を含む ResultT タスク </p>
+    exceptions:
+      - type: 12fe80de
+        description: <p>CommandText が null または空の場合 </p>
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandText()
+    id: getCommandText()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getCommandText()
+    nameWithType: MultiShardStatement.getCommandText()
+    fullName: String com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getCommandText()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandText*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 245
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>一連のシャードに対して実行するコマンド テキストを取得します。 </p>
+    syntax:
+      content: public String getCommandText()
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeout()
+    id: getCommandTimeout()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getCommandTimeout()
+    nameWithType: MultiShardStatement.getCommandTimeout()
+    fullName: int com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getCommandTimeout()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeout*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 259
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>コマンドのすべてのシャードに対して実行を待機する秒数時間です。 値 0 は、待機時間の制限がないことを示します。 既定では 300 秒です。 </p>
+    syntax:
+      content: public int getCommandTimeout()
+      return:
+        type: f75371fa
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeoutPerShard()
+    id: getCommandTimeoutPerShard()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getCommandTimeoutPerShard()
+    nameWithType: MultiShardStatement.getCommandTimeoutPerShard()
+    fullName: int com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getCommandTimeoutPerShard()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeoutPerShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 270
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>このプロパティは、個々 のシャードに対してコマンドを実行するためのタイムアウトを制御します。 </p>
+    syntax:
+      content: public int getCommandTimeoutPerShard()
+      return:
+        type: f75371fa
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getConnection()
+    id: getConnection()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getConnection()
+    nameWithType: MultiShardStatement.getConnection()
+    fullName: MultiShardConnection com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getConnection()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getConnection*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 297
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public MultiShardConnection getConnection()
+      return:
+        type: com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionOptions()
+    id: getExecutionOptions()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getExecutionOptions()
+    nameWithType: MultiShardStatement.getExecutionOptions()
+    fullName: MultiShardExecutionOptions com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getExecutionOptions()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionOptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 315
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public MultiShardExecutionOptions getExecutionOptions()
+      return:
+        type: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_options
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionPolicy()
+    id: getExecutionPolicy()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getExecutionPolicy()
+    nameWithType: MultiShardStatement.getExecutionPolicy()
+    fullName: MultiShardExecutionPolicy com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getExecutionPolicy()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 289
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public MultiShardExecutionPolicy getExecutionPolicy()
+      return:
+        type: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_policy
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryBehavior()
+    id: getRetryBehavior()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getRetryBehavior()
+    nameWithType: MultiShardStatement.getRetryBehavior()
+    fullName: RetryBehavior com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getRetryBehavior()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryBehavior*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 281
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public RetryBehavior getRetryBehavior()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryPolicy()
+    id: getRetryPolicy()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: getRetryPolicy()
+    nameWithType: MultiShardStatement.getRetryPolicy()
+    fullName: RetryPolicy com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getRetryPolicy()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 323
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public RetryPolicy getRetryPolicy()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeout()
+    id: resetCommandTimeout()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: resetCommandTimeout()
+    nameWithType: MultiShardStatement.resetCommandTimeout()
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.resetCommandTimeout()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeout*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 354
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>CommandTimeout プロパティを既定値にリセットします。 </p>
+    syntax:
+      content: public void resetCommandTimeout()
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeoutPerShard()
+    id: resetCommandTimeoutPerShard()
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: resetCommandTimeoutPerShard()
+    nameWithType: MultiShardStatement.resetCommandTimeoutPerShard()
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.resetCommandTimeoutPerShard()
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeoutPerShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 361
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>CommandTimeoutPerShard プロパティを既定値にリセットします。 </p>
+    syntax:
+      content: public void resetCommandTimeoutPerShard()
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandText(String)
+    id: setCommandText(String)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setCommandText(String value)
+    nameWithType: MultiShardStatement.setCommandText(String value)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setCommandText(String value)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandText*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 252
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>一連のシャードに対して実行するコマンド テキストを設定します。 </p>
+    syntax:
+      content: public void setCommandText(String value)
+      parameters:
+        - id: value
+          type: '26831127'
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeout(int)
+    id: setCommandTimeout(int)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setCommandTimeout(int commandTimeout)
+    nameWithType: MultiShardStatement.setCommandTimeout(int commandTimeout)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setCommandTimeout(int commandTimeout)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeout*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 263
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public void setCommandTimeout(int commandTimeout)
+      parameters:
+        - id: commandTimeout
+          type: f75371fa
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeoutPerShard(int)
+    id: setCommandTimeoutPerShard(int)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setCommandTimeoutPerShard(int value)
+    nameWithType: MultiShardStatement.setCommandTimeoutPerShard(int value)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setCommandTimeoutPerShard(int value)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeoutPerShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 277
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>このプロパティは、個々 のシャードに対してコマンドを実行するためのタイムアウトを制御します。 </p>
+    syntax:
+      content: public void setCommandTimeoutPerShard(int value)
+      parameters:
+        - id: value
+          type: f75371fa
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionOptions(MultiShardExecutionOptions)
+    id: setExecutionOptions(MultiShardExecutionOptions)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setExecutionOptions(MultiShardExecutionOptions value)
+    nameWithType: MultiShardStatement.setExecutionOptions(MultiShardExecutionOptions value)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setExecutionOptions(MultiShardExecutionOptions value)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionOptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 319
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public void setExecutionOptions(MultiShardExecutionOptions value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_options
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionPolicy(MultiShardExecutionPolicy)
+    id: setExecutionPolicy(MultiShardExecutionPolicy)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setExecutionPolicy(MultiShardExecutionPolicy value)
+    nameWithType: MultiShardStatement.setExecutionPolicy(MultiShardExecutionPolicy value)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setExecutionPolicy(MultiShardExecutionPolicy value)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 293
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public void setExecutionPolicy(MultiShardExecutionPolicy value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_policy
+  - uid: 'com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setParameters(int,int,Object...)'
+    id: )
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: 'setParameters(int index, int type, Object... objects)'
+    nameWithType: 'MultiShardStatement.setParameters(int index, int type, Object... objects)'
+    fullName: 'void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setParameters(int index, int type, Object... objects)'
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setParameters*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 341
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: |-
+      <p>クエリ パラメーターを設定します。 現在はテーブル型のパラメーターはサポートされています。</p>
+      <p></p>
+    syntax:
+      content: 'public void setParameters(int index, int type, Object... objects)'
+      parameters:
+        - id: index
+          type: f75371fa
+          description: <p>パラメーターのインデックス </p>
+        - id: type
+          type: f75371fa
+          description: <p>パラメーターの SQL 型 </p>
+        - id: objects
+          type: 1355eaf1
+          description: <p>パラメーターとして追加するオブジェクトの配列 </p>
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryBehavior(RetryBehavior)
+    id: setRetryBehavior(RetryBehavior)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setRetryBehavior(RetryBehavior value)
+    nameWithType: MultiShardStatement.setRetryBehavior(RetryBehavior value)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setRetryBehavior(RetryBehavior value)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryBehavior*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 285
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public void setRetryBehavior(RetryBehavior value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryPolicy(RetryPolicy)
+    id: setRetryPolicy(RetryPolicy)
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: setRetryPolicy(RetryPolicy value)
+    nameWithType: MultiShardStatement.setRetryPolicy(RetryPolicy value)
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setRetryPolicy(RetryPolicy value)
+    overload: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 327
+    package: com.microsoft.azure.elasticdb.query.multishard
+    syntax:
+      content: public void setRetryPolicy(RetryPolicy value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionBegan
+    id: shardExecutionBegan
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: shardExecutionBegan
+    nameWithType: MultiShardStatement.shardExecutionBegan
+    fullName: Event<EventHandler<ShardExecutionEventArgs>> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.shardExecutionBegan
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 99
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>イベント ハンドラーは、特定のシャードに実行が開始されたときに呼び出されます。 </p>
+    syntax:
+      content: public Event<EventHandler<ShardExecutionEventArgs>> shardExecutionBegan= new Event<>()
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_argse7daa122
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionCanceled
+    id: shardExecutionCanceled
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: shardExecutionCanceled
+    nameWithType: MultiShardStatement.shardExecutionCanceled
+    fullName: Event<EventHandler<ShardExecutionEventArgs>> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.shardExecutionCanceled
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 116
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>指定されたキャンセル トークンを使用して明示的にまたは暗黙的に選択した結果として、特定のシャードに実行が取り消されたときに呼び出されるイベント ハンドラー MultiShardExecutionPolicy です。 </p>
+    syntax:
+      content: public Event<EventHandler<ShardExecutionEventArgs>> shardExecutionCanceled= new Event<>()
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_argse7daa122
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionFaulted
+    id: shardExecutionFaulted
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: shardExecutionFaulted
+    nameWithType: MultiShardStatement.shardExecutionFaulted
+    fullName: Event<EventHandler<ShardExecutionEventArgs>> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.shardExecutionFaulted
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 110
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>イベント ハンドラーは、特定のシャードでの実行のエラーが発生したときに呼び出されます。 このハンドラーは、処理されない例外で対象の実行が再試行されませんさらにその結果 transience 例外のない、または選択した結果としてのみ呼び出されます。 RetryBehavior です。 </p>
+    syntax:
+      content: public Event<EventHandler<ShardExecutionEventArgs>> shardExecutionFaulted= new Event<>()
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_argse7daa122
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionReaderReturned
+    id: shardExecutionReaderReturned
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: shardExecutionReaderReturned
+    nameWithType: MultiShardStatement.shardExecutionReaderReturned
+    fullName: Event<EventHandler<ShardExecutionEventArgs>> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.shardExecutionReaderReturned
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 123
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>イベント ハンドラーは、特定のシャードに executeQuery が正常にリーダーを返されるときに呼び出されます。 これは内部専用のメソッドでありとは異なり shardExecutionSucceeded にリーダーを追加する前に呼び出される、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>; を特定するが困難な副作用がこの追加はします。 </p>
+    syntax:
+      content: public Event<EventHandler<ShardExecutionEventArgs>> shardExecutionReaderReturned= new Event<>()
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_argse7daa122
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.shardExecutionSucceeded
+    id: shardExecutionSucceeded
+    parent: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    langs:
+      - java
+    name: shardExecutionSucceeded
+    nameWithType: MultiShardStatement.shardExecutionSucceeded
+    fullName: Event<EventHandler<ShardExecutionEventArgs>> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.shardExecutionSucceeded
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/multishard/MultiShardStatement.java
+      startLine: 104
+    package: com.microsoft.azure.elasticdb.query.multishard
+    summary: <p>イベント ハンドラーの実行が、特定のシャードに正常に完了またはそのシャードに固有の結果セットが返されたときに呼び出されます。 </p>
+    syntax:
+      content: public Event<EventHandler<ShardExecutionEventArgs>> shardExecutionSucceeded= new Event<>()
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_argse7daa122
+references:
+  - uid: 70d811d7com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_argse7daa122
+    spec.java:
+      - name: Event<EventHandler<
+        fullName: Event<EventHandler<
+      - uid: com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_args
+        name: ShardExecutionEventArgs
+        fullName: com.microsoft.azure.elasticdb.query.multishard.ShardExecutionEventArgs
+        href: com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_args.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.create*
+    name: create
+    nameWithType: MultiShardStatement.create
+    fullName: static MultiShardStatement com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.create
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandText*
+    name: getCommandText
+    nameWithType: MultiShardStatement.getCommandText
+    fullName: String com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getCommandText
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandText*
+    name: setCommandText
+    nameWithType: MultiShardStatement.setCommandText
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setCommandText
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeout*
+    name: getCommandTimeout
+    nameWithType: MultiShardStatement.getCommandTimeout
+    fullName: int com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getCommandTimeout
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeout*
+    name: setCommandTimeout
+    nameWithType: MultiShardStatement.setCommandTimeout
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setCommandTimeout
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getCommandTimeoutPerShard*
+    name: getCommandTimeoutPerShard
+    nameWithType: MultiShardStatement.getCommandTimeoutPerShard
+    fullName: int com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getCommandTimeoutPerShard
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setCommandTimeoutPerShard*
+    name: setCommandTimeoutPerShard
+    nameWithType: MultiShardStatement.setCommandTimeoutPerShard
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setCommandTimeoutPerShard
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryBehavior*
+    name: getRetryBehavior
+    nameWithType: MultiShardStatement.getRetryBehavior
+    fullName: RetryBehavior com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getRetryBehavior
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryBehavior*
+    name: setRetryBehavior
+    nameWithType: MultiShardStatement.setRetryBehavior
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setRetryBehavior
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionPolicy*
+    name: getExecutionPolicy
+    nameWithType: MultiShardStatement.getExecutionPolicy
+    fullName: MultiShardExecutionPolicy com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getExecutionPolicy
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionPolicy*
+    name: setExecutionPolicy
+    nameWithType: MultiShardStatement.setExecutionPolicy
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setExecutionPolicy
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getConnection*
+    name: getConnection
+    nameWithType: MultiShardStatement.getConnection
+    fullName: MultiShardConnection com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getConnection
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getExecutionOptions*
+    name: getExecutionOptions
+    nameWithType: MultiShardStatement.getExecutionOptions
+    fullName: MultiShardExecutionOptions com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getExecutionOptions
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setExecutionOptions*
+    name: setExecutionOptions
+    nameWithType: MultiShardStatement.setExecutionOptions
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setExecutionOptions
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.getRetryPolicy*
+    name: getRetryPolicy
+    nameWithType: MultiShardStatement.getRetryPolicy
+    fullName: RetryPolicy com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.getRetryPolicy
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setRetryPolicy*
+    name: setRetryPolicy
+    nameWithType: MultiShardStatement.setRetryPolicy
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setRetryPolicy
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: 1355eaf1
+    spec.java:
+      - name: Object...
+        fullName: Object...
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.setParameters*
+    name: setParameters
+    nameWithType: MultiShardStatement.setParameters
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.setParameters
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeout*
+    name: resetCommandTimeout
+    nameWithType: MultiShardStatement.resetCommandTimeout
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.resetCommandTimeout
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.resetCommandTimeoutPerShard*
+    name: resetCommandTimeoutPerShard
+    nameWithType: MultiShardStatement.resetCommandTimeoutPerShard
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.resetCommandTimeoutPerShard
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: 12fe80de
+    spec.java:
+      - name: IllegalStateException
+        fullName: IllegalStateException
+  - uid: a19dd706
+    spec.java:
+      - name: TimeoutException
+        fullName: TimeoutException
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQuery*
+    name: executeQuery
+    nameWithType: MultiShardStatement.executeQuery
+    fullName: MultiShardResultSet com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQuery
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: 0a3e89da
+    spec.java:
+      - name: MultiShardAggregateException
+        fullName: MultiShardAggregateException
+  - uid: 7d892192com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_seta08ddfce
+    spec.java:
+      - name: Callable<
+        fullName: Callable<
+      - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set
+        name: MultiShardResultSet
+        fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardResultSet
+        href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.executeQueryAsync*
+    name: executeQueryAsync
+    nameWithType: MultiShardStatement.executeQueryAsync
+    fullName: Callable<MultiShardResultSet> com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.executeQueryAsync
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.cancel*
+    name: cancel
+    nameWithType: MultiShardStatement.cancel
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.cancel
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.close*
+    name: close
+    nameWithType: MultiShardStatement.close
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.close
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.dispose*
+    name: dispose
+    nameWithType: MultiShardStatement.dispose
+    fullName: void com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement.dispose
+    package: com.microsoft.azure.elasticdb.query.multishard
+  - uid: com.microsoft.azure.elasticdb.query.multishard._labeled_result_set
+    parent: com.microsoft.azure.elasticdb.query.multishard
+    href: com.microsoft.azure.elasticdb.query.multishard._labeled_result_set.yml
+    name: LabeledResultSet
+    nameWithType: LabeledResultSet
+    fullName: com.microsoft.azure.elasticdb.query.multishard.LabeledResultSet
+    type: Class
+    summary: '<p>リーダーに関連する追加情報を含む結果セットを affiliating の単純な変更できないクラス (例: ステートメント、シャード、例外が発生しましたなど) の結果セットを非同期に取得するときに便利です。 目的: 結果セットを基になるデータの送信元、シャードの文字列のラベルと共に結果セットを保持する便利なクラス。 メモ: これは非同期的に実行するときに、結果セットとラベルを一緒にまとめるに便利です。 </p>'
+    syntax:
+      content: public class LabeledResultSet
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior.yml
+    name: RetryBehavior
+    nameWithType: RetryBehavior
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryBehavior
+    type: Class
+    summary: <p>一時的なエラーを検出するために使用する再試行動作を定義します。 </p>
+    syntax:
+      content: public class RetryBehavior
+  - uid: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_policy
+    parent: com.microsoft.azure.elasticdb.query.logging
+    href: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_policy.yml
+    name: MultiShardExecutionPolicy
+    nameWithType: MultiShardExecutionPolicy
+    fullName: com.microsoft.azure.elasticdb.query.logging.MultiShardExecutionPolicy
+    type: Enum
+    summary: '<p>使用できるクエリの実行ポリシーを定義します。 目的: を使用できるクエリの実行ポリシーの抑制論理的根拠を定義します。"多"は、スペル、ここでします。 </p>'
+    syntax:
+      content: public enum MultiShardExecutionPolicy
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection
+    parent: com.microsoft.azure.elasticdb.query.multishard
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection.yml
+    name: MultiShardConnection
+    nameWithType: MultiShardConnection
+    fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardConnection
+    type: Class
+    summary: '<p>シャードのセットへの接続を表し、シャード セット全体に対してクエリを処理する機能を提供します。 目的: がシャードのセットへの接続を作成し、その有効期間の注意事項を制御します。 このクラスは、スレッド セーフであります。 </p>'
+    syntax:
+      content: public class MultiShardConnection
+  - uid: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_options
+    parent: com.microsoft.azure.elasticdb.query.logging
+    href: com.microsoft.azure.elasticdb.query.logging._multi_shard_execution_options.yml
+    name: MultiShardExecutionOptions
+    nameWithType: MultiShardExecutionOptions
+    fullName: com.microsoft.azure.elasticdb.query.logging.MultiShardExecutionOptions
+    type: Enum
+    summary: <p>複数のシャードに対してコマンドを実行するときに、使用可能なオプションを定義します。 この列挙体には、フラグ属性があります。 </p>
+    syntax:
+      content: public enum MultiShardExecutionOptions
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryPolicy
+    type: Class
+    summary: <p>信頼性の低いアクションおよび一時的な問題には、この再試行メカニズムでの基本実装を提供します。 </p>
+    syntax:
+      content: public class RetryPolicy
+  - uid: com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_args
+    parent: com.microsoft.azure.elasticdb.query.multishard
+    href: com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_args.yml
+    name: ShardExecutionEventArgs
+    nameWithType: ShardExecutionEventArgs
+    fullName: com.microsoft.azure.elasticdb.query.multishard.ShardExecutionEventArgs
+    type: Class
+    summary: <p>複数のシャードあたりのイベント ハンドラーに渡される入力します。 </p>
+    syntax:
+      content: public class ShardExecutionEventArgs
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set
+    parent: com.microsoft.azure.elasticdb.query.multishard
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set.yml
+    name: MultiShardResultSet
+    nameWithType: MultiShardResultSet
+    fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardResultSet
+    type: Class
+    syntax:
+      content: public class MultiShardResultSet
+  - uid: com.microsoft.azure.elasticdb.query.logging._command_behavior
+    parent: com.microsoft.azure.elasticdb.query.logging
+    href: com.microsoft.azure.elasticdb.query.logging._command_behavior.yml
+    name: CommandBehavior
+    nameWithType: CommandBehavior
+    fullName: com.microsoft.azure.elasticdb.query.logging.CommandBehavior
+    type: Enum
+    summary: '<p>概要: は、クエリと、データベースに対するその影響の結果の説明を提供します。 </p>'
+    syntax:
+      content: public enum CommandBehavior
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+    name: ShardLocation
+    nameWithType: ShardLocation
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+    type: Class
+    summary: <p>そのサーバー名とデータベース名の観点から、シャードの場所を表します。 シャードへの接続を管理し、シャードの他の操作をサポートするために使用されます。 なく、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャードの場所が、シャード マップに登録されていません。 </p>
+    syntax:
+      content: public class ShardLocation
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_exception.yml
+    name: MultiShardException
+    nameWithType: MultiShardException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardException
+    type: Class
+    summary: '<p>DEVNOTE:、シャード ShardLocation のシリアル化のシリアル化可能なサポートのないので、ここで型が、正常に動作では SMM ShardLocation がカプセル化します。 A <xref uid="com.microsoft.azure.elasticdb.query.exception._multi_shard_exception" data-throw-if-not-resolved="false">MultiShardException</xref>シャードに対して操作を実行するときに発生した例外を表します。 シャードと発生した例外の両方の id に関する情報を提供します。 、例外の性質によっては 1 つことができます、複数のシャードのクエリを再実行してくださいし、直接に、例外を生成するシャードを対象としたクエリを実行するまたは最後に SSMS などの一般的なツールを使用して、シャードに対して手動でクエリを実行します。 </p>'
+    syntax:
+      content: public class MultiShardException
+  - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement
+    parent: com.microsoft.azure.elasticdb.query.multishard
+    href: com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement.yml
+    name: MultiShardStatement
+    nameWithType: MultiShardStatement
+    fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement
+    type: Class
+    summary: '<p>補完、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>接続、ステートメント、および ResultSet の障害を許容するようなコマンド オブジェクトを使用します。 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>の入力としての T-SQL コマンド ステートメントは、そのシャードでそれに対応する指定のコレクション全体のコマンドを実行<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>です。 処理の結果、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref> execute メソッドを通じて利用できる、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 目的: 補完するもの、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>ノートの複数のシャードに対して指定されたコマンドを実行中の作業を抽象し、: このクラスは、スレッド セーフであります。 接続を持つシャードへの接続文字列プロパティを同期 API が内部的に非同期 API が呼び出されるため"コンテキスト接続 = true"はサポートされていません。 トランザクション セマンティクスはサポートされていません。 </p>'
+    syntax: *ref_1
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_aggregate_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_aggregate_exception.yml
+    name: MultiShardAggregateException
+    nameWithType: MultiShardAggregateException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardAggregateException
+    type: Class
+    summary: '<p>シャード セット間でクエリを実行するときに発生した 1 つまたは複数の例外エラーを表します。 InnerExceptions フィールドがこれらの例外を収集し、さらに検査または処理のため InnerExceptions を反復処理できる 1 つ。 複数のシャード間で発生したエラーの情報をやり取りする目的: パブリック型 </p>'
+    syntax:
+      content: public class MultiShardAggregateException

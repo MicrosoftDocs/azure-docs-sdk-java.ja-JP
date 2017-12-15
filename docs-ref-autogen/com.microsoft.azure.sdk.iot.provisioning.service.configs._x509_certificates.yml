@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+    id: _x509_certificates
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    children:
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getPrimary()
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getSecondary()
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates()
+      - com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates(X509Certificates)
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.yml
+    langs:
+      - java
+    name: X509Certificates
+    nameWithType: X509Certificates
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates
+    type: Class
+    source:
+      remote: &ref_0
+        path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/X509Certificates.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/X509Certificates.java
+      startLine: 90
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: "<p>1 つのデバイスのプロビジョニング サービスの表現 X509 プライマリおよびセカンダリ証明書。</p>\n<p>このクラスは、X509 の表現を作成します。 証明書。 プライマリとセカンダリの証明書を受け取ることができますが、プライマリのみが必須です。</p>\n<p>ユーザーは、証明書として、入力、<code>String \r\n\r\n    </code>から、 <b>.pem</b>ファイル。 このクラスは 1 つの両方をカプセル化は<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_attestation\" data-throw-if-not-resolved=\"false\">X509Attestation</xref>です。 次の JSON では、このクラスの結果の例を示します。 <pre><code>{\n\n        \"primary\": {\n\n            \"certificate\": \"-----BEGIN CERTIFICATE-----\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"-----END CERTIFICATE-----\\n\"\n\n        },\n\n        \"secondary\": {\n\n            \"certificate\": \"-----BEGIN CERTIFICATE-----\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"-----END CERTIFICATE-----\\n\"\n\n        }\n\n    }\n\n    </code></pre></p>\n\n<p>X509 を送信した後で成功した場合、証明書のプロビジョニング サービスが返されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_info\" data-throw-if-not-resolved=\"false\">X509CertificateInfo</xref>プライマリとセカンダリの両方の証明書。 ユーザーは、このクラスから、これらの情報を取得することができ、もう一度、プライマリ情報のみが必須です。 次の JSON 例は、どのような情報が X509 のプロビジョニング サービスが返されます。 <pre><code>{\n\n        \"primary\": {\n\n            \"info\": {\n\n                 \"subjectName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"sha1Thumbprint\": \"0000000000000000000000000000000000\",\n\n                 \"sha256Thumbprint\": \"validEnrollmentGroupId\",\n\n                 \"issuerName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"notBeforeUtc\": \"2017-11-14T12:34:18Z\",\n\n                 \"notAfterUtc\": \"2017-11-20T12:34:18Z\",\n\n                 \"serialNumber\": \"000000000000000000\",\n\n                 \"version\": 3\n\n             }\n\n        },\n\n        \"secondary\": {\n\n            \"info\": {\n\n                 \"subjectName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"sha1Thumbprint\": \"0000000000000000000000000000000000\",\n\n                 \"sha256Thumbprint\": \"validEnrollmentGroupId\",\n\n                 \"issuerName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"notBeforeUtc\": \"2017-11-14T12:34:18Z\",\n\n                 \"notAfterUtc\": \"2017-11-20T12:34:18Z\",\n\n                 \"serialNumber\": \"000000000000000000\",\n\n                 \"version\": 3\n\n             }\n\n        }\n\n    }\n\n    </code></pre></p>\n\n<p></p>"
+    syntax: &ref_1
+      content: public class X509Certificates
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getPrimary()
+    id: getPrimary()
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.yml
+    langs:
+      - java
+    name: getPrimary()
+    nameWithType: X509Certificates.getPrimary()
+    fullName: X509CertificateWithInfo com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.getPrimary()
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getPrimary*
+    type: Method
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/X509Certificates.java
+      startLine: 179
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>プライマリの get アクセス操作子にします。</p>
+      <p></p>
+    syntax:
+      content: public X509CertificateWithInfo getPrimary()
+      return:
+        type: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_with_info
+        description: "<p><xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_with_info\" data-throw-if-not-resolved=\"false\">X509CertificateWithInfo</xref>ストアドのプライマリとします。 できません<code>null \r\n\r\n    </code>です。 </p>"
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getSecondary()
+    id: getSecondary()
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.yml
+    langs:
+      - java
+    name: getSecondary()
+    nameWithType: X509Certificates.getSecondary()
+    fullName: X509CertificateWithInfo com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.getSecondary()
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getSecondary*
+    type: Method
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/X509Certificates.java
+      startLine: 190
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>セカンダリの get アクセス操作子にします。</p>
+      <p></p>
+    syntax:
+      content: public X509CertificateWithInfo getSecondary()
+      return:
+        type: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_with_info
+        description: "<p><xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_with_info\" data-throw-if-not-resolved=\"false\">X509CertificateWithInfo</xref>ストアド セカンダリとします。 できます<code>null \r\n\r\n    </code>です。 </p>"
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates()
+    id: X509Certificates()
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.yml
+    langs:
+      - java
+    name: X509Certificates()
+    nameWithType: X509Certificates.X509Certificates()
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.X509Certificates()
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/X509Certificates.java
+      startLine: 204
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>空のコンス トラクター</p>
+      <p>このクラスを逆シリアル化するツールでのみ使用します。 </p>
+    syntax:
+      content: protected X509Certificates()
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates(X509Certificates)
+    id: X509Certificates(X509Certificates)
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.yml
+    langs:
+      - java
+    name: X509Certificates(X509Certificates x509Certificates)
+    nameWithType: X509Certificates.X509Certificates(X509Certificates x509Certificates)
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.X509Certificates(X509Certificates x509Certificates)
+    overload: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: provisioning/provisioning-service-client/src/main/java/com/microsoft/azure/sdk/iot/provisioning/service/configs/X509Certificates.java
+      startLine: 157
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    summary: |-
+      <p>コンス トラクター [コピー]</p>
+      <p>指定された 1 つのコンテンツを copping、x509Certificates の新しいインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: public X509Certificates(X509Certificates x509Certificates)
+      parameters:
+        - id: x509Certificates
+          type: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+          description: "<p>元の<code>X509Certificates \r\n\r\n    </code>をコピーします。 </p>"
+    exceptions:
+      - type: 3c87bd19
+        description: <p>指定された x509Certificates が null の場合、またはそのプライマリ証明書が null の場合は。 </p>
+references:
+  - uid: 3c87bd19
+    spec.java:
+      - name: IllegalArgumentException
+        fullName: IllegalArgumentException
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.X509Certificates*
+    name: X509Certificates
+    nameWithType: X509Certificates.X509Certificates
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.X509Certificates
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getPrimary*
+    name: getPrimary
+    nameWithType: X509Certificates.getPrimary
+    fullName: X509CertificateWithInfo com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.getPrimary
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.getSecondary*
+    name: getSecondary
+    nameWithType: X509Certificates.getSecondary
+    fullName: X509CertificateWithInfo com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates.getSecondary
+    package: com.microsoft.azure.sdk.iot.provisioning.service.configs
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_with_info
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_with_info.yml
+    name: X509CertificateWithInfo
+    nameWithType: X509CertificateWithInfo
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509CertificateWithInfo
+    type: Class
+    summary: "<p>形式を 1 つのデバイスのプロビジョニング サービスの X509 証明書の情報をします。</p>\n<p>このクラスは、X509 の表現を作成します。 証明書、証明書、証明書のいずれかまたは両方の情報を含むことができます。</p>\n<p>このクラスを作成するユーザーが、証明書としてを指定する必要があります、<code>String \r\n\r\n    </code>から、 <b>.pem</b>または<b>して .cert</b>ファイル。</p>\n\n<p>次の JSON では、このクラスの結果の例を示します。 <pre><code>{\n\n        \"certificate\": \"-----BEGIN CERTIFICATE-----\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                       \"-----END CERTIFICATE-----\\n\";\n\n    }\n\n    </code></pre></p>\n\n<p>後の送信、X509 証明書をプロビジョニング サービスが返されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_info\" data-throw-if-not-resolved=\"false\">X509CertificateInfo</xref>です。 ユーザーは、このクラスから、この情報を取得することができます。</p>\n<p>次の JSON 例は、どのような情報が X509 のプロビジョニング サービスが返されます。 <pre><code>{\n\n        \"info\": {\n\n             \"subjectName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n             \"sha1Thumbprint\": \"0000000000000000000000000000000000\",\n\n             \"sha256Thumbprint\": \"validEnrollmentGroupId\",\n\n             \"issuerName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n             \"notBeforeUtc\": \"2017-11-14T12:34:18Z\",\n\n             \"notAfterUtc\": \"2017-11-20T12:34:18Z\",\n\n             \"serialNumber\": \"000000000000000000\",\n\n             \"version\": 3\n\n        }\n\n    }\n\n    </code></pre></p>\n\n<p></p>"
+    syntax:
+      content: public class X509CertificateWithInfo
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificates.yml
+    name: X509Certificates
+    nameWithType: X509Certificates
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Certificates
+    type: Class
+    summary: "<p>1 つのデバイスのプロビジョニング サービスの表現 X509 プライマリおよびセカンダリ証明書。</p>\n<p>このクラスは、X509 の表現を作成します。 証明書。 プライマリとセカンダリの証明書を受け取ることができますが、プライマリのみが必須です。</p>\n<p>ユーザーは、証明書として、入力、<code>String \r\n\r\n    </code>から、 <b>.pem</b>ファイル。 このクラスは 1 つの両方をカプセル化は<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_attestation\" data-throw-if-not-resolved=\"false\">X509Attestation</xref>です。 次の JSON では、このクラスの結果の例を示します。 <pre><code>{\n\n        \"primary\": {\n\n            \"certificate\": \"-----BEGIN CERTIFICATE-----\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"-----END CERTIFICATE-----\\n\"\n\n        },\n\n        \"secondary\": {\n\n            \"certificate\": \"-----BEGIN CERTIFICATE-----\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\n\" +\n\n                           \"-----END CERTIFICATE-----\\n\"\n\n        }\n\n    }\n\n    </code></pre></p>\n\n<p>X509 を送信した後で成功した場合、証明書のプロビジョニング サービスが返されます、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_info\" data-throw-if-not-resolved=\"false\">X509CertificateInfo</xref>プライマリとセカンダリの両方の証明書。 ユーザーは、このクラスから、これらの情報を取得することができ、もう一度、プライマリ情報のみが必須です。 次の JSON 例は、どのような情報が X509 のプロビジョニング サービスが返されます。 <pre><code>{\n\n        \"primary\": {\n\n            \"info\": {\n\n                 \"subjectName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"sha1Thumbprint\": \"0000000000000000000000000000000000\",\n\n                 \"sha256Thumbprint\": \"validEnrollmentGroupId\",\n\n                 \"issuerName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"notBeforeUtc\": \"2017-11-14T12:34:18Z\",\n\n                 \"notAfterUtc\": \"2017-11-20T12:34:18Z\",\n\n                 \"serialNumber\": \"000000000000000000\",\n\n                 \"version\": 3\n\n             }\n\n        },\n\n        \"secondary\": {\n\n            \"info\": {\n\n                 \"subjectName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"sha1Thumbprint\": \"0000000000000000000000000000000000\",\n\n                 \"sha256Thumbprint\": \"validEnrollmentGroupId\",\n\n                 \"issuerName\": \"CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US\",\n\n                 \"notBeforeUtc\": \"2017-11-14T12:34:18Z\",\n\n                 \"notAfterUtc\": \"2017-11-20T12:34:18Z\",\n\n                 \"serialNumber\": \"000000000000000000\",\n\n                 \"version\": 3\n\n             }\n\n        }\n\n    }\n\n    </code></pre></p>\n\n<p></p>"
+    syntax: *ref_1
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_attestation
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_attestation.yml
+    name: X509Attestation
+    nameWithType: X509Attestation
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509Attestation
+    type: Class
+    summary: "<p>1 つのデバイスのプロビジョニング サービスの表現 X509<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._attestation\" data-throw-if-not-resolved=\"false\">構成証明書</xref>です。</p>\n<p>プロビジョニング サービスは、デバイスの構成証明メカニズムとして、デバイスの識別子のコンポジション エンジン、またはダイスをサポートします。 ダイスを使用するのには、ユーザーが、X509 を指定する必要があります証明書。 このクラスは、ある X509 の新しい構成証明書を作成するための手段を提供します。 証明書および抽象インターフェイスとして返す<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._attestation\" data-throw-if-not-resolved=\"false\">構成証明書</xref>です。</p>\n<p>構成証明書が、X509 には、3 種類の証明書のいずれかが含まれています。</p>\n<p>\r\n\r\n  <variablelist>\r\n\r\n    <varlistentry>\r\n\r\n      <b>クライアントまたはエイリアスの証明書:</b>\r\n\r\n    </varlistentry>\r\n\r\n    <listitem>\r\n\r\n      <p>ClientCertificates としてこのクラスで呼び出されると、この証明書は 1 つのデバイスを認証できます。 </p>\r\n\r\n    </listitem>\r\n\r\n    <varlistentry>\r\n\r\n      <b>署名またはルート証明書:</b>\r\n\r\n    </varlistentry>\r\n\r\n    <listitem>\r\n\r\n      <p>RootCertificates としてこのクラスで呼び出されると、この証明書は複数のデバイスを認証する複数のクライアント証明書を作成できます。 </p>\r\n\r\n    </listitem>\r\n\r\n    <varlistentry>\r\n\r\n      <b>CA リファレンス:</b>\r\n\r\n    </varlistentry>\r\n\r\n    <listitem>\r\n\r\n      <p>としてこのクラスで呼び出された<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_c_a_references\" data-throw-if-not-resolved=\"false\">X509CAReferences</xref>、これは、複数のデバイスを認証する複数のクライアント証明書を作成できる rootCertificate の CA 参照します。 </p>\n\n    </listitem>\n\n  </variablelist>\n\n</p>\n<p>プロビジョニング サービスにより、ユーザーを作成<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._individual_enrollment\" data-throw-if-not-resolved=\"false\">IndividualEnrollment</xref>と<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._enrollment_group\" data-throw-if-not-resolved=\"false\">EnrollmentGroup</xref>です。 すべての操作を<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._individual_enrollment\" data-throw-if-not-resolved=\"false\">IndividualEnrollment</xref>で<b>さいころ</b>、ユーザーを指定する必要があります、 <b>clientCertificates</b>、経由での操作について<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._enrollment_group\" data-throw-if-not-resolved=\"false\">EnrollmentGroup</xref>、ユーザーを指定する必要があります、 <b>rootCertificates</b>または<b> <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_c_a_references\" data-throw-if-not-resolved=\"false\">X509CAReferences</xref></b>です。</p>\n<p>この種類の証明書ごとに、ユーザーは、2 つの証明書、プライマリおよびセカンダリを提供できます。 プライマリのみは必須ですが、セカンダリは省略可能です。</p>\n<p>プロビジョニング サービスは指定された証明書を処理が、再度は返されません。 代わりに、 <xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_attestation.getPrimaryX509CertificateInfo()\" data-throw-if-not-resolved=\"false\">getPrimaryX509CertificateInfo()</xref>と<xref uid=\"com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_attestation.getSecondaryX509CertificateInfo()\" data-throw-if-not-resolved=\"false\">getSecondaryX509CertificateInfo()</xref>証明書の証明書情報が返されます。</p>\n<p></p>"
+    syntax:
+      content: public class X509Attestation extends Attestation
+  - uid: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_info
+    parent: com.microsoft.azure.sdk.iot.provisioning.service.configs
+    href: com.microsoft.azure.sdk.iot.provisioning.service.configs._x509_certificate_info.yml
+    name: X509CertificateInfo
+    nameWithType: X509CertificateInfo
+    fullName: com.microsoft.azure.sdk.iot.provisioning.service.configs.X509CertificateInfo
+    type: Class
+    summary: |-
+      <p>表現の 1 つの X509 証明書情報がデバイスのプロビジョニング サービス用です。</p>
+      <p>ユーザーが X509 の結果としてプロビジョニング サービスからこの情報を受信操作します。</p>
+      <p>この情報には、一連パラメーターにはが含まれています、次の JSON の例に示します X509 証明書の情報です。 <pre><code>{
+
+              "subjectName": "CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US",
+
+              "sha1Thumbprint": "0000000000000000000000000000000000",
+
+              "sha256Thumbprint": "validEnrollmentGroupId",
+
+              "issuerName": "CN=ROOT_00000000-0000-0000-0000-000000000000, OU=Azure IoT, O=MSFT, C=US",
+
+              "notBeforeUtc": "2017-11-14T12:34:182Z",
+
+              "notAfterUtc": "2017-11-20T12:34:183Z",
+
+              "serialNumber": "000000000000000000",
+
+              "version": 3
+
+          }
+
+          </code></pre></p>
+
+      <p></p>
+    syntax:
+      content: public class X509CertificateInfo

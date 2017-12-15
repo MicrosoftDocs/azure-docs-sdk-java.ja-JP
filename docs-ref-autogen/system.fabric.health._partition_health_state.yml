@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._partition_health_state
+    id: _partition_health_state
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._partition_health_state.getPartitionId()
+    href: system.fabric.health._partition_health_state.yml
+    langs:
+      - java
+    name: PartitionHealthState
+    nameWithType: PartitionHealthState
+    fullName: system.fabric.health.PartitionHealthState
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealthState.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealthState.java
+      startLine: 8
+    package: system.fabric.health
+    summary: <p>パーティション識別子および集計された正常性状態を含むパーティションのヘルス状態を表します。 </p>
+    syntax:
+      content: public class PartitionHealthState extends EntityHealthState
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._entity_health_state
+    inheritedMembers:
+      - system.fabric.health._entity_health_state.EntityHealthState(HealthState)
+      - system.fabric.health._entity_health_state.getAggregatedHealthState()
+  - uid: system.fabric.health._partition_health_state.getPartitionId()
+    id: getPartitionId()
+    parent: system.fabric.health._partition_health_state
+    href: system.fabric.health._partition_health_state.yml
+    langs:
+      - java
+    name: getPartitionId()
+    nameWithType: PartitionHealthState.getPartitionId()
+    fullName: UUID system.fabric.health.PartitionHealthState.getPartitionId()
+    overload: system.fabric.health._partition_health_state.getPartitionId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/PartitionHealthState.java
+      startLine: 22
+    package: system.fabric.health
+    summary: |-
+      <p>パーティション ID を取得します</p>
+      <p></p>
+    syntax:
+      content: public UUID getPartitionId()
+      return:
+        type: add9545a
+        description: <p>パーティションの id。 </p>
+references:
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: system.fabric.health._partition_health_state.getPartitionId*
+    name: getPartitionId
+    nameWithType: PartitionHealthState.getPartitionId
+    fullName: UUID system.fabric.health.PartitionHealthState.getPartitionId
+    package: system.fabric.health
+  - uid: system.fabric.health._entity_health_state.EntityHealthState(HealthState)
+    parent: system.fabric.health._entity_health_state
+    href: system.fabric.health._entity_health_state.yml
+    name: EntityHealthState(HealthState aggregatedHealthState)
+    nameWithType: EntityHealthState.EntityHealthState(HealthState aggregatedHealthState)
+    fullName: system.fabric.health.EntityHealthState.EntityHealthState(HealthState aggregatedHealthState)
+    type: Constructor
+    syntax:
+      content: protected EntityHealthState(HealthState aggregatedHealthState)
+      parameters:
+        - id: aggregatedHealthState
+          type: system.fabric.health._health_state
+  - uid: system.fabric.health._entity_health_state.getAggregatedHealthState()
+    parent: system.fabric.health._entity_health_state
+    href: system.fabric.health._entity_health_state.yml
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealthState.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealthState.getAggregatedHealthState()
+    type: Method
+    summary: |-
+      <p>報告されたすべてのイベントと、目的のポリシーに基づいて Health Manager によって計算された集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: <p>ヘルス マネージャーによって計算された集計の正常性状態。 </p>
+  - uid: system.fabric.health._entity_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._entity_health_state.yml
+    name: EntityHealthState
+    nameWithType: EntityHealthState
+    fullName: system.fabric.health.EntityHealthState
+    type: Class
+    summary: "<p>エンティティ ヘルス状態のすべてのクラスの基底クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>エンティティのヘルス状態には、エンティティの識別子とエンティティで集計された正常性状態が含まれています。 </p>"
+    syntax:
+      content: public class EntityHealthState

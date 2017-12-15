@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.services.client._service_partition_resolver
+    id: _service_partition_resolver
+    parent: microsoft.servicefabric.services.client
+    children:
+      - 'microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync(ResolvedServicePartition,Duration,Duration)'
+      - 'microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync(URI,ServicePartitionKey,Duration,Duration)'
+    href: microsoft.servicefabric.services.client._service_partition_resolver.yml
+    langs:
+      - java
+    name: ServicePartitionResolver
+    nameWithType: ServicePartitionResolver
+    fullName: microsoft.servicefabric.services.client.ServicePartitionResolver
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/client/ServicePartitionResolver.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/client/ServicePartitionResolver.java
+      startLine: 10
+    package: microsoft.servicefabric.services.client
+    summary: <p>サービスのエンドポイントを決定するのに役立つクラスを実装します。 </p>
+    syntax:
+      content: public interface ServicePartitionResolver
+  - uid: 'microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync(ResolvedServicePartition,Duration,Duration)'
+    id: 'resolveAsync(ResolvedServicePartition,Duration,Duration)'
+    parent: microsoft.servicefabric.services.client._service_partition_resolver
+    href: microsoft.servicefabric.services.client._service_partition_resolver.yml
+    langs:
+      - java
+    name: 'resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    nameWithType: 'ServicePartitionResolver.resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    fullName: 'CompletableFuture<ResolvedServicePartition> microsoft.servicefabric.services.client.ServicePartitionResolver.resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    overload: microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/client/ServicePartitionResolver.java
+      startLine: 48
+    package: microsoft.servicefabric.services.client
+    summary: |-
+      <p>指定されたサービスのパーティションを解決します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<ResolvedServicePartition> resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+      parameters:
+        - id: previousRsp
+          type: system.fabric._resolved_service_partition
+          description: <p>以前の解決されたパーティション </p>
+        - id: resolveTimeoutPerTry
+          type: e02a2de0
+          description: <p>FabricClient に渡されるタイムアウト </p>
+        - id: maxRetryBackoffInterval
+          type: e02a2de0
+          description: <p>再試行可能な例外と FabricClient のメソッドが失敗したときに再試行する前にバックオフする間隔。 </p>
+      return:
+        type: 9cdf14d0system.fabric._resolved_service_partitiona08ddfce
+        description: <p>未処理の操作を表す CompletableFuture です。 タスクから結果が、 <xref uid="system.fabric._resolved_service_partition" data-throw-if-not-resolved="false">system.fabric.ResolvedServicePartition</xref>サービス エンドポイントを含む、解決済みのサービス パーティションに関する情報を含むオブジェクト。 </p>
+  - uid: 'microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync(URI,ServicePartitionKey,Duration,Duration)'
+    id: 'resolveAsync(URI,ServicePartitionKey,Duration,Duration)'
+    parent: microsoft.servicefabric.services.client._service_partition_resolver
+    href: microsoft.servicefabric.services.client._service_partition_resolver.yml
+    langs:
+      - java
+    name: 'resolveAsync(URI serviceName, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    nameWithType: 'ServicePartitionResolver.resolveAsync(URI serviceName, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    fullName: 'CompletableFuture<ResolvedServicePartition> microsoft.servicefabric.services.client.ServicePartitionResolver.resolveAsync(URI serviceName, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    overload: microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/client/ServicePartitionResolver.java
+      startLine: 28
+    package: microsoft.servicefabric.services.client
+    summary: |-
+      <p>指定されたサービスのパーティションを解決します。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<ResolvedServicePartition> resolveAsync(URI serviceName, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+      parameters:
+        - id: serviceName
+          type: '62304784'
+          description: <p>サービスの Uri を解決するのには </p>
+        - id: partitionKey
+          type: microsoft.servicefabric.services.client._service_partition_key
+          description: <p>解決するのには、パーティションを識別するキー </p>
+        - id: resolveTimeoutPerTry
+          type: e02a2de0
+          description: <p>FabricClient に渡されるタイムアウト </p>
+        - id: maxRetryBackoffInterval
+          type: e02a2de0
+          description: <p>再試行可能な例外と FabricClient のメソッドが失敗したときに再試行する前にバックオフする間隔。 </p>
+      return:
+        type: 9cdf14d0system.fabric._resolved_service_partitiona08ddfce
+        description: <p>未処理の操作を表す CompletableFuture です。 タスクから結果が、 <xref uid="system.fabric._resolved_service_partition" data-throw-if-not-resolved="false">system.fabric.ResolvedServicePartition</xref>サービス エンドポイントを含む、解決済みのサービス パーティションに関する情報を含むオブジェクト。 </p>
+references:
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: 9cdf14d0system.fabric._resolved_service_partitiona08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._resolved_service_partition
+        name: ResolvedServicePartition
+        fullName: system.fabric.ResolvedServicePartition
+        href: system.fabric._resolved_service_partition.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.services.client._service_partition_resolver.resolveAsync*
+    name: resolveAsync
+    nameWithType: ServicePartitionResolver.resolveAsync
+    fullName: CompletableFuture<ResolvedServicePartition> microsoft.servicefabric.services.client.ServicePartitionResolver.resolveAsync
+    package: microsoft.servicefabric.services.client
+  - uid: microsoft.servicefabric.services.client._fabric_service_partition_resolver
+    parent: microsoft.servicefabric.services.client
+    href: microsoft.servicefabric.services.client._fabric_service_partition_resolver.yml
+    name: FabricServicePartitionResolver
+    nameWithType: FabricServicePartitionResolver
+    fullName: microsoft.servicefabric.services.client.FabricServicePartitionResolver
+    type: Class
+    summary: '<p>サービスのエンドポイントを決定するのに役立つクラスを実装します。 このクラスをラップ FabricClient の<xref uid="" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(java.net.URI)</xref>メソッド、およびそのメソッドからエラーを実装して、バックアップ/再試行メカニズムです。 </p>'
+    syntax:
+      content: public class FabricServicePartitionResolver implements ServicePartitionResolver
+  - uid: system.fabric._resolved_service_partition
+    parent: system.fabric
+    href: system.fabric._resolved_service_partition.yml
+    name: ResolvedServicePartition
+    nameWithType: ResolvedServicePartition
+    fullName: system.fabric.ResolvedServicePartition
+    type: Class
+    summary: |-
+      <p>指定したサービス パーティションがリッスンするエンドポイントの設定でパーティション分割情報が含まれるデータ構造を表します。</p>
+      <p></p>
+    syntax:
+      content: public class ResolvedServicePartition
+  - uid: 'microsoft.servicefabric.services.client._fabric_service_partition_resolver.resolveAsync(URI,ServicePartitionKey,Duration,Duration)'
+    parent: microsoft.servicefabric.services.client._fabric_service_partition_resolver
+    href: microsoft.servicefabric.services.client._fabric_service_partition_resolver.yml
+    name: 'resolveAsync(URI serviceUri, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    nameWithType: 'FabricServicePartitionResolver.resolveAsync(URI serviceUri, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    fullName: 'CompletableFuture<ResolvedServicePartition> microsoft.servicefabric.services.client.FabricServicePartitionResolver.resolveAsync(URI serviceUri, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    type: Method
+    summary: |-
+      <p>指定されたサービスのパーティションを呼び出すことによって解決<xref uid="system.fabric._service_management_client.resolveServicePartitionAsync(URI)" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(URI)</xref>再試行可能なエラーに戻る/再試行を持つメソッドです。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<ResolvedServicePartition> resolveAsync(URI serviceUri, ServicePartitionKey partitionKey, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+      parameters:
+        - id: serviceUri
+          type: '62304784'
+          description: <p>サービスの Uri を解決するのには </p>
+        - id: partitionKey
+          type: microsoft.servicefabric.services.client._service_partition_key
+          description: <p>解決するのには、パーティションを識別するキー </p>
+        - id: resolveTimeoutPerTry
+          type: e02a2de0
+          description: '<p>渡されるタイムアウト<xref uid="system.fabric._service_management_client.resolveServicePartitionAsync(URI)" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(URI)</xref>メソッド </p>'
+        - id: maxRetryBackoffInterval
+          type: e02a2de0
+          description: '<p>ときに再試行する前にバックオフ間隔<xref uid="system.fabric._service_management_client.resolveServicePartitionAsync(URI)" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(URI)</xref>メソッド再試行可能な例外で失敗します。 </p>'
+      return:
+        type: 9cdf14d0system.fabric._resolved_service_partitiona08ddfce
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクから結果が、 <xref uid="system.fabric._resolved_service_partition" data-throw-if-not-resolved="false">system.fabric.ResolvedServicePartition</xref>サービス エンドポイントを含む、解決済みのサービス パーティションに関する情報を含むオブジェクト。 </p>
+  - uid: microsoft.servicefabric.services.client._service_partition_key
+    parent: microsoft.servicefabric.services.client
+    href: microsoft.servicefabric.services.client._service_partition_key.yml
+    name: ServicePartitionKey
+    nameWithType: ServicePartitionKey
+    fullName: microsoft.servicefabric.services.client.ServicePartitionKey
+    type: Class
+    summary: <p>サービス パーティションに対処するためにキーを定義します。 </p>
+    syntax:
+      content: public class ServicePartitionKey
+  - uid: 'microsoft.servicefabric.services.client._fabric_service_partition_resolver.resolveAsync(ResolvedServicePartition,Duration,Duration)'
+    parent: microsoft.servicefabric.services.client._fabric_service_partition_resolver
+    href: microsoft.servicefabric.services.client._fabric_service_partition_resolver.yml
+    name: 'resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    nameWithType: 'FabricServicePartitionResolver.resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    fullName: 'CompletableFuture<ResolvedServicePartition> microsoft.servicefabric.services.client.FabricServicePartitionResolver.resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+    type: Method
+    summary: |-
+      <p>指定されたサービスのパーティションを FabricClient を呼び出すことによって解決<xref uid="system.fabric._service_management_client.resolveServicePartitionAsync(URI)" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(URI)</xref>再試行可能なエラーに戻る/再試行を持つメソッドです。 これには、解決済みのサービス パーティション内に、ResolveAsync() メソッドの以前の呼び出しを使用した取得しました。 Api オーバー ロードは、クライアントが、解決済みのサービス パーティションを持つことが有効ではなくなったことを確認する場合に使用されます。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<ResolvedServicePartition> resolveAsync(ResolvedServicePartition previousRsp, Duration resolveTimeoutPerTry, Duration maxRetryBackoffInterval)'
+      parameters:
+        - id: previousRsp
+          type: system.fabric._resolved_service_partition
+          description: <p>以前の解決済みのサービス パーティション </p>
+        - id: resolveTimeoutPerTry
+          type: e02a2de0
+          description: '<p>渡されるタイムアウト<xref uid="system.fabric._service_management_client.resolveServicePartitionAsync(URI)" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(URI)</xref>メソッド </p>'
+        - id: maxRetryBackoffInterval
+          type: e02a2de0
+          description: '<p>ときに再試行する前にバックオフ間隔<xref uid="system.fabric._service_management_client.resolveServicePartitionAsync(URI)" data-throw-if-not-resolved="false">system.fabric.ServiceManagementClient#resolveServicePartitionAsync(URI)</xref>メソッド再試行可能な例外で失敗します。 </p>'
+      return:
+        type: 9cdf14d0system.fabric._resolved_service_partitiona08ddfce
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクから結果が、 <xref uid="system.fabric._resolved_service_partition" data-throw-if-not-resolved="false">system.fabric.ResolvedServicePartition</xref>サービス エンドポイントを含む、解決済みのサービス パーティションに関する情報を含むオブジェクト。 </p>

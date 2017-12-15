@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.datalake.store._request_options
+    id: _request_options
+    parent: com.microsoft.azure.datalake.store
+    children:
+      - com.microsoft.azure.datalake.store._request_options.requestid
+      - com.microsoft.azure.datalake.store._request_options.retryPolicy
+      - com.microsoft.azure.datalake.store._request_options.timeout
+    href: com.microsoft.azure.datalake.store._request_options.yml
+    langs:
+      - java
+    name: RequestOptions
+    nameWithType: RequestOptions
+    fullName: com.microsoft.azure.datalake.store.RequestOptions
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/main/java/com/microsoft/azure/datalake/store/RequestOptions.java
+        branch: master
+        repo: 'https://github.com/azure/azure-data-lake-store-java'
+      path: src/main/java/com/microsoft/azure/datalake/store/RequestOptions.java
+      startLine: 14
+    package: com.microsoft.azure.datalake.store
+    summary: <p>サーバーの呼び出しの動作を制御する一般的なオプション </p>
+    syntax:
+      content: public class RequestOptions
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.datalake.store._request_options.requestid
+    id: requestid
+    parent: com.microsoft.azure.datalake.store._request_options
+    href: com.microsoft.azure.datalake.store._request_options.yml
+    langs:
+      - java
+    name: requestid
+    nameWithType: RequestOptions.requestid
+    fullName: String com.microsoft.azure.datalake.store.RequestOptions.requestid
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/RequestOptions.java
+      startLine: 26
+    package: com.microsoft.azure.datalake.store
+    summary: <p>クライアント要求 id です。 SDK は、要求 ID が指定されていない場合に UUID を生成します。 </p>
+    syntax:
+      content: public String requestid= null
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.datalake.store._request_options.retryPolicy
+    id: retryPolicy
+    parent: com.microsoft.azure.datalake.store._request_options
+    href: com.microsoft.azure.datalake.store._request_options.yml
+    langs:
+      - java
+    name: retryPolicy
+    nameWithType: RequestOptions.retryPolicy
+    fullName: RetryPolicy com.microsoft.azure.datalake.store.RequestOptions.retryPolicy
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/RequestOptions.java
+      startLine: 31
+    package: com.microsoft.azure.datalake.store
+    summary: <p><xref uid="" data-throw-if-not-resolved="false">RetryPolicy</xref>要求に対して使用するには </p>
+    syntax:
+      content: public RetryPolicy retryPolicy= null
+      return:
+        type: com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+  - uid: com.microsoft.azure.datalake.store._request_options.timeout
+    id: timeout
+    parent: com.microsoft.azure.datalake.store._request_options
+    href: com.microsoft.azure.datalake.store._request_options.yml
+    langs:
+      - java
+    name: timeout
+    nameWithType: RequestOptions.timeout
+    fullName: int com.microsoft.azure.datalake.store.RequestOptions.timeout
+    type: Field
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/RequestOptions.java
+      startLine: 21
+    package: com.microsoft.azure.datalake.store
+    summary: '<p>タイムアウト (ミリ秒) の要求に使用します。 実際のタイムアウトは 2 回、指定したタイムアウト時間、有効なので、readTimeout と、要求の connectTimeout の両方に使用されます。 既定値は 60,000 (60 秒) です。 </p>'
+    syntax:
+      content: public int timeout= 60000
+      return:
+        type: f75371fa
+references:
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.datalake.store.retrypolicies._retry_policy
+    parent: com.microsoft.azure.datalake.store.retrypolicies
+    href: com.microsoft.azure.datalake.store.retrypolicies._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.datalake.store.retrypolicies.RetryPolicy
+    type: Interface
+    summary: |-
+      <p><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。 </p>
+      <p>このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。 </p>
+    syntax:
+      content: public interface RetryPolicy

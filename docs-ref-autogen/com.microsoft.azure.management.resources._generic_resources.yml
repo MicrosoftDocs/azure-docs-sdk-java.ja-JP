@@ -1,0 +1,880 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.resources._generic_resources
+    id: _generic_resources
+    parent: com.microsoft.azure.management.resources
+    children:
+      - 'com.microsoft.azure.management.resources._generic_resources.checkExistence(String,String,String,String,String,String)'
+      - com.microsoft.azure.management.resources._generic_resources.checkExistenceById(String)
+      - 'com.microsoft.azure.management.resources._generic_resources.delete(String,String,String,String,String,String)'
+      - 'com.microsoft.azure.management.resources._generic_resources.deleteAsync(String,String,String,String,String,String)'
+      - 'com.microsoft.azure.management.resources._generic_resources.deleteAsync(String,String,String,String,String,String,ServiceCallback<Void>)'
+      - 'com.microsoft.azure.management.resources._generic_resources.get(String,String,String,String)'
+      - 'com.microsoft.azure.management.resources._generic_resources.get(String,String,String,String,String,String)'
+      - 'com.microsoft.azure.management.resources._generic_resources.moveResources(String,ResourceGroup,List<String>)'
+      - 'com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync(String,ResourceGroup,List<String>)'
+      - 'com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync(String,ResourceGroup,List<String>,ServiceCallback<Void>)'
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: GenericResources
+    nameWithType: GenericResources
+    fullName: com.microsoft.azure.management.resources.GenericResources
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 27
+    package: com.microsoft.azure.management.resources
+    summary: <p>汎用リソース管理 API へのエントリ ポイントです。 </p>
+    syntax:
+      content: 'public interface GenericResources extends SupportsListing<GenericResource>,SupportsListingByResourceGroup<GenericResource>,SupportsListingInResourceGroupByTag<GenericResource>,SupportsGettingById<GenericResource>,SupportsCreating<GenericResource.DefinitionStages.Blank>,SupportsDeletingById,HasManager<ResourceManager>'
+    inheritedMembers:
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.define(String)
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteById(String)
+      - 'com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String,ServiceCallback<Void>)'
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getById(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String)
+      - 'com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String,ServiceCallback<T>)'
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.list()
+      - com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.listAsync()
+      - com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroup(String)
+      - com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroupAsync(String)
+      - 'com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.listByTag(String,String,String)'
+      - 'com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.listByTagAsync(String,String,String)'
+      - com.microsoft.azure.management.resources.fluentcore.arm.models._has_manager.manager()
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.checkExistence(String,String,String,String,String,String)'
+    id: 'checkExistence(String,String,String,String,String,String)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'checkExistence(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    nameWithType: 'GenericResources.checkExistence(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    fullName: 'boolean com.microsoft.azure.management.resources.GenericResources.checkExistence(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    overload: com.microsoft.azure.management.resources._generic_resources.checkExistence*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 46
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソース グループにリソースが存在するかどうかを確認します。</p>
+      <p></p>
+    syntax:
+      content: 'public boolean checkExistence(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前 </p>
+        - id: resourceProviderNamespace
+          type: '26831127'
+          description: <p>リソース プロバイダーの名前空間 </p>
+        - id: parentResourcePath
+          type: '26831127'
+          description: <p>親のリソース パス </p>
+        - id: resourceType
+          type: '26831127'
+          description: <p>リソースの種類 </p>
+        - id: resourceName
+          type: '26831127'
+          description: <p>リソースの名前 </p>
+        - id: apiVersion
+          type: '26831127'
+          description: <p>API のバージョン </p>
+      return:
+        type: 4fc6e284
+        description: <p>リソースが存在する場合は true。false それ以外の場合 </p>
+  - uid: com.microsoft.azure.management.resources._generic_resources.checkExistenceById(String)
+    id: checkExistenceById(String)
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: checkExistenceById(String id)
+    nameWithType: GenericResources.checkExistenceById(String id)
+    fullName: boolean com.microsoft.azure.management.resources.GenericResources.checkExistenceById(String id)
+    overload: com.microsoft.azure.management.resources._generic_resources.checkExistenceById*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 60
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソースが存在するかどうかを確認します。</p>
+      <p></p>
+    syntax:
+      content: public boolean checkExistenceById(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの ID。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>リソースが存在する場合は true。false それ以外の場合 </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.delete(String,String,String,String,String,String)'
+    id: 'delete(String,String,String,String,String,String)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'delete(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    nameWithType: 'GenericResources.delete(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    fullName: 'void com.microsoft.azure.management.resources.GenericResources.delete(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    overload: com.microsoft.azure.management.resources._generic_resources.delete*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 137
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソースとそのすべての子リソースを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public void delete(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前。 名前は大文字小文字を区別します。 </p>
+        - id: resourceProviderNamespace
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: parentResourcePath
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceType
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceName
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: apiVersion
+          type: '26831127'
+          description: <p>文字列値 </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.deleteAsync(String,String,String,String,String,String)'
+    id: 'deleteAsync(String,String,String,String,String,String)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    nameWithType: 'GenericResources.deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    fullName: 'Completable com.microsoft.azure.management.resources.GenericResources.deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    overload: com.microsoft.azure.management.resources._generic_resources.deleteAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 151
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>非同期的に、リソースとそのすべての子リソースを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public Completable deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前。 名前は大文字小文字を区別します。 </p>
+        - id: resourceProviderNamespace
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: parentResourcePath
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceType
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceName
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: apiVersion
+          type: '26831127'
+          description: <p>文字列値 </p>
+      return:
+        type: '56537e90'
+        description: <p>この呼び出しの遅延の計算の表現 </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.deleteAsync(String,String,String,String,String,String,ServiceCallback<Void>)'
+    id: 'deleteAsync(String,String,String,String,String,String,ServiceCallback<Void>)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion, ServiceCallback<Void> callback)'
+    nameWithType: 'GenericResources.deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion, ServiceCallback<Void> callback)'
+    fullName: 'ServiceFuture<Void> com.microsoft.azure.management.resources.GenericResources.deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion, ServiceCallback<Void> callback)'
+    overload: com.microsoft.azure.management.resources._generic_resources.deleteAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 167
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>非同期的に、リソースとそのすべての子リソースを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<Void> deleteAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion, ServiceCallback<Void> callback)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前。 名前は大文字小文字を区別します。 </p>
+        - id: resourceProviderNamespace
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: parentResourcePath
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceType
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceName
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: apiVersion
+          type: '26831127'
+          description: <p>文字列値 </p>
+        - id: callback
+          type: da7fd5ea
+          description: <p>成功または失敗時に呼び出すコールバック</p>
+      return:
+        type: aa81d378
+        description: <p>キャンセル要求へのハンドル </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.get(String,String,String,String)'
+    id: 'get(String,String,String,String)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'get(String resourceGroupName, String providerNamespace, String resourceType, String resourceName)'
+    nameWithType: 'GenericResources.get(String resourceGroupName, String providerNamespace, String resourceType, String resourceName)'
+    fullName: 'GenericResource com.microsoft.azure.management.resources.GenericResources.get(String resourceGroupName, String providerNamespace, String resourceType, String resourceName)'
+    overload: com.microsoft.azure.management.resources._generic_resources.get*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 89
+    package: com.microsoft.azure.management.resources
+    summary: <p>リソース グループに属しているリソースを返します。 </p>
+    syntax:
+      content: 'public GenericResource get(String resourceGroupName, String providerNamespace, String resourceType, String resourceName)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループ名 </p>
+        - id: providerNamespace
+          type: '26831127'
+          description: <p>プロバイダーの名前空間 </p>
+        - id: resourceType
+          type: '26831127'
+          description: <p>リソースの種類 </p>
+        - id: resourceName
+          type: '26831127'
+          description: <p>リソースの名前 </p>
+      return:
+        type: com.microsoft.azure.management.resources._generic_resource
+        description: <p>汎用リソース </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.get(String,String,String,String,String,String)'
+    id: 'get(String,String,String,String,String,String)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'get(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    nameWithType: 'GenericResources.get(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    fullName: 'GenericResource com.microsoft.azure.management.resources.GenericResources.get(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+    overload: com.microsoft.azure.management.resources._generic_resources.get*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 73
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソース グループに属しているリソースを返します。</p>
+      <p></p>
+    syntax:
+      content: 'public GenericResource get(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String apiVersion)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前。 名前は大文字小文字を区別します。 </p>
+        - id: resourceProviderNamespace
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: parentResourcePath
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceType
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: resourceName
+          type: '26831127'
+          description: <p>リソース id です。 </p>
+        - id: apiVersion
+          type: '26831127'
+          description: <p>文字列値 </p>
+      return:
+        type: com.microsoft.azure.management.resources._generic_resource
+        description: <p>汎用リソース </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.moveResources(String,ResourceGroup,List<String>)'
+    id: 'moveResources(String,ResourceGroup,List<String>)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'moveResources(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+    nameWithType: 'GenericResources.moveResources(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+    fullName: 'void com.microsoft.azure.management.resources.GenericResources.moveResources(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+    overload: com.microsoft.azure.management.resources._generic_resources.moveResources*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 102
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソースを別の 1 つのリソース グループに移動します。</p>
+      <p></p>
+    syntax:
+      content: 'public void moveResources(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+      parameters:
+        - id: sourceResourceGroupName
+          type: '26831127'
+          description: <p>ソース リソース グループ名 </p>
+        - id: targetResourceGroup
+          type: com.microsoft.azure.management.resources._resource_group
+          description: <p>リソース グループをターゲットには、別のサブスクリプションであることができます。 </p>
+        - id: resources
+          type: 7d60c20e
+          description: <p>移動する、リソースの Id の一覧 </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync(String,ResourceGroup,List<String>)'
+    id: 'moveResourcesAsync(String,ResourceGroup,List<String>)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+    nameWithType: 'GenericResources.moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+    fullName: 'Completable com.microsoft.azure.management.resources.GenericResources.moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+    overload: com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 113
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソースを移動 1 つのリソース グループから別に非同期的にします。</p>
+      <p></p>
+    syntax:
+      content: 'public Completable moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources)'
+      parameters:
+        - id: sourceResourceGroupName
+          type: '26831127'
+          description: <p>ソース リソース グループ名 </p>
+        - id: targetResourceGroup
+          type: com.microsoft.azure.management.resources._resource_group
+          description: <p>リソース グループをターゲットには、別のサブスクリプションであることができます。 </p>
+        - id: resources
+          type: 7d60c20e
+          description: <p>移動する、リソースの Id の一覧</p>
+      return:
+        type: '56537e90'
+        description: <p>この呼び出しの遅延の計算の表現 </p>
+  - uid: 'com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync(String,ResourceGroup,List<String>,ServiceCallback<Void>)'
+    id: 'moveResourcesAsync(String,ResourceGroup,List<String>,ServiceCallback<Void>)'
+    parent: com.microsoft.azure.management.resources._generic_resources
+    href: com.microsoft.azure.management.resources._generic_resources.yml
+    langs:
+      - java
+    name: 'moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources, ServiceCallback<Void> callback)'
+    nameWithType: 'GenericResources.moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources, ServiceCallback<Void> callback)'
+    fullName: 'ServiceFuture<Void> com.microsoft.azure.management.resources.GenericResources.moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources, ServiceCallback<Void> callback)'
+    overload: com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-resources/src/main/java/com/microsoft/azure/management/resources/GenericResources.java
+      startLine: 125
+    package: com.microsoft.azure.management.resources
+    summary: |-
+      <p>リソースを移動 1 つのリソース グループから別に非同期的にします。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<Void> moveResourcesAsync(String sourceResourceGroupName, ResourceGroup targetResourceGroup, List<String> resources, ServiceCallback<Void> callback)'
+      parameters:
+        - id: sourceResourceGroupName
+          type: '26831127'
+          description: <p>ソース リソース グループ名 </p>
+        - id: targetResourceGroup
+          type: com.microsoft.azure.management.resources._resource_group
+          description: <p>リソース グループをターゲットには、別のサブスクリプションであることができます。 </p>
+        - id: resources
+          type: 7d60c20e
+          description: <p>移動する、リソースの Id の一覧 </p>
+        - id: callback
+          type: da7fd5ea
+          description: <p>成功または失敗時に呼び出すコールバック</p>
+      return:
+        type: aa81d378
+        description: <p>キャンセル要求へのハンドル </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.management.resources._generic_resources.checkExistence*
+    name: checkExistence
+    nameWithType: GenericResources.checkExistence
+    fullName: boolean com.microsoft.azure.management.resources.GenericResources.checkExistence
+    package: com.microsoft.azure.management.resources
+  - uid: com.microsoft.azure.management.resources._generic_resources.checkExistenceById*
+    name: checkExistenceById
+    nameWithType: GenericResources.checkExistenceById
+    fullName: boolean com.microsoft.azure.management.resources.GenericResources.checkExistenceById
+    package: com.microsoft.azure.management.resources
+  - uid: com.microsoft.azure.management.resources._generic_resources.get*
+    name: get
+    nameWithType: GenericResources.get
+    fullName: GenericResource com.microsoft.azure.management.resources.GenericResources.get
+    package: com.microsoft.azure.management.resources
+  - uid: 7d60c20e
+    spec.java:
+      - name: List<String>
+        fullName: List<String>
+  - uid: com.microsoft.azure.management.resources._generic_resources.moveResources*
+    name: moveResources
+    nameWithType: GenericResources.moveResources
+    fullName: void com.microsoft.azure.management.resources.GenericResources.moveResources
+    package: com.microsoft.azure.management.resources
+  - uid: '56537e90'
+    spec.java:
+      - name: Completable
+        fullName: Completable
+  - uid: com.microsoft.azure.management.resources._generic_resources.moveResourcesAsync*
+    name: moveResourcesAsync
+    nameWithType: GenericResources.moveResourcesAsync
+    fullName: Completable com.microsoft.azure.management.resources.GenericResources.moveResourcesAsync
+    package: com.microsoft.azure.management.resources
+  - uid: da7fd5ea
+    spec.java:
+      - name: ServiceCallback<Void>
+        fullName: ServiceCallback<Void>
+  - uid: aa81d378
+    spec.java:
+      - name: ServiceFuture<Void>
+        fullName: ServiceFuture<Void>
+  - uid: com.microsoft.azure.management.resources._generic_resources.delete*
+    name: delete
+    nameWithType: GenericResources.delete
+    fullName: void com.microsoft.azure.management.resources.GenericResources.delete
+    package: com.microsoft.azure.management.resources
+  - uid: com.microsoft.azure.management.resources._generic_resources.deleteAsync*
+    name: deleteAsync
+    nameWithType: GenericResources.deleteAsync
+    fullName: Completable com.microsoft.azure.management.resources.GenericResources.deleteAsync
+    package: com.microsoft.azure.management.resources
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.define(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.yml
+    name: define(String name)
+    nameWithType: SupportsCreating<T>.define(String name)
+    fullName: T com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating<T>.define(String name)
+    type: Method
+    summary: |-
+      <p>新しいリソースの定義を開始します。 </p>
+      <p>これは、ビルダーの先頭でトップ レベル リソースを作成するために使用するパターン<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>です。 最終的なメソッド定義を完了して実際のリソースの作成を開始処理<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>は<xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">Creatable#create()</xref>です。 </p>
+      <p>なお、 <xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">Creatable#create()</xref>メソッドは、指定された入力パラメーターの最小セットを持つリソース定義の段階でのみ使用します。 表示されない場合<xref uid="com.microsoft.azure.management.resources.fluentcore.model._creatable.create()" data-throw-if-not-resolved="false">Creatable#create()</xref>使用可能なメソッドの間では必要なすべての入力設定が指定されていないを意味します。 入力の設定、通常で始まる「に」という単語例:「fluent インターフェイス」スタイルのインターフェイスとして、リソース定義の次のステージを返すとします。 </p>
+    syntax:
+      content: public T define(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>新しいリソースの名前 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>新しいリソース定義の最初の段階 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteById(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: deleteById(String id)
+    nameWithType: SupportsDeletingById.deleteById(String id)
+    fullName: void com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById.deleteById(String id)
+    type: Method
+    summary: |-
+      <p>リソースを削除<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。</p>
+      <p></p>
+    syntax:
+      content: public void deleteById(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>削除するリソースのリソース ID </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String,ServiceCallback<Void>)'
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: 'deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+    nameWithType: 'SupportsDeletingById.deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+    fullName: 'ServiceFuture<Void> com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById.deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+    type: Method
+    summary: |-
+      <p>リソースを非同期に削除<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<Void> deleteByIdAsync(String id, ServiceCallback<Void> callback)'
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>削除するリソースのリソース ID </p>
+        - id: callback
+          type: da7fd5ea
+          description: <p>成功または失敗時にコールバック </p>
+      return:
+        type: aa81d378
+        description: <p>キャンセル要求へのハンドル </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.deleteByIdAsync(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: deleteByIdAsync(String id)
+    nameWithType: SupportsDeletingById.deleteByIdAsync(String id)
+    fullName: Completable com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById.deleteByIdAsync(String id)
+    type: Method
+    summary: |-
+      <p>リソースを非同期に削除<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。</p>
+      <p></p>
+    syntax:
+      content: public Completable deleteByIdAsync(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>削除するリソースのリソース ID </p>
+      return:
+        type: '56537e90'
+        description: <p>この呼び出しの遅延の計算の表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getById(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: getById(String id)
+    nameWithType: SupportsGettingById<T>.getById(String id)
+    fullName: T com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>.getById(String id)
+    type: Method
+    summary: |-
+      <p>リソースに関する情報を取得<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース id に基づいています。</p>
+      <p></p>
+    syntax:
+      content: public T getById(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの id。 </p>
+      return:
+        type: 8ce1ecb9
+        description: <p>リソースの変更できない表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: getByIdAsync(String id)
+    nameWithType: SupportsGettingById<T>.getByIdAsync(String id)
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>.getByIdAsync(String id)
+    type: Method
+    summary: |-
+      <p>リソースに関する情報を取得<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース id に基づいています。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> getByIdAsync(String id)
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの id。 </p>
+      return:
+        type: c4094ba1
+        description: <p>リソースの変更できない表現 </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.getByIdAsync(String,ServiceCallback<T>)'
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: 'getByIdAsync(String id, ServiceCallback<T> callback)'
+    nameWithType: 'SupportsGettingById<T>.getByIdAsync(String id, ServiceCallback<T> callback)'
+    fullName: 'ServiceFuture<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>.getByIdAsync(String id, ServiceCallback<T> callback)'
+    type: Method
+    summary: |-
+      <p>リソースに関する情報を取得<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース id に基づいています。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceFuture<T> getByIdAsync(String id, ServiceCallback<T> callback)'
+      parameters:
+        - id: id
+          type: '26831127'
+          description: <p>リソースの id。 </p>
+        - id: callback
+          type: 4b6febe3
+          description: <p>成功または失敗時に呼び出すコールバック </p>
+      return:
+        type: c0371a4e
+        description: <p>リソースの変更できない表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.list()
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.yml
+    name: list()
+    nameWithType: SupportsListing<T>.list()
+    fullName: PagedList<T> com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing<T>.list()
+    type: Method
+    summary: |-
+      <p>現在選択されているサブスクリプションで指定した型のすべてのリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<T> list()
+      return:
+        type: e5f90f8a
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.listAsync()
+    parent: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.yml
+    name: listAsync()
+    nameWithType: SupportsListing<T>.listAsync()
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing<T>.listAsync()
+    type: Method
+    summary: |-
+      <p>現在選択されているサブスクリプションで指定した型のすべてのリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> listAsync()
+      return:
+        type: c4094ba1
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroup(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.yml
+    name: listByResourceGroup(String resourceGroupName)
+    nameWithType: SupportsListingByResourceGroup<T>.listByResourceGroup(String resourceGroupName)
+    fullName: PagedList<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingByResourceGroup<T>.listByResourceGroup(String resourceGroupName)
+    type: Method
+    summary: |-
+      <p>指定されたリソース グループ内の指定した型のリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public PagedList<T> listByResourceGroup(String resourceGroupName)
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソースを一覧表示するリソース グループの名前 </p>
+      return:
+        type: e5f90f8a
+        description: <p>リソースの一覧 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.listByResourceGroupAsync(String)
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.yml
+    name: listByResourceGroupAsync(String resourceGroupName)
+    nameWithType: SupportsListingByResourceGroup<T>.listByResourceGroupAsync(String resourceGroupName)
+    fullName: Observable<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingByResourceGroup<T>.listByResourceGroupAsync(String resourceGroupName)
+    type: Method
+    summary: |-
+      <p>指定されたリソース グループ内の指定した型のリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: public Observable<T> listByResourceGroupAsync(String resourceGroupName)
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソースを一覧表示するリソース グループの名前 </p>
+      return:
+        type: c4094ba1
+        description: <p>リソースの一覧 </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.listByTag(String,String,String)'
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.yml
+    name: 'listByTag(String resourceGroupName, String tagName, String tagValue)'
+    nameWithType: 'SupportsListingInResourceGroupByTag<T>.listByTag(String resourceGroupName, String tagName, String tagValue)'
+    fullName: 'PagedList<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingInResourceGroupByTag<T>.listByTag(String resourceGroupName, String tagName, String tagValue)'
+    type: Method
+    summary: |-
+      <p>指定したタグを持つすべてのリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: 'public PagedList<T> listByTag(String resourceGroupName, String tagName, String tagValue)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前 </p>
+        - id: tagName
+          type: '26831127'
+          description: <p>タグの名前をキーとして </p>
+        - id: tagValue
+          type: '26831127'
+          description: <p>タグの値 </p>
+      return:
+        type: e5f90f8a
+        description: <p>リソースの一覧 </p>
+  - uid: 'com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.listByTagAsync(String,String,String)'
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.yml
+    name: 'listByTagAsync(String resourceGroupName, String tagName, String tagValue)'
+    nameWithType: 'SupportsListingInResourceGroupByTag<T>.listByTagAsync(String resourceGroupName, String tagName, String tagValue)'
+    fullName: 'Observable<T> com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingInResourceGroupByTag<T>.listByTagAsync(String resourceGroupName, String tagName, String tagValue)'
+    type: Method
+    summary: |-
+      <p>指定したタグを持つすべてのリソースを一覧表示します。</p>
+      <p></p>
+    syntax:
+      content: 'public Observable<T> listByTagAsync(String resourceGroupName, String tagName, String tagValue)'
+      parameters:
+        - id: resourceGroupName
+          type: '26831127'
+          description: <p>リソース グループの名前 </p>
+        - id: tagName
+          type: '26831127'
+          description: <p>タグの名前をキーとして </p>
+        - id: tagValue
+          type: '26831127'
+          description: <p>タグの値 </p>
+      return:
+        type: c4094ba1
+        description: <p>この呼び出しは、要求されたリソースを返すの遅延の計算の表現 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.models._has_manager.manager()
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models._has_manager
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._has_manager.yml
+    name: manager()
+    nameWithType: HasManager<ManagerT>.manager()
+    fullName: ManagerT com.microsoft.azure.management.resources.fluentcore.arm.models.HasManager<ManagerT>.manager()
+    type: Method
+    syntax:
+      content: public ManagerT manager()
+      return:
+        type: 8b0aab42
+        description: <p>このリソースの種類のマネージャー クライアント </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing
+    parent: com.microsoft.azure.management.resources.fluentcore.collection
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_listing.yml
+    name: SupportsListing<T>
+    nameWithType: SupportsListing<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing<T>
+    type: Interface
+    summary: |-
+      <p>一覧にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>サブスクリプションで特定の種類のリソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsListing<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>リソースの fluent 型 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collectiondcedd7c35acb6def31f119e1aca84c40.yml
+    name: SupportsListingByResourceGroup<T>
+    nameWithType: SupportsListingByResourceGroup<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingByResourceGroup<T>
+    type: Interface
+    summary: |-
+      <p>一覧にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>特定のリソース グループ内の特定の種類のリソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません。)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsListingByResourceGroup<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>登録されているリソースの種類。 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection077104503d9703aa5f6480fadde09264.yml
+    name: SupportsListingInResourceGroupByTag<T>
+    nameWithType: SupportsListingInResourceGroupByTag<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsListingInResourceGroupByTag<T>
+    type: Interface
+    summary: |-
+      <p>一覧にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>タグに基づいて、特定の種類のリソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsListingInResourceGroupByTag<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>リソースの fluent 型 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.collection
+    href: com.microsoft.azure.management.resources.fluentcore.arm.collection._supports_getting_by_id.yml
+    name: SupportsGettingById<T>
+    nameWithType: SupportsGettingById<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById<T>
+    type: Interface
+    summary: |-
+      <p>特定の作業にアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID に基づいて、リソース </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません。)</p>
+      <p></p>
+    syntax:
+      content: public interface SupportsGettingById<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>リソースのコレクションの型 </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating
+    parent: com.microsoft.azure.management.resources.fluentcore.collection
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_creating.yml
+    name: SupportsCreating<T>
+    nameWithType: SupportsCreating<T>
+    fullName: com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating<T>
+    type: Interface
+    summary: |-
+      <p>作成へのアクセスを提供する<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>トップ レベル リソース。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません) </p>
+    syntax:
+      content: public interface SupportsCreating<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>最初の空白定義インターフェイス </p>
+  - uid: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id
+    parent: com.microsoft.azure.management.resources.fluentcore.collection
+    href: com.microsoft.azure.management.resources.fluentcore.collection._supports_deleting_by_id.yml
+    name: SupportsDeletingById
+    nameWithType: SupportsDeletingById
+    fullName: com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById
+    type: Interface
+    summary: |-
+      <p>リソースを削除するのにアクセスできるように<xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソースの ID によって識別します。 </p>
+      <p>(注: このインターフェイスは、ユーザー コードで実装するものではありません) </p>
+    syntax:
+      content: public interface SupportsDeletingById
+  - uid: com.microsoft.azure.management.resources.fluentcore.arm.models._has_manager
+    parent: com.microsoft.azure.management.resources.fluentcore.arm.models
+    href: com.microsoft.azure.management.resources.fluentcore.arm.models._has_manager.yml
+    name: HasManager<ManagerT>
+    nameWithType: HasManager<ManagerT>
+    fullName: com.microsoft.azure.management.resources.fluentcore.arm.models.HasManager<ManagerT>
+    type: Interface
+    summary: <p>管理クライアントを公開するモデルを表すインターフェイスです。 </p>
+    syntax:
+      content: public interface HasManager<ManagerT>
+      typeParameters:
+        - type: 8b0aab42
+          description: <p>クライアントのマネージャーの種類 </p>
+  - uid: com.microsoft.azure.management.resources._generic_resource
+    parent: com.microsoft.azure.management.resources
+    href: com.microsoft.azure.management.resources._generic_resource.yml
+    name: GenericResource
+    nameWithType: GenericResource
+    fullName: com.microsoft.azure.management.resources.GenericResource
+    type: Interface
+    summary: <p>不変のクライアント側表現、 <xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>汎用リソース。 </p>
+    syntax:
+      content: 'public interface GenericResource extends GroupableResource<ResourceManager, GenericResourceInner>,Refreshable<GenericResource>,Updatable<GenericResource.Update>'
+  - uid: com.microsoft.azure.management.resources._resource_group
+    parent: com.microsoft.azure.management.resources
+    href: com.microsoft.azure.management.resources._resource_group.yml
+    name: ResourceGroup
+    nameWithType: ResourceGroup
+    fullName: com.microsoft.azure.management.resources.ResourceGroup
+    type: Interface
+    summary: <p>不変のクライアント側表現、 <xref uid="com.microsoft.azure.management._azure" data-throw-if-not-resolved="false">Azure</xref>リソース グループです。 </p>
+    syntax:
+      content: public interface ResourceGroup

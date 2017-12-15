@@ -1,0 +1,566 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    id: _retry_strategy
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    children:
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_FIRST_FAST_RETRY
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultExponential()
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultFixed()
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultProgressive()
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getFastFirstRetry()
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getName()
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getNoRetry()
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getShouldRetry()
+      - 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.RetryStrategy(String,boolean)'
+      - com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.setFastFirstRetry(boolean)
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: RetryStrategy
+    nameWithType: RetryStrategy
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 15
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>再試行回数と再試行の間隔の数を決定する再試行戦略を表します。 </p>
+    syntax: &ref_1
+      content: public class RetryStrategy
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF
+    id: DEFAULT_CLIENT_BACKOFF
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_CLIENT_BACKOFF
+    nameWithType: RetryStrategy.DEFAULT_CLIENT_BACKOFF
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_CLIENT_BACKOFF
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 26
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>再試行の間の指数遅延のランダムな差分を計算するときに使用される時間の既定値を表します。 </p>
+    syntax: &ref_7
+      content: public static final Duration DEFAULT_CLIENT_BACKOFF= Duration.ofSeconds(10)
+      return:
+        type: 89ac7c4d
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT
+    id: DEFAULT_CLIENT_RETRY_COUNT
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_CLIENT_RETRY_COUNT
+    nameWithType: RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT
+    fullName: final int com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 21
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: '<p>#リージョンのパブリック メンバー </p><p>既定の再試行回数を表します。 </p>'
+    syntax: &ref_3
+      content: public static final int DEFAULT_CLIENT_RETRY_COUNT= 10
+      return:
+        type: cd225469
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_FIRST_FAST_RETRY
+    id: DEFAULT_FIRST_FAST_RETRY
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_FIRST_FAST_RETRY
+    nameWithType: RetryStrategy.DEFAULT_FIRST_FAST_RETRY
+    fullName: final boolean com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_FIRST_FAST_RETRY
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 52
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>既定の再試行の間隔に従って再試行は残りますが最初の再試行試みが、すぐに行われますかどうかを示すフラグを表します。 </p>
+    syntax:
+      content: public static final boolean DEFAULT_FIRST_FAST_RETRY= true
+      return:
+        type: 4dda0764
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF
+    id: DEFAULT_MAX_BACKOFF
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_MAX_BACKOFF
+    nameWithType: RetryStrategy.DEFAULT_MAX_BACKOFF
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_MAX_BACKOFF
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 31
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>再試行の間の指数遅延を計算するときに使用する時間の既定の最大量を表します。 </p>
+    syntax: &ref_6
+      content: public static final Duration DEFAULT_MAX_BACKOFF= Duration.ofSeconds(30)
+      return:
+        type: 89ac7c4d
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF
+    id: DEFAULT_MIN_BACKOFF
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_MIN_BACKOFF
+    nameWithType: RetryStrategy.DEFAULT_MIN_BACKOFF
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_MIN_BACKOFF
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 36
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>再試行の間の指数遅延を計算するときに使用する時間の既定の最小量を表します。 </p>
+    syntax: &ref_5
+      content: public static final Duration DEFAULT_MIN_BACKOFF= Duration.ofSeconds(1)
+      return:
+        type: 89ac7c4d
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT
+    id: DEFAULT_RETRY_INCREMENT
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_RETRY_INCREMENT
+    nameWithType: RetryStrategy.DEFAULT_RETRY_INCREMENT
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_RETRY_INCREMENT
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 46
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>既定の時間増分プログレッシブ遅延ポリシーで再試行の間隔を表します。 </p>
+    syntax: &ref_4
+      content: public static final Duration DEFAULT_RETRY_INCREMENT= Duration.ofSeconds(1)
+      return:
+        type: 89ac7c4d
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL
+    id: DEFAULT_RETRY_INTERVAL
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: DEFAULT_RETRY_INTERVAL
+    nameWithType: RetryStrategy.DEFAULT_RETRY_INTERVAL
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_RETRY_INTERVAL
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 41
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>再試行の間隔の既定値を表します。 </p>
+    syntax: &ref_2
+      content: public static final Duration DEFAULT_RETRY_INTERVAL= Duration.ofSeconds(1)
+      return:
+        type: 89ac7c4d
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultExponential()
+    id: getDefaultExponential()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getDefaultExponential()
+    nameWithType: RetryStrategy.getDefaultExponential()
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultExponential()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultExponential*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 116
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>既定のポリシーで構成されているランダムな指数近似の再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MIN_BACKOFF</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MAX_BACKOFF</xref>、および<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_BACKOFF</xref>パラメーター。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    syntax:
+      content: public static RetryStrategy getDefaultExponential()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultFixed()
+    id: getDefaultFixed()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getDefaultFixed()
+    nameWithType: RetryStrategy.getDefaultFixed()
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultFixed()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultFixed*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 97
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>既定のポリシーで構成されている固定の再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>と<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>パラメーター。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    syntax:
+      content: public static RetryStrategy getDefaultFixed()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultProgressive()
+    id: getDefaultProgressive()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getDefaultProgressive()
+    nameWithType: RetryStrategy.getDefaultProgressive()
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultProgressive()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultProgressive*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 106
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>既定のポリシーで構成されているプログレッシブ再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>、および<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INCREMENT</xref>パラメーター。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    syntax:
+      content: public static RetryStrategy getDefaultProgressive()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getFastFirstRetry()
+    id: getFastFirstRetry()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getFastFirstRetry()
+    nameWithType: RetryStrategy.getFastFirstRetry()
+    fullName: final boolean com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getFastFirstRetry()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getFastFirstRetry*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 120
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    syntax:
+      content: public final boolean getFastFirstRetry()
+      return:
+        type: 4dda0764
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getName()
+    id: getName()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getName()
+    nameWithType: RetryStrategy.getName()
+    fullName: final String com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getName()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 128
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    syntax:
+      content: public final String getName()
+      return:
+        type: 3d93591e
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getNoRetry()
+    id: getNoRetry()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getNoRetry()
+    nameWithType: RetryStrategy.getNoRetry()
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getNoRetry()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getNoRetry*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 89
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: <p>返しますいいえを実行する既定のポリシー、再試行 1 回だけアクションを呼び出します。 </p>
+    syntax:
+      content: public static RetryStrategy getNoRetry()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getShouldRetry()
+    id: getShouldRetry()
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: getShouldRetry()
+    nameWithType: RetryStrategy.getShouldRetry()
+    fullName: abstract ShouldRetry com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getShouldRetry()
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getShouldRetry*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 141
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: |-
+      <p>返します、対応する<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry" data-throw-if-not-resolved="false">ShouldRetry</xref>を委任します。</p>
+      <p></p>
+    syntax:
+      content: public abstract ShouldRetry getShouldRetry()
+      return:
+        type: 13c86962com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry
+        description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry" data-throw-if-not-resolved="false">ShouldRetry</xref>を委任します。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.RetryStrategy(String,boolean)'
+    id: 'RetryStrategy(String,boolean)'
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: 'RetryStrategy(String name, boolean firstFastRetry)'
+    nameWithType: 'RetryStrategy.RetryStrategy(String name, boolean firstFastRetry)'
+    fullName: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.RetryStrategy(String name, boolean firstFastRetry)'
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.RetryStrategy*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 80
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    summary: |-
+      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref>クラスです。</p>
+      <p></p>
+    syntax:
+      content: 'protected RetryStrategy(String name, boolean firstFastRetry)'
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>再試行戦略の名前。 </p>
+        - id: firstFastRetry
+          type: 4fc6e284
+          description: <p>true の場合、すぐには、最初の試行で再試行してください。それ以外の場合は false です。 以降の再試行は、構成されている再試行の間隔に従って残ります。 </p>
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.setFastFirstRetry(boolean)
+    id: setFastFirstRetry(boolean)
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    langs:
+      - java
+    name: setFastFirstRetry(boolean value)
+    nameWithType: RetryStrategy.setFastFirstRetry(boolean value)
+    fullName: final void com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.setFastFirstRetry(boolean value)
+    overload: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.setFastFirstRetry*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryStrategy.java
+      startLine: 124
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    syntax:
+      content: public final void setFastFirstRetry(boolean value)
+      parameters:
+        - id: value
+          type: 4fc6e284
+      return:
+        type: 3f6357ce
+references:
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 89ac7c4d
+    spec.java:
+      - name: final Duration
+        fullName: final Duration
+  - uid: 4dda0764
+    spec.java:
+      - name: final boolean
+        fullName: final boolean
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.RetryStrategy*
+    name: RetryStrategy
+    nameWithType: RetryStrategy.RetryStrategy
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.RetryStrategy
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getNoRetry*
+    name: getNoRetry
+    nameWithType: RetryStrategy.getNoRetry
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getNoRetry
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultFixed*
+    name: getDefaultFixed
+    nameWithType: RetryStrategy.getDefaultFixed
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultFixed
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultProgressive*
+    name: getDefaultProgressive
+    nameWithType: RetryStrategy.getDefaultProgressive
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultProgressive
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getDefaultExponential*
+    name: getDefaultExponential
+    nameWithType: RetryStrategy.getDefaultExponential
+    fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultExponential
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getFastFirstRetry*
+    name: getFastFirstRetry
+    nameWithType: RetryStrategy.getFastFirstRetry
+    fullName: final boolean com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getFastFirstRetry
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: 3f6357ce
+    spec.java:
+      - name: final void
+        fullName: final void
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.setFastFirstRetry*
+    name: setFastFirstRetry
+    nameWithType: RetryStrategy.setFastFirstRetry
+    fullName: final void com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.setFastFirstRetry
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getName*
+    name: getName
+    nameWithType: RetryStrategy.getName
+    fullName: final String com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getName
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: 13c86962com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry
+    spec.java:
+      - name: 'abstract '
+        fullName: 'abstract '
+      - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry
+        name: ShouldRetry
+        fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ShouldRetry
+        href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.yml
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.getShouldRetry*
+    name: getShouldRetry
+    nameWithType: RetryStrategy.getShouldRetry
+    fullName: abstract ShouldRetry com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getShouldRetry
+    package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._exponential_backoff
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._exponential_backoff.yml
+    name: ExponentialBackoff
+    nameWithType: ExponentialBackoff
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ExponentialBackoff
+    type: Class
+    summary: <p>再試行の間の指数遅延を計算するためのバックオフ パラメーターの再試行戦略。 </p>
+    syntax:
+      content: public class ExponentialBackoff extends RetryStrategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval.yml
+    name: FixedInterval
+    nameWithType: FixedInterval
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.FixedInterval
+    type: Class
+    summary: <p>指定した数の再試行回数と、既定の再試行の時間間隔を固定に再試行戦略を表します。 </p>
+    syntax:
+      content: public class FixedInterval extends RetryStrategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._incremental
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._incremental.yml
+    name: Incremental
+    nameWithType: Incremental
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.Incremental
+    type: Class
+    summary: <p>指定された数の再試行回数と再試行の間の増分時間間隔による再試行戦略。 </p>
+    syntax:
+      content: public class Incremental extends RetryStrategy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: RetryStrategy
+    nameWithType: RetryStrategy
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy
+    type: Class
+    summary: <p>再試行回数と再試行の間隔の数を決定する再試行戦略を表します。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: DEFAULT_RETRY_INTERVAL
+    nameWithType: RetryStrategy.DEFAULT_RETRY_INTERVAL
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_RETRY_INTERVAL
+    type: Field
+    summary: <p>再試行の間隔の既定値を表します。 </p>
+    syntax: *ref_2
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: DEFAULT_CLIENT_RETRY_COUNT
+    nameWithType: RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT
+    fullName: final int com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT
+    type: Field
+    summary: '<p>#リージョンのパブリック メンバー </p><p>既定の再試行回数を表します。 </p>'
+    syntax: *ref_3
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: DEFAULT_RETRY_INCREMENT
+    nameWithType: RetryStrategy.DEFAULT_RETRY_INCREMENT
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_RETRY_INCREMENT
+    type: Field
+    summary: <p>既定の時間増分プログレッシブ遅延ポリシーで再試行の間隔を表します。 </p>
+    syntax: *ref_4
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: DEFAULT_MIN_BACKOFF
+    nameWithType: RetryStrategy.DEFAULT_MIN_BACKOFF
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_MIN_BACKOFF
+    type: Field
+    summary: <p>再試行の間の指数遅延を計算するときに使用する時間の既定の最小量を表します。 </p>
+    syntax: *ref_5
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: DEFAULT_MAX_BACKOFF
+    nameWithType: RetryStrategy.DEFAULT_MAX_BACKOFF
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_MAX_BACKOFF
+    type: Field
+    summary: <p>再試行の間の指数遅延を計算するときに使用する時間の既定の最大量を表します。 </p>
+    syntax: *ref_6
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.yml
+    name: DEFAULT_CLIENT_BACKOFF
+    nameWithType: RetryStrategy.DEFAULT_CLIENT_BACKOFF
+    fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_CLIENT_BACKOFF
+    type: Field
+    summary: <p>再試行の間の指数遅延のランダムな差分を計算するときに使用される時間の既定値を表します。 </p>
+    syntax: *ref_7
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._should_retry.yml
+    name: ShouldRetry
+    nameWithType: ShouldRetry
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ShouldRetry
+    type: Interface
+    summary: <p>再試行の条件が見つかるたびに呼び出されるコールバック デリゲートを定義します。 </p>
+    syntax:
+      content: public interface ShouldRetry

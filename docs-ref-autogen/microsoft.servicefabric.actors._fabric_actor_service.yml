@@ -1,0 +1,1022 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._fabric_actor_service
+    id: _fabric_actor_service
+    parent: microsoft.servicefabric.actors
+    children:
+      - microsoft.servicefabric.actors._fabric_actor_service.createServiceReplicaListeners()
+      - microsoft.servicefabric.actors._fabric_actor_service.deleteActorAsync(ActorId)
+      - 'microsoft.servicefabric.actors._fabric_actor_service.FabricActorService(StatefulServiceContext,ActorTypeInformation)'
+      - 'microsoft.servicefabric.actors._fabric_actor_service.FabricActorService(StatefulServiceContext,ActorTypeInformation,BiFunction<FabricActorService, ActorId, ActorBase>)'
+      - 'microsoft.servicefabric.actors._fabric_actor_service.FabricActorService(StatefulServiceContext,ActorTypeInformation,BiFunction<FabricActorService, ActorId, ActorBase>,BiFunction<ActorBase, ActorStateProvider, ActorStateManager>,ActorStateProvider,ActorServiceSettings)'
+      - microsoft.servicefabric.actors._fabric_actor_service.getActorsAsync(ContinuationToken)
+      - microsoft.servicefabric.actors._fabric_actor_service.getActorTypeInformation()
+      - microsoft.servicefabric.actors._fabric_actor_service.getSettings()
+      - microsoft.servicefabric.actors._fabric_actor_service.getStateProvider()
+      - microsoft.servicefabric.actors._fabric_actor_service.onAbort()
+      - 'microsoft.servicefabric.actors._fabric_actor_service.onChangeRoleAsync(ReplicaRole,CancellationToken)'
+      - microsoft.servicefabric.actors._fabric_actor_service.onCloseAsync(CancellationToken)
+      - microsoft.servicefabric.actors._fabric_actor_service.runAsync(CancellationToken)
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: FabricActorService
+    nameWithType: FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 27
+    package: microsoft.servicefabric.actors
+    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    syntax: &ref_1
+      content: public class FabricActorService extends StatefulServiceBase implements ActorService
+    inheritance:
+      - java.lang.Object
+      - microsoft.servicefabric.services.runtime._stateful_service_base
+    inheritedMembers:
+      - microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription)
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription,Duration)'
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getAddresses()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getPartition()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getServiceContext()
+      - microsoft.servicefabric.services.runtime._stateful_service_base.getStateProviderReplica()
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.onDataLossAsync(RestoreContext,CancellationToken)'
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.onOpenAsync(ReplicaOpenMode,CancellationToken)'
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.setAddresses(Map<String, String>)'
+      - microsoft.servicefabric.services.runtime._stateful_service_base.setPartition(StatefulServicePartition)
+      - 'microsoft.servicefabric.services.runtime._stateful_service_base.StatefulServiceBase(StatefulServiceContext,StateProviderReplica)'
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.createServiceReplicaListeners()
+    id: createServiceReplicaListeners()
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: createServiceReplicaListeners()
+    nameWithType: FabricActorService.createServiceReplicaListeners()
+    fullName: List<ServiceReplicaListener> microsoft.servicefabric.actors.FabricActorService.createServiceReplicaListeners()
+    overload: microsoft.servicefabric.actors._fabric_actor_service.createServiceReplicaListeners*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 180
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>サービス レプリカのリスナーを作成します。</p>
+      <p></p>
+    syntax:
+      content: protected List<ServiceReplicaListener> createServiceReplicaListeners()
+      return:
+        type: 5618da2dmicrosoft.servicefabric.services.communication.runtime._service_replica_listenera08ddfce
+        description: '<p>などの文字列のエンドポイントのペア {「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}} </p>'
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.deleteActorAsync(ActorId)
+    id: deleteActorAsync(ActorId)
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: deleteActorAsync(ActorId actorId)
+    nameWithType: FabricActorService.deleteActorAsync(ActorId actorId)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.deleteActorAsync(ActorId actorId)
+    overload: microsoft.servicefabric.actors._fabric_actor_service.deleteActorAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 169
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</p>
+      <p>
+      アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。 アクティブでアクターの状態は、状態プロバイダーから削除されます。 このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。 </p>
+    syntax:
+      content: public CompletableFuture<?> deleteActorAsync(ActorId actorId)
+      parameters:
+        - id: actorId
+          type: microsoft.servicefabric.actors._actor_id
+          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。 </p>"
+      return:
+        type: 16409f84
+        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+    overridden: microsoft.servicefabric.actors._actor_service.deleteActorAsync(ActorId)
+  - uid: 'microsoft.servicefabric.actors._fabric_actor_service.FabricActorService(StatefulServiceContext,ActorTypeInformation)'
+    id: 'FabricActorService(StatefulServiceContext,ActorTypeInformation)'
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: 'FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo)'
+    nameWithType: 'FabricActorService.FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo)'
+    fullName: 'microsoft.servicefabric.actors.FabricActorService.FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo)'
+    overload: microsoft.servicefabric.actors._fabric_actor_service.FabricActorService*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 49
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>新しいインスタンスを初期化、 <xref uid="microsoft.servicefabric.actors._actor_service" data-throw-if-not-resolved="false">ActorService</xref>クラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo)'
+      parameters:
+        - id: context
+          type: system.fabric._stateful_service_context
+          description: <p>サービス コンテキスト アクター サービスは、の下で動作します。 </p>
+        - id: actorTypeInfo
+          type: microsoft.servicefabric.actors._actor_type_information
+          description: <p>アクターの情報を入力します。 </p>
+  - uid: 'microsoft.servicefabric.actors._fabric_actor_service.FabricActorService(StatefulServiceContext,ActorTypeInformation,BiFunction<FabricActorService, ActorId, ActorBase>)'
+    id: 'FabricActorService(StatefulServiceContext,ActorTypeInformation,BiFunction<FabricActorService, ActorId, ActorBase>)'
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: 'FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory)'
+    nameWithType: 'FabricActorService.FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory)'
+    fullName: 'microsoft.servicefabric.actors.FabricActorService.FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory)'
+    overload: microsoft.servicefabric.actors._fabric_actor_service.FabricActorService*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 63
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>新しいインスタンスを初期化、 <xref uid="microsoft.servicefabric.actors._actor_service" data-throw-if-not-resolved="false">ActorService</xref>クラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory)'
+      parameters:
+        - id: context
+          type: system.fabric._stateful_service_context
+          description: <p>サービス コンテキスト アクター サービスは、の下で動作します。 </p>
+        - id: actorTypeInfo
+          type: microsoft.servicefabric.actors._actor_type_information
+          description: <p>アクターの情報を入力します。 </p>
+        - id: actorFactory
+          type: 8ead6242microsoft.servicefabric.actors._fabric_actor_serviceb33c76fcmicrosoft.servicefabric.actors._actor_idb33c76fcmicrosoft.servicefabric.actors._actor_basea08ddfce
+          description: <p>アクター オブジェクトを作成するファクトリ メソッド。 </p>
+  - uid: 'microsoft.servicefabric.actors._fabric_actor_service.FabricActorService(StatefulServiceContext,ActorTypeInformation,BiFunction<FabricActorService, ActorId, ActorBase>,BiFunction<ActorBase, ActorStateProvider, ActorStateManager>,ActorStateProvider,ActorServiceSettings)'
+    id: 'FabricActorService(StatefulServiceContext,ActorTypeInformation,BiFunction<FabricActorService, ActorId, ActorBase>,BiFunction<ActorBase, ActorStateProvider, ActorStateManager>,ActorStateProvider,ActorServiceSettings)'
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: 'FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory, BiFunction<ActorBase, ActorStateProvider, ActorStateManager> stateManagerFactory, ActorStateProvider stateProvider, ActorServiceSettings settings)'
+    nameWithType: 'FabricActorService.FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory, BiFunction<ActorBase, ActorStateProvider, ActorStateManager> stateManagerFactory, ActorStateProvider stateProvider, ActorServiceSettings settings)'
+    fullName: 'microsoft.servicefabric.actors.FabricActorService.FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory, BiFunction<ActorBase, ActorStateProvider, ActorStateManager> stateManagerFactory, ActorStateProvider stateProvider, ActorServiceSettings settings)'
+    overload: microsoft.servicefabric.actors._fabric_actor_service.FabricActorService*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 86
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>新しいインスタンスを初期化、 <xref uid="microsoft.servicefabric.actors._actor_service" data-throw-if-not-resolved="false">ActorService</xref>クラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public FabricActorService(StatefulServiceContext context, ActorTypeInformation actorTypeInfo, BiFunction<FabricActorService, ActorId, ActorBase> actorFactory, BiFunction<ActorBase, ActorStateProvider, ActorStateManager> stateManagerFactory, ActorStateProvider stateProvider, ActorServiceSettings settings)'
+      parameters:
+        - id: context
+          type: system.fabric._stateful_service_context
+          description: <p>サービス コンテキスト アクター サービスは、の下で動作します。 </p>
+        - id: actorTypeInfo
+          type: microsoft.servicefabric.actors._actor_type_information
+          description: <p>アクターの情報を入力します。 </p>
+        - id: actorFactory
+          type: 8ead6242microsoft.servicefabric.actors._fabric_actor_serviceb33c76fcmicrosoft.servicefabric.actors._actor_idb33c76fcmicrosoft.servicefabric.actors._actor_basea08ddfce
+          description: <p>アクター オブジェクトを作成するファクトリ メソッド。 </p>
+        - id: stateManagerFactory
+          type: 8ead6242microsoft.servicefabric.actors._actor_baseb33c76fcmicrosoft.servicefabric.actors._actor_state_providerb33c76fcmicrosoft.servicefabric.actors._actor_state_managera08ddfce
+          description: <p>作成するファクトリ メソッド<xref uid="microsoft.servicefabric.actors._actor_state_manager" data-throw-if-not-resolved="false">ActorStateManager</xref>です。 </p>
+        - id: stateProvider
+          type: microsoft.servicefabric.actors._actor_state_provider
+          description: <p>アクター オブジェクトの状態を保存状態プロバイダー。 </p>
+        - id: settings
+          type: microsoft.servicefabric.actors._actor_service_settings
+          description: <p>動作を構成する設定<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。 </p>
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getActorsAsync(ContinuationToken)
+    id: getActorsAsync(ContinuationToken)
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: getActorsAsync(ContinuationToken continuationToken)
+    nameWithType: FabricActorService.getActorsAsync(ContinuationToken continuationToken)
+    fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.FabricActorService.getActorsAsync(ContinuationToken continuationToken)
+    overload: microsoft.servicefabric.actors._fabric_actor_service.getActorsAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 152
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクター サービスを照会することによってアクターの一覧を取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<PagedResult<ActorInformation>> getActorsAsync(ContinuationToken continuationToken)
+      parameters:
+        - id: continuationToken
+          type: microsoft.servicefabric.actors._continuation_token
+          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+      return:
+        type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>サーバーへの呼び出しの非同期操作を表すです。 </p>
+    overridden: microsoft.servicefabric.actors._actor_service.getActorsAsync(ContinuationToken)
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getActorTypeInformation()
+    id: getActorTypeInformation()
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: getActorTypeInformation()
+    nameWithType: FabricActorService.getActorTypeInformation()
+    fullName: ActorTypeInformation microsoft.servicefabric.actors.FabricActorService.getActorTypeInformation()
+    overload: microsoft.servicefabric.actors._fabric_actor_service.getActorTypeInformation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 120
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>取得<xref uid="microsoft.servicefabric.actors._actor_type_information" data-throw-if-not-resolved="false">ActorTypeInformation</xref>アクター サービス用です。</p>
+      <p></p>
+    syntax:
+      content: public ActorTypeInformation getActorTypeInformation()
+      return:
+        type: microsoft.servicefabric.actors._actor_type_information
+        description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_type_information\" data-throw-if-not-resolved=\"false\">ActorTypeInformation</xref>サービス レプリカによってホストされているアクターのです。 </p>"
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getSettings()
+    id: getSettings()
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: getSettings()
+    nameWithType: FabricActorService.getSettings()
+    fullName: ActorServiceSettings microsoft.servicefabric.actors.FabricActorService.getSettings()
+    overload: microsoft.servicefabric.actors._fabric_actor_service.getSettings*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 138
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクター サービスの設定を取得します。</p>
+      <p></p>
+    syntax:
+      content: public ActorServiceSettings getSettings()
+      return:
+        type: microsoft.servicefabric.actors._actor_service_settings
+        description: <p>アクター サービスの設定です。 </p>
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getStateProvider()
+    id: getStateProvider()
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: getStateProvider()
+    nameWithType: FabricActorService.getStateProvider()
+    fullName: ActorStateProvider microsoft.servicefabric.actors.FabricActorService.getStateProvider()
+    overload: microsoft.servicefabric.actors._fabric_actor_service.getStateProvider*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 129
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>取得、 <xref uid="microsoft.servicefabric.actors._actor_state_provider" data-throw-if-not-resolved="false">ActorStateProvider</xref>アクター サービスの状態プロバイダーを表すです。</p>
+      <p></p>
+    syntax:
+      content: public ActorStateProvider getStateProvider()
+      return:
+        type: microsoft.servicefabric.actors._actor_state_provider
+        description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>アクター サービスの状態プロバイダーを表すです。 </p>"
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.onAbort()
+    id: onAbort()
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: onAbort()
+    nameWithType: FabricActorService.onAbort()
+    fullName: void microsoft.servicefabric.actors.FabricActorService.onAbort()
+    overload: microsoft.servicefabric.actors._fabric_actor_service.onAbort*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 258
+    package: microsoft.servicefabric.actors
+    summary: '<p>オーバーライド<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base.onAbort()" data-throw-if-not-resolved="false">StatefulServiceBase#onAbort()</xref></p>'
+    syntax:
+      content: protected void onAbort()
+  - uid: 'microsoft.servicefabric.actors._fabric_actor_service.onChangeRoleAsync(ReplicaRole,CancellationToken)'
+    id: 'onChangeRoleAsync(ReplicaRole,CancellationToken)'
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: 'onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    nameWithType: 'FabricActorService.onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    overload: microsoft.servicefabric.actors._fabric_actor_service.onChangeRoleAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 210
+    package: microsoft.servicefabric.actors
+    summary: '<p>オーバーライド<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base.onChangeRoleAsync(ReplicaRole,CancellationToken)" data-throw-if-not-resolved="false">StatefulServiceBase #onChangeRoleAsync(ReplicaRole, system.fabric.CancellationToken)</xref></p>'
+    syntax:
+      content: 'protected CompletableFuture<?> onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+      parameters:
+        - id: newRole
+          type: system.fabric._replica_role
+          description: <p>レプリカの新しいロール。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>レプリカがプライマリになったときに実行される非同期操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.onCloseAsync(CancellationToken)
+    id: onCloseAsync(CancellationToken)
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: onCloseAsync(CancellationToken cancellationToken)
+    nameWithType: FabricActorService.onCloseAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.onCloseAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.actors._fabric_actor_service.onCloseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 247
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>オーバーライド<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base.onCloseAsync(CancellationToken)" data-throw-if-not-resolved="false">StatefulServiceBase#onCloseAsync(CancellationToken)</xref></p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onCloseAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: <p>キャンセル要求を監視するトークンです。 </p>
+      return:
+        type: 16409f84
+        description: <p>レプリカが閉じられたときに実行される非同期操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.runAsync(CancellationToken)
+    id: runAsync(CancellationToken)
+    parent: microsoft.servicefabric.actors._fabric_actor_service
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    langs:
+      - java
+    name: runAsync(CancellationToken cancellationToken)
+    nameWithType: FabricActorService.runAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.runAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.actors._fabric_actor_service.runAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/FabricActorService.java
+      startLine: 195
+    package: microsoft.servicefabric.actors
+    summary: '<p>オーバーライド<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base.runAsync(CancellationToken)" data-throw-if-not-resolved="false">StatefulServiceBase#runAsync(system.fabric.CancellationToken)</xref></p>'
+    syntax:
+      content: protected CompletableFuture<?> runAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>レプリカがプライマリになったときにアラームを読み込む非同期操作を表すタスク。 </p>
+references:
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.FabricActorService*
+    name: FabricActorService
+    nameWithType: FabricActorService.FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService.FabricActorService
+    package: microsoft.servicefabric.actors
+  - uid: 8ead6242microsoft.servicefabric.actors._fabric_actor_serviceb33c76fcmicrosoft.servicefabric.actors._actor_idb33c76fcmicrosoft.servicefabric.actors._actor_basea08ddfce
+    spec.java:
+      - name: BiFunction<
+        fullName: BiFunction<
+      - uid: microsoft.servicefabric.actors._fabric_actor_service
+        name: FabricActorService
+        fullName: microsoft.servicefabric.actors.FabricActorService
+        href: microsoft.servicefabric.actors._fabric_actor_service.yml
+      - name: ', '
+        fullName: ', '
+      - uid: microsoft.servicefabric.actors._actor_id
+        name: ActorId
+        fullName: microsoft.servicefabric.actors.ActorId
+        href: microsoft.servicefabric.actors._actor_id.yml
+      - name: ', '
+        fullName: ', '
+      - uid: microsoft.servicefabric.actors._actor_base
+        name: ActorBase
+        fullName: microsoft.servicefabric.actors.ActorBase
+        href: microsoft.servicefabric.actors._actor_base.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 8ead6242microsoft.servicefabric.actors._actor_baseb33c76fcmicrosoft.servicefabric.actors._actor_state_providerb33c76fcmicrosoft.servicefabric.actors._actor_state_managera08ddfce
+    spec.java:
+      - name: BiFunction<
+        fullName: BiFunction<
+      - uid: microsoft.servicefabric.actors._actor_base
+        name: ActorBase
+        fullName: microsoft.servicefabric.actors.ActorBase
+        href: microsoft.servicefabric.actors._actor_base.yml
+      - name: ', '
+        fullName: ', '
+      - uid: microsoft.servicefabric.actors._actor_state_provider
+        name: ActorStateProvider
+        fullName: microsoft.servicefabric.actors.ActorStateProvider
+        href: microsoft.servicefabric.actors._actor_state_provider.yml
+      - name: ', '
+        fullName: ', '
+      - uid: microsoft.servicefabric.actors._actor_state_manager
+        name: ActorStateManager
+        fullName: microsoft.servicefabric.actors.ActorStateManager
+        href: microsoft.servicefabric.actors._actor_state_manager.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getActorTypeInformation*
+    name: getActorTypeInformation
+    nameWithType: FabricActorService.getActorTypeInformation
+    fullName: ActorTypeInformation microsoft.servicefabric.actors.FabricActorService.getActorTypeInformation
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getStateProvider*
+    name: getStateProvider
+    nameWithType: FabricActorService.getStateProvider
+    fullName: ActorStateProvider microsoft.servicefabric.actors.FabricActorService.getStateProvider
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getSettings*
+    name: getSettings
+    nameWithType: FabricActorService.getSettings
+    fullName: ActorServiceSettings microsoft.servicefabric.actors.FabricActorService.getSettings
+    package: microsoft.servicefabric.actors
+  - uid: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: microsoft.servicefabric.actors._paged_result
+        name: PagedResult
+        fullName: microsoft.servicefabric.actors.PagedResult
+        href: microsoft.servicefabric.actors._paged_result.yml
+      - name: <
+        fullName: <
+      - uid: microsoft.servicefabric.actors._actor_information
+        name: ActorInformation
+        fullName: microsoft.servicefabric.actors.ActorInformation
+        href: microsoft.servicefabric.actors._actor_information.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.getActorsAsync*
+    name: getActorsAsync
+    nameWithType: FabricActorService.getActorsAsync
+    fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.FabricActorService.getActorsAsync
+    package: microsoft.servicefabric.actors
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.deleteActorAsync*
+    name: deleteActorAsync
+    nameWithType: FabricActorService.deleteActorAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.deleteActorAsync
+    package: microsoft.servicefabric.actors
+  - uid: 5618da2dmicrosoft.servicefabric.services.communication.runtime._service_replica_listenera08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: microsoft.servicefabric.services.communication.runtime._service_replica_listener
+        name: ServiceReplicaListener
+        fullName: microsoft.servicefabric.services.communication.runtime.ServiceReplicaListener
+        href: microsoft.servicefabric.services.communication.runtime._service_replica_listener.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.createServiceReplicaListeners*
+    name: createServiceReplicaListeners
+    nameWithType: FabricActorService.createServiceReplicaListeners
+    fullName: List<ServiceReplicaListener> microsoft.servicefabric.actors.FabricActorService.createServiceReplicaListeners
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.runAsync*
+    name: runAsync
+    nameWithType: FabricActorService.runAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.runAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.onChangeRoleAsync*
+    name: onChangeRoleAsync
+    nameWithType: FabricActorService.onChangeRoleAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.onChangeRoleAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.onCloseAsync*
+    name: onCloseAsync
+    nameWithType: FabricActorService.onCloseAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.onCloseAsync
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._fabric_actor_service.onAbort*
+    name: onAbort
+    nameWithType: FabricActorService.onAbort
+    fullName: void microsoft.servicefabric.actors.FabricActorService.onAbort
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: backupAsync(BackupDescription backupDescription)
+    nameWithType: StatefulServiceBase.backupAsync(BackupDescription backupDescription)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.backupAsync(BackupDescription backupDescription)
+    type: Method
+    summary: |-
+      <p>これによって管理されるすべての信頼性の高い状態のバックアップを実行<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base" data-throw-if-not-resolved="false">StatefulServiceBase</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<?> backupAsync(BackupDescription backupDescription)
+      parameters:
+        - id: backupDescription
+          type: microsoft.servicefabric.data._backup_description
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">BackupDescription</xref>バックアップ要求を記述します。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.backupAsync(BackupDescription,Duration)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: 'backupAsync(BackupDescription backupDescription, Duration timeout)'
+    nameWithType: 'StatefulServiceBase.backupAsync(BackupDescription backupDescription, Duration timeout)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.backupAsync(BackupDescription backupDescription, Duration timeout)'
+    type: Method
+    summary: |-
+      <p>これによって管理されるすべての信頼性の高い状態のバックアップを実行<xref uid="microsoft.servicefabric.services.runtime._stateful_service_base" data-throw-if-not-resolved="false">StatefulServiceBase</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture<?> backupAsync(BackupDescription backupDescription, Duration timeout)'
+      parameters:
+        - id: backupDescription
+          type: microsoft.servicefabric.data._backup_description
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">BackupDescription</xref>バックアップ要求を記述します。 </p>
+        - id: timeout
+          type: e02a2de0
+          description: <p>この操作のタイムアウト。 </p>
+      return:
+        type: 16409f84
+        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getAddresses()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: getAddresses()
+    nameWithType: StatefulServiceBase.getAddresses()
+    fullName: 'Map<String, String> microsoft.servicefabric.services.runtime.StatefulServiceBase.getAddresses()'
+    type: Method
+    summary: |-
+      <p>すべてのアドレスの一覧のこのサービス レプリカとして取得 (ListenerName、エンドポイント) キーと値のペア。</p>
+      <p></p>
+    syntax:
+      content: 'protected Map<String, String> getAddresses()'
+      return:
+        type: 689c8cb5
+        description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>(ListenerName、エンドポイント) とアドレスの一覧を含むキーと値のペア。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getPartition()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: getPartition()
+    nameWithType: StatefulServiceBase.getPartition()
+    fullName: StatefulServicePartition microsoft.servicefabric.services.runtime.StatefulServiceBase.getPartition()
+    type: Method
+    summary: |-
+      <p>サービスを現在のサービスのレプリカが属するパーティションをします。</p>
+      <p></p>
+    syntax:
+      content: protected StatefulServicePartition getPartition()
+      return:
+        type: system.fabric._stateful_service_partition
+        description: <p><xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref>を表す、このサービス レプリカが属しているパーティション。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getServiceContext()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: getServiceContext()
+    nameWithType: StatefulServiceBase.getServiceContext()
+    fullName: StatefulServiceContext microsoft.servicefabric.services.runtime.StatefulServiceBase.getServiceContext()
+    type: Method
+    summary: |-
+      <p>このステートフル サービスが動作しているサービス コンテキストを取得します。 ReplicaId、PartitionId ServiceName などのような情報を提供します。</p>
+      <p></p>
+    syntax:
+      content: public StatefulServiceContext getServiceContext()
+      return:
+        type: system.fabric._stateful_service_context
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">StatefulServiceContext</xref>サービス コンテキストをについて説明します。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.getStateProviderReplica()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: getStateProviderReplica()
+    nameWithType: StatefulServiceBase.getStateProviderReplica()
+    fullName: StateProviderReplica microsoft.servicefabric.services.runtime.StatefulServiceBase.getStateProviderReplica()
+    type: Method
+    syntax:
+      content: protected StateProviderReplica getStateProviderReplica()
+      return:
+        type: microsoft.servicefabric.data._state_provider_replica
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.onDataLossAsync(RestoreContext,CancellationToken)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: 'onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceBase.onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<Boolean> microsoft.servicefabric.services.runtime.StatefulServiceBase.onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+    type: Method
+    summary: |-
+      <p>このメソッドは、疑いのあるデータの消失時に呼び出されます。 データの損失が発生した場合、サービスを復元するには、このメソッドをオーバーライドすることができます。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<Boolean> onDataLossAsync(RestoreContext context, CancellationToken cancellationToken)'
+      parameters:
+        - id: context
+          type: microsoft.servicefabric.data._restore_context
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">RestoreContext</xref>サービスを復元するために使用します。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 7e53ac82
+        description: <p>非同期の復元操作を表すタスク。 True は、状態が復元されていることを示します。 False は、レプリカの状態が変更されていないことを示します。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.onOpenAsync(ReplicaOpenMode,CancellationToken)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: 'onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceBase.onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+    type: Method
+    summary: |-
+      <p>このメソッドは、サービスを開くの最後の手順として呼び出されます。 このレプリカの内部コンポーネントのオープンが完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<?> onOpenAsync(ReplicaOpenMode openMode, CancellationToken cancellationToken)'
+      parameters:
+        - id: openMode
+          type: system.fabric._replica_open_mode
+          description: <p>このサービス レプリカです。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.setAddresses(Map<String, String>)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: 'setAddresses(Map<String, String> addresses)'
+    nameWithType: 'StatefulServiceBase.setAddresses(Map<String, String> addresses)'
+    fullName: 'void microsoft.servicefabric.services.runtime.StatefulServiceBase.setAddresses(Map<String, String> addresses)'
+    type: Method
+    summary: |-
+      <p>セットの一覧 (ListenerName、エンドポイント) としては、このサービス レプリカのすべてのアドレスのキー/値ペア。</p>
+      <p></p>
+    syntax:
+      content: 'protected void setAddresses(Map<String, String> addresses)'
+      parameters:
+        - id: addresses
+          type: 689c8cb5
+          description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>(ListenerName、エンドポイント) とアドレスの一覧を含むキーと値のペア。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.setPartition(StatefulServicePartition)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: setPartition(StatefulServicePartition partition)
+    nameWithType: StatefulServiceBase.setPartition(StatefulServicePartition partition)
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.setPartition(StatefulServicePartition partition)
+    type: Method
+    summary: |-
+      <p>サービスを現在のサービスのレプリカが属するパーティションをします。</p>
+      <p></p>
+    syntax:
+      content: protected void setPartition(StatefulServicePartition partition)
+      parameters:
+        - id: partition
+          type: system.fabric._stateful_service_partition
+          description: <p><xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref>を表す、このサービス レプリカが属しているパーティション。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.StatefulServiceBase(StatefulServiceContext,StateProviderReplica)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: 'StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+    nameWithType: 'StatefulServiceBase.StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+    fullName: 'microsoft.servicefabric.services.runtime.StatefulServiceBase.StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+    type: Constructor
+    summary: |-
+      <p>新たに作成<xref uid="microsoft.servicefabric.services.runtime._stateful_service" data-throw-if-not-resolved="false">StatefulService</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'protected StatefulServiceBase(StatefulServiceContext serviceContext, StateProviderReplica stateProviderReplica)'
+      parameters:
+        - id: serviceContext
+          type: system.fabric._stateful_service_context
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">StatefulServiceContext</xref>サービス コンテキストをについて説明します。 </p>
+        - id: stateProviderReplica
+          type: microsoft.servicefabric.data._state_provider_replica
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">StateProviderReplica</xref>信頼性の高い状態プロバイダーの複製を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base
+    parent: microsoft.servicefabric.services.runtime
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: StatefulServiceBase
+    nameWithType: StatefulServiceBase
+    fullName: microsoft.servicefabric.services.runtime.StatefulServiceBase
+    type: Class
+    summary: <p>ベースのステートフルな信頼性の高いサービスを Microsoft Service Fabric の基本クラスを表します。 </p>
+    syntax:
+      content: public class StatefulServiceBase
+  - uid: microsoft.servicefabric.actors._actor_service
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_service.yml
+    name: ActorService
+    nameWithType: ActorService
+    fullName: microsoft.servicefabric.actors.ActorService
+    type: Interface
+    summary: <p>呼び出すことができるメソッドを含むインターフェイスを定義する<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス レベルです。 </p>
+    syntax:
+      content: public interface ActorService extends Service
+  - uid: microsoft.servicefabric.actors._actor_state_provider
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_state_provider.yml
+    name: ActorStateProvider
+    nameWithType: ActorStateProvider
+    fullName: microsoft.servicefabric.actors.ActorStateProvider
+    type: Interface
+    summary: <p>アクター状態プロバイダーは、アクター ランタイムと通信するために実装する必要があるインターフェイスを表します。 </p>
+    syntax:
+      content: public interface ActorStateProvider extends StateProviderReplica
+  - uid: microsoft.servicefabric.actors._actor_service_settings
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_service_settings.yml
+    name: ActorServiceSettings
+    nameWithType: ActorServiceSettings
+    fullName: microsoft.servicefabric.actors.ActorServiceSettings
+    type: Class
+    summary: <p>動作を構成する設定<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。 </p>
+    syntax:
+      content: public class ActorServiceSettings
+  - uid: microsoft.servicefabric.actors._actor_base
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_base.yml
+    name: ActorBase
+    nameWithType: ActorBase
+    fullName: microsoft.servicefabric.actors.ActorBase
+    type: Class
+    summary: "<p>アクターの基本クラスを表します。 <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref></p>\n<p>\r\n\r\n  <b>注釈:</b>アクターの基本データ型は、共通するアクターから派生するアクターによって実装された機能を提供<xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アクター ガベージ コレクションとのフェールオーバーの制限が、状態が保持されます。 状態の取得と格納がアクター状態プロバイダーによって提供される<xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>です。 </p>"
+    syntax:
+      content: public class ActorBase
+  - uid: microsoft.servicefabric.actors._actor_state_manager
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_state_manager.yml
+    name: ActorStateManager
+    nameWithType: ActorStateManager
+    fullName: microsoft.servicefabric.actors.ActorStateManager
+    type: Interface
+    summary: <p>インターフェイスのマネージャーの状態を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>を実装します。 </p>
+    syntax:
+      content: public interface ActorStateManager
+  - uid: microsoft.servicefabric.actors._actor_type_information
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_type_information.yml
+    name: ActorTypeInformation
+    nameWithType: ActorTypeInformation
+    fullName: microsoft.servicefabric.actors.ActorTypeInformation
+    type: Class
+    summary: <p>アクターを実装する型についてを説明します。 </p>
+    syntax:
+      content: public class ActorTypeInformation
+  - uid: system.fabric._replica_role
+    parent: system.fabric
+    href: system.fabric._replica_role.yml
+    name: ReplicaRole
+    nameWithType: ReplicaRole
+    fullName: system.fabric.ReplicaRole
+    type: Enum
+    summary: <p>レプリカのロールを定義します。 </p>
+    syntax:
+      content: public enum ReplicaRole
+  - uid: system.fabric._stateful_service_context
+    parent: system.fabric
+    href: system.fabric._stateful_service_context.yml
+    name: StatefulServiceContext
+    nameWithType: StatefulServiceContext
+    fullName: system.fabric.StatefulServiceContext
+    type: Class
+    syntax:
+      content: public class StatefulServiceContext
+  - uid: microsoft.servicefabric.actors._fabric_actor_service
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._fabric_actor_service.yml
+    name: FabricActorService
+    nameWithType: FabricActorService
+    fullName: microsoft.servicefabric.actors.FabricActorService
+    type: Class
+    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    syntax: *ref_1
+  - uid: microsoft.servicefabric.actors._actor_id
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_id.yml
+    name: ActorId
+    nameWithType: ActorId
+    fullName: microsoft.servicefabric.actors.ActorId
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。 アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。 </p>"
+    syntax:
+      content: public class ActorId
+  - uid: microsoft.servicefabric.actors._actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor.yml
+    name: Actor
+    nameWithType: Actor
+    fullName: microsoft.servicefabric.actors.Actor
+    type: Interface
+    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    syntax:
+      content: public interface Actor
+  - uid: microsoft.servicefabric.actors._paged_result
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._paged_result.yml
+    name: PagedResult<T>
+    nameWithType: PagedResult<T>
+    fullName: microsoft.servicefabric.actors.PagedResult<T>
+    type: Class
+    summary: |-
+      <p>アクター クエリの呼び出しの結果を表します。</p>
+      <p></p>
+    syntax:
+      content: public class PagedResult<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>このクエリ結果に含まれる項目の種類。 </p>
+  - uid: microsoft.servicefabric.actors._actor_information
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_information.yml
+    name: ActorInformation
+    nameWithType: ActorInformation
+    fullName: microsoft.servicefabric.actors.ActorInformation
+    type: Class
+    summary: <p>によって返されるアクターに関する情報を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>メソッドの呼び出しをクエリします。 </p>
+    syntax:
+      content: public class ActorInformation
+  - uid: microsoft.servicefabric.actors._actor_service.getActorsAsync(ContinuationToken)
+    parent: microsoft.servicefabric.actors._actor_service
+    href: microsoft.servicefabric.actors._actor_service.yml
+    name: getActorsAsync(ContinuationToken continuationToken)
+    nameWithType: ActorService.getActorsAsync(ContinuationToken continuationToken)
+    fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.ActorService.getActorsAsync(ContinuationToken continuationToken)
+    type: Method
+    summary: |-
+      <p>アクター サービスを照会することによってアクターの一覧を取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<PagedResult<ActorInformation>> getActorsAsync(ContinuationToken continuationToken)
+      parameters:
+        - id: continuationToken
+          type: microsoft.servicefabric.actors._continuation_token
+          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+      return:
+        type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
+        description: <p>サーバーへの呼び出しの非同期操作を表す予定。 </p>
+  - uid: microsoft.servicefabric.actors._continuation_token
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._continuation_token.yml
+    name: ContinuationToken
+    nameWithType: ContinuationToken
+    fullName: microsoft.servicefabric.actors.ContinuationToken
+    type: Class
+    summary: "<p>クエリ操作の継続トークンを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>メソッドを使用して結果のセットの一部を返す可能性があります、 <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref>オブジェクトが使用可能な結果の次のセットを返す、後続の呼び出しで使用できるオブジェクトにも継続トークンを返します。 </p>"
+    syntax:
+      content: public class ContinuationToken
+  - uid: microsoft.servicefabric.actors._actor_service.deleteActorAsync(ActorId)
+    parent: microsoft.servicefabric.actors._actor_service
+    href: microsoft.servicefabric.actors._actor_service.yml
+    name: deleteActorAsync(ActorId actorId)
+    nameWithType: ActorService.deleteActorAsync(ActorId actorId)
+    fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorService.deleteActorAsync(ActorId actorId)
+    type: Method
+    summary: |-
+      <p>削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</p>
+      <p>
+      アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。 アクティブでアクターの状態は、状態プロバイダーから削除されます。 このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。 </p>
+    syntax:
+      content: public CompletableFuture<?> deleteActorAsync(ActorId actorId)
+      parameters:
+        - id: actorId
+          type: microsoft.servicefabric.actors._actor_id
+          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。 </p>"
+      return:
+        type: 16409f84
+        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+  - uid: microsoft.servicefabric.services.communication.runtime._service_replica_listener
+    parent: microsoft.servicefabric.services.communication.runtime
+    href: microsoft.servicefabric.services.communication.runtime._service_replica_listener.yml
+    name: ServiceReplicaListener
+    nameWithType: ServiceReplicaListener
+    fullName: microsoft.servicefabric.services.communication.runtime.ServiceReplicaListener
+    type: Class
+    summary: <p>ステートフル サービス レプリカの通信リスナーとそのプロパティを表します。 通信リスナーから与えられたエンドポイントは、通信リスナーの名前に関連付けられます。 </p>
+    syntax:
+      content: public class ServiceReplicaListener
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.runAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: runAsync(CancellationToken cancellationToken)
+    nameWithType: StatefulServiceBase.runAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.runAsync(CancellationToken cancellationToken)
+    type: Method
+    summary: |-
+      <p>サービスが、プライマリで、書き込みの状態を持つときに実行される処理ループを実装するだけのロジックでこのメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> runAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateful_service_base.onChangeRoleAsync(ReplicaRole,CancellationToken)'
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: 'onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    nameWithType: 'StatefulServiceBase.onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+    type: Method
+    summary: |-
+      <p>このメソッドは、最後の手順として完了する前に<xref uid="system.fabric._stateful_service_replica.changeRoleAsync(ReplicaRole,CancellationToken)" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica#changeRoleAsync (ReplicaRole、CancellationToken)</xref>です。 このレプリカの内部コンポーネントの ChangeRole が完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: 'protected CompletableFuture<?> onChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
+      parameters:
+        - id: newRole
+          type: system.fabric._replica_role
+          description: <p>このサービス レプリカです。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onCloseAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: onCloseAsync(CancellationToken cancellationToken)
+    nameWithType: StatefulServiceBase.onCloseAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatefulServiceBase.onCloseAsync(CancellationToken cancellationToken)
+    type: Method
+    summary: |-
+      <p>サービスを閉じるための最後の手順として、このメソッドが呼び出されます。 このレプリカの内部コンポーネントの終了が完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onCloseAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateful_service_base.onAbort()
+    parent: microsoft.servicefabric.services.runtime._stateful_service_base
+    href: microsoft.servicefabric.services.runtime._stateful_service_base.yml
+    name: onAbort()
+    nameWithType: StatefulServiceBase.onAbort()
+    fullName: void microsoft.servicefabric.services.runtime.StatefulServiceBase.onAbort()
+    type: Method
+    summary: <p>通知サービスを中止しています。 RunAsync は、取り消し処理は中止パスには待機されなかったとして、このメソッドの実行と同時に実行可能性があります。 </p>
+    syntax:
+      content: protected void onAbort()
+  - uid: microsoft.servicefabric.services.remoting._service_remoting_listener
+    parent: microsoft.servicefabric.services.remoting
+    href: microsoft.servicefabric.services.remoting._service_remoting_listener.yml
+    name: ServiceRemotingListener
+    nameWithType: ServiceRemotingListener
+    fullName: microsoft.servicefabric.services.remoting.ServiceRemotingListener
+    type: Interface
+    summary: <p>ステートレスおよびステートフルなサービスのインターフェイスのリモート処理を有効にするための基本の通信インターフェイスを定義します。 </p>
+    syntax:
+      content: public interface ServiceRemotingListener

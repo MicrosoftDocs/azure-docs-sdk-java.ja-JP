@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._health_event
+    id: _health_event
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._health_event.getHealthInformation()
+      - system.fabric.health._health_event.getLastErrorTransitionAt()
+      - system.fabric.health._health_event.getLastModifiedUtcTimestamp()
+      - system.fabric.health._health_event.getLastOkTransitionAt()
+      - system.fabric.health._health_event.getLastWarningTransitionAt()
+      - system.fabric.health._health_event.getSourceUtcTimestamp()
+      - system.fabric.health._health_event.isExpired()
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 10
+    package: system.fabric.health
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax: &ref_1
+      content: public class HealthEvent
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric.health._health_event.getHealthInformation()
+    id: getHealthInformation()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: getHealthInformation()
+    nameWithType: HealthEvent.getHealthInformation()
+    fullName: HealthInformation system.fabric.health.HealthEvent.getHealthInformation()
+    overload: system.fabric.health._health_event.getHealthInformation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 138
+    package: system.fabric.health
+    summary: |-
+      <p>報告されたヘルス情報です。</p>
+      <p></p>
+    syntax:
+      content: public HealthInformation getHealthInformation()
+      return:
+        type: system.fabric.health._health_information
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric.health._health_information\" data-throw-if-not-resolved=\"false\">HealthInformation</xref>\r\n\r\n</p>"
+  - uid: system.fabric.health._health_event.getLastErrorTransitionAt()
+    id: getLastErrorTransitionAt()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: getLastErrorTransitionAt()
+    nameWithType: HealthEvent.getLastErrorTransitionAt()
+    fullName: Calendar system.fabric.health.HealthEvent.getLastErrorTransitionAt()
+    overload: system.fabric.health._health_event.getLastErrorTransitionAt*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 185
+    package: system.fabric.health
+    summary: "<p>場合、現在<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>は<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>で報告される正常性レポートが最初の時刻を返します<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>です。 定期的なレポートでは、同じ状態を持つ多数のレポートが生成された可能性がします。 場合、現在<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>は<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Ok</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>、するヘルス状態が前回の時刻を返します<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>、別の状態に遷移する前にします。</p>\n<p>\r\n\r\n  <b>注釈:</b>遷移フィールド、LastOkTransitionAt、LastWarningTransitionAt、LastErrorTransitionAt 付与正常性の履歴、イベントの状態の移行。 スマートなアラートや「履歴」の正常性イベントに関する情報を使用できます。 次のようなシナリオが可能です。 </p>\n\n<p>\n\n  <itemizedlist>\n\n    <listitem>\n\n      <p></p>\n\n      <p>プロパティが X 分間以上警告/エラー状態の場合はアラートを出す。 </p>\n\n      <p>一時的な状況でアラートを回避できます。 正常性状態が 5 分以上の警告された場合、アラートの変換など、(<xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">HealthState</xref>警告および -LastWarningTransitionTime を = =&gt; 5 分) です。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>最後の X 分間に変更された条件のみに基づいてアラートを出す。 </p>\n\n      <p>指定した時刻より前に既にエラーの状態にあったレポートについては、既に通知されているため、無視できます。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>プロパティは、警告およびエラーの切り替えは場合、は、どのくらいの期間が経過している問題のある (つまり問題あり) を決定します。 </p>\n\n      <p>プロパティは、5 分以上の正常なされていない場合、アラートの変換など、(<xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">HealthState</xref> ! = Ok と -LastOkTransitionTime&gt; 5 分) です。 </p>\n\n    </listitem>\n\n  </itemizedlist>\n\n</p>"
+    syntax:
+      content: public Calendar getLastErrorTransitionAt()
+      return:
+        type: bb22f98f
+        description: '<p>返します<xref uid="" data-throw-if-not-resolved="false">java.util.Calendar</xref>関連する遷移時 (UTC) の最後を表す<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>です。 </p>'
+  - uid: system.fabric.health._health_event.getLastModifiedUtcTimestamp()
+    id: getLastModifiedUtcTimestamp()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: getLastModifiedUtcTimestamp()
+    nameWithType: HealthEvent.getLastModifiedUtcTimestamp()
+    fullName: Calendar system.fabric.health.HealthEvent.getLastModifiedUtcTimestamp()
+    overload: system.fabric.health._health_event.getLastModifiedUtcTimestamp*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 66
+    package: system.fabric.health
+    summary: |-
+      <p>日付と時刻の正常性ストアによって、正常性レポートの最終変更日時を取得します。</p>
+      <p></p>
+    syntax:
+      content: public Calendar getLastModifiedUtcTimestamp()
+      return:
+        type: bb22f98f
+        description: <p>日付と時刻の正常性ストアによって、正常性レポートの最終変更日時。 </p>
+  - uid: system.fabric.health._health_event.getLastOkTransitionAt()
+    id: getLastOkTransitionAt()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: getLastOkTransitionAt()
+    nameWithType: HealthEvent.getLastOkTransitionAt()
+    fullName: Calendar system.fabric.health.HealthEvent.getLastOkTransitionAt()
+    overload: system.fabric.health._health_event.getLastOkTransitionAt*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 129
+    package: system.fabric.health
+    summary: "<p>場合、現在<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>は<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Ok</xref>で報告される正常性レポートが最初の時刻を返します<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Ok</xref>です。 定期的なレポートでは、同じ状態を持つ多数のレポートが生成された可能性がします。 場合、現在<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>は<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>、するヘルス状態が前回の時刻を返します<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Ok</xref>、別の状態に遷移する前にします。 場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>されていない<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Ok</xref>System.DateTime.FromFileTimeUtc(0) になります。</p>\n<p>\r\n\r\n  <b>注釈:</b>遷移フィールド、LastOkTransitionAt、LastWarningTransitionAt、LastErrorTransitionAt 付与正常性の履歴、イベントの状態の移行。 スマートなアラートや「履歴」の正常性イベントに関する情報を使用できます。 次のようなシナリオが可能です。 </p>\n\n<p>\n\n  <itemizedlist>\n\n    <listitem>\n\n      <p></p>\n\n      <p>プロパティが X 分間以上警告/エラー状態の場合はアラートを出す。 </p>\n\n      <p>一時的な状況でアラートを回避できます。 正常性状態が 5 分以上の警告された場合、アラートの変換など、(<xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">HealthState</xref>警告および -LastWarningTransitionTime を = =&gt; 5 分) です。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>最後の X 分間に変更された条件のみに基づいてアラートを出す。 </p>\n\n      <p>指定した時刻より前に既にエラーの状態にあったレポートについては、既に通知されているため、無視できます。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>プロパティは、警告およびエラーの切り替えは場合、は、どのくらいの期間が経過している問題のある (つまり問題あり) を決定します。 </p>\n\n      <p>プロパティは、5 分以上の正常なされていない場合、アラートの変換など、(<xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">HealthState</xref> ! = Ok と -LastOkTransitionTime&gt; 5 分) です。 </p>\n\n    </listitem>\n\n  </itemizedlist>\n\n</p>"
+    syntax:
+      content: public Calendar getLastOkTransitionAt()
+      return:
+        type: bb22f98f
+        description: '<p>返します<xref uid="" data-throw-if-not-resolved="false">java.util.Calendar</xref>関連する遷移時 (UTC) の最後を表す<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Ok</xref>です。 </p>'
+  - uid: system.fabric.health._health_event.getLastWarningTransitionAt()
+    id: getLastWarningTransitionAt()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: getLastWarningTransitionAt()
+    nameWithType: HealthEvent.getLastWarningTransitionAt()
+    fullName: Calendar system.fabric.health.HealthEvent.getLastWarningTransitionAt()
+    overload: system.fabric.health._health_event.getLastWarningTransitionAt*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 231
+    package: system.fabric.health
+    summary: "<p>場合、現在<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>は<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>で報告される正常性レポートが最初の時刻を返します<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>です。 定期的なレポートでは、同じ状態を持つ多数のレポートが生成された可能性がします。 場合、現在<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthInformation#healthState</xref>は<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Ok</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref> 、するヘルス状態が前回の時刻を返します<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>、別の状態に遷移する前にします。</p>\n<p>\r\n\r\n  <b>注釈:</b>遷移フィールド、LastOkTransitionAt、LastWarningTransitionAt、LastErrorTransitionAt 付与正常性の履歴、イベントの状態の移行。 スマートなアラートや「履歴」の正常性イベントに関する情報を使用できます。 次のようなシナリオが可能です。 </p>\n\n<p>\n\n  <itemizedlist>\n\n    <listitem>\n\n      <p></p>\n\n      <p>プロパティが X 分間以上警告/エラー状態の場合はアラートを出す。 </p>\n\n      <p>一時的な状況でアラートを回避できます。 正常性状態が 5 分以上の警告された場合、アラートの変換など、(<xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">HealthState</xref>警告および -LastWarningTransitionTime を = =&gt; 5 分) です。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>最後の X 分間に変更された条件のみに基づいてアラートを出す。 </p>\n\n      <p>指定した時刻より前に既にエラーの状態にあったレポートについては、既に通知されているため、無視できます。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>プロパティは、警告およびエラーの切り替えは場合、は、どのくらいの期間が経過している問題のある (つまり問題あり) を決定します。 </p>\n\n      <p>プロパティは、5 分以上の正常なされていない場合、アラートの変換など、(<xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">HealthState</xref> ! = Ok と -LastOkTransitionTime&gt; 5 分) です。 </p>\n\n    </listitem>\n\n  </itemizedlist>\n\n</p>"
+    syntax:
+      content: public Calendar getLastWarningTransitionAt()
+      return:
+        type: bb22f98f
+        description: '<p>返します<xref uid="" data-throw-if-not-resolved="false">java.util.Calendar</xref>関連する遷移時 (UTC) の最後を表す<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+  - uid: system.fabric.health._health_event.getSourceUtcTimestamp()
+    id: getSourceUtcTimestamp()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: getSourceUtcTimestamp()
+    nameWithType: HealthEvent.getSourceUtcTimestamp()
+    fullName: Calendar system.fabric.health.HealthEvent.getSourceUtcTimestamp()
+    overload: system.fabric.health._health_event.getSourceUtcTimestamp*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 57
+    package: system.fabric.health
+    summary: |-
+      <p>正常性レポートをソースから送信されたときの時刻。</p>
+      <p></p>
+    syntax:
+      content: public Calendar getSourceUtcTimestamp()
+      return:
+        type: bb22f98f
+        description: <p>ソース UtcTimestamp を返す </p>
+  - uid: system.fabric.health._health_event.isExpired()
+    id: isExpired()
+    parent: system.fabric.health._health_event
+    href: system.fabric.health._health_event.yml
+    langs:
+      - java
+    name: isExpired()
+    nameWithType: HealthEvent.isExpired()
+    fullName: boolean system.fabric.health.HealthEvent.isExpired()
+    overload: system.fabric.health._health_event.isExpired*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/HealthEvent.java
+      startLine: 80
+    package: system.fabric.health
+    summary: "<p>正常性イベントの有効期限が切れた whetherÂ を示す値を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>RemoveWhenExpired が false の場合にのみ、イベントが期限切れことができます。 それ以外の場合、イベントはクエリによって返されずに、ストアから削除されます。 </p>"
+    syntax:
+      content: public boolean isExpired()
+      return:
+        type: 4fc6e284
+        description: <p>正常性イベントの有効期限が切れました。 場合は true。正常性イベントが、時に期限が切れていない場合は false、正常性ストアには、クエリが評価されます。 </p>
+references:
+  - uid: bb22f98f
+    spec.java:
+      - name: Calendar
+        fullName: Calendar
+  - uid: system.fabric.health._health_event.getSourceUtcTimestamp*
+    name: getSourceUtcTimestamp
+    nameWithType: HealthEvent.getSourceUtcTimestamp
+    fullName: Calendar system.fabric.health.HealthEvent.getSourceUtcTimestamp
+    package: system.fabric.health
+  - uid: system.fabric.health._health_event.getLastModifiedUtcTimestamp*
+    name: getLastModifiedUtcTimestamp
+    nameWithType: HealthEvent.getLastModifiedUtcTimestamp
+    fullName: Calendar system.fabric.health.HealthEvent.getLastModifiedUtcTimestamp
+    package: system.fabric.health
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: system.fabric.health._health_event.isExpired*
+    name: isExpired
+    nameWithType: HealthEvent.isExpired
+    fullName: boolean system.fabric.health.HealthEvent.isExpired
+    package: system.fabric.health
+  - uid: system.fabric.health._health_event.getLastOkTransitionAt*
+    name: getLastOkTransitionAt
+    nameWithType: HealthEvent.getLastOkTransitionAt
+    fullName: Calendar system.fabric.health.HealthEvent.getLastOkTransitionAt
+    package: system.fabric.health
+  - uid: system.fabric.health._health_event.getHealthInformation*
+    name: getHealthInformation
+    nameWithType: HealthEvent.getHealthInformation
+    fullName: HealthInformation system.fabric.health.HealthEvent.getHealthInformation
+    package: system.fabric.health
+  - uid: system.fabric.health._health_event.getLastErrorTransitionAt*
+    name: getLastErrorTransitionAt
+    nameWithType: HealthEvent.getLastErrorTransitionAt
+    fullName: Calendar system.fabric.health.HealthEvent.getLastErrorTransitionAt
+    package: system.fabric.health
+  - uid: system.fabric.health._health_event.getLastWarningTransitionAt*
+    name: getLastWarningTransitionAt
+    nameWithType: HealthEvent.getLastWarningTransitionAt
+    fullName: Calendar system.fabric.health.HealthEvent.getLastWarningTransitionAt
+    package: system.fabric.health
+  - uid: system.fabric.health._health_information
+    parent: system.fabric.health
+    href: system.fabric.health._health_information.yml
+    name: HealthInformation
+    nameWithType: HealthInformation
+    fullName: system.fabric.health.HealthInformation
+    type: Class
+    summary: <p>エンティティのヘルス情報が含まれています。 この情報は、正常性レポートに含まれています。 正常性イベントの一部としても提供されます。 </p>
+    syntax:
+      content: public class HealthInformation
+  - uid: system.fabric.health._health_state
+    parent: system.fabric.health
+    href: system.fabric.health._health_state.yml
+    name: HealthState
+    nameWithType: HealthState
+    fullName: system.fabric.health.HealthState
+    type: Enum
+    syntax:
+      content: public enum HealthState
+  - uid: system.fabric.health._health_event
+    parent: system.fabric.health
+    href: system.fabric.health._health_event.yml
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax: *ref_1

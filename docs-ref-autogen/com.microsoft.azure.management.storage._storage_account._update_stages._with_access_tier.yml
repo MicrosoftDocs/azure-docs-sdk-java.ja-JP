@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier
+    id: _with_access_tier
+    parent: com.microsoft.azure.management.storage
+    children:
+      - com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier.withAccessTier(AccessTier)
+    href: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier.yml
+    langs:
+      - java
+    name: StorageAccount.UpdateStages.WithAccessTier
+    nameWithType: StorageAccount.UpdateStages.WithAccessTier
+    fullName: com.microsoft.azure.management.storage.StorageAccount.UpdateStages.WithAccessTier
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-mgmt-storage/src/main/java/com/microsoft/azure/management/storage/StorageAccount.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-storage/src/main/java/com/microsoft/azure/management/storage/StorageAccount.java
+      startLine: 397
+    package: com.microsoft.azure.management.storage
+    summary: <p>Blob 記憶域アカウント更新ステージを指定するアクセス レベルを許可します。 </p>
+    syntax:
+      content: public interface WithAccessTier
+  - uid: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier.withAccessTier(AccessTier)
+    id: withAccessTier(AccessTier)
+    parent: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier
+    href: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier.yml
+    langs:
+      - java
+    name: withAccessTier(AccessTier accessTier)
+    nameWithType: StorageAccount.UpdateStages.WithAccessTier.withAccessTier(AccessTier accessTier)
+    fullName: Update com.microsoft.azure.management.storage.StorageAccount.UpdateStages.WithAccessTier.withAccessTier(AccessTier accessTier)
+    overload: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier.withAccessTier*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-mgmt-storage/src/main/java/com/microsoft/azure/management/storage/StorageAccount.java
+      startLine: 408
+    package: com.microsoft.azure.management.storage
+    summary: |-
+      <p>課金の目的に使用されるアクセス レベルを指定します。 </p>
+      <p>アクセス層には、7 日に複数回の (168 時間) を変更できません。 StandardLRS、StandardGRS、StandardRAGRS、または PremiumLRS 勘定科目の種類には、アクセス層を設定することはできません。</p>
+      <p></p>
+    syntax:
+      content: public Update withAccessTier(AccessTier accessTier)
+      parameters:
+        - id: accessTier
+          type: com.microsoft.azure.management.storage._access_tier
+          description: <p>アクセス層の値 </p>
+      return:
+        type: com.microsoft.azure.management.storage._storage_account._update
+        description: <p>ストレージ アカウントの更新の次のステージ </p>
+references:
+  - uid: com.microsoft.azure.management.storage._storage_account._update_stages._with_access_tier.withAccessTier*
+    name: withAccessTier
+    nameWithType: StorageAccount.UpdateStages.WithAccessTier.withAccessTier
+    fullName: Update com.microsoft.azure.management.storage.StorageAccount.UpdateStages.WithAccessTier.withAccessTier
+    package: com.microsoft.azure.management.storage
+  - uid: com.microsoft.azure.management.storage._storage_account._update
+    parent: com.microsoft.azure.management.storage
+    href: com.microsoft.azure.management.storage._storage_account._update.yml
+    name: StorageAccount.Update
+    nameWithType: StorageAccount.Update
+    fullName: com.microsoft.azure.management.storage.StorageAccount.Update
+    type: Interface
+    summary: <p>変更可能なすべての設定を含む、ストレージ アカウントの更新操作のテンプレートです。 </p>
+    syntax:
+      content: 'public interface Update extends Appliable<StorageAccount>,StorageAccount.UpdateStages.WithSku,StorageAccount.UpdateStages.WithCustomDomain,StorageAccount.UpdateStages.WithEncryption,StorageAccount.UpdateStages.WithAccessTier,Resource.UpdateWithTags<Update>'
+  - uid: com.microsoft.azure.management.storage._access_tier
+    parent: com.microsoft.azure.management.storage
+    href: com.microsoft.azure.management.storage._access_tier.yml
+    name: AccessTier
+    nameWithType: AccessTier
+    fullName: com.microsoft.azure.management.storage.AccessTier
+    type: Enum
+    summary: <p>値を定義<xref uid="com.microsoft.azure.management.storage._access_tier" data-throw-if-not-resolved="false">AccessTier</xref>です。 </p>
+    syntax:
+      content: public enum AccessTier

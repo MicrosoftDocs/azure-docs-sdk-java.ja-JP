@@ -1,0 +1,172 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage._retry_policy_factory
+    id: _retry_policy_factory
+    parent: com.microsoft.azure.storage
+    children:
+      - com.microsoft.azure.storage._retry_policy_factory.createInstance(OperationContext)
+    href: com.microsoft.azure.storage._retry_policy_factory.yml
+    langs:
+      - java
+    name: RetryPolicyFactory
+    nameWithType: RetryPolicyFactory
+    fullName: com.microsoft.azure.storage.RetryPolicyFactory
+    type: Interface
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/RetryPolicyFactory.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/RetryPolicyFactory.java
+      startLine: 19
+    package: com.microsoft.azure.storage
+    summary: <p>新たに作成する再試行ポリシー ファクトリを表す<xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>トランザクションごとにオブジェクト。 </p>
+    syntax:
+      content: public interface RetryPolicyFactory
+  - uid: com.microsoft.azure.storage._retry_policy_factory.createInstance(OperationContext)
+    id: createInstance(OperationContext)
+    parent: com.microsoft.azure.storage._retry_policy_factory
+    href: com.microsoft.azure.storage._retry_policy_factory.yml
+    langs:
+      - java
+    name: createInstance(OperationContext opContext)
+    nameWithType: RetryPolicyFactory.createInstance(OperationContext opContext)
+    fullName: RetryPolicy com.microsoft.azure.storage.RetryPolicyFactory.createInstance(OperationContext opContext)
+    overload: com.microsoft.azure.storage._retry_policy_factory.createInstance*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/RetryPolicyFactory.java
+      startLine: 31
+    package: com.microsoft.azure.storage
+    summary: |-
+      <p>新たに作成<xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>試行中、現在の要求のオブジェクト。</p>
+      <p></p>
+    syntax:
+      content: public RetryPolicy createInstance(OperationContext opContext)
+      parameters:
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: com.microsoft.azure.storage._retry_policy
+        description: <p>A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の新しい再試行ポリシーを表すオブジェクト。 </p>
+references:
+  - uid: com.microsoft.azure.storage._retry_policy_factory.createInstance*
+    name: createInstance
+    nameWithType: RetryPolicyFactory.createInstance
+    fullName: RetryPolicy com.microsoft.azure.storage.RetryPolicyFactory.createInstance
+    package: com.microsoft.azure.storage
+  - uid: com.microsoft.azure.storage._retry_exponential_retry
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._retry_exponential_retry.yml
+    name: RetryExponentialRetry
+    nameWithType: RetryExponentialRetry
+    fullName: com.microsoft.azure.storage.RetryExponentialRetry
+    type: Class
+    summary: |-
+      <p>指定された回数の再試行、ランダムな指数バックオフ方式を使用して、再試行の間隔を決定するを実行する再試行ポリシーを表します。</p>
+      <p>このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref>インターフェイスです。 </p>
+    syntax:
+      content: public class RetryExponentialRetry extends RetryPolicy implements RetryPolicyFactory
+  - uid: com.microsoft.azure.storage._retry_linear_retry
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._retry_linear_retry.yml
+    name: RetryLinearRetry
+    nameWithType: RetryLinearRetry
+    fullName: com.microsoft.azure.storage.RetryLinearRetry
+    type: Class
+    summary: |-
+      <p>指定された回数の再試行の間の一定の時間を指定した期間を使用して、再試行を実行する再試行ポリシーを表します。</p>
+      <p>このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">RetryPolicyFactory</xref>インターフェイスです。 </p>
+    syntax:
+      content: public class RetryLinearRetry extends RetryPolicy implements RetryPolicyFactory
+  - uid: com.microsoft.azure.storage._retry_no_retry
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._retry_no_retry.yml
+    name: RetryNoRetry
+    nameWithType: RetryNoRetry
+    fullName: com.microsoft.azure.storage.RetryNoRetry
+    type: Class
+    summary: |-
+      <p>実行再試行再試行ポリシーを表しません。</p>
+      <p>このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref>インターフェイスです。 </p>
+    syntax:
+      content: public class RetryNoRetry extends RetryPolicy implements RetryPolicyFactory
+  - uid: com.microsoft.azure.storage._retry_policy
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.storage.RetryPolicy
+    type: Class
+    summary: <p>再試行ポリシーを表す抽象クラスです。 </p>
+    syntax:
+      content: public class RetryPolicy implements RetryPolicyFactory
+  - uid: com.microsoft.azure.storage._retry_no_retry.createInstance(final OperationContext)
+    parent: com.microsoft.azure.storage._retry_no_retry
+    href: com.microsoft.azure.storage._retry_no_retry.yml
+    name: createInstance(final OperationContext opContext)
+    nameWithType: RetryNoRetry.createInstance(final OperationContext opContext)
+    fullName: RetryPolicy com.microsoft.azure.storage.RetryNoRetry.createInstance(final OperationContext opContext)
+    type: Method
+    summary: |-
+      <p>現在試行中の要求の新しい再試行ポリシーを生成します。</p>
+      <p></p>
+    syntax:
+      content: public RetryPolicy createInstance(final OperationContext opContext)
+      parameters:
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: com.microsoft.azure.storage._retry_policy
+        description: <p>A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の再試行ポリシーを表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._retry_linear_retry.createInstance(final OperationContext)
+    parent: com.microsoft.azure.storage._retry_linear_retry
+    href: com.microsoft.azure.storage._retry_linear_retry.yml
+    name: createInstance(final OperationContext opContext)
+    nameWithType: RetryLinearRetry.createInstance(final OperationContext opContext)
+    fullName: RetryPolicy com.microsoft.azure.storage.RetryLinearRetry.createInstance(final OperationContext opContext)
+    type: Method
+    summary: |-
+      <p>現在試行中の要求の新しい再試行ポリシーを生成します。</p>
+      <p></p>
+    syntax:
+      content: public RetryPolicy createInstance(final OperationContext opContext)
+      parameters:
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: com.microsoft.azure.storage._retry_policy
+        description: <p>A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の再試行ポリシーを表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._retry_exponential_retry.createInstance(final OperationContext)
+    parent: com.microsoft.azure.storage._retry_exponential_retry
+    href: com.microsoft.azure.storage._retry_exponential_retry.yml
+    name: createInstance(final OperationContext opContext)
+    nameWithType: RetryExponentialRetry.createInstance(final OperationContext opContext)
+    fullName: RetryPolicy com.microsoft.azure.storage.RetryExponentialRetry.createInstance(final OperationContext opContext)
+    type: Method
+    summary: |-
+      <p>現在試行中の要求の新しい再試行ポリシーを生成します。</p>
+      <p></p>
+    syntax:
+      content: public RetryPolicy createInstance(final OperationContext opContext)
+      parameters:
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: com.microsoft.azure.storage._retry_policy
+        description: <p>A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の再試行ポリシーを表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._operation_context
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._operation_context.yml
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: com.microsoft.azure.storage.OperationContext
+    type: Class
+    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    syntax:
+      content: public class OperationContext

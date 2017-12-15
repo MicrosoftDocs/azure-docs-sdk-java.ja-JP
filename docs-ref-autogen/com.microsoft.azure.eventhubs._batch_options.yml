@@ -1,0 +1,203 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.eventhubs._batch_options
+    id: _batch_options
+    parent: com.microsoft.azure.eventhubs
+    children:
+      - com.microsoft.azure.eventhubs._batch_options.maxMessageSize
+      - com.microsoft.azure.eventhubs._batch_options.partitionKey
+      - com.microsoft.azure.eventhubs._batch_options.with(Consumer<BatchOptions>)
+    href: com.microsoft.azure.eventhubs._batch_options.yml
+    langs:
+      - java
+    name: BatchOptions
+    nameWithType: BatchOptions
+    fullName: com.microsoft.azure.eventhubs.BatchOptions
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/BatchOptions.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-event-hubs-java'
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/BatchOptions.java
+      startLine: 49
+    package: com.microsoft.azure.eventhubs
+    summary: "<p>\r\n  <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>作成に使用される<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es です。</p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>partitionKey と maxMessageSize .with() メソッドを使用して設定することができます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>partitionKey が null です。</p></listitem><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem></itemizedlist></p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>、.with() メソッドを使用して maxMessageSize のみ設定できます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem><listitem><p>注: パーティション分割キーを設定した場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>がスローされます。</p></listitem></itemizedlist></p>\n<p>バッチのいずれかの型を構築するために作成、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>オブジェクトし、それを適切な createBatch メソッドに渡します。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>を使用して (<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">PartitionSender#createBatch(BatchOptions)</xref>です。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">EventHubClient#createBatch(BatchOptions)</xref>です。</p>\n<p>\n  <pre>\n    <code>// Note: For all examples, 'client' is an instance of EventHubClient. The usage is the same for PartitionSender,\n    however, you can NOT set a partition key when using PartitionSender\n    \n    // Create EventDataBatch with defaults\n    EventDataBatch edb1 = client.createBatch();\n    \n    // Create EventDataBatch with custom partitionKey\n    BatchOptions options = new BatchOptions().with( options -&gt; options.partitionKey = \"foo\");\n    EventDataBatch edb2 = client.createBatch(options);\n    \n    // Create EventDataBatch with custom partitionKey and maxMessageSize\n    BatchOptions options = new BatchOptions().with ( options -&gt; {\n        options.partitionKey = \"foo\";\n        options.maxMessageSize = 100 * 1024;\n    };\n    EventDataBatch edb3 = client.createBatch(options);\n    </code>\n  </pre>\n</p>"
+    syntax: &ref_1
+      content: public class BatchOptions
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.eventhubs._batch_options.maxMessageSize
+    id: maxMessageSize
+    parent: com.microsoft.azure.eventhubs._batch_options
+    href: com.microsoft.azure.eventhubs._batch_options.yml
+    langs:
+      - java
+    name: maxMessageSize
+    nameWithType: BatchOptions.maxMessageSize
+    fullName: Integer com.microsoft.azure.eventhubs.BatchOptions.maxMessageSize
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/BatchOptions.java
+      startLine: 51
+    package: com.microsoft.azure.eventhubs
+    syntax:
+      content: public Integer maxMessageSize= null
+      return:
+        type: 08effaa0
+  - uid: com.microsoft.azure.eventhubs._batch_options.partitionKey
+    id: partitionKey
+    parent: com.microsoft.azure.eventhubs._batch_options
+    href: com.microsoft.azure.eventhubs._batch_options.yml
+    langs:
+      - java
+    name: partitionKey
+    nameWithType: BatchOptions.partitionKey
+    fullName: String com.microsoft.azure.eventhubs.BatchOptions.partitionKey
+    type: Field
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/BatchOptions.java
+      startLine: 50
+    package: com.microsoft.azure.eventhubs
+    syntax:
+      content: public String partitionKey= null
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.eventhubs._batch_options.with(Consumer<BatchOptions>)
+    id: with(Consumer<BatchOptions>)
+    parent: com.microsoft.azure.eventhubs._batch_options
+    href: com.microsoft.azure.eventhubs._batch_options.yml
+    langs:
+      - java
+    name: with(Consumer<BatchOptions> builderFunction)
+    nameWithType: BatchOptions.with(Consumer<BatchOptions> builderFunction)
+    fullName: final BatchOptions com.microsoft.azure.eventhubs.BatchOptions.with(Consumer<BatchOptions> builderFunction)
+    overload: com.microsoft.azure.eventhubs._batch_options.with*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-eventhubs/src/main/java/com/microsoft/azure/eventhubs/BatchOptions.java
+      startLine: 53
+    package: com.microsoft.azure.eventhubs
+    syntax:
+      content: public final BatchOptions with(Consumer<BatchOptions> builderFunction)
+      parameters:
+        - id: builderFunction
+          type: e0918e98com.microsoft.azure.eventhubs._batch_optionsa08ddfce
+      return:
+        type: 93de0ef9com.microsoft.azure.eventhubs._batch_options
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 08effaa0
+    spec.java:
+      - name: Integer
+        fullName: Integer
+  - uid: e0918e98com.microsoft.azure.eventhubs._batch_optionsa08ddfce
+    spec.java:
+      - name: Consumer<
+        fullName: Consumer<
+      - uid: com.microsoft.azure.eventhubs._batch_options
+        name: BatchOptions
+        fullName: com.microsoft.azure.eventhubs.BatchOptions
+        href: com.microsoft.azure.eventhubs._batch_options.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 93de0ef9com.microsoft.azure.eventhubs._batch_options
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.eventhubs._batch_options
+        name: BatchOptions
+        fullName: com.microsoft.azure.eventhubs.BatchOptions
+        href: com.microsoft.azure.eventhubs._batch_options.yml
+  - uid: com.microsoft.azure.eventhubs._batch_options.with*
+    name: with
+    nameWithType: BatchOptions.with
+    fullName: final BatchOptions com.microsoft.azure.eventhubs.BatchOptions.with
+    package: com.microsoft.azure.eventhubs
+  - uid: com.microsoft.azure.eventhubs._batch_options
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._batch_options.yml
+    name: BatchOptions
+    nameWithType: BatchOptions
+    fullName: com.microsoft.azure.eventhubs.BatchOptions
+    type: Class
+    summary: "<p>\r\n  <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>作成に使用される<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es です。</p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>partitionKey と maxMessageSize .with() メソッドを使用して設定することができます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>partitionKey が null です。</p></listitem><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem></itemizedlist></p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>、.with() メソッドを使用して maxMessageSize のみ設定できます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem><listitem><p>注: パーティション分割キーを設定した場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>がスローされます。</p></listitem></itemizedlist></p>\n<p>バッチのいずれかの型を構築するために作成、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>オブジェクトし、それを適切な createBatch メソッドに渡します。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>を使用して (<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">PartitionSender#createBatch(BatchOptions)</xref>です。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">EventHubClient#createBatch(BatchOptions)</xref>です。</p>\n<p>\n  <pre>\n    <code>// Note: For all examples, 'client' is an instance of EventHubClient. The usage is the same for PartitionSender,\n    however, you can NOT set a partition key when using PartitionSender\n    \n    // Create EventDataBatch with defaults\n    EventDataBatch edb1 = client.createBatch();\n    \n    // Create EventDataBatch with custom partitionKey\n    BatchOptions options = new BatchOptions().with( options -&gt; options.partitionKey = \"foo\");\n    EventDataBatch edb2 = client.createBatch(options);\n    \n    // Create EventDataBatch with custom partitionKey and maxMessageSize\n    BatchOptions options = new BatchOptions().with ( options -&gt; {\n        options.partitionKey = \"foo\";\n        options.maxMessageSize = 100 * 1024;\n    };\n    EventDataBatch edb3 = client.createBatch(options);\n    </code>\n  </pre>\n</p>"
+    syntax: *ref_1
+  - uid: com.microsoft.azure.eventhubs._event_data_batch
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_data_batch.yml
+    name: EventDataBatch
+    nameWithType: EventDataBatch
+    fullName: com.microsoft.azure.eventhubs.EventDataBatch
+    type: Class
+    summary: <p>バッチ/コレクションを作成するためのヘルパー クラス<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs へ送信中に使用されるオブジェクト </p>
+    syntax:
+      content: public class EventDataBatch
+  - uid: com.microsoft.azure.eventhubs._event_hub_client
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: EventHubClient
+    nameWithType: EventHubClient
+    fullName: com.microsoft.azure.eventhubs.EventHubClient
+    type: Class
+    summary: |-
+      <p>クラスのすべて EventHub クライアントの操作が開始されるは、ここを固定します。</p>
+      <p></p>
+    syntax:
+      content: public class EventHubClient
+  - uid: com.microsoft.azure.eventhubs._partition_sender
+    parent: com.microsoft.azure.eventhubs
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    name: PartitionSender
+    nameWithType: PartitionSender
+    fullName: com.microsoft.azure.eventhubs.PartitionSender
+    type: Class
+    summary: |-
+      <p>この送信元のクラスは、イベント、特定の EventHub パーティションへの送信の論理表現です。 特定のパーティションにイベントを送信しない場合がある場合、このクラスは使用しません。 代わりに、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient #send</xref>メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public class PartitionSender
+  - uid: com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)
+    parent: com.microsoft.azure.eventhubs._partition_sender
+    href: com.microsoft.azure.eventhubs._partition_sender.yml
+    name: createBatch(BatchOptions options)
+    nameWithType: PartitionSender.createBatch(BatchOptions options)
+    fullName: EventDataBatch com.microsoft.azure.eventhubs.PartitionSender.createBatch(BatchOptions options)
+    type: Method
+    summary: |-
+      <p>空のコレクションを作成<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 使用してこれらのイベントを送信中に、同じ partitionKey を使用する必要があります<xref uid="com.microsoft.azure.eventhubs._partition_sender.send(EventDataBatch)" data-throw-if-not-resolved="false">PartitionSender#send(EventDataBatch)</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public EventDataBatch createBatch(BatchOptions options)
+      parameters:
+        - id: options
+          type: com.microsoft.azure.eventhubs._batch_options
+          description: <p>参照してください<xref uid="com.microsoft.azure.eventhubs._batch_options" data-throw-if-not-resolved="false">BatchOptions</xref>詳細の使用方法の詳細 </p>
+      return:
+        type: com.microsoft.azure.eventhubs._event_data_batch
+        description: <p>空の<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>、EventHubs サービスとのメッセージの最大サイズがネゴシエートされた後 </p>
+  - uid: com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)
+    parent: com.microsoft.azure.eventhubs._event_hub_client
+    href: com.microsoft.azure.eventhubs._event_hub_client.yml
+    name: createBatch(BatchOptions options)
+    nameWithType: EventHubClient.createBatch(BatchOptions options)
+    fullName: final EventDataBatch com.microsoft.azure.eventhubs.EventHubClient.createBatch(BatchOptions options)
+    type: Method
+    summary: |-
+      <p>空のコレクションを作成<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 使用してこれらのイベントを送信中に、同じ partitionKey を使用する必要があります<xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventDataBatch)" data-throw-if-not-resolved="false">EventHubClient#send(EventDataBatch)</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public final EventDataBatch createBatch(BatchOptions options)
+      parameters:
+        - id: options
+          type: com.microsoft.azure.eventhubs._batch_options
+          description: <p>参照してください<xref uid="com.microsoft.azure.eventhubs._batch_options" data-throw-if-not-resolved="false">BatchOptions</xref>詳細については </p>
+      return:
+        type: 93de0ef9com.microsoft.azure.eventhubs._event_data_batch
+        description: <p>空の<xref uid="com.microsoft.azure.eventhubs._event_data_batch" data-throw-if-not-resolved="false">EventDataBatch</xref>、EventHubs サービスとのメッセージの最大サイズがネゴシエートされた後 </p>

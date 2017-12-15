@@ -1,0 +1,797 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._fabric_replicator
+    id: _fabric_replicator
+    parent: system.fabric
+    children:
+      - system.fabric._fabric_replicator.abort()
+      - 'system.fabric._fabric_replicator.buildReplicaAsync(ReplicaInformation,CancellationToken)'
+      - 'system.fabric._fabric_replicator.changeRoleAsync(Epoch,ReplicaRole,CancellationToken)'
+      - system.fabric._fabric_replicator.closeAsync(CancellationToken)
+      - system.fabric._fabric_replicator.getCatchUpCapability()
+      - system.fabric._fabric_replicator.getCurrentProgress()
+      - system.fabric._fabric_replicator.onDataLossAsync(CancellationToken)
+      - system.fabric._fabric_replicator.openAsync(CancellationToken)
+      - system.fabric._fabric_replicator.removeReplica(long)
+      - 'system.fabric._fabric_replicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration,ReplicaSetConfiguration)'
+      - system.fabric._fabric_replicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration)
+      - 'system.fabric._fabric_replicator.updateEpochAsync(Epoch,CancellationToken)'
+      - 'system.fabric._fabric_replicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode,CancellationToken)'
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: FabricReplicator
+    nameWithType: FabricReplicator
+    fullName: system.fabric.FabricReplicator
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 19
+    package: system.fabric
+    summary: "<p>高可用性と信頼性のレプリケート状態です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。 インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。 </p>"
+    syntax:
+      content: public class FabricReplicator implements Replicator
+    inheritance:
+      - java.lang.Object
+      - system.fabric._primary_replicator
+      - system.fabric._replicator
+  - uid: system.fabric._fabric_replicator.abort()
+    id: abort()
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: abort()
+    nameWithType: FabricReplicator.abort()
+    fullName: void system.fabric.FabricReplicator.abort()
+    overload: system.fabric._fabric_replicator.abort*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 50
+    package: system.fabric
+    syntax:
+      content: public void abort()
+    overridden: system.fabric._replicator.abort()
+  - uid: 'system.fabric._fabric_replicator.buildReplicaAsync(ReplicaInformation,CancellationToken)'
+    id: 'buildReplicaAsync(ReplicaInformation,CancellationToken)'
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: 'buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+    nameWithType: 'FabricReplicator.buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.FabricReplicator.buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+    overload: system.fabric._fabric_replicator.buildReplicaAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 94
+    package: system.fabric
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+      parameters:
+        - id: replicaInfo
+          type: system.fabric._replica_information
+          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 5f2aaa64
+        description: <p>非同期操作を表すタスク。 </p>
+    overridden: 'system.fabric._primary_replicator.buildReplicaAsync(ReplicaInformation,CancellationToken)'
+  - uid: 'system.fabric._fabric_replicator.changeRoleAsync(Epoch,ReplicaRole,CancellationToken)'
+    id: 'changeRoleAsync(Epoch,ReplicaRole,CancellationToken)'
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: 'changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+    nameWithType: 'FabricReplicator.changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.FabricReplicator.changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+    overload: system.fabric._fabric_replicator.changeRoleAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 39
+    package: system.fabric
+    syntax:
+      content: 'public CompletableFuture changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+      parameters:
+        - id: epoch
+          type: system.fabric._epoch
+        - id: role
+          type: system.fabric._replica_role
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 5f2aaa64
+    overridden: 'system.fabric._replicator.changeRoleAsync(Epoch,ReplicaRole,CancellationToken)'
+  - uid: system.fabric._fabric_replicator.closeAsync(CancellationToken)
+    id: closeAsync(CancellationToken)
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: closeAsync(CancellationToken cancellationToken)
+    nameWithType: FabricReplicator.closeAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture system.fabric.FabricReplicator.closeAsync(CancellationToken cancellationToken)
+    overload: system.fabric._fabric_replicator.closeAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 45
+    package: system.fabric
+    syntax:
+      content: public CompletableFuture closeAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 5f2aaa64
+    overridden: system.fabric._replicator.closeAsync(CancellationToken)
+  - uid: system.fabric._fabric_replicator.getCatchUpCapability()
+    id: getCatchUpCapability()
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: getCatchUpCapability()
+    nameWithType: FabricReplicator.getCatchUpCapability()
+    fullName: long system.fabric.FabricReplicator.getCatchUpCapability()
+    overload: system.fabric._fabric_replicator.getCatchUpCapability*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 60
+    package: system.fabric
+    syntax:
+      content: public long getCatchUpCapability()
+      return:
+        type: 0364520f
+    overridden: system.fabric._replicator.getCatchUpCapability()
+  - uid: system.fabric._fabric_replicator.getCurrentProgress()
+    id: getCurrentProgress()
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: getCurrentProgress()
+    nameWithType: FabricReplicator.getCurrentProgress()
+    fullName: long system.fabric.FabricReplicator.getCurrentProgress()
+    overload: system.fabric._fabric_replicator.getCurrentProgress*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 55
+    package: system.fabric
+    syntax:
+      content: public long getCurrentProgress()
+      return:
+        type: 0364520f
+    overridden: system.fabric._replicator.getCurrentProgress()
+  - uid: system.fabric._fabric_replicator.onDataLossAsync(CancellationToken)
+    id: onDataLossAsync(CancellationToken)
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: onDataLossAsync(CancellationToken cancellationToken)
+    nameWithType: FabricReplicator.onDataLossAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<Boolean> system.fabric.FabricReplicator.onDataLossAsync(CancellationToken cancellationToken)
+    overload: system.fabric._fabric_replicator.onDataLossAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 70
+    package: system.fabric
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> onDataLossAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 7e53ac82
+        description: <p>非同期操作を表す CompletableFuture です。 </p>
+    overridden: system.fabric._primary_replicator.onDataLossAsync(CancellationToken)
+  - uid: system.fabric._fabric_replicator.openAsync(CancellationToken)
+    id: openAsync(CancellationToken)
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: openAsync(CancellationToken cancellationToken)
+    nameWithType: FabricReplicator.openAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<String> system.fabric.FabricReplicator.openAsync(CancellationToken cancellationToken)
+    overload: system.fabric._fabric_replicator.openAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 34
+    package: system.fabric
+    syntax:
+      content: public CompletableFuture<String> openAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 06be942d
+    overridden: system.fabric._replicator.openAsync(CancellationToken)
+  - uid: system.fabric._fabric_replicator.removeReplica(long)
+    id: removeReplica(long)
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: removeReplica(long replicaId)
+    nameWithType: FabricReplicator.removeReplica(long replicaId)
+    fullName: void system.fabric.FabricReplicator.removeReplica(long replicaId)
+    overload: system.fabric._fabric_replicator.removeReplica*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 100
+    package: system.fabric
+    summary: "<p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>\n<p></p>\n<p>\r\n\r\n  <b>注釈:</b>この Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>"
+    syntax:
+      content: public void removeReplica(long replicaId)
+      parameters:
+        - id: replicaId
+          type: 0364520f
+          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+    overridden: system.fabric._primary_replicator.removeReplica(long)
+  - uid: 'system.fabric._fabric_replicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration,ReplicaSetConfiguration)'
+    id: 'updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration,ReplicaSetConfiguration)'
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: 'updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+    nameWithType: 'FabricReplicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+    fullName: 'void system.fabric.FabricReplicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+    overload: system.fabric._fabric_replicator.updateCatchUpReplicaSetConfiguration*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 75
+    package: system.fabric
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: 'public void updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+      parameters:
+        - id: currentConfiguration
+          type: system.fabric._replica_set_configuration
+          description: <p>内部使用のみ。 </p>
+        - id: previousConfiguration
+          type: system.fabric._replica_set_configuration
+          description: <p>内部使用のみ。 </p>
+    overridden: 'system.fabric._primary_replicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration,ReplicaSetConfiguration)'
+  - uid: system.fabric._fabric_replicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration)
+    id: updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration)
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+    nameWithType: FabricReplicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+    fullName: void system.fabric.FabricReplicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+    overload: system.fabric._fabric_replicator.updateCurrentReplicaSetConfiguration*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 89
+    package: system.fabric
+    summary: "<p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>\n<p></p>\n<p>\r\n\r\n  <b>注釈:</b>この Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>"
+    syntax:
+      content: public void updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+      parameters:
+        - id: currentConfiguration
+          type: system.fabric._replica_set_configuration
+          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+    overridden: system.fabric._primary_replicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration)
+  - uid: 'system.fabric._fabric_replicator.updateEpochAsync(Epoch,CancellationToken)'
+    id: 'updateEpochAsync(Epoch,CancellationToken)'
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: 'updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+    nameWithType: 'FabricReplicator.updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.FabricReplicator.updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+    overload: system.fabric._fabric_replicator.updateEpochAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 65
+    package: system.fabric
+    syntax:
+      content: 'public CompletableFuture updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+      parameters:
+        - id: epoch
+          type: system.fabric._epoch
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 5f2aaa64
+    overridden: 'system.fabric._replicator.updateEpochAsync(Epoch,CancellationToken)'
+  - uid: 'system.fabric._fabric_replicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode,CancellationToken)'
+    id: 'waitForCatchUpQuorumAsync(ReplicaSetQuorumMode,CancellationToken)'
+    parent: system.fabric._fabric_replicator
+    href: system.fabric._fabric_replicator.yml
+    langs:
+      - java
+    name: 'waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+    nameWithType: 'FabricReplicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.FabricReplicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+    overload: system.fabric._fabric_replicator.waitForCatchUpQuorumAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/FabricReplicator.java
+      startLine: 82
+    package: system.fabric
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+      parameters:
+        - id: quorumMode
+          type: system.fabric._replica_set_quorum_mode
+          description: <p>内部使用のみ。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 5f2aaa64
+        description: <p>内部使用のみ。 </p>
+    overridden: 'system.fabric._primary_replicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode,CancellationToken)'
+references:
+  - uid: 06be942d
+    spec.java:
+      - name: CompletableFuture<String>
+        fullName: CompletableFuture<String>
+  - uid: system.fabric._fabric_replicator.openAsync*
+    name: openAsync
+    nameWithType: FabricReplicator.openAsync
+    fullName: CompletableFuture<String> system.fabric.FabricReplicator.openAsync
+    package: system.fabric
+  - uid: 5f2aaa64
+    spec.java:
+      - name: CompletableFuture
+        fullName: CompletableFuture
+  - uid: system.fabric._fabric_replicator.changeRoleAsync*
+    name: changeRoleAsync
+    nameWithType: FabricReplicator.changeRoleAsync
+    fullName: CompletableFuture system.fabric.FabricReplicator.changeRoleAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.closeAsync*
+    name: closeAsync
+    nameWithType: FabricReplicator.closeAsync
+    fullName: CompletableFuture system.fabric.FabricReplicator.closeAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.abort*
+    name: abort
+    nameWithType: FabricReplicator.abort
+    fullName: void system.fabric.FabricReplicator.abort
+    package: system.fabric
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric._fabric_replicator.getCurrentProgress*
+    name: getCurrentProgress
+    nameWithType: FabricReplicator.getCurrentProgress
+    fullName: long system.fabric.FabricReplicator.getCurrentProgress
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.getCatchUpCapability*
+    name: getCatchUpCapability
+    nameWithType: FabricReplicator.getCatchUpCapability
+    fullName: long system.fabric.FabricReplicator.getCatchUpCapability
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.updateEpochAsync*
+    name: updateEpochAsync
+    nameWithType: FabricReplicator.updateEpochAsync
+    fullName: CompletableFuture system.fabric.FabricReplicator.updateEpochAsync
+    package: system.fabric
+  - uid: 7e53ac82
+    spec.java:
+      - name: CompletableFuture<Boolean>
+        fullName: CompletableFuture<Boolean>
+  - uid: system.fabric._fabric_replicator.onDataLossAsync*
+    name: onDataLossAsync
+    nameWithType: FabricReplicator.onDataLossAsync
+    fullName: CompletableFuture<Boolean> system.fabric.FabricReplicator.onDataLossAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.updateCatchUpReplicaSetConfiguration*
+    name: updateCatchUpReplicaSetConfiguration
+    nameWithType: FabricReplicator.updateCatchUpReplicaSetConfiguration
+    fullName: void system.fabric.FabricReplicator.updateCatchUpReplicaSetConfiguration
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.waitForCatchUpQuorumAsync*
+    name: waitForCatchUpQuorumAsync
+    nameWithType: FabricReplicator.waitForCatchUpQuorumAsync
+    fullName: CompletableFuture system.fabric.FabricReplicator.waitForCatchUpQuorumAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.updateCurrentReplicaSetConfiguration*
+    name: updateCurrentReplicaSetConfiguration
+    nameWithType: FabricReplicator.updateCurrentReplicaSetConfiguration
+    fullName: void system.fabric.FabricReplicator.updateCurrentReplicaSetConfiguration
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.buildReplicaAsync*
+    name: buildReplicaAsync
+    nameWithType: FabricReplicator.buildReplicaAsync
+    fullName: CompletableFuture system.fabric.FabricReplicator.buildReplicaAsync
+    package: system.fabric
+  - uid: system.fabric._fabric_replicator.removeReplica*
+    name: removeReplica
+    nameWithType: FabricReplicator.removeReplica
+    fullName: void system.fabric.FabricReplicator.removeReplica
+    package: system.fabric
+  - uid: system.fabric._replicator
+    parent: system.fabric
+    href: system.fabric._replicator.yml
+    name: Replicator
+    nameWithType: Replicator
+    fullName: system.fabric.Replicator
+    type: Interface
+    syntax:
+      content: public interface Replicator
+  - uid: system.fabric._fabric_state_replicator
+    parent: system.fabric
+    href: system.fabric._fabric_state_replicator.yml
+    name: FabricStateReplicator
+    nameWithType: FabricStateReplicator
+    fullName: system.fabric.FabricStateReplicator
+    type: Class
+    syntax:
+      content: public class FabricStateReplicator
+  - uid: system.fabric._replicator.openAsync(CancellationToken)
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: openAsync(CancellationToken cancellationToken)
+    nameWithType: Replicator.openAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<String> system.fabric.Replicator.openAsync(CancellationToken cancellationToken)
+    type: Method
+    syntax:
+      content: public CompletableFuture<String> openAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 06be942d
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: system.fabric.exception._fabric_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_exception.yml
+    name: FabricException
+    nameWithType: FabricException
+    fullName: system.fabric.exception.FabricException
+    type: Class
+    syntax:
+      content: public class FabricException
+  - uid: 'system.fabric._replicator.changeRoleAsync(Epoch,ReplicaRole,CancellationToken)'
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: 'changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+    nameWithType: 'Replicator.changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.Replicator.changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+    type: Method
+    syntax:
+      content: 'public CompletableFuture changeRoleAsync(Epoch epoch, ReplicaRole role, CancellationToken cancellationToken)'
+      parameters:
+        - id: epoch
+          type: system.fabric._epoch
+        - id: role
+          type: system.fabric._replica_role
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 5f2aaa64
+  - uid: system.fabric._epoch
+    parent: system.fabric
+    href: system.fabric._epoch.yml
+    name: Epoch
+    nameWithType: Epoch
+    fullName: system.fabric.Epoch
+    type: Class
+    summary: "<p>Service Fabric でパーティションの現在のバージョンを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>、<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>パーティション全体の構成番号です。 レプリカの構成は、たとえば、プライマリ レプリカが変更されたときに、変更を設定すると、新しいプライマリ レプリカからレプリケートされた操作と呼ばれます新しい<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>、古いプライマリによって送信された 1 つからレプリカです。 プライマリが変更されたというは、通常、元のプライマリ レプリカの影響を受ける失敗によって影響を受けませんセカンダリ レプリカに直接表示されません。 プライマリ レプリカが変更されたことを追跡するために、セカンダリ レプリカに伝達するがします。 使用してこのような通信が発生した、 <xref uid=\"system.fabric._state_provider.updateEpochAsync(Epoch,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#updateEpochAsync (system.fabric.Epoch、system.fabric.SequenceNumber、system.fabric.CancellationToken)</xref>メソッドです。 ほとんどのサービスがの内部フィールドの詳細を無視することができます、<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>ことを知っておく通常で十分ですので、<xref uid=\"system.fabric._epoch\" data-throw-if-not-resolved=\"false\">エポック</xref>が変更されたと操作の相対順序を判別するエポックを比較してシステム内のイベント。 比較操作は、この目的で提供されます。 </p>"
+    syntax:
+      content: public class Epoch
+  - uid: system.fabric._replica_role
+    parent: system.fabric
+    href: system.fabric._replica_role.yml
+    name: ReplicaRole
+    nameWithType: ReplicaRole
+    fullName: system.fabric.ReplicaRole
+    type: Enum
+    summary: <p>レプリカのロールを定義します。 </p>
+    syntax:
+      content: public enum ReplicaRole
+  - uid: system.fabric._replicator.closeAsync(CancellationToken)
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: closeAsync(CancellationToken cancellationToken)
+    nameWithType: Replicator.closeAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture system.fabric.Replicator.closeAsync(CancellationToken cancellationToken)
+    type: Method
+    syntax:
+      content: public CompletableFuture closeAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 5f2aaa64
+  - uid: system.fabric._replicator.abort()
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: abort()
+    nameWithType: Replicator.abort()
+    fullName: void system.fabric.Replicator.abort()
+    type: Method
+    syntax:
+      content: public void abort()
+  - uid: system.fabric._replicator.getCurrentProgress()
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: getCurrentProgress()
+    nameWithType: Replicator.getCurrentProgress()
+    fullName: long system.fabric.Replicator.getCurrentProgress()
+    type: Method
+    syntax:
+      content: public long getCurrentProgress()
+      return:
+        type: 0364520f
+  - uid: system.fabric._replicator.getCatchUpCapability()
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: getCatchUpCapability()
+    nameWithType: Replicator.getCatchUpCapability()
+    fullName: long system.fabric.Replicator.getCatchUpCapability()
+    type: Method
+    syntax:
+      content: public long getCatchUpCapability()
+      return:
+        type: 0364520f
+  - uid: 'system.fabric._replicator.updateEpochAsync(Epoch,CancellationToken)'
+    parent: system.fabric._replicator
+    href: system.fabric._replicator.yml
+    name: 'updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+    nameWithType: 'Replicator.updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.Replicator.updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+    type: Method
+    syntax:
+      content: 'public CompletableFuture updateEpochAsync(Epoch epoch, CancellationToken cancellationToken)'
+      parameters:
+        - id: epoch
+          type: system.fabric._epoch
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 5f2aaa64
+  - uid: system.fabric._primary_replicator.onDataLossAsync(CancellationToken)
+    parent: system.fabric._primary_replicator
+    href: system.fabric._primary_replicator.yml
+    name: onDataLossAsync(CancellationToken cancellationToken)
+    nameWithType: PrimaryReplicator.onDataLossAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<Boolean> system.fabric.PrimaryReplicator.onDataLossAsync(CancellationToken cancellationToken)
+    type: Method
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<Boolean> onDataLossAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 7e53ac82
+        description: <p>非同期操作を表す CompletableFuture です。 </p>
+  - uid: 'system.fabric._primary_replicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration,ReplicaSetConfiguration)'
+    parent: system.fabric._primary_replicator
+    href: system.fabric._primary_replicator.yml
+    name: 'updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+    nameWithType: 'PrimaryReplicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+    fullName: 'void system.fabric.PrimaryReplicator.updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+    type: Method
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: 'public void updateCatchUpReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration, ReplicaSetConfiguration previousConfiguration)'
+      parameters:
+        - id: currentConfiguration
+          type: system.fabric._replica_set_configuration
+          description: <p>内部使用のみ。 </p>
+        - id: previousConfiguration
+          type: system.fabric._replica_set_configuration
+          description: <p>内部使用のみ。 </p>
+  - uid: system.fabric._replica_set_configuration
+    parent: system.fabric
+    href: system.fabric._replica_set_configuration.yml
+    name: ReplicaSetConfiguration
+    nameWithType: ReplicaSetConfiguration
+    fullName: system.fabric.ReplicaSetConfiguration
+    type: Class
+    summary: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>
+    syntax:
+      content: public class ReplicaSetConfiguration
+  - uid: 'system.fabric._primary_replicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode,CancellationToken)'
+    parent: system.fabric._primary_replicator
+    href: system.fabric._primary_replicator.yml
+    name: 'waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+    nameWithType: 'PrimaryReplicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.PrimaryReplicator.waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+    type: Method
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture waitForCatchUpQuorumAsync(ReplicaSetQuorumMode quorumMode, CancellationToken cancellationToken)'
+      parameters:
+        - id: quorumMode
+          type: system.fabric._replica_set_quorum_mode
+          description: <p>内部使用のみ。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 5f2aaa64
+        description: <p>内部使用のみ。 </p>
+  - uid: system.fabric._replica_set_quorum_mode
+    parent: system.fabric
+    href: system.fabric._replica_set_quorum_mode.yml
+    name: ReplicaSetQuorumMode
+    nameWithType: ReplicaSetQuorumMode
+    fullName: system.fabric.ReplicaSetQuorumMode
+    type: Enum
+    syntax:
+      content: public enum ReplicaSetQuorumMode
+  - uid: system.fabric._primary_replicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration)
+    parent: system.fabric._primary_replicator
+    href: system.fabric._primary_replicator.yml
+    name: updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+    nameWithType: PrimaryReplicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+    fullName: void system.fabric.PrimaryReplicator.updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+    type: Method
+    summary: "<p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>\n<p></p>\n<p>\r\n\r\n  <b>注釈:</b>この Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>"
+    syntax:
+      content: public void updateCurrentReplicaSetConfiguration(ReplicaSetConfiguration currentConfiguration)
+      parameters:
+        - id: currentConfiguration
+          type: system.fabric._replica_set_configuration
+          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+  - uid: 'system.fabric._primary_replicator.buildReplicaAsync(ReplicaInformation,CancellationToken)'
+    parent: system.fabric._primary_replicator
+    href: system.fabric._primary_replicator.yml
+    name: 'buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+    nameWithType: 'PrimaryReplicator.buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture system.fabric.PrimaryReplicator.buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+    type: Method
+    summary: |-
+      <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+      <p></p>
+    syntax:
+      content: 'public CompletableFuture buildReplicaAsync(ReplicaInformation replicaInfo, CancellationToken cancellationToken)'
+      parameters:
+        - id: replicaInfo
+          type: system.fabric._replica_information
+          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 5f2aaa64
+        description: <p>非同期操作を表すタスク。 </p>
+  - uid: system.fabric._replica_information
+    parent: system.fabric
+    href: system.fabric._replica_information.yml
+    name: ReplicaInformation
+    nameWithType: ReplicaInformation
+    fullName: system.fabric.ReplicaInformation
+    type: Class
+    summary: |-
+      <p>内部使用のみ。 レプリカについての情報を表します。</p>
+      <p></p>
+    syntax:
+      content: public class ReplicaInformation
+  - uid: system.fabric._primary_replicator.removeReplica(long)
+    parent: system.fabric._primary_replicator
+    href: system.fabric._primary_replicator.yml
+    name: removeReplica(long replicaId)
+    nameWithType: PrimaryReplicator.removeReplica(long replicaId)
+    fullName: void system.fabric.PrimaryReplicator.removeReplica(long replicaId)
+    type: Method
+    summary: "<p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>\n<p></p>\n<p>\r\n\r\n  <b>注釈:</b>この Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>"
+    syntax:
+      content: public void removeReplica(long replicaId)
+      parameters:
+        - id: replicaId
+          type: 0364520f
+          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</p>
+  - uid: system.fabric._state_replicator
+    parent: system.fabric
+    href: system.fabric._state_replicator.yml
+    name: StateReplicator
+    nameWithType: StateReplicator
+    fullName: system.fabric.StateReplicator
+    type: Interface
+    summary: <p>公開のレプリケーション関連の機能、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>クラスによって使用されている<xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">StateProvider</xref>を高可用性を保証する状態をレプリケートします。 </p>
+    syntax:
+      content: public interface StateReplicator
+  - uid: system.fabric._primary_replicator
+    parent: system.fabric
+    href: system.fabric._primary_replicator.yml
+    name: PrimaryReplicator
+    nameWithType: PrimaryReplicator
+    fullName: system.fabric.PrimaryReplicator
+    type: Interface
+    summary: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>
+    syntax:
+      content: public interface PrimaryReplicator
+  - uid: system.fabric._state_provider
+    parent: system.fabric
+    href: system.fabric._state_provider.yml
+    name: StateProvider
+    nameWithType: StateProvider
+    fullName: system.fabric.StateProvider
+    type: Interface
+    summary: <p>サービスが対話するために実装する必要がありますの動作を定義、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。 </p>
+    syntax:
+      content: public interface StateProvider
+  - uid: 'system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)'
+    parent: system.fabric._stateful_service_partition
+    href: system.fabric._stateful_service_partition.yml
+    name: 'createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
+    nameWithType: 'StatefulServicePartition.createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
+    fullName: 'FabricReplicator system.fabric.StatefulServicePartition.createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
+    type: Method
+    summary: "<p>作成、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>指定された設定で、レプリカに返します。</p>\n<p>\r\n\r\n  <b>注釈:</b>の作成にこのメソッドを使用する必要があります、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>サービスとして、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> を実装するステートフルなサービス<xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>です。 </p>"
+    syntax:
+      content: 'public FabricReplicator createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
+      parameters:
+        - id: stateProvider
+          type: system.fabric._state_provider
+          description: <p><xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">System.fabric.StateProvider</xref>いる、返された<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>関連付けする必要があります。 これは、多くの場合、同じオブジェクトを実装する<xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>、特定のサービスを異なる方法で考慮することがありますが、します。 </p>
+        - id: replicatorSettings
+          type: system.fabric._replicator_settings
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._replicator_settings\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings</xref>いる、返された<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>構成する必要があります。 </p>"
+      return:
+        type: system.fabric._fabric_replicator
+        description: <p>返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。 </p>

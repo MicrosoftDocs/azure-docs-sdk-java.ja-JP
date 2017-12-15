@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.services.remoting.client
+    id: client
+    children:
+      - microsoft.servicefabric.services.remoting.client._fabric_service_proxy_factory
+      - microsoft.servicefabric.services.remoting.client._service_proxy
+      - microsoft.servicefabric.services.remoting.client._service_proxy_base
+      - microsoft.servicefabric.services.remoting.client._service_proxy_factory
+      - microsoft.servicefabric.services.remoting.client._service_remoting_client
+      - microsoft.servicefabric.services.remoting.client._service_remoting_client_factory
+      - microsoft.servicefabric.services.remoting.client._service_remoting_exception_handler
+      - microsoft.servicefabric.services.remoting.client._service_remoting_partition_client
+    href: microsoft.servicefabric.services.remoting.client.yml
+    langs:
+      - java
+    name: microsoft.servicefabric.services.remoting.client
+    nameWithType: microsoft.servicefabric.services.remoting.client
+    fullName: microsoft.servicefabric.services.remoting.client
+    type: Namespace
+    source:
+      remote:
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/remoting/client/FabricServiceProxyFactory.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/remoting/client/FabricServiceProxyFactory.java
+    syntax:
+      content: package microsoft.servicefabric.services.remoting.client
+references:
+  - uid: microsoft.servicefabric.services.remoting.client._fabric_service_proxy_factory
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._fabric_service_proxy_factory.yml
+    name: FabricServiceProxyFactory
+    nameWithType: FabricServiceProxyFactory
+    fullName: microsoft.servicefabric.services.remoting.client.FabricServiceProxyFactory
+    type: Class
+    summary: <p>指定されたサービスへのリモート通信にプロキシを作成するファクトリを指定します。 </p>
+    syntax:
+      content: public class FabricServiceProxyFactory implements ServiceProxyFactory
+  - uid: microsoft.servicefabric.services.remoting.client._service_proxy
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_proxy.yml
+    name: ServiceProxy
+    nameWithType: ServiceProxy
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceProxy
+    type: Interface
+    summary: <p>これは、リモート処理の基本のクライアント側インターフェイスです。 フレームワークのリモート処理インフラストラクチャを通じて IService から継承するすべてのサービス コントラクトを提供<xref uid="microsoft.servicefabric.services.remoting._service_remoting_listener" data-throw-if-not-resolved="false">ServiceRemotingListener</xref>と<xref uid="microsoft.servicefabric.services.remoting.client._service_proxy" data-throw-if-not-resolved="false">ServiceProxy</xref>です。 </p>
+    syntax:
+      content: public interface ServiceProxy
+  - uid: microsoft.servicefabric.services.remoting.client._service_proxy_base
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_proxy_base.yml
+    name: ServiceProxyBase
+    nameWithType: ServiceProxyBase
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceProxyBase
+    type: Class
+    summary: <p>プロキシをリモート IService インターフェイスの基本実装を提供します。 </p>
+    syntax:
+      content: public class ServiceProxyBase extends ProxyBase implements ServiceProxy
+  - uid: microsoft.servicefabric.services.remoting.client._service_proxy_factory
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_proxy_factory.yml
+    name: ServiceProxyFactory
+    nameWithType: ServiceProxyFactory
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceProxyFactory
+    type: Interface
+    summary: <p>指定されたサービスへのリモート通信にプロキシを作成するファクトリのインターフェイスを指定します。 </p>
+    syntax:
+      content: public interface ServiceProxyFactory
+  - uid: microsoft.servicefabric.services.remoting.client._service_remoting_client
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_remoting_client.yml
+    name: ServiceRemotingClient
+    nameWithType: ServiceRemotingClient
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceRemotingClient
+    type: Interface
+    summary: <p>クライアントを提供する実装する必要がありますのあるインターフェイスを定義する<xref uid="microsoft.servicefabric.services.remoting._service" data-throw-if-not-resolved="false">サービス</xref>リモート通信します。 </p>
+    syntax:
+      content: public interface ServiceRemotingClient extends CommunicationClient
+  - uid: microsoft.servicefabric.services.remoting.client._service_remoting_client_factory
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_remoting_client_factory.yml
+    name: ServiceRemotingClientFactory
+    nameWithType: ServiceRemotingClientFactory
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceRemotingClientFactory
+    type: Interface
+    summary: <p>クライアント ファクトリには、リモート処理の通信を提供するために実装する必要がありますのあるインターフェイスを定義します。 </p>
+    syntax:
+      content: public interface ServiceRemotingClientFactory extends CommunicationClientFactory<ServiceRemotingClient>
+  - uid: microsoft.servicefabric.services.remoting.client._service_remoting_exception_handler
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_remoting_exception_handler.yml
+    name: ServiceRemotingExceptionHandler
+    nameWithType: ServiceRemotingExceptionHandler
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceRemotingExceptionHandler
+    type: Class
+    summary: <p>このクラスは、リモート インターフェイス上の service fabric サービスと通信中に発生した例外の処理を提供します。 <xref uid="microsoft.servicefabric.services.remoting.client._service_remoting_exception_handler" data-throw-if-not-resolved="false">ServiceRemotingExceptionHandler</xref></p>
+    syntax:
+      content: public class ServiceRemotingExceptionHandler implements ExceptionHandler
+  - uid: microsoft.servicefabric.services.remoting.client._service_remoting_partition_client
+    parent: microsoft.servicefabric.services.remoting.client
+    href: microsoft.servicefabric.services.remoting.client._service_remoting_partition_client.yml
+    name: ServiceRemotingPartitionClient
+    nameWithType: ServiceRemotingPartitionClient
+    fullName: microsoft.servicefabric.services.remoting.client.ServiceRemotingPartitionClient
+    type: Interface
+    summary: <p>サービス パーティションの特定のレプリカへのリモート処理経由で通信するクライアントのインターフェイスを定義します。 </p>
+    syntax:
+      content: public interface ServiceRemotingPartitionClient extends ServicePartitionClient<ServiceRemotingClient>

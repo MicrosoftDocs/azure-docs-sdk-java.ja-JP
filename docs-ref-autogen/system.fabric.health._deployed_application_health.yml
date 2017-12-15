@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health._deployed_application_health
+    id: _deployed_application_health
+    parent: system.fabric.health
+    children:
+      - system.fabric.health._deployed_application_health.getApplicationName()
+      - system.fabric.health._deployed_application_health.getDeployedServicePackageHealthState()
+      - system.fabric.health._deployed_application_health.getNodeName()
+    href: system.fabric.health._deployed_application_health.yml
+    langs:
+      - java
+    name: DeployedApplicationHealth
+    nameWithType: DeployedApplicationHealth
+    fullName: system.fabric.health.DeployedApplicationHealth
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/DeployedApplicationHealth.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/DeployedApplicationHealth.java
+      startLine: 11
+    package: system.fabric.health
+    summary: '<p>によって返されるノードにデプロイされたアプリケーションの正常性について説明します<xref uid="system.fabric._health_client.getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getDeployedApplicationHealthAsync(system.fabric.DeployedApplicationHealthQueryDescription)</xref></p>'
+    syntax:
+      content: public class DeployedApplicationHealth extends EntityHealth
+    inheritance:
+      - java.lang.Object
+      - system.fabric.health._entity_health
+    inheritedMembers:
+      - 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+      - system.fabric.health._entity_health.getAggregatedHealthState()
+      - system.fabric.health._entity_health.getHealthEvents()
+      - system.fabric.health._entity_health.getUnhealthyEvaluations()
+  - uid: system.fabric.health._deployed_application_health.getApplicationName()
+    id: getApplicationName()
+    parent: system.fabric.health._deployed_application_health
+    href: system.fabric.health._deployed_application_health.yml
+    langs:
+      - java
+    name: getApplicationName()
+    nameWithType: DeployedApplicationHealth.getApplicationName()
+    fullName: URI system.fabric.health.DeployedApplicationHealth.getApplicationName()
+    overload: system.fabric.health._deployed_application_health.getApplicationName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/DeployedApplicationHealth.java
+      startLine: 41
+    package: system.fabric.health
+    summary: |-
+      <p>アプリケーションを一意に識別するアプリケーション名を取得します。</p>
+      <p></p>
+    syntax:
+      content: public URI getApplicationName()
+      return:
+        type: '62304784'
+        description: <p>アプリケーション名。 </p>
+  - uid: system.fabric.health._deployed_application_health.getDeployedServicePackageHealthState()
+    id: getDeployedServicePackageHealthState()
+    parent: system.fabric.health._deployed_application_health
+    href: system.fabric.health._deployed_application_health.yml
+    langs:
+      - java
+    name: getDeployedServicePackageHealthState()
+    nameWithType: DeployedApplicationHealth.getDeployedServicePackageHealthState()
+    fullName: List<DeployedServicePackageHealthState> system.fabric.health.DeployedApplicationHealth.getDeployedServicePackageHealthState()
+    overload: system.fabric.health._deployed_application_health.getDeployedServicePackageHealthState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/DeployedApplicationHealth.java
+      startLine: 68
+    package: system.fabric.health
+    summary: "<p>Health store に、検出されるよう、現在の展開済みアプリケーションの展開済みサービス パッケージの正常性状態を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>サービスの展開のみがその点をパッケージ化、 <xref uid=\"system.fabric._deployed_application_health_query_description.getDeployedServicePackageHealthStatesFilter()\" data-throw-if-not-resolved=\"false\">system.fabric.DeployedApplicationHealthQueryDescription#getDeployedServicePackageHealthStatesFilter()</xref> (指定した場合) が返されます。 入力のフィルターが指定されていない場合は、すべての展開済みサービス パッケージが返されます。 すべての展開済みサービス パッケージを評価して、展開されたアプリケーションで集計された正常性を決定します。 </p>"
+    syntax:
+      content: public List<DeployedServicePackageHealthState> getDeployedServicePackageHealthState()
+      return:
+        type: 5618da2dsystem.fabric.health._deployed_service_package_health_statea08ddfce
+        description: <p>現在展開済みアプリケーションの展開済みサービス パッケージは、health store に見つかりました。 </p>
+  - uid: system.fabric.health._deployed_application_health.getNodeName()
+    id: getNodeName()
+    parent: system.fabric.health._deployed_application_health
+    href: system.fabric.health._deployed_application_health.yml
+    langs:
+      - java
+    name: getNodeName()
+    nameWithType: DeployedApplicationHealth.getNodeName()
+    fullName: String system.fabric.health.DeployedApplicationHealth.getNodeName()
+    overload: system.fabric.health._deployed_application_health.getNodeName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/DeployedApplicationHealth.java
+      startLine: 50
+    package: system.fabric.health
+    summary: |-
+      <p>アプリケーションが配置されているノードのノード名を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getNodeName()
+      return:
+        type: '26831127'
+        description: <p>アプリケーションが配置されているノードのノード名。 </p>
+references:
+  - uid: '62304784'
+    spec.java:
+      - name: URI
+        fullName: URI
+  - uid: system.fabric.health._deployed_application_health.getApplicationName*
+    name: getApplicationName
+    nameWithType: DeployedApplicationHealth.getApplicationName
+    fullName: URI system.fabric.health.DeployedApplicationHealth.getApplicationName
+    package: system.fabric.health
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: system.fabric.health._deployed_application_health.getNodeName*
+    name: getNodeName
+    nameWithType: DeployedApplicationHealth.getNodeName
+    fullName: String system.fabric.health.DeployedApplicationHealth.getNodeName
+    package: system.fabric.health
+  - uid: 5618da2dsystem.fabric.health._deployed_service_package_health_statea08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: system.fabric.health._deployed_service_package_health_state
+        name: DeployedServicePackageHealthState
+        fullName: system.fabric.health.DeployedServicePackageHealthState
+        href: system.fabric.health._deployed_service_package_health_state.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric.health._deployed_application_health.getDeployedServicePackageHealthState*
+    name: getDeployedServicePackageHealthState
+    nameWithType: DeployedApplicationHealth.getDeployedServicePackageHealthState
+    fullName: List<DeployedServicePackageHealthState> system.fabric.health.DeployedApplicationHealth.getDeployedServicePackageHealthState
+    package: system.fabric.health
+  - uid: 'system.fabric.health._entity_health.EntityHealth(int,List<HealthEvent>,List<HealthEvaluation>)'
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: 'EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    nameWithType: 'EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    fullName: 'system.fabric.health.EntityHealth.EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+    type: Constructor
+    syntax:
+      content: 'protected EntityHealth(int aggregatedHealthState, List<HealthEvent> healthEvents, List<HealthEvaluation> unhealthyEvaluations)'
+      parameters:
+        - id: aggregatedHealthState
+          type: f75371fa
+        - id: healthEvents
+          type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        - id: unhealthyEvaluations
+          type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+  - uid: system.fabric.health._entity_health.getAggregatedHealthState()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getAggregatedHealthState()
+    nameWithType: EntityHealth.getAggregatedHealthState()
+    fullName: HealthState system.fabric.health.EntityHealth.getAggregatedHealthState()
+    type: Method
+    summary: |-
+      <p>エンティティで集計された正常性状態を取得します。</p>
+      <p></p>
+    syntax:
+      content: public HealthState getAggregatedHealthState()
+      return:
+        type: system.fabric.health._health_state
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric.health._health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState</xref>に基づいて Health Manager によって計算された集計された正常性状態を表す (存在する場合)、エンティティとその子でイベントを報告し、正常性ポリシーを必要に応じて。 </p>"
+  - uid: system.fabric.health._entity_health.getHealthEvents()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getHealthEvents()
+    nameWithType: EntityHealth.getHealthEvents()
+    fullName: List<HealthEvent> system.fabric.health.EntityHealth.getHealthEvents()
+    type: Method
+    summary: "<p>エンティティで報告される正常性イベントを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>正常性イベントは、正常性ストアに送信される正常性レポートをに基づいて作成されます。 正常性ストアによって追加された追加のメタデータが含まれます。 </p>"
+    syntax:
+      content: public List<HealthEvent> getHealthEvents()
+      return:
+        type: 5618da2dsystem.fabric.health._health_eventa08ddfce
+        description: <p>エンティティの正常性イベントが報告されました。 </p>
+  - uid: system.fabric.health._entity_health.getUnhealthyEvaluations()
+    parent: system.fabric.health._entity_health
+    href: system.fabric.health._entity_health.yml
+    name: getUnhealthyEvaluations()
+    nameWithType: EntityHealth.getUnhealthyEvaluations()
+    fullName: List<HealthEvaluation> system.fabric.health.EntityHealth.getUnhealthyEvaluations()
+    type: Method
+    summary: |-
+      <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を示す異常な評価を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<HealthEvaluation> getUnhealthyEvaluations()
+      return:
+        type: 5618da2dsystem.fabric.health._health_evaluationa08ddfce
+        description: <p>現在の集計された正常性状態が正常性マネージャーによってに返された理由を説明する異常な評価。 </p>
+  - uid: system.fabric.health._entity_health
+    parent: system.fabric.health
+    href: system.fabric.health._entity_health.yml
+    name: EntityHealth
+    nameWithType: EntityHealth
+    fullName: system.fabric.health.EntityHealth
+    type: Class
+    summary: <p>関連するクラスをすべてのエンティティのヘルスの基本クラスを表します。 </p>
+    syntax:
+      content: public class EntityHealth
+  - uid: system.fabric.health._deployed_service_package_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health_state.yml
+    name: DeployedServicePackageHealthState
+    nameWithType: DeployedServicePackageHealthState
+    fullName: system.fabric.health.DeployedServicePackageHealthState
+    type: Class
+    summary: <p>エンティティの識別子と、集計された正常性状態を含む、展開済みサービス パッケージのヘルス状態を表します。 </p>
+    syntax:
+      content: public class DeployedServicePackageHealthState
+  - uid: system.fabric.health._health_event
+    parent: system.fabric.health
+    href: system.fabric.health._health_event.yml
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax:
+      content: public class HealthEvent
+  - uid: system.fabric.health._health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._health_evaluation.yml
+    name: HealthEvaluation
+    nameWithType: HealthEvaluation
+    fullName: system.fabric.health.HealthEvaluation
+    type: Class
+    summary: <p>データとエンティティのヘルスを評価する正常性ストアによって使用されるアルゴリズムを記述する正常性評価を表します。 </p>
+    syntax:
+      content: public class HealthEvaluation
+  - uid: system.fabric._deployed_application_health_query_description.getDeployedServicePackageHealthStatesFilter()
+    parent: system.fabric._deployed_application_health_query_description
+    href: system.fabric._deployed_application_health_query_description.yml
+    name: getDeployedServicePackageHealthStatesFilter()
+    nameWithType: DeployedApplicationHealthQueryDescription.getDeployedServicePackageHealthStatesFilter()
+    fullName: DeployedServicePackageHealthStatesFilter system.fabric.DeployedApplicationHealthQueryDescription.getDeployedServicePackageHealthStatesFilter()
+    type: Method
+    summary: "<p>フィルターを取得<xref uid=\"system.fabric.health._deployed_service_package_health_state\" data-throw-if-not-resolved=\"false\">system.fabric.health.DeployedServicePackageHealthState</xref>子。 フィルターに一致する子のみが返されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>フィルターに一致する子のみが返されます。 すべての子は、展開されたアプリケーションで集計された正常性状態の評価に使用されます。 フィルターが指定されていない場合は、展開済みアプリケーションの展開済みサービス パッケージのすべての子が返されます。 </p>"
+    syntax:
+      content: public DeployedServicePackageHealthStatesFilter getDeployedServicePackageHealthStatesFilter()
+      return:
+        type: system.fabric._deployed_service_package_health_states_filter
+        description: "<p>\r\n\r\n  <xref uid=\"system.fabric._deployed_service_package_health_states_filter\" data-throw-if-not-resolved=\"false\">system.fabric.DeployedServicePackageHealthStatesFilter</xref>返された展開済みサービス パッケージをフィルター処理するために使用します。 </p>"
+  - uid: system.fabric._health_client.getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription)
+    parent: system.fabric._health_client
+    href: system.fabric._health_client.yml
+    name: getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription queryDescription)
+    nameWithType: HealthClient.getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription queryDescription)
+    fullName: CompletableFuture<DeployedApplicationHealth> system.fabric.HealthClient.getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription queryDescription)
+    type: Method
+    summary: |-
+      <p>指定されたノードで、展開済みの Service Fabric アプリケーションの正常性を非同期に取得します。</p>
+      <p></p>
+    syntax:
+      content: public CompletableFuture<DeployedApplicationHealth> getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription queryDescription)
+      parameters:
+        - id: queryDescription
+          type: system.fabric._deployed_application_health_query_description
+          description: <p>クエリの説明 </p>
+      return:
+        type: 9cdf14d0system.fabric.health._deployed_application_healtha08ddfce
+        description: <p>展開済みの Service Fabric アプリケーションの正常性。 </p>

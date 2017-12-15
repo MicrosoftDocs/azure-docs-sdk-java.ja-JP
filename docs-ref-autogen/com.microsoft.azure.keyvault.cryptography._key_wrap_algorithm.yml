@@ -1,0 +1,452 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    id: _key_wrap_algorithm
+    parent: com.microsoft.azure.keyvault.cryptography
+    children:
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [])'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [],byte [])'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [],byte [],Provider)'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [],Provider)'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [])'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [],byte [])'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [],byte [],Provider)'
+      - 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [],Provider)'
+      - com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.KeyWrapAlgorithm(String)
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: KeyWrapAlgorithm
+    nameWithType: KeyWrapAlgorithm
+    fullName: com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm
+    type: Class
+    source:
+      remote: &ref_0
+        path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+        branch: bb950b2a0255c017040501de0c19e4849361ca1d
+        repo: 'https://github.com/Azure/azure-keyvault-java'
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 19
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>キー ラップ アルゴリズムはすべての抽象基本クラスです。 </p>
+    syntax:
+      content: public class KeyWrapAlgorithm extends Algorithm
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.keyvault.cryptography._algorithm
+    inheritedMembers:
+      - com.microsoft.azure.keyvault.cryptography._algorithm.Algorithm(String)
+      - com.microsoft.azure.keyvault.cryptography._algorithm.getName()
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [])'
+    id: 'CreateDecryptor(byte [])'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateDecryptor(byte[] key)'
+    nameWithType: 'KeyWrapAlgorithm.CreateDecryptor(byte[] key)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateDecryptor(byte[] key)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 102
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>復号化を実装します。 既定の AES KW 初期化ベクターを使用します。 </p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateDecryptor(byte[] key)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [],byte [])'
+    id: 'CreateDecryptor(byte [],byte [])'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateDecryptor(byte[] key, byte[] iv)'
+    nameWithType: 'KeyWrapAlgorithm.CreateDecryptor(byte[] key, byte[] iv)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateDecryptor(byte[] key, byte[] iv)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 133
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>指定された初期化ベクトルを使用して復号化を実装します。 </p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateDecryptor(byte[] key, byte[] iv)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+        - id: iv
+          type: ccd9418d
+          description: <p>使用する初期化ベクター。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [],byte [],Provider)'
+    id: 'CreateDecryptor(byte [],byte [],Provider)'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateDecryptor(byte[] key, byte[] iv, Provider provider)'
+    nameWithType: 'KeyWrapAlgorithm.CreateDecryptor(byte[] key, byte[] iv, Provider provider)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateDecryptor(byte[] key, byte[] iv, Provider provider)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 150
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref> Java セキュリティ API の指定された初期化ベクトルと、特定のプロバイダーを使用して復号化を実装します。 </p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateDecryptor(byte[] key, byte[] iv, Provider provider)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+        - id: iv
+          type: ccd9418d
+          description: <p>使用する初期化ベクター。 </p>
+        - id: provider
+          type: 8f3c7027
+          description: <p>使用するプロバイダー。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor(byte [],Provider)'
+    id: 'CreateDecryptor(byte [],Provider)'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateDecryptor(byte[] key, Provider provider)'
+    nameWithType: 'KeyWrapAlgorithm.CreateDecryptor(byte[] key, Provider provider)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateDecryptor(byte[] key, Provider provider)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 118
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref> Java セキュリティ API の指定したプロバイダーを使用して復号化を実装します。 既定の AES KW 初期化ベクターを使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateDecryptor(byte[] key, Provider provider)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+        - id: provider
+          type: 8f3c7027
+          description: <p>使用するプロバイダー。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [])'
+    id: 'CreateEncryptor(byte [])'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateEncryptor(byte[] key)'
+    nameWithType: 'KeyWrapAlgorithm.CreateEncryptor(byte[] key)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateEncryptor(byte[] key)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 41
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>暗号化を実装します。 既定の AES KW 初期化ベクターを使用します。 </p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateEncryptor(byte[] key)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [],byte [])'
+    id: 'CreateEncryptor(byte [],byte [])'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateEncryptor(byte[] key, byte[] iv)'
+    nameWithType: 'KeyWrapAlgorithm.CreateEncryptor(byte[] key, byte[] iv)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateEncryptor(byte[] key, byte[] iv)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 72
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の指定された初期化ベクトルを使用して暗号化を実装します。 </p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateEncryptor(byte[] key, byte[] iv)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+        - id: iv
+          type: ccd9418d
+          description: <p>使用する初期化ベクター。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [],byte [],Provider)'
+    id: 'CreateEncryptor(byte [],byte [],Provider)'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateEncryptor(byte[] key, byte[] iv, Provider provider)'
+    nameWithType: 'KeyWrapAlgorithm.CreateEncryptor(byte[] key, byte[] iv, Provider provider)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateEncryptor(byte[] key, byte[] iv, Provider provider)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 89
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref> Java セキュリティ API の指定された初期化ベクトルと、特定のプロバイダーを使用して暗号化を実装します。 </p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateEncryptor(byte[] key, byte[] iv, Provider provider)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+        - id: iv
+          type: ccd9418d
+          description: <p>使用する初期化ベクター。 </p>
+        - id: provider
+          type: 8f3c7027
+          description: <p>使用するプロバイダー。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: 'com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor(byte [],Provider)'
+    id: 'CreateEncryptor(byte [],Provider)'
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: 'CreateEncryptor(byte[] key, Provider provider)'
+    nameWithType: 'KeyWrapAlgorithm.CreateEncryptor(byte[] key, Provider provider)'
+    fullName: 'abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateEncryptor(byte[] key, Provider provider)'
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 57
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>作成、 <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref> Java セキュリティ API の指定されたプロバイダーを使用する暗号化の実装です。 既定の AES KW 初期化ベクターを使用します。</p>
+      <p></p>
+    syntax:
+      content: 'public abstract ICryptoTransform CreateEncryptor(byte[] key, Provider provider)'
+      parameters:
+        - id: key
+          type: ccd9418d
+          description: <p>AES キーの素材を使用します。 </p>
+        - id: provider
+          type: 8f3c7027
+          description: <p>使用するプロバイダー。 </p>
+      return:
+        type: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        description: <p>A <xref uid="com.microsoft.azure.keyvault.cryptography._i_crypto_transform" data-throw-if-not-resolved="false">com.microsoft.azure.keyvault.cryptography.ICryptoTransform</xref>の実装 </p>
+    exceptions:
+      - type: 456eb9d1
+      - type: 5ef34f89
+      - type: e333ca4f
+      - type: 2093b65f
+  - uid: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.KeyWrapAlgorithm(String)
+    id: KeyWrapAlgorithm(String)
+    parent: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm
+    href: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.yml
+    langs:
+      - java
+    name: KeyWrapAlgorithm(String name)
+    nameWithType: KeyWrapAlgorithm.KeyWrapAlgorithm(String name)
+    fullName: com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.KeyWrapAlgorithm(String name)
+    overload: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.KeyWrapAlgorithm*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: azure-keyvault-cryptography/src/main/java/com/microsoft/azure/keyvault/cryptography/KeyWrapAlgorithm.java
+      startLine: 26
+    package: com.microsoft.azure.keyvault.cryptography
+    summary: |-
+      <p>コンス トラクターです。</p>
+      <p></p>
+    syntax:
+      content: protected KeyWrapAlgorithm(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>アルゴリズムの名前。 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.KeyWrapAlgorithm*
+    name: KeyWrapAlgorithm
+    nameWithType: KeyWrapAlgorithm.KeyWrapAlgorithm
+    fullName: com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.KeyWrapAlgorithm
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: 456eb9d1
+    spec.java:
+      - name: NoSuchAlgorithmException
+        fullName: NoSuchAlgorithmException
+  - uid: 5ef34f89
+    spec.java:
+      - name: NoSuchPaddingException
+        fullName: NoSuchPaddingException
+  - uid: e333ca4f
+    spec.java:
+      - name: InvalidKeyException
+        fullName: InvalidKeyException
+  - uid: 2093b65f
+    spec.java:
+      - name: InvalidAlgorithmParameterException
+        fullName: InvalidAlgorithmParameterException
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: 13c86962com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+    spec.java:
+      - name: 'abstract '
+        fullName: 'abstract '
+      - uid: com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+        name: ICryptoTransform
+        fullName: com.microsoft.azure.keyvault.cryptography.ICryptoTransform
+        href: com.microsoft.azure.keyvault.cryptography._i_crypto_transform.yml
+  - uid: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateEncryptor*
+    name: CreateEncryptor
+    nameWithType: KeyWrapAlgorithm.CreateEncryptor
+    fullName: abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateEncryptor
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: 8f3c7027
+    spec.java:
+      - name: Provider
+        fullName: Provider
+  - uid: com.microsoft.azure.keyvault.cryptography._key_wrap_algorithm.CreateDecryptor*
+    name: CreateDecryptor
+    nameWithType: KeyWrapAlgorithm.CreateDecryptor
+    fullName: abstract ICryptoTransform com.microsoft.azure.keyvault.cryptography.KeyWrapAlgorithm.CreateDecryptor
+    package: com.microsoft.azure.keyvault.cryptography
+  - uid: com.microsoft.azure.keyvault.cryptography._algorithm.Algorithm(String)
+    parent: com.microsoft.azure.keyvault.cryptography._algorithm
+    href: com.microsoft.azure.keyvault.cryptography._algorithm.yml
+    name: Algorithm(String name)
+    nameWithType: Algorithm.Algorithm(String name)
+    fullName: com.microsoft.azure.keyvault.cryptography.Algorithm.Algorithm(String name)
+    type: Constructor
+    summary: |-
+      <p>コンス トラクターです。</p>
+      <p></p>
+    syntax:
+      content: protected Algorithm(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>アルゴリズムの名前。 </p>
+  - uid: com.microsoft.azure.keyvault.cryptography._algorithm.getName()
+    parent: com.microsoft.azure.keyvault.cryptography._algorithm
+    href: com.microsoft.azure.keyvault.cryptography._algorithm.yml
+    name: getName()
+    nameWithType: Algorithm.getName()
+    fullName: String com.microsoft.azure.keyvault.cryptography.Algorithm.getName()
+    type: Method
+    summary: |-
+      <p>アルゴリズムの名前を取得します。</p>
+      <p></p>
+    syntax:
+      content: public String getName()
+      return:
+        type: '26831127'
+        description: <p>アルゴリズムの名前。 </p>
+  - uid: com.microsoft.azure.keyvault.cryptography._algorithm
+    parent: com.microsoft.azure.keyvault.cryptography
+    href: com.microsoft.azure.keyvault.cryptography._algorithm.yml
+    name: Algorithm
+    nameWithType: Algorithm
+    fullName: com.microsoft.azure.keyvault.cryptography.Algorithm
+    type: Class
+    summary: <p>すべての抽象基本クラス<xref uid="com.microsoft.azure.keyvault.cryptography._algorithm" data-throw-if-not-resolved="false">アルゴリズム</xref>オブジェクト。 </p>
+    syntax:
+      content: public class Algorithm
+  - uid: com.microsoft.azure.keyvault.cryptography.algorithms._aes_kw
+    parent: com.microsoft.azure.keyvault.cryptography.algorithms
+    href: com.microsoft.azure.keyvault.cryptography.algorithms._aes_kw.yml
+    name: AesKw
+    nameWithType: AesKw
+    fullName: com.microsoft.azure.keyvault.cryptography.algorithms.AesKw
+    type: Class
+    syntax:
+      content: public class AesKw extends KeyWrapAlgorithm
+  - uid: com.microsoft.azure.keyvault.cryptography._i_crypto_transform
+    parent: com.microsoft.azure.keyvault.cryptography
+    href: com.microsoft.azure.keyvault.cryptography._i_crypto_transform.yml
+    name: ICryptoTransform
+    nameWithType: ICryptoTransform
+    fullName: com.microsoft.azure.keyvault.cryptography.ICryptoTransform
+    type: Interface
+    summary: <p>暗号変換の基本的な操作を定義します。 </p>
+    syntax:
+      content: public interface ICryptoTransform

@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload
+    id: fileupload
+    children:
+      - com.microsoft.azure.sdk.iot.device.fileupload._file_upload
+      - com.microsoft.azure.sdk.iot.device.fileupload._file_upload_in_progress
+      - com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task
+    href: com.microsoft.azure.sdk.iot.device.fileupload.yml
+    langs:
+      - java
+    name: com.microsoft.azure.sdk.iot.device.fileupload
+    nameWithType: com.microsoft.azure.sdk.iot.device.fileupload
+    fullName: com.microsoft.azure.sdk.iot.device.fileupload
+    type: Namespace
+    source:
+      remote:
+        path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/fileupload/FileUpload.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/fileupload/FileUpload.java
+      startLine: 3
+    syntax:
+      content: package com.microsoft.azure.sdk.iot.device.fileupload
+references:
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload
+    parent: com.microsoft.azure.sdk.iot.device.fileupload
+    href: com.microsoft.azure.sdk.iot.device.fileupload._file_upload.yml
+    name: FileUpload
+    nameWithType: FileUpload
+    fullName: com.microsoft.azure.sdk.iot.device.fileupload.FileUpload
+    type: Class
+    summary: <p>Iot Hub を使用して Azure ストレージ内のファイルをアップロードするための手段を提供します。 </p>
+    syntax:
+      content: public class FileUpload
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_in_progress
+    parent: com.microsoft.azure.sdk.iot.device.fileupload
+    href: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_in_progress.yml
+    name: FileUploadInProgress
+    nameWithType: FileUploadInProgress
+    fullName: com.microsoft.azure.sdk.iot.device.fileupload.FileUploadInProgress
+    type: Class
+    summary: <p>進行中のファイルのアップロードを制御します。 </p>
+    syntax:
+      content: public class FileUploadInProgress
+  - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task
+    parent: com.microsoft.azure.sdk.iot.device.fileupload
+    href: com.microsoft.azure.sdk.iot.device.fileupload._file_upload_task.yml
+    name: FileUploadTask
+    nameWithType: FileUploadTask
+    fullName: com.microsoft.azure.sdk.iot.device.fileupload.FileUploadTask
+    type: Class
+    summary: "<p>Iot Hub を使用して、Azure ストレージにファイルの非同期アップロードするための手段を提供します。</p>\n<p>ファイルのアップロード プロセスは、次の図の 3 つの手順で構成されます。 +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+|デバイス | |Iot Hub | |記憶域 | |サービス |+-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+ +------------<mdash></mdash>+ <table rows=\"3\" cols=\"3\"><row><entry thead=\"yes\"><p></p></entry><entry thead=\"yes\"><p></p></entry><entry thead=\"yes\"><p></p></entry></row><row><entry thead=\"no\"><p>REQUEST_BLOB </p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p></p></entry></row><row><entry thead=\"no\"><p>+<mdash></mdash>要求の blob<mdash></mdash>&gt;</p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p></p></entry></row></table>\r\n|&lt;<ndash></ndash>blob の SAS トークン<ndash> </ndash> + ||||||UPLOAD_FILE | | |+-<mdash> </mdash>ファイルを指定された blob にアップロード<mdash> </mdash> &gt;| | +&lt; --- <mdash> </mdash>を---アップロードの末尾<mdash></mdash> + | | |NOTIFY_IOTHUB | | |+<mdash> </mdash>ステータスを通知する<ndash> </ndash> &gt;| | | + ---<mdash> </mdash> ---使用可能な新しいファイルを通知する<mdash></mdash>&gt;| | | </p>"
+    syntax:
+      content: public class FileUploadTask

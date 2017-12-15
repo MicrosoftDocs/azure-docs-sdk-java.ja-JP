@@ -1,0 +1,968 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.applicationinsights._telemetry_client
+    id: _telemetry_client
+    parent: com.microsoft.applicationinsights
+    children:
+      - com.microsoft.applicationinsights._telemetry_client.flush()
+      - com.microsoft.applicationinsights._telemetry_client.getContext()
+      - com.microsoft.applicationinsights._telemetry_client.isDisabled()
+      - com.microsoft.applicationinsights._telemetry_client.TelemetryClient()
+      - com.microsoft.applicationinsights._telemetry_client.TelemetryClient(TelemetryConfiguration)
+      - com.microsoft.applicationinsights._telemetry_client.track(Telemetry)
+      - com.microsoft.applicationinsights._telemetry_client.trackDependency(RemoteDependencyTelemetry)
+      - 'com.microsoft.applicationinsights._telemetry_client.trackDependency(String,String,Duration,boolean)'
+      - com.microsoft.applicationinsights._telemetry_client.trackEvent(EventTelemetry)
+      - com.microsoft.applicationinsights._telemetry_client.trackEvent(String)
+      - 'com.microsoft.applicationinsights._telemetry_client.trackEvent(String,Map<String, String>,Map<String, Double>)'
+      - com.microsoft.applicationinsights._telemetry_client.trackException(Exception)
+      - 'com.microsoft.applicationinsights._telemetry_client.trackException(Exception,Map<String, String>,Map<String, Double>)'
+      - com.microsoft.applicationinsights._telemetry_client.trackException(ExceptionTelemetry)
+      - 'com.microsoft.applicationinsights._telemetry_client.trackHttpRequest(String,Date,long,String,boolean)'
+      - com.microsoft.applicationinsights._telemetry_client.trackMetric(MetricTelemetry)
+      - 'com.microsoft.applicationinsights._telemetry_client.trackMetric(String,double)'
+      - 'com.microsoft.applicationinsights._telemetry_client.trackMetric(String,double,int,double,double,Map<String, String>)'
+      - com.microsoft.applicationinsights._telemetry_client.trackPageView(PageViewTelemetry)
+      - com.microsoft.applicationinsights._telemetry_client.trackPageView(String)
+      - com.microsoft.applicationinsights._telemetry_client.trackRequest(RequestTelemetry)
+      - com.microsoft.applicationinsights._telemetry_client.trackSessionState(SessionState)
+      - com.microsoft.applicationinsights._telemetry_client.trackTrace(String)
+      - 'com.microsoft.applicationinsights._telemetry_client.trackTrace(String,SeverityLevel)'
+      - 'com.microsoft.applicationinsights._telemetry_client.trackTrace(String,SeverityLevel,Map<String, String>)'
+      - com.microsoft.applicationinsights._telemetry_client.trackTrace(TraceTelemetry)
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: TelemetryClient
+    nameWithType: TelemetryClient
+    fullName: com.microsoft.applicationinsights.TelemetryClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+        branch: master
+        repo: 'https://github.com/Microsoft/ApplicationInsights-Java'
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 46
+    package: com.microsoft.applicationinsights
+    summary: '<p>Azure の Application Insights にテレメトリを送信するには、このクラスのインスタンスを作成します。 一般的な概要<ulink url="https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics">https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics</ulink></p>'
+    syntax: &ref_1
+      content: public class TelemetryClient
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.applicationinsights._telemetry_client.flush()
+    id: flush()
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: flush()
+    nameWithType: TelemetryClient.flush()
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.flush()
+    overload: com.microsoft.applicationinsights._telemetry_client.flush*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 460
+    package: com.microsoft.applicationinsights
+    summary: <p>チャネルで Telemetries 保留可能な限りをフラッシュします。 継続的に実行中のサーバー アプリケーションの場合は不要です。 </p>
+    syntax:
+      content: public void flush()
+  - uid: com.microsoft.applicationinsights._telemetry_client.getContext()
+    id: getContext()
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: getContext()
+    nameWithType: TelemetryClient.getContext()
+    fullName: TelemetryContext com.microsoft.applicationinsights.TelemetryClient.getContext()
+    overload: com.microsoft.applicationinsights._telemetry_client.getContext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 88
+    package: com.microsoft.applicationinsights
+    summary: <p>テレメトリを送信するを拡張するために使用される現在のコンテキストを取得します。 </p>
+    syntax:
+      content: public TelemetryContext getContext()
+      return:
+        type: com.microsoft.applicationinsights.telemetry._telemetry_context
+        description: <p>すべてのレコードに使用する製品利用統計情報のコンテキスト。 このアプリケーションのセッションに変更し、将来のすべてのテレメトリを影響を与えます。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.isDisabled()
+    id: isDisabled()
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: isDisabled()
+    nameWithType: TelemetryClient.isDisabled()
+    fullName: boolean com.microsoft.applicationinsights.TelemetryClient.isDisabled()
+    overload: com.microsoft.applicationinsights._telemetry_client.isDisabled*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 105
+    package: com.microsoft.applicationinsights
+    summary: <p>追跡が有効になっているかどうかを確認します。 </p>
+    syntax:
+      content: public boolean isDisabled()
+      return:
+        type: 4fc6e284
+        description: <p>追跡が無効になっている場合は ' true'、'false' それ以外の場合。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.TelemetryClient()
+    id: TelemetryClient()
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: TelemetryClient()
+    nameWithType: TelemetryClient.TelemetryClient()
+    fullName: com.microsoft.applicationinsights.TelemetryClient.TelemetryClient()
+    overload: com.microsoft.applicationinsights._telemetry_client.TelemetryClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 79
+    package: com.microsoft.applicationinsights
+    summary: <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.applicationinsights._telemetry_client" data-throw-if-not-resolved="false">TelemetryClient</xref>クラスが、アクティブな構成から構成されています。 </p>
+    syntax:
+      content: public TelemetryClient()
+  - uid: com.microsoft.applicationinsights._telemetry_client.TelemetryClient(TelemetryConfiguration)
+    id: TelemetryClient(TelemetryConfiguration)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: TelemetryClient(TelemetryConfiguration configuration)
+    nameWithType: TelemetryClient.TelemetryClient(TelemetryConfiguration configuration)
+    fullName: com.microsoft.applicationinsights.TelemetryClient.TelemetryClient(TelemetryConfiguration configuration)
+    overload: com.microsoft.applicationinsights._telemetry_client.TelemetryClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 64
+    package: com.microsoft.applicationinsights
+    summary: <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.applicationinsights._telemetry_client" data-throw-if-not-resolved="false">TelemetryClient</xref>クラスです。 指定された構成で製品利用統計情報を送信します。 </p>
+    syntax:
+      content: public TelemetryClient(TelemetryConfiguration configuration)
+      parameters:
+        - id: configuration
+          type: com.microsoft.applicationinsights._telemetry_configuration
+          description: <p>このインスタンスでは動作の構成。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.track(Telemetry)
+    id: track(Telemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: track(Telemetry telemetry)
+    nameWithType: TelemetryClient.track(Telemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.track(Telemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.track*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 386
+    package: com.microsoft.applicationinsights
+    summary: <p>このメソッドは、Application Insights インフラストラクチャの一部です。 直接呼び出さないでくださいことです。 </p>
+    syntax:
+      content: public void track(Telemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._telemetry
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.Telemetry</xref>インスタンス。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackDependency(RemoteDependencyTelemetry)
+    id: trackDependency(RemoteDependencyTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackDependency(RemoteDependencyTelemetry telemetry)
+    nameWithType: TelemetryClient.trackDependency(RemoteDependencyTelemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackDependency(RemoteDependencyTelemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackDependency*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 343
+    package: com.microsoft.applicationinsights
+    summary: <p>依存関係のレコードを Application Insights に送信します。 検索で分析「依存関係」に表示されます。 デバイスの種類を設定して、サーバーの依存関係呼び出し、依存関係の応答時間、および依存関係の失敗などのメトリックのグラフに影響するレコードには、"PC"= = です。 </p>
+    syntax:
+      content: public void trackDependency(RemoteDependencyTelemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._remote_dependency_telemetry
+          description: <p>テレメトリー </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackDependency(String,String,Duration,boolean)'
+    id: 'trackDependency(String,String,Duration,boolean)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackDependency(String dependencyName, String commandName, Duration duration, boolean success)'
+    nameWithType: 'TelemetryClient.trackDependency(String dependencyName, String commandName, Duration duration, boolean success)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackDependency(String dependencyName, String commandName, Duration duration, boolean success)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackDependency*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 331
+    package: com.microsoft.applicationinsights
+    syntax:
+      content: 'public void trackDependency(String dependencyName, String commandName, Duration duration, boolean success)'
+      parameters:
+        - id: dependencyName
+          type: '26831127'
+        - id: commandName
+          type: '26831127'
+        - id: duration
+          type: com.microsoft.applicationinsights.telemetry._duration
+        - id: success
+          type: 4fc6e284
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackEvent(EventTelemetry)
+    id: trackEvent(EventTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackEvent(EventTelemetry telemetry)
+    nameWithType: TelemetryClient.trackEvent(EventTelemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackEvent(EventTelemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackEvent*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 161
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights にカスタム イベント レコードを送信します。 カスタム イベント""分析、検索、メトリックス エクスプ ローラーに表示されます。 </p>
+    syntax:
+      content: public void trackEvent(EventTelemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._event_telemetry
+          description: <p>イベントのテレメトリ項目です。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackEvent(String)
+    id: trackEvent(String)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackEvent(String name)
+    nameWithType: TelemetryClient.trackEvent(String name)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackEvent(String name)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackEvent*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 153
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights にカスタム イベント レコードを送信します。 カスタム イベント""分析、検索、メトリックス エクスプ ローラーに表示されます。 </p>
+    syntax: &ref_2
+      content: public void trackEvent(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>イベントの名前。 150 の最大長。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackEvent(String,Map<String, String>,Map<String, Double>)'
+    id: 'trackEvent(String,Map<String, String>,Map<String, Double>)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackEvent(String name, Map<String, String> properties, Map<String, Double> metrics)'
+    nameWithType: 'TelemetryClient.trackEvent(String name, Map<String, String> properties, Map<String, Double> metrics)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackEvent(String name, Map<String, String> properties, Map<String, Double> metrics)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackEvent*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 127
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights にカスタム イベント レコードを送信します。 カスタム イベント分析、検索、メトリックス エクスプ ローラーに表示されます。 </p>
+    syntax:
+      content: 'public void trackEvent(String name, Map<String, String> properties, Map<String, Double> metrics)'
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>イベントの名前。 150 の最大長。 </p>
+        - id: properties
+          type: 689c8cb5
+          description: <p>名前付きの文字列値の検索を行うこともでき、イベントをフィルター処理します。 </p>
+        - id: metrics
+          type: 2ed405bc
+          description: <p>このイベントに関連付けられている数値の単位。 メトリックス エクスプ ローラーでのカスタム メトリック下に表示されます。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackException(Exception)
+    id: trackException(Exception)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackException(Exception exception)
+    nameWithType: TelemetryClient.trackException(Exception exception)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackException(Exception exception)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackException*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 291
+    package: com.microsoft.applicationinsights
+    summary: '<p>例外レコードを Application Insights に送信します。 [例外] で、分析、検索に表示されます。 </p>'
+    syntax:
+      content: public void trackException(Exception exception)
+      parameters:
+        - id: exception
+          type: 8a99d4b0
+          description: <p>に関する情報を記録する例外。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackException(Exception,Map<String, String>,Map<String, Double>)'
+    id: 'trackException(Exception,Map<String, String>,Map<String, Double>)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackException(Exception exception, Map<String, String> properties, Map<String, Double> metrics)'
+    nameWithType: 'TelemetryClient.trackException(Exception exception, Map<String, String> properties, Map<String, Double> metrics)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackException(Exception exception, Map<String, String> properties, Map<String, Double> metrics)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackException*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 269
+    package: com.microsoft.applicationinsights
+    summary: '<p>例外レコードを Application Insights に送信します。 [例外] で、分析、検索に表示されます。 </p>'
+    syntax:
+      content: 'public void trackException(Exception exception, Map<String, String> properties, Map<String, Double> metrics)'
+      parameters:
+        - id: exception
+          type: 8a99d4b0
+          description: <p>に関する情報を記録する例外。 </p>
+        - id: properties
+          type: 689c8cb5
+          description: <p>検索し、トレース メッセージを分類に使用できる文字列値の名前です。 </p>
+        - id: metrics
+          type: 2ed405bc
+          description: <p>この例外イベントに関連付けられている値。 メトリックス エクスプ ローラーでは、「カスタムのメトリック」に表示されます。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackException(ExceptionTelemetry)
+    id: trackException(ExceptionTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackException(ExceptionTelemetry telemetry)
+    nameWithType: TelemetryClient.trackException(ExceptionTelemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackException(ExceptionTelemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackException*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 299
+    package: com.microsoft.applicationinsights
+    summary: <p>診断の検索で表示するため、ExceptionTelemetry レコードを送信します。 </p>
+    syntax:
+      content: public void trackException(ExceptionTelemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._exception_telemetry
+          description: <p>既に構築された例外のテレメトリ レコード。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackHttpRequest(String,Date,long,String,boolean)'
+    id: 'trackHttpRequest(String,Date,long,String,boolean)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackHttpRequest(String name, Date timestamp, long duration, String responseCode, boolean success)'
+    nameWithType: 'TelemetryClient.trackHttpRequest(String name, Date timestamp, long duration, String responseCode, boolean success)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackHttpRequest(String name, Date timestamp, long duration, String responseCode, boolean success)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackHttpRequest*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 312
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights を要求されたレコードを送信します。 検索し、分析では、「要求」に表示され、失敗した要求をサーバーの応答時間のサーバー要求などのメトリックのグラフに貢献します。 </p>
+    syntax:
+      content: 'public void trackHttpRequest(String name, Date timestamp, long duration, String responseCode, boolean success)'
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>要求または操作用のユーザー フレンドリ名。 </p>
+        - id: timestamp
+          type: '12977444'
+          description: <p>要求の時刻。 </p>
+        - id: duration
+          type: 0364520f
+          description: <p>(ミリ秒単位)、要求の処理の期間です。 </p>
+        - id: responseCode
+          type: '26831127'
+          description: <p>HTTP 応答コード。 </p>
+        - id: success
+          type: 4fc6e284
+          description: <p>失敗した要求として false の場合、要求が成功した場合、操作を記録する場合は true です。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackMetric(MetricTelemetry)
+    id: trackMetric(MetricTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackMetric(MetricTelemetry telemetry)
+    nameWithType: TelemetryClient.trackMetric(MetricTelemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackMetric(MetricTelemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackMetric*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 259
+    package: com.microsoft.applicationinsights
+    summary: <p>数値のメトリックを Application Insights に送信します。 CustomMetrics Analytics では、およびメトリックのエクスプ ローラーでのカスタム メトリックの下に表示されます。 </p>
+    syntax:
+      content: public void trackMetric(MetricTelemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._metric_telemetry
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.Telemetry</xref>インスタンス。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackMetric(String,double)'
+    id: 'trackMetric(String,double)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackMetric(String name, double value)'
+    nameWithType: 'TelemetryClient.trackMetric(String name, double value)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackMetric(String name, double value)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackMetric*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 251
+    package: com.microsoft.applicationinsights
+    summary: <p>数値のメトリックを Application Insights に送信します。 CustomMetrics Analytics では、およびメトリックのエクスプ ローラーでのカスタム メトリックの下に表示されます。 </p>
+    syntax:
+      content: 'public void trackMetric(String name, double value)'
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>メトリックの名前。 150 の最大長。 </p>
+        - id: value
+          type: a07dcde8
+          description: <p>メトリックの値。 0 より大きい必要があります。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackMetric(String,double,int,double,double,Map<String, String>)'
+    id: 'trackMetric(String,double,int,double,double,Map<String, String>)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackMetric(String name, double value, int sampleCount, double min, double max, Map<String, String> properties)'
+    nameWithType: 'TelemetryClient.trackMetric(String name, double value, int sampleCount, double min, double max, Map<String, String> properties)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackMetric(String name, double value, int sampleCount, double min, double max, Map<String, String> properties)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackMetric*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 223
+    package: com.microsoft.applicationinsights
+    summary: <p>数値のメトリックを Application Insights に送信します。 CustomMetrics Analytics では、およびメトリックのエクスプ ローラーでのカスタム メトリックの下に表示されます。 </p>
+    syntax:
+      content: 'public void trackMetric(String name, double value, int sampleCount, double min, double max, Map<String, String> properties)'
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>メトリックの名前。 150 の最大長。 </p>
+        - id: value
+          type: a07dcde8
+          description: <p>メトリックの値。 1 つ以上のサンプル数に基づいている場合の平均します。 0 より大きい必要があります。 </p>
+        - id: sampleCount
+          type: f75371fa
+          description: <p>サンプルの数。 </p>
+        - id: min
+          type: a07dcde8
+          description: <p>このサンプルの最小値。 </p>
+        - id: max
+          type: a07dcde8
+          description: <p>このサンプルの最大値。 </p>
+        - id: properties
+          type: 689c8cb5
+          description: <p>検索し、トレース メッセージを分類に使用できる文字列値の名前です。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackPageView(PageViewTelemetry)
+    id: trackPageView(PageViewTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackPageView(PageViewTelemetry telemetry)
+    nameWithType: TelemetryClient.trackPageView(PageViewTelemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackPageView(PageViewTelemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackPageView*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 378
+    package: com.microsoft.applicationinsights
+    summary: <p>アプリケーションで表示 ページに関する情報を送信します。 </p>
+    syntax:
+      content: public void trackPageView(PageViewTelemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._page_view_telemetry
+          description: <p>テレメトリを送信するには </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackPageView(String)
+    id: trackPageView(String)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackPageView(String name)
+    nameWithType: TelemetryClient.trackPageView(String name)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackPageView(String name)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackPageView*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 360
+    package: com.microsoft.applicationinsights
+    summary: <p>ページ ビューのレコードを Application Insights に送信します。 「ページ ビューの」で検索し、分析が表示され、ビューのページ読み込み時間などのメトリックのグラフに貢献します。 </p>
+    syntax:
+      content: public void trackPageView(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>ページの名前。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackRequest(RequestTelemetry)
+    id: trackRequest(RequestTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackRequest(RequestTelemetry request)
+    nameWithType: TelemetryClient.trackRequest(RequestTelemetry request)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackRequest(RequestTelemetry request)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackRequest*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 327
+    package: com.microsoft.applicationinsights
+    summary: |-
+      <p>Application Insights を要求されたレコードを送信します。 検索し、分析では、「要求」に表示され、失敗した要求をサーバーの応答時間のサーバー要求などのメトリックのグラフに貢献します。</p>
+      <p></p>
+    syntax:
+      content: public void trackRequest(RequestTelemetry request)
+      parameters:
+        - id: request
+          type: com.microsoft.applicationinsights.telemetry._request_telemetry
+          description: <p>request </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackSessionState(SessionState)
+    id: trackSessionState(SessionState)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackSessionState(SessionState sessionState)
+    nameWithType: TelemetryClient.trackSessionState(SessionState sessionState)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackSessionState(SessionState sessionState)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackSessionState*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 117
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights を使用して、指定したセッションの状態、ユーザーに送信<xref uid="com.microsoft.applicationinsights._telemetry_client.trackEvent(String)" data-throw-if-not-resolved="false">trackEvent (文字列名)</xref>ようにこのメソッドは廃止される予定です。 <xrefsect id="deprecated_1_deprecated000042"><xreftitle>非推奨</xreftitle><xrefdescription><p>このメソッドは、Java SDK の version 2.0.0 の廃止されます。 </p></xrefdescription></xrefsect></p>
+    syntax:
+      content: public void trackSessionState(SessionState sessionState)
+      parameters:
+        - id: sessionState
+          type: com.microsoft.applicationinsights.telemetry._session_state
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._session_state\" data-throw-if-not-resolved=\"false\">com.microsoft.applicationinsights.telemetry.SessionState</xref>ユーザー セッションの状態を示す値。 </p>"
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackTrace(String)
+    id: trackTrace(String)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackTrace(String message)
+    nameWithType: TelemetryClient.trackTrace(String message)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackTrace(String message)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackTrace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 193
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights を TraceTelemetry レコードを送信します。 分析、検索では、「トレース」が表示されます。 </p>
+    syntax:
+      content: public void trackTrace(String message)
+      parameters:
+        - id: message
+          type: '26831127'
+          description: <p>ログ メッセージ。 最大長 10000 です。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackTrace(String,SeverityLevel)'
+    id: 'trackTrace(String,SeverityLevel)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackTrace(String message, SeverityLevel severityLevel)'
+    nameWithType: 'TelemetryClient.trackTrace(String message, SeverityLevel severityLevel)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackTrace(String message, SeverityLevel severityLevel)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackTrace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 202
+    package: com.microsoft.applicationinsights
+    summary: <p>TraceTelemetry レコードを送信します。 分析、検索では、「トレース」が表示されます。 </p>
+    syntax:
+      content: 'public void trackTrace(String message, SeverityLevel severityLevel)'
+      parameters:
+        - id: message
+          type: '26831127'
+          description: <p>ログ メッセージ。 最大長 10000 です。 </p>
+        - id: severityLevel
+          type: com.microsoft.applicationinsights.telemetry._severity_level
+          description: <p>重大度のレベル。 </p>
+  - uid: 'com.microsoft.applicationinsights._telemetry_client.trackTrace(String,SeverityLevel,Map<String, String>)'
+    id: 'trackTrace(String,SeverityLevel,Map<String, String>)'
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: 'trackTrace(String message, SeverityLevel severityLevel, Map<String, String> properties)'
+    nameWithType: 'TelemetryClient.trackTrace(String message, SeverityLevel severityLevel, Map<String, String> properties)'
+    fullName: 'void com.microsoft.applicationinsights.TelemetryClient.trackTrace(String message, SeverityLevel severityLevel, Map<String, String> properties)'
+    overload: com.microsoft.applicationinsights._telemetry_client.trackTrace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 171
+    package: com.microsoft.applicationinsights
+    summary: <p>Application Insights を TraceTelemetry レコードを送信します。 分析、検索では、「トレース」が表示されます。 </p>
+    syntax:
+      content: 'public void trackTrace(String message, SeverityLevel severityLevel, Map<String, String> properties)'
+      parameters:
+        - id: message
+          type: '26831127'
+          description: <p>ログ メッセージ。 最大長 10000 です。 </p>
+        - id: severityLevel
+          type: com.microsoft.applicationinsights.telemetry._severity_level
+          description: <p>重大度のレベル。 </p>
+        - id: properties
+          type: 689c8cb5
+          description: <p>検索し、トレース メッセージを分類に使用できる文字列値の名前です。 </p>
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackTrace(TraceTelemetry)
+    id: trackTrace(TraceTelemetry)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    langs:
+      - java
+    name: trackTrace(TraceTelemetry telemetry)
+    nameWithType: TelemetryClient.trackTrace(TraceTelemetry telemetry)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackTrace(TraceTelemetry telemetry)
+    overload: com.microsoft.applicationinsights._telemetry_client.trackTrace*
+    type: Method
+    source:
+      remote: *ref_0
+      path: core/src/main/java/com/microsoft/applicationinsights/TelemetryClient.java
+      startLine: 210
+    package: com.microsoft.applicationinsights
+    summary: <p>診断の検索で表示するための TraceTelemetry レコードを送信します。 </p>
+    syntax:
+      content: public void trackTrace(TraceTelemetry telemetry)
+      parameters:
+        - id: telemetry
+          type: com.microsoft.applicationinsights.telemetry._trace_telemetry
+          description: <p><xref uid="com.microsoft.applicationinsights.telemetry._telemetry" data-throw-if-not-resolved="false">Com.microsoft.applicationinsights.telemetry.Telemetry</xref>インスタンス。 </p>
+references:
+  - uid: com.microsoft.applicationinsights._telemetry_client.TelemetryClient*
+    name: TelemetryClient
+    nameWithType: TelemetryClient.TelemetryClient
+    fullName: com.microsoft.applicationinsights.TelemetryClient.TelemetryClient
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.getContext*
+    name: getContext
+    nameWithType: TelemetryClient.getContext
+    fullName: TelemetryContext com.microsoft.applicationinsights.TelemetryClient.getContext
+    package: com.microsoft.applicationinsights
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.applicationinsights._telemetry_client.isDisabled*
+    name: isDisabled
+    nameWithType: TelemetryClient.isDisabled
+    fullName: boolean com.microsoft.applicationinsights.TelemetryClient.isDisabled
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackSessionState*
+    name: trackSessionState
+    nameWithType: TelemetryClient.trackSessionState
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackSessionState
+    package: com.microsoft.applicationinsights
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 689c8cb5
+    spec.java:
+      - name: 'Map<String, String>'
+        fullName: 'Map<String, String>'
+  - uid: 2ed405bc
+    spec.java:
+      - name: 'Map<String, Double>'
+        fullName: 'Map<String, Double>'
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackEvent*
+    name: trackEvent
+    nameWithType: TelemetryClient.trackEvent
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackEvent
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackTrace*
+    name: trackTrace
+    nameWithType: TelemetryClient.trackTrace
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackTrace
+    package: com.microsoft.applicationinsights
+  - uid: a07dcde8
+    spec.java:
+      - name: double
+        fullName: double
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackMetric*
+    name: trackMetric
+    nameWithType: TelemetryClient.trackMetric
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackMetric
+    package: com.microsoft.applicationinsights
+  - uid: 8a99d4b0
+    spec.java:
+      - name: Exception
+        fullName: Exception
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackException*
+    name: trackException
+    nameWithType: TelemetryClient.trackException
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackException
+    package: com.microsoft.applicationinsights
+  - uid: '12977444'
+    spec.java:
+      - name: Date
+        fullName: Date
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackHttpRequest*
+    name: trackHttpRequest
+    nameWithType: TelemetryClient.trackHttpRequest
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackHttpRequest
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackRequest*
+    name: trackRequest
+    nameWithType: TelemetryClient.trackRequest
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackRequest
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackDependency*
+    name: trackDependency
+    nameWithType: TelemetryClient.trackDependency
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackDependency
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackPageView*
+    name: trackPageView
+    nameWithType: TelemetryClient.trackPageView
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackPageView
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.track*
+    name: track
+    nameWithType: TelemetryClient.track
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.track
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_client.flush*
+    name: flush
+    nameWithType: TelemetryClient.flush
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.flush
+    package: com.microsoft.applicationinsights
+  - uid: com.microsoft.applicationinsights._telemetry_configuration
+    parent: com.microsoft.applicationinsights
+    href: com.microsoft.applicationinsights._telemetry_configuration.yml
+    name: TelemetryConfiguration
+    nameWithType: TelemetryConfiguration
+    fullName: com.microsoft.applicationinsights.TelemetryConfiguration
+    type: Class
+    summary: |-
+      <p>通常 ApplicationInsights.xml ファイルから読み込まれたグローバル製品利用統計情報設定をカプセル化します。</p>
+      <p>すべて<xref uid="com.microsoft.applicationinsights.telemetry._telemetry_context" data-throw-if-not-resolved="false">com.microsoft.applicationinsights.telemetry.TelemetryContext</xref>オブジェクトの初期化は 'Active' ('getActive' の静的メソッドによって返される) を使用してこのクラスによって提供される製品利用統計情報の構成。 </p>
+    syntax:
+      content: public class TelemetryConfiguration
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry_context
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry_context.yml
+    name: TelemetryContext
+    nameWithType: TelemetryContext
+    fullName: com.microsoft.applicationinsights.telemetry.TelemetryContext
+    type: Class
+    summary: <p>テレメトリを Application Insights サービスに送信するためのコンテキストを表します。 コンテキストは、すべてのテレメトリ項目と共に送信されるデータを保持します。 インストルメンテーション キーが含まれています操作の現在の id を関連付けるために関連するテレメトリのアイテムです。ユーザー、セッション、およびデバイスのデータです。 このコンテキストを使用できる遠隔測定をフィルター処理するポータルで製品利用統計情報のすべての項目に追加され、使用できるプロパティを設定することもできます。 </p>
+    syntax:
+      content: public class TelemetryContext
+  - uid: com.microsoft.applicationinsights.channel._telemetry_channel
+    parent: com.microsoft.applicationinsights.channel
+    href: com.microsoft.applicationinsights.channel._telemetry_channel.yml
+    name: TelemetryChannel
+    nameWithType: TelemetryChannel
+    fullName: com.microsoft.applicationinsights.channel.TelemetryChannel
+    type: Interface
+    summary: <p>Azure の Application Insights にテレメトリを送信するための通信チャネルを表します。 </p>
+    syntax:
+      content: public interface TelemetryChannel
+  - uid: com.microsoft.applicationinsights._telemetry_client
+    parent: com.microsoft.applicationinsights
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    name: TelemetryClient
+    nameWithType: TelemetryClient
+    fullName: com.microsoft.applicationinsights.TelemetryClient
+    type: Class
+    summary: '<p>Azure の Application Insights にテレメトリを送信するには、このクラスのインスタンスを作成します。 一般的な概要<ulink url="https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics">https://docs.microsoft.com/azure/application-insights/app-insights-api-custom-events-metrics</ulink></p>'
+    syntax: *ref_1
+  - uid: com.microsoft.applicationinsights.telemetry._session_state
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._session_state.yml
+    name: SessionState
+    nameWithType: SessionState
+    fullName: com.microsoft.applicationinsights.telemetry.SessionState
+    type: Enum
+    summary: <p>セッション状態。 </p>
+    syntax:
+      content: public enum SessionState
+  - uid: com.microsoft.applicationinsights._telemetry_client.trackEvent(String)
+    parent: com.microsoft.applicationinsights._telemetry_client
+    href: com.microsoft.applicationinsights._telemetry_client.yml
+    name: trackEvent(String name)
+    nameWithType: TelemetryClient.trackEvent(String name)
+    fullName: void com.microsoft.applicationinsights.TelemetryClient.trackEvent(String name)
+    type: Method
+    summary: <p>Application Insights にカスタム イベント レコードを送信します。 カスタム イベント""分析、検索、メトリックス エクスプ ローラーに表示されます。 </p>
+    syntax: *ref_2
+  - uid: com.microsoft.applicationinsights.telemetry._event_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._event_telemetry.yml
+    name: EventTelemetry
+    nameWithType: EventTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.EventTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights のカスタム イベントを追跡するために使用される型。 </p>"
+    syntax:
+      content: public class EventTelemetry extends BaseSampleSourceTelemetry<EventData>
+  - uid: com.microsoft.applicationinsights.telemetry._severity_level
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._severity_level.yml
+    name: SeverityLevel
+    nameWithType: SeverityLevel
+    fullName: com.microsoft.applicationinsights.telemetry.SeverityLevel
+    type: Enum
+    summary: <p>Enum<xref uid="com.microsoft.applicationinsights.telemetry._severity_level" data-throw-if-not-resolved="false">重大度レベル</xref>です。 </p>
+    syntax:
+      content: public enum SeverityLevel
+  - uid: com.microsoft.applicationinsights.telemetry._trace_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._trace_telemetry.yml
+    name: TraceTelemetry
+    nameWithType: TraceTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.TraceTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>使用されるログ メッセージの種類。 </p>"
+    syntax:
+      content: public class TraceTelemetry
+  - uid: com.microsoft.applicationinsights.telemetry._telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._telemetry.yml
+    name: Telemetry
+    nameWithType: Telemetry
+    fullName: com.microsoft.applicationinsights.telemetry.Telemetry
+    type: Interface
+    summary: <p>Application insights の基本製品利用統計情報の種類のインターフェイスです。 </p>
+    syntax:
+      content: public interface Telemetry extends JsonSerializable
+  - uid: com.microsoft.applicationinsights.telemetry._metric_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._metric_telemetry.yml
+    name: MetricTelemetry
+    nameWithType: MetricTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.MetricTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights に送信されるメトリックを追跡するために使用される型。 </p>"
+    syntax:
+      content: public class MetricTelemetry extends BaseTelemetry<MetricData>
+  - uid: com.microsoft.applicationinsights.telemetry._exception_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._exception_telemetry.yml
+    name: ExceptionTelemetry
+    nameWithType: ExceptionTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.ExceptionTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>Azure Application Insights に送信された例外を追跡するために使用される型。 </p>"
+    syntax:
+      content: public class ExceptionTelemetry extends BaseSampleSourceTelemetry<ExceptionData>
+  - uid: com.microsoft.applicationinsights.telemetry._request_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._request_telemetry.yml
+    name: RequestTelemetry
+    nameWithType: RequestTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.RequestTelemetry
+    type: Class
+    summary: |-
+      <p>Web 要求がアプリケーションによって処理に関する情報をカプセル化します。</p>
+      <p>このクラスのインスタンスの 'trackRequest' メソッドに渡すことによって、web アプリケーションに Application Insights によって処理された要求に関する情報を送信することができます、 <xref uid="com.microsoft.applicationinsights._telemetry_client" data-throw-if-not-resolved="false">com.microsoft.applicationinsights.TelemetryClient</xref></p>
+    syntax:
+      content: public class RequestTelemetry extends BaseSampleSourceTelemetry<RequestData>
+  - uid: com.microsoft.applicationinsights.telemetry._duration
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._duration.yml
+    name: Duration
+    nameWithType: Duration
+    fullName: com.microsoft.applicationinsights.telemetry.Duration
+    type: Class
+    summary: |-
+      <p>このクラスは、日、時間、分、秒、ミリ秒単位の観点から定義できる時間の間隔を定義するには、そのユーザーを使用します。</p>
+      <p>ユーザーが簡単に時間の間隔を定義できるようにするさまざまなコンス トラクターがあります。 </p>
+    syntax:
+      content: public class Duration
+  - uid: com.microsoft.applicationinsights.telemetry._remote_dependency_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._remote_dependency_telemetry.yml
+    name: RemoteDependencyTelemetry
+    nameWithType: RemoteDependencyTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.RemoteDependencyTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>の依存関係について、つまり、データベースまたは REST Api などの外部サービスにアプリケーションからの呼び出しを Azure Application Insights に送信します。 </p>"
+    syntax:
+      content: public class RemoteDependencyTelemetry extends BaseSampleSourceTelemetry<RemoteDependencyData>
+  - uid: com.microsoft.applicationinsights.telemetry._page_view_telemetry
+    parent: com.microsoft.applicationinsights.telemetry
+    href: com.microsoft.applicationinsights.telemetry._page_view_telemetry.yml
+    name: PageViewTelemetry
+    nameWithType: PageViewTelemetry
+    fullName: com.microsoft.applicationinsights.telemetry.PageViewTelemetry
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.applicationinsights.telemetry._telemetry\" data-throw-if-not-resolved=\"false\">製品利用統計情報</xref>ページ ビューを追跡するために使用される型。</p>\n\n<p>'TrackPageView' メソッドにこのクラスのインスタンスを渡すことによって、アプリケーションに Application Insights で表示したページに関する情報を送信することができます、 <xref uid=\"com.microsoft.applicationinsights._telemetry_client\" data-throw-if-not-resolved=\"false\">com.microsoft.applicationinsights.TelemetryClient</xref></p>"
+    syntax:
+      content: public class PageViewTelemetry extends BaseSampleSourceTelemetry<PageViewData>

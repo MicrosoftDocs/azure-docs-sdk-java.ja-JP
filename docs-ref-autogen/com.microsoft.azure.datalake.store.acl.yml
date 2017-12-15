@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.datalake.store.acl
+    id: acl
+    children:
+      - com.microsoft.azure.datalake.store.acl._acl_action
+      - com.microsoft.azure.datalake.store.acl._acl_entry
+      - com.microsoft.azure.datalake.store.acl._acl_scope
+      - com.microsoft.azure.datalake.store.acl._acl_status
+      - com.microsoft.azure.datalake.store.acl._acl_type
+    href: com.microsoft.azure.datalake.store.acl.yml
+    langs:
+      - java
+    name: com.microsoft.azure.datalake.store.acl
+    nameWithType: com.microsoft.azure.datalake.store.acl
+    fullName: com.microsoft.azure.datalake.store.acl
+    type: Namespace
+    source:
+      remote:
+        path: src/main/java/com/microsoft/azure/datalake/store/acl/AclAction.java
+        branch: master
+        repo: 'https://github.com/azure/azure-data-lake-store-java'
+      path: src/main/java/com/microsoft/azure/datalake/store/acl/AclAction.java
+      startLine: 6
+    summary: <p>Acl を使用するオブジェクト。 必要とするパラメーターを ACL に、これらのオブジェクトが使用される<xref uid="com.microsoft.azure.datalake.store._core" data-throw-if-not-resolved="false">com.microsoft.azure.datalake.store.Core</xref>と<xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">com.microsoft.azure.datalake.store.ADLStoreClient</xref>クラスです。 </p>
+    syntax:
+      content: package com.microsoft.azure.datalake.store.acl
+references:
+  - uid: com.microsoft.azure.datalake.store._core
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._core.yml
+    name: Core
+    nameWithType: Core
+    fullName: com.microsoft.azure.datalake.store.Core
+    type: Class
+    summary: "<p>プロトコルです。コア クラスは、応答する API の呼び出しを実装します。 1 つのメソッドがある<xref uid=\"com.microsoft.azure.datalake.store._core\" data-throw-if-not-resolved=\"false\">コア</xref>サーバーでサポートされているすべての REST api です。 </p>\n<p>このクラスのメソッドは、下位レベル、基になる操作の詳細をすべてを公開する傾向があります。 メソッドを呼び出すには、インスタンス化、 <xref uid=\"com.microsoft.azure.datalake.store._request_options\" data-throw-if-not-resolved=\"false\">RequestOptions</xref>オブジェクトします。 メンバーのいずれかに、必要に応じて値を割り当てる (例:\"RetryPolicy\") です。 新規作成し、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>オブジェクト。 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>呼び出しから呼び出しの結果と統計情報を渡す際に使用します。 </p>\n<p>発生したエラー<xref uid=\"com.microsoft.azure.datalake.store._core\" data-throw-if-not-resolved=\"false\">コア</xref>メソッドが戻るを通じて伝達される、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>パラメーター。 </p>\n<p>\r\n\r\n  <b>スレッド セーフ:</b>このクラスのすべての静的メソッドはスレッド セーフであります。</p>"
+    syntax:
+      content: public class Core
+  - uid: com.microsoft.azure.datalake.store._a_d_l_store_client
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._a_d_l_store_client.yml
+    name: ADLStoreClient
+    nameWithType: ADLStoreClient
+    fullName: com.microsoft.azure.datalake.store.ADLStoreClient
+    type: Class
+    summary: "<p>\r\n\r\n  <code>ADLStoreClient \r\n\r\n    </code>クラスは、Azure Data Lake へのクライアントを表します。 ファイルおよびディレクトリに対する操作を実行するために使用します。 </p>"
+    syntax:
+      content: public class ADLStoreClient
+  - uid: com.microsoft.azure.datalake.store.acl._acl_action
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_action.yml
+    name: AclAction
+    nameWithType: AclAction
+    fullName: com.microsoft.azure.datalake.store.acl.AclAction
+    type: Enum
+    summary: <p>ACL で許可されるアクションの考えられる組み合わせを指定します。 </p>
+    syntax:
+      content: public enum AclAction
+  - uid: com.microsoft.azure.datalake.store.acl._acl_entry
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_entry.yml
+    name: AclEntry
+    nameWithType: AclEntry
+    fullName: com.microsoft.azure.datalake.store.acl.AclEntry
+    type: Class
+    summary: "<p>1 つの ACL エントリが含まれています。 ACL エントリで構成されています (アクセス、または既定値) のスコープの ACL の種類 (ユーザー、グループ、その他のまたはマスク)、ユーザーまたはこの ACL に関連付けられているグループの名前 (ユーザーとグループの既定のアクセス許可を指定する場合は空白にすることができ、マスク エントリの場合は空白にする必要があります)、およびこの ACL エントリで許可されているアクション。 </p>\n<p>オブジェクトの ACL から成る、<code>List \r\n\r\n    </code> Acl エントリのです。 </p>\n\n<p>このクラスは、文字列から戻る ACL エントリや Acl を変換するための便利なメソッドの数も提供します。 </p>"
+    syntax:
+      content: public class AclEntry
+  - uid: com.microsoft.azure.datalake.store.acl._acl_scope
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_scope.yml
+    name: AclScope
+    nameWithType: AclScope
+    fullName: com.microsoft.azure.datalake.store.acl.AclScope
+    type: Enum
+    summary: <p>アクセス (既定値) の ACL エントリのスコープです。 </p>
+    syntax:
+      content: public enum AclScope
+  - uid: com.microsoft.azure.datalake.store.acl._acl_status
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_status.yml
+    name: AclStatus
+    nameWithType: AclStatus
+    fullName: com.microsoft.azure.datalake.store.acl.AclStatus
+    type: Class
+    summary: '<p>によって返されるオブジェクト、 <xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client.getAclStatus(String)" data-throw-if-not-resolved="false">com.microsoft.azure.datalake.store.ADLStoreClient#getAclStatus(String)</xref> getAclStatus} 呼び出し、そのファイルまたはディレクトリの Acl と権限について説明します。 </p>'
+    syntax:
+      content: public class AclStatus
+  - uid: com.microsoft.azure.datalake.store.acl._acl_type
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_type.yml
+    name: AclType
+    nameWithType: AclType
+    fullName: com.microsoft.azure.datalake.store.acl.AclType
+    type: Enum
+    summary: <p>Acl エントリの種類 (ユーザー、グループ、もう 1 つのまたはマスク) します。 </p>
+    syntax:
+      content: public enum AclType

@@ -1,0 +1,207 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings
+    id: _actor_concurrency_settings
+    parent: microsoft.servicefabric.actors
+    children:
+      - microsoft.servicefabric.actors._actor_concurrency_settings.ActorConcurrencySettings()
+      - microsoft.servicefabric.actors._actor_concurrency_settings.getLockTimeout()
+      - microsoft.servicefabric.actors._actor_concurrency_settings.getReentrancyMode()
+      - microsoft.servicefabric.actors._actor_concurrency_settings.setLockTimeout(Duration)
+      - microsoft.servicefabric.actors._actor_concurrency_settings.setReentrancyMode(ActorReentrancyMode)
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    langs:
+      - java
+    name: ActorConcurrencySettings
+    nameWithType: ActorConcurrencySettings
+    fullName: microsoft.servicefabric.actors.ActorConcurrencySettings
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+      startLine: 9
+    package: microsoft.servicefabric.actors
+    summary: <p>論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。 このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。 </p>
+    syntax: &ref_1
+      content: public class ActorConcurrencySettings
+    inheritance:
+      - java.lang.Object
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.ActorConcurrencySettings()
+    id: ActorConcurrencySettings()
+    parent: microsoft.servicefabric.actors._actor_concurrency_settings
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    langs:
+      - java
+    name: ActorConcurrencySettings()
+    nameWithType: ActorConcurrencySettings.ActorConcurrencySettings()
+    fullName: microsoft.servicefabric.actors.ActorConcurrencySettings.ActorConcurrencySettings()
+    overload: microsoft.servicefabric.actors._actor_concurrency_settings.ActorConcurrencySettings*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+      startLine: 18
+    package: microsoft.servicefabric.actors
+    summary: <p>新しいインスタンスを初期化、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_settings" data-throw-if-not-resolved="false">ActorConcurrencySettings</xref>クラスです。 </p>
+    syntax:
+      content: public ActorConcurrencySettings()
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.getLockTimeout()
+    id: getLockTimeout()
+    parent: microsoft.servicefabric.actors._actor_concurrency_settings
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    langs:
+      - java
+    name: getLockTimeout()
+    nameWithType: ActorConcurrencySettings.getLockTimeout()
+    fullName: Duration microsoft.servicefabric.actors.ActorConcurrencySettings.getLockTimeout()
+    overload: microsoft.servicefabric.actors._actor_concurrency_settings.getLockTimeout*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+      startLine: 57
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>セットのタイムアウトを有効にするには、同時実行のロックが基づいています。 スローする場合は、ランタイムは、メソッドの呼び出しをディスパッチするロックを取得できません、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref>例外。 この例外は、論理呼び出しチェーンをアンワインドし、呼び出しは、時間の場合は、構成された最大時間を再試行します。 同時実行のロックの実際のタイムアウト値は、上位のように、ランタイムは、指定された値をランダムな間隔を追加できます。</p>
+      <p></p>
+    syntax:
+      content: public Duration getLockTimeout()
+      return:
+        type: e02a2de0
+        description: <p>同時実行のロックを有効にするためのタイムアウトに基づいています。 </p>
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.getReentrancyMode()
+    id: getReentrancyMode()
+    parent: microsoft.servicefabric.actors._actor_concurrency_settings
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    langs:
+      - java
+    name: getReentrancyMode()
+    nameWithType: ActorConcurrencySettings.getReentrancyMode()
+    fullName: ActorReentrancyMode microsoft.servicefabric.actors.ActorConcurrencySettings.getReentrancyMode()
+    overload: microsoft.servicefabric.actors._actor_concurrency_settings.getReentrancyMode*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+      startLine: 33
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>アクター メソッド呼び出しの再入モードを取得します。</p>
+      <p></p>
+    syntax:
+      content: public ActorReentrancyMode getReentrancyMode()
+      return:
+        type: microsoft.servicefabric.actors._actor_reentrancy_mode
+        description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_reentrancy_mode\" data-throw-if-not-resolved=\"false\">ActorReentrancyMode</xref>アクター メソッドの呼び出しです。 </p>"
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.setLockTimeout(Duration)
+    id: setLockTimeout(Duration)
+    parent: microsoft.servicefabric.actors._actor_concurrency_settings
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    langs:
+      - java
+    name: setLockTimeout(Duration timeout)
+    nameWithType: ActorConcurrencySettings.setLockTimeout(Duration timeout)
+    fullName: void microsoft.servicefabric.actors.ActorConcurrencySettings.setLockTimeout(Duration timeout)
+    overload: microsoft.servicefabric.actors._actor_concurrency_settings.setLockTimeout*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+      startLine: 71
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>セットのタイムアウトを有効にするには、同時実行のロックが基づいています。 スローする場合は、ランタイムは、メソッドの呼び出しをディスパッチするロックを取得できません、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref>例外。</p>
+      <p></p>
+    syntax:
+      content: public void setLockTimeout(Duration timeout)
+      parameters:
+        - id: timeout
+          type: e02a2de0
+          description: <p>この例外は、論理呼び出しチェーンをアンワインドし、呼び出しは、時間の場合は、構成された最大時間を再試行します。 同時実行のロックの実際のタイムアウト値は、上位のように、ランタイムは、指定された値をランダムな間隔を追加できます。 </p>
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.setReentrancyMode(ActorReentrancyMode)
+    id: setReentrancyMode(ActorReentrancyMode)
+    parent: microsoft.servicefabric.actors._actor_concurrency_settings
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    langs:
+      - java
+    name: setReentrancyMode(ActorReentrancyMode mode)
+    nameWithType: ActorConcurrencySettings.setReentrancyMode(ActorReentrancyMode mode)
+    fullName: void microsoft.servicefabric.actors.ActorConcurrencySettings.setReentrancyMode(ActorReentrancyMode mode)
+    overload: microsoft.servicefabric.actors._actor_concurrency_settings.setReentrancyMode*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
+      startLine: 43
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>メソッドの呼び出しをアクターの再入モードに設定します。</p>
+      <p></p>
+    syntax:
+      content: public void setReentrancyMode(ActorReentrancyMode mode)
+      parameters:
+        - id: mode
+          type: microsoft.servicefabric.actors._actor_reentrancy_mode
+          description: <p>再入モードです。 <xref uid="microsoft.servicefabric.actors._actor_reentrancy_mode" data-throw-if-not-resolved="false">ActorReentrancyMode</xref>アクター メソッドの呼び出しです。 </p>
+references:
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.ActorConcurrencySettings*
+    name: ActorConcurrencySettings
+    nameWithType: ActorConcurrencySettings.ActorConcurrencySettings
+    fullName: microsoft.servicefabric.actors.ActorConcurrencySettings.ActorConcurrencySettings
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.getReentrancyMode*
+    name: getReentrancyMode
+    nameWithType: ActorConcurrencySettings.getReentrancyMode
+    fullName: ActorReentrancyMode microsoft.servicefabric.actors.ActorConcurrencySettings.getReentrancyMode
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.setReentrancyMode*
+    name: setReentrancyMode
+    nameWithType: ActorConcurrencySettings.setReentrancyMode
+    fullName: void microsoft.servicefabric.actors.ActorConcurrencySettings.setReentrancyMode
+    package: microsoft.servicefabric.actors
+  - uid: e02a2de0
+    spec.java:
+      - name: Duration
+        fullName: Duration
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.getLockTimeout*
+    name: getLockTimeout
+    nameWithType: ActorConcurrencySettings.getLockTimeout
+    fullName: Duration microsoft.servicefabric.actors.ActorConcurrencySettings.getLockTimeout
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings.setLockTimeout*
+    name: setLockTimeout
+    nameWithType: ActorConcurrencySettings.setLockTimeout
+    fullName: void microsoft.servicefabric.actors.ActorConcurrencySettings.setLockTimeout
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_reentrancy_mode
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_reentrancy_mode.yml
+    name: ActorReentrancyMode
+    nameWithType: ActorReentrancyMode
+    fullName: microsoft.servicefabric.actors.ActorReentrancyMode
+    type: Enum
+    summary: <p>アクター メソッドの呼び出しのための再入モードを指定します。 </p>
+    syntax:
+      content: public enum ActorReentrancyMode
+  - uid: microsoft.servicefabric.actors._actor_concurrency_settings
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_concurrency_settings.yml
+    name: ActorConcurrencySettings
+    nameWithType: ActorConcurrencySettings
+    fullName: microsoft.servicefabric.actors.ActorConcurrencySettings
+    type: Class
+    summary: <p>論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。 このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。 </p>
+    syntax: *ref_1
+  - uid: microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception.yml
+    name: ActorConcurrencyLockTimeoutException
+    nameWithType: ActorConcurrencyLockTimeoutException
+    fullName: microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException
+    type: Class
+    summary: <p>メソッドをディスパッチする同時実行のロックをランタイムが有効にするを取得できない場合に、アクター ランタイムによってスローされる例外に基づいています。 </p>
+    syntax:
+      content: public class ActorConcurrencyLockTimeoutException extends FabricException

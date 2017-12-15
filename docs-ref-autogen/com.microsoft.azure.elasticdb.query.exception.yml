@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.query.exception
+    id: exception
+    children:
+      - com.microsoft.azure.elasticdb.query.exception._multi_shard_aggregate_exception
+      - com.microsoft.azure.elasticdb.query.exception._multi_shard_exception
+      - com.microsoft.azure.elasticdb.query.exception._multi_shard_partial_read_exception
+      - com.microsoft.azure.elasticdb.query.exception._multi_shard_result_set_closed_exception
+      - com.microsoft.azure.elasticdb.query.exception._multi_shard_result_set_internal_exception
+      - com.microsoft.azure.elasticdb.query.exception._multi_shard_schema_mismatch_exception
+    href: com.microsoft.azure.elasticdb.query.exception.yml
+    langs:
+      - java
+    name: com.microsoft.azure.elasticdb.query.exception
+    nameWithType: com.microsoft.azure.elasticdb.query.exception
+    fullName: com.microsoft.azure.elasticdb.query.exception
+    type: Namespace
+    source:
+      remote:
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/exception/MultiShardAggregateException.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/query/exception/MultiShardAggregateException.java
+    syntax:
+      content: package com.microsoft.azure.elasticdb.query.exception
+references:
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_aggregate_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_aggregate_exception.yml
+    name: MultiShardAggregateException
+    nameWithType: MultiShardAggregateException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardAggregateException
+    type: Class
+    summary: '<p>シャード セット間でクエリを実行するときに発生した 1 つまたは複数の例外エラーを表します。 InnerExceptions フィールドがこれらの例外を収集し、さらに検査または処理のため InnerExceptions を反復処理できる 1 つ。 複数のシャード間で発生したエラーの情報をやり取りする目的: パブリック型 </p>'
+    syntax:
+      content: public class MultiShardAggregateException
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_exception.yml
+    name: MultiShardException
+    nameWithType: MultiShardException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardException
+    type: Class
+    summary: '<p>DEVNOTE:、シャード ShardLocation のシリアル化のシリアル化可能なサポートのないので、ここで型が、正常に動作では SMM ShardLocation がカプセル化します。 A <xref uid="com.microsoft.azure.elasticdb.query.exception._multi_shard_exception" data-throw-if-not-resolved="false">MultiShardException</xref>シャードに対して操作を実行するときに発生した例外を表します。 シャードと発生した例外の両方の id に関する情報を提供します。 、例外の性質によっては 1 つことができます、複数のシャードのクエリを再実行してくださいし、直接に、例外を生成するシャードを対象としたクエリを実行するまたは最後に SSMS などの一般的なツールを使用して、シャードに対して手動でクエリを実行します。 </p>'
+    syntax:
+      content: public class MultiShardException
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_partial_read_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_partial_read_exception.yml
+    name: MultiShardPartialReadException
+    nameWithType: MultiShardPartialReadException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardPartialReadException
+    type: Class
+    summary: '<p>MultiShardResultSet は、基になるシャードのいずれかからデータを読み取る例外にヒットしたときに、この例外をスローします。 これは、すべての行が対象のシャードから正常に取得されたことを示します。 ユーザー、手順を実行、クエリを再実行するかどうか、または既に取得されている行を含む作業を続行するかどうかを判断するために必要です。 結果の一部のポリシーでは、この例外がスローされますのみです。 目的: MultiShardResultSet 基になるの結果セットのいずれかの next() 呼び出し中に例外が発生するとをスローする例外をカスタムです。 そのためことでしたそのシャードからすべての結果を読み込むことがわかってすべてが発生したときに、何らかの理由でユーザーに通知する必要があります。 </p>'
+    syntax:
+      content: public class MultiShardPartialReadException extends MultiShardException
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_result_set_closed_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_result_set_closed_exception.yml
+    name: MultiShardResultSetClosedException
+    nameWithType: MultiShardResultSetClosedException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardResultSetClosedException
+    type: Class
+    summary: '<p>独自の例外をスロー、MultiShardResultSet が閉じられたときと、ユーザーが閉じたリーダーに対して操作を実行しようとするとします。 目的: throw、MultiShardResultSet が閉じられたときと、ユーザーにカスタム例外は、いくつかの操作を試行します。 </p>'
+    syntax:
+      content: public class MultiShardResultSetClosedException
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_result_set_internal_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_result_set_internal_exception.yml
+    name: MultiShardResultSetInternalException
+    nameWithType: MultiShardResultSetInternalException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardResultSetInternalException
+    type: Class
+    summary: '<p>MultiShardResultSet が無効な状態のときにスローされるカスタムの例外。 この例外を繰り返し発生する場合、マイクロソフト カスタマー サポートにお問い合わせください。 目的: MultiShardResultSet が無効な状態のときにスローする例外をカスタムです。 このエラーをしないように、ユーザー。 </p>'
+    syntax:
+      content: public class MultiShardResultSetInternalException
+  - uid: com.microsoft.azure.elasticdb.query.exception._multi_shard_schema_mismatch_exception
+    parent: com.microsoft.azure.elasticdb.query.exception
+    href: com.microsoft.azure.elasticdb.query.exception._multi_shard_schema_mismatch_exception.yml
+    name: MultiShardSchemaMismatchException
+    nameWithType: MultiShardSchemaMismatchException
+    fullName: com.microsoft.azure.elasticdb.query.exception.MultiShardSchemaMismatchException
+    type: Class
+    summary: '<p>カスタム例外は、全体的なクエリに参加しているシャードの少なくとも 1 つのスキーマが、複数のシャード クエリ全体の予期されるスキーマに準拠していない場合にスローされます。 目的: 特定のシャードから結果セットからスキーマが全体としてファンアウト クエリに対して予期されるスキーマに準拠していない場合にスローされる例外をカスタムです。 </p>'
+    syntax:
+      content: public class MultiShardSchemaMismatchException extends MultiShardException

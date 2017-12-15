@@ -1,0 +1,1052 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client
+    id: _cloud_queue_client
+    parent: com.microsoft.azure.storage.queue
+    children:
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient(final StorageUri,final StorageCredentials)'
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient(final URI,final StorageCredentials)'
+      - com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties()
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties(QueueRequestOptions,OperationContext)'
+      - com.microsoft.azure.storage.queue._cloud_queue_client.getDefaultRequestOptions()
+      - com.microsoft.azure.storage.queue._cloud_queue_client.getQueueReference(final String)
+      - com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats()
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats(QueueRequestOptions,OperationContext)'
+      - com.microsoft.azure.storage.queue._cloud_queue_client.isUsePathStyleUris()
+      - com.microsoft.azure.storage.queue._cloud_queue_client.listQueues()
+      - com.microsoft.azure.storage.queue._cloud_queue_client.listQueues(final String)
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.listQueues(final String,final QueueListingDetails,QueueRequestOptions,OperationContext)'
+      - com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented()
+      - com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented(final String)
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented(final String,final QueueListingDetails,final Integer,final ResultContinuation,QueueRequestOptions,OperationContext)'
+      - com.microsoft.azure.storage.queue._cloud_queue_client.setDefaultRequestOptions(QueueRequestOptions)
+      - com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties(final ServiceProperties)
+      - 'com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties(final ServiceProperties,QueueRequestOptions,OperationContext)'
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: CloudQueueClient
+    nameWithType: CloudQueueClient
+    fullName: com.microsoft.azure.storage.queue.CloudQueueClient
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 47
+    package: com.microsoft.azure.storage.queue
+    summary: <p>Microsoft Azure Queue サービスにアクセスするには、サービス クライアントを提供します。 </p>
+    syntax: &ref_1
+      content: public class CloudQueueClient extends ServiceClient
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.storage._service_client
+    inheritedMembers:
+      - com.microsoft.azure.storage._service_client.credentials
+      - 'com.microsoft.azure.storage._service_client.downloadServicePropertiesImpl(final RequestOptions,final boolean)'
+      - com.microsoft.azure.storage._service_client.getCredentials()
+      - com.microsoft.azure.storage._service_client.getEndpoint()
+      - 'com.microsoft.azure.storage._service_client.getServiceStatsImpl(final RequestOptions,final boolean)'
+      - com.microsoft.azure.storage._service_client.getStorageUri()
+      - 'com.microsoft.azure.storage._service_client.ServiceClient(final StorageUri,final StorageCredentials)'
+      - com.microsoft.azure.storage._service_client.setCredentials(final StorageCredentials)
+      - com.microsoft.azure.storage._service_client.setStorageUri(final StorageUri)
+      - 'com.microsoft.azure.storage._service_client.uploadServicePropertiesImpl(final ServiceProperties,final RequestOptions,final OperationContext,final boolean)'
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient(final StorageUri,final StorageCredentials)'
+    id: 'CloudQueueClient(final StorageUri,final StorageCredentials)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'CloudQueueClient(final StorageUri baseUri, final StorageCredentials credentials)'
+    nameWithType: 'CloudQueueClient.CloudQueueClient(final StorageUri baseUri, final StorageCredentials credentials)'
+    fullName: 'com.microsoft.azure.storage.queue.CloudQueueClient.CloudQueueClient(final StorageUri baseUri, final StorageCredentials credentials)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 78
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>指定したキュー サービス エンドポイントとアカウントの資格情報を使用して、クラスの新しいインスタンスを初期化します。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudQueueClient(final StorageUri baseUri, final StorageCredentials credentials)'
+      parameters:
+        - id: baseUri
+          type: 93de0ef9com.microsoft.azure.storage._storage_uri
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>クライアントの作成に使用されるキュー サービスのエンドポイントを表すオブジェクト。 </p>
+        - id: credentials
+          type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>アカウントの資格情報を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient(final URI,final StorageCredentials)'
+    id: 'CloudQueueClient(final URI,final StorageCredentials)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'CloudQueueClient(final URI baseUri, final StorageCredentials credentials)'
+    nameWithType: 'CloudQueueClient.CloudQueueClient(final URI baseUri, final StorageCredentials credentials)'
+    fullName: 'com.microsoft.azure.storage.queue.CloudQueueClient.CloudQueueClient(final URI baseUri, final StorageCredentials credentials)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 64
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>指定したキュー サービス エンドポイントとアカウントの資格情報を使用して、クラスの新しいインスタンスを初期化します。</p>
+      <p></p>
+    syntax:
+      content: 'public CloudQueueClient(final URI baseUri, final StorageCredentials credentials)'
+      parameters:
+        - id: baseUri
+          type: bac42120
+          description: <p>A<code>java.net.URI</code>クライアントの作成に使用されるキュー サービスのエンドポイントを表すオブジェクト。 </p>
+        - id: credentials
+          type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>アカウントの資格情報を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties()
+    id: downloadServiceProperties()
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: downloadServiceProperties()
+    nameWithType: CloudQueueClient.downloadServiceProperties()
+    fullName: final ServiceProperties com.microsoft.azure.storage.queue.CloudQueueClient.downloadServiceProperties()
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 377
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>現在取得<xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>指定されたストレージ サービスに対してです。 これには、ログ記録、HourMetrics、MinuteMetrics、CORS の構成が含まれます。</p>
+      <p></p>
+    syntax:
+      content: public final ServiceProperties downloadServiceProperties()
+      return:
+        type: 93de0ef9com.microsoft.azure.storage._service_properties
+        description: <p><xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>サービスの現在の構成を表すオブジェクト。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties(QueueRequestOptions,OperationContext)'
+    id: 'downloadServiceProperties(QueueRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'downloadServiceProperties(QueueRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudQueueClient.downloadServiceProperties(QueueRequestOptions options, OperationContext opContext)'
+    fullName: 'final ServiceProperties com.microsoft.azure.storage.queue.CloudQueueClient.downloadServiceProperties(QueueRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 398
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>現在取得<xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>指定されたストレージ サービスに対してです。 これには、ログ記録、HourMetrics、MinuteMetrics、CORS の構成が含まれます。</p>
+      <p></p>
+    syntax:
+      content: 'public final ServiceProperties downloadServiceProperties(QueueRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: options
+          type: com.microsoft.azure.storage.queue._queue_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="com.microsoft.azure.storage.queue._cloud_queue_client" data-throw-if-not-resolved="false">CloudQueueClient</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。 </p>
+      return:
+        type: 93de0ef9com.microsoft.azure.storage._service_properties
+        description: <p><xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>サービスの現在の構成を表すオブジェクト。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.getDefaultRequestOptions()
+    id: getDefaultRequestOptions()
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: getDefaultRequestOptions()
+    nameWithType: CloudQueueClient.getDefaultRequestOptions()
+    fullName: QueueRequestOptions com.microsoft.azure.storage.queue.CloudQueueClient.getDefaultRequestOptions()
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.getDefaultRequestOptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 478
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>取得、 <xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>これに関連付けられている要求に使用されます。 </p>
+      <p></p>
+    syntax:
+      content: public QueueRequestOptions getDefaultRequestOptions()
+      return:
+        type: com.microsoft.azure.storage.queue._queue_request_options
+        description: <p><xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>で使用される値を含むオブジェクト<code><xref uid="com.microsoft.azure.storage.queue._cloud_queue_client" data-throw-if-not-resolved="false">CloudQueueClient</xref></code></p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.getQueueReference(final String)
+    id: getQueueReference(final String)
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: getQueueReference(final String queueName)
+    nameWithType: CloudQueueClient.getQueueReference(final String queueName)
+    fullName: CloudQueue com.microsoft.azure.storage.queue.CloudQueueClient.getQueueReference(final String queueName)
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.getQueueReference*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 101
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>取得、 <xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>指定の名前を持つオブジェクト。</p>
+      <p></p>
+    syntax:
+      content: public CloudQueue getQueueReference(final String queueName)
+      parameters:
+        - id: queueName
+          type: 3d93591e
+          description: <p>キューの名前付け規則に従う必要がありますキューの名前。 キュー名は、任意のパス区切り記号 (/) を含めないでください。 キュー名では、小文字、長さは 3 ~ 63 文字にする必要がありはアルファベットまたは数字で始める必要があります。 キュー名には、文字、数字、およびダッシュ (-) 文字のみを含める場合があります。 </p>
+      return:
+        type: com.microsoft.azure.storage.queue._cloud_queue
+        description: <p>参照、 <xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>オブジェクト。 </p>
+    exceptions:
+      - type: '44102508'
+        description: <p>URI の構築されたリソースに基づいている場合、queueName が正しくありません。 </p>
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats()
+    id: getServiceStats()
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: getServiceStats()
+    nameWithType: CloudQueueClient.getServiceStats()
+    fullName: ServiceStats com.microsoft.azure.storage.queue.CloudQueueClient.getServiceStats()
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 335
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>サービスに照会、 <xref uid="com.microsoft.azure.storage._service_stats" data-throw-if-not-resolved="false">ServiceStats</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public ServiceStats getServiceStats()
+      return:
+        type: com.microsoft.azure.storage._service_stats
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage._service_stats\" data-throw-if-not-resolved=\"false\">ServiceStats</xref>指定されたストレージ サービスに対して </p>"
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats(QueueRequestOptions,OperationContext)'
+    id: 'getServiceStats(QueueRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'getServiceStats(QueueRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudQueueClient.getServiceStats(QueueRequestOptions options, OperationContext opContext)'
+    fullName: 'ServiceStats com.microsoft.azure.storage.queue.CloudQueueClient.getServiceStats(QueueRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 355
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>サービスに照会、 <xref uid="com.microsoft.azure.storage._service_stats" data-throw-if-not-resolved="false">ServiceStats</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public ServiceStats getServiceStats(QueueRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: options
+          type: com.microsoft.azure.storage.queue._queue_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="com.microsoft.azure.storage.queue._cloud_queue_client" data-throw-if-not-resolved="false">CloudQueueClient</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。 </p>
+      return:
+        type: com.microsoft.azure.storage._service_stats
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage._service_stats\" data-throw-if-not-resolved=\"false\">ServiceStats</xref>指定されたストレージ サービスに対して </p>"
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.isUsePathStyleUris()
+    id: isUsePathStyleUris()
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: isUsePathStyleUris()
+    nameWithType: CloudQueueClient.isUsePathStyleUris()
+    fullName: boolean com.microsoft.azure.storage.queue.CloudQueueClient.isUsePathStyleUris()
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.isUsePathStyleUris*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 467
+    package: com.microsoft.azure.storage.queue
+    syntax:
+      content: protected boolean isUsePathStyleUris()
+      return:
+        type: 4fc6e284
+        description: <p>usePathStyleUris </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.listQueues()
+    id: listQueues()
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: listQueues()
+    nameWithType: CloudQueueClient.listQueues()
+    fullName: Iterable<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueues()
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.listQueues*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 112
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>このキュー サービス クライアントのキューの反復可能なコレクションを取得します。</p>
+      <p></p>
+    syntax:
+      content: public Iterable<CloudQueue> listQueues()
+      return:
+        type: 2a13b5a5com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+        description: <p>反復可能なコレクション<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>遅れて取得した、このクライアントのキューを表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.listQueues(final String)
+    id: listQueues(final String)
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: listQueues(final String prefix)
+    nameWithType: CloudQueueClient.listQueues(final String prefix)
+    fullName: Iterable<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueues(final String prefix)
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.listQueues*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 128
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>このキュー サービス クライアントで指定したプレフィックスで名前が始まるキューの反復可能なコレクションを返します。</p>
+      <p></p>
+    syntax:
+      content: public Iterable<CloudQueue> listQueues(final String prefix)
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>キュー名のプレフィックスを表すです。</p>
+      return:
+        type: 2a13b5a5com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+        description: <p>反復可能なコレクション<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>遅れて取得した名前が指定したプレフィックスで始まるこのクライアントのキューを表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.listQueues(final String,final QueueListingDetails,QueueRequestOptions,OperationContext)'
+    id: 'listQueues(final String,final QueueListingDetails,QueueRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'listQueues(final String prefix, final QueueListingDetails detailsIncluded, QueueRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudQueueClient.listQueues(final String prefix, final QueueListingDetails detailsIncluded, QueueRequestOptions options, OperationContext opContext)'
+    fullName: 'Iterable<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueues(final String prefix, final QueueListingDetails detailsIncluded, QueueRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.listQueues*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 157
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>名前が指定の詳細設定を使用してこのキュー サービス クライアントの指定したプレフィックスで始まる、オプション、および操作コンテキストを要求のキューの反復可能なコレクションを返します。</p>
+      <p></p>
+    syntax:
+      content: 'public Iterable<CloudQueue> listQueues(final String prefix, final QueueListingDetails detailsIncluded, QueueRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>キュー名のプレフィックスを表すです。 </p>
+        - id: detailsIncluded
+          type: 93de0ef9com.microsoft.azure.storage.queue._queue_listing_details
+          description: <p>A <xref uid="com.microsoft.azure.storage.queue._queue_listing_details" data-throw-if-not-resolved="false">QueueListingDetails</xref>キューのメタデータが返されるかどうかを示す値。 </p>
+        - id: options
+          type: com.microsoft.azure.storage.queue._queue_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: 2a13b5a5com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+        description: <p>反復可能なコレクション<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>遅れて取得した、このクライアントの指定されたキューを表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented()
+    id: listQueuesSegmented()
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: listQueuesSegmented()
+    nameWithType: CloudQueueClient.listQueuesSegmented()
+    fullName: ResultSegment<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueuesSegmented()
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 184
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>このキュー サービス クライアントのキューの反復可能なコレクションの結果セグメントを取得します。</p>
+      <p></p>
+    syntax:
+      content: public ResultSegment<CloudQueue> listQueuesSegmented()
+      return:
+        type: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+        description: <p>A <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>の<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>の反復可能なコレクションのセグメントが含まれるオブジェクト<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>ストレージ要求のキューを表すオブジェクトサービス。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、操作中に記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented(final String)
+    id: listQueuesSegmented(final String)
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: listQueuesSegmented(final String prefix)
+    nameWithType: CloudQueueClient.listQueuesSegmented(final String prefix)
+    fullName: ResultSegment<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueuesSegmented(final String prefix)
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 201
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>このキュー サービス クライアントの名前が指定したプレフィックスで始まるキューの反復可能なコレクションの結果セグメントを取得します。</p>
+      <p></p>
+    syntax:
+      content: public ResultSegment<CloudQueue> listQueuesSegmented(final String prefix)
+      parameters:
+        - id: prefix
+          type: 3d93591e
+      return:
+        type: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+        description: <p>A <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>の<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>の反復可能なコレクションのセグメントが含まれるオブジェクト<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>ストレージ要求のキューを表すオブジェクトサービス。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、操作中に記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented(final String,final QueueListingDetails,final Integer,final ResultContinuation,QueueRequestOptions,OperationContext)'
+    id: 'listQueuesSegmented(final String,final QueueListingDetails,final Integer,final ResultContinuation,QueueRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'listQueuesSegmented(final String prefix, final QueueListingDetails detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, QueueRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudQueueClient.listQueuesSegmented(final String prefix, final QueueListingDetails detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, QueueRequestOptions options, OperationContext opContext)'
+    fullName: 'ResultSegment<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueuesSegmented(final String prefix, final QueueListingDetails detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, QueueRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 240
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>取得、反復可能な名前が指定して、このキューの指定したプレフィックスで始まるキューのコレクションの結果セグメントを一覧表示する詳細オプション、要求のオプション、および操作コンテキスト。</p>
+      <p></p>
+    syntax:
+      content: 'public ResultSegment<CloudQueue> listQueuesSegmented(final String prefix, final QueueListingDetails detailsIncluded, final Integer maxResults, final ResultContinuation continuationToken, QueueRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: prefix
+          type: 3d93591e
+          description: <p>A<code>String</code>一致するように、キュー名のプレフィックスを表すです。 </p>
+        - id: detailsIncluded
+          type: 93de0ef9com.microsoft.azure.storage.queue._queue_listing_details
+          description: <p>A <xref uid="com.microsoft.azure.storage.queue._queue_listing_details" data-throw-if-not-resolved="false">QueueListingDetails</xref>キューのメタデータが返されるかどうかを示す値。 </p>
+        - id: maxResults
+          type: 3437983f
+          description: '<p>取得する結果の最大数。 場合<code>null</code>5000 より大きいか、サーバーは最大 5,000 項目を返します。 1 以上でなければなりません。 </p>'
+        - id: continuationToken
+          type: 93de0ef9com.microsoft.azure.storage._result_continuation
+          description: <p>A <xref uid="com.microsoft.azure.storage._result_continuation" data-throw-if-not-resolved="false">ResultContinuation</xref>を前の一覧作成操作によって返された継続トークンを表すオブジェクト。 </p>
+        - id: options
+          type: com.microsoft.azure.storage.queue._queue_request_options
+          description: <p>A <xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+      return:
+        type: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+        description: <p>A <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>の<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>の反復可能なコレクションのセグメントが含まれるオブジェクト<xref uid="com.microsoft.azure.storage.queue._cloud_queue" data-throw-if-not-resolved="false">CloudQueue</xref>ストレージ要求のキューを表すオブジェクトサービス。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、操作中に記憶域サービスのエラーが発生しました。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.setDefaultRequestOptions(QueueRequestOptions)
+    id: setDefaultRequestOptions(QueueRequestOptions)
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: setDefaultRequestOptions(QueueRequestOptions defaultRequestOptions)
+    nameWithType: CloudQueueClient.setDefaultRequestOptions(QueueRequestOptions defaultRequestOptions)
+    fullName: void com.microsoft.azure.storage.queue.CloudQueueClient.setDefaultRequestOptions(QueueRequestOptions defaultRequestOptions)
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.setDefaultRequestOptions*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 489
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>セット、 <xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>このオブジェクトでアクセスされる任意のキューに使用されます。</p>
+      <p></p>
+    syntax:
+      content: public void setDefaultRequestOptions(QueueRequestOptions defaultRequestOptions)
+      parameters:
+        - id: defaultRequestOptions
+          type: com.microsoft.azure.storage.queue._queue_request_options
+          description: <p><xref uid="com.microsoft.azure.storage.queue._queue_request_options" data-throw-if-not-resolved="false">QueueRequestOptions</xref>を使用します。 </p>
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties(final ServiceProperties)
+    id: uploadServiceProperties(final ServiceProperties)
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: uploadServiceProperties(final ServiceProperties properties)
+    nameWithType: CloudQueueClient.uploadServiceProperties(final ServiceProperties properties)
+    fullName: void com.microsoft.azure.storage.queue.CloudQueueClient.uploadServiceProperties(final ServiceProperties properties)
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 421
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>新しいアップロード<xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>指定されたストレージ サービスを構成します。 これには、ログ記録、HourMetrics、MinuteMetrics、CORS の構成が含まれます。</p>
+      <p></p>
+    syntax:
+      content: public void uploadServiceProperties(final ServiceProperties properties)
+      parameters:
+        - id: properties
+          type: 93de0ef9com.microsoft.azure.storage._service_properties
+          description: <p><xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>をアップロードします。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+  - uid: 'com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties(final ServiceProperties,QueueRequestOptions,OperationContext)'
+    id: 'uploadServiceProperties(final ServiceProperties,QueueRequestOptions,OperationContext)'
+    parent: com.microsoft.azure.storage.queue._cloud_queue_client
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    langs:
+      - java
+    name: 'uploadServiceProperties(final ServiceProperties properties, QueueRequestOptions options, OperationContext opContext)'
+    nameWithType: 'CloudQueueClient.uploadServiceProperties(final ServiceProperties properties, QueueRequestOptions options, OperationContext opContext)'
+    fullName: 'void com.microsoft.azure.storage.queue.CloudQueueClient.uploadServiceProperties(final ServiceProperties properties, QueueRequestOptions options, OperationContext opContext)'
+    overload: com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/queue/CloudQueueClient.java
+      startLine: 443
+    package: com.microsoft.azure.storage.queue
+    summary: |-
+      <p>新しいアップロード<xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>指定されたストレージ サービスを構成します。 これには、ログ記録、HourMetrics、MinuteMetrics、CORS の構成が含まれます。</p>
+      <p></p>
+    syntax:
+      content: 'public void uploadServiceProperties(final ServiceProperties properties, QueueRequestOptions options, OperationContext opContext)'
+      parameters:
+        - id: properties
+          type: 93de0ef9com.microsoft.azure.storage._service_properties
+          description: <p><xref uid="com.microsoft.azure.storage._service_properties" data-throw-if-not-resolved="false">ServiceProperties</xref>をアップロードします。 </p>
+        - id: options
+          type: com.microsoft.azure.storage.queue._queue_request_options
+          description: <p>A <xref uid="" data-throw-if-not-resolved="false">BlobRequestOptions</xref>要求の他のオプションを指定するオブジェクト。 指定する<code>null</code>、関連付けられているサービス クライアントから既定の要求オプションを使用して ( <xref uid="" data-throw-if-not-resolved="false">CloudBlobClient</xref>)。 </p>
+        - id: opContext
+          type: com.microsoft.azure.storage._operation_context
+          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。 </p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は、記憶域サービスのエラーが発生しました。 </p>
+references:
+  - uid: bac42120
+    spec.java:
+      - name: final URI
+        fullName: final URI
+  - uid: 93de0ef9com.microsoft.azure.storage._storage_credentials
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._storage_credentials
+        name: StorageCredentials
+        fullName: com.microsoft.azure.storage.StorageCredentials
+        href: com.microsoft.azure.storage._storage_credentials.yml
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.CloudQueueClient*
+    name: CloudQueueClient
+    nameWithType: CloudQueueClient.CloudQueueClient
+    fullName: com.microsoft.azure.storage.queue.CloudQueueClient.CloudQueueClient
+    package: com.microsoft.azure.storage.queue
+  - uid: 93de0ef9com.microsoft.azure.storage._storage_uri
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._storage_uri
+        name: StorageUri
+        fullName: com.microsoft.azure.storage.StorageUri
+        href: com.microsoft.azure.storage._storage_uri.yml
+  - uid: '44102508'
+    spec.java:
+      - name: URISyntaxException
+        fullName: URISyntaxException
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.getQueueReference*
+    name: getQueueReference
+    nameWithType: CloudQueueClient.getQueueReference
+    fullName: CloudQueue com.microsoft.azure.storage.queue.CloudQueueClient.getQueueReference
+    package: com.microsoft.azure.storage.queue
+  - uid: 2a13b5a5com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+    spec.java:
+      - name: Iterable<
+        fullName: Iterable<
+      - uid: com.microsoft.azure.storage.queue._cloud_queue
+        name: CloudQueue
+        fullName: com.microsoft.azure.storage.queue.CloudQueue
+        href: com.microsoft.azure.storage.queue._cloud_queue.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.listQueues*
+    name: listQueues
+    nameWithType: CloudQueueClient.listQueues
+    fullName: Iterable<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueues
+    package: com.microsoft.azure.storage.queue
+  - uid: 93de0ef9com.microsoft.azure.storage.queue._queue_listing_details
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage.queue._queue_listing_details
+        name: QueueListingDetails
+        fullName: com.microsoft.azure.storage.queue.QueueListingDetails
+        href: com.microsoft.azure.storage.queue._queue_listing_details.yml
+  - uid: com.microsoft.azure.storage._result_segment78504a52com.microsoft.azure.storage.queue._cloud_queuea08ddfce
+    spec.java:
+      - uid: com.microsoft.azure.storage._result_segment
+        name: ResultSegment
+        fullName: com.microsoft.azure.storage.ResultSegment
+        href: com.microsoft.azure.storage._result_segment.yml
+      - name: <
+        fullName: <
+      - uid: com.microsoft.azure.storage.queue._cloud_queue
+        name: CloudQueue
+        fullName: com.microsoft.azure.storage.queue.CloudQueue
+        href: com.microsoft.azure.storage.queue._cloud_queue.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.listQueuesSegmented*
+    name: listQueuesSegmented
+    nameWithType: CloudQueueClient.listQueuesSegmented
+    fullName: ResultSegment<CloudQueue> com.microsoft.azure.storage.queue.CloudQueueClient.listQueuesSegmented
+    package: com.microsoft.azure.storage.queue
+  - uid: 3437983f
+    spec.java:
+      - name: final Integer
+        fullName: final Integer
+  - uid: 93de0ef9com.microsoft.azure.storage._result_continuation
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._result_continuation
+        name: ResultContinuation
+        fullName: com.microsoft.azure.storage.ResultContinuation
+        href: com.microsoft.azure.storage._result_continuation.yml
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.getServiceStats*
+    name: getServiceStats
+    nameWithType: CloudQueueClient.getServiceStats
+    fullName: ServiceStats com.microsoft.azure.storage.queue.CloudQueueClient.getServiceStats
+    package: com.microsoft.azure.storage.queue
+  - uid: 93de0ef9com.microsoft.azure.storage._service_properties
+    spec.java:
+      - name: 'final '
+        fullName: 'final '
+      - uid: com.microsoft.azure.storage._service_properties
+        name: ServiceProperties
+        fullName: com.microsoft.azure.storage.ServiceProperties
+        href: com.microsoft.azure.storage._service_properties.yml
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.downloadServiceProperties*
+    name: downloadServiceProperties
+    nameWithType: CloudQueueClient.downloadServiceProperties
+    fullName: final ServiceProperties com.microsoft.azure.storage.queue.CloudQueueClient.downloadServiceProperties
+    package: com.microsoft.azure.storage.queue
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.uploadServiceProperties*
+    name: uploadServiceProperties
+    nameWithType: CloudQueueClient.uploadServiceProperties
+    fullName: void com.microsoft.azure.storage.queue.CloudQueueClient.uploadServiceProperties
+    package: com.microsoft.azure.storage.queue
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.getDefaultRequestOptions*
+    name: getDefaultRequestOptions
+    nameWithType: CloudQueueClient.getDefaultRequestOptions
+    fullName: QueueRequestOptions com.microsoft.azure.storage.queue.CloudQueueClient.getDefaultRequestOptions
+    package: com.microsoft.azure.storage.queue
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.setDefaultRequestOptions*
+    name: setDefaultRequestOptions
+    nameWithType: CloudQueueClient.setDefaultRequestOptions
+    fullName: void com.microsoft.azure.storage.queue.CloudQueueClient.setDefaultRequestOptions
+    package: com.microsoft.azure.storage.queue
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client.isUsePathStyleUris*
+    name: isUsePathStyleUris
+    nameWithType: CloudQueueClient.isUsePathStyleUris
+    fullName: boolean com.microsoft.azure.storage.queue.CloudQueueClient.isUsePathStyleUris
+    package: com.microsoft.azure.storage.queue
+  - uid: com.microsoft.azure.storage._service_client.credentials
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: credentials
+    nameWithType: ServiceClient.credentials
+    fullName: StorageCredentials com.microsoft.azure.storage.ServiceClient.credentials
+    type: Field
+    summary: <p>保持、 <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>このサービスのクライアントに関連付けられています。 </p>
+    syntax:
+      content: protected StorageCredentials credentials
+      return:
+        type: com.microsoft.azure.storage._storage_credentials
+  - uid: 'com.microsoft.azure.storage._service_client.downloadServicePropertiesImpl(final RequestOptions,final boolean)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+    nameWithType: 'ServiceClient.downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+    fullName: 'StorageRequest<ServiceClient, Void, ServiceProperties> com.microsoft.azure.storage.ServiceClient.downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+    type: Method
+    syntax:
+      content: 'protected StorageRequest<ServiceClient, Void, ServiceProperties> downloadServicePropertiesImpl(final RequestOptions options, final boolean signAsTable)'
+      parameters:
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage._request_options
+        - id: signAsTable
+          type: 4dda0764
+      return:
+        type: com.microsoft.azure.storage.core._storage_request78504a52com.microsoft.azure.storage._service_client74f86c16com.microsoft.azure.storage._service_propertiesa08ddfce
+  - uid: com.microsoft.azure.storage._service_client.getCredentials()
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: getCredentials()
+    nameWithType: ServiceClient.getCredentials()
+    fullName: final StorageCredentials com.microsoft.azure.storage.ServiceClient.getCredentials()
+    type: Method
+    summary: |-
+      <p>このサービスのクライアントに関連付けられているストレージの資格情報を返します。</p>
+      <p></p>
+    syntax:
+      content: public final StorageCredentials getCredentials()
+      return:
+        type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+        description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>をこのクライアントに関連付けられているストレージの資格情報を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._service_client.getEndpoint()
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: getEndpoint()
+    nameWithType: ServiceClient.getEndpoint()
+    fullName: final URI com.microsoft.azure.storage.ServiceClient.getEndpoint()
+    type: Method
+    summary: |-
+      <p>このサービス クライアントのベース URI を返します。</p>
+      <p></p>
+    syntax:
+      content: public final URI getEndpoint()
+      return:
+        type: bac42120
+        description: <p>A<code>java.net.URI</code>サービス クライアントのベース URI を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage._service_client.getServiceStatsImpl(final RequestOptions,final boolean)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+    nameWithType: 'ServiceClient.getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+    fullName: 'StorageRequest<ServiceClient, Void, ServiceStats> com.microsoft.azure.storage.ServiceClient.getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+    type: Method
+    syntax:
+      content: 'protected StorageRequest<ServiceClient, Void, ServiceStats> getServiceStatsImpl(final RequestOptions options, final boolean signAsTable)'
+      parameters:
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage._request_options
+        - id: signAsTable
+          type: 4dda0764
+      return:
+        type: com.microsoft.azure.storage.core._storage_request78504a52com.microsoft.azure.storage._service_client74f86c16com.microsoft.azure.storage._service_statsa08ddfce
+  - uid: com.microsoft.azure.storage._service_client.getStorageUri()
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: getStorageUri()
+    nameWithType: ServiceClient.getStorageUri()
+    fullName: final StorageUri com.microsoft.azure.storage.ServiceClient.getStorageUri()
+    type: Method
+    summary: |-
+      <p>すべての場所の Uri の一覧を返します。</p>
+      <p></p>
+    syntax:
+      content: public final StorageUri getStorageUri()
+      return:
+        type: 93de0ef9com.microsoft.azure.storage._storage_uri
+        description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>をすべての場所の Uri の一覧を表すオブジェクト。 </p>
+  - uid: 'com.microsoft.azure.storage._service_client.ServiceClient(final StorageUri,final StorageCredentials)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+    nameWithType: 'ServiceClient.ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+    fullName: 'com.microsoft.azure.storage.ServiceClient.ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+    type: Constructor
+    summary: |-
+      <p>指定したサービス エンドポイントとアカウントの資格情報を使用してクラスのインスタンスを作成します。</p>
+      <p></p>
+    syntax:
+      content: 'protected ServiceClient(final StorageUri storageUri, final StorageCredentials credentials)'
+      parameters:
+        - id: storageUri
+          type: 93de0ef9com.microsoft.azure.storage._storage_uri
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>をクライアントの作成に使用されるサービス エンドポイントを表すオブジェクト。 </p>
+        - id: credentials
+          type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>をアカウントの資格情報を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage._service_client.setCredentials(final StorageCredentials)
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: setCredentials(final StorageCredentials credentials)
+    nameWithType: ServiceClient.setCredentials(final StorageCredentials credentials)
+    fullName: final void com.microsoft.azure.storage.ServiceClient.setCredentials(final StorageCredentials credentials)
+    type: Method
+    summary: |-
+      <p>このサービス クライアントで使用する資格情報を設定します。</p>
+      <p></p>
+    syntax:
+      content: protected final void setCredentials(final StorageCredentials credentials)
+      parameters:
+        - id: credentials
+          type: 93de0ef9com.microsoft.azure.storage._storage_credentials
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_credentials" data-throw-if-not-resolved="false">StorageCredentials</xref>サービス クライアントの割り当てられている資格情報を表すオブジェクト。 </p>
+      return:
+        type: 3f6357ce
+  - uid: com.microsoft.azure.storage._service_client.setStorageUri(final StorageUri)
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: setStorageUri(final StorageUri storageUri)
+    nameWithType: ServiceClient.setStorageUri(final StorageUri storageUri)
+    fullName: final void com.microsoft.azure.storage.ServiceClient.setStorageUri(final StorageUri storageUri)
+    type: Method
+    summary: |-
+      <p>すべての場所の Uri の一覧を設定します。</p>
+      <p></p>
+    syntax:
+      content: protected final void setStorageUri(final StorageUri storageUri)
+      parameters:
+        - id: storageUri
+          type: 93de0ef9com.microsoft.azure.storage._storage_uri
+          description: <p>A <xref uid="com.microsoft.azure.storage._storage_uri" data-throw-if-not-resolved="false">StorageUri</xref>をすべての場所の Uri の一覧を表すオブジェクト。 </p>
+      return:
+        type: 3f6357ce
+  - uid: 'com.microsoft.azure.storage._service_client.uploadServicePropertiesImpl(final ServiceProperties,final RequestOptions,final OperationContext,final boolean)'
+    parent: com.microsoft.azure.storage._service_client
+    href: com.microsoft.azure.storage._service_client.yml
+    name: 'uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+    nameWithType: 'ServiceClient.uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+    fullName: 'StorageRequest<ServiceClient, Void, Void> com.microsoft.azure.storage.ServiceClient.uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+    type: Method
+    syntax:
+      content: 'protected StorageRequest<ServiceClient, Void, Void> uploadServicePropertiesImpl(final ServiceProperties properties, final RequestOptions options, final OperationContext opContext, final boolean signAsTable)'
+      parameters:
+        - id: properties
+          type: 93de0ef9com.microsoft.azure.storage._service_properties
+        - id: options
+          type: 93de0ef9com.microsoft.azure.storage._request_options
+        - id: opContext
+          type: 93de0ef9com.microsoft.azure.storage._operation_context
+        - id: signAsTable
+          type: 4dda0764
+      return:
+        type: com.microsoft.azure.storage.core._storage_request78504a52com.microsoft.azure.storage._service_client6cfcae0a
+  - uid: com.microsoft.azure.storage._service_client
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._service_client.yml
+    name: ServiceClient
+    nameWithType: ServiceClient
+    fullName: com.microsoft.azure.storage.ServiceClient
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスにアクセスするため、クライアントを提供します。 </p>
+    syntax:
+      content: public class ServiceClient
+  - uid: com.microsoft.azure.storage.queue._queue_request_options
+    parent: com.microsoft.azure.storage.queue
+    href: com.microsoft.azure.storage.queue._queue_request_options.yml
+    name: QueueRequestOptions
+    nameWithType: QueueRequestOptions
+    fullName: com.microsoft.azure.storage.queue.QueueRequestOptions
+    type: Class
+    summary: <p>キューの要求で指定できるオプションのセットを表します。 </p>
+    syntax:
+      content: public class QueueRequestOptions
+  - uid: com.microsoft.azure.storage._storage_credentials
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_credentials.yml
+    name: StorageCredentials
+    nameWithType: StorageCredentials
+    fullName: com.microsoft.azure.storage.StorageCredentials
+    type: Class
+    summary: <p>Microsoft Azure ストレージ アカウントへのアクセスの認証に使用される資格情報のセットを表します。 これは、基本クラスを<xref uid="com.microsoft.azure.storage._storage_credentials_account_and_key" data-throw-if-not-resolved="false">StorageCredentialsAccountAndKey</xref>と<xref uid="com.microsoft.azure.storage._storage_credentials_shared_access_signature" data-throw-if-not-resolved="false">StorageCredentialsSharedAccessSignature</xref>クラスです。 </p>
+    syntax:
+      content: public class StorageCredentials
+  - uid: com.microsoft.azure.storage.queue._cloud_queue_client
+    parent: com.microsoft.azure.storage.queue
+    href: com.microsoft.azure.storage.queue._cloud_queue_client.yml
+    name: CloudQueueClient
+    nameWithType: CloudQueueClient
+    fullName: com.microsoft.azure.storage.queue.CloudQueueClient
+    type: Class
+    summary: <p>Microsoft Azure Queue サービスにアクセスするには、サービス クライアントを提供します。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage._storage_uri
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_uri.yml
+    name: StorageUri
+    nameWithType: StorageUri
+    fullName: com.microsoft.azure.storage.StorageUri
+    type: Class
+    summary: <p>記憶域リソースを表す Uri の一覧を保持します。 </p>
+    syntax:
+      content: public class StorageUri
+  - uid: com.microsoft.azure.storage.queue._cloud_queue
+    parent: com.microsoft.azure.storage.queue
+    href: com.microsoft.azure.storage.queue._cloud_queue.yml
+    name: CloudQueue
+    nameWithType: CloudQueue
+    fullName: com.microsoft.azure.storage.queue.CloudQueue
+    type: Class
+    summary: <p>このクラスは、Microsoft Azure Queue サービスのキューを表します。 </p>
+    syntax:
+      content: public class CloudQueue
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: com.microsoft.azure.storage.queue._queue_listing_details
+    parent: com.microsoft.azure.storage.queue
+    href: com.microsoft.azure.storage.queue._queue_listing_details.yml
+    name: QueueListingDetails
+    nameWithType: QueueListingDetails
+    fullName: com.microsoft.azure.storage.queue.QueueListingDetails
+    type: Enum
+    summary: <p>このストレージ アカウントのキューを一覧表示するときに含める詳細を指定します。 </p>
+    syntax:
+      content: public enum QueueListingDetails
+  - uid: com.microsoft.azure.storage._operation_context
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._operation_context.yml
+    name: OperationContext
+    nameWithType: OperationContext
+    fullName: com.microsoft.azure.storage.OperationContext
+    type: Class
+    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    syntax:
+      content: public class OperationContext
+  - uid: com.microsoft.azure.storage._result_segment
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._result_segment.yml
+    name: ResultSegment<T>
+    nameWithType: ResultSegment<T>
+    fullName: com.microsoft.azure.storage.ResultSegment<T>
+    type: Class
+    summary: |-
+      <p>結果のセグメントを表し、継続と改ページの情報が含まれています。</p>
+      <p></p>
+    syntax:
+      content: public class ResultSegment<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>セグメントに含まれている結果の型。 </p>
+  - uid: com.microsoft.azure.storage._result_continuation
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._result_continuation.yml
+    name: ResultContinuation
+    nameWithType: ResultContinuation
+    fullName: com.microsoft.azure.storage.ResultContinuation
+    type: Class
+    summary: '<p>一覧作成操作の継続トークンを表します。 継続トークンを返すメソッドで使用されます、 <xref uid="com.microsoft.azure.storage._result_segment" data-throw-if-not-resolved="false">ResultSegment</xref>などのオブジェクト<xref uid="com.microsoft.azure.storage.blob._cloud_blob_directory.listBlobsSegmented()" data-throw-if-not-resolved="false">CloudBlobDirectory #listBlobsSegmented</xref>です。 </p>'
+    syntax:
+      content: public class ResultContinuation
+  - uid: com.microsoft.azure.storage._service_stats
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._service_stats.yml
+    name: ServiceStats
+    nameWithType: ServiceStats
+    fullName: com.microsoft.azure.storage.ServiceStats
+    type: Class
+    summary: <p>クラウド ストレージ サービスに関連する統計情報のセットを表すクラスです。 </p>
+    syntax:
+      content: public class ServiceStats
+  - uid: com.microsoft.azure.storage._service_properties
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._service_properties.yml
+    name: ServiceProperties
+    nameWithType: ServiceProperties
+    fullName: com.microsoft.azure.storage.ServiceProperties
+    type: Class
+    summary: <p>サービスの分析のプロパティを表します。 </p>
+    syntax:
+      content: public class ServiceProperties
+  - uid: com.microsoft.azure.storage.core._storage_request
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._storage_request.yml
+    name: 'StorageRequest<C,P,R>'
+    nameWithType: 'StorageRequest<C,P,R>'
+    fullName: 'com.microsoft.azure.storage.core.StorageRequest<C,P,R>'
+    type: Class
+    summary: |-
+      <p>内部使用のために予約されています。 特定のストレージ操作の実行をカプセル化するクラスです。</p>
+      <p></p>
+    syntax:
+      content: 'public class StorageRequest<C,P,R>'
+      typeParameters:
+        - type: 37f8610d
+          description: <p>サービス クライアントの種類 </p>
+        - type: db9ec244
+          description: <p>DownloadAttributes などの CloudBlobContainer などは、親オブジェクトの型。 </p>
+        - type: d4d3e1e1
+          description: <p>予期される結果の種類 </p>
+  - uid: com.microsoft.azure.storage.core._segmented_storage_request
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._segmented_storage_request.yml
+    name: SegmentedStorageRequest
+    nameWithType: SegmentedStorageRequest
+    fullName: com.microsoft.azure.storage.core.SegmentedStorageRequest
+    type: Class
+    syntax:
+      content: public class SegmentedStorageRequest

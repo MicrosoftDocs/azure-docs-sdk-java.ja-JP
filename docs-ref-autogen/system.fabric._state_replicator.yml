@@ -1,0 +1,295 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._state_replicator
+    id: _state_replicator
+    parent: system.fabric
+    children:
+      - system.fabric._state_replicator.getCopyStream()
+      - system.fabric._state_replicator.getReplicationStream()
+      - 'system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)'
+      - system.fabric._state_replicator.updateReplicatorSettings(ReplicatorSettings)
+    href: system.fabric._state_replicator.yml
+    langs:
+      - java
+    name: StateReplicator
+    nameWithType: StateReplicator
+    fullName: system.fabric.StateReplicator
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/StateReplicator.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/StateReplicator.java
+      startLine: 7
+    package: system.fabric
+    summary: <p>公開のレプリケーション関連の機能、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>クラスによって使用されている<xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">StateProvider</xref>を高可用性を保証する状態をレプリケートします。 </p>
+    syntax:
+      content: public interface StateReplicator
+  - uid: system.fabric._state_replicator.getCopyStream()
+    id: getCopyStream()
+    parent: system.fabric._state_replicator
+    href: system.fabric._state_replicator.yml
+    langs:
+      - java
+    name: getCopyStream()
+    nameWithType: StateReplicator.getCopyStream()
+    fullName: OperationStream system.fabric.StateReplicator.getCopyStream()
+    overload: system.fabric._state_replicator.getCopyStream*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StateReplicator.java
+      startLine: 27
+    package: system.fabric
+    summary: <p>ストリームのコピーを取得します </p>
+    syntax:
+      content: public OperationStream getCopyStream()
+      return:
+        type: system.fabric._operation_stream
+        description: '<p>返される CopyStream を含む<xref uid="system.fabric._operation_data" data-throw-if-not-resolved="false">OperationData</xref>を実装するオブジェクト<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">操作</xref>です。 <xref uid="system.fabric._operation_data" data-throw-if-not-resolved="false">OperationData</xref>オブジェクトが、CopyState から取得した<xref uid="system.fabric._operation_data_stream" data-throw-if-not-resolved="false">OperationDataStream</xref>から、プライマリ レプリカを返す<xref uid="system.fabric._state_provider.getCopyState(SequenceNumber,OperationDataStream)" data-throw-if-not-resolved="false">StateProvider #getCopyState(SequenceNumber,OperationDataStream)</xref>です。 レプリカが作成され、遅延を解消するのには、する必要があります、CopyStream を取得し、送信、適用、および承認を実装するオブジェクトのコピーを開始<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">操作</xref>です。 並行して、レプリカは、対応する応答<xref uid="system.fabric._state_provider.getCopyContext()" data-throw-if-not-resolved="false">StateProvider#getCopyContext()</xref>と<xref uid="" data-throw-if-not-resolved="false">OperationDataStream#getNextAsync(CancellationToken)</xref>呼び出しです。 ストリームが空ときに、返された<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">操作</xref>メソッドは null です。 </p>'
+  - uid: system.fabric._state_replicator.getReplicationStream()
+    id: getReplicationStream()
+    parent: system.fabric._state_replicator
+    href: system.fabric._state_replicator.yml
+    langs:
+      - java
+    name: getReplicationStream()
+    nameWithType: StateReplicator.getReplicationStream()
+    fullName: OperationStream system.fabric.StateReplicator.getReplicationStream()
+    overload: system.fabric._state_replicator.getReplicationStream*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StateReplicator.java
+      startLine: 34
+    package: system.fabric
+    summary: <p>レプリケーション ストリームを取得します。 </p>
+    syntax:
+      content: public OperationStream getReplicationStream()
+      return:
+        type: system.fabric._operation_stream
+        description: '<p>ReplicationStream 実装<xref uid="system.fabric._operation_stream" data-throw-if-not-resolved="false">OperationStream</xref>です。 含まれています、ReplicationStream <xref uid="system.fabric._operation_data" data-throw-if-not-resolved="false">OperationData</xref>を実装するオブジェクト<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">操作</xref>です。 オブジェクトが経由でプライマリ レプリカによって提供される<xref uid="system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)" data-throw-if-not-resolved="false">StateReplicator #replicateAsync(OperationData, SequenceNumber, CancellationToken)</xref>です。 一般に、セカンダリ レプリカを送信する必要があります<xref uid="" data-throw-if-not-resolved="false">OperationStream#getOperationAsync(CancellationToken)</xref>です。 Service Fabric では、これを行うサービスは必要ありません、一般にサービスがすべて転送<xref uid="system.fabric._operation_data" data-throw-if-not-resolved="false">OperationData</xref>コピーからオブジェクトが最初に、ストリームし、レプリケーション ストリームからの操作を転送します。 同時に両方のコピーからの転送がサポートされていますが、増加状態を適用する際の複雑さは正しく更新し、高度なサービスにのみ推奨されます。 ストリームが空ときに、返された<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">操作</xref>メソッドは null です。 </p>'
+  - uid: 'system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)'
+    id: 'replicateAsync(OperationData,SequenceNumber,CancellationToken)'
+    parent: system.fabric._state_replicator
+    href: system.fabric._state_replicator.yml
+    langs:
+      - java
+    name: 'replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+    nameWithType: 'StateReplicator.replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<SequenceNumber> system.fabric.StateReplicator.replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+    overload: system.fabric._state_replicator.replicateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StateReplicator.java
+      startLine: 16
+    package: system.fabric
+    summary: <p>セカンダリ レプリカにプライマリ レプリカから状態の変更をレプリケートし、それらの状態の変更が適用されているクォーラムの受信確認を受信します。 </p>
+    syntax: &ref_1
+      content: 'public CompletableFuture<SequenceNumber> replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+      parameters:
+        - id: operationData
+          type: system.fabric._operation_data
+          description: <p>プライマリ レプリカは、レプリケートする必要がある状態の変化を表します。 </p>
+        - id: sequenceNumber
+          type: system.fabric._sequence_number
+          description: <p>Long、操作の LSN です。 これは、タスクによって返される同じ値であることに注意してください。 Out パラメーターとして指定することは、ローカル記録するには、タスクが終了する場合はコミットの準備をするサービスに便利です。 </p>
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: <p>失われているレプリカの書き込みクォーラムです。 操作を取り消す必要がある通知を送信するために使用します。 キャンセルが推奨でが取り消された場合でもは、操作を完了も可能性がありますに注意してください。 </p>
+      return:
+        type: 9cdf14d0system.fabric._sequence_numbera08ddfce
+        description: <p>Completable の将来の long 型で、操作の LSN を返します。 </p>
+  - uid: system.fabric._state_replicator.updateReplicatorSettings(ReplicatorSettings)
+    id: updateReplicatorSettings(ReplicatorSettings)
+    parent: system.fabric._state_replicator
+    href: system.fabric._state_replicator.yml
+    langs:
+      - java
+    name: updateReplicatorSettings(ReplicatorSettings settings)
+    nameWithType: StateReplicator.updateReplicatorSettings(ReplicatorSettings settings)
+    fullName: void system.fabric.StateReplicator.updateReplicatorSettings(ReplicatorSettings settings)
+    overload: system.fabric._state_replicator.updateReplicatorSettings*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/StateReplicator.java
+      startLine: 40
+    package: system.fabric
+    summary: <p>実行時に複製物作成会社設定の変更を有効にします。 変更できる唯一の設定は、セキュリティ資格情報です。 </p>
+    syntax:
+      content: public void updateReplicatorSettings(ReplicatorSettings settings)
+      parameters:
+        - id: settings
+          type: system.fabric._replicator_settings
+          description: <p>新しい<xref uid="system.fabric._replicator_settings" data-throw-if-not-resolved="false">ReplicatorSettings</xref>で資格情報に更新します。 </p>
+references:
+  - uid: 9cdf14d0system.fabric._sequence_numbera08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._sequence_number
+        name: SequenceNumber
+        fullName: system.fabric.SequenceNumber
+        href: system.fabric._sequence_number.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._state_replicator.replicateAsync*
+    name: replicateAsync
+    nameWithType: StateReplicator.replicateAsync
+    fullName: CompletableFuture<SequenceNumber> system.fabric.StateReplicator.replicateAsync
+    package: system.fabric
+  - uid: system.fabric._state_replicator.getCopyStream*
+    name: getCopyStream
+    nameWithType: StateReplicator.getCopyStream
+    fullName: OperationStream system.fabric.StateReplicator.getCopyStream
+    package: system.fabric
+  - uid: system.fabric._state_replicator.getReplicationStream*
+    name: getReplicationStream
+    nameWithType: StateReplicator.getReplicationStream
+    fullName: OperationStream system.fabric.StateReplicator.getReplicationStream
+    package: system.fabric
+  - uid: system.fabric._state_replicator.updateReplicatorSettings*
+    name: updateReplicatorSettings
+    nameWithType: StateReplicator.updateReplicatorSettings
+    fullName: void system.fabric.StateReplicator.updateReplicatorSettings
+    package: system.fabric
+  - uid: system.fabric._state_replicator2
+    parent: system.fabric
+    href: system.fabric._state_replicator2.yml
+    name: StateReplicator2
+    nameWithType: StateReplicator2
+    fullName: system.fabric.StateReplicator2
+    type: Interface
+    summary: <p>レプリケーションに関連する関数を公開、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>クラスによって使用されている<xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">system.fabric.StateProvider</xref>を高可用性を保証する状態をレプリケートします。 </p>
+    syntax:
+      content: public interface StateReplicator2
+  - uid: system.fabric._sequence_number
+    parent: system.fabric
+    href: system.fabric._sequence_number.yml
+    name: SequenceNumber
+    nameWithType: SequenceNumber
+    fullName: system.fabric.SequenceNumber
+    type: Class
+    syntax:
+      content: public class SequenceNumber
+  - uid: system.fabric._operation_data
+    parent: system.fabric
+    href: system.fabric._operation_data.yml
+    name: OperationData
+    nameWithType: OperationData
+    fullName: system.fabric.OperationData
+    type: Class
+    syntax:
+      content: public class OperationData
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: system.fabric._operation_stream
+    parent: system.fabric
+    href: system.fabric._operation_stream.yml
+    name: OperationStream
+    nameWithType: OperationStream
+    fullName: system.fabric.OperationStream
+    type: Interface
+    syntax:
+      content: public interface OperationStream
+  - uid: system.fabric._operation
+    parent: system.fabric
+    href: system.fabric._operation.yml
+    name: Operation
+    nameWithType: Operation
+    fullName: system.fabric.Operation
+    type: Interface
+    summary: "<p>\r\n\r\n  <b>注釈:</b>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>セカンダリ レプリカに配信される状態の変化を説明する基本インターフェイスです。 含まれている、 <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync (OperationData、SequenceNumber、system.fabric.CancellationToken)</xref>とシーケンス番号およびその他の情報を識別します。 </p>"
+    syntax:
+      content: public interface Operation
+  - uid: system.fabric._operation_data_stream
+    parent: system.fabric
+    href: system.fabric._operation_data_stream.yml
+    name: OperationDataStream
+    nameWithType: OperationDataStream
+    fullName: system.fabric.OperationDataStream
+    type: Interface
+    syntax:
+      content: public interface OperationDataStream
+  - uid: 'system.fabric._state_provider.getCopyState(SequenceNumber,OperationDataStream)'
+    parent: system.fabric._state_provider
+    href: system.fabric._state_provider.yml
+    name: 'getCopyState(SequenceNumber upToSequenceNumber, OperationDataStream copyContext)'
+    nameWithType: 'StateProvider.getCopyState(SequenceNumber upToSequenceNumber, OperationDataStream copyContext)'
+    fullName: 'OperationDataStream system.fabric.StateProvider.getCopyState(SequenceNumber upToSequenceNumber, OperationDataStream copyContext)'
+    type: Method
+    summary: "<p>プライマリ レプリカのセカンダリ レプリカを作成する必要がある状態を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>単に<xref uid=\"system.fabric._state_provider.getCopyContext()\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#getCopyContext()</xref>経由でプライマリ レプリカにコンテキストを送信するセカンダリ レプリカを有効にする<xref uid=\"system.fabric._operation_data_stream\" data-throw-if-not-resolved=\"false\">system.fabric.OperationDataStream</xref>、 <xref uid=\"system.fabric._state_provider.getCopyState(SequenceNumber,OperationDataStream)\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#getCopyState (SequenceNumber、OperationDataStream)</xref>により、プライマリ レプリカで応答する、 <xref uid=\"system.fabric._operation_data_stream\" data-throw-if-not-resolved=\"false\">system.fabric.OperationDataStream</xref>です。 ストリームには使用して、セカンダリ レプリカに配信されるオブジェクトが含まれています、 <xref uid=\"system.fabric._state_replicator.getCopyStream()\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#getCopyStream()</xref>のメソッド、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスです。 オブジェクトを実装<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>指定されたデータが含まれています。 プライマリ レプリカは、この呼び出しを受け取る、それを作成し、返す別<xref uid=\"system.fabric._operation_data_stream\" data-throw-if-not-resolved=\"false\">system.fabric.OperationDataStream</xref>を格納している<xref uid=\"system.fabric._operation_data\" data-throw-if-not-resolved=\"false\">system.fabric.OperationData</xref>です。 <xref uid=\"system.fabric._operation_data\" data-throw-if-not-resolved=\"false\">system.fabric.OperationData</xref>を表すデータと状態をセカンダリ レプリカ </p>"
+    syntax:
+      content: 'public OperationDataStream getCopyState(SequenceNumber upToSequenceNumber, OperationDataStream copyContext)'
+      parameters:
+        - id: upToSequenceNumber
+          type: system.fabric._sequence_number
+          description: '<p>最大最終シーケンス番号 (LSN) を使用してコピー ストリームに配置する必要があります、 <xref uid="system.fabric._state_replicator.getCopyStream()" data-throw-if-not-resolved="false">system.fabric.StateReplicator#getCopyStream()</xref>メソッドです。 この数より大きい Lsn が経由でレプリケーション ストリームの一部として、セカンダリ レプリカに配信される、 <xref uid="system.fabric._state_replicator.getReplicationStream()" data-throw-if-not-resolved="false">system.fabric.StateReplicator#getReplicationStream()</xref>メソッドです。 </p>'
+        - id: copyContext
+          type: system.fabric._operation_data_stream
+          description: <p><xref uid="system.fabric._operation_data_stream" data-throw-if-not-resolved="false">System.fabric.OperationDataStream</xref>を格納している、 <xref uid="system.fabric._operation_data" data-throw-if-not-resolved="false">system.fabric.OperationData</xref>セカンダリ レプリカによって作成されるオブジェクト。 指定された遅延を解消する必要があります。 </p>
+      return:
+        type: system.fabric._operation_data_stream
+        description: <p>返します<xref uid="system.fabric._operation_data_stream" data-throw-if-not-resolved="false">system.fabric.OperationDataStream</xref>です。 </p>
+  - uid: system.fabric._state_provider.getCopyContext()
+    parent: system.fabric._state_provider
+    href: system.fabric._state_provider.yml
+    name: getCopyContext()
+    nameWithType: StateProvider.getCopyContext()
+    fullName: OperationDataStream system.fabric.StateProvider.getCopyContext()
+    type: Method
+    summary: "<p>作成され、プライマリ レプリカにコンテキストを送信する開かれた後は、セカンダリ レプリカ上のコンテキストを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>、プライマリ レプリカが、コンテキストを分析しを使用して状態を返送<xref uid=\"system.fabric._state_provider.getCopyState(SequenceNumber,OperationDataStream)\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#getCopyState (SequenceNumber、OperationDataStream)</xref>です。 <xref uid=\"system.fabric._state_provider.getCopyContext()\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#getCopyContext()</xref>が新しく作成された、アイドル状態のセカンダリ レプリカで呼び出され、プライマリ レプリカとの双方向メッセージ交換を非同期的に確立するためのメカニズムを提供します。 セカンダリ レプリカは、送信<xref uid=\"system.fabric._operation_data\" data-throw-if-not-resolved=\"false\">system.fabric.OperationData</xref>オブジェクトをプライマリ レプリカがセカンダリ レプリカでコンテキストを収集する場合の進行状況を判断できます。 プライマリ レプリカは、必要な状態に戻すを送信して応答します。 参照してください<xref uid=\"system.fabric._state_provider.getCopyState(SequenceNumber,OperationDataStream)\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#getCopyState (SequenceNumber、OperationDataStream)</xref>交換の一方のプライマリ レプリカにします。 メモリ内のサービスでは、 <xref uid=\"system.fabric._state_provider.getCopyContext()\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider#getCopyContext()</xref>メソッドは呼び出されません、セカンダリ レプリカの状態は認識されている (空され、状態のすべてが必要)。 </p>"
+    syntax:
+      content: public OperationDataStream getCopyContext()
+      return:
+        type: system.fabric._operation_data_stream
+        description: <p>返します<xref uid="system.fabric._operation_data_stream" data-throw-if-not-resolved="false">system.fabric.OperationDataStream</xref>です。 </p>
+  - uid: 'system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)'
+    parent: system.fabric._state_replicator
+    href: system.fabric._state_replicator.yml
+    name: 'replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+    nameWithType: 'StateReplicator.replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+    fullName: 'CompletableFuture<SequenceNumber> system.fabric.StateReplicator.replicateAsync(OperationData operationData, SequenceNumber sequenceNumber, CancellationToken cancellationToken)'
+    type: Method
+    summary: <p>セカンダリ レプリカにプライマリ レプリカから状態の変更をレプリケートし、それらの状態の変更が適用されているクォーラムの受信確認を受信します。 </p>
+    syntax: *ref_1
+  - uid: system.fabric._replicator_settings
+    parent: system.fabric
+    href: system.fabric._replicator_settings.yml
+    name: ReplicatorSettings
+    nameWithType: ReplicatorSettings
+    fullName: system.fabric.ReplicatorSettings
+    type: Class
+    syntax:
+      content: public class ReplicatorSettings
+  - uid: system.fabric._fabric_replicator
+    parent: system.fabric
+    href: system.fabric._fabric_replicator.yml
+    name: FabricReplicator
+    nameWithType: FabricReplicator
+    fullName: system.fabric.FabricReplicator
+    type: Class
+    summary: "<p>高可用性と信頼性のレプリケート状態です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。 インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。 </p>"
+    syntax:
+      content: public class FabricReplicator implements Replicator
+  - uid: system.fabric._state_provider
+    parent: system.fabric
+    href: system.fabric._state_provider.yml
+    name: StateProvider
+    nameWithType: StateProvider
+    fullName: system.fabric.StateProvider
+    type: Interface
+    summary: <p>サービスが対話するために実装する必要がありますの動作を定義、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。 </p>
+    syntax:
+      content: public interface StateProvider

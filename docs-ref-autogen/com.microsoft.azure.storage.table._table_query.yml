@@ -1,0 +1,1303 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table._table_query
+    id: _table_query
+    parent: com.microsoft.azure.storage.table
+    children:
+      - 'com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)'
+      - com.microsoft.azure.storage.table._table_query.from(final Class<T>)
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final byte [])'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final Byte [])'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final Date)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final double)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final int)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final long)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final String)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final UUID)'
+      - 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,String,EdmType)'
+      - com.microsoft.azure.storage.table._table_query.generateQueryBuilder()
+      - com.microsoft.azure.storage.table._table_query.getClazzType()
+      - com.microsoft.azure.storage.table._table_query.getColumns()
+      - com.microsoft.azure.storage.table._table_query.getFilterString()
+      - com.microsoft.azure.storage.table._table_query.getSourceTableName()
+      - com.microsoft.azure.storage.table._table_query.getTakeCount()
+      - 'com.microsoft.azure.storage.table._table_query.select(final String [])'
+      - com.microsoft.azure.storage.table._table_query.setClazzType(final Class<T>)
+      - 'com.microsoft.azure.storage.table._table_query.setColumns(final String [])'
+      - com.microsoft.azure.storage.table._table_query.setFilterString(final String)
+      - com.microsoft.azure.storage.table._table_query.setSourceTableName(final String)
+      - com.microsoft.azure.storage.table._table_query.setTakeCount(final Integer)
+      - com.microsoft.azure.storage.table._table_query.TableQuery()
+      - com.microsoft.azure.storage.table._table_query.TableQuery(final Class<T>)
+      - com.microsoft.azure.storage.table._table_query.take(final Integer)
+      - com.microsoft.azure.storage.table._table_query.where(final String)
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: TableQuery<T>
+    nameWithType: TableQuery<T>
+    fullName: com.microsoft.azure.storage.table.TableQuery<T>
+    type: Class
+    source:
+      remote: &ref_0
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 74
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>指定されたテーブルに対するクエリを表すクラス。 A <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスは、クエリが実行されるときに使用するクエリ パラメーターを集計します。 いずれか、またはメソッドの<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クエリの実行に呼び出す必要があります。 パラメーターはエンコードされ、テーブルのクエリを実行すると、サーバーに渡されます。 </p>
+      <p>Fluent の構文を使用してテーブルのクエリを作成する、<xref uid="com.microsoft.azure.storage.table._table_query.from(final Class&lt;T&gt;)" data-throw-if-not-resolved="false">から</xref>静的ファクトリ メソッドと<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>、<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>、および<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>ミューテーター メソッド各は、1 つの式にチェーンできるオブジェクトへの参照を返します。 使用して、 <xref uid="" data-throw-if-not-resolved="false">from(Class)</xref>の指定されたエンティティを名前付きのテーブルで実行されるインスタンスを作成するファクトリ メソッドを静的クラス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>型を実装します。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>エンティティのフィルター式を指定するメソッドが返されます。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>を返すテーブル エンティティのプロパティを指定します。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>に、クエリによって返されるエンティティの数を制限する方法です。 注実行の順序で発生した最後で何も禁止されているに保存するのでの値を複数回これらのメソッドを呼び出すことです。 </p>
+      <p>例として、fluent 構文を使用してテーブル クエリを構築する可能性があります。 </p>
+      <p></p>
+      <p>この例は、すべてのエンティティが PartitionKey 値"ProductsMNO"であり RowKey 値より大きいか等しい「ナプキン」には、共通プロパティのみを選択すると、エンティティに一致する最初の 25 が要求の"Products"テーブルにクエリを作成し、プロパティが"InventoryCount"という名前し、そのまま返します<xref uid="com.microsoft.azure.storage.table._dynamic_table_entity" data-throw-if-not-resolved="false">DynamicTableEntity</xref>オブジェクト。 </p>
+      <p>フィルター式で使用するため、<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>メソッドまたは<xref uid="com.microsoft.azure.storage.table._table_query.setFilterString(final String)" data-throw-if-not-resolved="false">setFilterString</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid="com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)" data-throw-if-not-resolved="false">generateFilterCondition</xref>メソッドと<xref uid="com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)" data-throw-if-not-resolved="false">combineFilters</xref>で定義されている比較演算子を使用して、メソッド<xref uid="" data-throw-if-not-resolved="false">QueryComparisons</xref>と論理演算子で定義されている<xref uid="" data-throw-if-not-resolved="false">演算子</xref>. プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 </p>
+      <p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx">クエリを実行するテーブルおよびエンティティ</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>
+      <p><xref uid="" data-throw-if-not-resolved="false">TableQuery#TableQuery(Class)</xref>コンス トラクターと<xref uid="" data-throw-if-not-resolved="false">TableQuery#from(Class)</xref>静的ファクトリ メソッドを実装するクラス型を必要と<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>と引数がないコンス トラクターが含まれています。 使用して、クエリが実行する場合、 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>、呼び出し元指定<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>クラス型として。</p>
+      <p></p>
+    syntax: &ref_1
+      content: public class TableQuery<T extends TableEntity>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: '<p>クラスの型を実装する<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>引数がないコンス トラクターが含まれています。 注: をクラス型を定義する内部クラスを使用する場合は、静的クラスをマークします。 </p>'
+    inheritance:
+      - java.lang.Object
+  - uid: 'com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)'
+    id: 'combineFilters(String,String,String)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'combineFilters(String filterA, String operator, String filterB)'
+    nameWithType: 'TableQuery<T>.combineFilters(String filterA, String operator, String filterB)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.combineFilters(String filterA, String operator, String filterB)'
+    overload: com.microsoft.azure.storage.table._table_query.combineFilters*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 438
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>2 つのフィルター条件に指定された論理演算子を使用してフィルター条件を作成します。</p>
+      <p></p>
+    syntax: &ref_9
+      content: 'public static String combineFilters(String filterA, String operator, String filterB)'
+      parameters:
+        - id: filterA
+          type: '26831127'
+          description: <p>A<code>String</code>最初の書式付きフィルター条件を指定します。 </p>
+        - id: operator
+          type: '26831127'
+          description: <p>A<code>String</code>を指定する<code>Operators.AND</code>または<code>Operators.OR</code>です。 </p>
+        - id: filterB
+          type: '26831127'
+          description: <p>A<code>String</code>最初の書式付きフィルター条件を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>結合されたフィルター式を表します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.from(final Class<T>)
+    id: from(final Class<T>)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: from(final Class<T> clazzType)
+    nameWithType: TableQuery<T>.from(final Class<T> clazzType)
+    fullName: static <T extends TableEntity> TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.from(final Class<T> clazzType)
+    overload: com.microsoft.azure.storage.table._table_query.from*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 147
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>構築する静的ファクトリ メソッドを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスし、テーブル エンティティの型を定義します。 このメソッドを返します、 <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>クエリの変更をチェーンする追加のメソッドを許可する、インスタンスの参照。 </p>
+      <p>作成された<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスが指定されているクラス型 t です呼び出し元のテーブル エンティティを指定の特殊化<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>パラメーターのない型をより特化した場合は、クラス型として。必須。</p>
+      <p></p>
+    syntax: &ref_10
+      content: public static static<T extends TableEntity> TableQuery<T> from(final Class<T> clazzType)
+      parameters:
+        - id: clazzType
+          type: 2854615f
+          description: <p><code>java.lang.Class</code>クラスの<code>T</code>を実装する、 <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>クエリのテーブル エンティティの種類を表すインターフェイスです。</p>
+      return:
+        type: 1e2c6103com.microsoft.azure.storage.table._table_entity410a1f1ccom.microsoft.azure.storage.table._table_query669339f7
+        description: <p><xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>エンティティの種類の特殊化のセットを持つインスタンス。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)'
+    id: 'generateFilterCondition(String,String,final boolean)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final boolean value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final boolean value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final boolean value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 171
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、ブール値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax: &ref_8
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final boolean value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: 4dda0764
+          description: <p>A<code>boolean</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final byte [])'
+    id: 'generateFilterCondition(String,String,final byte [])'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final byte[] value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final byte[] value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final byte[] value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 196
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、バイナリ値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final byte[] value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: f549433f
+          description: <p>A<code>byte</code>プロパティと比較する値を指定する配列。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final Byte [])'
+    id: 'generateFilterCondition(String,String,final Byte [])'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final Byte[] value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final Byte[] value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final Byte[] value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 228
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、バイナリ値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final Byte[] value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: '51340937'
+          description: <p>A<code>Byte</code>プロパティと比較する値を指定する配列。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final Date)'
+    id: 'generateFilterCondition(String,String,final Date)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final Date value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final Date value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final Date value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 260
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、datetime 値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値のように設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final Date value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: 970a8f17
+          description: <p>A<code>java.util.Date</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final double)'
+    id: 'generateFilterCondition(String,String,final double)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final double value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final double value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final double value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 285
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、double 型の値として書式設定の値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final double value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: bc185a0c
+          description: <p>A<code>double</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final int)'
+    id: 'generateFilterCondition(String,String,final int)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final int value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final int value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final int value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 309
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、数値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final int value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: cd225469
+          description: <p><code>int</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final long)'
+    id: 'generateFilterCondition(String,String,final long)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final long value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final long value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final long value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 333
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、数値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final long value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: 4c60ae65
+          description: <p>A<code>long</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final String)'
+    id: 'generateFilterCondition(String,String,final String)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final String value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final String value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final String value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 357
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、文字列値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final String value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: 3d93591e
+          description: <p>A<code>String</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final UUID)'
+    id: 'generateFilterCondition(String,String,final UUID)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, final UUID value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final UUID value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final UUID value)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 422
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、UUID 値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, final UUID value)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: 5668214f
+          description: <p>A<code>UUID</code>プロパティと比較する値を指定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,String,EdmType)'
+    id: 'generateFilterCondition(String,String,String,EdmType)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'generateFilterCondition(String propertyName, String operation, String value, EdmType edmType)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, String value, EdmType edmType)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, String value, EdmType edmType)'
+    overload: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 376
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>プロパティ フィルター条件文字列を生成します。 指定された操作を使用して、指定された書式設定された、値を持つプロパティを比較するフィルター式で使用する書式設定された文字列を作成<xref uid="com.microsoft.azure.storage.table._edm_type" data-throw-if-not-resolved="false">EdmType</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public static String generateFilterCondition(String propertyName, String operation, String value, EdmType edmType)'
+      parameters:
+        - id: propertyName
+          type: '26831127'
+          description: <p>A<code>String</code>を比較するプロパティの名前を指定します。 </p>
+        - id: operation
+          type: '26831127'
+          description: <p>A<code>String</code>を使用する比較演算子を指定します。 </p>
+        - id: value
+          type: '26831127'
+          description: <p>A<code>String</code>プロパティと比較する値を指定します。 </p>
+        - id: edmType
+          type: com.microsoft.azure.storage.table._edm_type
+          description: <p><xref uid="com.microsoft.azure.storage.table._edm_type" data-throw-if-not-resolved="false">EdmType</xref>として値の書式設定します。 </p>
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>書式付きフィルター条件を表します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.generateQueryBuilder()
+    id: generateQueryBuilder()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: generateQueryBuilder()
+    nameWithType: TableQuery<T>.generateQueryBuilder()
+    fullName: UriQueryBuilder com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateQueryBuilder()
+    overload: com.microsoft.azure.storage.table._table_query.generateQueryBuilder*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 706
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>内部使用のために予約されています。 作成、 <xref uid="" data-throw-if-not-resolved="false">UriQueryBuilder</xref>テーブル クエリを表すオブジェクト。</p>
+      <p></p>
+    syntax:
+      content: protected UriQueryBuilder generateQueryBuilder()
+      return:
+        type: com.microsoft.azure.storage.core._uri_query_builder
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">UriQueryBuilder</xref>テーブル クエリを表すオブジェクト。</p>
+    exceptions:
+      - type: com.microsoft.azure.storage._storage_exception
+        description: <p>場合は追加、またはクエリ パラメーターのエンコーディングにエラーが発生します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.getClazzType()
+    id: getClazzType()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: getClazzType()
+    nameWithType: TableQuery<T>.getClazzType()
+    fullName: Class<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getClazzType()
+    overload: com.microsoft.azure.storage.table._table_query.getClazzType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 477
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>クエリによって返されるテーブル エンティティのクラス型を取得します。</p>
+      <p></p>
+    syntax:
+      content: public Class<T> getClazzType()
+      return:
+        type: ffb09d2d
+        description: <p><code>java.lang.Class</code>クラスの<code>T</code>クエリのテーブル エンティティの種類を表すです。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.getColumns()
+    id: getColumns()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: getColumns()
+    nameWithType: TableQuery<T>.getColumns()
+    fullName: 'String [] com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getColumns()'
+    overload: com.microsoft.azure.storage.table._table_query.getColumns*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 494
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>テーブル クエリで指定されたテーブル エンティティのプロパティ名の配列を取得します。 Select 句で、テーブルのクエリでプロパティ名が指定されていない場合、既定では、テーブルのすべてのプロパティが返されます。 呼び出しで返されるテーブル エンティティのプロパティを指定することがあります、 <xref uid="com.microsoft.azure.storage.table._table_query.setColumns(final String [])" data-throw-if-not-resolved="false">setColumns</xref>または<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>パラメーターとしてプロパティ名の配列を持つメソッドです。 </p>
+      <p>およびのシステム プロパティとが自動的に要求、テーブル サービスからで指定されたかどうかを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>か。</p>
+      <p></p>
+    syntax:
+      content: 'public String [] getColumns()'
+      return:
+        type: 1bb63ab0
+        description: <p>配列<code>String</code>クエリで返されるテーブル エンティティのプロパティのプロパティ名を表すオブジェクト。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.getFilterString()
+    id: getFilterString()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: getFilterString()
+    nameWithType: TableQuery<T>.getFilterString()
+    fullName: String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getFilterString()
+    overload: com.microsoft.azure.storage.table._table_query.getFilterString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 506
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>テーブル クエリで指定されるフィルター式を取得します。 テーブル クエリにフィルター式が指定されていない場合、既定では、テーブル内のすべてのエンティティが返されます。 呼び出しで返されるエンティティのフィルターを指定することがあります、 <xref uid="com.microsoft.azure.storage.table._table_query.setFilterString(final String)" data-throw-if-not-resolved="false">setFilterString</xref>または<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>メソッドです。</p>
+      <p></p>
+    syntax:
+      content: public String getFilterString()
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>クエリで使用されるフィルター式を表します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.getSourceTableName()
+    id: getSourceTableName()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: getSourceTableName()
+    nameWithType: TableQuery<T>.getSourceTableName()
+    fullName: String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getSourceTableName()
+    overload: com.microsoft.azure.storage.table._table_query.getSourceTableName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 516
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>テーブル クエリで指定されたソース テーブルの名前を取得します。</p>
+      <p></p>
+    syntax:
+      content: protected String getSourceTableName()
+      return:
+        type: '26831127'
+        description: <p>A<code>String</code>クエリで使用されるソース テーブルの名前を表します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.getTakeCount()
+    id: getTakeCount()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: getTakeCount()
+    nameWithType: TableQuery<T>.getTakeCount()
+    fullName: Integer com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getTakeCount()
+    overload: com.microsoft.azure.storage.table._table_query.getTakeCount*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 531
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>クエリからテーブルのクエリで返されるエンティティの数を取得します。 テーブルのクエリでこの値が指定されていない場合は、最大 1,000 エントリが返されます。 呼び出しで返されるエンティティの数を指定することがあります、 <xref uid="com.microsoft.azure.storage.table._table_query.setTakeCount(final Integer)" data-throw-if-not-resolved="false">setTakeCount</xref>または<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>メソッドです。 </p>
+      <p>によって返される値は 1,000 を超える、クエリがスローされます、 <xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref>の実行時にします。</p>
+      <p></p>
+    syntax:
+      content: public Integer getTakeCount()
+      return:
+        type: 08effaa0
+        description: <p><code>Integer</code>テーブル クエリで返されるエンティティの最大数を表します。 </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.select(final String [])'
+    id: 'select(final String [])'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'select(final String[] columns)'
+    nameWithType: 'TableQuery<T>.select(final String[] columns)'
+    fullName: 'TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.select(final String[] columns)'
+    overload: com.microsoft.azure.storage.table._table_query.select*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 550
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>テーブル クエリの実行時に返されるテーブル エンティティのプロパティのプロパティ名を定義します。 句は、サーバーから返されるテーブルのプロパティを制限するために使用、テーブルのクエリでは省略可能です。 既定では、クエリは、テーブル エンティティから、すべてのプロパティを返します。 </p>
+      <p>およびのシステム プロパティとが自動的に要求、テーブル サービスからで指定されたかどうかを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>か。</p>
+      <p></p>
+    syntax: &ref_3
+      content: 'public TableQuery<T> select(final String[] columns)'
+      parameters:
+        - id: columns
+          type: 3e8f7ba4
+          description: <p>配列<code>String</code>オブジェクト クエリの実行時に返されるテーブル エンティティのプロパティのプロパティ名を指定します。</p>
+      return:
+        type: com.microsoft.azure.storage.table._table_query669339f7
+        description: <p>参照、 <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>セットを返すテーブル エンティティのプロパティを持つインスタンス。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.setClazzType(final Class<T>)
+    id: setClazzType(final Class<T>)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: setClazzType(final Class<T> clazzType)
+    nameWithType: TableQuery<T>.setClazzType(final Class<T> clazzType)
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setClazzType(final Class<T> clazzType)
+    overload: com.microsoft.azure.storage.table._table_query.setClazzType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 567
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>クエリによって返されるテーブル エンティティのクラス型を設定します。 テーブル クエリを実行するには、クラス型が必要です。 </p>
+      <p>呼び出し元指定<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>クラス型として型をいいえより特殊化された場合のパラメーターが必要です。</p>
+      <p></p>
+    syntax:
+      content: public void setClazzType(final Class<T> clazzType)
+      parameters:
+        - id: clazzType
+          type: 2854615f
+          description: <p><code>java.lang.Class</code>クラスの<code>T</code>クエリのテーブル エンティティの種類を表すです。 クラス<code>T</code>を実装する型でなければなりません<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>引数がないコンス トラクターを持つと </p>
+  - uid: 'com.microsoft.azure.storage.table._table_query.setColumns(final String [])'
+    id: 'setColumns(final String [])'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: 'setColumns(final String[] columns)'
+    nameWithType: 'TableQuery<T>.setColumns(final String[] columns)'
+    fullName: 'void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setColumns(final String[] columns)'
+    overload: com.microsoft.azure.storage.table._table_query.setColumns*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 584
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>テーブル クエリの実行時に返されるテーブル エンティティのプロパティのプロパティ名を設定します。 既定では、クエリは、テーブル エンティティから、すべてのプロパティを返します。 </p>
+      <p>およびのシステム プロパティとが自動的に要求、テーブル サービスからで指定されたかどうかを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>か。</p>
+      <p></p>
+    syntax: &ref_2
+      content: 'public void setColumns(final String[] columns)'
+      parameters:
+        - id: columns
+          type: 3e8f7ba4
+          description: <p>配列<code>String</code>オブジェクト クエリの実行時に返されるテーブル エンティティのプロパティのプロパティ名を指定します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.setFilterString(final String)
+    id: setFilterString(final String)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: setFilterString(final String filterString)
+    nameWithType: TableQuery<T>.setFilterString(final String filterString)
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setFilterString(final String filterString)
+    overload: com.microsoft.azure.storage.table._table_query.setFilterString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 612
+    package: com.microsoft.azure.storage.table
+    summary: "<p>テーブル クエリで使用するフィルター式を設定します。 フィルター式は、省略可能です。既定ではテーブルのクエリは、表に、すべてのエンティティを返します。 </p>\n<p>フィルター式で使用するため、 <xref uid=\"com.microsoft.azure.storage.table._table_query.setFilterString(final String)\" data-throw-if-not-resolved=\"false\">setFilterString</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid=\"com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)\" data-throw-if-not-resolved=\"false\">generateFilterCondition</xref>メソッドおよび<xref uid=\"com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)\" data-throw-if-not-resolved=\"false\">combineFilters</xref>で定義されている比較演算子を使用して、メソッド<xref uid=\"\" data-throw-if-not-resolved=\"false\">QueryComparisons</xref>と論理演算子で定義されている<xref uid=\"\" data-throw-if-not-resolved=\"false\">演算子</xref>です。 プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 たとえば、テーブルのクエリに対する\"AccessLogs\"の PartitionKey 値を持つすべてのエンティティのクエリを実行します。 </p>\n<p></p>\n<p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明します。</p>\n<p>\r\n\r\n  <ulink url=\"http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx\">テーブルおよびエンティティを照会する</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>\n\n<p>フィルター文字列内で 15 個の個別の比較が許可されることに注意してください。</p>\n<p></p>"
+    syntax: &ref_4
+      content: public void setFilterString(final String filterString)
+      parameters:
+        - id: filterString
+          type: 3d93591e
+          description: <p>A<code>String</code>クエリで使用するフィルター式を表します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.setSourceTableName(final String)
+    id: setSourceTableName(final String)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: setSourceTableName(final String sourceTableName)
+    nameWithType: TableQuery<T>.setSourceTableName(final String sourceTableName)
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setSourceTableName(final String sourceTableName)
+    overload: com.microsoft.azure.storage.table._table_query.setSourceTableName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 623
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>テーブル クエリのソース テーブルの名前を設定します。 テーブル クエリを実行するソース テーブルが必要です。</p>
+      <p></p>
+    syntax:
+      content: protected void setSourceTableName(final String sourceTableName)
+      parameters:
+        - id: sourceTableName
+          type: 3d93591e
+          description: <p>A<code>String</code>クエリで使用するソース テーブルの名前を指定します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.setTakeCount(final Integer)
+    id: setTakeCount(final Integer)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: setTakeCount(final Integer takeCount)
+    nameWithType: TableQuery<T>.setTakeCount(final Integer takeCount)
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setTakeCount(final Integer takeCount)
+    overload: com.microsoft.azure.storage.table._table_query.setTakeCount*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 638
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>クエリから返されるエンティティの数の上限の境界を設定します。 この値は指定しない場合、テーブル クエリで、既定では最大 1,000 エントリが返されます。 </p>
+      <p>パラメーターに指定された値が 1,000 個を超える場合は、クエリがスローされます、 <xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref>の実行時にします。</p>
+      <p></p>
+    syntax: &ref_6
+      content: public void setTakeCount(final Integer takeCount)
+      parameters:
+        - id: takeCount
+          type: 3437983f
+          description: <p><code>Integer</code>テーブル クエリで返されるエンティティの最大数を表します。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.TableQuery()
+    id: TableQuery()
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: TableQuery()
+    nameWithType: TableQuery<T>.TableQuery()
+    fullName: com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.TableQuery()
+    overload: com.microsoft.azure.storage.table._table_query.TableQuery*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 452
+    package: com.microsoft.azure.storage.table
+    summary: <p>空の初期化<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンス。 テーブル エンティティの種類を設定しない場合は、このテーブル クエリを実行することはできません。 </p>
+    syntax:
+      content: public TableQuery()
+  - uid: com.microsoft.azure.storage.table._table_query.TableQuery(final Class<T>)
+    id: TableQuery(final Class<T>)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: TableQuery(final Class<T> clazzType)
+    nameWithType: TableQuery<T>.TableQuery(final Class<T> clazzType)
+    fullName: com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.TableQuery(final Class<T> clazzType)
+    overload: com.microsoft.azure.storage.table._table_query.TableQuery*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 466
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>初期化、 <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>で指定されたテーブルのエンティティ型。 呼び出し元指定<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>クラス型として型をいいえより特殊化された場合のパラメーターが必要です。</p>
+      <p></p>
+    syntax:
+      content: public TableQuery(final Class<T> clazzType)
+      parameters:
+        - id: clazzType
+          type: 2854615f
+          description: <p><code>java.lang.Class</code>クラスの<code>T</code>クエリのテーブル エンティティの種類を表すです。 クラス<code>T</code>を実装する型でなければなりません<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>引数がないコンス トラクターがあるとします。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.take(final Integer)
+    id: take(final Integer)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: take(final Integer take)
+    nameWithType: TableQuery<T>.take(final Integer take)
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.take(final Integer take)
+    overload: com.microsoft.azure.storage.table._table_query.take*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 659
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>クエリから返されるエンティティの数の上限の境界を定義します。 この値は指定しない場合、テーブル クエリで、既定では最大 1,000 エントリが返されます。 </p>
+      <p>パラメーターに指定された値が 1,000 個を超える場合は、クエリがスローされます、 <xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref>の実行時にします。</p>
+      <p></p>
+    syntax: &ref_7
+      content: public TableQuery<T> take(final Integer take)
+      parameters:
+        - id: take
+          type: 3437983f
+          description: <p><code>Integer</code>テーブル クエリで返されるエンティティの最大数を表します。</p>
+      return:
+        type: com.microsoft.azure.storage.table._table_query669339f7
+        description: <p>参照、 <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>セットを返すエンティティの数を持つインスタンス。 </p>
+  - uid: com.microsoft.azure.storage.table._table_query.where(final String)
+    id: where(final String)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    langs:
+      - java
+    name: where(final String filter)
+    nameWithType: TableQuery<T>.where(final String filter)
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.where(final String filter)
+    overload: com.microsoft.azure.storage.table._table_query.where*
+    type: Method
+    source:
+      remote: *ref_0
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableQuery.java
+      startLine: 693
+    package: com.microsoft.azure.storage.table
+    summary: "<p>テーブル クエリのフィルター式を定義します。 指定したフィルター式を満たすエンティティのみが、クエリによって返されます。 フィルター式の設定は省略可能です。既定では、テーブルのクエリでフィルター式が指定されていない場合、テーブル内のすべてのエンティティが返されます。 </p>\n<p>フィルター式で使用するため、<xref uid=\"com.microsoft.azure.storage.table._table_query.where(final String)\" data-throw-if-not-resolved=\"false\">場所</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid=\"com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)\" data-throw-if-not-resolved=\"false\">generateFilterCondition</xref>メソッドおよび<xref uid=\"com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)\" data-throw-if-not-resolved=\"false\">combineFilters</xref>定義されている比較演算子を使用して、メソッド<xref uid=\"\" data-throw-if-not-resolved=\"false\">QueryComparisons</xref>と論理演算子で定義されている<xref uid=\"\" data-throw-if-not-resolved=\"false\">演算子</xref>です。 プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 たとえば、テーブルのクエリに対する\"AccessLogs\"の PartitionKey 値を持つすべてのエンティティのクエリを実行します。 </p>\n<p></p>\n<p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明します。</p>\n<p>\r\n\r\n  <ulink url=\"http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx\">テーブルおよびエンティティを照会する</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>\n\n<p>フィルター文字列内で 15 個の個別の比較が許可されることに注意してください。</p>\n<p></p>"
+    syntax: &ref_5
+      content: public TableQuery<T> where(final String filter)
+      parameters:
+        - id: filter
+          type: 3d93591e
+          description: <p>A<code>String</code>テーブル クエリに適用するフィルター式を指定します。 </p>
+      return:
+        type: com.microsoft.azure.storage.table._table_query669339f7
+        description: <p>参照、 <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>セットを返すエンティティのフィルターとインスタンス。 </p>
+references:
+  - uid: 8ce1ecb9
+    spec.java:
+      - name: T
+        fullName: T
+  - uid: 2854615f
+    spec.java:
+      - name: final Class<T>
+        fullName: final Class<T>
+  - uid: 1e2c6103com.microsoft.azure.storage.table._table_entity410a1f1ccom.microsoft.azure.storage.table._table_query669339f7
+    spec.java:
+      - name: 'static<T extends '
+        fullName: 'static<T extends '
+      - uid: com.microsoft.azure.storage.table._table_entity
+        name: TableEntity
+        fullName: com.microsoft.azure.storage.table.TableEntity
+        href: com.microsoft.azure.storage.table._table_entity.yml
+      - name: '> '
+        fullName: '> '
+      - uid: com.microsoft.azure.storage.table._table_query
+        name: TableQuery
+        fullName: com.microsoft.azure.storage.table.TableQuery
+        href: com.microsoft.azure.storage.table._table_query.yml
+      - name: <T>
+        fullName: <T>
+  - uid: com.microsoft.azure.storage.table._table_query.from*
+    name: from
+    nameWithType: TableQuery<T>.from
+    fullName: static <T extends TableEntity> TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.from
+    package: com.microsoft.azure.storage.table
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 4dda0764
+    spec.java:
+      - name: final boolean
+        fullName: final boolean
+  - uid: com.microsoft.azure.storage.table._table_query.generateFilterCondition*
+    name: generateFilterCondition
+    nameWithType: TableQuery<T>.generateFilterCondition
+    fullName: static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition
+    package: com.microsoft.azure.storage.table
+  - uid: f549433f
+    spec.java:
+      - name: 'final byte []'
+        fullName: 'final byte []'
+  - uid: '51340937'
+    spec.java:
+      - name: 'final Byte []'
+        fullName: 'final Byte []'
+  - uid: 970a8f17
+    spec.java:
+      - name: final Date
+        fullName: final Date
+  - uid: bc185a0c
+    spec.java:
+      - name: final double
+        fullName: final double
+  - uid: cd225469
+    spec.java:
+      - name: final int
+        fullName: final int
+  - uid: 4c60ae65
+    spec.java:
+      - name: final long
+        fullName: final long
+  - uid: 3d93591e
+    spec.java:
+      - name: final String
+        fullName: final String
+  - uid: 5668214f
+    spec.java:
+      - name: final UUID
+        fullName: final UUID
+  - uid: com.microsoft.azure.storage.table._table_query.combineFilters*
+    name: combineFilters
+    nameWithType: TableQuery<T>.combineFilters
+    fullName: static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.combineFilters
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.TableQuery*
+    name: TableQuery
+    nameWithType: TableQuery<T>.TableQuery
+    fullName: com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.TableQuery
+    package: com.microsoft.azure.storage.table
+  - uid: ffb09d2d
+    spec.java:
+      - name: Class<T>
+        fullName: Class<T>
+  - uid: com.microsoft.azure.storage.table._table_query.getClazzType*
+    name: getClazzType
+    nameWithType: TableQuery<T>.getClazzType
+    fullName: Class<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getClazzType
+    package: com.microsoft.azure.storage.table
+  - uid: 1bb63ab0
+    spec.java:
+      - name: 'String []'
+        fullName: 'String []'
+  - uid: com.microsoft.azure.storage.table._table_query.getColumns*
+    name: getColumns
+    nameWithType: TableQuery<T>.getColumns
+    fullName: 'String [] com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getColumns'
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.getFilterString*
+    name: getFilterString
+    nameWithType: TableQuery<T>.getFilterString
+    fullName: String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getFilterString
+    package: com.microsoft.azure.storage.table
+  - uid: 08effaa0
+    spec.java:
+      - name: Integer
+        fullName: Integer
+  - uid: com.microsoft.azure.storage.table._table_query.getTakeCount*
+    name: getTakeCount
+    nameWithType: TableQuery<T>.getTakeCount
+    fullName: Integer com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getTakeCount
+    package: com.microsoft.azure.storage.table
+  - uid: 3e8f7ba4
+    spec.java:
+      - name: 'final String []'
+        fullName: 'final String []'
+  - uid: com.microsoft.azure.storage.table._table_query669339f7
+    spec.java:
+      - uid: com.microsoft.azure.storage.table._table_query
+        name: TableQuery
+        fullName: com.microsoft.azure.storage.table.TableQuery
+        href: com.microsoft.azure.storage.table._table_query.yml
+      - name: <T>
+        fullName: <T>
+  - uid: com.microsoft.azure.storage.table._table_query.select*
+    name: select
+    nameWithType: TableQuery<T>.select
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.select
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.setClazzType*
+    name: setClazzType
+    nameWithType: TableQuery<T>.setClazzType
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setClazzType
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.setColumns*
+    name: setColumns
+    nameWithType: TableQuery<T>.setColumns
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setColumns
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.setFilterString*
+    name: setFilterString
+    nameWithType: TableQuery<T>.setFilterString
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setFilterString
+    package: com.microsoft.azure.storage.table
+  - uid: 3437983f
+    spec.java:
+      - name: final Integer
+        fullName: final Integer
+  - uid: com.microsoft.azure.storage.table._table_query.setTakeCount*
+    name: setTakeCount
+    nameWithType: TableQuery<T>.setTakeCount
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setTakeCount
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.take*
+    name: take
+    nameWithType: TableQuery<T>.take
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.take
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.where*
+    name: where
+    nameWithType: TableQuery<T>.where
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.where
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.getSourceTableName*
+    name: getSourceTableName
+    nameWithType: TableQuery<T>.getSourceTableName
+    fullName: String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.getSourceTableName
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.setSourceTableName*
+    name: setSourceTableName
+    nameWithType: TableQuery<T>.setSourceTableName
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setSourceTableName
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_query.generateQueryBuilder*
+    name: generateQueryBuilder
+    nameWithType: TableQuery<T>.generateQueryBuilder
+    fullName: UriQueryBuilder com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateQueryBuilder
+    package: com.microsoft.azure.storage.table
+  - uid: com.microsoft.azure.storage.table._table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_entity.yml
+    name: TableEntity
+    nameWithType: TableEntity
+    fullName: com.microsoft.azure.storage.table.TableEntity
+    type: Interface
+    summary: "<p>テーブルのエンティティ型に必要なインターフェイスです。 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。 実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。 </p>\n<p>ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。 使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。 また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。 </p>\n\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。 </p>\n\n<p>実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。 クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。 </p>\n<p></p>"
+    syntax:
+      content: public interface TableEntity
+  - uid: com.microsoft.azure.storage.table._table_query
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: TableQuery<T>
+    nameWithType: TableQuery<T>
+    fullName: com.microsoft.azure.storage.table.TableQuery<T>
+    type: Class
+    summary: |-
+      <p>指定されたテーブルに対するクエリを表すクラス。 A <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスは、クエリが実行されるときに使用するクエリ パラメーターを集計します。 いずれか、またはメソッドの<xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クエリの実行に呼び出す必要があります。 パラメーターはエンコードされ、テーブルのクエリを実行すると、サーバーに渡されます。 </p>
+      <p>Fluent の構文を使用してテーブルのクエリを作成する、<xref uid="com.microsoft.azure.storage.table._table_query.from(final Class&lt;T&gt;)" data-throw-if-not-resolved="false">から</xref>静的ファクトリ メソッドと<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>、<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>、および<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>ミューテーター メソッド各は、1 つの式にチェーンできるオブジェクトへの参照を返します。 使用して、 <xref uid="" data-throw-if-not-resolved="false">from(Class)</xref>の指定されたエンティティを名前付きのテーブルで実行されるインスタンスを作成するファクトリ メソッドを静的クラス<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>型を実装します。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>エンティティのフィルター式を指定するメソッドが返されます。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.select(final String [])" data-throw-if-not-resolved="false">選択</xref>を返すテーブル エンティティのプロパティを指定します。 使用して、<xref uid="com.microsoft.azure.storage.table._table_query.take(final Integer)" data-throw-if-not-resolved="false">かかる</xref>に、クエリによって返されるエンティティの数を制限する方法です。 注実行の順序で発生した最後で何も禁止されているに保存するのでの値を複数回これらのメソッドを呼び出すことです。 </p>
+      <p>例として、fluent 構文を使用してテーブル クエリを構築する可能性があります。 </p>
+      <p></p>
+      <p>この例は、すべてのエンティティが PartitionKey 値"ProductsMNO"であり RowKey 値より大きいか等しい「ナプキン」には、共通プロパティのみを選択すると、エンティティに一致する最初の 25 が要求の"Products"テーブルにクエリを作成し、プロパティが"InventoryCount"という名前し、そのまま返します<xref uid="com.microsoft.azure.storage.table._dynamic_table_entity" data-throw-if-not-resolved="false">DynamicTableEntity</xref>オブジェクト。 </p>
+      <p>フィルター式で使用するため、<xref uid="com.microsoft.azure.storage.table._table_query.where(final String)" data-throw-if-not-resolved="false">場所</xref>メソッドまたは<xref uid="com.microsoft.azure.storage.table._table_query.setFilterString(final String)" data-throw-if-not-resolved="false">setFilterString</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid="com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)" data-throw-if-not-resolved="false">generateFilterCondition</xref>メソッドと<xref uid="com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)" data-throw-if-not-resolved="false">combineFilters</xref>で定義されている比較演算子を使用して、メソッド<xref uid="" data-throw-if-not-resolved="false">QueryComparisons</xref>と論理演算子で定義されている<xref uid="" data-throw-if-not-resolved="false">演算子</xref>. プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 </p>
+      <p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx">クエリを実行するテーブルおよびエンティティ</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>
+      <p><xref uid="" data-throw-if-not-resolved="false">TableQuery#TableQuery(Class)</xref>コンス トラクターと<xref uid="" data-throw-if-not-resolved="false">TableQuery#from(Class)</xref>静的ファクトリ メソッドを実装するクラス型を必要と<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>と引数がないコンス トラクターが含まれています。 使用して、クエリが実行する場合、 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>、呼び出し元指定<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>クラス型として。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.storage.table._table_service_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_service_entity.yml
+    name: TableServiceEntity
+    nameWithType: TableServiceEntity
+    fullName: com.microsoft.azure.storage.table.TableServiceEntity
+    type: Class
+    summary: "<p><xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>クラスは、ストレージ サービス内のテーブル エンティティの基本オブジェクト型を表します。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の基本実装を提供、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>を提供するインターフェイスとメソッドを既定ではおよびリフレクションを使用してすべてのプロパティを逆シリアル化します。 テーブル エンティティ クラスがこのクラスを拡張し、オーバーライド、および提供するメソッドをカスタマイズしたかより多くのパフォーマンスの高いシリアル化ロジック。 </p>\n<p>リフレクションの使用によりのサブクラス<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>シリアル化を実装することがなく逆シリアル化およびシリアル化のコードそのものです。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 活用するために、自動のシリアル化コード、テーブル エンティティ クラスは、対応するテーブル内のエンティティ Microsoft Azure テーブル ストレージ内の各プロパティの getter および setter メソッドを提供する必要があります。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 Java 対応するプロパティの型のマップは、次の表を参照してください。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>サブクラスで注釈。 </p>\n<p>次の表は、Microsoft Azure ストレージでサポートされているプロパティのデータ型と逆シリアル化したときに、対応する Java 型を示します。 <table rows=\"9\" cols=\"4\"><row><entry thead=\"yes\"><p>ストレージの種類 </p></entry><entry thead=\"yes\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>値 </p></entry><entry thead=\"yes\"><p>Java の型 </p></entry><entry thead=\"yes\"><p>説明  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Binary</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.BINARY\" data-throw-if-not-resolved=\"false\">EdmType #BINARY</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>バイト配列のサイズは最大 64 KB です。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Boolean</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.BOOLEAN\" data-throw-if-not-resolved=\"false\">EdmType #BOOLEAN</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>ブール値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.DateTime</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.DATE_TIME\" data-throw-if-not-resolved=\"false\">EdmType # 日付 _ 時刻</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>世界協定時刻 (UTC) を表す 64 ビット値。 サポートされている範囲は、西暦 1601 年 1 月 1 日深夜 12時 00分から始まります 始まります。 この範囲は 9999 年 12 月 31 日に終了します。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Double</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.DOUBLE\" data-throw-if-not-resolved=\"false\">EdmType #DOUBLE</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>64 ビット倍精度浮動小数点値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Guid</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.GUID\" data-throw-if-not-resolved=\"false\">EdmType #GUID</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>グローバルで一意となる 128 ビットの識別子。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Int32</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.INT32\" data-throw-if-not-resolved=\"false\">EdmType # INT32</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>32 ビット整数値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.Int64</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.INT64\" data-throw-if-not-resolved=\"false\">EdmType # INT64</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>64 ビット整数値。  </p></entry></row><row><entry thead=\"no\"><p><b>Edm.String</b></p></entry><entry thead=\"no\"><p><xref uid=\"com.microsoft.azure.storage.table._edm_type.STRING\" data-throw-if-not-resolved=\"false\">EdmType #STRING</xref></p></entry><entry thead=\"no\"><p></p></entry><entry thead=\"no\"><p>UTF-16 エンコードの値。 文字列値には、最大 64 KB の可能性があります。  </p></entry></row></table></p>\n<p>MSDN のトピックを参照してください<ulink url=\"http://msdn.microsoft.com//library/azure/dd179338.aspx\">テーブル サービス データ モデルについて</ulink>テーブル、エンティティ、および Microsoft Azure ストレージ サービスで使用されているプロパティの概要についてはします。 </p>\n<p>使用できる EDM プリミティブ データ型と名前の概要については、次を参照してください、。</p>\n<p>\r\n\r\n  <ulink url=\"http://www.odata.org/developers/protocols/overview#AbstractTypeSystem\">プリミティブ データ型</ulink>のセクションで、 <ulink url=\"http://www.odata.org/developers/protocols/overview\">OData プロトコルの概要</ulink>です。 </p>\n\n<p></p>"
+    syntax:
+      content: public class TableServiceEntity
+  - uid: com.microsoft.azure.storage.table._edm_type
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._edm_type.yml
+    name: EdmType
+    nameWithType: EdmType
+    fullName: com.microsoft.azure.storage.table.EdmType
+    type: Enum
+    summary: |-
+      <p>Open Data Protocol (OData) で Entity Data Model (EDM) のプリミティブ型を表すために使用する列挙です。 EDM は、OData サービスで使用される基になる抽象データ モデルです。 <xref uid="com.microsoft.azure.storage.table._edm_type" data-throw-if-not-resolved="false">EdmType</xref>列挙が含まれています、 <xref uid="com.microsoft.azure.storage.table._edm_type.parse(final String)" data-throw-if-not-resolved="false">parse(String)</xref> EDM データ型に変換するメソッドが列挙型に名前し、上書き、 <xref uid="com.microsoft.azure.storage.table._edm_type.toString()" data-throw-if-not-resolved="false">toString()</xref>メソッドを生成するために、EDM データ型の名前。 </p>
+      <p>OData の詳細については、次を参照してください。、 <ulink url="http://www.odata.org/">Open Data Protocol</ulink> web サイトです。 </p>
+      <p>使用できる EDM プリミティブ データ型と名の概要については、次を参照してください。、<ulink url="http://www.odata.org/developers/protocols/overview#AbstractTypeSystem">プリミティブ データ型</ulink>のセクションで、 <ulink url="http://www.odata.org/developers/protocols/overview">OData プロトコルの概要</ulink>です。 </p>
+      <p>OData によってサポートされるプリミティブ型の定義に使用される抽象型システムがで詳細に定義されている<ulink url="http://msdn.microsoft.com/en-us/library/dd541474.aspx">MC-CSDL</ulink>です。 </p>
+    syntax:
+      content: public enum EdmType
+  - uid: 'com.microsoft.azure.storage.table._table_query.setColumns(final String [])'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: 'setColumns(final String[] columns)'
+    nameWithType: 'TableQuery<T>.setColumns(final String[] columns)'
+    fullName: 'void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setColumns(final String[] columns)'
+    type: Method
+    summary: |-
+      <p>テーブル クエリの実行時に返されるテーブル エンティティのプロパティのプロパティ名を設定します。 既定では、クエリは、テーブル エンティティから、すべてのプロパティを返します。 </p>
+      <p>およびのシステム プロパティとが自動的に要求、テーブル サービスからで指定されたかどうかを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>か。</p>
+      <p></p>
+    syntax: *ref_2
+  - uid: 'com.microsoft.azure.storage.table._table_query.select(final String [])'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: 'select(final String[] columns)'
+    nameWithType: 'TableQuery<T>.select(final String[] columns)'
+    fullName: 'TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.select(final String[] columns)'
+    type: Method
+    summary: |-
+      <p>テーブル クエリの実行時に返されるテーブル エンティティのプロパティのプロパティ名を定義します。 句は、サーバーから返されるテーブルのプロパティを制限するために使用、テーブルのクエリでは省略可能です。 既定では、クエリは、テーブル エンティティから、すべてのプロパティを返します。 </p>
+      <p>およびのシステム プロパティとが自動的に要求、テーブル サービスからで指定されたかどうかを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>か。</p>
+      <p></p>
+    syntax: *ref_3
+  - uid: com.microsoft.azure.storage.table._table_query.setFilterString(final String)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: setFilterString(final String filterString)
+    nameWithType: TableQuery<T>.setFilterString(final String filterString)
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setFilterString(final String filterString)
+    type: Method
+    summary: "<p>テーブル クエリで使用するフィルター式を設定します。 フィルター式は、省略可能です。既定ではテーブルのクエリは、表に、すべてのエンティティを返します。 </p>\n<p>フィルター式で使用するため、 <xref uid=\"com.microsoft.azure.storage.table._table_query.setFilterString(final String)\" data-throw-if-not-resolved=\"false\">setFilterString</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid=\"com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)\" data-throw-if-not-resolved=\"false\">generateFilterCondition</xref>メソッドおよび<xref uid=\"com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)\" data-throw-if-not-resolved=\"false\">combineFilters</xref>で定義されている比較演算子を使用して、メソッド<xref uid=\"\" data-throw-if-not-resolved=\"false\">QueryComparisons</xref>と論理演算子で定義されている<xref uid=\"\" data-throw-if-not-resolved=\"false\">演算子</xref>です。 プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 たとえば、テーブルのクエリに対する\"AccessLogs\"の PartitionKey 値を持つすべてのエンティティのクエリを実行します。 </p>\n<p></p>\n<p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明します。</p>\n<p>\r\n\r\n  <ulink url=\"http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx\">テーブルおよびエンティティを照会する</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>\n\n<p>フィルター文字列内で 15 個の個別の比較が許可されることに注意してください。</p>\n<p></p>"
+    syntax: *ref_4
+  - uid: com.microsoft.azure.storage.table._table_query.where(final String)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: where(final String filter)
+    nameWithType: TableQuery<T>.where(final String filter)
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.where(final String filter)
+    type: Method
+    summary: "<p>テーブル クエリのフィルター式を定義します。 指定したフィルター式を満たすエンティティのみが、クエリによって返されます。 フィルター式の設定は省略可能です。既定では、テーブルのクエリでフィルター式が指定されていない場合、テーブル内のすべてのエンティティが返されます。 </p>\n<p>フィルター式で使用するため、<xref uid=\"com.microsoft.azure.storage.table._table_query.where(final String)\" data-throw-if-not-resolved=\"false\">場所</xref>メソッドは、オーバー ロードされたを fluent 構文を使用して作成することができます<xref uid=\"com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)\" data-throw-if-not-resolved=\"false\">generateFilterCondition</xref>メソッドおよび<xref uid=\"com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)\" data-throw-if-not-resolved=\"false\">combineFilters</xref>定義されている比較演算子を使用して、メソッド<xref uid=\"\" data-throw-if-not-resolved=\"false\">QueryComparisons</xref>と論理演算子で定義されている<xref uid=\"\" data-throw-if-not-resolved=\"false\">演算子</xref>です。 プロパティ名を指定する必要があります最初のオペランドの比較をフィルターで、2 番目のオペランドを定数に評価する必要があることに注意してください。 PartitionKey と RowKey プロパティ値は、比較のための型です。 たとえば、テーブルのクエリに対する\"AccessLogs\"の PartitionKey 値を持つすべてのエンティティのクエリを実行します。 </p>\n<p></p>\n<p>テーブル クエリで使用できる値については、MSDN のトピックで詳しく説明します。</p>\n<p>\r\n\r\n  <ulink url=\"http://msdn.microsoft.com/en-us/library/azure/dd894031.aspx\">テーブルおよびエンティティを照会する</ulink>が、スペース文字値内で必要としないようにする URL でエンコードされる場合、クエリが実行されたときに実行されます。 </p>\n\n<p>フィルター文字列内で 15 個の個別の比較が許可されることに注意してください。</p>\n<p></p>"
+    syntax: *ref_5
+  - uid: com.microsoft.azure.storage.table._table_query.setTakeCount(final Integer)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: setTakeCount(final Integer takeCount)
+    nameWithType: TableQuery<T>.setTakeCount(final Integer takeCount)
+    fullName: void com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.setTakeCount(final Integer takeCount)
+    type: Method
+    summary: |-
+      <p>クエリから返されるエンティティの数の上限の境界を設定します。 この値は指定しない場合、テーブル クエリで、既定では最大 1,000 エントリが返されます。 </p>
+      <p>パラメーターに指定された値が 1,000 個を超える場合は、クエリがスローされます、 <xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref>の実行時にします。</p>
+      <p></p>
+    syntax: *ref_6
+  - uid: com.microsoft.azure.storage.table._table_query.take(final Integer)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: take(final Integer take)
+    nameWithType: TableQuery<T>.take(final Integer take)
+    fullName: TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.take(final Integer take)
+    type: Method
+    summary: |-
+      <p>クエリから返されるエンティティの数の上限の境界を定義します。 この値は指定しない場合、テーブル クエリで、既定では最大 1,000 エントリが返されます。 </p>
+      <p>パラメーターに指定された値が 1,000 個を超える場合は、クエリがスローされます、 <xref uid="com.microsoft.azure.storage._storage_exception" data-throw-if-not-resolved="false">StorageException</xref>の実行時にします。</p>
+      <p></p>
+    syntax: *ref_7
+  - uid: com.microsoft.azure.storage._storage_exception
+    parent: com.microsoft.azure.storage
+    href: com.microsoft.azure.storage._storage_exception.yml
+    name: StorageException
+    nameWithType: StorageException
+    fullName: com.microsoft.azure.storage.StorageException
+    type: Class
+    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    syntax:
+      content: public class StorageException
+  - uid: 'com.microsoft.azure.storage.table._table_query.generateFilterCondition(String,String,final boolean)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: 'generateFilterCondition(String propertyName, String operation, final boolean value)'
+    nameWithType: 'TableQuery<T>.generateFilterCondition(String propertyName, String operation, final boolean value)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.generateFilterCondition(String propertyName, String operation, final boolean value)'
+    type: Method
+    summary: |-
+      <p>値のプロパティ フィルター条件文字列を生成します。 次の例のように、ブール値として書式設定された、値を持つプロパティを比較する指定された操作を使用するフィルター式で使用する書式設定された文字列を作成します。 </p>
+      <p></p>
+      <p>このステートメントは、次の値に設定します。 </p>
+      <p></p>
+      <p></p>
+    syntax: *ref_8
+  - uid: 'com.microsoft.azure.storage.table._table_query.combineFilters(String,String,String)'
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: 'combineFilters(String filterA, String operator, String filterB)'
+    nameWithType: 'TableQuery<T>.combineFilters(String filterA, String operator, String filterB)'
+    fullName: 'static String com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.combineFilters(String filterA, String operator, String filterB)'
+    type: Method
+    summary: |-
+      <p>2 つのフィルター条件に指定された論理演算子を使用してフィルター条件を作成します。</p>
+      <p></p>
+    syntax: *ref_9
+  - uid: com.microsoft.azure.storage.core._uri_query_builder
+    parent: com.microsoft.azure.storage.core
+    href: com.microsoft.azure.storage.core._uri_query_builder.yml
+    name: UriQueryBuilder
+    nameWithType: UriQueryBuilder
+    fullName: com.microsoft.azure.storage.core.UriQueryBuilder
+    type: Class
+    summary: <p>内部使用のために予約されています。 URI のクエリ文字列の変更を支援するヘルパー クラス </p>
+    syntax:
+      content: public class UriQueryBuilder
+  - uid: com.microsoft.azure.storage.table._cloud_table_client
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._cloud_table_client.yml
+    name: CloudTableClient
+    nameWithType: CloudTableClient
+    fullName: com.microsoft.azure.storage.table.CloudTableClient
+    type: Class
+    summary: |-
+      <p>Microsoft Azure テーブル サービスにアクセスするためには、サービス クライアントを提供します。 </p>
+      <p><xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クラスは、テーブル サービスのエンドポイントのベース URI およびストレージ アカウントにアクセスするための資格情報をカプセル化しを実行するメソッドと同様に作成、削除、一覧、およびテーブルを照会する方法を提供操作とテーブル エンティティに対するクエリ。 これらのメソッドは、要求を作成し、返される結果を取得する記憶域サービスの REST API 操作を呼び出します。 </p>
+      <p>テーブル サービスのエンドポイントは、ストレージ アカウントの DNS 名を含む、テーブル サービス リソースのベース URI を示します。 <br /><br />
+
+       詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">テーブル サービス リソースのアドレス指定</ulink>です。 </p>
+
+      <p>資格情報は、ストレージ アカウント名と、キー、または共有アクセス署名の組み合わせにすることができます。 詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">ストレージ アカウントへのアクセスの認証</ulink>です。 </p>
+    syntax:
+      content: public class CloudTableClient extends ServiceClient
+  - uid: com.microsoft.azure.storage.table._table_query.from(final Class<T>)
+    parent: com.microsoft.azure.storage.table._table_query
+    href: com.microsoft.azure.storage.table._table_query.yml
+    name: from(final Class<T> clazzType)
+    nameWithType: TableQuery<T>.from(final Class<T> clazzType)
+    fullName: static <T extends TableEntity> TableQuery<T> com.microsoft.azure.storage.table.TableQuery<T extends TableEntity>.from(final Class<T> clazzType)
+    type: Method
+    summary: |-
+      <p>構築する静的ファクトリ メソッドを<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスし、テーブル エンティティの型を定義します。 このメソッドを返します、 <xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>クエリの変更をチェーンする追加のメソッドを許可する、インスタンスの参照。 </p>
+      <p>作成された<xref uid="com.microsoft.azure.storage.table._table_query" data-throw-if-not-resolved="false">TableQuery</xref>インスタンスが指定されているクラス型 t です呼び出し元のテーブル エンティティを指定の特殊化<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>パラメーターのない型をより特化した場合は、クラス型として。必須。</p>
+      <p></p>
+    syntax: *ref_10
+  - uid: com.microsoft.azure.storage.table._dynamic_table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._dynamic_table_entity.yml
+    name: DynamicTableEntity
+    nameWithType: DynamicTableEntity
+    fullName: com.microsoft.azure.storage.table.DynamicTableEntity
+    type: Class
+    summary: <p>A <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>呼び出し元のエンティティのプロパティ マップに直接アクセスを許可する型。 このクラスは拡張<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>をシリアル化と逆シリアル化のリフレクションの使用を排除します。 </p>
+    syntax:
+      content: public class DynamicTableEntity extends TableServiceEntity
+  - uid: com.microsoft.azure.storage.table._entity_resolver
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._entity_resolver.yml
+    name: EntityResolver<T>
+    nameWithType: EntityResolver<T>
+    fullName: com.microsoft.azure.storage.table.EntityResolver<T>
+    type: Interface
+    summary: |-
+      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
+      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p></p>
+    syntax:
+      content: public interface EntityResolver<T>
+      typeParameters:
+        - type: 8ce1ecb9
+          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>

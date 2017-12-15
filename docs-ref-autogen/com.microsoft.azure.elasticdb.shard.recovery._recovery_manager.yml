@@ -1,0 +1,814 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    id: _recovery_manager
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    children:
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard(ShardLocation)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard(ShardLocation,String)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard(ShardLocation)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard(ShardLocation,String)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences(ShardLocation)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences(ShardLocation,String)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getMappingDifferences(RecoveryToken)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>)'
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>,ReferenceObjectHelper<ShardLocation>)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardLocation(RecoveryToken)
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapName(RecoveryToken)
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapType(RecoveryToken)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShard(RecoveryToken,List<ShardRange>)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>,String)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>,String)'
+      - com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.RecoveryManager(ShardMapManager)
+      - 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.resolveMappingDifferences(RecoveryToken,MappingDifferenceResolution)'
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: RecoveryManager
+    nameWithType: RecoveryManager
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 48
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: <p>さまざまな回復を管理するシャードのマップ manager に関連するタスク。 シャード マップの情報およびグローバル シャードのマップ manager データベース、シャードにローカルに格納されている間のデータ破損の問題を解決するのに役立ちます。 また、特定の '不測' データベースのバックアップまたはデータベース コピー数のシャード マップの再構築が必要な回復シナリオ。 いる一部の回復方法が不可能なデータ失われること正しく使用されていないときに注意してください。 バックアップまたは回復操作に参加するすべてのデータベースのコピーをお勧めします。 </p>
+    syntax:
+      content: public class RecoveryManager
+    inheritance:
+      - java.lang.Object
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard(ShardLocation)
+    id: attachShard(ShardLocation)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: attachShard(ShardLocation location)
+    nameWithType: RecoveryManager.attachShard(ShardLocation location)
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.attachShard(ShardLocation location)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 123
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードをシャードのマップ マネージャーにアタッチします。 アタッチするシャード上でより新しいバージョンが見つかった場合、同じシャード マップのマッピングの以前のバージョンが自動的に更新されます。 シャードをアタッチした後は、手動の競合解決を保証する不整合を確認する DetectMappingDifferences (ShardLocation、文字列) を呼び出す必要があります。</p>
+      <p></p>
+    syntax:
+      content: public void attachShard(ShardLocation location)
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>アタッチされている、シャードの場所です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard(ShardLocation,String)'
+    id: 'attachShard(ShardLocation,String)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'attachShard(ShardLocation location, String shardMapName)'
+    nameWithType: 'RecoveryManager.attachShard(ShardLocation location, String shardMapName)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.attachShard(ShardLocation location, String shardMapName)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 139
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードをシャードのマップ マネージャーにアタッチします。 アタッチするシャード上でより新しいバージョンが見つかった場合、同じシャード マップのマッピングの以前のバージョンが自動的に更新されます。 シャードの場所は、この操作の一部としてローカル ストアの最新バージョンにアップグレードされます。 シャードをアタッチした後は、手動の競合解決を保証する不整合を確認する DetectMappingDifferences (ShardLocation、文字列) を呼び出す必要があります。</p>
+      <p></p>
+    syntax:
+      content: 'public void attachShard(ShardLocation location, String shardMapName)'
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>アタッチされている、シャードの場所です。 </p>
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップ名でフィルター処理する省略可能です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard(ShardLocation)
+    id: detachShard(ShardLocation)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: detachShard(ShardLocation location)
+    nameWithType: RecoveryManager.detachShard(ShardLocation location)
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.detachShard(ShardLocation location)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 183
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードのマップ マネージャーから特定のシャードをデタッチします。 マッピングを削除するシャードを指すは、このメソッドによって自動的に削除されます。</p>
+      <p></p>
+    syntax:
+      content: public void detachShard(ShardLocation location)
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>デタッチするシャードの場所です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard(ShardLocation,String)'
+    id: 'detachShard(ShardLocation,String)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'detachShard(ShardLocation location, String shardMapName)'
+    nameWithType: 'RecoveryManager.detachShard(ShardLocation location, String shardMapName)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.detachShard(ShardLocation location, String shardMapName)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 196
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードのマップ マネージャーから特定のシャードをデタッチします。 マッピングを削除するシャードを指すは、このメソッドによって自動的に削除されます。</p>
+      <p></p>
+    syntax:
+      content: 'public void detachShard(ShardLocation location, String shardMapName)'
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>デタッチするシャードの場所です。 </p>
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップ名でフィルター処理する省略可能です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences(ShardLocation)
+    id: detectMappingDifferences(ShardLocation)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: detectMappingDifferences(ShardLocation location)
+    nameWithType: RecoveryManager.detectMappingDifferences(ShardLocation location)
+    fullName: List<RecoveryToken> com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.detectMappingDifferences(ShardLocation location)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 523
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードを指定した場所にグローバル シャードのマップ manager データベースとシャードのローカルのデータベースのマッピングでの違いを列挙します。</p>
+      <p></p>
+    syntax:
+      content: public List<RecoveryToken> detectMappingDifferences(ShardLocation location)
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>不整合が検出する対象のシャードの場所です。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._recovery_tokena08ddfce
+        description: <p>さらに解決作業 (ResolveMappingDifferences) に使用されるトークンのコレクション。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences(ShardLocation,String)'
+    id: 'detectMappingDifferences(ShardLocation,String)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'detectMappingDifferences(ShardLocation location, String shardMapName)'
+    nameWithType: 'RecoveryManager.detectMappingDifferences(ShardLocation location, String shardMapName)'
+    fullName: 'List<RecoveryToken> com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.detectMappingDifferences(ShardLocation location, String shardMapName)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 537
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードを指定した場所にグローバル シャードのマップ manager データベースとシャードのローカルのデータベースのマッピングでの違いを列挙します。</p>
+      <p></p>
+    syntax:
+      content: 'public List<RecoveryToken> detectMappingDifferences(ShardLocation location, String shardMapName)'
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>不整合が検出する対象のシャードの場所です。 </p>
+        - id: shardMapName
+          type: '26831127'
+          description: <p>特定のシャード マップを指定する省略可能なパラメーターです。 </p>
+      return:
+        type: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._recovery_tokena08ddfce
+        description: <p>さらに解決作業 (ResolveMappingDifferences) に使用されるトークンのコレクション。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getMappingDifferences(RecoveryToken)
+    id: getMappingDifferences(RecoveryToken)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: getMappingDifferences(RecoveryToken token)
+    nameWithType: RecoveryManager.getMappingDifferences(RecoveryToken token)
+    fullName: 'Map<ShardRange, MappingLocation> com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getMappingDifferences(RecoveryToken token)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getMappingDifferences*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 222
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>範囲-場所キー/値ペアのディクショナリを返します。 返される場所は、特定の範囲 (またはポイント) がのみローカル シャードのマップだけでは、グローバル シャード マップ、またはその両方に存在するかどうかを示す、列挙子です。 範囲のいずれかのシャードのマップに含まれていないは、これらの範囲が表示されないようにの相違点を含めることはできません。</p>
+      <p></p>
+    syntax:
+      content: 'public Map<ShardRange, MappingLocation> getMappingDifferences(RecoveryToken token)'
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+      return:
+        type: 6110eba5com.microsoft.azure.elasticdb.shard.base._shard_rangeb33c76fccom.microsoft.azure.elasticdb.shard.recovery._mapping_locationa08ddfce
+        description: <p>範囲のセットとそれに対応する<xref uid="com.microsoft.azure.elasticdb.shard.recovery._mapping_location" data-throw-if-not-resolved="false">MappingLocation</xref>です。 このメソッドでは、回復のトークン パラメーターを提供する DetectMappingDifferences (ShardLocation、文字列) を前回呼び出したと仮定します。 このメソッドの結果は ResolveMappingDifferences または RebuildMappingsOnShard などの不整合を解決するのには、後続の呼び出しで通常使用されます。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>)'
+    id: 'getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName)'
+    nameWithType: 'RecoveryManager.getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 287
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャード マップの種類と DetectMappingDifferences (ShardLocation、文字列) から返されたトークンに基づく名前を取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public void getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName)'
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+        - id: mapType
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_map_typea08ddfce
+          description: <p>ShardMap 型 (範囲またはリスト) を出力します。 </p>
+        - id: shardMapName
+          type: 4f397241
+          description: <p>シャード マップの名前を出力します。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>,ReferenceObjectHelper<ShardLocation>)'
+    id: 'getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>,ReferenceObjectHelper<ShardLocation>)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName, ReferenceObjectHelper<ShardLocation> shardLocation)'
+    nameWithType: 'RecoveryManager.getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName, ReferenceObjectHelper<ShardLocation> shardLocation)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName, ReferenceObjectHelper<ShardLocation> shardLocation)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 249
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャード マップの種類、名前、およびシャードに基づく場所 DetectMappingDifferences (ShardLocation、文字列) から返されたトークンを取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public void getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName, ReferenceObjectHelper<ShardLocation> shardLocation)'
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+        - id: mapType
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_map_typea08ddfce
+          description: <p>出力のシャード マップの種類 (範囲またはリスト)。 </p>
+        - id: shardMapName
+          type: 4f397241
+          description: <p>シャード マップ名を出力します。 </p>
+        - id: shardLocation
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+          description: <p>出力のシャードの場所 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardLocation(RecoveryToken)
+    id: getShardLocation(RecoveryToken)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: getShardLocation(RecoveryToken token)
+    nameWithType: RecoveryManager.getShardLocation(RecoveryToken token)
+    fullName: ShardLocation com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardLocation(RecoveryToken token)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardLocation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 360
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>DetectMappingDifferences (ShardLocation、文字列) によって処理されるローカルのシャードのマップのシャードの場所を返します。</p>
+      <p></p>
+    syntax:
+      content: public ShardLocation getShardLocation(RecoveryToken token)
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から返された回復トークン </p>
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_location
+        description: <p>マッピング DetectMappingDifferences (ShardLocation、文字列) で検出されたの相違点のセットに対応するシャードの場所です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapName(RecoveryToken)
+    id: getShardMapName(RecoveryToken)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: getShardMapName(RecoveryToken token)
+    nameWithType: RecoveryManager.getShardMapName(RecoveryToken token)
+    fullName: String com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardMapName(RecoveryToken token)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 336
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>DetectMappingDifferences (ShardLocation、文字列) によって処理されたシャードのマップのシャード マップ名を返します。</p>
+      <p></p>
+    syntax:
+      content: public String getShardMapName(RecoveryToken token)
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+      return:
+        type: '26831127'
+        description: <p>指定した回復トークンのシャードのマップの名前。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapType(RecoveryToken)
+    id: getShardMapType(RecoveryToken)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: getShardMapType(RecoveryToken token)
+    nameWithType: RecoveryManager.getShardMapType(RecoveryToken token)
+    fullName: ShardMapType com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardMapType(RecoveryToken token)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 313
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>DetectMappingDifferences (ShardLocation、文字列) によって処理されたシャードのマップのシャード マップの種類を返します。</p>
+      <p></p>
+    syntax:
+      content: public ShardMapType getShardMapType(RecoveryToken token)
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+      return:
+        type: com.microsoft.azure.elasticdb.shard.map._shard_map_type
+        description: <p>回復のトークンに対応するシャード マップ (リスト、範囲など) の型。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShard(RecoveryToken,List<ShardRange>)'
+    id: 'rebuildMappingsOnShard(RecoveryToken,List<ShardRange>)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'rebuildMappingsOnShard(RecoveryToken token, List<ShardRange> ranges)'
+    nameWithType: 'RecoveryManager.rebuildMappingsOnShard(RecoveryToken token, List<ShardRange> ranges)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShard(RecoveryToken token, List<ShardRange> ranges)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 460
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>DetectMappingDifferences (ShardLocation, string) によって検出され、GetMappingDifferences にアクセスして一貫性のないシャードの範囲の一覧からローカル範囲シャード マップを再構築します。 結果として得られるローカル範囲シャード マップが常にまだされませんと一致するシャードのマップ manager データベース内のグローバル シャード マップします。 ResolveMappingDifferences 後続の呼び出しは、システムを正常な状態に戻す必要があります。</p>
+      <p></p>
+    syntax:
+      content: 'public void rebuildMappingsOnShard(RecoveryToken token, List<ShardRange> ranges)'
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences を前回呼び出したときからの回復トークン </p>
+        - id: ranges
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_rangea08ddfce
+          description: <p>ローカル シャードのマップを再構築するときに、ローカルのシャードに保持する範囲のセット。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 不整合をシャードの範囲内だけは、このメソッドを使用して再構築することができます。 なしの不一致は、ローカルのシャードとグローバル シャードのマップをすべての範囲内では、ローカルのシャードに完全な状態で保持され、この呼び出しの影響は受けません。 シャードのマップ マネージャーで正規のインターフェイスを使用して後で、競合しないマッピングを後続の変更ができます。 回復マネージャーを使用して、競合しないマッピングを変更する必要はありません。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>)
+    id: rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations)
+    nameWithType: RecoveryManager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations)
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 419
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>指定した場所のシャードのコレクション、個々 のシャードに格納されているマッピング情報に基づいてシャードのマップ マネージャーを再構築します。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。 個々 のシャード マップの情報は、不整合が発生した場合、動作は定義されません。 クロス シャード ロックは行われませんため、シャードは、このメソッドの実行中に不整合になると、グローバル シャードのマップの最終的な状態は破損している可能性があります。</p>
+      <p></p>
+    syntax:
+      content: public void rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations)
+      parameters:
+        - id: shardLocations
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+          description: <p>シャードの場所のコレクション。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>,String)'
+    id: 'rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>,String)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations, String shardMapName)'
+    nameWithType: 'RecoveryManager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations, String shardMapName)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations, String shardMapName)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 436
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>指定した場所のシャードのコレクション、個々 のシャードに格納されているマッピング情報に基づいてシャードのマップ マネージャーを再構築します。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。 個々 のシャード マップの情報は、不整合が発生した場合、動作は定義されません。 クロス シャード ロックは行われませんため、シャードは、このメソッドの実行中に不整合になると、グローバル シャードのマップの最終的な状態は破損している可能性があります。</p>
+      <p></p>
+    syntax:
+      content: 'public void rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations, String shardMapName)'
+      parameters:
+        - id: shardLocations
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+          description: <p>シャードの場所のコレクション。 </p>
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップのオプションの名前。 省略した場合は、各シャードにあるすべてのシャード マップからの回復を試みます。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>)
+    id: rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations)
+    nameWithType: RecoveryManager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations)
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 385
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードの場所のコレクションを指定するには、ローカルのシャードのマップを再構築は、グローバルのシャードのマップに格納されているマッピング情報に基づいています。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</p>
+      <p></p>
+    syntax:
+      content: public void rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations)
+      parameters:
+        - id: shardLocations
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+          description: <p>シャードの場所のコレクション。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>,String)'
+    id: 'rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>,String)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations, String shardMapName)'
+    nameWithType: 'RecoveryManager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations, String shardMapName)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations, String shardMapName)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 400
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>シャードの場所のコレクションを指定するには、ローカルのシャードのマップを再構築は、グローバルのシャードのマップに格納されているマッピング情報に基づいています。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</p>
+      <p></p>
+    syntax:
+      content: 'public void rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations, String shardMapName)'
+      parameters:
+        - id: shardLocations
+          type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+          description: <p>シャードの場所のコレクション。 </p>
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップ名でフィルター処理する省略可能なパラメーターです。 省略した場合、すべてのシャード マップが再構築されます。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.RecoveryManager(ShardMapManager)
+    id: RecoveryManager(ShardMapManager)
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: RecoveryManager(ShardMapManager shardMapManager)
+    nameWithType: RecoveryManager.RecoveryManager(ShardMapManager shardMapManager)
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.RecoveryManager(ShardMapManager shardMapManager)
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.RecoveryManager*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 74
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>回復マネージャーのインスタンスの構成要素には、シャードのマップ マネージャーが与えられます。</p>
+      <p></p>
+    syntax:
+      content: public RecoveryManager(ShardMapManager shardMapManager)
+      parameters:
+        - id: shardMapManager
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+          description: <p>シャードのマップ マネージャーが復旧中です。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.resolveMappingDifferences(RecoveryToken,MappingDifferenceResolution)'
+    id: 'resolveMappingDifferences(RecoveryToken,MappingDifferenceResolution)'
+    parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    langs:
+      - java
+    name: 'resolveMappingDifferences(RecoveryToken token, MappingDifferenceResolution resolution)'
+    nameWithType: 'RecoveryManager.resolveMappingDifferences(RecoveryToken token, MappingDifferenceResolution resolution)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.resolveMappingDifferences(RecoveryToken token, MappingDifferenceResolution resolution)'
+    overload: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.resolveMappingDifferences*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
+      startLine: 771
+    package: com.microsoft.azure.elasticdb.shard.recovery
+    summary: |-
+      <p>情報源として、シャード マップ (ローカルまたはグローバルのいずれか) のいずれかを選択し、両方の同期のシャード マップ上のマッピングを表示します。</p>
+      <p></p>
+    syntax:
+      content: 'public void resolveMappingDifferences(RecoveryToken token, MappingDifferenceResolution resolution)'
+      parameters:
+        - id: token
+          type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+        - id: resolution
+          type: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference_resolution
+          description: <p>解決に使用する解決方法です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+references:
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.RecoveryManager*
+    name: RecoveryManager
+    nameWithType: RecoveryManager.RecoveryManager
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.RecoveryManager
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard*
+    name: attachShard
+    nameWithType: RecoveryManager.attachShard
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.attachShard
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard*
+    name: detachShard
+    nameWithType: RecoveryManager.detachShard
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.detachShard
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: 6110eba5com.microsoft.azure.elasticdb.shard.base._shard_rangeb33c76fccom.microsoft.azure.elasticdb.shard.recovery._mapping_locationa08ddfce
+    spec.java:
+      - name: Map<
+        fullName: Map<
+      - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+        name: ShardRange
+        fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+        href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+      - name: ', '
+        fullName: ', '
+      - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_location
+        name: MappingLocation
+        fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingLocation
+        href: com.microsoft.azure.elasticdb.shard.recovery._mapping_location.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getMappingDifferences*
+    name: getMappingDifferences
+    nameWithType: RecoveryManager.getMappingDifferences
+    fullName: 'Map<ShardRange, MappingLocation> com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getMappingDifferences'
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_map_typea08ddfce
+    spec.java:
+      - name: ReferenceObjectHelper<
+        fullName: ReferenceObjectHelper<
+      - uid: com.microsoft.azure.elasticdb.shard.map._shard_map_type
+        name: ShardMapType
+        fullName: com.microsoft.azure.elasticdb.shard.map.ShardMapType
+        href: com.microsoft.azure.elasticdb.shard.map._shard_map_type.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 4f397241
+    spec.java:
+      - name: ReferenceObjectHelper<String>
+        fullName: ReferenceObjectHelper<String>
+  - uid: 2695f77dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+    spec.java:
+      - name: ReferenceObjectHelper<
+        fullName: ReferenceObjectHelper<
+      - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+        name: ShardLocation
+        fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+        href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo*
+    name: getShardInfo
+    nameWithType: RecoveryManager.getShardInfo
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardInfo
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapType*
+    name: getShardMapType
+    nameWithType: RecoveryManager.getShardMapType
+    fullName: ShardMapType com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardMapType
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapName*
+    name: getShardMapName
+    nameWithType: RecoveryManager.getShardMapName
+    fullName: String com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardMapName
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardLocation*
+    name: getShardLocation
+    nameWithType: RecoveryManager.getShardLocation
+    fullName: ShardLocation com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.getShardLocation
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+        name: ShardLocation
+        fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+        href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager*
+    name: rebuildMappingsOnShardsFromShardMapManager
+    nameWithType: RecoveryManager.rebuildMappingsOnShardsFromShardMapManager
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShardsFromShardMapManager
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards*
+    name: rebuildMappingsOnShardMapManagerFromShards
+    nameWithType: RecoveryManager.rebuildMappingsOnShardMapManagerFromShards
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShardMapManagerFromShards
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_rangea08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+        name: ShardRange
+        fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+        href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShard*
+    name: rebuildMappingsOnShard
+    nameWithType: RecoveryManager.rebuildMappingsOnShard
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.rebuildMappingsOnShard
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._recovery_tokena08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+        name: RecoveryToken
+        fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryToken
+        href: com.microsoft.azure.elasticdb.shard.recovery._recovery_token.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences*
+    name: detectMappingDifferences
+    nameWithType: RecoveryManager.detectMappingDifferences
+    fullName: List<RecoveryToken> com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.detectMappingDifferences
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.resolveMappingDifferences*
+    name: resolveMappingDifferences
+    nameWithType: RecoveryManager.resolveMappingDifferences
+    fullName: void com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager.resolveMappingDifferences
+    package: com.microsoft.azure.elasticdb.shard.recovery
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_token.yml
+    name: RecoveryToken
+    nameWithType: RecoveryToken
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryToken
+    type: Class
+    summary: <p>回復のトークンが生成されのメソッドで使用される、 <xref uid="com.microsoft.azure.elasticdb.shard.recovery._recovery_manager" data-throw-if-not-resolved="false">RecoveryManager</xref>シャードのマップの競合の検出と解決を実行します。 </p>
+    syntax:
+      content: public class RecoveryToken
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_range.yml
+    name: ShardRange
+    nameWithType: ShardRange
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
+    type: Class
+    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    syntax:
+      content: public class ShardRange
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference.yml
+    name: MappingDifference
+    nameWithType: MappingDifference
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingDifference
+    type: Class
+    summary: <p>マッピングの相違点のクラスです。 </p>
+    syntax:
+      content: public class MappingDifference
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_shard_map.yml
+    name: StoreShardMap
+    nameWithType: StoreShardMap
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreShardMap
+    type: Class
+    summary: <p>シャード マップの表現を格納します。 </p>
+    syntax:
+      content: public class StoreShardMap
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_shard
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_shard.yml
+    name: StoreShard
+    nameWithType: StoreShard
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreShard
+    type: Class
+    summary: <p>単一のシャードのストレージ表現します。 </p>
+    syntax:
+      content: public class StoreShard
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+    name: ShardLocation
+    nameWithType: ShardLocation
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+    type: Class
+    summary: <p>そのサーバー名とデータベース名の観点から、シャードの場所を表します。 シャードへの接続を管理し、シャードの他の操作をサポートするために使用されます。 なく、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャードの場所が、シャード マップに登録されていません。 </p>
+    syntax:
+      content: public class ShardLocation
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    name: ShardMapManager
+    nameWithType: ShardMapManager
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager
+    type: Class
+    summary: <p>シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。 </p>
+    syntax:
+      content: public class ShardMapManager
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_location
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_location.yml
+    name: MappingLocation
+    nameWithType: MappingLocation
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingLocation
+    type: Enum
+    summary: <p>異なるマッピングが存在する場所です。 </p>
+    syntax:
+      content: public enum MappingLocation
+  - uid: com.microsoft.azure.elasticdb.shard.map._shard_map_type
+    parent: com.microsoft.azure.elasticdb.shard.map
+    href: com.microsoft.azure.elasticdb.shard.map._shard_map_type.yml
+    name: ShardMapType
+    nameWithType: ShardMapType
+    fullName: com.microsoft.azure.elasticdb.shard.map.ShardMapType
+    type: Enum
+    summary: <p>シャード マップの種類です。 </p>
+    syntax:
+      content: public enum ShardMapType
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference_resolution
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    href: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference_resolution.yml
+    name: MappingDifferenceResolution
+    nameWithType: MappingDifferenceResolution
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingDifferenceResolution
+    type: Enum
+    summary: <p>マッピングの相違点を解決するための戦略を解決します。 </p>
+    syntax:
+      content: public enum MappingDifferenceResolution

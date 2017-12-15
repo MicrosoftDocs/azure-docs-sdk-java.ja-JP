@@ -1,0 +1,1630 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.datalake.store._core
+    id: _core
+    parent: com.microsoft.azure.datalake.store
+    children:
+      - 'com.microsoft.azure.datalake.store._core.append(String,long,byte [],int,int,String,String,SyncFlag,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.checkAccess(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.concat(String,List<String>,ADLStoreClient,boolean,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.concat(String,List<String>,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.concurrentAppend(String,byte [],int,int,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.create(String,boolean,String,byte [],int,int,String,String,boolean,SyncFlag,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.delete(String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.getAclStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.getAclStatus(String,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.getContentSummary(String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.getFileStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.getFileStatus(String,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+      - com.microsoft.azure.datalake.store._core.isValidOctal(String)
+      - 'com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.mkdirs(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.modifyAclEntries(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.modifyAclEntries(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.open(String,long,long,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.open(String,long,long,String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.removeAcl(String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.removeAclEntries(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.removeAclEntries(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.removeDefaultAcl(String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.rename(String,String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.setAcl(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.setAcl(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.setExpiryTime(String,ExpiryOption,long,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.setOwner(String,String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.setPermission(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+      - 'com.microsoft.azure.datalake.store._core.setTimes(String,long,long,ADLStoreClient,RequestOptions,OperationResponse)'
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: Core
+    nameWithType: Core
+    fullName: com.microsoft.azure.datalake.store.Core
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+        branch: master
+        repo: 'https://github.com/azure/azure-data-lake-store-java'
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 40
+    package: com.microsoft.azure.datalake.store
+    summary: "<p>プロトコルです。コア クラスは、応答する API の呼び出しを実装します。 1 つのメソッドがある<xref uid=\"com.microsoft.azure.datalake.store._core\" data-throw-if-not-resolved=\"false\">コア</xref>サーバーでサポートされているすべての REST api です。 </p>\n<p>このクラスのメソッドは、下位レベル、基になる操作の詳細をすべてを公開する傾向があります。 メソッドを呼び出すには、インスタンス化、 <xref uid=\"com.microsoft.azure.datalake.store._request_options\" data-throw-if-not-resolved=\"false\">RequestOptions</xref>オブジェクトします。 メンバーのいずれかに、必要に応じて値を割り当てる (例:\"RetryPolicy\") です。 新規作成し、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>オブジェクト。 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>呼び出しから呼び出しの結果と統計情報を渡す際に使用します。 </p>\n<p>発生したエラー<xref uid=\"com.microsoft.azure.datalake.store._core\" data-throw-if-not-resolved=\"false\">コア</xref>メソッドが戻るを通じて伝達される、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>パラメーター。 </p>\n<p>\r\n\r\n  <b>スレッド セーフ:</b>このクラスのすべての静的メソッドはスレッド セーフであります。</p>"
+    syntax: &ref_3
+      content: public class Core
+    inheritance:
+      - java.lang.Object
+  - uid: 'com.microsoft.azure.datalake.store._core.append(String,long,byte [],int,int,String,String,SyncFlag,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'append(String,long,byte [],int,int,String,String,SyncFlag,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'append(String path, long offsetToAppendTo, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.append(String path, long offsetToAppendTo, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.append(String path, long offsetToAppendTo, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.append*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 155
+    package: com.microsoft.azure.datalake.store
+    summary: "<p>作成された既存のファイルにバイトを追加します。</p>\n<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">作成 (文字列、ブール値、文字列、byte[]、int、int、文字列、文字列、ブール値、SyncFlag、ADLStoreClient、RequestOptions、OperationResponse)</xref> (文字列、ブール値、文字列、byte[]、int、int、文字列、文字列、ブール値、ブール値、 <xref uid=\"com.microsoft.azure.datalake.store._a_d_l_store_client\" data-throw-if-not-resolved=\"false\">ADLStoreClient</xref>、 <xref uid=\"com.microsoft.azure.datalake.store._request_options\" data-throw-if-not-resolved=\"false\">RequestOptions</xref>、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>) を作成しました。</p>\n\n<p>\n使用して<xref uid=\"com.microsoft.azure.datalake.store._sync_flag.METADATA\" data-throw-if-not-resolved=\"false\">SyncFlag #METADATA</xref>特にファイルの長さがから取得した場合も、ファイルのメタデータを更新する必要があります<xref uid=\"com.microsoft.azure.datalake.store._core.getFileStatus(String,ADLStoreClient,RequestOptions,OperationResponse)\" data-throw-if-not-resolved=\"false\">getFileStatus (String, ADLStoreClient、RequestOptions、OperationResponse)</xref>または<xref uid=\"com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,ADLStoreClient,RequestOptions,OperationResponse)\" data-throw-if-not-resolved=\"false\">listStatus (文字列、文字列、文字列、int、ADLStoreClient、RequestOptions、OperationResponse)</xref> API 呼び出し。 更新のメタデータの処理のオーバーヘッドがあります。</p>\n<p>使用して<xref uid=\"com.microsoft.azure.datalake.store._sync_flag.CLOSE\" data-throw-if-not-resolved=\"false\">SyncFlag #CLOSE</xref>以上のデータがこのパスに書き込まれる予定です。 含むバックエンドはメタデータを更新して、ストリームのハンドルを閉じるおよび有効な leaseId が渡された場合、パスにリースを解放します。 コストのかかる操作と最後のバイトが書き込まれるときにのみ使用する必要があります。 </p>"
+    syntax:
+      content: 'public static void append(String path, long offsetToAppendTo, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>追加先のファイルの完全パス。 ファイルが既に存在する必要があります。 </p>
+        - id: offsetToAppendTo
+          type: 0364520f
+          description: "<p>ファイルを追加する位置を示すオフセットします。 オフセットを選択して、サーバーをできるように、渡す<code>-1 \r\n\r\n    </code>です。 </p>"
+        - id: contents
+          type: ccd9418d
+          description: "<p>ファイルに書き込まれるコンテンツを含むバイト配列。 指定できます。<code>null \r\n\r\n    </code></p>"
+        - id: offsetWithinContentsArray
+          type: f75371fa
+          description: "<p>渡されるバイト配列内のオフセット<code>contents \r\n\r\n    </code>です。 このオフセットから始まるバイトがサーバーに書き込まれます </p>"
+        - id: length
+          type: f75371fa
+          description: "<p>バイト数<code>contents \r\n\r\n    </code>書き込まれる </p>"
+        - id: leaseId
+          type: '26831127'
+          description: <p>(クライアントによって生成される) のリース ID を表す文字列。 Null にすることができます。 </p>
+        - id: sessionId
+          type: '26831127'
+          description: <p>セッション ID が (クライアントによって生成される) を含む文字列。 Null にすることができます。 </p>
+        - id: syncFlag
+          type: com.microsoft.azure.datalake.store._sync_flag
+          description: '<p>使用して<xref uid="com.microsoft.azure.datalake.store._sync_flag.DATA" data-throw-if-not-resolved="false">SyncFlag #DATA</xref>バイト数を同じファイル パスに書き込むときにします。 ほとんどのパフォーマンスの高い操作です。</p>'
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.checkAccess(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'checkAccess(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'checkAccess(String path, String rwx, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.checkAccess(String path, String rwx, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.checkAccess(String path, String rwx, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.checkAccess*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1051
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>呼び出し元のユーザーがファイルに必要な権限を持つかどうかを確認します。 確認するアクセス許可は、rwx パラメーターで unix のアクセス許可文字列として指定する必要があります。</p>
+      <p></p>
+    syntax:
+      content: 'public static void checkAccess(String path, String rwx, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはチェックするディレクトリの完全なパス </p>
+        - id: rwx
+          type: '26831127'
+          description: "<p>rwx 文字列の形式で、チェックする権限です。 呼び出しは、呼び出し元が要求されたすべての権限を持っている場合は true を返します。 たとえば、指定する<code>\"r-x\" \r\n\r\n    </code>場合、呼び出し元が読み取り権限と実行に成功します。 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.concat(String,List<String>,ADLStoreClient,boolean,RequestOptions,OperationResponse)'
+    id: 'concat(String,List<String>,ADLStoreClient,boolean,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'concat(String path, List<String> sources, ADLStoreClient client, boolean deleteSourceDirectory, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.concat(String path, List<String> sources, ADLStoreClient client, boolean deleteSourceDirectory, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.concat(String path, List<String> sources, ADLStoreClient client, boolean deleteSourceDirectory, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.concat*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 580
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ターゲット ファイル名に指定されたファイルのリストを連結します。 ターゲットが存在する必要があります。 ソース ファイルは、連結が成功した場合、削除されます。</p>
+      <p></p>
+    syntax:
+      content: 'public static void concat(String path, List<String> sources, ADLStoreClient client, boolean deleteSourceDirectory, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>そのファイルの完全パス、ターゲットを作成するには </p>
+        - id: sources
+          type: 7d60c20e
+          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の連結するファイルの完全なパス名を含む文字列。 Null または空にすることはできません。 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: deleteSourceDirectory
+          type: 4fc6e284
+          description: <p>ソース ファイルを含むディレクトリを削除するかどうかを指定します。 Concat で指定されたソース ファイルが含まれる場合<em>すべて</em>このパラメーターは、すべてのソース ファイルとソース ディレクトリを削除、concat を指定して、ディレクトリ内のファイルです。 ディレクトリ レベルの操作がすべて、1 つずつサーバー上のファイルを削除するよりも高速なので、一部のアプリケーションのパフォーマンスが向上を提供この可能性があります。 これは、ニーズがこのフラグによって提供される機能に一致する一括アップロードのアプリと同様に、一部のアプリの特定のパフォーマンスの最適化です。 </p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.concat(String,List<String>,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'concat(String,List<String>,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'concat(String path, List<String> sources, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.concat(String path, List<String> sources, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.concat(String path, List<String> sources, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.concat*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 553
+    package: com.microsoft.azure.datalake.store
+    summary: <p>ターゲット ファイル名に指定されたファイルのリストを連結します。 ターゲットが存在する必要があります。 ソース ファイルは、連結が成功した場合、削除されます。 </p>
+    syntax:
+      content: 'public static void concat(String path, List<String> sources, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>そのファイルの完全パス、ターゲットを作成するには </p>
+        - id: sources
+          type: 7d60c20e
+          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の連結するファイルの完全なパス名を含む文字列。 Null または空にすることはできません。 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.concurrentAppend(String,byte [],int,int,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'concurrentAppend(String,byte [],int,int,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'concurrentAppend(String path, byte[] contents, int offsetWithinContentsArray, int length, boolean autoCreate, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.concurrentAppend(String path, byte[] contents, int offsetWithinContentsArray, int length, boolean autoCreate, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.concurrentAppend(String path, byte[] contents, int offsetWithinContentsArray, int length, boolean autoCreate, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.concurrentAppend*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 197
+    package: com.microsoft.azure.datalake.store
+    summary: "<p>ファイルにバイトを追加します。 オフセットは、サーバーによって決定されます。 これにより、同時に同じファイルに追加する複数のライターです。 作成したファイル<code>concurrentAppend \r\n\r\n    </code>を付加することができますのみ<code>concurrentAppend \r\n\r\n    </code>です。</p>\n\n<p></p>"
+    syntax:
+      content: 'public static void concurrentAppend(String path, byte[] contents, int offsetWithinContentsArray, int length, boolean autoCreate, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>追加先のファイルの完全パス。 </p>
+        - id: contents
+          type: ccd9418d
+          description: "<p>ファイルに書き込まれるコンテンツを含むバイト配列。 指定できます。<code>null \r\n\r\n    </code></p>"
+        - id: offsetWithinContentsArray
+          type: f75371fa
+          description: "<p>渡されるバイト配列内のオフセット<code>contents \r\n\r\n    </code>です。 このオフセットから始まるバイトがサーバーに書き込まれます </p>"
+        - id: length
+          type: f75371fa
+          description: "<p>バイト数<code>contents \r\n\r\n    </code>書き込まれる </p>"
+        - id: autoCreate
+          type: 4fc6e284
+          description: <p>存在しない場合、ファイルを作成するかどうかを指定するブール値 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.create(String,boolean,String,byte [],int,int,String,String,boolean,SyncFlag,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'create(String,boolean,String,byte [],int,int,String,String,boolean,SyncFlag,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'create(String path, boolean overwrite, String octalPermission, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, boolean createParent, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.create(String path, boolean overwrite, String octalPermission, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, boolean createParent, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.create(String path, boolean overwrite, String octalPermission, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, boolean createParent, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.create*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 82
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルを作成し、書き込みにします。</p>
+      <p>
+      使用して<xref uid="com.microsoft.azure.datalake.store._sync_flag.METADATA" data-throw-if-not-resolved="false">SyncFlag #METADATA</xref>特にファイルの長さがから取得した場合も、ファイルのメタデータを更新する必要があります<xref uid="com.microsoft.azure.datalake.store._core.getFileStatus(String,ADLStoreClient,RequestOptions,OperationResponse)" data-throw-if-not-resolved="false">getFileStatus (String, ADLStoreClient、RequestOptions、OperationResponse)</xref>または<xref uid="com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,ADLStoreClient,RequestOptions,OperationResponse)" data-throw-if-not-resolved="false">listStatus (文字列、文字列、文字列、int、ADLStoreClient、RequestOptions、OperationResponse)</xref> API 呼び出し。 更新のメタデータの処理のオーバーヘッドがあります。</p>
+      <p>使用して<xref uid="com.microsoft.azure.datalake.store._sync_flag.CLOSE" data-throw-if-not-resolved="false">SyncFlag #CLOSE</xref>以上のデータがこのパスに書き込まれる予定です。 含むバックエンドはメタデータを更新して、ストリームのハンドルを閉じるおよび有効な leaseId が渡された場合、パスにリースを解放します。 コストのかかる操作と最後のバイトが書き込まれるときにのみ使用する必要があります。 </p>
+    syntax:
+      content: 'public static void create(String path, boolean overwrite, String octalPermission, byte[] contents, int offsetWithinContentsArray, int length, String leaseId, String sessionId, boolean createParent, SyncFlag syncFlag, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>作成するファイルの完全なパス </p>
+        - id: overwrite
+          type: 4fc6e284
+          description: <p>既に存在する場合、ファイルを上書きするかどうか </p>
+        - id: octalPermission
+          type: '26831127'
+          description: "<p>8 進数の数字として、ファイルのアクセス許可 (たとえば、<code>\"755\" \r\n\r\n    </code> )。 Null にすることができます。 </p>"
+        - id: contents
+          type: ccd9418d
+          description: "<p>ファイルに書き込まれるコンテンツを含むバイト配列。 指定できます。<code>null \r\n\r\n    </code></p>"
+        - id: offsetWithinContentsArray
+          type: f75371fa
+          description: "<p>渡されるバイト配列内のオフセット<code>contents \r\n\r\n    </code>です。 このオフセットから始まるバイトがサーバーに書き込まれます </p>"
+        - id: length
+          type: f75371fa
+          description: "<p>バイト数<code>contents \r\n\r\n    </code>書き込まれる </p>"
+        - id: leaseId
+          type: '26831127'
+          description: <p>(クライアントによって生成される) のリース ID を表す文字列。 Null にすることができます。 </p>
+        - id: sessionId
+          type: '26831127'
+          description: <p>セッション ID が (クライアントによって生成される) を含む文字列。 Null にすることができます。 </p>
+        - id: createParent
+          type: 4fc6e284
+          description: <p>true の場合が欠落している場合、ファイルの親ディレクトリは作成されます。 </p>
+        - id: syncFlag
+          type: com.microsoft.azure.datalake.store._sync_flag
+          description: '<p>使用して<xref uid="com.microsoft.azure.datalake.store._sync_flag.DATA" data-throw-if-not-resolved="false">SyncFlag #DATA</xref>バイト数を同じファイル パスに書き込むときにします。 ほとんどのパフォーマンスの高い操作です。</p>'
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.delete(String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'delete(String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'delete(String path, boolean recursive, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.delete(String path, boolean recursive, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static boolean com.microsoft.azure.datalake.store.Core.delete(String path, boolean recursive, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.delete*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 301
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>Azure Data Lake からファイルまたはディレクトリを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean delete(String path, boolean recursive, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>削除するファイルの完全パス。 ファイルが既に存在する必要があります。 </p>
+        - id: recursive
+          type: 4fc6e284
+          description: <p>下にあるディレクトリの階層内のすべてを削除するかどうかのファイル ディレクトリを次に、ディレクトリを削除する場合 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>返します<code>true \r\n\r\n    </code>削除が成功した場合。 確認も<code>resp.successful \r\n\r\n    </code>します。 </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.getAclStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'getAclStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'getAclStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.getAclStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static AclStatus com.microsoft.azure.datalake.store.Core.getAclStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.getAclStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1288
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>現在の Acl およびファイルまたはディレクトリに関連付けられているアクセス許可を取得します。 現在所有するユーザーおよびグループをファイルまたはディレクトリも返します。</p>
+      <p></p>
+    syntax:
+      content: 'public static AclStatus getAclStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたは Acl およびのアクセス許可を取得するディレクトリの完全なパス </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: com.microsoft.azure.datalake.store.acl._acl_status
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">AclStatus</xref> Acl、アクセス許可およびファイルまたはディレクトリの所有者を含むオブジェクト </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.getAclStatus(String,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'getAclStatus(String,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'getAclStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.getAclStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static AclStatus com.microsoft.azure.datalake.store.Core.getAclStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.getAclStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1308
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>現在の Acl およびファイルまたはディレクトリに関連付けられているアクセス許可を取得します。 現在所有するユーザーおよびグループをファイルまたはディレクトリも返します。</p>
+      <p></p>
+    syntax:
+      content: 'public static AclStatus getAclStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたは Acl およびのアクセス許可を取得するディレクトリの完全なパス </p>
+        - id: oidOrUpn
+          type: com.microsoft.azure.datalake.store._user_group_representation
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._user_group_representation\" data-throw-if-not-resolved=\"false\">UserGroupRepresentation</xref> OID または UPN としてユーザーおよびグループの情報を返すかどうかを指定する列挙型 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: com.microsoft.azure.datalake.store.acl._acl_status
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">AclStatus</xref> Acl、アクセス許可およびファイルまたはディレクトリの所有者を含むオブジェクト </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.getContentSummary(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'getContentSummary(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'getContentSummary(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.getContentSummary(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static ContentSummary com.microsoft.azure.datalake.store.Core.getContentSummary(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.getContentSummary*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 498
+    package: com.microsoft.azure.datalake.store
+    summary: <p>ファイルまたはディレクトリの概要のコンテンツを取得します。 </p>
+    syntax:
+      content: 'public static ContentSummary getContentSummary(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはクエリをディレクトリのパス </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+      return:
+        type: com.microsoft.azure.datalake.store._content_summary
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._content_summary\" data-throw-if-not-resolved=\"false\">ContentSummary</xref>を含むファイルまたはディレクトリに関する情報の概要 </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.getFileStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'getFileStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static DirectoryEntry com.microsoft.azure.datalake.store.Core.getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.getFileStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 652
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリに関連付けられているディレクトリのメタデータを取得します。</p>
+      <p></p>
+    syntax: &ref_1
+      content: 'public static DirectoryEntry getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはディレクトリのメタデータを取得するには </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: com.microsoft.azure.datalake.store._directory_entry
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref>ファイルのメタデータを含む </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.getFileStatus(String,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'getFileStatus(String,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'getFileStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.getFileStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static DirectoryEntry com.microsoft.azure.datalake.store.Core.getFileStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.getFileStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 672
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリに関連付けられているディレクトリのメタデータを取得します。</p>
+      <p></p>
+    syntax:
+      content: 'public static DirectoryEntry getFileStatus(String path, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはディレクトリのメタデータを取得するには </p>
+        - id: oidOrUpn
+          type: com.microsoft.azure.datalake.store._user_group_representation
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._user_group_representation\" data-throw-if-not-resolved=\"false\">UserGroupRepresentation</xref> OID または UPN としてユーザーおよびグループの情報を返すかどうかを指定する列挙型 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: com.microsoft.azure.datalake.store._directory_entry
+        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref>ファイルのメタデータを含む </p>"
+  - uid: com.microsoft.azure.datalake.store._core.isValidOctal(String)
+    id: isValidOctal(String)
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: isValidOctal(String input)
+    nameWithType: Core.isValidOctal(String input)
+    fullName: static boolean com.microsoft.azure.datalake.store.Core.isValidOctal(String input)
+    overload: com.microsoft.azure.datalake.store._core.isValidOctal*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1035
+    package: com.microsoft.azure.datalake.store
+    syntax:
+      content: public static boolean isValidOctal(String input)
+      parameters:
+        - id: input
+          type: '26831127'
+      return:
+        type: 4fc6e284
+  - uid: 'com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'listStatus(String,String,String,int,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static List<DirectoryEntry> com.microsoft.azure.datalake.store.Core.listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.listStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 777
+    package: com.microsoft.azure.datalake.store
+    summary: "<p>返す、ディレクトリの内容を列挙、<xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の<xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref>オブジェクト、指定したディレクトリ内ファイルまたはディレクトリごとに 1 つです。 </p>\n<p>クライアントまたはサーバーの過負荷を回避するのには、呼び出しが部分的な一覧は、呼び出し元のケースが最後のエントリを使用して、返された一覧として指定されてからの呼び出しを行う必要がありますを返す可能性があります、<code>listAfter \r\n\r\n    </code>次の呼び出しのパラメーターです。 </p>\n\n<p></p>"
+    syntax: &ref_2
+      content: 'public static List<DirectoryEntry> listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>列挙するディレクトリ </p>
+        - id: listAfter
+          type: '26831127'
+          description: <p>列挙を開始位置となるファイル名 </p>
+        - id: listBefore
+          type: '26831127'
+          description: <p>列挙を終了する前にファイル名 </p>
+        - id: listSize
+          type: f75371fa
+          description: <p>返される一覧内のエントリの最大数 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: 5618da2dcom.microsoft.azure.datalake.store._directory_entrya08ddfce
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>&lt;<xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref> &gt;ディレクトリの内容を含む </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'listStatus(String,String,String,int,UserGroupRepresentation,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'listStatus(String path, String listAfter, String listBefore, int listSize, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.listStatus(String path, String listAfter, String listBefore, int listSize, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static List<DirectoryEntry> com.microsoft.azure.datalake.store.Core.listStatus(String path, String listAfter, String listBefore, int listSize, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.listStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 807
+    package: com.microsoft.azure.datalake.store
+    summary: "<p>返す、ディレクトリの内容を列挙、<xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の<xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref>オブジェクト、指定したディレクトリ内ファイルまたはディレクトリごとに 1 つです。 </p>\n<p>クライアントまたはサーバーの過負荷を回避するのには、呼び出しが部分的な一覧は、呼び出し元のケースが最後のエントリを使用して、返された一覧として指定されてからの呼び出しを行う必要がありますを返す可能性があります、<code>listAfter \r\n\r\n    </code>次の呼び出しのパラメーターです。 </p>\n\n<p></p>"
+    syntax:
+      content: 'public static List<DirectoryEntry> listStatus(String path, String listAfter, String listBefore, int listSize, UserGroupRepresentation oidOrUpn, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>列挙するディレクトリ </p>
+        - id: listAfter
+          type: '26831127'
+          description: <p>列挙を開始位置となるファイル名 </p>
+        - id: listBefore
+          type: '26831127'
+          description: <p>列挙を終了する前にファイル名 </p>
+        - id: listSize
+          type: f75371fa
+          description: <p>返される一覧内のエントリの最大数 </p>
+        - id: oidOrUpn
+          type: com.microsoft.azure.datalake.store._user_group_representation
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._user_group_representation\" data-throw-if-not-resolved=\"false\">UserGroupRepresentation</xref> OID または UPN としてユーザーおよびグループの情報を返すかどうかを指定する列挙型 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: 5618da2dcom.microsoft.azure.datalake.store._directory_entrya08ddfce
+        description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>&lt;<xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref> &gt;ディレクトリの内容を含む </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.mkdirs(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'mkdirs(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'mkdirs(String path, String octalPermission, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.mkdirs(String path, String octalPermission, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static boolean com.microsoft.azure.datalake.store.Core.mkdirs(String path, String octalPermission, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.mkdirs*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 410
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>作成されたディレクトリとそのすべてが、存在しない場合は、親ディレクトリをそのします。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean mkdirs(String path, String octalPermission, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>作成するディレクトリの完全パス。 パスに存在しない親も作成されます。 </p>
+        - id: octalPermission
+          type: '26831127'
+          description: "<p>8 進数の数字として、ディレクトリのアクセス許可 (たとえば、<code>\"755\" \r\n\r\n    </code> )。 Null にすることができます。 </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: 4fc6e284
+        description: "<p>返します<code>true \r\n\r\n    </code>の作成が成功した場合。 確認も<code>resp.successful \r\n\r\n    </code>します。 </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.modifyAclEntries(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'modifyAclEntries(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'modifyAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.modifyAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.modifyAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.modifyAclEntries*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1121
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリの acl エントリを変更します。 この呼び出しは、既存の Acl で指定されたリストを結合します。 同じスコープを持つエントリ、タイプとユーザー既に存在する場合、アクセス許可が置き換えられます。 新しい ACL エントリを追加する場合よりもされていない場合。</p>
+      <p></p>
+    syntax:
+      content: 'public static void modifyAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>持つ Acl を変更する必要がありますファイルまたはディレクトリのパス </p>
+        - id: aclSpec
+          type: 5618da2dcom.microsoft.azure.datalake.store.acl._acl_entrya08ddfce
+          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の<xref uid=\"\" data-throw-if-not-resolved=\"false\">AclEntry</xref>を追加または変更エントリを含む、s </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.modifyAclEntries(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'modifyAclEntries(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'modifyAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.modifyAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.modifyAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.modifyAclEntries*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1092
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリの acl エントリを変更します。 この呼び出しは、既存の Acl で指定されたリストを結合します。 同じスコープを持つエントリ、タイプとユーザー既に存在する場合、アクセス許可が置き換えられます。 新しい ACL エントリを追加する場合よりもされていない場合。</p>
+      <p></p>
+    syntax:
+      content: 'public static void modifyAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>持つ Acl を変更する必要がありますファイルまたはディレクトリのパス </p>
+        - id: aclSpec
+          type: '26831127'
+          description: <p>追加または変更するエントリを含む aclspec 文字列 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.open(String,long,long,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'open(String,long,long,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'open(String path, long offset, long length, String sessionId, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.open(String path, long offset, long length, String sessionId, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static InputStream com.microsoft.azure.datalake.store.Core.open(String path, long offset, long length, String sessionId, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.open*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 225
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルからの読み取り。 これは、ファイル内のオフセットからバイトを読み取りをステートレスの読み取りメソッドです。</p>
+      <p></p>
+    syntax:
+      content: 'public static InputStream open(String path, long offset, long length, String sessionId, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>読み取るファイルの完全パス。 ファイルが既に存在する必要があります。 </p>
+        - id: offset
+          type: 0364520f
+          description: <p>読み取りを含むファイル内のオフセット </p>
+        - id: length
+          type: 0364520f
+          description: <p>ファイルから読み取るバイト数 </p>
+        - id: sessionId
+          type: '26831127'
+          description: <p>セッション ID が (クライアントによって生成される) を含む文字列。 Null にすることができます。 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+      return:
+        type: 76fcb9b7
+        description: <p>返します、 <xref uid="com.microsoft.azure.datalake.store._a_d_l_file_input_stream" data-throw-if-not-resolved="false">com.microsoft.azure.datalake.store.ADLFileInputStream</xref></p>
+  - uid: 'com.microsoft.azure.datalake.store._core.open(String,long,long,String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'open(String,long,long,String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'open(String path, long offset, long length, String sessionId, boolean speculativeRead, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.open(String path, long offset, long length, String sessionId, boolean speculativeRead, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static InputStream com.microsoft.azure.datalake.store.Core.open(String path, long offset, long length, String sessionId, boolean speculativeRead, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.open*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 252
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルからの読み取り。 これは、ファイル内のオフセットからバイトを読み取りをステートレスの読み取りメソッドです。</p>
+      <p></p>
+    syntax:
+      content: 'public static InputStream open(String path, long offset, long length, String sessionId, boolean speculativeRead, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>読み取るファイルの完全パス。 ファイルが既に存在する必要があります。 </p>
+        - id: offset
+          type: 0364520f
+          description: <p>読み取りを含むファイル内のオフセット </p>
+        - id: length
+          type: 0364520f
+          description: <p>ファイルから読み取るバイト数 </p>
+        - id: sessionId
+          type: '26831127'
+          description: <p>セッション ID が (クライアントによって生成される) を含む文字列。 Null にすることができます。 </p>
+        - id: speculativeRead
+          type: 4fc6e284
+          description: <p>読み取りが予測かどうかを示します。 現在を使用しないため、読み取りは失敗します。 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+      return:
+        type: 76fcb9b7
+        description: <p>返します、 <xref uid="com.microsoft.azure.datalake.store._a_d_l_file_input_stream" data-throw-if-not-resolved="false">com.microsoft.azure.datalake.store.ADLFileInputStream</xref></p>
+  - uid: 'com.microsoft.azure.datalake.store._core.removeAcl(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'removeAcl(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'removeAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.removeAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.removeAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.removeAcl*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1216
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリからすべての acl エントリを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public static void removeAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたは Acl を削除するディレクトリの完全なパス </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.removeAclEntries(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'removeAclEntries(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'removeAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.removeAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.removeAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.removeAclEntries*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1174
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリから指定された ACL エントリを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public static void removeAclEntries(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>きめ細かく対応、ファイルまたはディレクトリのパスから Acl を削除するには </p>
+        - id: aclSpec
+          type: 5618da2dcom.microsoft.azure.datalake.store.acl._acl_entrya08ddfce
+          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の<xref uid=\"\" data-throw-if-not-resolved=\"false\">AclEntry</xref>s を削除するには </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.removeAclEntries(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'removeAclEntries(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'removeAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.removeAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.removeAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.removeAclEntries*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1147
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリから指定された ACL エントリを削除します。</p>
+      <p></p>
+    syntax:
+      content: 'public static void removeAclEntries(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>きめ細かく対応、ファイルまたはディレクトリのパスから Acl を削除するには </p>
+        - id: aclSpec
+          type: '26831127'
+          description: <p>削除するエントリを含む aclspec 文字列 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.removeDefaultAcl(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'removeDefaultAcl(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'removeDefaultAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.removeDefaultAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.removeDefaultAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.removeDefaultAcl*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1200
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ディレクトリからすべての既定の acl エントリを削除します。 自体ディレクトリへのアクセスの Acl は変更されません。</p>
+      <p></p>
+    syntax:
+      content: 'public static void removeDefaultAcl(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>既定の Acl を削除するディレクトリの完全なパス </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.rename(String,String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'rename(String,String,boolean,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'rename(String path, String destination, boolean overwrite, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.rename(String path, String destination, boolean overwrite, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static boolean com.microsoft.azure.datalake.store.Core.rename(String path, String destination, boolean overwrite, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.rename*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 348
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルの名前を変更します。</p>
+      <p></p>
+    syntax:
+      content: 'public static boolean rename(String path, String destination, boolean overwrite, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>名前を変更する既存のファイルの完全パス。 (古い名前) </p>
+        - id: destination
+          type: '26831127'
+          description: <p>ファイルの新しい名前 </p>
+        - id: overwrite
+          type: 4fc6e284
+          description: <p>既に存在する場合は、ファイルまたは空のディレクトリに、変換先を上書き </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答</p>
+      return:
+        type: 4fc6e284
+        description: "<p>返します<code>true \r\n\r\n    </code>名前の変更が成功した場合。 確認も<code>resp.successful \r\n\r\n    </code>します。 </p>"
+  - uid: 'com.microsoft.azure.datalake.store._core.setAcl(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'setAcl(String,List<AclEntry>,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'setAcl(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.setAcl(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.setAcl(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.setAcl*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1263
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリの Acl を設定します。 ファイルまたはディレクトリは、関連付けられている Acl を既に持っている場合は、既存のすべての Acl が指定された Acl を追加する前に削除されます。</p>
+      <p></p>
+    syntax:
+      content: 'public static void setAcl(String path, List<AclEntry> aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはディレクトリの Acl を設定するへの完全パス。 </p>
+        - id: aclSpec
+          type: 5618da2dcom.microsoft.azure.datalake.store.acl._acl_entrya08ddfce
+          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の<xref uid=\"\" data-throw-if-not-resolved=\"false\">AclEntry</xref>s を設定するには </p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.setAcl(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'setAcl(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'setAcl(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.setAcl(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.setAcl(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.setAcl*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1235
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルまたはディレクトリの Acl を設定します。 ファイルまたはディレクトリは、関連付けられている Acl を既に持っている場合は、既存のすべての Acl が指定された Acl を追加する前に削除されます。</p>
+      <p></p>
+    syntax:
+      content: 'public static void setAcl(String path, String aclSpec, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはディレクトリの Acl を設定するへの完全パス。 </p>
+        - id: aclSpec
+          type: '26831127'
+          description: <p>設定するように Acl を含む posix aclspec 文字列 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.setExpiryTime(String,ExpiryOption,long,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'setExpiryTime(String,ExpiryOption,long,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'setExpiryTime(String path, ExpiryOption expiryOption, long milliseconds, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.setExpiryTime(String path, ExpiryOption expiryOption, long milliseconds, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.setExpiryTime(String path, ExpiryOption expiryOption, long milliseconds, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.setExpiryTime*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 464
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>ファイルの有効期限を設定します。</p>
+      <p></p>
+    syntax:
+      content: 'public static void setExpiryTime(String path, ExpiryOption expiryOption, long milliseconds, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>有効期限を設定するファイルのパス </p>
+        - id: expiryOption
+          type: com.microsoft.azure.datalake.store._expiry_option
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._expiry_option\" data-throw-if-not-resolved=\"false\">ExpiryOption</xref>時間に渡されたを解釈する方法を指定する値 </p>"
+        - id: milliseconds
+          type: 0364520f
+          description: <p>時間の期間 (ミリ秒) </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.setOwner(String,String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'setOwner(String,String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'setOwner(String path, String user, String group, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.setOwner(String path, String user, String group, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.setOwner(String path, String user, String group, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.setOwner*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 978
+    package: com.microsoft.azure.datalake.store
+    summary: "<p>所有しているユーザーとファイルのグループを設定します。 ユーザーまたはグループが場合<code>null \r\n\r\n    </code>、変更されていないこと、します。 ユーザーおよび同じ所有者の両方を渡すことはできません<code>null \r\n\r\n    </code>です。</p>\n\n<p></p>"
+    syntax:
+      content: 'public static void setOwner(String path, String user, String group, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルの完全なパス </p>
+        - id: user
+          type: '26831127'
+          description: "<p>ユーザーの ID または<code>null \r\n\r\n    </code></p>"
+        - id: group
+          type: '26831127'
+          description: "<p>グループの ID または<code>null \r\n\r\n    </code></p>"
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.setPermission(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'setPermission(String,String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'setPermission(String path, String octalPermissions, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.setPermission(String path, String octalPermissions, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.setPermission(String path, String octalPermissions, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.setPermission*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 1017
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>指定したファイル ro ディレクトリのアクセス許可を設定します。 これは、ファイルまたはディレクトリの従来の unix 読み取り/書き込み/実行アクセス許可を設定します。 Acl の使用を設定する、 <xref uid="" data-throw-if-not-resolved="false">setAcl</xref>呼び出します。</p>
+      <p></p>
+    syntax:
+      content: 'public static void setPermission(String path, String octalPermissions, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: <p>ファイルまたはディレクトリの ro の完全なパスのアクセス許可を設定します。 </p>
+        - id: octalPermissions
+          type: '26831127'
+          description: <p>unix 8 進数形式で設定するアクセス許可。 たとえば、' 644' とします。 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+  - uid: 'com.microsoft.azure.datalake.store._core.setTimes(String,long,long,ADLStoreClient,RequestOptions,OperationResponse)'
+    id: 'setTimes(String,long,long,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    langs:
+      - java
+    name: 'setTimes(String path, long atime, long mtime, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.setTimes(String path, long atime, long mtime, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static void com.microsoft.azure.datalake.store.Core.setTimes(String path, long atime, long mtime, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    overload: com.microsoft.azure.datalake.store._core.setTimes*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/main/java/com/microsoft/azure/datalake/store/Core.java
+      startLine: 938
+    package: com.microsoft.azure.datalake.store
+    summary: |-
+      <p>(変更および時間へのアクセス) の時刻の一方または両方を設定したファイルまたはディレクトリの</p>
+      <p></p>
+    syntax:
+      content: 'public static void setTimes(String path, long atime, long mtime, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+      parameters:
+        - id: path
+          type: '26831127'
+          description: "<p>ファイルまたはディレクトリの完全なパス<code>touch \r\n\r\n    </code></p>"
+        - id: atime
+          type: 0364520f
+          description: <p>Long としてアクセス日時 </p>
+        - id: mtime
+          type: 0364520f
+          description: <p>Long として変更時刻 </p>
+        - id: client
+          type: com.microsoft.azure.datalake.store._a_d_l_store_client
+          description: <p><xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client" data-throw-if-not-resolved="false">ADLStoreClient</xref></p>
+        - id: opts
+          type: com.microsoft.azure.datalake.store._request_options
+          description: <p>呼び出しの動作を変更するオプション </p>
+        - id: resp
+          type: com.microsoft.azure.datalake.store._operation_response
+          description: <p>呼び出しによって生成されたエラー情報と、呼び出しからの応答 </p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.datalake.store._core.create*
+    name: create
+    nameWithType: Core.create
+    fullName: static void com.microsoft.azure.datalake.store.Core.create
+    package: com.microsoft.azure.datalake.store
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: com.microsoft.azure.datalake.store._core.append*
+    name: append
+    nameWithType: Core.append
+    fullName: static void com.microsoft.azure.datalake.store.Core.append
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.concurrentAppend*
+    name: concurrentAppend
+    nameWithType: Core.concurrentAppend
+    fullName: static void com.microsoft.azure.datalake.store.Core.concurrentAppend
+    package: com.microsoft.azure.datalake.store
+  - uid: 76fcb9b7
+    spec.java:
+      - name: InputStream
+        fullName: InputStream
+  - uid: com.microsoft.azure.datalake.store._core.open*
+    name: open
+    nameWithType: Core.open
+    fullName: static InputStream com.microsoft.azure.datalake.store.Core.open
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.delete*
+    name: delete
+    nameWithType: Core.delete
+    fullName: static boolean com.microsoft.azure.datalake.store.Core.delete
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.rename*
+    name: rename
+    nameWithType: Core.rename
+    fullName: static boolean com.microsoft.azure.datalake.store.Core.rename
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.mkdirs*
+    name: mkdirs
+    nameWithType: Core.mkdirs
+    fullName: static boolean com.microsoft.azure.datalake.store.Core.mkdirs
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.setExpiryTime*
+    name: setExpiryTime
+    nameWithType: Core.setExpiryTime
+    fullName: static void com.microsoft.azure.datalake.store.Core.setExpiryTime
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.getContentSummary*
+    name: getContentSummary
+    nameWithType: Core.getContentSummary
+    fullName: static ContentSummary com.microsoft.azure.datalake.store.Core.getContentSummary
+    package: com.microsoft.azure.datalake.store
+  - uid: 7d60c20e
+    spec.java:
+      - name: List<String>
+        fullName: List<String>
+  - uid: com.microsoft.azure.datalake.store._core.concat*
+    name: concat
+    nameWithType: Core.concat
+    fullName: static void com.microsoft.azure.datalake.store.Core.concat
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.getFileStatus*
+    name: getFileStatus
+    nameWithType: Core.getFileStatus
+    fullName: static DirectoryEntry com.microsoft.azure.datalake.store.Core.getFileStatus
+    package: com.microsoft.azure.datalake.store
+  - uid: 5618da2dcom.microsoft.azure.datalake.store._directory_entrya08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.datalake.store._directory_entry
+        name: DirectoryEntry
+        fullName: com.microsoft.azure.datalake.store.DirectoryEntry
+        href: com.microsoft.azure.datalake.store._directory_entry.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.datalake.store._core.listStatus*
+    name: listStatus
+    nameWithType: Core.listStatus
+    fullName: static List<DirectoryEntry> com.microsoft.azure.datalake.store.Core.listStatus
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.setTimes*
+    name: setTimes
+    nameWithType: Core.setTimes
+    fullName: static void com.microsoft.azure.datalake.store.Core.setTimes
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.setOwner*
+    name: setOwner
+    nameWithType: Core.setOwner
+    fullName: static void com.microsoft.azure.datalake.store.Core.setOwner
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.setPermission*
+    name: setPermission
+    nameWithType: Core.setPermission
+    fullName: static void com.microsoft.azure.datalake.store.Core.setPermission
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.isValidOctal*
+    name: isValidOctal
+    nameWithType: Core.isValidOctal
+    fullName: static boolean com.microsoft.azure.datalake.store.Core.isValidOctal
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.checkAccess*
+    name: checkAccess
+    nameWithType: Core.checkAccess
+    fullName: static void com.microsoft.azure.datalake.store.Core.checkAccess
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.modifyAclEntries*
+    name: modifyAclEntries
+    nameWithType: Core.modifyAclEntries
+    fullName: static void com.microsoft.azure.datalake.store.Core.modifyAclEntries
+    package: com.microsoft.azure.datalake.store
+  - uid: 5618da2dcom.microsoft.azure.datalake.store.acl._acl_entrya08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.datalake.store.acl._acl_entry
+        name: AclEntry
+        fullName: com.microsoft.azure.datalake.store.acl.AclEntry
+        href: com.microsoft.azure.datalake.store.acl._acl_entry.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.datalake.store._core.removeAclEntries*
+    name: removeAclEntries
+    nameWithType: Core.removeAclEntries
+    fullName: static void com.microsoft.azure.datalake.store.Core.removeAclEntries
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.removeDefaultAcl*
+    name: removeDefaultAcl
+    nameWithType: Core.removeDefaultAcl
+    fullName: static void com.microsoft.azure.datalake.store.Core.removeDefaultAcl
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.removeAcl*
+    name: removeAcl
+    nameWithType: Core.removeAcl
+    fullName: static void com.microsoft.azure.datalake.store.Core.removeAcl
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.setAcl*
+    name: setAcl
+    nameWithType: Core.setAcl
+    fullName: static void com.microsoft.azure.datalake.store.Core.setAcl
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._core.getAclStatus*
+    name: getAclStatus
+    nameWithType: Core.getAclStatus
+    fullName: static AclStatus com.microsoft.azure.datalake.store.Core.getAclStatus
+    package: com.microsoft.azure.datalake.store
+  - uid: com.microsoft.azure.datalake.store._sync_flag
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._sync_flag.yml
+    name: SyncFlag
+    nameWithType: SyncFlag
+    fullName: com.microsoft.azure.datalake.store.SyncFlag
+    type: Enum
+    summary: <p>追加中にバックエンド インジケーター フラグです。 </p>
+    syntax:
+      content: public enum SyncFlag
+  - uid: com.microsoft.azure.datalake.store._a_d_l_store_client
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._a_d_l_store_client.yml
+    name: ADLStoreClient
+    nameWithType: ADLStoreClient
+    fullName: com.microsoft.azure.datalake.store.ADLStoreClient
+    type: Class
+    summary: "<p>\r\n\r\n  <code>ADLStoreClient \r\n\r\n    </code>クラスは、Azure Data Lake へのクライアントを表します。 ファイルおよびディレクトリに対する操作を実行するために使用します。 </p>"
+    syntax:
+      content: public class ADLStoreClient
+  - uid: com.microsoft.azure.datalake.store._request_options
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._request_options.yml
+    name: RequestOptions
+    nameWithType: RequestOptions
+    fullName: com.microsoft.azure.datalake.store.RequestOptions
+    type: Class
+    summary: <p>サーバーの呼び出しの動作を制御する一般的なオプション </p>
+    syntax:
+      content: public class RequestOptions
+  - uid: com.microsoft.azure.datalake.store._operation_response
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._operation_response.yml
+    name: OperationResponse
+    nameWithType: OperationResponse
+    fullName: com.microsoft.azure.datalake.store.OperationResponse
+    type: Class
+    summary: |-
+      <p>サーバーの呼び出しからの応答に関する情報です。</p>
+      <p>このクラスは、サーバーの呼び出しを行ってからすべての情報のコンテナーです。 </p>
+    syntax:
+      content: public class OperationResponse
+  - uid: com.microsoft.azure.datalake.store._sync_flag.DATA
+    parent: com.microsoft.azure.datalake.store._sync_flag
+    href: com.microsoft.azure.datalake.store._sync_flag.yml
+    name: DATA
+    nameWithType: SyncFlag.DATA
+    fullName: com.microsoft.azure.datalake.store.SyncFlag.DATA
+    type: Field
+    summary: <p>更新されていないが必要であり、リースを保持します。 パフォーマンスの高い操作です。 </p>
+    syntax:
+      content: public DATA
+  - uid: com.microsoft.azure.datalake.store._sync_flag.METADATA
+    parent: com.microsoft.azure.datalake.store._sync_flag
+    href: com.microsoft.azure.datalake.store._sync_flag.yml
+    name: METADATA
+    nameWithType: SyncFlag.METADATA
+    fullName: com.microsoft.azure.datalake.store.SyncFlag.METADATA
+    type: Field
+    summary: <p>指定されたデータが追加された後にファイルのメタデータを更新するファイル。 </p>
+    syntax:
+      content: public METADATA
+  - uid: 'com.microsoft.azure.datalake.store._core.getFileStatus(String,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    name: 'getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static DirectoryEntry com.microsoft.azure.datalake.store.Core.getFileStatus(String path, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    type: Method
+    summary: |-
+      <p>ファイルまたはディレクトリに関連付けられているディレクトリのメタデータを取得します。</p>
+      <p></p>
+    syntax: *ref_1
+  - uid: 'com.microsoft.azure.datalake.store._core.listStatus(String,String,String,int,ADLStoreClient,RequestOptions,OperationResponse)'
+    parent: com.microsoft.azure.datalake.store._core
+    href: com.microsoft.azure.datalake.store._core.yml
+    name: 'listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    nameWithType: 'Core.listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    fullName: 'static List<DirectoryEntry> com.microsoft.azure.datalake.store.Core.listStatus(String path, String listAfter, String listBefore, int listSize, ADLStoreClient client, RequestOptions opts, OperationResponse resp)'
+    type: Method
+    summary: "<p>返す、ディレクトリの内容を列挙、<xref uid=\"\" data-throw-if-not-resolved=\"false\">リスト</xref>の<xref uid=\"com.microsoft.azure.datalake.store._directory_entry\" data-throw-if-not-resolved=\"false\">DirectoryEntry</xref>オブジェクト、指定したディレクトリ内ファイルまたはディレクトリごとに 1 つです。 </p>\n<p>クライアントまたはサーバーの過負荷を回避するのには、呼び出しが部分的な一覧は、呼び出し元のケースが最後のエントリを使用して、返された一覧として指定されてからの呼び出しを行う必要がありますを返す可能性があります、<code>listAfter \r\n\r\n    </code>次の呼び出しのパラメーターです。 </p>\n\n<p></p>"
+    syntax: *ref_2
+  - uid: com.microsoft.azure.datalake.store._sync_flag.CLOSE
+    parent: com.microsoft.azure.datalake.store._sync_flag
+    href: com.microsoft.azure.datalake.store._sync_flag.yml
+    name: CLOSE
+    nameWithType: SyncFlag.CLOSE
+    fullName: com.microsoft.azure.datalake.store.SyncFlag.CLOSE
+    type: Field
+    summary: <p>指定されたデータが追加された後にファイルのメタデータを更新するファイル。 ファイル ハンドルを閉じます。 ファイル ハンドルが閉じられると、leaseid でストリームが開かれている場合、ファイルのリースは解放されます。 </p>
+    syntax:
+      content: public CLOSE
+  - uid: com.microsoft.azure.datalake.store._a_d_l_file_input_stream
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._a_d_l_file_input_stream.yml
+    name: ADLFileInputStream
+    nameWithType: ADLFileInputStream
+    fullName: com.microsoft.azure.datalake.store.ADLFileInputStream
+    type: Class
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store._a_d_l_file_input_stream\" data-throw-if-not-resolved=\"false\">ADLFileInputStream</xref>含むで開いたファイルからデータを読み取るために使用できます。 一括でサーバーからデータを読み取り、バッファーからのユーザーの読み取りを満たす、バッファリング ストリームすることをお勧めします。 既定のバッファー サイズは、4 MB です。</p>\n\n<p>\r\n\r\n  <b>スレッド セーフ</b>: このクラスのメソッドがないことに注意してください。 スレッド セーフであります。 </p>"
+    syntax:
+      content: public class ADLFileInputStream
+  - uid: com.microsoft.azure.datalake.store._expiry_option
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._expiry_option.yml
+    name: ExpiryOption
+    nameWithType: ExpiryOption
+    fullName: com.microsoft.azure.datalake.store.ExpiryOption
+    type: Enum
+    summary: <p>SetExpiry 呼び出しで指定された、有効期限を解釈する方法を指定する列挙です。 </p>
+    syntax:
+      content: public enum ExpiryOption
+  - uid: com.microsoft.azure.datalake.store._content_summary
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._content_summary.yml
+    name: ContentSummary
+    nameWithType: ContentSummary
+    fullName: com.microsoft.azure.datalake.store.ContentSummary
+    type: Class
+    summary: <p>getContentSummary 呼び出しからの戻り値を含む構造体。 </p>
+    syntax:
+      content: public class ContentSummary
+  - uid: com.microsoft.azure.datalake.store._directory_entry
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._directory_entry.yml
+    name: DirectoryEntry
+    nameWithType: DirectoryEntry
+    fullName: com.microsoft.azure.datalake.store.DirectoryEntry
+    type: Class
+    summary: <p>含むでディレクトリ enrty (ファイルまたはディレクトリ) のファイル システム メタデータ。 </p>
+    syntax:
+      content: public class DirectoryEntry
+  - uid: com.microsoft.azure.datalake.store._user_group_representation
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._user_group_representation.yml
+    name: UserGroupRepresentation
+    nameWithType: UserGroupRepresentation
+    fullName: com.microsoft.azure.datalake.store.UserGroupRepresentation
+    type: Enum
+    summary: <p>ユーザーを返すし、グループ ID の呼び出しでのユーザーとグループのオブジェクトの表現方法を指定する列挙型 </p>
+    syntax:
+      content: public enum UserGroupRepresentation
+  - uid: com.microsoft.azure.datalake.store.acl._acl_entry
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_entry.yml
+    name: AclEntry
+    nameWithType: AclEntry
+    fullName: com.microsoft.azure.datalake.store.acl.AclEntry
+    type: Class
+    summary: "<p>1 つの ACL エントリが含まれています。 ACL エントリで構成されています (アクセス、または既定値) のスコープの ACL の種類 (ユーザー、グループ、その他のまたはマスク)、ユーザーまたはこの ACL に関連付けられているグループの名前 (ユーザーとグループの既定のアクセス許可を指定する場合は空白にすることができ、マスク エントリの場合は空白にする必要があります)、およびこの ACL エントリで許可されているアクション。 </p>\n<p>オブジェクトの ACL から成る、<code>List \r\n\r\n    </code> Acl エントリのです。 </p>\n\n<p>このクラスは、文字列から戻る ACL エントリや Acl を変換するための便利なメソッドの数も提供します。 </p>"
+    syntax:
+      content: public class AclEntry
+  - uid: com.microsoft.azure.datalake.store.acl._acl_status
+    parent: com.microsoft.azure.datalake.store.acl
+    href: com.microsoft.azure.datalake.store.acl._acl_status.yml
+    name: AclStatus
+    nameWithType: AclStatus
+    fullName: com.microsoft.azure.datalake.store.acl.AclStatus
+    type: Class
+    summary: '<p>によって返されるオブジェクト、 <xref uid="com.microsoft.azure.datalake.store._a_d_l_store_client.getAclStatus(String)" data-throw-if-not-resolved="false">com.microsoft.azure.datalake.store.ADLStoreClient#getAclStatus(String)</xref> getAclStatus} 呼び出し、そのファイルまたはディレクトリの Acl と権限について説明します。 </p>'
+    syntax:
+      content: public class AclStatus
+  - uid: com.microsoft.azure.datalake.store._core
+    parent: com.microsoft.azure.datalake.store
+    href: com.microsoft.azure.datalake.store._core.yml
+    name: Core
+    nameWithType: Core
+    fullName: com.microsoft.azure.datalake.store.Core
+    type: Class
+    summary: "<p>プロトコルです。コア クラスは、応答する API の呼び出しを実装します。 1 つのメソッドがある<xref uid=\"com.microsoft.azure.datalake.store._core\" data-throw-if-not-resolved=\"false\">コア</xref>サーバーでサポートされているすべての REST api です。 </p>\n<p>このクラスのメソッドは、下位レベル、基になる操作の詳細をすべてを公開する傾向があります。 メソッドを呼び出すには、インスタンス化、 <xref uid=\"com.microsoft.azure.datalake.store._request_options\" data-throw-if-not-resolved=\"false\">RequestOptions</xref>オブジェクトします。 メンバーのいずれかに、必要に応じて値を割り当てる (例:\"RetryPolicy\") です。 新規作成し、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>オブジェクト。 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>呼び出しから呼び出しの結果と統計情報を渡す際に使用します。 </p>\n<p>発生したエラー<xref uid=\"com.microsoft.azure.datalake.store._core\" data-throw-if-not-resolved=\"false\">コア</xref>メソッドが戻るを通じて伝達される、 <xref uid=\"com.microsoft.azure.datalake.store._operation_response\" data-throw-if-not-resolved=\"false\">OperationResponse</xref>パラメーター。 </p>\n<p>\r\n\r\n  <b>スレッド セーフ:</b>このクラスのすべての静的メソッドはスレッド セーフであります。</p>"
+    syntax: *ref_3

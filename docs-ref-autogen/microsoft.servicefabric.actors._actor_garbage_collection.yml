@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.actors._actor_garbage_collection
+    id: _actor_garbage_collection
+    parent: microsoft.servicefabric.actors
+    children:
+      - microsoft.servicefabric.actors._actor_garbage_collection.idleTimeoutInSeconds()
+      - microsoft.servicefabric.actors._actor_garbage_collection.scanIntervalInSeconds()
+    href: microsoft.servicefabric.actors._actor_garbage_collection.yml
+    langs:
+      - java
+    name: ActorGarbageCollection
+    nameWithType: ActorGarbageCollection
+    fullName: microsoft.servicefabric.actors.ActorGarbageCollection
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorGarbageCollection.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorGarbageCollection.java
+      startLine: 12
+    package: microsoft.servicefabric.actors
+    summary: <p>ガベージ コレクションの動作を構成する設定<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。 </p>
+    syntax:
+      content: public interface ActorGarbageCollection
+  - uid: microsoft.servicefabric.actors._actor_garbage_collection.idleTimeoutInSeconds()
+    id: idleTimeoutInSeconds()
+    parent: microsoft.servicefabric.actors._actor_garbage_collection
+    href: microsoft.servicefabric.actors._actor_garbage_collection.yml
+    langs:
+      - java
+    name: idleTimeoutInSeconds()
+    nameWithType: ActorGarbageCollection.idleTimeoutInSeconds()
+    fullName: long microsoft.servicefabric.actors.ActorGarbageCollection.idleTimeoutInSeconds()
+    overload: microsoft.servicefabric.actors._actor_garbage_collection.idleTimeoutInSeconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorGarbageCollection.java
+      startLine: 26
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>取得ガベージ前に待機する時間間隔は使用中ではないアクターを収集します。</p>
+      <p></p>
+    syntax:
+      content: public long idleTimeoutInSeconds() default 60
+      return:
+        type: 0364520f
+        description: <p>ガベージに含まれていないするアクターの収集を使用する前に待機する時間の長い時間間隔。 </p>
+  - uid: microsoft.servicefabric.actors._actor_garbage_collection.scanIntervalInSeconds()
+    id: scanIntervalInSeconds()
+    parent: microsoft.servicefabric.actors._actor_garbage_collection
+    href: microsoft.servicefabric.actors._actor_garbage_collection.yml
+    langs:
+      - java
+    name: scanIntervalInSeconds()
+    nameWithType: ActorGarbageCollection.scanIntervalInSeconds()
+    fullName: long microsoft.servicefabric.actors.ActorGarbageCollection.scanIntervalInSeconds()
+    overload: microsoft.servicefabric.actors._actor_garbage_collection.scanIntervalInSeconds*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorGarbageCollection.java
+      startLine: 19
+    package: microsoft.servicefabric.actors
+    summary: |-
+      <p>取得時間を実行する間隔<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>ガベージ コレクション スキャンします。</p>
+      <p></p>
+    syntax:
+      content: public long scanIntervalInSeconds() default 3600
+      return:
+        type: 0364520f
+        description: <p>時間間隔で実行する時間の長い<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>ガベージ コレクション スキャンします。 </p>
+references:
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: microsoft.servicefabric.actors._actor_garbage_collection.scanIntervalInSeconds*
+    name: scanIntervalInSeconds
+    nameWithType: ActorGarbageCollection.scanIntervalInSeconds
+    fullName: long microsoft.servicefabric.actors.ActorGarbageCollection.scanIntervalInSeconds
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor_garbage_collection.idleTimeoutInSeconds*
+    name: idleTimeoutInSeconds
+    nameWithType: ActorGarbageCollection.idleTimeoutInSeconds
+    fullName: long microsoft.servicefabric.actors.ActorGarbageCollection.idleTimeoutInSeconds
+    package: microsoft.servicefabric.actors
+  - uid: microsoft.servicefabric.actors._actor
+    parent: microsoft.servicefabric.actors
+    href: microsoft.servicefabric.actors._actor.yml
+    name: Actor
+    nameWithType: Actor
+    fullName: microsoft.servicefabric.actors.Actor
+    type: Interface
+    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    syntax:
+      content: public interface Actor

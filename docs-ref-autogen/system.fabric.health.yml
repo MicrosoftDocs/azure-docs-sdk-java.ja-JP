@@ -1,0 +1,775 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.health
+    id: health
+    children:
+      - system.fabric.health._application_health
+      - system.fabric.health._application_health_evaluation
+      - system.fabric.health._application_health_state
+      - system.fabric.health._application_health_state_chunk
+      - system.fabric.health._application_health_state_chunk_list
+      - system.fabric.health._application_type_applications_health_evaluation
+      - system.fabric.health._applications_health_evaluation
+      - system.fabric.health._cluster_health
+      - system.fabric.health._cluster_health_chunk
+      - system.fabric.health._cluster_upgrade_health_policy
+      - system.fabric.health._delta_nodes_check_health_evaluation
+      - system.fabric.health._deployed_application_health
+      - system.fabric.health._deployed_application_health_evaluation
+      - system.fabric.health._deployed_application_health_state
+      - system.fabric.health._deployed_application_health_state_chunk
+      - system.fabric.health._deployed_application_health_state_chunk_list
+      - system.fabric.health._deployed_applications_health_evaluation
+      - system.fabric.health._deployed_service_package_health
+      - system.fabric.health._deployed_service_package_health_evaluation
+      - system.fabric.health._deployed_service_package_health_state
+      - system.fabric.health._deployed_service_package_health_state_chunk
+      - system.fabric.health._deployed_service_package_health_state_chunk_list
+      - system.fabric.health._deployed_service_packages_health_evaluation
+      - system.fabric.health._entity_health
+      - system.fabric.health._entity_health_state
+      - system.fabric.health._event_health_evaluation
+      - system.fabric.health._health_evaluation
+      - system.fabric.health._health_evaluation_kind
+      - system.fabric.health._health_event
+      - system.fabric.health._health_information
+      - system.fabric.health._health_report
+      - system.fabric.health._health_report_kind
+      - system.fabric.health._health_state
+      - system.fabric.health._health_state_chunk_list
+      - system.fabric.health._health_state_filter
+      - system.fabric.health._node_health
+      - system.fabric.health._node_health_evaluation
+      - system.fabric.health._node_health_state
+      - system.fabric.health._node_health_state_chunk
+      - system.fabric.health._node_health_state_chunk_list
+      - system.fabric.health._nodes_health_evaluation
+      - system.fabric.health._partition_health
+      - system.fabric.health._partition_health_evaluation
+      - system.fabric.health._partition_health_state
+      - system.fabric.health._partition_health_state_chunk
+      - system.fabric.health._partition_health_state_chunk_list
+      - system.fabric.health._partitions_health_evaluation
+      - system.fabric.health._replica_health
+      - system.fabric.health._replica_health_evaluation
+      - system.fabric.health._replica_health_state
+      - system.fabric.health._replica_health_state_chunk
+      - system.fabric.health._replica_health_state_chunk_list
+      - system.fabric.health._replicas_health_evaluation
+      - system.fabric.health._service_health
+      - system.fabric.health._service_health_evaluation
+      - system.fabric.health._service_health_report
+      - system.fabric.health._service_health_state
+      - system.fabric.health._service_health_state_chunk
+      - system.fabric.health._service_health_state_chunk_list
+      - system.fabric.health._services_health_evaluation
+      - system.fabric.health._stateful_service_replica_health
+      - system.fabric.health._stateful_service_replica_health_state
+      - system.fabric.health._stateless_service_instance_health
+      - system.fabric.health._stateless_service_instance_health_report
+      - system.fabric.health._stateless_service_instance_health_state
+      - system.fabric.health._system_application_health_evaluation
+      - system.fabric.health._upgrade_domain_delta_nodes_check_health_evaluation
+      - system.fabric.health._upgrade_domain_deployed_applications_health_evaluation
+      - system.fabric.health._upgrade_domain_nodes_health_evaluation
+    href: system.fabric.health.yml
+    langs:
+      - java
+    name: system.fabric.health
+    nameWithType: system.fabric.health
+    fullName: system.fabric.health
+    type: Namespace
+    source:
+      remote:
+        path: src/prod/src/java/system.fabric/src/system/fabric/health/ApplicationHealth.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/health/ApplicationHealth.java
+    syntax:
+      content: package system.fabric.health
+references:
+  - uid: system.fabric.health._application_health
+    parent: system.fabric.health
+    href: system.fabric.health._application_health.yml
+    name: ApplicationHealth
+    nameWithType: ApplicationHealth
+    fullName: system.fabric.health.ApplicationHealth
+    type: Class
+    summary: '<p>によって返されるアプリケーションの正常性を示します<xref uid="system.fabric._health_client.getApplicationHealthAsync(URI)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getApplicationHealthAsync</xref></p>'
+    syntax:
+      content: public class ApplicationHealth extends EntityHealth
+  - uid: system.fabric.health._application_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._application_health_evaluation.yml
+    name: ApplicationHealthEvaluation
+    nameWithType: ApplicationHealthEvaluation
+    fullName: system.fabric.health.ApplicationHealthEvaluation
+    type: Class
+    summary: "<p>データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む、アプリケーションの正常性評価を表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>です。 </p>"
+    syntax:
+      content: public class ApplicationHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._application_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._application_health_state.yml
+    name: ApplicationHealthState
+    nameWithType: ApplicationHealthState
+    fullName: system.fabric.health.ApplicationHealthState
+    type: Class
+    summary: <p>アプリケーション識別子と、集計された正常性状態を含む、アプリケーションのヘルス状態を表します。 </p>
+    syntax:
+      content: public class ApplicationHealthState extends EntityHealthState
+  - uid: system.fabric.health._application_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._application_health_state_chunk.yml
+    name: ApplicationHealthStateChunk
+    nameWithType: ApplicationHealthStateChunk
+    fullName: system.fabric.health.ApplicationHealthStateChunk
+    type: Class
+    summary: <p>チャンクを表して、アプリケーション ヘルス状態、アプリケーションに関する基本的な正常性の情報が含まれています。 </p>
+    syntax:
+      content: public class ApplicationHealthStateChunk
+  - uid: system.fabric.health._application_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._application_health_state_chunk_list.yml
+    name: ApplicationHealthStateChunkList
+    nameWithType: ApplicationHealthStateChunkList
+    fullName: system.fabric.health.ApplicationHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._application_health_state_chunk\" data-throw-if-not-resolved=\"false\">ApplicationHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class ApplicationHealthStateChunkList extends HealthStateChunkList<ApplicationHealthStateChunk>
+  - uid: system.fabric.health._applications_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._applications_health_evaluation.yml
+    name: ApplicationsHealthEvaluation
+    nameWithType: ApplicationsHealthEvaluation
+    fullName: system.fabric.health.ApplicationsHealthEvaluation
+    type: Class
+    summary: "<p>現在の集計された正常性状態の影響を受ける各の異常なアプリケーションの正常性評価を含む、アプリケーションの正常性評価を表します </p>\n<p>\r\n\r\n  <b>注釈:</b>アプリケーション評価返されることがクラスターの正常性評価中に、クラスターの集計された正常性状態は、いずれかの<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>です。 </p>"
+    syntax:
+      content: public class ApplicationsHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._application_type_applications_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._application_type_applications_health_evaluation.yml
+    name: ApplicationTypeApplicationsHealthEvaluation
+    nameWithType: ApplicationTypeApplicationsHealthEvaluation
+    fullName: system.fabric.health.ApplicationTypeApplicationsHealthEvaluation
+    type: Class
+    summary: "<p>アプリケーションの種類のアプリケーションの正常性評価を表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アプリケーション タイプのアプリケーションが異常なクラスターの正常性評価が返されるときに、評価を返すことができますか、ヘルス状態を集計<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>です。 現在の集計された正常性状態の影響を受ける各問題のあるアプリケーション タイプのアプリケーションの正常性評価が含まれています。 </p>"
+    syntax:
+      content: public class ApplicationTypeApplicationsHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._cluster_health
+    parent: system.fabric.health
+    href: system.fabric.health._cluster_health.yml
+    name: ClusterHealth
+    nameWithType: ClusterHealth
+    fullName: system.fabric.health.ClusterHealth
+    type: Class
+    summary: '<p>によって返される、クラスターの正常性を表す<xref uid="system.fabric._health_client.getClusterHealthAsync(ClusterHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getClusterHealthAsync(system.fabric.ClusterHealthQueryDescription)</xref>です。 集計されたクラスターの正常性状態とクラスターのアプリケーションとノードのヘルス状態が含まれています。 </p>'
+    syntax:
+      content: public class ClusterHealth extends EntityHealth
+  - uid: system.fabric.health._cluster_health_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._cluster_health_chunk.yml
+    name: ClusterHealthChunk
+    nameWithType: ClusterHealthChunk
+    fullName: system.fabric.health.ClusterHealthChunk
+    type: Class
+    summary: <p>クラスターに関するヘルス情報が含まれて、クラスター状態チャンクを表します。 </p>
+    syntax:
+      content: public class ClusterHealthChunk
+  - uid: system.fabric.health._cluster_upgrade_health_policy
+    parent: system.fabric.health
+    href: system.fabric.health._cluster_upgrade_health_policy.yml
+    name: ClusterUpgradeHealthPolicy
+    nameWithType: ClusterUpgradeHealthPolicy
+    fullName: system.fabric.health.ClusterUpgradeHealthPolicy
+    type: Class
+    summary: "<p>クラスターのアップグレードには、特定のクラスターの正常性を評価する正常性ポリシーを定義します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>取ります™ と共に使用される s <xref uid=\"system.fabric._cluster_health_policy\" data-throw-if-not-resolved=\"false\">system.fabric.ClusterHealthPolicy</xref>をクラスターの正常性を評価し、監視対象のクラスターのアップグレードが成功したかロールバックする必要があるかを判断します。 </p>"
+    syntax:
+      content: public class ClusterUpgradeHealthPolicy
+  - uid: system.fabric.health._delta_nodes_check_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._delta_nodes_check_health_evaluation.yml
+    name: DeltaNodesCheckHealthEvaluation
+    nameWithType: DeltaNodesCheckHealthEvaluation
+    fullName: system.fabric.health.DeltaNodesCheckHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計された正常性状態の影響を受ける各の異常なノードの正常性評価を含む、デルタ ノード正常性評価を表します。 返されることがクラスターのアップグレード中に、クラスターの集計された正常性状態が<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>です。 </p>'
+    syntax:
+      content: public class DeltaNodesCheckHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._deployed_application_health
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_application_health.yml
+    name: DeployedApplicationHealth
+    nameWithType: DeployedApplicationHealth
+    fullName: system.fabric.health.DeployedApplicationHealth
+    type: Class
+    summary: '<p>によって返されるノードにデプロイされたアプリケーションの正常性について説明します<xref uid="system.fabric._health_client.getDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getDeployedApplicationHealthAsync(system.fabric.DeployedApplicationHealthQueryDescription)</xref></p>'
+    syntax:
+      content: public class DeployedApplicationHealth extends EntityHealth
+  - uid: system.fabric.health._deployed_application_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_application_health_evaluation.yml
+    name: DeployedApplicationHealthEvaluation
+    nameWithType: DeployedApplicationHealthEvaluation
+    fullName: system.fabric.health.DeployedApplicationHealthEvaluation
+    type: Class
+    summary: "<p>展開済みアプリケーションの場合、データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む正常性評価を表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref></p>"
+    syntax:
+      content: public class DeployedApplicationHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._deployed_application_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_application_health_state.yml
+    name: DeployedApplicationHealthState
+    nameWithType: DeployedApplicationHealthState
+    fullName: system.fabric.health.DeployedApplicationHealthState
+    type: Class
+    summary: <p>エンティティの識別子を含む配置のアプリケーションの正常性状態と、集計された正常性状態を表します。 </p>
+    syntax:
+      content: public class DeployedApplicationHealthState extends EntityHealthState
+  - uid: system.fabric.health._deployed_application_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_application_health_state_chunk.yml
+    name: DeployedApplicationHealthStateChunk
+    nameWithType: DeployedApplicationHealthStateChunk
+    fullName: system.fabric.health.DeployedApplicationHealthStateChunk
+    type: Class
+    summary: <p>展開済みアプリケーションに関する基本的な正常性の情報を含む、展開済みアプリケーションの正常性の状態チャンクを表します。 アプリケーションの子として含まれます。 </p>
+    syntax:
+      content: public class DeployedApplicationHealthStateChunk
+  - uid: system.fabric.health._deployed_application_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_application_health_state_chunk_list.yml
+    name: DeployedApplicationHealthStateChunkList
+    nameWithType: DeployedApplicationHealthStateChunkList
+    fullName: system.fabric.health.DeployedApplicationHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._deployed_application_health_state_chunk\" data-throw-if-not-resolved=\"false\">DeployedApplicationHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class DeployedApplicationHealthStateChunkList extends HealthStateChunkList<DeployedApplicationHealthStateChunk>
+  - uid: system.fabric.health._deployed_applications_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_applications_health_evaluation.yml
+    name: DeployedApplicationsHealthEvaluation
+    nameWithType: DeployedApplicationsHealthEvaluation
+    fullName: system.fabric.health.DeployedApplicationsHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計された正常性状態の影響を受ける異常な展開済みアプリケーションごとに正常性評価を含む、展開済みアプリケーションの正常性評価を表します。 いずれかのアプリケーションの正常性と、集計された正常性状態の評価が返されることが<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref></p>'
+    syntax:
+      content: public class DeployedApplicationsHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._deployed_service_package_health
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health.yml
+    name: DeployedServicePackageHealth
+    nameWithType: DeployedServicePackageHealth
+    fullName: system.fabric.health.DeployedServicePackageHealth
+    type: Class
+    syntax:
+      content: public class DeployedServicePackageHealth extends EntityHealth
+  - uid: system.fabric.health._deployed_service_package_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health_evaluation.yml
+    name: DeployedServicePackageHealthEvaluation
+    nameWithType: DeployedServicePackageHealthEvaluation
+    fullName: system.fabric.health.DeployedServicePackageHealthEvaluation
+    type: Class
+    summary: '<p>展開済みサービス パッケージの場合、データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む正常性評価を表します。 集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class DeployedServicePackageHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._deployed_service_package_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health_state.yml
+    name: DeployedServicePackageHealthState
+    nameWithType: DeployedServicePackageHealthState
+    fullName: system.fabric.health.DeployedServicePackageHealthState
+    type: Class
+    summary: <p>エンティティの識別子と、集計された正常性状態を含む、展開済みサービス パッケージのヘルス状態を表します。 </p>
+    syntax:
+      content: public class DeployedServicePackageHealthState extends EntityHealthState
+  - uid: system.fabric.health._deployed_service_package_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health_state_chunk.yml
+    name: DeployedServicePackageHealthStateChunk
+    nameWithType: DeployedServicePackageHealthStateChunk
+    fullName: system.fabric.health.DeployedServicePackageHealthStateChunk
+    type: Class
+    summary: <p>展開済みサービス パッケージのヘルス状態チャンク、展開済みサービス パッケージに関する基本的な正常性の情報を含むを表します。 配置済みのアプリケーションの子として含まれます。 </p>
+    syntax:
+      content: public class DeployedServicePackageHealthStateChunk
+  - uid: system.fabric.health._deployed_service_package_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_package_health_state_chunk_list.yml
+    name: DeployedServicePackageHealthStateChunkList
+    nameWithType: DeployedServicePackageHealthStateChunkList
+    fullName: system.fabric.health.DeployedServicePackageHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._deployed_service_package_health_state_chunk\" data-throw-if-not-resolved=\"false\">DeployedServicePackageHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class DeployedServicePackageHealthStateChunkList extends HealthStateChunkList<DeployedServicePackageHealthStateChunk>
+  - uid: system.fabric.health._deployed_service_packages_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._deployed_service_packages_health_evaluation.yml
+    name: DeployedServicePackagesHealthEvaluation
+    nameWithType: DeployedServicePackagesHealthEvaluation
+    fullName: system.fabric.health.DeployedServicePackagesHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計された正常性状態の影響を受ける各異常な展開済みサービス パッケージの正常性評価を含む、展開済みサービス パッケージの正常性評価を表します。 いずれかが配置されたアプリケーションの正常性と、集計された正常性状態を評価するときに返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class DeployedServicePackagesHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._entity_health
+    parent: system.fabric.health
+    href: system.fabric.health._entity_health.yml
+    name: EntityHealth
+    nameWithType: EntityHealth
+    fullName: system.fabric.health.EntityHealth
+    type: Class
+    summary: <p>関連するクラスをすべてのエンティティのヘルスの基本クラスを表します。 </p>
+    syntax:
+      content: public class EntityHealth
+  - uid: system.fabric.health._entity_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._entity_health_state.yml
+    name: EntityHealthState
+    nameWithType: EntityHealthState
+    fullName: system.fabric.health.EntityHealthState
+    type: Class
+    summary: "<p>エンティティ ヘルス状態のすべてのクラスの基底クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>エンティティのヘルス状態には、エンティティの識別子とエンティティで集計された正常性状態が含まれています。 </p>"
+    syntax:
+      content: public class EntityHealthState
+  - uid: system.fabric.health._event_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._event_health_evaluation.yml
+    name: EventHealthEvaluation
+    nameWithType: EventHealthEvaluation
+    fullName: system.fabric.health.EventHealthEvaluation
+    type: Class
+    summary: '<p>正常性評価を表す、 <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">system.fabric.health.HealthEvent</xref>です。 返されるエンティティのヘルスを評価するときに返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class EventHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._health_evaluation.yml
+    name: HealthEvaluation
+    nameWithType: HealthEvaluation
+    fullName: system.fabric.health.HealthEvaluation
+    type: Class
+    summary: <p>データとエンティティのヘルスを評価する正常性ストアによって使用されるアルゴリズムを記述する正常性評価を表します。 </p>
+    syntax:
+      content: public class HealthEvaluation
+  - uid: system.fabric.health._health_evaluation_kind
+    parent: system.fabric.health
+    href: system.fabric.health._health_evaluation_kind.yml
+    name: HealthEvaluationKind
+    nameWithType: HealthEvaluationKind
+    fullName: system.fabric.health.HealthEvaluationKind
+    type: Enum
+    syntax:
+      content: public enum HealthEvaluationKind
+  - uid: system.fabric.health._health_event
+    parent: system.fabric.health
+    href: system.fabric.health._health_event.yml
+    name: HealthEvent
+    nameWithType: HealthEvent
+    fullName: system.fabric.health.HealthEvent
+    type: Class
+    summary: <p>A <xref uid="system.fabric.health._health_event" data-throw-if-not-resolved="false">HealthEvent</xref>オブジェクトは ReportHealth API を使用してエンティティのヘルスをレポート中に使用される正常性の情報を含む構造体 </p>
+    syntax:
+      content: public class HealthEvent
+  - uid: system.fabric.health._health_information
+    parent: system.fabric.health
+    href: system.fabric.health._health_information.yml
+    name: HealthInformation
+    nameWithType: HealthInformation
+    fullName: system.fabric.health.HealthInformation
+    type: Class
+    summary: <p>エンティティのヘルス情報が含まれています。 この情報は、正常性レポートに含まれています。 正常性イベントの一部としても提供されます。 </p>
+    syntax:
+      content: public class HealthInformation
+  - uid: system.fabric.health._health_report
+    parent: system.fabric.health
+    href: system.fabric.health._health_report.yml
+    name: HealthReport
+    nameWithType: HealthReport
+    fullName: system.fabric.health.HealthReport
+    type: Class
+    summary: "<p>\r\n\r\n  <b>注釈:</b>レポートは、正常性を使用してストアに送信できます<xref uid=\"system.fabric._health_client.reportHealth(HealthReport)\" data-throw-if-not-resolved=\"false\">system.fabric.HealthClient#reportHealth(system.fabric.health.HealthReport)</xref>です。 </p>"
+    syntax:
+      content: public class HealthReport
+  - uid: system.fabric.health._health_report_kind
+    parent: system.fabric.health
+    href: system.fabric.health._health_report_kind.yml
+    name: HealthReportKind
+    nameWithType: HealthReportKind
+    fullName: system.fabric.health.HealthReportKind
+    type: Enum
+    syntax:
+      content: public enum HealthReportKind
+  - uid: system.fabric.health._health_state
+    parent: system.fabric.health
+    href: system.fabric.health._health_state.yml
+    name: HealthState
+    nameWithType: HealthState
+    fullName: system.fabric.health.HealthState
+    type: Enum
+    syntax:
+      content: public enum HealthState
+  - uid: system.fabric.health._health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._health_state_chunk_list.yml
+    name: HealthStateChunkList<T>
+    nameWithType: HealthStateChunkList<T>
+    fullName: system.fabric.health.HealthStateChunkList<T>
+    type: Class
+    syntax:
+      content: public class HealthStateChunkList<T>
+      typeParameters:
+        - type: 8ce1ecb9
+  - uid: system.fabric.health._health_state_filter
+    parent: system.fabric.health
+    href: system.fabric.health._health_state_filter.yml
+    name: HealthStateFilter
+    nameWithType: HealthStateFilter
+    fullName: system.fabric.health.HealthStateFilter
+    type: Enum
+    syntax:
+      content: public enum HealthStateFilter
+  - uid: system.fabric.health._node_health
+    parent: system.fabric.health
+    href: system.fabric.health._node_health.yml
+    name: NodeHealth
+    nameWithType: NodeHealth
+    fullName: system.fabric.health.NodeHealth
+    type: Class
+    summary: '<p>によって返されるノードの正常性を示します<xref uid="system.fabric._health_client.getNodeHealthAsync(NodeHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getNodeHealthAsync(NodeHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class NodeHealth extends EntityHealth
+  - uid: system.fabric.health._node_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._node_health_evaluation.yml
+    name: NodeHealthEvaluation
+    nameWithType: NodeHealthEvaluation
+    fullName: system.fabric.health.NodeHealthEvaluation
+    type: Class
+    summary: '<p>データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む、ノードの正常性評価を表します。 集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class NodeHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._node_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._node_health_state.yml
+    name: NodeHealthState
+    nameWithType: NodeHealthState
+    fullName: system.fabric.health.NodeHealthState
+    type: Class
+    summary: <p>ノードの id および集計された正常性状態を含むノードのヘルス状態を表します。 </p>
+    syntax:
+      content: public class NodeHealthState extends EntityHealthState
+  - uid: system.fabric.health._node_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._node_health_state_chunk.yml
+    name: NodeHealthStateChunk
+    nameWithType: NodeHealthStateChunk
+    fullName: system.fabric.health.NodeHealthStateChunk
+    type: Class
+    summary: <p>ノードに関する基本的な正常性の情報が含まれているノードの正常性の状態チャンクを表します。 </p>
+    syntax:
+      content: public class NodeHealthStateChunk
+  - uid: system.fabric.health._node_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._node_health_state_chunk_list.yml
+    name: NodeHealthStateChunkList
+    nameWithType: NodeHealthStateChunkList
+    fullName: system.fabric.health.NodeHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._node_health_state_chunk\" data-throw-if-not-resolved=\"false\">NodeHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class NodeHealthStateChunkList extends HealthStateChunkList<NodeHealthStateChunk>
+  - uid: system.fabric.health._nodes_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._nodes_health_evaluation.yml
+    name: NodesHealthEvaluation
+    nameWithType: NodesHealthEvaluation
+    fullName: system.fabric.health.NodesHealthEvaluation
+    type: Class
+    syntax:
+      content: public class NodesHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._partition_health
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health.yml
+    name: PartitionHealth
+    nameWithType: PartitionHealth
+    fullName: system.fabric.health.PartitionHealth
+    type: Class
+    summary: '<p>によって返されるパーティションの正常性を説明<xref uid="system.fabric._health_client.getPartitionHealthAsync(PartitionHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getPartitionHealthAsync(PartitionHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class PartitionHealth extends EntityHealth
+  - uid: system.fabric.health._partition_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health_evaluation.yml
+    name: PartitionHealthEvaluation
+    nameWithType: PartitionHealthEvaluation
+    fullName: system.fabric.health.PartitionHealthEvaluation
+    type: Class
+    summary: '<p>データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含むパーティションの正常性評価を表します。 集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class PartitionHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._partition_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health_state.yml
+    name: PartitionHealthState
+    nameWithType: PartitionHealthState
+    fullName: system.fabric.health.PartitionHealthState
+    type: Class
+    summary: <p>パーティション識別子および集計された正常性状態を含むパーティションのヘルス状態を表します。 </p>
+    syntax:
+      content: public class PartitionHealthState extends EntityHealthState
+  - uid: system.fabric.health._partition_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health_state_chunk.yml
+    name: PartitionHealthStateChunk
+    nameWithType: PartitionHealthStateChunk
+    fullName: system.fabric.health.PartitionHealthStateChunk
+    type: Class
+    summary: <p>パーティションに関する基本的な正常性の情報が含まれているパーティションの正常性の状態チャンクを表します。 </p>
+    syntax:
+      content: public class PartitionHealthStateChunk
+  - uid: system.fabric.health._partition_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._partition_health_state_chunk_list.yml
+    name: PartitionHealthStateChunkList
+    nameWithType: PartitionHealthStateChunkList
+    fullName: system.fabric.health.PartitionHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._partition_health_state_chunk\" data-throw-if-not-resolved=\"false\">PartitionHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class PartitionHealthStateChunkList extends HealthStateChunkList<PartitionHealthStateChunk>
+  - uid: system.fabric.health._partitions_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._partitions_health_evaluation.yml
+    name: PartitionsHealthEvaluation
+    nameWithType: PartitionsHealthEvaluation
+    fullName: system.fabric.health.PartitionsHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計された正常性状態に影響を与える問題のある各パーティションの正常性評価を含む、サービスのパーティションの正常性評価を表します。 いずれかのサービスのヘルスと、集計された正常性状態の評価が返されることが<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class PartitionsHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._replica_health
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health.yml
+    name: ReplicaHealth
+    nameWithType: ReplicaHealth
+    fullName: system.fabric.health.ReplicaHealth
+    type: Class
+    summary: '<p>によって返されるステートフル サービス レプリカまたはステートレス サービス インスタンスの正常性を示します<xref uid="system.fabric._health_client.getReplicaHealthAsync(ReplicaHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getReplicaHealthAsync(ReplicaHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class ReplicaHealth extends EntityHealth
+  - uid: system.fabric.health._replica_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_evaluation.yml
+    name: ReplicaHealthEvaluation
+    nameWithType: ReplicaHealthEvaluation
+    fullName: system.fabric.health.ReplicaHealthEvaluation
+    type: Class
+    summary: '<p>レプリカの場合、データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む正常性評価を表します。 集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class ReplicaHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._replica_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_state.yml
+    name: ReplicaHealthState
+    nameWithType: ReplicaHealthState
+    fullName: system.fabric.health.ReplicaHealthState
+    type: Class
+    summary: <p>ステートフル サービス レプリカまたはステートレス サービス インスタンスのヘルス状態の基本クラスを表します。 </p>
+    syntax:
+      content: public class ReplicaHealthState extends EntityHealthState
+  - uid: system.fabric.health._replica_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_state_chunk.yml
+    name: ReplicaHealthStateChunk
+    nameWithType: ReplicaHealthStateChunk
+    fullName: system.fabric.health.ReplicaHealthStateChunk
+    type: Class
+    summary: <p>レプリカについての基本的な正常性の情報が含まれているレプリカの正常性の状態チャンクを表します。 パーティションの子として含まれます。 </p>
+    syntax:
+      content: public class ReplicaHealthStateChunk
+  - uid: system.fabric.health._replica_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._replica_health_state_chunk_list.yml
+    name: ReplicaHealthStateChunkList
+    nameWithType: ReplicaHealthStateChunkList
+    fullName: system.fabric.health.ReplicaHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._replica_health_state_chunk\" data-throw-if-not-resolved=\"false\">ReplicaHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class ReplicaHealthStateChunkList extends HealthStateChunkList<ReplicaHealthStateChunk>
+  - uid: system.fabric.health._replicas_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._replicas_health_evaluation.yml
+    name: ReplicasHealthEvaluation
+    nameWithType: ReplicasHealthEvaluation
+    fullName: system.fabric.health.ReplicasHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計されたヘルス状態、影響を受ける異常な各レプリカの正常性評価を含む、レプリカの正常性評価を表します。 いずれかのパーティションの正常性と、集計された正常性状態の評価が返されることが<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class ReplicasHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._service_health
+    parent: system.fabric.health
+    href: system.fabric.health._service_health.yml
+    name: ServiceHealth
+    nameWithType: ServiceHealth
+    fullName: system.fabric.health.ServiceHealth
+    type: Class
+    summary: '<p>によって返されるように、サービスのヘルスをについて説明します<xref uid="system.fabric._health_client.getServiceHealthAsync(ServiceHealthQueryDescription)" data-throw-if-not-resolved="false">system.fabric.HealthClient#getServiceHealthAsync(ServiceHealthQueryDescription)</xref>です。 </p>'
+    syntax:
+      content: public class ServiceHealth extends EntityHealth
+  - uid: system.fabric.health._service_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_evaluation.yml
+    name: ServiceHealthEvaluation
+    nameWithType: ServiceHealthEvaluation
+    fullName: system.fabric.health.ServiceHealthEvaluation
+    type: Class
+    summary: '<p>サービスの場合、データと正常性を評価する正常性ストアによって使用されるアルゴリズムに関する情報を含む正常性評価を表します。 集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class ServiceHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._service_health_report
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_report.yml
+    name: ServiceHealthReport
+    nameWithType: ServiceHealthReport
+    fullName: system.fabric.health.ServiceHealthReport
+    type: Class
+    summary: '<p>サービス正常性エンティティに適用される正常性レポートを表します。 使用して正常性ストアに、レポートが送信される<xref uid="system.fabric._health_client.reportHealth(HealthReport)" data-throw-if-not-resolved="false">system.fabric.HealthClient#reportHealth(system.fabric.health.HealthReport)</xref>です。 </p>'
+    syntax:
+      content: public class ServiceHealthReport extends HealthReport
+  - uid: system.fabric.health._service_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_state.yml
+    name: ServiceHealthState
+    nameWithType: ServiceHealthState
+    fullName: system.fabric.health.ServiceHealthState
+    type: Class
+    summary: <p>サービスの識別子とその集計された正常性状態を含むサービスのヘルス状態を表します。 </p>
+    syntax:
+      content: public class ServiceHealthState extends EntityHealthState
+  - uid: system.fabric.health._service_health_state_chunk
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_state_chunk.yml
+    name: ServiceHealthStateChunk
+    nameWithType: ServiceHealthStateChunk
+    fullName: system.fabric.health.ServiceHealthStateChunk
+    type: Class
+    summary: <p>基本的な正常性サービスの情報が含まれているサービスの正常性の状態チャンクを表します。 </p>
+    syntax:
+      content: public class ServiceHealthStateChunk
+  - uid: system.fabric.health._service_health_state_chunk_list
+    parent: system.fabric.health
+    href: system.fabric.health._service_health_state_chunk_list.yml
+    name: ServiceHealthStateChunkList
+    nameWithType: ServiceHealthStateChunkList
+    fullName: system.fabric.health.ServiceHealthStateChunkList
+    type: Class
+    summary: "<p>含むリストを表す<xref uid=\"system.fabric.health._service_health_state_chunk\" data-throw-if-not-resolved=\"false\">ServiceHealthStateChunk</xref>項目。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ヘルス状態のチャンク クエリを通じて、一覧を取得できます。 クエリは、メッセージを格納できる以上のチャンクを結果として必要があります。 この場合、メッセージに一致する項目の一覧が返されます、合計項目の数を示すカウントを利用できます。 </p>"
+    syntax:
+      content: public class ServiceHealthStateChunkList extends HealthStateChunkList<ServiceHealthStateChunk>
+  - uid: system.fabric.health._services_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._services_health_evaluation.yml
+    name: ServicesHealthEvaluation
+    nameWithType: ServicesHealthEvaluation
+    fullName: system.fabric.health.ServicesHealthEvaluation
+    type: Class
+    summary: '<p>特定サービスの種類のアプリケーションに属する現在集計された正常性状態の影響を受ける各の異常なサービスの正常性評価を含むサービスの正常性評価を表します。 いずれかのアプリケーションの正常性と、集計された正常性状態の評価が返されることが<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class ServicesHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._stateful_service_replica_health
+    parent: system.fabric.health
+    href: system.fabric.health._stateful_service_replica_health.yml
+    name: StatefulServiceReplicaHealth
+    nameWithType: StatefulServiceReplicaHealth
+    fullName: system.fabric.health.StatefulServiceReplicaHealth
+    type: Class
+    summary: <p>によって返されるステートフル サービス レプリカの正常性を示します<xref uid="system.fabric._health_client.getReplicaHealthAsync(ReplicaHealthQueryDescription)" data-throw-if-not-resolved="false">getReplicaHealthAsync</xref>メソッドです。 </p>
+    syntax:
+      content: public class StatefulServiceReplicaHealth extends ReplicaHealth
+  - uid: system.fabric.health._stateful_service_replica_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._stateful_service_replica_health_state.yml
+    name: StatefulServiceReplicaHealthState
+    nameWithType: StatefulServiceReplicaHealthState
+    fullName: system.fabric.health.StatefulServiceReplicaHealthState
+    type: Class
+    summary: <p>集計された正常性状態およびレプリカを含むステートフル サービス レプリカの正常性の状態を表します。 </p>
+    syntax:
+      content: public class StatefulServiceReplicaHealthState extends ReplicaHealthState
+  - uid: system.fabric.health._stateless_service_instance_health
+    parent: system.fabric.health
+    href: system.fabric.health._stateless_service_instance_health.yml
+    name: StatelessServiceInstanceHealth
+    nameWithType: StatelessServiceInstanceHealth
+    fullName: system.fabric.health.StatelessServiceInstanceHealth
+    type: Class
+    summary: <p>によって返される、ステートレス サービス レプリカの正常性を示します<xref uid="system.fabric._health_client.getReplicaHealthAsync(ReplicaHealthQueryDescription)" data-throw-if-not-resolved="false">getReplicaHealthAsync</xref>メソッドです。 </p>
+    syntax:
+      content: public class StatelessServiceInstanceHealth extends ReplicaHealth
+  - uid: system.fabric.health._stateless_service_instance_health_report
+    parent: system.fabric.health
+    href: system.fabric.health._stateless_service_instance_health_report.yml
+    name: StatelessServiceInstanceHealthReport
+    nameWithType: StatelessServiceInstanceHealthReport
+    fullName: system.fabric.health.StatelessServiceInstanceHealthReport
+    type: Class
+    summary: <p>ステートレス サービスの正常性エンティティに適用される正常性レポートを表します。 使用して正常性ストアに、レポートが送信される<xref uid="system.fabric._health_client" data-throw-if-not-resolved="false">system.fabric.HealthClient</xref>の ReportHealth 操作します。 </p>
+    syntax:
+      content: public class StatelessServiceInstanceHealthReport extends HealthReport
+  - uid: system.fabric.health._stateless_service_instance_health_state
+    parent: system.fabric.health
+    href: system.fabric.health._stateless_service_instance_health_state.yml
+    name: StatelessServiceInstanceHealthState
+    nameWithType: StatelessServiceInstanceHealthState
+    fullName: system.fabric.health.StatelessServiceInstanceHealthState
+    type: Class
+    summary: <p>インスタンス id を格納する、ステートレス サービスのインスタンスの正常性エンティティのヘルス状態と、集計された正常性状態を表します。 </p>
+    syntax:
+      content: public class StatelessServiceInstanceHealthState extends ReplicaHealthState
+  - uid: system.fabric.health._system_application_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._system_application_health_evaluation.yml
+    name: SystemApplicationHealthEvaluation
+    nameWithType: SystemApplicationHealthEvaluation
+    fullName: system.fabric.health.SystemApplicationHealthEvaluation
+    type: Class
+    summary: '<p>ファブリックの正常性評価を表します。/正常性を評価する正常性ストアによって使用されるシステム アプリケーションは、データと、アルゴリズムに関する情報を格納します。 クラスターの集計された正常性状態は、いずれかの場合にのみ、評価が返される<xref uid="" data-throw-if-not-resolved="false">HealthState #Error</xref>または<xref uid="" data-throw-if-not-resolved="false">HealthState #Warning</xref>です。 </p>'
+    syntax:
+      content: public class SystemApplicationHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._upgrade_domain_delta_nodes_check_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._upgrade_domain_delta_nodes_check_health_evaluation.yml
+    name: UpgradeDomainDeltaNodesCheckHealthEvaluation
+    nameWithType: UpgradeDomainDeltaNodesCheckHealthEvaluation
+    fullName: system.fabric.health.UpgradeDomainDeltaNodesCheckHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計された正常性状態の影響を受ける各の異常なノードの正常性評価を含む、アップグレード ドメインのデルタ異常なクラスターのノードの正常性評価を表します。 返されることがクラスターのアップグレード中にクラスターが集計された正常性状態が<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>です。 </p>'
+    syntax:
+      content: public class UpgradeDomainDeltaNodesCheckHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._upgrade_domain_deployed_applications_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._upgrade_domain_deployed_applications_health_evaluation.yml
+    name: UpgradeDomainDeployedApplicationsHealthEvaluation
+    nameWithType: UpgradeDomainDeployedApplicationsHealthEvaluation
+    fullName: system.fabric.health.UpgradeDomainDeployedApplicationsHealthEvaluation
+    type: Class
+    summary: "<p>現在の集計された正常性状態の影響を受ける異常な展開済みアプリケーションごとに正常性評価を含む、アップグレード ドメイン内のアプリケーションの展開済みアプリケーションの正常性評価を表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>がクラスターやアプリケーションのアップグレードと、集計された正常性状態の中にアプリケーションの正常性を評価するときに返される<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Error</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.health.HealthState#Warning</xref>です。 </p>"
+    syntax:
+      content: public class UpgradeDomainDeployedApplicationsHealthEvaluation extends HealthEvaluation
+  - uid: system.fabric.health._upgrade_domain_nodes_health_evaluation
+    parent: system.fabric.health
+    href: system.fabric.health._upgrade_domain_nodes_health_evaluation.yml
+    name: UpgradeDomainNodesHealthEvaluation
+    nameWithType: UpgradeDomainNodesHealthEvaluation
+    fullName: system.fabric.health.UpgradeDomainNodesHealthEvaluation
+    type: Class
+    summary: '<p>現在の集計された正常性状態の影響を受ける各の異常なノードの正常性評価を含む、アップグレード ドメイン内のクラスター ノードの正常性評価を表します。 いずれかがクラスターのアップグレードと、集計された正常性状態の中にクラスターの正常性を評価するときに返される<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Error</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.health.HealthState#Warning</xref>です。 </p>'
+    syntax:
+      content: public class UpgradeDomainNodesHealthEvaluation extends HealthEvaluation

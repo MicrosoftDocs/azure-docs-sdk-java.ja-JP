@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.network._route._definition
+    id: _definition
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._route._definition.yml
+    langs:
+      - java
+    name: Route.Definition<ParentT>
+    nameWithType: Route.Definition<ParentT>
+    fullName: com.microsoft.azure.management.network.Route.Definition<ParentT>
+    type: Interface
+    source:
+      remote:
+        path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Route.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/Route.java
+      startLine: 99
+    package: com.microsoft.azure.management.network
+    summary: <p>ルート定義の全体です。 </p>
+    syntax:
+      content: 'public interface Definition<ParentT> extends Route.DefinitionStages.Blank<ParentT>,Route.DefinitionStages.WithAttach<ParentT>,Route.DefinitionStages.WithNextHopType<ParentT>,Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>'
+      typeParameters:
+        - type: 18a275b1
+          description: '<p>最後の戻り値の型<xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()" data-throw-if-not-resolved="false">DefinitionStages.WithAttach#attach()</xref></p>'
+    inheritedMembers:
+      - com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()
+      - com.microsoft.azure.management.network._route._definition_stages._with_destination_address_prefix.withDestinationAddressPrefix(String)
+      - com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.withNextHop(RouteNextHopType)
+      - com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.withNextHopToVirtualAppliance(String)
+references:
+  - uid: 18a275b1
+    spec.java:
+      - name: ParentT
+        fullName: ParentT
+  - uid: com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()
+    parent: com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition
+    href: com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.yml
+    name: attach()
+    nameWithType: Attachable.InDefinition<ParentT>.attach()
+    fullName: ParentT com.microsoft.azure.management.resources.fluentcore.model.Attachable<ParentT>.InDefinition<ParentT>.attach()
+    type: Method
+    summary: <p>子の定義を親のリソース定義にアタッチします。 </p>
+    syntax:
+      content: public ParentT attach()
+      return:
+        type: 18a275b1
+        description: <p>親の定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._route._definition_stages._with_destination_address_prefix.withDestinationAddressPrefix(String)
+    parent: com.microsoft.azure.management.network._route._definition_stages._with_destination_address_prefix
+    href: com.microsoft.azure.management.network._route._definition_stages._with_destination_address_prefix.yml
+    name: withDestinationAddressPrefix(String cidr)
+    nameWithType: Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>.withDestinationAddressPrefix(String cidr)
+    fullName: WithNextHopType<ParentT> com.microsoft.azure.management.network.Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>.withDestinationAddressPrefix(String cidr)
+    type: Method
+    summary: <p>ルートを適用する変換先のアドレス プレフィックスを指定します。 </p>
+    syntax:
+      content: public WithNextHopType<ParentT> withDestinationAddressPrefix(String cidr)
+      parameters:
+        - id: cidr
+          type: '26831127'
+          description: <p>CIDR 表記で表されるアドレス プレフィックス </p>
+      return:
+        type: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_typeda8a2936
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.withNextHop(RouteNextHopType)
+    parent: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type
+    href: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.yml
+    name: withNextHop(RouteNextHopType nextHopType)
+    nameWithType: Route.DefinitionStages.WithNextHopType<ParentT>.withNextHop(RouteNextHopType nextHopType)
+    fullName: WithAttach<ParentT> com.microsoft.azure.management.network.Route.DefinitionStages.WithNextHopType<ParentT>.withNextHop(RouteNextHopType nextHopType)
+    type: Method
+    summary: |-
+      <p>次ホップの種類を指定します。 </p>
+      <p>仮想アプライアンスを使用する<xref uid="com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.withNextHopToVirtualAppliance(String)" data-throw-if-not-resolved="false">withNextHopToVirtualAppliance(String)</xref>代わりにその IP アドレスを指定します。 </p>
+    syntax:
+      content: public WithAttach<ParentT> withNextHop(RouteNextHopType nextHopType)
+      parameters:
+        - id: nextHopType
+          type: com.microsoft.azure.management.network._route_next_hop_type
+          description: <p>ホップの種類 </p>
+      return:
+        type: com.microsoft.azure.management.network._route._definition_stages._with_attachda8a2936
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.withNextHopToVirtualAppliance(String)
+    parent: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type
+    href: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.yml
+    name: withNextHopToVirtualAppliance(String ipAddress)
+    nameWithType: Route.DefinitionStages.WithNextHopType<ParentT>.withNextHopToVirtualAppliance(String ipAddress)
+    fullName: WithAttach<ParentT> com.microsoft.azure.management.network.Route.DefinitionStages.WithNextHopType<ParentT>.withNextHopToVirtualAppliance(String ipAddress)
+    type: Method
+    summary: <p>移動するのには、次のホップに仮想アプライアンスの IP アドレスを指定します。 </p>
+    syntax:
+      content: public WithAttach<ParentT> withNextHopToVirtualAppliance(String ipAddress)
+      parameters:
+        - id: ipAddress
+          type: '26831127'
+          description: <p>既存の仮想アプライアンス (仮想マシン) の IP アドレス </p>
+      return:
+        type: com.microsoft.azure.management.network._route._definition_stages._with_attachda8a2936
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._route._definition_stages._blank
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._route._definition_stages._blank.yml
+    name: Route.DefinitionStages.Blank<ParentT>
+    nameWithType: Route.DefinitionStages.Blank<ParentT>
+    fullName: com.microsoft.azure.management.network.Route.DefinitionStages.Blank<ParentT>
+    type: Interface
+    summary: <p>ルート定義の最初の段階です。 </p>
+    syntax:
+      content: public interface Blank<ParentT> extends Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>
+  - uid: com.microsoft.azure.management.network._route._definition_stages._with_attach
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._route._definition_stages._with_attach.yml
+    name: Route.DefinitionStages.WithAttach<ParentT>
+    nameWithType: Route.DefinitionStages.WithAttach<ParentT>
+    fullName: com.microsoft.azure.management.network.Route.DefinitionStages.WithAttach<ParentT>
+    type: Interface
+    summary: |-
+      <p>ルート定義の最終段階です。 </p>
+      <p>この段階で、残りの省略可能な設定を指定することができます、またはルート定義は、親のルート テーブルを使用して定義に添付できる<xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref>です。 </p>
+    syntax:
+      content: public interface WithAttach<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: '<p>戻り値の型<xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref></p>'
+  - uid: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._route._definition_stages._with_next_hop_type.yml
+    name: Route.DefinitionStages.WithNextHopType<ParentT>
+    nameWithType: Route.DefinitionStages.WithNextHopType<ParentT>
+    fullName: com.microsoft.azure.management.network.Route.DefinitionStages.WithNextHopType<ParentT>
+    type: Interface
+    summary: <p>次ホップの種類の指定を許可するルート定義の段階です。 </p>
+    syntax:
+      content: public interface WithNextHopType<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: '<p>戻り値の型<xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref></p>'
+  - uid: com.microsoft.azure.management.network._route._definition_stages._with_destination_address_prefix
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._route._definition_stages._with_destination_address_prefix.yml
+    name: Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>
+    nameWithType: Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>
+    fullName: com.microsoft.azure.management.network.Route.DefinitionStages.WithDestinationAddressPrefix<ParentT>
+    type: Interface
+    summary: <p>移行先のアドレス プレフィックスを指定できるようにルート定義の段階です。 </p>
+    syntax:
+      content: public interface WithDestinationAddressPrefix<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: '<p>戻り値の型<xref uid="com.microsoft.azure.management.resources.fluentcore.model._attachable._in_definition.attach()" data-throw-if-not-resolved="false">WithAttach#attach()</xref></p>'

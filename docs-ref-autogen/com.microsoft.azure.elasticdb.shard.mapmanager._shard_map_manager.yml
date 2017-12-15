@@ -1,0 +1,1227 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    id: _shard_map_manager
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    children:
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createListShardMap(String,ShardKeyType)'
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createRangeShardMap(String,ShardKeyType)'
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.deleteShardMap(ShardMap)
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCache()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCredentials()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getDistinctShardLocations()
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getListShardMap(String,ShardKeyType)'
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRangeShardMap(String,ShardKeyType)'
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRecoveryManager()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRetryPolicy()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getSchemaInfoCollection()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMap(String)
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMaps()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreConnectionFactory()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreOperationFactory()
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.lookupShardMapByName(String,String,boolean)'
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.onShardMapManagerRetryingEvent(RetryingEventArgs)
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager(SqlShardMapManagerCredentials,IStoreConnectionFactory,IStoreOperationFactory,ICacheStore,ShardMapManagerLoadPolicy,RetryPolicy,RetryBehavior)'
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager(SqlShardMapManagerCredentials,IStoreConnectionFactory,IStoreOperationFactory,ICacheStore,ShardMapManagerLoadPolicy,RetryPolicy,RetryBehavior,EventHandler<RetryingEventArgs>)'
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.shardMapManagerRetrying
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.shardMapManagerRetryingEventHandler(Object,RetryingEventArgs)'
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetListShardMap(String,ShardKeyType,ReferenceObjectHelper<ListShardMap<KeyT>>)'
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetRangeShardMap(String,ShardKeyType,ReferenceObjectHelper<RangeShardMap<KeyT>>)'
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetShardMap(String,ShardKeyType,ReferenceObjectHelper<ShardMap>)'
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore()
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore(Version)
+      - com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore(ShardLocation)
+      - 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore(ShardLocation,Version)'
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: ShardMapManager
+    nameWithType: ShardMapManager
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 55
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: <p>シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。 </p>
+    syntax: &ref_1
+      content: public class ShardMapManager
+    inheritance:
+      - java.lang.Object
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createListShardMap(String,ShardKeyType)'
+    id: 'createListShardMap(String,ShardKeyType)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'createListShardMap(String shardMapName, ShardKeyType keyType)'
+    nameWithType: 'ShardMapManager.createListShardMap(String shardMapName, ShardKeyType keyType)'
+    fullName: 'public<KeyT> ListShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.createListShardMap(String shardMapName, ShardKeyType keyType)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createListShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 237
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>作成、一覧ベース ListShardMap&lt;KeyT&gt;です。 </p>
+      <p></p>
+    syntax:
+      content: 'public <KeyT> ListShardMap<KeyT> createListShardMap(String shardMapName, ShardKeyType keyType)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+      return:
+        type: 22f12f9fcom.microsoft.azure.elasticdb.shard.map._list_shard_map9d2fc6d0
+        description: <p>指定した名前には、シャードのマップをリストします。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createRangeShardMap(String,ShardKeyType)'
+    id: 'createRangeShardMap(String,ShardKeyType)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'createRangeShardMap(String shardMapName, ShardKeyType keyType)'
+    nameWithType: 'ShardMapManager.createRangeShardMap(String shardMapName, ShardKeyType keyType)'
+    fullName: 'public<KeyT> RangeShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.createRangeShardMap(String shardMapName, ShardKeyType keyType)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createRangeShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 266
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>作成、範囲ベース RangeShardMap&lt;KeyT&gt;です。 </p>
+      <p></p>
+    syntax:
+      content: 'public <KeyT> RangeShardMap<KeyT> createRangeShardMap(String shardMapName, ShardKeyType keyType)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+      return:
+        type: 22f12f9fcom.microsoft.azure.elasticdb.shard.map._range_shard_map9d2fc6d0
+        description: <p>指定した名前のシャードのマップの範囲です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.deleteShardMap(ShardMap)
+    id: deleteShardMap(ShardMap)
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: deleteShardMap(ShardMap shardMap)
+    nameWithType: ShardMapManager.deleteShardMap(ShardMap shardMap)
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.deleteShardMap(ShardMap shardMap)
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.deleteShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 294
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>指定されたシャードのマップを削除します。</p>
+      <p></p>
+    syntax:
+      content: public void deleteShardMap(ShardMap shardMap)
+      parameters:
+        - id: shardMap
+          type: com.microsoft.azure.elasticdb.shard.map._shard_map
+          description: <p>削除する ShardMap です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCache()
+    id: getCache()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getCache()
+    nameWithType: ShardMapManager.getCache()
+    fullName: ICacheStore com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getCache()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCache*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 222
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    syntax:
+      content: public ICacheStore getCache()
+      return:
+        type: 66277c30
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCredentials()
+    id: getCredentials()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getCredentials()
+    nameWithType: ShardMapManager.getCredentials()
+    fullName: SqlShardMapManagerCredentials com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getCredentials()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCredentials*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 190
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    syntax:
+      content: public SqlShardMapManagerCredentials getCredentials()
+      return:
+        type: 3dd9a3c4
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getDistinctShardLocations()
+    id: getDistinctShardLocations()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getDistinctShardLocations()
+    nameWithType: ShardMapManager.getDistinctShardLocations()
+    fullName: List<ShardLocation> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getDistinctShardLocations()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getDistinctShardLocations*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 478
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>シャードのマップ マネージャーから個別のシャードの場所を取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<ShardLocation> getDistinctShardLocations()
+      return:
+        type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+        description: <p>シャードのマップ マネージャーに関連付けられているシャード場所のコレクション。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getListShardMap(String,ShardKeyType)'
+    id: 'getListShardMap(String,ShardKeyType)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'getListShardMap(String shardMapName, ShardKeyType keyType)'
+    nameWithType: 'ShardMapManager.getListShardMap(String shardMapName, ShardKeyType keyType)'
+    fullName: 'public<KeyT> ListShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getListShardMap(String shardMapName, ShardKeyType keyType)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getListShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 385
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>取得、ListShardMap&lt;KeyT&gt;名を指定します。 </p>
+      <p></p>
+    syntax:
+      content: 'public <KeyT> ListShardMap<KeyT> getListShardMap(String shardMapName, ShardKeyType keyType)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+      return:
+        type: 22f12f9fcom.microsoft.azure.elasticdb.shard.map._list_shard_map9d2fc6d0
+        description: <p>結果として得られる ShardMap です。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRangeShardMap(String,ShardKeyType)'
+    id: 'getRangeShardMap(String,ShardKeyType)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'getRangeShardMap(String shardMapName, ShardKeyType keyType)'
+    nameWithType: 'ShardMapManager.getRangeShardMap(String shardMapName, ShardKeyType keyType)'
+    fullName: 'public<KeyT> RangeShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getRangeShardMap(String shardMapName, ShardKeyType keyType)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRangeShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 433
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>取得、RangeShardMap&lt;KeyT&gt;名を指定します。 </p>
+      <p></p>
+    syntax:
+      content: 'public <KeyT> RangeShardMap<KeyT> getRangeShardMap(String shardMapName, ShardKeyType keyType)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+      return:
+        type: 22f12f9fcom.microsoft.azure.elasticdb.shard.map._range_shard_map9d2fc6d0
+        description: <p>結果として得られる ShardMap です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRecoveryManager()
+    id: getRecoveryManager()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getRecoveryManager()
+    nameWithType: ShardMapManager.getRecoveryManager()
+    fullName: RecoveryManager com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getRecoveryManager()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRecoveryManager*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 579
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>現在のシャードのマップ マネージャー インスタンスの回復マネージャーを取得します。</p>
+      <p></p>
+    syntax:
+      content: public RecoveryManager getRecoveryManager()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+        description: <p>シャードのマップ マネージャーの回復マネージャーです。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRetryPolicy()
+    id: getRetryPolicy()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getRetryPolicy()
+    nameWithType: ShardMapManager.getRetryPolicy()
+    fullName: RetryPolicy com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getRetryPolicy()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRetryPolicy*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 214
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    syntax:
+      content: public RetryPolicy getRetryPolicy()
+      return:
+        type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getSchemaInfoCollection()
+    id: getSchemaInfoCollection()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getSchemaInfoCollection()
+    nameWithType: ShardMapManager.getSchemaInfoCollection()
+    fullName: SchemaInfoCollection com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getSchemaInfoCollection()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getSchemaInfoCollection*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 588
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>シャード マップ マネージャーの現在のインスタンスのスキーマ情報のコレクション オブジェクトを取得します。</p>
+      <p></p>
+    syntax:
+      content: public SchemaInfoCollection getSchemaInfoCollection()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+        description: <p>シャードのマップ manager のスキーマ情報のコレクションです。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMap(String)
+    id: getShardMap(String)
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getShardMap(String shardMapName)
+    nameWithType: ShardMapManager.getShardMap(String shardMapName)
+    fullName: ShardMap com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getShardMap(String shardMapName)
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 337
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>名前で指定された ShardMap を取得します。</p>
+      <p></p>
+    syntax:
+      content: public ShardMap getShardMap(String shardMapName)
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+      return:
+        type: com.microsoft.azure.elasticdb.shard.map._shard_map
+        description: <p>特定の名前を持つ ShardMap します。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMaps()
+    id: getShardMaps()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getShardMaps()
+    nameWithType: ShardMapManager.getShardMaps()
+    fullName: List<ShardMap> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getShardMaps()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMaps*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 314
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>シャードのマップ マネージャーに関連付けられているすべてのシャード マップを取得します。</p>
+      <p></p>
+    syntax:
+      content: public List<ShardMap> getShardMaps()
+      return:
+        type: 5618da2dcom.microsoft.azure.elasticdb.shard.map._shard_mapa08ddfce
+        description: <p>シャードのマップ マネージャーに関連付けられたシャード マップのコレクションです。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreConnectionFactory()
+    id: getStoreConnectionFactory()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getStoreConnectionFactory()
+    nameWithType: ShardMapManager.getStoreConnectionFactory()
+    fullName: IStoreConnectionFactory com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getStoreConnectionFactory()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreConnectionFactory*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 198
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    syntax:
+      content: public IStoreConnectionFactory getStoreConnectionFactory()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.store._i_store_connection_factory
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreOperationFactory()
+    id: getStoreOperationFactory()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: getStoreOperationFactory()
+    nameWithType: ShardMapManager.getStoreOperationFactory()
+    fullName: IStoreOperationFactory com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getStoreOperationFactory()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreOperationFactory*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 206
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    syntax:
+      content: public IStoreOperationFactory getStoreOperationFactory()
+      return:
+        type: 8357facb
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.lookupShardMapByName(String,String,boolean)'
+    id: 'lookupShardMapByName(String,String,boolean)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'lookupShardMapByName(String operationName, String shardMapName, boolean lookInCacheFirst)'
+    nameWithType: 'ShardMapManager.lookupShardMapByName(String operationName, String shardMapName, boolean lookInCacheFirst)'
+    fullName: 'ShardMap com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.lookupShardMapByName(String operationName, String shardMapName, boolean lookInCacheFirst)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.lookupShardMapByName*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 603
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>要求された場合、およびグローバル シャード マップから必要な場合は、キャッシュからのシャードのマップを検索します。</p>
+      <p></p>
+    syntax:
+      content: 'public ShardMap lookupShardMapByName(String operationName, String shardMapName, boolean lookInCacheFirst)'
+      parameters:
+        - id: operationName
+          type: '26831127'
+          description: <p>操作名、詳細な診断に役立ちます。 </p>
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: lookInCacheFirst
+          type: 4fc6e284
+          description: <p>キャッシュ内の最初のルックアップをスキップするかどうか。 </p>
+      return:
+        type: com.microsoft.azure.elasticdb.shard.map._shard_map
+        description: <p>検索する 1 つに対応するシャード マップのオブジェクト。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.onShardMapManagerRetryingEvent(RetryingEventArgs)
+    id: onShardMapManagerRetryingEvent(RetryingEventArgs)
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: onShardMapManagerRetryingEvent(RetryingEventArgs arg)
+    nameWithType: ShardMapManager.onShardMapManagerRetryingEvent(RetryingEventArgs arg)
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.onShardMapManagerRetryingEvent(RetryingEventArgs arg)
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.onShardMapManagerRetryingEvent*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 654
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>ShardMapManagerRetryingEvent イベントの発行元です。</p>
+      <p></p>
+    syntax:
+      content: public void onShardMapManagerRetryingEvent(RetryingEventArgs arg)
+      parameters:
+        - id: arg
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args
+          description: <p>イベント引数。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager(SqlShardMapManagerCredentials,IStoreConnectionFactory,IStoreOperationFactory,ICacheStore,ShardMapManagerLoadPolicy,RetryPolicy,RetryBehavior)'
+    id: 'ShardMapManager(SqlShardMapManagerCredentials,IStoreConnectionFactory,IStoreOperationFactory,ICacheStore,ShardMapManagerLoadPolicy,RetryPolicy,RetryBehavior)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior)'
+    nameWithType: 'ShardMapManager.ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior)'
+    fullName: 'com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 103
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>指定した接続文字列が対応するデータ ソースを開き、取得、 <xref uid="com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager" data-throw-if-not-resolved="false">ShardMapManager</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior)'
+      parameters:
+        - id: credentials
+          type: 3dd9a3c4
+          description: <p>実行するための資格情報<xref uid="com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager" data-throw-if-not-resolved="false">ShardMapManager</xref>操作します。 </p>
+        - id: storeConnectionFactory
+          type: com.microsoft.azure.elasticdb.shard.store._i_store_connection_factory
+          description: <p>ストアの接続用のファクトリです。 </p>
+        - id: storeOperationFactory
+          type: 8357facb
+          description: <p>ストアの操作のためのファクトリです。 </p>
+        - id: cacheStore
+          type: 66277c30
+          description: <p>キャッシュ ストア。 </p>
+        - id: loadPolicy
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager_load_policy
+          description: <p>初期化のポリシー。 </p>
+        - id: retryPolicy
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+          description: <p>シャードのマップ manager データベースへの接続の再試行を実行するためのポリシー。 </p>
+        - id: retryBehavior
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior
+          description: <p>一時的なエラーを検出するためのポリシー。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager(SqlShardMapManagerCredentials,IStoreConnectionFactory,IStoreOperationFactory,ICacheStore,ShardMapManagerLoadPolicy,RetryPolicy,RetryBehavior,EventHandler<RetryingEventArgs>)'
+    id: 'ShardMapManager(SqlShardMapManagerCredentials,IStoreConnectionFactory,IStoreOperationFactory,ICacheStore,ShardMapManagerLoadPolicy,RetryPolicy,RetryBehavior,EventHandler<RetryingEventArgs>)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior, EventHandler<RetryingEventArgs> retryEventHandler)'
+    nameWithType: 'ShardMapManager.ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior, EventHandler<RetryingEventArgs> retryEventHandler)'
+    fullName: 'com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior, EventHandler<RetryingEventArgs> retryEventHandler)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 133
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>指定した接続文字列が対応するデータ ソースを開き、取得、 <xref uid="com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager" data-throw-if-not-resolved="false">ShardMapManager</xref>です。</p>
+      <p></p>
+    syntax:
+      content: 'public ShardMapManager(SqlShardMapManagerCredentials credentials, IStoreConnectionFactory storeConnectionFactory, IStoreOperationFactory storeOperationFactory, ICacheStore cacheStore, ShardMapManagerLoadPolicy loadPolicy, RetryPolicy retryPolicy, RetryBehavior retryBehavior, EventHandler<RetryingEventArgs> retryEventHandler)'
+      parameters:
+        - id: credentials
+          type: 3dd9a3c4
+          description: <p>実行するための資格情報<xref uid="com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager" data-throw-if-not-resolved="false">ShardMapManager</xref>操作します。 </p>
+        - id: storeConnectionFactory
+          type: com.microsoft.azure.elasticdb.shard.store._i_store_connection_factory
+          description: <p>ストアの接続用のファクトリです。 </p>
+        - id: storeOperationFactory
+          type: 8357facb
+          description: <p>ストアの操作のためのファクトリです。 </p>
+        - id: cacheStore
+          type: 66277c30
+          description: <p>キャッシュ ストア。 </p>
+        - id: loadPolicy
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager_load_policy
+          description: <p>初期化のポリシー。 </p>
+        - id: retryPolicy
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+          description: <p>シャードのマップ manager データベースへの接続の再試行を実行するためのポリシー。 </p>
+        - id: retryBehavior
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior
+          description: <p>一時的なエラーを検出するためのポリシー。 </p>
+        - id: retryEventHandler
+          type: f45ab895com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_argsa08ddfce
+          description: <p>ストア操作の再試行イベントのイベント ハンドラー。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.shardMapManagerRetrying
+    id: shardMapManagerRetrying
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: shardMapManagerRetrying
+    nameWithType: ShardMapManager.shardMapManagerRetrying
+    fullName: Event<EventHandler<RetryingEventArgs>> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.shardMapManagerRetrying
+    type: Field
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 61
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: <p>Shard Map Manager ストア再試行で発生するイベントです。 </p>
+    syntax:
+      content: public Event<EventHandler<RetryingEventArgs>> shardMapManagerRetrying
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_argse7daa122
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.shardMapManagerRetryingEventHandler(Object,RetryingEventArgs)'
+    id: 'shardMapManagerRetryingEventHandler(Object,RetryingEventArgs)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'shardMapManagerRetryingEventHandler(Object sender, RetryingEventArgs arg)'
+    nameWithType: 'ShardMapManager.shardMapManagerRetryingEventHandler(Object sender, RetryingEventArgs arg)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.shardMapManagerRetryingEventHandler(Object sender, RetryingEventArgs arg)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.shardMapManagerRetryingEventHandler*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 640
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>サブスクライバーの関数を<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.retrying" data-throw-if-not-resolved="false">RetryPolicy.retrying</xref>イベント。</p>
+      <p></p>
+    syntax:
+      content: 'public void shardMapManagerRetryingEventHandler(Object sender, RetryingEventArgs arg)'
+      parameters:
+        - id: sender
+          type: '79317049'
+          description: <p>送信元オブジェクト (RetryPolicy) </p>
+        - id: arg
+          type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args
+          description: <p>イベント引数。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetListShardMap(String,ShardKeyType,ReferenceObjectHelper<ListShardMap<KeyT>>)'
+    id: 'tryGetListShardMap(String,ShardKeyType,ReferenceObjectHelper<ListShardMap<KeyT>>)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'tryGetListShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ListShardMap<KeyT>> shardMap)'
+    nameWithType: 'ShardMapManager.tryGetListShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ListShardMap<KeyT>> shardMap)'
+    fullName: 'public<KeyT> boolean com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.tryGetListShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ListShardMap<KeyT>> shardMap)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetListShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 410
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>ListShardMap を取得しようとしています。&lt;KeyT&gt;名を指定します。 </p>
+      <p></p>
+    syntax:
+      content: 'public <KeyT> boolean tryGetListShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ListShardMap<KeyT>> shardMap)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+        - id: shardMap
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._list_shard_maped7603c7
+      return:
+        type: 9ff93231
+        description: <p>ListShardMap </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetRangeShardMap(String,ShardKeyType,ReferenceObjectHelper<RangeShardMap<KeyT>>)'
+    id: 'tryGetRangeShardMap(String,ShardKeyType,ReferenceObjectHelper<RangeShardMap<KeyT>>)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'tryGetRangeShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<RangeShardMap<KeyT>> shardMap)'
+    nameWithType: 'ShardMapManager.tryGetRangeShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<RangeShardMap<KeyT>> shardMap)'
+    fullName: 'public<KeyT> boolean com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.tryGetRangeShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<RangeShardMap<KeyT>> shardMap)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetRangeShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 458
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>RangeShardMap を取得しようとしています。&lt;KeyT&gt;名を指定します。</p>
+      <p></p>
+    syntax:
+      content: 'public <KeyT> boolean tryGetRangeShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<RangeShardMap<KeyT>> shardMap)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+        - id: shardMap
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._range_shard_maped7603c7
+      return:
+        type: 9ff93231
+        description: <p>RangeShardMap </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetShardMap(String,ShardKeyType,ReferenceObjectHelper<ShardMap>)'
+    id: 'tryGetShardMap(String,ShardKeyType,ReferenceObjectHelper<ShardMap>)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'tryGetShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ShardMap> shardMap)'
+    nameWithType: 'ShardMapManager.tryGetShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ShardMap> shardMap)'
+    fullName: 'boolean com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.tryGetShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ShardMap> shardMap)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 362
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>名前で指定された ShardMap を取得しようとしています。</p>
+      <p></p>
+    syntax:
+      content: 'public boolean tryGetShardMap(String shardMapName, ShardKeyType keyType, ReferenceObjectHelper<ShardMap> shardMap)'
+      parameters:
+        - id: shardMapName
+          type: '26831127'
+          description: <p>シャード マップの名前です。 </p>
+        - id: keyType
+          type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+        - id: shardMap
+          type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_mapa08ddfce
+          description: <p>指定した名前のシャードのマップ。 </p>
+      return:
+        type: 4fc6e284
+        description: "<p>\r\n\r\n  <code>true</code>指定した名前のシャードのマップが見つかった場合は<code>false</code>それ以外の場合。 </p>"
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore()
+    id: upgradeGlobalStore()
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: upgradeGlobalStore()
+    nameWithType: ShardMapManager.upgradeGlobalStore()
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.upgradeGlobalStore()
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 497
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: <p>アップグレードでは、ライブラリでサポートされている最新バージョンにグローバル シャード マップのホストを格納します。 </p>
+    syntax:
+      content: public void upgradeGlobalStore()
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore(Version)
+    id: upgradeGlobalStore(Version)
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: upgradeGlobalStore(Version targetVersion)
+    nameWithType: ShardMapManager.upgradeGlobalStore(Version targetVersion)
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.upgradeGlobalStore(Version targetVersion)
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 517
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>アップグレードでは、ホストを指定したバージョンのグローバル シャード マップを格納します。 これは、アップグレードのテストに使用されます。</p>
+      <p></p>
+    syntax:
+      content: public void upgradeGlobalStore(Version targetVersion)
+      parameters:
+        - id: targetVersion
+          type: com.microsoft.azure.elasticdb.shard.store._version
+          description: <p>展開するには、ストアのバージョンを対象。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore(ShardLocation)
+    id: upgradeLocalStore(ShardLocation)
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: upgradeLocalStore(ShardLocation location)
+    nameWithType: ShardMapManager.upgradeLocalStore(ShardLocation location)
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.upgradeLocalStore(ShardLocation location)
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 560
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>アップグレードでは、ライブラリでサポートされている最新バージョンに場所を格納します。</p>
+      <p></p>
+    syntax:
+      content: public void upgradeLocalStore(ShardLocation location)
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>アップグレードするシャード場所です。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore(ShardLocation,Version)'
+    id: 'upgradeLocalStore(ShardLocation,Version)'
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    langs:
+      - java
+    name: 'upgradeLocalStore(ShardLocation location, Version targetVersion)'
+    nameWithType: 'ShardMapManager.upgradeLocalStore(ShardLocation location, Version targetVersion)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.upgradeLocalStore(ShardLocation location, Version targetVersion)'
+    overload: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapmanager/ShardMapManager.java
+      startLine: 539
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+    summary: |-
+      <p>アップグレードでは、指定されたバージョンの場所を格納します。 これは、アップグレードのテストに使用されます。</p>
+      <p></p>
+    syntax:
+      content: 'public void upgradeLocalStore(ShardLocation location, Version targetVersion)'
+      parameters:
+        - id: location
+          type: com.microsoft.azure.elasticdb.shard.base._shard_location
+          description: <p>アップグレードするシャード場所です。 </p>
+        - id: targetVersion
+          type: com.microsoft.azure.elasticdb.shard.store._version
+          description: <p>展開するには、ストアのバージョンを対象。 </p>
+references:
+  - uid: 70d811d7com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_argse7daa122
+    spec.java:
+      - name: Event<EventHandler<
+        fullName: Event<EventHandler<
+      - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args
+        name: RetryingEventArgs
+        fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryingEventArgs
+        href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args.yml
+      - name: '>>'
+        fullName: '>>'
+  - uid: 3dd9a3c4
+    spec.java:
+      - name: SqlShardMapManagerCredentials
+        fullName: SqlShardMapManagerCredentials
+  - uid: 8357facb
+    spec.java:
+      - name: IStoreOperationFactory
+        fullName: IStoreOperationFactory
+  - uid: 66277c30
+    spec.java:
+      - name: ICacheStore
+        fullName: ICacheStore
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.ShardMapManager*
+    name: ShardMapManager
+    nameWithType: ShardMapManager.ShardMapManager
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.ShardMapManager
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: f45ab895com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_argsa08ddfce
+    spec.java:
+      - name: EventHandler<
+        fullName: EventHandler<
+      - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args
+        name: RetryingEventArgs
+        fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryingEventArgs
+        href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCredentials*
+    name: getCredentials
+    nameWithType: ShardMapManager.getCredentials
+    fullName: SqlShardMapManagerCredentials com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getCredentials
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreConnectionFactory*
+    name: getStoreConnectionFactory
+    nameWithType: ShardMapManager.getStoreConnectionFactory
+    fullName: IStoreConnectionFactory com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getStoreConnectionFactory
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getStoreOperationFactory*
+    name: getStoreOperationFactory
+    nameWithType: ShardMapManager.getStoreOperationFactory
+    fullName: IStoreOperationFactory com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getStoreOperationFactory
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRetryPolicy*
+    name: getRetryPolicy
+    nameWithType: ShardMapManager.getRetryPolicy
+    fullName: RetryPolicy com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getRetryPolicy
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getCache*
+    name: getCache
+    nameWithType: ShardMapManager.getCache
+    fullName: ICacheStore com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getCache
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.deleteShardMap*
+    name: deleteShardMap
+    nameWithType: ShardMapManager.deleteShardMap
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.deleteShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.map._shard_mapa08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.map._shard_map
+        name: ShardMap
+        fullName: com.microsoft.azure.elasticdb.shard.map.ShardMap
+        href: com.microsoft.azure.elasticdb.shard.map._shard_map.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMaps*
+    name: getShardMaps
+    nameWithType: ShardMapManager.getShardMaps
+    fullName: List<ShardMap> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getShardMaps
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getShardMap*
+    name: getShardMap
+    nameWithType: ShardMapManager.getShardMap
+    fullName: ShardMap com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_mapa08ddfce
+    spec.java:
+      - name: ReferenceObjectHelper<
+        fullName: ReferenceObjectHelper<
+      - uid: com.microsoft.azure.elasticdb.shard.map._shard_map
+        name: ShardMap
+        fullName: com.microsoft.azure.elasticdb.shard.map.ShardMap
+        href: com.microsoft.azure.elasticdb.shard.map._shard_map.yml
+      - name: '>'
+        fullName: '>'
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetShardMap*
+    name: tryGetShardMap
+    nameWithType: ShardMapManager.tryGetShardMap
+    fullName: boolean com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.tryGetShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+        name: ShardLocation
+        fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+        href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getDistinctShardLocations*
+    name: getDistinctShardLocations
+    nameWithType: ShardMapManager.getDistinctShardLocations
+    fullName: List<ShardLocation> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getDistinctShardLocations
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeGlobalStore*
+    name: upgradeGlobalStore
+    nameWithType: ShardMapManager.upgradeGlobalStore
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.upgradeGlobalStore
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.upgradeLocalStore*
+    name: upgradeLocalStore
+    nameWithType: ShardMapManager.upgradeLocalStore
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.upgradeLocalStore
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRecoveryManager*
+    name: getRecoveryManager
+    nameWithType: ShardMapManager.getRecoveryManager
+    fullName: RecoveryManager com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getRecoveryManager
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getSchemaInfoCollection*
+    name: getSchemaInfoCollection
+    nameWithType: ShardMapManager.getSchemaInfoCollection
+    fullName: SchemaInfoCollection com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getSchemaInfoCollection
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.lookupShardMapByName*
+    name: lookupShardMapByName
+    nameWithType: ShardMapManager.lookupShardMapByName
+    fullName: ShardMap com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.lookupShardMapByName
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.shardMapManagerRetryingEventHandler*
+    name: shardMapManagerRetryingEventHandler
+    nameWithType: ShardMapManager.shardMapManagerRetryingEventHandler
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.shardMapManagerRetryingEventHandler
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.onShardMapManagerRetryingEvent*
+    name: onShardMapManagerRetryingEvent
+    nameWithType: ShardMapManager.onShardMapManagerRetryingEvent
+    fullName: void com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.onShardMapManagerRetryingEvent
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 22f12f9fcom.microsoft.azure.elasticdb.shard.map._list_shard_map9d2fc6d0
+    spec.java:
+      - name: '<KeyT> '
+        fullName: '<KeyT> '
+      - uid: com.microsoft.azure.elasticdb.shard.map._list_shard_map
+        name: ListShardMap
+        fullName: com.microsoft.azure.elasticdb.shard.map.ListShardMap
+        href: com.microsoft.azure.elasticdb.shard.map._list_shard_map.yml
+      - name: <KeyT>
+        fullName: <KeyT>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createListShardMap*
+    name: createListShardMap
+    nameWithType: ShardMapManager.createListShardMap
+    fullName: public<KeyT> ListShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.createListShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 22f12f9fcom.microsoft.azure.elasticdb.shard.map._range_shard_map9d2fc6d0
+    spec.java:
+      - name: '<KeyT> '
+        fullName: '<KeyT> '
+      - uid: com.microsoft.azure.elasticdb.shard.map._range_shard_map
+        name: RangeShardMap
+        fullName: com.microsoft.azure.elasticdb.shard.map.RangeShardMap
+        href: com.microsoft.azure.elasticdb.shard.map._range_shard_map.yml
+      - name: <KeyT>
+        fullName: <KeyT>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.createRangeShardMap*
+    name: createRangeShardMap
+    nameWithType: ShardMapManager.createRangeShardMap
+    fullName: public<KeyT> RangeShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.createRangeShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getListShardMap*
+    name: getListShardMap
+    nameWithType: ShardMapManager.getListShardMap
+    fullName: public<KeyT> ListShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getListShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 2695f77dcom.microsoft.azure.elasticdb.shard.map._list_shard_maped7603c7
+    spec.java:
+      - name: ReferenceObjectHelper<
+        fullName: ReferenceObjectHelper<
+      - uid: com.microsoft.azure.elasticdb.shard.map._list_shard_map
+        name: ListShardMap
+        fullName: com.microsoft.azure.elasticdb.shard.map.ListShardMap
+        href: com.microsoft.azure.elasticdb.shard.map._list_shard_map.yml
+      - name: <KeyT>>
+        fullName: <KeyT>>
+  - uid: 9ff93231
+    spec.java:
+      - name: <KeyT> boolean
+        fullName: <KeyT> boolean
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetListShardMap*
+    name: tryGetListShardMap
+    nameWithType: ShardMapManager.tryGetListShardMap
+    fullName: public<KeyT> boolean com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.tryGetListShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.getRangeShardMap*
+    name: getRangeShardMap
+    nameWithType: ShardMapManager.getRangeShardMap
+    fullName: public<KeyT> RangeShardMap<KeyT> com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.getRangeShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: 2695f77dcom.microsoft.azure.elasticdb.shard.map._range_shard_maped7603c7
+    spec.java:
+      - name: ReferenceObjectHelper<
+        fullName: ReferenceObjectHelper<
+      - uid: com.microsoft.azure.elasticdb.shard.map._range_shard_map
+        name: RangeShardMap
+        fullName: com.microsoft.azure.elasticdb.shard.map.RangeShardMap
+        href: com.microsoft.azure.elasticdb.shard.map._range_shard_map.yml
+      - name: <KeyT>>
+        fullName: <KeyT>>
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.tryGetRangeShardMap*
+    name: tryGetRangeShardMap
+    nameWithType: ShardMapManager.tryGetRangeShardMap
+    fullName: public<KeyT> boolean com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager.tryGetRangeShardMap
+    package: com.microsoft.azure.elasticdb.shard.mapmanager
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_args.yml
+    name: RetryingEventArgs
+    nameWithType: RetryingEventArgs
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryingEventArgs
+    type: Class
+    summary: <p>シャード管理再試行中イベントの引数。 </p>
+    syntax:
+      content: public class RetryingEventArgs
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    name: ShardMapManager
+    nameWithType: ShardMapManager
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager
+    type: Class
+    summary: <p>シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.elasticdb.shard.store._i_store_connection_factory
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._i_store_connection_factory.yml
+    name: IStoreConnectionFactory
+    nameWithType: IStoreConnectionFactory
+    fullName: com.microsoft.azure.elasticdb.shard.store.IStoreConnectionFactory
+    type: Interface
+    summary: <p>ストアの接続用のファクトリです。 </p>
+    syntax:
+      content: public interface IStoreConnectionFactory
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.yml
+    name: RetryPolicy
+    nameWithType: RetryPolicy
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryPolicy
+    type: Class
+    summary: <p>信頼性の低いアクションおよび一時的な問題には、この再試行メカニズムでの基本実装を提供します。 </p>
+    syntax:
+      content: public class RetryPolicy
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager_load_policy
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager_load_policy.yml
+    name: ShardMapManagerLoadPolicy
+    nameWithType: ShardMapManagerLoadPolicy
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManagerLoadPolicy
+    type: Enum
+    summary: <p>初期化に使用されるポリシーについて説明します<xref uid="com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager" data-throw-if-not-resolved="false">ShardMapManager</xref>ストアからです。 </p>
+    syntax:
+      content: public enum ShardMapManagerLoadPolicy
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_behavior.yml
+    name: RetryBehavior
+    nameWithType: RetryBehavior
+    fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryBehavior
+    type: Class
+    summary: <p>一時的なエラーを検出するために使用する再試行動作を定義します。 </p>
+    syntax:
+      content: public class RetryBehavior
+  - uid: com.microsoft.azure.elasticdb.shard.map._shard_map
+    parent: com.microsoft.azure.elasticdb.shard.map
+    href: com.microsoft.azure.elasticdb.shard.map._shard_map.yml
+    name: ShardMap
+    nameWithType: ShardMap
+    fullName: com.microsoft.azure.elasticdb.shard.map.ShardMap
+    type: Class
+    summary: <p>シャードとキーと、コレクション内のシャード間のマッピングのコレクションを表します。 </p>
+    syntax:
+      content: public class ShardMap
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_key_type
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_key_type.yml
+    name: ShardKeyType
+    nameWithType: ShardKeyType
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardKeyType
+    type: Enum
+    summary: '<p>シャード キーの型。 現在、のみ Int32、Int64、Guid、および byte[] はシャード キーとしてサポートされるデータ型です。 </p>'
+    syntax:
+      content: public enum ShardKeyType
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+    name: ShardLocation
+    nameWithType: ShardLocation
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+    type: Class
+    summary: <p>そのサーバー名とデータベース名の観点から、シャードの場所を表します。 シャードへの接続を管理し、シャードの他の操作をサポートするために使用されます。 なく、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャードの場所が、シャード マップに登録されていません。 </p>
+    syntax:
+      content: public class ShardLocation
+  - uid: com.microsoft.azure.elasticdb.shard.store._version
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._version.yml
+    name: Version
+    nameWithType: Version
+    fullName: com.microsoft.azure.elasticdb.shard.store.Version
+    type: Class
+    summary: <p>アセンブリ、オペレーティング システム、または共通言語ランタイムのバージョン番号を表します。 このクラスは継承できません。 </p>
+    syntax:
+      content: public class Version
+  - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
+    parent: com.microsoft.azure.elasticdb.shard.recovery
+    href: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.yml
+    name: RecoveryManager
+    nameWithType: RecoveryManager
+    fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryManager
+    type: Class
+    summary: <p>さまざまな回復を管理するシャードのマップ manager に関連するタスク。 シャード マップの情報およびグローバル シャードのマップ manager データベース、シャードにローカルに格納されている間のデータ破損の問題を解決するのに役立ちます。 また、特定の '不測' データベースのバックアップまたはデータベース コピー数のシャード マップの再構築が必要な回復シナリオ。 いる一部の回復方法が不可能なデータ失われること正しく使用されていないときに注意してください。 バックアップまたは回復操作に参加するすべてのデータベースのコピーをお勧めします。 </p>
+    syntax:
+      content: public class RecoveryManager
+  - uid: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection
+    parent: com.microsoft.azure.elasticdb.shard.schema
+    href: com.microsoft.azure.elasticdb.shard.schema._schema_info_collection.yml
+    name: SchemaInfoCollection
+    nameWithType: SchemaInfoCollection
+    fullName: com.microsoft.azure.elasticdb.shard.schema.SchemaInfoCollection
+    type: Class
+    summary: <p>分割スキームに関連付けられたや保存、更新、またはスキーマ情報の取得のクライアントに記憶域サービスを提供し、情報の個々 のバケットに名前を割り当てます。 クラスは、分割スキームとメタデータのユニット間の関連付けを格納しません。 マッピングを維持するために、呼び出し元の役割です。 </p>
+    syntax:
+      content: public class SchemaInfoCollection
+  - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.retrying
+    parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
+    href: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.yml
+    name: retrying
+    nameWithType: RetryPolicy.retrying
+    fullName: Event<EventHandler<RetryingEventArgs>> com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryPolicy.retrying
+    type: Field
+    summary: <p>再試行の条件が見つかるたびに呼び出されるコールバック デリゲートのインスタンス。 </p>
+    syntax:
+      content: public Event<EventHandler<RetryingEventArgs>> retrying
+      return:
+        type: 70d811d7com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retrying_event_argse7daa122
+  - uid: com.microsoft.azure.elasticdb.shard.map._list_shard_map
+    parent: com.microsoft.azure.elasticdb.shard.map
+    href: com.microsoft.azure.elasticdb.shard.map._list_shard_map.yml
+    name: ListShardMap<KeyT>
+    nameWithType: ListShardMap<KeyT>
+    fullName: com.microsoft.azure.elasticdb.shard.map.ListShardMap<KeyT>
+    type: Class
+    summary: <p>指定したキーのポイントのあるポイントのシャード マップを表します。 </p>
+    syntax:
+      content: public class ListShardMap<KeyT> extends ShardMap
+      typeParameters:
+        - type: 3590bc99
+  - uid: com.microsoft.azure.elasticdb.shard.map._range_shard_map
+    parent: com.microsoft.azure.elasticdb.shard.map
+    href: com.microsoft.azure.elasticdb.shard.map._range_shard_map.yml
+    name: RangeShardMap<KeyT>
+    nameWithType: RangeShardMap<KeyT>
+    fullName: com.microsoft.azure.elasticdb.shard.map.RangeShardMap<KeyT>
+    type: Class
+    summary: <p>範囲のシャード マップを表します。 が必要です。 </p>
+    syntax:
+      content: public class RangeShardMap<KeyT> extends ShardMap
+      typeParameters:
+        - type: 3590bc99
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_shard_map.yml
+    name: StoreShardMap
+    nameWithType: StoreShardMap
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreShardMap
+    type: Class
+    summary: <p>シャード マップの表現を格納します。 </p>
+    syntax:
+      content: public class StoreShardMap
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_management_exception
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_management_exception.yml
+    name: ShardManagementException
+    nameWithType: ShardManagementException
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardManagementException
+    type: Class
+    summary: <p>記憶域操作中に発生する例外の表現。 </p>
+    syntax:
+      content: public class ShardManagementException

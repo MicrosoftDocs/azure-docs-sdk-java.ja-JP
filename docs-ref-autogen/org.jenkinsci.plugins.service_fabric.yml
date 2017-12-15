@@ -1,0 +1,79 @@
+### YamlMime:ManagedReference
+items:
+  - uid: org.jenkinsci.plugins.service_fabric
+    id: service_fabric
+    children:
+      - org.jenkinsci.plugins.service_fabric._service_fabric_build_action
+      - org.jenkinsci.plugins.service_fabric._service_fabric_project_action
+      - org.jenkinsci.plugins.service_fabric._service_fabric_publisher
+      - org.jenkinsci.plugins.service_fabric._service_fabric_publisher._descriptor_impl
+    href: org.jenkinsci.plugins.service_fabric.yml
+    langs:
+      - java
+    name: org.jenkinsci.plugins.serviceFabric
+    nameWithType: org.jenkinsci.plugins.serviceFabric
+    fullName: org.jenkinsci.plugins.serviceFabric
+    type: Namespace
+    source:
+      remote:
+        path: src/prod/src/java/jenkinsplugin/servicefabric/src/main/java/org/jenkinsci/plugins/serviceFabric/ServiceFabricBuildAction.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/jenkinsplugin/servicefabric/src/main/java/org/jenkinsci/plugins/serviceFabric/ServiceFabricBuildAction.java
+    syntax:
+      content: package org.jenkinsci.plugins.serviceFabric
+references:
+  - uid: org.jenkinsci.plugins.service_fabric._service_fabric_commands
+    href: org.jenkinsci.plugins.service_fabric._service_fabric_commands.yml
+    name: org.jenkinsci.plugins.serviceFabric.ServiceFabricCommands
+    nameWithType: org.jenkinsci.plugins.serviceFabric.ServiceFabricCommands
+    fullName: org.jenkinsci.plugins.serviceFabric.ServiceFabricCommands
+    type: Namespace
+    syntax:
+      content: package org.jenkinsci.plugins.serviceFabric.ServiceFabricCommands
+  - uid: org.jenkinsci.plugins.service_fabric._service_fabric_build_action
+    parent: org.jenkinsci.plugins.service_fabric
+    href: org.jenkinsci.plugins.service_fabric._service_fabric_build_action.yml
+    name: ServiceFabricBuildAction
+    nameWithType: ServiceFabricBuildAction
+    fullName: org.jenkinsci.plugins.serviceFabric.ServiceFabricBuildAction
+    type: Class
+    summary: <p>8/27/15 に prit8976 によって作成します。 </p>
+    syntax:
+      content: public class ServiceFabricBuildAction
+  - uid: org.jenkinsci.plugins.service_fabric._service_fabric_project_action
+    parent: org.jenkinsci.plugins.service_fabric
+    href: org.jenkinsci.plugins.service_fabric._service_fabric_project_action.yml
+    name: ServiceFabricProjectAction
+    nameWithType: ServiceFabricProjectAction
+    fullName: org.jenkinsci.plugins.serviceFabric.ServiceFabricProjectAction
+    type: Class
+    summary: <p>8/27/15 に prit8976 によって作成します。 </p>
+    syntax:
+      content: public class ServiceFabricProjectAction
+  - uid: org.jenkinsci.plugins.service_fabric._service_fabric_publisher
+    parent: org.jenkinsci.plugins.service_fabric
+    href: org.jenkinsci.plugins.service_fabric._service_fabric_publisher.yml
+    name: ServiceFabricPublisher
+    nameWithType: ServiceFabricPublisher
+    fullName: org.jenkinsci.plugins.serviceFabric.ServiceFabricPublisher
+    type: Class
+    summary: |-
+      <p>サンプル<xref uid="" data-throw-if-not-resolved="false">パブリッシャー</xref>です。 </p>
+      <p>ユーザーは、プロジェクトを構成でき、このパブリッシャーと<xref uid="" data-throw-if-not-resolved="false">DescriptorImpl#newInstance(StaplerRequest)</xref>が呼び出されたため、新しい<xref uid="" data-throw-if-not-resolved="false">ServiabcnopstceFabricPublisher</xref>を作成します。 これにより、インスタンス フィールドを使用するように XStream を使用して、プロジェクト構成 XML に、作成されたインスタンスが永続化 (と同様に<xref uid="" data-throw-if-not-resolved="false">名前</xref>) 構成を注意してください。 </p>
+      <p>ビルドは実行が完了すると、 <xref uid="" data-throw-if-not-resolved="false">(AbstractBuild、ランチャー、BuildListener) を実行</xref>メソッドが呼び出されます。</p>
+      <p></p>
+    syntax:
+      content: public class ServiceFabricPublisher
+  - uid: org.jenkinsci.plugins.service_fabric._service_fabric_publisher._descriptor_impl
+    parent: org.jenkinsci.plugins.service_fabric
+    href: org.jenkinsci.plugins.service_fabric._service_fabric_publisher._descriptor_impl.yml
+    name: ServiceFabricPublisher.DescriptorImpl
+    nameWithType: ServiceFabricPublisher.DescriptorImpl
+    fullName: org.jenkinsci.plugins.serviceFabric.ServiceFabricPublisher.DescriptorImpl
+    type: Class
+    summary: |-
+      <p>記述子<xref uid="org.jenkinsci.plugins.service_fabric._service_fabric_publisher" data-throw-if-not-resolved="false">ServiceFabricPublisher</xref>です。 シングルトンとして使用されます。 クラスは、ビューからアクセスできるように、パブリックとしてマークされます。 </p>
+      <p>構成 画面の実際の HTML フラグメントを参照してください。 </p>
+    syntax:
+      content: public class DescriptorImpl

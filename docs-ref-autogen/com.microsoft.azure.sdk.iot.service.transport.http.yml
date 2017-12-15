@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.service.transport.http
+    id: http
+    children:
+      - com.microsoft.azure.sdk.iot.service.transport.http._http_connection
+      - com.microsoft.azure.sdk.iot.service.transport.http._http_message
+      - com.microsoft.azure.sdk.iot.service.transport.http._http_method
+      - com.microsoft.azure.sdk.iot.service.transport.http._http_request
+      - com.microsoft.azure.sdk.iot.service.transport.http._http_response
+    href: com.microsoft.azure.sdk.iot.service.transport.http.yml
+    langs:
+      - java
+    name: com.microsoft.azure.sdk.iot.service.transport.http
+    nameWithType: com.microsoft.azure.sdk.iot.service.transport.http
+    fullName: com.microsoft.azure.sdk.iot.service.transport.http
+    type: Namespace
+    source:
+      remote:
+        path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/transport/http/HttpConnection.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: service/iot-service-client/src/main/java/com/microsoft/azure/sdk/iot/service/transport/http/HttpConnection.java
+      startLine: 5
+    syntax:
+      content: package com.microsoft.azure.sdk.iot.service.transport.http
+references:
+  - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_connection
+    parent: com.microsoft.azure.sdk.iot.service.transport.http
+    href: com.microsoft.azure.sdk.iot.service.transport.http._http_connection.yml
+    name: HttpConnection
+    nameWithType: HttpConnection
+    fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpConnection
+    type: Class
+    summary: |-
+      <p>Java SE クラス HttpsURLConnection のラッパーです。 モック フレームワーク JMockit でテストするときに、互換性の問題を回避するだけでなく HttpsURLConnection を使用する場合は、いくつかドキュメントに未記載の副作用を回避するために使用します。 </p>
+      <p>基になる HttpsURLConnection は、Java で透過的に管理されます。 時間ごとに、接続を再利用する<xref uid="com.microsoft.azure.sdk.iot.service.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>が呼び出されると、入力ストリーム (入力ストリームまたは入力ストリームにアクセスできない場合、エラー ストリーム) を完全に読み取る必要があります。 それ以外の場合、データはストリームとの接続では再利用可能なできません。 </p>
+    syntax:
+      content: public class HttpConnection
+  - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_message
+    parent: com.microsoft.azure.sdk.iot.service.transport.http
+    href: com.microsoft.azure.sdk.iot.service.transport.http._http_message.yml
+    name: HttpMessage
+    nameWithType: HttpMessage
+    fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpMessage
+    type: Interface
+    summary: <p>HTTPS メッセージ。 '- アプリ - iot hub'; が付いた、そのプロパティ名は区別 plain IoT Hub メッセージから HTTPS メッセージコンテンツの種類を明示的に指定しています。 </p>
+    syntax:
+      content: public interface HttpMessage
+  - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_method
+    parent: com.microsoft.azure.sdk.iot.service.transport.http
+    href: com.microsoft.azure.sdk.iot.service.transport.http._http_method.yml
+    name: HttpMethod
+    nameWithType: HttpMethod
+    fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpMethod
+    type: Enum
+    summary: <p>HTTPS 要求メソッド (GET)。 </p>
+    syntax:
+      content: public enum HttpMethod
+  - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_request
+    parent: com.microsoft.azure.sdk.iot.service.transport.http
+    href: com.microsoft.azure.sdk.iot.service.transport.http._http_request.yml
+    name: HttpRequest
+    nameWithType: HttpRequest
+    fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpRequest
+    type: Class
+    syntax:
+      content: public class HttpRequest
+  - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_response
+    parent: com.microsoft.azure.sdk.iot.service.transport.http
+    href: com.microsoft.azure.sdk.iot.service.transport.http._http_response.yml
+    name: HttpResponse
+    nameWithType: HttpResponse
+    fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpResponse
+    type: Class
+    summary: <p>HTTPS 応答します。 (存在する場合)、ステータス コード、本文、ヘッダー フィールド、およびエラーの原因が含まれています。 </p>
+    syntax:
+      content: public class HttpResponse

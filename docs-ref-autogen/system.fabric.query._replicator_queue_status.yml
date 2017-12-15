@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric.query._replicator_queue_status
+    id: _replicator_queue_status
+    parent: system.fabric.query
+    children:
+      - system.fabric.query._replicator_queue_status.getCommittedSequenceNumber()
+      - system.fabric.query._replicator_queue_status.getCompletedSequenceNumber()
+      - system.fabric.query._replicator_queue_status.getFirstSequenceNumber()
+      - system.fabric.query._replicator_queue_status.getLastSequenceNumber()
+      - system.fabric.query._replicator_queue_status.getQueueMemorySize()
+      - system.fabric.query._replicator_queue_status.getQueueUtilizationPercentage()
+      - system.fabric.query._replicator_queue_status.ReplicatorQueueStatus()
+      - system.fabric.query._replicator_queue_status.toString()
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: ReplicatorQueueStatus
+    nameWithType: ReplicatorQueueStatus
+    fullName: system.fabric.query.ReplicatorQueueStatus
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 11
+    package: system.fabric.query
+    summary: "<p>使用するキューのさまざまな統計情報を提供、<xref uid=\"system.fabric.query._service\" data-throw-if-not-resolved=\"false\">サービス</xref>ファブリック<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>レプリケーターの役割によって (<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#Primary</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#ActiveSecondary</xref>)、この型のプロパティが異なる状況を意味します。 </p>"
+    syntax:
+      content: public class ReplicatorQueueStatus
+    inheritance:
+      - java.lang.Object
+  - uid: system.fabric.query._replicator_queue_status.getCommittedSequenceNumber()
+    id: getCommittedSequenceNumber()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: getCommittedSequenceNumber()
+    nameWithType: ReplicatorQueueStatus.getCommittedSequenceNumber()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getCommittedSequenceNumber()
+    overload: system.fabric.query._replicator_queue_status.getCommittedSequenceNumber*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 129
+    package: system.fabric.query
+    summary: "<p>「解説」を参照してください。</p>\n<p>\r\n\r\n  <b>解説します。</b>\r\n\r\n</p>\n<p>\n\n  <orderedlist>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#Primary</xref> â €\"を一番大きいシーケンス番号を表す、<b>クォーラム</b>のセカンダリ レプリカが、操作を適用します。  </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#ActiveSecondary</xref>本\"がプライマリからセカンダリにレプリケーターによって受信されている最大のシーケンス番号を表します。  </p>\n\n    </listitem>\n\n  </orderedlist>\n\n</p>"
+    syntax:
+      content: public long getCommittedSequenceNumber()
+      return:
+        type: 0364520f
+        description: <p>コミットされたシーケンス番号。 </p>
+  - uid: system.fabric.query._replicator_queue_status.getCompletedSequenceNumber()
+    id: getCompletedSequenceNumber()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: getCompletedSequenceNumber()
+    nameWithType: ReplicatorQueueStatus.getCompletedSequenceNumber()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getCompletedSequenceNumber()
+    overload: system.fabric.query._replicator_queue_status.getCompletedSequenceNumber*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 109
+    package: system.fabric.query
+    summary: "<p>「解説」を参照してください。</p>\n<p>\r\n\r\n  <b>解説します。</b>\r\n\r\n</p>\n<p>\n\n  <orderedlist>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#Primary</xref>本\"を一番大きいシーケンス番号を表す<b>すべて</b>セカンダリ レプリカが、操作を適用します。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#ActiveSecondary</xref>本\"が、ユーザーのサービスのレプリカによって適用されている最大のシーケンス番号を表します。 </p>\n\n    </listitem>\n\n  </orderedlist>\n\n</p>"
+    syntax: &ref_1
+      content: public long getCompletedSequenceNumber()
+      return:
+        type: 0364520f
+        description: <p>完了したシーケンス番号。 </p>
+  - uid: system.fabric.query._replicator_queue_status.getFirstSequenceNumber()
+    id: getFirstSequenceNumber()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: getFirstSequenceNumber()
+    nameWithType: ReplicatorQueueStatus.getFirstSequenceNumber()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getFirstSequenceNumber()
+    overload: system.fabric.query._replicator_queue_status.getFirstSequenceNumber*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 91
+    package: system.fabric.query
+    summary: "<p>「解説」を参照してください。</p>\n<p>\r\n\r\n  <b>解説します。</b>\r\n\r\n</p>\n<p>\n\n  <orderedlist>\n\n    <listitem>\n\n      <p></p>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#Primary</xref>本\"キューに存在する操作の最小のシーケンス番号を表します。 取ります™ s 値は同じになります<xref uid=\"system.fabric.query._replicator_queue_status.getCompletedSequenceNumber()\" data-throw-if-not-resolved=\"false\">system.fabric.query.ReplicatorQueueStatus#getCompletedSequenceNumber()</xref>プライマリ レプリケーターがすべてのセカンダリからの受信確認を受信した後、操作を破棄するため、レプリカです。 </p>\n\n      <p></p>\n\n    </listitem>\n\n    <listitem>\n\n      <p></p>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#ActiveSecondary</xref>本\"キューで利用可能な最初の操作のシーケンス番号を表します。 </p>\n\n      <p></p>\n\n    </listitem>\n\n  </orderedlist>\n\n</p>"
+    syntax:
+      content: public long getFirstSequenceNumber()
+      return:
+        type: 0364520f
+        description: <p>最初のシーケンス番号。 </p>
+  - uid: system.fabric.query._replicator_queue_status.getLastSequenceNumber()
+    id: getLastSequenceNumber()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: getLastSequenceNumber()
+    nameWithType: ReplicatorQueueStatus.getLastSequenceNumber()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getLastSequenceNumber()
+    overload: system.fabric.query._replicator_queue_status.getLastSequenceNumber*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 147
+    package: system.fabric.query
+    summary: "<p>「解説」を参照してください。</p>\n<p>\r\n\r\n  <b>解説します。</b>\r\n\r\n</p>\n<p>\n\n  <orderedlist>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#Primary</xref>本\"キューで提供される操作の最後のシーケンス番号を表します。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#ActiveSecondary</xref>本\"キューで提供される操作の最後のシーケンス番号を表します。 </p>\n\n    </listitem>\n\n  </orderedlist>\n\n</p>"
+    syntax:
+      content: public long getLastSequenceNumber()
+      return:
+        type: 0364520f
+        description: <p>最後のシーケンス番号。 </p>
+  - uid: system.fabric.query._replicator_queue_status.getQueueMemorySize()
+    id: getQueueMemorySize()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: getQueueMemorySize()
+    nameWithType: ReplicatorQueueStatus.getQueueMemorySize()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getQueueMemorySize()
+    overload: system.fabric.query._replicator_queue_status.getQueueMemorySize*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 62
+    package: system.fabric.query
+    summary: |-
+      <p>キューが使用されている仮想メモリ バイト数を取得します。</p>
+      <p></p>
+    syntax:
+      content: public long getQueueMemorySize()
+      return:
+        type: 0364520f
+        description: <p>キューが使用されている仮想メモリ バイト数。 </p>
+  - uid: system.fabric.query._replicator_queue_status.getQueueUtilizationPercentage()
+    id: getQueueUtilizationPercentage()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: getQueueUtilizationPercentage()
+    nameWithType: ReplicatorQueueStatus.getQueueUtilizationPercentage()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getQueueUtilizationPercentage()
+    overload: system.fabric.query._replicator_queue_status.getQueueUtilizationPercentage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 53
+    package: system.fabric.query
+    summary: "<p>キューの使用率を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>â €˜0â€ の値™ キューが空、ユーロ ˜100â-の値であることを示します™ キューがいっぱいであることを示します。 </p>"
+    syntax:
+      content: public long getQueueUtilizationPercentage()
+      return:
+        type: 0364520f
+        description: <p>キューの使用率。 </p>
+  - uid: system.fabric.query._replicator_queue_status.ReplicatorQueueStatus()
+    id: ReplicatorQueueStatus()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: ReplicatorQueueStatus()
+    nameWithType: ReplicatorQueueStatus.ReplicatorQueueStatus()
+    fullName: system.fabric.query.ReplicatorQueueStatus.ReplicatorQueueStatus()
+    overload: system.fabric.query._replicator_queue_status.ReplicatorQueueStatus*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 19
+    package: system.fabric.query
+    syntax:
+      content: public ReplicatorQueueStatus()
+  - uid: system.fabric.query._replicator_queue_status.toString()
+    id: toString()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    langs:
+      - java
+    name: toString()
+    nameWithType: ReplicatorQueueStatus.toString()
+    fullName: String system.fabric.query.ReplicatorQueueStatus.toString()
+    overload: system.fabric.query._replicator_queue_status.toString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/query/ReplicatorQueueStatus.java
+      startLine: 152
+    package: system.fabric.query
+    syntax:
+      content: public String toString()
+      return:
+        type: '26831127'
+references:
+  - uid: system.fabric.query._replicator_queue_status.ReplicatorQueueStatus*
+    name: ReplicatorQueueStatus
+    nameWithType: ReplicatorQueueStatus.ReplicatorQueueStatus
+    fullName: system.fabric.query.ReplicatorQueueStatus.ReplicatorQueueStatus
+    package: system.fabric.query
+  - uid: 0364520f
+    spec.java:
+      - name: long
+        fullName: long
+  - uid: system.fabric.query._replicator_queue_status.getQueueUtilizationPercentage*
+    name: getQueueUtilizationPercentage
+    nameWithType: ReplicatorQueueStatus.getQueueUtilizationPercentage
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getQueueUtilizationPercentage
+    package: system.fabric.query
+  - uid: system.fabric.query._replicator_queue_status.getQueueMemorySize*
+    name: getQueueMemorySize
+    nameWithType: ReplicatorQueueStatus.getQueueMemorySize
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getQueueMemorySize
+    package: system.fabric.query
+  - uid: system.fabric.query._replicator_queue_status.getFirstSequenceNumber*
+    name: getFirstSequenceNumber
+    nameWithType: ReplicatorQueueStatus.getFirstSequenceNumber
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getFirstSequenceNumber
+    package: system.fabric.query
+  - uid: system.fabric.query._replicator_queue_status.getCompletedSequenceNumber*
+    name: getCompletedSequenceNumber
+    nameWithType: ReplicatorQueueStatus.getCompletedSequenceNumber
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getCompletedSequenceNumber
+    package: system.fabric.query
+  - uid: system.fabric.query._replicator_queue_status.getCommittedSequenceNumber*
+    name: getCommittedSequenceNumber
+    nameWithType: ReplicatorQueueStatus.getCommittedSequenceNumber
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getCommittedSequenceNumber
+    package: system.fabric.query
+  - uid: system.fabric.query._replicator_queue_status.getLastSequenceNumber*
+    name: getLastSequenceNumber
+    nameWithType: ReplicatorQueueStatus.getLastSequenceNumber
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getLastSequenceNumber
+    package: system.fabric.query
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: system.fabric.query._replicator_queue_status.toString*
+    name: toString
+    nameWithType: ReplicatorQueueStatus.toString
+    fullName: String system.fabric.query.ReplicatorQueueStatus.toString
+    package: system.fabric.query
+  - uid: system.fabric.query._replicator_queue_status.getCompletedSequenceNumber()
+    parent: system.fabric.query._replicator_queue_status
+    href: system.fabric.query._replicator_queue_status.yml
+    name: getCompletedSequenceNumber()
+    nameWithType: ReplicatorQueueStatus.getCompletedSequenceNumber()
+    fullName: long system.fabric.query.ReplicatorQueueStatus.getCompletedSequenceNumber()
+    type: Method
+    summary: "<p>「解説」を参照してください。</p>\n<p>\r\n\r\n  <b>解説します。</b>\r\n\r\n</p>\n<p>\n\n  <orderedlist>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#Primary</xref>本\"を一番大きいシーケンス番号を表す<b>すべて</b>セカンダリ レプリカが、操作を適用します。 </p>\n\n    </listitem>\n\n    <listitem>\n\n      <p>\r\n\r\n        <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicaRole#ActiveSecondary</xref>本\"が、ユーザーのサービスのレプリカによって適用されている最大のシーケンス番号を表します。 </p>\n\n    </listitem>\n\n  </orderedlist>\n\n</p>"
+    syntax: *ref_1
+  - uid: system.fabric.query._service
+    parent: system.fabric.query
+    href: system.fabric.query._service.yml
+    name: Service
+    nameWithType: Service
+    fullName: system.fabric.query.Service
+    type: Class
+    summary: <p>サービスを表します。 </p>
+    syntax:
+      content: public class Service
+  - uid: system.fabric._replicator
+    parent: system.fabric
+    href: system.fabric._replicator.yml
+    name: Replicator
+    nameWithType: Replicator
+    fullName: system.fabric.Replicator
+    type: Interface
+    syntax:
+      content: public interface Replicator extends PrimaryReplicator

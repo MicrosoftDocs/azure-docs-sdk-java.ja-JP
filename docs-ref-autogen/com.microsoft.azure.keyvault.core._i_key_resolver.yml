@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.keyvault.core._i_key_resolver
+    id: _i_key_resolver
+    parent: com.microsoft.azure.keyvault.core
+    children:
+      - com.microsoft.azure.keyvault.core._i_key_resolver.resolveKeyAsync(String)
+    href: com.microsoft.azure.keyvault.core._i_key_resolver.yml
+    langs:
+      - java
+    name: IKeyResolver
+    nameWithType: IKeyResolver
+    fullName: com.microsoft.azure.keyvault.core.IKeyResolver
+    type: Interface
+    source:
+      remote: &ref_0
+        path: azure-keyvault-core/src/main/java/com/microsoft/azure/keyvault/core/IKeyResolver.java
+        branch: bb950b2a0255c017040501de0c19e4849361ca1d
+        repo: 'https://github.com/Azure/azure-keyvault-java'
+      path: azure-keyvault-core/src/main/java/com/microsoft/azure/keyvault/core/IKeyResolver.java
+      startLine: 26
+    package: com.microsoft.azure.keyvault.core
+    summary: <p>Microsoft Azure Key Vault のライブラリを含むキーの解決操作を表すためのインターフェイスします。 </p>
+    syntax:
+      content: public interface IKeyResolver
+  - uid: com.microsoft.azure.keyvault.core._i_key_resolver.resolveKeyAsync(String)
+    id: resolveKeyAsync(String)
+    parent: com.microsoft.azure.keyvault.core._i_key_resolver
+    href: com.microsoft.azure.keyvault.core._i_key_resolver.yml
+    langs:
+      - java
+    name: resolveKeyAsync(String kid)
+    nameWithType: IKeyResolver.resolveKeyAsync(String kid)
+    fullName: ListenableFuture<IKey> com.microsoft.azure.keyvault.core.IKeyResolver.resolveKeyAsync(String kid)
+    overload: com.microsoft.azure.keyvault.core._i_key_resolver.resolveKeyAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: azure-keyvault-core/src/main/java/com/microsoft/azure/keyvault/core/IKeyResolver.java
+      startLine: 38
+    package: com.microsoft.azure.keyvault.core
+    summary: |-
+      <p>取得、 <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref>指定したキー識別子の実装です。 実装では、認識されていることを確認する kid の形式を確認する必要があります。 キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</p>
+      <p></p>
+    syntax:
+      content: public ListenableFuture<IKey> resolveKeyAsync(String kid)
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>解決するのにはキーの識別子。 </p>
+      return:
+        type: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
+        description: <p>解決されたを含む ListenableFuture <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref></p>
+references:
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
+    spec.java:
+      - name: ListenableFuture<
+        fullName: ListenableFuture<
+      - uid: com.microsoft.azure.keyvault.core._i_key
+        name: IKey
+        fullName: com.microsoft.azure.keyvault.core.IKey
+        href: com.microsoft.azure.keyvault.core._i_key.yml
+      - name: '>'
+        fullName: '>'
+  - uid: com.microsoft.azure.keyvault.core._i_key_resolver.resolveKeyAsync*
+    name: resolveKeyAsync
+    nameWithType: IKeyResolver.resolveKeyAsync
+    fullName: ListenableFuture<IKey> com.microsoft.azure.keyvault.core.IKeyResolver.resolveKeyAsync
+    package: com.microsoft.azure.keyvault.core
+  - uid: com.microsoft.azure.keyvault.extensions._aggregate_key_resolver
+    parent: com.microsoft.azure.keyvault.extensions
+    href: com.microsoft.azure.keyvault.extensions._aggregate_key_resolver.yml
+    name: AggregateKeyResolver
+    nameWithType: AggregateKeyResolver
+    fullName: com.microsoft.azure.keyvault.extensions.AggregateKeyResolver
+    type: Class
+    summary: <p>キーの id を解決するのには反復するキーの競合回避モジュールのコレクション<xref uid="" data-throw-if-not-resolved="false">IKey</xref>です。 </p>
+    syntax:
+      content: public class AggregateKeyResolver implements IKeyResolver
+  - uid: com.microsoft.azure.keyvault.extensions._caching_key_resolver
+    parent: com.microsoft.azure.keyvault.extensions
+    href: com.microsoft.azure.keyvault.extensions._caching_key_resolver.yml
+    name: CachingKeyResolver
+    nameWithType: CachingKeyResolver
+    fullName: com.microsoft.azure.keyvault.extensions.CachingKeyResolver
+    type: Class
+    summary: <p>解決した後、キーをキャッシュするキーの競合回避モジュール<xref uid="" data-throw-if-not-resolved="false">IKey</xref>です。 </p>
+    syntax:
+      content: public class CachingKeyResolver implements IKeyResolver
+  - uid: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver
+    parent: com.microsoft.azure.keyvault.extensions
+    href: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver.yml
+    name: KeyVaultKeyResolver
+    nameWithType: KeyVaultKeyResolver
+    fullName: com.microsoft.azure.keyvault.extensions.KeyVaultKeyResolver
+    type: Class
+    summary: <p>入力するキーの id の解決を処理するキーの競合回避モジュール クラス<xref uid="" data-throw-if-not-resolved="false">IKey</xref>暗号化操作に使用します。 </p>
+    syntax:
+      content: public class KeyVaultKeyResolver
+  - uid: com.microsoft.azure.keyvault.core._i_key
+    parent: com.microsoft.azure.keyvault.core
+    href: com.microsoft.azure.keyvault.core._i_key.yml
+    name: IKey
+    nameWithType: IKey
+    fullName: com.microsoft.azure.keyvault.core.IKey
+    type: Interface
+    summary: <p>Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。 </p>
+    syntax:
+      content: public interface IKey
+  - uid: com.microsoft.azure.keyvault.extensions._caching_key_resolver.resolveKeyAsync(String)
+    parent: com.microsoft.azure.keyvault.extensions._caching_key_resolver
+    href: com.microsoft.azure.keyvault.extensions._caching_key_resolver.yml
+    name: resolveKeyAsync(String kid)
+    nameWithType: CachingKeyResolver.resolveKeyAsync(String kid)
+    fullName: ListenableFuture<IKey> com.microsoft.azure.keyvault.extensions.CachingKeyResolver.resolveKeyAsync(String kid)
+    type: Method
+    summary: |-
+      <p>指定したキー識別子に対して IKey 実装を取得します。 実装では、認識されていることを確認する kid の形式を確認する必要があります。 キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</p>
+      <p></p>
+    syntax:
+      content: public ListenableFuture<IKey> resolveKeyAsync(String kid)
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>解決するのにはキーの識別子。 </p>
+      return:
+        type: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
+        description: <p>解決 IKey を含む ListenableFuture </p>
+  - uid: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver.resolveKeyAsync(String)
+    parent: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver
+    href: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver.yml
+    name: resolveKeyAsync(String kid)
+    nameWithType: KeyVaultKeyResolver.resolveKeyAsync(String kid)
+    fullName: ListenableFuture<IKey> com.microsoft.azure.keyvault.extensions.KeyVaultKeyResolver.resolveKeyAsync(String kid)
+    type: Method
+    summary: |-
+      <p>指定したキー識別子に対して IKey 実装を取得します。 実装では、認識されていることを確認する kid の形式を確認する必要があります。 キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</p>
+      <p></p>
+    syntax:
+      content: public ListenableFuture<IKey> resolveKeyAsync(String kid)
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>解決するのにはキーの識別子。 </p>
+      return:
+        type: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
+        description: <p>解決 IKey を含む ListenableFuture </p>
+  - uid: com.microsoft.azure.keyvault.extensions._aggregate_key_resolver.resolveKeyAsync(String)
+    parent: com.microsoft.azure.keyvault.extensions._aggregate_key_resolver
+    href: com.microsoft.azure.keyvault.extensions._aggregate_key_resolver.yml
+    name: resolveKeyAsync(String kid)
+    nameWithType: AggregateKeyResolver.resolveKeyAsync(String kid)
+    fullName: ListenableFuture<IKey> com.microsoft.azure.keyvault.extensions.AggregateKeyResolver.resolveKeyAsync(String kid)
+    type: Method
+    summary: |-
+      <p>指定したキー識別子に対して IKey 実装を取得します。 実装では、認識されていることを確認する kid の形式を確認する必要があります。 キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</p>
+      <p></p>
+    syntax:
+      content: public ListenableFuture<IKey> resolveKeyAsync(String kid)
+      parameters:
+        - id: kid
+          type: '26831127'
+          description: <p>解決するのにはキーの識別子。 </p>
+      return:
+        type: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
+        description: <p>解決 IKey を含む ListenableFuture </p>

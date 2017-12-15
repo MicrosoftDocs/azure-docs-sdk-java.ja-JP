@@ -1,0 +1,961 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard
+    id: _shard
+    parent: com.microsoft.azure.elasticdb.shard.base
+    children:
+      - com.microsoft.azure.elasticdb.shard.base._shard.clone()
+      - com.microsoft.azure.elasticdb.shard.base._shard.equals(Object)
+      - com.microsoft.azure.elasticdb.shard.base._shard.equals(Shard)
+      - com.microsoft.azure.elasticdb.shard.base._shard.getId()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getLocation()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getShardInfo()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getShardMap()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getShardMapId()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getShardMapManager()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getStatus()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getStoreShard()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getValue()
+      - com.microsoft.azure.elasticdb.shard.base._shard.getVersion()
+      - com.microsoft.azure.elasticdb.shard.base._shard.hashCode()
+      - com.microsoft.azure.elasticdb.shard.base._shard.openConnection(String)
+      - 'com.microsoft.azure.elasticdb.shard.base._shard.openConnection(String,ConnectionOptions)'
+      - com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync(String)
+      - 'com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync(String,ConnectionOptions)'
+      - com.microsoft.azure.elasticdb.shard.base._shard.setShardMap(ShardMap)
+      - com.microsoft.azure.elasticdb.shard.base._shard.setShardMapManager(ShardMapManager)
+      - com.microsoft.azure.elasticdb.shard.base._shard.setStoreShard(StoreShard)
+      - 'com.microsoft.azure.elasticdb.shard.base._shard.Shard(ShardMapManager,ShardMap,ShardCreationInfo)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard.Shard(ShardMapManager,ShardMap,StoreShard)'
+      - com.microsoft.azure.elasticdb.shard.base._shard.toString()
+      - 'com.microsoft.azure.elasticdb.shard.base._shard.validate(StoreShardMap,Connection)'
+      - 'com.microsoft.azure.elasticdb.shard.base._shard.validateAsync(StoreShardMap,Connection)'
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: Shard
+    nameWithType: Shard
+    fullName: com.microsoft.azure.elasticdb.shard.base.Shard
+    type: Class
+    source:
+      remote: &ref_0
+        path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+        branch: master
+        repo: 'https://github.com/Microsoft/elastic-db-tools-for-java'
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 34
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>単一のシャードの表現。 シャードは、基本的にデータ ソース ロケーターつまり<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_location" data-throw-if-not-resolved="false">ShardLocation</xref>シャードのマップに登録されています。 シャードは、マッピングのターゲットとしてマッピングで使用されます (を参照してください<xref uid="com.microsoft.azure.elasticdb.shard.base._point_mapping" data-throw-if-not-resolved="false">PointMapping</xref>と<xref uid="com.microsoft.azure.elasticdb.shard.base._range_mapping" data-throw-if-not-resolved="false">RangeMapping</xref>)。 </p>
+    syntax: &ref_1
+      content: public class Shard implements IShardProvider<ShardLocation>
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.elasticdb.shard.base._i_shard_provider
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.clone()
+    id: clone()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: clone()
+    nameWithType: Shard.clone()
+    fullName: Shard com.microsoft.azure.elasticdb.shard.base.Shard.clone()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.clone*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 315
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>インスタンスを複製します。</p>
+      <p></p>
+    syntax:
+      content: public Shard clone()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard
+        description: <p>インスタンスのクローンを作成します。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.equals(Object)
+    id: equals(Object)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: equals(Object obj)
+    nameWithType: Shard.equals(Object obj)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.Shard.equals(Object obj)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.equals*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 337
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>指定したオブジェクトが現在のオブジェクトと等しいかどうかを判断します。</p>
+      <p></p>
+    syntax:
+      content: public boolean equals(Object obj)
+      parameters:
+        - id: obj
+          type: '79317049'
+          description: <p>現在のオブジェクトと比較するオブジェクト。 </p>
+      return:
+        type: 4fc6e284
+        description: <p>指定したオブジェクトが現在のオブジェクトと等しい場合は true。それ以外の場合は false です。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.equals(Shard)
+    id: equals(Shard)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: equals(Shard other)
+    nameWithType: Shard.equals(Shard other)
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.Shard.equals(Shard other)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.equals*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 348
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>等値比較を実行する指定された<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public boolean equals(Shard other)
+      parameters:
+        - id: other
+          type: com.microsoft.azure.elasticdb.shard.base._shard
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>と比較します。 </p>"
+      return:
+        type: 4fc6e284
+        description: <p>このオブジェクトは、それ以外の場合は false、他のオブジェクトと等しい場合は true。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getId()
+    id: getId()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getId()
+    nameWithType: Shard.getId()
+    fullName: UUID com.microsoft.azure.elasticdb.shard.base.Shard.getId()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 128
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>シャードの id。 各シャードは、一意の 1 つを必要です。 </p>
+    syntax:
+      content: public UUID getId()
+      return:
+        type: add9545a
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getLocation()
+    id: getLocation()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getLocation()
+    nameWithType: Shard.getLocation()
+    fullName: ShardLocation com.microsoft.azure.elasticdb.shard.base.Shard.getLocation()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getLocation*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 112
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>シャードの場所を取得します。 </p>
+    syntax:
+      content: public ShardLocation getLocation()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_location
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardInfo()
+    id: getShardInfo()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getShardInfo()
+    nameWithType: Shard.getShardInfo()
+    fullName: Shard com.microsoft.azure.elasticdb.shard.base.Shard.getShardInfo()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getShardInfo*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 142
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>ShardProvider オブジェクト。 </p>"
+    syntax:
+      content: public Shard getShardInfo()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardMap()
+    id: getShardMap()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getShardMap()
+    nameWithType: Shard.getShardMap()
+    fullName: ShardMap com.microsoft.azure.elasticdb.shard.base.Shard.getShardMap()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 153
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public ShardMap getShardMap()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.map._shard_map
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardMapId()
+    id: getShardMapId()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getShardMapId()
+    nameWithType: Shard.getShardMapId()
+    fullName: UUID com.microsoft.azure.elasticdb.shard.base.Shard.getShardMapId()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getShardMapId*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 164
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>このシャードが属する ShardMap を識別します。 </p>
+    syntax:
+      content: public UUID getShardMapId()
+      return:
+        type: add9545a
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardMapManager()
+    id: getShardMapManager()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getShardMapManager()
+    nameWithType: Shard.getShardMapManager()
+    fullName: ShardMapManager com.microsoft.azure.elasticdb.shard.base.Shard.getShardMapManager()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getShardMapManager*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 168
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public ShardMapManager getShardMapManager()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getStatus()
+    id: getStatus()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getStatus()
+    nameWithType: Shard.getStatus()
+    fullName: ShardStatus com.microsoft.azure.elasticdb.shard.base.Shard.getStatus()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getStatus*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 121
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: '<p>オンラインまたはオフラインにすることができるシャードの状態を取得します。 のみ、シャードがオンラインの場合は、シャード マップに Shard.OpenConnection (string, ConnectionOptions) を使用して接続を開くことができます。 シャードはメンテナンス操作中であるとき、接続を防止シャード ステータスをオフラインに設定できます。 </p>'
+    syntax:
+      content: public ShardStatus getStatus()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_status
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getStoreShard()
+    id: getStoreShard()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getStoreShard()
+    nameWithType: Shard.getStoreShard()
+    fullName: StoreShard com.microsoft.azure.elasticdb.shard.base.Shard.getStoreShard()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getStoreShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 176
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public StoreShard getStoreShard()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.store._store_shard
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getValue()
+    id: getValue()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getValue()
+    nameWithType: Shard.getValue()
+    fullName: ShardLocation com.microsoft.azure.elasticdb.shard.base.Shard.getValue()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getValue*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 149
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: <p>対応する値、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>です。 特徴 (traits) を表す、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>ShardInfo プロパティによって提供されるオブジェクト。 </p>
+    syntax:
+      content: public ShardLocation getValue()
+      return:
+        type: com.microsoft.azure.elasticdb.shard.base._shard_location
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getVersion()
+    id: getVersion()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: getVersion()
+    nameWithType: Shard.getVersion()
+    fullName: UUID com.microsoft.azure.elasticdb.shard.base.Shard.getVersion()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.getVersion*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 135
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>バージョン。 </p>"
+    syntax:
+      content: public UUID getVersion()
+      return:
+        type: add9545a
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.hashCode()
+    id: hashCode()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: hashCode()
+    nameWithType: Shard.hashCode()
+    fullName: int com.microsoft.azure.elasticdb.shard.base.Shard.hashCode()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.hashCode*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 375
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>このインスタンスのハッシュ コードを計算します。</p>
+      <p></p>
+    syntax:
+      content: public int hashCode()
+      return:
+        type: f75371fa
+        description: <p>オブジェクトのハッシュ コード。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.openConnection(String)
+    id: openConnection(String)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: openConnection(String connectionString)
+    nameWithType: Shard.openConnection(String connectionString)
+    fullName: Connection com.microsoft.azure.elasticdb.shard.base.Shard.openConnection(String connectionString)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.openConnection*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 194
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>開き、指定されたシャードへの通常の SqlConnection <xref uid="com.microsoft.azure.elasticdb.shard.mapper._connection_options.Validate" data-throw-if-not-resolved="false">ConnectionOptions.Validate</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public Connection openConnection(String connectionString)
+      parameters:
+        - id: connectionString
+          type: '26831127'
+          description: <p>SQL Server 資格情報または統合セキュリティの設定などの資格情報で接続文字列です。 サーバーと、データベース、シャードの名前のホスト名は、キーの参照操作から取得されます。 この呼び出しによって返された SqlConnection オブジェクトが一時的なエラーに対して保護されていないことに注意してください。 呼び出し元は、transient fault handling Microsoft Patterns and Practices チームからの Enterprise Library の機能を使用して、アプリケーション コードで、たとえば、一時的なエラーへの接続を保護するベスト プラクティスに従う必要があります。 </p>
+      return:
+        type: 8270ccc2
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard.openConnection(String,ConnectionOptions)'
+    id: 'openConnection(String,ConnectionOptions)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: 'openConnection(String connectionString, ConnectionOptions options)'
+    nameWithType: 'Shard.openConnection(String connectionString, ConnectionOptions options)'
+    fullName: 'Connection com.microsoft.azure.elasticdb.shard.base.Shard.openConnection(String connectionString, ConnectionOptions options)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.openConnection*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 210
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>指定されたシャードへの正規の SqlConnection を開きます。</p>
+      <p></p>
+    syntax:
+      content: 'public Connection openConnection(String connectionString, ConnectionOptions options)'
+      parameters:
+        - id: connectionString
+          type: '26831127'
+          description: <p>SQL Server 資格情報または統合セキュリティの設定などの資格情報で接続文字列です。 サーバーと、データベース、シャードの名前のホスト名は、キーの参照操作から取得されます。 </p>
+        - id: options
+          type: com.microsoft.azure.elasticdb.shard.mapper._connection_options
+          description: <p>検証操作で実行するためのオプションには、接続が開かれます。 この呼び出しによって返された SqlConnection オブジェクトが一時的なエラーに対して保護されていないことに注意してください。 呼び出し元は、transient fault handling Microsoft Patterns and Practices チームからの Enterprise Library の機能を使用して、アプリケーション コードで、たとえば、一時的なエラーへの接続を保護するベスト プラクティスに従う必要があります。 </p>
+      return:
+        type: 8270ccc2
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync(String)
+    id: openConnectionAsync(String)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: openConnectionAsync(String connectionString)
+    nameWithType: Shard.openConnectionAsync(String connectionString)
+    fullName: Callable<Connection> com.microsoft.azure.elasticdb.shard.base.Shard.openConnectionAsync(String connectionString)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 228
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>非同期的に、指定されたシャードへの通常の SqlConnection が開き、 <xref uid="com.microsoft.azure.elasticdb.shard.mapper._connection_options.Validate" data-throw-if-not-resolved="false">ConnectionOptions.Validate</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public Callable<Connection> openConnectionAsync(String connectionString)
+      parameters:
+        - id: connectionString
+          type: '26831127'
+          description: <p>SQL Server 資格情報または統合セキュリティの設定などの資格情報で接続文字列です。 サーバーと、データベース、シャードの名前のホスト名は、キーの参照操作から取得されます。 </p>
+      return:
+        type: 68f3503d
+        description: <p>この呼び出しによって返された SqlConnection オブジェクトが一時的なエラーに対して保護されていないこと、開かれた SqlConnection ノートをカプセル化するタスク。 呼び出し元は、transient fault handling Microsoft Patterns and Practices チームからの Enterprise Library の機能を使用して、アプリケーション コードで、たとえば、一時的なエラーへの接続を保護するベスト プラクティスに従う必要があります。 使用状況以外のすべてのエラーは返されたタスクによって伝達されます。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync(String,ConnectionOptions)'
+    id: 'openConnectionAsync(String,ConnectionOptions)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: 'openConnectionAsync(String connectionString, ConnectionOptions options)'
+    nameWithType: 'Shard.openConnectionAsync(String connectionString, ConnectionOptions options)'
+    fullName: 'Callable<Connection> com.microsoft.azure.elasticdb.shard.base.Shard.openConnectionAsync(String connectionString, ConnectionOptions options)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 245
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>指定されたシャードに正規 SqlConnection では非同期的にします。</p>
+      <p></p>
+    syntax:
+      content: 'public Callable<Connection> openConnectionAsync(String connectionString, ConnectionOptions options)'
+      parameters:
+        - id: connectionString
+          type: '26831127'
+          description: <p>SQL Server 資格情報または統合セキュリティの設定などの資格情報で接続文字列です。 サーバーと、データベース、シャードの名前のホスト名は、キーの参照操作から取得されます。 </p>
+        - id: options
+          type: com.microsoft.azure.elasticdb.shard.mapper._connection_options
+          description: <p>検証操作で実行するためのオプションには、接続が開かれます。 </p>
+      return:
+        type: 68f3503d
+        description: <p>この呼び出しによって返された SqlConnection オブジェクトが一時的なエラーに対して保護されていないこと、開かれた SqlConnection ノートをカプセル化するタスク。 呼び出し元は、transient fault handling Microsoft Patterns and Practices チームからの Enterprise Library の機能を使用して、アプリケーション コードで、たとえば、一時的なエラーへの接続を保護するベスト プラクティスに従う必要があります。 使用状況以外のすべてのエラーは返されたタスクによって伝達されます。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.setShardMap(ShardMap)
+    id: setShardMap(ShardMap)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: setShardMap(ShardMap value)
+    nameWithType: Shard.setShardMap(ShardMap value)
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.setShardMap(ShardMap value)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.setShardMap*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 157
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public void setShardMap(ShardMap value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.shard.map._shard_map
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.setShardMapManager(ShardMapManager)
+    id: setShardMapManager(ShardMapManager)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: setShardMapManager(ShardMapManager value)
+    nameWithType: Shard.setShardMapManager(ShardMapManager value)
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.setShardMapManager(ShardMapManager value)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.setShardMapManager*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 172
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public void setShardMapManager(ShardMapManager value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.setStoreShard(StoreShard)
+    id: setStoreShard(StoreShard)
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: setStoreShard(StoreShard value)
+    nameWithType: Shard.setStoreShard(StoreShard value)
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.setStoreShard(StoreShard value)
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.setStoreShard*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 180
+    package: com.microsoft.azure.elasticdb.shard.base
+    syntax:
+      content: public void setStoreShard(StoreShard value)
+      parameters:
+        - id: value
+          type: com.microsoft.azure.elasticdb.shard.store._store_shard
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard.Shard(ShardMapManager,ShardMap,ShardCreationInfo)'
+    id: 'Shard(ShardMapManager,ShardMap,ShardCreationInfo)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: 'Shard(ShardMapManager shardMapManager, ShardMap shardMap, ShardCreationInfo creationInfo)'
+    nameWithType: 'Shard.Shard(ShardMapManager shardMapManager, ShardMap shardMap, ShardCreationInfo creationInfo)'
+    fullName: 'com.microsoft.azure.elasticdb.shard.base.Shard.Shard(ShardMapManager shardMapManager, ShardMap shardMap, ShardCreationInfo creationInfo)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.Shard*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 68
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>構築、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャード作成引数を指定します。</p>
+      <p></p>
+    syntax:
+      content: 'public Shard(ShardMapManager shardMapManager, ShardMap shardMap, ShardCreationInfo creationInfo)'
+      parameters:
+        - id: shardMapManager
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+          description: <p>ShardMapManager を所有しています。 </p>
+        - id: shardMap
+          type: com.microsoft.azure.elasticdb.shard.map._shard_map
+          description: <p>シャード マップを所有しています。 </p>
+        - id: creationInfo
+          type: com.microsoft.azure.elasticdb.shard.base._shard_creation_info
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>作成情報。 </p>"
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard.Shard(ShardMapManager,ShardMap,StoreShard)'
+    id: 'Shard(ShardMapManager,ShardMap,StoreShard)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: 'Shard(ShardMapManager shardMapManager, ShardMap shardMap, StoreShard storeShard)'
+    nameWithType: 'Shard.Shard(ShardMapManager shardMapManager, ShardMap shardMap, StoreShard storeShard)'
+    fullName: 'com.microsoft.azure.elasticdb.shard.base.Shard.Shard(ShardMapManager shardMapManager, ShardMap shardMap, StoreShard storeShard)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.Shard*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 94
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>記憶域の表現を使用する内部コンス トラクターです。</p>
+      <p></p>
+    syntax:
+      content: 'public Shard(ShardMapManager shardMapManager, ShardMap shardMap, StoreShard storeShard)'
+      parameters:
+        - id: shardMapManager
+          type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+          description: <p>ShardMapManager を所有しています。 </p>
+        - id: shardMap
+          type: com.microsoft.azure.elasticdb.shard.map._shard_map
+          description: <p>シャード マップを所有しています。 </p>
+        - id: storeShard
+          type: com.microsoft.azure.elasticdb.shard.store._store_shard
+          description: <p>シャードのストレージ表現します。 </p>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.toString()
+    id: toString()
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: toString()
+    nameWithType: Shard.toString()
+    fullName: String com.microsoft.azure.elasticdb.shard.base.Shard.toString()
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.toString*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 325
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>オブジェクトを文字列形式に変換します。</p>
+      <p></p>
+    syntax:
+      content: public String toString()
+      return:
+        type: '26831127'
+        description: <p>オブジェクトの文字列表現。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard.validate(StoreShardMap,Connection)'
+    id: 'validate(StoreShardMap,Connection)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: 'validate(StoreShardMap shardMap, Connection conn)'
+    nameWithType: 'Shard.validate(StoreShardMap shardMap, Connection conn)'
+    fullName: 'void com.microsoft.azure.elasticdb.shard.base.Shard.validate(StoreShardMap shardMap, Connection conn)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.validate*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 261
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>ローカルの表現が最新のものではバックアップ データ ストアの形式と検証を実行します。</p>
+      <p></p>
+    syntax:
+      content: 'public void validate(StoreShardMap shardMap, Connection conn)'
+      parameters:
+        - id: shardMap
+          type: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>シャード プロバイダーが所属するマップです。 </p>"
+        - id: conn
+          type: 8270ccc2
+          description: <p>接続の検証に使用します。 </p>
+  - uid: 'com.microsoft.azure.elasticdb.shard.base._shard.validateAsync(StoreShardMap,Connection)'
+    id: 'validateAsync(StoreShardMap,Connection)'
+    parent: com.microsoft.azure.elasticdb.shard.base._shard
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    langs:
+      - java
+    name: 'validateAsync(StoreShardMap shardMap, Connection conn)'
+    nameWithType: 'Shard.validateAsync(StoreShardMap shardMap, Connection conn)'
+    fullName: 'Callable com.microsoft.azure.elasticdb.shard.base.Shard.validateAsync(StoreShardMap shardMap, Connection conn)'
+    overload: com.microsoft.azure.elasticdb.shard.base._shard.validateAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/Shard.java
+      startLine: 289
+    package: com.microsoft.azure.elasticdb.shard.base
+    summary: |-
+      <p>非同期的にローカルの表現が最新のものではバックアップ データ ストアの形式と検証を実行します。</p>
+      <p></p>
+    syntax:
+      content: 'public Callable validateAsync(StoreShardMap shardMap, Connection conn)'
+      parameters:
+        - id: shardMap
+          type: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>シャード プロバイダーが所属するマップです。 </p>"
+        - id: conn
+          type: 8270ccc2
+          description: <p>接続の検証に使用します。 </p>
+      return:
+        type: b2e5ac79
+        description: <p>検証の完了を待機するタスク </p>
+references:
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.Shard*
+    name: Shard
+    nameWithType: Shard.Shard
+    fullName: com.microsoft.azure.elasticdb.shard.base.Shard.Shard
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getLocation*
+    name: getLocation
+    nameWithType: Shard.getLocation
+    fullName: ShardLocation com.microsoft.azure.elasticdb.shard.base.Shard.getLocation
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getStatus*
+    name: getStatus
+    nameWithType: Shard.getStatus
+    fullName: ShardStatus com.microsoft.azure.elasticdb.shard.base.Shard.getStatus
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: add9545a
+    spec.java:
+      - name: UUID
+        fullName: UUID
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getId*
+    name: getId
+    nameWithType: Shard.getId
+    fullName: UUID com.microsoft.azure.elasticdb.shard.base.Shard.getId
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getVersion*
+    name: getVersion
+    nameWithType: Shard.getVersion
+    fullName: UUID com.microsoft.azure.elasticdb.shard.base.Shard.getVersion
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardInfo*
+    name: getShardInfo
+    nameWithType: Shard.getShardInfo
+    fullName: Shard com.microsoft.azure.elasticdb.shard.base.Shard.getShardInfo
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getValue*
+    name: getValue
+    nameWithType: Shard.getValue
+    fullName: ShardLocation com.microsoft.azure.elasticdb.shard.base.Shard.getValue
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardMap*
+    name: getShardMap
+    nameWithType: Shard.getShardMap
+    fullName: ShardMap com.microsoft.azure.elasticdb.shard.base.Shard.getShardMap
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.setShardMap*
+    name: setShardMap
+    nameWithType: Shard.setShardMap
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.setShardMap
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardMapId*
+    name: getShardMapId
+    nameWithType: Shard.getShardMapId
+    fullName: UUID com.microsoft.azure.elasticdb.shard.base.Shard.getShardMapId
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getShardMapManager*
+    name: getShardMapManager
+    nameWithType: Shard.getShardMapManager
+    fullName: ShardMapManager com.microsoft.azure.elasticdb.shard.base.Shard.getShardMapManager
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.setShardMapManager*
+    name: setShardMapManager
+    nameWithType: Shard.setShardMapManager
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.setShardMapManager
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.getStoreShard*
+    name: getStoreShard
+    nameWithType: Shard.getStoreShard
+    fullName: StoreShard com.microsoft.azure.elasticdb.shard.base.Shard.getStoreShard
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.setStoreShard*
+    name: setStoreShard
+    nameWithType: Shard.setStoreShard
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.setStoreShard
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: 8270ccc2
+    spec.java:
+      - name: Connection
+        fullName: Connection
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.openConnection*
+    name: openConnection
+    nameWithType: Shard.openConnection
+    fullName: Connection com.microsoft.azure.elasticdb.shard.base.Shard.openConnection
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: 68f3503d
+    spec.java:
+      - name: Callable<Connection>
+        fullName: Callable<Connection>
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.openConnectionAsync*
+    name: openConnectionAsync
+    nameWithType: Shard.openConnectionAsync
+    fullName: Callable<Connection> com.microsoft.azure.elasticdb.shard.base.Shard.openConnectionAsync
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.validate*
+    name: validate
+    nameWithType: Shard.validate
+    fullName: void com.microsoft.azure.elasticdb.shard.base.Shard.validate
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: b2e5ac79
+    spec.java:
+      - name: Callable
+        fullName: Callable
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.validateAsync*
+    name: validateAsync
+    nameWithType: Shard.validateAsync
+    fullName: Callable com.microsoft.azure.elasticdb.shard.base.Shard.validateAsync
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.clone*
+    name: clone
+    nameWithType: Shard.clone
+    fullName: Shard com.microsoft.azure.elasticdb.shard.base.Shard.clone
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.toString*
+    name: toString
+    nameWithType: Shard.toString
+    fullName: String com.microsoft.azure.elasticdb.shard.base.Shard.toString
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: 4fc6e284
+    spec.java:
+      - name: boolean
+        fullName: boolean
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.equals*
+    name: equals
+    nameWithType: Shard.equals
+    fullName: boolean com.microsoft.azure.elasticdb.shard.base.Shard.equals
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard.hashCode*
+    name: hashCode
+    nameWithType: Shard.hashCode
+    fullName: int com.microsoft.azure.elasticdb.shard.base.Shard.hashCode
+    package: com.microsoft.azure.elasticdb.shard.base
+  - uid: com.microsoft.azure.elasticdb.shard.base._i_shard_provider
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._i_shard_provider.yml
+    name: IShardProvider<ValueT>
+    nameWithType: IShardProvider<ValueT>
+    fullName: com.microsoft.azure.elasticdb.shard.base.IShardProvider<ValueT>
+    type: Interface
+    summary: <p>提供する機能を表す、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>と共に、関連付けられた値。 </p>
+    syntax:
+      content: public interface IShardProvider<ValueT>
+      typeParameters:
+        - type: 0fb6b535
+  - uid: com.microsoft.azure.elasticdb.shard.map._shard_map
+    parent: com.microsoft.azure.elasticdb.shard.map
+    href: com.microsoft.azure.elasticdb.shard.map._shard_map.yml
+    name: ShardMap
+    nameWithType: ShardMap
+    fullName: com.microsoft.azure.elasticdb.shard.map.ShardMap
+    type: Class
+    summary: <p>シャードとキーと、コレクション内のシャード間のマッピングのコレクションを表します。 </p>
+    syntax:
+      content: public class ShardMap
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard.yml
+    name: Shard
+    nameWithType: Shard
+    fullName: com.microsoft.azure.elasticdb.shard.base.Shard
+    type: Class
+    summary: <p>単一のシャードの表現。 シャードは、基本的にデータ ソース ロケーターつまり<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_location" data-throw-if-not-resolved="false">ShardLocation</xref>シャードのマップに登録されています。 シャードは、マッピングのターゲットとしてマッピングで使用されます (を参照してください<xref uid="com.microsoft.azure.elasticdb.shard.base._point_mapping" data-throw-if-not-resolved="false">PointMapping</xref>と<xref uid="com.microsoft.azure.elasticdb.shard.base._range_mapping" data-throw-if-not-resolved="false">RangeMapping</xref>)。 </p>
+    syntax: *ref_1
+  - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
+    parent: com.microsoft.azure.elasticdb.shard.mapmanager
+    href: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager.yml
+    name: ShardMapManager
+    nameWithType: ShardMapManager
+    fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager
+    type: Class
+    summary: <p>シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。 </p>
+    syntax:
+      content: public class ShardMapManager
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_shard
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_shard.yml
+    name: StoreShard
+    nameWithType: StoreShard
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreShard
+    type: Class
+    summary: <p>単一のシャードのストレージ表現します。 </p>
+    syntax:
+      content: public class StoreShard
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_creation_info
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_creation_info.yml
+    name: ShardCreationInfo
+    nameWithType: ShardCreationInfo
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardCreationInfo
+    type: Class
+    summary: <p>作成するための引数、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>です。 </p>
+    syntax:
+      content: public class ShardCreationInfo
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_location.yml
+    name: ShardLocation
+    nameWithType: ShardLocation
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
+    type: Class
+    summary: <p>そのサーバー名とデータベース名の観点から、シャードの場所を表します。 シャードへの接続を管理し、シャードの他の操作をサポートするために使用されます。 なく、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャードの場所が、シャード マップに登録されていません。 </p>
+    syntax:
+      content: public class ShardLocation
+  - uid: com.microsoft.azure.elasticdb.shard.base._shard_status
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._shard_status.yml
+    name: ShardStatus
+    nameWithType: ShardStatus
+    fullName: com.microsoft.azure.elasticdb.shard.base.ShardStatus
+    type: Enum
+    summary: <p>シャードの状態です。 </p>
+    syntax:
+      content: public enum ShardStatus
+  - uid: com.microsoft.azure.elasticdb.shard.mapper._connection_options.Validate
+    parent: com.microsoft.azure.elasticdb.shard.mapper._connection_options
+    href: com.microsoft.azure.elasticdb.shard.mapper._connection_options.yml
+    name: Validate
+    nameWithType: ConnectionOptions.Validate
+    fullName: com.microsoft.azure.elasticdb.shard.mapper.ConnectionOptions.Validate
+    type: Field
+    summary: <p>検証は、対応するマッピングの状態がクライアントで前回のマッピング情報のキャッシュ以降に変更していないことを確認してください。 への接続で実行されます。 </p>
+    syntax:
+      content: public Validate=(1)
+  - uid: com.microsoft.azure.elasticdb.shard.mapper._connection_options
+    parent: com.microsoft.azure.elasticdb.shard.mapper
+    href: com.microsoft.azure.elasticdb.shard.mapper._connection_options.yml
+    name: ConnectionOptions
+    nameWithType: ConnectionOptions
+    fullName: com.microsoft.azure.elasticdb.shard.mapper.ConnectionOptions
+    type: Enum
+    syntax:
+      content: public enum ConnectionOptions
+  - uid: com.microsoft.azure.elasticdb.shard.store._store_shard_map
+    parent: com.microsoft.azure.elasticdb.shard.store
+    href: com.microsoft.azure.elasticdb.shard.store._store_shard_map.yml
+    name: StoreShardMap
+    nameWithType: StoreShardMap
+    fullName: com.microsoft.azure.elasticdb.shard.store.StoreShardMap
+    type: Class
+    summary: <p>シャード マップの表現を格納します。 </p>
+    syntax:
+      content: public class StoreShardMap
+  - uid: com.microsoft.azure.elasticdb.shard.base._point_mapping
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._point_mapping.yml
+    name: PointMapping
+    nameWithType: PointMapping
+    fullName: com.microsoft.azure.elasticdb.shard.base.PointMapping
+    type: Class
+    summary: <p>シャードレット (ポイント) の単一のキー値の間のマッピングと表します<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>です。 </p>
+    syntax:
+      content: 'public class PointMapping implements IShardProvider<Object>,IMappingInfoProvider'
+  - uid: com.microsoft.azure.elasticdb.shard.base._range_mapping
+    parent: com.microsoft.azure.elasticdb.shard.base
+    href: com.microsoft.azure.elasticdb.shard.base._range_mapping.yml
+    name: RangeMapping
+    nameWithType: RangeMapping
+    fullName: com.microsoft.azure.elasticdb.shard.base.RangeMapping
+    type: Class
+    summary: <p>表すキー値の範囲の間のマッピングと<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>です。 </p>
+    syntax:
+      content: 'public class RangeMapping implements IShardProvider<Range>,IMappingInfoProvider'

@@ -1,0 +1,396 @@
+### YamlMime:ManagedReference
+items:
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base
+    id: _stateless_service_base
+    parent: microsoft.servicefabric.services.runtime
+    children:
+      - microsoft.servicefabric.services.runtime._stateless_service_base.createServiceInstanceListeners()
+      - microsoft.servicefabric.services.runtime._stateless_service_base.getAddresses()
+      - microsoft.servicefabric.services.runtime._stateless_service_base.getPartition()
+      - microsoft.servicefabric.services.runtime._stateless_service_base.getServiceContext()
+      - microsoft.servicefabric.services.runtime._stateless_service_base.onAbort()
+      - microsoft.servicefabric.services.runtime._stateless_service_base.onCloseAsync(CancellationToken)
+      - microsoft.servicefabric.services.runtime._stateless_service_base.onOpenAsync(CancellationToken)
+      - microsoft.servicefabric.services.runtime._stateless_service_base.runAsync(CancellationToken)
+      - 'microsoft.servicefabric.services.runtime._stateless_service_base.setAddresses(Map<String, String>)'
+      - microsoft.servicefabric.services.runtime._stateless_service_base.StatelessServiceBase()
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: StatelessServiceBase
+    nameWithType: StatelessServiceBase
+    fullName: microsoft.servicefabric.services.runtime.StatelessServiceBase
+    type: Class
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 14
+    package: microsoft.servicefabric.services.runtime
+    syntax:
+      content: public class StatelessServiceBase
+    inheritance:
+      - java.lang.Object
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.createServiceInstanceListeners()
+    id: createServiceInstanceListeners()
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: createServiceInstanceListeners()
+    nameWithType: StatelessServiceBase.createServiceInstanceListeners()
+    fullName: List<ServiceInstanceListener> microsoft.servicefabric.services.runtime.StatelessServiceBase.createServiceInstanceListeners()
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.createServiceInstanceListeners*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 86
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービス インスタンスの通信リスナーを指定するには、このメソッドをオーバーライドします。 通信リスナーのによって返されるエンドポイントが ListenerName の JSON 文字列として格納されているなどの文字列のエンドポイントのペア {「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</p>
+      <p></p>
+    syntax:
+      content: protected List<ServiceInstanceListener> createServiceInstanceListeners()
+      return:
+        type: 5618da2dmicrosoft.servicefabric.services.communication.runtime._service_instance_listenera08ddfce
+        description: <p>ServiceInstanceListeners の一覧 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.getAddresses()
+    id: getAddresses()
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: getAddresses()
+    nameWithType: StatelessServiceBase.getAddresses()
+    fullName: 'Map<String, String> microsoft.servicefabric.services.runtime.StatelessServiceBase.getAddresses()'
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.getAddresses*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 31
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このサービスのすべてのアドレスの取得 ボックスの一覧は、キー/値ペア (ListenerName、エンドポイント) としてインスタンスです。</p>
+      <p></p>
+    syntax:
+      content: 'protected Map<String, String> getAddresses()'
+      return:
+        type: 689c8cb5
+        description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>(ListenerName、エンドポイント) とアドレスの一覧を含むキーと値のペア。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.getPartition()
+    id: getPartition()
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: getPartition()
+    nameWithType: StatelessServiceBase.getPartition()
+    fullName: StatelessServicePartition microsoft.servicefabric.services.runtime.StatelessServiceBase.getPartition()
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.getPartition*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 63
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>インスタンスを現在のサービスが属するサービス パーティションを取得します。</p>
+      <p></p>
+    syntax:
+      content: protected StatelessServicePartition getPartition()
+      return:
+        type: system.fabric._stateless_service_partition
+        description: <p><xref uid="" data-throw-if-not-resolved="false">StatelessServicePartition</xref>を表す、このサービス レプリカが属しているパーティション。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.getServiceContext()
+    id: getServiceContext()
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: getServiceContext()
+    nameWithType: StatelessServiceBase.getServiceContext()
+    fullName: StatelessServiceContext microsoft.servicefabric.services.runtime.StatelessServiceBase.getServiceContext()
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.getServiceContext*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 53
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このステートレス サービスが動作しているサービス コンテキストを取得します。 InstanceId、PartitionId ServiceName などのような情報を提供します。</p>
+      <p></p>
+    syntax:
+      content: public StatelessServiceContext getServiceContext()
+      return:
+        type: microsoft.servicefabric.services.runtime._stateless_service_context
+        description: <p>A <xref uid="microsoft.servicefabric.services.runtime._stateless_service_context" data-throw-if-not-resolved="false">StatelessServiceContext</xref>サービス コンテキストをについて説明します。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.onAbort()
+    id: onAbort()
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: onAbort()
+    nameWithType: StatelessServiceBase.onAbort()
+    fullName: void microsoft.servicefabric.services.runtime.StatelessServiceBase.onAbort()
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.onAbort*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 139
+    package: microsoft.servicefabric.services.runtime
+    summary: <p>通知サービスを中止しています。 RunAsync は、取り消し処理は中止パスには待機されなかったとして、このメソッドの実行と同時に実行可能性があります。 </p>
+    syntax:
+      content: protected void onAbort()
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.onCloseAsync(CancellationToken)
+    id: onCloseAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: onCloseAsync(CancellationToken cancellationToken)
+    nameWithType: StatelessServiceBase.onCloseAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatelessServiceBase.onCloseAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.onCloseAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 129
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービスを閉じるための最後の手順として、このメソッドが呼び出されます。 このインスタンスの内部コンポーネントの終了が完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onCloseAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.onOpenAsync(CancellationToken)
+    id: onOpenAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: onOpenAsync(CancellationToken cancellationToken)
+    nameWithType: StatelessServiceBase.onOpenAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatelessServiceBase.onOpenAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.onOpenAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 99
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このメソッドは、サービスを開くの最後の手順として呼び出されます。 このインスタンスの内部コンポーネントのオープンが完了したことを通知するには、このメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> onOpenAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.runAsync(CancellationToken)
+    id: runAsync(CancellationToken)
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: runAsync(CancellationToken cancellationToken)
+    nameWithType: StatelessServiceBase.runAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatelessServiceBase.runAsync(CancellationToken cancellationToken)
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.runAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 114
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>サービスが開かれているときに実行されるバック グラウンド タスクを実装するだけのロジックでこのメソッドをオーバーライドします。</p>
+      <p></p>
+    syntax:
+      content: protected CompletableFuture<?> runAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+      return:
+        type: 16409f84
+        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 </p>
+  - uid: 'microsoft.servicefabric.services.runtime._stateless_service_base.setAddresses(Map<String, String>)'
+    id: 'setAddresses(Map<String, String>)'
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: 'setAddresses(Map<String, String> addresses)'
+    nameWithType: 'StatelessServiceBase.setAddresses(Map<String, String> addresses)'
+    fullName: 'void microsoft.servicefabric.services.runtime.StatelessServiceBase.setAddresses(Map<String, String> addresses)'
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.setAddresses*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 43
+    package: microsoft.servicefabric.services.runtime
+    summary: |-
+      <p>このサービスのすべてのアドレスのセットの一覧は、キー/値ペア (ListenerName、エンドポイント) としてインスタンスします。</p>
+      <p></p>
+    syntax:
+      content: 'protected void setAddresses(Map<String, String> addresses)'
+      parameters:
+        - id: addresses
+          type: 689c8cb5
+          description: <p><xref uid="" data-throw-if-not-resolved="false">マップ</xref>(ListenerName、エンドポイント) とアドレスの一覧を含むキーと値のペア。 </p>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.StatelessServiceBase()
+    id: StatelessServiceBase()
+    parent: microsoft.servicefabric.services.runtime._stateless_service_base
+    href: microsoft.servicefabric.services.runtime._stateless_service_base.yml
+    langs:
+      - java
+    name: StatelessServiceBase()
+    nameWithType: StatelessServiceBase.StatelessServiceBase()
+    fullName: microsoft.servicefabric.services.runtime.StatelessServiceBase.StatelessServiceBase()
+    overload: microsoft.servicefabric.services.runtime._stateless_service_base.StatelessServiceBase*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/runtime/StatelessServiceBase.java
+      startLine: 19
+    package: microsoft.servicefabric.services.runtime
+    syntax:
+      content: protected StatelessServiceBase()
+references:
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.StatelessServiceBase*
+    name: StatelessServiceBase
+    nameWithType: StatelessServiceBase.StatelessServiceBase
+    fullName: microsoft.servicefabric.services.runtime.StatelessServiceBase.StatelessServiceBase
+    package: microsoft.servicefabric.services.runtime
+  - uid: 689c8cb5
+    spec.java:
+      - name: 'Map<String, String>'
+        fullName: 'Map<String, String>'
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.getAddresses*
+    name: getAddresses
+    nameWithType: StatelessServiceBase.getAddresses
+    fullName: 'Map<String, String> microsoft.servicefabric.services.runtime.StatelessServiceBase.getAddresses'
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.setAddresses*
+    name: setAddresses
+    nameWithType: StatelessServiceBase.setAddresses
+    fullName: void microsoft.servicefabric.services.runtime.StatelessServiceBase.setAddresses
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.getPartition*
+    name: getPartition
+    nameWithType: StatelessServiceBase.getPartition
+    fullName: StatelessServicePartition microsoft.servicefabric.services.runtime.StatelessServiceBase.getPartition
+    package: microsoft.servicefabric.services.runtime
+  - uid: 5618da2dmicrosoft.servicefabric.services.communication.runtime._service_instance_listenera08ddfce
+    spec.java:
+      - name: List<
+        fullName: List<
+      - uid: microsoft.servicefabric.services.communication.runtime._service_instance_listener
+        name: ServiceInstanceListener
+        fullName: microsoft.servicefabric.services.communication.runtime.ServiceInstanceListener
+        href: microsoft.servicefabric.services.communication.runtime._service_instance_listener.yml
+      - name: '>'
+        fullName: '>'
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.createServiceInstanceListeners*
+    name: createServiceInstanceListeners
+    nameWithType: StatelessServiceBase.createServiceInstanceListeners
+    fullName: List<ServiceInstanceListener> microsoft.servicefabric.services.runtime.StatelessServiceBase.createServiceInstanceListeners
+    package: microsoft.servicefabric.services.runtime
+  - uid: 16409f84
+    spec.java:
+      - name: CompletableFuture<?>
+        fullName: CompletableFuture<?>
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.onOpenAsync*
+    name: onOpenAsync
+    nameWithType: StatelessServiceBase.onOpenAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatelessServiceBase.onOpenAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.runAsync*
+    name: runAsync
+    nameWithType: StatelessServiceBase.runAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatelessServiceBase.runAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.onCloseAsync*
+    name: onCloseAsync
+    nameWithType: StatelessServiceBase.onCloseAsync
+    fullName: CompletableFuture<?> microsoft.servicefabric.services.runtime.StatelessServiceBase.onCloseAsync
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.onAbort*
+    name: onAbort
+    nameWithType: StatelessServiceBase.onAbort
+    fullName: void microsoft.servicefabric.services.runtime.StatelessServiceBase.onAbort
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_base.getServiceContext*
+    name: getServiceContext
+    nameWithType: StatelessServiceBase.getServiceContext
+    fullName: StatelessServiceContext microsoft.servicefabric.services.runtime.StatelessServiceBase.getServiceContext
+    package: microsoft.servicefabric.services.runtime
+  - uid: microsoft.servicefabric.services.runtime._stateless_service
+    parent: microsoft.servicefabric.services.runtime
+    href: microsoft.servicefabric.services.runtime._stateless_service.yml
+    name: StatelessService
+    nameWithType: StatelessService
+    fullName: microsoft.servicefabric.services.runtime.StatelessService
+    type: Class
+    summary: <p>ステートレス リライアブル サービス基本クラスを表す Microsoft Service Fabric に基づいています。 Microsoft Service Fabric が基づくステートレス リライアブル サービスを実装するには、このクラスから派生します。 </p>
+    syntax:
+      content: public class StatelessService extends StatelessServiceBase
+  - uid: microsoft.servicefabric.services.runtime._stateless_service_context
+    parent: microsoft.servicefabric.services.runtime
+    href: microsoft.servicefabric.services.runtime._stateless_service_context.yml
+    name: StatelessServiceContext
+    nameWithType: StatelessServiceContext
+    fullName: microsoft.servicefabric.services.runtime.StatelessServiceContext
+    type: Class
+    summary: <p>下にある、ステートレスなサービスが動作しているサービス コンテキストを表します。 </p>
+    syntax:
+      content: public class StatelessServiceContext
+  - uid: system.fabric._stateless_service_partition
+    parent: system.fabric
+    href: system.fabric._stateless_service_partition.yml
+    name: StatelessServicePartition
+    nameWithType: StatelessServicePartition
+    fullName: system.fabric.StatelessServicePartition
+    type: Interface
+    summary: "<p>ステートレス サービス インスタンスに関連付けられているパーティションを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>をパラメーターとして、ステートレスなサービスを提供、 <xref uid=\"system.fabric._service_partition\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition</xref>です。 </p>"
+    syntax:
+      content: public interface StatelessServicePartition
+  - uid: microsoft.servicefabric.services.communication.runtime._service_instance_listener
+    parent: microsoft.servicefabric.services.communication.runtime
+    href: microsoft.servicefabric.services.communication.runtime._service_instance_listener.yml
+    name: ServiceInstanceListener
+    nameWithType: ServiceInstanceListener
+    fullName: microsoft.servicefabric.services.communication.runtime.ServiceInstanceListener
+    type: Class
+    summary: <p>ステートレス サービス インスタンスの通信リスナーとそのプロパティを表します。 通信リスナーから与えられたエンドポイントは、通信リスナーの名前に関連付けられます。 </p>
+    syntax:
+      content: public class ServiceInstanceListener
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken

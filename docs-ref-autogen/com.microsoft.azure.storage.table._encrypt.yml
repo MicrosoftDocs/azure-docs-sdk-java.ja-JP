@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.storage.table._encrypt
+    id: _encrypt
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._encrypt.yml
+    langs:
+      - java
+    name: Encrypt
+    nameWithType: Encrypt
+    fullName: com.microsoft.azure.storage.table.Encrypt
+    type: Interface
+    source:
+      remote:
+        path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/Encrypt.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-storage-java'
+      path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/Encrypt.java
+      startLine: 33
+    package: com.microsoft.azure.storage.table
+    summary: |-
+      <p>エンティティ プロパティを暗号化するかどうかを示すために使用できるカスタム属性を表します。 この注釈を使用して、setter メソッドによって保存されたデータを暗号化するかどうかを指定するか、実装するクラスの get アクセス操作子メソッドによって取得されたデータを復号化<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>です。</p>
+      <p></p>
+    syntax:
+      content: public interface Encrypt
+    see:
+      - type: com.microsoft.azure.storage.table._ignore
+        description: 無視
+references:
+  - uid: com.microsoft.azure.storage.table._table_entity
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._table_entity.yml
+    name: TableEntity
+    nameWithType: TableEntity
+    fullName: com.microsoft.azure.storage.table.TableEntity
+    type: Interface
+    summary: "<p>テーブルのエンティティ型に必要なインターフェイスです。 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。 実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。 </p>\n<p>ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。 使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。 また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。 </p>\n\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。 </p>\n\n<p>実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。 クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。 </p>\n<p></p>"
+    syntax:
+      content: public interface TableEntity
+  - uid: com.microsoft.azure.storage.table._ignore
+    parent: com.microsoft.azure.storage.table
+    href: com.microsoft.azure.storage.table._ignore.yml
+    name: Ignore
+    nameWithType: Ignore
+    fullName: com.microsoft.azure.storage.table.Ignore
+    type: Interface
+    summary: |-
+      <p>注釈リフレクションによってプロパティをシリアル化または逆の使用を防ぐためのメソッドに設定します。 実装するクラスのメソッドに注釈を適用<xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>させるはリフレクション ベースのシリアル化および逆シリアル化中に無視されます。 ドキュメントを参照して<xref uid="com.microsoft.azure.storage.table._table_service_entity" data-throw-if-not-resolved="false">TableServiceEntity</xref>詳細についてはリフレクション ベースのシリアル化および逆シリアル化を使用します。</p>
+      <p></p>
+    syntax:
+      content: public interface Ignore

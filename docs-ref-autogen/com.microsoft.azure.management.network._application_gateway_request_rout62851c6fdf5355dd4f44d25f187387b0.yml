@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.management.network._application_gateway_request_rout62851c6fdf5355dd4f44d25f187387b0
+    id: _application_gateway_request_rout62851c6fdf5355dd4f44d25f187387b0
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._application_gateway_request_rout62851c6fdf5355dd4f44d25f187387b0.yml
+    langs:
+      - java
+    name: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListenerOrFrontend<ParentT>
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListenerOrFrontend<ParentT>
+    fullName: com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListenerOrFrontend<ParentT>
+    type: Interface
+    source:
+      remote:
+        path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/ApplicationGatewayRequestRoutingRule.java
+        branch: v1.3.0
+        repo: 'https://github.com/Azure/azure-sdk-for-java'
+      path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/ApplicationGatewayRequestRoutingRule.java
+      startLine: 436
+    package: com.microsoft.azure.management.network
+    summary: <p>Application gateway のステージでは、ルーティング ルールの定義に既存のリスナーをそのルールに関連付けるように要求またはをリッスンするようにフロント エンドを指定することを暗黙的に新しいものを作成します。 </p>
+    syntax:
+      content: 'public interface WithListenerOrFrontend<ParentT> extends ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>'
+      typeParameters:
+        - type: 18a275b1
+          description: <p>この定義をアタッチした後に返される、アプリケーション ゲートウェイの定義のステージ </p>
+    inheritedMembers:
+      - com.microsoft.azure.management.network._application_gateway_request_rout2207e84184a6324a8dcf3edb61c13d4e.fromListener(String)
+      - com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.fromPrivateFrontend()
+      - com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.fromPublicFrontend()
+references:
+  - uid: 18a275b1
+    spec.java:
+      - name: ParentT
+        fullName: ParentT
+  - uid: com.microsoft.azure.management.network._application_gateway_request_rout2207e84184a6324a8dcf3edb61c13d4e.fromListener(String)
+    parent: com.microsoft.azure.management.network._application_gateway_request_rout2207e84184a6324a8dcf3edb61c13d4e
+    href: com.microsoft.azure.management.network._application_gateway_request_rout2207e84184a6324a8dcf3edb61c13d4e.yml
+    name: fromListener(String name)
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>.fromListener(String name)
+    fullName: WithBackendHttpConfiguration<ParentT> com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>.fromListener(String name)
+    type: Method
+    summary: |-
+      <p>要求のルーティング規則をフロント エンド リスナーに関連付けます。 </p>
+      <p>指定した名前のリスナーがまだ存在しない場合、省略可能なアプリケーション ゲートウェイの定義の一部で個別にその定義しなければなりません。 のみ、これは、名前を使用してリスナーへの参照を追加します。 </p>
+      <p>また、一度に 2 つ以上の要求ルーティング ルールによって指定されたリスナーを使用できることに注意してください。 </p>
+    syntax:
+      content: public WithBackendHttpConfiguration<ParentT> fromListener(String name)
+      parameters:
+        - id: name
+          type: '26831127'
+          description: <p>参照するリスナーの名前 </p>
+      return:
+        type: com.microsoft.azure.management.network._application_gateway_request_rout0b48dcf24d11f11af359289325f203beda8a2936
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.fromPrivateFrontend()
+    parent: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25
+    href: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.yml
+    name: fromPrivateFrontend()
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>.fromPrivateFrontend()
+    fullName: WithFrontendPort<ParentT> com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>.fromPrivateFrontend()
+    type: Method
+    summary: |-
+      <p>アプリケーション ゲートウェイのプライベート (内部) フロント エンドに適用するルールを有効にします。 </p>
+      <p>プライベート フロント エンド IP 構成がまだ存在しない場合は、自動生成の名前で作成されます。 </p>
+      <p>アプリケーション ゲートウェイには、そのプライベート フロント エンドの指定されたサブネットはない場合、は、アプリケーション ゲートウェイ定義のオプションの設定で、特定のサブネットが指定されていない限り、自動的に 1 つ作成されます。 </p>
+    syntax:
+      content: public WithFrontendPort<ParentT> fromPrivateFrontend()
+      return:
+        type: com.microsoft.azure.management.network._application_gateway_request_rout3e9bd84a4a5309e4905f58a936a151b5da8a2936
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.fromPublicFrontend()
+    parent: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25
+    href: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.yml
+    name: fromPublicFrontend()
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>.fromPublicFrontend()
+    fullName: WithFrontendPort<ParentT> com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>.fromPublicFrontend()
+    type: Method
+    summary: |-
+      <p>アプリケーション ゲートウェイのパブリック (インターネット側) フロント エンドに適用するルールを有効にします。 </p>
+      <p>パブリック フロント エンド IP 構成がまだ存在しない場合は、自動生成の名前で作成されます。 </p>
+      <p>アプリケーション ゲートウェイには、そのパブリック フロント エンドに対して指定されたパブリック IP アドレスがない場合、は、アプリケーション ゲートウェイ定義のオプションの設定に特定のパブリック IP アドレスが指定されていない限り、自動的に 1 つ作成されます。 </p>
+    syntax:
+      content: public WithFrontendPort<ParentT> fromPublicFrontend()
+      return:
+        type: com.microsoft.azure.management.network._application_gateway_request_rout3e9bd84a4a5309e4905f58a936a151b5da8a2936
+        description: <p>定義の次のステージ </p>
+  - uid: com.microsoft.azure.management.network._application_gateway_request_rout2207e84184a6324a8dcf3edb61c13d4e
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._application_gateway_request_rout2207e84184a6324a8dcf3edb61c13d4e.yml
+    name: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>
+    fullName: com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>
+    type: Interface
+    summary: <p>Application gateway のステージでは、ルーティング ルールの定義にルーティング規則を関連付けるには既存のリスナーを指定する許可を要求します。 </p>
+    syntax:
+      content: public interface WithListener<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: <p>この定義をアタッチした後に返される、アプリケーション ゲートウェイの定義のステージ </p>
+  - uid: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._application_gateway_request_routf2f459fbe52157fa152ab9a452eeeb25.yml
+    name: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>
+    fullName: com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>
+    type: Interface
+    summary: <p>Application gateway のステージでは、ルーティング ルールの定義に適用する規則のフロント エンドを指定する許可を要求します。 </p>
+    syntax:
+      content: public interface WithFrontend<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: <p>この定義をアタッチした後に返される、アプリケーション ゲートウェイの定義のステージ </p>
+  - uid: com.microsoft.azure.management.network._application_gateway_request_routing_rule._update_definition
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._application_gateway_request_routing_rule._update_definition.yml
+    name: ApplicationGatewayRequestRoutingRule.UpdateDefinition<ParentT>
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinition<ParentT>
+    fullName: com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinition<ParentT>
+    type: Interface
+    summary: <p>アプリケーション ゲートウェイ要求ルーティング ルール定義の application gateway の一部として、その全体を更新します。 </p>
+    syntax:
+      content: 'public interface UpdateDefinition<ParentT> extends ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.Blank<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithAttach<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontend<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListener<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithFrontendPort<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListenerOrFrontend<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithBackend<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithBackendAddress<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithBackendOrAddress<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithBackendAddressOrAttach<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithBackendHttpConfigurationOrSni<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithSslCertificate<ParentT>,ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithSslPassword<UpdateDefinitionStages.WithBackendHttpConfigurationOrSni<ParentT>>'
+      typeParameters:
+        - type: 18a275b1
+          description: <p>この定義をアタッチした後に返される、アプリケーション ゲートウェイの定義のステージ </p>
+  - uid: com.microsoft.azure.management.network._application_gateway_request_rout3e0bbdd99717652faa3ad70abe0a4277
+    parent: com.microsoft.azure.management.network
+    href: com.microsoft.azure.management.network._application_gateway_request_rout3e0bbdd99717652faa3ad70abe0a4277.yml
+    name: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.Blank<ParentT>
+    nameWithType: ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.Blank<ParentT>
+    fullName: com.microsoft.azure.management.network.ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.Blank<ParentT>
+    type: Interface
+    summary: <p>Application gateway の最初の段階では、ルーティング ルールの定義を要求します。 </p>
+    syntax:
+      content: public interface Blank<ParentT> extends ApplicationGatewayRequestRoutingRule.UpdateDefinitionStages.WithListenerOrFrontend<ParentT>
+      typeParameters:
+        - type: 18a275b1
+          description: <p>この定義をアタッチした後に返される、アプリケーション ゲートウェイの定義のステージ </p>

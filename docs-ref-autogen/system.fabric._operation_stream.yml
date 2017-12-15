@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+  - uid: system.fabric._operation_stream
+    id: _operation_stream
+    parent: system.fabric
+    children:
+      - system.fabric._operation_stream.getOperationAsync(CancellationToken)
+    href: system.fabric._operation_stream.yml
+    langs:
+      - java
+    name: OperationStream
+    nameWithType: OperationStream
+    fullName: system.fabric.OperationStream
+    type: Interface
+    source:
+      remote: &ref_0
+        path: src/prod/src/java/system.fabric/src/system/fabric/OperationStream.java
+        branch: master
+        repo: 'https://msazure.visualstudio.com/One/_git/sf-java'
+      path: src/prod/src/java/system.fabric/src/system/fabric/OperationStream.java
+      startLine: 11
+    package: system.fabric
+    syntax:
+      content: public interface OperationStream
+  - uid: system.fabric._operation_stream.getOperationAsync(CancellationToken)
+    id: getOperationAsync(CancellationToken)
+    parent: system.fabric._operation_stream
+    href: system.fabric._operation_stream.yml
+    langs:
+      - java
+    name: getOperationAsync(CancellationToken cancellationToken)
+    nameWithType: OperationStream.getOperationAsync(CancellationToken cancellationToken)
+    fullName: CompletableFuture<Operation> system.fabric.OperationStream.getOperationAsync(CancellationToken cancellationToken)
+    overload: system.fabric._operation_stream.getOperationAsync*
+    type: Method
+    source:
+      remote: *ref_0
+      path: src/prod/src/java/system.fabric/src/system/fabric/OperationStream.java
+      startLine: 13
+    package: system.fabric
+    syntax:
+      content: public CompletableFuture<Operation> getOperationAsync(CancellationToken cancellationToken)
+      parameters:
+        - id: cancellationToken
+          type: system.fabric._cancellation_token
+      return:
+        type: 9cdf14d0system.fabric._operationa08ddfce
+references:
+  - uid: 9cdf14d0system.fabric._operationa08ddfce
+    spec.java:
+      - name: CompletableFuture<
+        fullName: CompletableFuture<
+      - uid: system.fabric._operation
+        name: Operation
+        fullName: system.fabric.Operation
+        href: system.fabric._operation.yml
+      - name: '>'
+        fullName: '>'
+  - uid: system.fabric._operation_stream.getOperationAsync*
+    name: getOperationAsync
+    nameWithType: OperationStream.getOperationAsync
+    fullName: CompletableFuture<Operation> system.fabric.OperationStream.getOperationAsync
+    package: system.fabric
+  - uid: system.fabric._operation_stream2
+    parent: system.fabric
+    href: system.fabric._operation_stream2.yml
+    name: OperationStream2
+    nameWithType: OperationStream2
+    fullName: system.fabric.OperationStream2
+    type: Interface
+    syntax:
+      content: public interface OperationStream2
+  - uid: system.fabric._operation
+    parent: system.fabric
+    href: system.fabric._operation.yml
+    name: Operation
+    nameWithType: Operation
+    fullName: system.fabric.Operation
+    type: Interface
+    summary: "<p>\r\n\r\n  <b>注釈:</b>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>セカンダリ レプリカに配信される状態の変化を説明する基本インターフェイスです。 含まれている、 <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync (OperationData、SequenceNumber、system.fabric.CancellationToken)</xref>とシーケンス番号およびその他の情報を識別します。 </p>"
+    syntax:
+      content: public interface Operation
+  - uid: system.fabric._cancellation_token
+    parent: system.fabric
+    href: system.fabric._cancellation_token.yml
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: system.fabric.CancellationToken
+    type: Class
+    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    syntax:
+      content: public class CancellationToken
+  - uid: system.fabric.exception._fabric_exception
+    parent: system.fabric.exception
+    href: system.fabric.exception._fabric_exception.yml
+    name: FabricException
+    nameWithType: FabricException
+    fullName: system.fabric.exception.FabricException
+    type: Class
+    syntax:
+      content: public class FabricException

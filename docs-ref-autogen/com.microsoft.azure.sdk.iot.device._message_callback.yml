@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.device._message_callback
+    id: _message_callback
+    parent: com.microsoft.azure.sdk.iot.device
+    children:
+      - 'com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)'
+    href: com.microsoft.azure.sdk.iot.device._message_callback.yml
+    langs:
+      - java
+    name: MessageCallback
+    nameWithType: MessageCallback
+    fullName: com.microsoft.azure.sdk.iot.device.MessageCallback
+    type: Interface
+    source:
+      remote: &ref_0
+        path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/MessageCallback.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/MessageCallback.java
+      startLine: 12
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>IoT Hub メッセージ コールバックのインターフェイスです。 </p>
+      <p>このインターフェイスの実装を作成する開発者が求められるし、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)" data-throw-if-not-resolved="false">MessageCallback #execute(Message, Object)</xref> IoT Hub からメッセージを受信するとします。 </p>
+    syntax:
+      content: public interface MessageCallback
+  - uid: 'com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)'
+    id: 'execute(Message,Object)'
+    parent: com.microsoft.azure.sdk.iot.device._message_callback
+    href: com.microsoft.azure.sdk.iot.device._message_callback.yml
+    langs:
+      - java
+    name: 'execute(Message message, Object callbackContext)'
+    nameWithType: 'MessageCallback.execute(Message message, Object callbackContext)'
+    fullName: 'IotHubMessageResult com.microsoft.azure.sdk.iot.device.MessageCallback.execute(Message message, Object callbackContext)'
+    overload: com.microsoft.azure.sdk.iot.device._message_callback.execute*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/MessageCallback.java
+      startLine: 24
+    package: com.microsoft.azure.sdk.iot.device
+    summary: |-
+      <p>コールバックを実行します。 コールバックは、完了、abandon、またはメッセージを拒否する IoT Hub に指示する応答を返す必要があります。</p>
+      <p></p>
+    syntax: &ref_1
+      content: 'public IotHubMessageResult execute(Message message, Object callbackContext)'
+      parameters:
+        - id: message
+          type: com.microsoft.azure.sdk.iot.device._message
+          description: <p>メッセージ。 </p>
+        - id: callbackContext
+          type: '79317049'
+          description: <p>開発者によって指定されたカスタムのコンテキスト。</p>
+      return:
+        type: com.microsoft.azure.sdk.iot.device._iot_hub_message_result
+        description: <p>IoT Hub を完了する必要があります、かどうかは、abandon、またはメッセージを拒否します。 </p>
+references:
+  - uid: '79317049'
+    spec.java:
+      - name: Object
+        fullName: Object
+  - uid: com.microsoft.azure.sdk.iot.device._message_callback.execute*
+    name: execute
+    nameWithType: MessageCallback.execute
+    fullName: IotHubMessageResult com.microsoft.azure.sdk.iot.device.MessageCallback.execute
+    package: com.microsoft.azure.sdk.iot.device
+  - uid: com.microsoft.azure.sdk.iot.device._iot_hub_message_result
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._iot_hub_message_result.yml
+    name: IotHubMessageResult
+    nameWithType: IotHubMessageResult
+    fullName: com.microsoft.azure.sdk.iot.device.IotHubMessageResult
+    type: Enum
+    summary: <p>完了するには IoT Hub に指示するメッセージ コールバックからの戻り値は、abandon、またはメッセージを拒否します。 </p>
+    syntax:
+      content: public enum IotHubMessageResult
+  - uid: com.microsoft.azure.sdk.iot.device._message
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._message.yml
+    name: Message
+    nameWithType: Message
+    fullName: com.microsoft.azure.sdk.iot.device.Message
+    type: Class
+    syntax:
+      content: public class Message
+  - uid: 'com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)'
+    parent: com.microsoft.azure.sdk.iot.device._message_callback
+    href: com.microsoft.azure.sdk.iot.device._message_callback.yml
+    name: 'execute(Message message, Object callbackContext)'
+    nameWithType: 'MessageCallback.execute(Message message, Object callbackContext)'
+    fullName: 'IotHubMessageResult com.microsoft.azure.sdk.iot.device.MessageCallback.execute(Message message, Object callbackContext)'
+    type: Method
+    summary: |-
+      <p>コールバックを実行します。 コールバックは、完了、abandon、またはメッセージを拒否する IoT Hub に指示する応答を返す必要があります。</p>
+      <p></p>
+    syntax: *ref_1

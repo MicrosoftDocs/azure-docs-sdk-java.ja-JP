@@ -1,0 +1,390 @@
+### YamlMime:ManagedReference
+items:
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    id: _https_batch_message
+    parent: com.microsoft.azure.sdk.iot.device.transport.https
+    children:
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.addMessage(HttpsSingleMessage)
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getBody()
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getContentType()
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getProperties()
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getSystemProperties()
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.HttpsBatchMessage()
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.numMessages()
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: HttpsBatchMessage
+    nameWithType: HttpsBatchMessage
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage
+    type: Class
+    source:
+      remote: &ref_0
+        path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+        branch: master
+        repo: 'https://github.com/Azure/azure-iot-sdk-java'
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 19
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: <p>JSON 配列としてバッチ IoT ハブ要求の本文を構築します。 バッチのメッセージは、256 kb の最大サイズがします。 </p>
+    syntax:
+      content: public class HttpsBatchMessage implements HttpsMessage
+    inheritance:
+      - java.lang.Object
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    inheritedMembers:
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_message.HTTPS_APP_PROPERTY_PREFIX
+      - com.microsoft.azure.sdk.iot.device.transport.https._https_message.HTTPS_SYSTEM_PROPERTY_PREFIX
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.addMessage(HttpsSingleMessage)
+    id: addMessage(HttpsSingleMessage)
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: addMessage(HttpsSingleMessage msg)
+    nameWithType: HttpsBatchMessage.addMessage(HttpsSingleMessage msg)
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.addMessage(HttpsSingleMessage msg)
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.addMessage*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 59
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: |-
+      <p>バッチにメッセージを追加します。</p>
+      <p></p>
+    syntax:
+      content: public void addMessage(HttpsSingleMessage msg)
+      parameters:
+        - id: msg
+          type: com.microsoft.azure.sdk.iot.device.transport.https._https_single_message
+          description: <p>追加するメッセージ。</p>
+    exceptions:
+      - type: 0dcd34b0
+        description: <p>場合は、メッセージが原因でバッチ サイズは 256 kb を超えるメッセージを追加します。 バッチのメッセージは、メッセージが追加されなかったかのようになります。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getBody()
+    id: getBody()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: getBody()
+    nameWithType: HttpsBatchMessage.getBody()
+    fullName: 'byte [] com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getBody()'
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getBody*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 86
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: |-
+      <p>現在のバッチ本文 utf-8 でエンコードされたバイト配列として返します。</p>
+      <p></p>
+    syntax:
+      content: 'public byte [] getBody()'
+      return:
+        type: ccd9418d
+        description: <p>utf-8 として現在のバッチの本文は、バイト配列をエンコードします。 </p>
+    overridden: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getBody()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getContentType()
+    id: getContentType()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: getContentType()
+    nameWithType: HttpsBatchMessage.getContentType()
+    fullName: String com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getContentType()
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getContentType*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 98
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: |-
+      <p>コンテンツの種類 'application/vnd.microsoft.iothub.json' としてメッセージを返します。</p>
+      <p></p>
+    syntax:
+      content: public String getContentType()
+      return:
+        type: '26831127'
+        description: <p>メッセージ コンテンツの種類として 'application/vnd.microsoft.iothub.json' です。 </p>
+    overridden: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getContentType()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getProperties()
+    id: getProperties()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: getProperties()
+    nameWithType: HttpsBatchMessage.getProperties()
+    fullName: 'MessageProperty [] com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getProperties()'
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 109
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: |-
+      <p>バッチのメッセージのプロパティの空のリストを返します。</p>
+      <p></p>
+    syntax:
+      content: 'public MessageProperty [] getProperties()'
+      return:
+        type: com.microsoft.azure.sdk.iot.device._message_propertye5b41c5f
+        description: <p>空のバッチ メッセージのプロパティをリストします。 </p>
+    overridden: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getProperties()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getSystemProperties()
+    id: getSystemProperties()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: getSystemProperties()
+    nameWithType: HttpsBatchMessage.getSystemProperties()
+    fullName: 'Map<String, String> com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getSystemProperties()'
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getSystemProperties*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 121
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: |-
+      <p>一部では、 <xref uid="com.microsoft.azure.sdk.iot.device.transport.https._https_message" data-throw-if-not-resolved="false">HttpsMessage</xref>メッセージ プロパティのシステムのコレクションを取得するインターフェイスです。 バッチに空のマップだけを返します。</p>
+      <p></p>
+    syntax:
+      content: 'public Map<String, String> getSystemProperties()'
+      return:
+        type: 689c8cb5
+        description: <p>空のマップ。 </p>
+    overridden: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getSystemProperties()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.HttpsBatchMessage()
+    id: HttpsBatchMessage()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: HttpsBatchMessage()
+    nameWithType: HttpsBatchMessage.HttpsBatchMessage()
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.HttpsBatchMessage()
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.HttpsBatchMessage*
+    type: Constructor
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 43
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: <p>コンス トラクターです。 空の JSON 配列としてバッチ本文を初期化します。 </p>
+    syntax:
+      content: public HttpsBatchMessage()
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.numMessages()
+    id: numMessages()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.yml
+    langs:
+      - java
+    name: numMessages()
+    nameWithType: HttpsBatchMessage.numMessages()
+    fullName: int com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.numMessages()
+    overload: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.numMessages*
+    type: Method
+    source:
+      remote: *ref_0
+      path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/https/HttpsBatchMessage.java
+      startLine: 132
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+    summary: |-
+      <p>現在、バッチ内のメッセージの数を返します。</p>
+      <p></p>
+    syntax:
+      content: public int numMessages()
+      return:
+        type: f75371fa
+        description: <p>現在、バッチ内のメッセージの数。 </p>
+references:
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.HttpsBatchMessage*
+    name: HttpsBatchMessage
+    nameWithType: HttpsBatchMessage.HttpsBatchMessage
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.HttpsBatchMessage
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: 0dcd34b0
+    spec.java:
+      - name: IotHubSizeExceededException
+        fullName: IotHubSizeExceededException
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.addMessage*
+    name: addMessage
+    nameWithType: HttpsBatchMessage.addMessage
+    fullName: void com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.addMessage
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: ccd9418d
+    spec.java:
+      - name: 'byte []'
+        fullName: 'byte []'
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getBody*
+    name: getBody
+    nameWithType: HttpsBatchMessage.getBody
+    fullName: 'byte [] com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getBody'
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: '26831127'
+    spec.java:
+      - name: String
+        fullName: String
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getContentType*
+    name: getContentType
+    nameWithType: HttpsBatchMessage.getContentType
+    fullName: String com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getContentType
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: com.microsoft.azure.sdk.iot.device._message_propertye5b41c5f
+    spec.java:
+      - uid: com.microsoft.azure.sdk.iot.device._message_property
+        name: MessageProperty
+        fullName: com.microsoft.azure.sdk.iot.device.MessageProperty
+        href: com.microsoft.azure.sdk.iot.device._message_property.yml
+      - name: ' []'
+        fullName: ' []'
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getProperties*
+    name: getProperties
+    nameWithType: HttpsBatchMessage.getProperties
+    fullName: 'MessageProperty [] com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getProperties'
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: 689c8cb5
+    spec.java:
+      - name: 'Map<String, String>'
+        fullName: 'Map<String, String>'
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.getSystemProperties*
+    name: getSystemProperties
+    nameWithType: HttpsBatchMessage.getSystemProperties
+    fullName: 'Map<String, String> com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.getSystemProperties'
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: f75371fa
+    spec.java:
+      - name: int
+        fullName: int
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_batch_message.numMessages*
+    name: numMessages
+    nameWithType: HttpsBatchMessage.numMessages
+    fullName: int com.microsoft.azure.sdk.iot.device.transport.https.HttpsBatchMessage.numMessages
+    package: com.microsoft.azure.sdk.iot.device.transport.https
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message.HTTPS_APP_PROPERTY_PREFIX
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: HTTPS_APP_PROPERTY_PREFIX
+    nameWithType: HttpsMessage.HTTPS_APP_PROPERTY_PREFIX
+    fullName: String com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage.HTTPS_APP_PROPERTY_PREFIX
+    type: Field
+    summary: <p>HTTPS アプリケーション定義のプロパティに追加するプレフィックス。 </p>
+    syntax:
+      content: public String HTTPS_APP_PROPERTY_PREFIX= "iothub-app-"
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message.HTTPS_SYSTEM_PROPERTY_PREFIX
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: HTTPS_SYSTEM_PROPERTY_PREFIX
+    nameWithType: HttpsMessage.HTTPS_SYSTEM_PROPERTY_PREFIX
+    fullName: String com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage.HTTPS_SYSTEM_PROPERTY_PREFIX
+    type: Field
+    summary: <p>HTTPS システム定義のプロパティに追加するプレフィックス。 </p>
+    syntax:
+      content: public String HTTPS_SYSTEM_PROPERTY_PREFIX= "iothub-"
+      return:
+        type: '26831127'
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    parent: com.microsoft.azure.sdk.iot.device.transport.https
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: HttpsMessage
+    nameWithType: HttpsMessage
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage
+    type: Interface
+    summary: <p>HTTPS メッセージ。 '- アプリ - iot hub'; が付いた、そのプロパティ名は区別 plain IoT Hub メッセージから HTTPS メッセージコンテンツの種類を明示的に指定しています。 </p>
+    syntax:
+      content: public interface HttpsMessage
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_single_message
+    parent: com.microsoft.azure.sdk.iot.device.transport.https
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_single_message.yml
+    name: HttpsSingleMessage
+    nameWithType: HttpsSingleMessage
+    fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsSingleMessage
+    type: Class
+    summary: <p>1 つの HTTPS メッセージ。 </p>
+    syntax:
+      content: public class HttpsSingleMessage
+  - uid: com.microsoft.azure.sdk.iot.device.exceptions._iot_hub_size_exceeded_exception
+    parent: com.microsoft.azure.sdk.iot.device.exceptions
+    href: com.microsoft.azure.sdk.iot.device.exceptions._iot_hub_size_exceeded_exception.yml
+    name: IotHubSizeExceededException
+    nameWithType: IotHubSizeExceededException
+    fullName: com.microsoft.azure.sdk.iot.device.exceptions.IotHubSizeExceededException
+    type: Class
+    summary: |-
+      <p>Iot Hub のサイズを超えました例外を作成します。</p>
+      <p>関数が、バッファーにコンテンツを追加しようとしています。 または、メッセージと、最終的なサイズが、iot Hub で許容される最大サイズを超える場合、この例外はスローになります。 </p>
+    syntax:
+      content: public class IotHubSizeExceededException
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getBody()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: getBody()
+    nameWithType: HttpsMessage.getBody()
+    fullName: 'byte [] com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage.getBody()'
+    type: Method
+    summary: <p>メッセージの本文を取得します。 </p>
+    syntax:
+      content: 'public byte [] getBody()'
+      return:
+        type: ccd9418d
+        description: <p>メッセージ本文を返します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getContentType()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: getContentType()
+    nameWithType: HttpsMessage.getContentType()
+    fullName: String com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage.getContentType()
+    type: Method
+    summary: <p>メッセージのコンテンツ タイプを取得します。 </p>
+    syntax:
+      content: public String getContentType()
+      return:
+        type: '26831127'
+        description: <p>メッセージのコンテンツの種類を返します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device._message_property
+    parent: com.microsoft.azure.sdk.iot.device
+    href: com.microsoft.azure.sdk.iot.device._message_property.yml
+    name: MessageProperty
+    nameWithType: MessageProperty
+    fullName: com.microsoft.azure.sdk.iot.device.MessageProperty
+    type: Class
+    summary: <p>IoT Hub メッセージ プロパティの場合です。 </p>
+    syntax:
+      content: public class MessageProperty
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getProperties()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: getProperties()
+    nameWithType: HttpsMessage.getProperties()
+    fullName: 'MessageProperty [] com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage.getProperties()'
+    type: Method
+    summary: <p>メッセージ プロパティのコレクションを取得します。 </p>
+    syntax:
+      content: 'public MessageProperty [] getProperties()'
+      return:
+        type: com.microsoft.azure.sdk.iot.device._message_propertye5b41c5f
+        description: <p>メッセージ プロパティを返します。 </p>
+  - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_message.getSystemProperties()
+    parent: com.microsoft.azure.sdk.iot.device.transport.https._https_message
+    href: com.microsoft.azure.sdk.iot.device.transport.https._https_message.yml
+    name: getSystemProperties()
+    nameWithType: HttpsMessage.getSystemProperties()
+    fullName: 'Map<String, String> com.microsoft.azure.sdk.iot.device.transport.https.HttpsMessage.getSystemProperties()'
+    type: Method
+    summary: <p>メッセージのプロパティのシステムのコレクションを取得します。 </p>
+    syntax:
+      content: 'public Map<String, String> getSystemProperties()'
+      return:
+        type: 689c8cb5
+        description: <p>システム メッセージのプロパティを返します。 </p>
