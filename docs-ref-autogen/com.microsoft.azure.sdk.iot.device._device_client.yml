@@ -48,10 +48,10 @@ items:
       startLine: 39
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>公開された API です。 IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。 IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。 </p>
-      <p>これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。 </p>
-      <p>クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。 通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。 </p>
-      <p>クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。 </p>
+      <p><span data-ttu-id="3e9c9-101">公開された API です。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-101">The public-facing API.</span></span> <span data-ttu-id="3e9c9-102">IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-102">Allows a single logical or physical device to connect to an IoT Hub.</span></span> <span data-ttu-id="3e9c9-103">IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-103">The IoT Hub client supports sending events to and receiving messages from an IoT Hub.</span></span> </p>
+      <p><span data-ttu-id="3e9c9-104">これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-104">To support these workflows, the client library will provide the following abstractions: a message, with its payload and associated properties; and a client, which sends and receives messages.</span></span> </p>
+      <p><span data-ttu-id="3e9c9-105">クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-105">The client buffers messages while the network is down, and re-sends them when the network comes back online.</span></span> <span data-ttu-id="3e9c9-106">通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-106">It also batches messages to improve communication efficiency (HTTPS only).</span></span> </p>
+      <p><span data-ttu-id="3e9c9-107">クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-107">The client supports HTTPS 1.1 and AMQPS 1.0 transports.</span></span> </p>
     syntax: &ref_3
       content: public class DeviceClient
     inheritance:
@@ -73,12 +73,12 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 380
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>現在未処理のすべての要求を完了し、IoT Hub クライアントを閉じます。 IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。 後に<code>closeNow() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。 クライアントは既に閉じられている場合、関数は何もしないものとします。 <xrefsect id=\"deprecated_1_deprecated000009\"><xreftitle>非推奨</xreftitle><xrefdescription><p>: 現在のリリースはこの呼び出しに置き換え 1.1.25 <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.closeNow()\" data-throw-if-not-resolved=\"false\">closeNow()</xref></p></xrefdescription></xrefsect></p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-108\">現在未処理のすべての要求を完了し、IoT Hub クライアントを閉じます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-108\">Completes all current outstanding requests and closes the IoT Hub client.</span></span> <span data-ttu-id=\"3e9c9-109\">IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-109\">Must be called to terminate the background thread that is sending data to IoT Hub.</span></span> <span data-ttu-id=\"3e9c9-110\">後に<code>closeNow() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-110\">After<code>closeNow() \r\n\r\n    </code> is called, the IoT Hub client is no longer usable.</span></span> <span data-ttu-id=\"3e9c9-111\">クライアントは既に閉じられている場合、関数は何もしないものとします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-111\">If the client is already closed, the function shall do nothing.</span></span> <span data-ttu-id=\"3e9c9-112\"><xrefsect id=\"deprecated_1_deprecated000009\"><xreftitle>非推奨</xreftitle><xrefdescription></span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-112\"><xrefsect id=\"deprecated_1_deprecated000009\"><xreftitle>Deprecated</xreftitle><xrefdescription></span></span><p><span data-ttu-id=\"3e9c9-113\">: 現在のリリースはこの呼び出しに置き換え 1.1.25 <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.closeNow()\" data-throw-if-not-resolved=\"false\">closeNow()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-113\">: As of release 1.1.25 this call is replaced by <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.closeNow()\" data-throw-if-not-resolved=\"false\">closeNow()</xref></span></span></p></xrefdescription></xrefsect></p>\n\n<p></p>"
     syntax:
       content: public void close()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、IoT Hub への接続を閉じることができません。 </p>
+        description: <p><span data-ttu-id="3e9c9-114">場合は、IoT Hub への接続を閉じることができません。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-114">if the connection to an IoT Hub cannot be closed.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.closeNow()
     id: closeNow()
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -95,12 +95,12 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 423
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>クライアントによって保持されているすべてのリソースを解放するには、IoT Hub クライアントを閉じます。 ときに closeNow は転送中に含まれていたすべてのメッセージと呼ばれるまたは保留中の送信が通知されます、コールバックと iot Hub に接続するすべての既存のユーザーには閉じられます。 IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。 後に<code>closeNow() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。 クライアントは既に閉じられている場合、関数は何もしないものとします。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-115\">クライアントによって保持されているすべてのリソースを解放するには、IoT Hub クライアントを閉じます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-115\">Closes the IoT Hub client by releasing any resources held by client.</span></span> <span data-ttu-id=\"3e9c9-116\">ときに closeNow は転送中に含まれていたすべてのメッセージと呼ばれるまたは保留中の送信が通知されます、コールバックと iot Hub に接続するすべての既存のユーザーには閉じられます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-116\">When closeNow is called all the messages that were in transit or pending to be sent will be informed to the user in the callbacks and any existing connection to IotHub will be closed.</span></span> <span data-ttu-id=\"3e9c9-117\">IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-117\">Must be called to terminate the background thread that is sending data to IoT Hub.</span></span> <span data-ttu-id=\"3e9c9-118\">後に<code>closeNow() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-118\">After<code>closeNow() \r\n\r\n    </code> is called, the IoT Hub client is no longer usable.</span></span> <span data-ttu-id=\"3e9c9-119\">クライアントは既に閉じられている場合、関数は何もしないものとします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-119\">If the client is already closed, the function shall do nothing.</span></span></p>\n\n<p></p>"
     syntax: &ref_2
       content: public void closeNow()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、IoT Hub への接続を閉じることができません。 </p>
+        description: <p><span data-ttu-id="3e9c9-120">場合は、IoT Hub への接続を閉じることができません。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-120">if the connection to an IoT Hub cannot be closed.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.CONNECTION_STRING_CHARSET
     id: CONNECTION_STRING_CHARSET
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -116,7 +116,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 96
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000008\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>この値は廃止されておりは置き換えられません 1.2.27 を解放します。 文字セットは、接続文字列で、デバイス ID を URL エンコードに使用されます。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-121\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000008\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-121\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000008\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-122\">この値は廃止されておりは置き換えられません 1.2.27 を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-122\">as of release 1.2.27 this value is deprecated and will not be replaced.</span></span> <span data-ttu-id=\"3e9c9-123\">文字セットは、接続文字列で、デバイス ID を URL エンコードに使用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-123\">The charset used for URL-encoding the device ID in the connection string.</span></span> </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
     syntax:
       content: public static final Charset CONNECTION_STRING_CHARSET= StandardCharsets.UTF_8
       return:
@@ -138,31 +138,31 @@ items:
       startLine: 240
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>認証のため、指定されたセキュリティ プロバイダーを使用して、クライアントのデバイスを作成します。</p>
+      <p><span data-ttu-id="3e9c9-124">認証のため、指定されたセキュリティ プロバイダーを使用して、クライアントのデバイスを作成します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-124">Creates a device client that uses the provided security provider for authentication.</span></span></p>
       <p></p>
     syntax:
       content: 'public static DeviceClient createFromSecurityProvider(String uri, String deviceId, SecurityProvider securityProvider, IotHubClientProtocol protocol)'
       parameters:
         - id: uri
           type: '26831127'
-          description: '<p>Iot ハブに接続するための接続文字列 (形式:"yourHubName.azure devices.net") </p>'
+          description: '<p><span data-ttu-id="3e9c9-125">Iot ハブに接続するための接続文字列 (形式:"yourHubName.azure devices.net")</span><span class="sxs-lookup"><span data-stu-id="3e9c9-125">The connection string for iot hub to connect to (format: "yourHubName.azure-devices.net")</span></span> </p>'
         - id: deviceId
           type: '26831127'
-          description: <p>使用するデバイスの id </p>
+          description: <p><span data-ttu-id="3e9c9-126">使用するデバイスの id</span><span class="sxs-lookup"><span data-stu-id="3e9c9-126">The id for the device to use</span></span> </p>
         - id: securityProvider
           type: com.microsoft.azure.sdk.iot.provisioning.security._security_provider
-          description: <p>デバイスのセキュリティ プロバイダー </p>
+          description: <p><span data-ttu-id="3e9c9-127">デバイスのセキュリティ プロバイダー</span><span class="sxs-lookup"><span data-stu-id="3e9c9-127">The security provider for the device</span></span> </p>
         - id: protocol
           type: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol
-          description: <p>プロトコル、デバイスが IoT Hub への通信の使用していてはいけない </p>
+          description: <p><span data-ttu-id="3e9c9-128">プロトコル、デバイスが IoT Hub への通信の使用していてはいけない</span><span class="sxs-lookup"><span data-stu-id="3e9c9-128">The protocol the device shall use for communication to the IoT Hub</span></span> </p>
       return:
         type: com.microsoft.azure.sdk.iot.device._device_client
-        description: <p>作成したデバイスのクライアント インスタンス </p>
+        description: <p><span data-ttu-id="3e9c9-129">作成したデバイスのクライアント インスタンス</span><span class="sxs-lookup"><span data-stu-id="3e9c9-129">The created device client instance</span></span> </p>
     exceptions:
       - type: '44102508'
-        description: <p>場合は、指定された connString を解析できませんでした。 </p>
+        description: <p><span data-ttu-id="3e9c9-130">場合は、指定された connString を解析できませんでした。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-130">If the provided connString could not be parsed.</span></span> </p>
       - type: cbf33bbe
-        description: <p>SecurityProvider の認証中に例外をスローした場合 </p>
+        description: <p><span data-ttu-id="3e9c9-131">SecurityProvider の認証中に例外をスローした場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-131">If the SecurityProvider throws any exception while authenticating</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.DEVICE_ID_ATTRIBUTE
     id: DEVICE_ID_ATTRIBUTE
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -178,7 +178,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 76
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000005\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>この値は廃止されておりは置き換えられません 1.2.27 を解放します。 接続文字列内のデバイス ID 属性名。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-132\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000005\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-132\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000005\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-133\">この値は廃止されておりは置き換えられません 1.2.27 を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-133\">as of release 1.2.27 this value is deprecated and will not be replaced.</span></span> <span data-ttu-id=\"3e9c9-134\">接続文字列内のデバイス ID 属性名。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-134\">The device ID attribute name in a connection string.</span></span> </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
     syntax:
       content: public static final String DEVICE_ID_ATTRIBUTE= "DeviceId="
       return:
@@ -218,22 +218,22 @@ items:
       startLine: 184
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>接続文字列を引数として受け取るコンス トラクターです。</p>
+      <p><span data-ttu-id="3e9c9-135">接続文字列を引数として受け取るコンス トラクターです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-135">Constructor that takes a connection string as an argument.</span></span></p>
       <p></p>
     syntax:
       content: 'public DeviceClient(String connString, IotHubClientProtocol protocol)'
       parameters:
         - id: connString
           type: '26831127'
-          description: "<p>接続文字列。 接続文字列は、';' で、'=' で区切られた値とキーで区切られたキーと値のペアのセットです。 次のキーの値を含める必要があります: <code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、および<code>SharedAccessKey \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-136\">接続文字列。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-136\">the connection string.</span></span> <span data-ttu-id=\"3e9c9-137\">接続文字列は、';' で、'=' で区切られた値とキーで区切られたキーと値のペアのセットです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-137\">The connection string is a set of key-value pairs that are separated by ';', with the keys and values separated by '='.</span></span> <span data-ttu-id=\"3e9c9-138\">次のキーの値を含める必要があります: <code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、および<code>SharedAccessKey \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-138\">It should contain values for the following keys: <code>HostName \r\n\r\n    </code> ,<code>DeviceId \r\n\r\n    </code> , and<code>SharedAccessKey \r\n\r\n    </code> .</span></span> </p>"
         - id: protocol
           type: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol
-          description: <p>通信プロトコルは、(HTTPS など) を使用します。</p>
+          description: <p><span data-ttu-id="3e9c9-139">通信プロトコルは、(HTTPS など) を使用します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-139">the communication protocol used (i.e. HTTPS).</span></span></p>
     exceptions:
       - type: 3c87bd19
-        description: "<p>いずれかの<code>connString \r\n\r\n    </code>または<code>protocol \r\n\r\n    </code>は<code>null \r\n\r\n    </code>; 場合、または<code>connString \r\n\r\n    </code>属性は、次のいずれかがありません:<code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、または<code>SharedAccessKey \r\n\r\n    </code>IoT hub のホスト名が RFC 3986 に準拠していない場合、または指定されました。<code>connString \r\n\r\n    </code>は認証された x509 デバイス </p>"
+        description: "<p><span data-ttu-id=\"3e9c9-140\">いずれかの<code>connString \r\n\r\n    </code>または<code>protocol \r\n\r\n    </code>は<code>null \r\n\r\n    </code>; 場合、または<code>connString \r\n\r\n    </code>属性は、次のいずれかがありません:<code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、または<code>SharedAccessKey \r\n\r\n    </code>IoT hub のホスト名が RFC 3986 に準拠していない場合、または指定されました。<code>connString \r\n\r\n    </code>は認証された x509 デバイス</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-140\">if any of<code>connString \r\n\r\n    </code> or <code>protocol \r\n\r\n    </code> are<code>null \r\n\r\n    </code> ; or if<code>connString \r\n\r\n    </code> is missing one of the following attributes:<code>HostName \r\n\r\n    </code> ,<code>DeviceId \r\n\r\n    </code> , or <code>SharedAccessKey \r\n\r\n    </code> or if the IoT hub hostname does not conform to RFC 3986 or if the provided<code>connString \r\n\r\n    </code> is for an x509 authenticated device</span></span> </p>"
       - type: '44102508'
-        description: <p>接続文字列内のホスト名が有効な URI ではない場合 </p>
+        description: <p><span data-ttu-id="3e9c9-141">接続文字列内のホスト名が有効な URI ではない場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-141">if the hostname in the connection string is not a valid URI</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.DeviceClient(String,IotHubClientProtocol,String,boolean,String,boolean)'
     id: 'DeviceClient(String,IotHubClientProtocol,String,boolean,String,boolean)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -251,32 +251,32 @@ items:
       startLine: 212
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>X509 を使用するコンス トラクターが iot Hub と通信するための認証</p>
+      <p><span data-ttu-id="3e9c9-142">X509 を使用するコンス トラクターが iot Hub と通信するための認証</span><span class="sxs-lookup"><span data-stu-id="3e9c9-142">Constructor that uses x509 authentication for communicating with IotHub</span></span></p>
       <p></p>
     syntax:
       content: 'public DeviceClient(String connString, IotHubClientProtocol protocol, String publicKeyCertificate, boolean isCertificatePath, String privateKey, boolean isPrivateKeyPath)'
       parameters:
         - id: connString
           type: '26831127'
-          description: '<p>x509 の接続文字列として接続するデバイス (形式:"ホスト名 =...; DeviceId =... です。x509 = true") </p>'
+          description: '<p><span data-ttu-id="3e9c9-143">x509 の接続文字列として接続するデバイス (形式:"ホスト名 =...; DeviceId =... です。x509 = true")</span><span class="sxs-lookup"><span data-stu-id="3e9c9-143">the connection string for the x509 device to connect as (format: "HostName=...;DeviceId=...;x509=true")</span></span> </p>'
         - id: protocol
           type: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol
-          description: <p>iot Hub と通信するときに使用するプロトコル </p>
+          description: <p><span data-ttu-id="3e9c9-144">iot Hub と通信するときに使用するプロトコル</span><span class="sxs-lookup"><span data-stu-id="3e9c9-144">the protocol to use when communicating with IotHub</span></span> </p>
         - id: publicKeyCertificate
           type: '26831127'
-          description: <p>PEM 公開キー証明書の形式または PEM へのパスの形式の公開キー証明書ファイル </p>
+          description: <p><span data-ttu-id="3e9c9-145">PEM 公開キー証明書の形式または PEM へのパスの形式の公開キー証明書ファイル</span><span class="sxs-lookup"><span data-stu-id="3e9c9-145">the PEM formatted public key certificate or the path to a PEM formatted public key certificate file</span></span> </p>
         - id: isCertificatePath
           type: 4fc6e284
-          description: <p>指定された publicKeyCertificate が PEM 書式設定された公開キー証明書を含むファイル パスの場合 </p>
+          description: <p><span data-ttu-id="3e9c9-146">指定された publicKeyCertificate が PEM 書式設定された公開キー証明書を含むファイル パスの場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-146">if the provided publicKeyCertificate is a path to a file containing the PEM formatted public key certificate</span></span> </p>
         - id: privateKey
           type: '26831127'
-          description: <p>PEM 秘密キーの形式または PEM へのパスには秘密キー ファイルが書式設定 </p>
+          description: <p><span data-ttu-id="3e9c9-147">PEM 秘密キーの形式または PEM へのパスには秘密キー ファイルが書式設定</span><span class="sxs-lookup"><span data-stu-id="3e9c9-147">the PEM formatted private key or the path to a PEM formatted private key file</span></span> </p>
         - id: isPrivateKeyPath
           type: 4fc6e284
-          description: <p>指定されたプライベート キーが PEM の書式設定された秘密キーを含むファイルへのパスの場合 </p>
+          description: <p><span data-ttu-id="3e9c9-148">指定されたプライベート キーが PEM の書式設定された秘密キーを含むファイルへのパスの場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-148">if the provided privateKey is a path to a file containing the PEM formatted private key</span></span> </p>
     exceptions:
       - type: '44102508'
-        description: <p>接続文字列内のホスト名が有効な URI ではない場合 </p>
+        description: <p><span data-ttu-id="3e9c9-149">接続文字列内のホスト名が有効な URI ではない場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-149">if the hostname in the connection string is not a valid URI</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.DeviceClient(String,TransportClient)'
     id: 'DeviceClient(String,TransportClient)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -294,22 +294,22 @@ items:
       startLine: 134
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>接続文字列とトランスポート クライアントの引数として受け取るコンス トラクターです。</p>
+      <p><span data-ttu-id="3e9c9-150">接続文字列とトランスポート クライアントの引数として受け取るコンス トラクターです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-150">Constructor that takes a connection string and a transport client as an argument.</span></span></p>
       <p></p>
     syntax:
       content: 'public DeviceClient(String connString, TransportClient transportClient)'
       parameters:
         - id: connString
           type: '26831127'
-          description: "<p>接続文字列。 接続文字列は、';' で、'=' で区切られた値とキーで区切られたキーと値のペアのセットです。 次のキーの値を含める必要があります: <code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、および<code>SharedAccessKey \r\n\r\n    </code>です。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-151\">接続文字列。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-151\">the connection string.</span></span> <span data-ttu-id=\"3e9c9-152\">接続文字列は、';' で、'=' で区切られた値とキーで区切られたキーと値のペアのセットです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-152\">The connection string is a set of key-value pairs that are separated by ';', with the keys and values separated by '='.</span></span> <span data-ttu-id=\"3e9c9-153\">次のキーの値を含める必要があります: <code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、および<code>SharedAccessKey \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-153\">It should contain values for the following keys: <code>HostName \r\n\r\n    </code> ,<code>DeviceId \r\n\r\n    </code> , and<code>SharedAccessKey \r\n\r\n    </code> .</span></span></p>"
         - id: transportClient
           type: com.microsoft.azure.sdk.iot.device._transport_client
-          description: <p>デバイス クライアントが使用するトランスポート クライアント。</p>
+          description: <p><span data-ttu-id="3e9c9-154">デバイス クライアントが使用するトランスポート クライアント。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-154">the transport client to use by the device client.</span></span></p>
     exceptions:
       - type: 3c87bd19
-        description: "<p>場合<code>connString \r\n\r\n    </code>場合<code>connString \r\n\r\n    </code>属性は、次のいずれかがありません:<code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、または<code>SharedAccessKey \r\n\r\n    </code>IoT hub のホスト名が RFC 3986 に準拠していない場合、または指定された<code>connString \r\n\r\n    </code>は認証された x509 デバイス </p>"
+        description: "<p><span data-ttu-id=\"3e9c9-155\">場合<code>connString \r\n\r\n    </code>場合<code>connString \r\n\r\n    </code>属性は、次のいずれかがありません:<code>HostName \r\n\r\n    </code> 、<code>DeviceId \r\n\r\n    </code> 、または<code>SharedAccessKey \r\n\r\n    </code>IoT hub のホスト名が RFC 3986 に準拠していない場合、または指定された<code>connString \r\n\r\n    </code>は認証された x509 デバイス</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-155\">if<code>connString \r\n\r\n    </code> or if<code>connString \r\n\r\n    </code> is missing one of the following attributes:<code>HostName \r\n\r\n    </code> ,<code>DeviceId \r\n\r\n    </code> , or <code>SharedAccessKey \r\n\r\n    </code> or if the IoT hub hostname does not conform to RFC 3986 or if the provided<code>connString \r\n\r\n    </code> is for an x509 authenticated device</span></span> </p>"
       - type: '44102508'
-        description: <p>接続文字列内のホスト名が有効な URI ではない場合 </p>
+        description: <p><span data-ttu-id="3e9c9-156">接続文字列内のホスト名が有効な URI ではない場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-156">if the hostname in the connection string is not a valid URI</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.getConfig()
     id: getConfig()
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -327,13 +327,13 @@ items:
       startLine: 1090
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>デバイス クライアントの構成を取得します。</p>
+      <p><span data-ttu-id="3e9c9-157">デバイス クライアントの構成を取得します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-157">Getter for the device client config.</span></span></p>
       <p></p>
     syntax:
       content: public DeviceClientConfig getConfig()
       return:
         type: com.microsoft.azure.sdk.iot.device._device_client_config
-        description: <p>構成の値。 </p>
+        description: <p><span data-ttu-id="3e9c9-158">構成の値。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-158">the value of the config.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.HOSTNAME_ATTRIBUTE
     id: HOSTNAME_ATTRIBUTE
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -349,7 +349,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 70
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000004\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>この値は廃止されておりは置き換えられません 1.2.27 を解放します。 接続文字列でホスト名の属性名。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-159\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000004\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-159\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000004\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-160\">この値は廃止されておりは置き換えられません 1.2.27 を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-160\">as of release 1.2.27 this value is deprecated and will not be replaced.</span></span> <span data-ttu-id=\"3e9c9-161\">接続文字列でホスト名の属性名。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-161\">The hostname attribute name in a connection string.</span></span> </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
     syntax:
       content: public static final String HOSTNAME_ATTRIBUTE= "HostName="
       return:
@@ -371,13 +371,13 @@ items:
       startLine: 339
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>非同期的に送信して、IoT Hub からメッセージを受信開始します。 クライアントが既に開いている場合、関数は何もしないものとします。</p>
+      <p>非同期的に送信して、IoT Hub からメッセージを受信開始します。 <span data-ttu-id="3e9c9-163">クライアントが既に開いている場合、関数は何もしないものとします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-163">If the client is already open, the function shall do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public void open()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、IoT Hub への接続を確立できません。 </p>
+        description: <p><span data-ttu-id="3e9c9-164">場合は、IoT Hub への接続を確立できません。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-164">if a connection to an IoT Hub cannot be established.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.RECEIVE_PERIOD_MILLIS
     id: RECEIVE_PERIOD_MILLIS
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -412,7 +412,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 59
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000003\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>リリースのこれらの値は推奨されなくなり、置き換え 1.2.27 <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)\" data-throw-if-not-resolved=\"false\">setOption (String, Object)</xref><b>SetMinimumPollingInterval</b>を変更します。</p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>\n<p>トランスポートがメッセージのポーリング間待機するミリ秒数。 </p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-165\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000003\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-165\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000003\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-166\">リリースのこれらの値は推奨されなくなり、置き換え 1.2.27 <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)\" data-throw-if-not-resolved=\"false\">setOption (String, Object)</xref><b>SetMinimumPollingInterval</b>を変更します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-166\">as of release 1.2.27 these value is deprecated and replaced by <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)\" data-throw-if-not-resolved=\"false\">setOption(String, Object)</xref><b>SetMinimumPollingInterval</b> to change it.</span></span></p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>\n<p><span data-ttu-id=\"3e9c9-167\">トランスポートがメッセージのポーリング間待機するミリ秒数。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-167\">The number of milliseconds the transport will wait between polling for messages.</span></span> </p>"
     syntax:
       content: public static long RECEIVE_PERIOD_MILLIS_AMQPS= 10L
       return:
@@ -472,17 +472,17 @@ items:
       startLine: 1059
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>デバイスへの接続が失われたか、確立されるたびに実行されるコールバックを登録します。</p>
+      <p><span data-ttu-id="3e9c9-168">デバイスへの接続が失われたか、確立されるたびに実行されるコールバックを登録します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-168">Registers a callback to be executed whenever the connection to the device is lost or established.</span></span></p>
       <p></p>
     syntax:
       content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
       parameters:
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
-          description: <p>呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="3e9c9-169">呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-169">the callback to be called.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-170\">コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-170\">a context to be passed to the callback.</span></span> <span data-ttu-id=\"3e9c9-171\">指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-171\">Can be <code>null \r\n\r\n    </code> if no callback is provided.</span></span> </p>"
   - uid: com.microsoft.azure.sdk.iot.device._device_client.SEND_PERIOD_MILLIS
     id: SEND_PERIOD_MILLIS
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -498,7 +498,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 49
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000002\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>リリースのこの値は推奨されなくなり、置き換え 1.2.27 <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)\" data-throw-if-not-resolved=\"false\">setOption (String, Object)</xref><b>SetSendInterval</b>を変更します。</p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>\n<p>トランスポートがメッセージを送信して間待機するミリ秒数。 </p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-172\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000002\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-172\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000002\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-173\">リリースのこの値は推奨されなくなり、置き換え 1.2.27 <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)\" data-throw-if-not-resolved=\"false\">setOption (String, Object)</xref><b>SetSendInterval</b>を変更します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-173\">as of release 1.2.27 this value is deprecated and replaced by <xref uid=\"com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)\" data-throw-if-not-resolved=\"false\">setOption(String, Object)</xref><b>SetSendInterval</b> to change it.</span></span></p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>\n<p><span data-ttu-id=\"3e9c9-174\">トランスポートがメッセージを送信して間待機するミリ秒数。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-174\">The number of milliseconds the transport will wait between sending out messages.</span></span> </p>"
     syntax:
       content: public static long SEND_PERIOD_MILLIS= 10L
       return:
@@ -520,25 +520,25 @@ items:
       startLine: 464
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>IoT Hub にイベント メッセージを非同期的に送信します。</p>
+      <p><span data-ttu-id="3e9c9-175">IoT Hub にイベント メッセージを非同期的に送信します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-175">Asynchronously sends an event message to the IoT Hub.</span></span></p>
       <p></p>
     syntax:
       content: 'public void sendEventAsync(Message message, IotHubEventCallback callback, Object callbackContext)'
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device._message
-          description: <p>送信するメッセージ。 </p>
+          description: <p><span data-ttu-id="3e9c9-176">送信するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-176">the message to be sent.</span></span> </p>
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: "<p>応答が受信したときに呼び出されるコールバック。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-177\">応答が受信したときに呼び出されるコールバック。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-177\">the callback to be invoked when a response is received.</span></span> <span data-ttu-id=\"3e9c9-178\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-178\">Can be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: callbackContext
           type: '79317049'
-          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-179\">コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-179\">a context to be passed to the callback.</span></span> <span data-ttu-id=\"3e9c9-180\">指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-180\">Can be <code>null \r\n\r\n    </code> if no callback is provided.</span></span></p>"
     exceptions:
       - type: 3c87bd19
-        description: "<p>メッセージが提供される場合は<code>null \r\n\r\n    </code>します。 </p>"
+        description: "<p><span data-ttu-id=\"3e9c9-181\">メッセージが提供される場合は<code>null \r\n\r\n    </code>します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-181\">if the message provided is<code>null \r\n\r\n    </code> .</span></span> </p>"
       - type: 12fe80de
-        description: <p>場合は、クライアントがまだ開かれていないかは既に閉じられています。 </p>
+        description: <p><span data-ttu-id="3e9c9-182">場合は、クライアントがまだ開かれていないかは既に閉じられています。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-182">if the client has not been opened yet or is already closed.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.sendReportedProperties(Set<Property>)
     id: sendReportedProperties(Set<Property>)
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -556,19 +556,19 @@ items:
       startLine: 592
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>報告されたプロパティの送信</p>
+      <p><span data-ttu-id="3e9c9-183">報告されたプロパティの送信</span><span class="sxs-lookup"><span data-stu-id="3e9c9-183">Sends reported properties</span></span></p>
       <p></p>
     syntax:
       content: public void sendReportedProperties(Set<Property> reportedProperties)
       parameters:
         - id: reportedProperties
           type: b398a0f1com.microsoft.azure.sdk.iot.device._device_twin._propertya08ddfce
-          description: "<p>必要なプロパティとそれに対応するコールバックとコンテキストを設定します。 ことはできません<code>null \r\n\r\n    </code>です。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-184\">必要なプロパティとそれに対応するコールバックとコンテキストを設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-184\">the Set for desired properties and their corresponding callback and context.</span></span> <span data-ttu-id=\"3e9c9-185\">ことはできません<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-185\">Cannot be<code>null \r\n\r\n    </code> .</span></span></p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>クライアントが開いていないか、ツイン ・を開始する前に呼び出されますときに呼び出されるとします。 </p>
+        description: <p><span data-ttu-id="3e9c9-186">クライアントが開いていないか、ツイン ・を開始する前に呼び出されますときに呼び出されるとします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-186">if called when client is not opened or called before starting twin.</span></span> </p>
       - type: 3c87bd19
-        description: <p>reportedProperties が null または空の場合は。 </p>
+        description: <p><span data-ttu-id="3e9c9-187">reportedProperties が null または空の場合は。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-187">if reportedProperties is null or empty.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.setMessageCallback(MessageCallback,Object)'
     id: 'setMessageCallback(MessageCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -586,25 +586,25 @@ items:
       startLine: 487
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>メッセージ コールバックを設定します。</p>
+      <p><span data-ttu-id="3e9c9-188">メッセージ コールバックを設定します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-188">Sets the message callback.</span></span></p>
       <p></p>
     syntax:
       content: 'public DeviceClient setMessageCallback(MessageCallback callback, Object context)'
       parameters:
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._message_callback
-          description: "<p>メッセージのコールバック。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-189\">メッセージのコールバック。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-189\">the message callback.</span></span> <span data-ttu-id=\"3e9c9-190\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-190\">Can be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: context
           type: '79317049'
-          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>です。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-191\">コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-191\">the context to be passed to the callback.</span></span> <span data-ttu-id=\"3e9c9-192\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-192\">Can be<code>null \r\n\r\n    </code> .</span></span></p>"
       return:
         type: com.microsoft.azure.sdk.iot.device._device_client
-        description: <p>fluent 設定できません。</p>
+        description: '<p><span data-ttu-id="3e9c9-193">fluent 設定できません。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-193">itself, for fluent setting.</span></span></p>'
     exceptions:
       - type: 3c87bd19
-        description: "<p>場合は、コールバックは<code>null \r\n\r\n    </code>がでコンテキストが渡されます。 </p>"
+        description: "<p><span data-ttu-id=\"3e9c9-194\">場合は、コールバックは<code>null \r\n\r\n    </code>がでコンテキストが渡されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-194\">if the callback is<code>null \r\n\r\n    </code> but a context is passed in.</span></span> </p>"
       - type: 12fe80de
-        description: <p>コールバックが後に設定されている場合、クライアントは閉じられます。 </p>
+        description: <p><span data-ttu-id="3e9c9-195">コールバックが後に設定されている場合、クライアントは閉じられます。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-195">if the callback is set after the client is closed.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.setOption(String,Object)'
     id: 'setOption(String,Object)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -621,19 +621,19 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 914
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>パラメーターによって識別されるランタイム オプションを設定<code>optionName \r\n\r\n    </code>に<code>value \r\n\r\n    </code>です。</p>\n\n<p>この API を使用して設定できるオプションは次のとおりです。<itemizedlist><listitem><p><b>SetMinimumPollingInterval</b> -このオプションは、このクライアントで構成されているトランスポートが HTTP である場合にのみ適用されます。 このオプションは、新しいメッセージの可用性をチェックするサービスへの呼び出しの間隔をミリ秒で、間隔を指定します。 値が型にする期待<code>long \r\n\r\n    </code>です。</p></listitem><listitem><p><b>SetCertificatePath</b> -このオプションは、このクライアントで構成されているトランスポートが AMQP である場合にのみ適用されます。 このオプションは、ピアの検証に使用される証明書へのパスを指定します。 値が型にする期待<code>String \r\n\r\n    </code>です。</p></listitem><listitem><p><b>SetSASTokenExpiryTime</b> -このオプションは、HTTP の該当する/AMQP/MQTT です。 このオプションは、SASToken が切れるまでの秒単位で間隔を指定します。 トランスポートが既に開いている場合は、このオプションを設定と、更新された有効期限付きトランスポートが再起動されます。 値が型にする期待<code>long \r\n\r\n    </code>です。</p></listitem></itemizedlist></p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-196\">パラメーターによって識別されるランタイム オプションを設定<code>optionName \r\n\r\n    </code>に<code>value \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-196\">Sets a runtime option identified by parameter<code>optionName \r\n\r\n    </code> to<code>value \r\n\r\n    </code> .</span></span></p>\n\n<p><span data-ttu-id=\"3e9c9-197\">この API を使用して設定できるオプションは次のとおりです。<itemizedlist><listitem></span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-197\">The options that can be set via this API are:<itemizedlist><listitem></span></span><p><span data-ttu-id=\"3e9c9-198\"><b>SetMinimumPollingInterval</b> -このオプションは、このクライアントで構成されているトランスポートが HTTP である場合にのみ適用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-198\"><b>SetMinimumPollingInterval</b> - this option is applicable only when the transport configured with this client is HTTP.</span></span> <span data-ttu-id=\"3e9c9-199\">このオプションは、新しいメッセージの可用性をチェックするサービスへの呼び出しの間隔をミリ秒で、間隔を指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-199\">This option specifies the interval in milliseconds between calls to the service checking for availability of new messages.</span></span> <span data-ttu-id=\"3e9c9-200\">値が型にする期待<code>long \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-200\">The value is expected to be of type<code>long \r\n\r\n    </code> .</span></span></p></listitem><listitem><p><span data-ttu-id=\"3e9c9-201\"><b>SetCertificatePath</b> -このオプションは、このクライアントで構成されているトランスポートが AMQP である場合にのみ適用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-201\"><b>SetCertificatePath</b> - this option is applicable only when the transport configured with this client is AMQP.</span></span> <span data-ttu-id=\"3e9c9-202\">このオプションは、ピアの検証に使用される証明書へのパスを指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-202\">This option specifies the path to the certificate used to verify peer.</span></span> <span data-ttu-id=\"3e9c9-203\">値が型にする期待<code>String \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-203\">The value is expected to be of type<code>String \r\n\r\n    </code> .</span></span></p></listitem><listitem><p><span data-ttu-id=\"3e9c9-204\"><b>SetSASTokenExpiryTime</b> -このオプションは、HTTP の該当する/AMQP/MQTT です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-204\"><b>SetSASTokenExpiryTime</b> - this option is applicable for HTTP/ AMQP/MQTT.</span></span> <span data-ttu-id=\"3e9c9-205\">このオプションは、SASToken が切れるまでの秒単位で間隔を指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-205\">This option specifies the interval in seconds after which SASToken expires.</span></span> <span data-ttu-id=\"3e9c9-206\">トランスポートが既に開いている場合は、このオプションを設定と、更新された有効期限付きトランスポートが再起動されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-206\">If the transport is already open then setting this option will restart the transport with the updated expiry time.</span></span> <span data-ttu-id=\"3e9c9-207\">値が型にする期待<code>long \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-207\">The value is expected to be of type<code>long \r\n\r\n    </code> .</span></span></p></listitem></itemizedlist></p>\n\n<p></p>"
     syntax: &ref_1
       content: 'public void setOption(String optionName, Object value)'
       parameters:
         - id: optionName
           type: '26831127'
-          description: <p>オプション名を変更するには </p>
+          description: <p><span data-ttu-id="3e9c9-208">オプション名を変更するには</span><span class="sxs-lookup"><span data-stu-id="3e9c9-208">the option name to modify</span></span> </p>
         - id: value
           type: '79317049'
-          description: <p>適切なオプションの値の種類のオブジェクト </p>
+          description: <p><span data-ttu-id="3e9c9-209">適切なオプションの値の種類のオブジェクト</span><span class="sxs-lookup"><span data-stu-id="3e9c9-209">an object of the appropriate type for the option's value</span></span> </p>
     exceptions:
       - type: 3c87bd19
-        description: <p>指定されたパラメーターが null の場合 </p>
+        description: <p><span data-ttu-id="3e9c9-210">指定されたパラメーターが null の場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-210">if the provided optionName is null</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client.SHARED_ACCESS_KEY_ATTRIBUTE
     id: SHARED_ACCESS_KEY_ATTRIBUTE
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -649,7 +649,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 82
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000006\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>この値は廃止されておりは置き換えられません 1.2.27 を解放します。 接続文字列内の共有アクセス キー属性の名前。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-211\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000006\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-211\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000006\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-212\">この値は廃止されておりは置き換えられません 1.2.27 を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-212\">as of release 1.2.27 this value is deprecated and will not be replaced.</span></span> <span data-ttu-id=\"3e9c9-213\">接続文字列内の共有アクセス キー属性の名前。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-213\">The shared access key attribute name in a connection string.</span></span> </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
     syntax:
       content: public static final String SHARED_ACCESS_KEY_ATTRIBUTE= "SharedAccessKey="
       return:
@@ -669,7 +669,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/DeviceClient.java
       startLine: 88
     package: com.microsoft.azure.sdk.iot.device
-    summary: "<p>\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000007\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      <p>この値は廃止されておりは置き換えられません 1.2.27 を解放します。 接続文字列内の共有アクセス署名属性名。 </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-214\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000007\">\r\n\r\n    <xreftitle>非推奨</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-214\">\r\n\r\n  <xrefsect id=\"deprecated_1_deprecated000007\">\r\n\r\n    <xreftitle>Deprecated</xreftitle>\r\n\r\n    <xrefdescription>\r\n\r\n      </span></span><p><span data-ttu-id=\"3e9c9-215\">この値は廃止されておりは置き換えられません 1.2.27 を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-215\">as of release 1.2.27 this value is deprecated and will not be replaced.</span></span> <span data-ttu-id=\"3e9c9-216\">接続文字列内の共有アクセス署名属性名。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-216\">The shared access signature attribute name in a connection string.</span></span> </p>\n\n    </xrefdescription>\n\n  </xrefsect>\n\n</p>"
     syntax:
       content: public static final String SHARED_ACCESS_TOKEN_ATTRIBUTE= "SharedAccessSignature="
       return:
@@ -691,30 +691,30 @@ items:
       startLine: 515
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>デバイス ツインを開始します。</p>
+      <p><span data-ttu-id="3e9c9-217">デバイス ツインを開始します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-217">Starts the device twin.</span></span></p>
       <p></p>
     syntax:
       content: 'public void startDeviceTwin(IotHubEventCallback deviceTwinStatusCallback, Object deviceTwinStatusCallbackContext, PropertyCallBack genericPropertyCallBack, Object genericPropertyCallBackContext)'
       parameters:
         - id: deviceTwinStatusCallback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: "<p><xref uid=\"com.microsoft.azure.sdk.iot.device._iot_hub_event_callback\" data-throw-if-not-resolved=\"false\">IotHubEventCallback</xref>デバイス ツイン操作の状態を提供するためのコールバック。 ことはできません<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-218\"><xref uid=\"com.microsoft.azure.sdk.iot.device._iot_hub_event_callback\" data-throw-if-not-resolved=\"false\">IotHubEventCallback</xref>デバイス ツイン操作の状態を提供するためのコールバック。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-218\">the <xref uid=\"com.microsoft.azure.sdk.iot.device._iot_hub_event_callback\" data-throw-if-not-resolved=\"false\">IotHubEventCallback</xref> callback for providing the status of Device Twin operations.</span></span> <span data-ttu-id=\"3e9c9-219\">ことはできません<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-219\">Cannot be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: deviceTwinStatusCallbackContext
           type: '79317049'
-          description: "<p>ステータス コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-220\">ステータス コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-220\">the context to be passed to the status callback.</span></span> <span data-ttu-id=\"3e9c9-221\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-221\">Can be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: genericPropertyCallBack
           type: com.microsoft.azure.sdk.iot.device._device_twin._property_call_back
-          description: "<p>必要なプロパティの変更を提供するため PropertyCallBack コールバック。 ことはできません<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-222\">必要なプロパティの変更を提供するため PropertyCallBack コールバック。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-222\">the PropertyCallBack callback for providing any changes in desired properties.</span></span> <span data-ttu-id=\"3e9c9-223\">ことはできません<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-223\">Cannot be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: genericPropertyCallBackContext
           type: '79317049'
-          description: "<p>プロパティのコールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>です。 *</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-224\">プロパティのコールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-224\">the context to be passed to the property callback.</span></span> <span data-ttu-id=\"3e9c9-225\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-225\">Can be<code>null \r\n\r\n    </code> .</span></span> *</p>"
     exceptions:
       - type: 3c87bd19
-        description: "<p>コールバックがある場合<code>null \r\n\r\n    </code></p>"
+        description: "<p><span data-ttu-id=\"3e9c9-226\">コールバックがある場合<code>null \r\n\r\n    </code></span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-226\">if the callback is<code>null \r\n\r\n    </code></span></span></p>"
       - type: b1c38b44
-        description: <p>同じデバイスで複数回呼び出された場合 </p>
+        description: <p><span data-ttu-id="3e9c9-227">同じデバイスで複数回呼び出された場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-227">if called more than once on the same device</span></span> </p>
       - type: cbf33bbe
-        description: <p>クライアントが開かれていないときに呼び出された場合 </p>
+        description: <p><span data-ttu-id="3e9c9-228">クライアントが開かれていないときに呼び出された場合</span><span class="sxs-lookup"><span data-stu-id="3e9c9-228">if called when client is not opened</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.subscribeToDesiredProperties(Map<Property, Pair<PropertyCallBack<String, Object>, Object>>)'
     id: 'subscribeToDesiredProperties(Map<Property, Pair<PropertyCallBack<String, Object>, Object>>)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -732,17 +732,17 @@ items:
       startLine: 559
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>必要なプロパティをサブスクライブします。</p>
+      <p><span data-ttu-id="3e9c9-229">必要なプロパティをサブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-229">Subscribes to desired properties</span></span></p>
       <p></p>
     syntax:
       content: 'public void subscribeToDesiredProperties(Map<Property, Pair<PropertyCallBack<String, Object>, Object>> onDesiredPropertyChange)'
       parameters:
         - id: onDesiredPropertyChange
           type: 6110eba5com.microsoft.azure.sdk.iot.device._device_twin._propertyb33c76fccom.microsoft.azure.sdk.iot.device._device_twin._pair78504a52com.microsoft.azure.sdk.iot.device._device_twin._property_call_back0a3cd938
-          description: "<p>必要なプロパティとそれに対応するコールバックとコンテキスト用にマップします。 指定できます<code>null \r\n\r\n    </code>です。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-230\">必要なプロパティとそれに対応するコールバックとコンテキスト用にマップします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-230\">the Map for desired properties and their corresponding callback and context.</span></span> <span data-ttu-id=\"3e9c9-231\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-231\">Can be<code>null \r\n\r\n    </code> .</span></span></p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>クライアントが開いていないか、ツイン ・を開始する前に呼び出されますときに呼び出されるとします。 </p>
+        description: <p><span data-ttu-id="3e9c9-232">クライアントが開いていないか、ツイン ・を開始する前に呼び出されますときに呼び出されるとします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-232">if called when client is not opened or called before starting twin.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.subscribeToDeviceMethod(DeviceMethodCallback,Object,IotHubEventCallback,Object)'
     id: 'subscribeToDeviceMethod(DeviceMethodCallback,Object,IotHubEventCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -760,28 +760,28 @@ items:
       startLine: 636
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>デバイスの方法をサブスクライブします。</p>
+      <p><span data-ttu-id="3e9c9-233">デバイスの方法をサブスクライブします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-233">Subscribes to device methods</span></span></p>
       <p></p>
     syntax:
       content: 'public void subscribeToDeviceMethod(DeviceMethodCallback deviceMethodCallback, Object deviceMethodCallbackContext, IotHubEventCallback deviceMethodStatusCallback, Object deviceMethodStatusCallbackContext)'
       parameters:
         - id: deviceMethodCallback
           type: com.microsoft.azure.sdk.iot.device._device_twin._device_method_callback
-          description: "<p>コールバックがどのデバイスにメソッドが呼び出されるものとします。 ことはできません<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-234\">コールバックがどのデバイスにメソッドが呼び出されるものとします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-234\">Callback on which device methods shall be invoked.</span></span> <span data-ttu-id=\"3e9c9-235\">ことはできません<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-235\">Cannot be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: deviceMethodCallbackContext
           type: '79317049'
-          description: "<p>デバイス メソッド コールバックのコンテキスト。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-236\">デバイス メソッド コールバックのコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-236\">Context for device method callback.</span></span> <span data-ttu-id=\"3e9c9-237\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-237\">Can be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: deviceMethodStatusCallback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: "<p>デバイスの方法の iot Hub の状態を提供するためのコールバック。 ことはできません<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"3e9c9-238\">デバイスの方法の iot Hub の状態を提供するためのコールバック。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-238\">Callback for providing IotHub status for device methods.</span></span> <span data-ttu-id=\"3e9c9-239\">ことはできません<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-239\">Cannot be<code>null \r\n\r\n    </code> .</span></span> </p>"
         - id: deviceMethodStatusCallbackContext
           type: '79317049'
-          description: "<p>デバイス メソッド ステータス コールバックのコンテキスト。 指定できます<code>null \r\n\r\n    </code>です。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-240\">デバイス メソッド ステータス コールバックのコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-240\">Context for device method status callback.</span></span> <span data-ttu-id=\"3e9c9-241\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-241\">Can be<code>null \r\n\r\n    </code> .</span></span></p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>クライアントが開かれていないときに呼び出されるとします。 </p>
+        description: <p><span data-ttu-id="3e9c9-242">クライアントが開かれていないときに呼び出されるとします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-242">if called when client is not opened.</span></span> </p>
       - type: 3c87bd19
-        description: <p>いずれかのコールバックが null の場合は。 </p>
+        description: <p><span data-ttu-id="3e9c9-243">いずれかのコールバックが null の場合は。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-243">if either callback are null.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device._device_client.uploadToBlobAsync(String,InputStream,long,IotHubEventCallback,Object)'
     id: 'uploadToBlobAsync(String,InputStream,long,IotHubEventCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device._device_client
@@ -799,33 +799,33 @@ items:
       startLine: 684
     package: com.microsoft.azure.sdk.iot.device
     summary: |-
-      <p>IoT Hub にストリームを非同期的にアップロードします。</p>
+      <p><span data-ttu-id="3e9c9-244">IoT Hub にストリームを非同期的にアップロードします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-244">Asynchronously upload a stream to the IoT Hub.</span></span></p>
       <p></p>
     syntax:
       content: 'public void uploadToBlobAsync(String destinationBlobName, InputStream inputStream, long streamLength, IotHubEventCallback callback, Object callbackContext)'
       parameters:
         - id: destinationBlobName
           type: '26831127'
-          description: <p>記憶域内のファイルの名前を持つ文字列です。 </p>
+          description: <p><span data-ttu-id="3e9c9-245">記憶域内のファイルの名前を持つ文字列です。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-245">is a string with the name of the file in the storage.</span></span> </p>
         - id: inputStream
           type: 76fcb9b7
-          description: <p>blob にアップロードするには、ストリームと InputStream がします。 </p>
+          description: <p><span data-ttu-id="3e9c9-246">blob にアップロードするには、ストリームと InputStream がします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-246">is a InputStream with the stream to upload in the blob.</span></span> </p>
         - id: streamLength
           type: 0364520f
-          description: <p>アップロードするストリームのバイト数の長さがします。 </p>
+          description: <p><span data-ttu-id="3e9c9-247">アップロードするストリームのバイト数の長さがします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-247">is a long with the number of bytes in the stream to upload.</span></span> </p>
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: <p>ファイルがアップロードされたときに呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="3e9c9-248">ファイルがアップロードされたときに呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-248">the callback to be invoked when a file is uploaded.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>です。</p>"
+          description: "<p><span data-ttu-id=\"3e9c9-249\">コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-249\">a context to be passed to the callback.</span></span> <span data-ttu-id=\"3e9c9-250\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-250\">Can be<code>null \r\n\r\n    </code> .</span></span></p>"
     exceptions:
       - type: 3c87bd19
-        description: "<p>かどうか、指定された blob 名、またはファイル パスが<code>null \r\n\r\n    </code>、空であるか、無効、またはコールバックが<code>null \r\n\r\n    </code>です。 </p>"
+        description: "<p><span data-ttu-id=\"3e9c9-251\">かどうか、指定された blob 名、またはファイル パスが<code>null \r\n\r\n    </code>、空であるか、無効、またはコールバックが<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-251\">if the provided blob name, or the file path is<code>null \r\n\r\n    </code> , empty or not valid, or if the callback is<code>null \r\n\r\n    </code> .</span></span> </p>"
       - type: cbf33bbe
-        description: <p>場合は、クライアントは、ファイルアップロードまたはトランスポートのインスタンスを作成できません。 </p>
+        description: <p><span data-ttu-id="3e9c9-252">場合は、クライアントは、ファイルアップロードまたはトランスポートのインスタンスを作成できません。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-252">if the client cannot create a instance of the FileUpload or the transport.</span></span> </p>
       - type: b1c38b44
-        description: <p>x509 を使用する場合、このメソッドが呼び出された場合の認証 </p>
+        description: <p><span data-ttu-id="3e9c9-253">x509 を使用する場合、このメソッドが呼び出された場合の認証</span><span class="sxs-lookup"><span data-stu-id="3e9c9-253">if this method is called when using x509 authentication</span></span> </p>
 references:
   - uid: 0364520f
     spec.java:
@@ -989,7 +989,7 @@ references:
     nameWithType: 'DeviceClient.setOption(String optionName, Object value)'
     fullName: 'void com.microsoft.azure.sdk.iot.device.DeviceClient.setOption(String optionName, Object value)'
     type: Method
-    summary: "<p>パラメーターによって識別されるランタイム オプションを設定<code>optionName \r\n\r\n    </code>に<code>value \r\n\r\n    </code>です。</p>\n\n<p>この API を使用して設定できるオプションは次のとおりです。<itemizedlist><listitem><p><b>SetMinimumPollingInterval</b> -このオプションは、このクライアントで構成されているトランスポートが HTTP である場合にのみ適用されます。 このオプションは、新しいメッセージの可用性をチェックするサービスへの呼び出しの間隔をミリ秒で、間隔を指定します。 値が型にする期待<code>long \r\n\r\n    </code>です。</p></listitem><listitem><p><b>SetCertificatePath</b> -このオプションは、このクライアントで構成されているトランスポートが AMQP である場合にのみ適用されます。 このオプションは、ピアの検証に使用される証明書へのパスを指定します。 値が型にする期待<code>String \r\n\r\n    </code>です。</p></listitem><listitem><p><b>SetSASTokenExpiryTime</b> -このオプションは、HTTP の該当する/AMQP/MQTT です。 このオプションは、SASToken が切れるまでの秒単位で間隔を指定します。 トランスポートが既に開いている場合は、このオプションを設定と、更新された有効期限付きトランスポートが再起動されます。 値が型にする期待<code>long \r\n\r\n    </code>です。</p></listitem></itemizedlist></p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-254\">パラメーターによって識別されるランタイム オプションを設定<code>optionName \r\n\r\n    </code>に<code>value \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-254\">Sets a runtime option identified by parameter<code>optionName \r\n\r\n    </code> to<code>value \r\n\r\n    </code> .</span></span></p>\n\n<p><span data-ttu-id=\"3e9c9-255\">この API を使用して設定できるオプションは次のとおりです。<itemizedlist><listitem></span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-255\">The options that can be set via this API are:<itemizedlist><listitem></span></span><p><span data-ttu-id=\"3e9c9-256\"><b>SetMinimumPollingInterval</b> -このオプションは、このクライアントで構成されているトランスポートが HTTP である場合にのみ適用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-256\"><b>SetMinimumPollingInterval</b> - this option is applicable only when the transport configured with this client is HTTP.</span></span> <span data-ttu-id=\"3e9c9-257\">このオプションは、新しいメッセージの可用性をチェックするサービスへの呼び出しの間隔をミリ秒で、間隔を指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-257\">This option specifies the interval in milliseconds between calls to the service checking for availability of new messages.</span></span> <span data-ttu-id=\"3e9c9-258\">値が型にする期待<code>long \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-258\">The value is expected to be of type<code>long \r\n\r\n    </code> .</span></span></p></listitem><listitem><p><span data-ttu-id=\"3e9c9-259\"><b>SetCertificatePath</b> -このオプションは、このクライアントで構成されているトランスポートが AMQP である場合にのみ適用されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-259\"><b>SetCertificatePath</b> - this option is applicable only when the transport configured with this client is AMQP.</span></span> <span data-ttu-id=\"3e9c9-260\">このオプションは、ピアの検証に使用される証明書へのパスを指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-260\">This option specifies the path to the certificate used to verify peer.</span></span> <span data-ttu-id=\"3e9c9-261\">値が型にする期待<code>String \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-261\">The value is expected to be of type<code>String \r\n\r\n    </code> .</span></span></p></listitem><listitem><p><span data-ttu-id=\"3e9c9-262\"><b>SetSASTokenExpiryTime</b> -このオプションは、HTTP の該当する/AMQP/MQTT です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-262\"><b>SetSASTokenExpiryTime</b> - this option is applicable for HTTP/ AMQP/MQTT.</span></span> <span data-ttu-id=\"3e9c9-263\">このオプションは、SASToken が切れるまでの秒単位で間隔を指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-263\">This option specifies the interval in seconds after which SASToken expires.</span></span> <span data-ttu-id=\"3e9c9-264\">トランスポートが既に開いている場合は、このオプションを設定と、更新された有効期限付きトランスポートが再起動されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-264\">If the transport is already open then setting this option will restart the transport with the updated expiry time.</span></span> <span data-ttu-id=\"3e9c9-265\">値が型にする期待<code>long \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-265\">The value is expected to be of type<code>long \r\n\r\n    </code> .</span></span></p></listitem></itemizedlist></p>\n\n<p></p>"
     syntax: *ref_1
   - uid: com.microsoft.azure.sdk.iot.device._device_client_config
     parent: com.microsoft.azure.sdk.iot.device
@@ -998,7 +998,7 @@ references:
     nameWithType: DeviceClientConfig
     fullName: com.microsoft.azure.sdk.iot.device.DeviceClientConfig
     type: Class
-    summary: <p>IoT Hub クライアントの構成設定。 ユーザー定義のすべての設定を検証します。 </p>
+    summary: <p><span data-ttu-id="3e9c9-266">IoT Hub クライアントの構成設定。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-266">Configuration settings for an IoT Hub client.</span></span> <span data-ttu-id="3e9c9-267">ユーザー定義のすべての設定を検証します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-267">Validates all user-defined settings.</span></span> </p>
     syntax:
       content: public class DeviceClientConfig
   - uid: com.microsoft.azure.sdk.iot.device._device_i_o
@@ -1009,36 +1009,36 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.DeviceIO
     type: Class
     summary: |-
-      <p>Iot Hub で標準の I/O インターフェイスを実装します。 <verbatim>+-------------------------------------+                  +-----------------------------------+ |                                    |                 |                                  | |            DeviceClient |--- + DeviceClientConfig | |                                    |                 |                                  |+-------------------------------------+                  +-----------------------------------+
+      <p><span data-ttu-id="3e9c9-268">Iot Hub で標準の I/O インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-268">Implement the standard I/O interface with the IoTHub.</span></span> <span data-ttu-id="3e9c9-269"><verbatim>+-------------------------------------+                  +-----------------------------------+ |                                    |                 |                                  | |            DeviceClient |--- + DeviceClientConfig | |                                    |                 |                                  |+-------------------------------------+                  +-----------------------------------+</span><span class="sxs-lookup"><span data-stu-id="3e9c9-269"><verbatim>+-------------------------------------+                  +-----------------------------------+ |                                     |                  |                                   | |             DeviceClient            |------------------+        DeviceClientConfig         | |                                     |                  |                                   | +-------------------------------------+                  +-----------------------------------+</span></span>
 
-         |                        |
+         <span data-ttu-id="3e9c9-270">|                        |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-270">|                        |</span></span>
 
          |                       \/
 
-         |  +---------------------------------------------------------------------------------------------+
+         <span data-ttu-id="3e9c9-271">|  +---------------------------------------------------------------------------------------------+</span><span class="sxs-lookup"><span data-stu-id="3e9c9-271">|  +---------------------------------------------------------------------------------------------+</span></span>
 
-         | |サービス |
+         <span data-ttu-id="3e9c9-272">| |サービス |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-272">|  | Services                                                                                    |</span></span>
 
-         |  |  +-----------+    +------------+    +--------------+                        +------------+  |
+         <span data-ttu-id="3e9c9-273">|  |  +-----------+    +------------+    +--------------+                        +------------+  |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-273">|  |  +-----------+    +------------+    +--------------+                        +------------+  |</span></span>
 
-         | | |製品利用統計情報 |   |DeviceTwin |   |DeviceMethod |                       |ファイルアップロード | |
+         <span data-ttu-id="3e9c9-274">| | |製品利用統計情報 |   |DeviceTwin |   |DeviceMethod |                       |ファイルアップロード | |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-274">|  |  | Telemetry |    | DeviceTwin |    | DeviceMethod |                        | FileUpload |  |</span></span>
 
-         |  |  +-----------+    +------------+    +--------------+                        +---------+--+  |
+         <span data-ttu-id="3e9c9-275">|  |  +-----------+    +------------+    +--------------+                        +---------+--+  |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-275">|  |  +-----------+    +------------+    +--------------+                        +---------+--+  |</span></span>
 
-         |  +---------------------------------------------------------------------------------------|-----+
+         <span data-ttu-id="3e9c9-276">|  +---------------------------------------------------------------------------------------|-----+</span><span class="sxs-lookup"><span data-stu-id="3e9c9-276">|  +---------------------------------------------------------------------------------------|-----+</span></span>
 
-         |                                    |                                                     |
+         <span data-ttu-id="3e9c9-277">|                                    |                                                     |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-277">|                                    |                                                     |</span></span>
 
-        \/                                   \/                                                     |
+        <span data-ttu-id="3e9c9-278">\/                                   \/                                                     |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-278">\/                                   \/                                                     |</span></span>
 
-      #####################################################################################         |
-      # <a name="deviceio-----------------------------------------------------------------------------------"></a>DeviceIO # |
-      #  <a name="------------------------------------------------------------------------------------"></a>+----------------+    +-------------------------------------+    +------------+  #         |
-      #  <a name="------------------------------------open--------------------------------------------"></a>|               |   |               開く |   |           | #         |
-      #  <a name="-sendeventasync-----------------------------------------------close---------------"></a>|sendEventAsync |   |                  +---------------+ |   |  閉じる | #         |
-      #  <a name="----------------------------------------taskscheduler-----------------------------"></a>|               |   |                  |taskScheduler | |   |           | #         |
-      #  <a name="-----------------------------------------------------------------------------"></a>+--------+-------+    +--+----------------+--+---------+--+-+    +--------+---+  #         |
-      ############<a name="---------"></a>|###############|###################|#########|##################|#######         |
+      <span data-ttu-id="3e9c9-279">#####################################################################################         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-279">#####################################################################################         |</span></span>
+      # <a name="deviceio-----------------------------------------------------------------------------------"></a><span data-ttu-id="3e9c9-280">DeviceIO # |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-280">DeviceIO                                                                          #         |</span></span>
+      #  <a name="------------------------------------------------------------------------------------"></a><span data-ttu-id="3e9c9-281">+----------------+    +-------------------------------------+    +------------+  #         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-281">+----------------+    +-------------------------------------+    +------------+  #         |</span></span>
+      #  <a name="------------------------------------open--------------------------------------------"></a><span data-ttu-id="3e9c9-282">|               |   |               開く |   |           | #         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-282">|                |    |                open                 |    |            |  #         |</span></span>
+      #  <a name="-sendeventasync-----------------------------------------------close---------------"></a><span data-ttu-id="3e9c9-283">|sendEventAsync |   |                  +---------------+ |   |  閉じる | #         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-283">| sendEventAsync |    |                   +---------------+ |    |   close    |  #         |</span></span>
+      #  <a name="----------------------------------------taskscheduler-----------------------------"></a><span data-ttu-id="3e9c9-284">|               |   |                  |taskScheduler | |   |           | #         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-284">|                |    |                   | taskScheduler | |    |            |  #         |</span></span>
+      #  <a name="-----------------------------------------------------------------------------"></a><span data-ttu-id="3e9c9-285">+--------+-------+    +--+----------------+--+---------+--+-+    +--------+---+  #         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-285">+--------+-------+    +--+----------------+--+---------+--+-+    +--------+---+  #         |</span></span>
+      ############<a name="---------"></a><span data-ttu-id="3e9c9-286">|###############|###################|#########|##################|#######         |</span><span class="sxs-lookup"><span data-stu-id="3e9c9-286">|###############|###################|#########|##################|#######         |</span></span>
 
                   |               |                   |         |                  |                |
 
@@ -1054,7 +1054,7 @@ references:
 
                   |               |    +---+---+----+---+   +----+----+----+----+  |                |
 
-      </verbatim>IotHubTransport ||||||+------<mdash></mdash>|------------<mdash></mdash>|---------<mdash></mdash>|-------------------<mdash></mdash>|---------<mdash></mdash>|-----<mdash></mdash>+ +-------------------------------------------<mdash></mdash>+ |\/ \/ \/ \/ \/ | |IoTHubTransportManager | |+---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | |+ ---<mdash></mdash>+ + ---<mdash></mdash>+ + ---<mdash></mdash>+ + ---<mdash></mdash>+ | | | addMessage | |開いている | |sendMessages | |handleMessage | |閉じる | | |開いている | |閉じる | |送信 | |受信 | | |+---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | |+---<mdash></mdash>+ +----<mdash></mdash>+ +---<mdash></mdash>+ +------<mdash></mdash>+ | +-------<mdash></mdash>+-----------------------------<mdash></mdash>+----------------------<mdash></mdash>+----------<mdash></mdash>+ +<mdash></mdash>+---------------------------------------<mdash></mdash>+ | | | |\/ \/ \/ \/ +----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +---------------<mdash></mdash>+ +--------------------<mdash></mdash>+ |AmqpsTransport | |MqttTransport | |HttpsTransport | |HttpsTransportManager |+----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ |AmqpsIotHubConnection | |MqttIotHubConnection | |HttpsIotHubConnection |+----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ </p>
+      <span data-ttu-id="3e9c9-287"></verbatim>IotHubTransport ||||||+------<mdash></mdash>|------------<mdash></mdash>|---------<mdash></mdash>|-------------------<mdash></mdash>|---------<mdash></mdash>|-----<mdash></mdash>+ +-------------------------------------------<mdash></mdash>+ |\/ \/ \/ \/ \/ | |IoTHubTransportManager | |+---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | |+ ---<mdash></mdash>+ + ---<mdash></mdash>+ + ---<mdash></mdash>+ + ---<mdash></mdash>+ | | | addMessage | |開いている | |sendMessages | |handleMessage | |閉じる | | |開いている | |閉じる | |送信 | |受信 | | |+---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | |+---<mdash></mdash>+ +----<mdash></mdash>+ +---<mdash></mdash>+ +------<mdash></mdash>+ | +-------<mdash></mdash>+-----------------------------<mdash></mdash>+----------------------<mdash></mdash>+----------<mdash></mdash>+ +<mdash></mdash>+---------------------------------------<mdash></mdash>+ | | | |\/ \/ \/ \/ +----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +---------------<mdash></mdash>+ +--------------------<mdash></mdash>+ |AmqpsTransport | |MqttTransport | |HttpsTransport | |HttpsTransportManager |+----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ |AmqpsIotHubConnection | |MqttIotHubConnection | |HttpsIotHubConnection |+----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ </span><span class="sxs-lookup"><span data-stu-id="3e9c9-287"></verbatim> IotHubTransport | | | | | | +------<mdash></mdash>|------------<mdash></mdash>|---------<mdash></mdash>|-------------------<mdash></mdash>|---------<mdash></mdash>|-----<mdash></mdash>+ +-------------------------------------------<mdash></mdash>+ | \/ \/ \/ \/ \/ | | IoTHubTransportManager | | +---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | | +---<mdash></mdash>+ +----<mdash></mdash>+ +---<mdash></mdash>+ +------<mdash></mdash>+ | | | addMessage | | Open | | sendMessages | | handleMessage | | Close | | | | Open | | Close | | send | | receive | | | +---------<mdash></mdash>+ +---------<mdash></mdash>+ +-----------<mdash></mdash>+ +------------<mdash></mdash>+ +------<mdash></mdash>+ | | +---<mdash></mdash>+ +----<mdash></mdash>+ +---<mdash></mdash>+ +------<mdash></mdash>+ | +-------<mdash></mdash>+-----------------------------<mdash></mdash>+----------------------<mdash></mdash>+----------<mdash></mdash>+ +<mdash></mdash>+---------------------------------------<mdash></mdash>+ | | | | \/ \/ \/ \/ +----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +---------------<mdash></mdash>+ +--------------------<mdash></mdash>+ | AmqpsTransport | | MqttTransport | | HttpsTransport | | HttpsTransportManager | +----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ | AmqpsIotHubConnection | | MqttIotHubConnection | | HttpsIotHubConnection | +----------------------<mdash></mdash>+ +----------------------<mdash></mdash>+ +------------------------------------------<mdash></mdash>+ </span></span></p>
     syntax:
       content: public class DeviceIO
   - uid: com.microsoft.azure.sdk.iot.device._device_twin._device_twin
@@ -1082,7 +1082,7 @@ references:
     nameWithType: FileUpload
     fullName: com.microsoft.azure.sdk.iot.device.fileupload.FileUpload
     type: Class
-    summary: <p>Iot Hub を使用して Azure ストレージ内のファイルをアップロードするための手段を提供します。 </p>
+    summary: <p><span data-ttu-id="3e9c9-288">Iot Hub を使用して Azure ストレージ内のファイルをアップロードするための手段を提供します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-288">Provide means to upload file in the Azure Storage using the IoTHub.</span></span> </p>
     syntax:
       content: public class FileUpload
   - uid: com.microsoft.azure.sdk.iot.device._custom_logger
@@ -1101,7 +1101,7 @@ references:
     nameWithType: IoTHubConnectionType
     fullName: com.microsoft.azure.sdk.iot.device.transport.amqps.IoTHubConnectionType
     type: Enum
-    summary: <p>接続の種類 </p>
+    summary: <p><span data-ttu-id="3e9c9-289">接続の種類</span><span class="sxs-lookup"><span data-stu-id="3e9c9-289">Type of the connection</span></span> </p>
     syntax:
       content: public enum IoTHubConnectionType
   - uid: com.microsoft.azure.sdk.iot.device._transport_client
@@ -1112,8 +1112,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.TransportClient
     type: Class
     summary: |-
-      <p>公開された API です。 ユーザーを使用して複数のデバイス (多重) 同じ接続を使用して、IoT Hub に接続するには、トランスポート クライアント abstracton オブジェクトを作成できます。 トランスポート クライアントして開くデバイスの登録を識別するハンドル/closeNow 接続します。 </p>
-      <p>AMQPS で多重化された接続はサポートされて/AMQPS_WS プロトコルです。 </p>
+      <p><span data-ttu-id="3e9c9-290">公開された API です。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-290">The public-facing API.</span></span> <span data-ttu-id="3e9c9-291">ユーザーを使用して複数のデバイス (多重) 同じ接続を使用して、IoT Hub に接続するには、トランスポート クライアント abstracton オブジェクトを作成できます。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-291">Allows user to create a transport client abstracton object to use it for multiple devices to connect to an IoT Hub using the same connection (multiplexing).</span></span> <span data-ttu-id="3e9c9-292">トランスポート クライアントして開くデバイスの登録を識別するハンドル/closeNow 接続します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-292">Handle to register devices to transport client and open / closeNow the connection.</span></span> </p>
+      <p><span data-ttu-id="3e9c9-293">AMQPS で多重化された接続はサポートされて/AMQPS_WS プロトコルです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-293">The multiplexed connection is supported with AMQPS / AMQPS_WS protocols.</span></span> </p>
     syntax:
       content: public class TransportClient
   - uid: com.microsoft.azure.sdk.iot.device._iot_hub_client_protocol
@@ -1123,7 +1123,7 @@ references:
     nameWithType: IotHubClientProtocol
     fullName: com.microsoft.azure.sdk.iot.device.IotHubClientProtocol
     type: Enum
-    summary: <p>IoT Hub と通信するクライアントによって使用されるアプリケーション レイヤー プロトコルです。 </p>
+    summary: <p><span data-ttu-id="3e9c9-294">IoT Hub と通信するクライアントによって使用されるアプリケーション レイヤー プロトコルです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-294">The application-layer protocol used by the client to communicate with an IoT Hub.</span></span> </p>
     syntax:
       content: public enum IotHubClientProtocol
   - uid: com.microsoft.azure.sdk.iot.device._device_client.closeNow()
@@ -1133,7 +1133,7 @@ references:
     nameWithType: DeviceClient.closeNow()
     fullName: void com.microsoft.azure.sdk.iot.device.DeviceClient.closeNow()
     type: Method
-    summary: "<p>クライアントによって保持されているすべてのリソースを解放するには、IoT Hub クライアントを閉じます。 ときに closeNow は転送中に含まれていたすべてのメッセージと呼ばれるまたは保留中の送信が通知されます、コールバックと iot Hub に接続するすべての既存のユーザーには閉じられます。 IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。 後に<code>closeNow() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。 クライアントは既に閉じられている場合、関数は何もしないものとします。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"3e9c9-295\">クライアントによって保持されているすべてのリソースを解放するには、IoT Hub クライアントを閉じます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-295\">Closes the IoT Hub client by releasing any resources held by client.</span></span> <span data-ttu-id=\"3e9c9-296\">ときに closeNow は転送中に含まれていたすべてのメッセージと呼ばれるまたは保留中の送信が通知されます、コールバックと iot Hub に接続するすべての既存のユーザーには閉じられます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-296\">When closeNow is called all the messages that were in transit or pending to be sent will be informed to the user in the callbacks and any existing connection to IotHub will be closed.</span></span> <span data-ttu-id=\"3e9c9-297\">IoT Hub にデータを送信するバック グラウンド スレッドの終了を呼び出す必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-297\">Must be called to terminate the background thread that is sending data to IoT Hub.</span></span> <span data-ttu-id=\"3e9c9-298\">後に<code>closeNow() \r\n\r\n    </code>が呼び出されると、IoT Hub クライアントが使用できなくします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-298\">After<code>closeNow() \r\n\r\n    </code> is called, the IoT Hub client is no longer usable.</span></span> <span data-ttu-id=\"3e9c9-299\">クライアントは既に閉じられている場合、関数は何もしないものとします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"3e9c9-299\">If the client is already closed, the function shall do nothing.</span></span></p>\n\n<p></p>"
     syntax: *ref_2
   - uid: com.microsoft.azure.sdk.iot.device._message
     parent: com.microsoft.azure.sdk.iot.device
@@ -1152,8 +1152,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.IotHubEventCallback
     type: Interface
     summary: |-
-      <p>IoT Hub イベント コールバックのインターフェイスです。</p>
-      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+      <p><span data-ttu-id="3e9c9-300">IoT Hub イベント コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-300">An interface for an IoT Hub event callback.</span></span></p>
+      <p><span data-ttu-id="3e9c9-301">このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-301">Developers are expected to create an implementation of this interface, and the transport will call <xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback#execute(IotHubStatusCode, Object)</xref> upon receiving a response from an IoT Hub.</span></span> </p>
     syntax:
       content: public interface IotHubEventCallback
   - uid: com.microsoft.azure.sdk.iot.device._device_client
@@ -1164,10 +1164,10 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.DeviceClient
     type: Class
     summary: |-
-      <p>公開された API です。 IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。 IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。 </p>
-      <p>これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。 </p>
-      <p>クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。 通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。 </p>
-      <p>クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。 </p>
+      <p><span data-ttu-id="3e9c9-302">公開された API です。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-302">The public-facing API.</span></span> <span data-ttu-id="3e9c9-303">IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-303">Allows a single logical or physical device to connect to an IoT Hub.</span></span> <span data-ttu-id="3e9c9-304">IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-304">The IoT Hub client supports sending events to and receiving messages from an IoT Hub.</span></span> </p>
+      <p><span data-ttu-id="3e9c9-305">これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-305">To support these workflows, the client library will provide the following abstractions: a message, with its payload and associated properties; and a client, which sends and receives messages.</span></span> </p>
+      <p><span data-ttu-id="3e9c9-306">クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-306">The client buffers messages while the network is down, and re-sends them when the network comes back online.</span></span> <span data-ttu-id="3e9c9-307">通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-307">It also batches messages to improve communication efficiency (HTTPS only).</span></span> </p>
+      <p><span data-ttu-id="3e9c9-308">クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-308">The client supports HTTPS 1.1 and AMQPS 1.0 transports.</span></span> </p>
     syntax: *ref_3
   - uid: com.microsoft.azure.sdk.iot.device._message_callback
     parent: com.microsoft.azure.sdk.iot.device
@@ -1177,8 +1177,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.MessageCallback
     type: Interface
     summary: |-
-      <p>IoT Hub メッセージ コールバックのインターフェイスです。 </p>
-      <p>このインターフェイスの実装を作成する開発者が求められるし、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)" data-throw-if-not-resolved="false">MessageCallback #execute(Message, Object)</xref> IoT Hub からメッセージを受信するとします。 </p>
+      <p><span data-ttu-id="3e9c9-309">IoT Hub メッセージ コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-309">An interface for an IoT Hub message callback.</span></span> </p>
+      <p><span data-ttu-id="3e9c9-310">このインターフェイスの実装を作成する開発者が求められるし、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)" data-throw-if-not-resolved="false">MessageCallback #execute(Message, Object)</xref> IoT Hub からメッセージを受信するとします。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-310">The developer is expected to create an implementation of this interface, and the transport will call <xref uid="com.microsoft.azure.sdk.iot.device._message_callback.execute(Message,Object)" data-throw-if-not-resolved="false">MessageCallback#execute(Message, Object)</xref> upon receiving a message from an IoT Hub.</span></span> </p>
     syntax:
       content: public interface MessageCallback
   - uid: com.microsoft.azure.sdk.iot.device._device_twin._property_call_back
@@ -1231,8 +1231,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.IotHubConnectionStateCallback
     type: Interface
     summary: |-
-      <p>IoT Hub 接続状態コールバックのインターフェイスです。</p>
-      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback #execute(IotHubConnectionState, Object)</xref>接続の状態 (ダウン、成功した場合など) に渡します。 </p>
+      <p><span data-ttu-id="3e9c9-311">IoT Hub 接続状態コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-311">An interface for an IoT Hub connection state callback.</span></span></p>
+      <p><span data-ttu-id="3e9c9-312">このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback #execute(IotHubConnectionState, Object)</xref>接続の状態 (ダウン、成功した場合など) に渡します。</span><span class="sxs-lookup"><span data-stu-id="3e9c9-312">Developers are expected to create an implementation of this interface, and the transport will call <xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback#execute(IotHubConnectionState, Object)</xref> passing in the connection status (down, success, etc.).</span></span> </p>
     syntax:
       content: public interface IotHubConnectionStateCallback
   - uid: com.microsoft.azure.sdk.iot.provisioning.security._security_provider

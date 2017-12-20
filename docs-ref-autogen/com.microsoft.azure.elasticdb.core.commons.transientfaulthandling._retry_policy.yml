@@ -41,7 +41,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 20
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>信頼性の低いアクションおよび一時的な問題には、この再試行メカニズムでの基本実装を提供します。 </p>
+    summary: <p><span data-ttu-id="681da-101">信頼性の低いアクションおよび一時的な問題には、この再試行メカニズムでの基本実装を提供します。</span><span class="sxs-lookup"><span data-stu-id="681da-101">Provides the base implementation of the retry mechanism for unreliable actions and transient conditions.</span></span> </p>
     syntax: &ref_1
       content: public class RetryPolicy
     inheritance:
@@ -63,17 +63,17 @@ items:
       startLine: 304
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>繰り返し中に、現在の再試行ポリシーを満たすことは、指定されたアクションを実行します。 </p>
+      <p><span data-ttu-id="681da-102">繰り返し中に、現在の再試行ポリシーを満たすことは、指定されたアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="681da-102">Repetitively executes the specified action while it satisfies the current retry policy.</span></span> </p>
       <p></p>
     syntax:
       content: public <ResultT> ResultT executeAction(Callable<ResultT> callable)
       parameters:
         - id: callable
           type: 685fbee1
-          description: <p>型の結果を返す実行可能なアクションを表すデリゲート<em>ResultT</em>です。 </p>
+          description: <p><span data-ttu-id="681da-103">型の結果を返す実行可能なアクションを表すデリゲート<em>ResultT</em>です。</span><span class="sxs-lookup"><span data-stu-id="681da-103">A delegate that represents the executable action that returns the result of type <em>ResultT</em> .</span></span> </p>
       return:
         type: fcca2e12
-        description: <p>アクションの結果。 </p>
+        description: <p><span data-ttu-id="681da-104">アクションの結果。</span><span class="sxs-lookup"><span data-stu-id="681da-104">The result from the action.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.executeAction(Runnable)
     id: executeAction(Runnable)
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -91,14 +91,14 @@ items:
       startLine: 287
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>繰り返し中に、現在の再試行ポリシーを満たすことは、指定されたアクションを実行します。</p>
+      <p><span data-ttu-id="681da-105">繰り返し中に、現在の再試行ポリシーを満たすことは、指定されたアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="681da-105">Repetitively executes the specified action while it satisfies the current retry policy.</span></span></p>
       <p></p>
     syntax:
       content: public void executeAction(Runnable action)
       parameters:
         - id: action
           type: 2b8852ea
-          description: <p>すべての結果を返さない実行可能なアクションを表すデリゲート。 </p>
+          description: <p><span data-ttu-id="681da-106">すべての結果を返さない実行可能なアクションを表すデリゲート。</span><span class="sxs-lookup"><span data-stu-id="681da-106">A delegate that represents the executable action that doesn't return any results.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.getDefaultExponential()
     id: getDefaultExponential()
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -115,7 +115,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 211
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>既定値で構成されているランダムな指数近似の再試行間隔を実装する既定のポリシーを返します<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval" data-throw-if-not-resolved="false">FixedInterval</xref>再試行戦略。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    summary: <p><span data-ttu-id="681da-107">既定値で構成されているランダムな指数近似の再試行間隔を実装する既定のポリシーを返します<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval" data-throw-if-not-resolved="false">FixedInterval</xref>再試行戦略。</span><span class="sxs-lookup"><span data-stu-id="681da-107">Returns a default policy that implements a random exponential retry interval configured with the default <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval" data-throw-if-not-resolved="false">FixedInterval</xref> retry strategy.</span></span> <span data-ttu-id="681da-108">すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。</span><span class="sxs-lookup"><span data-stu-id="681da-108">The default retry policy treats all caught exceptions as transient errors.</span></span> </p>
     syntax:
       content: public static RetryPolicy getDefaultExponential()
       return:
@@ -136,7 +136,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 195
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>既定値で構成されている固定の再試行間隔を実装する既定のポリシーを返します<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval" data-throw-if-not-resolved="false">FixedInterval</xref>再試行戦略。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    summary: <p><span data-ttu-id="681da-109">既定値で構成されている固定の再試行間隔を実装する既定のポリシーを返します<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval" data-throw-if-not-resolved="false">FixedInterval</xref>再試行戦略。</span><span class="sxs-lookup"><span data-stu-id="681da-109">Returns a default policy that implements a fixed retry interval configured with the default <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval" data-throw-if-not-resolved="false">FixedInterval</xref> retry strategy.</span></span> <span data-ttu-id="681da-110">すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。</span><span class="sxs-lookup"><span data-stu-id="681da-110">The default retry policy treats all caught exceptions as transient errors.</span></span> </p>
     syntax:
       content: public static RetryPolicy getDefaultFixed()
       return:
@@ -157,7 +157,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 203
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>既定値で構成されているプログレッシブ再試行間隔を実装する既定のポリシーを返します<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._incremental" data-throw-if-not-resolved="false">Incremental</xref>再試行戦略。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    summary: <p><span data-ttu-id="681da-111">既定値で構成されているプログレッシブ再試行間隔を実装する既定のポリシーを返します<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._incremental" data-throw-if-not-resolved="false">Incremental</xref>再試行戦略。</span><span class="sxs-lookup"><span data-stu-id="681da-111">Returns a default policy that implements a progressive retry interval configured with the default <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._incremental" data-throw-if-not-resolved="false">Incremental</xref> retry strategy.</span></span> <span data-ttu-id="681da-112">すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。</span><span class="sxs-lookup"><span data-stu-id="681da-112">The default retry policy treats all caught exceptions as transient errors.</span></span> </p>
     syntax:
       content: public static RetryPolicy getDefaultProgressive()
       return:
@@ -178,7 +178,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 180
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>既定の再試行ポリシーを取得します。 1 秒間隔で再試行回数 = 5。 </p>
+    summary: <p><span data-ttu-id="681da-113">既定の再試行ポリシーを取得します。</span><span class="sxs-lookup"><span data-stu-id="681da-113">Gets the default retry policy.</span></span> <span data-ttu-id="681da-114">1 秒間隔で再試行回数 = 5。</span><span class="sxs-lookup"><span data-stu-id="681da-114">5 retries at 1 second intervals.</span></span> </p>
     syntax:
       content: public static RetryPolicy getDefaultRetryPolicy()
       return:
@@ -240,13 +240,13 @@ items:
       startLine: 252
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>TFH ライブラリには、このインスタンスをマーシャ リング<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref>型です。</p>
+      <p><span data-ttu-id="681da-115">TFH ライブラリには、このインスタンスをマーシャ リング<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref>型です。</span><span class="sxs-lookup"><span data-stu-id="681da-115">Marshals this instance into the TFH library <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref> type.</span></span></p>
       <p></p>
     syntax:
       content: public RetryStrategy getExponentialRetryStrategy()
       return:
         type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
-        description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref></p>
+        description: <p><span data-ttu-id="681da-116"><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref></span><span class="sxs-lookup"><span data-stu-id="681da-116">The <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy" data-throw-if-not-resolved="false">RetryStrategy</xref></span></span></p>
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.getMaxBackOff()
     id: getMaxBackOff()
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -303,7 +303,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 187
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>返しますいいえを実行する既定のポリシー、再試行 1 回だけアクションを呼び出します。 </p>
+    summary: '<p><span data-ttu-id="681da-117">返しますいいえを実行する既定のポリシー、再試行 1 回だけアクションを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="681da-117">Returns a default policy that performs no retries, but invokes the action only once.</span></span> </p>'
     syntax:
       content: public static RetryPolicy getNoRetry()
       return:
@@ -363,7 +363,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 34
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>再試行の条件が見つかるたびに呼び出されるコールバック デリゲートのインスタンス。 </p>
+    summary: <p><span data-ttu-id="681da-118">再試行の条件が見つかるたびに呼び出されるコールバック デリゲートのインスタンス。</span><span class="sxs-lookup"><span data-stu-id="681da-118">An instance of a callback delegate that will be invoked whenever a retry condition is encountered.</span></span> </p>
     syntax:
       content: public Event<EventHandler<RetryingEventArgs>> retrying
       return:
@@ -385,23 +385,23 @@ items:
       startLine: 73
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>インスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>クラスです。</p>
+      <p><span data-ttu-id="681da-119">インスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>クラスです。</span><span class="sxs-lookup"><span data-stu-id="681da-119">Initializes an instance of the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> class.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(int retryCount, Duration minBackOff, Duration maxBackOff, Duration deltaBackOff)'
       parameters:
         - id: retryCount
           type: f75371fa
-          description: <p>再試行回数。 </p>
+          description: <p><span data-ttu-id="681da-120">再試行回数。</span><span class="sxs-lookup"><span data-stu-id="681da-120">The number of retry attempts.</span></span> </p>
         - id: minBackOff
           type: e02a2de0
-          description: <p>指数バックオフ ポリシーの最小バックオフの時間。 </p>
+          description: <p><span data-ttu-id="681da-121">指数バックオフ ポリシーの最小バックオフの時間。</span><span class="sxs-lookup"><span data-stu-id="681da-121">Minimum backoff time for exponential backoff policy.</span></span> </p>
         - id: maxBackOff
           type: e02a2de0
-          description: <p>指数バックオフ ポリシーの最大バックオフの時間。 </p>
+          description: <p><span data-ttu-id="681da-122">指数バックオフ ポリシーの最大バックオフの時間。</span><span class="sxs-lookup"><span data-stu-id="681da-122">Maximum backoff time for exponential backoff policy.</span></span> </p>
         - id: deltaBackOff
           type: e02a2de0
-          description: <p>指数バックオフ ポリシーの差分バックオフ時間。 </p>
+          description: <p><span data-ttu-id="681da-123">指数バックオフ ポリシーの差分バックオフ時間。</span><span class="sxs-lookup"><span data-stu-id="681da-123">Delta backoff time for exponential backoff policy.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.RetryPolicy(ITransientErrorDetectionStrategy,int)'
     id: 'RetryPolicy(ITransientErrorDetectionStrategy,int)'
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -419,17 +419,17 @@ items:
       startLine: 112
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>再試行の回数を指定した番号を持つクラスし、既定の再試行の間の一定の時間間隔。</p>
+      <p><span data-ttu-id="681da-124">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>再試行の回数を指定した番号を持つクラスし、既定の再試行の間の一定の時間間隔。</span><span class="sxs-lookup"><span data-stu-id="681da-124">Initializes a new instance of the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> class with the specified number of retry attempts and default fixed time interval between retries.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, int retryCount)'
       parameters:
         - id: errorDetectionStrategy
           type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746
-          description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。 </p>
+          description: <p><span data-ttu-id="681da-125"><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。</span><span class="sxs-lookup"><span data-stu-id="681da-125">The <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref> that is responsible for detecting transient conditions.</span></span> </p>
         - id: retryCount
           type: f75371fa
-          description: <p>再試行回数。 </p>
+          description: <p><span data-ttu-id="681da-126">再試行回数。</span><span class="sxs-lookup"><span data-stu-id="681da-126">The number of retry attempts.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.RetryPolicy(ITransientErrorDetectionStrategy,int,Duration,Duration)'
     id: 'RetryPolicy(ITransientErrorDetectionStrategy,int,Duration,Duration)'
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -447,23 +447,23 @@ items:
       startLine: 170
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定された数の再試行回数と再試行の遅延が増やされるを定義するパラメーターを持つクラス。</p>
+      <p><span data-ttu-id="681da-127">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定された数の再試行回数と再試行の遅延が増やされるを定義するパラメーターを持つクラス。</span><span class="sxs-lookup"><span data-stu-id="681da-127">Initializes a new instance of the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> class with the specified number of retry attempts and parameters defining the progressive delay between retries.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, int retryCount, Duration initialInterval, Duration increment)'
       parameters:
         - id: errorDetectionStrategy
           type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746
-          description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。 </p>
+          description: <p><span data-ttu-id="681da-128"><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。</span><span class="sxs-lookup"><span data-stu-id="681da-128">The <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref> that is responsible for detecting transient conditions.</span></span> </p>
         - id: retryCount
           type: f75371fa
-          description: <p>再試行回数。 </p>
+          description: <p><span data-ttu-id="681da-129">再試行回数。</span><span class="sxs-lookup"><span data-stu-id="681da-129">The number of retry attempts.</span></span> </p>
         - id: initialInterval
           type: e02a2de0
-          description: <p>最初の再試行に適用する初期間隔。 </p>
+          description: <p><span data-ttu-id="681da-130">最初の再試行に適用する初期間隔。</span><span class="sxs-lookup"><span data-stu-id="681da-130">The initial interval that will apply for the first retry.</span></span> </p>
         - id: increment
           type: e02a2de0
-          description: <p>再試行間の累進遅延を計算するために使用される増分時間値。 </p>
+          description: <p><span data-ttu-id="681da-131">再試行間の累進遅延を計算するために使用される増分時間値。</span><span class="sxs-lookup"><span data-stu-id="681da-131">The incremental time value that will be used to calculate the progressive delay between retries.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.RetryPolicy(ITransientErrorDetectionStrategy,int,Duration,Duration,Duration)'
     id: 'RetryPolicy(ITransientErrorDetectionStrategy,int,Duration,Duration,Duration)'
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -481,26 +481,26 @@ items:
       startLine: 149
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>再試行回数と再試行の間の指数遅延を計算するためのバックオフ パラメーターの指定した数を持つクラス。</p>
+      <p><span data-ttu-id="681da-132">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>再試行回数と再試行の間の指数遅延を計算するためのバックオフ パラメーターの指定した数を持つクラス。</span><span class="sxs-lookup"><span data-stu-id="681da-132">Initializes a new instance of the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> class with the specified number of retry attempts and backoff parameters for calculating the exponential delay between retries.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, int retryCount, Duration minBackoff, Duration maxBackoff, Duration deltaBackoff)'
       parameters:
         - id: errorDetectionStrategy
           type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746
-          description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。 </p>
+          description: <p><span data-ttu-id="681da-133"><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。</span><span class="sxs-lookup"><span data-stu-id="681da-133">The <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref> that is responsible for detecting transient conditions.</span></span> </p>
         - id: retryCount
           type: f75371fa
-          description: <p>再試行回数。 </p>
+          description: <p><span data-ttu-id="681da-134">再試行回数。</span><span class="sxs-lookup"><span data-stu-id="681da-134">The number of retry attempts.</span></span> </p>
         - id: minBackoff
           type: e02a2de0
-          description: <p>最小バックオフの時間。 </p>
+          description: <p><span data-ttu-id="681da-135">最小バックオフの時間。</span><span class="sxs-lookup"><span data-stu-id="681da-135">The minimum backoff time.</span></span> </p>
         - id: maxBackoff
           type: e02a2de0
-          description: <p>最大バックオフの時間。 </p>
+          description: <p><span data-ttu-id="681da-136">最大バックオフの時間。</span><span class="sxs-lookup"><span data-stu-id="681da-136">The maximum backoff time.</span></span> </p>
         - id: deltaBackoff
           type: e02a2de0
-          description: <p>再試行の間の指数遅延のランダムな差分の計算に使用される時刻値。 </p>
+          description: <p><span data-ttu-id="681da-137">再試行の間の指数遅延のランダムな差分の計算に使用される時刻値。</span><span class="sxs-lookup"><span data-stu-id="681da-137">The time value that will be used to calculate a random delta in the exponential delay between retries.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.RetryPolicy(ITransientErrorDetectionStrategy,int,Duration)'
     id: 'RetryPolicy(ITransientErrorDetectionStrategy,int,Duration)'
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -518,20 +518,20 @@ items:
       startLine: 128
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>再試行回数と再試行の間の一定の時間間隔の指定した数を持つクラス。</p>
+      <p><span data-ttu-id="681da-138">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>再試行回数と再試行の間の一定の時間間隔の指定した数を持つクラス。</span><span class="sxs-lookup"><span data-stu-id="681da-138">Initializes a new instance of the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> class with the specified number of retry attempts and fixed time interval between retries.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, int retryCount, Duration retryInterval)'
       parameters:
         - id: errorDetectionStrategy
           type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746
-          description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。 </p>
+          description: <p><span data-ttu-id="681da-139"><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。</span><span class="sxs-lookup"><span data-stu-id="681da-139">The <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref> that is responsible for detecting transient conditions.</span></span> </p>
         - id: retryCount
           type: f75371fa
-          description: <p>再試行回数。 </p>
+          description: <p><span data-ttu-id="681da-140">再試行回数。</span><span class="sxs-lookup"><span data-stu-id="681da-140">The number of retry attempts.</span></span> </p>
         - id: retryInterval
           type: e02a2de0
-          description: <p>再試行の間隔。 </p>
+          description: <p><span data-ttu-id="681da-141">再試行の間隔。</span><span class="sxs-lookup"><span data-stu-id="681da-141">The interval between retries.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.RetryPolicy(ITransientErrorDetectionStrategy,RetryStrategy)'
     id: 'RetryPolicy(ITransientErrorDetectionStrategy,RetryStrategy)'
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -549,17 +549,17 @@ items:
       startLine: 93
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
     summary: |-
-      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定された数の再試行回数と再試行の遅延が増やされるを定義するパラメーターを持つクラス。</p>
+      <p><span data-ttu-id="681da-142">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定された数の再試行回数と再試行の遅延が増やされるを定義するパラメーターを持つクラス。</span><span class="sxs-lookup"><span data-stu-id="681da-142">Initializes a new instance of the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> class with the specified number of retry attempts and parameters defining the progressive delay between retries.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(ITransientErrorDetectionStrategy errorDetectionStrategy, RetryStrategy retryStrategy)'
       parameters:
         - id: errorDetectionStrategy
           type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746
-          description: <p><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。 </p>
+          description: <p><span data-ttu-id="681da-143"><xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref>は、一時的な問題を検出します。</span><span class="sxs-lookup"><span data-stu-id="681da-143">The <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746" data-throw-if-not-resolved="false">ITransientErrorDetectionStrategy</xref> that is responsible for detecting transient conditions.</span></span> </p>
         - id: retryStrategy
           type: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
-          description: <p>この再試行ポリシーを使用する戦略です。 </p>
+          description: <p><span data-ttu-id="681da-144">この再試行ポリシーを使用する戦略です。</span><span class="sxs-lookup"><span data-stu-id="681da-144">The strategy to use for this retry policy.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy.toString()
     id: toString()
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy
@@ -576,7 +576,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/core/commons/transientfaulthandling/RetryPolicy.java
       startLine: 260
     package: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling
-    summary: <p>文字列表現<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>です。 </p>
+    summary: <p><span data-ttu-id="681da-145">文字列表現<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>です。</span><span class="sxs-lookup"><span data-stu-id="681da-145">String representation of <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>.</span></span> </p>
     syntax:
       content: public String toString()
       return:
@@ -714,7 +714,7 @@ references:
     nameWithType: RetryPolicy
     fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryPolicy
     type: Class
-    summary: <p>信頼性の低いアクションおよび一時的な問題には、この再試行メカニズムでの基本実装を提供します。 </p>
+    summary: <p><span data-ttu-id="681da-146">信頼性の低いアクションおよび一時的な問題には、この再試行メカニズムでの基本実装を提供します。</span><span class="sxs-lookup"><span data-stu-id="681da-146">Provides the base implementation of the retry mechanism for unreliable actions and transient conditions.</span></span> </p>
     syntax: *ref_1
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF
     parent: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
@@ -723,7 +723,7 @@ references:
     nameWithType: RetryStrategy.DEFAULT_MIN_BACKOFF
     fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_MIN_BACKOFF
     type: Field
-    summary: <p>再試行の間の指数遅延を計算するときに使用する時間の既定の最小量を表します。 </p>
+    summary: <p><span data-ttu-id="681da-147">再試行の間の指数遅延を計算するときに使用する時間の既定の最小量を表します。</span><span class="sxs-lookup"><span data-stu-id="681da-147">Represents the default minimum amount of time used when calculating the exponential delay between retries.</span></span> </p>
     syntax:
       content: public static final Duration DEFAULT_MIN_BACKOFF= Duration.ofSeconds(1)
       return:
@@ -735,7 +735,7 @@ references:
     nameWithType: RetryStrategy.DEFAULT_MAX_BACKOFF
     fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_MAX_BACKOFF
     type: Field
-    summary: <p>再試行の間の指数遅延を計算するときに使用する時間の既定の最大量を表します。 </p>
+    summary: <p><span data-ttu-id="681da-148">再試行の間の指数遅延を計算するときに使用する時間の既定の最大量を表します。</span><span class="sxs-lookup"><span data-stu-id="681da-148">Represents the default maximum amount of time used when calculating the exponential delay between retries.</span></span> </p>
     syntax:
       content: public static final Duration DEFAULT_MAX_BACKOFF= Duration.ofSeconds(30)
       return:
@@ -747,7 +747,7 @@ references:
     nameWithType: RetryStrategy.DEFAULT_CLIENT_BACKOFF
     fullName: final Duration com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.DEFAULT_CLIENT_BACKOFF
     type: Field
-    summary: <p>再試行の間の指数遅延のランダムな差分を計算するときに使用される時間の既定値を表します。 </p>
+    summary: <p><span data-ttu-id="681da-149">再試行の間の指数遅延のランダムな差分を計算するときに使用される時間の既定値を表します。</span><span class="sxs-lookup"><span data-stu-id="681da-149">Represents the default amount of time used when calculating a random delta in the exponential delay between retries.</span></span> </p>
     syntax:
       content: public static final Duration DEFAULT_CLIENT_BACKOFF= Duration.ofSeconds(10)
       return:
@@ -759,7 +759,7 @@ references:
     nameWithType: RetryStrategy.getNoRetry()
     fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getNoRetry()
     type: Method
-    summary: <p>返しますいいえを実行する既定のポリシー、再試行 1 回だけアクションを呼び出します。 </p>
+    summary: '<p><span data-ttu-id="681da-150">返しますいいえを実行する既定のポリシー、再試行 1 回だけアクションを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="681da-150">Returns a default policy that performs no retries, but invokes the action only once.</span></span> </p>'
     syntax:
       content: public static RetryStrategy getNoRetry()
       return:
@@ -771,7 +771,7 @@ references:
     nameWithType: RetryStrategy.getDefaultFixed()
     fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultFixed()
     type: Method
-    summary: <p>既定のポリシーで構成されている固定の再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>と<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>パラメーター。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    summary: <p><span data-ttu-id="681da-151">既定のポリシーで構成されている固定の再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>と<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="681da-151">Returns a default policy that implements a fixed retry interval configured with the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref> and <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref> parameters.</span></span> <span data-ttu-id="681da-152">すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。</span><span class="sxs-lookup"><span data-stu-id="681da-152">The default retry policy treats all caught exceptions as transient errors.</span></span> </p>
     syntax:
       content: public static RetryStrategy getDefaultFixed()
       return:
@@ -783,7 +783,7 @@ references:
     nameWithType: RetryStrategy.getDefaultProgressive()
     fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultProgressive()
     type: Method
-    summary: <p>既定のポリシーで構成されているプログレッシブ再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>、および<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INCREMENT</xref>パラメーター。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    summary: '<p><span data-ttu-id="681da-153">既定のポリシーで構成されているプログレッシブ再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>、および<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INCREMENT</xref>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="681da-153">Returns a default policy that implements a progressive retry interval configured with the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>, <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INTERVAL" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INTERVAL</xref>, and <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_RETRY_INCREMENT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_RETRY_INCREMENT</xref> parameters.</span></span> <span data-ttu-id="681da-154">すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。</span><span class="sxs-lookup"><span data-stu-id="681da-154">The default retry policy treats all caught exceptions as transient errors.</span></span> </p>'
     syntax:
       content: public static RetryStrategy getDefaultProgressive()
       return:
@@ -795,7 +795,7 @@ references:
     nameWithType: RetryStrategy.getDefaultExponential()
     fullName: static RetryStrategy com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy.getDefaultExponential()
     type: Method
-    summary: <p>既定のポリシーで構成されているランダムな指数近似の再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MIN_BACKOFF</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MAX_BACKOFF</xref>、および<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_BACKOFF</xref>パラメーター。 すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。 </p>
+    summary: '<p><span data-ttu-id="681da-155">既定のポリシーで構成されているランダムな指数近似の再試行間隔を実装するを返します、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MIN_BACKOFF</xref>、 <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MAX_BACKOFF</xref>、および<xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_BACKOFF</xref>パラメーター。</span><span class="sxs-lookup"><span data-stu-id="681da-155">Returns a default policy that implements a random exponential retry interval configured with the <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_RETRY_COUNT" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_RETRY_COUNT</xref>, <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MIN_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MIN_BACKOFF</xref>, <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_MAX_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_MAX_BACKOFF</xref>, and <xref uid="com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy.DEFAULT_CLIENT_BACKOFF" data-throw-if-not-resolved="false">RetryStrategy.DEFAULT_CLIENT_BACKOFF</xref> parameters.</span></span> <span data-ttu-id="681da-156">すべてのキャッチされた例外は、既定の再試行ポリシーは、一時的なエラーとして扱います。</span><span class="sxs-lookup"><span data-stu-id="681da-156">The default retry policy treats all caught exceptions as transient errors.</span></span> </p>'
     syntax:
       content: public static RetryStrategy getDefaultExponential()
       return:
@@ -807,7 +807,7 @@ references:
     nameWithType: RetryingEventArgs
     fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryingEventArgs
     type: Class
-    summary: <p>シャード管理再試行中イベントの引数。 </p>
+    summary: <p><span data-ttu-id="681da-157">シャード管理再試行中イベントの引数。</span><span class="sxs-lookup"><span data-stu-id="681da-157">Shard management retrying event arguments.</span></span> </p>
     syntax:
       content: public class RetryingEventArgs
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._retry_strategy
@@ -817,7 +817,7 @@ references:
     nameWithType: RetryStrategy
     fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.RetryStrategy
     type: Class
-    summary: <p>再試行回数と再試行の間隔の数を決定する再試行戦略を表します。 </p>
+    summary: <p><span data-ttu-id="681da-158">再試行回数と再試行の間隔の数を決定する再試行戦略を表します。</span><span class="sxs-lookup"><span data-stu-id="681da-158">Represents a retry strategy that determines the number of retry attempts and the interval between retries.</span></span> </p>
     syntax:
       content: public class RetryStrategy
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ff40c226a7d228847951c8c201a34746
@@ -827,7 +827,7 @@ references:
     nameWithType: ITransientErrorDetectionStrategy
     fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.ITransientErrorDetectionStrategy
     type: Interface
-    summary: <p>カスタム コンポーネントを特定の一時的な問題を検出して実装する必要があるインターフェイスを定義します。 </p>
+    summary: <p><span data-ttu-id="681da-159">カスタム コンポーネントを特定の一時的な問題を検出して実装する必要があるインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="681da-159">Defines an interface that must be implemented by custom components responsible for detecting specific transient conditions.</span></span> </p>
     syntax:
       content: public interface ITransientErrorDetectionStrategy
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._fixed_interval
@@ -837,7 +837,7 @@ references:
     nameWithType: FixedInterval
     fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.FixedInterval
     type: Class
-    summary: <p>指定した数の再試行回数と、既定の再試行の時間間隔を固定に再試行戦略を表します。 </p>
+    summary: '<p><span data-ttu-id="681da-160">指定した数の再試行回数と、既定の再試行の時間間隔を固定に再試行戦略を表します。</span><span class="sxs-lookup"><span data-stu-id="681da-160">Represents a retry strategy with a specified number of retry attempts and a default, fixed time interval between retries.</span></span> </p>'
     syntax:
       content: public class FixedInterval extends RetryStrategy
   - uid: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling._incremental
@@ -847,6 +847,6 @@ references:
     nameWithType: Incremental
     fullName: com.microsoft.azure.elasticdb.core.commons.transientfaulthandling.Incremental
     type: Class
-    summary: <p>指定された数の再試行回数と再試行の間の増分時間間隔による再試行戦略。 </p>
+    summary: <p><span data-ttu-id="681da-161">指定された数の再試行回数と再試行の間の増分時間間隔による再試行戦略。</span><span class="sxs-lookup"><span data-stu-id="681da-161">A retry strategy with a specified number of retry attempts and an incremental time interval between retries.</span></span> </p>
     syntax:
       content: public class Incremental extends RetryStrategy

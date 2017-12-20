@@ -35,7 +35,7 @@ items:
       path: src/main/java/com/microsoft/azure/batch/protocol/models/JobReleaseTask.java
       startLine: 34
     package: com.microsoft.azure.batch.protocol.models
-    summary: '<p>ジョブのリリース タスクをジョブを実行した任意のコンピューティング ノードでジョブの完了時に実行します。 ジョブのリリース タスクを実行、ジョブが終了すると、次のいずれかの理由: ユーザーを呼び出して終了ジョブ API、または削除ジョブ API ジョブがアクティブである、ジョブの最大のウォール クロック時間の制限に達すると、およびジョブがアクティブであるときに、または完了すると、ジョブのジョブ マネージャー タスクとジョブがジョブ マネージャーが完了したときに終了するように構成します。 ここで、ジョブのタスクが実行し、ジョブの準備タスクが実行され、完了した各コンピューティング ノードでジョブのリリース タスクが実行されます。 コンピューティング ノードをコンピューティング ノードが実行したジョブの準備タスクとジョブが、これ以上のタスクで実行されているジョブの終了後に再イメージ化する (そのため、ジョブの準備タスクが再実行されない) 場合、ジョブのリリース タスクが実行されないそのノード上。 場合は、コンピューティング ノードを再起動すると、ジョブのリリース タスクが実行中でも、コンピューティング ノードの起動時には、ジョブのリリース タスクが再度実行されます。 すべてのジョブのリリース タスクが完了するまで、ジョブは完了済みとしてマークされません。 ジョブのリリース タスクは、バック グラウンドで実行されます。 スケジュールのスロットを占有しませんつまり、プールに指定された maxTasksPerNode 上限に達するまではカウントされません。 </p>'
+    summary: '<p><span data-ttu-id="cdfda-101">ジョブのリリース タスクをジョブを実行した任意のコンピューティング ノードでジョブの完了時に実行します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-101">A Job Release task to run on job completion on any compute node where the job has run.</span></span> <span data-ttu-id="cdfda-102">ジョブのリリース タスクを実行、ジョブが終了すると、次のいずれかの理由: ユーザーを呼び出して終了ジョブ API、または削除ジョブ API ジョブがアクティブである、ジョブの最大のウォール クロック時間の制限に達すると、およびジョブがアクティブであるときに、または完了すると、ジョブのジョブ マネージャー タスクとジョブがジョブ マネージャーが完了したときに終了するように構成します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-102">The Job Release task runs when the job ends, because of one of the following: The user calls the Terminate Job API, or the Delete Job API while the job is still active, the job''s maximum wall clock time constraint is reached, and the job is still active, or the job''s Job Manager task completed, and the job is configured to terminate when the Job Manager completes.</span></span> <span data-ttu-id="cdfda-103">ここで、ジョブのタスクが実行し、ジョブの準備タスクが実行され、完了した各コンピューティング ノードでジョブのリリース タスクが実行されます。</span><span class="sxs-lookup"><span data-stu-id="cdfda-103">The Job Release task runs on each compute node where tasks of the job have run and the Job Preparation task ran and completed.</span></span> <span data-ttu-id="cdfda-104">コンピューティング ノードをコンピューティング ノードが実行したジョブの準備タスクとジョブが、これ以上のタスクで実行されているジョブの終了後に再イメージ化する (そのため、ジョブの準備タスクが再実行されない) 場合、ジョブのリリース タスクが実行されないそのノード上。</span><span class="sxs-lookup"><span data-stu-id="cdfda-104">If you reimage a compute node after it has run the Job Preparation task, and the job ends without any further tasks of the job running on that compute node (and hence the Job Preparation task does not re-run), then the Job Release task does not run on that node.</span></span> <span data-ttu-id="cdfda-105">場合は、コンピューティング ノードを再起動すると、ジョブのリリース タスクが実行中でも、コンピューティング ノードの起動時には、ジョブのリリース タスクが再度実行されます。</span><span class="sxs-lookup"><span data-stu-id="cdfda-105">If a compute node reboots while the Job Release task is still running, the Job Release task runs again when the compute node starts up.</span></span> <span data-ttu-id="cdfda-106">すべてのジョブのリリース タスクが完了するまで、ジョブは完了済みとしてマークされません。</span><span class="sxs-lookup"><span data-stu-id="cdfda-106">The job is not marked as complete until all Job Release tasks have completed.</span></span> <span data-ttu-id="cdfda-107">ジョブのリリース タスクは、バック グラウンドで実行されます。</span><span class="sxs-lookup"><span data-stu-id="cdfda-107">The Job Release task runs in the background.</span></span> <span data-ttu-id="cdfda-108">スケジュールのスロットを占有しませんつまり、プールに指定された maxTasksPerNode 上限に達するまではカウントされません。</span><span class="sxs-lookup"><span data-stu-id="cdfda-108">It does not occupy a scheduling slot; that is, it does not count towards the maxTasksPerNode limit specified on the pool.</span></span> </p>'
     syntax: &ref_1
       content: public class JobReleaseTask
     inheritance:
@@ -57,13 +57,13 @@ items:
       startLine: 141
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>コマンドライン値を取得します。</p>
+      <p><span data-ttu-id="cdfda-109">コマンドライン値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-109">Get the commandLine value.</span></span></p>
       <p></p>
     syntax:
       content: public String commandLine()
       return:
         type: '26831127'
-        description: <p>コマンドライン値 </p>
+        description: <p><span data-ttu-id="cdfda-110">コマンドライン値</span><span class="sxs-lookup"><span data-stu-id="cdfda-110">the commandLine value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.containerSettings()
     id: containerSettings()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -81,13 +81,13 @@ items:
       startLine: 161
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ContainerSettings 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-111">ContainerSettings 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-111">Get the containerSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public TaskContainerSettings containerSettings()
       return:
         type: com.microsoft.azure.batch.protocol.models._task_container_settings
-        description: <p>containerSettings 値 </p>
+        description: <p><span data-ttu-id="cdfda-112">containerSettings 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-112">the containerSettings value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.environmentSettings()
     id: environmentSettings()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -105,13 +105,13 @@ items:
       startLine: 201
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>EnvironmentSettings 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-113">EnvironmentSettings 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-113">Get the environmentSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public List<EnvironmentSetting> environmentSettings()
       return:
         type: 5618da2dcom.microsoft.azure.batch.protocol.models._environment_settinga08ddfce
-        description: <p>environmentSettings 値 </p>
+        description: <p><span data-ttu-id="cdfda-114">environmentSettings 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-114">the environmentSettings value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.id()
     id: id()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -129,13 +129,13 @@ items:
       startLine: 121
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>Id 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-115">Id 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-115">Get the id value.</span></span></p>
       <p></p>
     syntax:
       content: public String id()
       return:
         type: '26831127'
-        description: <p>id 値 </p>
+        description: <p><span data-ttu-id="cdfda-116">id 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-116">the id value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.maxWallClockTime()
     id: maxWallClockTime()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -153,13 +153,13 @@ items:
       startLine: 221
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>MaxWallClockTime 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-117">MaxWallClockTime 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-117">Get the maxWallClockTime value.</span></span></p>
       <p></p>
     syntax:
       content: public Period maxWallClockTime()
       return:
         type: '6e600119'
-        description: <p>maxWallClockTime 値 </p>
+        description: <p><span data-ttu-id="cdfda-118">maxWallClockTime 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-118">the maxWallClockTime value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.resourceFiles()
     id: resourceFiles()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -177,13 +177,13 @@ items:
       startLine: 181
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ResourceFiles 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-119">ResourceFiles 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-119">Get the resourceFiles value.</span></span></p>
       <p></p>
     syntax:
       content: public List<ResourceFile> resourceFiles()
       return:
         type: 5618da2dcom.microsoft.azure.batch.protocol.models._resource_filea08ddfce
-        description: <p>resourceFiles 値 </p>
+        description: <p><span data-ttu-id="cdfda-120">resourceFiles 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-120">the resourceFiles value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.retentionTime()
     id: retentionTime()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -201,13 +201,13 @@ items:
       startLine: 241
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>RetentionTime 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-121">RetentionTime 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-121">Get the retentionTime value.</span></span></p>
       <p></p>
     syntax:
       content: public Period retentionTime()
       return:
         type: '6e600119'
-        description: <p>retentionTime 値 </p>
+        description: <p><span data-ttu-id="cdfda-122">retentionTime 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-122">the retentionTime value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.userIdentity()
     id: userIdentity()
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -225,13 +225,13 @@ items:
       startLine: 261
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ユーザー Id 値を取得します。</p>
+      <p><span data-ttu-id="cdfda-123">ユーザー Id 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-123">Get the userIdentity value.</span></span></p>
       <p></p>
     syntax:
       content: public UserIdentity userIdentity()
       return:
         type: com.microsoft.azure.batch.protocol.models._user_identity
-        description: <p>ユーザー Id 値 </p>
+        description: <p><span data-ttu-id="cdfda-124">ユーザー Id 値</span><span class="sxs-lookup"><span data-stu-id="cdfda-124">the userIdentity value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withCommandLine(String)
     id: withCommandLine(String)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -249,17 +249,17 @@ items:
       startLine: 151
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>コマンドライン値を設定します。</p>
+      <p><span data-ttu-id="cdfda-125">コマンドライン値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-125">Set the commandLine value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withCommandLine(String commandLine)
       parameters:
         - id: commandLine
           type: '26831127'
-          description: <p>コマンドライン値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-126">コマンドライン値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-126">the commandLine value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-127"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-127">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withContainerSettings(TaskContainerSettings)
     id: withContainerSettings(TaskContainerSettings)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -277,17 +277,17 @@ items:
       startLine: 171
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ContainerSettings 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-128">ContainerSettings 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-128">Set the containerSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withContainerSettings(TaskContainerSettings containerSettings)
       parameters:
         - id: containerSettings
           type: com.microsoft.azure.batch.protocol.models._task_container_settings
-          description: <p>containerSettings 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-129">containerSettings 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-129">the containerSettings value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-130"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-130">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withEnvironmentSettings(List<EnvironmentSetting>)
     id: withEnvironmentSettings(List<EnvironmentSetting>)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -305,17 +305,17 @@ items:
       startLine: 211
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>EnvironmentSettings 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-131">EnvironmentSettings 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-131">Set the environmentSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withEnvironmentSettings(List<EnvironmentSetting> environmentSettings)
       parameters:
         - id: environmentSettings
           type: 5618da2dcom.microsoft.azure.batch.protocol.models._environment_settinga08ddfce
-          description: <p>environmentSettings 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-132">environmentSettings 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-132">the environmentSettings value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-133"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-133">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withId(String)
     id: withId(String)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -333,17 +333,17 @@ items:
       startLine: 131
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>Id 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-134">Id 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-134">Set the id value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withId(String id)
       parameters:
         - id: id
           type: '26831127'
-          description: <p>id 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-135">id 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-135">the id value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-136"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-136">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withMaxWallClockTime(Period)
     id: withMaxWallClockTime(Period)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -361,17 +361,17 @@ items:
       startLine: 231
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>MaxWallClockTime 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-137">MaxWallClockTime 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-137">Set the maxWallClockTime value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withMaxWallClockTime(Period maxWallClockTime)
       parameters:
         - id: maxWallClockTime
           type: '6e600119'
-          description: <p>maxWallClockTime 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-138">maxWallClockTime 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-138">the maxWallClockTime value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-139"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-139">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withResourceFiles(List<ResourceFile>)
     id: withResourceFiles(List<ResourceFile>)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -389,17 +389,17 @@ items:
       startLine: 191
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ResourceFiles 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-140">ResourceFiles 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-140">Set the resourceFiles value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withResourceFiles(List<ResourceFile> resourceFiles)
       parameters:
         - id: resourceFiles
           type: 5618da2dcom.microsoft.azure.batch.protocol.models._resource_filea08ddfce
-          description: <p>resourceFiles 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-141">resourceFiles 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-141">the resourceFiles value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-142"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-142">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withRetentionTime(Period)
     id: withRetentionTime(Period)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -417,17 +417,17 @@ items:
       startLine: 251
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>RetentionTime 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-143">RetentionTime 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-143">Set the retentionTime value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withRetentionTime(Period retentionTime)
       parameters:
         - id: retentionTime
           type: '6e600119'
-          description: <p>retentionTime 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-144">retentionTime 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-144">the retentionTime value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-145"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-145">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task.withUserIdentity(UserIdentity)
     id: withUserIdentity(UserIdentity)
     parent: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -445,17 +445,17 @@ items:
       startLine: 271
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ユーザー Id 値を設定します。</p>
+      <p><span data-ttu-id="cdfda-146">ユーザー Id 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-146">Set the userIdentity value.</span></span></p>
       <p></p>
     syntax:
       content: public JobReleaseTask withUserIdentity(UserIdentity userIdentity)
       parameters:
         - id: userIdentity
           type: com.microsoft.azure.batch.protocol.models._user_identity
-          description: <p>ユーザー Id 値を設定するには </p>
+          description: <p><span data-ttu-id="cdfda-147">ユーザー Id 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="cdfda-147">the userIdentity value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_release_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="cdfda-148"><xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-148">the <xref uid="com.microsoft.azure.batch.protocol.models._job_release_task" data-throw-if-not-resolved="false">JobReleaseTask</xref> object itself.</span></span> </p>
 references:
   - uid: '26831127'
     spec.java:
@@ -572,7 +572,7 @@ references:
     nameWithType: TaskContainerSettings
     fullName: com.microsoft.azure.batch.protocol.models.TaskContainerSettings
     type: Class
-    summary: <p>タスクのコンテナー設定します。 </p>
+    summary: <p><span data-ttu-id="cdfda-149">タスクのコンテナー設定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-149">The container settings for a task.</span></span> </p>
     syntax:
       content: public class TaskContainerSettings
   - uid: com.microsoft.azure.batch.protocol.models._resource_file
@@ -582,7 +582,7 @@ references:
     nameWithType: ResourceFile
     fullName: com.microsoft.azure.batch.protocol.models.ResourceFile
     type: Class
-    summary: <p>コンピューティング ノードを Azure blob ストレージからダウンロードされるファイルです。 </p>
+    summary: <p><span data-ttu-id="cdfda-150">コンピューティング ノードを Azure blob ストレージからダウンロードされるファイルです。</span><span class="sxs-lookup"><span data-stu-id="cdfda-150">A file to be downloaded from Azure blob storage to a compute node.</span></span> </p>
     syntax:
       content: public class ResourceFile
   - uid: com.microsoft.azure.batch.protocol._files
@@ -592,7 +592,7 @@ references:
     nameWithType: Files
     fullName: com.microsoft.azure.batch.protocol.Files
     type: Interface
-    summary: <p>このクラスのインスタンスで定義されているすべての操作へのアクセスを提供する<xref uid="com.microsoft.azure.batch.protocol._files" data-throw-if-not-resolved="false">ファイル</xref>です。 </p>
+    summary: <p><span data-ttu-id="cdfda-151">このクラスのインスタンスで定義されているすべての操作へのアクセスを提供する<xref uid="com.microsoft.azure.batch.protocol._files" data-throw-if-not-resolved="false">ファイル</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-151">An instance of this class provides access to all the operations defined in <xref uid="com.microsoft.azure.batch.protocol._files" data-throw-if-not-resolved="false">Files</xref>.</span></span> </p>
     syntax:
       content: public interface Files
   - uid: com.microsoft.azure.batch.protocol.models._environment_setting
@@ -602,7 +602,7 @@ references:
     nameWithType: EnvironmentSetting
     fullName: com.microsoft.azure.batch.protocol.models.EnvironmentSetting
     type: Class
-    summary: <p>タスクの処理に設定する環境変数です。 </p>
+    summary: <p><span data-ttu-id="cdfda-152">タスクの処理に設定する環境変数です。</span><span class="sxs-lookup"><span data-stu-id="cdfda-152">An environment variable to be set on a task process.</span></span> </p>
     syntax:
       content: public class EnvironmentSetting
   - uid: com.microsoft.azure.batch.protocol.models._user_identity
@@ -612,7 +612,7 @@ references:
     nameWithType: UserIdentity
     fullName: com.microsoft.azure.batch.protocol.models.UserIdentity
     type: Class
-    summary: <p>タスクが実行されるユーザー id の定義。 ユーザー名と autoUser プロパティの両方ではなくはどちらかを指定します。 </p>
+    summary: '<p><span data-ttu-id="cdfda-153">タスクが実行されるユーザー id の定義。</span><span class="sxs-lookup"><span data-stu-id="cdfda-153">The definition of the user identity under which the task is run.</span></span> <span data-ttu-id="cdfda-154">ユーザー名と autoUser プロパティの両方ではなくはどちらかを指定します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-154">Specify either the userName or autoUser property, but not both.</span></span> </p>'
     syntax:
       content: public class UserIdentity
   - uid: com.microsoft.azure.batch.protocol.models._job_release_task
@@ -622,5 +622,5 @@ references:
     nameWithType: JobReleaseTask
     fullName: com.microsoft.azure.batch.protocol.models.JobReleaseTask
     type: Class
-    summary: '<p>ジョブのリリース タスクをジョブを実行した任意のコンピューティング ノードでジョブの完了時に実行します。 ジョブのリリース タスクを実行、ジョブが終了すると、次のいずれかの理由: ユーザーを呼び出して終了ジョブ API、または削除ジョブ API ジョブがアクティブである、ジョブの最大のウォール クロック時間の制限に達すると、およびジョブがアクティブであるときに、または完了すると、ジョブのジョブ マネージャー タスクとジョブがジョブ マネージャーが完了したときに終了するように構成します。 ここで、ジョブのタスクが実行し、ジョブの準備タスクが実行され、完了した各コンピューティング ノードでジョブのリリース タスクが実行されます。 コンピューティング ノードをコンピューティング ノードが実行したジョブの準備タスクとジョブが、これ以上のタスクで実行されているジョブの終了後に再イメージ化する (そのため、ジョブの準備タスクが再実行されない) 場合、ジョブのリリース タスクが実行されないそのノード上。 場合は、コンピューティング ノードを再起動すると、ジョブのリリース タスクが実行中でも、コンピューティング ノードの起動時には、ジョブのリリース タスクが再度実行されます。 すべてのジョブのリリース タスクが完了するまで、ジョブは完了済みとしてマークされません。 ジョブのリリース タスクは、バック グラウンドで実行されます。 スケジュールのスロットを占有しませんつまり、プールに指定された maxTasksPerNode 上限に達するまではカウントされません。 </p>'
+    summary: '<p><span data-ttu-id="cdfda-155">ジョブのリリース タスクをジョブを実行した任意のコンピューティング ノードでジョブの完了時に実行します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-155">A Job Release task to run on job completion on any compute node where the job has run.</span></span> <span data-ttu-id="cdfda-156">ジョブのリリース タスクを実行、ジョブが終了すると、次のいずれかの理由: ユーザーを呼び出して終了ジョブ API、または削除ジョブ API ジョブがアクティブである、ジョブの最大のウォール クロック時間の制限に達すると、およびジョブがアクティブであるときに、または完了すると、ジョブのジョブ マネージャー タスクとジョブがジョブ マネージャーが完了したときに終了するように構成します。</span><span class="sxs-lookup"><span data-stu-id="cdfda-156">The Job Release task runs when the job ends, because of one of the following: The user calls the Terminate Job API, or the Delete Job API while the job is still active, the job''s maximum wall clock time constraint is reached, and the job is still active, or the job''s Job Manager task completed, and the job is configured to terminate when the Job Manager completes.</span></span> <span data-ttu-id="cdfda-157">ここで、ジョブのタスクが実行し、ジョブの準備タスクが実行され、完了した各コンピューティング ノードでジョブのリリース タスクが実行されます。</span><span class="sxs-lookup"><span data-stu-id="cdfda-157">The Job Release task runs on each compute node where tasks of the job have run and the Job Preparation task ran and completed.</span></span> <span data-ttu-id="cdfda-158">コンピューティング ノードをコンピューティング ノードが実行したジョブの準備タスクとジョブが、これ以上のタスクで実行されているジョブの終了後に再イメージ化する (そのため、ジョブの準備タスクが再実行されない) 場合、ジョブのリリース タスクが実行されないそのノード上。</span><span class="sxs-lookup"><span data-stu-id="cdfda-158">If you reimage a compute node after it has run the Job Preparation task, and the job ends without any further tasks of the job running on that compute node (and hence the Job Preparation task does not re-run), then the Job Release task does not run on that node.</span></span> <span data-ttu-id="cdfda-159">場合は、コンピューティング ノードを再起動すると、ジョブのリリース タスクが実行中でも、コンピューティング ノードの起動時には、ジョブのリリース タスクが再度実行されます。</span><span class="sxs-lookup"><span data-stu-id="cdfda-159">If a compute node reboots while the Job Release task is still running, the Job Release task runs again when the compute node starts up.</span></span> <span data-ttu-id="cdfda-160">すべてのジョブのリリース タスクが完了するまで、ジョブは完了済みとしてマークされません。</span><span class="sxs-lookup"><span data-stu-id="cdfda-160">The job is not marked as complete until all Job Release tasks have completed.</span></span> <span data-ttu-id="cdfda-161">ジョブのリリース タスクは、バック グラウンドで実行されます。</span><span class="sxs-lookup"><span data-stu-id="cdfda-161">The Job Release task runs in the background.</span></span> <span data-ttu-id="cdfda-162">スケジュールのスロットを占有しませんつまり、プールに指定された maxTasksPerNode 上限に達するまではカウントされません。</span><span class="sxs-lookup"><span data-stu-id="cdfda-162">It does not occupy a scheduling slot; that is, it does not count towards the maxTasksPerNode limit specified on the pool.</span></span> </p>'
     syntax: *ref_1

@@ -28,7 +28,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ServiceLoadMetricDescription.java
       startLine: 23
     package: system.fabric
-    summary: "<p>\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。 高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。 </p>"
+    summary: "<p><span data-ttu-id=\"b7bcd-101\">\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-101\">\r\n\r\n  <b>Remarks:</b>Note that to provide metrics for services is optional, because Service Fabric uses default metrics.</span></span> <span data-ttu-id=\"b7bcd-102\">高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-102\">Provide metrics only if the service requires advanced load balancing features, such as balancing that is based on specific node characteristics and resources.</span></span> </p>"
     syntax: &ref_2
       content: public class ServiceLoadMetricDescription
     inheritance:
@@ -49,12 +49,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ServiceLoadMetricDescription.java
       startLine: 94
     package: system.fabric
-    summary: "<p>メトリックの名前を定義します。</p>\n<p>\r\n\r\n  <b>注釈:</b>をサービスが選択した場合<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref>実行時に経由で指定された名前、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>時間をで指定されている名前に一致する必要があります<xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref>正確にします。 メトリック名は大文字小文字を区別ことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b7bcd-103\">メトリックの名前を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-103\">Defines the name of the metric.</span></span></p>\n<p><span data-ttu-id=\"b7bcd-104\">\r\n\r\n  <b>注釈:</b>をサービスが選択した場合<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref>実行時に経由で指定された名前、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>時間をで指定されている名前に一致する必要があります<xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref>正確にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-104\">\r\n\r\n  <b>Remarks:</b>If the service chooses to <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref> during runtime, the name that is provided via the <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref> at that time should match the name that is specified in <xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref> exactly.</span></span> <span data-ttu-id=\"b7bcd-105\">メトリック名は大文字小文字を区別ことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-105\">Note that metric names are case sensitive.</span></span> </p>"
     syntax: &ref_1
       content: public String getName()
       return:
         type: '26831127'
-        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>です。 </p>
+        description: <p><span data-ttu-id="b7bcd-106">返します<xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>です。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-106">Returns <xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>.</span></span> </p>
   - uid: system.fabric._service_load_metric_description.getPrimaryDefaultLoad()
     id: getPrimaryDefaultLoad()
     parent: system.fabric._service_load_metric_description
@@ -112,13 +112,13 @@ items:
       startLine: 105
     package: system.fabric
     summary: |-
-      <p>決定 metricâ â €™ このサービスが構成されている他のメトリックを基準とした s 重み。 実行時に、競合で 2 つのメトリックが終了する場合、ロード バランサーによっては大きな重みのメトリックが優先されます。</p>
+      <p><span data-ttu-id="b7bcd-107">決定 metricâ â €™ このサービスが構成されている他のメトリックを基準とした s 重み。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-107">Determines the metricâ€™s weight relative to the other metrics that are configured for this service.</span></span> <span data-ttu-id="b7bcd-108">実行時に、競合で 2 つのメトリックが終了する場合、ロード バランサーによっては大きな重みのメトリックが優先されます。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-108">During runtime, if two metrics end up in conflict, the Load Balancer prefers the metric with the higher weight.</span></span></p>
       <p></p>
     syntax:
       content: public ServiceLoadMetricWeight getWeight()
       return:
         type: system.fabric.description._service_load_metric_weight
-        description: <p>返します<xref uid="system.fabric.description._service_load_metric_weight" data-throw-if-not-resolved="false">system.fabric.description.ServiceLoadMetricWeight</xref>です。 </p>
+        description: <p><span data-ttu-id="b7bcd-109">返します<xref uid="system.fabric.description._service_load_metric_weight" data-throw-if-not-resolved="false">system.fabric.description.ServiceLoadMetricWeight</xref>です。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-109">Returns <xref uid="system.fabric.description._service_load_metric_weight" data-throw-if-not-resolved="false">system.fabric.description.ServiceLoadMetricWeight</xref>.</span></span> </p>
   - uid: system.fabric._service_load_metric_description.ServiceLoadMetricDescription()
     id: ServiceLoadMetricDescription()
     parent: system.fabric._service_load_metric_description
@@ -153,13 +153,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ServiceLoadMetricDescription.java
       startLine: 57
     package: system.fabric
-    summary: "<p>メトリックの名前を定義します。</p>\n<p>\r\n\r\n  <b>注釈:</b>をサービスが選択した場合<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref>実行時に経由で指定された名前、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>時間をで指定されている名前に一致する必要があります<xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref>正確にします。 メトリック名は大文字小文字を区別ことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b7bcd-110\">メトリックの名前を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-110\">Defines the name of the metric.</span></span></p>\n<p><span data-ttu-id=\"b7bcd-111\">\r\n\r\n  <b>注釈:</b>をサービスが選択した場合<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref>実行時に経由で指定された名前、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>時間をで指定されている名前に一致する必要があります<xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref>正確にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-111\">\r\n\r\n  <b>Remarks:</b>If the service chooses to <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref> during runtime, the name that is provided via the <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref> at that time should match the name that is specified in <xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref> exactly.</span></span> <span data-ttu-id=\"b7bcd-112\">メトリック名は大文字小文字を区別ことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-112\">Note that metric names are case sensitive.</span></span> </p>"
     syntax:
       content: public void setName(String name)
       parameters:
         - id: name
           type: '26831127'
-          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>です。 </p>"
+          description: "<p><span data-ttu-id=\"b7bcd-113\">\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-113\">\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>.</span></span> </p>"
   - uid: system.fabric._service_load_metric_description.setPrimaryDefaultLoad(int)
     id: setPrimaryDefaultLoad(int)
     parent: system.fabric._service_load_metric_description
@@ -219,14 +219,14 @@ items:
       startLine: 69
     package: system.fabric
     summary: |-
-      <p>決定 metricâ â €™ このサービスが構成されている他のメトリックを基準とした s 重み。 実行時に、競合で 2 つのメトリックが終了する場合、ロード バランサーによっては大きな重みのメトリックが優先されます。</p>
+      <p><span data-ttu-id="b7bcd-114">決定 metricâ â €™ このサービスが構成されている他のメトリックを基準とした s 重み。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-114">Determines the metricâ€™s weight relative to the other metrics that are configured for this service.</span></span> <span data-ttu-id="b7bcd-115">実行時に、競合で 2 つのメトリックが終了する場合、ロード バランサーによっては大きな重みのメトリックが優先されます。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-115">During runtime, if two metrics end up in conflict, the Load Balancer prefers the metric with the higher weight.</span></span></p>
       <p></p>
     syntax:
       content: public void setWeight(ServiceLoadMetricWeight weight)
       parameters:
         - id: weight
           type: system.fabric.description._service_load_metric_weight
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric.description._service_load_metric_weight\" data-throw-if-not-resolved=\"false\">system.fabric.description.ServiceLoadMetricWeight</xref>です。 </p>"
+          description: "<p><span data-ttu-id=\"b7bcd-116\">\r\n\r\n  <xref uid=\"system.fabric.description._service_load_metric_weight\" data-throw-if-not-resolved=\"false\">system.fabric.description.ServiceLoadMetricWeight</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-116\">\r\n\r\n  <xref uid=\"system.fabric.description._service_load_metric_weight\" data-throw-if-not-resolved=\"false\">system.fabric.description.ServiceLoadMetricWeight</xref>.</span></span> </p>"
 references:
   - uid: system.fabric._service_load_metric_description.ServiceLoadMetricDescription*
     name: ServiceLoadMetricDescription
@@ -293,7 +293,7 @@ references:
     fullName: system.fabric.description.ServiceLoadMetricWeight
     type: Enum
     summary: |-
-      <p>メトリックの重みをについて説明します。</p>
+      <p><span data-ttu-id="b7bcd-117">メトリックの重みをについて説明します。</span><span class="sxs-lookup"><span data-stu-id="b7bcd-117">Describes the weight of a metric.</span></span></p>
       <p></p>
     syntax:
       content: public enum ServiceLoadMetricWeight
@@ -313,7 +313,7 @@ references:
     nameWithType: ServiceLoadMetricDescription.getName()
     fullName: String system.fabric.ServiceLoadMetricDescription.getName()
     type: Method
-    summary: "<p>メトリックの名前を定義します。</p>\n<p>\r\n\r\n  <b>注釈:</b>をサービスが選択した場合<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref>実行時に経由で指定された名前、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>時間をで指定されている名前に一致する必要があります<xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref>正確にします。 メトリック名は大文字小文字を区別ことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b7bcd-118\">メトリックの名前を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-118\">Defines the name of the metric.</span></span></p>\n<p><span data-ttu-id=\"b7bcd-119\">\r\n\r\n  <b>注釈:</b>をサービスが選択した場合<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref>実行時に経由で指定された名前、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>時間をで指定されている名前に一致する必要があります<xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref>正確にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-119\">\r\n\r\n  <b>Remarks:</b>If the service chooses to <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportLoad(java.util.Collection)</xref> during runtime, the name that is provided via the <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref> at that time should match the name that is specified in <xref uid=\"system.fabric._service_load_metric_description.getName()\" data-throw-if-not-resolved=\"false\">system.fabric.ServiceLoadMetricDescription#getName()</xref> exactly.</span></span> <span data-ttu-id=\"b7bcd-120\">メトリック名は大文字小文字を区別ことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-120\">Note that metric names are case sensitive.</span></span> </p>"
     syntax: *ref_1
   - uid: system.fabric._pin_collection
     parent: system.fabric
@@ -331,5 +331,5 @@ references:
     nameWithType: ServiceLoadMetricDescription
     fullName: system.fabric.ServiceLoadMetricDescription
     type: Class
-    summary: "<p>\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。 高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。 </p>"
+    summary: "<p><span data-ttu-id=\"b7bcd-121\">\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-121\">\r\n\r\n  <b>Remarks:</b>Note that to provide metrics for services is optional, because Service Fabric uses default metrics.</span></span> <span data-ttu-id=\"b7bcd-122\">高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b7bcd-122\">Provide metrics only if the service requires advanced load balancing features, such as balancing that is based on specific node characteristics and resources.</span></span> </p>"
     syntax: *ref_2

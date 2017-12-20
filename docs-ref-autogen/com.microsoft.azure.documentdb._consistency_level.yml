@@ -25,8 +25,8 @@ items:
       startLine: 12
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>DocumentDB クライアントの操作、Azure DocumentDB データベース サービスでサポートされる一貫性レベルを表します。 </p>
-      <p>要求された<xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref>一致か、データベース アカウント用にプロビジョニングよりも弱くなりますである必要があります。 強度順一貫性レベルは、厳密な BoundedStaleness、セッションおよび Eventual です。 </p>
+      <p><span data-ttu-id="d72e4-101">DocumentDB クライアントの操作、Azure DocumentDB データベース サービスでサポートされる一貫性レベルを表します。</span><span class="sxs-lookup"><span data-stu-id="d72e4-101">Represents the consistency levels supported for DocumentDB client operations in the Azure DocumentDB database service.</span></span> </p>
+      <p><span data-ttu-id="d72e4-102">要求された<xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref>一致か、データベース アカウント用にプロビジョニングよりも弱くなりますである必要があります。</span><span class="sxs-lookup"><span data-stu-id="d72e4-102">The requested <xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref> must match or be weaker than that provisioned for the database account.</span></span> <span data-ttu-id="d72e4-103">強度順一貫性レベルは、厳密な BoundedStaleness、セッションおよび Eventual です。</span><span class="sxs-lookup"><span data-stu-id="d72e4-103">Consistency levels by order of strength are Strong, BoundedStaleness, Session and Eventual.</span></span> </p>
     syntax: &ref_1
       content: public enum ConsistencyLevel
     inheritance:
@@ -47,7 +47,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
       startLine: 23
     package: com.microsoft.azure.documentdb
-    summary: <p>境界のある陳腐化では、読み取りがすぎる古くなっていないことを保証します。 これは操作 (MaxStalenessPrefix) または時刻 (MaxStalenessIntervalInSeconds) の数に基づいて構成できます。 </p>
+    summary: <p><span data-ttu-id="d72e4-104">境界のある陳腐化では、読み取りがすぎる古くなっていないことを保証します。</span><span class="sxs-lookup"><span data-stu-id="d72e4-104">Bounded Staleness guarantees that reads are not too out-of-date.</span></span> <span data-ttu-id="d72e4-105">これは操作 (MaxStalenessPrefix) または時刻 (MaxStalenessIntervalInSeconds) の数に基づいて構成できます。</span><span class="sxs-lookup"><span data-stu-id="d72e4-105">This can be configured based on number of operations (MaxStalenessPrefix) or time (MaxStalenessIntervalInSeconds)</span></span> </p>
     syntax:
       content: public BoundedStaleness
   - uid: com.microsoft.azure.documentdb._consistency_level.ConsistentPrefix
@@ -65,7 +65,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
       startLine: 42
     package: com.microsoft.azure.documentdb
-    summary: <p>ConsistentPrefix 整合性では、読み取りのギャップのすべての書き込みのいくつかのプレフィックスが返されることを保証します。 すべての書き込みはで最終的に使用できますの読み取り。 </p>
+    summary: <p><span data-ttu-id="d72e4-106">ConsistentPrefix 整合性では、読み取りのギャップのすべての書き込みのいくつかのプレフィックスが返されることを保証します。</span><span class="sxs-lookup"><span data-stu-id="d72e4-106">ConsistentPrefix Consistency guarantees that reads will return some prefix of all writes with no gaps.</span></span> <span data-ttu-id="d72e4-107">すべての書き込みはで最終的に使用できますの読み取り。</span><span class="sxs-lookup"><span data-stu-id="d72e4-107">All writes will be eventually be available for reads.</span></span> </p>
     syntax:
       content: public ConsistentPrefix
   - uid: com.microsoft.azure.documentdb._consistency_level.Eventual
@@ -83,7 +83,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
       startLine: 36
     package: com.microsoft.azure.documentdb
-    summary: <p>最終的整合性では、読み取りが書き込みのサブセットを返すことを保証します。 すべての書き込みはで最終的に使用できますの読み取り。 </p>
+    summary: <p><span data-ttu-id="d72e4-108">最終的整合性では、読み取りが書き込みのサブセットを返すことを保証します。</span><span class="sxs-lookup"><span data-stu-id="d72e4-108">Eventual Consistency guarantees that reads will return a subset of writes.</span></span> <span data-ttu-id="d72e4-109">すべての書き込みはで最終的に使用できますの読み取り。</span><span class="sxs-lookup"><span data-stu-id="d72e4-109">All writes will be eventually be available for reads.</span></span> </p>
     syntax:
       content: public Eventual
   - uid: com.microsoft.azure.documentdb._consistency_level.Session
@@ -101,7 +101,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
       startLine: 30
     package: com.microsoft.azure.documentdb
-    summary: <p>セッションの整合性を保証単調読み取り (、古いデータの読み取りは行わないでください新しい、古い再度)、(書き込みが順序付け) 単調の書き込みと読み取りが単一セッションの中で、書き込み (、書き込みでは、読み取りをすぐに表示)。 </p>
+    summary: '<p><span data-ttu-id="d72e4-110">セッションの整合性を保証単調読み取り (、古いデータの読み取りは行わないでください新しい、古い再度)、(書き込みが順序付け) 単調の書き込みと読み取りが単一セッションの中で、書き込み (、書き込みでは、読み取りをすぐに表示)。</span><span class="sxs-lookup"><span data-stu-id="d72e4-110">Session Consistency guarantees monotonic reads (you never read old data, then new, then old again), monotonic writes (writes are ordered) and read your writes (your writes are immediately visible to your reads) within any single session.</span></span> </p>'
     syntax:
       content: public Session
   - uid: com.microsoft.azure.documentdb._consistency_level.Strong
@@ -119,7 +119,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/ConsistencyLevel.java
       startLine: 17
     package: com.microsoft.azure.documentdb
-    summary: <p>読み取り操作は常に強力な一貫性の保証は、最後に書き込まれた値を返します。 </p>
+    summary: <p><span data-ttu-id="d72e4-111">読み取り操作は常に強力な一貫性の保証は、最後に書き込まれた値を返します。</span><span class="sxs-lookup"><span data-stu-id="d72e4-111">Strong Consistency guarantees that read operations always return the value that was last written.</span></span> </p>
     syntax:
       content: public Strong
 references:
@@ -131,6 +131,6 @@ references:
     fullName: com.microsoft.azure.documentdb.ConsistencyLevel
     type: Enum
     summary: |-
-      <p>DocumentDB クライアントの操作、Azure DocumentDB データベース サービスでサポートされる一貫性レベルを表します。 </p>
-      <p>要求された<xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref>一致か、データベース アカウント用にプロビジョニングよりも弱くなりますである必要があります。 強度順一貫性レベルは、厳密な BoundedStaleness、セッションおよび Eventual です。 </p>
+      <p><span data-ttu-id="d72e4-112">DocumentDB クライアントの操作、Azure DocumentDB データベース サービスでサポートされる一貫性レベルを表します。</span><span class="sxs-lookup"><span data-stu-id="d72e4-112">Represents the consistency levels supported for DocumentDB client operations in the Azure DocumentDB database service.</span></span> </p>
+      <p><span data-ttu-id="d72e4-113">要求された<xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref>一致か、データベース アカウント用にプロビジョニングよりも弱くなりますである必要があります。</span><span class="sxs-lookup"><span data-stu-id="d72e4-113">The requested <xref uid="com.microsoft.azure.documentdb._consistency_level" data-throw-if-not-resolved="false">ConsistencyLevel</xref> must match or be weaker than that provisioned for the database account.</span></span> <span data-ttu-id="d72e4-114">強度順一貫性レベルは、厳密な BoundedStaleness、セッションおよび Eventual です。</span><span class="sxs-lookup"><span data-stu-id="d72e4-114">Consistency levels by order of strength are Strong, BoundedStaleness, Session and Eventual.</span></span> </p>
     syntax: *ref_1

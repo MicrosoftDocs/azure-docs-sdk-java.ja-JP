@@ -48,7 +48,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 26
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    summary: <p><span data-ttu-id="ed242-101">低キーとキーの最高のシャード キーの範囲。</span><span class="sxs-lookup"><span data-stu-id="ed242-101">A range of shard keys between a low key and a high key.</span></span> <span data-ttu-id="ed242-102">低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。</span><span class="sxs-lookup"><span data-stu-id="ed242-102">The low key is inclusive (part of the range) while the high key is exclusive (not part of the range).</span></span> <span data-ttu-id="ed242-103"><xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。</span><span class="sxs-lookup"><span data-stu-id="ed242-103">The <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> class is immutable.</span></span> </p>
     syntax: &ref_1
       content: public class ShardRange
     inheritance:
@@ -71,17 +71,17 @@ items:
       startLine: 389
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>2 つのシャードの範囲値の間の比較を実行します。</p>
+      <p><span data-ttu-id="ed242-104">2 つのシャードの範囲値の間の比較を実行します。</span><span class="sxs-lookup"><span data-stu-id="ed242-104">Performs comparison between two shard range values.</span></span></p>
       <p></p>
     syntax:
       content: public int compareTo(ShardRange other)
       parameters:
         - id: other
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>このオブジェクトと比較してシャードの範囲です。 </p>
+          description: <p><span data-ttu-id="ed242-105">このオブジェクトと比較してシャードの範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-105">The shard range compared with this object.</span></span> </p>
       return:
         type: f75371fa
-        description: '<p>-1: この範囲の低い境界がより小さい<em>他の</em>の低い境界;-1: の低い境界値に一致し、この範囲の高い境界値が場合よりも低い<em>他の</em>'' s。 1: 境界がより大きい場合、この範囲の高、<em>他の</em>の高い境界; 1: この範囲の低い境界値がより高いかどうか<em>他の</em>の下限の境界および境界の高この範囲の値より小さい以上で<em>他</em>の高い境界。 0: この範囲と同じ境界がある場合<em>他</em>です。 </p>'
+        description: '<p><span data-ttu-id="ed242-106">-1: この範囲の低い境界がより小さい<em>他の</em>の低い境界;-1: の低い境界値に一致し、この範囲の高い境界値が場合よりも低い<em>他の</em>'' s。</span><span class="sxs-lookup"><span data-stu-id="ed242-106">-1 : if this range''s low boundary is less than the <em>other</em> ''s low boundary; -1 : if the low boundary values match and the high boundary value of this range is less than the <em>other</em> ''s.</span></span> <span data-ttu-id="ed242-107">1: 境界がより大きい場合、この範囲の高、<em>他の</em>の高い境界; 1: この範囲の低い境界値がより高いかどうか<em>他の</em>の下限の境界および境界の高この範囲の値より小さい以上で<em>他</em>の高い境界。</span><span class="sxs-lookup"><span data-stu-id="ed242-107">1 : if this range''s high boundary is greater than the <em>other</em> ''s high boundary; 1 : if the low boundary value of this range is higher than <em>other</em> ''s low boundary and high boundary value of this range is less than or equal to <em>other</em> ''s high boundary .</span></span> <span data-ttu-id="ed242-108">0: この範囲と同じ境界がある場合<em>他</em>です。</span><span class="sxs-lookup"><span data-stu-id="ed242-108">0 : if this range has the same boundaries as <em>other</em> .</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.contains(ShardKey)
     id: contains(ShardKey)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -99,17 +99,17 @@ items:
       startLine: 359
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>指定したキーが、範囲内かどうかを確認します。</p>
+      <p><span data-ttu-id="ed242-109">指定したキーが、範囲内かどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="ed242-109">Checks whether the specified key is inside the range.</span></span></p>
       <p></p>
     syntax:
       content: public boolean contains(ShardKey key)
       parameters:
         - id: key
           type: com.microsoft.azure.elasticdb.shard.base._shard_key
-          description: <p>チェックするキー </p>
+          description: <p><span data-ttu-id="ed242-110">チェックするキー</span><span class="sxs-lookup"><span data-stu-id="ed242-110">The key to check</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>内側、false の場合は true それ以外の場合 </p>
+        description: '<p><span data-ttu-id="ed242-111">内側、false の場合は true それ以外の場合</span><span class="sxs-lookup"><span data-stu-id="ed242-111">True if inside, false otherwise</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.contains(ShardRange)
     id: contains(ShardRange)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -127,17 +127,17 @@ items:
       startLine: 372
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>範囲が、範囲内かどうかを確認します。</p>
+      <p><span data-ttu-id="ed242-112">範囲が、範囲内かどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="ed242-112">Checks whether the range is inside the range.</span></span></p>
       <p></p>
     syntax:
       content: public boolean contains(ShardRange range)
       parameters:
         - id: range
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>確認する範囲。 </p>
+          description: <p><span data-ttu-id="ed242-113">確認する範囲。</span><span class="sxs-lookup"><span data-stu-id="ed242-113">The range to check.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>内側、false の場合は true それ以外の場合。 </p>
+        description: '<p><span data-ttu-id="ed242-114">内側、false の場合は true それ以外の場合。</span><span class="sxs-lookup"><span data-stu-id="ed242-114">True if inside, false otherwise.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.equals(Object)
     id: equals(Object)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -155,17 +155,17 @@ items:
       startLine: 337
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>指定したオブジェクトが現在のオブジェクトと等しいかどうかを判断します。</p>
+      <p><span data-ttu-id="ed242-115">指定したオブジェクトが現在のオブジェクトと等しいかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="ed242-115">Determines whether the specified object is equal to the current object.</span></span></p>
       <p></p>
     syntax:
       content: public boolean equals(Object obj)
       parameters:
         - id: obj
           type: '79317049'
-          description: <p>現在のオブジェクトと比較するオブジェクト。 </p>
+          description: <p><span data-ttu-id="ed242-116">現在のオブジェクトと比較するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ed242-116">The object to compare with the current object.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>指定したオブジェクトが現在のオブジェクトと等しい場合は true。それ以外の場合は false です。 </p>
+        description: '<p><span data-ttu-id="ed242-117">指定したオブジェクトが現在のオブジェクトと等しい場合は true。それ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="ed242-117">True if the specified object is equal to the current object; otherwise, false.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.equals(ShardRange)
     id: equals(ShardRange)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -183,17 +183,17 @@ items:
       startLine: 348
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>他の指定された等値比較を実行<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>です。</p>
+      <p><span data-ttu-id="ed242-118">他の指定された等値比較を実行<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>です。</span><span class="sxs-lookup"><span data-stu-id="ed242-118">Performs equality comparison with another given <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>.</span></span></p>
       <p></p>
     syntax:
       content: public boolean equals(ShardRange other)
       parameters:
         - id: other
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard_range\" data-throw-if-not-resolved=\"false\">ShardRange</xref>と比較します。 </p>"
+          description: "<p><span data-ttu-id=\"ed242-119\">\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard_range\" data-throw-if-not-resolved=\"false\">ShardRange</xref>と比較します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ed242-119\">\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard_range\" data-throw-if-not-resolved=\"false\">ShardRange</xref> to compare with.</span></span> </p>"
       return:
         type: 4fc6e284
-        description: <p>True の場合は、同じシャードの範囲、false それ以外の場合。 </p>
+        description: '<p><span data-ttu-id="ed242-120">True の場合は、同じシャードの範囲、false それ以外の場合。</span><span class="sxs-lookup"><span data-stu-id="ed242-120">True if same shard range, false otherwise.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRange(ShardKeyType)
     id: getFullRange(ShardKeyType)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -211,17 +211,17 @@ items:
       startLine: 261
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>指定したキーの種類に対応するシャードの範囲を取得します。</p>
+      <p><span data-ttu-id="ed242-121">指定したキーの種類に対応するシャードの範囲を取得します。</span><span class="sxs-lookup"><span data-stu-id="ed242-121">Gets a shard range corresponding to a specified key type.</span></span></p>
       <p></p>
     syntax:
       content: public static ShardRange getFullRange(ShardKeyType keyType)
       parameters:
         - id: keyType
           type: com.microsoft.azure.elasticdb.shard.base._shard_key_type
-          description: <p>キーの型。 </p>
+          description: <p><span data-ttu-id="ed242-122">キーの型。</span><span class="sxs-lookup"><span data-stu-id="ed242-122">Type of key.</span></span> </p>
       return:
         type: com.microsoft.azure.elasticdb.shard.base._shard_range
-        description: <p>全範囲は、キーの種類を指定します。 </p>
+        description: <p><span data-ttu-id="ed242-123">全範囲は、キーの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="ed242-123">Full range for given key type.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.getFullRangeBinary()
     id: getFullRangeBinary()
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -238,7 +238,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 140
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-124">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-124">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeBinary()
       return:
@@ -259,7 +259,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 147
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-125">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-125">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeDateTime()
       return:
@@ -280,7 +280,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 161
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-126">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-126">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeDateTimeOffset()
       return:
@@ -301,7 +301,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 133
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-127">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-127">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeGuid()
       return:
@@ -322,7 +322,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 119
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-128">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-128">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeInt32()
       return:
@@ -343,7 +343,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 126
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-129">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-129">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeInt64()
       return:
@@ -364,7 +364,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/base/ShardRange.java
       startLine: 154
     package: com.microsoft.azure.elasticdb.shard.base
-    summary: <p>最大値をキーの最小値から始まる完全範囲です。 </p>
+    summary: <p><span data-ttu-id="ed242-130">最大値をキーの最小値から始まる完全範囲です。</span><span class="sxs-lookup"><span data-stu-id="ed242-130">Full range that starts from the min value for a key to the max value.</span></span> </p>
     syntax:
       content: public static ShardRange getFullRangeTimeSpan()
       return:
@@ -446,13 +446,13 @@ items:
       startLine: 325
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>このインスタンスのハッシュ コードを計算します。</p>
+      <p><span data-ttu-id="ed242-131">このインスタンスのハッシュ コードを計算します。</span><span class="sxs-lookup"><span data-stu-id="ed242-131">Calculates the hash code for this instance.</span></span></p>
       <p></p>
     syntax:
       content: public int hashCode()
       return:
         type: f75371fa
-        description: <p>オブジェクトのハッシュ コード。 </p>
+        description: <p><span data-ttu-id="ed242-132">オブジェクトのハッシュ コード。</span><span class="sxs-lookup"><span data-stu-id="ed242-132">Hash code for the object.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.intersect(ShardRange)
     id: intersect(ShardRange)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -470,17 +470,17 @@ items:
       startLine: 435
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>2 つの範囲の交差部分を返します。</p>
+      <p><span data-ttu-id="ed242-133">2 つの範囲の交差部分を返します。</span><span class="sxs-lookup"><span data-stu-id="ed242-133">Returns the intersection of two ranges.</span></span></p>
       <p></p>
     syntax:
       content: public ShardRange intersect(ShardRange range)
       parameters:
         - id: range
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._range\" data-throw-if-not-resolved=\"false\">範囲</xref>と交差するようにします。 </p>"
+          description: "<p><span data-ttu-id=\"ed242-134\">\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._range\" data-throw-if-not-resolved=\"false\">範囲</xref>と交差するようにします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ed242-134\">\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._range\" data-throw-if-not-resolved=\"false\">Range</xref> to intersect with.</span></span> </p>"
       return:
         type: com.microsoft.azure.elasticdb.shard.base._shard_range
-        description: <p>現在の範囲と範囲の交差しない場合は、null、指定した範囲の交差部分です。 </p>
+        description: '<p><span data-ttu-id="ed242-135">現在の範囲と範囲の交差しない場合は、null、指定した範囲の交差部分です。</span><span class="sxs-lookup"><span data-stu-id="ed242-135">The intersection of the current range and the specified range, null if ranges dont intersect.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.intersects(ShardRange)
     id: intersects(ShardRange)
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -498,17 +498,17 @@ items:
       startLine: 422
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>範囲が、現在の範囲と交差するかどうかを確認します。</p>
+      <p><span data-ttu-id="ed242-136">範囲が、現在の範囲と交差するかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="ed242-136">Checks whether the range intersects with the current range.</span></span></p>
       <p></p>
     syntax:
       content: public boolean intersects(ShardRange range)
       parameters:
         - id: range
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>確認する範囲。 </p>
+          description: <p><span data-ttu-id="ed242-137">確認する範囲。</span><span class="sxs-lookup"><span data-stu-id="ed242-137">The range to check.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>これと交差する場合、False それ以外の場合は true。 </p>
+        description: '<p><span data-ttu-id="ed242-138">これと交差する場合、False それ以外の場合は true。</span><span class="sxs-lookup"><span data-stu-id="ed242-138">True if it intersects, False otherwise.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.NULL
     id: 'NULL'
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -545,20 +545,20 @@ items:
       startLine: 235
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>等値演算子。</p>
+      <p><span data-ttu-id="ed242-139">等値演算子。</span><span class="sxs-lookup"><span data-stu-id="ed242-139">Equality operator.</span></span></p>
       <p></p>
     syntax:
       content: 'public static boolean opEquality(ShardRange left, ShardRange right)'
       parameters:
         - id: left
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>左側にあります。 </p>
+          description: <p><span data-ttu-id="ed242-140">左側にあります。</span><span class="sxs-lookup"><span data-stu-id="ed242-140">Left hand side</span></span> </p>
         - id: right
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>右側にあります。 </p>
+          description: <p><span data-ttu-id="ed242-141">右側にあります。</span><span class="sxs-lookup"><span data-stu-id="ed242-141">Right hand side</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>2 つのオブジェクトが等しい場合は false 以外の場合は true。 </p>
+        description: '<p><span data-ttu-id="ed242-142">2 つのオブジェクトが等しい場合は false 以外の場合は true。</span><span class="sxs-lookup"><span data-stu-id="ed242-142">True if the two objects are equal, false in all other cases</span></span> </p>'
   - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThan(ShardRange,ShardRange)'
     id: 'opGreaterThan(ShardRange,ShardRange)'
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -576,20 +576,20 @@ items:
       startLine: 193
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (より大きい) を使用します。</p>
+      <p><span data-ttu-id="ed242-143">比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (より大きい) を使用します。</span><span class="sxs-lookup"><span data-stu-id="ed242-143">Compares two <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> using lexicographic order (greater than).</span></span></p>
       <p></p>
     syntax:
       content: 'public static boolean opGreaterThan(ShardRange left, ShardRange right)'
       parameters:
         - id: left
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-144">左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-144">Left hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
         - id: right
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-145">右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-145">Right hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>True の場合 lhs&gt; rhs </p>
+        description: <p><span data-ttu-id="ed242-146">True の場合 lhs&gt; rhs</span><span class="sxs-lookup"><span data-stu-id="ed242-146">True if lhs&gt; rhs</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opGreaterThanOrEqual(ShardRange,ShardRange)'
     id: 'opGreaterThanOrEqual(ShardRange,ShardRange)'
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -607,20 +607,20 @@ items:
       startLine: 221
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (大きいまたは等しい) を使用します。</p>
+      <p><span data-ttu-id="ed242-147">比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (大きいまたは等しい) を使用します。</span><span class="sxs-lookup"><span data-stu-id="ed242-147">Compares two <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> using lexicographic order (greater or equal).</span></span></p>
       <p></p>
     syntax:
       content: 'public static boolean opGreaterThanOrEqual(ShardRange left, ShardRange right)'
       parameters:
         - id: left
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-148">左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-148">Left hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
         - id: right
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-149">右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-149">Right hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>True の場合 lhs&gt;rhs を = </p>
+        description: <p><span data-ttu-id="ed242-150">True の場合 lhs&gt;rhs を =</span><span class="sxs-lookup"><span data-stu-id="ed242-150">True if lhs&gt;= rhs</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opInequality(ShardRange,ShardRange)'
     id: 'opInequality(ShardRange,ShardRange)'
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -638,20 +638,20 @@ items:
       startLine: 249
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>非等値演算子。</p>
+      <p><span data-ttu-id="ed242-151">非等値演算子。</span><span class="sxs-lookup"><span data-stu-id="ed242-151">Inequality operator.</span></span></p>
       <p></p>
     syntax:
       content: 'public static boolean opInequality(ShardRange left, ShardRange right)'
       parameters:
         - id: left
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>左側にあります。 </p>
+          description: <p><span data-ttu-id="ed242-152">左側にあります。</span><span class="sxs-lookup"><span data-stu-id="ed242-152">Left hand side</span></span> </p>
         - id: right
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>右側にあります。 </p>
+          description: <p><span data-ttu-id="ed242-153">右側にあります。</span><span class="sxs-lookup"><span data-stu-id="ed242-153">Right hand side</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>等しい、false の場合は、2 つのオブジェクトがない場合は true。 </p>
+        description: '<p><span data-ttu-id="ed242-154">等しい、false の場合は、2 つのオブジェクトがない場合は true。</span><span class="sxs-lookup"><span data-stu-id="ed242-154">True if the two objects are not equal, false in all other cases</span></span> </p>'
   - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThan(ShardRange,ShardRange)'
     id: 'opLessThan(ShardRange,ShardRange)'
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -669,20 +669,20 @@ items:
       startLine: 174
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序を使用して (より小さい)。</p>
+      <p><span data-ttu-id="ed242-155">比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序を使用して (より小さい)。</span><span class="sxs-lookup"><span data-stu-id="ed242-155">Compares two <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> using lexicographic order (less than).</span></span></p>
       <p></p>
     syntax:
       content: 'public static boolean opLessThan(ShardRange left, ShardRange right)'
       parameters:
         - id: left
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-156">左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-156">Left hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
         - id: right
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-157">右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-157">Right hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>True の場合 lhs &lt;rhs </p>
+        description: <p><span data-ttu-id="ed242-158">True の場合 lhs &lt;rhs</span><span class="sxs-lookup"><span data-stu-id="ed242-158">True if lhs &lt;rhs</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.base._shard_range.opLessThanOrEqual(ShardRange,ShardRange)'
     id: 'opLessThanOrEqual(ShardRange,ShardRange)'
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -700,20 +700,20 @@ items:
       startLine: 207
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (より小さいか等しい) を使用します。</p>
+      <p><span data-ttu-id="ed242-159">比較する 2 つ<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>辞書式順序 (より小さいか等しい) を使用します。</span><span class="sxs-lookup"><span data-stu-id="ed242-159">Compares two <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> using lexicographic order (less or equal).</span></span></p>
       <p></p>
     syntax:
       content: 'public static boolean opLessThanOrEqual(ShardRange left, ShardRange right)'
       parameters:
         - id: left
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-160">左側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-160">Left hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
         - id: right
           type: com.microsoft.azure.elasticdb.shard.base._shard_range
-          description: <p>右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。 </p>
+          description: <p><span data-ttu-id="ed242-161">右側にある<xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>演算子のです。</span><span class="sxs-lookup"><span data-stu-id="ed242-161">Right hand side <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> of the operator.</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>True の場合 lhs &lt;rhs を = </p>
+        description: <p><span data-ttu-id="ed242-162">True の場合 lhs &lt;rhs を =</span><span class="sxs-lookup"><span data-stu-id="ed242-162">True if lhs &lt;= rhs</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.ShardRange()
     id: ShardRange()
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -749,17 +749,17 @@ items:
       startLine: 100
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>(包括) の低い境界 (排他) 高の高い境界に、シャードの範囲を構築します。</p>
+      <p><span data-ttu-id="ed242-163">(包括) の低い境界 (排他) 高の高い境界に、シャードの範囲を構築します。</span><span class="sxs-lookup"><span data-stu-id="ed242-163">Constructs a shard range from low boundary (inclusive) to high high boundary (exclusive).</span></span></p>
       <p></p>
     syntax:
       content: 'public ShardRange(ShardKey low, ShardKey high)'
       parameters:
         - id: low
           type: com.microsoft.azure.elasticdb.shard.base._shard_key
-          description: <p>低境界 (包括) </p>
+          description: <p><span data-ttu-id="ed242-164">低境界 (包括)</span><span class="sxs-lookup"><span data-stu-id="ed242-164">low boundary (inclusive)</span></span> </p>
         - id: high
           type: com.microsoft.azure.elasticdb.shard.base._shard_key
-          description: <p>高境界 (排他) </p>
+          description: <p><span data-ttu-id="ed242-165">高境界 (排他)</span><span class="sxs-lookup"><span data-stu-id="ed242-165">high boundary (exclusive)</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range.toString()
     id: toString()
     parent: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -777,13 +777,13 @@ items:
       startLine: 315
     package: com.microsoft.azure.elasticdb.shard.base
     summary: |-
-      <p>オブジェクトを文字列形式に変換します。</p>
+      <p><span data-ttu-id="ed242-166">オブジェクトを文字列形式に変換します。</span><span class="sxs-lookup"><span data-stu-id="ed242-166">Converts the object to its string representation.</span></span></p>
       <p></p>
     syntax:
       content: public String toString()
       return:
         type: '26831127'
-        description: <p>オブジェクトの文字列表現。 </p>
+        description: <p><span data-ttu-id="ed242-167">オブジェクトの文字列表現。</span><span class="sxs-lookup"><span data-stu-id="ed242-167">String representation of the object.</span></span> </p>
 references:
   - uid: 93de0ef9com.microsoft.azure.elasticdb.shard.base._shard_range
     spec.java:
@@ -941,7 +941,7 @@ references:
     nameWithType: ShardRange
     fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
     type: Class
-    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    summary: <p><span data-ttu-id="ed242-168">低キーとキーの最高のシャード キーの範囲。</span><span class="sxs-lookup"><span data-stu-id="ed242-168">A range of shard keys between a low key and a high key.</span></span> <span data-ttu-id="ed242-169">低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。</span><span class="sxs-lookup"><span data-stu-id="ed242-169">The low key is inclusive (part of the range) while the high key is exclusive (not part of the range).</span></span> <span data-ttu-id="ed242-170"><xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。</span><span class="sxs-lookup"><span data-stu-id="ed242-170">The <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> class is immutable.</span></span> </p>
     syntax: *ref_1
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_key.getMinInt()
     parent: com.microsoft.azure.elasticdb.shard.base._shard_key
@@ -950,7 +950,7 @@ references:
     nameWithType: ShardKey.getMinInt()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinInt()
     type: Method
-    summary: '<p>#endregion </p><p>#地域負の無限大静的な get アクセス操作子を表します。 </p>'
+    summary: '<p>#<span data-ttu-id="ed242-171">endregion</span><span class="sxs-lookup"><span data-stu-id="ed242-171">endregion</span></span> </p><p>#<span data-ttu-id="ed242-172">地域負の無限大静的な get アクセス操作子を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-172">region Static Getters Represents negative infinity.</span></span> </p>'
     syntax:
       content: public static ShardKey getMinInt()
       return:
@@ -962,7 +962,7 @@ references:
     nameWithType: ShardKey.getMaxInt()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxInt()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-173">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-173">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxInt()
       return:
@@ -974,7 +974,7 @@ references:
     nameWithType: ShardKey.getMinLong()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinLong()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-174">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-174">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMinLong()
       return:
@@ -986,7 +986,7 @@ references:
     nameWithType: ShardKey.getMaxLong()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxLong()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-175">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-175">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxLong()
       return:
@@ -998,7 +998,7 @@ references:
     nameWithType: ShardKey.getMinGuid()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinGuid()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-176">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-176">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMinGuid()
       return:
@@ -1010,7 +1010,7 @@ references:
     nameWithType: ShardKey.getMaxGuid()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxGuid()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-177">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-177">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxGuid()
       return:
@@ -1022,7 +1022,7 @@ references:
     nameWithType: ShardKey.getMinBinary()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinBinary()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-178">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-178">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMinBinary()
       return:
@@ -1034,7 +1034,7 @@ references:
     nameWithType: ShardKey.getMaxBinary()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxBinary()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-179">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-179">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxBinary()
       return:
@@ -1046,7 +1046,7 @@ references:
     nameWithType: ShardKey.getMinDateTime()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinDateTime()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-180">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-180">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMinDateTime()
       return:
@@ -1058,7 +1058,7 @@ references:
     nameWithType: ShardKey.getMaxDateTime()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxDateTime()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-181">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-181">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxDateTime()
       return:
@@ -1070,7 +1070,7 @@ references:
     nameWithType: ShardKey.getMinTimeSpan()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinTimeSpan()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-182">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-182">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMinTimeSpan()
       return:
@@ -1082,7 +1082,7 @@ references:
     nameWithType: ShardKey.getMaxTimeSpan()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxTimeSpan()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-183">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-183">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxTimeSpan()
       return:
@@ -1094,7 +1094,7 @@ references:
     nameWithType: ShardKey.getMinDateTimeOffset()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMinDateTimeOffset()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-184">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-184">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMinDateTimeOffset()
       return:
@@ -1106,7 +1106,7 @@ references:
     nameWithType: ShardKey.getMaxDateTimeOffset()
     fullName: static ShardKey com.microsoft.azure.elasticdb.shard.base.ShardKey.getMaxDateTimeOffset()
     type: Method
-    summary: <p>負の無限大を表します。 </p>
+    summary: <p><span data-ttu-id="ed242-185">負の無限大を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-185">Represents negative infinity.</span></span> </p>
     syntax:
       content: public static ShardKey getMaxDateTimeOffset()
       return:
@@ -1118,7 +1118,7 @@ references:
     nameWithType: ShardKey
     fullName: com.microsoft.azure.elasticdb.shard.base.ShardKey
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>キーの値。 値と型をラップし、正規化/非正規化のシリアル化を許可します。 </p>"
+    summary: "<p><span data-ttu-id=\"ed242-186\">\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">シャード</xref>キーの値。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ed242-186\">\r\n\r\n  <xref uid=\"com.microsoft.azure.elasticdb.shard.base._shard\" data-throw-if-not-resolved=\"false\">Shard</xref> key value.</span></span> <span data-ttu-id=\"ed242-187\">値と型をラップし、正規化/非正規化のシリアル化を許可します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ed242-187\">Wraps the type and value and allows normalization/denormalization for serialization.</span></span> </p>"
     syntax:
       content: public class ShardKey
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_key_type
@@ -1128,7 +1128,7 @@ references:
     nameWithType: ShardKeyType
     fullName: com.microsoft.azure.elasticdb.shard.base.ShardKeyType
     type: Enum
-    summary: '<p>シャード キーの型。 現在、のみ Int32、Int64、Guid、および byte[] はシャード キーとしてサポートされるデータ型です。 </p>'
+    summary: '<p><span data-ttu-id="ed242-188">シャード キーの型。</span><span class="sxs-lookup"><span data-stu-id="ed242-188">Type of shard key.</span></span> <span data-ttu-id="ed242-189">現在、のみ Int32、Int64、Guid、および byte[] はシャード キーとしてサポートされるデータ型です。</span><span class="sxs-lookup"><span data-stu-id="ed242-189">Currently, only Int32, Int64, Guid and byte[] are the data types supported as shard keys.</span></span> </p>'
     syntax:
       content: public enum ShardKeyType
   - uid: com.microsoft.azure.elasticdb.shard.base._range
@@ -1138,6 +1138,6 @@ references:
     nameWithType: Range
     fullName: com.microsoft.azure.elasticdb.shard.base.Range
     type: Class
-    summary: <p>左包括は右側の排他的な値の範囲を表します。 </p>
+    summary: '<p><span data-ttu-id="ed242-190">左包括は右側の排他的な値の範囲を表します。</span><span class="sxs-lookup"><span data-stu-id="ed242-190">Represents a left-inclusive, right-exclusive range of values.</span></span> </p>'
     syntax:
       content: public class Range

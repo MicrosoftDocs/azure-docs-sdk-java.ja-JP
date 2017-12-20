@@ -22,9 +22,9 @@ items:
       startLine: 57
     package: com.microsoft.azure.sdk.iot.provisioning.service.contract
     summary: |-
-      <p>このクライアントは、デバイスのプロビジョニング サービスの HTTP 通信を処理します。</p>
-      <p>このクラスは、プロビジョニング サービス クライアントとデバイスのプロビジョニング サービス間の HTTPS コントラクトを実装します。 サービス クライアントのプロビジョニングのパブリック Api を実装する、マネージャーによって呼び出されます。 パブリック Api にアクセスするを参照してください、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>です。</p>
-      <p>次の図では、これら 3 つのレイヤー、サービス クライアントの間の関係について説明します。</p>
+      <p><span data-ttu-id="ea5bb-101">このクライアントは、デバイスのプロビジョニング サービスの HTTP 通信を処理します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-101">This client handles the Device Provisioning Service HTTP communication.</span></span></p>
+      <p><span data-ttu-id="ea5bb-102">このクラスは、プロビジョニング サービス クライアントとデバイスのプロビジョニング サービス間の HTTPS コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-102">This class implements the HTTPS contract between the Provisioning Service Client and the Device Provisioning Service.</span></span> <span data-ttu-id="ea5bb-103">サービス クライアントのプロビジョニングのパブリック Api を実装する、マネージャーによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-103">It is called by the Managers that implement the Provisioning Service Client public APIs.</span></span> <span data-ttu-id="ea5bb-104">パブリック Api にアクセスするを参照してください、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-104">To access the public APIs, please see the <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>.</span></span></p>
+      <p><span data-ttu-id="ea5bb-105">次の図では、これら 3 つのレイヤー、サービス クライアントの間の関係について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-105">The follow diagram describe the relation between these 3 layers of the Service Client:</span></span></p>
       <p>
 
         <pre>
@@ -93,20 +93,20 @@ items:
       startLine: 104
     package: com.microsoft.azure.sdk.iot.provisioning.service.contract
     summary: |-
-      <p>新しいインスタンスを作成、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http" data-throw-if-not-resolved="false">ContractApiHttp</xref>です。</p>
+      <p><span data-ttu-id="ea5bb-106">新しいインスタンスを作成、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http" data-throw-if-not-resolved="false">ContractApiHttp</xref>です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-106">Create a new instance of the <xref uid="com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http" data-throw-if-not-resolved="false">ContractApiHttp</xref>.</span></span></p>
       <p></p>
     syntax:
       content: public static ContractApiHttp createFromConnectionString(ProvisioningConnectionString provisioningConnectionString)
       parameters:
         - id: provisioningConnectionString
           type: com.microsoft.azure.sdk.iot.provisioning.service.auth._provisioning_connection_string
-          description: <p>デバイスのプロビジョニング サービスのサービスの接続文字列です。 </p>
+          description: <p><span data-ttu-id="ea5bb-107">デバイスのプロビジョニング サービスのサービスの接続文字列です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-107">is the Device Provisioning Service service connection string.</span></span> </p>
       return:
         type: com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http
-        description: "<p>インスタンス<code>ContractApiHttp \r\n\r\n    </code>です。 </p>"
+        description: "<p><span data-ttu-id=\"ea5bb-108\">インスタンス<code>ContractApiHttp \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea5bb-108\">an instance of<code>ContractApiHttp \r\n\r\n    </code> .</span></span> </p>"
     exceptions:
       - type: 3c87bd19
-        description: <p>指定された接続文字列に問題がある場合 </p>
+        description: <p><span data-ttu-id="ea5bb-109">指定された接続文字列に問題がある場合</span><span class="sxs-lookup"><span data-stu-id="ea5bb-109">if there is a problem with the provided connection string.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http.request(HttpMethod,String,Map<String, String>,String)'
     id: 'request(HttpMethod,String,Map<String, String>,String)'
     parent: com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http
@@ -124,34 +124,34 @@ items:
       startLine: 130
     package: com.microsoft.azure.sdk.iot.provisioning.service.contract
     summary: |-
-      <p>この関数は、http プロトコルを使用してデバイスのプロビジョニング サービスのサービスに未加工の情報を送信します。 </p>
-      <p>この関数の目的が、基本と間の通信のコント ローラー サービスにして、デバイスのプロビジョニング サービス rest Api を十分に理解がある場合にのみ使用する必要があります。 Api を使用することを強くお勧め<b> <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref> </b>の代わりに直接アクセスする rest API がこのクラスを使用します。 </p>
+      <p><span data-ttu-id="ea5bb-110">この関数は、http プロトコルを使用してデバイスのプロビジョニング サービスのサービスに未加工の情報を送信します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-110">This function sends a raw information to the Device Provisioning Service service using http protocol.</span></span> </p>
+      <p><span data-ttu-id="ea5bb-111">この関数の目的が、基本と間の通信のコント ローラー サービスにして、デバイスのプロビジョニング サービス rest Api を十分に理解がある場合にのみ使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-111">The purpose of this function is be the base communication between the controllers and the Service, and should be used only if you have full understanding of the Device Provisioning Service rest APIs.</span></span> <span data-ttu-id="ea5bb-112">Api を使用することを強くお勧め<b> <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref> </b>の代わりに直接アクセスする rest API がこのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-112">We highly recommend that you uses the APis under <b><xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref></b> instead of directly access the rest API using this class.</span></span> </p>
       <p></p>
     syntax:
       content: 'public synchronized HttpResponse request(HttpMethod httpMethod, String path, Map<String, String> headerParameters, String payload)'
       parameters:
         - id: httpMethod
           type: com.microsoft.azure.sdk.iot.deps.transport.http._http_method
-          description: <p>要求 (GET、POST、PUT、DELETE、PATCH) で http 動詞です。 </p>
+          description: '<p><span data-ttu-id="ea5bb-113">要求 (GET、POST、PUT、DELETE、PATCH) で http 動詞です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-113">is the http verb in the request (GET, POST, PUT, DELETE, PATCH).</span></span> </p>'
         - id: path
           type: '26831127'
-          description: <p>URL を構成するサービスのリソースへのパスです。 </p>
+          description: <p><span data-ttu-id="ea5bb-114">URL を構成するサービスのリソースへのパスです。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-114">is the path to the resource in the service that will compose the URL.</span></span> </p>
         - id: headerParameters
           type: 689c8cb5
-          description: <p>http ヘッダーで省略可能なパラメーターを格納するキー値のペアの一覧を示します。 </p>
+          description: <p><span data-ttu-id="ea5bb-115">http ヘッダーで省略可能なパラメーターを格納するキー値のペアの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-115">is a list of pairs key values that contains optional parameters in the http header.</span></span> </p>
         - id: payload
           type: '26831127'
-          description: <p>メッセージの本文です。 </p>
+          description: <p><span data-ttu-id="ea5bb-116">メッセージの本文です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-116">is the body of the message.</span></span> </p>
       return:
         type: cffad4f2com.microsoft.azure.sdk.iot.deps.transport.http._http_response
-        description: "<p><code>HttpResponse \r\n\r\n    </code>要求の応答を格納しています。 </p>"
+        description: "<p><span data-ttu-id=\"ea5bb-117\"><code>HttpResponse \r\n\r\n    </code>要求の応答を格納しています。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea5bb-117\">the<code>HttpResponse \r\n\r\n    </code> that contains the response of the request.</span></span> </p>"
     exceptions:
       - type: 637b6540
-        description: <p>場合は、サービス クライアントは、プロビジョニング サービスと http メッセージを交換できませんでした。 </p>
+        description: <p><span data-ttu-id="ea5bb-118">場合は、サービス クライアントは、プロビジョニング サービスと http メッセージを交換できませんでした。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-118">if the Service Client failed to exchange http messages with the Provisioning Service.</span></span> </p>
       - type: 407b0ee3
-        description: <p>場合は、サービスのプロビジョニング応答には、エラー メッセージが含まれています。 </p>
+        description: <p><span data-ttu-id="ea5bb-119">場合は、サービスのプロビジョニング応答には、エラー メッセージが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-119">if the Provisioning Service response contains an error message.</span></span> </p>
       - type: 3c87bd19
-        description: <p>指定されたパラメーターが正しくない場合は。 </p>
+        description: <p><span data-ttu-id="ea5bb-120">指定されたパラメーターが正しくない場合は。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-120">if the provided parameters are not correct.</span></span> </p>
 references:
   - uid: 3c87bd19
     spec.java:
@@ -198,7 +198,7 @@ references:
     nameWithType: ProvisioningConnectionString
     fullName: com.microsoft.azure.sdk.iot.provisioning.service.auth.ProvisioningConnectionString
     type: Class
-    summary: <p>すべての接続文字列プロパティとユーザー、デバイス、および接続文字列のシリアル化のためのメソッドを公開します。 </p>
+    summary: '<p><span data-ttu-id="ea5bb-121">すべての接続文字列プロパティとユーザー、デバイス、および接続文字列のシリアル化のためのメソッドを公開します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-121">Expose all connections string properties and methods for user, device and connection string serialization.</span></span> </p>'
     syntax:
       content: public class ProvisioningConnectionString
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_request
@@ -217,7 +217,7 @@ references:
     nameWithType: HttpMethod
     fullName: com.microsoft.azure.sdk.iot.deps.transport.http.HttpMethod
     type: Enum
-    summary: <p>HTTPS 要求メソッド (GET)。 </p>
+    summary: <p><span data-ttu-id="ea5bb-122">HTTPS 要求メソッド (GET)。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-122">The HTTPS request method (i.e. GET).</span></span> </p>
     syntax:
       content: public enum HttpMethod
   - uid: com.microsoft.azure.sdk.iot.provisioning.service.exceptions._provis44df38cec06277955900d3713d9e20cc
@@ -227,7 +227,7 @@ references:
     nameWithType: ProvisioningServiceClientTransportException
     fullName: com.microsoft.azure.sdk.iot.provisioning.service.exceptions.ProvisioningServiceClientTransportException
     type: Class
-    summary: <p>トランスポートの例外を作成します。 </p>
+    summary: <p><span data-ttu-id="ea5bb-123">トランスポートの例外を作成します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-123">Create transport exception</span></span> </p>
     syntax:
       content: public class ProvisioningServiceClientTransportException
   - uid: com.microsoft.azure.sdk.iot.provisioning.service.contract._contract_api_http
@@ -238,9 +238,9 @@ references:
     fullName: com.microsoft.azure.sdk.iot.provisioning.service.contract.ContractApiHttp
     type: Class
     summary: |-
-      <p>このクライアントは、デバイスのプロビジョニング サービスの HTTP 通信を処理します。</p>
-      <p>このクラスは、プロビジョニング サービス クライアントとデバイスのプロビジョニング サービス間の HTTPS コントラクトを実装します。 サービス クライアントのプロビジョニングのパブリック Api を実装する、マネージャーによって呼び出されます。 パブリック Api にアクセスするを参照してください、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>です。</p>
-      <p>次の図では、これら 3 つのレイヤー、サービス クライアントの間の関係について説明します。</p>
+      <p><span data-ttu-id="ea5bb-124">このクライアントは、デバイスのプロビジョニング サービスの HTTP 通信を処理します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-124">This client handles the Device Provisioning Service HTTP communication.</span></span></p>
+      <p><span data-ttu-id="ea5bb-125">このクラスは、プロビジョニング サービス クライアントとデバイスのプロビジョニング サービス間の HTTPS コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-125">This class implements the HTTPS contract between the Provisioning Service Client and the Device Provisioning Service.</span></span> <span data-ttu-id="ea5bb-126">サービス クライアントのプロビジョニングのパブリック Api を実装する、マネージャーによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-126">It is called by the Managers that implement the Provisioning Service Client public APIs.</span></span> <span data-ttu-id="ea5bb-127">パブリック Api にアクセスするを参照してください、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-127">To access the public APIs, please see the <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>.</span></span></p>
+      <p><span data-ttu-id="ea5bb-128">次の図では、これら 3 つのレイヤー、サービス クライアントの間の関係について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-128">The follow diagram describe the relation between these 3 layers of the Service Client:</span></span></p>
       <p>
 
         <pre>
@@ -296,7 +296,7 @@ references:
     nameWithType: HttpResponse
     fullName: com.microsoft.azure.sdk.iot.deps.transport.http.HttpResponse
     type: Class
-    summary: <p>HTTPS 応答します。 (存在する場合)、ステータス コード、本文、ヘッダー フィールド、およびエラーの原因が含まれています。 </p>
+    summary: '<p><span data-ttu-id="ea5bb-129">HTTPS 応答します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-129">An HTTPS response.</span></span> <span data-ttu-id="ea5bb-130">(存在する場合)、ステータス コード、本文、ヘッダー フィールド、およびエラーの原因が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-130">Contains the status code, body, header fields, and error reason (if any).</span></span> </p>'
     syntax:
       content: public class HttpResponse
   - uid: com.microsoft.azure.sdk.iot.provisioning.service.exceptions._provisioning_service_client_exception
@@ -307,7 +307,7 @@ references:
     fullName: com.microsoft.azure.sdk.iot.provisioning.service.exceptions.ProvisioningServiceClientException
     type: Class
     summary: |-
-      <p>スーパー サービス クライアントでデバイスのプロビジョニング サービス例外クラスです。</p>
+      <p><span data-ttu-id="ea5bb-131">スーパー サービス クライアントでデバイスのプロビジョニング サービス例外クラスです。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-131">Super class for the Device Provisioning Service exceptions on the Service Client.</span></span></p>
       <p>
 
         <pre>
@@ -367,18 +367,18 @@ references:
     fullName: com.microsoft.azure.sdk.iot.provisioning.service.ProvisioningServiceClient
     type: Class
     summary: |-
-      <p>サービス クライアントのプロビジョニング デバイスです。</p>
-      <p>IoT Hub デバイス プロビジョニング サービスは、IoT Hub を人間が操作しなくても指定した IoT ハブへのプロビジョニングを自動のデバイスを有効にするためのヘルパー サービスです。 セキュリティで保護されたスケーラブルな方法でプロビジョニング数百万台のデバイスのデバイスのプロビジョニング サービスを使用できます。</p>
-      <p>この java SDK を作成および維持 IoT Hub デバイス プロビジョニング サービスに登録する開発者を支援するために API を提供する、java オブジェクトおよびメソッドで rest API を変換します。</p>
-      <p>これを使用する SDK、アプリケーションで、次のパッケージを含める必要があります。 <pre><code>// Include the following imports to use the Device Provisioning Service APIs.
+      <p><span data-ttu-id="ea5bb-132">サービス クライアントのプロビジョニング デバイスです。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-132">Device Provisioning Service Client.</span></span></p>
+      <p><span data-ttu-id="ea5bb-133">IoT Hub デバイス プロビジョニング サービスは、IoT Hub を人間が操作しなくても指定した IoT ハブへのプロビジョニングを自動のデバイスを有効にするためのヘルパー サービスです。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-133">The IoT Hub Device Provisioning Service is a helper service for IoT Hub that enables automatic device provisioning to a specified IoT hub without requiring human intervention.</span></span> <span data-ttu-id="ea5bb-134">セキュリティで保護されたスケーラブルな方法でプロビジョニング数百万台のデバイスのデバイスのプロビジョニング サービスを使用できます。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-134">You can use the Device Provisioning Service to provision millions of devices in a secure and scalable manner.</span></span></p>
+      <p><span data-ttu-id="ea5bb-135">この java SDK を作成および維持 IoT Hub デバイス プロビジョニング サービスに登録する開発者を支援するために API を提供する、java オブジェクトおよびメソッドで rest API を変換します。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-135">This java SDK provides an API to help developers to create and maintain Enrollments on the IoT Hub Device Provisioning Service, it translate the rest API in java Objects and Methods.</span></span></p>
+      <p><span data-ttu-id="ea5bb-136">これを使用する SDK、アプリケーションで、次のパッケージを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-136">To use the this SDK, you must include the follow package on your application.</span></span> <pre><code>// Include the following imports to use the Device Provisioning Service APIs.
 
           import com.microsoft.azure.sdk.iot.provisioning.service.*;
 
           </code></pre></p>
 
-      <p>によって、メインの Api が公開されている、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>アプリケーションを作成し、登録を管理する呼び出さなければいけないのパブリック メソッドが含まれています。 内のオブジェクト、<b>構成</b>など、新しい登録を作成するアプリケーションはオブジェクトを作成、パッケージの入力し、パブリック API のパラメーターとして渡されたものと<xref uid="" data-throw-if-not-resolved="false">IndividualEnrollment</xref>適切な登録の構成、および呼び出し、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client.createOrUpdateIndividualEnrollment(IndividualEnrollment)" data-throw-if-not-resolved="false">createOrUpdateIndividualEnrollment(IndividualEnrollment)</xref>です。</p>
-      <p>IoT Hub デバイス プロビジョニング サービスでは、SQL クエリはもサポートしています。 アプリケーションは、クエリは、ファクトリのいずれかのインスタンスを使用して新しいクエリを作成できます<xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client.createIndividualEnrollmentQuery(QuerySpecification)" data-throw-if-not-resolved="false">createIndividualEnrollmentQuery(QuerySpecification)</xref>渡す、 <xref uid="" data-throw-if-not-resolved="false">QuerySpecification</xref>、SQL クエリを使用して. このファクトリを返します、<xref uid="com.microsoft.azure.sdk.iot.provisioning.service._query" data-throw-if-not-resolved="false">クエリ</xref>active 反復子であるオブジェクト。</p>
-      <p>この java SDK は、次の図で表すことが、最初のレイヤーは、パブリック Api は、アプリケーションを使用していてはいけない。</p>
+      <p><span data-ttu-id="ea5bb-137">によって、メインの Api が公開されている、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>アプリケーションを作成し、登録を管理する呼び出さなければいけないのパブリック メソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-137">The main APIs are exposed by the <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client" data-throw-if-not-resolved="false">ProvisioningServiceClient</xref>, it contains the public Methods that the application shall call to create and maintain the Enrollments.</span></span> <span data-ttu-id="ea5bb-138">内のオブジェクト、<b>構成</b>など、新しい登録を作成するアプリケーションはオブジェクトを作成、パッケージの入力し、パブリック API のパラメーターとして渡されたものと<xref uid="" data-throw-if-not-resolved="false">IndividualEnrollment</xref>適切な登録の構成、および呼び出し、 <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client.createOrUpdateIndividualEnrollment(IndividualEnrollment)" data-throw-if-not-resolved="false">createOrUpdateIndividualEnrollment(IndividualEnrollment)</xref>です。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-138">The Objects in the <b>configs</b> package shall be filled and passed as parameters of the public API, for example, to create a new enrollment, the application shall create the object <xref uid="" data-throw-if-not-resolved="false">IndividualEnrollment</xref> with the appropriate enrollment configurations, and call the <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client.createOrUpdateIndividualEnrollment(IndividualEnrollment)" data-throw-if-not-resolved="false">createOrUpdateIndividualEnrollment(IndividualEnrollment)</xref>.</span></span></p>
+      <p><span data-ttu-id="ea5bb-139">IoT Hub デバイス プロビジョニング サービスでは、SQL クエリはもサポートしています。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-139">The IoT Hub Device Provisioning Service supports SQL queries too.</span></span> <span data-ttu-id="ea5bb-140">アプリケーションは、クエリは、ファクトリのいずれかのインスタンスを使用して新しいクエリを作成できます<xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client.createIndividualEnrollmentQuery(QuerySpecification)" data-throw-if-not-resolved="false">createIndividualEnrollmentQuery(QuerySpecification)</xref>渡す、 <xref uid="" data-throw-if-not-resolved="false">QuerySpecification</xref>、SQL クエリを使用して.</span><span class="sxs-lookup"><span data-stu-id="ea5bb-140">The application can create a new query using one of the queries factories, for instance <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._provisioning_service_client.createIndividualEnrollmentQuery(QuerySpecification)" data-throw-if-not-resolved="false">createIndividualEnrollmentQuery(QuerySpecification)</xref>, passing the <xref uid="" data-throw-if-not-resolved="false">QuerySpecification</xref>, with the SQL query.</span></span> <span data-ttu-id="ea5bb-141">このファクトリを返します、<xref uid="com.microsoft.azure.sdk.iot.provisioning.service._query" data-throw-if-not-resolved="false">クエリ</xref>active 反復子であるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-141">This factory returns a <xref uid="com.microsoft.azure.sdk.iot.provisioning.service._query" data-throw-if-not-resolved="false">Query</xref> object, which is an active iterator.</span></span></p>
+      <p><span data-ttu-id="ea5bb-142">この java SDK は、次の図で表すことが、最初のレイヤーは、パブリック Api は、アプリケーションを使用していてはいけない。</span><span class="sxs-lookup"><span data-stu-id="ea5bb-142">This java SDK can be represented in the follow diagram, the first layer are the public APIs the your application shall use:</span></span></p>
       <p>
 
         <pre>

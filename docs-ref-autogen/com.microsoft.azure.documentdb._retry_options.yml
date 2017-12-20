@@ -24,7 +24,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/RetryOptions.java
       startLine: 5
     package: com.microsoft.azure.documentdb
-    summary: <p>Azure DocumentDB データベース サービスでの再試行オプションをカプセル化します。 </p>
+    summary: <p><span data-ttu-id="a7051-101">Azure DocumentDB データベース サービスでの再試行オプションをカプセル化します。</span><span class="sxs-lookup"><span data-stu-id="a7051-101">Encapsulates retry options in the Azure DocumentDB database service.</span></span> </p>
     syntax: &ref_1
       content: public class RetryOptions
     inheritance:
@@ -46,13 +46,13 @@ items:
       startLine: 24
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>サービスが適用されるため率を制限するクライアントで要求が失敗した場合の再試行の最大数を取得します。</p>
+      <p><span data-ttu-id="a7051-102">サービスが適用されるため率を制限するクライアントで要求が失敗した場合の再試行の最大数を取得します。</span><span class="sxs-lookup"><span data-stu-id="a7051-102">Gets the maximum number of retries in the case where the request fails because the service has applied rate limiting on the client.</span></span></p>
       <p></p>
     syntax:
       content: public int getMaxRetryAttemptsOnThrottledRequests()
       return:
         type: f75371fa
-        description: <p>再試行の最大数。 </p>
+        description: <p><span data-ttu-id="a7051-103">再試行の最大数。</span><span class="sxs-lookup"><span data-stu-id="a7051-103">the maximum number of retries.</span></span> </p>
   - uid: com.microsoft.azure.documentdb._retry_options.getMaxRetryWaitTimeInSeconds()
     id: getMaxRetryWaitTimeInSeconds()
     parent: com.microsoft.azure.documentdb._retry_options
@@ -70,13 +70,13 @@ items:
       startLine: 58
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>秒単位で最大再試行時間を取得します。</p>
+      <p><span data-ttu-id="a7051-104">秒単位で最大再試行時間を取得します。</span><span class="sxs-lookup"><span data-stu-id="a7051-104">Gets the maximum retry time in seconds.</span></span></p>
       <p></p>
     syntax:
       content: public int getMaxRetryWaitTimeInSeconds()
       return:
         type: f75371fa
-        description: <p>最大時間 (秒) を再試行してください。 </p>
+        description: <p><span data-ttu-id="a7051-105">最大時間 (秒) を再試行してください。</span><span class="sxs-lookup"><span data-stu-id="a7051-105">the maximum retry time in seconds.</span></span> </p>
   - uid: com.microsoft.azure.documentdb._retry_options.RetryOptions()
     id: RetryOptions()
     parent: com.microsoft.azure.documentdb._retry_options
@@ -93,7 +93,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/RetryOptions.java
       startLine: 13
     package: com.microsoft.azure.documentdb
-    summary: <p>新しいインスタンスを作成、 <xref uid="com.microsoft.azure.documentdb._retry_options" data-throw-if-not-resolved="false">RetryOptions</xref>クラスし、すべてのプロパティを既定値に初期化します。 </p>
+    summary: <p><span data-ttu-id="a7051-106">新しいインスタンスを作成、 <xref uid="com.microsoft.azure.documentdb._retry_options" data-throw-if-not-resolved="false">RetryOptions</xref>クラスし、すべてのプロパティを既定値に初期化します。</span><span class="sxs-lookup"><span data-stu-id="a7051-106">Creates a new instance of the <xref uid="com.microsoft.azure.documentdb._retry_options" data-throw-if-not-resolved="false">RetryOptions</xref> class and initializes all properties to default values.</span></span> </p>
     syntax:
       content: public RetryOptions()
   - uid: com.microsoft.azure.documentdb._retry_options.setMaxRetryAttemptsOnThrottledRequests(int)
@@ -113,16 +113,16 @@ items:
       startLine: 45
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>サービスが適用されるため率を制限するクライアントで要求が失敗した場合の再試行の最大数を設定します。 </p>
-      <p>送信している場合、クライアント要求、許可されているレートよりも高速、サービスは (すぎる多く Request) をクライアントを調整する HttpStatusCode 429 を返します。 SDK の現在の実装は、時間、サービス、時間が経過後の処理を再試行するように指示し、待機します。 </p>
-      <p>既定値は 9 です。 つまり、要求が調整の場合、同じ要求の送信は最大 10 倍の時間のサーバーにアプリケーションにエラーが返される前にします。</p>
+      <p><span data-ttu-id="a7051-107">サービスが適用されるため率を制限するクライアントで要求が失敗した場合の再試行の最大数を設定します。</span><span class="sxs-lookup"><span data-stu-id="a7051-107">Sets the maximum number of retries in the case where the request fails because the service has applied rate limiting on the client.</span></span> </p>
+      <p><span data-ttu-id="a7051-108">送信している場合、クライアント要求、許可されているレートよりも高速、サービスは (すぎる多く Request) をクライアントを調整する HttpStatusCode 429 を返します。</span><span class="sxs-lookup"><span data-stu-id="a7051-108">When a client is sending requests faster than the allowed rate, the service will return HttpStatusCode 429 (Too Many Request) to throttle the client.</span></span> <span data-ttu-id="a7051-109">SDK の現在の実装は、時間、サービス、時間が経過後の処理を再試行するように指示し、待機します。</span><span class="sxs-lookup"><span data-stu-id="a7051-109">The current implementation in the SDK will then wait for the amount of time the service tells it to wait and retry after the time has elapsed.</span></span> </p>
+      <p><span data-ttu-id="a7051-110">既定値は 9 です。</span><span class="sxs-lookup"><span data-stu-id="a7051-110">The default value is 9.</span></span> <span data-ttu-id="a7051-111">つまり、要求が調整の場合、同じ要求の送信は最大 10 倍の時間のサーバーにアプリケーションにエラーが返される前にします。</span><span class="sxs-lookup"><span data-stu-id="a7051-111">This means in the case where the request is throttled, the same request will be issued for a maximum of 10 times to the server before an error is returned to the application.</span></span></p>
       <p></p>
     syntax:
       content: public void setMaxRetryAttemptsOnThrottledRequests(int maxRetryAttemptsOnThrottledRequests)
       parameters:
         - id: maxRetryAttemptsOnThrottledRequests
           type: f75371fa
-          description: <p>スロットル エラーのため失敗した要求の再試行の最大数。 </p>
+          description: <p><span data-ttu-id="a7051-112">スロットル エラーのため失敗した要求の再試行の最大数。</span><span class="sxs-lookup"><span data-stu-id="a7051-112">the max number of retry attempts on failed requests due to a throttle error.</span></span> </p>
   - uid: com.microsoft.azure.documentdb._retry_options.setMaxRetryWaitTimeInSeconds(int)
     id: setMaxRetryWaitTimeInSeconds(int)
     parent: com.microsoft.azure.documentdb._retry_options
@@ -140,16 +140,16 @@ items:
       startLine: 76
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>セットの最大再試行時間 (秒)。 </p>
-      <p>スロットル エラーのため、要求に失敗したときに、サービス応答を返信までの時間が経過する前にクライアントが再試行する必要がありますを示す値を含む (再試行後)。 MaxRetryWaitTime フラグは、すべての再試行回数の最大待機時間を設定するアプリケーションを使用します。 累積待機時間を超えた場合、MaxRetryWaitTime、SDK が再試行を停止し、アプリケーションに、エラーが返されます。 </p>
-      <p>既定値は 30 秒です。</p>
+      <p><span data-ttu-id="a7051-113">セットの最大再試行時間 (秒)。</span><span class="sxs-lookup"><span data-stu-id="a7051-113">Sets the maximum retry time in seconds.</span></span> </p>
+      <p><span data-ttu-id="a7051-114">スロットル エラーのため、要求に失敗したときに、サービス応答を返信までの時間が経過する前にクライアントが再試行する必要がありますを示す値を含む (再試行後)。</span><span class="sxs-lookup"><span data-stu-id="a7051-114">When a request fails due to a throttle error, the service sends back a response that contains a value indicating the client should not retry before the time period has elapsed (Retry-After).</span></span> <span data-ttu-id="a7051-115">MaxRetryWaitTime フラグは、すべての再試行回数の最大待機時間を設定するアプリケーションを使用します。</span><span class="sxs-lookup"><span data-stu-id="a7051-115">The MaxRetryWaitTime flag allows the application to set a maximum wait time for all retry attempts.</span></span> <span data-ttu-id="a7051-116">累積待機時間を超えた場合、MaxRetryWaitTime、SDK が再試行を停止し、アプリケーションに、エラーが返されます。</span><span class="sxs-lookup"><span data-stu-id="a7051-116">If the cumulative wait time exceeds the MaxRetryWaitTime, the SDK will stop retrying and return the error to the application.</span></span> </p>
+      <p><span data-ttu-id="a7051-117">既定値は 30 秒です。</span><span class="sxs-lookup"><span data-stu-id="a7051-117">The default value is 30 seconds.</span></span></p>
       <p></p>
     syntax:
       content: public void setMaxRetryWaitTimeInSeconds(int maxRetryWaitTimeInSeconds)
       parameters:
         - id: maxRetryWaitTimeInSeconds
           type: f75371fa
-          description: <p>リクエストを秒単位の最大数は再試行されます。 </p>
+          description: <p><span data-ttu-id="a7051-118">リクエストを秒単位の最大数は再試行されます。</span><span class="sxs-lookup"><span data-stu-id="a7051-118">the maximum number of seconds a request will be retried.</span></span> </p>
 references:
   - uid: com.microsoft.azure.documentdb._retry_options.RetryOptions*
     name: RetryOptions
@@ -187,5 +187,5 @@ references:
     nameWithType: RetryOptions
     fullName: com.microsoft.azure.documentdb.RetryOptions
     type: Class
-    summary: <p>Azure DocumentDB データベース サービスでの再試行オプションをカプセル化します。 </p>
+    summary: <p><span data-ttu-id="a7051-119">Azure DocumentDB データベース サービスでの再試行オプションをカプセル化します。</span><span class="sxs-lookup"><span data-stu-id="a7051-119">Encapsulates retry options in the Azure DocumentDB database service.</span></span> </p>
     syntax: *ref_1

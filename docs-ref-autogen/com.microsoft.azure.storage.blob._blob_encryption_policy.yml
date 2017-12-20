@@ -26,7 +26,7 @@ items:
       path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
       startLine: 44
     package: com.microsoft.azure.storage.blob
-    summary: <p>Azure blob のエンベロープの暗号化/復号化されている blob の暗号化ポリシーを表します。 </p>
+    summary: <p><span data-ttu-id="ca3d7-101">Azure blob のエンベロープの暗号化/復号化されている blob の暗号化ポリシーを表します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-101">Represents a blob encryption policy that is used to perform envelope encryption/decryption of Azure blobs.</span></span> </p>
     syntax: &ref_1
       content: public class BlobEncryptionPolicy
     inheritance:
@@ -48,18 +48,18 @@ items:
       startLine: 70
     package: com.microsoft.azure.storage.blob
     summary: |-
-      <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.storage.blob._blob_encryption_policy" data-throw-if-not-resolved="false">BlobEncryptionPolicy</xref>クラスを指定したキーとの競合回避モジュールを使用します。 </p>
-      <p>生成されたポリシーは、暗号化に使用するためのもので、ユーザーは予想される場合に、少なくともキーを提供します。 キーがない場合に、暗号化中にスローされる例外が発生します。 生成されたポリシーを復号化に使用する場合は、ユーザーは、keyResolver を指定できます。 クライアント ライブラリが - 1。 キーを取得する指定した場合は、キーの競合回避モジュールを呼び出します。 手順 2. 競合回避モジュールが指定されていませんが、キーが指定されて、キーのキーの id と一致しを使用します。</p>
+      <p><span data-ttu-id="ca3d7-102">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.storage.blob._blob_encryption_policy" data-throw-if-not-resolved="false">BlobEncryptionPolicy</xref>クラスを指定したキーとの競合回避モジュールを使用します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-102">Initializes a new instance of the <xref uid="com.microsoft.azure.storage.blob._blob_encryption_policy" data-throw-if-not-resolved="false">BlobEncryptionPolicy</xref> class with the specified key and resolver.</span></span> </p>
+      <p><span data-ttu-id="ca3d7-103">生成されたポリシーは、暗号化に使用するためのもので、ユーザーは予想される場合に、少なくともキーを提供します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-103">If the generated policy is intended to be used for encryption, users are expected to provide a key at the minimum.</span></span> <span data-ttu-id="ca3d7-104">キーがない場合に、暗号化中にスローされる例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-104">The absence of key will cause an exception to be thrown during encryption.</span></span> <span data-ttu-id="ca3d7-105">生成されたポリシーを復号化に使用する場合は、ユーザーは、keyResolver を指定できます。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-105">If the generated policy is intended to be used for decryption, users can provide a keyResolver.</span></span> <span data-ttu-id="ca3d7-106">クライアント ライブラリが - 1。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-106">The client library will - 1.</span></span> <span data-ttu-id="ca3d7-107">キーを取得する指定した場合は、キーの競合回避モジュールを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-107">Invoke the key resolver if specified to get the key.</span></span> <span data-ttu-id="ca3d7-108">手順 2.</span><span class="sxs-lookup"><span data-stu-id="ca3d7-108">2.</span></span> <span data-ttu-id="ca3d7-109">競合回避モジュールが指定されていませんが、キーが指定されて、キーのキーの id と一致しを使用します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-109">If resolver is not specified but a key is specified, match the key id on the key and use it.</span></span></p>
       <p></p>
     syntax:
       content: 'public BlobEncryptionPolicy(IKey key, IKeyResolver keyResolver)'
       parameters:
         - id: key
           type: com.microsoft.azure.keyvault.core._i_key
-          description: <p>型のオブジェクト<xref uid="" data-throw-if-not-resolved="false">IKey</xref>コンテンツ暗号化キーをラップ/ラップ解除するために使用されます。 </p>
+          description: <p><span data-ttu-id="ca3d7-110">型のオブジェクト<xref uid="" data-throw-if-not-resolved="false">IKey</xref>コンテンツ暗号化キーをラップ/ラップ解除するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-110">An object of type <xref uid="" data-throw-if-not-resolved="false">IKey</xref> that is used to wrap/unwrap the content encryption key.</span></span> </p>
         - id: keyResolver
           type: com.microsoft.azure.keyvault.core._i_key_resolver
-          description: <p>キーの競合回避モジュールを既存の blob を解読するための正しいキーを選択します。 </p>
+          description: <p><span data-ttu-id="ca3d7-111">キーの競合回避モジュールを既存の blob を解読するための正しいキーを選択します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-111">The key resolver used to select the correct key for decrypting existing blobs.</span></span> </p>
   - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.getKey()
     id: getKey()
     parent: com.microsoft.azure.storage.blob._blob_encryption_policy
@@ -77,13 +77,13 @@ items:
       startLine: 80
     package: com.microsoft.azure.storage.blob
     summary: |-
-      <p>取得、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</p>
+      <p><span data-ttu-id="ca3d7-112">取得、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-112">Gets the <xref uid="" data-throw-if-not-resolved="false">IKey</xref> that is used to wrap/unwrap the content key during encryption.</span></span></p>
       <p></p>
     syntax:
       content: public IKey getKey()
       return:
         type: com.microsoft.azure.keyvault.core._i_key
-        description: <p><xref uid="" data-throw-if-not-resolved="false">IKey</xref>オブジェクト。 </p>
+        description: <p><span data-ttu-id="ca3d7-113"><xref uid="" data-throw-if-not-resolved="false">IKey</xref>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-113">An <xref uid="" data-throw-if-not-resolved="false">IKey</xref> object.</span></span> </p>
   - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.getKeyResolver()
     id: getKeyResolver()
     parent: com.microsoft.azure.storage.blob._blob_encryption_policy
@@ -101,13 +101,13 @@ items:
       startLine: 89
     package: com.microsoft.azure.storage.blob
     summary: |-
-      <p>使用して、適切なキーの既存の blob を復号化キーの競合回避モジュールを取得します。</p>
+      <p><span data-ttu-id="ca3d7-114">使用して、適切なキーの既存の blob を復号化キーの競合回避モジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-114">Gets the key resolver used to select the correct key for decrypting existing blobs.</span></span></p>
       <p></p>
     syntax:
       content: public IKeyResolver getKeyResolver()
       return:
         type: com.microsoft.azure.keyvault.core._i_key_resolver
-        description: <p>競合回避モジュールを返す、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>キー Id を指定します。 </p>
+        description: <p><span data-ttu-id="ca3d7-115">競合回避モジュールを返す、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>キー Id を指定します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-115">A resolver that returns an <xref uid="" data-throw-if-not-resolved="false">IKey</xref> given a keyId.</span></span> </p>
   - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.keyResolver
     id: keyResolver
     parent: com.microsoft.azure.storage.blob._blob_encryption_policy
@@ -123,7 +123,7 @@ items:
       path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
       startLine: 49
     package: com.microsoft.azure.storage.blob
-    summary: <p><xref uid="" data-throw-if-not-resolved="false">IKeyResolver</xref>既存の blob を解読するための正しいキーを選択するために使用します。 </p>
+    summary: <p><span data-ttu-id="ca3d7-116"><xref uid="" data-throw-if-not-resolved="false">IKeyResolver</xref>既存の blob を解読するための正しいキーを選択するために使用します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-116">The <xref uid="" data-throw-if-not-resolved="false">IKeyResolver</xref> used to select the correct key for decrypting existing blobs.</span></span> </p>
     syntax:
       content: public IKeyResolver keyResolver
       return:
@@ -143,7 +143,7 @@ items:
       path: microsoft-azure-storage/src/com/microsoft/azure/storage/blob/BlobEncryptionPolicy.java
       startLine: 54
     package: com.microsoft.azure.storage.blob
-    summary: <p>型のオブジェクト<xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。 </p>
+    summary: <p><span data-ttu-id="ca3d7-117">型のオブジェクト<xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-117">An object of type <xref uid="" data-throw-if-not-resolved="false">IKey</xref> that is used to wrap/unwrap the content key during encryption.</span></span> </p>
     syntax:
       content: public IKey keyWrapper
       return:
@@ -165,14 +165,14 @@ items:
       startLine: 99
     package: com.microsoft.azure.storage.blob
     summary: |-
-      <p>セット、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</p>
+      <p><span data-ttu-id="ca3d7-118">セット、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>ラップ/ラップ解除コンテンツ キーの暗号化中に使用されます。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-118">Sets the <xref uid="" data-throw-if-not-resolved="false">IKey</xref> that is used to wrap/unwrap the content key during encryption.</span></span></p>
       <p></p>
     syntax:
       content: public void setKey(IKey key)
       parameters:
         - id: key
           type: com.microsoft.azure.keyvault.core._i_key
-          description: <p><xref uid="" data-throw-if-not-resolved="false">IKey</xref>オブジェクト。 </p>
+          description: <p><span data-ttu-id="ca3d7-119"><xref uid="" data-throw-if-not-resolved="false">IKey</xref>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-119">An <xref uid="" data-throw-if-not-resolved="false">IKey</xref> object.</span></span> </p>
   - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.setKeyResolver(IKeyResolver)
     id: setKeyResolver(IKeyResolver)
     parent: com.microsoft.azure.storage.blob._blob_encryption_policy
@@ -190,14 +190,14 @@ items:
       startLine: 109
     package: com.microsoft.azure.storage.blob
     summary: |-
-      <p>使用して、適切なキーの既存の blob を復号化キーの競合回避モジュールを設定します。</p>
+      <p><span data-ttu-id="ca3d7-120">使用して、適切なキーの既存の blob を復号化キーの競合回避モジュールを設定します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-120">Sets the key resolver used to select the correct key for decrypting existing blobs.</span></span></p>
       <p></p>
     syntax:
       content: public void setKeyResolver(IKeyResolver keyResolver)
       parameters:
         - id: keyResolver
           type: com.microsoft.azure.keyvault.core._i_key_resolver
-          description: <p>競合回避モジュールを返す、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>キー Id を指定します。 </p>
+          description: <p><span data-ttu-id="ca3d7-121">競合回避モジュールを返す、 <xref uid="" data-throw-if-not-resolved="false">IKey</xref>キー Id を指定します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-121">A resolver that returns an <xref uid="" data-throw-if-not-resolved="false">IKey</xref> given a keyId.</span></span> </p>
 references:
   - uid: com.microsoft.azure.storage.blob._blob_encryption_policy.BlobEncryptionPolicy*
     name: BlobEncryptionPolicy
@@ -231,7 +231,7 @@ references:
     nameWithType: IKeyResolver
     fullName: com.microsoft.azure.keyvault.core.IKeyResolver
     type: Interface
-    summary: <p>Microsoft Azure Key Vault のライブラリを含むキーの解決操作を表すためのインターフェイスします。 </p>
+    summary: <p><span data-ttu-id="ca3d7-122">Microsoft Azure Key Vault のライブラリを含むキーの解決操作を表すためのインターフェイスします。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-122">Interface for representing key resolving operations with the Microsoft Azure Key Vault libraries.</span></span> </p>
     syntax:
       content: public interface IKeyResolver
   - uid: com.microsoft.azure.keyvault.core._i_key
@@ -241,7 +241,7 @@ references:
     nameWithType: IKey
     fullName: com.microsoft.azure.keyvault.core.IKey
     type: Interface
-    summary: <p>Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。 </p>
+    summary: <p><span data-ttu-id="ca3d7-123">Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-123">Interface for representing cryptographic keys with the Microsoft Azure Key Vault libraries.</span></span> </p>
     syntax:
       content: public interface IKey
   - uid: com.microsoft.azure.storage.blob._blob_encryption_policy
@@ -251,7 +251,7 @@ references:
     nameWithType: BlobEncryptionPolicy
     fullName: com.microsoft.azure.storage.blob.BlobEncryptionPolicy
     type: Class
-    summary: <p>Azure blob のエンベロープの暗号化/復号化されている blob の暗号化ポリシーを表します。 </p>
+    summary: <p><span data-ttu-id="ca3d7-124">Azure blob のエンベロープの暗号化/復号化されている blob の暗号化ポリシーを表します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-124">Represents a blob encryption policy that is used to perform envelope encryption/decryption of Azure blobs.</span></span> </p>
     syntax: *ref_1
   - uid: com.microsoft.azure.storage._storage_exception
     parent: com.microsoft.azure.storage
@@ -260,7 +260,7 @@ references:
     nameWithType: StorageException
     fullName: com.microsoft.azure.storage.StorageException
     type: Class
-    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    summary: <p><span data-ttu-id="ca3d7-125">Microsoft Azure ストレージ サービスの例外を表します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-125">Represents an exception for the Microsoft Azure storage service.</span></span> </p>
     syntax:
       content: public class StorageException
   - uid: com.microsoft.azure.storage.blob._cloud_blob
@@ -270,7 +270,7 @@ references:
     nameWithType: CloudBlob
     fullName: com.microsoft.azure.storage.blob.CloudBlob
     type: Class
-    summary: <p>Microsoft Azure blob を表します。 これは、基本クラスを<xref uid="com.microsoft.azure.storage.blob._cloud_block_blob" data-throw-if-not-resolved="false">CloudBlockBlob</xref>と<xref uid="com.microsoft.azure.storage.blob._cloud_page_blob" data-throw-if-not-resolved="false">CloudPageBlob</xref>クラスです。 </p>
+    summary: <p><span data-ttu-id="ca3d7-126">Microsoft Azure blob を表します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-126">Represents a Microsoft Azure blob.</span></span> <span data-ttu-id="ca3d7-127">これは、基本クラスを<xref uid="com.microsoft.azure.storage.blob._cloud_block_blob" data-throw-if-not-resolved="false">CloudBlockBlob</xref>と<xref uid="com.microsoft.azure.storage.blob._cloud_page_blob" data-throw-if-not-resolved="false">CloudPageBlob</xref>クラスです。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-127">This is the base class for the <xref uid="com.microsoft.azure.storage.blob._cloud_block_blob" data-throw-if-not-resolved="false">CloudBlockBlob</xref> and <xref uid="com.microsoft.azure.storage.blob._cloud_page_blob" data-throw-if-not-resolved="false">CloudPageBlob</xref> classes.</span></span> </p>
     syntax:
       content: public class CloudBlob
   - uid: com.microsoft.azure.storage.blob._blob_request_options
@@ -280,6 +280,6 @@ references:
     nameWithType: BlobRequestOptions
     fullName: com.microsoft.azure.storage.blob.BlobRequestOptions
     type: Class
-    summary: <p>要求時に指定できるオプションのセットを表します。 </p>
+    summary: <p><span data-ttu-id="ca3d7-128">要求時に指定できるオプションのセットを表します。</span><span class="sxs-lookup"><span data-stu-id="ca3d7-128">Represents a set of options that may be specified on a request.</span></span> </p>
     syntax:
       content: public class BlobRequestOptions

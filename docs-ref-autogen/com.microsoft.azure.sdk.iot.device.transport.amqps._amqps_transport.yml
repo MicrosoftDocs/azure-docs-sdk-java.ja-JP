@@ -35,8 +35,8 @@ items:
       startLine: 27
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>AMQPS トランスポートの場合。 メッセージを追加して、IoT Hub にメッセージを送信するための機能が含まれています。 IoT Hub によって受信されるまで、未送信のメッセージをバッファーします。 トランスポートは、構築時、次のパラメーターにバインドされて: IoT Hub 名、デバイス ID、デバイスのキー。 </p>
-      <p>トランスポートは、IoT Hub からメッセージを受信し、メッセージとコールバックが見つかった場合はユーザー定義メッセージのコールバックを呼び出します。 </p>
+      <p><span data-ttu-id="ea0ba-101">AMQPS トランスポートの場合。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-101">An AMQPS transport.</span></span> <span data-ttu-id="ea0ba-102">メッセージを追加して、IoT Hub にメッセージを送信するための機能が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-102">Contains functionality for adding messages and sending messages to an IoT Hub.</span></span> <span data-ttu-id="ea0ba-103">IoT Hub によって受信されるまで、未送信のメッセージをバッファーします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-103">Buffers unsent messages until they are received by an IoT Hub.</span></span> <span data-ttu-id="ea0ba-104">トランスポートは、構築時、次のパラメーターにバインドされて: IoT Hub 名、デバイス ID、デバイスのキー。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-104">A transport is bound at construction to the following parameters: IoT Hub name, device ID and device key.</span></span> </p>
+      <p><span data-ttu-id="ea0ba-105">トランスポートは、IoT Hub からメッセージを受信し、メッセージとコールバックが見つかった場合はユーザー定義メッセージのコールバックを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-105">The transport also receives messages from IoT Hub and invokes a user-defined message callback if a message and callback are found.</span></span> </p>
     syntax:
       content: 'public class AmqpsTransport implements IotHubTransport,ServerListener'
     inheritance:
@@ -60,24 +60,24 @@ items:
       startLine: 227
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>トランスポート キューにメッセージを追加します。</p>
+      <p><span data-ttu-id="ea0ba-106">トランスポート キューにメッセージを追加します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-106">Adds a message to the transport queue.</span></span></p>
       <p></p>
     syntax:
       content: 'public void addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device._message
-          description: <p>送信するメッセージ。 </p>
+          description: <p><span data-ttu-id="ea0ba-107">送信するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-107">the message to be sent.</span></span> </p>
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="ea0ba-108">メッセージの応答を受信したときに呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-108">the callback to be invoked when a response for the message is received.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+          description: <p><span data-ttu-id="ea0ba-109">コールバックが呼び出されたときに渡されるコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-109">the context to be passed in when the callback is invoked.</span></span></p>
     overridden: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubEventCallback,Object)'
     exceptions:
       - type: 12fe80de
-        description: <p>場合は、トランスポートは閉じています。 </p>
+        description: <p><span data-ttu-id="ea0ba-110">場合は、トランスポートは閉じています。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-110">if the transport is closed.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.addMessage(Message,IotHubResponseCallback,Object)'
     id: 'addMessage(Message,IotHubResponseCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -95,24 +95,24 @@ items:
       startLine: 251
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>トランスポート キューにメッセージを追加します。 !!! この機能はまだサポートされていないを使用してください!</p>
+      <p><span data-ttu-id="ea0ba-111">トランスポート キューにメッセージを追加します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-111">Adds a message to the transport queue.</span></span> <span data-ttu-id="ea0ba-112">!!!</span><span class="sxs-lookup"><span data-stu-id="ea0ba-112">!!!</span></span> <span data-ttu-id="ea0ba-113">この機能はまだサポートされていないを使用してください!</span><span class="sxs-lookup"><span data-stu-id="ea0ba-113">This functionality is not supported yet, please use  with !!!</span></span></p>
       <p></p>
     syntax:
       content: 'public void addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device._message
-          description: <p>送信するメッセージ。 </p>
+          description: <p><span data-ttu-id="ea0ba-114">送信するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-114">the message to be sent.</span></span> </p>
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
-          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="ea0ba-115">メッセージの応答を受信したときに呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-115">the callback to be invoked when a response for the message is received.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。</p>
+          description: <p><span data-ttu-id="ea0ba-116">コールバックが呼び出されたときに渡されるコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-116">the context to be passed in when the callback is invoked.</span></span></p>
     overridden: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubResponseCallback,Object)'
     exceptions:
       - type: b1c38b44
-        description: <p>いつも。 </p>
+        description: <p><span data-ttu-id="ea0ba-117">いつも。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-117">always.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.AmqpsTransport(final DeviceClientConfig)
     id: AmqpsTransport(final DeviceClientConfig)
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -130,14 +130,14 @@ items:
       startLine: 60
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>インスタンスを作成する、指定された<xref uid="com.microsoft.azure.sdk.iot.device._device_client_config" data-throw-if-not-resolved="false">DeviceClientConfig</xref>オブジェクト。</p>
+      <p><span data-ttu-id="ea0ba-118">インスタンスを作成する、指定された<xref uid="com.microsoft.azure.sdk.iot.device._device_client_config" data-throw-if-not-resolved="false">DeviceClientConfig</xref>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-118">Constructs an instance from the given <xref uid="com.microsoft.azure.sdk.iot.device._device_client_config" data-throw-if-not-resolved="false">DeviceClientConfig</xref> object.</span></span></p>
       <p></p>
     syntax:
       content: public AmqpsTransport(final DeviceClientConfig config)
       parameters:
         - id: config
           type: 93de0ef9com.microsoft.azure.sdk.iot.device._device_client_config
-          description: <p>IoT Hub と AMQPS セッションの構成パラメーター </p>
+          description: <p><span data-ttu-id="ea0ba-119">IoT Hub と AMQPS セッションの構成パラメーター</span><span class="sxs-lookup"><span data-stu-id="ea0ba-119">configuration parameters for an AMQPS session with an IoT Hub</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.close()
     id: close()
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -154,7 +154,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/amqps/AmqpsTransport.java
       startLine: 170
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
-    summary: "<p>IoT Hub と通信するために使用するすべてのリソースを閉じます。 1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。 トランスポートが既に閉じられています関数には何もしないものとします。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"ea0ba-120\">IoT Hub と通信するために使用するすべてのリソースを閉じます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-120\">Closes all resources used to communicate with an IoT Hub.</span></span> <span data-ttu-id=\"ea0ba-121\">1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-121\">Once<code>close() \r\n\r\n    </code> is called, the transport is no longer usable.</span></span> <span data-ttu-id=\"ea0ba-122\">トランスポートが既に閉じられています関数には何もしないものとします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-122\">If the transport is already closed, the function shall do nothing.</span></span></p>\n\n<p></p>"
     syntax:
       content: public synchronized void close()
       return:
@@ -162,7 +162,7 @@ items:
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.close()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、トランスポートを閉じるときにエラーが発生します。 </p>
+        description: <p><span data-ttu-id="ea0ba-123">場合は、トランスポートを閉じるときにエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-123">if an error occurs in closing the transport.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.connectionEstablished()
     id: connectionEstablished()
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -179,7 +179,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/amqps/AmqpsTransport.java
       startLine: 499
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
-    summary: <p>接続が確立されているすべてのリスナーのアラートを生成する必要があります。 </p>
+    summary: <p><span data-ttu-id="ea0ba-124">接続が確立されているすべてのリスナーのアラートを生成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-124">Need to alert all listeners that the connection has been established.</span></span> </p>
     syntax:
       content: public void connectionEstablished()
     overridden: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.connectionEstablished()
@@ -199,7 +199,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/amqps/AmqpsTransport.java
       startLine: 477
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
-    summary: <p>接続が失われた場合は、進行中のすべてのメッセージが再度送信するバッファーです。 </p>
+    summary: '<p><span data-ttu-id="ea0ba-125">接続が失われた場合は、進行中のすべてのメッセージが再度送信するバッファーです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-125">If the connection is lost, all the messages in progress are buffered to be sent again.</span></span> </p>'
     syntax:
       content: public void connectionLost()
     overridden: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.connectionLost()
@@ -220,15 +220,15 @@ items:
       startLine: 392
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。 </p>
-      <p>メッセージ コールバックが設定されていない場合、関数は何もします。</p>
+      <p><span data-ttu-id="ea0ba-126">メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-126">Invokes the message callback if a message is found and responds to the IoT Hub on how the processed message should be handled by the IoT Hub.</span></span> </p>
+      <p><span data-ttu-id="ea0ba-127">メッセージ コールバックが設定されていない場合、関数は何もします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-127">If no message callback is set, the function will do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public void handleMessage()
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.handleMessage()
     exceptions:
       - type: 12fe80de
-        description: <p>場合は、トランスポートは閉じています。 </p>
+        description: <p><span data-ttu-id="ea0ba-128">場合は、トランスポートは閉じています。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-128">if the transport is closed.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.invokeCallbacks()
     id: invokeCallbacks()
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -246,14 +246,14 @@ items:
       startLine: 359
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>完了したすべての要求のコールバックを呼び出します。</p>
+      <p><span data-ttu-id="ea0ba-129">完了したすべての要求のコールバックを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-129">Invokes the callbacks for all completed requests.</span></span></p>
       <p></p>
     syntax:
       content: public void invokeCallbacks()
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.invokeCallbacks()
     exceptions:
       - type: 12fe80de
-        description: <p>場合は、トランスポートは閉じています。 </p>
+        description: <p><span data-ttu-id="ea0ba-130">場合は、トランスポートは閉じています。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-130">if the transport is closed.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.isEmpty()
     id: isEmpty()
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -270,12 +270,12 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/amqps/AmqpsTransport.java
       startLine: 527
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
-    summary: "<p>返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"ea0ba-131\">返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-131\">Returns<code>true \r\n\r\n    </code> if the transport has no more messages to handle, and<code>false \r\n\r\n    </code> otherwise.</span></span></p>\n\n<p></p>"
     syntax:
       content: public boolean isEmpty()
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。 </p>"
+        description: "<p><span data-ttu-id=\"ea0ba-132\">\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-132\">\r\n\r\n  <code>true \r\n\r\n    </code> if the transport has no more messages to handle, and<code>false \r\n\r\n    </code> otherwise.</span></span> </p>"
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.isEmpty()
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.messageReceived(AmqpsMessage)
     id: messageReceived(AmqpsMessage)
@@ -293,13 +293,13 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/amqps/AmqpsTransport.java
       startLine: 513
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
-    summary: <p>メッセージが受信されると、処理されるメッセージの一覧に追加されます。 </p>
+    summary: '<p><span data-ttu-id="ea0ba-133">メッセージが受信されると、処理されるメッセージの一覧に追加されます。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-133">When a message is received, it is added to the list of messages to be processed.</span></span> </p>'
     syntax:
       content: public void messageReceived(AmqpsMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_message
-          description: <p>受信したメッセージ。 </p>
+          description: <p><span data-ttu-id="ea0ba-134">受信したメッセージ。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-134">The message received.</span></span> </p>
     overridden: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.messageReceived(AmqpsMessage)
   - uid: 'com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.messageSent(Integer,Boolean)'
     id: 'messageSent(Integer,Boolean)'
@@ -317,16 +317,16 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/transport/amqps/AmqpsTransport.java
       startLine: 452
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
-    summary: <p>Iot Hub によって、メッセージの応答が進行状況メッセージ内のリストから削除され、そのコールバックが実行されるコールバックの一覧に追加します。 メッセージが正常に配信されませんだった場合、は、再度送信するバッファーです。 </p>
+    summary: '<p><span data-ttu-id="ea0ba-135">Iot Hub によって、メッセージの応答が進行状況メッセージ内のリストから削除され、そのコールバックが実行されるコールバックの一覧に追加します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-135">When a message is acknowledged by IoTHub, it is removed from the list of in progress messages and its callback is added to the list of callbacks to be executed.</span></span> <span data-ttu-id="ea0ba-136">メッセージが正常に配信されませんだった場合、は、再度送信するバッファーです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-136">If the message was not successfully delivered, it is buffered to be sent again.</span></span> </p>'
     syntax:
       content: 'public void messageSent(Integer messageHash, Boolean deliveryState)'
       parameters:
         - id: messageHash
           type: 08effaa0
-          description: <p>メッセージのハッシュです。 </p>
+          description: <p><span data-ttu-id="ea0ba-137">メッセージのハッシュです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-137">The hash of the message.</span></span> </p>
         - id: deliveryState
           type: 866c2227
-          description: <p>配信の状態。 </p>
+          description: <p><span data-ttu-id="ea0ba-138">配信の状態。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-138">The state of the delivery.</span></span> </p>
     overridden: 'com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.messageSent(Integer,Boolean)'
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.multiplexOpen(List<DeviceClient>)
     id: multiplexOpen(List<DeviceClient>)
@@ -345,7 +345,7 @@ items:
       startLine: 116
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>IoT Hub と共有の通信チャネルを確立します。 チャネルが既に onConnectionInit の場合、関数には何もしないいてはいけない。</p>
+      <p><span data-ttu-id="ea0ba-139">IoT Hub と共有の通信チャネルを確立します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-139">Establishes a shared communication channel with an IoT Hub.</span></span> <span data-ttu-id="ea0ba-140">チャネルが既に onConnectionInit の場合、関数には何もしないいてはいけない。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-140">If a channel is already onConnectionInit, the function shall do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public void multiplexOpen(List<DeviceClient> deviceClientList)
@@ -355,7 +355,7 @@ items:
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.multiplexOpen(List<DeviceClient>)
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、通信チャネルを確立できません。 </p>
+        description: <p><span data-ttu-id="ea0ba-141">場合は、通信チャネルを確立できません。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-141">if a communication channel cannot be established.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.open()
     id: open()
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -373,7 +373,7 @@ items:
       startLine: 78
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>IoT Hub と通信チャネルを確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p><span data-ttu-id="ea0ba-142">IoT Hub と通信チャネルを確立します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-142">Establishes a communication channel with an IoT Hub.</span></span> <span data-ttu-id="ea0ba-143">チャネルが既に開いている場合、関数は何もしないものとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-143">If a channel is already open, the function shall do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public synchronized void open()
@@ -382,7 +382,7 @@ items:
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.open()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、通信チャネルを確立できません。 </p>
+        description: <p><span data-ttu-id="ea0ba-144">場合は、通信チャネルを確立できません。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-144">if a communication channel cannot be established.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
     id: 'registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport
@@ -400,17 +400,17 @@ items:
       startLine: 542
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>Amqps 接続が失われたか、確立されるたびに実行されるコールバックを登録します。</p>
+      <p><span data-ttu-id="ea0ba-145">Amqps 接続が失われたか、確立されるたびに実行されるコールバックを登録します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-145">Registers a callback to be executed whenever the amqps connection is lost or established.</span></span></p>
       <p></p>
     syntax:
       content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
       parameters:
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
-          description: <p>呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="ea0ba-146">呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-146">the callback to be called.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+          description: "<p><span data-ttu-id=\"ea0ba-147\">コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-147\">a context to be passed to the callback.</span></span> <span data-ttu-id=\"ea0ba-148\">指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-148\">Can be <code>null \r\n\r\n    </code> if no callback is provided.</span></span> </p>"
     overridden: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_transport.sendMessages()
     id: sendMessages()
@@ -429,7 +429,7 @@ items:
       startLine: 268
     package: com.microsoft.azure.sdk.iot.device.transport.amqps
     summary: |-
-      <p>一度に 1 つずつ順番待ちリストからすべてのメッセージを送信します。 前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。 </p>
+      <p><span data-ttu-id="ea0ba-149">一度に 1 つずつ順番待ちリストからすべてのメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-149">Sends all messages from the waiting list, one at a time.</span></span> <span data-ttu-id="ea0ba-150">前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-150">If a previous send attempt had failed, the function will attempt to resend the messages in the previous attempt.</span></span> </p>
       <p></p>
     syntax:
       content: public synchronized void sendMessages()
@@ -438,9 +438,9 @@ items:
     overridden: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.sendMessages()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、サーバーに到達できませんでした。 </p>
+        description: <p><span data-ttu-id="ea0ba-151">場合は、サーバーに到達できませんでした。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-151">if the server could not be reached.</span></span> </p>
       - type: 12fe80de
-        description: <p>場合は、トランスポートが開かれていないかは既に閉じています。 </p>
+        description: <p><span data-ttu-id="ea0ba-152">場合は、トランスポートが開かれていないかは既に閉じています。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-152">if the transport has not been opened or is already closed.</span></span> </p>
 references:
   - uid: 93de0ef9com.microsoft.azure.sdk.iot.device._device_client_config
     spec.java:
@@ -569,7 +569,7 @@ references:
     nameWithType: IotHubTransport
     fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubTransport
     type: Interface
-    summary: <p>IoT ハブ トランスポートのインターフェイスです。 </p>
+    summary: <p><span data-ttu-id="ea0ba-153">IoT ハブ トランスポートのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-153">An interface for an IoT Hub transport.</span></span> </p>
     syntax:
       content: public interface IotHubTransport
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener
@@ -579,7 +579,7 @@ references:
     nameWithType: ServerListener
     fullName: com.microsoft.azure.sdk.iot.device.transport.amqps.ServerListener
     type: Interface
-    summary: <p>Iot Hub との対話によってトリガーされるメソッドを定義します。 </p>
+    summary: <p><span data-ttu-id="ea0ba-154">Iot Hub との対話によってトリガーされるメソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-154">Defines methods which are triggered by interactions with the IoTHub.</span></span> </p>
     syntax:
       content: public interface ServerListener
   - uid: com.microsoft.azure.sdk.iot.device.transport._state
@@ -598,7 +598,7 @@ references:
     nameWithType: AmqpsIotHubConnection
     fullName: com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsIotHubConnection
     type: Class
-    summary: <p>デバイスと、iot Hub と AMQPS iot Hub 接続です。 このクラスには、送信または受信するメッセージ、および論理再取得失われた場合に、iot Hub との接続を確立するための機能が含まれています。 </p>
+    summary: '<p><span data-ttu-id="ea0ba-155">デバイスと、iot Hub と AMQPS iot Hub 接続です。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-155">An AMQPS IotHub connection between a device and an IoTHub.</span></span> <span data-ttu-id="ea0ba-156">このクラスには、送信または受信するメッセージ、および論理再取得失われた場合に、iot Hub との接続を確立するための機能が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-156">This class contains functionality for sending/receiving a message, and logic to re-establish the connection with the IoTHub in case it gets lost.</span></span> </p>'
     syntax:
       content: public class AmqpsIotHubConnection
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_outbound_packet
@@ -608,7 +608,7 @@ references:
     nameWithType: IotHubOutboundPacket
     fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubOutboundPacket
     type: Class
-    summary: <p>メッセージを送信する、IoT ハブ トランスポートに必要なデータを含むパケットです。 </p>
+    summary: <p><span data-ttu-id="ea0ba-157">メッセージを送信する、IoT ハブ トランスポートに必要なデータを含むパケットです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-157">A packet containing the data needed for an IoT Hub transport to send a message.</span></span> </p>
     syntax:
       content: public class IotHubOutboundPacket
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_message
@@ -618,7 +618,7 @@ references:
     nameWithType: AmqpsMessage
     fullName: com.microsoft.azure.sdk.iot.device.transport.amqps.AmqpsMessage
     type: Class
-    summary: <p>QPID-j Proton MessageImpl の拡張機能クラスを実装する、<xref uid="com.microsoft.azure.sdk.iot.device._message" data-throw-if-not-resolved="false">メッセージ</xref>インターフェイスです。 プライベート メンバー変数として配信オブジェクトを追加し、新しく追加<xref uid="com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_message._a_c_k___t_y_p_e" data-throw-if-not-resolved="false">ACK_TYPE</xref>列挙型。 1 つのメッセージを簡単に確認する機能を追加します。 </p>
+    summary: <p><span data-ttu-id="ea0ba-158">QPID-j Proton MessageImpl の拡張機能クラスを実装する、<xref uid="com.microsoft.azure.sdk.iot.device._message" data-throw-if-not-resolved="false">メッセージ</xref>インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-158">Extension of the QPID-Proton-J MessageImpl class which implements the <xref uid="com.microsoft.azure.sdk.iot.device._message" data-throw-if-not-resolved="false">Message</xref> interface.</span></span> <span data-ttu-id="ea0ba-159">プライベート メンバー変数として配信オブジェクトを追加し、新しく追加<xref uid="com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_message._a_c_k___t_y_p_e" data-throw-if-not-resolved="false">ACK_TYPE</xref>列挙型。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-159">Adds a Delivery object as a private member variable and adds a new <xref uid="com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_message._a_c_k___t_y_p_e" data-throw-if-not-resolved="false">ACK_TYPE</xref> enum.</span></span> <span data-ttu-id="ea0ba-160">1 つのメッセージを簡単に確認する機能を追加します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-160">Adds the ability to easily acknowledge a single message.</span></span> </p>
     syntax:
       content: public class AmqpsMessage
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_callback_packet
@@ -628,7 +628,7 @@ references:
     nameWithType: IotHubCallbackPacket
     fullName: com.microsoft.azure.sdk.iot.device.transport.IotHubCallbackPacket
     type: Class
-    summary: <p>コールバックを呼び出す、IoT ハブ トランスポートに必要なデータを含むパケットです。 </p>
+    summary: <p><span data-ttu-id="ea0ba-161">コールバックを呼び出す、IoT ハブ トランスポートに必要なデータを含むパケットです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-161">A packet containing the data needed for an IoT Hub transport to invoke a callback.</span></span> </p>
     syntax:
       content: public class IotHubCallbackPacket
   - uid: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
@@ -639,8 +639,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.IotHubConnectionStateCallback
     type: Interface
     summary: |-
-      <p>IoT Hub 接続状態コールバックのインターフェイスです。</p>
-      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback #execute(IotHubConnectionState, Object)</xref>接続の状態 (ダウン、成功した場合など) に渡します。 </p>
+      <p><span data-ttu-id="ea0ba-162">IoT Hub 接続状態コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-162">An interface for an IoT Hub connection state callback.</span></span></p>
+      <p><span data-ttu-id="ea0ba-163">このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback #execute(IotHubConnectionState, Object)</xref>接続の状態 (ダウン、成功した場合など) に渡します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-163">Developers are expected to create an implementation of this interface, and the transport will call <xref uid="" data-throw-if-not-resolved="false">IotHubConnectionStateCallback#execute(IotHubConnectionState, Object)</xref> passing in the connection status (down, success, etc.).</span></span> </p>
     syntax:
       content: public interface IotHubConnectionStateCallback
   - uid: com.microsoft.azure.sdk.iot.device._custom_logger
@@ -659,7 +659,7 @@ references:
     nameWithType: DeviceClientConfig
     fullName: com.microsoft.azure.sdk.iot.device.DeviceClientConfig
     type: Class
-    summary: <p>IoT Hub クライアントの構成設定。 ユーザー定義のすべての設定を検証します。 </p>
+    summary: <p><span data-ttu-id="ea0ba-164">IoT Hub クライアントの構成設定。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-164">Configuration settings for an IoT Hub client.</span></span> <span data-ttu-id="ea0ba-165">ユーザー定義のすべての設定を検証します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-165">Validates all user-defined settings.</span></span> </p>
     syntax:
       content: public class DeviceClientConfig
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.open()
@@ -670,7 +670,7 @@ references:
     fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.open()
     type: Method
     summary: |-
-      <p>IoT Hub と通信チャネルを確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p><span data-ttu-id="ea0ba-166">IoT Hub と通信チャネルを確立します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-166">Establishes a communication channel with an IoT Hub.</span></span> <span data-ttu-id="ea0ba-167">チャネルが既に開いている場合、関数は何もしないものとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-167">If a channel is already open, the function shall do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public void open()
@@ -682,14 +682,14 @@ references:
     fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.multiplexOpen(List<DeviceClient> deviceClientList)
     type: Method
     summary: |-
-      <p>IoT Hub と通信チャネル usingmultiplexing を確立します。 チャネルが既に開いている場合、関数は何もしないものとします。</p>
+      <p><span data-ttu-id="ea0ba-168">IoT Hub と通信チャネル usingmultiplexing を確立します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-168">Establishes a communication channel usingmultiplexing with an IoT Hub.</span></span> <span data-ttu-id="ea0ba-169">チャネルが既に開いている場合、関数は何もしないものとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-169">If a channel is already open, the function shall do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public void multiplexOpen(List<DeviceClient> deviceClientList)
       parameters:
         - id: deviceClientList
           type: 5618da2dcom.microsoft.azure.sdk.iot.device._device_clienta08ddfce
-          description: <p>クライアントの一覧は、同じトランスポートを使用します。 </p>
+          description: <p><span data-ttu-id="ea0ba-170">クライアントの一覧は、同じトランスポートを使用します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-170">the list of clients use the same transport.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._device_client
     parent: com.microsoft.azure.sdk.iot.device
     href: com.microsoft.azure.sdk.iot.device._device_client.yml
@@ -698,10 +698,10 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.DeviceClient
     type: Class
     summary: |-
-      <p>公開された API です。 IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。 IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。 </p>
-      <p>これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。 </p>
-      <p>クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。 通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。 </p>
-      <p>クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。 </p>
+      <p><span data-ttu-id="ea0ba-171">公開された API です。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-171">The public-facing API.</span></span> <span data-ttu-id="ea0ba-172">IoT Hub に接続する 1 つの論理的または物理的なデバイスを許可します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-172">Allows a single logical or physical device to connect to an IoT Hub.</span></span> <span data-ttu-id="ea0ba-173">IoT Hub クライアントは、送信側のイベントをおよび IoT Hub からメッセージの受信をサポートします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-173">The IoT Hub client supports sending events to and receiving messages from an IoT Hub.</span></span> </p>
+      <p><span data-ttu-id="ea0ba-174">これらのワークフローをサポートするために、クライアント ライブラリは、次の抽象化を提供します。 メッセージ ペイロードおよび関連するプロパティです。クライアントはメッセージを送受信します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-174">To support these workflows, the client library will provide the following abstractions: a message, with its payload and associated properties; and a client, which sends and receives messages.</span></span> </p>
+      <p><span data-ttu-id="ea0ba-175">クライアントは、ネットワークがダウンしているし、ネットワークがオンラインに戻ったときに再送信中にメッセージをバッファーします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-175">The client buffers messages while the network is down, and re-sends them when the network comes back online.</span></span> <span data-ttu-id="ea0ba-176">通信 (HTTPS のみ) の効率性を向上させるためにメッセージをバッチ処理します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-176">It also batches messages to improve communication efficiency (HTTPS only).</span></span> </p>
+      <p><span data-ttu-id="ea0ba-177">クライアントは、HTTPS 1.1 および AMQPS 1.0 のトランスポートをサポートします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-177">The client supports HTTPS 1.1 and AMQPS 1.0 transports.</span></span> </p>
     syntax:
       content: public class DeviceClient
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.close()
@@ -711,7 +711,7 @@ references:
     nameWithType: IotHubTransport.close()
     fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.close()
     type: Method
-    summary: "<p>IoT Hub と通信するために使用するすべてのリソースを閉じます。 1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。 トランスポートが既に閉じられています関数には何もしないものとします。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"ea0ba-178\">IoT Hub と通信するために使用するすべてのリソースを閉じます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-178\">Closes all resources used to communicate with an IoT Hub.</span></span> <span data-ttu-id=\"ea0ba-179\">1 回<code>close() \r\n\r\n    </code>が呼び出されると、トランスポートが使用できなくします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-179\">Once<code>close() \r\n\r\n    </code> is called, the transport is no longer usable.</span></span> <span data-ttu-id=\"ea0ba-180\">トランスポートが既に閉じられています関数には何もしないものとします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-180\">If the transport is already closed, the function shall do nothing.</span></span></p>\n\n<p></p>"
     syntax:
       content: public void close()
   - uid: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubEventCallback,Object)'
@@ -722,20 +722,20 @@ references:
     fullName: 'void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
     type: Method
     summary: |-
-      <p>トランスポート キューにメッセージを追加します。</p>
+      <p><span data-ttu-id="ea0ba-181">トランスポート キューにメッセージを追加します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-181">Adds a message to the transport queue.</span></span></p>
       <p></p>
     syntax:
       content: 'public void addMessage(Message message, IotHubEventCallback callback, Object callbackContext)'
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device._message
-          description: <p>送信するメッセージ。 </p>
+          description: <p><span data-ttu-id="ea0ba-182">送信するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-182">the message to be sent.</span></span> </p>
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="ea0ba-183">メッセージの応答を受信したときに呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-183">the callback to be invoked when a response for the message is received.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。 </p>
+          description: <p><span data-ttu-id="ea0ba-184">コールバックが呼び出されたときに渡されるコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-184">the context to be passed in when the callback is invoked.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._message
     parent: com.microsoft.azure.sdk.iot.device
     href: com.microsoft.azure.sdk.iot.device._message.yml
@@ -753,8 +753,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.IotHubEventCallback
     type: Interface
     summary: |-
-      <p>IoT Hub イベント コールバックのインターフェイスです。</p>
-      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+      <p><span data-ttu-id="ea0ba-185">IoT Hub イベント コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-185">An interface for an IoT Hub event callback.</span></span></p>
+      <p><span data-ttu-id="ea0ba-186">このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-186">Developers are expected to create an implementation of this interface, and the transport will call <xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback#execute(IotHubStatusCode, Object)</xref> upon receiving a response from an IoT Hub.</span></span> </p>
     syntax:
       content: public interface IotHubEventCallback
   - uid: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.addMessage(Message,IotHubResponseCallback,Object)'
@@ -765,20 +765,20 @@ references:
     fullName: 'void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
     type: Method
     summary: |-
-      <p>トランスポート キューにメッセージを追加します。</p>
+      <p><span data-ttu-id="ea0ba-187">トランスポート キューにメッセージを追加します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-187">Adds a message to the transport queue.</span></span></p>
       <p></p>
     syntax:
       content: 'public void addMessage(Message message, IotHubResponseCallback callback, Object callbackContext)'
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device._message
-          description: <p>送信するメッセージ。 </p>
+          description: <p><span data-ttu-id="ea0ba-188">送信するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-188">the message to be sent.</span></span> </p>
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
-          description: <p>メッセージの応答を受信したときに呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="ea0ba-189">メッセージの応答を受信したときに呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-189">the callback to be invoked when a response for the message is received.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: <p>コールバックが呼び出されたときに渡されるコンテキスト。 </p>
+          description: <p><span data-ttu-id="ea0ba-190">コールバックが呼び出されたときに渡されるコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-190">the context to be passed in when the callback is invoked.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback
     parent: com.microsoft.azure.sdk.iot.device
     href: com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.yml
@@ -787,8 +787,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.IotHubResponseCallback
     type: Interface
     summary: |-
-      <p>IoT Hub 応答コールバックのインターフェイスです。</p>
-      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.execute(ResponseMessage,Object)" data-throw-if-not-resolved="false">IotHubResponseCallback #execute(ResponseMessage, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+      <p><span data-ttu-id="ea0ba-191">IoT Hub 応答コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-191">An interface for an IoT Hub response callback.</span></span></p>
+      <p><span data-ttu-id="ea0ba-192">このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.execute(ResponseMessage,Object)" data-throw-if-not-resolved="false">IotHubResponseCallback #execute(ResponseMessage, Object)</xref> IoT Hub からの応答を受信するとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-192">Developers are expected to create an implementation of this interface, and the transport will call <xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_response_callback.execute(ResponseMessage,Object)" data-throw-if-not-resolved="false">IotHubResponseCallback#execute(ResponseMessage, Object)</xref> upon receiving a response from an IoT Hub.</span></span> </p>
     syntax:
       content: public interface IotHubResponseCallback
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.sendMessages()
@@ -799,7 +799,7 @@ references:
     fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.sendMessages()
     type: Method
     summary: |-
-      <p>トランスポート キューでは、すべてのメッセージを送信します。 前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。</p>
+      <p><span data-ttu-id="ea0ba-193">トランスポート キューでは、すべてのメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-193">Sends all messages on the transport queue.</span></span> <span data-ttu-id="ea0ba-194">前回の送信に失敗した場合、関数は前の試みで、メッセージを再送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-194">If a previous send attempt had failed, the function will attempt to resend the messages in the previous attempt.</span></span></p>
       <p></p>
     syntax:
       content: public void sendMessages()
@@ -810,7 +810,7 @@ references:
     nameWithType: IotHubTransport.invokeCallbacks()
     fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.invokeCallbacks()
     type: Method
-    summary: <p>完了したすべての要求のコールバックを呼び出します。 </p>
+    summary: <p><span data-ttu-id="ea0ba-195">完了したすべての要求のコールバックを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-195">Invokes the callbacks for all completed requests.</span></span> </p>
     syntax:
       content: public void invokeCallbacks()
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.handleMessage()
@@ -821,8 +821,8 @@ references:
     fullName: void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.handleMessage()
     type: Method
     summary: |-
-      <p>メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。 </p>
-      <p>メッセージ コールバックが設定されていない場合、関数は何もします。</p>
+      <p><span data-ttu-id="ea0ba-196">メッセージが検出され、IoT Hub によって処理されたメッセージを処理する方法の IoT Hub に応答する場合は、メッセージのコールバックを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-196">Invokes the message callback if a message is found and responds to the IoT Hub on how the processed message should be handled by the IoT Hub.</span></span> </p>
+      <p><span data-ttu-id="ea0ba-197">メッセージ コールバックが設定されていない場合、関数は何もします。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-197">If no message callback is set, the function will do nothing.</span></span></p>
       <p></p>
     syntax:
       content: public void handleMessage()
@@ -833,16 +833,16 @@ references:
     nameWithType: 'ServerListener.messageSent(Integer messageHash, Boolean deliveryState)'
     fullName: 'void com.microsoft.azure.sdk.iot.device.transport.amqps.ServerListener.messageSent(Integer messageHash, Boolean deliveryState)'
     type: Method
-    summary: <p>Iot Hub によってメッセージが確認されたときに実行されるメソッドです。 </p>
+    summary: <p><span data-ttu-id="ea0ba-198">Iot Hub によってメッセージが確認されたときに実行されるメソッドです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-198">Method executed when a message was acknowledged by IoTHub.</span></span> </p>
     syntax:
       content: 'public void messageSent(Integer messageHash, Boolean deliveryState)'
       parameters:
         - id: messageHash
           type: 08effaa0
-          description: <p>メッセージのハッシュです。 </p>
+          description: <p><span data-ttu-id="ea0ba-199">メッセージのハッシュです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-199">The hash of the message.</span></span> </p>
         - id: deliveryState
           type: 866c2227
-          description: <p>配信の状態。 </p>
+          description: <p><span data-ttu-id="ea0ba-200">配信の状態。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-200">The state of the delivery.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.connectionLost()
     parent: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener
     href: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.yml
@@ -850,7 +850,7 @@ references:
     nameWithType: ServerListener.connectionLost()
     fullName: void com.microsoft.azure.sdk.iot.device.transport.amqps.ServerListener.connectionLost()
     type: Method
-    summary: <p>メソッドは、iot Hub との接続が失われたときに実行します。 </p>
+    summary: <p><span data-ttu-id="ea0ba-201">メソッドは、iot Hub との接続が失われたときに実行します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-201">Method executed when the connection with the IoTHub is lost.</span></span> </p>
     syntax:
       content: public void connectionLost()
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.connectionEstablished()
@@ -860,7 +860,7 @@ references:
     nameWithType: ServerListener.connectionEstablished()
     fullName: void com.microsoft.azure.sdk.iot.device.transport.amqps.ServerListener.connectionEstablished()
     type: Method
-    summary: <p>Iot Hub との接続が確立されるときに実行されるメソッド </p>
+    summary: <p><span data-ttu-id="ea0ba-202">Iot Hub との接続が確立されるときに実行されるメソッド</span><span class="sxs-lookup"><span data-stu-id="ea0ba-202">Method executed when the connection with the IoTHub is established</span></span> </p>
     syntax:
       content: public void connectionEstablished()
   - uid: com.microsoft.azure.sdk.iot.device.transport.amqps._server_listener.messageReceived(AmqpsMessage)
@@ -870,13 +870,13 @@ references:
     nameWithType: ServerListener.messageReceived(AmqpsMessage message)
     fullName: void com.microsoft.azure.sdk.iot.device.transport.amqps.ServerListener.messageReceived(AmqpsMessage message)
     type: Method
-    summary: <p>Iot Hub からメッセージが受信されたときに実行されるメソッドです。 </p>
+    summary: <p><span data-ttu-id="ea0ba-203">Iot Hub からメッセージが受信されたときに実行されるメソッドです。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-203">Method executed when a message was received from IoTHub.</span></span> </p>
     syntax:
       content: public void messageReceived(AmqpsMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.sdk.iot.device.transport.amqps._amqps_message
-          description: <p>受信したメッセージ。 </p>
+          description: <p><span data-ttu-id="ea0ba-204">受信したメッセージ。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-204">The message received.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.isEmpty()
     parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
     href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
@@ -884,12 +884,12 @@ references:
     nameWithType: IotHubTransport.isEmpty()
     fullName: boolean com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.isEmpty()
     type: Method
-    summary: "<p>返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"ea0ba-205\">返します<code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-205\">Returns<code>true \r\n\r\n    </code> if the transport has no more messages to handle, and<code>false \r\n\r\n    </code> otherwise.</span></span></p>\n\n<p></p>"
     syntax:
       content: public boolean isEmpty()
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。 </p>"
+        description: "<p><span data-ttu-id=\"ea0ba-206\">\r\n\r\n  <code>true \r\n\r\n    </code>場合は、トランスポートは、処理するメッセージがなくなると<code>false \r\n\r\n    </code>それ以外の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-206\">\r\n\r\n  <code>true \r\n\r\n    </code> if the transport has no more messages to handle, and<code>false \r\n\r\n    </code> otherwise.</span></span> </p>"
   - uid: 'com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.registerConnectionStateCallback(IotHubConnectionStateCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport
     href: com.microsoft.azure.sdk.iot.device.transport._iot_hub_transport.yml
@@ -898,14 +898,14 @@ references:
     fullName: 'void com.microsoft.azure.sdk.iot.device.transport.IotHubTransport.registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
     type: Method
     summary: |-
-      <p>IoT Hub への接続が失われた、または確立されるたびに実行されるコールバックを登録します。</p>
+      <p><span data-ttu-id="ea0ba-207">IoT Hub への接続が失われた、または確立されるたびに実行されるコールバックを登録します。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-207">Registers a callback to be executed whenever the connection to the IoT Hub is lost or established.</span></span></p>
       <p></p>
     syntax:
       content: 'public void registerConnectionStateCallback(IotHubConnectionStateCallback callback, Object callbackContext)'
       parameters:
         - id: callback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_connection_state_callback
-          description: <p>呼び出されるコールバック。 </p>
+          description: <p><span data-ttu-id="ea0ba-208">呼び出されるコールバック。</span><span class="sxs-lookup"><span data-stu-id="ea0ba-208">the callback to be called.</span></span> </p>
         - id: callbackContext
           type: '79317049'
-          description: "<p>コールバックに渡されるコンテキスト。 指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。 </p>"
+          description: "<p><span data-ttu-id=\"ea0ba-209\">コールバックに渡されるコンテキスト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-209\">a context to be passed to the callback.</span></span> <span data-ttu-id=\"ea0ba-210\">指定できます<code>null \r\n\r\n    </code>コールバックが指定されていない場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea0ba-210\">Can be <code>null \r\n\r\n    </code> if no callback is provided.</span></span> </p>"

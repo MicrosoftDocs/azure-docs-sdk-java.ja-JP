@@ -20,7 +20,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorRemotingExceptionHandler.java
       startLine: 60
     package: microsoft.servicefabric.actors
-    summary: "<p>このクラスは、リモート アクター インターフェイス経由での service fabric アクターと通信中に発生した例外の処理を提供します。</p>\n<p>\r\n\r\n  <b>注釈:</b>この例外ハンドラーは、次のシナリオに関連する例外を処理します。 </p>\n\n<p>\n\n  <itemizedlist>\n\n    <listitem>\n\n      <p>&lt;示されている&gt;重複したメッセージを:&lt;が示されている/&gt; </p>\n\n      <p>例外処理のロジックに基づくクライアントからアクターに対して実行される操作が再試行されます。 これらの例外は、サービスのフェールオーバーを含むさまざまなエラー状態を表します。 したがって、アクターが重複するメッセージを受信することです。 アクターによって前のメッセージの処理中に重複するメッセージを受信する場合、ランタイムは、クライアントに内部例外を返します。 クライアントは、アクターから結果を戻すために、操作を再試行します。 クライアントがアクターの観点から重複する操作が実行され、操作は既に処理されて、し、重複するメッセージが到着した場合と同様の方法で処理が必要です。 </p>\n\n      <p></p>\n\n      <p></p>\n\n    </listitem>\n\n    <listitem>\n\n      <p>&lt;示されている&gt;<xref uid=\"microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception\" data-throw-if-not-resolved=\"false\">ActorConcurrencyLockTimeoutException</xref>:&lt;が示されている/&gt; </p>\n\n      <p>アクターの操作は、基にする同時実行のロックを使用して実行されます ( <xref uid=\"microsoft.servicefabric.actors._actor_concurrency_settings\" data-throw-if-not-resolved=\"false\">ActorConcurrencySettings</xref>) 論理呼び出しコンテキスト ベースの再入をサポートします。 実行時間の長いアクター操作した場合は、このロックはタイムアウトが発生するの買収可能性があります。ロックの取得こともできます (アクター A および B が互いを同時にほぼ呼び出してアクター) に、デッドロックが発生した場合はタイムアウトが発生します。 </p>\n\n      <p></p>\n\n      <p>同時実行のロックのタイムアウトに関連する例外を返すことによって処理される<xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>から、 <xref uid=\"microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)\" data-throw-if-not-resolved=\"false\">ExceptionHandler #handleException(ExceptionInformation, OperationRetrySettings)</xref>メソッド操作を実行するクライアントが別のアクターにない場合。 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult #isTransient</xref>のプロパティ、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>設定を true に、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>の retryDelay プロパティは、ランダムな値にするように設定<xref uid=\"\" data-throw-if-not-resolved=\"false\">OperationRetrySettings</xref>の MaxRetryBackoffIntervalOnTransientErrors と<xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>の MaxRetryCount プロパティに設定されている<xref uid=\"\" data-throw-if-not-resolved=\"false\">整数 #MAX_VALUE</xref>です。 </p>\n\n      <p></p>\n\n      <p>同時実行のロックのタイムアウトに関連する例外を返すことによって処理される<xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingThrowResult</xref>から、 <xref uid=\"microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)\" data-throw-if-not-resolved=\"false\">ExceptionHandler #handleException(ExceptionInformation, OperationRetrySettings)</xref>メソッド、操作を実行するクライアントが別のアクターの場合。 これにより、呼び出しチェーンまでアンワインドするデッドロック状態では、元のクライアントにバックアップし、そこから、操作が再試行します。 </p>\n\n      <p></p>\n\n    </listitem>\n\n  </itemizedlist>\n\n</p>"
+    summary: "<p><span data-ttu-id=\"b594f-101\">このクラスは、リモート アクター インターフェイス経由での service fabric アクターと通信中に発生した例外の処理を提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-101\">This class provide handling of exceptions encountered in communicating with service fabric actors over remoted actor interfaces.</span></span></p>\n<p><span data-ttu-id=\"b594f-102\">\r\n\r\n  <b>注釈:</b>この例外ハンドラーは、次のシナリオに関連する例外を処理します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-102\">\r\n\r\n  <b>Remarks:</b> This exception handler handles exceptions related to the following scenarios:</span></span> </p>\n\n<p>\n\n  <itemizedlist>\n\n    <listitem>\n\n      <p><span data-ttu-id=\"b594f-103\">&lt;示されている&gt;重複したメッセージを:&lt;が示されている/&gt;</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-103\">&lt;cite&gt;Duplicate Messages:&lt;/cite&gt;</span></span> </p>\n\n      <p><span data-ttu-id=\"b594f-104\">例外処理のロジックに基づくクライアントからアクターに対して実行される操作が再試行されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-104\">Operations performed on the actor are retried from the client based on the exception handling logic.</span></span> <span data-ttu-id=\"b594f-105\">これらの例外は、サービスのフェールオーバーを含むさまざまなエラー状態を表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-105\">These exceptions represent various error condition including service failover.</span></span> <span data-ttu-id=\"b594f-106\">したがって、アクターが重複するメッセージを受信することです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-106\">Therefore it is possible for the actors to receive duplicate messages.</span></span> <span data-ttu-id=\"b594f-107\">アクターによって前のメッセージの処理中に重複するメッセージを受信する場合、ランタイムは、クライアントに内部例外を返します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-107\">If a duplicate message is received while previous message is being processed by the actor, runtime return an internal exception to the client.</span></span> <span data-ttu-id=\"b594f-108\">クライアントは、アクターから結果を戻すために、操作を再試行します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-108\">The client then retries the operation to get the result back from the actor.</span></span> <span data-ttu-id=\"b594f-109\">クライアントがアクターの観点から重複する操作が実行され、操作は既に処理されて、し、重複するメッセージが到着した場合と同様の方法で処理が必要です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-109\">From the actor's perspective duplicate operation will be performed by the clients and it should handle it in the similar manner as if the operation was already processed and then a duplicate message arrived.</span></span> </p>\n\n      <p></p>\n\n      <p></p>\n\n    </listitem>\n\n    <listitem>\n\n      <p><span data-ttu-id=\"b594f-110\">&lt;示されている&gt;<xref uid=\"microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception\" data-throw-if-not-resolved=\"false\">ActorConcurrencyLockTimeoutException</xref>:&lt;が示されている/&gt;</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-110\">&lt;cite&gt;<xref uid=\"microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception\" data-throw-if-not-resolved=\"false\">ActorConcurrencyLockTimeoutException</xref>:&lt;/cite&gt;</span></span> </p>\n\n      <p><span data-ttu-id=\"b594f-111\">アクターの操作は、基にする同時実行のロックを使用して実行されます ( <xref uid=\"microsoft.servicefabric.actors._actor_concurrency_settings\" data-throw-if-not-resolved=\"false\">ActorConcurrencySettings</xref>) 論理呼び出しコンテキスト ベースの再入をサポートします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-111\">Operations on the actors are performed using a turn based concurrency lock ( <xref uid=\"microsoft.servicefabric.actors._actor_concurrency_settings\" data-throw-if-not-resolved=\"false\">ActorConcurrencySettings</xref>) that supports logical call context based reentrancy.</span></span> <span data-ttu-id=\"b594f-112\">実行時間の長いアクター操作した場合は、このロックはタイムアウトが発生するの買収可能性があります。ロックの取得こともできます (アクター A および B が互いを同時にほぼ呼び出してアクター) に、デッドロックが発生した場合はタイムアウトが発生します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-112\">In case of the long running actor operations it is possible for acquisition of this lock to time out. The acquisition of the lock can also time out in case of the deadlock situations (actor A and actor B calling each other almost at the same time).</span></span> </p>\n\n      <p></p>\n\n      <p><span data-ttu-id=\"b594f-113\">同時実行のロックのタイムアウトに関連する例外を返すことによって処理される<xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>から、 <xref uid=\"microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)\" data-throw-if-not-resolved=\"false\">ExceptionHandler #handleException(ExceptionInformation, OperationRetrySettings)</xref>メソッド操作を実行するクライアントが別のアクターにない場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-113\">The exception related to concurrency lock timeout is handled by returning <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref> from the <xref uid=\"microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)\" data-throw-if-not-resolved=\"false\">ExceptionHandler#handleException(ExceptionInformation, OperationRetrySettings)</xref> method if the client performing the operation is not another actor.</span></span> <span data-ttu-id=\"b594f-114\"><xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult #isTransient</xref>のプロパティ、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>設定を true に、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>の retryDelay プロパティは、ランダムな値にするように設定<xref uid=\"\" data-throw-if-not-resolved=\"false\">OperationRetrySettings</xref>の MaxRetryBackoffIntervalOnTransientErrors と<xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>の MaxRetryCount プロパティに設定されている<xref uid=\"\" data-throw-if-not-resolved=\"false\">整数 #MAX_VALUE</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-114\">The <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult#isTransient</xref> property of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref> is set to true, the <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>'s retryDelay property is set to a random value up to <xref uid=\"\" data-throw-if-not-resolved=\"false\">OperationRetrySettings</xref>'s MaxRetryBackoffIntervalOnTransientErrors and <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingRetryResult</xref>'s MaxRetryCount property is set to <xref uid=\"\" data-throw-if-not-resolved=\"false\">Integer#MAX_VALUE</xref>.</span></span> </p>\n\n      <p></p>\n\n      <p><span data-ttu-id=\"b594f-115\">同時実行のロックのタイムアウトに関連する例外を返すことによって処理される<xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingThrowResult</xref>から、 <xref uid=\"microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)\" data-throw-if-not-resolved=\"false\">ExceptionHandler #handleException(ExceptionInformation, OperationRetrySettings)</xref>メソッド、操作を実行するクライアントが別のアクターの場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-115\">The exception related to concurrency lock timeout is handled by returning <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExceptionHandlingThrowResult</xref> from the <xref uid=\"microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)\" data-throw-if-not-resolved=\"false\">ExceptionHandler#handleException(ExceptionInformation, OperationRetrySettings)</xref> method, if the client performing the operation is another actor.</span></span> <span data-ttu-id=\"b594f-116\">これにより、呼び出しチェーンまでアンワインドするデッドロック状態では、元のクライアントにバックアップし、そこから、操作が再試行します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b594f-116\">In the deadlock situations this allows the call chain to unwind all the way back to the original client and the operation is then retried from there.</span></span> </p>\n\n      <p></p>\n\n    </listitem>\n\n  </itemizedlist>\n\n</p>"
     syntax:
       content: public class ActorRemotingExceptionHandler implements ExceptionHandler
     inheritance:
@@ -43,20 +43,20 @@ items:
       startLine: 72
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>例外を調査し、その例外を処理する方法を判断するメソッドです。</p>
+      <p><span data-ttu-id="b594f-117">例外を調査し、その例外を処理する方法を判断するメソッドです。</span><span class="sxs-lookup"><span data-stu-id="b594f-117">Method that examines the exception and determines how that exception can be handled.</span></span></p>
       <p></p>
     syntax:
       content: 'public ExceptionHandlingResult handleException(ExceptionInformation exceptionInformation, OperationRetrySettings retrySettings)'
       parameters:
         - id: exceptionInformation
           type: microsoft.servicefabric.services.communication.client._exception_information
-          description: <p>例外に関する情報。 </p>
+          description: <p><span data-ttu-id="b594f-118">例外に関する情報。</span><span class="sxs-lookup"><span data-stu-id="b594f-118">Information about the exception.</span></span> </p>
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>操作の再試行の設定。 </p>
+          description: <p><span data-ttu-id="b594f-119">操作の再試行の設定。</span><span class="sxs-lookup"><span data-stu-id="b594f-119">The operation retry preferences.</span></span> </p>
       return:
         type: microsoft.servicefabric.services.communication.client._exception_handling_result
-        description: <p>例外処理の結果です。 </p>
+        description: <p><span data-ttu-id="b594f-120">例外処理の結果です。</span><span class="sxs-lookup"><span data-stu-id="b594f-120">Result of the exception handling.</span></span> </p>
     overridden: 'microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)'
 references:
   - uid: microsoft.servicefabric.actors._actor_remoting_exception_handler.handleException*
@@ -71,7 +71,7 @@ references:
     nameWithType: ExceptionHandler
     fullName: microsoft.servicefabric.services.communication.client.ExceptionHandler
     type: Interface
-    summary: <p>Service fabric サービスと通信中に発生した例外を処理するためのインターフェイスを定義します。 </p>
+    summary: <p><span data-ttu-id="b594f-121">Service fabric サービスと通信中に発生した例外を処理するためのインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="b594f-121">Defines the interface for handling the exceptions encountered in communicating with service fabric services.</span></span> </p>
     syntax:
       content: public interface ExceptionHandler
   - uid: microsoft.servicefabric.services.communication.client._exception_handling_result
@@ -81,7 +81,7 @@ references:
     nameWithType: ExceptionHandlingResult
     fullName: microsoft.servicefabric.services.communication.client.ExceptionHandlingResult
     type: Class
-    summary: <p>クライアントとサービス間の通信中に例外を処理してから、結果の基本クラスを指定します。 </p>
+    summary: <p><span data-ttu-id="b594f-122">クライアントとサービス間の通信中に例外を処理してから、結果の基本クラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="b594f-122">Specifies the base class for the result from handling an exception during client to service communication.</span></span> </p>
     syntax:
       content: public class ExceptionHandlingResult
   - uid: 'microsoft.servicefabric.services.communication.client._exception_handler.handleException(ExceptionInformation,OperationRetrySettings)'
@@ -92,20 +92,20 @@ references:
     fullName: 'ExceptionHandlingResult microsoft.servicefabric.services.communication.client.ExceptionHandler.handleException(ExceptionInformation exceptionInformation, OperationRetrySettings retrySettings)'
     type: Method
     summary: |-
-      <p>例外を調査し、その例外を処理する方法を判断するメソッドです。</p>
+      <p><span data-ttu-id="b594f-123">例外を調査し、その例外を処理する方法を判断するメソッドです。</span><span class="sxs-lookup"><span data-stu-id="b594f-123">Method that examines the exception and determines how that exception can be handled.</span></span></p>
       <p></p>
     syntax:
       content: 'public ExceptionHandlingResult handleException(ExceptionInformation exceptionInformation, OperationRetrySettings retrySettings)'
       parameters:
         - id: exceptionInformation
           type: microsoft.servicefabric.services.communication.client._exception_information
-          description: <p>例外に関する情報。 </p>
+          description: <p><span data-ttu-id="b594f-124">例外に関する情報。</span><span class="sxs-lookup"><span data-stu-id="b594f-124">Information about the exception.</span></span> </p>
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>操作の再試行の設定。 </p>
+          description: <p><span data-ttu-id="b594f-125">操作の再試行の設定。</span><span class="sxs-lookup"><span data-stu-id="b594f-125">The operation retry preferences.</span></span> </p>
       return:
         type: microsoft.servicefabric.services.communication.client._exception_handling_result
-        description: <p>true の場合は、例外処理、それ以外の場合 </p>
+        description: '<p><span data-ttu-id="b594f-126">true の場合は、例外処理、それ以外の場合</span><span class="sxs-lookup"><span data-stu-id="b594f-126">true if the exception is handled, false otherwise</span></span> </p>'
   - uid: microsoft.servicefabric.services.communication.client._exception_information
     parent: microsoft.servicefabric.services.communication.client
     href: microsoft.servicefabric.services.communication.client._exception_information.yml
@@ -113,7 +113,7 @@ references:
     nameWithType: ExceptionInformation
     fullName: microsoft.servicefabric.services.communication.client.ExceptionInformation
     type: Class
-    summary: <p>通信チャネルに表示される例外とその例外を処理するために必要な追加の情報をカプセル化するクラスを指定します。 </p>
+    summary: <p><span data-ttu-id="b594f-127">通信チャネルに表示される例外とその例外を処理するために必要な追加の情報をカプセル化するクラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="b594f-127">Specifies the class that encapsulates the exception seen on the communication channel and additional information required to handle that exception.</span></span> </p>
     syntax:
       content: public class ExceptionInformation
   - uid: microsoft.servicefabric.services.communication.client._operation_retry_settings
@@ -132,7 +132,7 @@ references:
     nameWithType: ActorConcurrencyLockTimeoutException
     fullName: microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException
     type: Class
-    summary: <p>メソッドをディスパッチする同時実行のロックをランタイムが有効にするを取得できない場合に、アクター ランタイムによってスローされる例外に基づいています。 </p>
+    summary: <p><span data-ttu-id="b594f-128">メソッドをディスパッチする同時実行のロックをランタイムが有効にするを取得できない場合に、アクター ランタイムによってスローされる例外に基づいています。</span><span class="sxs-lookup"><span data-stu-id="b594f-128">Exception thrown by actor runtime when runtime cannot acquire the turn based concurrency lock to dispatch the method.</span></span> </p>
     syntax:
       content: public class ActorConcurrencyLockTimeoutException extends FabricException
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings
@@ -142,6 +142,6 @@ references:
     nameWithType: ActorConcurrencySettings
     fullName: microsoft.servicefabric.actors.ActorConcurrencySettings
     type: Class
-    summary: <p>論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。 このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。 </p>
+    summary: <p><span data-ttu-id="b594f-129">論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="b594f-129">The method calls on an actor dispatched via in turn with support for logical call context based reentrancy.</span></span> <span data-ttu-id="b594f-130">このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="b594f-130">This class provides the settings to configure the turn based concurrency lock for actors.</span></span> </p>
     syntax:
       content: public class ActorConcurrencySettings

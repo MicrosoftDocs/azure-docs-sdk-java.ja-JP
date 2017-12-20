@@ -21,8 +21,8 @@ items:
       startLine: 14
     package: com.microsoft.azure.datalake.store.retrypolicies
     summary: |-
-      <p><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。 </p>
-      <p>このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。 </p>
+      <p><span data-ttu-id="2e702-101"><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="2e702-101">the <xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> controls whether a failed request should be retried, and how long to wait before retrying.</span></span> </p>
+      <p><span data-ttu-id="2e702-102">このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。</span><span class="sxs-lookup"><span data-stu-id="2e702-102">Implementations of this interface implement different retry policies.</span></span> </p>
     syntax: &ref_1
       content: public interface RetryPolicy
   - uid: 'com.microsoft.azure.datalake.store.retrypolicies._retry_policy.shouldRetry(int,Exception)'
@@ -41,19 +41,19 @@ items:
       path: src/main/java/com/microsoft/azure/datalake/store/retrypolicies/RetryPolicy.java
       startLine: 27
     package: com.microsoft.azure.datalake.store.retrypolicies
-    summary: "<p>失敗した要求を再試行するかどうかを示すブール値。 実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。 </p>\n<p>再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。 つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。 </p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"2e702-103\">失敗した要求を再試行するかどうかを示すブール値。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-103\">boolean indicating whether a failed request should be retried.</span></span> <span data-ttu-id=\"2e702-104\">実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-104\">Implementations can use the HTTP response code and any exceptions from the last failure to decide whether to retry.</span></span> </p>\n<p><span data-ttu-id=\"2e702-105\">再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-105\">If the retry policy requires a wait before the next try, then the<code>shouldRetry \r\n\r\n    </code> method should wait for the appropriate time before responding back.</span></span> <span data-ttu-id=\"2e702-106\">つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-106\">i.e., there is not an explicit contract for waits, but it is implicit in the time taken by the<code>shouldRetry \r\n\r\n    </code> method to return.</span></span> </p>\n\n<p></p>"
     syntax:
       content: 'public boolean shouldRetry(int httpResponseCode, Exception lastException)'
       parameters:
         - id: httpResponseCode
           type: f75371fa
-          description: <p>受信した HTTP 応答コード </p>
+          description: <p><span data-ttu-id="2e702-107">受信した HTTP 応答コード</span><span class="sxs-lookup"><span data-stu-id="2e702-107">the HTTP response code received</span></span> </p>
         - id: lastException
           type: 8a99d4b0
-          description: <p>最後の要求の処理中に発生したすべての例外 </p>
+          description: <p><span data-ttu-id="2e702-108">最後の要求の処理中に発生したすべての例外</span><span class="sxs-lookup"><span data-stu-id="2e702-108">any exceptions encountered while processing the last request</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>要求を再試行するかどうかを示すブール値 </p>
+        description: <p><span data-ttu-id="2e702-109">要求を再試行するかどうかを示すブール値</span><span class="sxs-lookup"><span data-stu-id="2e702-109">boolean indicating whether the request should be retried</span></span> </p>
 references:
   - uid: f75371fa
     spec.java:
@@ -80,26 +80,26 @@ references:
     fullName: com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy
     type: Class
     summary: |-
-      <p>別の実装には、エラーに基づき意思決定が再試行してください。</p>
+      <p><span data-ttu-id="2e702-110">別の実装には、エラーに基づき意思決定が再試行してください。</span><span class="sxs-lookup"><span data-stu-id="2e702-110">implements different retry decisions based on the error.</span></span></p>
       <p>
 
         <itemizedlist>
 
           <listitem>
 
-            <p>Nonretryable エラー (3 xx、ほとんどの 4 xx、およびリターン コードの一部の 5 xx) には、再試行はありません。 </p>
+            <p><span data-ttu-id="2e702-111">Nonretryable エラー (3 xx、ほとんどの 4 xx、およびリターン コードの一部の 5 xx) には、再試行はありません。</span><span class="sxs-lookup"><span data-stu-id="2e702-111">For nonretryable errors (3xx, most 4xx, and some 5xx return codes), do no retry.</span></span> </p>
 
           </listitem>
 
           <listitem>
 
-            <p>エラーを調整するには、指数バックオフによる再試行の操作を行います </p>
+            <p><span data-ttu-id="2e702-112">エラーを調整するには、指数バックオフによる再試行の操作を行います</span><span class="sxs-lookup"><span data-stu-id="2e702-112">For throttling error, do a retry with exponential backoff</span></span> </p>
 
           </listitem>
 
           <listitem>
 
-            <p>その他のすべてのエラーの場合は、線形バックオフによる再試行の操作を行います </p>
+            <p><span data-ttu-id="2e702-113">その他のすべてのエラーの場合は、線形バックオフによる再試行の操作を行います</span><span class="sxs-lookup"><span data-stu-id="2e702-113">for all other errors, do a retry with linear backoff</span></span> </p>
 
           </listitem>
 
@@ -116,8 +116,8 @@ references:
     fullName: com.microsoft.azure.datalake.store.retrypolicies.NoRetryPolicy
     type: Class
     summary: |-
-      <p>再試行しないことです。 常に false の場合、その erequest いない再試行することを示すを返します。</p>
-      <p>再試行安全ではないとユーザーが呼び出しとほとんどの同時にセマンティクス、は、これを使用してください。 これは、ここでの最後の呼び出しによって返されたエラーは確定示しません呼び出しの成功または失敗非べし等メソッドの場合に便利です。 たとえば、追加がタイムアウトになる、バックエンドで成功した場合は、再試行しています可能性がありますデータ 2 回ファイルに追加します。 </p>
+      <p><span data-ttu-id="2e702-114">再試行しないことです。</span><span class="sxs-lookup"><span data-stu-id="2e702-114">No retry ever.</span></span> <span data-ttu-id="2e702-115">常に false の場合、その erequest いない再試行することを示すを返します。</span><span class="sxs-lookup"><span data-stu-id="2e702-115">Always returns false, indicating that erequest should not be retried.</span></span></p>
+      <p><span data-ttu-id="2e702-116">再試行安全ではないとユーザーが呼び出しとほとんどの同時にセマンティクス、は、これを使用してください。</span><span class="sxs-lookup"><span data-stu-id="2e702-116">This should be used when retrying is not safe, and user wants at-most-once semantics with the call.</span></span> <span data-ttu-id="2e702-117">これは、ここでの最後の呼び出しによって返されたエラーは確定示しません呼び出しの成功または失敗非べし等メソッドの場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="2e702-117">This is useful for non-idempotent methods, where the error returned by the last call does not conclusively indicate success or failure of the call.</span></span> <span data-ttu-id="2e702-118">たとえば、追加がタイムアウトになる、バックエンドで成功した場合は、再試行しています可能性がありますデータ 2 回ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="2e702-118">For example, if an append times out but succeeds on the back-end , then retrying it may append the data twice to the file.</span></span> </p>
     syntax:
       content: public class NoRetryPolicy implements RetryPolicy
   - uid: 'com.microsoft.azure.datalake.store.retrypolicies._no_retry_policy.shouldRetry(int,Exception)'
@@ -127,19 +127,19 @@ references:
     nameWithType: 'NoRetryPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
     fullName: 'boolean com.microsoft.azure.datalake.store.retrypolicies.NoRetryPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
     type: Method
-    summary: "<p>失敗した要求を再試行するかどうかを示すブール値。 実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。 </p>\n<p>再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。 つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。 </p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"2e702-119\">失敗した要求を再試行するかどうかを示すブール値。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-119\">boolean indicating whether a failed request should be retried.</span></span> <span data-ttu-id=\"2e702-120\">実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-120\">Implementations can use the HTTP response code and any exceptions from the last failure to decide whether to retry.</span></span> </p>\n<p><span data-ttu-id=\"2e702-121\">再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-121\">If the retry policy requires a wait before the next try, then the<code>shouldRetry \r\n\r\n    </code> method should wait for the appropriate time before responding back.</span></span> <span data-ttu-id=\"2e702-122\">つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-122\">i.e., there is not an explicit contract for waits, but it is implicit in the time taken by the<code>shouldRetry \r\n\r\n    </code> method to return.</span></span> </p>\n\n<p></p>"
     syntax:
       content: 'public boolean shouldRetry(int httpResponseCode, Exception lastException)'
       parameters:
         - id: httpResponseCode
           type: f75371fa
-          description: <p>受信した HTTP 応答コード </p>
+          description: <p><span data-ttu-id="2e702-123">受信した HTTP 応答コード</span><span class="sxs-lookup"><span data-stu-id="2e702-123">the HTTP response code received</span></span> </p>
         - id: lastException
           type: 8a99d4b0
-          description: <p>最後の要求の処理中に発生したすべての例外 </p>
+          description: <p><span data-ttu-id="2e702-124">最後の要求の処理中に発生したすべての例外</span><span class="sxs-lookup"><span data-stu-id="2e702-124">any exceptions encountered while processing the last request</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>要求を再試行するかどうかを示すブール値 </p>
+        description: <p><span data-ttu-id="2e702-125">要求を再試行するかどうかを示すブール値</span><span class="sxs-lookup"><span data-stu-id="2e702-125">boolean indicating whether the request should be retried</span></span> </p>
   - uid: 'com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.shouldRetry(int,Exception)'
     parent: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy
     href: com.microsoft.azure.datalake.store.retrypolicies._exponential_backoff_policy.yml
@@ -147,19 +147,19 @@ references:
     nameWithType: 'ExponentialBackoffPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
     fullName: 'boolean com.microsoft.azure.datalake.store.retrypolicies.ExponentialBackoffPolicy.shouldRetry(int httpResponseCode, Exception lastException)'
     type: Method
-    summary: "<p>失敗した要求を再試行するかどうかを示すブール値。 実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。 </p>\n<p>再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。 つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。 </p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"2e702-126\">失敗した要求を再試行するかどうかを示すブール値。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-126\">boolean indicating whether a failed request should be retried.</span></span> <span data-ttu-id=\"2e702-127\">実装は、HTTP 応答コードと最後の障害からのすべての例外を使用して再試行するかどうかを決定することができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-127\">Implementations can use the HTTP response code and any exceptions from the last failure to decide whether to retry.</span></span> </p>\n<p><span data-ttu-id=\"2e702-128\">再試行ポリシーには、次の再試行する前に待機が必要とする場合、<code>shouldRetry \r\n\r\n    </code>メソッドは、戻る応答する前に適切な時間まで待機する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-128\">If the retry policy requires a wait before the next try, then the<code>shouldRetry \r\n\r\n    </code> method should wait for the appropriate time before responding back.</span></span> <span data-ttu-id=\"2e702-129\">つまり、待機、明示的なコントラクトはありませんが、暗黙にかかる時間には、<code>shouldRetry \r\n\r\n    </code>を返すメソッド。</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e702-129\">i.e., there is not an explicit contract for waits, but it is implicit in the time taken by the<code>shouldRetry \r\n\r\n    </code> method to return.</span></span> </p>\n\n<p></p>"
     syntax:
       content: 'public boolean shouldRetry(int httpResponseCode, Exception lastException)'
       parameters:
         - id: httpResponseCode
           type: f75371fa
-          description: <p>受信した HTTP 応答コード </p>
+          description: <p><span data-ttu-id="2e702-130">受信した HTTP 応答コード</span><span class="sxs-lookup"><span data-stu-id="2e702-130">the HTTP response code received</span></span> </p>
         - id: lastException
           type: 8a99d4b0
-          description: <p>最後の要求の処理中に発生したすべての例外 </p>
+          description: <p><span data-ttu-id="2e702-131">最後の要求の処理中に発生したすべての例外</span><span class="sxs-lookup"><span data-stu-id="2e702-131">any exceptions encountered while processing the last request</span></span> </p>
       return:
         type: 4fc6e284
-        description: <p>要求を再試行するかどうかを示すブール値 </p>
+        description: <p><span data-ttu-id="2e702-132">要求を再試行するかどうかを示すブール値</span><span class="sxs-lookup"><span data-stu-id="2e702-132">boolean indicating whether the request should be retried</span></span> </p>
   - uid: com.microsoft.azure.datalake.store.retrypolicies._retry_policy
     parent: com.microsoft.azure.datalake.store.retrypolicies
     href: com.microsoft.azure.datalake.store.retrypolicies._retry_policy.yml
@@ -168,6 +168,6 @@ references:
     fullName: com.microsoft.azure.datalake.store.retrypolicies.RetryPolicy
     type: Interface
     summary: |-
-      <p><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。 </p>
-      <p>このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。 </p>
+      <p><span data-ttu-id="2e702-133"><xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>失敗した要求が再試行する前に再試行、および期間の待機をするかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="2e702-133">the <xref uid="com.microsoft.azure.datalake.store.retrypolicies._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> controls whether a failed request should be retried, and how long to wait before retrying.</span></span> </p>
+      <p><span data-ttu-id="2e702-134">このインターフェイスの実装では、さまざまな再試行ポリシーを実装します。</span><span class="sxs-lookup"><span data-stu-id="2e702-134">Implementations of this interface implement different retry policies.</span></span> </p>
     syntax: *ref_1

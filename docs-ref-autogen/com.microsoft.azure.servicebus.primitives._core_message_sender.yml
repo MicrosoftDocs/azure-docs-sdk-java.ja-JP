@@ -619,9 +619,9 @@ references:
     fullName: com.microsoft.azure.servicebus.primitives.ClientEntity
     type: Class
     summary: |-
-      <p>開く、閉じる/中止状態 m と c のすべてのクライアント エンティティ コントラクト </p>
-      <p>メイン目的: closeAll 関連エンティティ </p>
-      <p>内部クラス </p>
+      <p><span data-ttu-id="19477-101">開く、閉じる/中止状態 m と c のすべてのクライアント エンティティ コントラクト</span><span class="sxs-lookup"><span data-stu-id="19477-101">Contract for all client entities with Open-Close/Abort state m/c</span></span> </p>
+      <p><span data-ttu-id="19477-102">メイン目的: closeAll 関連エンティティ</span><span class="sxs-lookup"><span data-stu-id="19477-102">main-purpose: closeAll related entities</span></span> </p>
+      <p><span data-ttu-id="19477-103">内部クラス</span><span class="sxs-lookup"><span data-stu-id="19477-103">Internal-class</span></span> </p>
     syntax:
       content: public class ClientEntity
   - uid: com.microsoft.azure.servicebus.primitives._messaging_factory
@@ -631,7 +631,7 @@ references:
     nameWithType: MessagingFactory
     fullName: com.microsoft.azure.servicebus.primitives.MessagingFactory
     type: Class
-    summary: <p>関連するすべての AMQP の詳細を AMQP 接続をカプセル化し、ライフ サイクルを管理の概要は次のサイクルです。 このクラスの各インスタンスは、名前空間への AMQP 接続を 1 つを表します。 アプリケーションでは、複数の送信者、受信者または同じ MessagingFacotry インスタンスを使用してクライアントを作成する場合は、それらの送信者、受信者またはクライアントと名前空間に同じ接続が共有されます。 </p>
+    summary: '<p><span data-ttu-id="19477-104">関連するすべての AMQP の詳細を AMQP 接続をカプセル化し、ライフ サイクルを管理の概要は次のサイクルです。</span><span class="sxs-lookup"><span data-stu-id="19477-104">Abstracts all AMQP related details and encapsulates an AMQP connection and manages its life cycle.</span></span> <span data-ttu-id="19477-105">このクラスの各インスタンスは、名前空間への AMQP 接続を 1 つを表します。</span><span class="sxs-lookup"><span data-stu-id="19477-105">Each instance of this class represent one AMQP connection to the namespace.</span></span> <span data-ttu-id="19477-106">アプリケーションでは、複数の送信者、受信者または同じ MessagingFacotry インスタンスを使用してクライアントを作成する場合は、それらの送信者、受信者またはクライアントと名前空間に同じ接続が共有されます。</span><span class="sxs-lookup"><span data-stu-id="19477-106">If an application creates multiple senders, receivers or clients using the same MessagingFacotry instance, all those senders, receivers or clients will share the same connection to the namespace.</span></span> </p>'
     syntax:
       content: public class MessagingFactory
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy
@@ -641,7 +641,7 @@ references:
     nameWithType: RetryPolicy
     fullName: com.microsoft.azure.servicebus.primitives.RetryPolicy
     type: Class
-    summary: <p>例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。 送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。 クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。 ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。 </p>
+    summary: '<p><span data-ttu-id="19477-107">例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。</span><span class="sxs-lookup"><span data-stu-id="19477-107">Represents an abstraction of a policy for retrying messaging operations when an exception is encountered.</span></span> <span data-ttu-id="19477-108">送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。</span><span class="sxs-lookup"><span data-stu-id="19477-108">Some exceptions encountered by a sender or receiver can be transient like ServerBusy and the operation will succeed if retried.</span></span> <span data-ttu-id="19477-109">クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。</span><span class="sxs-lookup"><span data-stu-id="19477-109">Clients can specify a retry policy using <xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref> which guides senders and receivers to automatically retry the failed operation before throwing the exception to the client application.</span></span> <span data-ttu-id="19477-110">ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。</span><span class="sxs-lookup"><span data-stu-id="19477-110">Users should not implement this class, instead should use one of the provided implementations through <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref> or <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>.</span></span> </p>'
     syntax:
       content: public class RetryPolicy
   - uid: com.microsoft.azure.servicebus.primitives._core_message_sender

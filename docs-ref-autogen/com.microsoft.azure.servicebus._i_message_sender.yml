@@ -28,7 +28,7 @@ items:
       startLine: 16
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>Azure Service Bus にメッセージを送信するメッセージの送信者を表します。</p>
+      <p><span data-ttu-id="92bde-101">Azure Service Bus にメッセージを送信するメッセージの送信者を表します。</span><span class="sxs-lookup"><span data-stu-id="92bde-101">Represents a message sender that sends messages to Azure Service Bus.</span></span></p>
       <p></p>
     syntax:
       content: public interface IMessageSender extends IMessageEntityClient
@@ -53,19 +53,19 @@ items:
       startLine: 92
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-102">まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="92bde-102">Cancels the enqueuing of an already sent scheduled message, if it was not already enqueued.</span></span> <span data-ttu-id="92bde-103">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-103">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-104">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-104">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-105">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-105">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void cancelScheduledMessage(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+          description: <p><span data-ttu-id="92bde-106">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-106">sequence number of the scheduled message</span></span> </p>
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="92bde-107">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="92bde-107">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>スケジュールされたメッセージはキャンセルできませんでした。 場合、 </p>
+        description: <p><span data-ttu-id="92bde-108">スケジュールされたメッセージはキャンセルできませんでした。 場合、</span><span class="sxs-lookup"><span data-stu-id="92bde-108">if scheduled message couldn't be cancelled</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_sender.cancelScheduledMessageAsync(long)
     id: cancelScheduledMessageAsync(long)
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -83,17 +83,17 @@ items:
       startLine: 70
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-109">まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="92bde-109">Cancels the enqueuing of an already sent scheduled message, if it was not already enqueued.</span></span> <span data-ttu-id="92bde-110">これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-110">This is an asynchronous method returning a CompletableFuture which completes when the message is cancelled.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> cancelScheduledMessageAsync(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+          description: <p><span data-ttu-id="92bde-111">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-111">sequence number of the scheduled message</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の取り消しを表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-112">保留中の取り消しを表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-112">a CompletableFuture representing the pending cancellation</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_sender.scheduleMessage(IMessage,Instant)'
     id: 'scheduleMessage(IMessage,Instant)'
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -111,25 +111,25 @@ items:
       startLine: 82
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-113">接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-113">Sends a scheduled message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-114">スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。</span><span class="sxs-lookup"><span data-stu-id="92bde-114">A scheduled message is enqueued and made available to receivers only at the scheduled enqueue time.</span></span> <span data-ttu-id="92bde-115">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-115">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-116">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-116">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-117">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-117">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: 'public long scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-118">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-118">message to be sent to the entity</span></span> </p>
         - id: scheduledEnqueueTimeUtc
           type: 328f8254
-          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+          description: <p><span data-ttu-id="92bde-119">インスタント メッセージをエンティティにエンキューをする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92bde-119">instant at which the message should be enqueued in the entity</span></span> </p>
       return:
         type: 0364520f
-        description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+        description: <p><span data-ttu-id="92bde-120">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-120">sequence number of the scheduled message</span></span> </p>
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="92bde-121">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="92bde-121">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>場合は、エンティティにメッセージを送信できませんでした。 </p>
+        description: <p><span data-ttu-id="92bde-122">場合は、エンティティにメッセージを送信できませんでした。</span><span class="sxs-lookup"><span data-stu-id="92bde-122">if message couldn't be sent to the entity</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_sender.scheduleMessageAsync(IMessage,Instant)'
     id: 'scheduleMessageAsync(IMessage,Instant)'
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -147,20 +147,20 @@ items:
       startLine: 62
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。 完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</p>
+      <p><span data-ttu-id="92bde-123">接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-123">Sends a scheduled message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-124">スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。</span><span class="sxs-lookup"><span data-stu-id="92bde-124">A scheduled message is enqueued and made available to receivers only at the scheduled enqueue time.</span></span> <span data-ttu-id="92bde-125">これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-125">This is an asynchronous method returning a CompletableFuture which completes when the message is sent to the entity.</span></span> <span data-ttu-id="92bde-126">完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</span><span class="sxs-lookup"><span data-stu-id="92bde-126">The CompletableFuture, on completion, returns the sequence number of the scheduled message which can be used to cancel the scheduling of the message.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Long> scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-127">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-127">message to be sent to the entity</span></span> </p>
         - id: scheduledEnqueueTimeUtc
           type: 328f8254
-          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+          description: <p><span data-ttu-id="92bde-128">インスタント メッセージをエンティティにエンキューをする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92bde-128">instant at which the message should be enqueued in the entity</span></span> </p>
       return:
         type: 30822cb1
-        description: '<p>スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。 このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。 </p>'
+        description: '<p><span data-ttu-id="92bde-129">スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="92bde-129">a CompletableFuture representing the pending send, which returns the sequence number of the scheduled message.</span></span> <span data-ttu-id="92bde-130">このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。</span><span class="sxs-lookup"><span data-stu-id="92bde-130">This sequence number can be used to cancel the scheduling of the message.</span></span> </p>'
   - uid: com.microsoft.azure.servicebus._i_message_sender.send(IMessage)
     id: send(IMessage)
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -178,19 +178,19 @@ items:
       startLine: 25
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-131">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-131">Sends a message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-132">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-132">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-133">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-133">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-134">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-134">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void send(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-135">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-135">message to be sent to the entity</span></span> </p>
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="92bde-136">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="92bde-136">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>場合は、エンティティにメッセージを送信できませんでした。 </p>
+        description: <p><span data-ttu-id="92bde-137">場合は、エンティティにメッセージを送信できませんでした。</span><span class="sxs-lookup"><span data-stu-id="92bde-137">if message couldn't be sent to the entity</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_sender.sendAsync(IMessage)
     id: sendAsync(IMessage)
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -208,17 +208,17 @@ items:
       startLine: 43
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-138">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-138">Sends a message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-139">これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-139">This is an asynchronous method returning a CompletableFuture which completes when the message is sent to the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> sendAsync(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-140">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-140">message to be sent to the entity</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の送信を表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-141">保留中の送信を表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-141">a CompletableFuture representing the pending send</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_sender.sendBatch(Collection<? extends IMessage>)
     id: sendBatch(Collection<? extends IMessage>)
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -236,19 +236,19 @@ items:
       startLine: 35
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 このメソッドは、バッチが、エンティティに送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-142">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-142">Sends a batch of messages to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-143">このメソッドは、バッチが、エンティティに送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-143">This method blocks until the batch is sent to the entity.</span></span> <span data-ttu-id="92bde-144">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-144">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-145">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-145">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void sendBatch(Collection<? extends IMessage> messages)
       parameters:
         - id: messages
           type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
-          description: <p>エンティティに送信されるメッセージのコレクション </p>
+          description: <p><span data-ttu-id="92bde-146">エンティティに送信されるメッセージのコレクション</span><span class="sxs-lookup"><span data-stu-id="92bde-146">collection of messages to be sent to the entity</span></span> </p>
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="92bde-147">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="92bde-147">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>場合は、エンティティにバッチを送信できませんでした。 </p>
+        description: <p><span data-ttu-id="92bde-148">場合は、エンティティにバッチを送信できませんでした。</span><span class="sxs-lookup"><span data-stu-id="92bde-148">if the batch couldn't be sent to the entity</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_sender.sendBatchAsync(Collection<? extends IMessage>)
     id: sendBatchAsync(Collection<? extends IMessage>)
     parent: com.microsoft.azure.servicebus._i_message_sender
@@ -266,17 +266,17 @@ items:
       startLine: 51
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-149">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-149">Sends a batch of messages to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-150">これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-150">This is an asynchronous method returning a CompletableFuture which completes when the batch is sent to the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> sendBatchAsync(Collection<? extends IMessage> messages)
       parameters:
         - id: messages
           type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
-          description: <p>エンティティに送信されるメッセージのコレクション </p>
+          description: <p><span data-ttu-id="92bde-151">エンティティに送信されるメッセージのコレクション</span><span class="sxs-lookup"><span data-stu-id="92bde-151">collection of messages to be sent to the entity</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の送信を表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-152">保留中の送信を表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-152">a CompletableFuture representing the pending send</span></span> </p>
 references:
   - uid: 8256ba40
     spec.java:
@@ -359,7 +359,7 @@ references:
     nameWithType: ICloseable.close()
     fullName: void com.microsoft.azure.servicebus.ICloseable.close()
     type: Method
-    summary: <p>同期的に終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。 このメソッドを呼び出すことは、呼び出し元のと同じです。 このメソッドはブロックされるまでオブジェクトが閉じられます。 </p>
+    summary: <p><span data-ttu-id="92bde-153">同期的に終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="92bde-153">Synchronously closes and disposes any resources associated with this object.</span></span> <span data-ttu-id="92bde-154">このメソッドを呼び出すことは、呼び出し元のと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-154">Calling this method is equivalent of calling .</span></span> <span data-ttu-id="92bde-155">このメソッドはブロックされるまでオブジェクトが閉じられます。</span><span class="sxs-lookup"><span data-stu-id="92bde-155">This method blocks until this object is closed.</span></span> </p>
     syntax:
       content: public void close()
   - uid: com.microsoft.azure.servicebus._i_closeable.closeAsync()
@@ -369,12 +369,12 @@ references:
     nameWithType: ICloseable.closeAsync()
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.ICloseable.closeAsync()
     type: Method
-    summary: <p>終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。 閉じられた後、オブジェクトを使用できません。 これは、すぐに、CompletableFuture を返す非同期メソッドです。 このオブジェクトは、返された CompletableFuture が完了したときに完全に閉じられます。 </p>
+    summary: <p><span data-ttu-id="92bde-156">終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="92bde-156">Closes and disposes any resources associated with this object.</span></span> <span data-ttu-id="92bde-157">閉じられた後、オブジェクトを使用できません。</span><span class="sxs-lookup"><span data-stu-id="92bde-157">An object cannot be used after it is closed.</span></span> <span data-ttu-id="92bde-158">これは、すぐに、CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-158">This is an asynchronous method that returns a CompletableFuture immediately.</span></span> <span data-ttu-id="92bde-159">このオブジェクトは、返された CompletableFuture が完了したときに完全に閉じられます。</span><span class="sxs-lookup"><span data-stu-id="92bde-159">This object is completely closed when the returned CompletableFuture is completed.</span></span> </p>
     syntax:
       content: public CompletableFuture<Void> closeAsync()
       return:
         type: db03ee24
-        description: <p>このオブジェクトの終了を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="92bde-160">このオブジェクトの終了を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="92bde-160">a CompletableFuture representing the closing of this object.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_entity_client.getEntityPath()
     parent: com.microsoft.azure.servicebus._i_message_entity_client
     href: com.microsoft.azure.servicebus._i_message_entity_client.yml
@@ -383,13 +383,13 @@ references:
     fullName: String com.microsoft.azure.servicebus.IMessageEntityClient.getEntityPath()
     type: Method
     summary: |-
-      <p>メッセージが送信または受信側のメッセージをこのクライアントは、エンティティのパスを取得します。</p>
+      <p><span data-ttu-id="92bde-161">メッセージが送信または受信側のメッセージをこのクライアントは、エンティティのパスを取得します。</span><span class="sxs-lookup"><span data-stu-id="92bde-161">Gets the path of the entity this client is sending messages to or receiving messages from.</span></span></p>
       <p></p>
     syntax:
       content: public String getEntityPath()
       return:
         type: '26831127'
-        description: <p>このクライアントが接続するエンティティのパス </p>
+        description: <p><span data-ttu-id="92bde-162">このクライアントが接続するエンティティのパス</span><span class="sxs-lookup"><span data-stu-id="92bde-162">path of the entity this client is connecting to</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_entity_client
     parent: com.microsoft.azure.servicebus
     href: com.microsoft.azure.servicebus._i_message_entity_client.yml
@@ -398,7 +398,7 @@ references:
     fullName: com.microsoft.azure.servicebus.IMessageEntityClient
     type: Interface
     summary: |-
-      <p>Azure Service Bus エンティティには、メッセージング クライアントを表します。</p>
+      <p><span data-ttu-id="92bde-163">Azure Service Bus エンティティには、メッセージング クライアントを表します。</span><span class="sxs-lookup"><span data-stu-id="92bde-163">Represents a messaging client to an Azure Service Bus entity.</span></span></p>
       <p></p>
     syntax:
       content: public interface IMessageEntityClient extends ICloseable
@@ -409,7 +409,7 @@ references:
     nameWithType: IQueueClient
     fullName: com.microsoft.azure.servicebus.IQueueClient
     type: Interface
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._queue_client\" data-throw-if-not-resolved=\"false\">QueueClient</xref> Service Bus キューとすべての基本的な対話に使用できます。 </p>"
+    summary: "<p><span data-ttu-id=\"92bde-164\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._queue_client\" data-throw-if-not-resolved=\"false\">QueueClient</xref> Service Bus キューとすべての基本的な対話に使用できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"92bde-164\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._queue_client\" data-throw-if-not-resolved=\"false\">QueueClient</xref> can be used for all basic interactions with a Service Bus Queue.</span></span> </p>"
     syntax:
       content: public interface IQueueClient
   - uid: com.microsoft.azure.servicebus._i_topic_client
@@ -419,7 +419,7 @@ references:
     nameWithType: ITopicClient
     fullName: com.microsoft.azure.servicebus.ITopicClient
     type: Interface
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._topic_client\" data-throw-if-not-resolved=\"false\">TopicClient</xref> Service Bus トピックのすべての基本的な通信に使用できます。 <code></code></p>"
+    summary: "<p><span data-ttu-id=\"92bde-165\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._topic_client\" data-throw-if-not-resolved=\"false\">TopicClient</xref> Service Bus トピックのすべての基本的な通信に使用できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"92bde-165\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._topic_client\" data-throw-if-not-resolved=\"false\">TopicClient</xref> can be used for all basic interactions with a Service Bus topic.</span></span> <code></code></p>"
     syntax:
       content: public interface ITopicClient
   - uid: com.microsoft.azure.servicebus._message_sender
@@ -431,14 +431,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.TopicClient.send(IMessage message)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-166">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-166">Sends a message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-167">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-167">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-168">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-168">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-169">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-169">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void send(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-170">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-170">message to be sent to the entity</span></span> </p>
   - uid: com.microsoft.azure.servicebus._queue_client.send(IMessage)
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -447,14 +447,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.QueueClient.send(IMessage message)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-171">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-171">Sends a message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-172">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-172">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-173">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-173">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-174">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-174">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void send(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-175">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-175">message to be sent to the entity</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message
     parent: com.microsoft.azure.servicebus
     href: com.microsoft.azure.servicebus._i_message.yml
@@ -463,7 +463,7 @@ references:
     fullName: com.microsoft.azure.servicebus.IMessage
     type: Interface
     summary: |-
-      <p>Azure Service Bus とクライアント間で交換されるメッセージを表します。</p>
+      <p><span data-ttu-id="92bde-176">Azure Service Bus とクライアント間で交換されるメッセージを表します。</span><span class="sxs-lookup"><span data-stu-id="92bde-176">Represents a message that is exchanged between Azure Service Bus and clients.</span></span></p>
       <p></p>
     syntax:
       content: public interface IMessage
@@ -474,7 +474,7 @@ references:
     nameWithType: ServiceBusException
     fullName: com.microsoft.azure.servicebus.primitives.ServiceBusException
     type: Class
-    summary: <p>これは、すべてのエラーの場合のサービス バスを生成する基本例外です。 </p>
+    summary: <p><span data-ttu-id="92bde-177">これは、すべてのエラーの場合のサービス バスを生成する基本例外です。</span><span class="sxs-lookup"><span data-stu-id="92bde-177">This is the base exception that service bus will generate for all error cases.</span></span> </p>
     syntax:
       content: public class ServiceBusException
   - uid: com.microsoft.azure.servicebus._topic_client.sendBatch(Collection<? extends IMessage>)
@@ -485,14 +485,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.TopicClient.sendBatch(Collection<? extends IMessage> messages)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 このメソッドは、バッチが、エンティティに送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-178">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-178">Sends a batch of messages to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-179">このメソッドは、バッチが、エンティティに送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-179">This method blocks until the batch is sent to the entity.</span></span> <span data-ttu-id="92bde-180">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-180">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-181">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-181">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void sendBatch(Collection<? extends IMessage> messages)
       parameters:
         - id: messages
           type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
-          description: <p>エンティティに送信されるメッセージのコレクション </p>
+          description: <p><span data-ttu-id="92bde-182">エンティティに送信されるメッセージのコレクション</span><span class="sxs-lookup"><span data-stu-id="92bde-182">collection of messages to be sent to the entity</span></span> </p>
   - uid: com.microsoft.azure.servicebus._queue_client.sendBatch(Collection<? extends IMessage>)
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -501,14 +501,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.QueueClient.sendBatch(Collection<? extends IMessage> messages)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 このメソッドは、バッチが、エンティティに送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-183">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-183">Sends a batch of messages to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-184">このメソッドは、バッチが、エンティティに送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-184">This method blocks until the batch is sent to the entity.</span></span> <span data-ttu-id="92bde-185">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-185">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-186">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-186">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void sendBatch(Collection<? extends IMessage> messages)
       parameters:
         - id: messages
           type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
-          description: <p>エンティティに送信されるメッセージのコレクション </p>
+          description: <p><span data-ttu-id="92bde-187">エンティティに送信されるメッセージのコレクション</span><span class="sxs-lookup"><span data-stu-id="92bde-187">collection of messages to be sent to the entity</span></span> </p>
   - uid: com.microsoft.azure.servicebus._topic_client.sendAsync(IMessage)
     parent: com.microsoft.azure.servicebus._topic_client
     href: com.microsoft.azure.servicebus._topic_client.yml
@@ -517,17 +517,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.sendAsync(IMessage message)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-188">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-188">Sends a message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-189">これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-189">This is an asynchronous method returning a CompletableFuture which completes when the message is sent to the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> sendAsync(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-190">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-190">message to be sent to the entity</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の送信を表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-191">保留中の送信を表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-191">a CompletableFuture representing the pending send</span></span> </p>
   - uid: com.microsoft.azure.servicebus._queue_client.sendAsync(IMessage)
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -536,17 +536,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.QueueClient.sendAsync(IMessage message)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-192">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-192">Sends a message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-193">これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-193">This is an asynchronous method returning a CompletableFuture which completes when the message is sent to the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> sendAsync(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-194">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-194">message to be sent to the entity</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の送信を表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-195">保留中の送信を表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-195">a CompletableFuture representing the pending send</span></span> </p>
   - uid: com.microsoft.azure.servicebus._topic_client.sendBatchAsync(Collection<? extends IMessage>)
     parent: com.microsoft.azure.servicebus._topic_client
     href: com.microsoft.azure.servicebus._topic_client.yml
@@ -555,17 +555,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.sendBatchAsync(Collection<? extends IMessage> messages)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-196">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-196">Sends a batch of messages to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-197">これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-197">This is an asynchronous method returning a CompletableFuture which completes when the batch is sent to the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> sendBatchAsync(Collection<? extends IMessage> messages)
       parameters:
         - id: messages
           type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
-          description: <p>エンティティに送信されるメッセージのコレクション </p>
+          description: <p><span data-ttu-id="92bde-198">エンティティに送信されるメッセージのコレクション</span><span class="sxs-lookup"><span data-stu-id="92bde-198">collection of messages to be sent to the entity</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の送信を表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-199">保留中の送信を表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-199">a CompletableFuture representing the pending send</span></span> </p>
   - uid: com.microsoft.azure.servicebus._queue_client.sendBatchAsync(Collection<? extends IMessage>)
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -574,17 +574,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.QueueClient.sendBatchAsync(Collection<? extends IMessage> messages)
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。 これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-200">接続されているこのセンダーで、Azure Service Bus エンティティにメッセージのバッチを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-200">Sends a batch of messages to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-201">これは、エンティティに送信されると、バッチが完了 CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-201">This is an asynchronous method returning a CompletableFuture which completes when the batch is sent to the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> sendBatchAsync(Collection<? extends IMessage> messages)
       parameters:
         - id: messages
           type: d56263b8com.microsoft.azure.servicebus._i_messagea08ddfce
-          description: <p>エンティティに送信されるメッセージのコレクション </p>
+          description: <p><span data-ttu-id="92bde-202">エンティティに送信されるメッセージのコレクション</span><span class="sxs-lookup"><span data-stu-id="92bde-202">collection of messages to be sent to the entity</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の送信を表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-203">保留中の送信を表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-203">a CompletableFuture representing the pending send</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._topic_client.scheduleMessageAsync(IMessage,Instant)'
     parent: com.microsoft.azure.servicebus._topic_client
     href: com.microsoft.azure.servicebus._topic_client.yml
@@ -593,20 +593,20 @@ references:
     fullName: 'CompletableFuture<Long> com.microsoft.azure.servicebus.TopicClient.scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。 完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</p>
+      <p><span data-ttu-id="92bde-204">接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-204">Sends a scheduled message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-205">スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。</span><span class="sxs-lookup"><span data-stu-id="92bde-205">A scheduled message is enqueued and made available to receivers only at the scheduled enqueue time.</span></span> <span data-ttu-id="92bde-206">これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-206">This is an asynchronous method returning a CompletableFuture which completes when the message is sent to the entity.</span></span> <span data-ttu-id="92bde-207">完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</span><span class="sxs-lookup"><span data-stu-id="92bde-207">The CompletableFuture, on completion, returns the sequence number of the scheduled message which can be used to cancel the scheduling of the message.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Long> scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-208">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-208">message to be sent to the entity</span></span> </p>
         - id: scheduledEnqueueTimeUtc
           type: 328f8254
-          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+          description: <p><span data-ttu-id="92bde-209">インスタント メッセージをエンティティにエンキューをする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92bde-209">instant at which the message should be enqueued in the entity</span></span> </p>
       return:
         type: 30822cb1
-        description: '<p>スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。 このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。 </p>'
+        description: '<p><span data-ttu-id="92bde-210">スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="92bde-210">a CompletableFuture representing the pending send, which returns the sequence number of the scheduled message.</span></span> <span data-ttu-id="92bde-211">このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。</span><span class="sxs-lookup"><span data-stu-id="92bde-211">This sequence number can be used to cancel the scheduling of the message.</span></span> </p>'
   - uid: 'com.microsoft.azure.servicebus._queue_client.scheduleMessageAsync(IMessage,Instant)'
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -615,20 +615,20 @@ references:
     fullName: 'CompletableFuture<Long> com.microsoft.azure.servicebus.QueueClient.scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。 完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</p>
+      <p><span data-ttu-id="92bde-212">接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-212">Sends a scheduled message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-213">スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。</span><span class="sxs-lookup"><span data-stu-id="92bde-213">A scheduled message is enqueued and made available to receivers only at the scheduled enqueue time.</span></span> <span data-ttu-id="92bde-214">これは、エンティティにメッセージが送信されるときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-214">This is an asynchronous method returning a CompletableFuture which completes when the message is sent to the entity.</span></span> <span data-ttu-id="92bde-215">完了時に、CompletableFuture では、メッセージのスケジュールをキャンセルするために使用するスケジュールされたメッセージのシーケンス番号を返します。</span><span class="sxs-lookup"><span data-stu-id="92bde-215">The CompletableFuture, on completion, returns the sequence number of the scheduled message which can be used to cancel the scheduling of the message.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Long> scheduleMessageAsync(IMessage message, Instant scheduledEnqueueTimeUtc)'
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-216">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-216">message to be sent to the entity</span></span> </p>
         - id: scheduledEnqueueTimeUtc
           type: 328f8254
-          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+          description: <p><span data-ttu-id="92bde-217">インスタント メッセージをエンティティにエンキューをする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92bde-217">instant at which the message should be enqueued in the entity</span></span> </p>
       return:
         type: 30822cb1
-        description: '<p>スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。 このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。 </p>'
+        description: '<p><span data-ttu-id="92bde-218">スケジュールされたメッセージのシーケンス番号を返しますの保留中の送信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="92bde-218">a CompletableFuture representing the pending send, which returns the sequence number of the scheduled message.</span></span> <span data-ttu-id="92bde-219">このシーケンス番号は、メッセージのスケジュール設定 [キャンセル] を使用できます。</span><span class="sxs-lookup"><span data-stu-id="92bde-219">This sequence number can be used to cancel the scheduling of the message.</span></span> </p>'
   - uid: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessageAsync(long)
     parent: com.microsoft.azure.servicebus._topic_client
     href: com.microsoft.azure.servicebus._topic_client.yml
@@ -637,17 +637,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.TopicClient.cancelScheduledMessageAsync(long sequenceNumber)
     type: Method
     summary: |-
-      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-220">まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="92bde-220">Cancels the enqueuing of an already sent scheduled message, if it was not already enqueued.</span></span> <span data-ttu-id="92bde-221">これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-221">This is an asynchronous method returning a CompletableFuture which completes when the message is cancelled.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> cancelScheduledMessageAsync(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+          description: <p><span data-ttu-id="92bde-222">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-222">sequence number of the scheduled message</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の取り消しを表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-223">保留中の取り消しを表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-223">a CompletableFuture representing the pending cancellation</span></span> </p>
   - uid: com.microsoft.azure.servicebus._queue_client.cancelScheduledMessageAsync(long)
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -656,17 +656,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.QueueClient.cancelScheduledMessageAsync(long sequenceNumber)
     type: Method
     summary: |-
-      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</p>
+      <p><span data-ttu-id="92bde-224">まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="92bde-224">Cancels the enqueuing of an already sent scheduled message, if it was not already enqueued.</span></span> <span data-ttu-id="92bde-225">これは、メッセージが取り消されたときに完了する CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="92bde-225">This is an asynchronous method returning a CompletableFuture which completes when the message is cancelled.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> cancelScheduledMessageAsync(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+          description: <p><span data-ttu-id="92bde-226">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-226">sequence number of the scheduled message</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の取り消しを表す CompletableFuture </p>
+        description: <p><span data-ttu-id="92bde-227">保留中の取り消しを表す CompletableFuture</span><span class="sxs-lookup"><span data-stu-id="92bde-227">a CompletableFuture representing the pending cancellation</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._topic_client.scheduleMessage(IMessage,Instant)'
     parent: com.microsoft.azure.servicebus._topic_client
     href: com.microsoft.azure.servicebus._topic_client.yml
@@ -675,20 +675,20 @@ references:
     fullName: 'long com.microsoft.azure.servicebus.TopicClient.scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-228">接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-228">Sends a scheduled message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-229">スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。</span><span class="sxs-lookup"><span data-stu-id="92bde-229">A scheduled message is enqueued and made available to receivers only at the scheduled enqueue time.</span></span> <span data-ttu-id="92bde-230">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-230">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-231">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-231">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-232">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-232">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: 'public long scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-233">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-233">message to be sent to the entity</span></span> </p>
         - id: scheduledEnqueueTimeUtc
           type: 328f8254
-          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+          description: <p><span data-ttu-id="92bde-234">インスタント メッセージをエンティティにエンキューをする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92bde-234">instant at which the message should be enqueued in the entity</span></span> </p>
       return:
         type: 0364520f
-        description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+        description: <p><span data-ttu-id="92bde-235">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-235">sequence number of the scheduled message</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._queue_client.scheduleMessage(IMessage,Instant)'
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -697,20 +697,20 @@ references:
     fullName: 'long com.microsoft.azure.servicebus.QueueClient.scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
     type: Method
     summary: |-
-      <p>接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。 スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-236">接続されているこのセンダーで、Azure Service Bus エンティティにスケジュールされたメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="92bde-236">Sends a scheduled message to the Azure Service Bus entity this sender is connected to.</span></span> <span data-ttu-id="92bde-237">スケジュールされたメッセージ キューに入れられるされレシーバー スケジュール エンキュー時にのみです。</span><span class="sxs-lookup"><span data-stu-id="92bde-237">A scheduled message is enqueued and made available to receivers only at the scheduled enqueue time.</span></span> <span data-ttu-id="92bde-238">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-238">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-239">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-239">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-240">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-240">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: 'public long scheduleMessage(IMessage message, Instant scheduledEnqueueTimeUtc)'
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>エンティティに送信されるメッセージ </p>
+          description: <p><span data-ttu-id="92bde-241">エンティティに送信されるメッセージ</span><span class="sxs-lookup"><span data-stu-id="92bde-241">message to be sent to the entity</span></span> </p>
         - id: scheduledEnqueueTimeUtc
           type: 328f8254
-          description: <p>インスタント メッセージをエンティティにエンキューをする必要があります。 </p>
+          description: <p><span data-ttu-id="92bde-242">インスタント メッセージをエンティティにエンキューをする必要があります。</span><span class="sxs-lookup"><span data-stu-id="92bde-242">instant at which the message should be enqueued in the entity</span></span> </p>
       return:
         type: 0364520f
-        description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+        description: <p><span data-ttu-id="92bde-243">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-243">sequence number of the scheduled message</span></span> </p>
   - uid: com.microsoft.azure.servicebus._topic_client.cancelScheduledMessage(long)
     parent: com.microsoft.azure.servicebus._topic_client
     href: com.microsoft.azure.servicebus._topic_client.yml
@@ -719,14 +719,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.TopicClient.cancelScheduledMessage(long sequenceNumber)
     type: Method
     summary: |-
-      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-244">まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="92bde-244">Cancels the enqueuing of an already sent scheduled message, if it was not already enqueued.</span></span> <span data-ttu-id="92bde-245">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-245">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-246">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-246">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-247">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-247">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void cancelScheduledMessage(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+          description: <p><span data-ttu-id="92bde-248">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-248">sequence number of the scheduled message</span></span> </p>
   - uid: com.microsoft.azure.servicebus._queue_client.cancelScheduledMessage(long)
     parent: com.microsoft.azure.servicebus._queue_client
     href: com.microsoft.azure.servicebus._queue_client.yml
@@ -735,11 +735,11 @@ references:
     fullName: void com.microsoft.azure.servicebus.QueueClient.cancelScheduledMessage(long sequenceNumber)
     type: Method
     summary: |-
-      <p>まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。 このメソッドは、エンティティにメッセージが送信されるまでブロックします。 このメソッドを呼び出すことを呼び出すことと同じです。 パフォーマンス向上のためには、非同期メソッドを使用します。</p>
+      <p><span data-ttu-id="92bde-249">まだいなかったにキュー入れられた場合は、送信済みのスケジュールされたメッセージのキューに登録をキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="92bde-249">Cancels the enqueuing of an already sent scheduled message, if it was not already enqueued.</span></span> <span data-ttu-id="92bde-250">このメソッドは、エンティティにメッセージが送信されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="92bde-250">This method blocks until the message is sent to the entity.</span></span> <span data-ttu-id="92bde-251">このメソッドを呼び出すことを呼び出すことと同じです。</span><span class="sxs-lookup"><span data-stu-id="92bde-251">Calling this method is equivalent to calling .</span></span> <span data-ttu-id="92bde-252">パフォーマンス向上のためには、非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="92bde-252">For better performance, use async methods.</span></span></p>
       <p></p>
     syntax:
       content: public void cancelScheduledMessage(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>スケジュールされたメッセージのシーケンス番号 </p>
+          description: <p><span data-ttu-id="92bde-253">スケジュールされたメッセージのシーケンス番号</span><span class="sxs-lookup"><span data-stu-id="92bde-253">sequence number of the scheduled message</span></span> </p>

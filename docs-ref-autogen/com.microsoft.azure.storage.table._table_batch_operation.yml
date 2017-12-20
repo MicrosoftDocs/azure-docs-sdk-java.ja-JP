@@ -39,8 +39,8 @@ items:
       startLine: 47
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作を表すクラス。 呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。 </p>
-      <p>バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。 取得操作のバッチには、他の操作を含めることはできません。 バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。 </p>
+      <p><span data-ttu-id="cca13-101">バッチ操作を表すクラス。</span><span class="sxs-lookup"><span data-stu-id="cca13-101">A class which represents a batch operation.</span></span> <span data-ttu-id="cca13-102">呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-102">A batch operation is a collection of table operations which are executed by the Storage Service REST API as a single atomic operation, by invoking an <ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">Entity Group Transaction</ulink>.</span></span> </p>
+      <p><span data-ttu-id="cca13-103">バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。</span><span class="sxs-lookup"><span data-stu-id="cca13-103">A batch operation may contain up to 100 individual table operations, with the requirement that each operation entity must have same partition key.</span></span> <span data-ttu-id="cca13-104">取得操作のバッチには、他の操作を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="cca13-104">A batch with a retrieve operation cannot contain any other operations.</span></span> <span data-ttu-id="cca13-105">バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。</span><span class="sxs-lookup"><span data-stu-id="cca13-105">Note that the total payload of a batch operation is limited to 4MB.</span></span> </p>
     syntax: &ref_1
       content: public class TableBatchOperation
     inheritance:
@@ -63,17 +63,17 @@ items:
       startLine: 64
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作で指定したインデックス位置には、テーブルの操作を追加します。</p>
+      <p><span data-ttu-id="cca13-106">バッチ操作で指定したインデックス位置には、テーブルの操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-106">Adds the table operation at the specified index in the batch operation .</span></span></p>
       <p></p>
     syntax:
       content: 'public void add(final int index, final TableOperation element)'
       parameters:
         - id: index
           type: cd225469
-          description: <p><code>int</code>バッチ操作内のインデックスを表す<code>ArrayList</code>でテーブル操作を追加します。 </p>
+          description: <p><span data-ttu-id="cca13-107"><code>int</code>バッチ操作内のインデックスを表す<code>ArrayList</code>でテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-107">An <code>int</code> which represents the index in the batch operation <code>ArrayList</code> to add the table operation at.</span></span> </p>
         - id: element
           type: 93de0ef9com.microsoft.azure.storage.table._table_operation
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作を追加します。 </p>
+          description: <p><span data-ttu-id="cca13-108"><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-108">The <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> to add to the batch operation.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.add(final TableOperation)
     id: add(final TableOperation)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -91,17 +91,17 @@ items:
       startLine: 88
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作には、テーブルの操作を追加します。</p>
+      <p><span data-ttu-id="cca13-109">バッチ操作には、テーブルの操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-109">Adds the table operation to the batch operation .</span></span></p>
       <p></p>
     syntax:
       content: public boolean add(final TableOperation element)
       parameters:
         - id: element
           type: 93de0ef9com.microsoft.azure.storage.table._table_operation
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作を追加します。 </p>
+          description: <p><span data-ttu-id="cca13-110"><xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-110">The <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> to add to the batch operation.</span></span> </p>
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。 </p>"
+        description: "<p><span data-ttu-id=\"cca13-111\">\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-111\">\r\n\r\n  <code>true</code> if the operation was added successfully.</span></span> </p>"
   - uid: 'com.microsoft.azure.storage.table._table_batch_operation.addAll(final int,final java.util.Collection<? extends TableOperation>)'
     id: Collection<? extends TableOperation>)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -119,20 +119,20 @@ items:
       startLine: 117
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>指定したインデックスから始まる、バッチ操作には、テーブル操作のコレクションを追加します。</p>
+      <p><span data-ttu-id="cca13-112">指定したインデックスから始まる、バッチ操作には、テーブル操作のコレクションを追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-112">Adds the collection of table operations to the batch operation  starting at the specified index.</span></span></p>
       <p></p>
     syntax:
       content: 'public boolean addAll(final int index, final java.util.Collection<? extends TableOperation> c)'
       parameters:
         - id: index
           type: cd225469
-          description: <p><code>int</code>バッチ操作内のインデックスを表す<code>ArrayList</code>でテーブル操作を追加します。 </p>
+          description: <p><span data-ttu-id="cca13-113"><code>int</code>バッチ操作内のインデックスを表す<code>ArrayList</code>でテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-113">An <code>int</code> which represents the index in the batch operation <code>ArrayList</code> to add the table operation at.</span></span> </p>
         - id: c
           type: 4f93b78dcom.microsoft.azure.storage.table._table_operationa08ddfce
-          description: <p>A<code>java.util.Collection</code>の<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作に追加するオブジェクト。 </p>
+          description: <p><span data-ttu-id="cca13-114">A<code>java.util.Collection</code>の<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作に追加するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="cca13-114">A <code>java.util.Collection</code> of <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> objects to add to the batch operation.</span></span> </p>
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。 </p>"
+        description: "<p><span data-ttu-id=\"cca13-115\">\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-115\">\r\n\r\n  <code>true</code> if the operations were added successfully.</span></span> </p>"
   - uid: com.microsoft.azure.storage.table._table_batch_operation.addAll(final java.util.Collection<? extends TableOperation>)
     id: Collection<? extends TableOperation>)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -150,17 +150,17 @@ items:
       startLine: 146
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作には、テーブル操作のコレクションを追加します。</p>
+      <p><span data-ttu-id="cca13-116">バッチ操作には、テーブル操作のコレクションを追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-116">Adds the collection of table operations to the batch operation .</span></span></p>
       <p></p>
     syntax:
       content: public boolean addAll(final java.util.Collection<? extends TableOperation> c)
       parameters:
         - id: c
           type: 4f93b78dcom.microsoft.azure.storage.table._table_operationa08ddfce
-          description: <p>A<code>java.util.Collection</code>の<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作に追加するオブジェクト。 </p>
+          description: <p><span data-ttu-id="cca13-117">A<code>java.util.Collection</code>の<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作に追加するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="cca13-117">A <code>java.util.Collection</code> of <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> objects to add to the batch operation.</span></span> </p>
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。 </p>"
+        description: "<p><span data-ttu-id=\"cca13-118\">\r\n\r\n  <code>true</code>場合は、操作が正常に追加されました。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-118\">\r\n\r\n  <code>true</code> if the operations were added successfully.</span></span> </p>"
   - uid: com.microsoft.azure.storage.table._table_batch_operation.clear()
     id: clear()
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -177,7 +177,7 @@ items:
       path: microsoft-azure-storage/src/com/microsoft/azure/storage/table/TableBatchOperation.java
       startLine: 170
     package: com.microsoft.azure.storage.table
-    summary: <p>バッチ操作からのすべてのテーブル操作をクリアします。 </p>
+    summary: <p><span data-ttu-id="cca13-119">バッチ操作からのすべてのテーブル操作をクリアします。</span><span class="sxs-lookup"><span data-stu-id="cca13-119">Clears all table operations from the batch operation.</span></span> </p>
     syntax:
       content: public void clear()
   - uid: com.microsoft.azure.storage.table._table_batch_operation.delete(final TableEntity)
@@ -197,14 +197,14 @@ items:
       startLine: 181
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定されたエンティティを削除するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-120">バッチ操作に指定されたエンティティを削除するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-120">Adds a table operation to delete the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public void delete(final TableEntity entity)
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を削除します。 </p>
+          description: <p><span data-ttu-id="cca13-121"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を削除します。</span><span class="sxs-lookup"><span data-stu-id="cca13-121">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to delete.</span></span> </p>
   - uid: 'com.microsoft.azure.storage.table._table_batch_operation.execute(final CloudTableClient,final String,final TableRequestOptions,final OperationContext)'
     id: 'execute(final CloudTableClient,final String,final TableRequestOptions,final OperationContext)'
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -222,30 +222,30 @@ items:
       startLine: 408
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>内部使用のために予約されています。 指定されたを使用して、指定したテーブルでは、このバッチ操作を実行<xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>と<xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>です。 </p>
-      <p>このメソッドは、テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用して、このバッチ操作を実行するには、ストレージ サービス REST API を呼び出すが、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>オブジェクト。</p>
+      <p><span data-ttu-id="cca13-122">内部使用のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="cca13-122">Reserved for internal use.</span></span> <span data-ttu-id="cca13-123">指定されたを使用して、指定したテーブルでは、このバッチ操作を実行<xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>と<xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-123">Executes this batch operation on the specified table, using the specified <xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref> and <xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>.</span></span> </p>
+      <p><span data-ttu-id="cca13-124">このメソッドは、テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用して、このバッチ操作を実行するには、ストレージ サービス REST API を呼び出すが、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="cca13-124">This method will invoke the Storage Service REST API to execute this batch operation, using the Table service endpoint and storage account credentials in the <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref> object.</span></span></p>
       <p></p>
     syntax:
       content: 'protected ArrayList<TableResult> execute(final CloudTableClient client, final String tableName, final TableRequestOptions options, final OperationContext opContext)'
       parameters:
         - id: client
           type: 93de0ef9com.microsoft.azure.storage.table._cloud_table_client
-          description: <p>A <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用するを指定します。 </p>
+          description: <p><span data-ttu-id="cca13-125">A <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>テーブル サービス エンドポイントとストレージ アカウントの資格情報を使用するを指定します。</span><span class="sxs-lookup"><span data-stu-id="cca13-125">A <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref> instance specifying the Table service endpoint and storage account credentials to use.</span></span> </p>
         - id: tableName
           type: 3d93591e
-          description: <p>A<code>String</code>テーブルの名前を含むです。 </p>
+          description: <p><span data-ttu-id="cca13-126">A<code>String</code>テーブルの名前を含むです。</span><span class="sxs-lookup"><span data-stu-id="cca13-126">A <code>String</code> containing the name of the table.</span></span> </p>
         - id: options
           type: 93de0ef9com.microsoft.azure.storage.table._table_request_options
-          description: <p>A <xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>オプションの再試行の操作のポリシーやタイムアウトの設定などの実行を指定するオブジェクト。 </p>
+          description: <p><span data-ttu-id="cca13-127">A <xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref>オプションの再試行の操作のポリシーやタイムアウトの設定などの実行を指定するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="cca13-127">A <xref uid="com.microsoft.azure.storage.table._table_request_options" data-throw-if-not-resolved="false">TableRequestOptions</xref> object that specifies execution options such as retry policy and timeout settings for the operation.</span></span> </p>
         - id: opContext
           type: 93de0ef9com.microsoft.azure.storage._operation_context
-          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>オブジェクトの現在の操作を追跡します。</p>
+          description: <p><span data-ttu-id="cca13-128"><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>オブジェクトの現在の操作を追跡します。</span><span class="sxs-lookup"><span data-stu-id="cca13-128">An <xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref> object for tracking the current operation.</span></span></p>
       return:
         type: 573b1e0bcom.microsoft.azure.storage.table._table_resulta08ddfce
-        description: <p><code>ArrayList</code>の<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>操作の実行結果を格納します。</p>
+        description: <p><span data-ttu-id="cca13-129"><code>ArrayList</code>の<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>操作の実行結果を格納します。</span><span class="sxs-lookup"><span data-stu-id="cca13-129">An <code>ArrayList</code> of <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref> containing the results of executing the operation.</span></span></p>
     exceptions:
       - type: com.microsoft.azure.storage._storage_exception
-        description: <p>場合は、ストレージ操作でエラーが発生します。 </p>
+        description: <p><span data-ttu-id="cca13-130">場合は、ストレージ操作でエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="cca13-130">if an error occurs in the storage operation.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.insert(final TableEntity)
     id: insert(final TableEntity)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -263,14 +263,14 @@ items:
       startLine: 192
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定されたエンティティを挿入するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-131">バッチ操作に指定されたエンティティを挿入するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-131">Adds a table operation to insert the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public void insert(final TableEntity entity)
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を挿入します。 </p>
+          description: <p><span data-ttu-id="cca13-132"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を挿入します。</span><span class="sxs-lookup"><span data-stu-id="cca13-132">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to insert.</span></span> </p>
   - uid: 'com.microsoft.azure.storage.table._table_batch_operation.insert(final TableEntity,boolean)'
     id: 'insert(final TableEntity,boolean)'
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -288,17 +288,17 @@ items:
       startLine: 204
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定されたエンティティを挿入するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-133">バッチ操作に指定されたエンティティを挿入するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-133">Adds a table operation to insert the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: 'public void insert(final TableEntity entity, boolean echoContent)'
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を挿入します。 </p>
+          description: <p><span data-ttu-id="cca13-134"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を挿入します。</span><span class="sxs-lookup"><span data-stu-id="cca13-134">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to insert.</span></span> </p>
         - id: echoContent
           type: 4fc6e284
-          description: <p>ブール型かどうかをメッセージ ペイロードを応答で返される必要があります。 </p>
+          description: <p><span data-ttu-id="cca13-135">ブール型かどうかをメッセージ ペイロードを応答で返される必要があります。</span><span class="sxs-lookup"><span data-stu-id="cca13-135">The boolean representing whether the message payload should be returned in the response.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.insertOrMerge(final TableEntity)
     id: insertOrMerge(final TableEntity)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -316,14 +316,14 @@ items:
       startLine: 215
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>挿入またはバッチ操作に指定されたエンティティをマージするテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-136">挿入またはバッチ操作に指定されたエンティティをマージするテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-136">Adds a table operation to insert or merge the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public void insertOrMerge(final TableEntity entity)
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>がない場合に挿入するか、存在する場合にマージします。 </p>
+          description: <p><span data-ttu-id="cca13-137"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>がない場合に挿入するか、存在する場合にマージします。</span><span class="sxs-lookup"><span data-stu-id="cca13-137">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to insert if not found or to merge if it exists.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.insertOrReplace(final TableEntity)
     id: insertOrReplace(final TableEntity)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -341,14 +341,14 @@ items:
       startLine: 226
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>挿入またはバッチ操作に指定されたエンティティを置換するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-138">挿入またはバッチ操作に指定されたエンティティを置換するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-138">Adds a table operation to insert or replace the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public void insertOrReplace(final TableEntity entity)
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>がない場合に挿入する、または存在する場合を置換します。 </p>
+          description: <p><span data-ttu-id="cca13-139"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>がない場合に挿入する、または存在する場合を置換します。</span><span class="sxs-lookup"><span data-stu-id="cca13-139">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to insert if not found or to replace if it exists.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.merge(final TableEntity)
     id: merge(final TableEntity)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -366,14 +366,14 @@ items:
       startLine: 237
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定されたエンティティをマージするテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-140">バッチ操作に指定されたエンティティをマージするテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-140">Adds a table operation to merge the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public void merge(final TableEntity entity)
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>をマージします。 </p>
+          description: <p><span data-ttu-id="cca13-141"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>をマージします。</span><span class="sxs-lookup"><span data-stu-id="cca13-141">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to merge.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.remove(int)
     id: remove(int)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -391,14 +391,14 @@ items:
       startLine: 283
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作から指定したインデックスにテーブルの操作を削除します。</p>
+      <p><span data-ttu-id="cca13-142">バッチ操作から指定したインデックスにテーブルの操作を削除します。</span><span class="sxs-lookup"><span data-stu-id="cca13-142">Removes the table operation at the specified index from the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public TableOperation remove(int index)
       parameters:
         - id: index
           type: f75371fa
-          description: <p><code>int</code>内のインデックスを表す、<code>ArrayList</code>バッチ操作から削除するテーブル操作のです。 </p>
+          description: <p><span data-ttu-id="cca13-143"><code>int</code>内のインデックスを表す、<code>ArrayList</code>バッチ操作から削除するテーブル操作のです。</span><span class="sxs-lookup"><span data-stu-id="cca13-143">An <code>int</code> which represents the index in the <code>ArrayList</code> of the table operation to remove from the batch operation.</span></span> </p>
       return:
         type: com.microsoft.azure.storage.table._table_operation
   - uid: com.microsoft.azure.storage.table._table_batch_operation.remove(Object)
@@ -418,17 +418,17 @@ items:
       startLine: 298
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作から、指定されたを削除します。</p>
+      <p><span data-ttu-id="cca13-144">バッチ操作から、指定されたを削除します。</span><span class="sxs-lookup"><span data-stu-id="cca13-144">Removes the specified  from the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public boolean remove(Object o)
       parameters:
         - id: o
           type: '79317049'
-          description: <p><code>Object</code>バッチ操作から削除します。 </p>
+          description: <p><span data-ttu-id="cca13-145"><code>Object</code>バッチ操作から削除します。</span><span class="sxs-lookup"><span data-stu-id="cca13-145">The <code>Object</code> to remove from the batch operation.</span></span> </p>
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>場合は、オブジェクトが正常に削除されました。 </p>"
+        description: "<p><span data-ttu-id=\"cca13-146\">\r\n\r\n  <code>true</code>場合は、オブジェクトが正常に削除されました。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-146\">\r\n\r\n  <code>true</code> if the object was removed successfully.</span></span> </p>"
   - uid: com.microsoft.azure.storage.table._table_batch_operation.removeAll(java.util.Collection<?>)
     id: Collection<?>)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -446,17 +446,17 @@ items:
       startLine: 313
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作から、指定されたコレクションのすべての要素を削除します。</p>
+      <p><span data-ttu-id="cca13-147">バッチ操作から、指定されたコレクションのすべての要素を削除します。</span><span class="sxs-lookup"><span data-stu-id="cca13-147">Removes all elements of the specified collection from the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public boolean removeAll(java.util.Collection<?> c)
       parameters:
         - id: c
           type: 5c3b993a
-          description: <p>バッチ操作から削除する要素のコレクション。 </p>
+          description: <p><span data-ttu-id="cca13-148">バッチ操作から削除する要素のコレクション。</span><span class="sxs-lookup"><span data-stu-id="cca13-148">The collection of elements to remove from the batch operation.</span></span> </p>
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>場合は、コレクション内のオブジェクトが正常に削除されました。 </p>"
+        description: "<p><span data-ttu-id=\"cca13-149\">\r\n\r\n  <code>true</code>場合は、コレクション内のオブジェクトが正常に削除されました。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-149\">\r\n\r\n  <code>true</code> if the objects in the collection were removed successfully.</span></span> </p>"
   - uid: 'com.microsoft.azure.storage.table._table_batch_operation.removeRange(int,int)'
     id: 'removeRange(int,int)'
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -474,17 +474,17 @@ items:
       startLine: 575
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>内部使用のために予約されています。 指定した範囲内のインデックスでのすべてのテーブル操作をバッチ操作から削除します。</p>
+      <p><span data-ttu-id="cca13-150">内部使用のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="cca13-150">Reserved for internal use.</span></span> <span data-ttu-id="cca13-151">指定した範囲内のインデックスでのすべてのテーブル操作をバッチ操作から削除します。</span><span class="sxs-lookup"><span data-stu-id="cca13-151">Removes all the table operations at indexes in the specified range from the batch operation .</span></span></p>
       <p></p>
     syntax:
       content: 'protected void removeRange(int fromIndex, int toIndex)'
       parameters:
         - id: fromIndex
           type: f75371fa
-          description: <p><code>int</code>の範囲の下限を表す<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作から削除するオブジェクト<code>ArrayList</code>です。 </p>
+          description: <p><span data-ttu-id="cca13-152"><code>int</code>の範囲の下限を表す<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作から削除するオブジェクト<code>ArrayList</code>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-152">An <code>int</code> which represents the inclusive lower bound of the range of <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> objects to remove from the batch operation <code>ArrayList</code>.</span></span> </p>
         - id: toIndex
           type: f75371fa
-          description: <p><code>int</code>の範囲の上限を表す<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作から削除するオブジェクト<code>ArrayList</code>です。 </p>
+          description: <p><span data-ttu-id="cca13-153"><code>int</code>の範囲の上限を表す<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>バッチ操作から削除するオブジェクト<code>ArrayList</code>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-153">An <code>int</code> which represents the exclusive upper bound of the range of <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> objects to remove from the batch operation <code>ArrayList</code>.</span></span> </p>
   - uid: com.microsoft.azure.storage.table._table_batch_operation.replace(final TableEntity)
     id: replace(final TableEntity)
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -502,14 +502,14 @@ items:
       startLine: 325
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定されたエンティティを置換するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-154">バッチ操作に指定されたエンティティを置換するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-154">Adds a table operation to replace the specified entity to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: public void replace(final TableEntity entity)
       parameters:
         - id: entity
           type: 93de0ef9com.microsoft.azure.storage.table._table_entity
-          description: <p><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を置き換えます。 </p>
+          description: <p><span data-ttu-id="cca13-155"><xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="cca13-155">The <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> to replace.</span></span> </p>
   - uid: 'com.microsoft.azure.storage.table._table_batch_operation.retrieve(final String,final String,final Class<? extends TableEntity>)'
     id: 'retrieve(final String,final String,final Class<? extends TableEntity>)'
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -527,20 +527,20 @@ items:
       startLine: 253
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定の PartitionKey と RowKey で指定されたクラス型のエンティティを取得するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-156">バッチ操作に指定の PartitionKey と RowKey で指定されたクラス型のエンティティを取得するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-156">Adds a table operation to retrieve an entity of the specified class type with the specified PartitionKey and RowKey to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: 'public void retrieve(final String partitionKey, final String rowKey, final Class<? extends TableEntity> clazzType)'
       parameters:
         - id: partitionKey
           type: 3d93591e
-          description: <p>A<code>String</code>を取得するエンティティの PartitionKey を格納します。 </p>
+          description: <p><span data-ttu-id="cca13-157">A<code>String</code>を取得するエンティティの PartitionKey を格納します。</span><span class="sxs-lookup"><span data-stu-id="cca13-157">A <code>String</code> containing the PartitionKey of the entity to retrieve.</span></span> </p>
         - id: rowKey
           type: 3d93591e
-          description: <p>A<code>String</code>を取得するエンティティの RowKey を格納します。 </p>
+          description: <p><span data-ttu-id="cca13-158">A<code>String</code>を取得するエンティティの RowKey を格納します。</span><span class="sxs-lookup"><span data-stu-id="cca13-158">A <code>String</code> containing the RowKey of the entity to retrieve.</span></span> </p>
         - id: clazzType
           type: f6d66785com.microsoft.azure.storage.table._table_entitya08ddfce
-          description: <p>クラス、 <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>エンティティの種類を取得します。 </p>
+          description: <p><span data-ttu-id="cca13-159">クラス、 <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref>エンティティの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="cca13-159">The class of the <xref uid="com.microsoft.azure.storage.table._table_entity" data-throw-if-not-resolved="false">TableEntity</xref> type for the entity to retrieve.</span></span> </p>
   - uid: 'com.microsoft.azure.storage.table._table_batch_operation.retrieve(final String,final String,final EntityResolver<?>)'
     id: 'retrieve(final String,final String,final EntityResolver<?>)'
     parent: com.microsoft.azure.storage.table._table_batch_operation
@@ -558,20 +558,20 @@ items:
       startLine: 270
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>バッチ操作に指定の PartitionKey と RowKey で指定されたクラス型のエンティティを取得するテーブル操作を追加します。</p>
+      <p><span data-ttu-id="cca13-160">バッチ操作に指定の PartitionKey と RowKey で指定されたクラス型のエンティティを取得するテーブル操作を追加します。</span><span class="sxs-lookup"><span data-stu-id="cca13-160">Adds a table operation to retrieve an entity of the specified class type with the specified PartitionKey and RowKey to the batch operation.</span></span></p>
       <p></p>
     syntax:
       content: 'public void retrieve(final String partitionKey, final String rowKey, final EntityResolver<?> resolver)'
       parameters:
         - id: partitionKey
           type: 3d93591e
-          description: <p>A<code>String</code>を取得するエンティティの PartitionKey を格納します。 </p>
+          description: <p><span data-ttu-id="cca13-161">A<code>String</code>を取得するエンティティの PartitionKey を格納します。</span><span class="sxs-lookup"><span data-stu-id="cca13-161">A <code>String</code> containing the PartitionKey of the entity to retrieve.</span></span> </p>
         - id: rowKey
           type: 3d93591e
-          description: <p>A<code>String</code>を取得するエンティティの RowKey を格納します。 </p>
+          description: <p><span data-ttu-id="cca13-162">A<code>String</code>を取得するエンティティの RowKey を格納します。</span><span class="sxs-lookup"><span data-stu-id="cca13-162">A <code>String</code> containing the RowKey of the entity to retrieve.</span></span> </p>
         - id: resolver
           type: 93de0ef9com.microsoft.azure.storage.table._entity_resolver7e6ad1eb
-          description: <p><xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>結果内の特定の型として取得するエンティティを射影する実装。 </p>
+          description: <p><span data-ttu-id="cca13-163"><xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>結果内の特定の型として取得するエンティティを射影する実装。</span><span class="sxs-lookup"><span data-stu-id="cca13-163">The <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref> implementation to project the entity to retrieve as a particular type in the result.</span></span> </p>
 references:
   - uid: cd225469
     spec.java:
@@ -755,8 +755,8 @@ references:
     fullName: com.microsoft.azure.storage.table.TableOperation
     type: Class
     summary: |-
-      <p>1 つのテーブル操作を表すクラス。 </p>
-      <p>構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。 実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。 A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。 場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。 </p>
+      <p><span data-ttu-id="cca13-164">1 つのテーブル操作を表すクラス。</span><span class="sxs-lookup"><span data-stu-id="cca13-164">A class which represents a single table operation.</span></span> </p>
+      <p><span data-ttu-id="cca13-165">構築する静的ファクトリ メソッドを使用して<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>挿入、更新、マージ、削除、置換、またはテーブルのエンティティを取得するテーブルに対する操作用のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="cca13-165">Use the static factory methods to construct <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> instances for operations on tables that insert, update, merge, delete, replace or retrieve table entities.</span></span> <span data-ttu-id="cca13-166">実行する、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>インスタンス、に対してメソッドを呼び出し、 <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="cca13-166">To execute a <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> instance, call the  method on a <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref> instance.</span></span> <span data-ttu-id="cca13-167">A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>直接、またはの一部として実行することが、 <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-167">A <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> may be executed directly or as part of a <xref uid="com.microsoft.azure.storage.table._table_batch_operation" data-throw-if-not-resolved="false">TableBatchOperation</xref>.</span></span> <span data-ttu-id="cca13-168">場合、 <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> 、エンティティを返します。 結果を、対応する、に格納されている<xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>メソッドによって返されます。</span><span class="sxs-lookup"><span data-stu-id="cca13-168">If a <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref> returns an entity result, it is stored in the corresponding <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref> returned by the  method.</span></span> </p>
     syntax:
       content: public class TableOperation
   - uid: com.microsoft.azure.storage.table._table_entity
@@ -766,7 +766,7 @@ references:
     nameWithType: TableEntity
     fullName: com.microsoft.azure.storage.table.TableEntity
     type: Interface
-    summary: "<p>テーブルのエンティティ型に必要なインターフェイスです。 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。 実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。 </p>\n<p>ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。 使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。 また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。 </p>\n\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。 <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。 </p>\n\n<p>実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。 クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。 Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。 リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド </p>\n<p></p>\n<p>and </p>\n<p></p>\n<p>ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。 クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。 メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。 使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。 \"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。 </p>\n<p></p>"
+    summary: "<p><span data-ttu-id=\"cca13-169\">テーブルのエンティティ型に必要なインターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-169\">An interface required for table entity types.</span></span> <span data-ttu-id=\"cca13-170\"><xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>インターフェイスは、共通のエンティティ プロパティの getter および setter メソッドを宣言し、およびシリアル化と逆シリアル化のプロパティ マップを使用してすべてのエンティティ プロパティのメソッドです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-170\">The <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref> interface declares getter and setter methods for the common entity properties, and  and  methods for serialization and deserialization of all entity properties using a property map.</span></span> <span data-ttu-id=\"cca13-171\">実装するクラスを作成する<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>プロパティの格納、取得、シリアル化および逆シリアル化をカスタマイズして、テーブル エンティティの追加のカスタム ロジックを指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-171\">Create classes implementing <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref> to customize property storage, retrieval, serialization and deserialization, and to provide additional custom logic for a table entity.</span></span> </p>\n<p><span data-ttu-id=\"cca13-172\">ストレージ クライアント ライブラリには 2 つの実装が含まれています<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>単純なプロパティ アクセスとシリアル化を提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-172\">The Storage client library includes two implementations of <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref> that provide for simple property access and serialization:</span></span> </p>\n<p><span data-ttu-id=\"cca13-173\">\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>実装<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>し格納およびプロパティを取得する単純なプロパティ マップを提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-173\">\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref> implements <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref> and provides a simple property map to store and retrieve properties.</span></span> <span data-ttu-id=\"cca13-174\">使用して、 <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref>簡単なアクセスのプロパティのサブセットのみを返す場合 (たとえば、クエリの select 句) をエンティティのプロパティまたはの場合、クエリが異なる複数のエンティティ型を返すことができますプロパティ。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-174\">Use a <xref uid=\"com.microsoft.azure.storage.table._dynamic_table_entity\" data-throw-if-not-resolved=\"false\">DynamicTableEntity</xref> for simple access to entity properties when only a subset of properties are returned (for example, by a select clause in a query), or for when your query can return multiple entity types with different properties.</span></span> <span data-ttu-id=\"cca13-175\">また、この種類を使用する、プロパティ情報を失うことがなく異種エンティティの一括テーブルの更新を実行することができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-175\">You can also use this type to perform bulk table updates of heterogeneous entities without losing property information.</span></span> </p>\n\n<p><span data-ttu-id=\"cca13-176\">\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>の実装は、 <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>でシリアル化と逆シリアル化をリフレクション ベースで動作を使用する、およびメソッドです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-176\">\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> is an implementation of <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref> that uses reflection-based serialization and deserialization behavior in its  and  methods.</span></span> <span data-ttu-id=\"cca13-177\"><xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-派生クラスの型と名前付けをシリアル化して自動的に逆シリアル化の規則に従っているメソッドを使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-177\"><xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>-derived classes with methods that follow a convention for types and naming are serialized and deserialized automatically.</span></span> </p>\n\n<p><span data-ttu-id=\"cca13-178\">実装するクラス<xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref>活用できる、自動リフレクション ベースのシリアル化および逆シリアル化の動作で<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref>で静的メソッドを呼び出すことによって、 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-178\">Any class that implements <xref uid=\"com.microsoft.azure.storage.table._table_entity\" data-throw-if-not-resolved=\"false\">TableEntity</xref> can take advantage of the automatic reflection-based serialization and deserialization behavior in <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> by invoking the static methods  in  and  in .</span></span> <span data-ttu-id=\"cca13-179\">クラスは、シリアル化しても、自動的に逆シリアル化するには、型および名前付け規則に従うメソッドを提供する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-179\">The class must provide methods that follow the type and naming convention to be serialized and deserialized automatically.</span></span> <span data-ttu-id=\"cca13-180\">Getter メソッドと setter メソッドの両方が指定されたプロパティ名とデータ型の検出、し、適切なメソッドの呼び出しに自動的にデータを逆シリアル化または逆シリアル化します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-180\">When both a getter method and setter method are found for a given property name and data type, then the appropriate method is invoked automatically to serialize or deserialize the data.</span></span> <span data-ttu-id=\"cca13-181\">リフレクションのコードは次の形式のペア内の get アクセス操作子および set アクセス操作子メソッド</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-181\">The reflection code looks for getter and setter methods in pairs of the form</span></span> </p>\n<p></p>\n<p><span data-ttu-id=\"cca13-182\">and</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-182\">and</span></span> </p>\n<p></p>\n<p><span data-ttu-id=\"cca13-183\">ここで<em>PropertyName</em>テーブル エンティティのプロパティ名と<em>型</em>Java の型、プロパティの EDM データ型と互換性のあります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-183\">where <em>PropertyName</em> is a property name for the table entity, and <em>type</em> is a Java type compatible with the EDM data type of the property.</span></span> <span data-ttu-id=\"cca13-184\">クラスの説明の表を参照して<xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> Java 対応するプロパティの型のマップ。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-184\">See the table in the class description for <xref uid=\"com.microsoft.azure.storage.table._table_service_entity\" data-throw-if-not-resolved=\"false\">TableServiceEntity</xref> for a map of property types to their Java equivalents.</span></span> <span data-ttu-id=\"cca13-185\"><xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>プロパティの名前規則に従っていない get アクセス操作子および set アクセス操作子メソッドでリフレクションのプロパティ名を指定する属性を持つ注釈を適用することがあります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-185\">The <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref> annotation may be applied with a  attribute to specify a property name for reflection on getter and setter methods that do not follow the property name convention.</span></span> <span data-ttu-id=\"cca13-186\">メソッド名と属性の<xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>注釈はリフレクションを使用してプロパティ名の照合の大文字小文字を区別します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-186\">Method names and the  attribute of <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref> annotations are case sensitive for matching property names with reflection.</span></span> <span data-ttu-id=\"cca13-187\">使用して、<xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">無視</xref>メソッドが自動のシリアル化および逆シリアル化のリフレクションで使用されていることを防ぐための注釈。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-187\">Use the <xref uid=\"com.microsoft.azure.storage.table._ignore\" data-throw-if-not-resolved=\"false\">Ignore</xref> annotation to prevent methods from being used by reflection for automatic serialization and deserialization.</span></span> <span data-ttu-id=\"cca13-188\">\"PartitionKey\"、\"RowKey\"、\"Timestamp\"、\"Etag\"の名前は予約されており、無視された場合に設定されますなお、 <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref>リフレクション メソッドを使用して、サブクラスで注釈。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cca13-188\">Note that the names \"PartitionKey\", \"RowKey\", \"Timestamp\", and \"Etag\" are reserved and will be ignored if set with the <xref uid=\"com.microsoft.azure.storage.table._store_as\" data-throw-if-not-resolved=\"false\">StoreAs</xref> annotation in a subclass that uses the reflection methods.</span></span> </p>\n<p></p>"
     syntax:
       content: public interface TableEntity
   - uid: com.microsoft.azure.storage.table._entity_resolver
@@ -777,14 +777,14 @@ references:
     fullName: com.microsoft.azure.storage.table.EntityResolver<T>
     type: Interface
     summary: |-
-      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
-      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p><span data-ttu-id="cca13-189">取得されたエンティティでクライアント側の射影を実行するインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="cca13-189">An interface to perform client side projection on a retrieved entity.</span></span> <span data-ttu-id="cca13-190"><xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cca13-190">An <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref> instance must implement a  method projecting the entity data represented by the parameters passed in as a new instance of the type specified by the type parameter.</span></span> </p>
+      <p><span data-ttu-id="cca13-191">このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="cca13-191">This interface is useful for converting directly from table entity data to a client object type without requiring a separate table entity class type that deserializes every property individually.</span></span> <span data-ttu-id="cca13-192">クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。</span><span class="sxs-lookup"><span data-stu-id="cca13-192">For example, a client can perform a client side projection of a <em>Customer</em> entity by simply returning the  for the <em>CustomerName</em> property of each entity.</span></span> <span data-ttu-id="cca13-193">このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</span><span class="sxs-lookup"><span data-stu-id="cca13-193">The result of this projection will be a collection of s containing each customer name.</span></span></p>
       <p></p>
     syntax:
       content: public interface EntityResolver<T>
       typeParameters:
         - type: 8ce1ecb9
-          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>
+          description: <p><span data-ttu-id="cca13-194">競合回避モジュールを生成するオブジェクトの型。</span><span class="sxs-lookup"><span data-stu-id="cca13-194">The type of the object that the resolver produces.</span></span> </p>
   - uid: com.microsoft.azure.storage.core._storage_request
     parent: com.microsoft.azure.storage.core
     href: com.microsoft.azure.storage.core._storage_request.yml
@@ -793,17 +793,17 @@ references:
     fullName: 'com.microsoft.azure.storage.core.StorageRequest<C,P,R>'
     type: Class
     summary: |-
-      <p>内部使用のために予約されています。 特定のストレージ操作の実行をカプセル化するクラスです。</p>
+      <p><span data-ttu-id="cca13-195">内部使用のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="cca13-195">RESERVED FOR INTERNAL USE.</span></span> <span data-ttu-id="cca13-196">特定のストレージ操作の実行をカプセル化するクラスです。</span><span class="sxs-lookup"><span data-stu-id="cca13-196">A class which encapsulate the execution of a given storage operation.</span></span></p>
       <p></p>
     syntax:
       content: 'public class StorageRequest<C,P,R>'
       typeParameters:
         - type: 37f8610d
-          description: <p>サービス クライアントの種類 </p>
+          description: <p><span data-ttu-id="cca13-197">サービス クライアントの種類</span><span class="sxs-lookup"><span data-stu-id="cca13-197">The service client type</span></span> </p>
         - type: db9ec244
-          description: <p>DownloadAttributes などの CloudBlobContainer などは、親オブジェクトの型。 </p>
+          description: '<p><span data-ttu-id="cca13-198">DownloadAttributes などの CloudBlobContainer などは、親オブジェクトの型。</span><span class="sxs-lookup"><span data-stu-id="cca13-198">The type of the parent object, i.e. CloudBlobContainer for downloadAttributes etc.</span></span> </p>'
         - type: d4d3e1e1
-          description: <p>予期される結果の種類 </p>
+          description: <p><span data-ttu-id="cca13-199">予期される結果の種類</span><span class="sxs-lookup"><span data-stu-id="cca13-199">The type of the expected result</span></span> </p>
   - uid: com.microsoft.azure.storage.table._cloud_table_client
     parent: com.microsoft.azure.storage.table
     href: com.microsoft.azure.storage.table._cloud_table_client.yml
@@ -812,13 +812,13 @@ references:
     fullName: com.microsoft.azure.storage.table.CloudTableClient
     type: Class
     summary: |-
-      <p>Microsoft Azure テーブル サービスにアクセスするためには、サービス クライアントを提供します。 </p>
-      <p><xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クラスは、テーブル サービスのエンドポイントのベース URI およびストレージ アカウントにアクセスするための資格情報をカプセル化しを実行するメソッドと同様に作成、削除、一覧、およびテーブルを照会する方法を提供操作とテーブル エンティティに対するクエリ。 これらのメソッドは、要求を作成し、返される結果を取得する記憶域サービスの REST API 操作を呼び出します。 </p>
-      <p>テーブル サービスのエンドポイントは、ストレージ アカウントの DNS 名を含む、テーブル サービス リソースのベース URI を示します。 <br /><br />
+      <p><span data-ttu-id="cca13-200">Microsoft Azure テーブル サービスにアクセスするためには、サービス クライアントを提供します。</span><span class="sxs-lookup"><span data-stu-id="cca13-200">Provides a service client for accessing the Microsoft Azure Table service.</span></span> </p>
+      <p><span data-ttu-id="cca13-201"><xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref>クラスは、テーブル サービスのエンドポイントのベース URI およびストレージ アカウントにアクセスするための資格情報をカプセル化しを実行するメソッドと同様に作成、削除、一覧、およびテーブルを照会する方法を提供操作とテーブル エンティティに対するクエリ。</span><span class="sxs-lookup"><span data-stu-id="cca13-201">The <xref uid="com.microsoft.azure.storage.table._cloud_table_client" data-throw-if-not-resolved="false">CloudTableClient</xref> class encapsulates the base URI for the Table service endpoint and the credentials for accessing the storage account, and provides methods to create, delete, list, and query tables, as well as methods to execute operations and queries on table entities.</span></span> <span data-ttu-id="cca13-202">これらのメソッドは、要求を作成し、返される結果を取得する記憶域サービスの REST API 操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="cca13-202">These methods invoke Storage Service REST API operations to make the requests and obtain the results that are returned.</span></span> </p>
+      <p><span data-ttu-id="cca13-203">テーブル サービスのエンドポイントは、ストレージ アカウントの DNS 名を含む、テーブル サービス リソースのベース URI を示します。</span><span class="sxs-lookup"><span data-stu-id="cca13-203">A Table service endpoint is the base URI for Table service resources, including the DNS name of the storage account:</span></span> <br /><br />
 
-       詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">テーブル サービス リソースのアドレス指定</ulink>です。 </p>
+       <span data-ttu-id="cca13-204">詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">テーブル サービス リソースのアドレス指定</ulink>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-204">For more information, see the MSDN topic <ulink url="http://msdn.microsoft.com/en-us/library/azure/dd179360.aspx">Addressing Table Service Resources</ulink>.</span></span> </p>
 
-      <p>資格情報は、ストレージ アカウント名と、キー、または共有アクセス署名の組み合わせにすることができます。 詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">ストレージ アカウントへのアクセスの認証</ulink>です。 </p>
+      <p><span data-ttu-id="cca13-205">資格情報は、ストレージ アカウント名と、キー、または共有アクセス署名の組み合わせにすることができます。</span><span class="sxs-lookup"><span data-stu-id="cca13-205">The credentials can be a combination of the storage account name and a key, or a shared access signature.</span></span> <span data-ttu-id="cca13-206">詳細については、MSDN のトピックを参照してください。<ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">ストレージ アカウントへのアクセスの認証</ulink>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-206">For more information, see the MSDN topic <ulink url="http://msdn.microsoft.com/en-us/library/azure/hh225339.aspx">Authenticating Access to Your Storage Account</ulink>.</span></span> </p>
     syntax:
       content: public class CloudTableClient extends ServiceClient
   - uid: com.microsoft.azure.storage.table._table_batch_operation
@@ -829,8 +829,8 @@ references:
     fullName: com.microsoft.azure.storage.table.TableBatchOperation
     type: Class
     summary: |-
-      <p>バッチ操作を表すクラス。 呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。 </p>
-      <p>バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。 取得操作のバッチには、他の操作を含めることはできません。 バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。 </p>
+      <p><span data-ttu-id="cca13-207">バッチ操作を表すクラス。</span><span class="sxs-lookup"><span data-stu-id="cca13-207">A class which represents a batch operation.</span></span> <span data-ttu-id="cca13-208">呼び出すことによって、記憶域サービスの REST API によって単一のアトミック操作として実行されるテーブル操作のコレクションは、バッチ操作は、<ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">エンティティ グループ トランザクション</ulink>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-208">A batch operation is a collection of table operations which are executed by the Storage Service REST API as a single atomic operation, by invoking an <ulink url="http://msdn.microsoft.com/en-us/library/azure/dd894038.aspx">Entity Group Transaction</ulink>.</span></span> </p>
+      <p><span data-ttu-id="cca13-209">バッチ操作には、各操作のエンティティが同じパーティション キーを持つ必要があります、要件と、最大 100 の個々 のテーブル操作を含めることがあります。</span><span class="sxs-lookup"><span data-stu-id="cca13-209">A batch operation may contain up to 100 individual table operations, with the requirement that each operation entity must have same partition key.</span></span> <span data-ttu-id="cca13-210">取得操作のバッチには、他の操作を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="cca13-210">A batch with a retrieve operation cannot contain any other operations.</span></span> <span data-ttu-id="cca13-211">バッチ操作の合計ペイロードは 4 MB に制限されるに注意してください。</span><span class="sxs-lookup"><span data-stu-id="cca13-211">Note that the total payload of a batch operation is limited to 4MB.</span></span> </p>
     syntax: *ref_1
   - uid: com.microsoft.azure.storage.table._table_result
     parent: com.microsoft.azure.storage.table
@@ -839,7 +839,7 @@ references:
     nameWithType: TableResult
     fullName: com.microsoft.azure.storage.table.TableResult
     type: Class
-    summary: <p>テーブル操作の結果を表すクラス。 <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>クラスは、HTTP 応答と、特定のという記憶域サービスの REST API 操作によって返されるテーブル エンティティ結果をカプセル化<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>です。 </p>
+    summary: <p><span data-ttu-id="cca13-212">テーブル操作の結果を表すクラス。</span><span class="sxs-lookup"><span data-stu-id="cca13-212">A class which represents the result of a table operation.</span></span> <span data-ttu-id="cca13-213"><xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref>クラスは、HTTP 応答と、特定のという記憶域サービスの REST API 操作によって返されるテーブル エンティティ結果をカプセル化<xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cca13-213">The <xref uid="com.microsoft.azure.storage.table._table_result" data-throw-if-not-resolved="false">TableResult</xref> class encapsulates the HTTP response and any table entity results returned by the Storage Service REST API operation called for a particular <xref uid="com.microsoft.azure.storage.table._table_operation" data-throw-if-not-resolved="false">TableOperation</xref>.</span></span> </p>
     syntax:
       content: public class TableResult
   - uid: com.microsoft.azure.storage.table._table_request_options
@@ -849,7 +849,7 @@ references:
     nameWithType: TableRequestOptions
     fullName: com.microsoft.azure.storage.table.TableRequestOptions
     type: Class
-    summary: <p>タイムアウト、ペイロード形式、およびテーブルの操作要求の指定可能性のある再試行ポリシー オプションのセットを表します。 </p>
+    summary: '<p><span data-ttu-id="cca13-214">タイムアウト、ペイロード形式、およびテーブルの操作要求の指定可能性のある再試行ポリシー オプションのセットを表します。</span><span class="sxs-lookup"><span data-stu-id="cca13-214">Represents a set of timeout, payload format, and retry policy options that may be specified for a table operation request.</span></span> </p>'
     syntax:
       content: public class TableRequestOptions
   - uid: com.microsoft.azure.storage._operation_context
@@ -859,7 +859,7 @@ references:
     nameWithType: OperationContext
     fullName: com.microsoft.azure.storage.OperationContext
     type: Class
-    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    summary: <p><span data-ttu-id="cca13-215">現在の論理演算を表します。</span><span class="sxs-lookup"><span data-stu-id="cca13-215">Represents the current logical operation.</span></span> <span data-ttu-id="cca13-216">論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。</span><span class="sxs-lookup"><span data-stu-id="cca13-216">A logical operation may have a one-to-many relationship with multiple individual physical requests.</span></span> </p>
     syntax:
       content: public class OperationContext
   - uid: com.microsoft.azure.storage._storage_exception
@@ -869,6 +869,6 @@ references:
     nameWithType: StorageException
     fullName: com.microsoft.azure.storage.StorageException
     type: Class
-    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    summary: <p><span data-ttu-id="cca13-217">Microsoft Azure ストレージ サービスの例外を表します。</span><span class="sxs-lookup"><span data-stu-id="cca13-217">Represents an exception for the Microsoft Azure storage service.</span></span> </p>
     syntax:
       content: public class StorageException

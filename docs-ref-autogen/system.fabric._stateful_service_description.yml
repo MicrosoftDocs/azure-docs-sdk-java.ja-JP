@@ -93,12 +93,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
       startLine: 144
     package: system.fabric
-    summary: "<p>このサービスの最小の許可されているレプリカ セットのサイズを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>Service Fabric が、特定のパーティションのレプリカ セットのビューで保持するレプリカの最小数を定義します。 たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref>は 5 (5) 通常 (失敗) なし、そこに設定されて、レプリカ セットのビューに 5 つのレプリカになります。 ただし、この数は障害中に低下します。 <xref uid=\"\" data-throw-if-not-resolved=\"false\">System.fabric.StatefulServiceDescription#minReplicaSetSize</xref>ビューでは、レプリカの最小数を定義たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> 5 と<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> 、3 つは、(を実行している残りの 2 つのレプリカでその結果、) 次の 3 つの同時実行エラーがあってもが、レプリカのビューに 3 つのレプリカ設定 (2 つおよび 1 つ下)。 以降のマジョリティのクォーラムは、このビューで保持されるレプリカの数のマジョリティのクォーラムを使用、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>最小レベルのすべての操作の信頼性は、: 前の例では、ターゲット = 5 と Min = 3, 3 つの同時障害には、2 つのレプリカ (およびそれを 1 つ) の残りおよび 3 のマジョリティ クォーラム (、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) は 2 です。 つまり、プライマリ、引き続き操作をレプリケートすること、および、進捗 (パーティション) を設定する残りのセカンダリ レプリカがレプリカの順序で操作を適用する必要があります。 レプリカの合計数を下回るマジョリティ クォーラムのかどうか、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>以降に書き込みを禁止する、します。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-101\">このサービスの最小の許可されているレプリカ セットのサイズを取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-101\">Gets the minimum allowed replica set size for this service.</span></span></p>\n<p><span data-ttu-id=\"736a7-102\">\r\n\r\n  <b>注釈:</b>Service Fabric が、特定のパーティションのレプリカ セットのビューで保持するレプリカの最小数を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-102\">\r\n\r\n  <b>Remarks:</b>Defines the minimum number of replicas that Service Fabric will keep in its view of the Replica Set for a given partition.</span></span> <span data-ttu-id=\"736a7-103\">たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref>は 5 (5) 通常 (失敗) なし、そこに設定されて、レプリカ セットのビューに 5 つのレプリカになります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-103\">For example, if the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> is set to five (5) then normally (without failures) there will be five replicas in the view of the replica set.</span></span> <span data-ttu-id=\"736a7-104\">ただし、この数は障害中に低下します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-104\">However this number will decrease during failures.</span></span> <span data-ttu-id=\"736a7-105\"><xref uid=\"\" data-throw-if-not-resolved=\"false\">System.fabric.StatefulServiceDescription#minReplicaSetSize</xref>ビューでは、レプリカの最小数を定義たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> 5 と<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> 、3 つは、(を実行している残りの 2 つのレプリカでその結果、) 次の 3 つの同時実行エラーがあってもが、レプリカのビューに 3 つのレプリカ設定 (2 つおよび 1 つ下)。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-105\">The <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> defines the minimum number of replicas in the view, so for example if the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> is five and the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> is three, then even if there are three concurrent failures (resulting in only two remaining replicas running) will still have three replicas in its view of the replica set (two up and one down).</span></span> <span data-ttu-id=\"736a7-106\">以降のマジョリティのクォーラムは、このビューで保持されるレプリカの数のマジョリティのクォーラムを使用、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>最小レベルのすべての操作の信頼性は、: 前の例では、ターゲット = 5 と Min = 3, 3 つの同時障害には、2 つのレプリカ (およびそれを 1 つ) の残りおよび 3 のマジョリティ クォーラム (、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) は 2 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-106\">Since uses majority quorum of the number of replicas maintained in this view, majority quorum of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> is minimum level of reliability of any operation: in the prior example, with Target = 5 and Min = 3, with 3 concurrent failures, there are two remaining up replicas (and one down), and the majority quorum of 3 (the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) is 2.</span></span> <span data-ttu-id=\"736a7-107\">つまり、プライマリ、引き続き操作をレプリケートすること、および、進捗 (パーティション) を設定する残りのセカンダリ レプリカがレプリカの順序で操作を適用する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-107\">This means that the primary will continue to be able to replicate operations AND that the remaining secondary replica MUST apply the operation in order for the replica set (partition) to make progress.</span></span> <span data-ttu-id=\"736a7-108\">レプリカの合計数を下回るマジョリティ クォーラムのかどうか、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>以降に書き込みを禁止する、します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-108\">If the total number of replicas drops below the majority quorum of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> then further writes will be disallowed.</span></span> </p>"
     syntax:
       content: public long getMinReplicaSetSize()
       return:
         type: 0364520f
-        description: <p>最小値には、このサービスのレプリカ セットのサイズが許可されています。 </p>
+        description: <p><span data-ttu-id="736a7-109">最小値には、このサービスのレプリカ セットのサイズが許可されています。</span><span class="sxs-lookup"><span data-stu-id="736a7-109">The minimum allowed replica set size for this service.</span></span> </p>
   - uid: system.fabric._stateful_service_description.getTargetReplicaSetSize()
     id: getTargetReplicaSetSize()
     parent: system.fabric._stateful_service_description
@@ -115,12 +115,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
       startLine: 95
     package: system.fabric
-    summary: "<p>レプリカ セットのターゲット サイズを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>システムを作成し、このサービスの各パーティションを保持するレプリカの数。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-110\">レプリカ セットのターゲット サイズを取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-110\">Gets the target size of the replica set.</span></span></p>\n<p><span data-ttu-id=\"736a7-111\">\r\n\r\n  <b>注釈:</b>システムを作成し、このサービスの各パーティションを保持するレプリカの数。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-111\">\r\n\r\n  <b>Remarks:</b>The number of replicas that the system creates and maintains for each partition of this service.</span></span> </p>"
     syntax:
       content: public long getTargetReplicaSetSize()
       return:
         type: 0364520f
-        description: <p>レプリカのターゲット サイズを設定します。 </p>
+        description: <p><span data-ttu-id="736a7-112">レプリカのターゲット サイズを設定します。</span><span class="sxs-lookup"><span data-stu-id="736a7-112">The target size of the replica set.</span></span> </p>
   - uid: system.fabric._stateful_service_description.hasPersistedState()
     id: hasPersistedState()
     parent: system.fabric._stateful_service_description
@@ -137,12 +137,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
       startLine: 199
     package: system.fabric
-    summary: "<p>このインスタンスの状態が永続化するかどうかを示す値を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>ときに、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>でセカンダリ レプリカが永続的なサービスの操作を受け取り、それを送信前に、データが保持されていることを確認するサービスを待つ必要がありますその受信確認のプライマリにフェールバックします。 非永続的なサービスでは、操作受信を確認できますすぐに受信したときにします。 永続的なサービスのレプリカが失敗した場合、Service Fabric すぐには考慮されませんそのレプリカを損失としてそのレプリカの永続的な状態がまだ存在するため。 レプリカを復旧した場合を再作成できます永続化された状態を使用します。 これに対し、代替レプリカをすぐにビルドを開始してがありますコストと、不要なエラーは一時的な場合は特にです。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-113\">このインスタンスの状態が永続化するかどうかを示す値を取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-113\">Gets a value indicating whether this instance has persisted state.</span></span></p>\n<p><span data-ttu-id=\"736a7-114\">\r\n\r\n  <b>注釈:</b>ときに、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>でセカンダリ レプリカが永続的なサービスの操作を受け取り、それを送信前に、データが保持されていることを確認するサービスを待つ必要がありますその受信確認のプライマリにフェールバックします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-114\">\r\n\r\n  <b>Remarks:</b>When a <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> at a secondary replica receives an operation for a persistent service, it must wait for the service to acknowledge that the data has been persisted before it can send that acknowledgment back to the primary.</span></span> <span data-ttu-id=\"736a7-115\">非永続的なサービスでは、操作受信を確認できますすぐに受信したときにします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-115\">For non-persistent services, the operation can be acknowledged immediately upon receipt.</span></span> <span data-ttu-id=\"736a7-116\">永続的なサービスのレプリカが失敗した場合、Service Fabric すぐには考慮されませんそのレプリカを損失としてそのレプリカの永続的な状態がまだ存在するため。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-116\">When a persistent service replica fails, the Service Fabric will not immediately consider that replica as lost because the persistent state for that replica still exists.</span></span> <span data-ttu-id=\"736a7-117\">レプリカを復旧した場合を再作成できます永続化された状態を使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-117\">If the replica is recovered, it can be recreated using the persisted state.</span></span> <span data-ttu-id=\"736a7-118\">これに対し、代替レプリカをすぐにビルドを開始してがありますコストと、不要なエラーは一時的な場合は特にです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-118\">In contrast, beginning to build a replacement replica immediately may be costly and unnecessary, especially when the failures are transient.</span></span> </p>"
     syntax:
       content: public boolean hasPersistedState()
       return:
         type: 4fc6e284
-        description: <p>インスタンスの状態が保持している場合は true。それ以外の場合は false です。 </p>
+        description: '<p><span data-ttu-id="736a7-119">インスタンスの状態が保持している場合は true。それ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="736a7-119">true if the instance has persisted state; otherwise, false.</span></span> </p>'
   - uid: system.fabric._stateful_service_description.hasPersistedState(boolean)
     id: hasPersistedState(boolean)
     parent: system.fabric._stateful_service_description
@@ -159,13 +159,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
       startLine: 220
     package: system.fabric
-    summary: "<p>このインスタンスの状態が永続化するかどうかを示す値を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>ときに、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>でセカンダリ レプリカが永続的なサービスの操作を受け取り、それを送信前に、データが保持されていることを確認するサービスを待つ必要がありますその受信確認のプライマリにフェールバックします。 非永続的なサービスでは、操作受信を確認できますすぐに受信したときにします。 永続的なサービスのレプリカが失敗した場合、Service Fabric すぐには考慮されませんそのレプリカを損失としてそのレプリカの永続的な状態がまだ存在するため。 レプリカを復旧した場合を再作成できます永続化された状態を使用します。 これに対し、代替レプリカをすぐにビルドを開始してがありますコストと、不要なエラーは一時的な場合は特にです。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-120\">このインスタンスの状態が永続化するかどうかを示す値を設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-120\">Sets a value indicating whether this instance has persisted state.</span></span></p>\n<p><span data-ttu-id=\"736a7-121\">\r\n\r\n  <b>注釈:</b>ときに、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>でセカンダリ レプリカが永続的なサービスの操作を受け取り、それを送信前に、データが保持されていることを確認するサービスを待つ必要がありますその受信確認のプライマリにフェールバックします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-121\">\r\n\r\n  <b>Remarks:</b>When a <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> at a secondary replica receives an operation for a persistent service, it must wait for the service to acknowledge that the data has been persisted before it can send that acknowledgment back to the primary.</span></span> <span data-ttu-id=\"736a7-122\">非永続的なサービスでは、操作受信を確認できますすぐに受信したときにします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-122\">For non-persistent services, the operation can be acknowledged immediately upon receipt.</span></span> <span data-ttu-id=\"736a7-123\">永続的なサービスのレプリカが失敗した場合、Service Fabric すぐには考慮されませんそのレプリカを損失としてそのレプリカの永続的な状態がまだ存在するため。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-123\">When a persistent service replica fails, the Service Fabric will not immediately consider that replica as lost because the persistent state for that replica still exists.</span></span> <span data-ttu-id=\"736a7-124\">レプリカを復旧した場合を再作成できます永続化された状態を使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-124\">If the replica is recovered, it can be recreated using the persisted state.</span></span> <span data-ttu-id=\"736a7-125\">これに対し、代替レプリカをすぐにビルドを開始してがありますコストと、不要なエラーは一時的な場合は特にです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-125\">In contrast, beginning to build a replacement replica immediately may be costly and unnecessary, especially when the failures are transient.</span></span> </p>"
     syntax:
       content: public void hasPersistedState(boolean hasPersistedState)
       parameters:
         - id: hasPersistedState
           type: 4fc6e284
-          description: <p>インスタンスの状態が保持している場合は true。それ以外の場合は false です。 </p>
+          description: '<p><span data-ttu-id="736a7-126">インスタンスの状態が保持している場合は true。それ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="736a7-126">true if the instance has persisted state; otherwise, false.</span></span> </p>'
   - uid: system.fabric._stateful_service_description.setMinReplicaSetSize(long)
     id: setMinReplicaSetSize(long)
     parent: system.fabric._stateful_service_description
@@ -182,13 +182,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
       startLine: 179
     package: system.fabric
-    summary: "<p>このサービスに許可されている最小のレプリカ セットのサイズを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>Service Fabric が、特定のパーティションのレプリカ セットのビューで保持するレプリカの最小数を定義します。 たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref>は 5 (5) 通常 (失敗) なし、そこに設定されて、レプリカ セットのビューに 5 つのレプリカになります。 ただし、この数は障害中に低下します。 <xref uid=\"\" data-throw-if-not-resolved=\"false\">System.fabric.StatefulServiceDescription#minReplicaSetSize</xref>ビューでは、レプリカの最小数を定義たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> 5 と<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> 、3 つは、(を実行している残りの 2 つのレプリカでその結果、) 次の 3 つの同時実行エラーがあってもが、レプリカのビューに 3 つのレプリカ設定 (2 つおよび 1 つ下)。 以降のマジョリティのクォーラムは、このビューで保持されるレプリカの数のマジョリティのクォーラムを使用、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>最小レベルのすべての操作の信頼性は、: 前の例では、ターゲット = 5 と Min = 3, 3 つの同時障害には、2 つのレプリカ (およびそれを 1 つ) の残りおよび 3 のマジョリティ クォーラム (、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) は 2 です。 つまり、プライマリ、引き続き操作をレプリケートすること、および、進捗 (パーティション) を設定する残りのセカンダリ レプリカがレプリカの順序で操作を適用する必要があります。 レプリカの合計数を下回るマジョリティ クォーラムのかどうか、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>以降に書き込みを禁止する、します。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-127\">このサービスに許可されている最小のレプリカ セットのサイズを設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-127\">Sets the minimum allowed replica set size for this service.</span></span></p>\n<p><span data-ttu-id=\"736a7-128\">\r\n\r\n  <b>注釈:</b>Service Fabric が、特定のパーティションのレプリカ セットのビューで保持するレプリカの最小数を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-128\">\r\n\r\n  <b>Remarks:</b>Defines the minimum number of replicas that Service Fabric will keep in its view of the Replica Set for a given partition.</span></span> <span data-ttu-id=\"736a7-129\">たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref>は 5 (5) 通常 (失敗) なし、そこに設定されて、レプリカ セットのビューに 5 つのレプリカになります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-129\">For example, if the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> is set to five (5) then normally (without failures) there will be five replicas in the view of the replica set.</span></span> <span data-ttu-id=\"736a7-130\">ただし、この数は障害中に低下します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-130\">However this number will decrease during failures.</span></span> <span data-ttu-id=\"736a7-131\"><xref uid=\"\" data-throw-if-not-resolved=\"false\">System.fabric.StatefulServiceDescription#minReplicaSetSize</xref>ビューでは、レプリカの最小数を定義たとえば場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> 5 と<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> 、3 つは、(を実行している残りの 2 つのレプリカでその結果、) 次の 3 つの同時実行エラーがあってもが、レプリカのビューに 3 つのレプリカ設定 (2 つおよび 1 つ下)。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-131\">The <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> defines the minimum number of replicas in the view, so for example if the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#targetReplicaSetSize</xref> is five and the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> is three, then even if there are three concurrent failures (resulting in only two remaining replicas running) will still have three replicas in its view of the replica set (two up and one down).</span></span> <span data-ttu-id=\"736a7-132\">以降のマジョリティのクォーラムは、このビューで保持されるレプリカの数のマジョリティのクォーラムを使用、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>最小レベルのすべての操作の信頼性は、: 前の例では、ターゲット = 5 と Min = 3, 3 つの同時障害には、2 つのレプリカ (およびそれを 1 つ) の残りおよび 3 のマジョリティ クォーラム (、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) は 2 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-132\">Since uses majority quorum of the number of replicas maintained in this view, majority quorum of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> is minimum level of reliability of any operation: in the prior example, with Target = 5 and Min = 3, with 3 concurrent failures, there are two remaining up replicas (and one down), and the majority quorum of 3 (the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>) is 2.</span></span> <span data-ttu-id=\"736a7-133\">つまり、プライマリ、引き続き操作をレプリケートすること、および、進捗 (パーティション) を設定する残りのセカンダリ レプリカがレプリカの順序で操作を適用する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-133\">This means that the primary will continue to be able to replicate operations AND that the remaining secondary replica MUST apply the operation in order for the replica set (partition) to make progress.</span></span> <span data-ttu-id=\"736a7-134\">レプリカの合計数を下回るマジョリティ クォーラムのかどうか、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref>以降に書き込みを禁止する、します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-134\">If the total number of replicas drops below the majority quorum of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServiceDescription#minReplicaSetSize</xref> then further writes will be disallowed.</span></span> </p>"
     syntax:
       content: public void setMinReplicaSetSize(long minReplicaSetSize)
       parameters:
         - id: minReplicaSetSize
           type: 0364520f
-          description: <p>最小値には、このサービスのレプリカ セットのサイズが許可されています。 </p>
+          description: <p><span data-ttu-id="736a7-135">最小値には、このサービスのレプリカ セットのサイズが許可されています。</span><span class="sxs-lookup"><span data-stu-id="736a7-135">The minimum allowed replica set size for this service.</span></span> </p>
   - uid: system.fabric._stateful_service_description.setTargetReplicaSetSize(long)
     id: setTargetReplicaSetSize(long)
     parent: system.fabric._stateful_service_description
@@ -205,13 +205,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceDescription.java
       startLine: 109
     package: system.fabric
-    summary: "<p>レプリカ セットのターゲット サイズを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>システムを作成し、このサービスの各パーティションを保持するレプリカの数。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-136\">レプリカ セットのターゲット サイズを設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-136\">Sets the target size of the replica set.</span></span></p>\n<p><span data-ttu-id=\"736a7-137\">\r\n\r\n  <b>注釈:</b>システムを作成し、このサービスの各パーティションを保持するレプリカの数。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-137\">\r\n\r\n  <b>Remarks:</b>The number of replicas that the system creates and maintains for each partition of this service.</span></span> </p>"
     syntax:
       content: public void setTargetReplicaSetSize(long targetReplicaSetSize)
       parameters:
         - id: targetReplicaSetSize
           type: 0364520f
-          description: <p>レプリカのターゲット サイズを設定します。 </p>
+          description: <p><span data-ttu-id="736a7-138">レプリカのターゲット サイズを設定します。</span><span class="sxs-lookup"><span data-stu-id="736a7-138">The target size of the replica set.</span></span> </p>
   - uid: system.fabric._stateful_service_description.StatefulServiceDescription()
     id: StatefulServiceDescription()
     parent: system.fabric._stateful_service_description
@@ -310,12 +310,12 @@ references:
     nameWithType: ServiceDescription.getApplicationName()
     fullName: URI system.fabric.ServiceDescription.getApplicationName()
     type: Method
-    summary: "<p>取得またはアプリケーションの名前を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>注釈: このアプリケーションの一意の名前は、グループのサービスを一緒の管理に使用します。 スキームである必要があります\"fabric://\"アプリケーション名は、サービス名のプレフィックスをする必要があります。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-139\">取得またはアプリケーションの名前を設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-139\">Gets or sets the name of the application.</span></span></p>\n<p><span data-ttu-id=\"736a7-140\">\r\n\r\n  <b>注釈:</b>注釈: このアプリケーションの一意の名前は、グループのサービスを一緒の管理に使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-140\">\r\n\r\n  <b>Remarks:</b>Remarks:This is the unique name of an application and is used to group services together for management.</span></span> <span data-ttu-id=\"736a7-141\">スキームである必要があります\"fabric://\"アプリケーション名は、サービス名のプレフィックスをする必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-141\">The scheme must be \"fabric://\" and the application name must be a prefix of the service name.</span></span> </p>"
     syntax:
       content: public URI getApplicationName()
       return:
         type: '62304784'
-        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>. </p>
+        description: <p><span data-ttu-id="736a7-142">返します<xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>.</span><span class="sxs-lookup"><span data-stu-id="736a7-142">Returns <xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>..</span></span> </p>
   - uid: system.fabric._service_description.getCorrelations()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -324,13 +324,13 @@ references:
     fullName: List<ServiceCorrelationDescription> system.fabric.ServiceDescription.getCorrelations()
     type: Method
     summary: |-
-      <p>他のサービスとサービスの相関関係を記述した一覧です。</p>
+      <p><span data-ttu-id="736a7-143">他のサービスとサービスの相関関係を記述した一覧です。</span><span class="sxs-lookup"><span data-stu-id="736a7-143">A list that describes the correlation of the service with other services.</span></span></p>
       <p></p>
     syntax:
       content: public List<ServiceCorrelationDescription> getCorrelations()
       return:
         type: 5618da2dsystem.fabric._service_correlation_descriptiona08ddfce
-        description: <p>一覧を返します。 </p>
+        description: <p><span data-ttu-id="736a7-144">一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="736a7-144">Returns List.</span></span> </p>
   - uid: system.fabric._service_description.getDefaultMoveCost()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -339,13 +339,13 @@ references:
     fullName: MoveCost system.fabric.ServiceDescription.getDefaultMoveCost()
     type: Method
     summary: |-
-      <p>取得または設定のサービスの DefaultMoveCost、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref></p>
+      <p><span data-ttu-id="736a7-145">取得または設定のサービスの DefaultMoveCost、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref></span><span class="sxs-lookup"><span data-stu-id="736a7-145">Gets or sets the DefaultMoveCost of a service in a <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref></span></span></p>
       <p></p>
     syntax:
       content: public MoveCost getDefaultMoveCost()
       return:
         type: system.fabric._move_cost
-        description: <p>値を既定値<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>サービスは、サービスの場合に設定する必要があります、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。 </p>
+        description: <p><span data-ttu-id="736a7-146">値を既定値<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>サービスは、サービスの場合に設定する必要があります、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-146">The value that the default <xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref> for the service should be set to for a service in its <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>.</span></span> </p>
   - uid: system.fabric._service_description.getInitializationData()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -354,13 +354,13 @@ references:
     fullName: 'byte [] system.fabric.ServiceDescription.getInitializationData()'
     type: Method
     summary: |-
-      <p>取得または作成するときは、渡される初期化データをサービス インスタンスまたはレプリカに設定します。</p>
+      <p><span data-ttu-id="736a7-147">取得または作成するときは、渡される初期化データをサービス インスタンスまたはレプリカに設定します。</span><span class="sxs-lookup"><span data-stu-id="736a7-147">Gets or sets the initialization data that will be passed to service instances or replicas when they are created.</span></span></p>
       <p></p>
     syntax:
       content: 'public byte [] getInitializationData()'
       return:
         type: ccd9418d
-        description: <p>バイトの配列を返します。 </p>
+        description: <p><span data-ttu-id="736a7-148">バイトの配列を返します。</span><span class="sxs-lookup"><span data-stu-id="736a7-148">Returns an array of Byte.</span></span> </p>
   - uid: system.fabric._service_description.getMetrics()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -369,13 +369,13 @@ references:
     fullName: List<ServiceLoadMetricDescription> system.fabric.ServiceDescription.getMetrics()
     type: Method
     summary: |-
-      <p>取得またはこのサービスの ServiceLoadMetricDescriptionCollection を設定します。 LoadMetricDescriptionCollection が含まれています、 <xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>s このサービスに関連します。</p>
+      <p><span data-ttu-id="736a7-149">取得またはこのサービスの ServiceLoadMetricDescriptionCollection を設定します。</span><span class="sxs-lookup"><span data-stu-id="736a7-149">Gets or sets the ServiceLoadMetricDescriptionCollection for this service.</span></span> <span data-ttu-id="736a7-150">LoadMetricDescriptionCollection が含まれています、 <xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>s このサービスに関連します。</span><span class="sxs-lookup"><span data-stu-id="736a7-150">The LoadMetricDescriptionCollection contains the <xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>s relevant to this service</span></span></p>
       <p></p>
     syntax:
       content: public List<ServiceLoadMetricDescription> getMetrics()
       return:
         type: 5618da2dsystem.fabric._service_load_metric_descriptiona08ddfce
-        description: <p>コレクションを返します<xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>です。 </p>
+        description: <p><span data-ttu-id="736a7-151">コレクションを返します<xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-151">Returns a collection of <xref uid="system.fabric._service_load_metric_description" data-throw-if-not-resolved="false">system.fabric.ServiceLoadMetricDescription</xref>.</span></span> </p>
   - uid: system.fabric._service_description.getPartitionDescription()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -406,13 +406,13 @@ references:
     fullName: String system.fabric.ServiceDescription.getPartitionSchemeDescription()
     type: Method
     summary: |-
-      <p>サービスに使用するパーティション構成をについて説明します。</p>
+      <p><span data-ttu-id="736a7-152">サービスに使用するパーティション構成をについて説明します。</span><span class="sxs-lookup"><span data-stu-id="736a7-152">Describe the partition scheme to be used for the service.</span></span></p>
       <p></p>
     syntax:
       content: public String getPartitionSchemeDescription()
       return:
         type: '26831127'
-        description: <p>文字列を返します。 </p>
+        description: <p><span data-ttu-id="736a7-153">文字列を返します。</span><span class="sxs-lookup"><span data-stu-id="736a7-153">Returns String</span></span> </p>
   - uid: system.fabric._service_description.getPlacementConstraints()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -420,12 +420,12 @@ references:
     nameWithType: ServiceDescription.getPlacementConstraints()
     fullName: String system.fabric.ServiceDescription.getPlacementConstraints()
     type: Method
-    summary: "<p>取得またはこのサービスの配置に関する制約を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>配置制約は、サービスを特定のノード プロパティ (およびそれらのプロパティの値) は、配置を制御するために選択できるようにするステートメントをブール値。 ノードのプロパティは、通常、ノードのハードウェア機能に関連して、ノードに関するいくつか追加のメタデータを定義するキー値のペアです。 ノードのプロパティとして公開される可能性がハードウェアの特性には、\"HasDisk\"、\"%memorysize\"、\"StorageSize\"、\"NumberOfCores\"などがあります。サービスを展開するときに、管理者は、サービスに配慮してプロパティに加え、これらのプロパティの値の要件を定義する簡単なブール演算子を定義できます。 例: (HasDisk = = true &amp; &amp; %memorysize&gt;= 2048)。 実行時に Service Fabric 負荷分散のみを配置するサービスをサービスによる要求に一致する値を持つプロパティを持つノード。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-154\">取得またはこのサービスの配置に関する制約を設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-154\">Gets or sets the placement constraints for this service.</span></span></p>\n<p><span data-ttu-id=\"736a7-155\">\r\n\r\n  <b>注釈:</b>配置制約は、サービスを特定のノード プロパティ (およびそれらのプロパティの値) は、配置を制御するために選択できるようにするステートメントをブール値。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-155\">\r\n\r\n  <b>Remarks:</b>Placement Constraints are Boolean statements which allow services to select for particular node properties (and the values of those properties) in order to control where it is legal to place them.</span></span> <span data-ttu-id=\"736a7-156\">ノードのプロパティは、通常、ノードのハードウェア機能に関連して、ノードに関するいくつか追加のメタデータを定義するキー値のペアです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-156\">Node properties are key value pairs that define some additional metadata about a node, usually related to the hardware capabilities of the node.</span></span> <span data-ttu-id=\"736a7-157\">ノードのプロパティとして公開される可能性がハードウェアの特性には、\"HasDisk\"、\"%memorysize\"、\"StorageSize\"、\"NumberOfCores\"などがあります。サービスを展開するときに、管理者は、サービスに配慮してプロパティに加え、これらのプロパティの値の要件を定義する簡単なブール演算子を定義できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-157\">Examples of hardware characteristics that could be exposed as node properties are \"HasDisk\", \"MemorySize\", \"StorageSize\", \"NumberOfCores\" etc. When deploying a service, an administrator can define the properties that the service cares about as well as simple Boolean operators which define requirements for the values of those properties.</span></span> <span data-ttu-id=\"736a7-158\">例: (HasDisk = = true &amp; &amp; %memorysize&gt;= 2048)。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-158\">Ex: (HasDisk==true &amp;&amp; MemorySize&gt;=2048).</span></span> <span data-ttu-id=\"736a7-159\">実行時に Service Fabric 負荷分散のみを配置するサービスをサービスによる要求に一致する値を持つプロパティを持つノード。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-159\">During runtime, Service Fabric Load Balancing will only place services on nodes that have properties with values which match those required by the service.</span></span> </p>"
     syntax:
       content: public String getPlacementConstraints()
       return:
         type: '26831127'
-        description: <p>配置制約。 </p>
+        description: <p><span data-ttu-id="736a7-160">配置制約。</span><span class="sxs-lookup"><span data-stu-id="736a7-160">The placement constraints.</span></span> </p>
   - uid: system.fabric._service_description.getPolicyList()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -434,13 +434,13 @@ references:
     fullName: List<ServicePlacementPolicyDescription> system.fabric.ServiceDescription.getPolicyList()
     type: Method
     summary: |-
-      <p>属する ServicePlacementPolicyDescriptions の一覧を取得、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</p>
+      <p><span data-ttu-id="736a7-161">属する ServicePlacementPolicyDescriptions の一覧を取得、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-161">Gets the list of ServicePlacementPolicyDescriptions belonging to the <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>.</span></span></p>
       <p></p>
     syntax:
       content: public List<ServicePlacementPolicyDescription> getPolicyList()
       return:
         type: 5618da2dsystem.fabric._service_placement_policy_descriptiona08ddfce
-        description: <p>属する ServicePlacementPolicyDescriptions の一覧、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。 </p>
+        description: <p><span data-ttu-id="736a7-162">属する ServicePlacementPolicyDescriptions の一覧、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-162">The list of ServicePlacementPolicyDescriptions belonging to the <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>.</span></span> </p>
   - uid: system.fabric._service_description.getServiceKind()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -449,13 +449,13 @@ references:
     fullName: ServiceDescriptionKind system.fabric.ServiceDescription.getServiceKind()
     type: Method
     summary: |-
-      <p>サービスの種類 (つまり、ステートフル、ステートレスおよびなど) について説明します</p>
+      <p><span data-ttu-id="736a7-163">サービスの種類 (つまり、ステートフル、ステートレスおよびなど) について説明します</span><span class="sxs-lookup"><span data-stu-id="736a7-163">Describes the service type (i.e., Stateful, Stateless and etc)</span></span></p>
       <p></p>
     syntax:
       content: public ServiceDescriptionKind getServiceKind()
       return:
         type: system.fabric._service_description_kind
-        description: <p>返します<xref uid="system.fabric._service_description_kind" data-throw-if-not-resolved="false">system.fabric.ServiceDescriptionKind</xref>です。 </p>
+        description: <p><span data-ttu-id="736a7-164">返します<xref uid="system.fabric._service_description_kind" data-throw-if-not-resolved="false">system.fabric.ServiceDescriptionKind</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-164">Returns <xref uid="system.fabric._service_description_kind" data-throw-if-not-resolved="false">system.fabric.ServiceDescriptionKind</xref>.</span></span> </p>
   - uid: system.fabric._service_description.getServiceName()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -464,13 +464,13 @@ references:
     fullName: URI system.fabric.ServiceDescription.getServiceName()
     type: Method
     summary: |-
-      <p>サービスの URI 名です。</p>
+      <p><span data-ttu-id="736a7-165">サービスの URI 名です。</span><span class="sxs-lookup"><span data-stu-id="736a7-165">URI name of the service.</span></span></p>
       <p></p>
     syntax:
       content: public URI getServiceName()
       return:
         type: '62304784'
-        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>です。 </p>
+        description: <p><span data-ttu-id="736a7-166">返します<xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-166">Returns <xref uid="" data-throw-if-not-resolved="false">java.net.URI</xref>.</span></span> </p>
   - uid: system.fabric._service_description.getServiceTypeName()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -479,13 +479,13 @@ references:
     fullName: String system.fabric.ServiceDescription.getServiceTypeName()
     type: Method
     summary: |-
-      <p>サービスの種類の名前。</p>
+      <p><span data-ttu-id="736a7-167">サービスの種類の名前。</span><span class="sxs-lookup"><span data-stu-id="736a7-167">Name of the service type.</span></span></p>
       <p></p>
     syntax:
       content: public String getServiceTypeName()
       return:
         type: '26831127'
-        description: <p>文字列を返します。 </p>
+        description: <p><span data-ttu-id="736a7-168">文字列を返します。</span><span class="sxs-lookup"><span data-stu-id="736a7-168">Returns String.</span></span> </p>
   - uid: system.fabric._service_description.isDefaultMoveCostSpecified()
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -494,13 +494,13 @@ references:
     fullName: boolean system.fabric.ServiceDescription.isDefaultMoveCostSpecified()
     type: Method
     summary: |-
-      <p>かどうか、既定値を取得<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>が指定されて、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</p>
+      <p><span data-ttu-id="736a7-169">かどうか、既定値を取得<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>が指定されて、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-169">Gets whether a Default <xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref> is specified for a <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>.</span></span></p>
       <p></p>
     syntax:
       content: public boolean isDefaultMoveCostSpecified()
       return:
         type: 4fc6e284
-        description: <p>示すフラグかどうか、既定値<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>が指定されて、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。 </p>
+        description: <p><span data-ttu-id="736a7-170">示すフラグかどうか、既定値<xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref>が指定されて、 <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="736a7-170">A flag indicating whether a Default <xref uid="system.fabric._move_cost" data-throw-if-not-resolved="false">MoveCost</xref> is specified for a <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>.</span></span> </p>
   - uid: 'system.fabric._service_description.ServiceDescription(ServiceDescriptionKind,String,String,String,String,byte [],int,String,ServiceCorrelationDescription [],ServiceLoadMetricDescription [],ServicePlacementPolicyDescription [],boolean,int)'
     parent: system.fabric._service_description
     href: system.fabric._service_description.yml
@@ -640,7 +640,7 @@ references:
     nameWithType: ServiceDescription
     fullName: system.fabric.ServiceDescription
     type: Class
-    summary: <p>A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。 </p>
+    summary: <p><span data-ttu-id="736a7-171">A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="736a7-171">A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref> contains all of the information necessary to create a service.</span></span> </p>
     syntax:
       content: public class ServiceDescription
   - uid: system.fabric._stateful_service_failover_settings
@@ -659,7 +659,7 @@ references:
     nameWithType: ServiceCorrelationDescription
     fullName: system.fabric.ServiceCorrelationDescription
     type: Class
-    summary: <p>サービス間の特定の相関関係を作成します。 </p>
+    summary: <p><span data-ttu-id="736a7-172">サービス間の特定の相関関係を作成します。</span><span class="sxs-lookup"><span data-stu-id="736a7-172">Creates a particular correlation between services.</span></span> </p>
     syntax:
       content: public class ServiceCorrelationDescription
   - uid: system.fabric._service_load_metric_description
@@ -669,7 +669,7 @@ references:
     nameWithType: ServiceLoadMetricDescription
     fullName: system.fabric.ServiceLoadMetricDescription
     type: Class
-    summary: "<p>\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。 高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-173\">\r\n\r\n  <b>注釈:</b>サービスのメトリックを提供するが省略可能で、Service Fabric は、既定のメトリックを使用するために注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-173\">\r\n\r\n  <b>Remarks:</b>Note that to provide metrics for services is optional, because Service Fabric uses default metrics.</span></span> <span data-ttu-id=\"736a7-174\">高度な負荷が分散される分散などの機能が特定のノードの特性およびリソースに基づいて、サービスに必要な場合にのみ、メトリックを提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-174\">Provide metrics only if the service requires advanced load balancing features, such as balancing that is based on specific node characteristics and resources.</span></span> </p>"
     syntax:
       content: public class ServiceLoadMetricDescription
   - uid: system.fabric._service_placement_policy_description
@@ -688,7 +688,7 @@ references:
     nameWithType: FabricReplicator
     fullName: system.fabric.FabricReplicator
     type: Class
-    summary: "<p>高可用性と信頼性のレプリケート状態です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。 インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。 </p>"
+    summary: "<p><span data-ttu-id=\"736a7-175\">高可用性と信頼性のレプリケート状態です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-175\">Replicates state for high availability and reliability.</span></span> </p>\n<p><span data-ttu-id=\"736a7-176\">\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-176\">\r\n\r\n  <b>Remarks:</b>Provides the default implementation of the <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>, <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>, and <xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref> interfaces, which user services can use, along with their implementation of the <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> interface.</span></span> <span data-ttu-id=\"736a7-177\">インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"736a7-177\">An instance of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> class is obtained via the <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator( system.fabric.StateProvider, system.fabric.ReplicatorSettings)</xref> method, which can be cast to <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> for use.</span></span> </p>"
     syntax:
       content: public class FabricReplicator implements Replicator
   - uid: system.fabric._pin_collection

@@ -20,12 +20,12 @@ items:
       path: azure-mgmt-network/src/main/java/com/microsoft/azure/management/network/LoadBalancingRule.java
       startLine: 376
     package: com.microsoft.azure.management.network
-    summary: <p>負荷分散に規則を関連付けるには、バックエンドの指定を許可するルールの定義の段階です。 </p>
+    summary: <p><span data-ttu-id="008c4-101">負荷分散に規則を関連付けるには、バックエンドの指定を許可するルールの定義の段階です。</span><span class="sxs-lookup"><span data-stu-id="008c4-101">The stage of a load balancing rule definition allowing to specify the backend to associate the rule with.</span></span> </p>
     syntax:
       content: public interface WithBackend<ReturnT> extends LoadBalancingRule.UpdateDefinitionStages.WithVirtualMachine<ReturnT>
       typeParameters:
         - type: c1a5ebc4
-          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>
+          description: <p><span data-ttu-id="008c4-102">この定義をアタッチした後に戻るに親の定義のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-102">the stage of the parent definition to return to after attaching this definition</span></span> </p>
     inheritedMembers:
       - com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba.toExistingVirtualMachines(HasNetworkInterfaces...)
       - com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba.toExistingVirtualMachines(Collection<HasNetworkInterfaces>)
@@ -46,17 +46,17 @@ items:
       startLine: 384
     package: com.microsoft.azure.management.network
     summary: |-
-      <p>ネットワーク トラフィックを送信するには、このロード バランサーのバックエンドを指定します。 </p>
-      <p>指定した名前のバックエンドが存在しない場合、自動的に作成されます。 </p>
+      <p><span data-ttu-id="008c4-103">ネットワーク トラフィックを送信するには、このロード バランサーのバックエンドを指定します。</span><span class="sxs-lookup"><span data-stu-id="008c4-103">Specifies a backend on this load balancer to send network traffic to.</span></span> </p>
+      <p><span data-ttu-id="008c4-104">指定した名前のバックエンドが存在しない場合、自動的に作成されます。</span><span class="sxs-lookup"><span data-stu-id="008c4-104">If a backend with the specified name does not yet exist, it will be created automatically.</span></span> </p>
     syntax:
       content: public WithBackendPort<ReturnT> toBackend(String backendName)
       parameters:
         - id: backendName
           type: '26831127'
-          description: <p>既存のバックエンドの名前 </p>
+          description: <p><span data-ttu-id="008c4-105">既存のバックエンドの名前</span><span class="sxs-lookup"><span data-stu-id="008c4-105">the name of an existing backend</span></span> </p>
       return:
         type: com.microsoft.azure.management.network._load_balancing_rule._update_d4005a41be73048706153a1efd47c639a5b94c421
-        description: <p>定義の次のステージ </p>
+        description: <p><span data-ttu-id="008c4-106">定義の次のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-106">the next stage of the definition</span></span> </p>
 references:
   - uid: c1a5ebc4
     spec.java:
@@ -87,19 +87,19 @@ references:
     fullName: WithBackendPort<ReturnT> com.microsoft.azure.management.network.LoadBalancingRule.UpdateDefinitionStages.WithVirtualMachine<ReturnT>.toExistingVirtualMachines(HasNetworkInterfaces...vms)
     type: Method
     summary: |-
-      <p>指定したと仮定して、同じ可用性セットから、この負荷分散の規則に関連付けられる新しいバックエンド アドレス プールに仮想マシンのセットを追加します。 </p>
-      <p>これにより、仮想マシンの指定された一連のプライマリ ネットワーク インターフェイスのプライマリ IP 構成への参照が追加されます。 </p>
-      <p>仮想マシンが同じ可用性セットにない場合は、それらでは、バックエンドとの関連付けはできません。 </p>
-      <p>仮想マシンのみは既存のネットワーク インターフェイスが既にあるロード バランサーに関連付けられます。 ネットワーク インターフェイスを持たない仮想マシンはスキップされます。 </p>
+      <p><span data-ttu-id="008c4-107">指定したと仮定して、同じ可用性セットから、この負荷分散の規則に関連付けられる新しいバックエンド アドレス プールに仮想マシンのセットを追加します。</span><span class="sxs-lookup"><span data-stu-id="008c4-107">Adds the specified set of virtual machines, assuming they are from the same availability set, to a new back end address pool to be associated with this load balancing rule.</span></span> </p>
+      <p><span data-ttu-id="008c4-108">これにより、仮想マシンの指定された一連のプライマリ ネットワーク インターフェイスのプライマリ IP 構成への参照が追加されます。</span><span class="sxs-lookup"><span data-stu-id="008c4-108">This will add references to the primary IP configurations of the primary network interfaces of the provided set of virtual machines.</span></span> </p>
+      <p><span data-ttu-id="008c4-109">仮想マシンが同じ可用性セットにない場合は、それらでは、バックエンドとの関連付けはできません。</span><span class="sxs-lookup"><span data-stu-id="008c4-109">If the virtual machines are not in the same availability set, they will not be associated with the backend.</span></span> </p>
+      <p><span data-ttu-id="008c4-110">仮想マシンのみは既存のネットワーク インターフェイスが既にあるロード バランサーに関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="008c4-110">Only those virtual machines will be associated with the load balancer that already have an existing network interface.</span></span> <span data-ttu-id="008c4-111">ネットワーク インターフェイスを持たない仮想マシンはスキップされます。</span><span class="sxs-lookup"><span data-stu-id="008c4-111">Virtual machines without a network interface will be skipped.</span></span> </p>
     syntax:
       content: public WithBackendPort<ReturnT> toExistingVirtualMachines(HasNetworkInterfaces...vms)
       parameters:
         - id: vms
           type: 6bb6a610
-          description: <p>既存の仮想マシン </p>
+          description: <p><span data-ttu-id="008c4-112">既存の仮想マシン</span><span class="sxs-lookup"><span data-stu-id="008c4-112">existing virtual machines</span></span> </p>
       return:
         type: com.microsoft.azure.management.network._load_balancing_rule._update_d4005a41be73048706153a1efd47c639a5b94c421
-        description: <p>定義の次のステージ </p>
+        description: <p><span data-ttu-id="008c4-113">定義の次のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-113">the next stage of the definition</span></span> </p>
   - uid: com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba.toExistingVirtualMachines(Collection<HasNetworkInterfaces>)
     parent: com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba
     href: com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba.yml
@@ -108,19 +108,19 @@ references:
     fullName: WithBackendPort<ReturnT> com.microsoft.azure.management.network.LoadBalancingRule.UpdateDefinitionStages.WithVirtualMachine<ReturnT>.toExistingVirtualMachines(Collection<HasNetworkInterfaces> vms)
     type: Method
     summary: |-
-      <p>指定したと仮定して、同じ可用性セットから、この負荷分散の規則に関連付けられる新しいバックエンド アドレス プールに仮想マシンのセットを追加します。 </p>
-      <p>これにより、仮想マシンの指定された一連のプライマリ ネットワーク インターフェイスのプライマリ IP 構成への参照が追加されます。 </p>
-      <p>仮想マシンが同じ可用性セットにない場合は、それらでは、バックエンドとの関連付けはできません。 </p>
-      <p>仮想マシンのみは既存のネットワーク インターフェイスが既にあるロード バランサーに関連付けられます。 ネットワーク インターフェイスを持たない仮想マシンはスキップされます。 </p>
+      <p><span data-ttu-id="008c4-114">指定したと仮定して、同じ可用性セットから、この負荷分散の規則に関連付けられる新しいバックエンド アドレス プールに仮想マシンのセットを追加します。</span><span class="sxs-lookup"><span data-stu-id="008c4-114">Adds the specified set of virtual machines, assuming they are from the same availability set, to a new back end address pool to be associated with this load balancing rule.</span></span> </p>
+      <p><span data-ttu-id="008c4-115">これにより、仮想マシンの指定された一連のプライマリ ネットワーク インターフェイスのプライマリ IP 構成への参照が追加されます。</span><span class="sxs-lookup"><span data-stu-id="008c4-115">This will add references to the primary IP configurations of the primary network interfaces of the provided set of virtual machines.</span></span> </p>
+      <p><span data-ttu-id="008c4-116">仮想マシンが同じ可用性セットにない場合は、それらでは、バックエンドとの関連付けはできません。</span><span class="sxs-lookup"><span data-stu-id="008c4-116">If the virtual machines are not in the same availability set, they will not be associated with the backend.</span></span> </p>
+      <p><span data-ttu-id="008c4-117">仮想マシンのみは既存のネットワーク インターフェイスが既にあるロード バランサーに関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="008c4-117">Only those virtual machines will be associated with the load balancer that already have an existing network interface.</span></span> <span data-ttu-id="008c4-118">ネットワーク インターフェイスを持たない仮想マシンはスキップされます。</span><span class="sxs-lookup"><span data-stu-id="008c4-118">Virtual machines without a network interface will be skipped.</span></span> </p>
     syntax:
       content: public WithBackendPort<ReturnT> toExistingVirtualMachines(Collection<HasNetworkInterfaces> vms)
       parameters:
         - id: vms
           type: 12ebb11acom.microsoft.azure.management.network.model._has_network_interfacesa08ddfce
-          description: <p>既存の仮想マシン </p>
+          description: <p><span data-ttu-id="008c4-119">既存の仮想マシン</span><span class="sxs-lookup"><span data-stu-id="008c4-119">existing virtual machines</span></span> </p>
       return:
         type: com.microsoft.azure.management.network._load_balancing_rule._update_d4005a41be73048706153a1efd47c639a5b94c421
-        description: <p>定義の次のステージ </p>
+        description: <p><span data-ttu-id="008c4-120">定義の次のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-120">the next stage of the definition</span></span> </p>
   - uid: com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba
     parent: com.microsoft.azure.management.network
     href: com.microsoft.azure.management.network._load_balancing_rule._update_d73b584584b19d8a0cda5e12e7aa143ba.yml
@@ -128,12 +128,12 @@ references:
     nameWithType: LoadBalancingRule.UpdateDefinitionStages.WithVirtualMachine<ReturnT>
     fullName: com.microsoft.azure.management.network.LoadBalancingRule.UpdateDefinitionStages.WithVirtualMachine<ReturnT>
     type: Interface
-    summary: <p>負荷分散できるように、ネットワーク トラフィックの負荷を分散するバーチャル マシンのセットを選択するルールの定義の段階です。 </p>
+    summary: <p><span data-ttu-id="008c4-121">負荷分散できるように、ネットワーク トラフィックの負荷を分散するバーチャル マシンのセットを選択するルールの定義の段階です。</span><span class="sxs-lookup"><span data-stu-id="008c4-121">The stage of a load balancing rule definition allowing to select a set of virtual machines to load balance the network traffic among.</span></span> </p>
     syntax:
       content: public interface WithVirtualMachine<ReturnT>
       typeParameters:
         - type: c1a5ebc4
-          description: <p>定義の次のステージ </p>
+          description: <p><span data-ttu-id="008c4-122">定義の次のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-122">the next stage of the definition</span></span> </p>
   - uid: com.microsoft.azure.management.network._load_balancing_rule._update_definition
     parent: com.microsoft.azure.management.network
     href: com.microsoft.azure.management.network._load_balancing_rule._update_definition.yml
@@ -141,12 +141,12 @@ references:
     nameWithType: LoadBalancingRule.UpdateDefinition<ReturnT>
     fullName: com.microsoft.azure.management.network.LoadBalancingRule.UpdateDefinition<ReturnT>
     type: Interface
-    summary: <p>負荷分散のロード バランサーの更新の一部として、ルールの定義の全体です。 </p>
+    summary: <p><span data-ttu-id="008c4-123">負荷分散のロード バランサーの更新の一部として、ルールの定義の全体です。</span><span class="sxs-lookup"><span data-stu-id="008c4-123">The entirety of a load balancing rule definition as part of a load balancer update.</span></span> </p>
     syntax:
       content: 'public interface UpdateDefinition<ReturnT> extends LoadBalancingRule.UpdateDefinitionStages.Blank<ReturnT>,LoadBalancingRule.UpdateDefinitionStages.WithAttach<ReturnT>,LoadBalancingRule.UpdateDefinitionStages.WithProtocol<ReturnT>,LoadBalancingRule.UpdateDefinitionStages.WithFrontendPort<ReturnT>,LoadBalancingRule.UpdateDefinitionStages.WithFrontend<ReturnT>,LoadBalancingRule.UpdateDefinitionStages.WithBackend<ReturnT>,LoadBalancingRule.UpdateDefinitionStages.WithBackendPort<ReturnT>'
       typeParameters:
         - type: c1a5ebc4
-          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>
+          description: <p><span data-ttu-id="008c4-124">この定義をアタッチした後に戻るに親の定義のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-124">the stage of the parent definition to return to after attaching this definition</span></span> </p>
   - uid: com.microsoft.azure.management.network._load_balancing_rule._update_d4005a41be73048706153a1efd47c639a
     parent: com.microsoft.azure.management.network
     href: com.microsoft.azure.management.network._load_balancing_rule._update_d4005a41be73048706153a1efd47c639a.yml
@@ -154,9 +154,9 @@ references:
     nameWithType: LoadBalancingRule.UpdateDefinitionStages.WithBackendPort<ReturnT>
     fullName: com.microsoft.azure.management.network.LoadBalancingRule.UpdateDefinitionStages.WithBackendPort<ReturnT>
     type: Interface
-    summary: <p>負荷分散できるようにする負荷分散されたトラフィックを送信するバックエンド ポートを指定するルールの定義の段階です。 </p>
+    summary: <p><span data-ttu-id="008c4-125">負荷分散できるようにする負荷分散されたトラフィックを送信するバックエンド ポートを指定するルールの定義の段階です。</span><span class="sxs-lookup"><span data-stu-id="008c4-125">The stage of a load balancing rule definition allowing to specify the backend port to send the load-balanced traffic to.</span></span> </p>
     syntax:
       content: public interface WithBackendPort<ReturnT>
       typeParameters:
         - type: c1a5ebc4
-          description: <p>この定義をアタッチした後に戻るに親の定義のステージ </p>
+          description: <p><span data-ttu-id="008c4-126">この定義をアタッチした後に戻るに親の定義のステージ</span><span class="sxs-lookup"><span data-stu-id="008c4-126">the stage of the parent definition to return to after attaching this definition</span></span> </p>

@@ -43,7 +43,7 @@ references:
     nameWithType: LabeledResultSet
     fullName: com.microsoft.azure.elasticdb.query.multishard.LabeledResultSet
     type: Class
-    summary: '<p>リーダーに関連する追加情報を含む結果セットを affiliating の単純な変更できないクラス (例: ステートメント、シャード、例外が発生しましたなど) の結果セットを非同期に取得するときに便利です。 目的: 結果セットを基になるデータの送信元、シャードの文字列のラベルと共に結果セットを保持する便利なクラス。 メモ: これは非同期的に実行するときに、結果セットとラベルを一緒にまとめるに便利です。 </p>'
+    summary: '<p><span data-ttu-id="493b0-101">リーダーに関連する追加情報を含む結果セットを affiliating の単純な変更できないクラス (例: ステートメント、シャード、例外が発生しましたなど) の結果セットを非同期に取得するときに便利です。</span><span class="sxs-lookup"><span data-stu-id="493b0-101">Simple, immutable class for affiliating a ResultSet with additional information related to the reader (e.g. Statement, shard, exceptions encountered etc) Useful when grabbing ResultSets asynchronously.</span></span> <span data-ttu-id="493b0-102">目的: 結果セットを基になるデータの送信元、シャードの文字列のラベルと共に結果セットを保持する便利なクラス。</span><span class="sxs-lookup"><span data-stu-id="493b0-102">Purpose: Convenience class that holds a ResultSet along with a string label for the shard that the data underlying the ResultSet came from.</span></span> <span data-ttu-id="493b0-103">メモ: これは非同期的に実行するときに、結果セットとラベルを一緒にまとめるに便利です。</span><span class="sxs-lookup"><span data-stu-id="493b0-103">Notes: This is useful for keeping the ResultSet and the label together when executing asynchronously.</span></span> </p>'
     syntax:
       content: public class LabeledResultSet
   - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection
@@ -53,7 +53,7 @@ references:
     nameWithType: MultiShardConnection
     fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardConnection
     type: Class
-    summary: '<p>シャードのセットへの接続を表し、シャード セット全体に対してクエリを処理する機能を提供します。 目的: がシャードのセットへの接続を作成し、その有効期間の注意事項を制御します。 このクラスは、スレッド セーフであります。 </p>'
+    summary: '<p><span data-ttu-id="493b0-104">シャードのセットへの接続を表し、シャード セット全体に対してクエリを処理する機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="493b0-104">Represents a connection to a set of shards and provides the ability to process queries across the shard set.</span></span> <span data-ttu-id="493b0-105">目的: がシャードのセットへの接続を作成し、その有効期間の注意事項を制御します。 このクラスは、スレッド セーフであります。</span><span class="sxs-lookup"><span data-stu-id="493b0-105">Purpose: Creates connections to the given set of shards and governs their lifetime Notes: This class is NOT thread-safe.</span></span> </p>'
     syntax:
       content: public class MultiShardConnection
   - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_query_transient_error_detection_strategy
@@ -63,7 +63,7 @@ references:
     nameWithType: MultiShardQueryTransientErrorDetectionStrategy
     fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardQueryTransientErrorDetectionStrategy
     type: Class
-    summary: <p>一時的なエラーは、シャードのクエリと交差する固有の一時的なエラーの検出ロジックを提供します。 </p>
+    summary: <p><span data-ttu-id="493b0-106">一時的なエラーは、シャードのクエリと交差する固有の一時的なエラーの検出ロジックを提供します。</span><span class="sxs-lookup"><span data-stu-id="493b0-106">Provides the transient error detection logic for transient faults that are specific to cross shard query.</span></span> </p>
     syntax:
       content: public class MultiShardQueryTransientErrorDetectionStrategy implements ITransientErrorDetectionStrategy
   - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set
@@ -82,7 +82,7 @@ references:
     nameWithType: MultiShardStatement
     fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardStatement
     type: Class
-    summary: '<p>補完、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>接続、ステートメント、および ResultSet の障害を許容するようなコマンド オブジェクトを使用します。 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>の入力としての T-SQL コマンド ステートメントは、そのシャードでそれに対応する指定のコレクション全体のコマンドを実行<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>です。 処理の結果、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref> execute メソッドを通じて利用できる、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。 目的: 補完するもの、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>ノートの複数のシャードに対して指定されたコマンドを実行中の作業を抽象し、: このクラスは、スレッド セーフであります。 接続を持つシャードへの接続文字列プロパティを同期 API が内部的に非同期 API が呼び出されるため"コンテキスト接続 = true"はサポートされていません。 トランザクション セマンティクスはサポートされていません。 </p>'
+    summary: '<p><span data-ttu-id="493b0-107">補完、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>接続、ステートメント、および ResultSet の障害を許容するようなコマンド オブジェクトを使用します。</span><span class="sxs-lookup"><span data-stu-id="493b0-107">Complements the <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref> with a command object similar to the triad of Connection, Statement, and ResultSet.</span></span> <span data-ttu-id="493b0-108"><xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref>の入力としての T-SQL コマンド ステートメントは、そのシャードでそれに対応する指定のコレクション全体のコマンドを実行<xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>です。</span><span class="sxs-lookup"><span data-stu-id="493b0-108">The <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref> takes a T-SQL command statement as its input and executes the command across its collection of shards specified by its corresponding <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>.</span></span> <span data-ttu-id="493b0-109">処理の結果、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref> execute メソッドを通じて利用できる、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>です。</span><span class="sxs-lookup"><span data-stu-id="493b0-109">The results from processing the <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_statement" data-throw-if-not-resolved="false">MultiShardStatement</xref> are made available through the execute methods and the <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_result_set" data-throw-if-not-resolved="false">MultiShardResultSet</xref>.</span></span> <span data-ttu-id="493b0-110">目的: 補完するもの、 <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref>ノートの複数のシャードに対して指定されたコマンドを実行中の作業を抽象し、: このクラスは、スレッド セーフであります。</span><span class="sxs-lookup"><span data-stu-id="493b0-110">Purpose: Complements the <xref uid="com.microsoft.azure.elasticdb.query.multishard._multi_shard_connection" data-throw-if-not-resolved="false">MultiShardConnection</xref> and abstracts away the work of running a given command against multiple shards Notes: This class is NOT thread-safe.</span></span> <span data-ttu-id="493b0-111">接続を持つシャードへの接続文字列プロパティを同期 API が内部的に非同期 API が呼び出されるため"コンテキスト接続 = true"はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="493b0-111">Since the Sync API internally invokes the async API, connections to shards with connection string property "context connection = true" are not supported.</span></span> <span data-ttu-id="493b0-112">トランザクション セマンティクスはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="493b0-112">Transaction semantics are not supported.</span></span> </p>'
     syntax:
       content: public class MultiShardStatement
   - uid: com.microsoft.azure.elasticdb.query.multishard._multi_shard_utils
@@ -92,7 +92,7 @@ references:
     nameWithType: MultiShardUtils
     fullName: com.microsoft.azure.elasticdb.query.multishard.MultiShardUtils
     type: Class
-    summary: '<p>目的: このプロジェクトの他のクラスによって使用されるさまざまなユーティリティです。 </p>'
+    summary: '<p><span data-ttu-id="493b0-113">目的: このプロジェクトの他のクラスによって使用されるさまざまなユーティリティです。</span><span class="sxs-lookup"><span data-stu-id="493b0-113">Purpose: Various utilities used by other classes in this project.</span></span> </p>'
     syntax:
       content: public class MultiShardUtils
   - uid: com.microsoft.azure.elasticdb.query.multishard._shard_execution_event_args
@@ -102,6 +102,6 @@ references:
     nameWithType: ShardExecutionEventArgs
     fullName: com.microsoft.azure.elasticdb.query.multishard.ShardExecutionEventArgs
     type: Class
-    summary: <p>複数のシャードあたりのイベント ハンドラーに渡される入力します。 </p>
+    summary: <p><span data-ttu-id="493b0-114">複数のシャードあたりのイベント ハンドラーに渡される入力します。</span><span class="sxs-lookup"><span data-stu-id="493b0-114">Input to be passed to per-shard event handlers.</span></span> </p>
     syntax:
       content: public class ShardExecutionEventArgs

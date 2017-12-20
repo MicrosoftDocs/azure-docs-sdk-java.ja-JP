@@ -23,8 +23,8 @@ items:
       startLine: 21
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>要求されたときに、Azure Active Directory トークンを返します。 プロバイダーは、既に取得したいずれかの場合、トークンをキャッシュできます。 その場合、プロバイダーは有効期限をチェックし、必要に応じて更新を担当します。 </p>
-      <p>つまり、これはキャッシュされたトークンの有効期限が切れた場合に要求された場合、トークンをフェッチするトークンのキャッシュです。 </p>
+      <p><span data-ttu-id="c50ff-101">要求されたときに、Azure Active Directory トークンを返します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-101">Returns an Azure Active Directory token when requested.</span></span> <span data-ttu-id="c50ff-102">プロバイダーは、既に取得したいずれかの場合、トークンをキャッシュできます。</span><span class="sxs-lookup"><span data-stu-id="c50ff-102">The provider can cache the token if it has already retrieved one.</span></span> <span data-ttu-id="c50ff-103">その場合、プロバイダーは有効期限をチェックし、必要に応じて更新を担当します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-103">If it does, then the provider is responsible for checking expiry and refreshing as needed.</span></span> </p>
+      <p><span data-ttu-id="c50ff-104">つまり、これはキャッシュされたトークンの有効期限が切れた場合に要求された場合、トークンをフェッチするトークンのキャッシュです。</span><span class="sxs-lookup"><span data-stu-id="c50ff-104">In other words, this is is a token cache that fetches tokens when requested, if the cached token has expired.</span></span> </p>
     syntax:
       content: public class AccessTokenProvider
     inheritance:
@@ -46,16 +46,16 @@ items:
       startLine: 32
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>返します、 <xref uid="com.microsoft.azure.datalake.store.oauth2._azure_a_d_token" data-throw-if-not-resolved="false">AzureADToken</xref>キャッシュ (または取得) をこのインスタンス。</p>
+      <p><span data-ttu-id="c50ff-105">返します、 <xref uid="com.microsoft.azure.datalake.store.oauth2._azure_a_d_token" data-throw-if-not-resolved="false">AzureADToken</xref>キャッシュ (または取得) をこのインスタンス。</span><span class="sxs-lookup"><span data-stu-id="c50ff-105">returns the <xref uid="com.microsoft.azure.datalake.store.oauth2._azure_a_d_token" data-throw-if-not-resolved="false">AzureADToken</xref> cached (or retrieved) by this instance.</span></span></p>
       <p></p>
     syntax:
       content: public synchronized AzureADToken getToken()
       return:
         type: cffad4f2com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>アクセス トークンを含む </p>"
+        description: "<p><span data-ttu-id=\"c50ff-106\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>アクセス トークンを含む</span><span class=\"sxs-lookup\"><span data-stu-id=\"c50ff-106\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref> containing the access token</span></span> </p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>トークンを取り出すときにエラーがある場合 </p>
+        description: <p><span data-ttu-id="c50ff-107">トークンを取り出すときにエラーがある場合</span><span class="sxs-lookup"><span data-stu-id="c50ff-107">if there is an error fetching the token</span></span> </p>
   - uid: com.microsoft.azure.datalake.store.oauth2._access_token_provider.refreshToken()
     id: refreshToken()
     parent: com.microsoft.azure.datalake.store.oauth2._access_token_provider
@@ -73,17 +73,17 @@ items:
       startLine: 51
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>アクセス トークンをフェッチするメソッド。 派生クラスでは、Azure Active Directory から実際にトークンを取得するには、このメソッドをオーバーライドする必要があります。 </p>
-      <p>このメソッドが最初に、呼び出されると、トークンの有効期限が近づいているときに 1 回です。 </p>
+      <p><span data-ttu-id="c50ff-108">アクセス トークンをフェッチするメソッド。</span><span class="sxs-lookup"><span data-stu-id="c50ff-108">the method to fetch the access token.</span></span> <span data-ttu-id="c50ff-109">派生クラスでは、Azure Active Directory から実際にトークンを取得するには、このメソッドをオーバーライドする必要があります。</span><span class="sxs-lookup"><span data-stu-id="c50ff-109">Derived classes should override this method to actually get the token from Azure Active Directory.</span></span> </p>
+      <p><span data-ttu-id="c50ff-110">このメソッドが最初に、呼び出されると、トークンの有効期限が近づいているときに 1 回です。</span><span class="sxs-lookup"><span data-stu-id="c50ff-110">This method will be called initially, and then once when the token is about to expire.</span></span> </p>
       <p></p>
     syntax:
       content: protected abstract AzureADToken refreshToken()
       return:
         type: 13c86962com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>アクセス トークンを含む </p>"
+        description: "<p><span data-ttu-id=\"c50ff-111\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>アクセス トークンを含む</span><span class=\"sxs-lookup\"><span data-stu-id=\"c50ff-111\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref> containing the access token</span></span> </p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>トークンを取り出すときにエラーがある場合 </p>
+        description: <p><span data-ttu-id="c50ff-112">トークンを取り出すときにエラーがある場合</span><span class="sxs-lookup"><span data-stu-id="c50ff-112">if there is an error fetching the token</span></span> </p>
   - uid: com.microsoft.azure.datalake.store.oauth2._access_token_provider.token
     id: token
     parent: com.microsoft.azure.datalake.store.oauth2._access_token_provider
@@ -141,7 +141,7 @@ references:
     nameWithType: ClientCredsTokenProvider
     fullName: com.microsoft.azure.datalake.store.oauth2.ClientCredsTokenProvider
     type: Class
-    summary: <p>クライアントの資格情報に基づくトークンを提供します。 </p>
+    summary: <p><span data-ttu-id="c50ff-113">クライアントの資格情報に基づくトークンを提供します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-113">Provides tokens based on client credentials</span></span> </p>
     syntax:
       content: public class ClientCredsTokenProvider
   - uid: com.microsoft.azure.datalake.store.oauth2._device_code_token_provider
@@ -151,7 +151,7 @@ references:
     nameWithType: DeviceCodeTokenProvider
     fullName: com.microsoft.azure.datalake.store.oauth2.DeviceCodeTokenProvider
     type: Class
-    summary: <p>コンテキストをブラウザー以外の対話型ログインを有効に基づいています。 指定されたリンクとコードを使用して、ブラウザーを使用してログインするユーザーを求めるメッセージが表示されます。 </p>
+    summary: '<p><span data-ttu-id="c50ff-114">コンテキストをブラウザー以外の対話型ログインを有効に基づいています。</span><span class="sxs-lookup"><span data-stu-id="c50ff-114">Enables interactive login in non-browser based contexts.</span></span> <span data-ttu-id="c50ff-115">指定されたリンクとコードを使用して、ブラウザーを使用してログインするユーザーを求めるメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="c50ff-115">Displays a message asking the user to login using the browser, using the provided link and code.</span></span> </p>'
     syntax:
       content: public class DeviceCodeTokenProvider
   - uid: com.microsoft.azure.datalake.store.oauth2._msi_token_provider
@@ -161,7 +161,7 @@ references:
     nameWithType: MsiTokenProvider
     fullName: com.microsoft.azure.datalake.store.oauth2.MsiTokenProvider
     type: Class
-    summary: <p>Azure VM の管理サービス Id に基づくトークンを提供します。 </p>
+    summary: <p><span data-ttu-id="c50ff-116">Azure VM の管理サービス Id に基づくトークンを提供します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-116">Provides tokens based on Azure VM's Managed Service Identity</span></span> </p>
     syntax:
       content: public class MsiTokenProvider
   - uid: com.microsoft.azure.datalake.store.oauth2._refresh_token_based_token_provider
@@ -171,7 +171,7 @@ references:
     nameWithType: RefreshTokenBasedTokenProvider
     fullName: com.microsoft.azure.datalake.store.oauth2.RefreshTokenBasedTokenProvider
     type: Class
-    summary: <p>更新トークンに基づくトークンを提供します。 </p>
+    summary: <p><span data-ttu-id="c50ff-117">更新トークンに基づくトークンを提供します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-117">Provides tokens based on refresh token</span></span> </p>
     syntax:
       content: public class RefreshTokenBasedTokenProvider
   - uid: com.microsoft.azure.datalake.store.oauth2._user_password_token_provider
@@ -181,7 +181,7 @@ references:
     nameWithType: UserPasswordTokenProvider
     fullName: com.microsoft.azure.datalake.store.oauth2.UserPasswordTokenProvider
     type: Class
-    summary: <p>ユーザー名とパスワードに基づくトークンを提供します。 </p>
+    summary: <p><span data-ttu-id="c50ff-118">ユーザー名とパスワードに基づくトークンを提供します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-118">Provides tokens based on username and password</span></span> </p>
     syntax:
       content: public class UserPasswordTokenProvider
   - uid: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
@@ -191,6 +191,6 @@ references:
     nameWithType: AzureADToken
     fullName: com.microsoft.azure.datalake.store.oauth2.AzureADToken
     type: Class
-    summary: <p>オブジェクトの represnting AAD アクセス トークンを Azure データ Lake ストレージへの HTTP 要求を行うときに使用します。 </p>
+    summary: <p><span data-ttu-id="c50ff-119">オブジェクトの represnting AAD アクセス トークンを Azure データ Lake ストレージへの HTTP 要求を行うときに使用します。</span><span class="sxs-lookup"><span data-stu-id="c50ff-119">Object represnting the AAD access token to use when making HTTP requests to Azure Data Lake Storage.</span></span> </p>
     syntax:
       content: public class AzureADToken

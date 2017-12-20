@@ -23,7 +23,7 @@ items:
       path: src/main/java/com/microsoft/azure/datalake/store/oauth2/AzureADAuthenticator.java
       startLine: 27
     package: com.microsoft.azure.datalake.store.oauth2
-    summary: '<p>このクラスは、AAD トークンを取得するための便利なメソッドを提供します。 便利で、中に、これらのメソッドを使用して、トークンを取得する必要はありません。 顧客が他のメソッドを使用できます (例: adal4j クライアントを使用して) トークンを取得します。 </p>'
+    summary: '<p><span data-ttu-id="9f437-101">このクラスは、AAD トークンを取得するための便利なメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="9f437-101">This class provides convenience methods to obtain AAD tokens.</span></span> <span data-ttu-id="9f437-102">便利で、中に、これらのメソッドを使用して、トークンを取得する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="9f437-102">While convenient, it is not necessary to use these methods to obtain the tokens.</span></span> <span data-ttu-id="9f437-103">顧客が他のメソッドを使用できます (例: adal4j クライアントを使用して) トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="9f437-103">Customers can use any other method (e.g., using the adal4j client) to obtain tokens.</span></span> </p>'
     syntax:
       content: public class AzureADAuthenticator
     inheritance:
@@ -45,23 +45,23 @@ items:
       startLine: 73
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>ローカルの仮想マシンの VM 拡張機能から AAD トークンを取得します。 のみを得るには、Azure VM の MSI 拡張機能が有効です。</p>
+      <p><span data-ttu-id="9f437-104">ローカルの仮想マシンの VM 拡張機能から AAD トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="9f437-104">Gets AAD token from the local virtual machine's VM extension.</span></span> <span data-ttu-id="9f437-105">のみを得るには、Azure VM の MSI 拡張機能が有効です。</span><span class="sxs-lookup"><span data-stu-id="9f437-105">This only works on an Azure VM with MSI extension enabled.</span></span></p>
       <p></p>
     syntax:
       content: 'public static AzureADToken getTokenFromMsi(int localPort, String tenantGuid)'
       parameters:
         - id: localPort
           type: f75371fa
-          description: <p>MSI 拡張機能を実行するポートです。 0 または負の数が指定されている場合は、50342 の既定のポート番号を想定します。 </p>
+          description: '<p><span data-ttu-id="9f437-106">MSI 拡張機能を実行するポートです。</span><span class="sxs-lookup"><span data-stu-id="9f437-106">port at which the MSI extension is running.</span></span> <span data-ttu-id="9f437-107">0 または負の数が指定されている場合は、50342 の既定のポート番号を想定します。</span><span class="sxs-lookup"><span data-stu-id="9f437-107">If 0 or negative number is specified, then assume default port number of 50342.</span></span> </p>'
         - id: tenantGuid
           type: '26831127'
-          description: "<p>(省略可能)AAD テナントの guid です。 指定できます<code>null \r\n\r\n    </code>です。 </p>"
+          description: "<p><span data-ttu-id=\"9f437-108\">(省略可能)AAD テナントの guid です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f437-108\">(optional) The guid of the AAD tenant.</span></span> <span data-ttu-id=\"9f437-109\">指定できます<code>null \r\n\r\n    </code>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f437-109\">Can be<code>null \r\n\r\n    </code> .</span></span> </p>"
       return:
         type: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>資格情報を使用して取得 </p>"
+        description: "<p><span data-ttu-id=\"9f437-110\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>資格情報を使用して取得</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f437-110\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref> obtained using the creds</span></span> </p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>トークンを取得中にエラーがある場合に io 例外がスローされます。 </p>
+        description: <p><span data-ttu-id="9f437-111">トークンを取得中にエラーがある場合に io 例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9f437-111">throws IOException if there is a failure in obtaining the token</span></span> </p>
   - uid: 'com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator.getTokenUsingClientCreds(String,String,String)'
     id: 'getTokenUsingClientCreds(String,String,String)'
     parent: com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator
@@ -79,27 +79,27 @@ items:
       startLine: 49
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>Azure Active Directory のユーザー ID と、サービス プリンシパルのパスワード (つまり、Azure Active Directory で Web アプリ) を使用してトークンを取得します。 </p>
-      <p>Azure Active Directory では、サービス プリンシパルとして、web アプリを設定することができます。 ユーザーは、AAD からサービス プリンシパル キーを必要に応じて取得できます。 このメソッドは、サービス プリンシパルのクライアント ID とキーを使用してトークンを取得します。 さらに、ユーザーのディレクトリに関連付けられたトークン エンドポイントが必要です。 </p>
+      <p><span data-ttu-id="9f437-112">Azure Active Directory のユーザー ID と、サービス プリンシパルのパスワード (つまり、Azure Active Directory で Web アプリ) を使用してトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="9f437-112">gets Azure Active Directory token using the user ID and password of a service principal (that is, Web App in Azure Active Directory).</span></span> </p>
+      <p><span data-ttu-id="9f437-113">Azure Active Directory では、サービス プリンシパルとして、web アプリを設定することができます。</span><span class="sxs-lookup"><span data-stu-id="9f437-113">Azure Active Directory allows users to set up a web app as a service principal.</span></span> <span data-ttu-id="9f437-114">ユーザーは、AAD からサービス プリンシパル キーを必要に応じて取得できます。</span><span class="sxs-lookup"><span data-stu-id="9f437-114">Users can optionally obtain service principal keys from AAD.</span></span> <span data-ttu-id="9f437-115">このメソッドは、サービス プリンシパルのクライアント ID とキーを使用してトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="9f437-115">This method gets a token using a service principal's client ID and keys.</span></span> <span data-ttu-id="9f437-116">さらに、ユーザーのディレクトリに関連付けられたトークン エンドポイントが必要です。</span><span class="sxs-lookup"><span data-stu-id="9f437-116">In addition, it needs the token endpoint associated with the user's directory.</span></span> </p>
       <p></p>
     syntax:
       content: 'public static AzureADToken getTokenUsingClientCreds(String authEndpoint, String clientId, String clientSecret)'
       parameters:
         - id: authEndpoint
           type: '26831127'
-          description: <p>ユーザーのディレクトリに関連付けられている OAuth 2.0 トークン エンドポイント (Active Directory の構成から取得) </p>
+          description: <p><span data-ttu-id="9f437-117">ユーザーのディレクトリに関連付けられている OAuth 2.0 トークン エンドポイント (Active Directory の構成から取得)</span><span class="sxs-lookup"><span data-stu-id="9f437-117">the OAuth 2.0 token endpoint associated with the user's directory (obtain from Active Directory configuration)</span></span> </p>
         - id: clientId
           type: '26831127'
-          description: <p>Azure Active Directory の構成から、クライアント ID (GUID)、クライアントの web アプリの取得 </p>
+          description: <p><span data-ttu-id="9f437-118">Azure Active Directory の構成から、クライアント ID (GUID)、クライアントの web アプリの取得</span><span class="sxs-lookup"><span data-stu-id="9f437-118">the client ID (GUID) of the client web app obtained from Azure Active Directory configuration</span></span> </p>
         - id: clientSecret
           type: '26831127'
-          description: <p>クライアント web アプリのシークレット キー </p>
+          description: <p><span data-ttu-id="9f437-119">クライアント web アプリのシークレット キー</span><span class="sxs-lookup"><span data-stu-id="9f437-119">the secret key of the client web app</span></span> </p>
       return:
         type: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>資格情報を使用して取得 </p>"
+        description: "<p><span data-ttu-id=\"9f437-120\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>資格情報を使用して取得</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f437-120\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref> obtained using the creds</span></span> </p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>Azure AD に接続するときにエラーがある場合に io 例外がスローされます。 </p>
+        description: <p><span data-ttu-id="9f437-121">Azure AD に接続するときにエラーがある場合に io 例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9f437-121">throws IOException if there is a failure in connecting to Azure AD</span></span> </p>
   - uid: 'com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator.getTokenUsingRefreshToken(String,String)'
     id: 'getTokenUsingRefreshToken(String,String)'
     parent: com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator
@@ -117,23 +117,23 @@ items:
       startLine: 100
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>使用して更新トークンを Azure Active Directory のトークンを取得</p>
+      <p><span data-ttu-id="9f437-122">使用して更新トークンを Azure Active Directory のトークンを取得</span><span class="sxs-lookup"><span data-stu-id="9f437-122">gets Azure Active Directory token using refresh token</span></span></p>
       <p></p>
     syntax:
       content: 'public static AzureADToken getTokenUsingRefreshToken(String clientId, String refreshToken)'
       parameters:
         - id: clientId
           type: '26831127'
-          description: <p>Azure Active Directory の構成から、クライアント ID (GUID)、クライアントの web アプリの取得 </p>
+          description: <p><span data-ttu-id="9f437-123">Azure Active Directory の構成から、クライアント ID (GUID)、クライアントの web アプリの取得</span><span class="sxs-lookup"><span data-stu-id="9f437-123">the client ID (GUID) of the client web app obtained from Azure Active Directory configuration</span></span> </p>
         - id: refreshToken
           type: '26831127'
-          description: <p>更新トークン </p>
+          description: <p><span data-ttu-id="9f437-124">更新トークン</span><span class="sxs-lookup"><span data-stu-id="9f437-124">the refresh token</span></span> </p>
       return:
         type: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>更新トークンを使用して取得 </p>"
+        description: "<p><span data-ttu-id=\"9f437-125\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>更新トークンを使用して取得</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f437-125\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref> obtained using the refresh token</span></span> </p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>Azure AD に接続するときにエラーがある場合に io 例外がスローされます。 </p>
+        description: <p><span data-ttu-id="9f437-126">Azure AD に接続するときにエラーがある場合に io 例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9f437-126">throws IOException if there is a failure in connecting to Azure AD</span></span> </p>
   - uid: 'com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator.getTokenUsingUserCreds(String,String,String)'
     id: 'getTokenUsingUserCreds(String,String,String)'
     parent: com.microsoft.azure.datalake.store.oauth2._azure_a_d_authenticator
@@ -151,27 +151,27 @@ items:
       startLine: 129
     package: com.microsoft.azure.datalake.store.oauth2
     summary: |-
-      <p>Azure Active Directory のユーザーのユーザー名とパスワードを使用してトークンを取得します。 これは、id microsoftonline.com で直接認証できる場合にのみ機能します。これは、可能性があります行われませんが、ドメインのフェデレーション ユーザーやユーザーの multi-factor authentication または他の形式の強力な認証が構成されている場合。 </p>
-      <p>ユーザー ID とパスワードでセキュリティ上の問題によりこれのみ使用してください限られたテスト環境でテスト/ダミー ユーザーのみです。 </p>
+      <p><span data-ttu-id="9f437-127">Azure Active Directory のユーザーのユーザー名とパスワードを使用してトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="9f437-127">gets Azure Active Directory token using the user's username and password.</span></span> <span data-ttu-id="9f437-128">これは、id microsoftonline.com で直接認証できる場合にのみ機能します。これは、可能性があります行われませんが、ドメインのフェデレーション ユーザーやユーザーの multi-factor authentication または他の形式の強力な認証が構成されている場合。</span><span class="sxs-lookup"><span data-stu-id="9f437-128">This only works if the identity can be authenticated directly by microsoftonline.com. It will likely not work if the domain is federated and/or multi-factor authentication or other form of strong authentication is configured for the user.</span></span> </p>
+      <p><span data-ttu-id="9f437-129">ユーザー ID とパスワードでセキュリティ上の問題によりこれのみ使用してください限られたテスト環境でテスト/ダミー ユーザーのみです。</span><span class="sxs-lookup"><span data-stu-id="9f437-129">Due to security concerns with user ID and password,this should only be used in limited test circumstances, and for test/dummy users only.</span></span> </p>
       <p></p>
     syntax:
       content: 'public static AzureADToken getTokenUsingUserCreds(String clientId, String username, String password)'
       parameters:
         - id: clientId
           type: '26831127'
-          description: <p>Azure Active Directory の構成から、クライアント ID (GUID)、クライアントの web アプリの取得 </p>
+          description: <p><span data-ttu-id="9f437-130">Azure Active Directory の構成から、クライアント ID (GUID)、クライアントの web アプリの取得</span><span class="sxs-lookup"><span data-stu-id="9f437-130">the client ID (GUID) of the client web app obtained from Azure Active Directory configuration</span></span> </p>
         - id: username
           type: '26831127'
-          description: <p>ユーザーのユーザー名 </p>
+          description: <p><span data-ttu-id="9f437-131">ユーザーのユーザー名</span><span class="sxs-lookup"><span data-stu-id="9f437-131">the user name of the user</span></span> </p>
         - id: password
           type: '26831127'
-          description: <p>ユーザーのパスワード </p>
+          description: <p><span data-ttu-id="9f437-132">ユーザーのパスワード</span><span class="sxs-lookup"><span data-stu-id="9f437-132">the password of the user</span></span> </p>
       return:
         type: com.microsoft.azure.datalake.store.oauth2._azure_a_d_token
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>ユーザーの資格情報を使用して取得 </p>"
+        description: "<p><span data-ttu-id=\"9f437-133\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref>ユーザーの資格情報を使用して取得</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f437-133\">\r\n\r\n  <xref uid=\"com.microsoft.azure.datalake.store.oauth2._azure_a_d_token\" data-throw-if-not-resolved=\"false\">AzureADToken</xref> obtained using the user's creds</span></span> </p>"
     exceptions:
       - type: cbf33bbe
-        description: <p>Azure AD に接続するときにエラーがある場合に io 例外がスローされます。 </p>
+        description: <p><span data-ttu-id="9f437-134">Azure AD に接続するときにエラーがある場合に io 例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9f437-134">throws IOException if there is a failure in connecting to Azure AD</span></span> </p>
 references:
   - uid: cbf33bbe
     spec.java:
@@ -212,6 +212,6 @@ references:
     nameWithType: AzureADToken
     fullName: com.microsoft.azure.datalake.store.oauth2.AzureADToken
     type: Class
-    summary: <p>オブジェクトの represnting AAD アクセス トークンを Azure データ Lake ストレージへの HTTP 要求を行うときに使用します。 </p>
+    summary: <p><span data-ttu-id="9f437-135">オブジェクトの represnting AAD アクセス トークンを Azure データ Lake ストレージへの HTTP 要求を行うときに使用します。</span><span class="sxs-lookup"><span data-stu-id="9f437-135">Object represnting the AAD access token to use when making HTTP requests to Azure Data Lake Storage.</span></span> </p>
     syntax:
       content: public class AzureADToken

@@ -101,7 +101,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.AuthorizationFailedException
     type: Class
     summary: |-
-      <p>承認が目的の操作を実行するユーザーのアクセス許可の承認中にエラーが発生した場合に障害が発生した例外がスローされます。 この例外が発生したときにユーザーが接続文字列でトークンまたはキーが提供されるかどうかを確認する必要があります (例: いずれかに渡す<xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)" data-throw-if-not-resolved="false">com.microsoft.azure.eventhubs.EventHubClient#createFromConnectionString(String)</xref>) 有効ですが、あり (受信呼び出しなどが必要なリッスン キーまたはトークンに関連付けられた要求)、目的の操作の権利を正しく実行されます。</p>
+      <p><span data-ttu-id="9dc42-101">承認が目的の操作を実行するユーザーのアクセス許可の承認中にエラーが発生した場合に障害が発生した例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-101">Authorization failed exception is thrown when error is encountered during authorizing user's permission to run the intended operations.</span></span> <span data-ttu-id="9dc42-102">この例外が発生したときにユーザーが接続文字列でトークンまたはキーが提供されるかどうかを確認する必要があります (例: いずれかに渡す<xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)" data-throw-if-not-resolved="false">com.microsoft.azure.eventhubs.EventHubClient#createFromConnectionString(String)</xref>) 有効ですが、あり (受信呼び出しなどが必要なリッスン キーまたはトークンに関連付けられた要求)、目的の操作の権利を正しく実行されます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-102">When encountered this exception user should check whether the token/key provided in the connection string (e.g. one passed to <xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionString(final String)" data-throw-if-not-resolved="false">com.microsoft.azure.eventhubs.EventHubClient#createFromConnectionString(String)</xref>) is valid, and has correct execution right for the intended operations (e.g. Receive call will need Listen claim associated with the key/token).</span></span></p>
       <p></p>
     syntax:
       content: public class AuthorizationFailedException extends EventHubException
@@ -112,7 +112,7 @@ references:
     nameWithType: BatchOptions
     fullName: com.microsoft.azure.eventhubs.BatchOptions
     type: Class
-    summary: "<p>\r\n  <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>作成に使用される<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es です。</p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>partitionKey と maxMessageSize .with() メソッドを使用して設定することができます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>partitionKey が null です。</p></listitem><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem></itemizedlist></p>\n<p>作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>、.with() メソッドを使用して maxMessageSize のみ設定できます。 または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。 既定の設定:<itemizedlist><listitem><p>maxMessageSize が最大許容サイズです。</p></listitem><listitem><p>注: パーティション分割キーを設定した場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>がスローされます。</p></listitem></itemizedlist></p>\n<p>バッチのいずれかの型を構築するために作成、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>オブジェクトし、それを適切な createBatch メソッドに渡します。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>を使用して (<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">PartitionSender#createBatch(BatchOptions)</xref>です。 使用して場合<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">EventHubClient#createBatch(BatchOptions)</xref>です。</p>\n<p>\n  <pre>\n    <code>// Note: For all examples, 'client' is an instance of EventHubClient. The usage is the same for PartitionSender,\n    however, you can NOT set a partition key when using PartitionSender\n    \n    // Create EventDataBatch with defaults\n    EventDataBatch edb1 = client.createBatch();\n    \n    // Create EventDataBatch with custom partitionKey\n    BatchOptions options = new BatchOptions().with( options -&gt; options.partitionKey = \"foo\");\n    EventDataBatch edb2 = client.createBatch(options);\n    \n    // Create EventDataBatch with custom partitionKey and maxMessageSize\n    BatchOptions options = new BatchOptions().with ( options -&gt; {\n        options.partitionKey = \"foo\";\n        options.maxMessageSize = 100 * 1024;\n    };\n    EventDataBatch edb3 = client.createBatch(options);\n    </code>\n  </pre>\n</p>"
+    summary: "<p><span data-ttu-id=\"9dc42-103\">\r\n  <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>作成に使用される<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-103\">\r\n  <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> is used to create <xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es.</span></span></p>\n<p><span data-ttu-id=\"9dc42-104\">作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>partitionKey と maxMessageSize .with() メソッドを使用して設定することができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-104\">If you're creating <xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es with <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>, then you can set a partitionKey and maxMessageSize using the .with() method.</span></span> <span data-ttu-id=\"9dc42-105\">または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-105\">Alternatively, if you'd like the default settings, simply construct <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> with the void constructor.</span></span> <span data-ttu-id=\"9dc42-106\">既定の設定:<itemizedlist><listitem></span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-106\">Default settings:<itemizedlist><listitem></span></span><p><span data-ttu-id=\"9dc42-107\">partitionKey が null です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-107\">partitionKey is null</span></span></p></listitem><listitem><p><span data-ttu-id=\"9dc42-108\">maxMessageSize が最大許容サイズです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-108\">maxMessageSize is the maximum allowed size</span></span></p></listitem></itemizedlist></p>\n<p><span data-ttu-id=\"9dc42-109\">作成する場合は<xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>で es <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>、.with() メソッドを使用して maxMessageSize のみ設定できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-109\">If you're creating <xref uid=\"com.microsoft.azure.eventhubs._event_data_batch\" data-throw-if-not-resolved=\"false\">EventDataBatch</xref>es with <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>, then you can only set a maxMessageSize using the .with() method.</span></span> <span data-ttu-id=\"9dc42-110\">または、既定の設定を希望するだけで作成して、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> void コンス トラクターを使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-110\">Alternatively, if you'd like the default settings, simply construct <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> with the void constructor.</span></span> <span data-ttu-id=\"9dc42-111\">既定の設定:<itemizedlist><listitem></span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-111\">Default settings:<itemizedlist><listitem></span></span><p><span data-ttu-id=\"9dc42-112\">maxMessageSize が最大許容サイズです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-112\">maxMessageSize is the maximum allowed size</span></span></p></listitem><listitem><p><span data-ttu-id=\"9dc42-113\">注: パーティション分割キーを設定した場合、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>がスローされます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-113\">Note: if you set a partition key, an <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref> will be thrown.</span></span></p></listitem></itemizedlist></p>\n<p><span data-ttu-id=\"9dc42-114\">バッチのいずれかの型を構築するために作成、 <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref>オブジェクトし、それを適切な createBatch メソッドに渡します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-114\">To construct either type of batch, create a <xref uid=\"com.microsoft.azure.eventhubs._batch_options\" data-throw-if-not-resolved=\"false\">BatchOptions</xref> object and pass it into the appropriate createBatch method.</span></span> <span data-ttu-id=\"9dc42-115\">使用して場合<xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>を使用して (<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">PartitionSender#createBatch(BatchOptions)</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-115\">If using <xref uid=\"com.microsoft.azure.eventhubs._partition_sender\" data-throw-if-not-resolved=\"false\">PartitionSender</xref>, then use (<xref uid=\"com.microsoft.azure.eventhubs._partition_sender.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">PartitionSender#createBatch(BatchOptions)</xref>.</span></span> <span data-ttu-id=\"9dc42-116\">使用して場合<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>を使用して<xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">EventHubClient#createBatch(BatchOptions)</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-116\">If using <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client\" data-throw-if-not-resolved=\"false\">EventHubClient</xref>, then use <xref uid=\"com.microsoft.azure.eventhubs._event_hub_client.createBatch(BatchOptions)\" data-throw-if-not-resolved=\"false\">EventHubClient#createBatch(BatchOptions)</xref>.</span></span></p>\n<p>\n  <pre>\n    <code>// Note: For all examples, 'client' is an instance of EventHubClient. The usage is the same for PartitionSender,\n    however, you can NOT set a partition key when using PartitionSender\n    \n    // Create EventDataBatch with defaults\n    EventDataBatch edb1 = client.createBatch();\n    \n    // Create EventDataBatch with custom partitionKey\n    BatchOptions options = new BatchOptions().with( options -&gt; options.partitionKey = \"foo\");\n    EventDataBatch edb2 = client.createBatch(options);\n    \n    // Create EventDataBatch with custom partitionKey and maxMessageSize\n    BatchOptions options = new BatchOptions().with ( options -&gt; {\n        options.partitionKey = \"foo\";\n        options.maxMessageSize = 100 * 1024;\n    };\n    EventDataBatch edb3 = client.createBatch(options);\n    </code>\n  </pre>\n</p>"
     syntax:
       content: public class BatchOptions
   - uid: com.microsoft.azure.eventhubs._c_b_s_channel
@@ -140,7 +140,7 @@ references:
     nameWithType: ClientEntity
     fullName: com.microsoft.azure.eventhubs.ClientEntity
     type: Class
-    summary: '<p>開く、閉じる/中止状態 m と c の主目的を持つすべてのクライアント エンティティのコントラクト: closeAll 関連エンティティ内部クラス </p>'
+    summary: '<p><span data-ttu-id="9dc42-117">開く、閉じる/中止状態 m と c の主目的を持つすべてのクライアント エンティティのコントラクト: closeAll 関連エンティティ内部クラス</span><span class="sxs-lookup"><span data-stu-id="9dc42-117">Contract for all client entities with Open-Close/Abort state m/c main-purpose: closeAll related entities Internal-class</span></span> </p>'
     syntax:
       content: public class ClientEntity
   - uid: com.microsoft.azure.eventhubs._communication_exception
@@ -151,7 +151,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.CommunicationException
     type: Class
     summary: |-
-      <p>クライアント側の接続に問題がある場合は、この例外がスローされます。 ときにこの例外のユーザーの受信は、サービスにクライアント接続設定を確認する必要があります。<itemizedlist><listitem><p>正しいホスト名およびエンドポイントで使用されるポート番号を確認します。 </p></listitem><listitem><p>Amqp ポートをブロックするすべての可能なプロキシ設定を確認します。 </p></listitem><listitem><p>Amqp ポートをブロックするファイアウォールの設定の確認します。 </p></listitem><listitem><p>一般的なネットワーク接続の問題と、ネットワークの待機時間を確認します。 </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="9dc42-118">クライアント側の接続に問題がある場合は、この例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-118">This exception is thrown when there is a client side connectivity issue.</span></span> <span data-ttu-id="9dc42-119">ときにこの例外のユーザーの受信は、サービスにクライアント接続設定を確認する必要があります。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="9dc42-119">When receiving this exception user should check client connectivity settings to the service: <itemizedlist><listitem></span></span><p><span data-ttu-id="9dc42-120">正しいホスト名およびエンドポイントで使用されるポート番号を確認します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-120">Check for correct hostname and port number used in endpoint.</span></span> </p></listitem><listitem><p><span data-ttu-id="9dc42-121">Amqp ポートをブロックするすべての可能なプロキシ設定を確認します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-121">Check for any possible proxy settings that can block amqp ports</span></span> </p></listitem><listitem><p><span data-ttu-id="9dc42-122">Amqp ポートをブロックするファイアウォールの設定の確認します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-122">Check for any firewall settings that can block amqp ports</span></span> </p></listitem><listitem><p><span data-ttu-id="9dc42-123">一般的なネットワーク接続の問題と、ネットワークの待機時間を確認します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-123">Check for any general network connectivity issues, as well as network latency.</span></span> </p></listitem></itemizedlist></p>
       <p></p>
     syntax:
       content: public class CommunicationException extends EventHubException
@@ -162,7 +162,7 @@ references:
     nameWithType: ConnectionStringBuilder
     fullName: com.microsoft.azure.eventhubs.ConnectionStringBuilder
     type: Class
-    summary: "<p>\r\n  <xref uid=\"com.microsoft.azure.eventhubs._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref> ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。 既存の接続文字列で基本的な検証を実行するも使用できます。 </p>\n<p>サンプル コードに示します。 <pre><code>    ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(\n        \"ServiceBusNamespaceName\",\n        \"ServiceBusEntityName\", // eventHubName or QueueName or TopicName\n        \"SharedAccessSignatureKeyName\",\n        \"SharedAccessSignatureKey\");\n    \n    String connectionString = connectionStringBuilder.toString();\n    </code></pre></p>\n<p>接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。 基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem><p>エンドポイントで servicebus 名前空間を含む URL </p></listitem><listitem><p>EntityPath - サービス バス エンティティ (キュー/トピック/eventhub/サブスクリプション/consumergroup/パーティション) へのパス </p></listitem><listitem><p>SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキーの名前。 </p></listitem><listitem><p>SharedAccessKey -、対応する共有アクセス ポリシー規則の名前空間またはエンティティのキー。 </p></listitem></itemizedlist></p>"
+    summary: "<p><span data-ttu-id=\"9dc42-124\">\r\n  <xref uid=\"com.microsoft.azure.eventhubs._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref> ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-124\">\r\n  <xref uid=\"com.microsoft.azure.eventhubs._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref> can be used to construct a connection string which can establish communication with ServiceBus entities.</span></span> <span data-ttu-id=\"9dc42-125\">既存の接続文字列で基本的な検証を実行するも使用できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-125\">It can also be used to perform basic validation on an existing connection string.</span></span> </p>\n<p><span data-ttu-id=\"9dc42-126\">サンプル コードに示します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-126\">Sample Code:</span></span> <pre><code>    ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(\n        \"ServiceBusNamespaceName\",\n        \"ServiceBusEntityName\", // eventHubName or QueueName or TopicName\n        \"SharedAccessSignatureKeyName\",\n        \"SharedAccessSignatureKey\");\n    \n    String connectionString = connectionStringBuilder.toString();\n    </code></pre></p>\n<p><span data-ttu-id=\"9dc42-127\">接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-127\">A connection string is basically a string consisted of key-value pair separated by \";\".</span></span> <span data-ttu-id=\"9dc42-128\">基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem></span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-128\">Basic format is {{ &lt;}key{&gt;}={ &lt;}value{&gt;}[;{ &lt;}key{&gt;}={ &lt;}value{&gt;}]} where supported key name are as follow: <itemizedlist><listitem></span></span><p><span data-ttu-id=\"9dc42-129\">エンドポイントで servicebus 名前空間を含む URL</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-129\">Endpoint - the URL that contains the servicebus namespace</span></span> </p></listitem><listitem><p><span data-ttu-id=\"9dc42-130\">EntityPath - サービス バス エンティティ (キュー/トピック/eventhub/サブスクリプション/consumergroup/パーティション) へのパス</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-130\">EntityPath - the path to the service bus entity (queue/topic/eventhub/subscription/consumergroup/partition)</span></span> </p></listitem><listitem><p><span data-ttu-id=\"9dc42-131\">SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキーの名前。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-131\">SharedAccessKeyName - the key name to the corresponding shared access policy rule for the namespace, or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id=\"9dc42-132\">SharedAccessKey -、対応する共有アクセス ポリシー規則の名前空間またはエンティティのキー。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-132\">SharedAccessKey - the key for the corresponding shared access policy rule of the namespace or entity.</span></span> </p></listitem></itemizedlist></p>"
     syntax:
       content: public class ConnectionStringBuilder
   - uid: com.microsoft.azure.eventhubs._error_context
@@ -182,13 +182,13 @@ references:
     fullName: com.microsoft.azure.eventhubs.EventData
     type: Class
     summary: |-
-      <p>送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。 各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
-      <p>受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。 </p>
-      <p>ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink><pre>
+      <p><span data-ttu-id="9dc42-133">送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。</span><span class="sxs-lookup"><span data-stu-id="9dc42-133">The data structure encapsulating the Event being sent-to and received-from EventHubs.</span></span> <span data-ttu-id="9dc42-134">各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-134">Each EventHubs partition can be visualized as a Stream of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>.</span></span> </p>
+      <p><span data-ttu-id="9dc42-135">受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="9dc42-135">Serializing a received <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> with AMQP sections other than ApplicationProperties (with primitive java types) and Data section is not supported.</span></span> </p>
+      <p><span data-ttu-id="9dc42-136">ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-136">Here's how AMQP message sections map to <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>.</span></span> <span data-ttu-id="9dc42-137">ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink></span><span class="sxs-lookup"><span data-stu-id="9dc42-137">Here's the reference used for AMQP 1.0 specification: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink></span></span><pre>
       i.   <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> - AMQPMessage.ApplicationProperties section
       ii.  <xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref> - if AMQPMessage.Body has Data section
       iii. <xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">getObject()</xref> - if AMQPMessage.Body has AMQPValue or AMQPSequence sections
-      </pre> Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。 高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      </pre> <span data-ttu-id="9dc42-138">Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-138">While using client libraries released by Microsoft Azure EventHubs, sections (i) and (ii) alone are sufficient.</span></span> <span data-ttu-id="9dc42-139">高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-139">Section (iii) is used for advanced scenarios, where the sending application uses third-party AMQP library to send the message to EventHubs and the receiving application uses this client library to receive <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>.</span></span> </p>
     syntax:
       content: public class EventData
   - uid: com.microsoft.azure.eventhubs._event_data_batch
@@ -198,7 +198,7 @@ references:
     nameWithType: EventDataBatch
     fullName: com.microsoft.azure.eventhubs.EventDataBatch
     type: Class
-    summary: <p>バッチ/コレクションを作成するためのヘルパー クラス<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs へ送信中に使用されるオブジェクト </p>
+    summary: <p><span data-ttu-id="9dc42-140">バッチ/コレクションを作成するためのヘルパー クラス<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> EventHubs へ送信中に使用されるオブジェクト</span><span class="sxs-lookup"><span data-stu-id="9dc42-140">Helper class for creating a batch/collection of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> objects to be used while Sending to EventHubs</span></span> </p>
     syntax:
       content: public class EventDataBatch
   - uid: com.microsoft.azure.eventhubs._event_hub_client
@@ -209,7 +209,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.EventHubClient
     type: Class
     summary: |-
-      <p>クラスのすべて EventHub クライアントの操作が開始されるは、ここを固定します。</p>
+      <p><span data-ttu-id="9dc42-141">クラスのすべて EventHub クライアントの操作が開始されるは、ここを固定します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-141">Anchor class - all EventHub client operations STARTS here.</span></span></p>
       <p></p>
     syntax:
       content: public class EventHubClient extends ClientEntity implements IEventHubClient
@@ -220,7 +220,7 @@ references:
     nameWithType: EventHubException
     fullName: com.microsoft.azure.eventhubs.EventHubException
     type: Class
-    summary: <p>これは、基本例外をサービス バスは、すべてのエラー ケースを生成します。 </p>
+    summary: <p><span data-ttu-id="9dc42-142">これは、基本例外をサービス バスは、すべてのエラー ケースを生成します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-142">This is the base exception that service bus will produce for all error cases.</span></span> </p>
     syntax:
       content: public class EventHubException
   - uid: com.microsoft.azure.eventhubs._event_hub_partition_runtime_information
@@ -277,7 +277,7 @@ references:
     nameWithType: IllegalConnectionStringFormatException
     fullName: com.microsoft.azure.eventhubs.IllegalConnectionStringFormatException
     type: Class
-    summary: <p>指定した接続文字列は接続の要件を満たしていない場合、この例外がスローされます。 </p>
+    summary: <p><span data-ttu-id="9dc42-143">指定した接続文字列は接続の要件を満たしていない場合、この例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-143">This exception is thrown when the connection string provided does not meet the requirement for connection.</span></span> </p>
     syntax:
       content: public class IllegalConnectionStringFormatException
   - uid: com.microsoft.azure.eventhubs._illegal_entity_exception
@@ -288,7 +288,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.IllegalEntityException
     type: Class
     summary: |-
-      <p>この例外は、次の理由。<itemizedlist><listitem><p>エンティティ ユーザーが接続しようとしたときに存在しません </p></listitem><listitem><p>接続するエンティティのユーザーが本人が無効になっています </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="9dc42-144">この例外は、次の理由。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="9dc42-144">This exception is thrown for the following reasons: <itemizedlist><listitem></span></span><p><span data-ttu-id="9dc42-145">エンティティ ユーザーが接続しようとしたときに存在しません</span><span class="sxs-lookup"><span data-stu-id="9dc42-145">When the entity user attempted to connect does not exist</span></span> </p></listitem><listitem><p><span data-ttu-id="9dc42-146">接続するエンティティのユーザーが本人が無効になっています</span><span class="sxs-lookup"><span data-stu-id="9dc42-146">The entity user wants to connect is disabled</span></span> </p></listitem></itemizedlist></p>
       <p></p>
     syntax:
       content: public class IllegalEntityException extends EventHubException
@@ -335,7 +335,7 @@ references:
     nameWithType: MessageReceiver
     fullName: com.microsoft.azure.eventhubs.MessageReceiver
     type: Class
-    summary: <p>詳細は非同期にリアクターのイベント駆動モデルを変換すべて amqp を抽象化する一般的な受信者が関連する Api を受信 </p>
+    summary: <p><span data-ttu-id="9dc42-147">詳細は非同期にリアクターのイベント駆動モデルを変換すべて amqp を抽象化する一般的な受信者が関連する Api を受信</span><span class="sxs-lookup"><span data-stu-id="9dc42-147">Common Receiver that abstracts all amqp related details translates event-driven reactor model into async receive Api</span></span> </p>
     syntax:
       content: public class MessageReceiver extends ClientEntity implements IAmqpReceiver
   - uid: com.microsoft.azure.eventhubs._message_sender
@@ -345,7 +345,7 @@ references:
     nameWithType: MessageSender
     fullName: com.microsoft.azure.eventhubs.MessageSender
     type: Class
-    summary: <p>すべてを抽象化 amqp 関連する詳細非同期送信 Api リアクターのイベント駆動モデルに変換 </p>
+    summary: <p><span data-ttu-id="9dc42-148">すべてを抽象化 amqp 関連する詳細非同期送信 Api リアクターのイベント駆動モデルに変換</span><span class="sxs-lookup"><span data-stu-id="9dc42-148">Abstracts all amqp related details translates event-driven reactor model into async send Api</span></span> </p>
     syntax:
       content: public class MessageSender extends ClientEntity implements IAmqpSender
   - uid: com.microsoft.azure.eventhubs._messaging_factory
@@ -355,7 +355,7 @@ references:
     nameWithType: MessagingFactory
     fullName: com.microsoft.azure.eventhubs.MessagingFactory
     type: Class
-    summary: <p>関連するすべての amqp について詳しく説明し、公開 AmqpConnection の要約オブジェクトの管理接続のライフ サイクル </p>
+    summary: <p><span data-ttu-id="9dc42-149">関連するすべての amqp について詳しく説明し、公開 AmqpConnection の要約オブジェクトの管理接続のライフ サイクル</span><span class="sxs-lookup"><span data-stu-id="9dc42-149">Abstracts all amqp related details and exposes AmqpConnection object Manages connection life-cycle</span></span> </p>
     syntax:
       content: 'public class MessagingFactory extends ClientEntity implements IAmqpConnection,ISessionProvider'
   - uid: com.microsoft.azure.eventhubs._operation_cancelled_exception
@@ -365,7 +365,7 @@ references:
     nameWithType: OperationCancelledException
     fullName: com.microsoft.azure.eventhubs.OperationCancelledException
     type: Class
-    summary: <p>この例外は、基になる Amqp 層が異常なリンクを検出すると、中止または予期しない方法で接続の切断します。 </p>
+    summary: <p><span data-ttu-id="9dc42-150">この例外は、基になる Amqp 層が異常なリンクを検出すると、中止または予期しない方法で接続の切断します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-150">This exception is thrown when the underlying Amqp layer encounter an abnormal link abort or disconnect of connection in an unexpected fashion.</span></span> </p>
     syntax:
       content: public class OperationCancelledException extends EventHubException
   - uid: com.microsoft.azure.eventhubs._partition_receive_handler
@@ -376,7 +376,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.PartitionReceiveHandler
     type: Class
     summary: |-
-      <p>受信操作のハンドラー クラスです。 この抽象クラスの実装を使用して、使用する場合は、ユーザーの操作を指定する<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>の setReceiveHandler() します。</p>
+      <p><span data-ttu-id="9dc42-151">受信操作のハンドラー クラスです。</span><span class="sxs-lookup"><span data-stu-id="9dc42-151">A handler class for the receive operation.</span></span> <span data-ttu-id="9dc42-152">この抽象クラスの実装を使用して、使用する場合は、ユーザーの操作を指定する<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>の setReceiveHandler() します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-152">Use any implementation of this abstract class to specify user action when using <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>'s setReceiveHandler().</span></span></p>
       <p></p>
     syntax:
       content: public class PartitionReceiveHandler
@@ -388,8 +388,8 @@ references:
     fullName: com.microsoft.azure.eventhubs.PartitionReceiver
     type: Class
     summary: |-
-      <p>これは、EventHub パーティションからの受信の論理表現です。 </p>
-      <p>A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> ConsumerGroup + EventHub パーティションに関連付けられたの組み合わせ。 <itemizedlist><listitem><p>エポック基づいている場合は<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (つまり、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> ! = 0) 作成されると、サービスは、の ConsumerGroup + パーティションごとに、1 つだけのアクティブな受信者が保証されます EventHubs コンボです。 これは、作成する方法をお勧め、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。 </p></listitem><listitem><p>複数の受信者の ConsumerGroup + パーティションあたりコンボを作成するエポック以外の受信側です。 </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="9dc42-153">これは、EventHub パーティションからの受信の論理表現です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-153">This is a logical representation of receiving from a EventHub partition.</span></span> </p>
+      <p><span data-ttu-id="9dc42-154">A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> ConsumerGroup + EventHub パーティションに関連付けられたの組み合わせ。</span><span class="sxs-lookup"><span data-stu-id="9dc42-154">A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> is tied to a ConsumerGroup + EventHub Partition combination.</span></span> <itemizedlist><listitem><p><span data-ttu-id="9dc42-155">エポック基づいている場合は<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (つまり、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> ! = 0) 作成されると、サービスは、の ConsumerGroup + パーティションごとに、1 つだけのアクティブな受信者が保証されます EventHubs コンボです。</span><span class="sxs-lookup"><span data-stu-id="9dc42-155">If an epoch based <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (i.e., <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> != 0) is created, EventHubs service will guarantee only 1 active receiver exists per ConsumerGroup + Partition combo.</span></span> <span data-ttu-id="9dc42-156">これは、作成する方法をお勧め、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-156">This is the recommended approach to create a <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>.</span></span> </p></listitem><listitem><p><span data-ttu-id="9dc42-157">複数の受信者の ConsumerGroup + パーティションあたりコンボを作成するエポック以外の受信側です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-157">Multiple receivers per ConsumerGroup + Partition combo can be created using non-epoch receivers.</span></span> </p></listitem></itemizedlist></p>
       <p></p>
     syntax:
       content: public class PartitionReceiver extends ClientEntity implements IReceiverSettingsProvider
@@ -401,7 +401,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.PartitionSender
     type: Class
     summary: |-
-      <p>この送信元のクラスは、イベント、特定の EventHub パーティションへの送信の論理表現です。 特定のパーティションにイベントを送信しない場合がある場合、このクラスは使用しません。 代わりに、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient #send</xref>メソッドです。</p>
+      <p><span data-ttu-id="9dc42-158">この送信元のクラスは、イベント、特定の EventHub パーティションへの送信の論理表現です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-158">This sender class is a logical representation of sending events to a specific EventHub partition.</span></span> <span data-ttu-id="9dc42-159">特定のパーティションにイベントを送信しない場合がある場合、このクラスは使用しません。</span><span class="sxs-lookup"><span data-stu-id="9dc42-159">Do not use this class if you do not care about sending events to specific partitions.</span></span> <span data-ttu-id="9dc42-160">代わりに、 <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient #send</xref>メソッドです。</span><span class="sxs-lookup"><span data-stu-id="9dc42-160">Instead, use <xref uid="com.microsoft.azure.eventhubs._event_hub_client.send(final EventData)" data-throw-if-not-resolved="false">EventHubClient#send</xref> method.</span></span></p>
       <p></p>
     syntax:
       content: public class PartitionSender extends ClientEntity
@@ -424,7 +424,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.PayloadSizeExceededException
     type: Class
     summary: |-
-      <p>ユーザーが、イベント データやサービスによって定義されている許可されたペイロードのサイズを超えました仲介型メッセージを送信しようとした場合、この例外がスローされます。 注バッチのシナリオに制限を送信するには、可能なバッチのオーバーヘッドを含めることができます。</p>
+      <p><span data-ttu-id="9dc42-161">ユーザーが、イベント データやサービスによって定義されている許可されたペイロードのサイズを超えました仲介型メッセージを送信しようとした場合、この例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-161">this exception is thrown when user attempts to send a event data or brokered message that has exceeded the allowed payload size as defined by the service.</span></span> <span data-ttu-id="9dc42-162">注バッチのシナリオに制限を送信するには、可能なバッチのオーバーヘッドを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-162">Note that in a batch send scenario the limit can include possible batch overhead.</span></span></p>
       <p></p>
     syntax:
       content: public class PayloadSizeExceededException extends EventHubException
@@ -463,7 +463,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.ReceiverDisconnectedException
     type: Class
     summary: |-
-      <p>次の理由のいずれかの理由、EventHubReceiver は接続が切断されるときに、この例外がスローされます。<itemizedlist><listitem><p>エポック レシーバーがある場合に、イベント ハブ パーティションに非エポック レシーバーを接続するユーザーの試行は、パーティションに接続します。 </p></listitem><listitem><p>エポック受信者を特定のパーティションを使用しているより高いエポック値を持つ別のエポック受信アダプターが同じパーティションに接続します。 </p></listitem></itemizedlist>ユーザーは、か、すべてのコード非エポック受信機を使用している 1 つだけのエポック受信機が時間内の任意の時点で、特定のパーティションの処理があることを確認することを確認してください。</p>
+      <p><span data-ttu-id="9dc42-163">次の理由のいずれかの理由、EventHubReceiver は接続が切断されるときに、この例外がスローされます。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="9dc42-163">This exception is thrown when a EventHubReceiver is being disconnected because of one of the following reason: <itemizedlist><listitem></span></span><p><span data-ttu-id="9dc42-164">エポック レシーバーがある場合に、イベント ハブ パーティションに非エポック レシーバーを接続するユーザーの試行は、パーティションに接続します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-164">user attempts to connect a non-epoch receiver to a event hub partition, when there is an epoch receiver connected to the partition.</span></span> </p></listitem><listitem><p><span data-ttu-id="9dc42-165">エポック受信者を特定のパーティションを使用しているより高いエポック値を持つ別のエポック受信アダプターが同じパーティションに接続します。</span><span class="sxs-lookup"><span data-stu-id="9dc42-165">you are using an epoch receiver for a given partition but another epoch receiver with a higher epoch value connects to the same partition.</span></span> </p><span data-ttu-id="9dc42-166"></listitem></itemizedlist>ユーザーは、か、すべてのコード非エポック受信機を使用している 1 つだけのエポック受信機が時間内の任意の時点で、特定のパーティションの処理があることを確認することを確認してください。</span><span class="sxs-lookup"><span data-stu-id="9dc42-166"></listitem></itemizedlist> User should make sure either all code are using non-epoch receivers, or ensure that there is only one epoch receiver processing a given partition at any given point in time.</span></span></p>
       <p></p>
     syntax:
       content: public class ReceiverDisconnectedException extends EventHubException
@@ -474,7 +474,7 @@ references:
     nameWithType: ReceiverOptions
     fullName: com.microsoft.azure.eventhubs.ReceiverOptions
     type: Class
-    summary: <p>作成するときにオンまたはオフにできますが、さまざまな省略可能な動作を表す、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。 </p>
+    summary: <p><span data-ttu-id="9dc42-167">作成するときにオンまたはオフにできますが、さまざまな省略可能な動作を表す、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-167">Represents various optional behaviors which can be turned on or off during the creation of a <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>.</span></span> </p>
     syntax:
       content: public class ReceiverOptions
   - uid: com.microsoft.azure.eventhubs._receiver_runtime_information
@@ -484,7 +484,7 @@ references:
     nameWithType: ReceiverRuntimeInformation
     fullName: com.microsoft.azure.eventhubs.ReceiverRuntimeInformation
     type: Class
-    summary: <p>テンポラルの受信側のランタイム情報を表す、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。 現在の受信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>と<xref uid="com.microsoft.azure.eventhubs._receiver_runtime_information" data-throw-if-not-resolved="false">ReceiverRuntimeInformation</xref>保留中のイベント (をまだは処理されません) のおおよその値を検索するために使用できます。 </p>
+    summary: <p><span data-ttu-id="9dc42-168">テンポラルの受信側のランタイム情報を表す、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9dc42-168">Represents the temporal receiver runtime information for a <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>.</span></span> <span data-ttu-id="9dc42-169">現在の受信<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>と<xref uid="com.microsoft.azure.eventhubs._receiver_runtime_information" data-throw-if-not-resolved="false">ReceiverRuntimeInformation</xref>保留中のイベント (をまだは処理されません) のおおよその値を検索するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-169">Current received <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> and <xref uid="com.microsoft.azure.eventhubs._receiver_runtime_information" data-throw-if-not-resolved="false">ReceiverRuntimeInformation</xref> can be used to find approximate value of pending events (which are not processed yet).</span></span> </p>
     syntax:
       content: public class ReceiverRuntimeInformation
   - uid: com.microsoft.azure.eventhubs._replayable_work_item
@@ -505,7 +505,7 @@ references:
     nameWithType: RetryExponential
     fullName: com.microsoft.azure.eventhubs.RetryExponential
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>実装の再試行の間の遅延が指数の方法で拡張されます。 <xref uid=\"com.microsoft.azure.eventhubs._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>を使用して、クライアントの操作に対して設定できる<xref uid=\"com.microsoft.azure.eventhubs._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>です。 DeltaBackOff (MaximumBackoff - MinimumBackoff) の関数である retryFactor を使用して計算されます RetryIntervals と MaximumRetryCount </p>"
+    summary: "<p><span data-ttu-id=\"9dc42-170\">\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>実装の再試行の間の遅延が指数の方法で拡張されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-170\">\r\n\r\n  <xref uid=\"com.microsoft.azure.eventhubs._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> implementation where the delay between retries will grow in an exponential manner.</span></span> <span data-ttu-id=\"9dc42-171\"><xref uid=\"com.microsoft.azure.eventhubs._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>を使用して、クライアントの操作に対して設定できる<xref uid=\"com.microsoft.azure.eventhubs._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-171\"><xref uid=\"com.microsoft.azure.eventhubs._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> can be set on the client operations using <xref uid=\"com.microsoft.azure.eventhubs._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>.</span></span> <span data-ttu-id=\"9dc42-172\">DeltaBackOff (MaximumBackoff - MinimumBackoff) の関数である retryFactor を使用して計算されます RetryIntervals と MaximumRetryCount</span><span class=\"sxs-lookup\"><span data-stu-id=\"9dc42-172\">RetryIntervals will be computed using a retryFactor which is a function of deltaBackOff (MaximumBackoff - MinimumBackoff) and MaximumRetryCount</span></span> </p>"
     syntax:
       content: public class RetryExponential extends RetryPolicy
   - uid: com.microsoft.azure.eventhubs._retry_policy
@@ -534,7 +534,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.ServerBusyException
     type: Class
     summary: |-
-      <p>現在のエンティティのアクティビティがサービスに過剰な負荷を挿入がサーバーのビジー状態である例外がスローされます。 この例外が発生したときにユーザーとエンティティの再試行、および実行時の操作は、もう一度の前に、少なくとも 4 秒を待機する必要があります。</p>
+      <p><span data-ttu-id="9dc42-173">現在のエンティティのアクティビティがサービスに過剰な負荷を挿入がサーバーのビジー状態である例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-173">Server busy exception is thrown when the current entity's activity has put excessive load onto the service.</span></span> <span data-ttu-id="9dc42-174">この例外が発生したときにユーザーとエンティティの再試行、および実行時の操作は、もう一度の前に、少なくとも 4 秒を待機する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9dc42-174">When encountered this exception user should wait at least 4 seconds before any retry/runtime operations for the said entity again.</span></span></p>
       <p></p>
     syntax:
       content: public class ServerBusyException extends EventHubException
@@ -564,7 +564,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.TimeoutException
     type: Class
     summary: |-
-      <p>操作があらかじめ設定された時間制限を超えたときに、この例外がスローされます。 ユーザーは、接続はクライアント プロセスとサービス間で正常を確認する必要があります。</p>
+      <p><span data-ttu-id="9dc42-175">操作があらかじめ設定された時間制限を超えたときに、この例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="9dc42-175">This exception is thrown when the operation has exceeded the predetermined time limit.</span></span> <span data-ttu-id="9dc42-176">ユーザーは、接続はクライアント プロセスとサービス間で正常を確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9dc42-176">User should check connectivity is healthy between client process and service.</span></span></p>
       <p></p>
     syntax:
       content: public class TimeoutException extends EventHubException
@@ -584,7 +584,7 @@ references:
     nameWithType: Timer
     fullName: com.microsoft.azure.eventhubs.Timer
     type: Class
-    summary: <p>後で軽量のスレッドで置き換えることができます、スケジューラの機能の抽象化 </p>
+    summary: <p><span data-ttu-id="9dc42-177">後で軽量のスレッドで置き換えることができます、スケジューラの機能の抽象化</span><span class="sxs-lookup"><span data-stu-id="9dc42-177">An abstraction for a Scheduler functionality - which can later be replaced by a light-weight Thread</span></span> </p>
     syntax:
       content: public class Timer
   - uid: com.microsoft.azure.eventhubs._timer_type

@@ -18,7 +18,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ReceiverDisconnectedException.java
       startLine: 18
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>次の理由のいずれかの理由、EventHubReceiver は接続が切断されるときに、この例外がスローされます。<itemizedlist><listitem><p>エポック レシーバーがある場合に、イベント ハブ パーティションに非エポック レシーバーを接続するユーザーの試行は、パーティションに接続します。 </p></listitem><listitem><p>エポック受信者を特定のパーティションを使用しているより高いエポック値を持つ別のエポック受信アダプターが同じパーティションに接続します。 </p></listitem></itemizedlist>ユーザーは、か、すべてのコード非エポック受信機を使用している 1 つだけのエポック受信機が時間内の任意の時点で、特定のパーティションの処理があることを確認することを確認してください。 </p>
+    summary: '<p><span data-ttu-id="b1d80-101">次の理由のいずれかの理由、EventHubReceiver は接続が切断されるときに、この例外がスローされます。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="b1d80-101">This exception is thrown when a EventHubReceiver is being disconnected because of one of the following reason: <itemizedlist><listitem></span></span><p><span data-ttu-id="b1d80-102">エポック レシーバーがある場合に、イベント ハブ パーティションに非エポック レシーバーを接続するユーザーの試行は、パーティションに接続します。</span><span class="sxs-lookup"><span data-stu-id="b1d80-102">user attempts to connect a non-epoch receiver to a event hub partition, when there is an epoch receiver connected to the partition.</span></span> </p></listitem><listitem><p><span data-ttu-id="b1d80-103">エポック受信者を特定のパーティションを使用しているより高いエポック値を持つ別のエポック受信アダプターが同じパーティションに接続します。</span><span class="sxs-lookup"><span data-stu-id="b1d80-103">you are using an epoch receiver for a given partition but another epoch receiver with a higher epoch value connects to the same partition.</span></span> </p><span data-ttu-id="b1d80-104"></listitem></itemizedlist>ユーザーは、か、すべてのコード非エポック受信機を使用している 1 つだけのエポック受信機が時間内の任意の時点で、特定のパーティションの処理があることを確認することを確認してください。</span><span class="sxs-lookup"><span data-stu-id="b1d80-104"></listitem></itemizedlist> User should make sure either all code are using non-epoch receivers, or ensure that there is only one epoch receiver processing a given partition at any given point in time.</span></span> </p>'
     syntax:
       content: public class ReceiverDisconnectedException extends ServiceBusException
     inheritance:
@@ -52,12 +52,12 @@ references:
     nameWithType: ServiceBusException.getIsTransient()
     fullName: boolean com.microsoft.azure.servicebus.primitives.ServiceBusException.getIsTransient()
     type: Method
-    summary: <p>例外が、一時的なエラーかを示すブール値。 </p>
+    summary: <p><span data-ttu-id="b1d80-105">例外が、一時的なエラーかを示すブール値。</span><span class="sxs-lookup"><span data-stu-id="b1d80-105">A boolean indicating if the exception is a transient error or not.</span></span> </p>
     syntax:
       content: public boolean getIsTransient()
       return:
         type: 4fc6e284
-        description: <p>ユーザーがその他の介入なし例外を生成した操作を再試行できる場合に true を返します。 </p>
+        description: <p><span data-ttu-id="b1d80-106">ユーザーがその他の介入なし例外を生成した操作を再試行できる場合に true を返します。</span><span class="sxs-lookup"><span data-stu-id="b1d80-106">returns true when user can retry the operation that generated the exception without additional intervention.</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._service_bus_exception.getMessage()
     parent: com.microsoft.azure.servicebus.primitives._service_bus_exception
     href: com.microsoft.azure.servicebus.primitives._service_bus_exception.yml
@@ -132,6 +132,6 @@ references:
     nameWithType: ServiceBusException
     fullName: com.microsoft.azure.servicebus.primitives.ServiceBusException
     type: Class
-    summary: <p>これは、すべてのエラーの場合のサービス バスを生成する基本例外です。 </p>
+    summary: <p><span data-ttu-id="b1d80-107">これは、すべてのエラーの場合のサービス バスを生成する基本例外です。</span><span class="sxs-lookup"><span data-stu-id="b1d80-107">This is the base exception that service bus will generate for all error cases.</span></span> </p>
     syntax:
       content: public class ServiceBusException

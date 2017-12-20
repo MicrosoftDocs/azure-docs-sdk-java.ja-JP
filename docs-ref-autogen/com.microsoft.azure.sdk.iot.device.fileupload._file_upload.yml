@@ -22,7 +22,7 @@ items:
       path: device/iot-device-client/src/main/java/com/microsoft/azure/sdk/iot/device/fileupload/FileUpload.java
       startLine: 21
     package: com.microsoft.azure.sdk.iot.device.fileupload
-    summary: <p>Iot Hub を使用して Azure ストレージ内のファイルをアップロードするための手段を提供します。 </p>
+    summary: <p><span data-ttu-id="e5285-101">Iot Hub を使用して Azure ストレージ内のファイルをアップロードするための手段を提供します。</span><span class="sxs-lookup"><span data-stu-id="e5285-101">Provide means to upload file in the Azure Storage using the IoTHub.</span></span> </p>
     syntax:
       content: public class FileUpload
     inheritance:
@@ -44,13 +44,13 @@ items:
       startLine: 168
     package: com.microsoft.azure.sdk.iot.device.fileupload
     summary: |-
-      <p>すべての既存のアップロードをキャンセルして、スレッド プールをシャット ダウンのファイルのアップロードを閉じます。</p>
+      <p><span data-ttu-id="e5285-102">すべての既存のアップロードをキャンセルして、スレッド プールをシャット ダウンのファイルのアップロードを閉じます。</span><span class="sxs-lookup"><span data-stu-id="e5285-102">Close the file upload cancelling all existing uploads and shutting down the thread pool.</span></span></p>
       <p></p>
     syntax:
       content: public void closeNow()
     exceptions:
       - type: cbf33bbe
-        description: <p>場合は、inputStream で I/O エラーが発生します。 </p>
+        description: <p><span data-ttu-id="e5285-103">場合は、inputStream で I/O エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="e5285-103">if an I/O error occurs in the inputStream.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.device.fileupload._file_upload.FileUpload(DeviceClientConfig)
     id: FileUpload(DeviceClientConfig)
     parent: com.microsoft.azure.sdk.iot.device.fileupload._file_upload
@@ -68,19 +68,19 @@ items:
       startLine: 38
     package: com.microsoft.azure.sdk.iot.device.fileupload
     summary: |-
-      <p>コンス トラクター</p>
+      <p><span data-ttu-id="e5285-104">コンス トラクター</span><span class="sxs-lookup"><span data-stu-id="e5285-104">CONSTRUCTOR</span></span></p>
       <p></p>
     syntax:
       content: public FileUpload(DeviceClientConfig config)
       parameters:
         - id: config
           type: com.microsoft.azure.sdk.iot.device._device_client_config
-          description: <p>デバイスのセットをクライアントの構成です。 </p>
+          description: <p><span data-ttu-id="e5285-105">デバイスのセットをクライアントの構成です。</span><span class="sxs-lookup"><span data-stu-id="e5285-105">is the set of device client configurations.</span></span> </p>
     exceptions:
       - type: 3c87bd19
-        description: <p>場合は、パラメーターのいずれかが null です。 </p>
+        description: <p><span data-ttu-id="e5285-106">場合は、パラメーターのいずれかが null です。</span><span class="sxs-lookup"><span data-stu-id="e5285-106">if one of the parameters is null.</span></span> </p>
       - type: cbf33bbe
-        description: <p>場合、ファイルのアップロードを制御するアーティファクトを作成することはできません。 </p>
+        description: <p><span data-ttu-id="e5285-107">場合、ファイルのアップロードを制御するアーティファクトを作成することはできません。</span><span class="sxs-lookup"><span data-stu-id="e5285-107">if cannot create the artifacts to control the file upload.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.device.fileupload._file_upload.uploadToBlobAsync(String,InputStream,long,IotHubEventCallback,Object)'
     id: 'uploadToBlobAsync(String,InputStream,long,IotHubEventCallback,Object)'
     parent: com.microsoft.azure.sdk.iot.device.fileupload._file_upload
@@ -98,33 +98,33 @@ items:
       startLine: 91
     package: com.microsoft.azure.sdk.iot.device.fileupload
     summary: |-
-      <p>Iot hub に関連付けられているコンテナーにアップロードします。 この関数は、アップロード プロセスを開始し、実行を呼び出し元に戻ります。 アップロード プロセスは、バック グラウンドで実行されます。 これが完了したら、バック グラウンド スレッドにはアップロードのステータスでコールバックがトリガーされます。</p>
+      <p><span data-ttu-id="e5285-108">Iot hub に関連付けられているコンテナーにアップロードします。</span><span class="sxs-lookup"><span data-stu-id="e5285-108">Upload the file to container, which was associated to the iothub.</span></span> <span data-ttu-id="e5285-109">この関数は、アップロード プロセスを開始し、実行を呼び出し元に戻ります。</span><span class="sxs-lookup"><span data-stu-id="e5285-109">This function will start the upload process, and back the execution to the caller.</span></span> <span data-ttu-id="e5285-110">アップロード プロセスは、バック グラウンドで実行されます。</span><span class="sxs-lookup"><span data-stu-id="e5285-110">The upload process will be executed in background.</span></span> <span data-ttu-id="e5285-111">これが完了したら、バック グラウンド スレッドにはアップロードのステータスでコールバックがトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="e5285-111">When it is completed, the background thread will trigger the callback with the upload status.</span></span></p>
       <p></p>
     syntax:
       content: 'public synchronized void uploadToBlobAsync(String blobName, InputStream inputStream, long streamLength, IotHubEventCallback statusCallback, Object statusCallbackContext)'
       parameters:
         - id: blobName
           type: '26831127'
-          description: <p>コンテナー内のファイルの名前です。 </p>
+          description: <p><span data-ttu-id="e5285-112">コンテナー内のファイルの名前です。</span><span class="sxs-lookup"><span data-stu-id="e5285-112">is the name of the file in the container.</span></span> </p>
         - id: inputStream
           type: 76fcb9b7
-          description: <p>入力ストリームです。 </p>
+          description: <p><span data-ttu-id="e5285-113">入力ストリームです。</span><span class="sxs-lookup"><span data-stu-id="e5285-113">is the input stream.</span></span> </p>
         - id: streamLength
           type: 0364520f
-          description: <p>ストリームの長さです。 </p>
+          description: <p><span data-ttu-id="e5285-114">ストリームの長さです。</span><span class="sxs-lookup"><span data-stu-id="e5285-114">is the stream length.</span></span> </p>
         - id: statusCallback
           type: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
-          description: <p>(状態) のアップロードが完了したことを通知するコールバックです。 </p>
+          description: <p><span data-ttu-id="e5285-115">(状態) のアップロードが完了したことを通知するコールバックです。</span><span class="sxs-lookup"><span data-stu-id="e5285-115">is the callback to notify that the upload is completed (with status).</span></span> </p>
         - id: statusCallbackContext
           type: '79317049'
-          description: <p>並列で複数のアップロードを許可する、コールバックのコンテキストします。 </p>
+          description: '<p><span data-ttu-id="e5285-116">並列で複数のアップロードを許可する、コールバックのコンテキストします。</span><span class="sxs-lookup"><span data-stu-id="e5285-116">is the context of the callback, allowing multiple uploads in parallel.</span></span> </p>'
       return:
         type: 5c0b90ca
     exceptions:
       - type: 3c87bd19
-        description: "<p>パラメーターのいずれかが有効な場合は。 blobName は<code>null \r\n\r\n    </code>か、空、inputStream<code>null \r\n\r\n    </code>または利用できない、streamLength 負の場合、statusCallback は<code>null \r\n\r\n    </code></p>"
+        description: "<p><span data-ttu-id=\"e5285-117\">パラメーターのいずれかが有効な場合は。</span><span class=\"sxs-lookup\"><span data-stu-id=\"e5285-117\">if one of the parameters is invalid.</span></span> <span data-ttu-id=\"e5285-118\">blobName は<code>null \r\n\r\n    </code>か、空、inputStream<code>null \r\n\r\n    </code>または利用できない、streamLength 負の場合、statusCallback は<code>null \r\n\r\n    </code></span><span class=\"sxs-lookup\"><span data-stu-id=\"e5285-118\">blobName is<code>null \r\n\r\n    </code> or empty, inputStream is<code>null \r\n\r\n    </code> or not available, streamLength is negative, statusCallback is<code>null \r\n\r\n    </code></span></span></p>"
       - type: cbf33bbe
-        description: <p>場合は、inputStream で I/O エラーが発生します。 </p>
+        description: <p><span data-ttu-id="e5285-119">場合は、inputStream で I/O エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="e5285-119">if an I/O error occurs in the inputStream.</span></span> </p>
 references:
   - uid: 3c87bd19
     spec.java:
@@ -185,7 +185,7 @@ references:
     nameWithType: FileUploadInProgress
     fullName: com.microsoft.azure.sdk.iot.device.fileupload.FileUploadInProgress
     type: Class
-    summary: <p>進行中のファイルのアップロードを制御します。 </p>
+    summary: <p><span data-ttu-id="e5285-120">進行中のファイルのアップロードを制御します。</span><span class="sxs-lookup"><span data-stu-id="e5285-120">Control the file uploads that are in progress</span></span> </p>
     syntax:
       content: public class FileUploadInProgress
   - uid: com.microsoft.azure.sdk.iot.device.transport.https._https_transport_manager
@@ -195,7 +195,7 @@ references:
     nameWithType: HttpsTransportManager
     fullName: com.microsoft.azure.sdk.iot.device.transport.https.HttpsTransportManager
     type: Class
-    summary: <p>Https 用のトランスポート マネージャーの実装です。 </p>
+    summary: <p><span data-ttu-id="e5285-121">Https 用のトランスポート マネージャーの実装です。</span><span class="sxs-lookup"><span data-stu-id="e5285-121">Implementation of the transport manager for https.</span></span> </p>
     syntax:
       content: public class HttpsTransportManager
   - uid: com.microsoft.azure.sdk.iot.device._device_client_config
@@ -205,7 +205,7 @@ references:
     nameWithType: DeviceClientConfig
     fullName: com.microsoft.azure.sdk.iot.device.DeviceClientConfig
     type: Class
-    summary: <p>IoT Hub クライアントの構成設定。 ユーザー定義のすべての設定を検証します。 </p>
+    summary: <p><span data-ttu-id="e5285-122">IoT Hub クライアントの構成設定。</span><span class="sxs-lookup"><span data-stu-id="e5285-122">Configuration settings for an IoT Hub client.</span></span> <span data-ttu-id="e5285-123">ユーザー定義のすべての設定を検証します。</span><span class="sxs-lookup"><span data-stu-id="e5285-123">Validates all user-defined settings.</span></span> </p>
     syntax:
       content: public class DeviceClientConfig
   - uid: com.microsoft.azure.sdk.iot.device._iot_hub_event_callback
@@ -216,7 +216,7 @@ references:
     fullName: com.microsoft.azure.sdk.iot.device.IotHubEventCallback
     type: Interface
     summary: |-
-      <p>IoT Hub イベント コールバックのインターフェイスです。</p>
-      <p>このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。 </p>
+      <p><span data-ttu-id="e5285-124">IoT Hub イベント コールバックのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="e5285-124">An interface for an IoT Hub event callback.</span></span></p>
+      <p><span data-ttu-id="e5285-125">このインターフェイスの実装を作成する開発者が必要し、トランスポートが呼び出されます<xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback #execute(IotHubStatusCode, Object)</xref> IoT Hub からの応答を受信するとします。</span><span class="sxs-lookup"><span data-stu-id="e5285-125">Developers are expected to create an implementation of this interface, and the transport will call <xref uid="com.microsoft.azure.sdk.iot.device._iot_hub_event_callback.execute(IotHubStatusCode,Object)" data-throw-if-not-resolved="false">IotHubEventCallback#execute(IotHubStatusCode, Object)</xref> upon receiving a response from an IoT Hub.</span></span> </p>
     syntax:
       content: public interface IotHubEventCallback

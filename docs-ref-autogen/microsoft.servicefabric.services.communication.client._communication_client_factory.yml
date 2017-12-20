@@ -22,7 +22,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.services/src/microsoft/servicefabric/services/communication/client/CommunicationClientFactory.java
       startLine: 11
     package: microsoft.servicefabric.services.communication.client
-    summary: <p>Service fabric サービスと対話する通信のクライアントのファクトリを提供するために実装する必要があります、インターフェイスを定義します。 </p>
+    summary: <p><span data-ttu-id="606b8-101">Service fabric サービスと対話する通信のクライアントのファクトリを提供するために実装する必要があります、インターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="606b8-101">Defines the interface that must be implemented to provide a factory for communication clients to talk to a service fabric service.</span></span> </p>
     syntax:
       content: public interface CommunicationClientFactory<TCommunicationClient extends CommunicationClient>
       typeParameters:
@@ -44,26 +44,26 @@ items:
       startLine: 61
     package: microsoft.servicefabric.services.communication.client
     summary: |-
-      <p>1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを再解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。 フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</p>
+      <p><span data-ttu-id="606b8-102">1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを再解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。</span><span class="sxs-lookup"><span data-stu-id="606b8-102">Re-resolves a partition of the specified service containing one or more communication listeners and returns a client to communicate to the endpoint corresponding to the given listenerName.</span></span> <span data-ttu-id="606b8-103">フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</span><span class="sxs-lookup"><span data-stu-id="606b8-103">The endpoint of the service is of the form - {"Endpoints":{"Listener1":"Endpoint1","Listener2":"Endpoint2" ...}}</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<TCommunicationClient> getClientAsync(ResolvedServicePartition previousRsp, TargetReplicaSelector targetReplicaSelector, String listenerName, OperationRetrySettings retrySettings)'
       parameters:
         - id: previousRsp
           type: system.fabric._resolved_service_partition
-          description: <p>以前の ResolvedServicePartition 値 </p>
+          description: <p><span data-ttu-id="606b8-104">以前の ResolvedServicePartition 値</span><span class="sxs-lookup"><span data-stu-id="606b8-104">Previous ResolvedServicePartition value</span></span> </p>
         - id: targetReplicaSelector
           type: microsoft.servicefabric.services.communication.client._target_replica_selector
-          description: <p>レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります </p>
+          description: '<p><span data-ttu-id="606b8-105">レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります</span><span class="sxs-lookup"><span data-stu-id="606b8-105">Specifies which replica in the partition identified by the partition key, the client should connect to</span></span> </p>'
         - id: listenerName
           type: '26831127'
-          description: <p>クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。 </p>
+          description: '<p><span data-ttu-id="606b8-106">クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-106">Specifies which listener in the endpoint of the chosen replica, to which the client should connect to</span></span> </p>'
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。 </p>
+          description: <p><span data-ttu-id="606b8-107">クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-107">Specifies the retry policy that should be used for exceptions that occur when creating the client.</span></span> </p>
       return:
         type: '87556530'
-        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクの結果は、 <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>(<xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>) オブジェクト。 </p>
+        description: <p><span data-ttu-id="606b8-108">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。</span><span class="sxs-lookup"><span data-stu-id="606b8-108">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> that represents outstanding operation.</span></span> <span data-ttu-id="606b8-109">タスクの結果は、 <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>(<xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>) オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="606b8-109">The result of the Task is the <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>(<xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>) object.</span></span> </p>
   - uid: 'microsoft.servicefabric.services.communication.client._communication_client_factory.getClientAsync(URI,ServicePartitionKey,TargetReplicaSelector,String,OperationRetrySettings)'
     id: 'getClientAsync(URI,ServicePartitionKey,TargetReplicaSelector,String,OperationRetrySettings)'
     parent: microsoft.servicefabric.services.communication.client._communication_client_factory
@@ -81,29 +81,29 @@ items:
       startLine: 34
     package: microsoft.servicefabric.services.communication.client
     summary: |-
-      <p>1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。 フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</p>
+      <p><span data-ttu-id="606b8-110">1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。</span><span class="sxs-lookup"><span data-stu-id="606b8-110">Resolves a partition of the specified service containing one or more communication listeners and returns a client to communicate to the endpoint corresponding to the given listenerName.</span></span> <span data-ttu-id="606b8-111">フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</span><span class="sxs-lookup"><span data-stu-id="606b8-111">The endpoint of the service is of the form - {"Endpoints":{"Listener1":"Endpoint1","Listener2":"Endpoint2" ...}}</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<TCommunicationClient> getClientAsync(URI serviceUri, ServicePartitionKey partitionKey, TargetReplicaSelector targetReplicaSelector, String listenerName, OperationRetrySettings retrySettings)'
       parameters:
         - id: serviceUri
           type: '62304784'
-          description: <p>サービスの Uri を解決するのには </p>
+          description: <p><span data-ttu-id="606b8-112">サービスの Uri を解決するのには</span><span class="sxs-lookup"><span data-stu-id="606b8-112">Uri of the service to resolve</span></span> </p>
         - id: partitionKey
           type: microsoft.servicefabric.services.client._service_partition_key
-          description: <p>解決するのには、パーティションを識別するキー </p>
+          description: <p><span data-ttu-id="606b8-113">解決するのには、パーティションを識別するキー</span><span class="sxs-lookup"><span data-stu-id="606b8-113">Key that identifies the partition to resolve</span></span> </p>
         - id: targetReplicaSelector
           type: microsoft.servicefabric.services.communication.client._target_replica_selector
-          description: <p>レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります </p>
+          description: '<p><span data-ttu-id="606b8-114">レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります</span><span class="sxs-lookup"><span data-stu-id="606b8-114">Specifies which replica in the partition identified by the partition key, the client should connect to</span></span> </p>'
         - id: listenerName
           type: '26831127'
-          description: <p>クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。 </p>
+          description: '<p><span data-ttu-id="606b8-115">クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-115">Specifies which listener in the endpoint of the chosen replica, to which the client should connect to</span></span> </p>'
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。 </p>
+          description: <p><span data-ttu-id="606b8-116">クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-116">Specifies the retry policy that should be used for exceptions that occur when creating the client.</span></span> </p>
       return:
         type: '87556530'
-        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクの結果は、 <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>(<xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>) オブジェクト。 </p>
+        description: <p><span data-ttu-id="606b8-117">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。</span><span class="sxs-lookup"><span data-stu-id="606b8-117">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> that represents outstanding operation.</span></span> <span data-ttu-id="606b8-118">タスクの結果は、 <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>(<xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>) オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="606b8-118">The result of the Task is the <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>(<xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>) object.</span></span> </p>
   - uid: 'microsoft.servicefabric.services.communication.client._communication_client_factory.reportOperationExceptionAsync(TCommunicationClient,ExceptionInformation,OperationRetrySettings)'
     id: 'reportOperationExceptionAsync(TCommunicationClient,ExceptionInformation,OperationRetrySettings)'
     parent: microsoft.servicefabric.services.communication.client._communication_client_factory
@@ -121,23 +121,23 @@ items:
       startLine: 81
     package: microsoft.servicefabric.services.communication.client
     summary: |-
-      <p>発生する例外処理、 <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>サービスにメッセージを送信するときに</p>
+      <p><span data-ttu-id="606b8-119">発生する例外処理、 <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref>サービスにメッセージを送信するときに</span><span class="sxs-lookup"><span data-stu-id="606b8-119">Handles the exceptions that occur in the <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">CommunicationClient</xref> when sending a message to the Service</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<OperationRetryControl> reportOperationExceptionAsync(TCommunicationClient client, ExceptionInformation exceptionInformation, OperationRetrySettings retrySettings)'
       parameters:
         - id: client
           type: 4500d4bf
-          description: <p>クライアントの通信 </p>
+          description: <p><span data-ttu-id="606b8-120">クライアントの通信</span><span class="sxs-lookup"><span data-stu-id="606b8-120">Communication client</span></span> </p>
         - id: exceptionInformation
           type: microsoft.servicefabric.services.communication.client._exception_information
-          description: <p>サービスと通信中に発生した例外に関する情報。 </p>
+          description: <p><span data-ttu-id="606b8-121">サービスと通信中に発生した例外に関する情報。</span><span class="sxs-lookup"><span data-stu-id="606b8-121">Information about exception that happened while communicating with the service.</span></span> </p>
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>報告された例外を処理するために使用する必要があります再試行ポリシーを指定します。 </p>
+          description: <p><span data-ttu-id="606b8-122">報告された例外を処理するために使用する必要があります再試行ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-122">Specifies the retry policy that should be used for handling the reported exception.</span></span> </p>
       return:
         type: 9cdf14d0microsoft.servicefabric.services.communication.client._operation_retry_controla08ddfce
-        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクの結果は、 <xref uid="microsoft.servicefabric.services.communication.client._operation_retry_control" data-throw-if-not-resolved="false">OperationRetryControl</xref>再試行ポリシーでこの例外の情報を提供するオブジェクト。 </p>
+        description: <p><span data-ttu-id="606b8-123">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。</span><span class="sxs-lookup"><span data-stu-id="606b8-123">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> that represents outstanding operation.</span></span> <span data-ttu-id="606b8-124">タスクの結果は、 <xref uid="microsoft.servicefabric.services.communication.client._operation_retry_control" data-throw-if-not-resolved="false">OperationRetryControl</xref>再試行ポリシーでこの例外の情報を提供するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="606b8-124">The result of the Task is a <xref uid="microsoft.servicefabric.services.communication.client._operation_retry_control" data-throw-if-not-resolved="false">OperationRetryControl</xref> object that provides information on retry policy for this exception.</span></span> </p>
 references:
   - uid: 4500d4bf
     spec.java:
@@ -182,7 +182,7 @@ references:
     nameWithType: ServiceRemotingClientFactory
     fullName: microsoft.servicefabric.services.remoting.client.ServiceRemotingClientFactory
     type: Interface
-    summary: <p>クライアント ファクトリには、リモート処理の通信を提供するために実装する必要がありますのあるインターフェイスを定義します。 </p>
+    summary: <p><span data-ttu-id="606b8-125">クライアント ファクトリには、リモート処理の通信を提供するために実装する必要がありますのあるインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="606b8-125">Defines the interface that must be implemented for providing the remoting communication client factory.</span></span> </p>
     syntax:
       content: public interface ServiceRemotingClientFactory
   - uid: microsoft.servicefabric.services.communication.client._communication_client
@@ -192,7 +192,7 @@ references:
     nameWithType: CommunicationClient
     fullName: microsoft.servicefabric.services.communication.client.CommunicationClient
     type: Interface
-    summary: <p>信頼性の高いサービスの通信のクライアントを表すインターフェイスを定義します。 </p>
+    summary: <p><span data-ttu-id="606b8-126">信頼性の高いサービスの通信のクライアントを表すインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="606b8-126">Defines the interface that represents the communication client for reliable services.</span></span> </p>
     syntax:
       content: public interface CommunicationClient
   - uid: 'microsoft.servicefabric.services.remoting.fabrictransport.client._fabric_cebb00136a61d24a2824a594bd6e4a66.getClientAsync(URI,ServicePartitionKey,TargetReplicaSelector,String,OperationRetrySettings)'
@@ -203,29 +203,29 @@ references:
     fullName: 'CompletableFuture<ServiceRemotingClient> microsoft.servicefabric.services.remoting.fabrictransport.client.FabricTransportServiceRemotingClientFactory.getClientAsync(URI serviceUri, ServicePartitionKey partitionKey, TargetReplicaSelector targetReplicaSelector, String listenerName, OperationRetrySettings retrySettings)'
     type: Method
     summary: |-
-      <p>1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。 フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</p>
+      <p><span data-ttu-id="606b8-127">1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。</span><span class="sxs-lookup"><span data-stu-id="606b8-127">Resolves a partition of the specified service containing one or more communication listeners and returns a client to communicate to the endpoint corresponding to the given listenerName.</span></span> <span data-ttu-id="606b8-128">フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</span><span class="sxs-lookup"><span data-stu-id="606b8-128">The endpoint of the service is of the form - {"Endpoints":{"Listener1":"Endpoint1","Listener2":"Endpoint2" ...}}</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<ServiceRemotingClient> getClientAsync(URI serviceUri, ServicePartitionKey partitionKey, TargetReplicaSelector targetReplicaSelector, String listenerName, OperationRetrySettings retrySettings)'
       parameters:
         - id: serviceUri
           type: '62304784'
-          description: <p>サービスの Uri を解決するのには </p>
+          description: <p><span data-ttu-id="606b8-129">サービスの Uri を解決するのには</span><span class="sxs-lookup"><span data-stu-id="606b8-129">Uri of the service to resolve</span></span> </p>
         - id: partitionKey
           type: microsoft.servicefabric.services.client._service_partition_key
-          description: <p>解決するのには、パーティションを識別するキー </p>
+          description: <p><span data-ttu-id="606b8-130">解決するのには、パーティションを識別するキー</span><span class="sxs-lookup"><span data-stu-id="606b8-130">Key that identifies the partition to resolve</span></span> </p>
         - id: targetReplicaSelector
           type: microsoft.servicefabric.services.communication.client._target_replica_selector
-          description: <p>レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります </p>
+          description: '<p><span data-ttu-id="606b8-131">レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります</span><span class="sxs-lookup"><span data-stu-id="606b8-131">Specifies which replica in the partition identified by the partition key, the client should connect to</span></span> </p>'
         - id: listenerName
           type: '26831127'
-          description: <p>クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。 </p>
+          description: '<p><span data-ttu-id="606b8-132">クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-132">Specifies which listener in the endpoint of the chosen replica, to which the client should connect to</span></span> </p>'
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。</p>
+          description: <p><span data-ttu-id="606b8-133">クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-133">Specifies the retry policy that should be used for exceptions that occur when creating the client.</span></span></p>
       return:
         type: 9cdf14d0microsoft.servicefabric.services.remoting.client._service_remoting_clienta08ddfce
-        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクの結果は、CommunicationClient ( <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">microsoft.servicefabric.services.communication.client.CommunicationClient</xref>) オブジェクト。 </p>
+        description: <p><span data-ttu-id="606b8-134">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。</span><span class="sxs-lookup"><span data-stu-id="606b8-134">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> that represents outstanding operation.</span></span> <span data-ttu-id="606b8-135">タスクの結果は、CommunicationClient ( <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">microsoft.servicefabric.services.communication.client.CommunicationClient</xref>) オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="606b8-135">The result of the Task is the CommunicationClient( <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">microsoft.servicefabric.services.communication.client.CommunicationClient</xref>) object.</span></span> </p>
   - uid: microsoft.servicefabric.services.client._service_partition_key
     parent: microsoft.servicefabric.services.client
     href: microsoft.servicefabric.services.client._service_partition_key.yml
@@ -233,7 +233,7 @@ references:
     nameWithType: ServicePartitionKey
     fullName: microsoft.servicefabric.services.client.ServicePartitionKey
     type: Class
-    summary: <p>サービス パーティションに対処するためにキーを定義します。 </p>
+    summary: <p><span data-ttu-id="606b8-136">サービス パーティションに対処するためにキーを定義します。</span><span class="sxs-lookup"><span data-stu-id="606b8-136">Defines a key to address a service partition.</span></span> </p>
     syntax:
       content: public class ServicePartitionKey
   - uid: microsoft.servicefabric.services.communication.client._target_replica_selector
@@ -243,7 +243,7 @@ references:
     nameWithType: TargetReplicaSelector
     fullName: microsoft.servicefabric.services.communication.client.TargetReplicaSelector
     type: Enum
-    summary: <p>この列挙体は、どのように、ターゲット レプリカまたはインスタンスを選択する特定のパーティション用の通信チャネルを作成するときに指定します。 </p>
+    summary: <p><span data-ttu-id="606b8-137">この列挙体は、どのように、ターゲット レプリカまたはインスタンスを選択する特定のパーティション用の通信チャネルを作成するときに指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-137">This enumeration specifies how the target replica or instance should be chosen when creating a communication channel for a particular partition.</span></span> </p>
     syntax:
       content: public enum TargetReplicaSelector
   - uid: microsoft.servicefabric.services.communication.client._operation_retry_settings
@@ -263,26 +263,26 @@ references:
     fullName: 'CompletableFuture<ServiceRemotingClient> microsoft.servicefabric.services.remoting.fabrictransport.client.FabricTransportServiceRemotingClientFactory.getClientAsync(ResolvedServicePartition previousRsp, TargetReplicaSelector targetReplicaSelector, String listenerName, OperationRetrySettings retrySettings)'
     type: Method
     summary: |-
-      <p>1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを再解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。 フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</p>
+      <p><span data-ttu-id="606b8-138">1 つまたは複数の通信リスナーを含む指定されたサービスのパーティションを再解決し、指定された listenerName に対応するエンドポイントと通信するクライアントを返します。</span><span class="sxs-lookup"><span data-stu-id="606b8-138">Re-resolves a partition of the specified service containing one or more communication listeners and returns a client to communicate to the endpoint corresponding to the given listenerName.</span></span> <span data-ttu-id="606b8-139">フォームのサービスのエンドポイントは、{「エンドポイント」: {"Listener1":"Endpoint1"、"Listener2":"Endpoint2"...}}</span><span class="sxs-lookup"><span data-stu-id="606b8-139">The endpoint of the service is of the form - {"Endpoints":{"Listener1":"Endpoint1","Listener2":"Endpoint2" ...}}</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<ServiceRemotingClient> getClientAsync(ResolvedServicePartition previousRsp, TargetReplicaSelector targetReplicaSelector, String listenerName, OperationRetrySettings retrySettings)'
       parameters:
         - id: previousRsp
           type: system.fabric._resolved_service_partition
-          description: <p>以前の ResolvedServicePartition 値 </p>
+          description: <p><span data-ttu-id="606b8-140">以前の ResolvedServicePartition 値</span><span class="sxs-lookup"><span data-stu-id="606b8-140">Previous ResolvedServicePartition value</span></span> </p>
         - id: targetReplicaSelector
           type: microsoft.servicefabric.services.communication.client._target_replica_selector
-          description: <p>レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります </p>
+          description: '<p><span data-ttu-id="606b8-141">レプリカの指定パーティション キーで識別されるパーティションには、クライアントに接続する必要があります</span><span class="sxs-lookup"><span data-stu-id="606b8-141">Specifies which replica in the partition identified by the partition key, the client should connect to</span></span> </p>'
         - id: listenerName
           type: '26831127'
-          description: <p>クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。 </p>
+          description: '<p><span data-ttu-id="606b8-142">クライアントが接続する、選択したレプリカのエンドポイントでどのリスナーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-142">Specifies which listener in the endpoint of the chosen replica, to which the client should connect to</span></span> </p>'
         - id: retrySettings
           type: microsoft.servicefabric.services.communication.client._operation_retry_settings
-          description: <p>クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。</p>
+          description: <p><span data-ttu-id="606b8-143">クライアントを作成するときに発生する例外を使用する再試行ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-143">Specifies the retry policy that should be used for exceptions that occur when creating the client.</span></span></p>
       return:
         type: 9cdf14d0microsoft.servicefabric.services.remoting.client._service_remoting_clienta08ddfce
-        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。 タスクの結果は、CommunicationClient ( <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">microsoft.servicefabric.services.communication.client.CommunicationClient</xref>) オブジェクト。 </p>
+        description: <p><span data-ttu-id="606b8-144">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>未処理の操作を表すです。</span><span class="sxs-lookup"><span data-stu-id="606b8-144">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> that represents outstanding operation.</span></span> <span data-ttu-id="606b8-145">タスクの結果は、CommunicationClient ( <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">microsoft.servicefabric.services.communication.client.CommunicationClient</xref>) オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="606b8-145">The result of the Task is the CommunicationClient( <xref uid="microsoft.servicefabric.services.communication.client._communication_client" data-throw-if-not-resolved="false">microsoft.servicefabric.services.communication.client.CommunicationClient</xref>) object.</span></span> </p>
   - uid: system.fabric._resolved_service_partition
     parent: system.fabric
     href: system.fabric._resolved_service_partition.yml
@@ -291,7 +291,7 @@ references:
     fullName: system.fabric.ResolvedServicePartition
     type: Class
     summary: |-
-      <p>指定したサービス パーティションがリッスンするエンドポイントの設定でパーティション分割情報が含まれるデータ構造を表します。</p>
+      <p><span data-ttu-id="606b8-146">指定したサービス パーティションがリッスンするエンドポイントの設定でパーティション分割情報が含まれるデータ構造を表します。</span><span class="sxs-lookup"><span data-stu-id="606b8-146">Represents a data structure that contains information on the partitioning and set of endpoints to which the specified Service partition listens.</span></span></p>
       <p></p>
     syntax:
       content: public class ResolvedServicePartition
@@ -302,7 +302,7 @@ references:
     nameWithType: OperationRetryControl
     fullName: microsoft.servicefabric.services.communication.client.OperationRetryControl
     type: Class
-    summary: <p>例外の再試行ポリシーが通信にクライアントからサービスを指定します。 </p>
+    summary: <p><span data-ttu-id="606b8-147">例外の再試行ポリシーが通信にクライアントからサービスを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-147">Specifies the retry policy for the exceptions got on the communication from client to service.</span></span> </p>
     syntax:
       content: public class OperationRetryControl
   - uid: microsoft.servicefabric.services.communication.client._exception_information
@@ -312,6 +312,6 @@ references:
     nameWithType: ExceptionInformation
     fullName: microsoft.servicefabric.services.communication.client.ExceptionInformation
     type: Class
-    summary: <p>通信チャネルに表示される例外とその例外を処理するために必要な追加の情報をカプセル化するクラスを指定します。 </p>
+    summary: <p><span data-ttu-id="606b8-148">通信チャネルに表示される例外とその例外を処理するために必要な追加の情報をカプセル化するクラスを指定します。</span><span class="sxs-lookup"><span data-stu-id="606b8-148">Specifies the class that encapsulates the exception seen on the communication channel and additional information required to handle that exception.</span></span> </p>
     syntax:
       content: public class ExceptionInformation

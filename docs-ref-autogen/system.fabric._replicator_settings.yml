@@ -83,12 +83,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 214
     package: system.fabric
-    summary: "<p>受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>受信し、この期間内に受信確認は、その他の操作を 1 つのメッセージで送信、受信確認となります。 増加、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#batchAcknowledgementInterval</xref>値は、各レプリケーション操作の待機時間を減らしますが、レプリケーターのスループットが向上します。 既定値は、0.05 秒 (50 ミリ秒) </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-101\">受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間を取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-101\">Gets the amount of time that the replicator waits after receiving an operation before sending back an acknowledgment.</span></span></p>\n<p><span data-ttu-id=\"b94cf-102\">\r\n\r\n  <b>注釈:</b>受信し、この期間内に受信確認は、その他の操作を 1 つのメッセージで送信、受信確認となります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-102\">\r\n\r\n  <b>Remarks:</b>Other operations received and acknowledged during this time period will have their acknowledgments sent back in a single message.</span></span> <span data-ttu-id=\"b94cf-103\">増加、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#batchAcknowledgementInterval</xref>値は、各レプリケーション操作の待機時間を減らしますが、レプリケーターのスループットが向上します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-103\">Increasing the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#batchAcknowledgementInterval</xref> value decreases latency of individual replication operations but increases throughput of the replicator.</span></span> <span data-ttu-id=\"b94cf-104\">既定値は、0.05 秒 (50 ミリ秒)</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-104\">Default value is 0.05 Seconds (50 milliseconds)</span></span> </p>"
     syntax:
       content: public Duration getBatchAcknowledgementInterval()
       return:
         type: e02a2de0
-        description: <p>受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間にバックアップします。 </p>
+        description: <p><span data-ttu-id="b94cf-105">受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間にバックアップします。</span><span class="sxs-lookup"><span data-stu-id="b94cf-105">The amount of time that the replicator waits after receiving an operation before sending back an acknowledgment.</span></span> </p>
   - uid: system.fabric._replicator_settings.getInitialCopyQueueSize()
     id: getInitialCopyQueueSize()
     parent: system.fabric._replicator_settings
@@ -105,12 +105,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 340
     package: system.fabric
-    summary: "<p>コピー操作キュー内の初期サイズを取得<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 64 です。 このパラメーターの値が 2 のべき乗でなければならないことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-106\">コピー操作キュー内の初期サイズを取得<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-106\">Gets the initial size of the copy operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains copy <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span></p>\n<p><span data-ttu-id=\"b94cf-107\">\r\n\r\n  <b>注釈:</b>既定値は 64 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-107\">\r\n\r\n  <b>Remarks:</b>The default value is 64.</span></span> <span data-ttu-id=\"b94cf-108\">このパラメーターの値が 2 のべき乗でなければならないことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-108\">Note that values for this parameter must be a power of 2.</span></span> </p>"
     syntax:
       content: public long getInitialCopyQueueSize()
       return:
         type: 0364520f
-        description: <p>内のコピー操作キューの初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。 </p>
+        description: '<p><span data-ttu-id="b94cf-109">内のコピー操作キューの初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class="sxs-lookup"><span data-stu-id="b94cf-109">The initial size of the copy operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains copy <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> </p>'
   - uid: system.fabric._replicator_settings.getInitialPrimaryReplicationQueueSize()
     id: getInitialPrimaryReplicationQueueSize()
     parent: system.fabric._replicator_settings
@@ -127,12 +127,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 561
     package: system.fabric
-    summary: "<p>プライマリ レプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s の各単位をここでは、数キュー内の操作です。</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はプライマリ、既定値は 64 です。 このパラメーターの値が 2 のべき乗でなければならないことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-110\">プライマリ レプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s の各単位をここでは、数キュー内の操作です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-110\">Defines the initial size of the primary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s.The unit here is the number of operations in the queue.</span></span></p>\n<p><span data-ttu-id=\"b94cf-111\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はプライマリ、既定値は 64 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-111\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Primary The default value is 64.</span></span> <span data-ttu-id=\"b94cf-112\">このパラメーターの値が 2 のべき乗でなければならないことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-112\">Note that values for this parameter must be a power of 2.</span></span> </p>"
     syntax:
       content: public long getInitialPrimaryReplicationQueueSize()
       return:
         type: 0364520f
-        description: <p>プライマリ レプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref></p>
+        description: <p><span data-ttu-id="b94cf-113">プライマリ レプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref></span><span class="sxs-lookup"><span data-stu-id="b94cf-113">The initial size of the primary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref></span></span></p>
   - uid: system.fabric._replicator_settings.getInitialReplicationQueueSize()
     id: getInitialReplicationQueueSize()
     parent: system.fabric._replicator_settings
@@ -150,13 +150,13 @@ items:
       startLine: 294
     package: system.fabric
     summary: |-
-      <p>レプリケーション キューのサイズの初期サイズを取得します。</p>
+      <p><span data-ttu-id="b94cf-114">レプリケーション キューのサイズの初期サイズを取得します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-114">Gets the initial size of the replication queue size.</span></span></p>
       <p></p>
     syntax:
       content: public long getInitialReplicationQueueSize()
       return:
         type: 0364520f
-        description: <p>レプリケーション キューのサイズの初期サイズします。 </p>
+        description: <p><span data-ttu-id="b94cf-115">レプリケーション キューのサイズの初期サイズします。</span><span class="sxs-lookup"><span data-stu-id="b94cf-115">The initial size of the replication queue size.</span></span> </p>
   - uid: system.fabric._replicator_settings.getInitialSecondaryReplicationQueueSize()
     id: getInitialSecondaryReplicationQueueSize()
     parent: system.fabric._replicator_settings
@@ -173,12 +173,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 676
     package: system.fabric
-    summary: "<p>セカンダリのレプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はセカンダリ/アイドル状態を既定値は 64 です。 このパラメーターの値が 2 のべき乗でなければならないことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-116\">セカンダリのレプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-116\">Defines the initial size of the secondary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-117\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はセカンダリ/アイドル状態を既定値は 64 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-117\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Secondary/Idle The default value is 64.</span></span> <span data-ttu-id=\"b94cf-118\">このパラメーターの値が 2 のべき乗でなければならないことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-118\">Note that values for this parameter must be a power of 2.</span></span> </p>"
     syntax:
       content: public long getInitialSecondaryReplicationQueueSize()
       return:
         type: 0364520f
-        description: <p>セカンダリのレプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。 単位をここでは、キューの操作の数 </p>
+        description: '<p><span data-ttu-id="b94cf-119">セカンダリのレプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-119">The initial size of the secondary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> <span data-ttu-id="b94cf-120">単位をここでは、キューの操作の数</span><span class="sxs-lookup"><span data-stu-id="b94cf-120">The unit here is the number of operations in the queue</span></span> </p>'
   - uid: system.fabric._replicator_settings.getMaxCopyQueueSize()
     id: getMaxCopyQueueSize()
     parent: system.fabric._replicator_settings
@@ -195,12 +195,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 377
     package: system.fabric
-    summary: "<p>内のコピー操作キューの最大サイズを取得<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされる場合は、セカンダリでこのキューのサイズに達すると、™ s コピー キュー。 かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。 既定値は 1024 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-121\">内のコピー操作キューの最大サイズを取得<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-121\">Gets the maximum size of the copy operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains copy <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span></p>\n<p><span data-ttu-id=\"b94cf-122\">\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされる場合は、セカンダリでこのキューのサイズに達すると、™ s コピー キュー。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-122\">\r\n\r\n  <b>Remarks:</b>If this queue size is reached at the secondary, operations will be buffered in the Primaryâ€™s copy queue.</span></span> <span data-ttu-id=\"b94cf-123\">かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-123\">If that queue also fills, then the Primary will begin seeing <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref> exceptions.</span></span> <span data-ttu-id=\"b94cf-124\">既定値は 1024</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-124\">The default value is 1024</span></span> </p>"
     syntax:
       content: public long getMaxCopyQueueSize()
       return:
         type: 0364520f
-        description: <p>内のコピー操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。 </p>
+        description: '<p><span data-ttu-id="b94cf-125">内のコピー操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class="sxs-lookup"><span data-stu-id="b94cf-125">The maximum size of the copy operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains copy <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> </p>'
   - uid: system.fabric._replicator_settings.getMaxPrimaryReplicationQueueMemorySize()
     id: getMaxPrimaryReplicationQueueMemorySize()
     parent: system.fabric._replicator_settings
@@ -217,12 +217,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 638
     package: system.fabric
-    summary: "<p>内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスのロールがプライマリの場合。 既定値は 0 です。 つまり、メモリの制限はありません。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-126\">内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-126\">Defines the maximum size of the primary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-127\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスのロールがプライマリの場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-127\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Primary.</span></span> <span data-ttu-id=\"b94cf-128\">既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-128\">The default value is 0.</span></span> <span data-ttu-id=\"b94cf-129\">つまり、メモリの制限はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-129\">This implies there is no memory limit</span></span> </p>"
     syntax:
       content: public long getMaxPrimaryReplicationQueueMemorySize()
       return:
         type: 0364520f
-        description: <p>が必要です。 内のプライマリ レプリケーション操作キューの最大サイズを返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>の単位をここでは、仮想キューのメモリ使用量。長さを返します。 </p>
+        description: '<p><span data-ttu-id="b94cf-130">が必要です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-130">.</span></span> <span data-ttu-id="b94cf-131">内のプライマリ レプリケーション操作キューの最大サイズを返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>の単位をここでは、仮想キューのメモリ使用量。長さを返します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-131">Returns the maximum size of the primary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s The unit here is the virtual memory consumption of the queue .Returns long.</span></span> </p>'
   - uid: system.fabric._replicator_settings.getMaxPrimaryReplicationQueueSize()
     id: getMaxPrimaryReplicationQueueSize()
     parent: system.fabric._replicator_settings
@@ -239,12 +239,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 599
     package: system.fabric
-    summary: "<p>内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>このキューのサイズに達したかどうかは、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。 既定値は、このパラメーターの値は 1024 のメモが 2 の累乗にする必要があります。 この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>ときに、サービスの役割は、プライマリ </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-132\">内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-132\">Defines the maximum size of the primary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-133\">\r\n\r\n  <b>注釈:</b>このキューのサイズに達したかどうかは、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-133\">\r\n\r\n  <b>Remarks:</b>If this queue size is reached, then the Primary will begin seeing <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref> exceptions.</span></span> <span data-ttu-id=\"b94cf-134\">既定値は、このパラメーターの値は 1024 のメモが 2 の累乗にする必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-134\">The default value is 1024 Note that values for this parameter must be a power of 2.</span></span> <span data-ttu-id=\"b94cf-135\">この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>ときに、サービスの役割は、プライマリ</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-135\">This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Primary</span></span> </p>"
     syntax:
       content: public long getMaxPrimaryReplicationQueueSize()
       return:
         type: 0364520f
-        description: <p>最大キューのサイズ、プライマリ レプリケーション操作の内部<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。 単位をここでは、キュー内の操作の数です。 </p>
+        description: '<p><span data-ttu-id="b94cf-136">最大キューのサイズ、プライマリ レプリケーション操作の内部<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。</span><span class="sxs-lookup"><span data-stu-id="b94cf-136">The maximum size of the primary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s.</span></span> <span data-ttu-id="b94cf-137">単位をここでは、キュー内の操作の数です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-137">The unit here is the number of operations in the queue.</span></span> </p>'
   - uid: system.fabric._replicator_settings.getMaxReplicationMessageSize()
     id: getMaxReplicationMessageSize()
     parent: system.fabric._replicator_settings
@@ -261,12 +261,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 504
     package: system.fabric
-    summary: "<p>レプリケーター経由で送信できるメッセージの最大サイズを取得します。 メッセージをコピーして、コンテキストのメッセージをコピーするこれらレプリケーション メッセージが含まれます。 表現の単位はバイトです。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 50 MB </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-138\">レプリケーター経由で送信できるメッセージの最大サイズを取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-138\">Gets the maximum size of a message that can be transmitted via the replicator.</span></span> <span data-ttu-id=\"b94cf-139\">メッセージをコピーして、コンテキストのメッセージをコピーするこれらレプリケーション メッセージが含まれます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-139\">These include replication messages, copy messages and copy context messages.</span></span> <span data-ttu-id=\"b94cf-140\">表現の単位はバイトです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-140\">The unit of representation is bytes.</span></span></p>\n<p><span data-ttu-id=\"b94cf-141\">\r\n\r\n  <b>注釈:</b>既定値は 50 MB</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-141\">\r\n\r\n  <b>Remarks:</b>The default value is 50MB</span></span> </p>"
     syntax:
       content: public Long getMaxReplicationMessageSize()
       return:
         type: 34f09483
-        description: <p>レプリケーター経由で送信できるメッセージの最大サイズ。 </p>
+        description: <p><span data-ttu-id="b94cf-142">レプリケーター経由で送信できるメッセージの最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="b94cf-142">The maximum size of a message that can be transmitted via the replicator.</span></span> </p>
   - uid: system.fabric._replicator_settings.getMaxReplicationQueueMemorySize()
     id: getMaxReplicationQueueMemorySize()
     parent: system.fabric._replicator_settings
@@ -283,12 +283,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 446
     package: system.fabric
-    summary: "<p>レプリケーション キューのメモリの最大サイズを取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 0 です。 つまり、メモリの制限はありません。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-143\">レプリケーション キューのメモリの最大サイズを取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-143\">Gets the maximum size for the replication queue memory.</span></span></p>\n<p><span data-ttu-id=\"b94cf-144\">\r\n\r\n  <b>注釈:</b>既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-144\">\r\n\r\n  <b>Remarks:</b>The default value is 0.</span></span> <span data-ttu-id=\"b94cf-145\">つまり、メモリの制限はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-145\">This implies there is no memory limit</span></span> </p>"
     syntax:
       content: public long getMaxReplicationQueueMemorySize()
       return:
         type: 0364520f
-        description: <p>レプリケーション キューのメモリの最大サイズ。 </p>
+        description: <p><span data-ttu-id="b94cf-146">レプリケーション キューのメモリの最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="b94cf-146">The maximum size for the replication queue memory.</span></span> </p>
   - uid: system.fabric._replicator_settings.getMaxReplicationQueueSize()
     id: getMaxReplicationQueueSize()
     parent: system.fabric._replicator_settings
@@ -306,13 +306,13 @@ items:
       startLine: 313
     package: system.fabric
     summary: |-
-      <p>レプリケーション キューの最大サイズを取得します。</p>
+      <p><span data-ttu-id="b94cf-147">レプリケーション キューの最大サイズを取得します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-147">Gets the maximum size for the replication queue.</span></span></p>
       <p></p>
     syntax:
       content: public long getMaxReplicationQueueSize()
       return:
         type: 0364520f
-        description: <p>レプリケーション キューの最大サイズ。 </p>
+        description: <p><span data-ttu-id="b94cf-148">レプリケーション キューの最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="b94cf-148">the maximum size for the replication queue.</span></span> </p>
   - uid: system.fabric._replicator_settings.getMaxSecondaryReplicationQueueMemorySize()
     id: getMaxSecondaryReplicationQueueMemorySize()
     parent: system.fabric._replicator_settings
@@ -329,12 +329,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 758
     package: system.fabric
-    summary: "<p>内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s。</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合。 既定値は 0 です。 つまり、メモリの制限はありません。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-149\">内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-149\">Defines the maximum size of the secondary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s.</span></span></p>\n<p><span data-ttu-id=\"b94cf-150\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-150\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Secondary/Idle.</span></span> <span data-ttu-id=\"b94cf-151\">既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-151\">The default value is 0.</span></span> <span data-ttu-id=\"b94cf-152\">つまり、メモリの制限はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-152\">This implies there is no memory limit</span></span> </p>"
     syntax:
       content: public long getMaxSecondaryReplicationQueueMemorySize()
       return:
         type: 0364520f
-        description: <p>内のセカンダリのレプリケーション操作キューの最大サイズを返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。 単位をここでは、キューの仮想メモリの消費です。 </p>
+        description: '<p><span data-ttu-id="b94cf-153">内のセカンダリのレプリケーション操作キューの最大サイズを返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。</span><span class="sxs-lookup"><span data-stu-id="b94cf-153">Returns the maximum size of the secondary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s.</span></span> <span data-ttu-id="b94cf-154">単位をここでは、キューの仮想メモリの消費です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-154">The unit here is the virtual memory consumption of the queue.</span></span> </p>'
   - uid: system.fabric._replicator_settings.getMaxSecondaryReplicationQueueSize()
     id: getMaxSecondaryReplicationQueueSize()
     parent: system.fabric._replicator_settings
@@ -351,12 +351,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 717
     package: system.fabric
-    summary: "<p>内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされるこのキューのサイズに達すると、™ s レプリケーション キュー。 かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。 既定値は、このパラメーターの値が 2048.Note が 2 の累乗にする必要があります。 この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-155\">内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-155\">Defines the maximum size of the secondary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-156\">\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされるこのキューのサイズに達すると、™ s レプリケーション キュー。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-156\">\r\n\r\n  <b>Remarks:</b>If this queue size is reached, operations will be buffered in the Primaryâ€™s replication queue.</span></span> <span data-ttu-id=\"b94cf-157\">かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-157\">If that queue also fills, then the Primary will begin seeing <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref> exceptions.</span></span> <span data-ttu-id=\"b94cf-158\">既定値は、このパラメーターの値が 2048.Note が 2 の累乗にする必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-158\">The default value is 2048.Note that values for this parameter must be a power of 2.</span></span> <span data-ttu-id=\"b94cf-159\">この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-159\">This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Secondary/Idle</span></span> </p>"
     syntax:
       content: public long getMaxSecondaryReplicationQueueSize()
       return:
         type: 0364520f
-        description: <p>内のセカンダリのレプリケーション操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。 単位をここでは、キューの操作の数 </p>
+        description: '<p><span data-ttu-id="b94cf-160">内のセカンダリのレプリケーション操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-160">The maximum size of the secondary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> <span data-ttu-id="b94cf-161">単位をここでは、キューの操作の数</span><span class="sxs-lookup"><span data-stu-id="b94cf-161">The unit here is the number of operations in the queue</span></span> </p>'
   - uid: system.fabric._replicator_settings.getPrimaryWaitForPendingQuorumsTimeout()
     id: getPrimaryWaitForPendingQuorumsTimeout()
     parent: system.fabric._replicator_settings
@@ -373,12 +373,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 797
     package: system.fabric
-    summary: "<p>Â €˜cancellingâ€ につながる可能性のある再構成要求を処理する前に、保留中のレプリケーション操作の確認のクォーラムを受信するため、主にレプリケーターが待機する時間を定義™、保留中のレプリケーション操作です。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 0 です。 つまり、その再構成おく方™ t が保留中のレプリケーション操作でのクォーラムを受信するために待機します。 これは、再構成を早く完了するために役立ちます。 フェールオーバーをプライマリに長い期間の暗黙的な低速の再構成にこのパラメーターの値が大きいが生じる可能性があることに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-162\">Â €˜cancellingâ€ につながる可能性のある再構成要求を処理する前に、保留中のレプリケーション操作の確認のクォーラムを受信するため、主にレプリケーターが待機する時間を定義™、保留中のレプリケーション操作です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-162\">Defines how long the primary replicator waits for receiving a quorum of acknowledgments for any pending replication operations before processing a reconfiguration request, that could potentially result in â€˜cancellingâ€™ the pending replication operations.</span></span></p>\n<p><span data-ttu-id=\"b94cf-163\">\r\n\r\n  <b>注釈:</b>既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-163\">\r\n\r\n  <b>Remarks:</b>The default value is 0.</span></span> <span data-ttu-id=\"b94cf-164\">つまり、その再構成おく方™ t が保留中のレプリケーション操作でのクォーラムを受信するために待機します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-164\">This implies that reconfigurations arenâ€™t waited upon for receiving quorum on the pending replication operations.</span></span> <span data-ttu-id=\"b94cf-165\">これは、再構成を早く完了するために役立ちます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-165\">This helps in completing reconfigurations sooner.</span></span> <span data-ttu-id=\"b94cf-166\">フェールオーバーをプライマリに長い期間の暗黙的な低速の再構成にこのパラメーターの値が大きいが生じる可能性があることに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-166\">Note that larger values for this parameter could potentially result in slower reconfigurations, implying longer durations to fail-over a primary.</span></span> </p>"
     syntax:
       content: public Duration getPrimaryWaitForPendingQuorumsTimeout()
       return:
         type: e02a2de0
-        description: <p>プライマリのレプリケーターが再構成を処理するプライマリ レプリケーターの要求がある場合に、保留中のレプリケーション操作に対して受信確認のクォーラムを受信するために待機する時間<xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>です。 </p>
+        description: <p><span data-ttu-id="b94cf-167">プライマリのレプリケーターが再構成を処理するプライマリ レプリケーターの要求がある場合に、保留中のレプリケーション操作に対して受信確認のクォーラムを受信するために待機する時間<xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-167">Amount of time the primary replicator waits for receiving a quorum of acknowledgments for any pending replication operations when there is a request for the primary replicator to process a reconfiguration <xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>.</span></span> </p>
   - uid: system.fabric._replicator_settings.getReplicatorAddress()
     id: getReplicatorAddress()
     parent: system.fabric._replicator_settings
@@ -395,12 +395,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 247
     package: system.fabric
-    summary: "<p>その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレスを構成します。</p>\n<p>\r\n\r\n  <b>注釈:</b>文字列としてフォーマットされている\"hostname:port\"ホスト名が FQDN または IP アドレスを指定できます。 既定値は localhost:0 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-168\">その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレスを構成します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-168\">Configures the address that this replicator will use when communicating with other Replicators.</span></span></p>\n<p><span data-ttu-id=\"b94cf-169\">\r\n\r\n  <b>注釈:</b>文字列としてフォーマットされている\"hostname:port\"ホスト名が FQDN または IP アドレスを指定できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-169\">\r\n\r\n  <b>Remarks:</b>String is formatted as \"hostname:port\", where hostname can be FQDN or IP address.</span></span> <span data-ttu-id=\"b94cf-170\">既定値は localhost:0</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-170\">The default value is localhost:0</span></span> </p>"
     syntax:
       content: public String getReplicatorAddress()
       return:
         type: '26831127'
-        description: <p>その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレス。 </p>
+        description: <p><span data-ttu-id="b94cf-171">その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-171">The address that this replicator will use when communicating with other Replicators.</span></span> </p>
   - uid: system.fabric._replicator_settings.getRetryInterval()
     id: getRetryInterval()
     parent: system.fabric._replicator_settings
@@ -417,12 +417,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 177
     package: system.fabric
-    summary: "<p>定義しますが、どのくらいの期間<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。</p>\n<p>\r\n\r\n  <b>注釈:</b>メッセージが処理されたことに必ずしもはメッセージを受信します。 このタイマーを超えた場合、メッセージが再送信されます。 既定値は、5 秒です。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-172\">定義しますが、どのくらいの期間<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-172\">Defines how long the <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> waits after it transmits a message from the primary to the secondary for the secondary to acknowledge that it has received the message.</span></span></p>\n<p><span data-ttu-id=\"b94cf-173\">\r\n\r\n  <b>注釈:</b>メッセージが処理されたことに必ずしもはメッセージを受信します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-173\">\r\n\r\n  <b>Remarks:</b>Receiving a message does not necessarily that the message has been processed.</span></span> <span data-ttu-id=\"b94cf-174\">このタイマーを超えた場合、メッセージが再送信されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-174\">If this timer is exceeded, then the message is retransmitted.</span></span> <span data-ttu-id=\"b94cf-175\">既定値は、5 秒です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-175\">The default value is 5 seconds.</span></span> </p>"
     syntax:
       content: public Duration getRetryInterval()
       return:
         type: e02a2de0
-        description: <p>必要な時間、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。 </p>
+        description: <p><span data-ttu-id="b94cf-176">必要な時間、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-176">The time needed the <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref> waits after it transmits a message from the primary to the secondary for the secondary to acknowledge that it has received the message.</span></span> </p>
   - uid: system.fabric._replicator_settings.getSecurityCredentials()
     id: getSecurityCredentials()
     parent: system.fabric._replicator_settings
@@ -440,13 +440,13 @@ items:
       startLine: 273
     package: system.fabric
     summary: |-
-      <p>使用サービスが複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義できます。</p>
+      <p><span data-ttu-id="b94cf-177">使用サービスが複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義できます。</span><span class="sxs-lookup"><span data-stu-id="b94cf-177">Allows the service to define security credentials for securing the traffic between replicators.</span></span></p>
       <p></p>
     syntax:
       content: public SecurityCredentials getSecurityCredentials()
       return:
         type: system.fabric._security_credentials
-        description: <p>複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義するサービス。 </p>
+        description: <p><span data-ttu-id="b94cf-178">複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義するサービス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-178">The service to define security credentials for securing the traffic between replicators.</span></span> </p>
   - uid: system.fabric._replicator_settings.isRequireServiceAck()
     id: isRequireServiceAck()
     parent: system.fabric._replicator_settings
@@ -463,12 +463,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 415
     package: system.fabric
-    summary: "<p>により、サービスを呼び出すオプティミスティックの受信確認要求することで非永続的なサービスの操作の<xref uid=\"system.fabric._operation.acknowledge()\" data-throw-if-not-resolved=\"false\">system.fabric.Operation#acknowledge()</xref>次の操作をポンプする前にします。</p>\n<p>\r\n\r\n  <b>注釈:</b>明示的な受信確認を必要とする非永続的サービスはオプティミスティックの受信確認して、操作を防ぐために True にこのプロパティを設定することができます、<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>です。 この設定は、永続的なサービスの影響を与えません。 既定値は false です。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-179\">により、サービスを呼び出すオプティミスティックの受信確認要求することで非永続的なサービスの操作の<xref uid=\"system.fabric._operation.acknowledge()\" data-throw-if-not-resolved=\"false\">system.fabric.Operation#acknowledge()</xref>次の操作をポンプする前にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-179\">Prevents the optimistic acknowledgment of operations in non-persistent services by requiring that the service calls <xref uid=\"system.fabric._operation.acknowledge()\" data-throw-if-not-resolved=\"false\">system.fabric.Operation#acknowledge()</xref> before it pumps the next operation.</span></span></p>\n<p><span data-ttu-id=\"b94cf-180\">\r\n\r\n  <b>注釈:</b>明示的な受信確認を必要とする非永続的サービスはオプティミスティックの受信確認して、操作を防ぐために True にこのプロパティを設定することができます、<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-180\">\r\n\r\n  <b>Remarks:</b>Non-persistent services which require explicit acknowledgment can set this property to True in order to prevent optimistic acknowledgment of the operations by the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref>.</span></span> <span data-ttu-id=\"b94cf-181\">この設定は、永続的なサービスの影響を与えません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-181\">This setting has no effect for persistent services.</span></span> <span data-ttu-id=\"b94cf-182\">既定値は false です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-182\">The default value is false.</span></span> </p>"
     syntax:
       content: public boolean isRequireServiceAck()
       return:
         type: 4fc6e284
-        description: <p>true の場合、オプティミスティックの受信確認の非永続的なサービス操作のそれ以外の場合は false。 </p>
+        description: '<p><span data-ttu-id="b94cf-183">true の場合、オプティミスティックの受信確認の非永続的なサービス操作のそれ以外の場合は false。</span><span class="sxs-lookup"><span data-stu-id="b94cf-183">true if the optimistic acknowledgment of operations in non-persistent services;otherwise, false.</span></span> </p>'
   - uid: system.fabric._replicator_settings.isSecondaryClearAcknowledgedOperations()
     id: isSecondaryClearAcknowledgedOperations()
     parent: system.fabric._replicator_settings
@@ -485,12 +485,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 474
     package: system.fabric
-    summary: "<p>通常、セカンダリのレプリケーターに操作にできる catchup レプリカにプライマリに昇格の場合、キューに保持されます。 このフラグを有効にすると、セカンダリに複製物作成会社は、ユーザーのサービスによって承認されるとすぐに、操作を解放します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は false </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-184\">通常、セカンダリのレプリケーターに操作にできる catchup レプリカにプライマリに昇格の場合、キューに保持されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-184\">Typically, operations in the secondary replicator are kept in the queue to be able to catchup replicas if it is promoted to a primary.</span></span> <span data-ttu-id=\"b94cf-185\">このフラグを有効にすると、セカンダリに複製物作成会社は、ユーザーのサービスによって承認されるとすぐに、操作を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-185\">With this flag enabled, the secondary replicator releases the operation as soon as it is acknowledged by the user service.</span></span></p>\n<p><span data-ttu-id=\"b94cf-186\">\r\n\r\n  <b>注釈:</b>既定値は false</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-186\">\r\n\r\n  <b>Remarks:</b>The default value is false</span></span> </p>"
     syntax:
       content: public boolean isSecondaryClearAcknowledgedOperations()
       return:
         type: 4fc6e284
-        description: <p>ユーザー サービスが承認されるとすぐに、セカンダリのレプリケーターが、操作を解放する場合は true。それ以外の場合は false です。 </p>
+        description: '<p><span data-ttu-id="b94cf-187">ユーザー サービスが承認されるとすぐに、セカンダリのレプリケーターが、操作を解放する場合は true。それ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-187">true if the secondary replicator releases the operation as soon as it is acknowledged by the user service; otherwise, false.</span></span> </p>'
   - uid: system.fabric._replicator_settings.isUseStreamFaultsAndEndOfStreamOperationAck()
     id: isUseStreamFaultsAndEndOfStreamOperationAck()
     parent: system.fabric._replicator_settings
@@ -507,12 +507,12 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 531
     package: system.fabric
-    summary: "<p>レプリケーターがストリームのエラーを使用するかどうかを指定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は false </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-188\">レプリケーターがストリームのエラーを使用するかどうかを指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-188\">Specifies whether the replicator uses stream faults.</span></span></p>\n<p><span data-ttu-id=\"b94cf-189\">\r\n\r\n  <b>注釈:</b>既定値は false</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-189\">\r\n\r\n  <b>Remarks:</b>The default value is false</span></span> </p>"
     syntax:
       content: public boolean isUseStreamFaultsAndEndOfStreamOperationAck()
       return:
         type: 4fc6e284
-        description: <p>レプリケーターがストリームの障害を使用する場合は trueそれ以外の場合は false です。 </p>
+        description: '<p><span data-ttu-id="b94cf-190">レプリケーターがストリームの障害を使用する場合は trueそれ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-190">true if the replicator uses stream faults; otherwise, false.</span></span> </p>'
   - uid: 'system.fabric._replicator_settings.loadFrom(FabricCodePackageActivationContext,String,String)'
     id: 'loadFrom(FabricCodePackageActivationContext,String,String)'
     parent: system.fabric._replicator_settings
@@ -574,13 +574,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 233
     package: system.fabric
-    summary: "<p>受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間を設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>受信し、この期間内に受信確認は、その他の操作を 1 つのメッセージで送信、受信確認となります。 増加、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#batchAcknowledgementInterval</xref>値は、各レプリケーション操作の待機時間を減らしますが、レプリケーターのスループットが向上します。 既定値は、0.05 秒 (50 ミリ秒) </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-191\">受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間を設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-191\">Sets the amount of time that the replicator waits after receiving an operation before sending back an acknowledgment.</span></span></p>\n<p><span data-ttu-id=\"b94cf-192\">\r\n\r\n  <b>注釈:</b>受信し、この期間内に受信確認は、その他の操作を 1 つのメッセージで送信、受信確認となります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-192\">\r\n\r\n  <b>Remarks:</b>Other operations received and acknowledged during this time period will have their acknowledgments sent back in a single message.</span></span> <span data-ttu-id=\"b94cf-193\">増加、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#batchAcknowledgementInterval</xref>値は、各レプリケーション操作の待機時間を減らしますが、レプリケーターのスループットが向上します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-193\">Increasing the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#batchAcknowledgementInterval</xref> value decreases latency of individual replication operations but increases throughput of the replicator.</span></span> <span data-ttu-id=\"b94cf-194\">既定値は、0.05 秒 (50 ミリ秒)</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-194\">Default value is 0.05 Seconds (50 milliseconds)</span></span> </p>"
     syntax:
       content: public void setBatchAcknowledgementInterval(Duration batchAcknowledgementInterval)
       parameters:
         - id: batchAcknowledgementInterval
           type: e02a2de0
-          description: <p>受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間にバックアップします。 </p>
+          description: <p><span data-ttu-id="b94cf-195">受信確認を送信する前に、操作を受信した後、レプリケーターが待機する時間にバックアップします。</span><span class="sxs-lookup"><span data-stu-id="b94cf-195">The amount of time that the replicator waits after receiving an operation before sending back an acknowledgment.</span></span> </p>
   - uid: system.fabric._replicator_settings.setInitialCopyQueueSize(long)
     id: setInitialCopyQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -597,13 +597,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 358
     package: system.fabric
-    summary: "<p>取得または設定のコピー操作キュー内の初期サイズ<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 64 です。 このパラメーターの値が 2 のべき乗でなければならないことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-196\">取得または設定のコピー操作キュー内の初期サイズ<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-196\">Gets or sets the initial size of the copy operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains copy <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span></p>\n<p><span data-ttu-id=\"b94cf-197\">\r\n\r\n  <b>注釈:</b>既定値は 64 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-197\">\r\n\r\n  <b>Remarks:</b>The default value is 64.</span></span> <span data-ttu-id=\"b94cf-198\">このパラメーターの値が 2 のべき乗でなければならないことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-198\">Note that values for this parameter must be a power of 2.</span></span> </p>"
     syntax:
       content: public void setInitialCopyQueueSize(long initialCopyQueueSize)
       parameters:
         - id: initialCopyQueueSize
           type: 0364520f
-          description: <p>内のコピー操作キューの初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。 </p>
+          description: '<p><span data-ttu-id="b94cf-199">内のコピー操作キューの初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class="sxs-lookup"><span data-stu-id="b94cf-199">The initial size of the copy operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains copy <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setInitialPrimaryReplicationQueueSize(long)
     id: setInitialPrimaryReplicationQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -620,13 +620,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 579
     package: system.fabric
-    summary: "<p>プライマリ レプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s の各単位をここでは、数キュー内の操作です。</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はプライマリ、既定値は 64 です。 このパラメーターの値が 2 のべき乗でなければならないことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-200\">プライマリ レプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s の各単位をここでは、数キュー内の操作です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-200\">Defines the initial size of the primary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s.The unit here is the number of operations in the queue.</span></span></p>\n<p><span data-ttu-id=\"b94cf-201\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はプライマリ、既定値は 64 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-201\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Primary The default value is 64.</span></span> <span data-ttu-id=\"b94cf-202\">このパラメーターの値が 2 のべき乗でなければならないことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-202\">Note that values for this parameter must be a power of 2.</span></span> </p>"
     syntax:
       content: public void setInitialPrimaryReplicationQueueSize(long initialPrimaryReplicationQueueSize)
       parameters:
         - id: initialPrimaryReplicationQueueSize
           type: 0364520f
-          description: <p>プライマリ レプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref></p>
+          description: <p><span data-ttu-id="b94cf-203">プライマリ レプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref></span><span class="sxs-lookup"><span data-stu-id="b94cf-203">The initial size of the primary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref></span></span></p>
   - uid: system.fabric._replicator_settings.setInitialReplicationQueueSize(long)
     id: setInitialReplicationQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -644,14 +644,14 @@ items:
       startLine: 304
     package: system.fabric
     summary: |-
-      <p>レプリケーション キューのサイズの初期サイズを設定します。</p>
+      <p><span data-ttu-id="b94cf-204">レプリケーション キューのサイズの初期サイズを設定します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-204">Sets the initial size of the replication queue size.</span></span></p>
       <p></p>
     syntax:
       content: public void setInitialReplicationQueueSize(long initialReplicationQueueSize)
       parameters:
         - id: initialReplicationQueueSize
           type: 0364520f
-          description: <p>レプリケーション キューのサイズの初期サイズします。 </p>
+          description: <p><span data-ttu-id="b94cf-205">レプリケーション キューのサイズの初期サイズします。</span><span class="sxs-lookup"><span data-stu-id="b94cf-205">The initial size of the replication queue size.</span></span> </p>
   - uid: system.fabric._replicator_settings.setInitialSecondaryReplicationQueueSize(long)
     id: setInitialSecondaryReplicationQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -668,13 +668,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 696
     package: system.fabric
-    summary: "<p>セカンダリのレプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はセカンダリ/アイドル状態を既定値は 64 です。 このパラメーターの値が 2 のべき乗でなければならないことに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-206\">セカンダリのレプリケーション操作キュー内の初期サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-206\">Defines the initial size of the secondary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-207\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割はセカンダリ/アイドル状態を既定値は 64 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-207\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Secondary/Idle The default value is 64.</span></span> <span data-ttu-id=\"b94cf-208\">このパラメーターの値が 2 のべき乗でなければならないことに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-208\">Note that values for this parameter must be a power of 2.</span></span> </p>"
     syntax:
       content: public void setInitialSecondaryReplicationQueueSize(long initialSecondaryReplicationQueueSize)
       parameters:
         - id: initialSecondaryReplicationQueueSize
           type: 0364520f
-          description: <p>セカンダリのレプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。 単位をここでは、キューの操作の数 </p>
+          description: '<p><span data-ttu-id="b94cf-209">セカンダリのレプリケーション操作キュー内の初期サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-209">The initial size of the secondary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> <span data-ttu-id="b94cf-210">単位をここでは、キューの操作の数</span><span class="sxs-lookup"><span data-stu-id="b94cf-210">The unit here is the number of operations in the queue</span></span> </p>'
   - uid: system.fabric._replicator_settings.setMaxCopyQueueSize(long)
     id: setMaxCopyQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -691,13 +691,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 397
     package: system.fabric
-    summary: "<p>内のコピー操作キューの最大サイズを設定<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされる場合は、セカンダリでこのキューのサイズに達すると、™ s コピー キュー。 かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。 既定値は 1024 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-211\">内のコピー操作キューの最大サイズを設定<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-211\">Sets the maximum size of the copy operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains copy <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span></p>\n<p><span data-ttu-id=\"b94cf-212\">\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされる場合は、セカンダリでこのキューのサイズに達すると、™ s コピー キュー。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-212\">\r\n\r\n  <b>Remarks:</b>If this queue size is reached at the secondary, operations will be buffered in the Primaryâ€™s copy queue.</span></span> <span data-ttu-id=\"b94cf-213\">かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-213\">If that queue also fills, then the Primary will begin seeing <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref> exceptions.</span></span> <span data-ttu-id=\"b94cf-214\">既定値は 1024</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-214\">The default value is 1024</span></span> </p>"
     syntax:
       content: public void setMaxCopyQueueSize(long maxCopyQueueSize)
       parameters:
         - id: maxCopyQueueSize
           type: 0364520f
-          description: <p>内のコピー操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。 </p>
+          description: '<p><span data-ttu-id="b94cf-215">内のコピー操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、コピーが含まれています<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>追加されていないと、サービスによって処理されます。</span><span class="sxs-lookup"><span data-stu-id="b94cf-215">The maximum size of the copy operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains copy <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setMaxPrimaryReplicationQueueMemorySize(long)
     id: setMaxPrimaryReplicationQueueMemorySize(long)
     parent: system.fabric._replicator_settings
@@ -714,13 +714,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 657
     package: system.fabric
-    summary: "<p>内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスのロールがプライマリの場合。 既定値は 0 です。 つまり、メモリの制限はありません。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-216\">内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-216\">Defines the maximum size of the primary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-217\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスのロールがプライマリの場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-217\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Primary.</span></span> <span data-ttu-id=\"b94cf-218\">既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-218\">The default value is 0.</span></span> <span data-ttu-id=\"b94cf-219\">つまり、メモリの制限はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-219\">This implies there is no memory limit</span></span> </p>"
     syntax:
       content: public void setMaxPrimaryReplicationQueueMemorySize(long maxPrimaryReplicationQueueMemorySize)
       parameters:
         - id: maxPrimaryReplicationQueueMemorySize
           type: 0364520f
-          description: <p>最大キューのサイズ、プライマリ レプリケーション操作の内部<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>単位をここでは、仮想メモリキューの使用量。長さを返します。 </p>
+          description: '<p><span data-ttu-id="b94cf-220">最大キューのサイズ、プライマリ レプリケーション操作の内部<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>単位をここでは、仮想メモリキューの使用量。長さを返します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-220">the maximum size of the primary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s The unit here is the virtual memory consumption of the queue .Returns long.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setMaxPrimaryReplicationQueueSize(long)
     id: setMaxPrimaryReplicationQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -737,13 +737,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 620
     package: system.fabric
-    summary: "<p>内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>このキューのサイズに達したかどうかは、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。 既定値は、このパラメーターの値は 1024 のメモが 2 の累乗にする必要があります。 この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>ときに、サービスの役割は、プライマリ </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-221\">内のプライマリ レプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-221\">Defines the maximum size of the primary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-222\">\r\n\r\n  <b>注釈:</b>このキューのサイズに達したかどうかは、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-222\">\r\n\r\n  <b>Remarks:</b>If this queue size is reached, then the Primary will begin seeing <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref> exceptions.</span></span> <span data-ttu-id=\"b94cf-223\">既定値は、このパラメーターの値は 1024 のメモが 2 の累乗にする必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-223\">The default value is 1024 Note that values for this parameter must be a power of 2.</span></span> <span data-ttu-id=\"b94cf-224\">この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>ときに、サービスの役割は、プライマリ</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-224\">This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Primary</span></span> </p>"
     syntax:
       content: public void setMaxPrimaryReplicationQueueSize(long maxPrimaryReplicationQueueSize)
       parameters:
         - id: maxPrimaryReplicationQueueSize
           type: 0364520f
-          description: <p>最大キューのサイズ、プライマリ レプリケーション操作の内部<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。 単位をここでは、キュー内の操作の数です。 </p>
+          description: '<p><span data-ttu-id="b94cf-225">最大キューのサイズ、プライマリ レプリケーション操作の内部<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。</span><span class="sxs-lookup"><span data-stu-id="b94cf-225">The maximum size of the primary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s.</span></span> <span data-ttu-id="b94cf-226">単位をここでは、キュー内の操作の数です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-226">The unit here is the number of operations in the queue.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setMaxReplicationMessageSize(long)
     id: setMaxReplicationMessageSize(long)
     parent: system.fabric._replicator_settings
@@ -760,13 +760,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 519
     package: system.fabric
-    summary: "<p>レプリケーター経由で送信できるメッセージの最大サイズを設定します。 メッセージをコピーして、コンテキストのメッセージをコピーするこれらレプリケーション メッセージが含まれます。 表現の単位はバイトです。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 50 MB </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-227\">レプリケーター経由で送信できるメッセージの最大サイズを設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-227\">Sets the maximum size of a message that can be transmitted via the replicator.</span></span> <span data-ttu-id=\"b94cf-228\">メッセージをコピーして、コンテキストのメッセージをコピーするこれらレプリケーション メッセージが含まれます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-228\">These include replication messages, copy messages and copy context messages.</span></span> <span data-ttu-id=\"b94cf-229\">表現の単位はバイトです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-229\">The unit of representation is bytes.</span></span></p>\n<p><span data-ttu-id=\"b94cf-230\">\r\n\r\n  <b>注釈:</b>既定値は 50 MB</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-230\">\r\n\r\n  <b>Remarks:</b>The default value is 50MB</span></span> </p>"
     syntax:
       content: public void setMaxReplicationMessageSize(long maxReplicationMessageSize)
       parameters:
         - id: maxReplicationMessageSize
           type: 0364520f
-          description: <p>レプリケーター経由で送信できるメッセージの最大サイズ。 </p>
+          description: <p><span data-ttu-id="b94cf-231">レプリケーター経由で送信できるメッセージの最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="b94cf-231">The maximum size of a message that can be transmitted via the replicator.</span></span> </p>
   - uid: system.fabric._replicator_settings.setMaxReplicationQueueMemorySize(long)
     id: setMaxReplicationQueueMemorySize(long)
     parent: system.fabric._replicator_settings
@@ -783,13 +783,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 459
     package: system.fabric
-    summary: "<p>レプリケーション キューのメモリの最大サイズを設定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 0 です。 つまり、メモリの制限はありません。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-232\">レプリケーション キューのメモリの最大サイズを設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-232\">Sets the maximum size for the replication queue memory.</span></span></p>\n<p><span data-ttu-id=\"b94cf-233\">\r\n\r\n  <b>注釈:</b>既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-233\">\r\n\r\n  <b>Remarks:</b>The default value is 0.</span></span> <span data-ttu-id=\"b94cf-234\">つまり、メモリの制限はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-234\">This implies there is no memory limit</span></span> </p>"
     syntax:
       content: public void setMaxReplicationQueueMemorySize(long maxReplicationQueueMemorySize)
       parameters:
         - id: maxReplicationQueueMemorySize
           type: 0364520f
-          description: <p>レプリケーション キューのメモリの最大サイズ。 </p>
+          description: <p><span data-ttu-id="b94cf-235">レプリケーション キューのメモリの最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="b94cf-235">The maximum size for the replication queue memory.</span></span> </p>
   - uid: system.fabric._replicator_settings.setMaxReplicationQueueSize(long)
     id: setMaxReplicationQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -807,14 +807,14 @@ items:
       startLine: 323
     package: system.fabric
     summary: |-
-      <p>レプリケーション キューの最大サイズを設定します。</p>
+      <p><span data-ttu-id="b94cf-236">レプリケーション キューの最大サイズを設定します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-236">Sets the maximum size for the replication queue.</span></span></p>
       <p></p>
     syntax:
       content: public void setMaxReplicationQueueSize(long maxReplicationQueueSize)
       parameters:
         - id: maxReplicationQueueSize
           type: 0364520f
-          description: <p>レプリケーション キューの最大サイズ。 </p>
+          description: <p><span data-ttu-id="b94cf-237">レプリケーション キューの最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="b94cf-237">the maximum size for the replication queue.</span></span> </p>
   - uid: system.fabric._replicator_settings.setMaxSecondaryReplicationQueueMemorySize(long)
     id: setMaxSecondaryReplicationQueueMemorySize(long)
     parent: system.fabric._replicator_settings
@@ -831,13 +831,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 777
     package: system.fabric
-    summary: "<p>内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s。</p>\n<p>\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合。 既定値は 0 です。 つまり、メモリの制限はありません。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-238\">内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-238\">Defines the maximum size of the secondary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s.</span></span></p>\n<p><span data-ttu-id=\"b94cf-239\">\r\n\r\n  <b>注釈:</b>この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-239\">\r\n\r\n  <b>Remarks:</b>This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Secondary/Idle.</span></span> <span data-ttu-id=\"b94cf-240\">既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-240\">The default value is 0.</span></span> <span data-ttu-id=\"b94cf-241\">つまり、メモリの制限はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-241\">This implies there is no memory limit</span></span> </p>"
     syntax:
       content: public void setMaxSecondaryReplicationQueueMemorySize(long maxSecondaryReplicationQueueMemorySize)
       parameters:
         - id: maxSecondaryReplicationQueueMemorySize
           type: 0364520f
-          description: <p>内のセカンダリのレプリケーション操作キューの最大サイズを返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。 単位をここでは、キューの仮想メモリの消費です。 </p>
+          description: '<p><span data-ttu-id="b94cf-242">内のセカンダリのレプリケーション操作キューの最大サイズを返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s。</span><span class="sxs-lookup"><span data-stu-id="b94cf-242">Returns the maximum size of the secondary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s.</span></span> <span data-ttu-id="b94cf-243">単位をここでは、キューの仮想メモリの消費です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-243">The unit here is the virtual memory consumption of the queue.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setMaxSecondaryReplicationQueueSize(long)
     id: setMaxSecondaryReplicationQueueSize(long)
     parent: system.fabric._replicator_settings
@@ -854,13 +854,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 739
     package: system.fabric
-    summary: "<p>内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</p>\n<p>\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされるこのキューのサイズに達すると、™ s レプリケーション キュー。 かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。 既定値は、このパラメーターの値が 2048.Note が 2 の累乗にする必要があります。 この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-244\">内のセカンダリのレプリケーション操作キューの最大サイズを定義<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-244\">Defines the maximum size of the secondary replication operation queue inside <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, which contains replication <xref uid=\"system.fabric._operation\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>s</span></span></p>\n<p><span data-ttu-id=\"b94cf-245\">\r\n\r\n  <b>注釈:</b>Primaryâ€ で操作がバッファーされるこのキューのサイズに達すると、™ s レプリケーション キュー。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-245\">\r\n\r\n  <b>Remarks:</b>If this queue size is reached, operations will be buffered in the Primaryâ€™s replication queue.</span></span> <span data-ttu-id=\"b94cf-246\">かどうかには、そのキューを格納、し、プライマリの表示が開始<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref>例外。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-246\">If that queue also fills, then the Primary will begin seeing <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricErrorCode#ReplicationQueueFull</xref> exceptions.</span></span> <span data-ttu-id=\"b94cf-247\">既定値は、このパラメーターの値が 2048.Note が 2 の累乗にする必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-247\">The default value is 2048.Note that values for this parameter must be a power of 2.</span></span> <span data-ttu-id=\"b94cf-248\">この設定に固有の<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>サービスの役割がセカンダリ/アイドル状態の場合</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-248\">This setting is specific to the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref> when the role of the service is Secondary/Idle</span></span> </p>"
     syntax:
       content: public void setMaxSecondaryReplicationQueueSize(long maxSecondaryReplicationQueueSize)
       parameters:
         - id: maxSecondaryReplicationQueueSize
           type: 0364520f
-          description: <p>内のセカンダリのレプリケーション操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。 単位をここでは、キューの操作の数 </p>
+          description: '<p><span data-ttu-id="b94cf-249">内のセカンダリのレプリケーション操作キューの最大サイズ<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>、レプリケーションが含まれている<xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s はまだ追加され、処理、サービス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-249">The maximum size of the secondary replication operation queue inside <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>, which contains replication <xref uid="system.fabric._operation" data-throw-if-not-resolved="false">system.fabric.Operation</xref>s not yet pumped and processed by the service.</span></span> <span data-ttu-id="b94cf-250">単位をここでは、キューの操作の数</span><span class="sxs-lookup"><span data-stu-id="b94cf-250">The unit here is the number of operations in the queue</span></span> </p>'
   - uid: system.fabric._replicator_settings.setPrimaryWaitForPendingQuorumsTimeout(Duration)
     id: setPrimaryWaitForPendingQuorumsTimeout(Duration)
     parent: system.fabric._replicator_settings
@@ -877,13 +877,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 818
     package: system.fabric
-    summary: "<p>Â €˜cancellingâ€ につながる可能性のある再構成要求を処理する前に、保留中のレプリケーション操作の確認のクォーラムを受信するため、主にレプリケーターが待機する時間を定義™、保留中のレプリケーション操作です。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は 0 です。 つまり、その再構成おく方™ t が保留中のレプリケーション操作でのクォーラムを受信するために待機します。 これは、再構成を早く完了するために役立ちます。 フェールオーバーをプライマリに長い期間の暗黙的な低速の再構成にこのパラメーターの値が大きいが生じる可能性があることに注意してください。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-251\">Â €˜cancellingâ€ につながる可能性のある再構成要求を処理する前に、保留中のレプリケーション操作の確認のクォーラムを受信するため、主にレプリケーターが待機する時間を定義™、保留中のレプリケーション操作です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-251\">Defines how long the primary replicator waits for receiving a quorum of acknowledgments for any pending replication operations before processing a reconfiguration request, that could potentially result in â€˜cancellingâ€™ the pending replication operations.</span></span></p>\n<p><span data-ttu-id=\"b94cf-252\">\r\n\r\n  <b>注釈:</b>既定値は 0 です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-252\">\r\n\r\n  <b>Remarks:</b>The default value is 0.</span></span> <span data-ttu-id=\"b94cf-253\">つまり、その再構成おく方™ t が保留中のレプリケーション操作でのクォーラムを受信するために待機します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-253\">This implies that reconfigurations arenâ€™t waited upon for receiving quorum on the pending replication operations.</span></span> <span data-ttu-id=\"b94cf-254\">これは、再構成を早く完了するために役立ちます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-254\">This helps in completing reconfigurations sooner.</span></span> <span data-ttu-id=\"b94cf-255\">フェールオーバーをプライマリに長い期間の暗黙的な低速の再構成にこのパラメーターの値が大きいが生じる可能性があることに注意してください。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-255\">Note that larger values for this parameter could potentially result in slower reconfigurations, implying longer durations to fail-over a primary.</span></span> </p>"
     syntax:
       content: public void setPrimaryWaitForPendingQuorumsTimeout(Duration primaryWaitForPendingQuorumsTimeout)
       parameters:
         - id: primaryWaitForPendingQuorumsTimeout
           type: e02a2de0
-          description: <p>プライマリのレプリケーターが再構成を処理するプライマリ レプリケーターの要求がある場合に、保留中のレプリケーション操作に対して受信確認のクォーラムを受信するために待機する時間<xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>です。 </p>
+          description: <p><span data-ttu-id="b94cf-256">プライマリのレプリケーターが再構成を処理するプライマリ レプリケーターの要求がある場合に、保留中のレプリケーション操作に対して受信確認のクォーラムを受信するために待機する時間<xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-256">Amount of time the primary replicator waits for receiving a quorum of acknowledgments for any pending replication operations when there is a request for the primary replicator to process a reconfiguration <xref uid="" data-throw-if-not-resolved="false">java.time.Duration</xref>.</span></span> </p>
   - uid: system.fabric._replicator_settings.setReplicatorAddress(String)
     id: setReplicatorAddress(String)
     parent: system.fabric._replicator_settings
@@ -900,13 +900,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 262
     package: system.fabric
-    summary: "<p>その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレスを構成します。</p>\n<p>\r\n\r\n  <b>注釈:</b>文字列としてフォーマットされている\"hostname:port\"ホスト名が FQDN または IP アドレスを指定できます。 既定値は localhost:0 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-257\">その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレスを構成します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-257\">Configures the address that this replicator will use when communicating with other Replicators.</span></span></p>\n<p><span data-ttu-id=\"b94cf-258\">\r\n\r\n  <b>注釈:</b>文字列としてフォーマットされている\"hostname:port\"ホスト名が FQDN または IP アドレスを指定できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-258\">\r\n\r\n  <b>Remarks:</b>String is formatted as \"hostname:port\", where hostname can be FQDN or IP address.</span></span> <span data-ttu-id=\"b94cf-259\">既定値は localhost:0</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-259\">The default value is localhost:0</span></span> </p>"
     syntax:
       content: public void setReplicatorAddress(String replicatorAddress)
       parameters:
         - id: replicatorAddress
           type: '26831127'
-          description: <p>その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレス。 </p>
+          description: <p><span data-ttu-id="b94cf-260">その他の複製物作成会社と通信するときにこの複製物作成会社が使用するアドレス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-260">The address that this replicator will use when communicating with other Replicators.</span></span> </p>
   - uid: system.fabric._replicator_settings.setRequireServiceAck(boolean)
     id: setRequireServiceAck(boolean)
     parent: system.fabric._replicator_settings
@@ -923,13 +923,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 434
     package: system.fabric
-    summary: "<p>により、サービスを呼び出すオプティミスティックの受信確認要求することで非永続的なサービスの操作の<xref uid=\"system.fabric._operation.acknowledge()\" data-throw-if-not-resolved=\"false\">system.fabric.Operation#acknowledge()</xref>次の操作をポンプする前にします。</p>\n<p>\r\n\r\n  <b>注釈:</b>明示的な受信確認を必要とする非永続的サービスはオプティミスティックの受信確認して、操作を防ぐために True にこのプロパティを設定することができます、<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>です。 この設定は、永続的なサービスの影響を与えません。 既定値は false です。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-261\">により、サービスを呼び出すオプティミスティックの受信確認要求することで非永続的なサービスの操作の<xref uid=\"system.fabric._operation.acknowledge()\" data-throw-if-not-resolved=\"false\">system.fabric.Operation#acknowledge()</xref>次の操作をポンプする前にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-261\">Prevents the optimistic acknowledgment of operations in non-persistent services by requiring that the service calls <xref uid=\"system.fabric._operation.acknowledge()\" data-throw-if-not-resolved=\"false\">system.fabric.Operation#acknowledge()</xref> before it pumps the next operation.</span></span></p>\n<p><span data-ttu-id=\"b94cf-262\">\r\n\r\n  <b>注釈:</b>明示的な受信確認を必要とする非永続的サービスはオプティミスティックの受信確認して、操作を防ぐために True にこのプロパティを設定することができます、<xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">レプリケーター</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-262\">\r\n\r\n  <b>Remarks:</b>Non-persistent services which require explicit acknowledgment can set this property to True in order to prevent optimistic acknowledgment of the operations by the <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">Replicator</xref>.</span></span> <span data-ttu-id=\"b94cf-263\">この設定は、永続的なサービスの影響を与えません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-263\">This setting has no effect for persistent services.</span></span> <span data-ttu-id=\"b94cf-264\">既定値は false です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-264\">The default value is false.</span></span> </p>"
     syntax:
       content: public void setRequireServiceAck(boolean requireServiceAck)
       parameters:
         - id: requireServiceAck
           type: 4fc6e284
-          description: <p>true の場合、オプティミスティックの受信確認の非永続的なサービス操作のそれ以外の場合は false。 </p>
+          description: '<p><span data-ttu-id="b94cf-265">true の場合、オプティミスティックの受信確認の非永続的なサービス操作のそれ以外の場合は false。</span><span class="sxs-lookup"><span data-stu-id="b94cf-265">true if the optimistic acknowledgment of operations in non-persistent services;otherwise, false.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setRetryInterval(Duration)
     id: setRetryInterval(Duration)
     parent: system.fabric._replicator_settings
@@ -946,13 +946,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 196
     package: system.fabric
-    summary: "<p>定義しますが、どのくらいの期間<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。</p>\n<p>\r\n\r\n  <b>注釈:</b>メッセージが処理されたことに必ずしもはメッセージを受信します。 このタイマーを超えた場合、メッセージが再送信されます。 既定値は、5 秒です。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-266\">定義しますが、どのくらいの期間<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-266\">Defines how long the <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> waits after it transmits a message from the primary to the secondary for the secondary to acknowledge that it has received the message.</span></span></p>\n<p><span data-ttu-id=\"b94cf-267\">\r\n\r\n  <b>注釈:</b>メッセージが処理されたことに必ずしもはメッセージを受信します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-267\">\r\n\r\n  <b>Remarks:</b>Receiving a message does not necessarily that the message has been processed.</span></span> <span data-ttu-id=\"b94cf-268\">このタイマーを超えた場合、メッセージが再送信されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-268\">If this timer is exceeded, then the message is retransmitted.</span></span> <span data-ttu-id=\"b94cf-269\">既定値は、5 秒です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-269\">The default value is 5 seconds.</span></span> </p>"
     syntax:
       content: public void setRetryInterval(Duration retryInterval)
       parameters:
         - id: retryInterval
           type: e02a2de0
-          description: <p>必要な時間、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。 </p>
+          description: <p><span data-ttu-id="b94cf-270">必要な時間、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>は、プライマリからのメッセージを受信したことを確認するセカンダリ セカンダリへのメッセージを送信後に待機します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-270">The time needed the <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref> waits after it transmits a message from the primary to the secondary for the secondary to acknowledge that it has received the message.</span></span> </p>
   - uid: system.fabric._replicator_settings.setSecondaryClearAcknowledgedOperations(boolean)
     id: setSecondaryClearAcknowledgedOperations(boolean)
     parent: system.fabric._replicator_settings
@@ -969,13 +969,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 490
     package: system.fabric
-    summary: "<p>通常、セカンダリのレプリケーターに操作にできる catchup レプリカにプライマリに昇格の場合、キューに保持されます。 このフラグを有効にすると、セカンダリに複製物作成会社は、ユーザーのサービスによって承認されるとすぐに、操作を解放します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は false </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-271\">通常、セカンダリのレプリケーターに操作にできる catchup レプリカにプライマリに昇格の場合、キューに保持されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-271\">Typically, operations in the secondary replicator are kept in the queue to be able to catchup replicas if it is promoted to a primary.</span></span> <span data-ttu-id=\"b94cf-272\">このフラグを有効にすると、セカンダリに複製物作成会社は、ユーザーのサービスによって承認されるとすぐに、操作を解放します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-272\">With this flag enabled, the secondary replicator releases the operation as soon as it is acknowledged by the user service.</span></span></p>\n<p><span data-ttu-id=\"b94cf-273\">\r\n\r\n  <b>注釈:</b>既定値は false</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-273\">\r\n\r\n  <b>Remarks:</b>The default value is false</span></span> </p>"
     syntax:
       content: public void setSecondaryClearAcknowledgedOperations(boolean secondaryClearAcknowledgedOperations)
       parameters:
         - id: secondaryClearAcknowledgedOperations
           type: 4fc6e284
-          description: <p>ユーザー サービスが承認されるとすぐに、セカンダリのレプリケーターが、操作を解放する場合は true。それ以外の場合は false です。 </p>
+          description: '<p><span data-ttu-id="b94cf-274">ユーザー サービスが承認されるとすぐに、セカンダリのレプリケーターが、操作を解放する場合は true。それ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-274">true if the secondary replicator releases the operation as soon as it is acknowledged by the user service; otherwise, false.</span></span> </p>'
   - uid: system.fabric._replicator_settings.setSecurityCredentials(SecurityCredentials)
     id: setSecurityCredentials(SecurityCredentials)
     parent: system.fabric._replicator_settings
@@ -993,14 +993,14 @@ items:
       startLine: 285
     package: system.fabric
     summary: |-
-      <p>使用サービスが複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義できます。</p>
+      <p><span data-ttu-id="b94cf-275">使用サービスが複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義できます。</span><span class="sxs-lookup"><span data-stu-id="b94cf-275">Allows the service to define security credentials for securing the traffic between replicators.</span></span></p>
       <p></p>
     syntax:
       content: public void setSecurityCredentials(SecurityCredentials securityCredentials)
       parameters:
         - id: securityCredentials
           type: system.fabric._security_credentials
-          description: <p>複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義するサービス。 </p>
+          description: <p><span data-ttu-id="b94cf-276">複製物作成会社間のトラフィックを保護するためのセキュリティ資格情報を定義するサービス。</span><span class="sxs-lookup"><span data-stu-id="b94cf-276">The service to define security credentials for securing the traffic between replicators.</span></span> </p>
   - uid: system.fabric._replicator_settings.setUseStreamFaultsAndEndOfStreamOperationAck(boolean)
     id: setUseStreamFaultsAndEndOfStreamOperationAck(boolean)
     parent: system.fabric._replicator_settings
@@ -1017,13 +1017,13 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ReplicatorSettings.java
       startLine: 544
     package: system.fabric
-    summary: "<p>レプリケーターがストリームのエラーを使用するかどうかを指定します。</p>\n<p>\r\n\r\n  <b>注釈:</b>既定値は false </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-277\">レプリケーターがストリームのエラーを使用するかどうかを指定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-277\">Specifies whether the replicator uses stream faults.</span></span></p>\n<p><span data-ttu-id=\"b94cf-278\">\r\n\r\n  <b>注釈:</b>既定値は false</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-278\">\r\n\r\n  <b>Remarks:</b>The default value is false</span></span> </p>"
     syntax:
       content: public void setUseStreamFaultsAndEndOfStreamOperationAck(boolean useStreamFaultsAndEndOfStreamOperationAck)
       parameters:
         - id: useStreamFaultsAndEndOfStreamOperationAck
           type: 4fc6e284
-          description: <p>レプリケーターがストリームの障害を使用する場合は trueそれ以外の場合は false です。 </p>
+          description: '<p><span data-ttu-id="b94cf-279">レプリケーターがストリームの障害を使用する場合は trueそれ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-279">true if the replicator uses stream faults; otherwise, false.</span></span> </p>'
   - uid: system.fabric._replicator_settings.toNative(PinCollection)
     id: toNative(PinCollection)
     parent: system.fabric._replicator_settings
@@ -1315,7 +1315,7 @@ references:
     nameWithType: SecurityCredentials
     fullName: system.fabric.SecurityCredentials
     type: Class
-    summary: <p>セキュリティ資格情報を表す型の抽象基本クラスです。 </p>
+    summary: <p><span data-ttu-id="b94cf-280">セキュリティ資格情報を表す型の抽象基本クラスです。</span><span class="sxs-lookup"><span data-stu-id="b94cf-280">An abstract base class for types that represent security credentials.</span></span> </p>
     syntax:
       content: public class SecurityCredentials
   - uid: system.fabric._replicator_settings
@@ -1333,7 +1333,7 @@ references:
     nameWithType: FabricReplicator
     fullName: system.fabric.FabricReplicator
     type: Class
-    summary: "<p>高可用性と信頼性のレプリケート状態です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。 インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-281\">高可用性と信頼性のレプリケート状態です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-281\">Replicates state for high availability and reliability.</span></span> </p>\n<p><span data-ttu-id=\"b94cf-282\">\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-282\">\r\n\r\n  <b>Remarks:</b>Provides the default implementation of the <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>, <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>, and <xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref> interfaces, which user services can use, along with their implementation of the <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> interface.</span></span> <span data-ttu-id=\"b94cf-283\">インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-283\">An instance of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> class is obtained via the <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator( system.fabric.StateProvider, system.fabric.ReplicatorSettings)</xref> method, which can be cast to <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> for use.</span></span> </p>"
     syntax:
       content: public class FabricReplicator implements Replicator
   - uid: system.fabric._operation
@@ -1343,7 +1343,7 @@ references:
     nameWithType: Operation
     fullName: system.fabric.Operation
     type: Interface
-    summary: "<p>\r\n\r\n  <b>注釈:</b>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>セカンダリ レプリカに配信される状態の変化を説明する基本インターフェイスです。 含まれている、 <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync (OperationData、SequenceNumber、system.fabric.CancellationToken)</xref>とシーケンス番号およびその他の情報を識別します。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-284\">\r\n\r\n  <b>注釈:</b>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>セカンダリ レプリカに配信される状態の変化を説明する基本インターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-284\">\r\n\r\n  <b>Remarks:</b>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref> is the base interface that describes state changes that are delivered to a Secondary replica.</span></span> <span data-ttu-id=\"b94cf-285\">含まれている、 <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync (OperationData、SequenceNumber、system.fabric.CancellationToken)</xref>とシーケンス番号およびその他の情報を識別します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-285\">They contain the <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync(OperationData, SequenceNumber, system.fabric.CancellationToken)</xref> and the sequence number and other identifying information.</span></span> </p>"
     syntax:
       content: public interface Operation
   - uid: system.fabric._operation.acknowledge()
@@ -1353,7 +1353,7 @@ references:
     nameWithType: Operation.acknowledge()
     fullName: void system.fabric.Operation.acknowledge()
     type: Method
-    summary: "<p>この操作が、セカンダリ レプリカに正常に適用されたことを確認します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>取得したときに、サービスはこのメソッドを呼び出す必要があります、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>複製物作成会社と正常にローカル ストアに適用します。 永続化されたサービスでは、このメソッドを呼び出すことが必須ため、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>を実装するその他のオブジェクトを解放しない<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>です。 揮発性サービスでは、レプリケーターに暗黙的に承認されると operations 値の設定でそれ以外の場合は構成しない限り、受信したとき<xref uid=\"system.fabric._replicator_settings.isRequireServiceAck()\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#isRequireServiceAck()</xref> true に設定します。 プライマリ レプリカを受け取る前に、レプリカのクォーラム操作を確認する必要があります、 <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync (OperationData、SequenceNumber、system.fabric.CancellationToken)</xref>操作完了の応答。 </p>"
+    summary: "<p><span data-ttu-id=\"b94cf-286\">この操作が、セカンダリ レプリカに正常に適用されたことを確認します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-286\">Acknowledges that this operation has been successfully applied at the Secondary replica.</span></span> </p>\n<p><span data-ttu-id=\"b94cf-287\">\r\n\r\n  <b>注釈:</b>取得したときに、サービスはこのメソッドを呼び出す必要があります、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>複製物作成会社と正常にローカル ストアに適用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-287\">\r\n\r\n  <b>Remarks:</b>Services should call this method when they have obtained an <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref> from the replicator and successfully applied it to their local store.</span></span> <span data-ttu-id=\"b94cf-288\">永続化されたサービスでは、このメソッドを呼び出すことが必須ため、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>を実装するその他のオブジェクトを解放しない<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-288\">For persisted services, calling this method is mandatory because the <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> does not release additional objects that implement <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.Operation</xref>.</span></span> <span data-ttu-id=\"b94cf-289\">揮発性サービスでは、レプリケーターに暗黙的に承認されると operations 値の設定でそれ以外の場合は構成しない限り、受信したとき<xref uid=\"system.fabric._replicator_settings.isRequireServiceAck()\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#isRequireServiceAck()</xref> true に設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-289\">For volatile services, the replicator implicitly acknowledges operations when they are received unless they are configured otherwise by setting the value <xref uid=\"system.fabric._replicator_settings.isRequireServiceAck()\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings#isRequireServiceAck()</xref> to true.</span></span> <span data-ttu-id=\"b94cf-290\">プライマリ レプリカを受け取る前に、レプリカのクォーラム操作を確認する必要があります、 <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync (OperationData、SequenceNumber、system.fabric.CancellationToken)</xref>操作完了の応答。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b94cf-290\">An operation must be acknowledged by a quorum of replicas before the Primary replica receives the <xref uid=\"system.fabric._state_replicator.replicateAsync(OperationData,SequenceNumber,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator#replicateAsync(OperationData, SequenceNumber, system.fabric.CancellationToken)</xref> operation complete responses.</span></span> </p>"
     syntax:
       content: public void acknowledge()
   - uid: system.fabric._replicator
@@ -1381,6 +1381,6 @@ references:
     nameWithType: FabricCodePackageActivationContext
     fullName: system.fabric.FabricCodePackageActivationContext
     type: Class
-    summary: <p>Service Fabric サービスのアクティブ化コンテキストを表します。 これは、ファブリックのアクティブ化サービスでのみ有効です。 </p>
+    summary: <p><span data-ttu-id="b94cf-291">Service Fabric サービスのアクティブ化コンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="b94cf-291">Represents activation context for the Service Fabric service.</span></span> <span data-ttu-id="b94cf-292">これは、ファブリックのアクティブ化サービスでのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="b94cf-292">This is valid for fabric activated service only.</span></span> </p>
     syntax:
       content: public class FabricCodePackageActivationContext implements CodePackageActivationContext

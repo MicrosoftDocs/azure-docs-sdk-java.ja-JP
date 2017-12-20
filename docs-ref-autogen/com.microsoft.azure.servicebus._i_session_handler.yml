@@ -22,7 +22,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ISessionHandler.java
       startLine: 10
     package: com.microsoft.azure.servicebus
-    summary: '<p>セッションのメッセージ処理のコールバックを登録するためのコントラクトを定義<xref uid="" data-throw-if-not-resolved="false">QueueClient#registerSessionHandler(ISessionHandler)</xref>または<xref uid="" data-throw-if-not-resolved="false">SubscriptionClient#registerSessionHandler(ISessionHandler)</xref>の<xref uid="com.microsoft.azure.servicebus._queue_client" data-throw-if-not-resolved="false">QueueClient</xref>と<xref uid="com.microsoft.azure.servicebus._subscription_client" data-throw-if-not-resolved="false">SubscriptionClient</xref>です。 </p>'
+    summary: '<p><span data-ttu-id="d7e73-101">セッションのメッセージ処理のコールバックを登録するためのコントラクトを定義<xref uid="" data-throw-if-not-resolved="false">QueueClient#registerSessionHandler(ISessionHandler)</xref>または<xref uid="" data-throw-if-not-resolved="false">SubscriptionClient#registerSessionHandler(ISessionHandler)</xref>の<xref uid="com.microsoft.azure.servicebus._queue_client" data-throw-if-not-resolved="false">QueueClient</xref>と<xref uid="com.microsoft.azure.servicebus._subscription_client" data-throw-if-not-resolved="false">SubscriptionClient</xref>です。</span><span class="sxs-lookup"><span data-stu-id="d7e73-101">Defines the contract for registering the session message processing callback <xref uid="" data-throw-if-not-resolved="false">QueueClient#registerSessionHandler(ISessionHandler)</xref> or <xref uid="" data-throw-if-not-resolved="false">SubscriptionClient#registerSessionHandler(ISessionHandler)</xref> for <xref uid="com.microsoft.azure.servicebus._queue_client" data-throw-if-not-resolved="false">QueueClient</xref> and <xref uid="com.microsoft.azure.servicebus._subscription_client" data-throw-if-not-resolved="false">SubscriptionClient</xref>.</span></span> </p>'
     syntax:
       content: public interface ISessionHandler
   - uid: 'com.microsoft.azure.servicebus._i_session_handler.notifyException(Throwable,ExceptionPhase)'
@@ -42,17 +42,17 @@ items:
       startLine: 35
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>渡された例外を受信メッセージの処理中にポンプによってです。</p>
+      <p><span data-ttu-id="d7e73-102">渡された例外を受信メッセージの処理中にポンプによってです。</span><span class="sxs-lookup"><span data-stu-id="d7e73-102">Receiving the exceptions that passed by pump during message processing.</span></span></p>
       <p></p>
     syntax:
       content: 'public void notifyException(Throwable exception, ExceptionPhase phase)'
       parameters:
         - id: exception
           type: a04fafd7
-          description: <p>ポンプ内で受信した例外。 </p>
+          description: <p><span data-ttu-id="d7e73-103">ポンプ内で受信した例外。</span><span class="sxs-lookup"><span data-stu-id="d7e73-103">Exception received in pump.</span></span> </p>
         - id: phase
           type: com.microsoft.azure.servicebus._exception_phase
-          description: <p>例外のフェーズです。 </p>
+          description: <p><span data-ttu-id="d7e73-104">例外のフェーズです。</span><span class="sxs-lookup"><span data-stu-id="d7e73-104">Exception phase.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_session_handler.OnCloseSessionAsync(IMessageSession)
     id: OnCloseSessionAsync(IMessageSession)
     parent: com.microsoft.azure.servicebus._i_session_handler
@@ -70,17 +70,17 @@ items:
       startLine: 27
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>セッションのポンプによってセッションが閉じられる直前に呼び出されます</p>
+      <p><span data-ttu-id="d7e73-105">セッションのポンプによってセッションが閉じられる直前に呼び出されます</span><span class="sxs-lookup"><span data-stu-id="d7e73-105">Called just before a session is closed by the session pump</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> OnCloseSessionAsync(IMessageSession session)
       parameters:
         - id: session
           type: com.microsoft.azure.servicebus._i_message_session
-          description: <p>セッションが閉じられています。 </p>
+          description: <p><span data-ttu-id="d7e73-106">セッションが閉じられています。</span><span class="sxs-lookup"><span data-stu-id="d7e73-106">session being closed</span></span> </p>
       return:
         type: db03ee24
-        description: <p>アクションを実行する予定 </p>
+        description: <p><span data-ttu-id="d7e73-107">アクションを実行する予定</span><span class="sxs-lookup"><span data-stu-id="d7e73-107">a future that executes the action</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_session_handler.onMessageAsync(IMessageSession,IMessage)'
     id: 'onMessageAsync(IMessageSession,IMessage)'
     parent: com.microsoft.azure.servicebus._i_session_handler
@@ -98,20 +98,20 @@ items:
       startLine: 19
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>コールバックに渡す受信したメッセージ ポンプを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>s。</p>
+      <p><span data-ttu-id="d7e73-108">コールバックに渡す受信したメッセージ ポンプを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>s。</span><span class="sxs-lookup"><span data-stu-id="d7e73-108">The callback for message pump to pass received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref>s.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> onMessageAsync(IMessageSession session, IMessage message)'
       parameters:
         - id: session
           type: com.microsoft.azure.servicebus._i_message_session
-          description: <p><xref uid="com.microsoft.azure.servicebus._message_session" data-throw-if-not-resolved="false">MessageSession</xref>メッセージのです。 </p>
+          description: <p><span data-ttu-id="d7e73-109"><xref uid="com.microsoft.azure.servicebus._message_session" data-throw-if-not-resolved="false">MessageSession</xref>メッセージのです。</span><span class="sxs-lookup"><span data-stu-id="d7e73-109">The <xref uid="com.microsoft.azure.servicebus._message_session" data-throw-if-not-resolved="false">MessageSession</xref> of the message.</span></span> </p>
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。 </p>
+          description: <p><span data-ttu-id="d7e73-110">受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。</span><span class="sxs-lookup"><span data-stu-id="d7e73-110">The received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref>.</span></span> </p>
       return:
         type: db03ee24
-        description: <p>メッセージ ハンドラーの CompletableFuture します。 </p>
+        description: <p><span data-ttu-id="d7e73-111">メッセージ ハンドラーの CompletableFuture します。</span><span class="sxs-lookup"><span data-stu-id="d7e73-111">CompletableFuture for the message handler.</span></span> </p>
 references:
   - uid: db03ee24
     spec.java:
@@ -144,10 +144,10 @@ references:
     fullName: com.microsoft.azure.servicebus.IMessageSession
     type: Interface
     summary: |-
-      <p>セッション オブジェクトを表します。 <xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref>セッションでの操作を実行するために使用できます。 </p>
-      <p>サービス バス セッション、AMQP 1.0 プロトコルでは"Groups"とも呼ばれますとは、一連の関連メッセージをバインド解除済みです。 ServiceBus では、セッションでメッセージの順序を保証します。 </p>
-      <p>センダは、セッションを作成することができますを設定してトピックまたはキューにメッセージを送信するときに、 <xref uid="" data-throw-if-not-resolved="false">#sessionId をメッセージ</xref>プロパティを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>一部のアプリケーションに一意の識別子を定義します。 AMQP 1.0 プロトコル レベルでは、この値は、グループ id プロパティにマップされます。 </p>
-      <p>セッションは、キューまたはトピックのサブスクリプションで、セッションのセッション Id で、少なくとも 1 つのメッセージが表示される時に存在するようになります。 セッションが存在する場合は定義されている時点、またはセッションの有効期限が切れる場合または非表示のジェスチャです。 </p>
+      <p><span data-ttu-id="d7e73-112">セッション オブジェクトを表します。</span><span class="sxs-lookup"><span data-stu-id="d7e73-112">Describes a Session object.</span></span> <span data-ttu-id="d7e73-113"><xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref>セッションでの操作を実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="d7e73-113"><xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref> can be used to perform operations on sessions.</span></span> </p>
+      <p><span data-ttu-id="d7e73-114">サービス バス セッション、AMQP 1.0 プロトコルでは"Groups"とも呼ばれますとは、一連の関連メッセージをバインド解除済みです。</span><span class="sxs-lookup"><span data-stu-id="d7e73-114">Service Bus Sessions, also called 'Groups' in the AMQP 1.0 protocol, are unbounded sequences of related messages.</span></span> <span data-ttu-id="d7e73-115">ServiceBus では、セッションでメッセージの順序を保証します。</span><span class="sxs-lookup"><span data-stu-id="d7e73-115">ServiceBus guarantees ordering of messages in a session.</span></span> </p>
+      <p><span data-ttu-id="d7e73-116">センダは、セッションを作成することができますを設定してトピックまたはキューにメッセージを送信するときに、 <xref uid="" data-throw-if-not-resolved="false">#sessionId をメッセージ</xref>プロパティを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>一部のアプリケーションに一意の識別子を定義します。</span><span class="sxs-lookup"><span data-stu-id="d7e73-116">Any sender can create a session when submitting messages into a Topic or Queue by setting the <xref uid="" data-throw-if-not-resolved="false">Message#sessionId</xref> property on <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to some application defined unique identifier.</span></span> <span data-ttu-id="d7e73-117">AMQP 1.0 プロトコル レベルでは、この値は、グループ id プロパティにマップされます。</span><span class="sxs-lookup"><span data-stu-id="d7e73-117">At the AMQP 1.0 protocol level, this value maps to the group-id property.</span></span> </p>
+      <p><span data-ttu-id="d7e73-118">セッションは、キューまたはトピックのサブスクリプションで、セッションのセッション Id で、少なくとも 1 つのメッセージが表示される時に存在するようになります。</span><span class="sxs-lookup"><span data-stu-id="d7e73-118">Sessions come into existence when there is at least one message with the session's SessionId in the Queue or Topic subscription.</span></span> <span data-ttu-id="d7e73-119">セッションが存在する場合は定義されている時点、またはセッションの有効期限が切れる場合または非表示のジェスチャです。</span><span class="sxs-lookup"><span data-stu-id="d7e73-119">Once a Session exists, there is no defined moment or gesture for when the session expires or disappears.</span></span> </p>
     syntax:
       content: public interface IMessageSession extends IMessageReceiver
   - uid: com.microsoft.azure.servicebus._i_message
@@ -158,7 +158,7 @@ references:
     fullName: com.microsoft.azure.servicebus.IMessage
     type: Interface
     summary: |-
-      <p>Azure Service Bus とクライアント間で交換されるメッセージを表します。</p>
+      <p><span data-ttu-id="d7e73-120">Azure Service Bus とクライアント間で交換されるメッセージを表します。</span><span class="sxs-lookup"><span data-stu-id="d7e73-120">Represents a message that is exchanged between Azure Service Bus and clients.</span></span></p>
       <p></p>
     syntax:
       content: public interface IMessage
@@ -188,7 +188,7 @@ references:
     fullName: com.microsoft.azure.servicebus.ExceptionPhase
     type: Enum
     summary: |-
-      <p>メッセージ ポンプまたは例外が発生したセッション ポンプのフェーズを表す列挙体です。</p>
+      <p><span data-ttu-id="d7e73-121">メッセージ ポンプまたは例外が発生したセッション ポンプのフェーズを表す列挙体です。</span><span class="sxs-lookup"><span data-stu-id="d7e73-121">Enumeration to represent the phase in a message pump or session pump at which an exception occurred.</span></span></p>
       <p></p>
     syntax:
       content: public enum ExceptionPhase

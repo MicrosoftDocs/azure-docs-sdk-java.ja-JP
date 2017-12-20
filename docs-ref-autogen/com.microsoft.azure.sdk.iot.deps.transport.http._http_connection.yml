@@ -34,8 +34,8 @@ items:
       startLine: 29
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>Java SE クラス HttpsURLConnection のラッパーです。 モック フレームワーク JMockit でテストするときに、互換性の問題を回避するだけでなく HttpsURLConnection を使用する場合は、いくつかドキュメントに未記載の副作用を回避するために使用します。 </p>
-      <p>基になる HttpsURLConnection は、Java で透過的に管理されます。 時間ごとに、接続を再利用する<xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>が呼び出されると、入力ストリーム (入力ストリームまたは入力ストリームにアクセスできない場合、エラー ストリーム) を完全に読み取る必要があります。 それ以外の場合、データはストリームとの接続では再利用可能なできません。 </p>
+      <p><span data-ttu-id="831b0-101">Java SE クラス HttpsURLConnection のラッパーです。</span><span class="sxs-lookup"><span data-stu-id="831b0-101">A wrapper for the Java SE class HttpsURLConnection.</span></span> <span data-ttu-id="831b0-102">モック フレームワーク JMockit でテストするときに、互換性の問題を回避するだけでなく HttpsURLConnection を使用する場合は、いくつかドキュメントに未記載の副作用を回避するために使用します。</span><span class="sxs-lookup"><span data-stu-id="831b0-102">Used to avoid compatibility issues when testing with the mocking framework JMockit, as well as to avoid some undocumented side effects when using HttpsURLConnection.</span></span> </p>
+      <p><span data-ttu-id="831b0-103">基になる HttpsURLConnection は、Java で透過的に管理されます。</span><span class="sxs-lookup"><span data-stu-id="831b0-103">The underlying HttpsURLConnection is transparently managed by Java.</span></span> <span data-ttu-id="831b0-104">時間ごとに、接続を再利用する<xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>が呼び出されると、入力ストリーム (入力ストリームまたは入力ストリームにアクセスできない場合、エラー ストリーム) を完全に読み取る必要があります。</span><span class="sxs-lookup"><span data-stu-id="831b0-104">To reuse connections, for each time <xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref> is called, the input streams (input stream or error stream, if input stream is not accessible) must be completely read.</span></span> <span data-ttu-id="831b0-105">それ以外の場合、データはストリームとの接続では再利用可能なできません。</span><span class="sxs-lookup"><span data-stu-id="831b0-105">Otherwise, the data remains in the stream and the connection will not be reusable.</span></span> </p>
     syntax:
       content: public class HttpConnection
     inheritance:
@@ -55,7 +55,7 @@ items:
       path: deps/src/main/java/com/microsoft/azure/sdk/iot/deps/transport/http/HttpConnection.java
       startLine: 39
     package: com.microsoft.azure.sdk.iot.deps.transport.http
-    summary: <p>本文。 HttpsURLConnection をサイレント モードで呼び出す<xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>に出力ストリームが書き込まれたとき。 本文をバッファーし、まで出力ストリームに書き込みを遅延<xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>と呼びます。 </p>
+    summary: <p><span data-ttu-id="831b0-106">本文。</span><span class="sxs-lookup"><span data-stu-id="831b0-106">The body.</span></span> <span data-ttu-id="831b0-107">HttpsURLConnection をサイレント モードで呼び出す<xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>に出力ストリームが書き込まれたとき。</span><span class="sxs-lookup"><span data-stu-id="831b0-107">HttpsURLConnection silently calls <xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref> when the output stream is written to.</span></span> <span data-ttu-id="831b0-108">本文をバッファーし、まで出力ストリームに書き込みを遅延<xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>と呼びます。</span><span class="sxs-lookup"><span data-stu-id="831b0-108">We buffer the body and defer writing to the output stream until <xref uid="com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref> is called.</span></span> </p>
     syntax:
       content: 'protected byte [] body'
       return:
@@ -77,13 +77,13 @@ items:
       startLine: 94
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>コンス トラクターで指定された URL に要求を送信します。</p>
+      <p><span data-ttu-id="831b0-109">コンス トラクターで指定された URL に要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="831b0-109">Sends the request to the URL given in the constructor.</span></span></p>
       <p></p>
     syntax: &ref_1
       content: public void connect()
     exceptions:
       - type: cbf33bbe
-        description: <p>この例外は、接続を確立できませんでした、または不適切なステータス コードで、サーバーが応答した場合にスローされます。 </p>
+        description: '<p><span data-ttu-id="831b0-110">この例外は、接続を確立できませんでした、または不適切なステータス コードで、サーバーが応答した場合にスローされます。</span><span class="sxs-lookup"><span data-stu-id="831b0-110">This exception thrown if the connection could not be established, or the server responded with a bad status code.</span></span> </p>'
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.connection
     id: connection
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -99,7 +99,7 @@ items:
       path: deps/src/main/java/com/microsoft/azure/sdk/iot/deps/transport/http/HttpConnection.java
       startLine: 32
     package: com.microsoft.azure.sdk.iot.deps.transport.http
-    summary: <p>基になる HTTPS 接続します。 </p>
+    summary: <p><span data-ttu-id="831b0-111">基になる HTTPS 接続します。</span><span class="sxs-lookup"><span data-stu-id="831b0-111">The underlying HTTPS connection.</span></span> </p>
     syntax:
       content: protected final HttpsURLConnection connection
       return:
@@ -121,16 +121,16 @@ items:
       startLine: 280
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>キーがヘッダー フィールドの名前、値は、ヘッダー フィールド名に関連付けられている値をマップとして応答ヘッダーを返します。</p>
+      <p><span data-ttu-id="831b0-112">キーがヘッダー フィールドの名前、値は、ヘッダー フィールド名に関連付けられている値をマップとして応答ヘッダーを返します。</span><span class="sxs-lookup"><span data-stu-id="831b0-112">Returns the response headers as a Map, where the key is the header field name and the values are the values associated with the header field name.</span></span></p>
       <p></p>
     syntax:
       content: 'public Map<String, List<String>> getResponseHeaders()'
       return:
         type: b2319095
-        description: <p>応答ヘッダー。</p>
+        description: <p><span data-ttu-id="831b0-113">応答ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="831b0-113">the response headers.</span></span></p>
     exceptions:
       - type: cbf33bbe
-        description: <p>この例外は、応答を受信しなかった場合にスローされます。 </p>
+        description: <p><span data-ttu-id="831b0-114">この例外は、応答を受信しなかった場合にスローされます。</span><span class="sxs-lookup"><span data-stu-id="831b0-114">This exception thrown if no response was received.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.getResponseStatus()
     id: getResponseStatus()
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -148,16 +148,16 @@ items:
       startLine: 264
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>応答のステータス コードを返します。</p>
+      <p><span data-ttu-id="831b0-115">応答のステータス コードを返します。</span><span class="sxs-lookup"><span data-stu-id="831b0-115">Returns the response status code.</span></span></p>
       <p></p>
     syntax:
       content: public int getResponseStatus()
       return:
         type: f75371fa
-        description: <p>応答ステータス コード。</p>
+        description: <p><span data-ttu-id="831b0-116">応答ステータス コード。</span><span class="sxs-lookup"><span data-stu-id="831b0-116">The response status code.</span></span></p>
     exceptions:
       - type: cbf33bbe
-        description: <p>この例外は、応答を受信しなかった場合にスローされます。 </p>
+        description: <p><span data-ttu-id="831b0-117">この例外は、応答を受信しなかった場合にスローされます。</span><span class="sxs-lookup"><span data-stu-id="831b0-117">This exception thrown if no response was received.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.HttpConnection()
     id: HttpConnection()
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -193,20 +193,20 @@ items:
       startLine: 49
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>コンス トラクターです。 指定された URL への接続を開きます。</p>
+      <p><span data-ttu-id="831b0-118">コンス トラクターです。</span><span class="sxs-lookup"><span data-stu-id="831b0-118">Constructor.</span></span> <span data-ttu-id="831b0-119">指定された URL への接続を開きます。</span><span class="sxs-lookup"><span data-stu-id="831b0-119">Opens a connection to the given URL.</span></span></p>
       <p></p>
     syntax:
       content: 'public HttpConnection(URL url, HttpMethod method)'
       parameters:
         - id: url
           type: a891b3e6
-          description: <p>HTTPS 接続の URL です。 </p>
+          description: <p><span data-ttu-id="831b0-120">HTTPS 接続の URL です。</span><span class="sxs-lookup"><span data-stu-id="831b0-120">The URL for the HTTPS connection.</span></span> </p>
         - id: method
           type: com.microsoft.azure.sdk.iot.deps.transport.http._http_method
-          description: <p>HTTPS メソッド (GET)。</p>
+          description: <p><span data-ttu-id="831b0-121">HTTPS メソッド (GET)。</span><span class="sxs-lookup"><span data-stu-id="831b0-121">The HTTPS method (i.e. GET).</span></span></p>
     exceptions:
       - type: cbf33bbe
-        description: <p>接続が開かれるできなかった場合は、この例外がスローされます。 </p>
+        description: <p><span data-ttu-id="831b0-122">接続が開かれるできなかった場合は、この例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="831b0-122">This exception is thrown if the connection was unable to be opened.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.readError()
     id: readError()
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -224,16 +224,16 @@ items:
       startLine: 239
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>エラー ストリームから読み取り、エラーの原因を返します。</p>
+      <p><span data-ttu-id="831b0-123">エラー ストリームから読み取り、エラーの原因を返します。</span><span class="sxs-lookup"><span data-stu-id="831b0-123">Reads from the error stream and returns the error reason.</span></span></p>
       <p></p>
     syntax:
       content: 'public byte [] readError()'
       return:
         type: ccd9418d
-        description: <p>エラーの理由です。</p>
+        description: <p><span data-ttu-id="831b0-124">エラーの理由です。</span><span class="sxs-lookup"><span data-stu-id="831b0-124">The error reason.</span></span></p>
     exceptions:
       - type: cbf33bbe
-        description: <p>この例外はスローされた場合は、入力ストリームにアクセスできませんでした、たとえば、サーバーに到達できませんでした。 </p>
+        description: '<p><span data-ttu-id="831b0-125">この例外はスローされた場合は、入力ストリームにアクセスできませんでした、たとえば、サーバーに到達できませんでした。</span><span class="sxs-lookup"><span data-stu-id="831b0-125">This exception thrown if the input stream could not be accessed, for example if the server could not be reached.</span></span> </p>'
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.readInput()
     id: readInput()
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -251,16 +251,16 @@ items:
       startLine: 219
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>入力ストリーム (応答ストリーム) から読み取り、応答を返します。</p>
+      <p><span data-ttu-id="831b0-126">入力ストリーム (応答ストリーム) から読み取り、応答を返します。</span><span class="sxs-lookup"><span data-stu-id="831b0-126">Reads from the input stream (response stream) and returns the response.</span></span></p>
       <p></p>
     syntax:
       content: 'public byte [] readInput()'
       return:
         type: ccd9418d
-        description: <p>応答本文です。</p>
+        description: <p><span data-ttu-id="831b0-127">応答本文です。</span><span class="sxs-lookup"><span data-stu-id="831b0-127">The response body.</span></span></p>
     exceptions:
       - type: cbf33bbe
-        description: <p>この例外はスローされた場合は、入力ストリームにアクセスできませんでした、たとえば、サーバーに到達できませんでした。 </p>
+        description: '<p><span data-ttu-id="831b0-128">この例外はスローされた場合は、入力ストリームにアクセスできませんでした、たとえば、サーバーに到達できませんでした。</span><span class="sxs-lookup"><span data-stu-id="831b0-128">This exception thrown if the input stream could not be accessed, for example if the server could not be reached.</span></span> </p>'
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.readInputStream(InputStream)
     id: readInputStream(InputStream)
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -278,20 +278,20 @@ items:
       startLine: 296
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>ストリームが空になるまでは、入力ストリームを読み取ります。</p>
+      <p><span data-ttu-id="831b0-129">ストリームが空になるまでは、入力ストリームを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="831b0-129">Reads the input stream until the stream is empty.</span></span></p>
       <p></p>
     syntax:
       content: 'protected static byte [] readInputStream(InputStream stream)'
       parameters:
         - id: stream
           type: 76fcb9b7
-          description: <p>入力ストリーム。</p>
+          description: <p><span data-ttu-id="831b0-130">入力ストリーム。</span><span class="sxs-lookup"><span data-stu-id="831b0-130">The input stream.</span></span></p>
       return:
         type: ccd9418d
-        description: <p>入力ストリームの内容。</p>
+        description: <p><span data-ttu-id="831b0-131">入力ストリームの内容。</span><span class="sxs-lookup"><span data-stu-id="831b0-131">The content of the input stream.</span></span></p>
     exceptions:
       - type: cbf33bbe
-        description: <p>この例外から入力ストリームを読み取れなかった場合にスローされます。 </p>
+        description: <p><span data-ttu-id="831b0-132">この例外から入力ストリームを読み取れなかった場合にスローされます。</span><span class="sxs-lookup"><span data-stu-id="831b0-132">This exception thrown if the input stream could not be read from.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.setReadTimeoutMillis(int)
     id: setReadTimeoutMillis(int)
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -309,14 +309,14 @@ items:
       startLine: 174
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>読み取りのタイムアウトをミリ秒単位で設定します。 読み取りのタイムアウトは、サーバーは要求を受信後し、サーバーが返されるデータを送信する前に、(ミリ秒) の数です。</p>
+      <p><span data-ttu-id="831b0-133">読み取りのタイムアウトをミリ秒単位で設定します。</span><span class="sxs-lookup"><span data-stu-id="831b0-133">Sets the read timeout in milliseconds.</span></span> <span data-ttu-id="831b0-134">読み取りのタイムアウトは、サーバーは要求を受信後し、サーバーが返されるデータを送信する前に、(ミリ秒) の数です。</span><span class="sxs-lookup"><span data-stu-id="831b0-134">The read timeout is the number of milliseconds after the server receives a request and before the server sends data back.</span></span></p>
       <p></p>
     syntax:
       content: public void setReadTimeoutMillis(int timeout)
       parameters:
         - id: timeout
           type: f75371fa
-          description: <p>読み取りのタイムアウト。 </p>
+          description: <p><span data-ttu-id="831b0-135">読み取りのタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="831b0-135">The read timeout.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.setRequestHeader(String,String)'
     id: 'setRequestHeader(String,String)'
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -334,17 +334,17 @@ items:
       startLine: 160
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>要求ヘッダー フィールドを指定した値に設定します。</p>
+      <p><span data-ttu-id="831b0-136">要求ヘッダー フィールドを指定した値に設定します。</span><span class="sxs-lookup"><span data-stu-id="831b0-136">Sets the request header field to the given value.</span></span></p>
       <p></p>
     syntax:
       content: 'public void setRequestHeader(String field, String value)'
       parameters:
         - id: field
           type: '26831127'
-          description: <p>ヘッダー フィールド名です。 </p>
+          description: <p><span data-ttu-id="831b0-137">ヘッダー フィールド名です。</span><span class="sxs-lookup"><span data-stu-id="831b0-137">The header field name.</span></span> </p>
         - id: value
           type: '26831127'
-          description: <p>ヘッダー フィールドの値。 </p>
+          description: <p><span data-ttu-id="831b0-138">ヘッダー フィールドの値。</span><span class="sxs-lookup"><span data-stu-id="831b0-138">The header field value.</span></span> </p>
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.setRequestMethod(HttpMethod)
     id: setRequestMethod(HttpMethod)
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -362,17 +362,17 @@ items:
       startLine: 130
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>(つまり POST)、要求メソッドを設定します。</p>
+      <p><span data-ttu-id="831b0-139">(つまり POST)、要求メソッドを設定します。</span><span class="sxs-lookup"><span data-stu-id="831b0-139">Sets the request method (i.e. POST).</span></span></p>
       <p></p>
     syntax:
       content: public void setRequestMethod(HttpMethod method)
       parameters:
         - id: method
           type: com.microsoft.azure.sdk.iot.deps.transport.http._http_method
-          description: <p>要求メソッド。</p>
+          description: <p><span data-ttu-id="831b0-140">要求メソッド。</span><span class="sxs-lookup"><span data-stu-id="831b0-140">The request method.</span></span></p>
     exceptions:
       - type: 3c87bd19
-        description: <p>この例外を要求空でない本体と、新しいメソッドを持っている場合にスローされますが、POST または PUT です。 これは、Java の HttpsURLConnection サイレントが変換されるため、HTTPS メソッド POST または PUT 要求に本文が記述されている場合です。 </p>
+        description: <p><span data-ttu-id="831b0-141">この例外を要求空でない本体と、新しいメソッドを持っている場合にスローされますが、POST または PUT です。</span><span class="sxs-lookup"><span data-stu-id="831b0-141">This exception thrown if the request currently has a non-empty body and the new method is not a POST or a PUT.</span></span> <span data-ttu-id="831b0-142">これは、Java の HttpsURLConnection サイレントが変換されるため、HTTPS メソッド POST または PUT 要求に本文が記述されている場合です。</span><span class="sxs-lookup"><span data-stu-id="831b0-142">This is because Java's HttpsURLConnection silently converts the HTTPS method to POST or PUT if a body is written to the request.</span></span> </p>
   - uid: 'com.microsoft.azure.sdk.iot.deps.transport.http._http_connection.writeOutput(byte [])'
     id: 'writeOutput(byte [])'
     parent: com.microsoft.azure.sdk.iot.deps.transport.http._http_connection
@@ -390,17 +390,17 @@ items:
       startLine: 190
     package: com.microsoft.azure.sdk.iot.deps.transport.http
     summary: |-
-      <p>要求で送信される本文を保存します。</p>
+      <p><span data-ttu-id="831b0-143">要求で送信される本文を保存します。</span><span class="sxs-lookup"><span data-stu-id="831b0-143">Saves the body to be sent with the request.</span></span></p>
       <p></p>
     syntax:
       content: 'public void writeOutput(byte[] body)'
       parameters:
         - id: body
           type: ccd9418d
-          description: <p>要求本文。</p>
+          description: <p><span data-ttu-id="831b0-144">要求本文。</span><span class="sxs-lookup"><span data-stu-id="831b0-144">The request body.</span></span></p>
     exceptions:
       - type: 3c87bd19
-        description: <p>現在、要求に POST または PUT メソッドが使用していない、本文は空でない場合。 これは、Java の HttpsURLConnection サイレントが変換されるため、HTTPS メソッド POST または PUT 要求に本文が記述されている場合です。 </p>
+        description: <p><span data-ttu-id="831b0-145">現在、要求に POST または PUT メソッドが使用していない、本文は空でない場合。</span><span class="sxs-lookup"><span data-stu-id="831b0-145">if the request does not currently use method POST or PUT and the body is non-empty.</span></span> <span data-ttu-id="831b0-146">これは、Java の HttpsURLConnection サイレントが変換されるため、HTTPS メソッド POST または PUT 要求に本文が記述されている場合です。</span><span class="sxs-lookup"><span data-stu-id="831b0-146">This is because Java's HttpsURLConnection silently converts the HTTPS method to POST or PUT if a body is written to the request.</span></span> </p>
 references:
   - uid: 9d854a40
     spec.java:
@@ -501,7 +501,7 @@ references:
     fullName: void com.microsoft.azure.sdk.iot.deps.transport.http.HttpConnection.connect()
     type: Method
     summary: |-
-      <p>コンス トラクターで指定された URL に要求を送信します。</p>
+      <p><span data-ttu-id="831b0-147">コンス トラクターで指定された URL に要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="831b0-147">Sends the request to the URL given in the constructor.</span></span></p>
       <p></p>
     syntax: *ref_1
   - uid: com.microsoft.azure.sdk.iot.deps.transport.http._http_method
@@ -511,6 +511,6 @@ references:
     nameWithType: HttpMethod
     fullName: com.microsoft.azure.sdk.iot.deps.transport.http.HttpMethod
     type: Enum
-    summary: <p>HTTPS 要求メソッド (GET)。 </p>
+    summary: <p><span data-ttu-id="831b0-148">HTTPS 要求メソッド (GET)。</span><span class="sxs-lookup"><span data-stu-id="831b0-148">The HTTPS request method (i.e. GET).</span></span> </p>
     syntax:
       content: public enum HttpMethod

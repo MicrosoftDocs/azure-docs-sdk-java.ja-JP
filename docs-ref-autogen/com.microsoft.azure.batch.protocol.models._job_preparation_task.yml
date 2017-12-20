@@ -37,7 +37,7 @@ items:
       path: src/main/java/com/microsoft/azure/batch/protocol/models/JobPreparationTask.java
       startLine: 34
     package: com.microsoft.azure.batch.protocol.models
-    summary: <p>コンピューティング ノードのすべてのタスク上、特定のジョブの前に実行するジョブの準備タスク。 ジョブのタスクを実行するコンピューティング ノードを準備するジョブの準備を行うこともできます。 一般的に実行されるジョブの準備の活動が含まれます。 ジョブ内のすべてのタスクで使用される共通のリソース ファイルをダウンロードします。 ジョブの準備タスクは、コンピューティング ノード上の共有場所にこれらの一般的なリソース ファイルをダウンロードできます。 (AZ_BATCH_NODE_ROOT_DIR)、またはそのジョブのすべてのタスクと通信できるように、コンピューティング ノード上でローカル サービスを開始します。 ジョブの準備タスク (つまり、その再試行回数は終了コード 0 で終了する前に枯渇) が失敗した場合のバッチのコンピューティング ノードで、このジョブのタスクは実行されません。 ノードは、イメージが再作成されるまで、このジョブのタスクを実行する対象外です。 ノードは、アクティブなままし、その他のジョブに使用できます。 ジョブの準備タスクは、同じコンピューティング ノード上で複数回を実行できます。 そのため、再実行を処理するジョブの準備タスクを記述する必要があります。 コンピューティング ノードが再起動された場合、ジョブの準備タスクがもう一度ノードで実行 rerunOnNodeRebootAfterSuccess が true の場合、またはジョブの準備タスクが既に完了しなかった場合、ジョブの他のタスクをスケジュールする前にします。 コンピューティング ノードが再イメージ化されるジョブの準備タスクは、ジョブのいずれかのタスクをスケジュールする前にもう一度実行されます。 </p>
+    summary: '<p><span data-ttu-id="ecf33-101">コンピューティング ノードのすべてのタスク上、特定のジョブの前に実行するジョブの準備タスク。</span><span class="sxs-lookup"><span data-stu-id="ecf33-101">A Job Preparation task to run before any tasks of the job on any given compute node.</span></span> <span data-ttu-id="ecf33-102">ジョブのタスクを実行するコンピューティング ノードを準備するジョブの準備を行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-102">You can use Job Preparation to prepare a compute node to run tasks for the job.</span></span> <span data-ttu-id="ecf33-103">一般的に実行されるジョブの準備の活動が含まれます。 ジョブ内のすべてのタスクで使用される共通のリソース ファイルをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="ecf33-103">Activities commonly performed in Job Preparation include: Downloading common resource files used by all the tasks in the job.</span></span> <span data-ttu-id="ecf33-104">ジョブの準備タスクは、コンピューティング ノード上の共有場所にこれらの一般的なリソース ファイルをダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-104">The Job Preparation task can download these common resource files to the shared location on the compute node.</span></span> <span data-ttu-id="ecf33-105">(AZ_BATCH_NODE_ROOT_DIR)、またはそのジョブのすべてのタスクと通信できるように、コンピューティング ノード上でローカル サービスを開始します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-105">(AZ_BATCH_NODE_ROOT_DIR), or starting a local service on the compute node so that all tasks of that job can communicate with it.</span></span> <span data-ttu-id="ecf33-106">ジョブの準備タスク (つまり、その再試行回数は終了コード 0 で終了する前に枯渇) が失敗した場合のバッチのコンピューティング ノードで、このジョブのタスクは実行されません。</span><span class="sxs-lookup"><span data-stu-id="ecf33-106">If the Job Preparation task fails (that is, exhausts its retry count before exiting with exit code 0), Batch will not run tasks of this job on the compute node.</span></span> <span data-ttu-id="ecf33-107">ノードは、イメージが再作成されるまで、このジョブのタスクを実行する対象外です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-107">The node remains ineligible to run tasks of this job until it is reimaged.</span></span> <span data-ttu-id="ecf33-108">ノードは、アクティブなままし、その他のジョブに使用できます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-108">The node remains active and can be used for other jobs.</span></span> <span data-ttu-id="ecf33-109">ジョブの準備タスクは、同じコンピューティング ノード上で複数回を実行できます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-109">The Job Preparation task can run multiple times on the same compute node.</span></span> <span data-ttu-id="ecf33-110">そのため、再実行を処理するジョブの準備タスクを記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ecf33-110">Therefore, you should write the Job Preparation task to handle re-execution.</span></span> <span data-ttu-id="ecf33-111">コンピューティング ノードが再起動された場合、ジョブの準備タスクがもう一度ノードで実行 rerunOnNodeRebootAfterSuccess が true の場合、またはジョブの準備タスクが既に完了しなかった場合、ジョブの他のタスクをスケジュールする前にします。</span><span class="sxs-lookup"><span data-stu-id="ecf33-111">If the compute node is rebooted, the Job Preparation task is run again on the node before scheduling any other task of the job, if rerunOnNodeRebootAfterSuccess is true or if the Job Preparation task did not previously complete.</span></span> <span data-ttu-id="ecf33-112">コンピューティング ノードが再イメージ化されるジョブの準備タスクは、ジョブのいずれかのタスクをスケジュールする前にもう一度実行されます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-112">If the compute node is reimaged, the Job Preparation task is run again before scheduling any task of the job.</span></span> </p>'
     syntax: &ref_1
       content: public class JobPreparationTask
     inheritance:
@@ -59,13 +59,13 @@ items:
       startLine: 160
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>コマンドライン値を取得します。</p>
+      <p><span data-ttu-id="ecf33-113">コマンドライン値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-113">Get the commandLine value.</span></span></p>
       <p></p>
     syntax:
       content: public String commandLine()
       return:
         type: '26831127'
-        description: <p>コマンドライン値 </p>
+        description: <p><span data-ttu-id="ecf33-114">コマンドライン値</span><span class="sxs-lookup"><span data-stu-id="ecf33-114">the commandLine value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.constraints()
     id: constraints()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -83,13 +83,13 @@ items:
       startLine: 240
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>制約値を取得します。</p>
+      <p><span data-ttu-id="ecf33-115">制約値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-115">Get the constraints value.</span></span></p>
       <p></p>
     syntax:
       content: public TaskConstraints constraints()
       return:
         type: com.microsoft.azure.batch.protocol.models._task_constraints
-        description: <p>制約値 </p>
+        description: <p><span data-ttu-id="ecf33-116">制約値</span><span class="sxs-lookup"><span data-stu-id="ecf33-116">the constraints value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.containerSettings()
     id: containerSettings()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -107,13 +107,13 @@ items:
       startLine: 180
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ContainerSettings 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-117">ContainerSettings 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-117">Get the containerSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public TaskContainerSettings containerSettings()
       return:
         type: com.microsoft.azure.batch.protocol.models._task_container_settings
-        description: <p>containerSettings 値 </p>
+        description: <p><span data-ttu-id="ecf33-118">containerSettings 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-118">the containerSettings value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.environmentSettings()
     id: environmentSettings()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -131,13 +131,13 @@ items:
       startLine: 220
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>EnvironmentSettings 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-119">EnvironmentSettings 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-119">Get the environmentSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public List<EnvironmentSetting> environmentSettings()
       return:
         type: 5618da2dcom.microsoft.azure.batch.protocol.models._environment_settinga08ddfce
-        description: <p>environmentSettings 値 </p>
+        description: <p><span data-ttu-id="ecf33-120">environmentSettings 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-120">the environmentSettings value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.id()
     id: id()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -155,13 +155,13 @@ items:
       startLine: 140
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>Id 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-121">Id 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-121">Get the id value.</span></span></p>
       <p></p>
     syntax:
       content: public String id()
       return:
         type: '26831127'
-        description: <p>id 値 </p>
+        description: <p><span data-ttu-id="ecf33-122">id 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-122">the id value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.rerunOnNodeRebootAfterSuccess()
     id: rerunOnNodeRebootAfterSuccess()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -179,13 +179,13 @@ items:
       startLine: 300
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>RerunOnNodeRebootAfterSuccess 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-123">RerunOnNodeRebootAfterSuccess 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-123">Get the rerunOnNodeRebootAfterSuccess value.</span></span></p>
       <p></p>
     syntax:
       content: public Boolean rerunOnNodeRebootAfterSuccess()
       return:
         type: 866c2227
-        description: <p>rerunOnNodeRebootAfterSuccess 値 </p>
+        description: <p><span data-ttu-id="ecf33-124">rerunOnNodeRebootAfterSuccess 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-124">the rerunOnNodeRebootAfterSuccess value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.resourceFiles()
     id: resourceFiles()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -203,13 +203,13 @@ items:
       startLine: 200
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ResourceFiles 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-125">ResourceFiles 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-125">Get the resourceFiles value.</span></span></p>
       <p></p>
     syntax:
       content: public List<ResourceFile> resourceFiles()
       return:
         type: 5618da2dcom.microsoft.azure.batch.protocol.models._resource_filea08ddfce
-        description: <p>resourceFiles 値 </p>
+        description: <p><span data-ttu-id="ecf33-126">resourceFiles 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-126">the resourceFiles value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.userIdentity()
     id: userIdentity()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -227,13 +227,13 @@ items:
       startLine: 280
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ユーザー Id 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-127">ユーザー Id 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-127">Get the userIdentity value.</span></span></p>
       <p></p>
     syntax:
       content: public UserIdentity userIdentity()
       return:
         type: com.microsoft.azure.batch.protocol.models._user_identity
-        description: <p>ユーザー Id 値 </p>
+        description: <p><span data-ttu-id="ecf33-128">ユーザー Id 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-128">the userIdentity value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.waitForSuccess()
     id: waitForSuccess()
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -251,13 +251,13 @@ items:
       startLine: 260
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>WaitForSuccess 値を取得します。</p>
+      <p><span data-ttu-id="ecf33-129">WaitForSuccess 値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-129">Get the waitForSuccess value.</span></span></p>
       <p></p>
     syntax:
       content: public Boolean waitForSuccess()
       return:
         type: 866c2227
-        description: <p>waitForSuccess 値 </p>
+        description: <p><span data-ttu-id="ecf33-130">waitForSuccess 値</span><span class="sxs-lookup"><span data-stu-id="ecf33-130">the waitForSuccess value</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withCommandLine(String)
     id: withCommandLine(String)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -275,17 +275,17 @@ items:
       startLine: 170
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>コマンドライン値を設定します。</p>
+      <p><span data-ttu-id="ecf33-131">コマンドライン値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-131">Set the commandLine value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withCommandLine(String commandLine)
       parameters:
         - id: commandLine
           type: '26831127'
-          description: <p>コマンドライン値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-132">コマンドライン値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-132">the commandLine value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-133"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-133">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withConstraints(TaskConstraints)
     id: withConstraints(TaskConstraints)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -303,17 +303,17 @@ items:
       startLine: 250
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>制約値を設定します。</p>
+      <p><span data-ttu-id="ecf33-134">制約値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-134">Set the constraints value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withConstraints(TaskConstraints constraints)
       parameters:
         - id: constraints
           type: com.microsoft.azure.batch.protocol.models._task_constraints
-          description: <p>制約値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-135">制約値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-135">the constraints value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-136"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-136">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withContainerSettings(TaskContainerSettings)
     id: withContainerSettings(TaskContainerSettings)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -331,17 +331,17 @@ items:
       startLine: 190
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ContainerSettings 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-137">ContainerSettings 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-137">Set the containerSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withContainerSettings(TaskContainerSettings containerSettings)
       parameters:
         - id: containerSettings
           type: com.microsoft.azure.batch.protocol.models._task_container_settings
-          description: <p>containerSettings 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-138">containerSettings 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-138">the containerSettings value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-139"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-139">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withEnvironmentSettings(List<EnvironmentSetting>)
     id: withEnvironmentSettings(List<EnvironmentSetting>)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -359,17 +359,17 @@ items:
       startLine: 230
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>EnvironmentSettings 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-140">EnvironmentSettings 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-140">Set the environmentSettings value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withEnvironmentSettings(List<EnvironmentSetting> environmentSettings)
       parameters:
         - id: environmentSettings
           type: 5618da2dcom.microsoft.azure.batch.protocol.models._environment_settinga08ddfce
-          description: <p>environmentSettings 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-141">environmentSettings 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-141">the environmentSettings value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-142"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-142">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withId(String)
     id: withId(String)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -387,17 +387,17 @@ items:
       startLine: 150
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>Id 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-143">Id 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-143">Set the id value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withId(String id)
       parameters:
         - id: id
           type: '26831127'
-          description: <p>id 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-144">id 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-144">the id value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-145"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-145">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withRerunOnNodeRebootAfterSuccess(Boolean)
     id: withRerunOnNodeRebootAfterSuccess(Boolean)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -415,17 +415,17 @@ items:
       startLine: 310
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>RerunOnNodeRebootAfterSuccess 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-146">RerunOnNodeRebootAfterSuccess 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-146">Set the rerunOnNodeRebootAfterSuccess value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withRerunOnNodeRebootAfterSuccess(Boolean rerunOnNodeRebootAfterSuccess)
       parameters:
         - id: rerunOnNodeRebootAfterSuccess
           type: 866c2227
-          description: <p>rerunOnNodeRebootAfterSuccess 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-147">rerunOnNodeRebootAfterSuccess 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-147">the rerunOnNodeRebootAfterSuccess value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-148"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-148">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withResourceFiles(List<ResourceFile>)
     id: withResourceFiles(List<ResourceFile>)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -443,17 +443,17 @@ items:
       startLine: 210
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ResourceFiles 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-149">ResourceFiles 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-149">Set the resourceFiles value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withResourceFiles(List<ResourceFile> resourceFiles)
       parameters:
         - id: resourceFiles
           type: 5618da2dcom.microsoft.azure.batch.protocol.models._resource_filea08ddfce
-          description: <p>resourceFiles 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-150">resourceFiles 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-150">the resourceFiles value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-151"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-151">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withUserIdentity(UserIdentity)
     id: withUserIdentity(UserIdentity)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -471,17 +471,17 @@ items:
       startLine: 290
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>ユーザー Id 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-152">ユーザー Id 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-152">Set the userIdentity value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withUserIdentity(UserIdentity userIdentity)
       parameters:
         - id: userIdentity
           type: com.microsoft.azure.batch.protocol.models._user_identity
-          description: <p>ユーザー Id 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-153">ユーザー Id 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-153">the userIdentity value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-154"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-154">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task.withWaitForSuccess(Boolean)
     id: withWaitForSuccess(Boolean)
     parent: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -499,17 +499,17 @@ items:
       startLine: 270
     package: com.microsoft.azure.batch.protocol.models
     summary: |-
-      <p>WaitForSuccess 値を設定します。</p>
+      <p><span data-ttu-id="ecf33-155">WaitForSuccess 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-155">Set the waitForSuccess value.</span></span></p>
       <p></p>
     syntax:
       content: public JobPreparationTask withWaitForSuccess(Boolean waitForSuccess)
       parameters:
         - id: waitForSuccess
           type: 866c2227
-          description: <p>waitForSuccess 値を設定するには </p>
+          description: <p><span data-ttu-id="ecf33-156">waitForSuccess 値を設定するには</span><span class="sxs-lookup"><span data-stu-id="ecf33-156">the waitForSuccess value to set</span></span> </p>
       return:
         type: com.microsoft.azure.batch.protocol.models._job_preparation_task
-        description: <p><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。 </p>
+        description: <p><span data-ttu-id="ecf33-157"><xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref>オブジェクト自体です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-157">the <xref uid="com.microsoft.azure.batch.protocol.models._job_preparation_task" data-throw-if-not-resolved="false">JobPreparationTask</xref> object itself.</span></span> </p>
 references:
   - uid: '26831127'
     spec.java:
@@ -636,7 +636,7 @@ references:
     nameWithType: TaskContainerSettings
     fullName: com.microsoft.azure.batch.protocol.models.TaskContainerSettings
     type: Class
-    summary: <p>タスクのコンテナー設定します。 </p>
+    summary: <p><span data-ttu-id="ecf33-158">タスクのコンテナー設定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-158">The container settings for a task.</span></span> </p>
     syntax:
       content: public class TaskContainerSettings
   - uid: com.microsoft.azure.batch.protocol.models._resource_file
@@ -646,7 +646,7 @@ references:
     nameWithType: ResourceFile
     fullName: com.microsoft.azure.batch.protocol.models.ResourceFile
     type: Class
-    summary: <p>コンピューティング ノードを Azure blob ストレージからダウンロードされるファイルです。 </p>
+    summary: <p><span data-ttu-id="ecf33-159">コンピューティング ノードを Azure blob ストレージからダウンロードされるファイルです。</span><span class="sxs-lookup"><span data-stu-id="ecf33-159">A file to be downloaded from Azure blob storage to a compute node.</span></span> </p>
     syntax:
       content: public class ResourceFile
   - uid: com.microsoft.azure.batch.protocol._files
@@ -656,7 +656,7 @@ references:
     nameWithType: Files
     fullName: com.microsoft.azure.batch.protocol.Files
     type: Interface
-    summary: <p>このクラスのインスタンスで定義されているすべての操作へのアクセスを提供する<xref uid="com.microsoft.azure.batch.protocol._files" data-throw-if-not-resolved="false">ファイル</xref>です。 </p>
+    summary: <p><span data-ttu-id="ecf33-160">このクラスのインスタンスで定義されているすべての操作へのアクセスを提供する<xref uid="com.microsoft.azure.batch.protocol._files" data-throw-if-not-resolved="false">ファイル</xref>です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-160">An instance of this class provides access to all the operations defined in <xref uid="com.microsoft.azure.batch.protocol._files" data-throw-if-not-resolved="false">Files</xref>.</span></span> </p>
     syntax:
       content: public interface Files
   - uid: com.microsoft.azure.batch.protocol.models._environment_setting
@@ -666,7 +666,7 @@ references:
     nameWithType: EnvironmentSetting
     fullName: com.microsoft.azure.batch.protocol.models.EnvironmentSetting
     type: Class
-    summary: <p>タスクの処理に設定する環境変数です。 </p>
+    summary: <p><span data-ttu-id="ecf33-161">タスクの処理に設定する環境変数です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-161">An environment variable to be set on a task process.</span></span> </p>
     syntax:
       content: public class EnvironmentSetting
   - uid: com.microsoft.azure.batch.protocol.models._task_constraints
@@ -676,7 +676,7 @@ references:
     nameWithType: TaskConstraints
     fullName: com.microsoft.azure.batch.protocol.models.TaskConstraints
     type: Class
-    summary: <p>タスクに適用する制約を実行します。 </p>
+    summary: <p><span data-ttu-id="ecf33-162">タスクに適用する制約を実行します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-162">Execution constraints to apply to a task.</span></span> </p>
     syntax:
       content: public class TaskConstraints
   - uid: com.microsoft.azure.batch.protocol.models._user_identity
@@ -686,7 +686,7 @@ references:
     nameWithType: UserIdentity
     fullName: com.microsoft.azure.batch.protocol.models.UserIdentity
     type: Class
-    summary: <p>タスクが実行されるユーザー id の定義。 ユーザー名と autoUser プロパティの両方ではなくはどちらかを指定します。 </p>
+    summary: '<p><span data-ttu-id="ecf33-163">タスクが実行されるユーザー id の定義。</span><span class="sxs-lookup"><span data-stu-id="ecf33-163">The definition of the user identity under which the task is run.</span></span> <span data-ttu-id="ecf33-164">ユーザー名と autoUser プロパティの両方ではなくはどちらかを指定します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-164">Specify either the userName or autoUser property, but not both.</span></span> </p>'
     syntax:
       content: public class UserIdentity
   - uid: com.microsoft.azure.batch.protocol.models._job_preparation_task
@@ -696,5 +696,5 @@ references:
     nameWithType: JobPreparationTask
     fullName: com.microsoft.azure.batch.protocol.models.JobPreparationTask
     type: Class
-    summary: <p>コンピューティング ノードのすべてのタスク上、特定のジョブの前に実行するジョブの準備タスク。 ジョブのタスクを実行するコンピューティング ノードを準備するジョブの準備を行うこともできます。 一般的に実行されるジョブの準備の活動が含まれます。 ジョブ内のすべてのタスクで使用される共通のリソース ファイルをダウンロードします。 ジョブの準備タスクは、コンピューティング ノード上の共有場所にこれらの一般的なリソース ファイルをダウンロードできます。 (AZ_BATCH_NODE_ROOT_DIR)、またはそのジョブのすべてのタスクと通信できるように、コンピューティング ノード上でローカル サービスを開始します。 ジョブの準備タスク (つまり、その再試行回数は終了コード 0 で終了する前に枯渇) が失敗した場合のバッチのコンピューティング ノードで、このジョブのタスクは実行されません。 ノードは、イメージが再作成されるまで、このジョブのタスクを実行する対象外です。 ノードは、アクティブなままし、その他のジョブに使用できます。 ジョブの準備タスクは、同じコンピューティング ノード上で複数回を実行できます。 そのため、再実行を処理するジョブの準備タスクを記述する必要があります。 コンピューティング ノードが再起動された場合、ジョブの準備タスクがもう一度ノードで実行 rerunOnNodeRebootAfterSuccess が true の場合、またはジョブの準備タスクが既に完了しなかった場合、ジョブの他のタスクをスケジュールする前にします。 コンピューティング ノードが再イメージ化されるジョブの準備タスクは、ジョブのいずれかのタスクをスケジュールする前にもう一度実行されます。 </p>
+    summary: '<p><span data-ttu-id="ecf33-165">コンピューティング ノードのすべてのタスク上、特定のジョブの前に実行するジョブの準備タスク。</span><span class="sxs-lookup"><span data-stu-id="ecf33-165">A Job Preparation task to run before any tasks of the job on any given compute node.</span></span> <span data-ttu-id="ecf33-166">ジョブのタスクを実行するコンピューティング ノードを準備するジョブの準備を行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-166">You can use Job Preparation to prepare a compute node to run tasks for the job.</span></span> <span data-ttu-id="ecf33-167">一般的に実行されるジョブの準備の活動が含まれます。 ジョブ内のすべてのタスクで使用される共通のリソース ファイルをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="ecf33-167">Activities commonly performed in Job Preparation include: Downloading common resource files used by all the tasks in the job.</span></span> <span data-ttu-id="ecf33-168">ジョブの準備タスクは、コンピューティング ノード上の共有場所にこれらの一般的なリソース ファイルをダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-168">The Job Preparation task can download these common resource files to the shared location on the compute node.</span></span> <span data-ttu-id="ecf33-169">(AZ_BATCH_NODE_ROOT_DIR)、またはそのジョブのすべてのタスクと通信できるように、コンピューティング ノード上でローカル サービスを開始します。</span><span class="sxs-lookup"><span data-stu-id="ecf33-169">(AZ_BATCH_NODE_ROOT_DIR), or starting a local service on the compute node so that all tasks of that job can communicate with it.</span></span> <span data-ttu-id="ecf33-170">ジョブの準備タスク (つまり、その再試行回数は終了コード 0 で終了する前に枯渇) が失敗した場合のバッチのコンピューティング ノードで、このジョブのタスクは実行されません。</span><span class="sxs-lookup"><span data-stu-id="ecf33-170">If the Job Preparation task fails (that is, exhausts its retry count before exiting with exit code 0), Batch will not run tasks of this job on the compute node.</span></span> <span data-ttu-id="ecf33-171">ノードは、イメージが再作成されるまで、このジョブのタスクを実行する対象外です。</span><span class="sxs-lookup"><span data-stu-id="ecf33-171">The node remains ineligible to run tasks of this job until it is reimaged.</span></span> <span data-ttu-id="ecf33-172">ノードは、アクティブなままし、その他のジョブに使用できます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-172">The node remains active and can be used for other jobs.</span></span> <span data-ttu-id="ecf33-173">ジョブの準備タスクは、同じコンピューティング ノード上で複数回を実行できます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-173">The Job Preparation task can run multiple times on the same compute node.</span></span> <span data-ttu-id="ecf33-174">そのため、再実行を処理するジョブの準備タスクを記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ecf33-174">Therefore, you should write the Job Preparation task to handle re-execution.</span></span> <span data-ttu-id="ecf33-175">コンピューティング ノードが再起動された場合、ジョブの準備タスクがもう一度ノードで実行 rerunOnNodeRebootAfterSuccess が true の場合、またはジョブの準備タスクが既に完了しなかった場合、ジョブの他のタスクをスケジュールする前にします。</span><span class="sxs-lookup"><span data-stu-id="ecf33-175">If the compute node is rebooted, the Job Preparation task is run again on the node before scheduling any other task of the job, if rerunOnNodeRebootAfterSuccess is true or if the Job Preparation task did not previously complete.</span></span> <span data-ttu-id="ecf33-176">コンピューティング ノードが再イメージ化されるジョブの準備タスクは、ジョブのいずれかのタスクをスケジュールする前にもう一度実行されます。</span><span class="sxs-lookup"><span data-stu-id="ecf33-176">If the compute node is reimaged, the Job Preparation task is run again before scheduling any task of the job.</span></span> </p>'
     syntax: *ref_1

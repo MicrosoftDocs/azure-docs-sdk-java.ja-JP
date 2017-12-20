@@ -21,7 +21,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorService.java
       startLine: 9
     package: microsoft.servicefabric.actors
-    summary: <p>呼び出すことができるメソッドを含むインターフェイスを定義する<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス レベルです。 </p>
+    summary: <p><span data-ttu-id="fba77-101">呼び出すことができるメソッドを含むインターフェイスを定義する<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス レベルです。</span><span class="sxs-lookup"><span data-stu-id="fba77-101">Defines the interface containing methods which can be called at <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> Service level.</span></span> </p>
     syntax:
       content: public interface ActorService extends Service
   - uid: microsoft.servicefabric.actors._actor_service.deleteActorAsync(ActorId)
@@ -41,18 +41,18 @@ items:
       startLine: 33
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</p>
+      <p><span data-ttu-id="fba77-102">削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</span><span class="sxs-lookup"><span data-stu-id="fba77-102">Deletes an <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> from the <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> service.</span></span></p>
       <p>
-      アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。 アクティブでアクターの状態は、状態プロバイダーから削除されます。 このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。 </p>
+      <span data-ttu-id="fba77-103">アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。</span><span class="sxs-lookup"><span data-stu-id="fba77-103">An active actor, will be deactivated and its state will also be deleted from state provider.</span></span> <span data-ttu-id="fba77-104">アクティブでアクターの状態は、状態プロバイダーから削除されます。</span><span class="sxs-lookup"><span data-stu-id="fba77-104">An in-active actor's state will be deleted from state provider.</span></span> <span data-ttu-id="fba77-105">このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。</span><span class="sxs-lookup"><span data-stu-id="fba77-105">If this method is called for a non-existent actor id in the system, it will be a no-op.</span></span> </p>
     syntax:
       content: public CompletableFuture<?> deleteActorAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。 </p>"
+          description: "<p><span data-ttu-id=\"fba77-106\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-106\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref> of the actor to be deleted.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="fba77-107">サーバーへの呼び出しの非同期操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="fba77-107">A task that represents the asynchronous operation of call to server.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_service.getActorsAsync(ContinuationToken)
     id: getActorsAsync(ContinuationToken)
     parent: microsoft.servicefabric.actors._actor_service
@@ -70,17 +70,17 @@ items:
       startLine: 19
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>アクター サービスを照会することによってアクターの一覧を取得します。</p>
+      <p><span data-ttu-id="fba77-108">アクター サービスを照会することによってアクターの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="fba77-108">Gets the list of Actors by querying the actor service.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<PagedResult<ActorInformation>> getActorsAsync(ContinuationToken continuationToken)
       parameters:
         - id: continuationToken
           type: microsoft.servicefabric.actors._continuation_token
-          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+          description: <p><span data-ttu-id="fba77-109">クエリから結果を開始する継続トークンです。</span><span class="sxs-lookup"><span data-stu-id="fba77-109">A continuation token to start querying the results from.</span></span> <span data-ttu-id="fba77-110">継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。</span><span class="sxs-lookup"><span data-stu-id="fba77-110">A null value of continuation token means start returning values form the beginning.</span></span> </p>
       return:
         type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
-        description: <p>サーバーへの呼び出しの非同期操作を表す予定。 </p>
+        description: <p><span data-ttu-id="fba77-111">サーバーへの呼び出しの非同期操作を表す予定。</span><span class="sxs-lookup"><span data-stu-id="fba77-111">A future that represents the asynchronous operation of call to server.</span></span> </p>
 references:
   - uid: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
     spec.java:
@@ -119,7 +119,7 @@ references:
     nameWithType: Service
     fullName: microsoft.servicefabric.services.remoting.Service
     type: Interface
-    summary: <p>これは、サービスのインターフェイスのリモート処理を有効にするためのマーカー インターフェイスです。 <xref uid="microsoft.servicefabric.services.remoting._service_remoting_listener" data-throw-if-not-resolved="false">ServiceRemotingListener</xref>このインターフェイスから派生する、サービスによって実装されたすべてのインターフェイスのリモート処理を提供します。 リモート インターフェイスは、クライアント側プロキシを経由してアクセスできます。 </p>
+    summary: <p><span data-ttu-id="fba77-112">これは、サービスのインターフェイスのリモート処理を有効にするためのマーカー インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="fba77-112">This is the marker interface for enabling interface Remoting for services.</span></span> <span data-ttu-id="fba77-113"><xref uid="microsoft.servicefabric.services.remoting._service_remoting_listener" data-throw-if-not-resolved="false">ServiceRemotingListener</xref>このインターフェイスから派生する、サービスによって実装されたすべてのインターフェイスのリモート処理を提供します。</span><span class="sxs-lookup"><span data-stu-id="fba77-113">An <xref uid="microsoft.servicefabric.services.remoting._service_remoting_listener" data-throw-if-not-resolved="false">ServiceRemotingListener</xref> provides remoting for all interfaces implemented by the service that derive from this interface.</span></span> <span data-ttu-id="fba77-114">リモート インターフェイスは、クライアント側プロキシを経由してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="fba77-114">The remoted interfaces can be accessed via Proxy on the client side.</span></span> </p>
     syntax:
       content: public interface Service
   - uid: microsoft.servicefabric.actors._fabric_actor_service
@@ -129,7 +129,7 @@ references:
     nameWithType: FabricActorService
     fullName: microsoft.servicefabric.actors.FabricActorService
     type: Class
-    summary: "<p>ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。 </p>"
+    summary: "<p><span data-ttu-id=\"fba77-115\">ベース Microsoft Service Fabric アクターの信頼性の高いサービスの基本クラスを表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-115\">Represents the base class for Microsoft Service Fabric based reliable actors service.</span></span> </p>\n<p><span data-ttu-id=\"fba77-116\">\r\n\r\n  <b>注釈:</b>アクターが、任意のサービス レベルの動作をオーバーライドする場合は、独自のカスタム アクター サービスを実装するには、このクラスから派生します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-116\">\r\n\r\n  <b>Remarks:</b>Derive from this class to implement your own custom actor service if you want to override any service level behavior for your actors.</span></span> </p>"
     syntax:
       content: public class FabricActorService
   - uid: microsoft.servicefabric.actors._paged_result
@@ -140,13 +140,13 @@ references:
     fullName: microsoft.servicefabric.actors.PagedResult<T>
     type: Class
     summary: |-
-      <p>アクター クエリの呼び出しの結果を表します。</p>
+      <p><span data-ttu-id="fba77-117">アクター クエリの呼び出しの結果を表します。</span><span class="sxs-lookup"><span data-stu-id="fba77-117">Represents the result of actor query calls.</span></span></p>
       <p></p>
     syntax:
       content: public class PagedResult<T>
       typeParameters:
         - type: 8ce1ecb9
-          description: <p>このクエリ結果に含まれる項目の種類。 </p>
+          description: <p><span data-ttu-id="fba77-118">このクエリ結果に含まれる項目の種類。</span><span class="sxs-lookup"><span data-stu-id="fba77-118">Type of the items this query result contains.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_information
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._actor_information.yml
@@ -154,7 +154,7 @@ references:
     nameWithType: ActorInformation
     fullName: microsoft.servicefabric.actors.ActorInformation
     type: Class
-    summary: <p>によって返されるアクターに関する情報を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>メソッドの呼び出しをクエリします。 </p>
+    summary: <p><span data-ttu-id="fba77-119">によって返されるアクターに関する情報を表します<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>メソッドの呼び出しをクエリします。</span><span class="sxs-lookup"><span data-stu-id="fba77-119">Represents the information about an actor returned by <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> Query method call.</span></span> </p>
     syntax:
       content: public class ActorInformation
   - uid: microsoft.servicefabric.actors._fabric_actor_service.getActorsAsync(ContinuationToken)
@@ -165,17 +165,17 @@ references:
     fullName: CompletableFuture<PagedResult<ActorInformation>> microsoft.servicefabric.actors.FabricActorService.getActorsAsync(ContinuationToken continuationToken)
     type: Method
     summary: |-
-      <p>アクター サービスを照会することによってアクターの一覧を取得します。</p>
+      <p><span data-ttu-id="fba77-120">アクター サービスを照会することによってアクターの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="fba77-120">Gets the list of Actors by querying the actor service.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<PagedResult<ActorInformation>> getActorsAsync(ContinuationToken continuationToken)
       parameters:
         - id: continuationToken
           type: microsoft.servicefabric.actors._continuation_token
-          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+          description: <p><span data-ttu-id="fba77-121">クエリから結果を開始する継続トークンです。</span><span class="sxs-lookup"><span data-stu-id="fba77-121">A continuation token to start querying the results from.</span></span> <span data-ttu-id="fba77-122">継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。</span><span class="sxs-lookup"><span data-stu-id="fba77-122">A null value of continuation token means start returning values form the beginning.</span></span> </p>
       return:
         type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_informatione7daa122
-        description: <p>A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>サーバーへの呼び出しの非同期操作を表すです。 </p>
+        description: <p><span data-ttu-id="fba77-123">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>サーバーへの呼び出しの非同期操作を表すです。</span><span class="sxs-lookup"><span data-stu-id="fba77-123">A <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> that represents the asynchronous operation of call to server.</span></span> </p>
   - uid: microsoft.servicefabric.actors._continuation_token
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._continuation_token.yml
@@ -183,7 +183,7 @@ references:
     nameWithType: ContinuationToken
     fullName: microsoft.servicefabric.actors.ContinuationToken
     type: Class
-    summary: "<p>クエリ操作の継続トークンを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>メソッドを使用して結果のセットの一部を返す可能性があります、 <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref>オブジェクトが使用可能な結果の次のセットを返す、後続の呼び出しで使用できるオブジェクトにも継続トークンを返します。 </p>"
+    summary: "<p><span data-ttu-id=\"fba77-124\">クエリ操作の継続トークンを表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-124\">Represents a continuation token for query operations.</span></span> </p>\n<p><span data-ttu-id=\"fba77-125\">\r\n\r\n  <b>注釈:</b>メソッドを使用して結果のセットの一部を返す可能性があります、 <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref>オブジェクトが使用可能な結果の次のセットを返す、後続の呼び出しで使用できるオブジェクトにも継続トークンを返します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-125\">\r\n\r\n  <b>Remarks:</b>A method that may return a partial set of results via a <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref> object also returns a continuation token in the object, which can be used in a subsequent call to return the next set of available results.</span></span> </p>"
     syntax:
       content: public class ContinuationToken
   - uid: microsoft.servicefabric.actors._fabric_actor_service.deleteActorAsync(ActorId)
@@ -194,18 +194,18 @@ references:
     fullName: CompletableFuture<?> microsoft.servicefabric.actors.FabricActorService.deleteActorAsync(ActorId actorId)
     type: Method
     summary: |-
-      <p>削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</p>
+      <p><span data-ttu-id="fba77-126">削除、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>から、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>サービス。</span><span class="sxs-lookup"><span data-stu-id="fba77-126">Deletes an <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> from the <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> service.</span></span></p>
       <p>
-      アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。 アクティブでアクターの状態は、状態プロバイダーから削除されます。 このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。 </p>
+      <span data-ttu-id="fba77-127">アクティブなアクターが非アクティブ化し、状態プロバイダーからの状態も削除されます。</span><span class="sxs-lookup"><span data-stu-id="fba77-127">An active actor, will be deactivated and its state will also be deleted from state provider.</span></span> <span data-ttu-id="fba77-128">アクティブでアクターの状態は、状態プロバイダーから削除されます。</span><span class="sxs-lookup"><span data-stu-id="fba77-128">An in-active actor's state will be deleted from state provider.</span></span> <span data-ttu-id="fba77-129">このメソッドは、システムに存在しないアクター id 呼び出されると、no-op されます。</span><span class="sxs-lookup"><span data-stu-id="fba77-129">If this method is called for a non-existent actor id in the system, it will be a no-op.</span></span> </p>
     syntax:
       content: public CompletableFuture<?> deleteActorAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。 </p>"
+          description: "<p><span data-ttu-id=\"fba77-130\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>を削除するアクターのです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-130\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref> of the actor to be deleted.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="fba77-131">サーバーへの呼び出しの非同期操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="fba77-131">A task that represents the asynchronous operation of call to server.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_id
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._actor_id.yml
@@ -213,7 +213,7 @@ references:
     nameWithType: ActorId
     fullName: microsoft.servicefabric.actors.ActorId
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。 アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。 </p>"
+    summary: "<p><span data-ttu-id=\"fba77-132\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-132\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref> represents identity of an actor within an actor service.</span></span> <span data-ttu-id=\"fba77-133\">アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。</span><span class=\"sxs-lookup\"><span data-stu-id=\"fba77-133\">The actors can be identified by <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>, <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref> or long.</span></span> </p>"
     syntax:
       content: public class ActorId
   - uid: microsoft.servicefabric.actors._actor
@@ -223,6 +223,6 @@ references:
     nameWithType: Actor
     fullName: microsoft.servicefabric.actors.Actor
     type: Interface
-    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    summary: <p><span data-ttu-id="fba77-134">信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="fba77-134">Base interface for inheriting reliable actor interfaces.</span></span> </p>
     syntax:
       content: public interface Actor

@@ -24,7 +24,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StoreBackupOption.java
       startLine: 7
     package: system.fabric
-    summary: <p>キー値ストアのバックアップ オプション。 </p>
+    summary: <p><span data-ttu-id="07a49-101">キー値ストアのバックアップ オプション。</span><span class="sxs-lookup"><span data-stu-id="07a49-101">The backup option for the key-value store.</span></span> </p>
     syntax: &ref_1
       content: public enum StoreBackupOption
     inheritance:
@@ -45,7 +45,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StoreBackupOption.java
       startLine: 11
     package: system.fabric
-    summary: <p>キー値ストアの完全バックアップ。 </p>
+    summary: <p><span data-ttu-id="07a49-102">キー値ストアの完全バックアップ。</span><span class="sxs-lookup"><span data-stu-id="07a49-102">A full backup of the key-value store.</span></span> </p>
     syntax:
       content: public FABRIC_STORE_BACKUP_OPTION_FULL=(1)
   - uid: system.fabric._store_backup_option.FABRIC_STORE_BACKUP_OPTION_INCREMENTAL
@@ -63,7 +63,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StoreBackupOption.java
       startLine: 16
     package: system.fabric
-    summary: <p>キー値ストアの増分バックアップです。 つまり、ログ ファイルのみ、最後のフルまたは増分バックアップがバックアップされるため、作成します。 </p>
+    summary: <p><span data-ttu-id="07a49-103">キー値ストアの増分バックアップです。</span><span class="sxs-lookup"><span data-stu-id="07a49-103">Incremental backup of the key-value store.</span></span> <span data-ttu-id="07a49-104">つまり、ログ ファイルのみ、最後のフルまたは増分バックアップがバックアップされるため、作成します。</span><span class="sxs-lookup"><span data-stu-id="07a49-104">i.e. only the log files created since the last full or incremental backup will be backed up.</span></span> </p>
     syntax:
       content: public FABRIC_STORE_BACKUP_OPTION_INCREMENTAL=(2)
   - uid: system.fabric._store_backup_option.FABRIC_STORE_BACKUP_OPTION_TRUNCATE_LOGS_ONLY
@@ -81,7 +81,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StoreBackupOption.java
       startLine: 29
     package: system.fabric
-    summary: "<p>すべてのバックアップ ファイルを作成しなくても、キー値ストアのトランザクション ログの切り捨てを行うためのオプションです。 </p>\n<p>\r\n\r\n  <b>注釈:</b>増分バックアップを有効にすると、セカンダリ レプリカでバックアップ ファイルの作成を回避する場合に便利です。 増分バックアップが有効な場合は、ディスク領域がいっぱいのキー値ストアのトランザクション ログでします。 これを防ぐためには、頻繁にバックアップを作成する必要はします。 ただし、セカンダリ レプリカでバックアップを作成できない可能性がありますキー値ストア サービスによっては便利です。 これらのサービスでは、バックアップ ディレクトリを破棄することに対処しなければなりませんもします。 このオプションを使用すると場合、クリーンアップは、トランザクション ログ バックアップ ファイルを作成します。 </p>"
+    summary: "<p><span data-ttu-id=\"07a49-105\">すべてのバックアップ ファイルを作成しなくても、キー値ストアのトランザクション ログの切り捨てを行うためのオプションです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-105\">Option to truncate the transaction logs of the key-value store without creating any backup files.</span></span> </p>\n<p><span data-ttu-id=\"07a49-106\">\r\n\r\n  <b>注釈:</b>増分バックアップを有効にすると、セカンダリ レプリカでバックアップ ファイルの作成を回避する場合に便利です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-106\">\r\n\r\n  <b>Remarks:</b>This is useful in avoiding creation of backup files in secondary replicas when incremental backup is turned on.</span></span> <span data-ttu-id=\"07a49-107\">増分バックアップが有効な場合は、ディスク領域がいっぱいのキー値ストアのトランザクション ログでします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-107\">If incremental backup is turned on, then disk space fills up with transaction logs of the key-value store.</span></span> <span data-ttu-id=\"07a49-108\">これを防ぐためには、頻繁にバックアップを作成する必要はします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-108\">To prevent this, frequent backups have to be created.</span></span> <span data-ttu-id=\"07a49-109\">ただし、セカンダリ レプリカでバックアップを作成できない可能性がありますキー値ストア サービスによっては便利です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-109\">However, creating backups on secondary replicas may not be useful for some key-value store services.</span></span> <span data-ttu-id=\"07a49-110\">これらのサービスでは、バックアップ ディレクトリを破棄することに対処しなければなりませんもします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-110\">These services also have to deal with discarding the backup directory.</span></span> <span data-ttu-id=\"07a49-111\">このオプションを使用すると場合、クリーンアップは、トランザクション ログ バックアップ ファイルを作成します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"07a49-111\">If this option is used, it cleans up the transaction logs without creating backup files.</span></span> </p>"
     syntax:
       content: public FABRIC_STORE_BACKUP_OPTION_TRUNCATE_LOGS_ONLY=(3)
   - uid: system.fabric._store_backup_option.get(int)
@@ -127,7 +127,7 @@ items:
       content: public int getValue()
       return:
         type: f75371fa
-        description: <p>列挙型の現在の値。 </p>
+        description: <p><span data-ttu-id="07a49-112">列挙型の現在の値。</span><span class="sxs-lookup"><span data-stu-id="07a49-112">Current value of the enum.</span></span> </p>
 references:
   - uid: f75371fa
     spec.java:
@@ -150,5 +150,5 @@ references:
     nameWithType: StoreBackupOption
     fullName: system.fabric.StoreBackupOption
     type: Enum
-    summary: <p>キー値ストアのバックアップ オプション。 </p>
+    summary: <p><span data-ttu-id="07a49-113">キー値ストアのバックアップ オプション。</span><span class="sxs-lookup"><span data-stu-id="07a49-113">The backup option for the key-value store.</span></span> </p>
     syntax: *ref_1

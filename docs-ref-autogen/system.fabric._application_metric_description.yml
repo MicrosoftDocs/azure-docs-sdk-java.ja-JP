@@ -28,7 +28,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/ApplicationMetricDescription.java
       startLine: 8
     package: system.fabric
-    summary: <p>1 つのメトリックの容量のアプリケーションを指定します。 <xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref><xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref></p>
+    summary: <p><span data-ttu-id="8be08-101">1 つのメトリックの容量のアプリケーションを指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-101">Specifies the application capacity for one metric.</span></span> <span data-ttu-id="8be08-102"><xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref><xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref></span><span class="sxs-lookup"><span data-stu-id="8be08-102"><xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref><xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref></span></span></p>
     syntax: &ref_1
       content: public class ApplicationMetricDescription
     inheritance:
@@ -68,15 +68,15 @@ items:
       startLine: 116
     package: system.fabric
     summary: |-
-      <p>Service Fabric アプリケーションの最大ノード容量を取得します。</p>
+      <p><span data-ttu-id="8be08-103">Service Fabric アプリケーションの最大ノード容量を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-103">Gets the maximum node capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。 </p>
-      <p>アプリケーションの性能の製品の既存のアプリケーションを更新中に<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。 </p>
+      <span data-ttu-id="8be08-104">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="8be08-104">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> and this value must always be smaller than or equal to <xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>.</span></span> </p>
+      <p><span data-ttu-id="8be08-105">アプリケーションの性能の製品の既存のアプリケーションを更新中に<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="8be08-105">When updating existing application with application capacity, the product of <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref> and this value must always be smaller than or equal to <xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>.</span></span> </p>
     syntax: &ref_2
       content: public long getMaximumNodeCapacity()
       return:
         type: 0364520f
-        description: <p>1 つのノードでこのアプリケーションのインスタンスの最大負荷を指定します。 ノードの容量がこの値よりも大きい場合でも、この値を各ノードで、アプリケーション内のサービスでの合計の負荷が Service Fabric に制限されます。 0 に設定すると、この指標の容量は無制限に各ノードにします。 </p>
+        description: '<p><span data-ttu-id="8be08-106">1 つのノードでこのアプリケーションのインスタンスの最大負荷を指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-106">Specifies the Maximum Load for an instance of this Application on a single Node.</span></span> <span data-ttu-id="8be08-107">ノードの容量がこの値よりも大きい場合でも、この値を各ノードで、アプリケーション内のサービスでの合計の負荷が Service Fabric に制限されます。</span><span class="sxs-lookup"><span data-stu-id="8be08-107">Even if Capacity of the node is greater than this value, Service Fabric will limit the total load of services within the Application on each node to this value.</span></span> <span data-ttu-id="8be08-108">0 に設定すると、この指標の容量は無制限に各ノードにします。</span><span class="sxs-lookup"><span data-stu-id="8be08-108">If set to zero, capacity for this metric is unlimited on each node.</span></span> </p>'
   - uid: system.fabric._application_metric_description.getName()
     id: getName()
     parent: system.fabric._application_metric_description
@@ -94,13 +94,13 @@ items:
       startLine: 41
     package: system.fabric
     summary: |-
-      <p>メトリックの名前を取得します。</p>
+      <p><span data-ttu-id="8be08-109">メトリックの名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-109">Gets the name of the metric.</span></span></p>
       <p></p>
     syntax:
       content: public String getName()
       return:
         type: '26831127'
-        description: <p>メトリックの名前。 </p>
+        description: <p><span data-ttu-id="8be08-110">メトリックの名前。</span><span class="sxs-lookup"><span data-stu-id="8be08-110">The name of the metric.</span></span> </p>
   - uid: system.fabric._application_metric_description.getNodeReservationCapacity()
     id: getNodeReservationCapacity()
     parent: system.fabric._application_metric_description
@@ -118,14 +118,14 @@ items:
       startLine: 72
     package: system.fabric
     summary: |-
-      <p>Service Fabric アプリケーションのノードの予約容量を取得します。</p>
+      <p><span data-ttu-id="8be08-111">Service Fabric アプリケーションのノードの予約容量を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-111">Gets the node reservation capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの性能を設定するときに (<xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref>) アプリケーションの性能を更新するときに、または (( <xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>) この値を小さくする必要があります以上<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>メトリックごとにします。 </p>
+      <span data-ttu-id="8be08-112">アプリケーションの性能を設定するときに (<xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref>) アプリケーションの性能を更新するときに、または (( <xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>) この値を小さくする必要があります以上<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>メトリックごとにします。</span><span class="sxs-lookup"><span data-stu-id="8be08-112">When setting application capacity (<xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref>) or when updating application capacity (( <xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>) this value must be smaller than or equal to <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> for each metric.</span></span> </p>
     syntax:
       content: public long getNodeReservationCapacity()
       return:
         type: 0364520f
-        description: '<p>このアプリケーションのインスタンスである必要がノードで予約されているメトリック負荷の量を指定します。 場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref>が指定されて、これらの値の積は、アプリケーションのクラスター内で予約された容量になります。 かどうかゼロに設定すると、容量は予約されていません、この指標です。 </p>'
+        description: '<p><span data-ttu-id="8be08-113">このアプリケーションのインスタンスである必要がノードで予約されているメトリック負荷の量を指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-113">Specifies the amount of Metric Load which is reserved on nodes which have instances of this Application.</span></span> <span data-ttu-id="8be08-114">場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref>が指定されて、これらの値の積は、アプリケーションのクラスター内で予約された容量になります。</span><span class="sxs-lookup"><span data-stu-id="8be08-114">If <xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> is specified, then the product of these values will be the Capacity reserved in the cluster for the Application.</span></span> <span data-ttu-id="8be08-115">かどうかゼロに設定すると、容量は予約されていません、この指標です。</span><span class="sxs-lookup"><span data-stu-id="8be08-115">If set to zero, no capacity is reserved for this metric.</span></span> </p>'
   - uid: system.fabric._application_metric_description.getTotalApplicationCapacity()
     id: getTotalApplicationCapacity()
     parent: system.fabric._application_metric_description
@@ -143,15 +143,15 @@ items:
       startLine: 164
     package: system.fabric
     summary: |-
-      <p>Service Fabric アプリケーションの容量のメトリックを取得します。</p>
+      <p><span data-ttu-id="8be08-116">Service Fabric アプリケーションの容量のメトリックを取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-116">Gets the total metric capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。 </p>
-      <p>アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。 </p>
+      <span data-ttu-id="8be08-117">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8be08-117">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> and <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> must always be smaller than or equal to this value.</span></span> </p>
+      <p><span data-ttu-id="8be08-118">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8be08-118">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref> and <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> must always be smaller than or equal to this value.</span></span> </p>
     syntax: &ref_3
       content: public long getTotalApplicationCapacity()
       return:
         type: 0364520f
-        description: <p>クラスターでは、このアプリケーションの指標合計容量を指定します。 Service Fabric は、この値にアプリケーション内でサービスの負荷の合計を制限しようとしています。 </p>
+        description: <p><span data-ttu-id="8be08-119">クラスターでは、このアプリケーションの指標合計容量を指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-119">Specifies the total metric capacity for this Application in the Cluster.</span></span> <span data-ttu-id="8be08-120">Service Fabric は、この値にアプリケーション内でサービスの負荷の合計を制限しようとしています。</span><span class="sxs-lookup"><span data-stu-id="8be08-120">Service Fabric will try to limit the sum of loads of services within the Application to this value.</span></span> </p>
   - uid: system.fabric._application_metric_description.setMaximumNodeCapacity(long)
     id: setMaximumNodeCapacity(long)
     parent: system.fabric._application_metric_description
@@ -169,16 +169,16 @@ items:
       startLine: 141
     package: system.fabric
     summary: |-
-      <p>Service Fabric アプリケーションの最大ノード容量を設定します。</p>
+      <p><span data-ttu-id="8be08-121">Service Fabric アプリケーションの最大ノード容量を設定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-121">Sets the maximum node capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。 </p>
-      <p>アプリケーションの性能の製品の既存のアプリケーションを更新中に<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。 </p>
+      <span data-ttu-id="8be08-122">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="8be08-122">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> and this value must always be smaller than or equal to <xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>.</span></span> </p>
+      <p><span data-ttu-id="8be08-123">アプリケーションの性能の製品の既存のアプリケーションを更新中に<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="8be08-123">When updating existing application with application capacity, the product of <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref> and this value must always be smaller than or equal to <xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>.</span></span> </p>
     syntax:
       content: public void setMaximumNodeCapacity(long maximumNodeCapacity)
       parameters:
         - id: maximumNodeCapacity
           type: 0364520f
-          description: <p>1 つのノードでこのアプリケーションのインスタンスの最大負荷を指定します。 ノードの容量がこの値よりも大きい場合でも、この値を各ノードで、アプリケーション内のサービスでの合計の負荷が Service Fabric に制限されます。 0 に設定すると、この指標の容量は無制限に各ノードにします。 </p>
+          description: '<p><span data-ttu-id="8be08-124">1 つのノードでこのアプリケーションのインスタンスの最大負荷を指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-124">Specifies the Maximum Load for an instance of this Application on a single Node.</span></span> <span data-ttu-id="8be08-125">ノードの容量がこの値よりも大きい場合でも、この値を各ノードで、アプリケーション内のサービスでの合計の負荷が Service Fabric に制限されます。</span><span class="sxs-lookup"><span data-stu-id="8be08-125">Even if Capacity of the node is greater than this value, Service Fabric will limit the total load of services within the Application on each node to this value.</span></span> <span data-ttu-id="8be08-126">0 に設定すると、この指標の容量は無制限に各ノードにします。</span><span class="sxs-lookup"><span data-stu-id="8be08-126">If set to zero, capacity for this metric is unlimited on each node.</span></span> </p>'
   - uid: system.fabric._application_metric_description.setName(String)
     id: setName(String)
     parent: system.fabric._application_metric_description
@@ -196,14 +196,14 @@ items:
       startLine: 51
     package: system.fabric
     summary: |-
-      <p>メトリックの名前を設定します。</p>
+      <p><span data-ttu-id="8be08-127">メトリックの名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-127">Sets the name of the metric.</span></span></p>
       <p></p>
     syntax:
       content: public void setName(String name)
       parameters:
         - id: name
           type: '26831127'
-          description: <p>メトリックの名前。 </p>
+          description: <p><span data-ttu-id="8be08-128">メトリックの名前。</span><span class="sxs-lookup"><span data-stu-id="8be08-128">The name of the metric.</span></span> </p>
   - uid: system.fabric._application_metric_description.setNodeReservationCapacity(long)
     id: setNodeReservationCapacity(long)
     parent: system.fabric._application_metric_description
@@ -221,15 +221,15 @@ items:
       startLine: 92
     package: system.fabric
     summary: |-
-      <p>Service Fabric アプリケーションのノードの予約容量を取得します。</p>
+      <p><span data-ttu-id="8be08-129">Service Fabric アプリケーションのノードの予約容量を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-129">Gets the node reservation capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの性能を設定するときに (<xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref>) アプリケーションの性能を更新するときに、または (( <xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>) この値を小さくする必要があります以上<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>メトリックごとにします。 </p>
+      <span data-ttu-id="8be08-130">アプリケーションの性能を設定するときに (<xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref>) アプリケーションの性能を更新するときに、または (( <xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>) この値を小さくする必要があります以上<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>メトリックごとにします。</span><span class="sxs-lookup"><span data-stu-id="8be08-130">When setting application capacity (<xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref>) or when updating application capacity (( <xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref>) this value must be smaller than or equal to <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> for each metric.</span></span> </p>
     syntax:
       content: public void setNodeReservationCapacity(long nodeReservationCapacity)
       parameters:
         - id: nodeReservationCapacity
           type: 0364520f
-          description: '<p>このアプリケーションのインスタンスである必要がノードで予約されているメトリック負荷の量を指定します。 場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref>が指定されて、これらの値の積は、アプリケーションのクラスター内で予約された容量になります。 かどうかゼロに設定すると、容量は予約されていません、この指標です。 </p>'
+          description: '<p><span data-ttu-id="8be08-131">このアプリケーションのインスタンスである必要がノードで予約されているメトリック負荷の量を指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-131">Specifies the amount of Metric Load which is reserved on nodes which have instances of this Application.</span></span> <span data-ttu-id="8be08-132">場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref>が指定されて、これらの値の積は、アプリケーションのクラスター内で予約された容量になります。</span><span class="sxs-lookup"><span data-stu-id="8be08-132">If <xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> is specified, then the product of these values will be the Capacity reserved in the cluster for the Application.</span></span> <span data-ttu-id="8be08-133">かどうかゼロに設定すると、容量は予約されていません、この指標です。</span><span class="sxs-lookup"><span data-stu-id="8be08-133">If set to zero, no capacity is reserved for this metric.</span></span> </p>'
   - uid: system.fabric._application_metric_description.setTotalApplicationCapacity(long)
     id: setTotalApplicationCapacity(long)
     parent: system.fabric._application_metric_description
@@ -247,16 +247,16 @@ items:
       startLine: 188
     package: system.fabric
     summary: |-
-      <p>Service Fabric アプリケーションの指標合計容量を設定します。</p>
+      <p><span data-ttu-id="8be08-134">Service Fabric アプリケーションの指標合計容量を設定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-134">Sets the total metric capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。 </p>
-      <p>アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。 </p>
+      <span data-ttu-id="8be08-135">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8be08-135">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> and <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> must always be smaller than or equal to this value.</span></span> </p>
+      <p><span data-ttu-id="8be08-136">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8be08-136">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref> and <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> must always be smaller than or equal to this value.</span></span> </p>
     syntax:
       content: public void setTotalApplicationCapacity(long totalApplicationCapacity)
       parameters:
         - id: totalApplicationCapacity
           type: 0364520f
-          description: <p>クラスターでは、このアプリケーションの指標合計容量を指定します。 Service Fabric は、この値にアプリケーション内でサービスの負荷の合計を制限しようとしています。 </p>
+          description: <p><span data-ttu-id="8be08-137">クラスターでは、このアプリケーションの指標合計容量を指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-137">Specifies the total metric capacity for this Application in the Cluster.</span></span> <span data-ttu-id="8be08-138">Service Fabric は、この値にアプリケーション内でサービスの負荷の合計を制限しようとしています。</span><span class="sxs-lookup"><span data-stu-id="8be08-138">Service Fabric will try to limit the sum of loads of services within the Application to this value.</span></span> </p>
 references:
   - uid: system.fabric._application_metric_description.ApplicationMetricDescription*
     name: ApplicationMetricDescription
@@ -318,7 +318,7 @@ references:
     nameWithType: ApplicationMetricDescription
     fullName: system.fabric.ApplicationMetricDescription
     type: Class
-    summary: <p>1 つのメトリックの容量のアプリケーションを指定します。 <xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref><xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref></p>
+    summary: <p><span data-ttu-id="8be08-139">1 つのメトリックの容量のアプリケーションを指定します。</span><span class="sxs-lookup"><span data-stu-id="8be08-139">Specifies the application capacity for one metric.</span></span> <span data-ttu-id="8be08-140"><xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref><xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref></span><span class="sxs-lookup"><span data-stu-id="8be08-140"><xref uid="system.fabric._application_description" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription</xref><xref uid="system.fabric._application_update_description" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription</xref></span></span></p>
     syntax: *ref_1
   - uid: system.fabric._application_description.getMinimumNodes()
     parent: system.fabric._application_description
@@ -328,13 +328,13 @@ references:
     fullName: long system.fabric.ApplicationDescription.getMinimumNodes()
     type: Method
     summary: |-
-      <p>Service Fabric がこのアプリケーションの容量を予約はノードの最小数を取得します。</p>
+      <p><span data-ttu-id="8be08-141">Service Fabric がこのアプリケーションの容量を予約はノードの最小数を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-141">Gets the minimum number of nodes where Service Fabric will reserve capacity for this application.</span></span></p>
       <p></p>
     syntax:
       content: public long getMinimumNodes()
       return:
         type: 0364520f
-        description: '<p>Service Fabric が、クラスター内のこのアプリケーションを配置する容量を予約、ノードの数。 ある意味ではありませんこれらすべてのノード上のレプリカを保持するアプリケーションが保証されるに注意してください。 このパラメーターが 0 に設定されている場合は、容量は予約されません。 このパラメーターがより大きい場合<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref>と呼びます。 </p>'
+        description: '<p><span data-ttu-id="8be08-142">Service Fabric が、クラスター内のこのアプリケーションを配置する容量を予約、ノードの数。</span><span class="sxs-lookup"><span data-stu-id="8be08-142">Number of nodes where Service Fabric will reserve Capacity in the cluster for this Application to be placed.</span></span> <span data-ttu-id="8be08-143">ある意味ではありませんこれらすべてのノード上のレプリカを保持するアプリケーションが保証されるに注意してください。</span><span class="sxs-lookup"><span data-stu-id="8be08-143">Note that this does not mean that the Application is guaranteed to have replicas on all those nodes.</span></span> <span data-ttu-id="8be08-144">このパラメーターが 0 に設定されている場合は、容量は予約されません。</span><span class="sxs-lookup"><span data-stu-id="8be08-144">If this parameter is set to zero, no capacity will be reserved.</span></span> <span data-ttu-id="8be08-145">このパラメーターがより大きい場合<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref>と呼びます。</span><span class="sxs-lookup"><span data-stu-id="8be08-145">If this parameters is greater than <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> an <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref> will be thrown when <xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref> is called.</span></span> </p>'
   - uid: system.fabric._application_description
     parent: system.fabric
     href: system.fabric._application_description.yml
@@ -342,7 +342,7 @@ references:
     nameWithType: ApplicationDescription
     fullName: system.fabric.ApplicationDescription
     type: Class
-    summary: '<p>使用して作成するアプリケーションについて説明<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(system.fabric.ApplicationDescription)</xref></p>'
+    summary: '<p><span data-ttu-id="8be08-146">使用して作成するアプリケーションについて説明<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(system.fabric.ApplicationDescription)</xref></span><span class="sxs-lookup"><span data-stu-id="8be08-146">Describes an application to be created by using <xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(system.fabric.ApplicationDescription)</xref></span></span></p>'
     syntax:
       content: public class ApplicationDescription
   - uid: system.fabric._application_update_description
@@ -352,7 +352,7 @@ references:
     nameWithType: ApplicationUpdateDescription
     fullName: system.fabric.ApplicationUpdateDescription
     type: Class
-    summary: '<p>使用して更新されるアプリケーション容量の更新プログラムを説明<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref></p>'
+    summary: '<p><span data-ttu-id="8be08-147">使用して更新されるアプリケーション容量の更新プログラムを説明<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref></span><span class="sxs-lookup"><span data-stu-id="8be08-147">Describes an update of application capacity that will be updated using <xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref></span></span></p>'
     syntax:
       content: public class ApplicationUpdateDescription
   - uid: system.fabric._application_metric_description.getMaximumNodeCapacity()
@@ -363,10 +363,10 @@ references:
     fullName: long system.fabric.ApplicationMetricDescription.getMaximumNodeCapacity()
     type: Method
     summary: |-
-      <p>Service Fabric アプリケーションの最大ノード容量を取得します。</p>
+      <p><span data-ttu-id="8be08-148">Service Fabric アプリケーションの最大ノード容量を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-148">Gets the maximum node capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。 </p>
-      <p>アプリケーションの性能の製品の既存のアプリケーションを更新中に<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。 </p>
+      <span data-ttu-id="8be08-149">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="8be08-149">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> and this value must always be smaller than or equal to <xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>.</span></span> </p>
+      <p><span data-ttu-id="8be08-150">アプリケーションの性能の製品の既存のアプリケーションを更新中に<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>し、この値よりも小さいか等しい必ず<xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="8be08-150">When updating existing application with application capacity, the product of <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref> and this value must always be smaller than or equal to <xref uid="system.fabric._application_metric_description.getTotalApplicationCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getTotalApplicationCapacity()</xref>.</span></span> </p>
     syntax: *ref_2
   - uid: system.fabric._application_description.getMaximumNodes()
     parent: system.fabric._application_description
@@ -376,13 +376,13 @@ references:
     fullName: long system.fabric.ApplicationDescription.getMaximumNodes()
     type: Method
     summary: |-
-      <p>このアプリケーションをインスタンス化するノードの最大数を取得します。</p>
+      <p><span data-ttu-id="8be08-151">このアプリケーションをインスタンス化するノードの最大数を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-151">Gets the maximum number of nodes where this application can be instantiated.</span></span></p>
       <p></p>
     syntax:
       content: public long getMaximumNodes()
       return:
         type: 0364520f
-        description: '<p>スパンするこのアプリケーションが許可されているノードの数。 既定値は 0 です。 0 の場合、アプリケーションは任意の数のクラスター内のノードにまたがることができます。 このパラメーターがより小さい場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref>と呼びます。 </p>'
+        description: '<p><span data-ttu-id="8be08-152">スパンするこのアプリケーションが許可されているノードの数。</span><span class="sxs-lookup"><span data-stu-id="8be08-152">Number of nodes this application is allowed to span.</span></span> <span data-ttu-id="8be08-153">既定値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="8be08-153">Default value is zero.</span></span> <span data-ttu-id="8be08-154">0 の場合、アプリケーションは任意の数のクラスター内のノードにまたがることができます。</span><span class="sxs-lookup"><span data-stu-id="8be08-154">If it is zero, Application can span any number of nodes in the cluster.</span></span> <span data-ttu-id="8be08-155">このパラメーターがより小さい場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref>と呼びます。</span><span class="sxs-lookup"><span data-stu-id="8be08-155">If this parameter is smaller than <xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> an <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref> will be thrown when <xref uid="system.fabric._application_management_client.createApplicationAsync(ApplicationDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#createApplicationAsync(ApplicationDescription)</xref> is called.</span></span> </p>'
   - uid: system.fabric._application_metric_description.getTotalApplicationCapacity()
     parent: system.fabric._application_metric_description
     href: system.fabric._application_metric_description.yml
@@ -391,10 +391,10 @@ references:
     fullName: long system.fabric.ApplicationMetricDescription.getTotalApplicationCapacity()
     type: Method
     summary: |-
-      <p>Service Fabric アプリケーションの容量のメトリックを取得します。</p>
+      <p><span data-ttu-id="8be08-156">Service Fabric アプリケーションの容量のメトリックを取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-156">Gets the total metric capacity for Service Fabric application.</span></span></p>
       <p>
-      アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。 </p>
-      <p>アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。 </p>
+      <span data-ttu-id="8be08-157">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8be08-157">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMaximumNodes()</xref> and <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> must always be smaller than or equal to this value.</span></span> </p>
+      <p><span data-ttu-id="8be08-158">アプリケーションの容量を持つ新しいアプリケーションを作成する定義されている場合の製品<xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref>と<xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref>よりも小さいか、この値に等しいを常にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8be08-158">When creating a new application with application capacity defined, the product of <xref uid="system.fabric._application_update_description.getMaximumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationUpdateDescription#getMaximumNodes()</xref> and <xref uid="system.fabric._application_metric_description.getMaximumNodeCapacity()" data-throw-if-not-resolved="false">system.fabric.ApplicationMetricDescription#getMaximumNodeCapacity()</xref> must always be smaller than or equal to this value.</span></span> </p>
     syntax: *ref_3
   - uid: system.fabric._application_update_description.getMaximumNodes()
     parent: system.fabric._application_update_description
@@ -404,16 +404,16 @@ references:
     fullName: Long system.fabric.ApplicationUpdateDescription.getMaximumNodes()
     type: Method
     summary: |-
-      <p>このアプリケーションをインスタンス化するノードの最大数を取得します。</p>
+      <p><span data-ttu-id="8be08-159">このアプリケーションをインスタンス化するノードの最大数を取得します。</span><span class="sxs-lookup"><span data-stu-id="8be08-159">Gets the maximum number of nodes where this application can be instantiated.</span></span></p>
       <p>
-      ゼロになった場合は、クラスター内のノードの数にかかわらずアプリケーションを配置することができます。 </p>
-      <p>アプリケーションを更新するときにこのパラメーターが指定されていない場合は、ノードの最大数は変更されません。 </p>
-      <p>このパラメーターがより小さい場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref>と呼びます。 </p>
+      <span data-ttu-id="8be08-160">ゼロになった場合は、クラスター内のノードの数にかかわらずアプリケーションを配置することができます。</span><span class="sxs-lookup"><span data-stu-id="8be08-160">If it is zero, Application can be placed on any number of nodes in the cluster.</span></span> </p>
+      <p><span data-ttu-id="8be08-161">アプリケーションを更新するときにこのパラメーターが指定されていない場合は、ノードの最大数は変更されません。</span><span class="sxs-lookup"><span data-stu-id="8be08-161">If this parameter is not specified when updating an application, then the maximum number of nodes remains unchanged.</span></span> </p>
+      <p><span data-ttu-id="8be08-162">このパラメーターがより小さい場合<xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> 、 <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref>場合にスローされます<xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref>と呼びます。</span><span class="sxs-lookup"><span data-stu-id="8be08-162">If this parameter is smaller than <xref uid="system.fabric._application_description.getMinimumNodes()" data-throw-if-not-resolved="false">system.fabric.ApplicationDescription#getMinimumNodes()</xref> an <xref uid="" data-throw-if-not-resolved="false">java.lang.IllegalArgumentException</xref> will be thrown when <xref uid="system.fabric._application_management_client.updateApplicationAsync(ApplicationUpdateDescription)" data-throw-if-not-resolved="false">system.fabric.ApplicationManagementClient#updateApplicationAsync(ApplicationUpdateDescription)</xref> is called.</span></span> </p>
     syntax:
       content: public Long getMaximumNodes()
       return:
         type: 34f09483
-        description: <p>スパンするこのアプリケーションが許可されているノードの数。 既定値は 0 です。 </p>
+        description: <p><span data-ttu-id="8be08-163">スパンするこのアプリケーションが許可されているノードの数。</span><span class="sxs-lookup"><span data-stu-id="8be08-163">Number of nodes this application is allowed to span.</span></span> <span data-ttu-id="8be08-164">既定値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="8be08-164">Default value is zero.</span></span> </p>
   - uid: system.fabric._pin_collection
     parent: system.fabric
     href: system.fabric._pin_collection.yml

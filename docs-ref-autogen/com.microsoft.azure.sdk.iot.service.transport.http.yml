@@ -33,8 +33,8 @@ references:
     fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpConnection
     type: Class
     summary: |-
-      <p>Java SE クラス HttpsURLConnection のラッパーです。 モック フレームワーク JMockit でテストするときに、互換性の問題を回避するだけでなく HttpsURLConnection を使用する場合は、いくつかドキュメントに未記載の副作用を回避するために使用します。 </p>
-      <p>基になる HttpsURLConnection は、Java で透過的に管理されます。 時間ごとに、接続を再利用する<xref uid="com.microsoft.azure.sdk.iot.service.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>が呼び出されると、入力ストリーム (入力ストリームまたは入力ストリームにアクセスできない場合、エラー ストリーム) を完全に読み取る必要があります。 それ以外の場合、データはストリームとの接続では再利用可能なできません。 </p>
+      <p><span data-ttu-id="0326a-101">Java SE クラス HttpsURLConnection のラッパーです。</span><span class="sxs-lookup"><span data-stu-id="0326a-101">A wrapper for the Java SE class HttpsURLConnection.</span></span> <span data-ttu-id="0326a-102">モック フレームワーク JMockit でテストするときに、互換性の問題を回避するだけでなく HttpsURLConnection を使用する場合は、いくつかドキュメントに未記載の副作用を回避するために使用します。</span><span class="sxs-lookup"><span data-stu-id="0326a-102">Used to avoid compatibility issues when testing with the mocking framework JMockit, as well as to avoid some undocumented side effects when using HttpsURLConnection.</span></span> </p>
+      <p><span data-ttu-id="0326a-103">基になる HttpsURLConnection は、Java で透過的に管理されます。</span><span class="sxs-lookup"><span data-stu-id="0326a-103">The underlying HttpsURLConnection is transparently managed by Java.</span></span> <span data-ttu-id="0326a-104">時間ごとに、接続を再利用する<xref uid="com.microsoft.azure.sdk.iot.service.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref>が呼び出されると、入力ストリーム (入力ストリームまたは入力ストリームにアクセスできない場合、エラー ストリーム) を完全に読み取る必要があります。</span><span class="sxs-lookup"><span data-stu-id="0326a-104">To reuse connections, for each time <xref uid="com.microsoft.azure.sdk.iot.service.transport.http._http_connection.connect()" data-throw-if-not-resolved="false">connect()</xref> is called, the input streams (input stream or error stream, if input stream is not accessible) must be completely read.</span></span> <span data-ttu-id="0326a-105">それ以外の場合、データはストリームとの接続では再利用可能なできません。</span><span class="sxs-lookup"><span data-stu-id="0326a-105">Otherwise, the data remains in the stream and the connection will not be reusable.</span></span> </p>
     syntax:
       content: public class HttpConnection
   - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_message
@@ -44,7 +44,7 @@ references:
     nameWithType: HttpMessage
     fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpMessage
     type: Interface
-    summary: <p>HTTPS メッセージ。 '- アプリ - iot hub'; が付いた、そのプロパティ名は区別 plain IoT Hub メッセージから HTTPS メッセージコンテンツの種類を明示的に指定しています。 </p>
+    summary: '<p><span data-ttu-id="0326a-106">HTTPS メッセージ。</span><span class="sxs-lookup"><span data-stu-id="0326a-106">An HTTPS message.</span></span> <span data-ttu-id="0326a-107">''- アプリ - iot hub''; が付いた、そのプロパティ名は区別 plain IoT Hub メッセージから HTTPS メッセージコンテンツの種類を明示的に指定しています。</span><span class="sxs-lookup"><span data-stu-id="0326a-107">An HTTPS message is distinguished from a plain IoT Hub message by its property names, which are prefixed with ''iothub-app-''; and by the explicit specification of a content-type.</span></span> </p>'
     syntax:
       content: public interface HttpMessage
   - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_method
@@ -54,7 +54,7 @@ references:
     nameWithType: HttpMethod
     fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpMethod
     type: Enum
-    summary: <p>HTTPS 要求メソッド (GET)。 </p>
+    summary: <p><span data-ttu-id="0326a-108">HTTPS 要求メソッド (GET)。</span><span class="sxs-lookup"><span data-stu-id="0326a-108">The HTTPS request method (i.e. GET).</span></span> </p>
     syntax:
       content: public enum HttpMethod
   - uid: com.microsoft.azure.sdk.iot.service.transport.http._http_request
@@ -73,6 +73,6 @@ references:
     nameWithType: HttpResponse
     fullName: com.microsoft.azure.sdk.iot.service.transport.http.HttpResponse
     type: Class
-    summary: <p>HTTPS 応答します。 (存在する場合)、ステータス コード、本文、ヘッダー フィールド、およびエラーの原因が含まれています。 </p>
+    summary: '<p><span data-ttu-id="0326a-109">HTTPS 応答します。</span><span class="sxs-lookup"><span data-stu-id="0326a-109">An HTTPS response.</span></span> <span data-ttu-id="0326a-110">(存在する場合)、ステータス コード、本文、ヘッダー フィールド、およびエラーの原因が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0326a-110">Contains the status code, body, header fields, and error reason (if any).</span></span> </p>'
     syntax:
       content: public class HttpResponse

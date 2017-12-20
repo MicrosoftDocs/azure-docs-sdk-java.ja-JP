@@ -28,7 +28,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 6
     package: system.fabric
-    summary: <p>列挙、 <xref uid="system.fabric._upgrade_safety_check" data-throw-if-not-resolved="false">system.fabric.UpgradeSafetyCheck</xref>が実行されるノードのアップグレード中にします。 </p>
+    summary: <p><span data-ttu-id="7006e-101">列挙、 <xref uid="system.fabric._upgrade_safety_check" data-throw-if-not-resolved="false">system.fabric.UpgradeSafetyCheck</xref>が実行されるノードのアップグレード中にします。</span><span class="sxs-lookup"><span data-stu-id="7006e-101">Enumerates the <xref uid="system.fabric._upgrade_safety_check" data-throw-if-not-resolved="false">system.fabric.UpgradeSafetyCheck</xref> that is being performed for a node during upgrade.</span></span> </p>
     syntax:
       content: public enum UpgradeSafetyCheckKind
     inheritance:
@@ -49,7 +49,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 46
     package: system.fabric
-    summary: <p>1 つのインスタンスを持つノードにステートレスのサービス パーティションがあるか、対象のパーティションがクォーラム損失ノードにプライマリ レプリカがあることを示します。 どちらの場合にアップグレードするためのレプリカ ダウンと、可用性の低下が発生します。 </p>
+    summary: '<p><span data-ttu-id="7006e-102">1 つのインスタンスを持つノードにステートレスのサービス パーティションがあるか、対象のパーティションがクォーラム損失ノードにプライマリ レプリカがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-102">Indicates that there is either a stateless service partition on the node having exactly one instance, or there is a primary replica on the node for which the partition is quorum loss.</span></span> <span data-ttu-id="7006e-103">どちらの場合にアップグレードするためのレプリカ ダウンと、可用性の低下が発生します。</span><span class="sxs-lookup"><span data-stu-id="7006e-103">In both cases, bringing down the replicas due to upgrade will result in loss of availability.</span></span> </p>'
     syntax:
       content: public EnsureAvailability=(0x0007)
   - uid: system.fabric._upgrade_safety_check_kind.EnsurePartitionQuorum
@@ -67,7 +67,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 18
     package: system.fabric
-    summary: <p>対象の場合は、ノード上のレプリカを停止生じますそのパーティションのクォーラム損失にパーティションがあることを示します。 </p>
+    summary: '<p><span data-ttu-id="7006e-104">対象の場合は、ノード上のレプリカを停止生じますそのパーティションのクォーラム損失にパーティションがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-104">Indicates that there is some partition for which if we bring down the replica on the node, it will result in quorum loss for that partition.</span></span> </p>'
     syntax:
       content: public EnsurePartitionQuorum=(0x0002)
   - uid: system.fabric._upgrade_safety_check_kind.EnsureSeedNodeQuorum
@@ -85,7 +85,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 13
     package: system.fabric
-    summary: <p>ノードを停止している場合、これになるグローバル シード ノードのクォーラムの損失を示します。 </p>
+    summary: <p><span data-ttu-id="7006e-105">ノードを停止している場合、これになるグローバル シード ノードのクォーラムの損失を示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-105">Indicates that if we bring down the node then this will result in global seed node quorum loss.</span></span> </p>
     syntax:
       content: public EnsureSeedNodeQuorum=(0x0001)
   - uid: system.fabric._upgrade_safety_check_kind.getValue()
@@ -123,7 +123,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 8
     package: system.fabric
-    summary: <p>アップグレードの安全性チェックの種類が無効であることを示します。 この値は使用されません。 </p>
+    summary: <p><span data-ttu-id="7006e-106">アップグレードの安全性チェックの種類が無効であることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-106">Indicates that the upgrade safety check kind is invalid.</span></span> <span data-ttu-id="7006e-107">この値は使用されません。</span><span class="sxs-lookup"><span data-stu-id="7006e-107">This value is not used.</span></span> </p>
     syntax:
       content: public Invalid=(0x0000)
   - uid: system.fabric._upgrade_safety_check_kind.WaitForInbuildReplica
@@ -141,7 +141,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 40
     package: system.fabric
-    summary: <p>コピーを通過するノードで、いずれかのレプリカがあるかはその他のレプリカにデータをコピーするノードでプライマリ レプリカがあることを示します。 どちらの場合をアップグレードするため、ノード上のレプリカを停止することに、コピーが中止されます。 </p>
+    summary: '<p><span data-ttu-id="7006e-108">コピーを通過するノードで、いずれかのレプリカがあるかはその他のレプリカにデータをコピーするノードでプライマリ レプリカがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-108">Indicates that there is either a replica on the node that is going through copy, or there is a primary replica on the node that is copying data to some other replica.</span></span> <span data-ttu-id="7006e-109">どちらの場合をアップグレードするため、ノード上のレプリカを停止することに、コピーが中止されます。</span><span class="sxs-lookup"><span data-stu-id="7006e-109">In both cases, bringing down the replica on the node due to upgrade will abort the copy.</span></span> </p>'
     syntax:
       content: public WaitForInbuildReplica=(0x0006)
   - uid: system.fabric._upgrade_safety_check_kind.WaitForPrimaryPlacement
@@ -159,7 +159,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 23
     package: system.fabric
-    summary: <p>アップグレードするためには、このノードから移動されたノード上のレプリカがあることを示します。 Service Fabric は、プライマリへのこのノードに移動する待機しています。 </p>
+    summary: <p><span data-ttu-id="7006e-110">アップグレードするためには、このノードから移動されたノード上のレプリカがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-110">Indicates that there is some replica on the node that was moved out of this node due to upgrade.</span></span> <span data-ttu-id="7006e-111">Service Fabric は、プライマリへのこのノードに移動する待機しています。</span><span class="sxs-lookup"><span data-stu-id="7006e-111">Service Fabric is now waiting for the primary to be moved back to this node.</span></span> </p>
     syntax:
       content: public WaitForPrimaryPlacement=(0x0003)
   - uid: system.fabric._upgrade_safety_check_kind.WaitForPrimarySwap
@@ -177,7 +177,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 28
     package: system.fabric
-    summary: <p>Service Fabric がそのノードでアップグレードを開始する前に、ノードから移動するプライマリ レプリカを待機していることを示します。 </p>
+    summary: <p><span data-ttu-id="7006e-112">Service Fabric がそのノードでアップグレードを開始する前に、ノードから移動するプライマリ レプリカを待機していることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-112">Indicates that Service Fabric is waiting for a primary replica to be moved out of the node before starting upgrade on that node.</span></span> </p>
     syntax:
       content: public WaitForPrimarySwap=(0x0004)
   - uid: system.fabric._upgrade_safety_check_kind.WaitForReconfiguration
@@ -195,7 +195,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/UpgradeSafetyCheckKind.java
       startLine: 34
     package: system.fabric
-    summary: <p>再構成に関係するノード上のレプリカがあることを示します。 Service Fabric が、完了される再構成を開始する前に待機しているノード上でアップグレードします。 </p>
+    summary: <p><span data-ttu-id="7006e-113">再構成に関係するノード上のレプリカがあることを示します。</span><span class="sxs-lookup"><span data-stu-id="7006e-113">Indicates that there is some replica on the node that is involved in a reconfiguration.</span></span> <span data-ttu-id="7006e-114">Service Fabric が、完了される再構成を開始する前に待機しているノード上でアップグレードします。</span><span class="sxs-lookup"><span data-stu-id="7006e-114">Service Fabric is waiting for the reconfiguration to be complete before staring upgrade on that node.</span></span> </p>
     syntax:
       content: public WaitForReconfiguration=(0x0005)
 references:

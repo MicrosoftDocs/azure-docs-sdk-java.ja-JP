@@ -38,7 +38,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/recovery/RecoveryManager.java
       startLine: 48
     package: com.microsoft.azure.elasticdb.shard.recovery
-    summary: <p>さまざまな回復を管理するシャードのマップ manager に関連するタスク。 シャード マップの情報およびグローバル シャードのマップ manager データベース、シャードにローカルに格納されている間のデータ破損の問題を解決するのに役立ちます。 また、特定の '不測' データベースのバックアップまたはデータベース コピー数のシャード マップの再構築が必要な回復シナリオ。 いる一部の回復方法が不可能なデータ失われること正しく使用されていないときに注意してください。 バックアップまたは回復操作に参加するすべてのデータベースのコピーをお勧めします。 </p>
+    summary: <p><span data-ttu-id="179ab-101">さまざまな回復を管理するシャードのマップ manager に関連するタスク。</span><span class="sxs-lookup"><span data-stu-id="179ab-101">Manages various recovery related tasks for a shard map manager.</span></span> <span data-ttu-id="179ab-102">シャード マップの情報およびグローバル シャードのマップ manager データベース、シャードにローカルに格納されている間のデータ破損の問題を解決するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="179ab-102">It helps resolving data corruption issues between shard map information stored locally on the shards and in the global shard map manager database.</span></span> <span data-ttu-id="179ab-103">また、特定の '不測' データベースのバックアップまたはデータベース コピー数のシャード マップの再構築が必要な回復シナリオ。</span><span class="sxs-lookup"><span data-stu-id="179ab-103">It also helps with certain 'oops' recovery scenarios where reconstruction of shard maps from database backups or database copies is necessary.</span></span> <span data-ttu-id="179ab-104">いる一部の回復方法が不可能なデータ失われること正しく使用されていないときに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-104">Note that some of the recovery methods can cause unrecoverable data loss when not used properly.</span></span> <span data-ttu-id="179ab-105">バックアップまたは回復操作に参加するすべてのデータベースのコピーをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="179ab-105">It is recommend to take backups or copies of all databases that participate in recovery operations.</span></span> </p>
     syntax:
       content: public class RecoveryManager
     inheritance:
@@ -60,14 +60,14 @@ items:
       startLine: 123
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードをシャードのマップ マネージャーにアタッチします。 アタッチするシャード上でより新しいバージョンが見つかった場合、同じシャード マップのマッピングの以前のバージョンが自動的に更新されます。 シャードをアタッチした後は、手動の競合解決を保証する不整合を確認する DetectMappingDifferences (ShardLocation、文字列) を呼び出す必要があります。</p>
+      <p><span data-ttu-id="179ab-106">シャードをシャードのマップ マネージャーにアタッチします。</span><span class="sxs-lookup"><span data-stu-id="179ab-106">Attaches a shard to the shard map manager.</span></span> <span data-ttu-id="179ab-107">アタッチするシャード上でより新しいバージョンが見つかった場合、同じシャード マップのマッピングの以前のバージョンが自動的に更新されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-107">Earlier versions of mappings for the same shard map will automatically be updated if more recent versions are found on the shard to be attached.</span></span> <span data-ttu-id="179ab-108">シャードをアタッチした後は、手動の競合解決を保証する不整合を確認する DetectMappingDifferences (ShardLocation、文字列) を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-108">After attaching a shard, DetectMappingDifferences(ShardLocation, string) should be called to check for any inconsistencies that warrant manual conflict resolution.</span></span></p>
       <p></p>
     syntax:
       content: public void attachShard(ShardLocation location)
       parameters:
         - id: location
           type: com.microsoft.azure.elasticdb.shard.base._shard_location
-          description: <p>アタッチされている、シャードの場所です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-109">アタッチされている、シャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-109">Location of the shard being attached.</span></span> <span data-ttu-id="179ab-110">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-110">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-111">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-111">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.attachShard(ShardLocation,String)'
     id: 'attachShard(ShardLocation,String)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -85,17 +85,17 @@ items:
       startLine: 139
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードをシャードのマップ マネージャーにアタッチします。 アタッチするシャード上でより新しいバージョンが見つかった場合、同じシャード マップのマッピングの以前のバージョンが自動的に更新されます。 シャードの場所は、この操作の一部としてローカル ストアの最新バージョンにアップグレードされます。 シャードをアタッチした後は、手動の競合解決を保証する不整合を確認する DetectMappingDifferences (ShardLocation、文字列) を呼び出す必要があります。</p>
+      <p><span data-ttu-id="179ab-112">シャードをシャードのマップ マネージャーにアタッチします。</span><span class="sxs-lookup"><span data-stu-id="179ab-112">Attaches a shard to the shard map manager.</span></span> <span data-ttu-id="179ab-113">アタッチするシャード上でより新しいバージョンが見つかった場合、同じシャード マップのマッピングの以前のバージョンが自動的に更新されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-113">Earlier versions of mappings for the same shard map will automatically be updated if more recent versions are found on the shard to be attached.</span></span> <span data-ttu-id="179ab-114">シャードの場所は、この操作の一部としてローカル ストアの最新バージョンにアップグレードされます。</span><span class="sxs-lookup"><span data-stu-id="179ab-114">Shard location will be upgraded to latest version of local store as part of this operation.</span></span> <span data-ttu-id="179ab-115">シャードをアタッチした後は、手動の競合解決を保証する不整合を確認する DetectMappingDifferences (ShardLocation、文字列) を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-115">After attaching a shard, DetectMappingDifferences(ShardLocation, string) should be called to check for any inconsistencies that warrant manual conflict resolution.</span></span></p>
       <p></p>
     syntax:
       content: 'public void attachShard(ShardLocation location, String shardMapName)'
       parameters:
         - id: location
           type: com.microsoft.azure.elasticdb.shard.base._shard_location
-          description: <p>アタッチされている、シャードの場所です。 </p>
+          description: <p><span data-ttu-id="179ab-116">アタッチされている、シャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-116">Location of the shard being attached.</span></span> </p>
         - id: shardMapName
           type: '26831127'
-          description: <p>シャード マップ名でフィルター処理する省略可能です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-117">シャード マップ名でフィルター処理する省略可能です。</span><span class="sxs-lookup"><span data-stu-id="179ab-117">Optional string to filter on the shard map name.</span></span> <span data-ttu-id="179ab-118">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-118">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-119">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-119">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard(ShardLocation)
     id: detachShard(ShardLocation)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -113,14 +113,14 @@ items:
       startLine: 183
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードのマップ マネージャーから特定のシャードをデタッチします。 マッピングを削除するシャードを指すは、このメソッドによって自動的に削除されます。</p>
+      <p><span data-ttu-id="179ab-120">シャードのマップ マネージャーから特定のシャードをデタッチします。</span><span class="sxs-lookup"><span data-stu-id="179ab-120">Detaches the given shard from the shard map manager.</span></span> <span data-ttu-id="179ab-121">マッピングを削除するシャードを指すは、このメソッドによって自動的に削除されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-121">Mappings pointing to the shard to be deleted will automatically be removed by this method.</span></span></p>
       <p></p>
     syntax:
       content: public void detachShard(ShardLocation location)
       parameters:
         - id: location
           type: com.microsoft.azure.elasticdb.shard.base._shard_location
-          description: <p>デタッチするシャードの場所です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-122">デタッチするシャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-122">Location of the shard being detached.</span></span> <span data-ttu-id="179ab-123">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-123">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-124">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-124">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detachShard(ShardLocation,String)'
     id: 'detachShard(ShardLocation,String)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -138,17 +138,17 @@ items:
       startLine: 196
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードのマップ マネージャーから特定のシャードをデタッチします。 マッピングを削除するシャードを指すは、このメソッドによって自動的に削除されます。</p>
+      <p><span data-ttu-id="179ab-125">シャードのマップ マネージャーから特定のシャードをデタッチします。</span><span class="sxs-lookup"><span data-stu-id="179ab-125">Detaches the given shard from the shard map manager.</span></span> <span data-ttu-id="179ab-126">マッピングを削除するシャードを指すは、このメソッドによって自動的に削除されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-126">Mappings pointing to the shard to be deleted will automatically be removed by this method.</span></span></p>
       <p></p>
     syntax:
       content: 'public void detachShard(ShardLocation location, String shardMapName)'
       parameters:
         - id: location
           type: com.microsoft.azure.elasticdb.shard.base._shard_location
-          description: <p>デタッチするシャードの場所です。 </p>
+          description: <p><span data-ttu-id="179ab-127">デタッチするシャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-127">Location of the shard being detached.</span></span> </p>
         - id: shardMapName
           type: '26831127'
-          description: <p>シャード マップ名でフィルター処理する省略可能です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-128">シャード マップ名でフィルター処理する省略可能です。</span><span class="sxs-lookup"><span data-stu-id="179ab-128">Optional string to filter on shard map name.</span></span> <span data-ttu-id="179ab-129">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-129">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-130">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-130">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences(ShardLocation)
     id: detectMappingDifferences(ShardLocation)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -166,17 +166,17 @@ items:
       startLine: 523
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードを指定した場所にグローバル シャードのマップ manager データベースとシャードのローカルのデータベースのマッピングでの違いを列挙します。</p>
+      <p><span data-ttu-id="179ab-131">シャードを指定した場所にグローバル シャードのマップ manager データベースとシャードのローカルのデータベースのマッピングでの違いを列挙します。</span><span class="sxs-lookup"><span data-stu-id="179ab-131">Enumerates differences in the mappings between the global shard map manager database and the local shard database in the specified shard location.</span></span></p>
       <p></p>
     syntax:
       content: public List<RecoveryToken> detectMappingDifferences(ShardLocation location)
       parameters:
         - id: location
           type: com.microsoft.azure.elasticdb.shard.base._shard_location
-          description: <p>不整合が検出する対象のシャードの場所です。 </p>
+          description: <p><span data-ttu-id="179ab-132">不整合が検出する対象のシャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-132">Location of shard for which to detect inconsistencies.</span></span> </p>
       return:
         type: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._recovery_tokena08ddfce
-        description: <p>さらに解決作業 (ResolveMappingDifferences) に使用されるトークンのコレクション。 </p>
+        description: <p><span data-ttu-id="179ab-133">さらに解決作業 (ResolveMappingDifferences) に使用されるトークンのコレクション。</span><span class="sxs-lookup"><span data-stu-id="179ab-133">Collection of tokens to be used for further resolution tasks (see ResolveMappingDifferences).</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.detectMappingDifferences(ShardLocation,String)'
     id: 'detectMappingDifferences(ShardLocation,String)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -194,20 +194,20 @@ items:
       startLine: 537
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードを指定した場所にグローバル シャードのマップ manager データベースとシャードのローカルのデータベースのマッピングでの違いを列挙します。</p>
+      <p><span data-ttu-id="179ab-134">シャードを指定した場所にグローバル シャードのマップ manager データベースとシャードのローカルのデータベースのマッピングでの違いを列挙します。</span><span class="sxs-lookup"><span data-stu-id="179ab-134">Enumerates differences in the mappings between the global shard map manager database and the local shard database in the specified shard location.</span></span></p>
       <p></p>
     syntax:
       content: 'public List<RecoveryToken> detectMappingDifferences(ShardLocation location, String shardMapName)'
       parameters:
         - id: location
           type: com.microsoft.azure.elasticdb.shard.base._shard_location
-          description: <p>不整合が検出する対象のシャードの場所です。 </p>
+          description: <p><span data-ttu-id="179ab-135">不整合が検出する対象のシャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-135">Location of shard for which to detect inconsistencies.</span></span> </p>
         - id: shardMapName
           type: '26831127'
-          description: <p>特定のシャード マップを指定する省略可能なパラメーターです。 </p>
+          description: <p><span data-ttu-id="179ab-136">特定のシャード マップを指定する省略可能なパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="179ab-136">Optional parameter to specify a particular shard map.</span></span> </p>
       return:
         type: 5618da2dcom.microsoft.azure.elasticdb.shard.recovery._recovery_tokena08ddfce
-        description: <p>さらに解決作業 (ResolveMappingDifferences) に使用されるトークンのコレクション。 </p>
+        description: <p><span data-ttu-id="179ab-137">さらに解決作業 (ResolveMappingDifferences) に使用されるトークンのコレクション。</span><span class="sxs-lookup"><span data-stu-id="179ab-137">Collection of tokens to be used for further resolution tasks (see ResolveMappingDifferences).</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getMappingDifferences(RecoveryToken)
     id: getMappingDifferences(RecoveryToken)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -225,17 +225,17 @@ items:
       startLine: 222
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>範囲-場所キー/値ペアのディクショナリを返します。 返される場所は、特定の範囲 (またはポイント) がのみローカル シャードのマップだけでは、グローバル シャード マップ、またはその両方に存在するかどうかを示す、列挙子です。 範囲のいずれかのシャードのマップに含まれていないは、これらの範囲が表示されないようにの相違点を含めることはできません。</p>
+      <p><span data-ttu-id="179ab-138">範囲-場所キー/値ペアのディクショナリを返します。</span><span class="sxs-lookup"><span data-stu-id="179ab-138">Returns a dictionary of range-to-location key-value pairs.</span></span> <span data-ttu-id="179ab-139">返される場所は、特定の範囲 (またはポイント) がのみローカル シャードのマップだけでは、グローバル シャード マップ、またはその両方に存在するかどうかを示す、列挙子です。</span><span class="sxs-lookup"><span data-stu-id="179ab-139">The location returned is an enumerator stating whether a given range (or point) is present only in the local shard map, only in the global shard map, or both.</span></span> <span data-ttu-id="179ab-140">範囲のいずれかのシャードのマップに含まれていないは、これらの範囲が表示されないようにの相違点を含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="179ab-140">Ranges not contained in either shard map cannot contain differences so those ranges are not shown.</span></span></p>
       <p></p>
     syntax:
       content: 'public Map<ShardRange, MappingLocation> getMappingDifferences(RecoveryToken token)'
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+          description: '<p><span data-ttu-id="179ab-141">DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-141">Recovery token returned from DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
       return:
         type: 6110eba5com.microsoft.azure.elasticdb.shard.base._shard_rangeb33c76fccom.microsoft.azure.elasticdb.shard.recovery._mapping_locationa08ddfce
-        description: <p>範囲のセットとそれに対応する<xref uid="com.microsoft.azure.elasticdb.shard.recovery._mapping_location" data-throw-if-not-resolved="false">MappingLocation</xref>です。 このメソッドでは、回復のトークン パラメーターを提供する DetectMappingDifferences (ShardLocation、文字列) を前回呼び出したと仮定します。 このメソッドの結果は ResolveMappingDifferences または RebuildMappingsOnShard などの不整合を解決するのには、後続の呼び出しで通常使用されます。 </p>
+        description: '<p><span data-ttu-id="179ab-142">範囲のセットとそれに対応する<xref uid="com.microsoft.azure.elasticdb.shard.recovery._mapping_location" data-throw-if-not-resolved="false">MappingLocation</xref>です。</span><span class="sxs-lookup"><span data-stu-id="179ab-142">The set of ranges and their corresponding <xref uid="com.microsoft.azure.elasticdb.shard.recovery._mapping_location" data-throw-if-not-resolved="false">MappingLocation</xref>.</span></span> <span data-ttu-id="179ab-143">このメソッドでは、回復のトークン パラメーターを提供する DetectMappingDifferences (ShardLocation、文字列) を前回呼び出したと仮定します。</span><span class="sxs-lookup"><span data-stu-id="179ab-143">This method assumes a previous call to DetectMappingDifferences(ShardLocation, string) that provides the recovery token parameter.</span></span> <span data-ttu-id="179ab-144">このメソッドの結果は ResolveMappingDifferences または RebuildMappingsOnShard などの不整合を解決するのには、後続の呼び出しで通常使用されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-144">The result of this method is typically used in subsequent calls to resolve inconsistencies such as ResolveMappingDifferences or RebuildMappingsOnShard.</span></span> </p>'
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>)'
     id: 'getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -253,20 +253,20 @@ items:
       startLine: 287
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャード マップの種類と DetectMappingDifferences (ShardLocation、文字列) から返されたトークンに基づく名前を取得します。</p>
+      <p><span data-ttu-id="179ab-145">シャード マップの種類と DetectMappingDifferences (ShardLocation、文字列) から返されたトークンに基づく名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="179ab-145">Retrieves shard map type and name based on the token returned from DetectMappingDifferences(ShardLocation, string).</span></span></p>
       <p></p>
     syntax:
       content: 'public void getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName)'
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+          description: '<p><span data-ttu-id="179ab-146">DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-146">Recovery token returned from DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
         - id: mapType
           type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_map_typea08ddfce
-          description: <p>ShardMap 型 (範囲またはリスト) を出力します。 </p>
+          description: <p><span data-ttu-id="179ab-147">ShardMap 型 (範囲またはリスト) を出力します。</span><span class="sxs-lookup"><span data-stu-id="179ab-147">Output ShardMap type (Range or List).</span></span> </p>
         - id: shardMapName
           type: 4f397241
-          description: <p>シャード マップの名前を出力します。 </p>
+          description: <p><span data-ttu-id="179ab-148">シャード マップの名前を出力します。</span><span class="sxs-lookup"><span data-stu-id="179ab-148">Output name of shard map.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>,ReferenceObjectHelper<ShardLocation>)'
     id: 'getShardInfo(RecoveryToken,ReferenceObjectHelper<ShardMapType>,ReferenceObjectHelper<String>,ReferenceObjectHelper<ShardLocation>)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -284,23 +284,23 @@ items:
       startLine: 249
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャード マップの種類、名前、およびシャードに基づく場所 DetectMappingDifferences (ShardLocation、文字列) から返されたトークンを取得します。</p>
+      <p><span data-ttu-id="179ab-149">シャード マップの種類、名前、およびシャードに基づく場所 DetectMappingDifferences (ShardLocation、文字列) から返されたトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="179ab-149">Retrieves shard map type, name and shard location based on the token returned from DetectMappingDifferences(ShardLocation, string).</span></span></p>
       <p></p>
     syntax:
       content: 'public void getShardInfo(RecoveryToken token, ReferenceObjectHelper<ShardMapType> mapType, ReferenceObjectHelper<String> shardMapName, ReferenceObjectHelper<ShardLocation> shardLocation)'
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+          description: '<p><span data-ttu-id="179ab-150">DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-150">Recovery token returned from DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
         - id: mapType
           type: 2695f77dcom.microsoft.azure.elasticdb.shard.map._shard_map_typea08ddfce
-          description: <p>出力のシャード マップの種類 (範囲またはリスト)。 </p>
+          description: <p><span data-ttu-id="179ab-151">出力のシャード マップの種類 (範囲またはリスト)。</span><span class="sxs-lookup"><span data-stu-id="179ab-151">Outputs shard map type (Range or List).</span></span> </p>
         - id: shardMapName
           type: 4f397241
-          description: <p>シャード マップ名を出力します。 </p>
+          description: <p><span data-ttu-id="179ab-152">シャード マップ名を出力します。</span><span class="sxs-lookup"><span data-stu-id="179ab-152">Outputs shard map name.</span></span> </p>
         - id: shardLocation
           type: 2695f77dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
-          description: <p>出力のシャードの場所 </p>
+          description: <p><span data-ttu-id="179ab-153">出力のシャードの場所</span><span class="sxs-lookup"><span data-stu-id="179ab-153">Outputs shard location</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardLocation(RecoveryToken)
     id: getShardLocation(RecoveryToken)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -318,17 +318,17 @@ items:
       startLine: 360
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>DetectMappingDifferences (ShardLocation、文字列) によって処理されるローカルのシャードのマップのシャードの場所を返します。</p>
+      <p><span data-ttu-id="179ab-154">DetectMappingDifferences (ShardLocation、文字列) によって処理されるローカルのシャードのマップのシャードの場所を返します。</span><span class="sxs-lookup"><span data-stu-id="179ab-154">Returns the shard location of the local shard map processed by DetectMappingDifferences(ShardLocation, string).</span></span></p>
       <p></p>
     syntax:
       content: public ShardLocation getShardLocation(RecoveryToken token)
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から返された回復トークン </p>
+          description: '<p><span data-ttu-id="179ab-155">DetectMappingDifferences (ShardLocation、文字列) から返された回復トークン</span><span class="sxs-lookup"><span data-stu-id="179ab-155">Recovery token returned from DetectMappingDifferences(ShardLocation, string)</span></span> </p>'
       return:
         type: com.microsoft.azure.elasticdb.shard.base._shard_location
-        description: <p>マッピング DetectMappingDifferences (ShardLocation、文字列) で検出されたの相違点のセットに対応するシャードの場所です。 </p>
+        description: '<p><span data-ttu-id="179ab-156">マッピング DetectMappingDifferences (ShardLocation、文字列) で検出されたの相違点のセットに対応するシャードの場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-156">Location of the shard corresponding to the set of mapping differences detected in DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapName(RecoveryToken)
     id: getShardMapName(RecoveryToken)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -346,17 +346,17 @@ items:
       startLine: 336
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>DetectMappingDifferences (ShardLocation、文字列) によって処理されたシャードのマップのシャード マップ名を返します。</p>
+      <p><span data-ttu-id="179ab-157">DetectMappingDifferences (ShardLocation、文字列) によって処理されたシャードのマップのシャード マップ名を返します。</span><span class="sxs-lookup"><span data-stu-id="179ab-157">Returns the shard map name of the shard map processed by DetectMappingDifferences(ShardLocation, string).</span></span></p>
       <p></p>
     syntax:
       content: public String getShardMapName(RecoveryToken token)
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+          description: '<p><span data-ttu-id="179ab-158">DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-158">Recovery token returned from DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
       return:
         type: '26831127'
-        description: <p>指定した回復トークンのシャードのマップの名前。 </p>
+        description: <p><span data-ttu-id="179ab-159">指定した回復トークンのシャードのマップの名前。</span><span class="sxs-lookup"><span data-stu-id="179ab-159">The name of the shard map for the given recovery token.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.getShardMapType(RecoveryToken)
     id: getShardMapType(RecoveryToken)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -374,17 +374,17 @@ items:
       startLine: 313
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>DetectMappingDifferences (ShardLocation、文字列) によって処理されたシャードのマップのシャード マップの種類を返します。</p>
+      <p><span data-ttu-id="179ab-160">DetectMappingDifferences (ShardLocation、文字列) によって処理されたシャードのマップのシャード マップの種類を返します。</span><span class="sxs-lookup"><span data-stu-id="179ab-160">Returns the shard map type of the shard map processed by DetectMappingDifferences(ShardLocation, string).</span></span></p>
       <p></p>
     syntax:
       content: public ShardMapType getShardMapType(RecoveryToken token)
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+          description: '<p><span data-ttu-id="179ab-161">DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-161">Recovery token returned from DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
       return:
         type: com.microsoft.azure.elasticdb.shard.map._shard_map_type
-        description: <p>回復のトークンに対応するシャード マップ (リスト、範囲など) の型。 </p>
+        description: '<p><span data-ttu-id="179ab-162">回復のトークンに対応するシャード マップ (リスト、範囲など) の型。</span><span class="sxs-lookup"><span data-stu-id="179ab-162">The type of shard map (list, range, etc...) corresponding to the recovery token.</span></span> </p>'
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShard(RecoveryToken,List<ShardRange>)'
     id: 'rebuildMappingsOnShard(RecoveryToken,List<ShardRange>)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -402,17 +402,17 @@ items:
       startLine: 460
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>DetectMappingDifferences (ShardLocation, string) によって検出され、GetMappingDifferences にアクセスして一貫性のないシャードの範囲の一覧からローカル範囲シャード マップを再構築します。 結果として得られるローカル範囲シャード マップが常にまだされませんと一致するシャードのマップ manager データベース内のグローバル シャード マップします。 ResolveMappingDifferences 後続の呼び出しは、システムを正常な状態に戻す必要があります。</p>
+      <p><span data-ttu-id="179ab-163">DetectMappingDifferences (ShardLocation, string) によって検出され、GetMappingDifferences にアクセスして一貫性のないシャードの範囲の一覧からローカル範囲シャード マップを再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-163">Rebuilds a local range shard map from a list of inconsistent shard ranges detected by DetectMappingDifferences(ShardLocation, string) and then accessed by GetMappingDifferences.</span></span> <span data-ttu-id="179ab-164">結果として得られるローカル範囲シャード マップが常にまだされませんと一致するシャードのマップ manager データベース内のグローバル シャード マップします。</span><span class="sxs-lookup"><span data-stu-id="179ab-164">The resulting local range shard map will always still be inconsistent with the global shard map in the shard map manager database.</span></span> <span data-ttu-id="179ab-165">ResolveMappingDifferences 後続の呼び出しは、システムを正常な状態に戻す必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-165">A subsequent call to ResolveMappingDifferences is necessary to bring the system back to a healthy state.</span></span></p>
       <p></p>
     syntax:
       content: 'public void rebuildMappingsOnShard(RecoveryToken token, List<ShardRange> ranges)'
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences を前回呼び出したときからの回復トークン </p>
+          description: <p><span data-ttu-id="179ab-166">DetectMappingDifferences を前回呼び出したときからの回復トークン</span><span class="sxs-lookup"><span data-stu-id="179ab-166">The recovery token from a previous call to DetectMappingDifferences</span></span> </p>
         - id: ranges
           type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_rangea08ddfce
-          description: <p>ローカル シャードのマップを再構築するときに、ローカルのシャードに保持する範囲のセット。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 不整合をシャードの範囲内だけは、このメソッドを使用して再構築することができます。 なしの不一致は、ローカルのシャードとグローバル シャードのマップをすべての範囲内では、ローカルのシャードに完全な状態で保持され、この呼び出しの影響は受けません。 シャードのマップ マネージャーで正規のインターフェイスを使用して後で、競合しないマッピングを後続の変更ができます。 回復マネージャーを使用して、競合しないマッピングを変更する必要はありません。 </p>
+          description: <p><span data-ttu-id="179ab-167">ローカル シャードのマップを再構築するときに、ローカルのシャードに保持する範囲のセット。</span><span class="sxs-lookup"><span data-stu-id="179ab-167">The set of ranges to keep on the local shard when rebuilding the local shard map.</span></span> <span data-ttu-id="179ab-168">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-168">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-169">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-169">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> <span data-ttu-id="179ab-170">不整合をシャードの範囲内だけは、このメソッドを使用して再構築することができます。</span><span class="sxs-lookup"><span data-stu-id="179ab-170">Only shard ranges with inconsistencies can be rebuilt using this method.</span></span> <span data-ttu-id="179ab-171">なしの不一致は、ローカルのシャードとグローバル シャードのマップをすべての範囲内では、ローカルのシャードに完全な状態で保持され、この呼び出しの影響は受けません。</span><span class="sxs-lookup"><span data-stu-id="179ab-171">All ranges with no inconsistencies between the local shard and the global shard map will be kept intact on the local shard and are not affected by this call.</span></span> <span data-ttu-id="179ab-172">シャードのマップ マネージャーで正規のインターフェイスを使用して後で、競合しないマッピングを後続の変更ができます。</span><span class="sxs-lookup"><span data-stu-id="179ab-172">Subsequent changes to the non-conflicting mappings can be made later using the regular interfaces in the shard map manager.</span></span> <span data-ttu-id="179ab-173">回復マネージャーを使用して、競合しないマッピングを変更する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="179ab-173">It is not necessary to use the recovery manager to change non-conflicting mappings.</span></span> </p>
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>)
     id: rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -430,14 +430,14 @@ items:
       startLine: 419
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>指定した場所のシャードのコレクション、個々 のシャードに格納されているマッピング情報に基づいてシャードのマップ マネージャーを再構築します。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。 個々 のシャード マップの情報は、不整合が発生した場合、動作は定義されません。 クロス シャード ロックは行われませんため、シャードは、このメソッドの実行中に不整合になると、グローバル シャードのマップの最終的な状態は破損している可能性があります。</p>
+      <p><span data-ttu-id="179ab-174">指定した場所のシャードのコレクション、個々 のシャードに格納されているマッピング情報に基づいてシャードのマップ マネージャーを再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-174">Given a collection of shard locations, reconstructs the shard map manager based on mapping information stored in the individual shards.</span></span> <span data-ttu-id="179ab-175">指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-175">The specified shards need to be registered already in the global shard map.</span></span> <span data-ttu-id="179ab-176">このメソッドには、マッピングだけ再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-176">This method only rebuilds mappings.</span></span> <span data-ttu-id="179ab-177">グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</span><span class="sxs-lookup"><span data-stu-id="179ab-177">It does not rebuild shard membership within the global shard map.</span></span> <span data-ttu-id="179ab-178">個々 のシャード マップの情報は、不整合が発生した場合、動作は定義されません。</span><span class="sxs-lookup"><span data-stu-id="179ab-178">If the information in the individual shard maps is or becomes inconsistent, the behavior is undefined.</span></span> <span data-ttu-id="179ab-179">クロス シャード ロックは行われませんため、シャードは、このメソッドの実行中に不整合になると、グローバル シャードのマップの最終的な状態は破損している可能性があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-179">No cross shard locks are taken, so if any shards become inconsistent during the execution of this method, the final state of the global shard map may be corrupt.</span></span></p>
       <p></p>
     syntax:
       content: public void rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations)
       parameters:
         - id: shardLocations
           type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
-          description: <p>シャードの場所のコレクション。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-180">シャードの場所のコレクション。</span><span class="sxs-lookup"><span data-stu-id="179ab-180">Collection of shard locations.</span></span> <span data-ttu-id="179ab-181">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-181">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-182">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-182">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>,String)'
     id: 'rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation>,String)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -455,17 +455,17 @@ items:
       startLine: 436
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>指定した場所のシャードのコレクション、個々 のシャードに格納されているマッピング情報に基づいてシャードのマップ マネージャーを再構築します。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。 個々 のシャード マップの情報は、不整合が発生した場合、動作は定義されません。 クロス シャード ロックは行われませんため、シャードは、このメソッドの実行中に不整合になると、グローバル シャードのマップの最終的な状態は破損している可能性があります。</p>
+      <p><span data-ttu-id="179ab-183">指定した場所のシャードのコレクション、個々 のシャードに格納されているマッピング情報に基づいてシャードのマップ マネージャーを再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-183">Given a collection of shard locations, reconstructs the shard map manager based on mapping information stored in the individual shards.</span></span> <span data-ttu-id="179ab-184">指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-184">The specified shards need to be registered already in the global shard map.</span></span> <span data-ttu-id="179ab-185">このメソッドには、マッピングだけ再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-185">This method only rebuilds mappings.</span></span> <span data-ttu-id="179ab-186">グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</span><span class="sxs-lookup"><span data-stu-id="179ab-186">It does not rebuild shard membership within the global shard map.</span></span> <span data-ttu-id="179ab-187">個々 のシャード マップの情報は、不整合が発生した場合、動作は定義されません。</span><span class="sxs-lookup"><span data-stu-id="179ab-187">If the information in the individual shard maps is or becomes inconsistent, the behavior is undefined.</span></span> <span data-ttu-id="179ab-188">クロス シャード ロックは行われませんため、シャードは、このメソッドの実行中に不整合になると、グローバル シャードのマップの最終的な状態は破損している可能性があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-188">No cross shard locks are taken, so if any shards become inconsistent during the execution of this method, the final state of the global shard map may be corrupt.</span></span></p>
       <p></p>
     syntax:
       content: 'public void rebuildMappingsOnShardMapManagerFromShards(List<ShardLocation> shardLocations, String shardMapName)'
       parameters:
         - id: shardLocations
           type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
-          description: <p>シャードの場所のコレクション。 </p>
+          description: <p><span data-ttu-id="179ab-189">シャードの場所のコレクション。</span><span class="sxs-lookup"><span data-stu-id="179ab-189">Collection of shard locations.</span></span> </p>
         - id: shardMapName
           type: '26831127'
-          description: <p>シャード マップのオプションの名前。 省略した場合は、各シャードにあるすべてのシャード マップからの回復を試みます。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: '<p><span data-ttu-id="179ab-190">シャード マップのオプションの名前。</span><span class="sxs-lookup"><span data-stu-id="179ab-190">Optional name of shard map.</span></span> <span data-ttu-id="179ab-191">省略した場合は、各シャードにあるすべてのシャード マップからの回復を試みます。</span><span class="sxs-lookup"><span data-stu-id="179ab-191">If omitted, will attempt to recover from all shard maps present on each shard.</span></span> <span data-ttu-id="179ab-192">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-192">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-193">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-193">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>)
     id: rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -483,14 +483,14 @@ items:
       startLine: 385
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードの場所のコレクションを指定するには、ローカルのシャードのマップを再構築は、グローバルのシャードのマップに格納されているマッピング情報に基づいています。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</p>
+      <p><span data-ttu-id="179ab-194">シャードの場所のコレクションを指定するには、ローカルのシャードのマップを再構築は、グローバルのシャードのマップに格納されているマッピング情報に基づいています。</span><span class="sxs-lookup"><span data-stu-id="179ab-194">Given a collection of shard locations, reconstructs local shard maps based on the mapping information stored in the global shard map.</span></span> <span data-ttu-id="179ab-195">指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-195">The specified shards need to be registered already in the global shard map.</span></span> <span data-ttu-id="179ab-196">このメソッドには、マッピングだけ再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-196">This method only rebuilds mappings.</span></span> <span data-ttu-id="179ab-197">グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</span><span class="sxs-lookup"><span data-stu-id="179ab-197">It does not rebuild shard membership within the global shard map.</span></span></p>
       <p></p>
     syntax:
       content: public void rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations)
       parameters:
         - id: shardLocations
           type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
-          description: <p>シャードの場所のコレクション。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-198">シャードの場所のコレクション。</span><span class="sxs-lookup"><span data-stu-id="179ab-198">Collection of shard locations.</span></span> <span data-ttu-id="179ab-199">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-199">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-200">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-200">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>,String)'
     id: 'rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation>,String)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -508,17 +508,17 @@ items:
       startLine: 400
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>シャードの場所のコレクションを指定するには、ローカルのシャードのマップを再構築は、グローバルのシャードのマップに格納されているマッピング情報に基づいています。 指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。 このメソッドには、マッピングだけ再構築します。 グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</p>
+      <p><span data-ttu-id="179ab-201">シャードの場所のコレクションを指定するには、ローカルのシャードのマップを再構築は、グローバルのシャードのマップに格納されているマッピング情報に基づいています。</span><span class="sxs-lookup"><span data-stu-id="179ab-201">Given a collection of shard locations, reconstructs local shard maps based on the mapping information stored in the global shard map.</span></span> <span data-ttu-id="179ab-202">指定されたシャードは、グローバルのシャードのマップに既に登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="179ab-202">The specified shards need to be registered already in the global shard map.</span></span> <span data-ttu-id="179ab-203">このメソッドには、マッピングだけ再構築します。</span><span class="sxs-lookup"><span data-stu-id="179ab-203">This method only rebuilds mappings.</span></span> <span data-ttu-id="179ab-204">グローバルのシャードのマップ内のメンバーシップのシャードを再構築にはできません。</span><span class="sxs-lookup"><span data-stu-id="179ab-204">It does not rebuild shard membership within the global shard map.</span></span></p>
       <p></p>
     syntax:
       content: 'public void rebuildMappingsOnShardsFromShardMapManager(List<ShardLocation> shardLocations, String shardMapName)'
       parameters:
         - id: shardLocations
           type: 5618da2dcom.microsoft.azure.elasticdb.shard.base._shard_locationa08ddfce
-          description: <p>シャードの場所のコレクション。 </p>
+          description: <p><span data-ttu-id="179ab-205">シャードの場所のコレクション。</span><span class="sxs-lookup"><span data-stu-id="179ab-205">Collection of shard locations.</span></span> </p>
         - id: shardMapName
           type: '26831127'
-          description: <p>シャード マップ名でフィルター処理する省略可能なパラメーターです。 省略した場合、すべてのシャード マップが再構築されます。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: '<p><span data-ttu-id="179ab-206">シャード マップ名でフィルター処理する省略可能なパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="179ab-206">Optional parameter to filter by shard map name.</span></span> <span data-ttu-id="179ab-207">省略した場合、すべてのシャード マップが再構築されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-207">If omitted, all shard maps will be rebuilt.</span></span> <span data-ttu-id="179ab-208">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-208">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-209">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-209">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>'
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.RecoveryManager(ShardMapManager)
     id: RecoveryManager(ShardMapManager)
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -536,14 +536,14 @@ items:
       startLine: 74
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>回復マネージャーのインスタンスの構成要素には、シャードのマップ マネージャーが与えられます。</p>
+      <p><span data-ttu-id="179ab-210">回復マネージャーのインスタンスの構成要素には、シャードのマップ マネージャーが与えられます。</span><span class="sxs-lookup"><span data-stu-id="179ab-210">Constructs an instance of the recovery manager for given shard map manager.</span></span></p>
       <p></p>
     syntax:
       content: public RecoveryManager(ShardMapManager shardMapManager)
       parameters:
         - id: shardMapManager
           type: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
-          description: <p>シャードのマップ マネージャーが復旧中です。 </p>
+          description: <p><span data-ttu-id="179ab-211">シャードのマップ マネージャーが復旧中です。</span><span class="sxs-lookup"><span data-stu-id="179ab-211">Shard map manager being recovered.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.resolveMappingDifferences(RecoveryToken,MappingDifferenceResolution)'
     id: 'resolveMappingDifferences(RecoveryToken,MappingDifferenceResolution)'
     parent: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager
@@ -561,17 +561,17 @@ items:
       startLine: 771
     package: com.microsoft.azure.elasticdb.shard.recovery
     summary: |-
-      <p>情報源として、シャード マップ (ローカルまたはグローバルのいずれか) のいずれかを選択し、両方の同期のシャード マップ上のマッピングを表示します。</p>
+      <p><span data-ttu-id="179ab-212">情報源として、シャード マップ (ローカルまたはグローバルのいずれか) のいずれかを選択し、両方の同期のシャード マップ上のマッピングを表示します。</span><span class="sxs-lookup"><span data-stu-id="179ab-212">Selects one of the shard maps (either local or global) as a source of truth and brings mappings on both shard maps in sync.</span></span></p>
       <p></p>
     syntax:
       content: 'public void resolveMappingDifferences(RecoveryToken token, MappingDifferenceResolution resolution)'
       parameters:
         - id: token
           type: com.microsoft.azure.elasticdb.shard.recovery._recovery_token
-          description: <p>DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。 </p>
+          description: '<p><span data-ttu-id="179ab-213">DetectMappingDifferences (ShardLocation、文字列) から回復トークンが返されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-213">Recovery token returned from DetectMappingDifferences(ShardLocation, string).</span></span> </p>'
         - id: resolution
           type: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference_resolution
-          description: <p>解決に使用する解決方法です。 このメソッドが不可能なデータ損失を招くことに注意してください。 バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。 </p>
+          description: <p><span data-ttu-id="179ab-214">解決に使用する解決方法です。</span><span class="sxs-lookup"><span data-stu-id="179ab-214">The resolution strategy to be used for resolution.</span></span> <span data-ttu-id="179ab-215">このメソッドが不可能なデータ損失を招くことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-215">Note that this method can cause unrecoverable data loss.</span></span> <span data-ttu-id="179ab-216">バックアップまたはデータベースのコピーを取得した、慎重に進みます. のみを確認してください。</span><span class="sxs-lookup"><span data-stu-id="179ab-216">Make sure you have taken backups or copies of your databases and only then proceed with great care.</span></span> </p>
 references:
   - uid: com.microsoft.azure.elasticdb.shard.recovery._recovery_manager.RecoveryManager*
     name: RecoveryManager
@@ -719,7 +719,7 @@ references:
     nameWithType: RecoveryToken
     fullName: com.microsoft.azure.elasticdb.shard.recovery.RecoveryToken
     type: Class
-    summary: <p>回復のトークンが生成されのメソッドで使用される、 <xref uid="com.microsoft.azure.elasticdb.shard.recovery._recovery_manager" data-throw-if-not-resolved="false">RecoveryManager</xref>シャードのマップの競合の検出と解決を実行します。 </p>
+    summary: <p><span data-ttu-id="179ab-217">回復のトークンが生成されのメソッドで使用される、 <xref uid="com.microsoft.azure.elasticdb.shard.recovery._recovery_manager" data-throw-if-not-resolved="false">RecoveryManager</xref>シャードのマップの競合の検出と解決を実行します。</span><span class="sxs-lookup"><span data-stu-id="179ab-217">Recovery token generated and used by methods of the <xref uid="com.microsoft.azure.elasticdb.shard.recovery._recovery_manager" data-throw-if-not-resolved="false">RecoveryManager</xref> to perform conflict detection and resolution for shard maps.</span></span> </p>
     syntax:
       content: public class RecoveryToken
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_range
@@ -729,7 +729,7 @@ references:
     nameWithType: ShardRange
     fullName: com.microsoft.azure.elasticdb.shard.base.ShardRange
     type: Class
-    summary: <p>低キーとキーの最高のシャード キーの範囲。 低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。 <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。 </p>
+    summary: <p><span data-ttu-id="179ab-218">低キーとキーの最高のシャード キーの範囲。</span><span class="sxs-lookup"><span data-stu-id="179ab-218">A range of shard keys between a low key and a high key.</span></span> <span data-ttu-id="179ab-219">低キーでは、包括的 (範囲の一部) を高、中にキーが排他 (範囲に含まれていません)。</span><span class="sxs-lookup"><span data-stu-id="179ab-219">The low key is inclusive (part of the range) while the high key is exclusive (not part of the range).</span></span> <span data-ttu-id="179ab-220"><xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref>クラスは変更できません。</span><span class="sxs-lookup"><span data-stu-id="179ab-220">The <xref uid="com.microsoft.azure.elasticdb.shard.base._shard_range" data-throw-if-not-resolved="false">ShardRange</xref> class is immutable.</span></span> </p>
     syntax:
       content: public class ShardRange
   - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference
@@ -739,7 +739,7 @@ references:
     nameWithType: MappingDifference
     fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingDifference
     type: Class
-    summary: <p>マッピングの相違点のクラスです。 </p>
+    summary: <p><span data-ttu-id="179ab-221">マッピングの相違点のクラスです。</span><span class="sxs-lookup"><span data-stu-id="179ab-221">Class for mapping differences.</span></span> </p>
     syntax:
       content: public class MappingDifference
   - uid: com.microsoft.azure.elasticdb.shard.store._store_shard_map
@@ -749,7 +749,7 @@ references:
     nameWithType: StoreShardMap
     fullName: com.microsoft.azure.elasticdb.shard.store.StoreShardMap
     type: Class
-    summary: <p>シャード マップの表現を格納します。 </p>
+    summary: <p><span data-ttu-id="179ab-222">シャード マップの表現を格納します。</span><span class="sxs-lookup"><span data-stu-id="179ab-222">Store representation of a shard map.</span></span> </p>
     syntax:
       content: public class StoreShardMap
   - uid: com.microsoft.azure.elasticdb.shard.store._store_shard
@@ -759,7 +759,7 @@ references:
     nameWithType: StoreShard
     fullName: com.microsoft.azure.elasticdb.shard.store.StoreShard
     type: Class
-    summary: <p>単一のシャードのストレージ表現します。 </p>
+    summary: <p><span data-ttu-id="179ab-223">単一のシャードのストレージ表現します。</span><span class="sxs-lookup"><span data-stu-id="179ab-223">Storage representation of a single shard.</span></span> </p>
     syntax:
       content: public class StoreShard
   - uid: com.microsoft.azure.elasticdb.shard.base._shard_location
@@ -769,7 +769,7 @@ references:
     nameWithType: ShardLocation
     fullName: com.microsoft.azure.elasticdb.shard.base.ShardLocation
     type: Class
-    summary: <p>そのサーバー名とデータベース名の観点から、シャードの場所を表します。 シャードへの接続を管理し、シャードの他の操作をサポートするために使用されます。 なく、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャードの場所が、シャード マップに登録されていません。 </p>
+    summary: '<p><span data-ttu-id="179ab-224">そのサーバー名とデータベース名の観点から、シャードの場所を表します。</span><span class="sxs-lookup"><span data-stu-id="179ab-224">Represents the location of a shard in terms of its server name and database name.</span></span> <span data-ttu-id="179ab-225">シャードへの接続を管理し、シャードの他の操作をサポートするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="179ab-225">This is used to manage connections to the shard and to support other operations on shards.</span></span> <span data-ttu-id="179ab-226">なく、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>シャードの場所が、シャード マップに登録されていません。</span><span class="sxs-lookup"><span data-stu-id="179ab-226">As opposed to a <xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">Shard</xref>, a shard location is not registered with the shard map.</span></span> </p>'
     syntax:
       content: public class ShardLocation
   - uid: com.microsoft.azure.elasticdb.shard.mapmanager._shard_map_manager
@@ -779,7 +779,7 @@ references:
     nameWithType: ShardMapManager
     fullName: com.microsoft.azure.elasticdb.shard.mapmanager.ShardMapManager
     type: Class
-    summary: <p>シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。 </p>
+    summary: '<p><span data-ttu-id="179ab-227">シャード マップを作成、管理、検索操作のエントリ ポイントとして機能します。</span><span class="sxs-lookup"><span data-stu-id="179ab-227">Serves as the entry point for creation, management and lookup operations over shard maps.</span></span> </p>'
     syntax:
       content: public class ShardMapManager
   - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_location
@@ -789,7 +789,7 @@ references:
     nameWithType: MappingLocation
     fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingLocation
     type: Enum
-    summary: <p>異なるマッピングが存在する場所です。 </p>
+    summary: <p><span data-ttu-id="179ab-228">異なるマッピングが存在する場所です。</span><span class="sxs-lookup"><span data-stu-id="179ab-228">Location where the different mappings exist.</span></span> </p>
     syntax:
       content: public enum MappingLocation
   - uid: com.microsoft.azure.elasticdb.shard.map._shard_map_type
@@ -799,7 +799,7 @@ references:
     nameWithType: ShardMapType
     fullName: com.microsoft.azure.elasticdb.shard.map.ShardMapType
     type: Enum
-    summary: <p>シャード マップの種類です。 </p>
+    summary: <p><span data-ttu-id="179ab-229">シャード マップの種類です。</span><span class="sxs-lookup"><span data-stu-id="179ab-229">Type of shard map.</span></span> </p>
     syntax:
       content: public enum ShardMapType
   - uid: com.microsoft.azure.elasticdb.shard.recovery._mapping_difference_resolution
@@ -809,6 +809,6 @@ references:
     nameWithType: MappingDifferenceResolution
     fullName: com.microsoft.azure.elasticdb.shard.recovery.MappingDifferenceResolution
     type: Enum
-    summary: <p>マッピングの相違点を解決するための戦略を解決します。 </p>
+    summary: <p><span data-ttu-id="179ab-230">マッピングの相違点を解決するための戦略を解決します。</span><span class="sxs-lookup"><span data-stu-id="179ab-230">Resolution strategy for resolving mapping differences.</span></span> </p>
     syntax:
       content: public enum MappingDifferenceResolution

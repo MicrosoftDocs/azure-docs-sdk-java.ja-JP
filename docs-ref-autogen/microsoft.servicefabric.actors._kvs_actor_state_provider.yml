@@ -72,7 +72,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 244
     package: microsoft.servicefabric.actors
-    summary: "<p>状態プロバイダーのレプリカを強制的に中止します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>この通常ノードで、永続的な障害が検出されたときにエラーまたは発生 Service Fabric は、内部エラーのため、レプリカのライフ サイクルを確実に管理できません。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-101\">状態プロバイダーのレプリカを強制的に中止します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-101\">Forcefully abort the state provider replica.</span></span> </p>\n<p><span data-ttu-id=\"cd8fb-102\">\r\n\r\n  <b>注釈:</b>この通常ノードで、永続的な障害が検出されたときにエラーまたは発生 Service Fabric は、内部エラーのため、レプリカのライフ サイクルを確実に管理できません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-102\">\r\n\r\n  <b>Remarks:</b>This generally occurs when a permanent fault is detected on the node, or when Service Fabric cannot reliably manage the replica's life-cycle due to internal failures.</span></span> </p>"
     syntax:
       content: public void abort()
     overridden: microsoft.servicefabric.data._state_provider_replica.abort()
@@ -93,17 +93,17 @@ items:
       startLine: 337
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>指定した id に置き換えます。 アクターのライセンス認証プロセスの一部としてこのメソッドが呼び出されます</p>
+      <p><span data-ttu-id="cd8fb-103">指定した id に置き換えます。 アクターのライセンス認証プロセスの一部としてこのメソッドが呼び出されます</span><span class="sxs-lookup"><span data-stu-id="cd8fb-103">This method is invoked as part of the activation process of the actor with the specified Id.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<?> actorActivatedAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アクティブ化したアクターの id です。 </p>
+          description: <p><span data-ttu-id="cd8fb-104">アクティブ化したアクターの id です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-104">Id of the actor that is activated.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>表す非同期のタスク<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>アクティブ化通知の処理です。 </p>
+        description: <p><span data-ttu-id="cd8fb-105">表す非同期のタスク<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>アクティブ化通知の処理です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-105">A task that represents the asynchronous <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> activation notification processing.</span></span> </p>
     overridden: microsoft.servicefabric.actors._actor_state_provider.actorActivatedAsync(ActorId)
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.actorTypeInformation()
     id: actorTypeInformation()
@@ -141,22 +141,22 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 265
     package: microsoft.servicefabric.actors
-    summary: "<p>このアクター状態プロバイダーによって管理されている状態の完全バックアップを実行します</p>\n<p>\r\n\r\n  <b>注釈:</b>でバックアップ/復元がサポートされていない<xref uid=\"microsoft.servicefabric.actors._volatile_actor_state_provider\" data-throw-if-not-resolved=\"false\">VolatileActorStateProvider</xref>です。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-106\">このアクター状態プロバイダーによって管理されている状態の完全バックアップを実行します</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-106\">Performs a full backup of state managed by this actor state provider</span></span></p>\n<p><span data-ttu-id=\"cd8fb-107\">\r\n\r\n  <b>注釈:</b>でバックアップ/復元がサポートされていない<xref uid=\"microsoft.servicefabric.actors._volatile_actor_state_provider\" data-throw-if-not-resolved=\"false\">VolatileActorStateProvider</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-107\">\r\n\r\n  <b>Remarks:</b>Backup/restore is not supported by <xref uid=\"microsoft.servicefabric.actors._volatile_actor_state_provider\" data-throw-if-not-resolved=\"false\">VolatileActorStateProvider</xref>.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<?> backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
       parameters:
         - id: option
           type: microsoft.servicefabric.data._backup_option
-          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.data._backup_option\" data-throw-if-not-resolved=\"false\">microsoft.servicefabric.data.BackupOption</xref>コールバックの </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-108\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.data._backup_option\" data-throw-if-not-resolved=\"false\">microsoft.servicefabric.data.BackupOption</xref>コールバックの</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-108\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.data._backup_option\" data-throw-if-not-resolved=\"false\">microsoft.servicefabric.data.BackupOption</xref> for the callback</span></span> </p>"
         - id: timeout
           type: e02a2de0
-          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.time.Duration</xref>バックアップのタイムアウトを説明します。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-109\">\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.time.Duration</xref>バックアップのタイムアウトを説明します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-109\">\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.time.Duration</xref> that describes timeout for the backup</span></span> </p>"
         - id: backupCallback
           type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
-          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出される BackupCallbackCallback です。 </p>
+          description: <p><span data-ttu-id="cd8fb-110">バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出される BackupCallbackCallback です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-110">BackupCallbackCallback to be called when the backup folder has been created locally and is ready to be moved out of the node.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-111">非同期のバックアップ操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-111">Task that represents the asynchronous backup operation.</span></span> </p>
     overridden: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
     id: 'backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
@@ -174,16 +174,16 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 298
     package: microsoft.servicefabric.actors
-    summary: "<p>このアクター状態プロバイダーによって管理されている状態の完全バックアップを実行します</p>\n<p>\r\n\r\n  <b>注釈:</b>でバックアップ/復元がサポートされていない<xref uid=\"microsoft.servicefabric.actors._volatile_actor_state_provider\" data-throw-if-not-resolved=\"false\">VolatileActorStateProvider</xref>です。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-112\">このアクター状態プロバイダーによって管理されている状態の完全バックアップを実行します</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-112\">Performs a full backup of state managed by this actor state provider</span></span></p>\n<p><span data-ttu-id=\"cd8fb-113\">\r\n\r\n  <b>注釈:</b>でバックアップ/復元がサポートされていない<xref uid=\"microsoft.servicefabric.actors._volatile_actor_state_provider\" data-throw-if-not-resolved=\"false\">VolatileActorStateProvider</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-113\">\r\n\r\n  <b>Remarks:</b>Backup/restore is not supported by <xref uid=\"microsoft.servicefabric.actors._volatile_actor_state_provider\" data-throw-if-not-resolved=\"false\">VolatileActorStateProvider</xref>.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<?> backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
       parameters:
         - id: backupCallback
           type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
-          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出される BackupCallbackCallback です。 </p>
+          description: <p><span data-ttu-id="cd8fb-114">バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出される BackupCallbackCallback です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-114">BackupCallbackCallback to be called when the backup folder has been created locally and is ready to be moved out of the node.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-115">非同期のバックアップ操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-115">Task that represents the asynchronous backup operation.</span></span> </p>
     overridden: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.changeRoleAsync(ReplicaRole,CancellationToken)'
     id: 'changeRoleAsync(ReplicaRole,CancellationToken)'
@@ -202,20 +202,20 @@ items:
       startLine: 200
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>そのロールが変更される、たとえばプライマリまたはセカンダリに、状態プロバイダーのレプリカを通知します。</p>
+      <p><span data-ttu-id="cd8fb-116">そのロールが変更される、たとえばプライマリまたはセカンダリに、状態プロバイダーのレプリカを通知します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-116">Notify the state provider replica that its role is changing, for example to Primary or Secondary.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
       parameters:
         - id: newRole
           type: system.fabric._replica_role
-          description: <p>新しい<xref uid="" data-throw-if-not-resolved="false">ReplicaRole</xref>、プライマリまたはセカンダリなどです。 </p>
+          description: '<p><span data-ttu-id="cd8fb-117">新しい<xref uid="" data-throw-if-not-resolved="false">ReplicaRole</xref>、プライマリまたはセカンダリなどです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-117">The new <xref uid="" data-throw-if-not-resolved="false">ReplicaRole</xref>, such as primary or secondary.</span></span> </p>'
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-118\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-118\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>非同期の変更の役割の操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-119">非同期の変更の役割の操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-119">Task that represents the asynchronous change role operation.</span></span> </p>
     overridden: 'microsoft.servicefabric.data._state_provider_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.closeAsync(CancellationToken)
     id: closeAsync(CancellationToken)
@@ -233,16 +233,16 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 229
     package: microsoft.servicefabric.actors
-    summary: "<p>状態プロバイダーの複製が正常にクローズします。</p>\n<p>\r\n\r\n  <b>注釈:</b>これは、レプリカのコードにアップグレードされている、負荷分散のため、レプリカの移動または一時的なエラーが検出された場合に通常に発生します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-120\">状態プロバイダーの複製が正常にクローズします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-120\">Gracefully close the state provider replica.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-121\">\r\n\r\n  <b>注釈:</b>これは、レプリカのコードにアップグレードされている、負荷分散のため、レプリカの移動または一時的なエラーが検出された場合に通常に発生します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-121\">\r\n\r\n  <b>Remarks:</b>This generally occurs when the replica's code is being upgrade, the replica is being moved due to load balancing, or a transient fault is detected.</span></span> </p>"
     syntax:
       content: public CompletableFuture<?> closeAsync(CancellationToken cancellationToken)
       parameters:
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-122\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-122\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>非同期の close 操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-123">非同期の close 操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-123">Task that represents the asynchronous close operation.</span></span> </p>
     overridden: microsoft.servicefabric.data._state_provider_replica.closeAsync(CancellationToken)
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.containsStateAsync(ActorId,String)'
     id: 'containsStateAsync(ActorId,String)'
@@ -261,20 +261,20 @@ items:
       startLine: 448
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>アクター状態プロバイダーに指定した状態の名前を持つ、アクター状態が含まれているかどうかをチェックします。</p>
+      <p><span data-ttu-id="cd8fb-124">アクター状態プロバイダーに指定した状態の名前を持つ、アクター状態が含まれているかどうかをチェックします。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-124">Checks whether actor state provider contains an actor state with specified state name.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Boolean> containsStateAsync(ActorId actorId, String stateName)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態の有無を確認する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-125">状態の有無を確認する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-125">ID of the actor for which to check state existence.</span></span> </p>
         - id: stateName
           type: '26831127'
-          description: <p>有無を確認するアクター状態の名前です。 </p>
+          description: <p><span data-ttu-id="cd8fb-126">有無を確認するアクター状態の名前です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-126">Name of the actor state to check for existence.</span></span> </p>
       return:
         type: 7e53ac82
-        description: <p>非同期チェック操作を表すタスク。 TResult パラメーターの値は、指定した名前の状態には、それ以外の場合の false が存在する場合は true です。 </p>
+        description: <p><span data-ttu-id="cd8fb-127">非同期チェック操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-127">A task that represents the asynchronous check operation.</span></span> <span data-ttu-id="cd8fb-128">TResult パラメーターの値は、指定した名前の状態には、それ以外の場合の false が存在する場合は true です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-128">The value of TResult parameter is true if state with specified name exists otherwise false.</span></span> </p>
     overridden: 'microsoft.servicefabric.actors._actor_state_provider.containsStateAsync(ActorId,String)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.currentReplicaRole()
     id: currentReplicaRole()
@@ -313,20 +313,20 @@ items:
       startLine: 547
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>存在する場合は、指定されたアクター アラームを削除します。</p>
+      <p><span data-ttu-id="cd8fb-129">存在する場合は、指定されたアクター アラームを削除します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-129">Deletes the specified actor reminder if it exists.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> deleteReminderAsync(ActorId actorId, String reminderName)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アラームを削除するアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-130">アラームを削除するアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-130">ID of the actor to delete the reminder.</span></span> </p>
         - id: reminderName
           type: '26831127'
-          description: <p>削除するアラームの名前です。 </p>
+          description: <p><span data-ttu-id="cd8fb-131">削除するアラームの名前です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-131">Name of the reminder to delete.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の削除操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-132">非同期の削除操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-132">A task that represents the asynchronous delete operation.</span></span> </p>
     overridden: 'microsoft.servicefabric.actors._actor_state_provider.deleteReminderAsync(ActorId,String)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.enumerateStateNamesAsync(ActorId)
     id: enumerateStateNamesAsync(ActorId)
@@ -344,16 +344,16 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 489
     package: microsoft.servicefabric.actors
-    summary: "<p>指定されたアクターに関連付けられているすべての状態名の列挙可能なが作成されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>アクター状態プロバイダーから返された列挙子に安全に読み取りと同時に使用し、状態プロバイダーに書き込みます。 状態プロバイダーのスナップショットの一貫したビューを表します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-133\">指定されたアクターに関連付けられているすべての状態名の列挙可能なが作成されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-133\">Creates an enumerable of all the state names associated with specified actor.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-134\">\r\n\r\n  <b>注釈:</b>アクター状態プロバイダーから返された列挙子に安全に読み取りと同時に使用し、状態プロバイダーに書き込みます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-134\">\r\n\r\n  <b>Remarks:</b>The enumerator returned from actor state provider is safe to use concurrently with reads and writes to the state provider.</span></span> <span data-ttu-id=\"cd8fb-135\">状態プロバイダーのスナップショットの一貫したビューを表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-135\">It represents a snapshot consistent view of the state provider.</span></span> </p>"
     syntax:
       content: public CompletableFuture<List<String>> enumerateStateNamesAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>列挙可能なを作成する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-136">列挙可能なを作成する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-136">ID of the actor for which to create enumerable.</span></span> </p>
       return:
         type: d20512af
-        description: <p>非同期の列挙操作を表すタスク。 TResult パラメーターの値は、指定されたアクターに関連付けられているすべての州名の列挙です。 </p>
+        description: <p><span data-ttu-id="cd8fb-137">非同期の列挙操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-137">A task that represents the asynchronous enumeration operation.</span></span> <span data-ttu-id="cd8fb-138">TResult パラメーターの値は、指定されたアクターに関連付けられているすべての州名の列挙です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-138">The value of TResult parameter is an enumerable of all state names associated with specified actor.</span></span> </p>
     overridden: microsoft.servicefabric.actors._actor_state_provider.enumerateStateNamesAsync(ActorId)
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.getActorsAsync(int,ContinuationToken)'
     id: 'getActorsAsync(int,ContinuationToken)'
@@ -371,19 +371,19 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 510
     package: microsoft.servicefabric.actors
-    summary: "<p>状態プロバイダーから ActorIds を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b> </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-139\">状態プロバイダーから ActorIds を取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-139\">Gets ActorIds from the State Provider.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-140\">\r\n\r\n  <b>注釈:</b></span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-140\">\r\n\r\n  <b>Remarks:</b> The</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<PagedResult<ActorId>> getActorsAsync(int numItemsToReturn, ContinuationToken continuationToken)'
       parameters:
         - id: numItemsToReturn
           type: f75371fa
-          description: <p>返される要求された項目の数。 </p>
+          description: <p><span data-ttu-id="cd8fb-141">返される要求された項目の数。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-141">Number of items requested to be returned.</span></span> </p>
         - id: continuationToken
           type: microsoft.servicefabric.actors._continuation_token
-          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+          description: <p><span data-ttu-id="cd8fb-142">クエリから結果を開始する継続トークンです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-142">A continuation token to start querying the results from.</span></span> <span data-ttu-id="cd8fb-143">継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-143">A null value of continuation token means start returning values form the beginning.</span></span> </p>
       return:
         type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_ide7daa122
-        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-144">サーバーへの呼び出しの非同期操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-144">A task that represents the asynchronous operation of call to server.</span></span> </p>
     overridden: 'microsoft.servicefabric.actors._actor_state_provider.getActorsAsync(int,ContinuationToken)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.initialize(ActorTypeInformation)
     id: initialize(ActorTypeInformation)
@@ -402,14 +402,14 @@ items:
       startLine: 324
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>関連付けられているアクター型の型情報を使用してアクター状態プロバイダーを初期化します。</p>
+      <p><span data-ttu-id="cd8fb-145">関連付けられているアクター型の型情報を使用してアクター状態プロバイダーを初期化します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-145">Initializes the actor state provider with type information of the actor type associated with it.</span></span></p>
       <p></p>
     syntax:
       content: public void initialize(ActorTypeInformation actorTypeInformation)
       parameters:
         - id: actorTypeInformation
           type: microsoft.servicefabric.actors._actor_type_information
-          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_type_information\" data-throw-if-not-resolved=\"false\">ActorTypeInformation</xref>アクター クラスの情報を入力します。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-146\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_type_information\" data-throw-if-not-resolved=\"false\">ActorTypeInformation</xref>アクター クラスの情報を入力します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-146\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_type_information\" data-throw-if-not-resolved=\"false\">ActorTypeInformation</xref> Type information of the actor class.</span></span> </p>"
     overridden: microsoft.servicefabric.actors._actor_state_provider.initialize(ActorTypeInformation)
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.initialize(StatefulServiceInitializationParameters)
     id: initialize(StatefulServiceInitializationParameters)
@@ -427,13 +427,13 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 179
     package: microsoft.servicefabric.actors
-    summary: "<p>サービスの初期化情報を使用して、状態プロバイダーのレプリカを初期化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>初期化中に複雑な処理を行う必要はありません。 OpenAsync では、高価なまたは実行時間の長いの初期化を行う必要があります。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-147\">サービスの初期化情報を使用して、状態プロバイダーのレプリカを初期化します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-147\">Initialize the state provider replica using the service initialization information.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-148\">\r\n\r\n  <b>注釈:</b>初期化中に複雑な処理を行う必要はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-148\">\r\n\r\n  <b>Remarks:</b>No complex processing should be done during Initialize.</span></span> <span data-ttu-id=\"cd8fb-149\">OpenAsync では、高価なまたは実行時間の長いの初期化を行う必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-149\">Expensive or long-running initialization should be done in OpenAsync.</span></span> </p>"
     syntax:
       content: public void initialize(StatefulServiceInitializationParameters initializationParameters)
       parameters:
         - id: initializationParameters
           type: system.fabric._stateful_service_initialization_parameters
-          description: "<p>\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">StatefulServiceInitializationParameters</xref>サービス名、パーティション id、レプリカの id、およびコード パッケージ情報などです。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-150\">\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">StatefulServiceInitializationParameters</xref>サービス名、パーティション id、レプリカの id、およびコード パッケージ情報などです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-150\">\r\n\r\n  <xref uid=\"\" data-throw-if-not-resolved=\"false\">StatefulServiceInitializationParameters</xref> such as service name, partition id, replica id, and code package information.</span></span> </p>"
     overridden: microsoft.servicefabric.data._state_provider_replica.initialize(StatefulServiceInitializationParameters)
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.KvsActorStateProvider()
     id: KvsActorStateProvider()
@@ -451,7 +451,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 130
     package: microsoft.servicefabric.actors
-    summary: <p>インスタンスを作成<xref uid="microsoft.servicefabric.actors._kvs_actor_state_provider" data-throw-if-not-resolved="false">KvsActorStateProvider</xref>です。 </p>
+    summary: <p><span data-ttu-id="cd8fb-151">インスタンスを作成<xref uid="microsoft.servicefabric.actors._kvs_actor_state_provider" data-throw-if-not-resolved="false">KvsActorStateProvider</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-151">Creates an instance of <xref uid="microsoft.servicefabric.actors._kvs_actor_state_provider" data-throw-if-not-resolved="false">KvsActorStateProvider</xref>.</span></span> </p>
     syntax:
       content: public KvsActorStateProvider()
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.KvsActorStateProvider(ReplicatorSettings,LocalStoreSettings)'
@@ -471,17 +471,17 @@ items:
       startLine: 143
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>インスタンスを作成<xref uid="microsoft.servicefabric.actors._kvs_actor_state_provider" data-throw-if-not-resolved="false">KvsActorStateProvider</xref> with 指定 replicator とローカル キーと値の設定を保存します。</p>
+      <p><span data-ttu-id="cd8fb-152">インスタンスを作成<xref uid="microsoft.servicefabric.actors._kvs_actor_state_provider" data-throw-if-not-resolved="false">KvsActorStateProvider</xref> with 指定 replicator とローカル キーと値の設定を保存します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-152">Creates an instance of <xref uid="microsoft.servicefabric.actors._kvs_actor_state_provider" data-throw-if-not-resolved="false">KvsActorStateProvider</xref> with specified replicator and local key-value store settings.</span></span></p>
       <p></p>
     syntax:
       content: 'public KvsActorStateProvider(ReplicatorSettings replicatorSettings, LocalStoreSettings localStoreSettings)'
       parameters:
         - id: replicatorSettings
           type: system.fabric._replicator_settings
-          description: <p>A <xref uid="" data-throw-if-not-resolved="false">ReplicatorSettings</xref>複製物作成会社の設定を説明します。 </p>
+          description: <p><span data-ttu-id="cd8fb-153">A <xref uid="" data-throw-if-not-resolved="false">ReplicatorSettings</xref>複製物作成会社の設定を説明します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-153">A <xref uid="" data-throw-if-not-resolved="false">ReplicatorSettings</xref> that describes replicator settings.</span></span> </p>
         - id: localStoreSettings
           type: system.fabric._local_store_settings
-          description: <p>A <xref uid="" data-throw-if-not-resolved="false">LocalStoreSettings</xref>ローカル キー値ストアの設定を説明します。 </p>
+          description: <p><span data-ttu-id="cd8fb-154">A <xref uid="" data-throw-if-not-resolved="false">LocalStoreSettings</xref>ローカル キー値ストアの設定を説明します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-154">A <xref uid="" data-throw-if-not-resolved="false">LocalStoreSettings</xref> that describes local key value store settings.</span></span> </p>
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.loadRemindersAsync(CancellationToken)
     id: loadRemindersAsync(CancellationToken)
     parent: microsoft.servicefabric.actors._kvs_actor_state_provider
@@ -499,17 +499,17 @@ items:
       startLine: 565
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>アクター状態プロバイダーに含まれているすべてのアラームを読み込みます。</p>
+      <p><span data-ttu-id="cd8fb-155">アクター状態プロバイダーに含まれているすべてのアラームを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-155">Loads all the reminders contained in the actor state provider.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<ActorReminderCollection> loadRemindersAsync(CancellationToken cancellationToken)
       parameters:
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-156\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-156\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 9cdf14d0microsoft.servicefabric.actors._actor_reminder_collectiona08ddfce
-        description: <p>非同期ロード操作を表すタスク。 TResult パラメーターの値は、アクター状態プロバイダーに含まれているすべてのアクター アラームのコレクションです。 </p>
+        description: <p><span data-ttu-id="cd8fb-157">非同期ロード操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-157">A task that represents the asynchronous load operation.</span></span> <span data-ttu-id="cd8fb-158">TResult パラメーターの値は、アクター状態プロバイダーに含まれているすべてのアクター アラームのコレクションです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-158">The value of TResult parameter is a collection of all actor reminders contained in the actor state provider.</span></span> </p>
     overridden: microsoft.servicefabric.actors._actor_state_provider.loadRemindersAsync(CancellationToken)
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.loadStateAsync(ActorId,String)'
     id: 'loadStateAsync(ActorId,String)'
@@ -528,24 +528,24 @@ items:
       startLine: 377
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>指定された状態の名前に関連付けられているアクターの状態を読み込みます。</p>
+      <p><span data-ttu-id="cd8fb-159">指定された状態の名前に関連付けられているアクターの状態を読み込みます。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-159">Loads the actor state associated with the specified state name.</span></span></p>
       <p></p>
     syntax:
       content: 'public <T> CompletableFuture<T> loadStateAsync(ActorId actorId, String stateName)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アクティブ化したアクターの id です。 </p>
+          description: <p><span data-ttu-id="cd8fb-160">アクティブ化したアクターの id です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-160">Id of the actor that is activated.</span></span> </p>
         - id: stateName
           type: '26831127'
-          description: <p>StateName です。 </p>
+          description: <p><span data-ttu-id="cd8fb-161">StateName です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-161">StateName.</span></span> </p>
       return:
         type: 6d056e8b
-        description: <p>非同期ロード操作を表すタスク。 TResult のパラメーターの値には、特定の状態名に関連付けられているアクター状態の値が含まれています。 </p>
+        description: <p><span data-ttu-id="cd8fb-162">非同期ロード操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-162">A task that represents the asynchronous load operation.</span></span> <span data-ttu-id="cd8fb-163">TResult のパラメーターの値には、特定の状態名に関連付けられているアクター状態の値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-163">The value of TResult parameter contains value of actor state associated with given state name.</span></span> </p>
     overridden: 'microsoft.servicefabric.actors._actor_state_provider.loadStateAsync(ActorId,String)'
     exceptions:
       - type: c27a23df
-        description: <p>場合<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>状態名が存在しないに関連付けられた状態を指定します。 </p>
+        description: <p><span data-ttu-id="cd8fb-164">場合<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>状態名が存在しないに関連付けられた状態を指定します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-164">If <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> state associated with specified state name does not exist.</span></span> </p>
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.onSnapshotAsync(Duration)
     id: onSnapshotAsync(Duration)
     parent: microsoft.servicefabric.actors._kvs_actor_state_provider
@@ -585,22 +585,22 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 923
     package: microsoft.servicefabric.actors
-    summary: "<p>使用するため、状態プロバイダーのレプリカを開きます。</p>\n<p>\r\n\r\n  <b>注釈:</b>拡張状態プロバイダーの初期化タスクを開始できます。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-165\">使用するため、状態プロバイダーのレプリカを開きます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-165\">Open the state provider replica for use.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-166\">\r\n\r\n  <b>注釈:</b>拡張状態プロバイダーの初期化タスクを開始できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-166\">\r\n\r\n  <b>Remarks:</b>Extended state provider initialization tasks can be started at this time.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<Replicator> openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
       parameters:
         - id: openMode
           type: system.fabric._replica_open_mode
-          description: <p><xref uid="" data-throw-if-not-resolved="false">ReplicaOpenMode</xref>これは、新規または既存のレプリカであるかどうかを示すです。 </p>
+          description: <p><span data-ttu-id="cd8fb-167"><xref uid="" data-throw-if-not-resolved="false">ReplicaOpenMode</xref>これは、新規または既存のレプリカであるかどうかを示すです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-167">The <xref uid="" data-throw-if-not-resolved="false">ReplicaOpenMode</xref> that indicates whether this is a new or existing replica.</span></span> </p>
         - id: partition
           type: system.fabric._stateful_service_partition
-          description: <p><xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref>レプリカが属しているパーティション。 </p>
+          description: <p><span data-ttu-id="cd8fb-168"><xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref>レプリカが属しているパーティション。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-168">The <xref uid="" data-throw-if-not-resolved="false">StatefulServicePartition</xref> partition the replica belongs to.</span></span> </p>
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-169\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-169\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 9cdf14d0system.fabric._replicatora08ddfce
-        description: <p>非同期の open 操作を表すタスク。 結果には、パーティション内の他の状態プロバイダーのレプリカ間で状態のレプリケーションを担当するレプリケーターが含まれています。 </p>
+        description: <p><span data-ttu-id="cd8fb-170">非同期の open 操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-170">Task that represents the asynchronous open operation.</span></span> <span data-ttu-id="cd8fb-171">結果には、パーティション内の他の状態プロバイダーのレプリカ間で状態のレプリケーションを担当するレプリケーターが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-171">The result contains the replicator responsible for replicating state between other state provider replicas in the partition.</span></span> </p>
     overridden: 'microsoft.servicefabric.data._state_provider_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.removeActorAsync(ActorId)
     id: removeActorAsync(ActorId)
@@ -619,17 +619,17 @@ items:
       startLine: 470
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>すべての既存の状態と指定されたアクターにアトミックに関連付けられている通知を削除します。</p>
+      <p><span data-ttu-id="cd8fb-172">すべての既存の状態と指定されたアクターにアトミックに関連付けられている通知を削除します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-172">Removes all the existing states and reminders associated with specified actor atomically.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<?> removeActorAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態を削除するアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-173">状態を削除するアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-173">ID of the actor for which to remove state.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の削除操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-174">非同期の削除操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-174">A task that represents the asynchronous remove operation.</span></span> </p>
     overridden: microsoft.servicefabric.actors._actor_state_provider.removeActorAsync(ActorId)
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.restoreAsync(String)
     id: restoreAsync(String)
@@ -647,16 +647,16 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 987
     package: microsoft.servicefabric.actors
-    summary: '<p>によって作成されたバックアップを復元<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BiFunction)</xref>または<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync (BackupOption、期間、BiFunction)</xref><b>解説:</b>でバックアップ/復元がサポートされていない<xref uid="microsoft.servicefabric.actors._volatile_actor_state_provider" data-throw-if-not-resolved="false">VolatileActorStateProvider</xref>です。 </p>'
+    summary: '<p><span data-ttu-id="cd8fb-175">によって作成されたバックアップを復元<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BiFunction)</xref>または<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync (BackupOption、期間、BiFunction)</xref><b>解説:</b>でバックアップ/復元がサポートされていない<xref uid="microsoft.servicefabric.actors._volatile_actor_state_provider" data-throw-if-not-resolved="false">VolatileActorStateProvider</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-175">Restore a backup taken by <xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BiFunction)</xref> or <xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BackupOption, Duration, BiFunction)</xref><b>Remarks:</b>Backup/restore is not supported by <xref uid="microsoft.servicefabric.actors._volatile_actor_state_provider" data-throw-if-not-resolved="false">VolatileActorStateProvider</xref>.</span></span> </p>'
     syntax:
       content: public CompletableFuture<?> restoreAsync(String backupFolderPath)
       parameters:
         - id: backupFolderPath
           type: '26831127'
-          description: <p>レプリカを復元するがディレクトリです。 </p>
+          description: <p><span data-ttu-id="cd8fb-176">レプリカを復元するがディレクトリです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-176">Directory from where replica will be restored from.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の復元操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-177">非同期の復元操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-177">Task that represents the asynchronous restore operation.</span></span> </p>
     overridden: microsoft.servicefabric.data._state_provider_replica.restoreAsync(String)
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.restoreAsync(String,RestorePolicy)'
     id: 'restoreAsync(String,RestorePolicy)'
@@ -674,19 +674,19 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/KvsActorStateProvider.java
       startLine: 1007
     package: microsoft.servicefabric.actors
-    summary: '<p>によって作成されたバックアップを復元<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BiFunction)</xref>または<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync (BackupOption、期間、BiFunction)</xref><b>解説:</b>でバックアップ/復元がサポートされていない<xref uid="microsoft.servicefabric.actors._volatile_actor_state_provider" data-throw-if-not-resolved="false">VolatileActorStateProvider</xref>です。 </p>'
+    summary: '<p><span data-ttu-id="cd8fb-178">によって作成されたバックアップを復元<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BiFunction)</xref>または<xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync (BackupOption、期間、BiFunction)</xref><b>解説:</b>でバックアップ/復元がサポートされていない<xref uid="microsoft.servicefabric.actors._volatile_actor_state_provider" data-throw-if-not-resolved="false">VolatileActorStateProvider</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-178">Restore a backup taken by <xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BiFunction)</xref> or <xref uid="" data-throw-if-not-resolved="false">microsoft.servicefabric.data.StateProviderReplica#backupAsync(BackupOption, Duration, BiFunction)</xref><b>Remarks:</b>Backup/restore is not supported by <xref uid="microsoft.servicefabric.actors._volatile_actor_state_provider" data-throw-if-not-resolved="false">VolatileActorStateProvider</xref>.</span></span> </p>'
     syntax:
       content: 'public CompletableFuture<?> restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
       parameters:
         - id: backupFolderPath
           type: '26831127'
-          description: <p>レプリカを復元するがディレクトリです。 </p>
+          description: <p><span data-ttu-id="cd8fb-179">レプリカを復元するがディレクトリです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-179">Directory from where replica will be restored from.</span></span> </p>
         - id: restorePolicy
           type: microsoft.servicefabric.data._restore_policy
-          description: <p><xref uid="" data-throw-if-not-resolved="false">RestorePolicy</xref>です。 </p>
+          description: <p><span data-ttu-id="cd8fb-180"><xref uid="" data-throw-if-not-resolved="false">RestorePolicy</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-180">The <xref uid="" data-throw-if-not-resolved="false">RestorePolicy</xref>.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の復元操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-181">非同期の復元操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-181">Task that represents the asynchronous restore operation.</span></span> </p>
     overridden: 'microsoft.servicefabric.data._state_provider_replica.restoreAsync(String,RestorePolicy)'
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.saveReminderAsync(ActorId,ActorReminder)'
     id: 'saveReminderAsync(ActorId,ActorReminder)'
@@ -705,20 +705,20 @@ items:
       startLine: 528
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>指定されたアクター アラームを保存します。 指定した名前のアクター アラームが存在しない場合は、それ以外の場合と同じ名前のアクター アラームを既存のアクター アラームが更新を追加します。</p>
+      <p><span data-ttu-id="cd8fb-182">指定されたアクター アラームを保存します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-182">Saves the specified actor reminder.</span></span> <span data-ttu-id="cd8fb-183">指定した名前のアクター アラームが存在しない場合は、それ以外の場合と同じ名前のアクター アラームを既存のアクター アラームが更新を追加します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-183">If an actor reminder with given name does not exist, it adds the actor reminder otherwise existing actor reminder with same name is updated.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> saveReminderAsync(ActorId actorId, ActorReminder reminder)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アラームを保存する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-184">アラームを保存する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-184">ID of actor for which to save reminder.</span></span> </p>
         - id: reminder
           type: microsoft.servicefabric.actors._actor_reminder
-          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アラームを保存します。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-185\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アラームを保存します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-185\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">Actor</xref> reminder to save.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>非同期の保存操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-186">非同期の保存操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-186">A task that represents the asynchronous save operation.</span></span> </p>
     overridden: 'microsoft.servicefabric.actors._actor_state_provider.saveReminderAsync(ActorId,ActorReminder)'
   - uid: 'microsoft.servicefabric.actors._kvs_actor_state_provider.saveStateAsync(ActorId,List<ActorStateChange>)'
     id: 'saveStateAsync(ActorId,List<ActorStateChange>)'
@@ -737,20 +737,20 @@ items:
       startLine: 431
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>指定したアクター状態の変更のセットをアトミックに保存します。</p>
+      <p><span data-ttu-id="cd8fb-187">指定したアクター状態の変更のセットをアトミックに保存します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-187">Saves the specified set of actor state changes atomically.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> saveStateAsync(ActorId actorId, List<ActorStateChange> stateChanges)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態の変更を保存する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-188">状態の変更を保存する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-188">ID of the actor for which to save the state changes.</span></span> </p>
         - id: stateChanges
           type: 5618da2dmicrosoft.servicefabric.actors._actor_state_changea08ddfce
-          description: <p>状態の変更を保存するコレクション。 </p>
+          description: <p><span data-ttu-id="cd8fb-189">状態の変更を保存するコレクション。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-189">Collection of state changes to save.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の保存操作を表すタスク。 状態変更のコレクションには、指定された状態の名前の 1 つの項目を含める必要があります。 保存先に既に存在するか、存在しないアクター状態の更新/削除するアクターの状態を追加しようとしています。 操作は失敗します。 </p>
+        description: <p><span data-ttu-id="cd8fb-190">非同期の保存操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-190">A task that represents the asynchronous save operation.</span></span> <span data-ttu-id="cd8fb-191">状態変更のコレクションには、指定された状態の名前の 1 つの項目を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-191">The collection of state changes should contain only one item for a given state name.</span></span> <span data-ttu-id="cd8fb-192">保存先に既に存在するか、存在しないアクター状態の更新/削除するアクターの状態を追加しようとしています。 操作は失敗します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-192">The save operation will fail on trying to add an actor state which already exists or update/remove an actor state which does not exist.</span></span> </p>
     overridden: 'microsoft.servicefabric.actors._actor_state_provider.saveStateAsync(ActorId,List<ActorStateChange>)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.serviceInitializationParameters()
     id: serviceInitializationParameters()
@@ -789,14 +789,14 @@ items:
       startLine: 115
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>疑いのあるデータ損失の可能性の中に呼び出される関数</p>
+      <p><span data-ttu-id="cd8fb-193">疑いのあるデータ損失の可能性の中に呼び出される関数</span><span class="sxs-lookup"><span data-stu-id="cd8fb-193">Function called during suspected data-loss</span></span></p>
       <p></p>
     syntax:
       content: 'public void setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> value)'
       parameters:
         - id: onDataLossAsync
           type: 432ffe41system.fabric._cancellation_token774bd4f0
-          description: <p>TODO です。 疑いのあるデータ損失の処理の一部として呼び出される関数。 関数は、CancellationToken にし、イベントの非同期処理を表す CompletableFuture を返します。 True を返すには、レプリカの状態が復元されていることを示します。 False は、レプリカの状態が変更されていないことを示します。 </p>
+          description: '<p><span data-ttu-id="cd8fb-194">TODO です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-194">TODO.</span></span> <span data-ttu-id="cd8fb-195">疑いのあるデータ損失の処理の一部として呼び出される関数。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-195">Function called as part of suspected data loss processing.</span></span> <span data-ttu-id="cd8fb-196">関数は、CancellationToken にし、イベントの非同期処理を表す CompletableFuture を返します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-196">Function takes in CancellationToken and returns a CompletableFuture that represents the asynchronous processing of the event.</span></span> <span data-ttu-id="cd8fb-197">True を返すには、レプリカの状態が復元されていることを示します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-197">Returning true, indicates that the replica''s state has been restored.</span></span> <span data-ttu-id="cd8fb-198">False は、レプリカの状態が変更されていないことを示します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-198">False indicates that the replica''s state has not been changed.</span></span> </p>'
     overridden: 'microsoft.servicefabric.data._state_provider_replica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider.traceId()
     id: traceId()
@@ -1123,7 +1123,7 @@ references:
     nameWithType: ActorStateProvider
     fullName: microsoft.servicefabric.actors.ActorStateProvider
     type: Interface
-    summary: <p>アクター状態プロバイダーは、アクター ランタイムと通信するために実装する必要があるインターフェイスを表します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-199">アクター状態プロバイダーは、アクター ランタイムと通信するために実装する必要があるインターフェイスを表します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-199">Represents the interface that an actor state provider needs to implement for actor runtime to communicate with it.</span></span> </p>
     syntax:
       content: public interface ActorStateProvider extends StateProviderReplica
   - uid: system.fabric._cancellation_token_source
@@ -1133,7 +1133,7 @@ references:
     nameWithType: CancellationTokenSource
     fullName: system.fabric.CancellationTokenSource
     type: Class
-    summary: <p>A <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">CancellationTokenSource</xref>作成に使用される<xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">system.fabric.CancellationToken</xref>オブジェクトを管理します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-200">A <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">CancellationTokenSource</xref>作成に使用される<xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">system.fabric.CancellationToken</xref>オブジェクトを管理します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-200">A <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">CancellationTokenSource</xref> is used to create <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">system.fabric.CancellationToken</xref> object and manage it.</span></span> </p>
     syntax:
       content: public class CancellationTokenSource
   - uid: system.fabric._replica_role
@@ -1143,7 +1143,7 @@ references:
     nameWithType: ReplicaRole
     fullName: system.fabric.ReplicaRole
     type: Enum
-    summary: <p>レプリカのロールを定義します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-201">レプリカのロールを定義します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-201">Defines the replica role</span></span> </p>
     syntax:
       content: public enum ReplicaRole
   - uid: system.fabric._stateful_service_partition
@@ -1162,7 +1162,7 @@ references:
     nameWithType: ActorTypeInformation
     fullName: microsoft.servicefabric.actors.ActorTypeInformation
     type: Class
-    summary: <p>アクターを実装する型についてを説明します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-202">アクターを実装する型についてを説明します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-202">Contains information about the type implementing an actor.</span></span> </p>
     syntax:
       content: public class ActorTypeInformation
   - uid: system.fabric._stateful_service_initialization_parameters
@@ -1172,7 +1172,7 @@ references:
     nameWithType: StatefulServiceInitializationParameters
     fullName: system.fabric.StatefulServiceInitializationParameters
     type: Class
-    summary: <p>ステートフルなサービスのサービスの初期化パラメーターを定義します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-203">ステートフルなサービスのサービスの初期化パラメーターを定義します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-203">Defines service initialization parameters for a stateful service.</span></span> </p>
     syntax:
       content: public class StatefulServiceInitializationParameters
   - uid: system.fabric._cancellation_token
@@ -1182,7 +1182,7 @@ references:
     nameWithType: CancellationToken
     fullName: system.fabric.CancellationToken
     type: Class
-    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    summary: '<p><span data-ttu-id="cd8fb-204">A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-204">A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref> is used to propagate notification that operations should be canceled.</span></span> <span data-ttu-id="cd8fb-205">インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-205">You create a cancellation token by instantiating a <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref> object, which manages cancellation tokens retrieved from its <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref> method.</span></span> <span data-ttu-id="cd8fb-206">キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-206">You then pass the cancellation token to any number of operations that should receive notice of cancellation.</span></span> <span data-ttu-id="cd8fb-207">取り消しを開始するトークンを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-207">The token cannot be used to initiate cancellation.</span></span> <span data-ttu-id="cd8fb-208">所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-208">When the owning object calls <xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>, the cancelled property on the cancellation token is set to true.</span></span> <span data-ttu-id="cd8fb-209">通知を受信するオブジェクトは、適切な方法で応答できます。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-209">The objects that receive the notification can respond in whatever manner is appropriate.</span></span> </p>'
     syntax:
       content: public class CancellationToken
   - uid: system.fabric._restore_settings
@@ -1210,7 +1210,7 @@ references:
     nameWithType: LocalStoreSettings
     fullName: system.fabric.LocalStoreSettings
     type: Class
-    summary: <p>ローカル ストアのオプションの設定を表します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-210">ローカル ストアのオプションの設定を表します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-210">Represents the option settings for a local store.</span></span> </p>
     syntax:
       content: public class LocalStoreSettings
   - uid: 'microsoft.servicefabric.data._state_provider_replica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>>)'
@@ -1221,14 +1221,14 @@ references:
     fullName: 'void microsoft.servicefabric.data.StateProviderReplica.setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
     type: Method
     summary: |-
-      <p>疑いのあるデータ損失の可能性の中に呼び出される関数</p>
+      <p><span data-ttu-id="cd8fb-211">疑いのあるデータ損失の可能性の中に呼び出される関数</span><span class="sxs-lookup"><span data-stu-id="cd8fb-211">Function called during suspected data-loss</span></span></p>
       <p></p>
     syntax:
       content: 'public void setOnDataLossCallback(Function<CancellationToken, CompletableFuture<Boolean>> onDataLossAsync)'
       parameters:
         - id: onDataLossAsync
           type: 432ffe41system.fabric._cancellation_token774bd4f0
-          description: <p>TODO です。 疑いのあるデータ損失の処理の一部として呼び出される関数。 関数は、CancellationToken にし、イベントの非同期処理を表す CompletableFuture を返します。 True を返すには、レプリカの状態が復元されていることを示します。 False は、レプリカの状態が変更されていないことを示します。 </p>
+          description: '<p><span data-ttu-id="cd8fb-212">TODO です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-212">TODO.</span></span> <span data-ttu-id="cd8fb-213">疑いのあるデータ損失の処理の一部として呼び出される関数。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-213">Function called as part of suspected data loss processing.</span></span> <span data-ttu-id="cd8fb-214">関数は、CancellationToken にし、イベントの非同期処理を表す CompletableFuture を返します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-214">Function takes in CancellationToken and returns a CompletableFuture that represents the asynchronous processing of the event.</span></span> <span data-ttu-id="cd8fb-215">True を返すには、レプリカの状態が復元されていることを示します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-215">Returning true, indicates that the replica''s state has been restored.</span></span> <span data-ttu-id="cd8fb-216">False は、レプリカの状態が変更されていないことを示します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-216">False indicates that the replica''s state has not been changed.</span></span> </p>'
   - uid: microsoft.servicefabric.actors._kvs_actor_state_provider
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._kvs_actor_state_provider.yml
@@ -1244,13 +1244,13 @@ references:
     nameWithType: StateProviderReplica.initialize(StatefulServiceInitializationParameters initializationParameters)
     fullName: void microsoft.servicefabric.data.StateProviderReplica.initialize(StatefulServiceInitializationParameters initializationParameters)
     type: Method
-    summary: "<p>サービスの初期化情報を使用して、状態プロバイダーのレプリカを初期化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>初期化中に複雑な処理を行う必要はありません。 OpenAsync では、高価なまたは実行時間の長いの初期化を行う必要があります。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-217\">サービスの初期化情報を使用して、状態プロバイダーのレプリカを初期化します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-217\">Initialize the state provider replica using the service initialization information.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-218\">\r\n\r\n  <b>注釈:</b>初期化中に複雑な処理を行う必要はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-218\">\r\n\r\n  <b>Remarks:</b>No complex processing should be done during Initialize.</span></span> <span data-ttu-id=\"cd8fb-219\">OpenAsync では、高価なまたは実行時間の長いの初期化を行う必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-219\">Expensive or long-running initialization should be done in OpenAsync.</span></span> </p>"
     syntax:
       content: public void initialize(StatefulServiceInitializationParameters initializationParameters)
       parameters:
         - id: initializationParameters
           type: system.fabric._stateful_service_initialization_parameters
-          description: <p>サービス名、パーティション id、レプリカの id、およびコード パッケージ情報などのサービスの初期化情報。 </p>
+          description: '<p><span data-ttu-id="cd8fb-220">サービス名、パーティション id、レプリカの id、およびコード パッケージ情報などのサービスの初期化情報。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-220">Service initialization information such as service name, partition id, replica id, and code package information.</span></span> </p>'
   - uid: 'microsoft.servicefabric.data._state_provider_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
     parent: microsoft.servicefabric.data._state_provider_replica
     href: microsoft.servicefabric.data._state_provider_replica.yml
@@ -1259,20 +1259,20 @@ references:
     fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
     type: Method
     summary: |-
-      <p>そのロールが変更される、たとえばプライマリまたはセカンダリに、状態プロバイダーのレプリカを通知します。</p>
+      <p><span data-ttu-id="cd8fb-221">そのロールが変更される、たとえばプライマリまたはセカンダリに、状態プロバイダーのレプリカを通知します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-221">Notify the state provider replica that its role is changing, for example to Primary or Secondary.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
       parameters:
         - id: newRole
           type: system.fabric._replica_role
-          description: <p>プライマリまたはセカンダリなど、新しいレプリカ ロール。 </p>
+          description: '<p><span data-ttu-id="cd8fb-222">プライマリまたはセカンダリなど、新しいレプリカ ロール。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-222">The new replica role, such as primary or secondary.</span></span> </p>'
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-223\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-223\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>非同期の変更の役割の操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-224">非同期の変更の役割の操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-224">Task that represents the asynchronous change role operation.</span></span> </p>
   - uid: microsoft.servicefabric.data._state_provider_replica.closeAsync(CancellationToken)
     parent: microsoft.servicefabric.data._state_provider_replica
     href: microsoft.servicefabric.data._state_provider_replica.yml
@@ -1280,16 +1280,16 @@ references:
     nameWithType: StateProviderReplica.closeAsync(CancellationToken cancellationToken)
     fullName: CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.closeAsync(CancellationToken cancellationToken)
     type: Method
-    summary: "<p>状態プロバイダーの複製が正常にクローズします。</p>\n<p>\r\n\r\n  <b>注釈:</b>これは、レプリカのコードにアップグレードされている、負荷分散のため、レプリカの移動または一時的なエラーが検出された場合に通常に発生します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-225\">状態プロバイダーの複製が正常にクローズします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-225\">Gracefully close the state provider replica.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-226\">\r\n\r\n  <b>注釈:</b>これは、レプリカのコードにアップグレードされている、負荷分散のため、レプリカの移動または一時的なエラーが検出された場合に通常に発生します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-226\">\r\n\r\n  <b>Remarks:</b>This generally occurs when the replica's code is being upgrade, the replica is being moved due to load balancing, or a transient fault is detected.</span></span> </p>"
     syntax:
       content: public CompletableFuture<?> closeAsync(CancellationToken cancellationToken)
       parameters:
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-227\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-227\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>非同期の close 操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-228">非同期の close 操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-228">Task that represents the asynchronous close operation.</span></span> </p>
   - uid: microsoft.servicefabric.data._state_provider_replica.abort()
     parent: microsoft.servicefabric.data._state_provider_replica
     href: microsoft.servicefabric.data._state_provider_replica.yml
@@ -1297,7 +1297,7 @@ references:
     nameWithType: StateProviderReplica.abort()
     fullName: void microsoft.servicefabric.data.StateProviderReplica.abort()
     type: Method
-    summary: "<p>状態プロバイダーのレプリカを強制的に中止します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>この通常ノードで、永続的な障害が検出されたときにエラーまたは発生 Service Fabric は、内部エラーのため、レプリカのライフ サイクルを確実に管理できません。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-229\">状態プロバイダーのレプリカを強制的に中止します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-229\">Forcefully abort the state provider replica.</span></span> </p>\n<p><span data-ttu-id=\"cd8fb-230\">\r\n\r\n  <b>注釈:</b>この通常ノードで、永続的な障害が検出されたときにエラーまたは発生 Service Fabric は、内部エラーのため、レプリカのライフ サイクルを確実に管理できません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-230\">\r\n\r\n  <b>Remarks:</b>This generally occurs when a permanent fault is detected on the node, or when Service Fabric cannot reliably manage the replica's lifecycle due to internal failures.</span></span> </p>"
     syntax:
       content: public void abort()
   - uid: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BackupOption,Duration,BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
@@ -1307,22 +1307,22 @@ references:
     nameWithType: 'StateProviderReplica.backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
     fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
     type: Method
-    summary: "<p>これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</p>\n<p>\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。 BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。 False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。 また、バックアップはマークされます失敗とします。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-231\">これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-231\">Performs a full backup of all reliable state managed by this <xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-232\">\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-232\">\r\n\r\n  <b>Remarks:</b> A FULL backup will be performed with a one-hour timeout.</span></span> <span data-ttu-id=\"cd8fb-233\">BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-233\">Boolean returned by the backupCallback indicate whether the service was able to successfully move the backup folder to an external location.</span></span> <span data-ttu-id=\"cd8fb-234\">False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-234\">If false is returned, BackupAsync throws UnsupportedOperationException with the relevant message indicating backupCallback returned false.</span></span> <span data-ttu-id=\"cd8fb-235\">また、バックアップはマークされます失敗とします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-235\">Also, backup will be marked as unsuccessful.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<?> backupAsync(BackupOption option, Duration timeout, BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
       parameters:
         - id: option
           type: microsoft.servicefabric.data._backup_option
-          description: <p>実行するバックアップの種類。 </p>
+          description: <p><span data-ttu-id="cd8fb-236">実行するバックアップの種類。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-236">The type of backup to perform.</span></span> </p>
         - id: timeout
           type: e02a2de0
-          description: <p>この操作のタイムアウト。 </p>
+          description: <p><span data-ttu-id="cd8fb-237">この操作のタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-237">The timeout for this operation.</span></span> </p>
         - id: backupCallback
           type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
-          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック </p>
+          description: <p><span data-ttu-id="cd8fb-238">バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック</span><span class="sxs-lookup"><span data-stu-id="cd8fb-238">Callback to be called when the backup folder has been created locally and is ready to be moved out of the node</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-239">非同期のバックアップ操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-239">Task that represents the asynchronous backup operation.</span></span> </p>
   - uid: microsoft.servicefabric.data._backup_option
     parent: microsoft.servicefabric.data
     href: microsoft.servicefabric.data._backup_option.yml
@@ -1330,7 +1330,7 @@ references:
     nameWithType: BackupOption
     fullName: microsoft.servicefabric.data.BackupOption
     type: Enum
-    summary: <p>バックアップの種類を示します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-240">バックアップの種類を示します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-240">Indicates the kind of the backup.</span></span> </p>
     syntax:
       content: public enum BackupOption
   - uid: microsoft.servicefabric.data._backup_info
@@ -1340,7 +1340,7 @@ references:
     nameWithType: BackupInfo
     fullName: microsoft.servicefabric.data.BackupInfo
     type: Class
-    summary: <p>バックアップに関する情報を提供します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-241">バックアップに関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-241">Provides info about the backup.</span></span> </p>
     syntax:
       content: public class BackupInfo
   - uid: microsoft.servicefabric.actors._volatile_actor_state_provider
@@ -1350,7 +1350,7 @@ references:
     nameWithType: VolatileActorStateProvider
     fullName: microsoft.servicefabric.actors.VolatileActorStateProvider
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>揮発性の永続化つまりの実装 <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>状態が保持されるメモリ内のみです。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-242\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref>揮発性の永続化つまりの実装</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-242\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_state_provider\" data-throw-if-not-resolved=\"false\">ActorStateProvider</xref> implementation for Volatile persistence i.e</span></span> <span data-ttu-id=\"cd8fb-243\"><xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>状態が保持されるメモリ内のみです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-243\"><xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">Actor</xref> state is kept in-memory only.</span></span> </p>"
     syntax:
       content: public class VolatileActorStateProvider
   - uid: 'microsoft.servicefabric.data._state_provider_replica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>>)'
@@ -1360,16 +1360,16 @@ references:
     nameWithType: 'StateProviderReplica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
     fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
     type: Method
-    summary: "<p>これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</p>\n<p>\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。 BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。 False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。 また、バックアップはマークされます失敗とします。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-244\">これによって管理されるすべての信頼性の高い状態の完全バックアップを実行<xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-244\">Performs a full backup of all reliable state managed by this <xref uid=\"microsoft.servicefabric.data._reliable_state_manager\" data-throw-if-not-resolved=\"false\">ReliableStateManager</xref>.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-245\">\r\n\r\n  <b>注釈:</b>完全バックアップが 1 時間のタイムアウトを設定して実行されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-245\">\r\n\r\n  <b>Remarks:</b> A FULL backup will be performed with a one-hour timeout.</span></span> <span data-ttu-id=\"cd8fb-246\">BackupCallback によって返されるブール値では、サービスが正常に外部の場所に、バックアップ フォルダーを移動するかどうかを示します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-246\">Boolean returned by the backupCallback indicate whether the service was able to successfully move the backup folder to an external location.</span></span> <span data-ttu-id=\"cd8fb-247\">False が返される場合は BackupAsync backupCallback false が返されたことを示す関連するメッセージで UnsupportedOperationException がスローされます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-247\">If false is returned, BackupAsync throws UnsupportedOperationException with the relevant message indicating backupCallback returned false.</span></span> <span data-ttu-id=\"cd8fb-248\">また、バックアップはマークされます失敗とします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-248\">Also, backup will be marked as unsuccessful.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<?> backupAsync(BiFunction<BackupInfo, CancellationToken, CompletableFuture<Boolean>> backupCallback)'
       parameters:
         - id: backupCallback
           type: 8ead6242microsoft.servicefabric.data._backup_infob33c76fcsystem.fabric._cancellation_token774bd4f0
-          description: <p>バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック </p>
+          description: <p><span data-ttu-id="cd8fb-249">バックアップ フォルダーがローカルで作成された、ノード外に移動する準備ができているときに呼び出されるコールバック</span><span class="sxs-lookup"><span data-stu-id="cd8fb-249">Callback to be called when the backup folder has been created locally and is ready to be moved out of the node</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期のバックアップ操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-250">非同期のバックアップ操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-250">Task that represents the asynchronous backup operation.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_state_provider.initialize(ActorTypeInformation)
     parent: microsoft.servicefabric.actors._actor_state_provider
     href: microsoft.servicefabric.actors._actor_state_provider.yml
@@ -1378,14 +1378,14 @@ references:
     fullName: void microsoft.servicefabric.actors.ActorStateProvider.initialize(ActorTypeInformation actorTypeInformation)
     type: Method
     summary: |-
-      <p>関連付けられているアクター型の型情報を使用してアクター状態プロバイダーを初期化します。</p>
+      <p><span data-ttu-id="cd8fb-251">関連付けられているアクター型の型情報を使用してアクター状態プロバイダーを初期化します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-251">Initializes the actor state provider with type information of the actor type associated with it.</span></span></p>
       <p></p>
     syntax:
       content: public void initialize(ActorTypeInformation actorTypeInformation)
       parameters:
         - id: actorTypeInformation
           type: microsoft.servicefabric.actors._actor_type_information
-          description: <p>アクター クラスの型情報 </p>
+          description: <p><span data-ttu-id="cd8fb-252">アクター クラスの型情報</span><span class="sxs-lookup"><span data-stu-id="cd8fb-252">Type information of the actor class</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_state_provider.actorActivatedAsync(ActorId)
     parent: microsoft.servicefabric.actors._actor_state_provider
     href: microsoft.servicefabric.actors._actor_state_provider.yml
@@ -1394,17 +1394,17 @@ references:
     fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateProvider.actorActivatedAsync(ActorId actorId)
     type: Method
     summary: |-
-      <p>指定した id に置き換えます。 アクターのライセンス認証プロセスの一部としてこのメソッドが呼び出されます</p>
+      <p><span data-ttu-id="cd8fb-253">指定した id に置き換えます。 アクターのライセンス認証プロセスの一部としてこのメソッドが呼び出されます</span><span class="sxs-lookup"><span data-stu-id="cd8fb-253">This method is invoked as part of the activation process of the actor with the specified Id.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<?> actorActivatedAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アクティブ化したアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-254">アクティブ化したアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-254">ID of the actor that is activated.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>表す非同期のタスク<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>アクティブ化通知の処理です。 </p>
+        description: <p><span data-ttu-id="cd8fb-255">表す非同期のタスク<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref>アクティブ化通知の処理です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-255">A task that represents the asynchronous <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref> activation notification processing.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_id
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._actor_id.yml
@@ -1412,7 +1412,7 @@ references:
     nameWithType: ActorId
     fullName: microsoft.servicefabric.actors.ActorId
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。 アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-256\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref>アクター サービス内でアクターの id を表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-256\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_id\" data-throw-if-not-resolved=\"false\">ActorId</xref> represents identity of an actor within an actor service.</span></span> <span data-ttu-id=\"cd8fb-257\">アクターによって識別できます<xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref>か、または長。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-257\">The actors can be identified by <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.lang.String</xref>, <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.UUID</xref> or long.</span></span> </p>"
     syntax:
       content: public class ActorId
   - uid: microsoft.servicefabric.actors._actor
@@ -1422,7 +1422,7 @@ references:
     nameWithType: Actor
     fullName: microsoft.servicefabric.actors.Actor
     type: Interface
-    summary: <p>信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。 </p>
+    summary: <p><span data-ttu-id="cd8fb-258">信頼できるアクターのインターフェイスを継承するための基本インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-258">Base interface for inheriting reliable actor interfaces.</span></span> </p>
     syntax:
       content: public interface Actor
   - uid: 'microsoft.servicefabric.actors._actor_state_provider.saveStateAsync(ActorId,List<ActorStateChange>)'
@@ -1432,19 +1432,19 @@ references:
     nameWithType: 'ActorStateProvider.saveStateAsync(ActorId actorId, List<ActorStateChange> stateChanges)'
     fullName: 'CompletableFuture<?> microsoft.servicefabric.actors.ActorStateProvider.saveStateAsync(ActorId actorId, List<ActorStateChange> stateChanges)'
     type: Method
-    summary: "<p>指定したアクター状態の変更のセットをアトミックに保存します。</p>\n<p>\r\n\r\n  <b>注釈:</b>状態変更のコレクションは、指定された状態の名前の 1 つの項目を含める必要があります。 保存先に既に存在するか、存在しないアクター状態の更新/削除するアクターの状態を追加しようとしています。 操作は失敗します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-259\">指定したアクター状態の変更のセットをアトミックに保存します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-259\">Saves the specified set of actor state changes atomically.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-260\">\r\n\r\n  <b>注釈:</b>状態変更のコレクションは、指定された状態の名前の 1 つの項目を含める必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-260\">\r\n\r\n  <b>Remarks:</b> The collection of state changes should contain only one item for a given state name.</span></span> <span data-ttu-id=\"cd8fb-261\">保存先に既に存在するか、存在しないアクター状態の更新/削除するアクターの状態を追加しようとしています。 操作は失敗します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-261\">The save operation will fail on trying to add an actor state which already exists or update/remove an actor state which does not exist.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<?> saveStateAsync(ActorId actorId, List<ActorStateChange> stateChanges)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態の変更を保存する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-262">状態の変更を保存する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-262">ID of the actor for which to save the state changes.</span></span> </p>
         - id: stateChanges
           type: 5618da2dmicrosoft.servicefabric.actors._actor_state_changea08ddfce
-          description: <p>状態の変更を保存するコレクション。 </p>
+          description: <p><span data-ttu-id="cd8fb-263">状態の変更を保存するコレクション。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-263">Collection of state changes to save.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の保存操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-264">非同期の保存操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-264">A task that represents the asynchronous save operation.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_state_change
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._actor_state_change.yml
@@ -1452,7 +1452,7 @@ references:
     nameWithType: ActorStateChange
     fullName: microsoft.servicefabric.actors.ActorStateChange
     type: Class
-    summary: <p>表しますが、指定された状態の名前を持つアクター状態に変わります。 </p>
+    summary: <p><span data-ttu-id="cd8fb-265">表しますが、指定された状態の名前を持つアクター状態に変わります。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-265">Represents change to an actor state with a given state name.</span></span> </p>
     syntax:
       content: public class ActorStateChange
   - uid: 'microsoft.servicefabric.actors._actor_state_provider.containsStateAsync(ActorId,String)'
@@ -1463,20 +1463,20 @@ references:
     fullName: 'CompletableFuture<Boolean> microsoft.servicefabric.actors.ActorStateProvider.containsStateAsync(ActorId actorId, String stateName)'
     type: Method
     summary: |-
-      <p>アクター状態プロバイダーに指定した状態の名前を持つ、アクター状態が含まれているかどうかをチェックします。</p>
+      <p><span data-ttu-id="cd8fb-266">アクター状態プロバイダーに指定した状態の名前を持つ、アクター状態が含まれているかどうかをチェックします。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-266">Checks whether actor state provider contains an actor state with specified state name.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Boolean> containsStateAsync(ActorId actorId, String stateName)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態の有無を確認する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-267">状態の有無を確認する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-267">ID of the actor for which to check state existence.</span></span> </p>
         - id: stateName
           type: '26831127'
-          description: <p>有無を確認するアクター状態の名前です。 </p>
+          description: <p><span data-ttu-id="cd8fb-268">有無を確認するアクター状態の名前です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-268">Name of the actor state to check for existence.</span></span> </p>
       return:
         type: 7e53ac82
-        description: <p>非同期チェック操作を表すタスク。 TResult パラメーターの値は、指定した名前の状態には、それ以外の場合の false が存在する場合は true です。 </p>
+        description: <p><span data-ttu-id="cd8fb-269">非同期チェック操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-269">A task that represents the asynchronous check operation.</span></span> <span data-ttu-id="cd8fb-270">TResult パラメーターの値は、指定した名前の状態には、それ以外の場合の false が存在する場合は true です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-270">The value of TResult parameter is true if state with specified name exists otherwise false.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_state_provider.removeActorAsync(ActorId)
     parent: microsoft.servicefabric.actors._actor_state_provider
     href: microsoft.servicefabric.actors._actor_state_provider.yml
@@ -1485,17 +1485,17 @@ references:
     fullName: CompletableFuture<?> microsoft.servicefabric.actors.ActorStateProvider.removeActorAsync(ActorId actorId)
     type: Method
     summary: |-
-      <p>すべての既存の状態と指定されたアクターにアトミックに関連付けられている通知を削除します。</p>
+      <p><span data-ttu-id="cd8fb-271">すべての既存の状態と指定されたアクターにアトミックに関連付けられている通知を削除します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-271">Removes all the existing states and reminders associated with specified actor atomically.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<?> removeActorAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態を削除するアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-272">状態を削除するアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-272">ID of the actor for which to remove state.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の削除操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-273">非同期の削除操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-273">A task that represents the asynchronous remove operation.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_state_provider.enumerateStateNamesAsync(ActorId)
     parent: microsoft.servicefabric.actors._actor_state_provider
     href: microsoft.servicefabric.actors._actor_state_provider.yml
@@ -1503,16 +1503,16 @@ references:
     nameWithType: ActorStateProvider.enumerateStateNamesAsync(ActorId actorId)
     fullName: CompletableFuture<List<String>> microsoft.servicefabric.actors.ActorStateProvider.enumerateStateNamesAsync(ActorId actorId)
     type: Method
-    summary: "<p>指定されたアクターに関連付けられているすべての状態名の列挙可能なが作成されます。</p>\n<p>\r\n\r\n  <b>注釈:</b>アクター状態プロバイダーから返された列挙子に安全に読み取りと同時に使用し、状態プロバイダーに書き込みます。 状態プロバイダーのスナップショットの一貫したビューを表します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-274\">指定されたアクターに関連付けられているすべての状態名の列挙可能なが作成されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-274\">Creates an enumerable of all the state names associated with specified actor.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-275\">\r\n\r\n  <b>注釈:</b>アクター状態プロバイダーから返された列挙子に安全に読み取りと同時に使用し、状態プロバイダーに書き込みます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-275\">\r\n\r\n  <b>Remarks:</b>The enumerator returned from actor state provider is safe to use concurrently with reads and writes to the state provider.</span></span> <span data-ttu-id=\"cd8fb-276\">状態プロバイダーのスナップショットの一貫したビューを表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-276\">It represents a snapshot consistent view of the state provider.</span></span> </p>"
     syntax:
       content: public CompletableFuture<List<String>> enumerateStateNamesAsync(ActorId actorId)
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>列挙可能なを作成する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-277">列挙可能なを作成する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-277">ID of the actor for which to create enumerable.</span></span> </p>
       return:
         type: d20512af
-        description: <p>非同期の列挙操作を表すタスク。 TResult パラメーターの値は、指定されたアクターに関連付けられているすべての州名の列挙です。 </p>
+        description: <p><span data-ttu-id="cd8fb-278">非同期の列挙操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-278">A task that represents the asynchronous enumeration operation.</span></span> <span data-ttu-id="cd8fb-279">TResult パラメーターの値は、指定されたアクターに関連付けられているすべての州名の列挙です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-279">The value of TResult parameter is an enumerable of all state names associated with specified actor.</span></span> </p>
   - uid: microsoft.servicefabric.actors._paged_result
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._paged_result.yml
@@ -1521,13 +1521,13 @@ references:
     fullName: microsoft.servicefabric.actors.PagedResult<T>
     type: Class
     summary: |-
-      <p>アクター クエリの呼び出しの結果を表します。</p>
+      <p><span data-ttu-id="cd8fb-280">アクター クエリの呼び出しの結果を表します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-280">Represents the result of actor query calls.</span></span></p>
       <p></p>
     syntax:
       content: public class PagedResult<T>
       typeParameters:
         - type: 8ce1ecb9
-          description: <p>このクエリ結果に含まれる項目の種類。 </p>
+          description: <p><span data-ttu-id="cd8fb-281">このクエリ結果に含まれる項目の種類。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-281">Type of the items this query result contains.</span></span> </p>
   - uid: 'microsoft.servicefabric.actors._actor_state_provider.getActorsAsync(int,ContinuationToken)'
     parent: microsoft.servicefabric.actors._actor_state_provider
     href: microsoft.servicefabric.actors._actor_state_provider.yml
@@ -1535,19 +1535,19 @@ references:
     nameWithType: 'ActorStateProvider.getActorsAsync(int numItemsToReturn, ContinuationToken continuationToken)'
     fullName: 'CompletableFuture<PagedResult<ActorId>> microsoft.servicefabric.actors.ActorStateProvider.getActorsAsync(int numItemsToReturn, ContinuationToken continuationToken)'
     type: Method
-    summary: "<p>状態プロバイダーから ActorIds を取得します。</p>\n<p>\r\n\r\n  <b>注釈:</b> </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-282\">状態プロバイダーから ActorIds を取得します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-282\">Gets ActorIds from the State Provider.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-283\">\r\n\r\n  <b>注釈:</b></span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-283\">\r\n\r\n  <b>Remarks:</b> The</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<PagedResult<ActorId>> getActorsAsync(int numItemsToReturn, ContinuationToken continuationToken)'
       parameters:
         - id: numItemsToReturn
           type: f75371fa
-          description: <p>返される要求された項目の数。 </p>
+          description: <p><span data-ttu-id="cd8fb-284">返される要求された項目の数。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-284">Number of items requested to be returned.</span></span> </p>
         - id: continuationToken
           type: microsoft.servicefabric.actors._continuation_token
-          description: <p>クエリから結果を開始する継続トークンです。 継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。 </p>
+          description: <p><span data-ttu-id="cd8fb-285">クエリから結果を開始する継続トークンです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-285">A continuation token to start querying the results from.</span></span> <span data-ttu-id="cd8fb-286">継続トークンの null 値は、開始、先頭の値の形式を返すことを意味します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-286">A null value of continuation token means start returning values form the beginning.</span></span> </p>
       return:
         type: 9cdf14d0microsoft.servicefabric.actors._paged_result78504a52microsoft.servicefabric.actors._actor_ide7daa122
-        description: <p>サーバーへの呼び出しの非同期操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-287">サーバーへの呼び出しの非同期操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-287">A task that represents the asynchronous operation of call to server.</span></span> </p>
   - uid: microsoft.servicefabric.actors._continuation_token
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._continuation_token.yml
@@ -1555,7 +1555,7 @@ references:
     nameWithType: ContinuationToken
     fullName: microsoft.servicefabric.actors.ContinuationToken
     type: Class
-    summary: "<p>クエリ操作の継続トークンを表します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>メソッドを使用して結果のセットの一部を返す可能性があります、 <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref>オブジェクトが使用可能な結果の次のセットを返す、後続の呼び出しで使用できるオブジェクトにも継続トークンを返します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-288\">クエリ操作の継続トークンを表します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-288\">Represents a continuation token for query operations.</span></span> </p>\n<p><span data-ttu-id=\"cd8fb-289\">\r\n\r\n  <b>注釈:</b>メソッドを使用して結果のセットの一部を返す可能性があります、 <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref>オブジェクトが使用可能な結果の次のセットを返す、後続の呼び出しで使用できるオブジェクトにも継続トークンを返します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-289\">\r\n\r\n  <b>Remarks:</b>A method that may return a partial set of results via a <xref uid=\"microsoft.servicefabric.actors._paged_result\" data-throw-if-not-resolved=\"false\">PagedResult</xref> object also returns a continuation token in the object, which can be used in a subsequent call to return the next set of available results.</span></span> </p>"
     syntax:
       content: public class ContinuationToken
   - uid: 'microsoft.servicefabric.actors._actor_state_provider.saveReminderAsync(ActorId,ActorReminder)'
@@ -1566,20 +1566,20 @@ references:
     fullName: 'CompletableFuture<?> microsoft.servicefabric.actors.ActorStateProvider.saveReminderAsync(ActorId actorId, ActorReminder reminder)'
     type: Method
     summary: |-
-      <p>指定されたアクター アラームを保存します。 指定した名前のアクター アラームが存在しない場合は、それ以外の場合と同じ名前のアクター アラームを既存のアクター アラームが更新を追加します。</p>
+      <p><span data-ttu-id="cd8fb-290">指定されたアクター アラームを保存します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-290">Saves the specified actor reminder.</span></span> <span data-ttu-id="cd8fb-291">指定した名前のアクター アラームが存在しない場合は、それ以外の場合と同じ名前のアクター アラームを既存のアクター アラームが更新を追加します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-291">If an actor reminder with given name does not exist, it adds the actor reminder otherwise existing actor reminder with same name is updated.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> saveReminderAsync(ActorId actorId, ActorReminder reminder)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アラームを保存する対象のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-292">アラームを保存する対象のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-292">ID of the actor for which to save the reminder.</span></span> </p>
         - id: reminder
           type: microsoft.servicefabric.actors._actor_reminder
-          description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アラームを保存します。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-293\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">アクター</xref>アラームを保存します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-293\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor\" data-throw-if-not-resolved=\"false\">Actor</xref> reminder to save.</span></span> </p>"
       return:
         type: 16409f84
-        description: <p>非同期の保存操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-294">非同期の保存操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-294">A task that represents the asynchronous save operation.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_reminder
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._actor_reminder.yml
@@ -1587,7 +1587,7 @@ references:
     nameWithType: ActorReminder
     fullName: microsoft.servicefabric.actors.ActorReminder
     type: Interface
-    summary: <p>アラームの設定をカプセル化、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref></p>
+    summary: <p><span data-ttu-id="cd8fb-295">アラームの設定をカプセル化、<xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">アクター</xref></span><span class="sxs-lookup"><span data-stu-id="cd8fb-295">Encapsulates Reminder set on an <xref uid="microsoft.servicefabric.actors._actor" data-throw-if-not-resolved="false">Actor</xref></span></span></p>
     syntax:
       content: public interface ActorReminder
   - uid: 'microsoft.servicefabric.actors._actor_state_provider.deleteReminderAsync(ActorId,String)'
@@ -1598,20 +1598,20 @@ references:
     fullName: 'CompletableFuture<?> microsoft.servicefabric.actors.ActorStateProvider.deleteReminderAsync(ActorId actorId, String reminderName)'
     type: Method
     summary: |-
-      <p>存在する場合は、指定されたアクター アラームを削除します。</p>
+      <p><span data-ttu-id="cd8fb-296">存在する場合は、指定されたアクター アラームを削除します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-296">Deletes the specified actor reminder if it exists.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> deleteReminderAsync(ActorId actorId, String reminderName)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>アラームを削除するアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-297">アラームを削除するアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-297">ID of the actor for which to delete the reminder.</span></span> </p>
         - id: reminderName
           type: '26831127'
-          description: <p>削除するアラームの名前です。 </p>
+          description: <p><span data-ttu-id="cd8fb-298">削除するアラームの名前です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-298">Name of the reminder to delete.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の削除操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-299">非同期の削除操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-299">A task that represents the asynchronous delete operation.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_reminder_collection
     parent: microsoft.servicefabric.actors
     href: microsoft.servicefabric.actors._actor_reminder_collection.yml
@@ -1619,7 +1619,7 @@ references:
     nameWithType: ActorReminderCollection
     fullName: microsoft.servicefabric.actors.ActorReminderCollection
     type: Interface
-    summary: <p>キャプチャ<xref uid="microsoft.servicefabric.actors._actor_reminder_state" data-throw-if-not-resolved="false">ActorReminderState</xref>アクターの </p>
+    summary: <p><span data-ttu-id="cd8fb-300">キャプチャ<xref uid="microsoft.servicefabric.actors._actor_reminder_state" data-throw-if-not-resolved="false">ActorReminderState</xref>アクターの</span><span class="sxs-lookup"><span data-stu-id="cd8fb-300">Captures <xref uid="microsoft.servicefabric.actors._actor_reminder_state" data-throw-if-not-resolved="false">ActorReminderState</xref> for Actors</span></span> </p>
     syntax:
       content: public interface ActorReminderCollection
   - uid: microsoft.servicefabric.actors._actor_state_provider.loadRemindersAsync(CancellationToken)
@@ -1630,17 +1630,17 @@ references:
     fullName: CompletableFuture<ActorReminderCollection> microsoft.servicefabric.actors.ActorStateProvider.loadRemindersAsync(CancellationToken cancellationToken)
     type: Method
     summary: |-
-      <p>アクター状態プロバイダーに含まれているすべてのアラームを読み込みます。</p>
+      <p><span data-ttu-id="cd8fb-301">アクター状態プロバイダーに含まれているすべてのアラームを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-301">Loads all the reminders contained in the actor state provider.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<ActorReminderCollection> loadRemindersAsync(CancellationToken cancellationToken)
       parameters:
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-302\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-302\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 9cdf14d0microsoft.servicefabric.actors._actor_reminder_collectiona08ddfce
-        description: <p>非同期ロード操作を表すタスク。 TResult パラメーターの値は、アクター状態プロバイダーに含まれているすべてのアクター アラームのコレクションです。 </p>
+        description: <p><span data-ttu-id="cd8fb-303">非同期ロード操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-303">A task that represents the asynchronous load operation.</span></span> <span data-ttu-id="cd8fb-304">TResult パラメーターの値は、アクター状態プロバイダーに含まれているすべてのアクター アラームのコレクションです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-304">The value of TResult parameter is a collection of all actor reminders contained in the actor state provider.</span></span> </p>
   - uid: system.fabric._replicator
     parent: system.fabric
     href: system.fabric._replicator.yml
@@ -1657,22 +1657,22 @@ references:
     nameWithType: 'StateProviderReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
     fullName: 'CompletableFuture<Replicator> microsoft.servicefabric.data.StateProviderReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
     type: Method
-    summary: "<p>使用するため、状態プロバイダーのレプリカを開きます。</p>\n<p>\r\n\r\n  <b>注釈:</b>拡張状態プロバイダーの初期化タスクを開始できます。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-305\">使用するため、状態プロバイダーのレプリカを開きます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-305\">Open the state provider replica for use.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-306\">\r\n\r\n  <b>注釈:</b>拡張状態プロバイダーの初期化タスクを開始できます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-306\">\r\n\r\n  <b>Remarks:</b>Extended state provider initialization tasks can be started at this time.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<Replicator> openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
       parameters:
         - id: openMode
           type: system.fabric._replica_open_mode
-          description: <p>これが新規または既存のレプリカであるかどうかを示します。 </p>
+          description: <p><span data-ttu-id="cd8fb-307">これが新規または既存のレプリカであるかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-307">Indicates whether this is a new or existing replica.</span></span> </p>
         - id: partition
           type: system.fabric._stateful_service_partition
-          description: <p>このレプリカが属しているパーティション。 </p>
+          description: <p><span data-ttu-id="cd8fb-308">このレプリカが属しているパーティション。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-308">The partition this replica belongs to.</span></span> </p>
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"cd8fb-309\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-309\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 9cdf14d0system.fabric._replicatora08ddfce
-        description: <p>非同期の open 操作を表すタスク。 結果には、パーティション内の他の状態プロバイダーのレプリカ間で状態のレプリケーションを担当するレプリケーターが含まれています。 </p>
+        description: <p><span data-ttu-id="cd8fb-310">非同期の open 操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-310">Task that represents the asynchronous open operation.</span></span> <span data-ttu-id="cd8fb-311">結果には、パーティション内の他の状態プロバイダーのレプリカ間で状態のレプリケーションを担当するレプリケーターが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-311">The result contains the replicator responsible for replicating state between other state provider replicas in the partition.</span></span> </p>
   - uid: system.fabric._replica_open_mode
     parent: system.fabric
     href: system.fabric._replica_open_mode.yml
@@ -1689,16 +1689,16 @@ references:
     nameWithType: StateProviderReplica.restoreAsync(String backupFolderPath)
     fullName: CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.restoreAsync(String backupFolderPath)
     type: Method
-    summary: "<p>作成したバックアップを復元します。</p>\n<p>\r\n\r\n  <b>注釈:</b>安全な復元が実行されて、現在のレプリカの状態は、データを復元する場合、復元は完了のみを意味します。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-312\">作成したバックアップを復元します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-312\">Restore a backup taken.</span></span></p>\n<p><span data-ttu-id=\"cd8fb-313\">\r\n\r\n  <b>注釈:</b>安全な復元が実行されて、現在のレプリカの状態は、データを復元する場合、復元は完了のみを意味します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-313\">\r\n\r\n  <b>Remarks:</b>A safe restore will be performed, meaning the restore will only be completed if the data to restore is ahead of state of the current replica.</span></span> </p>"
     syntax:
       content: public CompletableFuture<?> restoreAsync(String backupFolderPath)
       parameters:
         - id: backupFolderPath
           type: '26831127'
-          description: <p>レプリカがから復元するディレクトリ。 このパラメーターを null にすることはできませんを空または空白のみが含まれています。 UNC パスも指定することがあります。 </p>
+          description: '<p><span data-ttu-id="cd8fb-314">レプリカがから復元するディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-314">The directory where the replica is to be restored from.</span></span> <span data-ttu-id="cd8fb-315">このパラメーターを null にすることはできませんを空または空白のみが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-315">This parameter cannot be null, empty or contain just whitespace.</span></span> <span data-ttu-id="cd8fb-316">UNC パスも指定することがあります。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-316">UNC paths may also be provided.</span></span> </p>'
       return:
         type: 16409f84
-        description: <p>非同期の復元操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-317">非同期の復元操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-317">Task that represents the asynchronous restore operation.</span></span> </p>
   - uid: 'microsoft.servicefabric.data._state_provider_replica.restoreAsync(String,RestorePolicy)'
     parent: microsoft.servicefabric.data._state_provider_replica
     href: microsoft.servicefabric.data._state_provider_replica.yml
@@ -1707,20 +1707,20 @@ references:
     fullName: 'CompletableFuture<?> microsoft.servicefabric.data.StateProviderReplica.restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
     type: Method
     summary: |-
-      <p>作成したバックアップを復元します。</p>
+      <p><span data-ttu-id="cd8fb-318">作成したバックアップを復元します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-318">Restore a backup taken</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<?> restoreAsync(String backupFolderPath, RestorePolicy restorePolicy)'
       parameters:
         - id: backupFolderPath
           type: '26831127'
-          description: <p>レプリカがから復元するディレクトリ。 このパラメーターを null にすることはできませんを空または空白のみが含まれています。 UNC パスも指定することがあります。 </p>
+          description: '<p><span data-ttu-id="cd8fb-319">レプリカがから復元するディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-319">The directory where the replica is to be restored from.</span></span> <span data-ttu-id="cd8fb-320">このパラメーターを null にすることはできませんを空または空白のみが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-320">This parameter cannot be null, empty or contain just whitespace.</span></span> <span data-ttu-id="cd8fb-321">UNC パスも指定することがあります。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-321">UNC paths may also be provided.</span></span> </p>'
         - id: restorePolicy
           type: microsoft.servicefabric.data._restore_policy
-          description: <p>復元のポリシー。 </p>
+          description: <p><span data-ttu-id="cd8fb-322">復元のポリシー。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-322">The restore policy.</span></span> </p>
       return:
         type: 16409f84
-        description: <p>非同期の復元操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="cd8fb-323">非同期の復元操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-323">Task that represents the asynchronous restore operation.</span></span> </p>
   - uid: microsoft.servicefabric.data._restore_policy
     parent: microsoft.servicefabric.data
     href: microsoft.servicefabric.data._restore_policy.yml
@@ -1728,7 +1728,7 @@ references:
     nameWithType: RestorePolicy
     fullName: microsoft.servicefabric.data.RestorePolicy
     type: Enum
-    summary: <p>復元操作のポリシーです。 </p>
+    summary: <p><span data-ttu-id="cd8fb-324">復元操作のポリシーです。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-324">Policy for restore operation.</span></span> </p>
     syntax:
       content: public enum RestorePolicy
   - uid: 'microsoft.servicefabric.actors._actor_state_provider.loadStateAsync(ActorId,String)'
@@ -1739,20 +1739,20 @@ references:
     fullName: '<T> CompletableFuture<T> microsoft.servicefabric.actors.ActorStateProvider.loadStateAsync(ActorId actorId, String stateName)'
     type: Method
     summary: |-
-      <p>指定された状態の名前に関連付けられているアクターの状態を読み込みます。</p>
+      <p><span data-ttu-id="cd8fb-325">指定された状態の名前に関連付けられているアクターの状態を読み込みます。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-325">Loads the actor state associated with the specified state name.</span></span></p>
       <p></p>
     syntax:
       content: 'public <T> CompletableFuture<T> loadStateAsync(ActorId actorId, String stateName)'
       parameters:
         - id: actorId
           type: microsoft.servicefabric.actors._actor_id
-          description: <p>状態の読み込み先のアクターの ID です。 </p>
+          description: <p><span data-ttu-id="cd8fb-326">状態の読み込み先のアクターの ID です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-326">ID of the actor for which to load the state.</span></span> </p>
         - id: stateName
           type: '26831127'
-          description: <p>読み込みにアクター状態の名前です。 </p>
+          description: <p><span data-ttu-id="cd8fb-327">読み込みにアクター状態の名前です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-327">Name of the actor state to load.</span></span> </p>
       return:
         type: 6d056e8b
-        description: <p>非同期ロード操作を表すタスク。 TResult のパラメーターの値には、特定の状態名に関連付けられているアクター状態の値が含まれています。 </p>
+        description: <p><span data-ttu-id="cd8fb-328">非同期ロード操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-328">A task that represents the asynchronous load operation.</span></span> <span data-ttu-id="cd8fb-329">TResult のパラメーターの値には、特定の状態名に関連付けられているアクター状態の値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-329">The value of TResult parameter contains value of actor state associated with given state name.</span></span> </p>
   - uid: system.fabric._key_value_store_enumerator
     parent: system.fabric
     href: system.fabric._key_value_store_enumerator.yml
@@ -1760,7 +1760,7 @@ references:
     nameWithType: KeyValueStoreEnumerator
     fullName: system.fabric.KeyValueStoreEnumerator
     type: Class
-    summary: '<p>コピー完了コールバックのコンテキスト内でセカンダリ レプリカのローカル ストアの内容を読み取ります。 参照してください<xref uid="system.fabric._key_value_store_replica.onCopyComplete(KeyValueStoreEnumerator)" data-throw-if-not-resolved="false">system.fabric.KeyValueStoreReplica#onCopyComplete(system.fabric.KeyValueStoreEnumerator)</xref>です。 </p>'
+    summary: '<p><span data-ttu-id="cd8fb-330">コピー完了コールバックのコンテキスト内でセカンダリ レプリカのローカル ストアの内容を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-330">Reads the local store contents of a secondary replica within the context of a copy completion callback.</span></span> <span data-ttu-id="cd8fb-331">参照してください<xref uid="system.fabric._key_value_store_replica.onCopyComplete(KeyValueStoreEnumerator)" data-throw-if-not-resolved="false">system.fabric.KeyValueStoreReplica#onCopyComplete(system.fabric.KeyValueStoreEnumerator)</xref>です。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-331">See <xref uid="system.fabric._key_value_store_replica.onCopyComplete(KeyValueStoreEnumerator)" data-throw-if-not-resolved="false">system.fabric.KeyValueStoreReplica#onCopyComplete(system.fabric.KeyValueStoreEnumerator)</xref>.</span></span> </p>'
     syntax:
       content: public class KeyValueStoreEnumerator
   - uid: system.fabric._key_value_store_notification
@@ -1770,7 +1770,7 @@ references:
     nameWithType: KeyValueStoreNotification
     fullName: system.fabric.KeyValueStoreNotification
     type: Class
-    summary: "<p>セカンダリ レプリカによって受信された、レプリケートされた操作のすべての情報が含まれています。 </p>\n<p>\r\n\r\n  <b>注釈:</b>を参照してください<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onReplicationOperation(java.util.Enumeration)</xref>です。 </p>"
+    summary: "<p><span data-ttu-id=\"cd8fb-332\">セカンダリ レプリカによって受信された、レプリケートされた操作のすべての情報が含まれています。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-332\">Contains all the information for a replicated operation received by a secondary replica.</span></span> </p>\n<p><span data-ttu-id=\"cd8fb-333\">\r\n\r\n  <b>注釈:</b>を参照してください<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onReplicationOperation(java.util.Enumeration)</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd8fb-333\">\r\n\r\n  <b>Remarks:</b>See <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onReplicationOperation(java.util.Enumeration)</xref>.</span></span> </p>"
     syntax:
       content: public class KeyValueStoreNotification
   - uid: system.fabric._configuration_package
@@ -1780,7 +1780,7 @@ references:
     nameWithType: ConfigurationPackage
     fullName: system.fabric.ConfigurationPackage
     type: Class
-    summary: <p>構成パッケージを表します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-334">構成パッケージを表します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-334">Represents a configuration package.</span></span> </p>
     syntax:
       content: public class ConfigurationPackage
   - uid: system.fabric.health._health_information
@@ -1790,7 +1790,7 @@ references:
     nameWithType: HealthInformation
     fullName: system.fabric.health.HealthInformation
     type: Class
-    summary: <p>エンティティのヘルス情報が含まれています。 この情報は、正常性レポートに含まれています。 正常性イベントの一部としても提供されます。 </p>
+    summary: <p><span data-ttu-id="cd8fb-335">エンティティのヘルス情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-335">Contains the health information about the entity.</span></span> <span data-ttu-id="cd8fb-336">この情報は、正常性レポートに含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-336">This information is included in the health report.</span></span> <span data-ttu-id="cd8fb-337">正常性イベントの一部としても提供されます。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-337">It is also provided as part of the health event.</span></span> </p>
     syntax:
       content: public class HealthInformation
   - uid: system.fabric._store_backup_info
@@ -1800,7 +1800,7 @@ references:
     nameWithType: StoreBackupInfo
     fullName: system.fabric.StoreBackupInfo
     type: Class
-    summary: <p>キー値ストアで作成したバックアップについての情報を提供します。 </p>
+    summary: <p><span data-ttu-id="cd8fb-338">キー値ストアで作成したバックアップについての情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="cd8fb-338">Provides info about the backup created on the key-value store.</span></span> </p>
     syntax:
       content: public class StoreBackupInfo
   - uid: system.fabric._transaction

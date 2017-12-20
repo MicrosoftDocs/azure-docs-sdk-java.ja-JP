@@ -20,7 +20,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceFactory.java
       startLine: 14
     package: system.fabric
-    summary: '<p>ステートフル サービスの特定の種類のレプリカの作成を担当するステートフルなサービス ファクトリを表します。 ステートフルなサービス ファクトリに登録されている、 <xref uid="system.fabric._fabric_runtime" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>を介してサービス ホストによって<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactory (java.lang.String,system.fabric.StatefulServiceFactory)</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactoryAsync(java.lang.String,system.fabric.StatefulServiceFactory,java.time.Duration)</xref></p>'
+    summary: '<p><span data-ttu-id="0f11c-101">ステートフル サービスの特定の種類のレプリカの作成を担当するステートフルなサービス ファクトリを表します。</span><span class="sxs-lookup"><span data-stu-id="0f11c-101">Represents a stateful service factory that is responsible for creating replicas of a specific type of stateful service.</span></span> <span data-ttu-id="0f11c-102">ステートフルなサービス ファクトリに登録されている、 <xref uid="system.fabric._fabric_runtime" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref>を介してサービス ホストによって<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactory (java.lang.String,system.fabric.StatefulServiceFactory)</xref>または<xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactoryAsync(java.lang.String,system.fabric.StatefulServiceFactory,java.time.Duration)</xref></span><span class="sxs-lookup"><span data-stu-id="0f11c-102">Stateful service factories are registered with the <xref uid="system.fabric._fabric_runtime" data-throw-if-not-resolved="false">system.fabric.FabricRuntime</xref> by service hosts via <xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactory(java.lang.String,system.fabric.StatefulServiceFactory)</xref> or <xref uid="" data-throw-if-not-resolved="false">system.fabric.FabricRuntime#registerStatefulServiceFactoryAsync(java.lang.String,system.fabric.StatefulServiceFactory,java.time.Duration)</xref></span></span></p>'
     syntax:
       content: public interface StatefulServiceFactory
   - uid: 'system.fabric._stateful_service_factory.createReplica(String,URI,byte [],UUID,long)'
@@ -40,34 +40,34 @@ items:
       startLine: 35
     package: system.fabric
     summary: |-
-      <p>特定のサービスのステートフル サービス レプリカの作成に Service Fabric によって呼び出されます。</p>
+      <p><span data-ttu-id="0f11c-103">特定のサービスのステートフル サービス レプリカの作成に Service Fabric によって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="0f11c-103">Called by Service Fabric to create a stateful service replica for a particular service.</span></span></p>
       <p></p>
     syntax:
       content: 'public StatefulServiceReplica createReplica(String serviceTypeName, URI serviceName, byte[] initializationData, UUID partitionId, long replicaId)'
       parameters:
         - id: serviceTypeName
           type: '26831127'
-          description: <p>Service Fabric は、作成するように要求するサービスの種類。 </p>
+          description: <p><span data-ttu-id="0f11c-104">Service Fabric は、作成するように要求するサービスの種類。</span><span class="sxs-lookup"><span data-stu-id="0f11c-104">The service type that Service Fabric requests to be created.</span></span> </p>
         - id: serviceName
           type: '62304784'
-          description: '<p>ファブリック: (Uri) をこのレプリカが関連付けられているサービスの名前/です。 </p>'
+          description: '<p><span data-ttu-id="0f11c-105">ファブリック: (Uri) をこのレプリカが関連付けられているサービスの名前/です。</span><span class="sxs-lookup"><span data-stu-id="0f11c-105">The fabric:/ name (Uri) of the service with which this replica is associated.</span></span> </p>'
         - id: initializationData
           type: ccd9418d
-          description: <p>このサービスの一部として渡された最初の初期化データを格納するバイト配列<xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">system.fabric.ServiceDescription</xref>です。 </p>
+          description: <p><span data-ttu-id="0f11c-106">このサービスの一部として渡された最初の初期化データを格納するバイト配列<xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">system.fabric.ServiceDescription</xref>です。</span><span class="sxs-lookup"><span data-stu-id="0f11c-106">A byte array that contains the initialization data which was originally passed as a part of this services <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">system.fabric.ServiceDescription</xref>.</span></span> </p>
         - id: partitionId
           type: add9545a
-          description: <p>このレプリカが関連付けられている GUID の種類のパーティション ID です。 </p>
+          description: '<p><span data-ttu-id="0f11c-107">このレプリカが関連付けられている GUID の種類のパーティション ID です。</span><span class="sxs-lookup"><span data-stu-id="0f11c-107">The partition ID of type, a GUID, with which this replica is associated.</span></span> </p>'
         - id: replicaId
           type: 0364520f
-          description: <p>レプリカ ID 型のこのレプリカの長さ。 </p>
+          description: <p><span data-ttu-id="0f11c-108">レプリカ ID 型のこのレプリカの長さ。</span><span class="sxs-lookup"><span data-stu-id="0f11c-108">The replica ID of type long for this replica.</span></span> </p>
       return:
         type: system.fabric._stateful_service_replica
-        description: <p>返します<xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>です。 </p>
+        description: <p><span data-ttu-id="0f11c-109">返します<xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>です。</span><span class="sxs-lookup"><span data-stu-id="0f11c-109">Returns <xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>.</span></span> </p>
     exceptions:
       - type: 84fa3863
-        description: <p>インスタンスの作成の失敗時に </p>
+        description: <p><span data-ttu-id="0f11c-110">インスタンスの作成の失敗時に</span><span class="sxs-lookup"><span data-stu-id="0f11c-110">On failure of instance creation</span></span> </p>
       - type: '81e09942'
-        description: <p>アクセス voilation 上 </p>
+        description: <p><span data-ttu-id="0f11c-111">アクセス voilation 上</span><span class="sxs-lookup"><span data-stu-id="0f11c-111">On Access voilation</span></span> </p>
 references:
   - uid: 84fa3863
     spec.java:
@@ -111,7 +111,7 @@ references:
     nameWithType: StatefulServiceReplica
     fullName: system.fabric.StatefulServiceReplica
     type: Interface
-    summary: "<p>スタートアップ、初期化、ロールの変更、およびシャット ダウンなど、レプリカのライフ サイクルを制御する動作を定義します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ステートフル サービスの種類は、このインターフェイスを実装する必要があります。 ステートフルなサービスの種類のロジックには、プライマリ レプリカ上で呼び出される動作とセカンダリ レプリカで呼び出される動作が含まれています。 サービスの作成者が作成する場合は、指定された使用<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、サービスを実装する必要がありますも、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> の実装を使用する<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>はによって提供される<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></p>"
+    summary: "<p><span data-ttu-id=\"0f11c-112\">スタートアップ、初期化、ロールの変更、およびシャット ダウンなど、レプリカのライフ サイクルを制御する動作を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0f11c-112\">Defines behavior that governs the lifecycle of a replica, such as startup, initialization, role changes, and shutdown.</span></span> </p>\n<p><span data-ttu-id=\"0f11c-113\">\r\n\r\n  <b>注釈:</b>ステートフル サービスの種類は、このインターフェイスを実装する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0f11c-113\">\r\n\r\n  <b>Remarks:</b>Stateful service types must implement this interface.</span></span> <span data-ttu-id=\"0f11c-114\">ステートフルなサービスの種類のロジックには、プライマリ レプリカ上で呼び出される動作とセカンダリ レプリカで呼び出される動作が含まれています。</span><span class=\"sxs-lookup\"><span data-stu-id=\"0f11c-114\">The logic of a stateful service type includes behavior that is invoked on Primary replicas and behavior that is invoked on Secondary replicas.</span></span> <span data-ttu-id=\"0f11c-115\">サービスの作成者が作成する場合は、指定された使用<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、サービスを実装する必要がありますも、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> の実装を使用する<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>はによって提供される<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"0f11c-115\">If the service author wants to make use of the provided <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, then the service must also implement <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> to use the implementation of <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> that is provided by <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></span></span></p>"
     syntax:
       content: public interface StatefulServiceReplica
   - uid: system.fabric._service_description
@@ -121,7 +121,7 @@ references:
     nameWithType: ServiceDescription
     fullName: system.fabric.ServiceDescription
     type: Class
-    summary: <p>A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。 </p>
+    summary: <p><span data-ttu-id="0f11c-116">A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref>すべてのサービスを作成するために必要な情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0f11c-116">A <xref uid="system.fabric._service_description" data-throw-if-not-resolved="false">ServiceDescription</xref> contains all of the information necessary to create a service.</span></span> </p>
     syntax:
       content: public class ServiceDescription
   - uid: system.fabric._fabric_runtime
@@ -131,6 +131,6 @@ references:
     nameWithType: FabricRuntime
     fullName: system.fabric.FabricRuntime
     type: Class
-    summary: '<p>ユーザーが作成したホストを取得できるように、 <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>、必要なサービス ファクトリを登録したり、[ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>、 <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] または直接のサービスの種類。 </p>'
+    summary: '<p><span data-ttu-id="0f11c-117">ユーザーが作成したホストを取得できるように、 <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>、必要なサービス ファクトリを登録したり、[ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>、 <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] または直接のサービスの種類。</span><span class="sxs-lookup"><span data-stu-id="0f11c-117">Allows user created hosts to obtain their <xref uid="system.fabric._code_package_activation_context" data-throw-if-not-resolved="false">system.fabric.CodePackageActivationContext</xref>, well as to register the necessary service factories [ <xref uid="system.fabric._stateless_service_factory" data-throw-if-not-resolved="false">system.fabric.StatelessServiceFactory</xref>, <xref uid="system.fabric._stateful_service_factory" data-throw-if-not-resolved="false">system.fabric.StatefulServiceFactory</xref> ] or service types directly.</span></span> </p>'
     syntax:
       content: public class FabricRuntime

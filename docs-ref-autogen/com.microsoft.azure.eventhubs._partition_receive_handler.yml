@@ -24,13 +24,13 @@ items:
       startLine: 12
     package: com.microsoft.azure.eventhubs
     summary: |-
-      <p>受信操作のハンドラー クラスです。 この抽象クラスの実装を使用して、使用する場合は、ユーザーの操作を指定する<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>の setReceiveHandler() します。</p>
+      <p><span data-ttu-id="2d322-101">受信操作のハンドラー クラスです。</span><span class="sxs-lookup"><span data-stu-id="2d322-101">A handler class for the receive operation.</span></span> <span data-ttu-id="2d322-102">この抽象クラスの実装を使用して、使用する場合は、ユーザーの操作を指定する<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>の setReceiveHandler() します。</span><span class="sxs-lookup"><span data-stu-id="2d322-102">Use any implementation of this abstract class to specify user action when using <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>'s setReceiveHandler().</span></span></p>
       <p></p>
     syntax: &ref_2
       content: public class PartitionReceiveHandler
     see:
       - type: com.microsoft.azure.eventhubs._partition_receiver.setReceiveHandler(final PartitionReceiveHandler)
-        description: 'PartitionReceiver::setReceiveHandler'
+        description: '<span data-ttu-id="2d322-103">PartitionReceiver::setReceiveHandler</span><span class="sxs-lookup"><span data-stu-id="2d322-103">PartitionReceiver::setReceiveHandler</span></span>'
     inheritance:
       - java.lang.Object
   - uid: com.microsoft.azure.eventhubs._partition_receive_handler.onError(Throwable)
@@ -50,14 +50,14 @@ items:
       startLine: 46
     package: com.microsoft.azure.eventhubs
     summary: |-
-      <p>このメソッドは、クロージャの基になるエラーをリッスンする実装、 <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>ポンプです。</p>
+      <p><span data-ttu-id="2d322-104">このメソッドは、クロージャの基になるエラーをリッスンする実装、 <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>ポンプです。</span><span class="sxs-lookup"><span data-stu-id="2d322-104">Implement this method to Listen to errors which lead to Closure of the <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref> pump.</span></span></p>
       <p></p>
     syntax:
       content: public abstract void onError(Throwable error)
       parameters:
         - id: error
           type: a04fafd7
-          description: <p>実行中に発生した致命的なエラー、 <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>ポンプ </p>
+          description: <p><span data-ttu-id="2d322-105">実行中に発生した致命的なエラー、 <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>ポンプ</span><span class="sxs-lookup"><span data-stu-id="2d322-105">fatal error encountered while running the <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref> pump</span></span> </p>
       return:
         type: 5beb11ad
   - uid: com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable<EventData>)
@@ -77,19 +77,19 @@ items:
       startLine: 39
     package: com.microsoft.azure.eventhubs
     summary: |-
-      <p>ユーザーは、受信したイベント上で実行されるアクションを指定するには、このメソッドを実装する必要があります。</p>
+      <p><span data-ttu-id="2d322-106">ユーザーは、受信したイベント上で実行されるアクションを指定するには、このメソッドを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2d322-106">user should implement this method to specify the action to be performed on the received events.</span></span></p>
       <p></p>
     syntax: &ref_1
       content: public abstract void onReceive(Iterable<EventData> events)
       parameters:
         - id: events
           type: 2a13b5a5com.microsoft.azure.eventhubs._event_dataa08ddfce
-          description: <p>対応するフェッチされるイベントの一覧<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。 </p>
+          description: <p><span data-ttu-id="2d322-107">対応するフェッチされるイベントの一覧<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。</span><span class="sxs-lookup"><span data-stu-id="2d322-107">the list of fetched events from the corresponding <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>.</span></span> </p>
       return:
         type: 5beb11ad
     see:
       - type: com.microsoft.azure.eventhubs._partition_receiver.receive(final int)
-        description: 'PartitionReceiver::receive'
+        description: '<span data-ttu-id="2d322-108">PartitionReceiver::receive</span><span class="sxs-lookup"><span data-stu-id="2d322-108">PartitionReceiver::receive</span></span>'
   - uid: com.microsoft.azure.eventhubs._partition_receive_handler.PartitionReceiveHandler(final int)
     id: PartitionReceiveHandler(final int)
     parent: com.microsoft.azure.eventhubs._partition_receive_handler
@@ -128,14 +128,14 @@ items:
       startLine: 29
     package: com.microsoft.azure.eventhubs
     summary: |-
-      <p>実行者<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler #onReceive</xref>これで最大の制限の設定を使用できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>の次で受信する<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler #onReceive</xref>を呼び出す</p>
+      <p><span data-ttu-id="2d322-109">実行者<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler #onReceive</xref>これで最大の制限の設定を使用できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>の次で受信する<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler #onReceive</xref>を呼び出す</span><span class="sxs-lookup"><span data-stu-id="2d322-109">implementor of <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler#onReceive</xref> can use this to set the limit on maximum <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s that can be received by the next <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler#onReceive</xref> call</span></span></p>
       <p></p>
     syntax:
       content: protected final void setMaxEventCount(final int value)
       parameters:
         - id: value
           type: cd225469
-          description: '<p>最大<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>の次に、受信する<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler #onReceive</xref>を呼び出す </p>'
+          description: '<p><span data-ttu-id="2d322-110">最大<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>の次に、受信する<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler #onReceive</xref>を呼び出す</span><span class="sxs-lookup"><span data-stu-id="2d322-110">maximum <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>''s to be received in the next <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler.onReceive(Iterable&lt;EventData&gt;)" data-throw-if-not-resolved="false">PartitionReceiveHandler#onReceive</xref> call</span></span> </p>'
       return:
         type: 3f6357ce
 references:
@@ -193,7 +193,7 @@ references:
     fullName: abstract void com.microsoft.azure.eventhubs.PartitionReceiveHandler.onReceive(Iterable<EventData> events)
     type: Method
     summary: |-
-      <p>ユーザーは、受信したイベント上で実行されるアクションを指定するには、このメソッドを実装する必要があります。</p>
+      <p><span data-ttu-id="2d322-111">ユーザーは、受信したイベント上で実行されるアクションを指定するには、このメソッドを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2d322-111">user should implement this method to specify the action to be performed on the received events.</span></span></p>
       <p></p>
     syntax: *ref_1
   - uid: com.microsoft.azure.eventhubs._event_data
@@ -204,13 +204,13 @@ references:
     fullName: com.microsoft.azure.eventhubs.EventData
     type: Class
     summary: |-
-      <p>送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。 各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
-      <p>受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。 </p>
-      <p>ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink><pre>
+      <p><span data-ttu-id="2d322-112">送信して、受信から EventHubs をされているイベントをカプセル化するデータ構造体。</span><span class="sxs-lookup"><span data-stu-id="2d322-112">The data structure encapsulating the Event being sent-to and received-from EventHubs.</span></span> <span data-ttu-id="2d322-113">各 EventHubs パーティションのストリームとして視覚化できます<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</span><span class="sxs-lookup"><span data-stu-id="2d322-113">Each EventHubs partition can be visualized as a Stream of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>.</span></span> </p>
+      <p><span data-ttu-id="2d322-114">受信したシリアル化する<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> (プリミティブ java 型) の ApplicationProperties およびデータ以外のセクションでは AMQP セクションではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="2d322-114">Serializing a received <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> with AMQP sections other than ApplicationProperties (with primitive java types) and Data section is not supported.</span></span> </p>
+      <p><span data-ttu-id="2d322-115">ここでは AMQP メッセージ セクションがどのようにマップする<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</span><span class="sxs-lookup"><span data-stu-id="2d322-115">Here's how AMQP message sections map to <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>.</span></span> <span data-ttu-id="2d322-116">ここでは、AMQP 1.0 仕様に使用される参照: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink></span><span class="sxs-lookup"><span data-stu-id="2d322-116">Here's the reference used for AMQP 1.0 specification: <ulink url="http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf">http://docs.oasis-open.org/amqp/core/v1.0/os/amqp-core-complete-v1.0-os.pdf</ulink></span></span><pre>
       i.   <xref uid="com.microsoft.azure.eventhubs._event_data.getProperties()" data-throw-if-not-resolved="false">getProperties()</xref> - AMQPMessage.ApplicationProperties section
       ii.  <xref uid="com.microsoft.azure.eventhubs._event_data.getBytes()" data-throw-if-not-resolved="false">getBytes()</xref> - if AMQPMessage.Body has Data section
       iii. <xref uid="com.microsoft.azure.eventhubs._event_data.getObject()" data-throw-if-not-resolved="false">getObject()</xref> - if AMQPMessage.Body has AMQPValue or AMQPSequence sections
-      </pre> Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。 高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。 </p>
+      </pre> <span data-ttu-id="2d322-117">Microsoft Azure EventHubs によってリリースされたクライアント ライブラリを使用するには、中にセクション (i) と (ii) だけで十分です。</span><span class="sxs-lookup"><span data-stu-id="2d322-117">While using client libraries released by Microsoft Azure EventHubs, sections (i) and (ii) alone are sufficient.</span></span> <span data-ttu-id="2d322-118">高度なシナリオ、場所、送信元アプリケーションは、サード パーティ製 AMQP のライブラリを使用して、EventHubs にメッセージを送信および受信側アプリケーションでは、このクライアント ライブラリを使用して、受信セクション (iii) が使用される<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>です。</span><span class="sxs-lookup"><span data-stu-id="2d322-118">Section (iii) is used for advanced scenarios, where the sending application uses third-party AMQP library to send the message to EventHubs and the receiving application uses this client library to receive <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>.</span></span> </p>
     syntax:
       content: public class EventData
   - uid: com.microsoft.azure.eventhubs._partition_receiver
@@ -221,8 +221,8 @@ references:
     fullName: com.microsoft.azure.eventhubs.PartitionReceiver
     type: Class
     summary: |-
-      <p>これは、EventHub パーティションからの受信の論理表現です。 </p>
-      <p>A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> ConsumerGroup + EventHub パーティションに関連付けられたの組み合わせ。 <itemizedlist><listitem><p>エポック基づいている場合は<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (つまり、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> ! = 0) 作成されると、サービスは、の ConsumerGroup + パーティションごとに、1 つだけのアクティブな受信者が保証されます EventHubs コンボです。 これは、作成する方法をお勧め、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。 </p></listitem><listitem><p>複数の受信者の ConsumerGroup + パーティションあたりコンボを作成するエポック以外の受信側です。 </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="2d322-119">これは、EventHub パーティションからの受信の論理表現です。</span><span class="sxs-lookup"><span data-stu-id="2d322-119">This is a logical representation of receiving from a EventHub partition.</span></span> </p>
+      <p><span data-ttu-id="2d322-120">A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> ConsumerGroup + EventHub パーティションに関連付けられたの組み合わせ。</span><span class="sxs-lookup"><span data-stu-id="2d322-120">A <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> is tied to a ConsumerGroup + EventHub Partition combination.</span></span> <itemizedlist><listitem><p><span data-ttu-id="2d322-121">エポック基づいている場合は<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (つまり、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> ! = 0) 作成されると、サービスは、の ConsumerGroup + パーティションごとに、1 つだけのアクティブな受信者が保証されます EventHubs コンボです。</span><span class="sxs-lookup"><span data-stu-id="2d322-121">If an epoch based <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> (i.e., <xref uid="com.microsoft.azure.eventhubs._partition_receiver.getEpoch()" data-throw-if-not-resolved="false">PartitionReceiver.getEpoch</xref> != 0) is created, EventHubs service will guarantee only 1 active receiver exists per ConsumerGroup + Partition combo.</span></span> <span data-ttu-id="2d322-122">これは、作成する方法をお勧め、 <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>です。</span><span class="sxs-lookup"><span data-stu-id="2d322-122">This is the recommended approach to create a <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>.</span></span> </p></listitem><listitem><p><span data-ttu-id="2d322-123">複数の受信者の ConsumerGroup + パーティションあたりコンボを作成するエポック以外の受信側です。</span><span class="sxs-lookup"><span data-stu-id="2d322-123">Multiple receivers per ConsumerGroup + Partition combo can be created using non-epoch receivers.</span></span> </p></listitem></itemizedlist></p>
       <p></p>
     syntax:
       content: public class PartitionReceiver
@@ -234,8 +234,8 @@ references:
     fullName: CompletableFuture<Iterable<EventData>> com.microsoft.azure.eventhubs.PartitionReceiver.receive(final int maxEventCount)
     type: Method
     summary: |-
-      <p>受信のバッチ<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s、EventHub からパーティションに分割 </p>
-      <p>サンプル コード (サンプル同期バージョンの api を使用するが、概念は同じ)。 <pre><xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref> client = <xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionStringSync(final String)" data-throw-if-not-resolved="false">EventHubClient.createFromConnectionStringSync</xref>("__connection__");
+      <p><span data-ttu-id="2d322-124">受信のバッチ<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s、EventHub からパーティションに分割</span><span class="sxs-lookup"><span data-stu-id="2d322-124">Receive a batch of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s from an EventHub partition</span></span> </p>
+      <p><span data-ttu-id="2d322-125">サンプル コード (サンプル同期バージョンの api を使用するが、概念は同じ)。</span><span class="sxs-lookup"><span data-stu-id="2d322-125">Sample code (sample uses sync version of the api but concept are identical):</span></span> <pre><xref uid="com.microsoft.azure.eventhubs._event_hub_client" data-throw-if-not-resolved="false">EventHubClient</xref> client = <xref uid="com.microsoft.azure.eventhubs._event_hub_client.createFromConnectionStringSync(final String)" data-throw-if-not-resolved="false">EventHubClient.createFromConnectionStringSync</xref>("__connection__");
       <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref> receiver = client.createPartitionReceiverSync("ConsumerGroup1", "1");
       Iterable{&lt;}<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>{&gt;} receivedEvents = receiver.receiveSync();</pre></p>
       <p>
@@ -286,10 +286,10 @@ references:
       parameters:
         - id: maxEventCount
           type: cd225469
-          description: <p>最大数<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>のこの呼び出しを返す必要があります </p>
+          description: <p><span data-ttu-id="2d322-126">最大数<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>のこの呼び出しを返す必要があります</span><span class="sxs-lookup"><span data-stu-id="2d322-126">maximum number of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s that this call should return</span></span> </p>
       return:
         type: 5ae8a14ccom.microsoft.azure.eventhubs._event_datae7daa122
-        description: <p>バッチを生成する completableFuture <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>この受信者を作成するパーティションから。 ない場合は、'null' を返します<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>が存在します。 </p>
+        description: <p><span data-ttu-id="2d322-127">バッチを生成する completableFuture <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>この受信者を作成するパーティションから。</span><span class="sxs-lookup"><span data-stu-id="2d322-127">A completableFuture that will yield a batch of <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>'s from the partition on which this receiver is created.</span></span> <span data-ttu-id="2d322-128">ない場合は、'null' を返します<xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref>が存在します。</span><span class="sxs-lookup"><span data-stu-id="2d322-128">Returns 'null' if no <xref uid="com.microsoft.azure.eventhubs._event_data" data-throw-if-not-resolved="false">EventData</xref> is present.</span></span> </p>
   - uid: com.microsoft.azure.eventhubs._partition_receive_handler
     parent: com.microsoft.azure.eventhubs
     href: com.microsoft.azure.eventhubs._partition_receive_handler.yml
@@ -298,7 +298,7 @@ references:
     fullName: com.microsoft.azure.eventhubs.PartitionReceiveHandler
     type: Class
     summary: |-
-      <p>受信操作のハンドラー クラスです。 この抽象クラスの実装を使用して、使用する場合は、ユーザーの操作を指定する<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>の setReceiveHandler() します。</p>
+      <p><span data-ttu-id="2d322-129">受信操作のハンドラー クラスです。</span><span class="sxs-lookup"><span data-stu-id="2d322-129">A handler class for the receive operation.</span></span> <span data-ttu-id="2d322-130">この抽象クラスの実装を使用して、使用する場合は、ユーザーの操作を指定する<xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>の setReceiveHandler() します。</span><span class="sxs-lookup"><span data-stu-id="2d322-130">Use any implementation of this abstract class to specify user action when using <xref uid="com.microsoft.azure.eventhubs._partition_receiver" data-throw-if-not-resolved="false">PartitionReceiver</xref>'s setReceiveHandler().</span></span></p>
       <p></p>
     syntax: *ref_2
   - uid: com.microsoft.azure.eventhubs._partition_receiver.setReceiveHandler(final PartitionReceiveHandler)
@@ -309,14 +309,14 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.eventhubs.PartitionReceiver.setReceiveHandler(final PartitionReceiveHandler receiveHandler)
     type: Method
     summary: |-
-      <p>イベントは、使用可能なときに呼び出される受信ハンドラーを登録します。 A <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>受信ポンプ モデルでイベントの処理やエラー処理のコールバックを指定するユーザーができるハンドラーします。</p>
+      <p><span data-ttu-id="2d322-131">イベントは、使用可能なときに呼び出される受信ハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="2d322-131">Register a receive handler that will be called when an event is available.</span></span> <span data-ttu-id="2d322-132">A <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>受信ポンプ モデルでイベントの処理やエラー処理のコールバックを指定するユーザーができるハンドラーします。</span><span class="sxs-lookup"><span data-stu-id="2d322-132">A <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref> is a handler that allows user to specify a callback for event processing and error handling in a receive pump model.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> setReceiveHandler(final PartitionReceiveHandler receiveHandler)
       parameters:
         - id: receiveHandler
           type: 93de0ef9com.microsoft.azure.eventhubs._partition_receive_handler
-          description: <p>実装<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>です。 このハンドラーに設定<code>null</code>受信ポンプを停止します。 </p>
+          description: <p><span data-ttu-id="2d322-133">実装<xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>です。</span><span class="sxs-lookup"><span data-stu-id="2d322-133">An implementation of <xref uid="com.microsoft.azure.eventhubs._partition_receive_handler" data-throw-if-not-resolved="false">PartitionReceiveHandler</xref>.</span></span> <span data-ttu-id="2d322-134">このハンドラーに設定<code>null</code>受信ポンプを停止します。</span><span class="sxs-lookup"><span data-stu-id="2d322-134">Setting this handler to <code>null</code> will stop the receive pump.</span></span> </p>
       return:
         type: db03ee24
-        description: <p>受信ハンドラーを設定する completableFuture </p>
+        description: <p><span data-ttu-id="2d322-135">受信ハンドラーを設定する completableFuture</span><span class="sxs-lookup"><span data-stu-id="2d322-135">A completableFuture which sets receiveHandler</span></span> </p>

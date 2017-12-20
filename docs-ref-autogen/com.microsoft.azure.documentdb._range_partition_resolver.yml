@@ -22,7 +22,7 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/RangePartitionResolver.java
       startLine: 35
     package: com.microsoft.azure.documentdb
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> Azure DocumentDB データベース サービスの範囲に基づくパーティション分割を実装します。 実装することによって、パーティションの数の間での要求およびデータを配布できます<xref uid=\"com.microsoft.azure.documentdb._partition_resolver\" data-throw-if-not-resolved=\"false\">PartitionResolver</xref>インターフェイスです。 </p>"
+    summary: "<p><span data-ttu-id=\"b6e43-101\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> Azure DocumentDB データベース サービスの範囲に基づくパーティション分割を実装します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b6e43-101\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> implements partitioning based on the ranges in the Azure DocumentDB database service.</span></span> <span data-ttu-id=\"b6e43-102\">実装することによって、パーティションの数の間での要求およびデータを配布できます<xref uid=\"com.microsoft.azure.documentdb._partition_resolver\" data-throw-if-not-resolved=\"false\">PartitionResolver</xref>インターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b6e43-102\">It allows you to distribute requests and data across a number of partitions by implementing <xref uid=\"com.microsoft.azure.documentdb._partition_resolver\" data-throw-if-not-resolved=\"false\">PartitionResolver</xref> interface.</span></span> </p>"
     syntax: &ref_1
       content: public class RangePartitionResolver<T extends Comparable<T>> implements PartitionResolver
       typeParameters:
@@ -46,16 +46,16 @@ items:
       path: DocumentDB/src/main/java/com/microsoft/azure/documentdb/RangePartitionResolver.java
       startLine: 45
     package: com.microsoft.azure.documentdb
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref>受け取るコンス トラクター、 <xref uid=\"com.microsoft.azure.documentdb._partition_key_extractor\" data-throw-if-not-resolved=\"false\">PartitionKeyExtractor</xref>範囲のコレクションへのリンクをマップします。</p>\n\n<p></p>"
+    summary: "<p><span data-ttu-id=\"b6e43-103\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref>受け取るコンス トラクター、 <xref uid=\"com.microsoft.azure.documentdb._partition_key_extractor\" data-throw-if-not-resolved=\"false\">PartitionKeyExtractor</xref>範囲のコレクションへのリンクをマップします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b6e43-103\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> constructor taking in the <xref uid=\"com.microsoft.azure.documentdb._partition_key_extractor\" data-throw-if-not-resolved=\"false\">PartitionKeyExtractor</xref>, a map of Ranges to collection links.</span></span></p>\n\n<p></p>"
     syntax:
       content: 'public RangePartitionResolver(PartitionKeyExtractor partitionKeyExtractor, Map<Range<T>, String> partitionMap)'
       parameters:
         - id: partitionKeyExtractor
           type: com.microsoft.azure.documentdb._partition_key_extractor
-          description: <p>実装するクラスのインスタンス<xref uid="com.microsoft.azure.documentdb._partition_key_extractor" data-throw-if-not-resolved="false">PartitionKeyExtractor</xref>インターフェイスです。 </p>
+          description: <p><span data-ttu-id="b6e43-104">実装するクラスのインスタンス<xref uid="com.microsoft.azure.documentdb._partition_key_extractor" data-throw-if-not-resolved="false">PartitionKeyExtractor</xref>インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b6e43-104">an instance of class that implements <xref uid="com.microsoft.azure.documentdb._partition_key_extractor" data-throw-if-not-resolved="false">PartitionKeyExtractor</xref> interface.</span></span> </p>
         - id: partitionMap
           type: 6110eba5com.microsoft.azure.documentdb._range9a286464
-          description: <p>コレクションへのリンクの範囲のマップ。 </p>
+          description: <p><span data-ttu-id="b6e43-105">コレクションへのリンクの範囲のマップ。</span><span class="sxs-lookup"><span data-stu-id="b6e43-105">the map of ranges to collection links.</span></span> </p>
   - uid: com.microsoft.azure.documentdb._range_partition_resolver.resolveForCreate(Object)
     id: resolveForCreate(Object)
     parent: com.microsoft.azure.documentdb._range_partition_resolver
@@ -73,17 +73,17 @@ items:
       startLine: 65
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>パーティション キーに基づくドキュメントを作成するためのコレクションを解決します。</p>
+      <p><span data-ttu-id="b6e43-106">パーティション キーに基づくドキュメントを作成するためのコレクションを解決します。</span><span class="sxs-lookup"><span data-stu-id="b6e43-106">Resolves the collection for creating the document based on the partition key.</span></span></p>
       <p></p>
     syntax:
       content: public String resolveForCreate(Object document)
       parameters:
         - id: document
           type: '79317049'
-          description: <p>作成するドキュメントです。 </p>
+          description: <p><span data-ttu-id="b6e43-107">作成するドキュメントです。</span><span class="sxs-lookup"><span data-stu-id="b6e43-107">the document to be created.</span></span> </p>
       return:
         type: '26831127'
-        description: <p>リンクの作成操作を処理する必要がありますをコレクションの自己リンクまたは名前に基づいています。 </p>
+        description: <p><span data-ttu-id="b6e43-108">リンクの作成操作を処理する必要がありますをコレクションの自己リンクまたは名前に基づいています。</span><span class="sxs-lookup"><span data-stu-id="b6e43-108">collection Self link or Name based link which should handle the Create operation.</span></span> </p>
     overridden: com.microsoft.azure.documentdb._partition_resolver.resolveForCreate(Object)
   - uid: com.microsoft.azure.documentdb._range_partition_resolver.resolveForRead(Object)
     id: resolveForRead(Object)
@@ -102,17 +102,17 @@ items:
       startLine: 87
     package: com.microsoft.azure.documentdb
     summary: |-
-      <p>パーティション キーに基づくドキュメントを読み取り/照会するためのコレクションを解決します。</p>
+      <p><span data-ttu-id="b6e43-109">パーティション キーに基づくドキュメントを読み取り/照会するためのコレクションを解決します。</span><span class="sxs-lookup"><span data-stu-id="b6e43-109">Resolves the collection for reading/querying the documents based on the partition key.</span></span></p>
       <p></p>
     syntax:
       content: public Iterable<String> resolveForRead(Object partitionKey)
       parameters:
         - id: partitionKey
           type: '79317049'
-          description: <p>パーティション キー値。 </p>
+          description: <p><span data-ttu-id="b6e43-110">パーティション キー値。</span><span class="sxs-lookup"><span data-stu-id="b6e43-110">the partition key value.</span></span> </p>
       return:
         type: a111923c
-        description: <p>自己リンクをコレクションや名ベースのリンクの読み取り操作を処理する必要があります。 </p>
+        description: <p><span data-ttu-id="b6e43-111">自己リンクをコレクションや名ベースのリンクの読み取り操作を処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6e43-111">collection Self link(s) or Name based link(s) which should handle the Read operation.</span></span> </p>
     overridden: com.microsoft.azure.documentdb._partition_resolver.resolveForRead(Object)
 references:
   - uid: 8ce1ecb9
@@ -163,7 +163,7 @@ references:
     nameWithType: PartitionResolver
     fullName: com.microsoft.azure.documentdb.PartitionResolver
     type: Interface
-    summary: <p>これは、シナリオのパーティション分割を実装して、Azure DocumentDB データベース サービス ドキュメント クライアント レベルで登録するインターフェイスです。 </p>
+    summary: <p><span data-ttu-id="b6e43-112">これは、シナリオのパーティション分割を実装して、Azure DocumentDB データベース サービス ドキュメント クライアント レベルで登録するインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b6e43-112">This is an interface to be implemented for partitioning scenarios and register it at the document client level in the Azure DocumentDB database service.</span></span> </p>
     syntax:
       content: public interface PartitionResolver
   - uid: com.microsoft.azure.documentdb._partition_key_extractor
@@ -173,7 +173,7 @@ references:
     nameWithType: PartitionKeyExtractor
     fullName: com.microsoft.azure.documentdb.PartitionKeyExtractor
     type: Interface
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._partition_key_extractor\" data-throw-if-not-resolved=\"false\">PartitionKeyExtractor</xref>インターフェイスは、Azure DocumentDB データベース サービス ドキュメントからパーティション キーを取得するために使用します。 </p>"
+    summary: "<p><span data-ttu-id=\"b6e43-113\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._partition_key_extractor\" data-throw-if-not-resolved=\"false\">PartitionKeyExtractor</xref>インターフェイスは、Azure DocumentDB データベース サービス ドキュメントからパーティション キーを取得するために使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b6e43-113\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._partition_key_extractor\" data-throw-if-not-resolved=\"false\">PartitionKeyExtractor</xref> interface is used for getting the partition key from a document in the Azure DocumentDB database service.</span></span> </p>"
     syntax:
       content: public interface PartitionKeyExtractor
   - uid: com.microsoft.azure.documentdb._range
@@ -183,7 +183,7 @@ references:
     nameWithType: Range<T>
     fullName: com.microsoft.azure.documentdb.Range<T>
     type: Class
-    summary: <p>Azure DocumentDB データベース サービス内の範囲を表します。 </p>
+    summary: <p><span data-ttu-id="b6e43-114">Azure DocumentDB データベース サービス内の範囲を表します。</span><span class="sxs-lookup"><span data-stu-id="b6e43-114">Represents a range in the Azure DocumentDB database service.</span></span> </p>
     syntax:
       content: public class Range<T extends Comparable<T>>
       typeParameters:
@@ -195,7 +195,7 @@ references:
     nameWithType: RangePartitionResolver<T>
     fullName: com.microsoft.azure.documentdb.RangePartitionResolver<T>
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> Azure DocumentDB データベース サービスの範囲に基づくパーティション分割を実装します。 実装することによって、パーティションの数の間での要求およびデータを配布できます<xref uid=\"com.microsoft.azure.documentdb._partition_resolver\" data-throw-if-not-resolved=\"false\">PartitionResolver</xref>インターフェイスです。 </p>"
+    summary: "<p><span data-ttu-id=\"b6e43-115\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> Azure DocumentDB データベース サービスの範囲に基づくパーティション分割を実装します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b6e43-115\">\r\n\r\n  <xref uid=\"com.microsoft.azure.documentdb._range_partition_resolver\" data-throw-if-not-resolved=\"false\">RangePartitionResolver</xref> implements partitioning based on the ranges in the Azure DocumentDB database service.</span></span> <span data-ttu-id=\"b6e43-116\">実装することによって、パーティションの数の間での要求およびデータを配布できます<xref uid=\"com.microsoft.azure.documentdb._partition_resolver\" data-throw-if-not-resolved=\"false\">PartitionResolver</xref>インターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b6e43-116\">It allows you to distribute requests and data across a number of partitions by implementing <xref uid=\"com.microsoft.azure.documentdb._partition_resolver\" data-throw-if-not-resolved=\"false\">PartitionResolver</xref> interface.</span></span> </p>"
     syntax: *ref_1
   - uid: com.microsoft.azure.documentdb._partition_resolver.resolveForCreate(Object)
     parent: com.microsoft.azure.documentdb._partition_resolver
@@ -205,17 +205,17 @@ references:
     fullName: String com.microsoft.azure.documentdb.PartitionResolver.resolveForCreate(Object document)
     type: Method
     summary: |-
-      <p>自己リンクまたは ID に基づくリンクのコレクションを取得する作成操作を指示する必要があります</p>
+      <p><span data-ttu-id="b6e43-117">自己リンクまたは ID に基づくリンクのコレクションを取得する作成操作を指示する必要があります</span><span class="sxs-lookup"><span data-stu-id="b6e43-117">Gets the collection Self Link or ID based link on which create operation should be directed</span></span></p>
       <p></p>
     syntax:
       content: public String resolveForCreate(Object document)
       parameters:
         - id: document
           type: '79317049'
-          description: <p>ドキュメント オブジェクトを作成します。 </p>
+          description: <p><span data-ttu-id="b6e43-118">ドキュメント オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="b6e43-118">the document object to be created</span></span> </p>
       return:
         type: '26831127'
-        description: <p>コレクションの SelfLink または ID ベースのリンク </p>
+        description: <p><span data-ttu-id="b6e43-119">コレクションの SelfLink または ID ベースのリンク</span><span class="sxs-lookup"><span data-stu-id="b6e43-119">collection SelfLink or ID based link</span></span> </p>
   - uid: com.microsoft.azure.documentdb._partition_resolver.resolveForRead(Object)
     parent: com.microsoft.azure.documentdb._partition_resolver
     href: com.microsoft.azure.documentdb._partition_resolver.yml
@@ -224,14 +224,14 @@ references:
     fullName: Iterable<String> com.microsoft.azure.documentdb.PartitionResolver.resolveForRead(Object partitionKey)
     type: Method
     summary: |-
-      <p>文字列の反復子を表す SelfLink(s) を取得または ID に基づくリンクの読み取り/クエリを操作する必要があります。</p>
+      <p><span data-ttu-id="b6e43-120">文字列の反復子を表す SelfLink(s) を取得または ID に基づくリンクの読み取り/クエリを操作する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6e43-120">Gets an iterator of strings representing SelfLink(s) or ID based link(s) on which read/query operation should be directed</span></span></p>
       <p></p>
     syntax:
       content: public Iterable<String> resolveForRead(Object partitionKey)
       parameters:
         - id: partitionKey
           type: '79317049'
-          description: <p>パーティション キーのコレクションを解決するために使用 </p>
+          description: <p><span data-ttu-id="b6e43-121">パーティション キーのコレクションを解決するために使用</span><span class="sxs-lookup"><span data-stu-id="b6e43-121">partition key used to resolve the collection</span></span> </p>
       return:
         type: a111923c
-        description: <p>SelfLink(s) または ID を表す文字列の反復子のリンクのベース </p>
+        description: <p><span data-ttu-id="b6e43-122">SelfLink(s) または ID を表す文字列の反復子のリンクのベース</span><span class="sxs-lookup"><span data-stu-id="b6e43-122">An iterator of strings representing SelfLink(s) or ID based link(s)</span></span> </p>

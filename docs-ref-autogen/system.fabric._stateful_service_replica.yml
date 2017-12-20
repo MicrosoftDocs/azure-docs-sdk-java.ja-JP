@@ -24,7 +24,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceReplica.java
       startLine: 17
     package: system.fabric
-    summary: "<p>スタートアップ、初期化、ロールの変更、およびシャット ダウンなど、レプリカのライフ サイクルを制御する動作を定義します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>ステートフル サービスの種類は、このインターフェイスを実装する必要があります。 ステートフルなサービスの種類のロジックには、プライマリ レプリカ上で呼び出される動作とセカンダリ レプリカで呼び出される動作が含まれています。 サービスの作成者が作成する場合は、指定された使用<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、サービスを実装する必要がありますも、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> の実装を使用する<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>はによって提供される<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></p>"
+    summary: "<p><span data-ttu-id=\"9b105-101\">スタートアップ、初期化、ロールの変更、およびシャット ダウンなど、レプリカのライフ サイクルを制御する動作を定義します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-101\">Defines behavior that governs the lifecycle of a replica, such as startup, initialization, role changes, and shutdown.</span></span> </p>\n<p><span data-ttu-id=\"9b105-102\">\r\n\r\n  <b>注釈:</b>ステートフル サービスの種類は、このインターフェイスを実装する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-102\">\r\n\r\n  <b>Remarks:</b>Stateful service types must implement this interface.</span></span> <span data-ttu-id=\"9b105-103\">ステートフルなサービスの種類のロジックには、プライマリ レプリカ上で呼び出される動作とセカンダリ レプリカで呼び出される動作が含まれています。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-103\">The logic of a stateful service type includes behavior that is invoked on Primary replicas and behavior that is invoked on Secondary replicas.</span></span> <span data-ttu-id=\"9b105-104\">サービスの作成者が作成する場合は、指定された使用<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>、サービスを実装する必要がありますも、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> の実装を使用する<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>はによって提供される<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-104\">If the service author wants to make use of the provided <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>, then the service must also implement <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> to use the implementation of <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> that is provided by <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref></span></span></p>"
     syntax:
       content: public interface StatefulServiceReplica
   - uid: system.fabric._stateful_service_replica.abort()
@@ -43,7 +43,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceReplica.java
       startLine: 93
     package: system.fabric
-    summary: "<p>インスタンスが異常終了します。 </p>\n<p>\r\n\r\n  <b>注釈:</b>リースが失われると、サービスの使用への応答<xref uid=\"system.fabric._service_partition.reportFault(FaultType)\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportFault(FaultType)</xref>レポートに、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FaultType#Permanent</xref>エラー異常終了の例に示します。 このメソッドが呼び出されたときにサービス インスタンスをすぐにリリースしのすべての参照をクリーンアップしを返します。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-105\">インスタンスが異常終了します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-105\">Ungracefully terminates an instance.</span></span> </p>\n<p><span data-ttu-id=\"9b105-106\">\r\n\r\n  <b>注釈:</b>リースが失われると、サービスの使用への応答<xref uid=\"system.fabric._service_partition.reportFault(FaultType)\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportFault(FaultType)</xref>レポートに、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FaultType#Permanent</xref>エラー異常終了の例に示します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-106\">\r\n\r\n  <b>Remarks:</b>Lease loss and, in response to the service, the use of <xref uid=\"system.fabric._service_partition.reportFault(FaultType)\" data-throw-if-not-resolved=\"false\">system.fabric.ServicePartition#reportFault(FaultType)</xref> to report a <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FaultType#Permanent</xref> fault are examples of ungraceful termination.</span></span> <span data-ttu-id=\"9b105-107\">このメソッドが呼び出されたときにサービス インスタンスをすぐにリリースしのすべての参照をクリーンアップしを返します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-107\">When this method is invoked, the service instance should immediately release and clean up all references and return.</span></span> </p>"
     syntax:
       content: public void abort()
   - uid: 'system.fabric._stateful_service_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
@@ -62,19 +62,19 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/StatefulServiceReplica.java
       startLine: 70
     package: system.fabric
-    summary: "<p>プライマリまたはセカンダリ レプリカのロールを変更します。</p>\n<p>\r\n\r\n  <b>注釈:</b>をパラメーターとして、新しいロールが示されます。 ときに、サービス ロールに移行する、新しい、サービスが、現在リッスン アドレスを更新することです。 リッスン アドレスは、クライアントが接続するアドレスです。 クライアントからの通信が予想される場合、ポートなどの一部のリソースを要求のみにプライマリ レプリカであるときに、サービスが有効にします。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-108\">プライマリまたはセカンダリ レプリカのロールを変更します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-108\">Changes the role of a Primary or Secondary replica.</span></span></p>\n<p><span data-ttu-id=\"9b105-109\">\r\n\r\n  <b>注釈:</b>をパラメーターとして、新しいロールが示されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-109\">\r\n\r\n  <b>Remarks:</b>The new role is indicated as a parameter.</span></span> <span data-ttu-id=\"9b105-110\">ときに、サービス ロールに移行する、新しい、サービスが、現在リッスン アドレスを更新することです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-110\">When the service transitions to the new role, the service has a chance to update its current listening address.</span></span> <span data-ttu-id=\"9b105-111\">リッスン アドレスは、クライアントが接続するアドレスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-111\">The listening address is the address where clients connect to it.</span></span> <span data-ttu-id=\"9b105-112\">クライアントからの通信が予想される場合、ポートなどの一部のリソースを要求のみにプライマリ レプリカであるときに、サービスが有効にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-112\">This enables the service when it is a Primary replica to only claim some resources such as ports when communication from clients is expected.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<String> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
       parameters:
         - id: newRole
           type: system.fabric._replica_role
-          description: <p>更新された<xref uid="system.fabric._replica_role" data-throw-if-not-resolved="false">system.fabric.ReplicaRole</xref>このレプリカに遷移させなければならないことです。 </p>
+          description: <p><span data-ttu-id="9b105-113">更新された<xref uid="system.fabric._replica_role" data-throw-if-not-resolved="false">system.fabric.ReplicaRole</xref>このレプリカに遷移させなければならないことです。</span><span class="sxs-lookup"><span data-stu-id="9b105-113">The updated <xref uid="system.fabric._replica_role" data-throw-if-not-resolved="false">system.fabric.ReplicaRole</xref> that this replica should transition to.</span></span> </p>
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-114\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-114\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 06be942d
-        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>型の<xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>用の â €™ サービス ファブリックの名前付けを使用して、レプリカと関連付けられる s 新しい接続アドレス。 </p>
+        description: '<p><span data-ttu-id="9b105-115">返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>型の<xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>用の â €™ サービス ファブリックの名前付けを使用して、レプリカと関連付けられる s 新しい接続アドレス。</span><span class="sxs-lookup"><span data-stu-id="9b105-115">Returns <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref> of type <xref uid="" data-throw-if-not-resolved="false">java.lang.String</xref>, the serviceâ€™s new connection address that is to be associated with the replica via Service Fabric Naming.</span></span> </p>'
   - uid: system.fabric._stateful_service_replica.closeAsync(CancellationToken)
     id: closeAsync(CancellationToken)
     parent: system.fabric._stateful_service_replica
@@ -92,17 +92,17 @@ items:
       startLine: 81
     package: system.fabric
     summary: |-
-      <p>シャット ダウンすると、サービスのレプリカを閉じます。 キャンセルが推奨でが取り消された場合でもは、操作を完了も可能性がありますに注意してください。</p>
+      <p><span data-ttu-id="9b105-116">シャット ダウンすると、サービスのレプリカを閉じます。</span><span class="sxs-lookup"><span data-stu-id="9b105-116">Closes the service replica when it is being shut down.</span></span> <span data-ttu-id="9b105-117">キャンセルが推奨でが取り消された場合でもは、操作を完了も可能性がありますに注意してください。</span><span class="sxs-lookup"><span data-stu-id="9b105-117">Note that cancellation is advisory and that the operation might still be completed even if it is canceled.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> closeAsync(CancellationToken cancellationToken)
       parameters:
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-118\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-118\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: db03ee24
-        description: <p>返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>です。 </p>
+        description: <p><span data-ttu-id="9b105-119">返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9b105-119">Returns <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>.</span></span> </p>
   - uid: system.fabric._stateful_service_replica.initialize(StatefulServiceInitializationParameters)
     id: initialize(StatefulServiceInitializationParameters)
     parent: system.fabric._stateful_service_replica
@@ -120,14 +120,14 @@ items:
       startLine: 24
     package: system.fabric
     summary: |-
-      <p>新しく作成されたサービスのレプリカを初期化します。</p>
+      <p><span data-ttu-id="9b105-120">新しく作成されたサービスのレプリカを初期化します。</span><span class="sxs-lookup"><span data-stu-id="9b105-120">Initializes a newly created service replica.</span></span></p>
       <p></p>
     syntax:
       content: public void initialize(StatefulServiceInitializationParameters initializationParameters)
       parameters:
         - id: initializationParameters
           type: system.fabric._stateful_service_initialization_parameters
-          description: <p><xref uid="system.fabric._stateful_service_initialization_parameters" data-throw-if-not-resolved="false">System.fabric.StatefulServiceInitializationParameters</xref>このレプリカにします。 </p>
+          description: <p><span data-ttu-id="9b105-121"><xref uid="system.fabric._stateful_service_initialization_parameters" data-throw-if-not-resolved="false">System.fabric.StatefulServiceInitializationParameters</xref>このレプリカにします。</span><span class="sxs-lookup"><span data-stu-id="9b105-121">The <xref uid="system.fabric._stateful_service_initialization_parameters" data-throw-if-not-resolved="false">system.fabric.StatefulServiceInitializationParameters</xref> for this replica.</span></span> </p>
   - uid: 'system.fabric._stateful_service_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
     id: 'openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
     parent: system.fabric._stateful_service_replica
@@ -145,23 +145,23 @@ items:
       startLine: 46
     package: system.fabric
     summary: |-
-      <p>その他の操作を実行できるように、初期化されたサービスのレプリカが開きます。</p>
+      <p><span data-ttu-id="9b105-122">その他の操作を実行できるように、初期化されたサービスのレプリカが開きます。</span><span class="sxs-lookup"><span data-stu-id="9b105-122">Opens an initialized service replica so that additional actions can be taken.</span></span></p>
       <p></p>
     syntax: &ref_1
       content: 'public CompletableFuture<Replicator> openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
       parameters:
         - id: openMode
           type: system.fabric._replica_open_mode
-          description: <p>これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。 </p>
+          description: <p><span data-ttu-id="9b105-123">これは、は、Service Fabric インフラストラクチャをサポートし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="9b105-123">This supports the Service Fabric infrastructure and is not meant to be used directly from your code.</span></span> </p>
         - id: partition
           type: system.fabric._stateful_service_partition
-          description: <p><xref uid="system.fabric._stateful_service_partition" data-throw-if-not-resolved="false">System.fabric.StatefulServicePartition</xref>このレプリカの情報です。 </p>
+          description: <p><span data-ttu-id="9b105-124"><xref uid="system.fabric._stateful_service_partition" data-throw-if-not-resolved="false">System.fabric.StatefulServicePartition</xref>このレプリカの情報です。</span><span class="sxs-lookup"><span data-stu-id="9b105-124">The <xref uid="system.fabric._stateful_service_partition" data-throw-if-not-resolved="false">system.fabric.StatefulServicePartition</xref> information for this replica.</span></span> </p>
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-125\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-125\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 9cdf14d0system.fabric._replicatora08ddfce
-        description: '<p>返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>&lt;<xref uid="system.fabric._replicator" data-throw-if-not-resolved="false">system.fabric.Replicator</xref>&gt;、 <xref uid="system.fabric._replicator" data-throw-if-not-resolved="false">system.fabric.Replicator</xref> stateful で使用されています。サービス。 Service Fabric の実装を使用する<xref uid="system.fabric._stateful_service_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica#openAsync (ReplicaOpenMode、StatefulServicePartition、CancellationToken)</xref> 、レプリカを返す必要があります、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>から取得した<xref uid="system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)" data-throw-if-not-resolved="false">system.fabric.StatefulServicePartition#createReplicator (StateProvider、ReplicatorSettings)</xref></p>'
+        description: '<p><span data-ttu-id="9b105-126">返します<xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>&lt;<xref uid="system.fabric._replicator" data-throw-if-not-resolved="false">system.fabric.Replicator</xref>&gt;、 <xref uid="system.fabric._replicator" data-throw-if-not-resolved="false">system.fabric.Replicator</xref> stateful で使用されています。サービス。</span><span class="sxs-lookup"><span data-stu-id="9b105-126">Returns <xref uid="" data-throw-if-not-resolved="false">CompletableFuture</xref>&lt;<xref uid="system.fabric._replicator" data-throw-if-not-resolved="false">system.fabric.Replicator</xref>&gt;, the <xref uid="system.fabric._replicator" data-throw-if-not-resolved="false">system.fabric.Replicator</xref> that is used by the stateful service.</span></span> <span data-ttu-id="9b105-127">Service Fabric の実装を使用する<xref uid="system.fabric._stateful_service_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica#openAsync (ReplicaOpenMode、StatefulServicePartition、CancellationToken)</xref> 、レプリカを返す必要があります、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>から取得した<xref uid="system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)" data-throw-if-not-resolved="false">system.fabric.StatefulServicePartition#createReplicator (StateProvider、ReplicatorSettings)</xref></span><span class="sxs-lookup"><span data-stu-id="9b105-127">To use the Service Fabric implementation, in <xref uid="system.fabric._stateful_service_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica#openAsync(ReplicaOpenMode, StatefulServicePartition, CancellationToken)</xref> , the replica should return a <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref> that is obtained from <xref uid="system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)" data-throw-if-not-resolved="false">system.fabric.StatefulServicePartition#createReplicator(StateProvider, ReplicatorSettings)</xref></span></span></p>'
 references:
   - uid: system.fabric._stateful_service_replica.initialize*
     name: initialize
@@ -214,7 +214,7 @@ references:
     nameWithType: KeyValueStoreReplica
     fullName: system.fabric.KeyValueStoreReplica
     type: Class
-    summary: <p>」のサービスのライターに、レプリケートされたトランザクション関連のデータ記憶域を提供"任意の Service Fabric サービスに統合するための準備ができています。 </p>
+    summary: '<p><span data-ttu-id="9b105-128">」のサービスのライターに、レプリケートされたトランザクション関連のデータ記憶域を提供"任意の Service Fabric サービスに統合するための準備ができています。</span><span class="sxs-lookup"><span data-stu-id="9b105-128">Provides a transactional, replicated, associative data storage to service writers â€“ ready for integration into any Service Fabric service.</span></span> </p>'
     syntax:
       content: public class KeyValueStoreReplica implements StatefulServiceReplica
   - uid: system.fabric._key_value_store_replica.initialize(StatefulServiceInitializationParameters)
@@ -224,13 +224,13 @@ references:
     nameWithType: KeyValueStoreReplica.initialize(StatefulServiceInitializationParameters initializationParameters)
     fullName: void system.fabric.KeyValueStoreReplica.initialize(StatefulServiceInitializationParameters initializationParameters)
     type: Method
-    summary: "<p>開くのための準備でレプリカを初期化します。</p>\n<p>\r\n\r\n  <b>注釈:</b>明示的に呼び出すのアプリケーション レプリカがから派生している場合は、このメソッドは必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。 ここでは、アプリケーションのレプリカをオーバーライドする必要があります<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onInitialize(system.fabric.StatefulServiceInitializationParameters)</xref>代わりにします。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-129\">開くのための準備でレプリカを初期化します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-129\">Initializes the replica in preparation for opening.</span></span></p>\n<p><span data-ttu-id=\"9b105-130\">\r\n\r\n  <b>注釈:</b>明示的に呼び出すのアプリケーション レプリカがから派生している場合は、このメソッドは必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-130\">\r\n\r\n  <b>Remarks:</b>This method does not need to be called explicitly if the application replica derives from <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>, which is the recommended pattern.</span></span> <span data-ttu-id=\"9b105-131\">ここでは、アプリケーションのレプリカをオーバーライドする必要があります<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onInitialize(system.fabric.StatefulServiceInitializationParameters)</xref>代わりにします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-131\">In this case, the application replica should override <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onInitialize(system.fabric.StatefulServiceInitializationParameters)</xref> instead.</span></span> </p>"
     syntax:
       content: public void initialize(StatefulServiceInitializationParameters initializationParameters)
       parameters:
         - id: initializationParameters
           type: system.fabric._stateful_service_initialization_parameters
-          description: <p>レプリカの初期化情報。 </p>
+          description: <p><span data-ttu-id="9b105-132">レプリカの初期化情報。</span><span class="sxs-lookup"><span data-stu-id="9b105-132">The initialization information for the replica.</span></span> </p>
   - uid: system.fabric._stateful_service_initialization_parameters
     parent: system.fabric
     href: system.fabric._stateful_service_initialization_parameters.yml
@@ -238,7 +238,7 @@ references:
     nameWithType: StatefulServiceInitializationParameters
     fullName: system.fabric.StatefulServiceInitializationParameters
     type: Class
-    summary: <p>ステートフルなサービスのサービスの初期化パラメーターを定義します。 </p>
+    summary: <p><span data-ttu-id="9b105-133">ステートフルなサービスのサービスの初期化パラメーターを定義します。</span><span class="sxs-lookup"><span data-stu-id="9b105-133">Defines service initialization parameters for a stateful service.</span></span> </p>
     syntax:
       content: public class StatefulServiceInitializationParameters extends ServiceInitializationParameters
   - uid: system.fabric._replicator
@@ -257,22 +257,22 @@ references:
     nameWithType: 'KeyValueStoreReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
     fullName: 'CompletableFuture<Replicator> system.fabric.KeyValueStoreReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
     type: Method
-    summary: "<p>オンライン レプリカ セット内の前に、レプリカとそのレプリケーターを開きます。</p>\n<p>\r\n\r\n  <b>注釈:</b>明示的に呼び出すのアプリケーション レプリカがから派生している場合は、このメソッドは必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。 この場合、アプリケーションのレプリカでは、OnOpenAsync を代わりにオーバーライドする必要があります。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-134\">オンライン レプリカ セット内の前に、レプリカとそのレプリケーターを開きます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-134\">Opens the replica and its replicator in preparation for coming online in a replica set.</span></span></p>\n<p><span data-ttu-id=\"9b105-135\">\r\n\r\n  <b>注釈:</b>明示的に呼び出すのアプリケーション レプリカがから派生している場合は、このメソッドは必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-135\">\r\n\r\n  <b>Remarks:</b>This method does not need to be called explicitly if the application replica derives from <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>, which is the recommended pattern.</span></span> <span data-ttu-id=\"9b105-136\">この場合、アプリケーションのレプリカでは、OnOpenAsync を代わりにオーバーライドする必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-136\">In this case, the application replica should override OnOpenAsync instead.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<Replicator> openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
       parameters:
         - id: openMode
           type: system.fabric._replica_open_mode
-          description: <p>このレプリカを開始するコンテキストが開くように指定します。 </p>
+          description: <p><span data-ttu-id="9b105-137">このレプリカを開始するコンテキストが開くように指定します。</span><span class="sxs-lookup"><span data-stu-id="9b105-137">Specifies the context under which this replica is begin opened.</span></span> </p>
         - id: partition
           type: system.fabric._stateful_service_partition
-          description: <p>このレプリカが属しているセットのレプリカを説明する情報が含まれています。 </p>
+          description: <p><span data-ttu-id="9b105-138">このレプリカが属しているセットのレプリカを説明する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9b105-138">Contains information describing the replica set to which this replica belongs.</span></span> </p>
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-139\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-139\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 9cdf14d0system.fabric._replicatora08ddfce
-        description: <p>Open の完了を示すために CompletableFuture <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.CompletableFuture</xref>です。 </p>
+        description: <p><span data-ttu-id="9b105-140">Open の完了を示すために CompletableFuture <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.CompletableFuture</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9b105-140">A CompletableFuture to indicate completion of the open <xref uid="" data-throw-if-not-resolved="false">java.util.concurrent.CompletableFuture</xref>.</span></span> </p>
   - uid: system.fabric._replica_open_mode
     parent: system.fabric
     href: system.fabric._replica_open_mode.yml
@@ -298,7 +298,7 @@ references:
     nameWithType: CancellationToken
     fullName: system.fabric.CancellationToken
     type: Class
-    summary: '<p>A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。 インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。 キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。 取り消しを開始するトークンを使用することはできません。 所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。 通知を受信するオブジェクトは、適切な方法で応答できます。 </p>'
+    summary: '<p><span data-ttu-id="9b105-141">A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref>操作を取り消す必要がある通知を伝達するために使用します。</span><span class="sxs-lookup"><span data-stu-id="9b105-141">A <xref uid="system.fabric._cancellation_token" data-throw-if-not-resolved="false">CancellationToken</xref> is used to propagate notification that operations should be canceled.</span></span> <span data-ttu-id="9b105-142">インスタンス化して、キャンセル トークンを作成する、 <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref>からキャンセル トークンを管理するオブジェクトを取得、 <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref>メソッドです。</span><span class="sxs-lookup"><span data-stu-id="9b105-142">You create a cancellation token by instantiating a <xref uid="system.fabric._cancellation_token_source" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource</xref> object, which manages cancellation tokens retrieved from its <xref uid="system.fabric._cancellation_token_source.getToken()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#getToken()</xref> method.</span></span> <span data-ttu-id="9b105-143">キャンセル トークンをキャンセルの通知を受け取る必要のある操作の任意の数を渡します。</span><span class="sxs-lookup"><span data-stu-id="9b105-143">You then pass the cancellation token to any number of operations that should receive notice of cancellation.</span></span> <span data-ttu-id="9b105-144">取り消しを開始するトークンを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="9b105-144">The token cannot be used to initiate cancellation.</span></span> <span data-ttu-id="9b105-145">所有するオブジェクトを呼び出すと<xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>、キャンセル トークンの取り消されたプロパティの設定を true にします。</span><span class="sxs-lookup"><span data-stu-id="9b105-145">When the owning object calls <xref uid="system.fabric._cancellation_token_source.cancel()" data-throw-if-not-resolved="false">system.fabric.CancellationTokenSource#cancel()</xref>, the cancelled property on the cancellation token is set to true.</span></span> <span data-ttu-id="9b105-146">通知を受信するオブジェクトは、適切な方法で応答できます。</span><span class="sxs-lookup"><span data-stu-id="9b105-146">The objects that receive the notification can respond in whatever manner is appropriate.</span></span> </p>'
     syntax:
       content: public class CancellationToken
   - uid: 'system.fabric._stateful_service_replica.openAsync(ReplicaOpenMode,StatefulServicePartition,CancellationToken)'
@@ -309,7 +309,7 @@ references:
     fullName: 'CompletableFuture<Replicator> system.fabric.StatefulServiceReplica.openAsync(ReplicaOpenMode openMode, StatefulServicePartition partition, CancellationToken cancellationToken)'
     type: Method
     summary: |-
-      <p>その他の操作を実行できるように、初期化されたサービスのレプリカが開きます。</p>
+      <p><span data-ttu-id="9b105-147">その他の操作を実行できるように、初期化されたサービスのレプリカが開きます。</span><span class="sxs-lookup"><span data-stu-id="9b105-147">Opens an initialized service replica so that additional actions can be taken.</span></span></p>
       <p></p>
     syntax: *ref_1
   - uid: system.fabric._fabric_replicator
@@ -319,7 +319,7 @@ references:
     nameWithType: FabricReplicator
     fullName: system.fabric.FabricReplicator
     type: Class
-    summary: "<p>高可用性と信頼性のレプリケート状態です。 </p>\n<p>\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。 インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-148\">高可用性と信頼性のレプリケート状態です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-148\">Replicates state for high availability and reliability.</span></span> </p>\n<p><span data-ttu-id=\"9b105-149\">\r\n\r\n  <b>注釈:</b>の既定の実装を提供、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>、 <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>、および<xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref>インターフェイスの実装と共に、ユーザーのサービスが使用できる、 <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>インターフェイスです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-149\">\r\n\r\n  <b>Remarks:</b>Provides the default implementation of the <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>, <xref uid=\"system.fabric._replicator\" data-throw-if-not-resolved=\"false\">system.fabric.Replicator</xref>, and <xref uid=\"system.fabric._primary_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.PrimaryReplicator</xref> interfaces, which user services can use, along with their implementation of the <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref> interface.</span></span> <span data-ttu-id=\"9b105-150\">インスタンス、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>クラスが経由で取得した、 <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator (system.fabric.StateProvider、system.fabric.ReplicatorSettings)</xref>メソッドにキャストできる<xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref>使用します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-150\">An instance of the <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> class is obtained via the <xref uid=\"system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)\" data-throw-if-not-resolved=\"false\">system.fabric.StatefulServicePartition#createReplicator( system.fabric.StateProvider, system.fabric.ReplicatorSettings)</xref> method, which can be cast to <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> for use.</span></span> </p>"
     syntax:
       content: public class FabricReplicator implements Replicator
   - uid: 'system.fabric._stateful_service_partition.createReplicator(StateProvider,ReplicatorSettings)'
@@ -329,19 +329,19 @@ references:
     nameWithType: 'StatefulServicePartition.createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
     fullName: 'FabricReplicator system.fabric.StatefulServicePartition.createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
     type: Method
-    summary: "<p>作成、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>指定された設定で、レプリカに返します。</p>\n<p>\r\n\r\n  <b>注釈:</b>の作成にこのメソッドを使用する必要があります、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>サービスとして、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> を実装するステートフルなサービス<xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>です。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-151\">作成、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>指定された設定で、レプリカに返します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-151\">Creates a <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> with the specified settings and returns it to the replica.</span></span></p>\n<p><span data-ttu-id=\"9b105-152\">\r\n\r\n  <b>注釈:</b>の作成にこのメソッドを使用する必要があります、 <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>サービスとして、 <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> を実装するステートフルなサービス<xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-152\">\r\n\r\n  <b>Remarks:</b>This method should be used to create a <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> to service as the <xref uid=\"system.fabric._state_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.StateReplicator</xref> for a stateful service that implements <xref uid=\"system.fabric._state_provider\" data-throw-if-not-resolved=\"false\">system.fabric.StateProvider</xref>.</span></span> </p>"
     syntax:
       content: 'public FabricReplicator createReplicator(StateProvider stateProvider, ReplicatorSettings replicatorSettings)'
       parameters:
         - id: stateProvider
           type: system.fabric._state_provider
-          description: <p><xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">System.fabric.StateProvider</xref>いる、返された<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>関連付けする必要があります。 これは、多くの場合、同じオブジェクトを実装する<xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>、特定のサービスを異なる方法で考慮することがありますが、します。 </p>
+          description: '<p><span data-ttu-id="9b105-153"><xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">System.fabric.StateProvider</xref>いる、返された<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref>関連付けする必要があります。</span><span class="sxs-lookup"><span data-stu-id="9b105-153">The <xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">system.fabric.StateProvider</xref> with which the returned <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">system.fabric.FabricReplicator</xref> should be associated.</span></span> <span data-ttu-id="9b105-154">これは、多くの場合、同じオブジェクトを実装する<xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>、特定のサービスを異なる方法で考慮することがありますが、します。</span><span class="sxs-lookup"><span data-stu-id="9b105-154">This is often the same object that implements <xref uid="system.fabric._stateful_service_replica" data-throw-if-not-resolved="false">system.fabric.StatefulServiceReplica</xref>, but certain services might be factored differently.</span></span> </p>'
         - id: replicatorSettings
           type: system.fabric._replicator_settings
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._replicator_settings\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings</xref>いる、返された<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>構成する必要があります。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-155\">\r\n\r\n  <xref uid=\"system.fabric._replicator_settings\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings</xref>いる、返された<xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref>構成する必要があります。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-155\">\r\n\r\n  <xref uid=\"system.fabric._replicator_settings\" data-throw-if-not-resolved=\"false\">system.fabric.ReplicatorSettings</xref> with which the returned <xref uid=\"system.fabric._fabric_replicator\" data-throw-if-not-resolved=\"false\">system.fabric.FabricReplicator</xref> should be configured.</span></span> </p>"
       return:
         type: system.fabric._fabric_replicator
-        description: <p>返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。 </p>
+        description: <p><span data-ttu-id="9b105-156">返します<xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9b105-156">Returns <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>.</span></span> </p>
   - uid: 'system.fabric._key_value_store_replica.changeRoleAsync(ReplicaRole,CancellationToken)'
     parent: system.fabric._key_value_store_replica
     href: system.fabric._key_value_store_replica.yml
@@ -349,19 +349,19 @@ references:
     nameWithType: 'KeyValueStoreReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
     fullName: 'CompletableFuture<String> system.fabric.KeyValueStoreReplica.changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
     type: Method
-    summary: "<p>レプリカとそのレプリケーターのレプリカのロールを変更します。</p>\n<p>\r\n\r\n  <b>注釈:</b>明示的に呼び出すのアプリケーション レプリカがから派生している場合は、このメソッドは必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。 ここでは、アプリケーションのレプリカをオーバーライドする必要があります<xref uid=\"system.fabric._key_value_store_replica.onChangeRoleAsync(ReplicaRole,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onChangeRoleAsync (system.fabric.ReplicaRole、system.fabric.CancellationToken)</xref>代わりにします。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-157\">レプリカとそのレプリケーターのレプリカのロールを変更します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-157\">Changes the replica role of the replica and its replicator.</span></span></p>\n<p><span data-ttu-id=\"9b105-158\">\r\n\r\n  <b>注釈:</b>明示的に呼び出すのアプリケーション レプリカがから派生している場合は、このメソッドは必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-158\">\r\n\r\n  <b>Remarks:</b>This method does not need to be called explicitly if the application replica derives from <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>, which is the recommended pattern.</span></span> <span data-ttu-id=\"9b105-159\">ここでは、アプリケーションのレプリカをオーバーライドする必要があります<xref uid=\"system.fabric._key_value_store_replica.onChangeRoleAsync(ReplicaRole,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onChangeRoleAsync (system.fabric.ReplicaRole、system.fabric.CancellationToken)</xref>代わりにします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-159\">In this case, the application replica should override <xref uid=\"system.fabric._key_value_store_replica.onChangeRoleAsync(ReplicaRole,CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onChangeRoleAsync(system.fabric.ReplicaRole, system.fabric.CancellationToken)</xref> instead.</span></span> </p>"
     syntax:
       content: 'public CompletableFuture<String> changeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)'
       parameters:
         - id: newRole
           type: system.fabric._replica_role
-          description: <p>ターゲット レプリカのロール。 </p>
+          description: <p><span data-ttu-id="9b105-160">ターゲット レプリカのロール。</span><span class="sxs-lookup"><span data-stu-id="9b105-160">The target replica role.</span></span> </p>
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-161\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-161\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: 06be942d
-        description: <p>このレプリカのアドレスを結果タスク。 </p>
+        description: <p><span data-ttu-id="9b105-162">このレプリカのアドレスを結果タスク。</span><span class="sxs-lookup"><span data-stu-id="9b105-162">A task whose result is the address of this replica.</span></span> </p>
   - uid: system.fabric._replica_role
     parent: system.fabric
     href: system.fabric._replica_role.yml
@@ -369,7 +369,7 @@ references:
     nameWithType: ReplicaRole
     fullName: system.fabric.ReplicaRole
     type: Enum
-    summary: <p>レプリカのロールを定義します。 </p>
+    summary: <p><span data-ttu-id="9b105-163">レプリカのロールを定義します。</span><span class="sxs-lookup"><span data-stu-id="9b105-163">Defines the replica role</span></span> </p>
     syntax:
       content: public enum ReplicaRole
   - uid: system.fabric._key_value_store_replica.closeAsync(CancellationToken)
@@ -379,16 +379,16 @@ references:
     nameWithType: KeyValueStoreReplica.closeAsync(CancellationToken cancellationToken)
     fullName: CompletableFuture<Void> system.fabric.KeyValueStoreReplica.closeAsync(CancellationToken cancellationToken)
     type: Method
-    summary: "<p>レプリカおよびレプリカ セットからオフラインになっているに備えて、レプリケーターを閉じます。 現在は使用しません。 将来使用するために予約されています。</p>\n<p>\r\n\r\n  <b>注釈:</b>レプリカが必ずしもから削除されていない永続的に、レプリカ セットと、後で再度開くことができます。 レプリカを閉じるための一般的な原因は、アップグレードまたは負荷分散の準備として正常にシャット ダウンします。 このメソッドは明示的に呼び出す場合は、アプリケーションのレプリカがから派生する必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。 ここでは、アプリケーションのレプリカをオーバーライドする必要があります<xref uid=\"system.fabric._key_value_store_replica.onCloseAsync(CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onCloseAsync(system.fabric.CancellationToken)</xref>代わりにします。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-164\">レプリカおよびレプリカ セットからオフラインになっているに備えて、レプリケーターを閉じます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-164\">Closes the replica and its replicator in preparation for going offline from a replica set.</span></span> <span data-ttu-id=\"9b105-165\">現在は使用しません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-165\">Currently unused.</span></span> <span data-ttu-id=\"9b105-166\">将来使用するために予約されています。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-166\">Reserved for future use.</span></span></p>\n<p><span data-ttu-id=\"9b105-167\">\r\n\r\n  <b>注釈:</b>レプリカが必ずしもから削除されていない永続的に、レプリカ セットと、後で再度開くことができます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-167\">\r\n\r\n  <b>Remarks:</b>The replica has not necessarily been removed permanently from the replica set and may be re-opened at a later time.</span></span> <span data-ttu-id=\"9b105-168\">レプリカを閉じるための一般的な原因は、アップグレードまたは負荷分散の準備として正常にシャット ダウンします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-168\">The most common causes for closing a replica is graceful shutdown in preparation for upgrade or load balancing.</span></span> <span data-ttu-id=\"9b105-169\">このメソッドは明示的に呼び出す場合は、アプリケーションのレプリカがから派生する必要はありません<xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>、これは、推奨パターン。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-169\">This method does not need to be called explicitly if the application replica derives from <xref uid=\"\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica</xref>, which is the recommended pattern.</span></span> <span data-ttu-id=\"9b105-170\">ここでは、アプリケーションのレプリカをオーバーライドする必要があります<xref uid=\"system.fabric._key_value_store_replica.onCloseAsync(CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onCloseAsync(system.fabric.CancellationToken)</xref>代わりにします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-170\">In this case, the application replica should override <xref uid=\"system.fabric._key_value_store_replica.onCloseAsync(CancellationToken)\" data-throw-if-not-resolved=\"false\">system.fabric.KeyValueStoreReplica#onCloseAsync(system.fabric.CancellationToken)</xref> instead.</span></span> </p>"
     syntax:
       content: public CompletableFuture<Void> closeAsync(CancellationToken cancellationToken)
       parameters:
         - id: cancellationToken
           type: system.fabric._cancellation_token
-          description: "<p>\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。 </p>"
+          description: "<p><span data-ttu-id=\"9b105-171\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref>操作の取り消し状態を表すオブジェクト。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-171\">\r\n\r\n  <xref uid=\"system.fabric._cancellation_token\" data-throw-if-not-resolved=\"false\">system.fabric.CancellationToken</xref> object to indicate the cancellation status of the operation.</span></span> </p>"
       return:
         type: db03ee24
-        description: <p>非同期操作を表すタスク。 </p>
+        description: <p><span data-ttu-id="9b105-172">非同期操作を表すタスク。</span><span class="sxs-lookup"><span data-stu-id="9b105-172">A task that represents the asynchronous operation.</span></span> </p>
   - uid: system.fabric._key_value_store_replica.abort()
     parent: system.fabric._key_value_store_replica
     href: system.fabric._key_value_store_replica.yml
@@ -396,7 +396,7 @@ references:
     nameWithType: KeyValueStoreReplica.abort()
     fullName: void system.fabric.KeyValueStoreReplica.abort()
     type: Method
-    summary: <p>このインスタンスを中止、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.KeyValueStoreReplica</xref>クラスです。 </p>
+    summary: <p><span data-ttu-id="9b105-173">このインスタンスを中止、 <xref uid="" data-throw-if-not-resolved="false">system.fabric.KeyValueStoreReplica</xref>クラスです。</span><span class="sxs-lookup"><span data-stu-id="9b105-173">Aborts this instance of the <xref uid="" data-throw-if-not-resolved="false">system.fabric.KeyValueStoreReplica</xref> class.</span></span> </p>
     syntax:
       content: public void abort()
   - uid: system.fabric._service_partition.reportFault(FaultType)
@@ -406,13 +406,13 @@ references:
     nameWithType: ServicePartition.reportFault(FaultType faultType)
     fullName: void system.fabric.ServicePartition.reportFault(FaultType faultType)
     type: Method
-    summary: "<p>負荷分散のメトリックのセットの負荷を報告します。 いつでも、負荷を報告することができます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.Collection</xref>の<xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">LoadMetric</xref>メソッドの 1 つまたは複数のプロパティを提供し、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>メソッド.</p>\n<p>\r\n\r\n  <b>注釈:</b>エラーは通常報告サービス コードが検出したときに回復できませんから一部を発行します。 </p>"
+    summary: "<p><span data-ttu-id=\"9b105-174\">負荷分散のメトリックのセットの負荷を報告します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-174\">Reports the load for a set of load balancing metrics.</span></span> <span data-ttu-id=\"9b105-175\">いつでも、負荷を報告することができます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.Collection</xref>の<xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">LoadMetric</xref>メソッドの 1 つまたは複数のプロパティを提供し、 <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref>メソッド.</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-175\">The load can be reported at any time via the <xref uid=\"\" data-throw-if-not-resolved=\"false\">java.util.Collection</xref> of <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">LoadMetric</xref> method and provides one or more properties of the <xref uid=\"system.fabric._load_metric\" data-throw-if-not-resolved=\"false\">system.fabric.LoadMetric</xref> method.</span></span></p>\n<p><span data-ttu-id=\"9b105-176\">\r\n\r\n  <b>注釈:</b>エラーは通常報告サービス コードが検出したときに回復できませんから一部を発行します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9b105-176\">\r\n\r\n  <b>Remarks:</b>A fault is typically reported when the service code encounters some issue from which it cannot recover.</span></span> </p>"
     syntax:
       content: public void reportFault(FaultType faultType)
       parameters:
         - id: faultType
           type: system.fabric._fault_type
-          description: <p><xref uid="system.fabric._load_metric" data-throw-if-not-resolved="false">System.fabric.LoadMetric</xref>サービスで検出されました。 </p>
+          description: <p><span data-ttu-id="9b105-177"><xref uid="system.fabric._load_metric" data-throw-if-not-resolved="false">System.fabric.LoadMetric</xref>サービスで検出されました。</span><span class="sxs-lookup"><span data-stu-id="9b105-177">The <xref uid="system.fabric._load_metric" data-throw-if-not-resolved="false">system.fabric.LoadMetric</xref> that the service has encountered.</span></span> </p>
   - uid: system.fabric._state_provider
     parent: system.fabric
     href: system.fabric._state_provider.yml
@@ -420,7 +420,7 @@ references:
     nameWithType: StateProvider
     fullName: system.fabric.StateProvider
     type: Interface
-    summary: <p>サービスが対話するために実装する必要がありますの動作を定義、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。 </p>
+    summary: <p><span data-ttu-id="9b105-178">サービスが対話するために実装する必要がありますの動作を定義、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>です。</span><span class="sxs-lookup"><span data-stu-id="9b105-178">Defines the behavior that a service must implement to interact with the <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>.</span></span> </p>
     syntax:
       content: public interface StateProvider
   - uid: system.fabric._state_replicator
@@ -430,6 +430,6 @@ references:
     nameWithType: StateReplicator
     fullName: system.fabric.StateReplicator
     type: Interface
-    summary: <p>公開のレプリケーション関連の機能、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>クラスによって使用されている<xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">StateProvider</xref>を高可用性を保証する状態をレプリケートします。 </p>
+    summary: <p><span data-ttu-id="9b105-179">公開のレプリケーション関連の機能、 <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref>クラスによって使用されている<xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">StateProvider</xref>を高可用性を保証する状態をレプリケートします。</span><span class="sxs-lookup"><span data-stu-id="9b105-179">Exposes replication related functions of the <xref uid="system.fabric._fabric_replicator" data-throw-if-not-resolved="false">FabricReplicator</xref> class that are used by <xref uid="system.fabric._state_provider" data-throw-if-not-resolved="false">StateProvider</xref> to replicate state to ensure high availability.</span></span> </p>
     syntax:
       content: public interface StateReplicator

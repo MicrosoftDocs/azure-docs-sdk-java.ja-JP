@@ -27,7 +27,7 @@ items:
       path: elastic-db-tools/src/main/java/com/microsoft/azure/elasticdb/shard/mapper/IShardMapper.java
       startLine: 21
     package: com.microsoft.azure.elasticdb.shard.mapper
-    summary: <p>シャード マップへのキーのコレクションのコンテナーです。 </p>
+    summary: <p><span data-ttu-id="9f006-101">シャード マップへのキーのコレクションのコンテナーです。</span><span class="sxs-lookup"><span data-stu-id="9f006-101">Container for a collection of keys to shards mappings.</span></span> </p>
     syntax:
       content: 'public interface IShardMapper<MappingT extends IShardProvider,ValueT>'
       typeParameters:
@@ -50,14 +50,14 @@ items:
       startLine: 67
     package: com.microsoft.azure.elasticdb.shard.mapper
     summary: |-
-      <p>マッピングを追加します。</p>
+      <p><span data-ttu-id="9f006-102">マッピングを追加します。</span><span class="sxs-lookup"><span data-stu-id="9f006-102">Adds a mapping.</span></span></p>
       <p></p>
     syntax:
       content: public MappingT add(MappingT mapping)
       parameters:
         - id: mapping
           type: e8a622a9
-          description: <p>マッピングが追加されます。 </p>
+          description: <p><span data-ttu-id="9f006-103">マッピングが追加されます。</span><span class="sxs-lookup"><span data-stu-id="9f006-103">Mapping being added.</span></span> </p>
       return:
         type: e8a622a9
   - uid: 'com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper.lookup(ValueT,LookupOptions)'
@@ -77,20 +77,20 @@ items:
       startLine: 89
     package: com.microsoft.azure.elasticdb.shard.mapper
     summary: |-
-      <p>キーの値を検索し、対応するマッピングを返します。</p>
+      <p><span data-ttu-id="9f006-104">キーの値を検索し、対応するマッピングを返します。</span><span class="sxs-lookup"><span data-stu-id="9f006-104">Looks up the key value and returns the corresponding mapping.</span></span></p>
       <p></p>
     syntax:
       content: 'public MappingT lookup(ValueT key, LookupOptions lookupOptions)'
       parameters:
         - id: key
           type: 0fb6b535
-          description: <p>キーの値を入力します。 </p>
+          description: <p><span data-ttu-id="9f006-105">キーの値を入力します。</span><span class="sxs-lookup"><span data-stu-id="9f006-105">Input key value.</span></span> </p>
         - id: lookupOptions
           type: com.microsoft.azure.elasticdb.shard.base._lookup_options
-          description: <p>参照のキャッシュまたは記憶域を使用するかどうか。 </p>
+          description: <p><span data-ttu-id="9f006-106">参照のキャッシュまたは記憶域を使用するかどうか。</span><span class="sxs-lookup"><span data-stu-id="9f006-106">Whether to use cache and/or storage for lookups.</span></span> </p>
       return:
         type: e8a622a9
-        description: <p>マッピングには、キーの値が含まれます。 </p>
+        description: <p><span data-ttu-id="9f006-107">マッピングには、キーの値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="9f006-107">Mapping that contains the key value.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper.openConnectionForKey(ValueT,String)'
     id: 'openConnectionForKey(ValueT,String)'
     parent: com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper
@@ -133,23 +133,23 @@ items:
       startLine: 38
     package: com.microsoft.azure.elasticdb.shard.mapper
     summary: |-
-      <p>指定されたキーの値には、マッピングに、キーの値を含むシャードへの SqlConnection を取得します。</p>
+      <p><span data-ttu-id="9f006-108">指定されたキーの値には、マッピングに、キーの値を含むシャードへの SqlConnection を取得します。</span><span class="sxs-lookup"><span data-stu-id="9f006-108">Given a key value, obtains a SqlConnection to the shard in the mapping that contains the key value.</span></span></p>
       <p></p>
     syntax:
       content: 'public Connection openConnectionForKey(ValueT key, String connectionString, ConnectionOptions options)'
       parameters:
         - id: key
           type: 0fb6b535
-          description: <p>キーの値を入力します。 </p>
+          description: <p><span data-ttu-id="9f006-109">キーの値を入力します。</span><span class="sxs-lookup"><span data-stu-id="9f006-109">Input key value.</span></span> </p>
         - id: connectionString
           type: '26831127'
-          description: <p>データ ソースとデータベースの資格情報で接続文字列は、キーの参照操作の結果から取得されます。 </p>
+          description: '<p><span data-ttu-id="9f006-110">データ ソースとデータベースの資格情報で接続文字列は、キーの参照操作の結果から取得されます。</span><span class="sxs-lookup"><span data-stu-id="9f006-110">Connection string with credential information, the DataSource and Database are obtained from the results of the lookup operation for key.</span></span> </p>'
         - id: options
           type: com.microsoft.azure.elasticdb.shard.mapper._connection_options
-          description: <p>検証操作で実行するためのオプションには、接続が開かれます。 </p>
+          description: <p><span data-ttu-id="9f006-111">検証操作で実行するためのオプションには、接続が開かれます。</span><span class="sxs-lookup"><span data-stu-id="9f006-111">Options for validation operations to perform on opened connection.</span></span> </p>
       return:
         type: 8270ccc2
-        description: <p>開かれた SqlConnection でです。 </p>
+        description: <p><span data-ttu-id="9f006-112">開かれた SqlConnection でです。</span><span class="sxs-lookup"><span data-stu-id="9f006-112">An opened SqlConnection.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper.openConnectionForKeyAsync(ValueT,String)'
     id: 'openConnectionForKeyAsync(ValueT,String)'
     parent: com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper
@@ -192,23 +192,23 @@ items:
       startLine: 57
     package: com.microsoft.azure.elasticdb.shard.mapper
     summary: |-
-      <p>指定されたキーの値には、マッピングに、キーの値を含むシャードへの SqlConnection を非同期的に取得します。</p>
+      <p><span data-ttu-id="9f006-113">指定されたキーの値には、マッピングに、キーの値を含むシャードへの SqlConnection を非同期的に取得します。</span><span class="sxs-lookup"><span data-stu-id="9f006-113">Given a key value, asynchronously obtains a SqlConnection to the shard in the mapping that contains the key value.</span></span></p>
       <p></p>
     syntax:
       content: 'public Callable<Connection> openConnectionForKeyAsync(ValueT key, String connectionString, ConnectionOptions options)'
       parameters:
         - id: key
           type: 0fb6b535
-          description: <p>キーの値を入力します。 </p>
+          description: <p><span data-ttu-id="9f006-114">キーの値を入力します。</span><span class="sxs-lookup"><span data-stu-id="9f006-114">Input key value.</span></span> </p>
         - id: connectionString
           type: '26831127'
-          description: <p>データ ソースとデータベースの資格情報で接続文字列は、キーの参照操作の結果から取得されます。 </p>
+          description: '<p><span data-ttu-id="9f006-115">データ ソースとデータベースの資格情報で接続文字列は、キーの参照操作の結果から取得されます。</span><span class="sxs-lookup"><span data-stu-id="9f006-115">Connection string with credential information, the DataSource and Database are obtained from the results of the lookup operation for key.</span></span> </p>'
         - id: options
           type: com.microsoft.azure.elasticdb.shard.mapper._connection_options
-          description: <p>検証操作で実行するためのオプションには、接続が開かれます。 </p>
+          description: <p><span data-ttu-id="9f006-116">検証操作で実行するためのオプションには、接続が開かれます。</span><span class="sxs-lookup"><span data-stu-id="9f006-116">Options for validation operations to perform on opened connection.</span></span> </p>
       return:
         type: 68f3503d
-        description: <p>開かれた SqlConnection でです。 </p>
+        description: <p><span data-ttu-id="9f006-117">開かれた SqlConnection でです。</span><span class="sxs-lookup"><span data-stu-id="9f006-117">An opened SqlConnection.</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper.remove(MappingT,UUID)'
     id: 'remove(MappingT,UUID)'
     parent: com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper
@@ -226,17 +226,17 @@ items:
       startLine: 77
     package: com.microsoft.azure.elasticdb.shard.mapper
     summary: |-
-      <p>マッピングを削除します。</p>
+      <p><span data-ttu-id="9f006-118">マッピングを削除します。</span><span class="sxs-lookup"><span data-stu-id="9f006-118">Removes a mapping.</span></span></p>
       <p></p>
     syntax:
       content: 'public void remove(MappingT mapping, UUID lockOwnerId)'
       parameters:
         - id: mapping
           type: e8a622a9
-          description: <p>マッピングが削除されます。 </p>
+          description: <p><span data-ttu-id="9f006-119">マッピングが削除されます。</span><span class="sxs-lookup"><span data-stu-id="9f006-119">Mapping being removed.</span></span> </p>
         - id: lockOwnerId
           type: add9545a
-          description: <p>マッピングのロック所有者の id </p>
+          description: <p><span data-ttu-id="9f006-120">マッピングのロック所有者の id</span><span class="sxs-lookup"><span data-stu-id="9f006-120">Lock owner id of the mapping</span></span> </p>
   - uid: 'com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper.tryLookup(ValueT,LookupOptions,ReferenceObjectHelper<MappingT>)'
     id: 'tryLookup(ValueT,LookupOptions,ReferenceObjectHelper<MappingT>)'
     parent: com.microsoft.azure.elasticdb.shard.mapper._i_shard_mapper
@@ -254,23 +254,23 @@ items:
       startLine: 103
     package: com.microsoft.azure.elasticdb.shard.mapper
     summary: |-
-      <p>キーの値を検索しようとし、対応するマッピングが返されます。</p>
+      <p><span data-ttu-id="9f006-121">キーの値を検索しようとし、対応するマッピングが返されます。</span><span class="sxs-lookup"><span data-stu-id="9f006-121">Tries to looks up the key value and returns the corresponding mapping.</span></span></p>
       <p></p>
     syntax:
       content: 'public boolean tryLookup(ValueT key, LookupOptions lookupOptions, ReferenceObjectHelper<MappingT> mapping)'
       parameters:
         - id: key
           type: 0fb6b535
-          description: <p>キーの値を入力します。 </p>
+          description: <p><span data-ttu-id="9f006-122">キーの値を入力します。</span><span class="sxs-lookup"><span data-stu-id="9f006-122">Input key value.</span></span> </p>
         - id: lookupOptions
           type: com.microsoft.azure.elasticdb.shard.base._lookup_options
-          description: <p>参照のキャッシュまたは記憶域を使用するかどうか。 </p>
+          description: <p><span data-ttu-id="9f006-123">参照のキャッシュまたは記憶域を使用するかどうか。</span><span class="sxs-lookup"><span data-stu-id="9f006-123">Whether to use cache and/or storage for lookups.</span></span> </p>
         - id: mapping
           type: 1d490b8c
-          description: <p>マッピングには、キーの値が含まれます。 </p>
+          description: <p><span data-ttu-id="9f006-124">マッピングには、キーの値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="9f006-124">Mapping that contains the key value.</span></span> </p>
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>マッピングが見つかった場合、<code>false</code>それ以外の場合。 </p>"
+        description: "<p><span data-ttu-id=\"9f006-125\">\r\n\r\n  <code>true</code>マッピングが見つかった場合、<code>false</code>それ以外の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"9f006-125\">\r\n\r\n  <code>true</code> if mapping is found, <code>false</code> otherwise.</span></span> </p>"
 references:
   - uid: e8a622a9
     spec.java:
@@ -341,7 +341,7 @@ references:
     nameWithType: IShardProvider<ValueT>
     fullName: com.microsoft.azure.elasticdb.shard.base.IShardProvider<ValueT>
     type: Interface
-    summary: <p>提供する機能を表す、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>と共に、関連付けられた値。 </p>
+    summary: <p><span data-ttu-id="9f006-126">提供する機能を表す、<xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">シャード</xref>と共に、関連付けられた値。</span><span class="sxs-lookup"><span data-stu-id="9f006-126">Represents capabilities to provide a <xref uid="com.microsoft.azure.elasticdb.shard.base._shard" data-throw-if-not-resolved="false">Shard</xref> along with an associated value.</span></span> </p>
     syntax:
       content: public interface IShardProvider<ValueT>
       typeParameters:
@@ -362,6 +362,6 @@ references:
     nameWithType: LookupOptions
     fullName: com.microsoft.azure.elasticdb.shard.base.LookupOptions
     type: Class
-    summary: <p>参照操作をマッピング検索する場所のマッピングを指定します。 </p>
+    summary: <p><span data-ttu-id="9f006-127">参照操作をマッピング検索する場所のマッピングを指定します。</span><span class="sxs-lookup"><span data-stu-id="9f006-127">Specifies where mapping lookup operations will search for mappings.</span></span> </p>
     syntax:
       content: public class LookupOptions

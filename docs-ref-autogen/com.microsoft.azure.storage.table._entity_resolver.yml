@@ -21,14 +21,14 @@ items:
       startLine: 36
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
-      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p><span data-ttu-id="c5658-101">取得されたエンティティでクライアント側の射影を実行するインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="c5658-101">An interface to perform client side projection on a retrieved entity.</span></span> <span data-ttu-id="c5658-102"><xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c5658-102">An <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref> instance must implement a  method projecting the entity data represented by the parameters passed in as a new instance of the type specified by the type parameter.</span></span> </p>
+      <p><span data-ttu-id="c5658-103">このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="c5658-103">This interface is useful for converting directly from table entity data to a client object type without requiring a separate table entity class type that deserializes every property individually.</span></span> <span data-ttu-id="c5658-104">クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。</span><span class="sxs-lookup"><span data-stu-id="c5658-104">For example, a client can perform a client side projection of a <em>Customer</em> entity by simply returning the  for the <em>CustomerName</em> property of each entity.</span></span> <span data-ttu-id="c5658-105">このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</span><span class="sxs-lookup"><span data-stu-id="c5658-105">The result of this projection will be a collection of s containing each customer name.</span></span></p>
       <p></p>
     syntax: &ref_1
       content: public interface EntityResolver<T>
       typeParameters:
         - type: 8ce1ecb9
-          description: <p>競合回避モジュールを生成するオブジェクトの型。 </p>
+          description: <p><span data-ttu-id="c5658-106">競合回避モジュールを生成するオブジェクトの型。</span><span class="sxs-lookup"><span data-stu-id="c5658-106">The type of the object that the resolver produces.</span></span> </p>
   - uid: 'com.microsoft.azure.storage.table._entity_resolver.resolve(String,String,Date,HashMap<String, EntityProperty>,String)'
     id: 'resolve(String,String,Date,HashMap<String, EntityProperty>,String)'
     parent: com.microsoft.azure.storage.table._entity_resolver
@@ -46,32 +46,32 @@ items:
       startLine: 58
     package: com.microsoft.azure.storage.table
     summary: |-
-      <p>指定したテーブル エンティティのデータの予測を含む型の新しいオブジェクト インスタンスへの参照を返します。</p>
+      <p><span data-ttu-id="c5658-107">指定したテーブル エンティティのデータの予測を含む型の新しいオブジェクト インスタンスへの参照を返します。</span><span class="sxs-lookup"><span data-stu-id="c5658-107">Returns a reference to a new object instance of type  containing a projection of the specified table entity data.</span></span></p>
       <p></p>
     syntax:
       content: 'public T resolve(String partitionKey, String rowKey, Date timeStamp, HashMap<String, EntityProperty> properties, String etag)'
       parameters:
         - id: partitionKey
           type: '26831127'
-          description: <p>A<code>String</code>エンティティの PartitionKey 値を格納します。 </p>
+          description: <p><span data-ttu-id="c5658-108">A<code>String</code>エンティティの PartitionKey 値を格納します。</span><span class="sxs-lookup"><span data-stu-id="c5658-108">A <code>String</code> containing the PartitionKey value for the entity.</span></span> </p>
         - id: rowKey
           type: '26831127'
-          description: <p>A<code>String</code>エンティティの RowKey 値を格納します。 </p>
+          description: <p><span data-ttu-id="c5658-109">A<code>String</code>エンティティの RowKey 値を格納します。</span><span class="sxs-lookup"><span data-stu-id="c5658-109">A <code>String</code> containing the RowKey value for the entity.</span></span> </p>
         - id: timeStamp
           type: '12977444'
-          description: <p>A<code>java.util.Date</code>エンティティのタイムスタンプ値を格納します。 </p>
+          description: <p><span data-ttu-id="c5658-110">A<code>java.util.Date</code>エンティティのタイムスタンプ値を格納します。</span><span class="sxs-lookup"><span data-stu-id="c5658-110">A <code>java.util.Date</code> containing the Timestamp value for the entity.</span></span> </p>
         - id: properties
           type: 292b5718com.microsoft.azure.storage.table._entity_propertya08ddfce
-          description: <p><code>java.util.HashMap</code>の<code>String</code>プロパティの名前を<xref uid="com.microsoft.azure.storage.table._entity_property" data-throw-if-not-resolved="false">EntityProperty</xref>テーブル エンティティのデータを表すデータ型と値のペア。 </p>
+          description: <p><span data-ttu-id="c5658-111"><code>java.util.HashMap</code>の<code>String</code>プロパティの名前を<xref uid="com.microsoft.azure.storage.table._entity_property" data-throw-if-not-resolved="false">EntityProperty</xref>テーブル エンティティのデータを表すデータ型と値のペア。</span><span class="sxs-lookup"><span data-stu-id="c5658-111">The <code>java.util.HashMap</code> of <code>String</code> property names to <xref uid="com.microsoft.azure.storage.table._entity_property" data-throw-if-not-resolved="false">EntityProperty</xref> data type and value pairs representing the table entity data.</span></span> </p>
         - id: etag
           type: '26831127'
-          description: <p>A<code>String</code>エンティティの Etag が含まれています。 </p>
+          description: <p><span data-ttu-id="c5658-112">A<code>String</code>エンティティの Etag が含まれています。</span><span class="sxs-lookup"><span data-stu-id="c5658-112">A <code>String</code> containing the Etag for the entity.</span></span> </p>
       return:
         type: 8ce1ecb9
-        description: <p>型のオブジェクト インスタンスへの参照を<code>T</code>テーブル エンティティのパラメーターの投影として構築します。 </p>
+        description: <p><span data-ttu-id="c5658-113">型のオブジェクト インスタンスへの参照を<code>T</code>テーブル エンティティのパラメーターの投影として構築します。</span><span class="sxs-lookup"><span data-stu-id="c5658-113">A reference to an object instance of type <code>T</code> constructed as a projection of the table entity parameters.</span></span> </p>
     exceptions:
       - type: com.microsoft.azure.storage._storage_exception
-        description: <p>場合は、操作中にエラーが発生します。 </p>
+        description: <p><span data-ttu-id="c5658-114">場合は、操作中にエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="c5658-114">if an error occurs during the operation.</span></span> </p>
 references:
   - uid: 8ce1ecb9
     spec.java:
@@ -107,7 +107,7 @@ references:
     nameWithType: EntityProperty
     fullName: com.microsoft.azure.storage.table.EntityProperty
     type: Class
-    summary: "<p>テーブル エンティティの単一の型指定されたプロパティ値を表すクラス。 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>ストアのデータ型として、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>です。 可能性のあるオブジェクトの型がプリミティブ型ではなく、値がシリアル化およびとして格納されている、します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>のサポートされている値の型のオーバー ロードされたコンス トラクターとメソッドのオーバー ロードを提供します。 コンス トラクターまたはメソッドのセットの各オーバー ロードされた、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>とパラメーターの型に基づいて、適切な値をシリアル化します。 </p>\n\n<p>いずれかを使用して、<em>型</em>逆シリアル化する方法、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>として適切な Java の型。 メソッドがスローされます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ParseException</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>場合、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> Java の型として逆シリアル化することはできません。 </p>"
+    summary: "<p><span data-ttu-id=\"c5658-115\">テーブル エンティティの単一の型指定されたプロパティ値を表すクラス。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-115\">A class which represents a single typed property value in a table entity.</span></span> <span data-ttu-id=\"c5658-116\"><xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>ストアのデータ型として、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-116\">An <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> stores the data type as an <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>.</span></span> <span data-ttu-id=\"c5658-117\">可能性のあるオブジェクトの型がプリミティブ型ではなく、値がシリアル化およびとして格納されている、します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-117\">The value, which may be  for object types, but not for primitive types, is serialized and stored as a .</span></span> </p>\n<p><span data-ttu-id=\"c5658-118\">\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>のサポートされている値の型のオーバー ロードされたコンス トラクターとメソッドのオーバー ロードを提供します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-118\">\r\n\r\n  <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> provides overloaded constructors and overloads of the  method for supported value types.</span></span> <span data-ttu-id=\"c5658-119\">コンス トラクターまたはメソッドのセットの各オーバー ロードされた、 <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref>とパラメーターの型に基づいて、適切な値をシリアル化します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-119\">Each overloaded constructor or  method sets the <xref uid=\"com.microsoft.azure.storage.table._edm_type\" data-throw-if-not-resolved=\"false\">EdmType</xref> and serializes the value appropriately based on the parameter type.</span></span> </p>\n\n<p><span data-ttu-id=\"c5658-120\">いずれかを使用して、<em>型</em>逆シリアル化する方法、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref>として適切な Java の型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-120\">Use one of the <em>Type</em> methods to deserialize an <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> as the appropriate Java type.</span></span> <span data-ttu-id=\"c5658-121\">メソッドがスローされます、 <xref uid=\"\" data-throw-if-not-resolved=\"false\">ParseException</xref>または<xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref>場合、 <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> Java の型として逆シリアル化することはできません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"c5658-121\">The method will throw a <xref uid=\"\" data-throw-if-not-resolved=\"false\">ParseException</xref> or <xref uid=\"\" data-throw-if-not-resolved=\"false\">IllegalArgumentException</xref> if the <xref uid=\"com.microsoft.azure.storage.table._entity_property\" data-throw-if-not-resolved=\"false\">EntityProperty</xref> cannot be deserialized as the Java type.</span></span> </p>"
     syntax:
       content: public class EntityProperty
   - uid: com.microsoft.azure.storage._storage_exception
@@ -117,7 +117,7 @@ references:
     nameWithType: StorageException
     fullName: com.microsoft.azure.storage.StorageException
     type: Class
-    summary: <p>Microsoft Azure ストレージ サービスの例外を表します。 </p>
+    summary: <p><span data-ttu-id="c5658-122">Microsoft Azure ストレージ サービスの例外を表します。</span><span class="sxs-lookup"><span data-stu-id="c5658-122">Represents an exception for the Microsoft Azure storage service.</span></span> </p>
     syntax:
       content: public class StorageException
   - uid: com.microsoft.azure.storage.table._entity_resolver
@@ -128,7 +128,7 @@ references:
     fullName: com.microsoft.azure.storage.table.EntityResolver<T>
     type: Interface
     summary: |-
-      <p>取得されたエンティティでクライアント側の射影を実行するインターフェイスです。 <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。 </p>
-      <p>このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。 クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。 このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</p>
+      <p><span data-ttu-id="c5658-123">取得されたエンティティでクライアント側の射影を実行するインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="c5658-123">An interface to perform client side projection on a retrieved entity.</span></span> <span data-ttu-id="c5658-124"><xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref>インスタンスは、型パラメーターによって指定された型の新しいインスタンスとして渡されるパラメーターによって表されるエンティティ データを投影するメソッドを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c5658-124">An <xref uid="com.microsoft.azure.storage.table._entity_resolver" data-throw-if-not-resolved="false">EntityResolver</xref> instance must implement a  method projecting the entity data represented by the parameters passed in as a new instance of the type specified by the type parameter.</span></span> </p>
+      <p><span data-ttu-id="c5658-125">このインターフェイスは、別のテーブル エンティティ クラス型であるすべてのプロパティを個別に逆シリアル化を必要とせず、エンティティ データをテーブルから直接クライアント オブジェクトの型へ変換するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="c5658-125">This interface is useful for converting directly from table entity data to a client object type without requiring a separate table entity class type that deserializes every property individually.</span></span> <span data-ttu-id="c5658-126">クライアントがのクライアント側の射影を実行するなど、<em>顧客</em>エンティティだけを返すことによっての<em>CustomerName</em>各エンティティのプロパティです。</span><span class="sxs-lookup"><span data-stu-id="c5658-126">For example, a client can perform a client side projection of a <em>Customer</em> entity by simply returning the  for the <em>CustomerName</em> property of each entity.</span></span> <span data-ttu-id="c5658-127">このプロジェクションの結果は、各顧客の名前を表す秒のコレクションになります。</span><span class="sxs-lookup"><span data-stu-id="c5658-127">The result of this projection will be a collection of s containing each customer name.</span></span></p>
       <p></p>
     syntax: *ref_1

@@ -27,7 +27,7 @@ items:
       path: azure-eventhubs-eph/src/main/java/com/microsoft/azure/eventprocessorhost/Checkpoint.java
       startLine: 18
     package: com.microsoft.azure.eventprocessorhost
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>クラスがパブリックで上級ユーザーを実装できるように、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>です。 実装している場合を除き、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>このクラスのオブジェクトを直接扱う必要はありません。 </p>\n\n<p>A<xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>組だけでは基本的にします。 その後、作成時に設定し、変更できない固定パーティション id を持つし、そのパーティションで、メッセージ内の位置を示すオフセット/sequenceNumber ペアを関連付けます。 </p>"
+    summary: "<p><span data-ttu-id=\"b21bc-101\">\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>クラスがパブリックで上級ユーザーを実装できるように、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-101\">\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">Checkpoint</xref> class is public so that advanced users can implement an <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>.</span></span> <span data-ttu-id=\"b21bc-102\">実装している場合を除き、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>このクラスのオブジェクトを直接扱う必要はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-102\">Unless you are implementing <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref> you should not have to deal with objects of this class directly.</span></span> </p>\n\n<p><span data-ttu-id=\"b21bc-103\">A<xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>組だけでは基本的にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-103\">A <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">Checkpoint</xref> is essentially just a tuple.</span></span> <span data-ttu-id=\"b21bc-104\">その後、作成時に設定し、変更できない固定パーティション id を持つし、そのパーティションで、メッセージ内の位置を示すオフセット/sequenceNumber ペアを関連付けます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-104\">It has a fixed partition id, set at creation time and immutable thereafter, and associates that with an offset/sequenceNumber pair which indicates a position within the messages in that partition.</span></span> </p>"
     syntax: &ref_1
       content: public class Checkpoint
     inheritance:
@@ -49,7 +49,7 @@ items:
       startLine: 53
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>指定されたチェックポイントの複製であるチェックポイントを作成します。</p>
+      <p><span data-ttu-id="b21bc-105">指定されたチェックポイントの複製であるチェックポイントを作成します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-105">Create a checkpoint which is a duplicate of the given checkpoint.</span></span></p>
       <p></p>
     syntax:
       content: public Checkpoint(Checkpoint source)
@@ -73,7 +73,7 @@ items:
       startLine: 29
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>オフセット/sequenceNumber 最初の使用可能なメッセージに設定でチェックポイントを作成します。</p>
+      <p><span data-ttu-id="b21bc-106">オフセット/sequenceNumber 最初の使用可能なメッセージに設定でチェックポイントを作成します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-106">Create a checkpoint with offset/sequenceNumber set to the first available message.</span></span></p>
       <p></p>
     syntax:
       content: public Checkpoint(String partitionId)
@@ -97,7 +97,7 @@ items:
       startLine: 41
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>SequenceNumber と指定したオフセットでチェックポイントを作成します。</p>
+      <p><span data-ttu-id="b21bc-107">SequenceNumber と指定したオフセットでチェックポイントを作成します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-107">Create a checkpoint with the given offset and sequenceNumber.</span></span></p>
       <p></p>
     syntax:
       content: 'public Checkpoint(String partitionId, String offset, long sequenceNumber)'
@@ -125,13 +125,13 @@ items:
       startLine: 76
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>オフセットを返します。</p>
+      <p><span data-ttu-id="b21bc-108">オフセットを返します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-108">Return the offset.</span></span></p>
       <p></p>
     syntax:
       content: public String getOffset()
       return:
         type: '26831127'
-        description: <p>現在では、文字列値をオフセットします。 </p>
+        description: <p><span data-ttu-id="b21bc-109">現在では、文字列値をオフセットします。</span><span class="sxs-lookup"><span data-stu-id="b21bc-109">the current offset string value.</span></span> </p>
   - uid: com.microsoft.azure.eventprocessorhost._checkpoint.getPartitionId()
     id: getPartitionId()
     parent: com.microsoft.azure.eventprocessorhost._checkpoint
@@ -149,13 +149,13 @@ items:
       startLine: 107
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>パーティション id を取得します。パーティション id が変更可能であるために、対応する set アクセス操作子はありません。</p>
+      <p><span data-ttu-id="b21bc-110">パーティション id を取得します。パーティション id が変更可能であるために、対応する set アクセス操作子はありません。</span><span class="sxs-lookup"><span data-stu-id="b21bc-110">Get the partition id. There is no corresponding setter because the partition id is immutable.</span></span></p>
       <p></p>
     syntax:
       content: public String getPartitionId()
       return:
         type: '26831127'
-        description: <p>処理が関連付けられている現在のパーティション id を取得します。 </p>
+        description: <p><span data-ttu-id="b21bc-111">処理が関連付けられている現在のパーティション id を取得します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-111">get the current partition id that the processing is associated with.</span></span> </p>
   - uid: com.microsoft.azure.eventprocessorhost._checkpoint.getSequenceNumber()
     id: getSequenceNumber()
     parent: com.microsoft.azure.eventprocessorhost._checkpoint
@@ -173,13 +173,13 @@ items:
       startLine: 97
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>シーケンス番号を取得します。</p>
+      <p><span data-ttu-id="b21bc-112">シーケンス番号を取得します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-112">Get the sequence number.</span></span></p>
       <p></p>
     syntax:
       content: public long getSequenceNumber()
       return:
         type: 0364520f
-        description: <p>現在のシーケンス番号。 </p>
+        description: <p><span data-ttu-id="b21bc-113">現在のシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="b21bc-113">the current sequence number.</span></span> </p>
   - uid: com.microsoft.azure.eventprocessorhost._checkpoint.setOffset(String)
     id: setOffset(String)
     parent: com.microsoft.azure.eventprocessorhost._checkpoint
@@ -197,14 +197,14 @@ items:
       startLine: 66
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>オフセットを設定します。 2 つの値は、イベント ハブに接続しているために、setSequenceNumber のペアにする必要があります。</p>
+      <p><span data-ttu-id="b21bc-114">オフセットを設定します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-114">Set the offset.</span></span> <span data-ttu-id="b21bc-115">2 つの値は、イベント ハブに接続しているために、setSequenceNumber のペアにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="b21bc-115">Should be paired with setSequenceNumber since the two values are connected in the Event Hub.</span></span></p>
       <p></p>
     syntax:
       content: public void setOffset(String newOffset)
       parameters:
         - id: newOffset
           type: '26831127'
-          description: <p>永続化する新しいオフセットします。 </p>
+          description: <p><span data-ttu-id="b21bc-116">永続化する新しいオフセットします。</span><span class="sxs-lookup"><span data-stu-id="b21bc-116">the new offset to be persisted.</span></span> </p>
   - uid: com.microsoft.azure.eventprocessorhost._checkpoint.setSequenceNumber(long)
     id: setSequenceNumber(long)
     parent: com.microsoft.azure.eventprocessorhost._checkpoint
@@ -222,14 +222,14 @@ items:
       startLine: 87
     package: com.microsoft.azure.eventprocessorhost
     summary: |-
-      <p>シーケンス番号を設定します。 2 つの値は、イベント ハブに接続しているために、setOffset のペアにする必要があります。</p>
+      <p><span data-ttu-id="b21bc-117">シーケンス番号を設定します。</span><span class="sxs-lookup"><span data-stu-id="b21bc-117">Set the sequence number.</span></span> <span data-ttu-id="b21bc-118">2 つの値は、イベント ハブに接続しているために、setOffset のペアにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="b21bc-118">Should be paired with setOffset since the two values are connected in the Event Hub.</span></span></p>
       <p></p>
     syntax:
       content: public void setSequenceNumber(long newSequenceNumber)
       parameters:
         - id: newSequenceNumber
           type: 0364520f
-          description: <p>永続化する新しいシーケンス番号。 </p>
+          description: <p><span data-ttu-id="b21bc-119">永続化する新しいシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="b21bc-119">the new sequence number to be persisted.</span></span> </p>
 references:
   - uid: '26831127'
     spec.java:
@@ -276,7 +276,7 @@ references:
     nameWithType: PartitionReceiver.START_OF_STREAM
     fullName: final String com.microsoft.azure.eventhubs.PartitionReceiver.START_OF_STREAM
     type: Field
-    summary: <p>これは、EventHub のパーティションのストリームの開始を表すために定義された定数です。 </p>
+    summary: <p><span data-ttu-id="b21bc-120">これは、EventHub のパーティションのストリームの開始を表すために定義された定数です。</span><span class="sxs-lookup"><span data-stu-id="b21bc-120">This is a constant defined to represent the start of a partition stream in EventHub.</span></span> </p>
     syntax:
       content: public static final String START_OF_STREAM= "-1"
       return:
@@ -288,7 +288,7 @@ references:
     nameWithType: Checkpoint
     fullName: com.microsoft.azure.eventprocessorhost.Checkpoint
     type: Class
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>クラスがパブリックで上級ユーザーを実装できるように、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>です。 実装している場合を除き、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>このクラスのオブジェクトを直接扱う必要はありません。 </p>\n\n<p>A<xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>組だけでは基本的にします。 その後、作成時に設定し、変更できない固定パーティション id を持つし、そのパーティションで、メッセージ内の位置を示すオフセット/sequenceNumber ペアを関連付けます。 </p>"
+    summary: "<p><span data-ttu-id=\"b21bc-121\">\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>クラスがパブリックで上級ユーザーを実装できるように、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-121\">\r\n\r\n  <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">Checkpoint</xref> class is public so that advanced users can implement an <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>.</span></span> <span data-ttu-id=\"b21bc-122\">実装している場合を除き、 <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref>このクラスのオブジェクトを直接扱う必要はありません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-122\">Unless you are implementing <xref uid=\"com.microsoft.azure.eventprocessorhost._i_checkpoint_manager\" data-throw-if-not-resolved=\"false\">ICheckpointManager</xref> you should not have to deal with objects of this class directly.</span></span> </p>\n\n<p><span data-ttu-id=\"b21bc-123\">A<xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">チェックポイント</xref>組だけでは基本的にします。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-123\">A <xref uid=\"com.microsoft.azure.eventprocessorhost._checkpoint\" data-throw-if-not-resolved=\"false\">Checkpoint</xref> is essentially just a tuple.</span></span> <span data-ttu-id=\"b21bc-124\">その後、作成時に設定し、変更できない固定パーティション id を持つし、そのパーティションで、メッセージ内の位置を示すオフセット/sequenceNumber ペアを関連付けます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"b21bc-124\">It has a fixed partition id, set at creation time and immutable thereafter, and associates that with an offset/sequenceNumber pair which indicates a position within the messages in that partition.</span></span> </p>"
     syntax: *ref_1
   - uid: com.microsoft.azure.eventprocessorhost._i_checkpoint_manager
     parent: com.microsoft.azure.eventprocessorhost

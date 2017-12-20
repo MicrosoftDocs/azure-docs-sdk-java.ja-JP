@@ -23,8 +23,8 @@ items:
       startLine: 22
     package: com.microsoft.azure.storage
     summary: |-
-      <p>実行再試行再試行ポリシーを表しません。</p>
-      <p>このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref>インターフェイスです。 </p>
+      <p><span data-ttu-id="8c39c-101">実行再試行再試行ポリシーを表しません。</span><span class="sxs-lookup"><span data-stu-id="8c39c-101">Represents a retry policy that performs no retries.</span></span></p>
+      <p><span data-ttu-id="8c39c-102">このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref>インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8c39c-102">This class extends the <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref> class and implements the <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref> interface.</span></span> </p>
     syntax: &ref_1
       content: public class RetryNoRetry extends RetryPolicy implements RetryPolicyFactory
     inheritance:
@@ -61,17 +61,17 @@ items:
       startLine: 49
     package: com.microsoft.azure.storage
     summary: |-
-      <p>現在試行中の要求の新しい再試行ポリシーを生成します。</p>
+      <p><span data-ttu-id="8c39c-103">現在試行中の要求の新しい再試行ポリシーを生成します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-103">Generates a new retry policy for the current request attempt.</span></span></p>
       <p></p>
     syntax:
       content: public RetryPolicy createInstance(final OperationContext opContext)
       parameters:
         - id: opContext
           type: 93de0ef9com.microsoft.azure.storage._operation_context
-          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+          description: '<p><span data-ttu-id="8c39c-104"><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-104">An <xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref> object that represents the context for the current operation.</span></span> <span data-ttu-id="8c39c-105">このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-105">This object is used to track requests to the storage service, and to provide additional runtime information about the operation.</span></span></p>'
       return:
         type: com.microsoft.azure.storage._retry_policy
-        description: <p>A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の再試行ポリシーを表すオブジェクト。 </p>
+        description: <p><span data-ttu-id="8c39c-106">A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の再試行ポリシーを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-106">A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> object that represents the retry policy for the current request attempt.</span></span> </p>
     overridden: com.microsoft.azure.storage._retry_policy_factory.createInstance(OperationContext)
   - uid: 'com.microsoft.azure.storage._retry_no_retry.evaluate(RetryContext,OperationContext)'
     id: 'evaluate(RetryContext,OperationContext)'
@@ -90,20 +90,20 @@ items:
       startLine: 66
     package: com.microsoft.azure.storage
     summary: |-
-      <p>操作が再試行する必要があり、次の再試行までの間隔を指定するかどうかを判断します。</p>
+      <p><span data-ttu-id="8c39c-107">操作が再試行する必要があり、次の再試行までの間隔を指定するかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-107">Determines whether the operation should be retried and specifies the interval until the next retry.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryInfo evaluate(RetryContext retryContext, OperationContext operationContext)'
       parameters:
         - id: retryContext
           type: com.microsoft.azure.storage._retry_context
-          description: <p>A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref>オブジェクトの再試行の回数を示す、前回の要求の結果の次の再試行がプライマリまたはセカンダリの場所で発生する必要があり、配置モードを指定するかどうか。 </p>
+          description: '<p><span data-ttu-id="8c39c-108">A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref>オブジェクトの再試行の回数を示す、前回の要求の結果の次の再試行がプライマリまたはセカンダリの場所で発生する必要があり、配置モードを指定するかどうか。</span><span class="sxs-lookup"><span data-stu-id="8c39c-108">A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref> object that indicates the number of retries, last request''s results, whether the next retry should happen in the primary or secondary location, and specifies the location mode.</span></span> </p>'
         - id: operationContext
           type: com.microsoft.azure.storage._operation_context
-          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>オブジェクトの現在の操作を追跡します。 </p>
+          description: <p><span data-ttu-id="8c39c-109"><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>オブジェクトの現在の操作を追跡します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-109">An <xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref> object for tracking the current operation.</span></span> </p>
       return:
         type: com.microsoft.azure.storage._retry_info
-        description: <p>A <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref>を次の再試行がプライマリまたはセカンダリの場所で発生するかし、配置モードを指定するかどうかを示すオブジェクト。 場合<code>null</code>操作は再試行されません。 </p>
+        description: '<p><span data-ttu-id="8c39c-110">A <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref>を次の再試行がプライマリまたはセカンダリの場所で発生するかし、配置モードを指定するかどうかを示すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-110">A <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref> object that indicates whether the next retry will happen in the primary or secondary location, and specifies the location mode.</span></span> <span data-ttu-id="8c39c-111">場合<code>null</code>操作は再試行されません。</span><span class="sxs-lookup"><span data-stu-id="8c39c-111">If <code>null</code>, the operation will not be retried.</span></span> </p>'
   - uid: com.microsoft.azure.storage._retry_no_retry.getInstance()
     id: getInstance()
     parent: com.microsoft.azure.storage._retry_no_retry
@@ -121,13 +121,13 @@ items:
       startLine: 34
     package: com.microsoft.azure.storage
     summary: |-
-      <p>再試行ポリシーなしの静的インスタンスを返します。</p>
+      <p><span data-ttu-id="8c39c-112">再試行ポリシーなしの静的インスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-112">Returns the static instance of a no retry policy.</span></span></p>
       <p></p>
     syntax:
       content: public static RetryNoRetry getInstance()
       return:
         type: com.microsoft.azure.storage._retry_no_retry
-        description: <p>A<code><xref uid="com.microsoft.azure.storage._retry_no_retry" data-throw-if-not-resolved="false">RetryNoRetry</xref></code>再試行ポリシーなしを表すオブジェクト。 </p>
+        description: <p><span data-ttu-id="8c39c-113">A<code><xref uid="com.microsoft.azure.storage._retry_no_retry" data-throw-if-not-resolved="false">RetryNoRetry</xref></code>再試行ポリシーなしを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-113">A <code><xref uid="com.microsoft.azure.storage._retry_no_retry" data-throw-if-not-resolved="false">RetryNoRetry</xref></code> object that represents a no retry policy.</span></span> </p>
 references:
   - uid: com.microsoft.azure.storage._retry_no_retry.getInstance*
     name: getInstance
@@ -159,7 +159,7 @@ references:
     nameWithType: RetryPolicy.DEFAULT_CLIENT_BACKOFF
     fullName: final int com.microsoft.azure.storage.RetryPolicy.DEFAULT_CLIENT_BACKOFF
     type: Field
-    summary: <p>既定のクライアント バックオフ間隔 (ミリ秒単位) を表します。 </p>
+    summary: '<p><span data-ttu-id="8c39c-114">既定のクライアント バックオフ間隔 (ミリ秒単位) を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-114">Represents the default client backoff interval, in milliseconds.</span></span> </p>'
     syntax:
       content: public static final int DEFAULT_CLIENT_BACKOFF= 1000 * 30
       return:
@@ -171,7 +171,7 @@ references:
     nameWithType: RetryPolicy.DEFAULT_CLIENT_RETRY_COUNT
     fullName: final int com.microsoft.azure.storage.RetryPolicy.DEFAULT_CLIENT_RETRY_COUNT
     type: Field
-    summary: <p>既定のクライアントの再試行回数を表します。 </p>
+    summary: <p><span data-ttu-id="8c39c-115">既定のクライアントの再試行回数を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-115">Represents the default client retry count.</span></span> </p>
     syntax:
       content: public static final int DEFAULT_CLIENT_RETRY_COUNT= 3
       return:
@@ -183,7 +183,7 @@ references:
     nameWithType: RetryPolicy.DEFAULT_MAX_BACKOFF
     fullName: final int com.microsoft.azure.storage.RetryPolicy.DEFAULT_MAX_BACKOFF
     type: Field
-    summary: <p>既定の最大バックオフ間隔 (ミリ秒単位) を表します。 </p>
+    summary: '<p><span data-ttu-id="8c39c-116">既定の最大バックオフ間隔 (ミリ秒単位) を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-116">Represents the default maximum backoff interval, in milliseconds.</span></span> </p>'
     syntax:
       content: public static final int DEFAULT_MAX_BACKOFF= 1000 * 90
       return:
@@ -195,7 +195,7 @@ references:
     nameWithType: RetryPolicy.DEFAULT_MIN_BACKOFF
     fullName: final int com.microsoft.azure.storage.RetryPolicy.DEFAULT_MIN_BACKOFF
     type: Field
-    summary: <p>既定の最小バックオフ間隔のミリ秒を表します。 </p>
+    summary: '<p><span data-ttu-id="8c39c-117">既定の最小バックオフ間隔のミリ秒を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-117">Represents the default minimum backoff interval, in milliseconds.</span></span> </p>'
     syntax:
       content: public static final int DEFAULT_MIN_BACKOFF= 1000 * 3
       return:
@@ -207,7 +207,7 @@ references:
     nameWithType: RetryPolicy.deltaBackoffIntervalInMs
     fullName: int com.microsoft.azure.storage.RetryPolicy.deltaBackoffIntervalInMs
     type: Field
-    summary: <p>ミリ秒単位で、実際のバックオフ間隔を表します。 </p>
+    summary: '<p><span data-ttu-id="8c39c-118">ミリ秒単位で、実際のバックオフ間隔を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-118">Represents the realized backoff interval, in milliseconds.</span></span> </p>'
     syntax:
       content: protected int deltaBackoffIntervalInMs
       return:
@@ -220,17 +220,17 @@ references:
     fullName: boolean com.microsoft.azure.storage.RetryPolicy.evaluateLastAttemptAndSecondaryNotFound(RetryContext retryContext)
     type: Method
     summary: |-
-      <p>記憶域の場所の前回の時刻を判断し、404 とセカンダリの場所に送信された要求が失敗したかどうかを指定するを返します。</p>
+      <p><span data-ttu-id="8c39c-119">記憶域の場所の前回の時刻を判断し、404 とセカンダリの場所に送信された要求が失敗したかどうかを指定するを返します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-119">Determines the time of the last attempt to a storage location and returns a  that specifies if a request that was sent to the secondary location failed with 404.</span></span></p>
       <p></p>
     syntax:
       content: protected boolean evaluateLastAttemptAndSecondaryNotFound(RetryContext retryContext)
       parameters:
         - id: retryContext
           type: com.microsoft.azure.storage._retry_context
-          description: <p>A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref>オブジェクトの再試行の回数を示す、前回の要求の結果の次の再試行がプライマリまたはセカンダリの場所で発生する必要があり、配置モードを指定するかどうか。 </p>
+          description: '<p><span data-ttu-id="8c39c-120">A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref>オブジェクトの再試行の回数を示す、前回の要求の結果の次の再試行がプライマリまたはセカンダリの場所で発生する必要があり、配置モードを指定するかどうか。</span><span class="sxs-lookup"><span data-stu-id="8c39c-120">A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref> object that indicates the number of retries, last request''s results, whether the next retry should happen in the primary or secondary location, and specifies the location mode.</span></span> </p>'
       return:
         type: 4fc6e284
-        description: "<p>\r\n\r\n  <code>true</code>要求を送信する場合、2 次拠点は 404 (Not Found) で失敗します。 <code>false</code>それ以外の場合。 </p>"
+        description: "<p><span data-ttu-id=\"8c39c-121\">\r\n\r\n  <code>true</code>要求を送信する場合、2 次拠点は 404 (Not Found) で失敗します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"8c39c-121\">\r\n\r\n  <code>true</code> if a request sent to the secondary location fails with 404 (Not Found).</span></span> <span data-ttu-id=\"8c39c-122\"><code>false</code>それ以外の場合。</span><span class=\"sxs-lookup\"><span data-stu-id=\"8c39c-122\"><code>false</code> otherwise.</span></span> </p>"
   - uid: 'com.microsoft.azure.storage._retry_policy.evaluateRetryInfo(final RetryContext,final boolean,final long)'
     parent: com.microsoft.azure.storage._retry_policy
     href: com.microsoft.azure.storage._retry_policy.yml
@@ -239,23 +239,23 @@ references:
     fullName: 'RetryInfo com.microsoft.azure.storage.RetryPolicy.evaluateRetryInfo(final RetryContext retryContext, final boolean secondaryNotFound, final long retryInterval)'
     type: Method
     summary: |-
-      <p>決定、 <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref>を次の再試行がプライマリまたはセカンダリの場所で発生するかし、配置モードを指定するかどうかを示すオブジェクト。</p>
+      <p><span data-ttu-id="8c39c-123">決定、 <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref>を次の再試行がプライマリまたはセカンダリの場所で発生するかし、配置モードを指定するかどうかを示すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-123">Determines the <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref> object that indicates whether the next retry will happen in the primary or secondary location, and specifies the location mode.</span></span></p>
       <p></p>
     syntax:
       content: 'protected RetryInfo evaluateRetryInfo(final RetryContext retryContext, final boolean secondaryNotFound, final long retryInterval)'
       parameters:
         - id: retryContext
           type: 93de0ef9com.microsoft.azure.storage._retry_context
-          description: <p>A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref>オブジェクトの再試行の回数を示す、前回の要求の結果の次の再試行がプライマリまたはセカンダリの場所で発生する必要があり、配置モードを指定するかどうか。</p>
+          description: '<p><span data-ttu-id="8c39c-124">A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref>オブジェクトの再試行の回数を示す、前回の要求の結果の次の再試行がプライマリまたはセカンダリの場所で発生する必要があり、配置モードを指定するかどうか。</span><span class="sxs-lookup"><span data-stu-id="8c39c-124">A <xref uid="com.microsoft.azure.storage._retry_context" data-throw-if-not-resolved="false">RetryContext</xref> object that indicates the number of retries, last request''s results, whether the next retry should happen in the primary or secondary location, and specifies the location mode.</span></span></p>'
         - id: secondaryNotFound
           type: 4dda0764
-          description: <p>A <code>boolean</code> 404 (Not Found) で 2 次拠点へ送信される要求が失敗したかどうかを表す </p>
+          description: <p><span data-ttu-id="8c39c-125">A <code>boolean</code> 404 (Not Found) で 2 次拠点へ送信される要求が失敗したかどうかを表す</span><span class="sxs-lookup"><span data-stu-id="8c39c-125">A <code>boolean</code> representing whether a request sent to the secondary location failed with 404 (Not Found)</span></span> </p>
         - id: retryInterval
           type: 4c60ae65
-          description: <p>バックオフ間隔です。 </p>
+          description: <p><span data-ttu-id="8c39c-126">バックオフ間隔です。</span><span class="sxs-lookup"><span data-stu-id="8c39c-126">Backoff Interval.</span></span> </p>
       return:
         type: com.microsoft.azure.storage._retry_info
-        description: <p>参照、 <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref>を次の再試行がプライマリまたはセカンダリの場所で発生するかし、配置モードを指定するかどうかを示すオブジェクト。 </p>
+        description: '<p><span data-ttu-id="8c39c-127">参照、 <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref>を次の再試行がプライマリまたはセカンダリの場所で発生するかし、配置モードを指定するかどうかを示すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-127">A reference to the <xref uid="com.microsoft.azure.storage._retry_info" data-throw-if-not-resolved="false">RetryInfo</xref> object that indicates whether the next retry will happen in the primary or secondary location, and specifies the location mode.</span></span> </p>'
   - uid: com.microsoft.azure.storage._retry_policy.lastPrimaryAttempt
     parent: com.microsoft.azure.storage._retry_policy
     href: com.microsoft.azure.storage._retry_policy.yml
@@ -263,7 +263,7 @@ references:
     nameWithType: RetryPolicy.lastPrimaryAttempt
     fullName: Date com.microsoft.azure.storage.RetryPolicy.lastPrimaryAttempt
     type: Field
-    summary: <p>プライマリの場所に、前回の要求の時刻を表します。 </p>
+    summary: <p><span data-ttu-id="8c39c-128">プライマリの場所に、前回の要求の時刻を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-128">Represents the time of the last request attempt to the primary location.</span></span> </p>
     syntax:
       content: protected Date lastPrimaryAttempt= null
       return:
@@ -275,7 +275,7 @@ references:
     nameWithType: RetryPolicy.lastSecondaryAttempt
     fullName: Date com.microsoft.azure.storage.RetryPolicy.lastSecondaryAttempt
     type: Field
-    summary: <p>セカンダリの場所に、前回の要求の時刻を表します。 </p>
+    summary: <p><span data-ttu-id="8c39c-129">セカンダリの場所に、前回の要求の時刻を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-129">Represents the time of the last request attempt to the secondary location.</span></span> </p>
     syntax:
       content: protected Date lastSecondaryAttempt= null
       return:
@@ -287,7 +287,7 @@ references:
     nameWithType: RetryPolicy.maximumAttempts
     fullName: int com.microsoft.azure.storage.RetryPolicy.maximumAttempts
     type: Field
-    summary: <p>再試行ポリシーが試行する最大再試行回数を表します。 </p>
+    summary: <p><span data-ttu-id="8c39c-130">再試行ポリシーが試行する最大再試行回数を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-130">Represents the maximum retries that the retry policy should attempt.</span></span> </p>
     syntax:
       content: protected int maximumAttempts
       return:
@@ -299,7 +299,7 @@ references:
     nameWithType: RetryPolicy.RetryPolicy()
     fullName: com.microsoft.azure.storage.RetryPolicy.RetryPolicy()
     type: Constructor
-    summary: <p>クラスのインスタンスを作成します。 </p>
+    summary: <p><span data-ttu-id="8c39c-131">クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-131">Creates an instance of the  class.</span></span> </p>
     syntax:
       content: public RetryPolicy()
   - uid: 'com.microsoft.azure.storage._retry_policy.RetryPolicy(final int,final int)'
@@ -310,17 +310,17 @@ references:
     fullName: 'com.microsoft.azure.storage.RetryPolicy.RetryPolicy(final int deltaBackoff, final int maxAttempts)'
     type: Constructor
     summary: |-
-      <p>指定した差分バックオフと最大再試行回数を使用してクラスのインスタンスを作成します。</p>
+      <p><span data-ttu-id="8c39c-132">指定した差分バックオフと最大再試行回数を使用してクラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-132">Creates an instance of the  class using the specified delta backoff and maximum retry attempts.</span></span></p>
       <p></p>
     syntax:
       content: 'public RetryPolicy(final int deltaBackoff, final int maxAttempts)'
       parameters:
         - id: deltaBackoff
           type: cd225469
-          description: <p>バックオフ間隔 (再試行の間隔のミリ秒単位)。 </p>
+          description: '<p><span data-ttu-id="8c39c-133">バックオフ間隔 (再試行の間隔のミリ秒単位)。</span><span class="sxs-lookup"><span data-stu-id="8c39c-133">The backoff interval, in milliseconds, between retries.</span></span> </p>'
         - id: maxAttempts
           type: cd225469
-          description: <p>再試行の最大数。 </p>
+          description: <p><span data-ttu-id="8c39c-134">再試行の最大数。</span><span class="sxs-lookup"><span data-stu-id="8c39c-134">The maximum number of retry attempts.</span></span> </p>
   - uid: com.microsoft.azure.storage._retry_policy
     parent: com.microsoft.azure.storage
     href: com.microsoft.azure.storage._retry_policy.yml
@@ -328,7 +328,7 @@ references:
     nameWithType: RetryPolicy
     fullName: com.microsoft.azure.storage.RetryPolicy
     type: Class
-    summary: <p>再試行ポリシーを表す抽象クラスです。 </p>
+    summary: <p><span data-ttu-id="8c39c-135">再試行ポリシーを表す抽象クラスです。</span><span class="sxs-lookup"><span data-stu-id="8c39c-135">Abstract class that represents a retry policy.</span></span> </p>
     syntax:
       content: public class RetryPolicy
   - uid: com.microsoft.azure.storage._retry_policy_factory
@@ -338,7 +338,7 @@ references:
     nameWithType: RetryPolicyFactory
     fullName: com.microsoft.azure.storage.RetryPolicyFactory
     type: Interface
-    summary: <p>新たに作成する再試行ポリシー ファクトリを表す<xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>トランザクションごとにオブジェクト。 </p>
+    summary: <p><span data-ttu-id="8c39c-136">新たに作成する再試行ポリシー ファクトリを表す<xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>トランザクションごとにオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-136">Represents a retry policy factory that creates a new <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> object per transaction.</span></span> </p>
     syntax:
       content: public interface RetryPolicyFactory
   - uid: com.microsoft.azure.storage._retry_no_retry
@@ -349,8 +349,8 @@ references:
     fullName: com.microsoft.azure.storage.RetryNoRetry
     type: Class
     summary: |-
-      <p>実行再試行再試行ポリシーを表しません。</p>
-      <p>このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref>インターフェイスです。 </p>
+      <p><span data-ttu-id="8c39c-137">実行再試行再試行ポリシーを表しません。</span><span class="sxs-lookup"><span data-stu-id="8c39c-137">Represents a retry policy that performs no retries.</span></span></p>
+      <p><span data-ttu-id="8c39c-138">このクラスは、 <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref>クラスと実装、 <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref>インターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8c39c-138">This class extends the <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicy</xref> class and implements the <xref uid="com.microsoft.azure.storage._retry_policy_factory" data-throw-if-not-resolved="false">com.microsoft.azure.storage.RetryPolicyFactory</xref> interface.</span></span> </p>
     syntax: *ref_1
   - uid: com.microsoft.azure.storage._retry_policy_factory.createInstance(OperationContext)
     parent: com.microsoft.azure.storage._retry_policy_factory
@@ -360,17 +360,17 @@ references:
     fullName: RetryPolicy com.microsoft.azure.storage.RetryPolicyFactory.createInstance(OperationContext opContext)
     type: Method
     summary: |-
-      <p>新たに作成<xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>試行中、現在の要求のオブジェクト。</p>
+      <p><span data-ttu-id="8c39c-139">新たに作成<xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>試行中、現在の要求のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-139">Creates a new <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> object for the current request attempt.</span></span></p>
       <p></p>
     syntax:
       content: public RetryPolicy createInstance(OperationContext opContext)
       parameters:
         - id: opContext
           type: com.microsoft.azure.storage._operation_context
-          description: <p><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。 このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</p>
+          description: '<p><span data-ttu-id="8c39c-140"><xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref>を現在の操作コンテキストを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-140">An <xref uid="com.microsoft.azure.storage._operation_context" data-throw-if-not-resolved="false">OperationContext</xref> object that represents the context for the current operation.</span></span> <span data-ttu-id="8c39c-141">このオブジェクトを使用して、記憶域サービスに要求を追跡して、操作に関する追加のランタイム情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-141">This object is used to track requests to the storage service, and to provide additional runtime information about the operation.</span></span></p>'
       return:
         type: com.microsoft.azure.storage._retry_policy
-        description: <p>A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の新しい再試行ポリシーを表すオブジェクト。 </p>
+        description: <p><span data-ttu-id="8c39c-142">A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>を試行中、現在の要求の新しい再試行ポリシーを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8c39c-142">A <xref uid="com.microsoft.azure.storage._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> object that represents the new retry policy for the current request attempt.</span></span> </p>
   - uid: com.microsoft.azure.storage._operation_context
     parent: com.microsoft.azure.storage
     href: com.microsoft.azure.storage._operation_context.yml
@@ -378,7 +378,7 @@ references:
     nameWithType: OperationContext
     fullName: com.microsoft.azure.storage.OperationContext
     type: Class
-    summary: <p>現在の論理演算を表します。 論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。 </p>
+    summary: <p><span data-ttu-id="8c39c-143">現在の論理演算を表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-143">Represents the current logical operation.</span></span> <span data-ttu-id="8c39c-144">論理操作では、複数の個別の物理的な要求と一対多リレーションシップがあります。</span><span class="sxs-lookup"><span data-stu-id="8c39c-144">A logical operation may have a one-to-many relationship with multiple individual physical requests.</span></span> </p>
     syntax:
       content: public class OperationContext
   - uid: com.microsoft.azure.storage._retry_info
@@ -388,7 +388,7 @@ references:
     nameWithType: RetryInfo
     fullName: com.microsoft.azure.storage.RetryInfo
     type: Class
-    summary: <p>記憶域サービスに対して行われた要求の再試行のコンテキストを表します。 </p>
+    summary: <p><span data-ttu-id="8c39c-145">記憶域サービスに対して行われた要求の再試行のコンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-145">Represents the context for a retry of a request made against the storage services.</span></span> </p>
     syntax:
       content: public class RetryInfo
   - uid: com.microsoft.azure.storage._retry_context
@@ -398,6 +398,6 @@ references:
     nameWithType: RetryContext
     fullName: com.microsoft.azure.storage.RetryContext
     type: Class
-    summary: <p>記憶域サービスに対して行われた要求の再試行のコンテキストを表します。 </p>
+    summary: <p><span data-ttu-id="8c39c-146">記憶域サービスに対して行われた要求の再試行のコンテキストを表します。</span><span class="sxs-lookup"><span data-stu-id="8c39c-146">Represents the context for a retry of a request made against the storage services.</span></span> </p>
     syntax:
       content: public class RetryContext

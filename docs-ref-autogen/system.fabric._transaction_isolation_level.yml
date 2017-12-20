@@ -26,7 +26,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 5
     package: system.fabric
-    summary: <p>可能な分離レベルのセットを列挙、 <xref uid="system.fabric._transaction" data-throw-if-not-resolved="false">system.fabric.Transaction</xref>です。 </p>
+    summary: <p><span data-ttu-id="21ae5-101">可能な分離レベルのセットを列挙、 <xref uid="system.fabric._transaction" data-throw-if-not-resolved="false">system.fabric.Transaction</xref>です。</span><span class="sxs-lookup"><span data-stu-id="21ae5-101">Enumerates the set of possible isolation levels for a <xref uid="system.fabric._transaction" data-throw-if-not-resolved="false">system.fabric.Transaction</xref>.</span></span> </p>
     syntax:
       content: public enum TransactionIsolationLevel
     inheritance:
@@ -47,7 +47,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 9
     package: system.fabric
-    summary: <p>ストアの既定の分離レベルを示します。 </p>
+    summary: <p><span data-ttu-id="21ae5-102">ストアの既定の分離レベルを示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-102">Indicates the default isolation level of the store.</span></span> </p>
     syntax:
       content: public Default=(0)
   - uid: system.fabric._transaction_isolation_level.getValue()
@@ -85,7 +85,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 19
     package: system.fabric
-    summary: <p>揮発性のデータは、トランザクション中に読み取ることができませんが、変更できることを示します。 共有ロックがデータの読み取りをダーティ リードを回避するのには、反復不可能読み取りやファントム データになるトランザクションの終了前にデータを変更することができます。 </p>
+    summary: '<p><span data-ttu-id="21ae5-103">揮発性のデータは、トランザクション中に読み取ることができませんが、変更できることを示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-103">Indicates that volatile data cannot be read during the transaction, but can be modified.</span></span> <span data-ttu-id="21ae5-104">共有ロックがデータの読み取りをダーティ リードを回避するのには、反復不可能読み取りやファントム データになるトランザクションの終了前にデータを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="21ae5-104">Shared locks are held while data is being read to avoid dirty reads, but data can be changed before the end of the transaction that results in non-repeatable reads or phantom data.</span></span> </p>'
     syntax:
       content: public ReadCommitted=(2)
   - uid: system.fabric._transaction_isolation_level.ReadUncommitted
@@ -103,7 +103,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 13
     package: system.fabric
-    summary: <p>トランザクション中に揮発性のデータを読み取ることを示します。 </p>
+    summary: <p><span data-ttu-id="21ae5-105">トランザクション中に揮発性のデータを読み取ることを示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-105">Indicates that volatile data can be read during the transaction.</span></span> </p>
     syntax:
       content: public ReadUncommitted=(1)
   - uid: system.fabric._transaction_isolation_level.RepeatableRead
@@ -121,7 +121,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 26
     package: system.fabric
-    summary: <p>揮発性データの読み取りが、トランザクション中に変更されないことを示します。 ロックは、その他のユーザーがデータを更新することを防止するクエリで使用されるすべてのデータに配置されます。 新しい行は、データ セットに挿入できるし、それ以降の読み取り、現在のトランザクションに含まれます。 </p>
+    summary: <p><span data-ttu-id="21ae5-106">揮発性データの読み取りが、トランザクション中に変更されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-106">Indicates that volatile data can be read but not modified during the transaction.</span></span> <span data-ttu-id="21ae5-107">ロックは、その他のユーザーがデータを更新することを防止するクエリで使用されるすべてのデータに配置されます。</span><span class="sxs-lookup"><span data-stu-id="21ae5-107">Locks are placed on all data that is used in a query to prevent other users from updating data.</span></span> <span data-ttu-id="21ae5-108">新しい行は、データ セットに挿入できるし、それ以降の読み取り、現在のトランザクションに含まれます。</span><span class="sxs-lookup"><span data-stu-id="21ae5-108">New rows can be inserted into data sets and are included in later reads in the current transaction.</span></span> </p>
     syntax:
       content: public RepeatableRead=(3)
   - uid: system.fabric._transaction_isolation_level.Serializable
@@ -139,7 +139,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 38
     package: system.fabric
-    summary: <p>揮発性のデータがシリアル化可能なことを示します。 揮発性のデータを読み取ることができますが、変更しないと、トランザクション中に新しいデータを追加することです。 データ セットでロックが配置される範囲を示します。 ロックでは、トランザクションが終了するまで更新またはデータ セットに挿入を防ぐためです。 </p>
+    summary: '<p><span data-ttu-id="21ae5-109">揮発性のデータがシリアル化可能なことを示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-109">Indicates that volatile data are serializable.</span></span> <span data-ttu-id="21ae5-110">揮発性のデータを読み取ることができますが、変更しないと、トランザクション中に新しいデータを追加することです。</span><span class="sxs-lookup"><span data-stu-id="21ae5-110">Volatile data can be read but not modified, and no new data can be added during the transaction.</span></span> <span data-ttu-id="21ae5-111">データ セットでロックが配置される範囲を示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-111">Indicates that range locks will be put on data sets.</span></span> <span data-ttu-id="21ae5-112">ロックでは、トランザクションが終了するまで更新またはデータ セットに挿入を防ぐためです。</span><span class="sxs-lookup"><span data-stu-id="21ae5-112">The locks prevent updates or inserts in data sets until the transaction finishes.</span></span> </p>'
     syntax:
       content: public Serializable=(5)
   - uid: system.fabric._transaction_isolation_level.Snapshot
@@ -157,7 +157,7 @@ items:
       path: src/prod/src/java/system.fabric/src/system/fabric/TransactionIsolationLevel.java
       startLine: 31
     package: system.fabric
-    summary: <p>揮発性のデータを読み取ることができます、スナップショットのレベルを示します。 読み取られるデータには、トランザクションの開始時に存在していたデータのトランザクション一貫性のあるバージョンがあります。 </p>
+    summary: <p><span data-ttu-id="21ae5-113">揮発性のデータを読み取ることができます、スナップショットのレベルを示します。</span><span class="sxs-lookup"><span data-stu-id="21ae5-113">Indicates the snapshot level where volatile data can be read.</span></span> <span data-ttu-id="21ae5-114">読み取られるデータには、トランザクションの開始時に存在していたデータのトランザクション一貫性のあるバージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="21ae5-114">Any data that is read will be a transaction-consistent version of the data that existed at start of the transaction.</span></span> </p>
     syntax:
       content: public Snapshot=(4)
 references:

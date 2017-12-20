@@ -21,7 +21,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessageHandler.java
       startLine: 10
     package: com.microsoft.azure.servicebus
-    summary: '<p>コールバックを登録するためのコントラクトを定義<xref uid="" data-throw-if-not-resolved="false">QueueClient#registerMessageHandler(IMessageHandler)</xref>と<xref uid="" data-throw-if-not-resolved="false">SubscriptionClient#registerMessageHandler(IMessageHandler)</xref> の<xref uid="com.microsoft.azure.servicebus._queue_client" data-throw-if-not-resolved="false">QueueClient</xref>と<xref uid="com.microsoft.azure.servicebus._subscription_client" data-throw-if-not-resolved="false">SubscriptionClient</xref>です。 </p>'
+    summary: '<p><span data-ttu-id="c0375-101">コールバックを登録するためのコントラクトを定義<xref uid="" data-throw-if-not-resolved="false">QueueClient#registerMessageHandler(IMessageHandler)</xref>と<xref uid="" data-throw-if-not-resolved="false">SubscriptionClient#registerMessageHandler(IMessageHandler)</xref> の<xref uid="com.microsoft.azure.servicebus._queue_client" data-throw-if-not-resolved="false">QueueClient</xref>と<xref uid="com.microsoft.azure.servicebus._subscription_client" data-throw-if-not-resolved="false">SubscriptionClient</xref>です。</span><span class="sxs-lookup"><span data-stu-id="c0375-101">Defines the contract for registering the callback <xref uid="" data-throw-if-not-resolved="false">QueueClient#registerMessageHandler(IMessageHandler)</xref> and <xref uid="" data-throw-if-not-resolved="false">SubscriptionClient#registerMessageHandler(IMessageHandler)</xref> for <xref uid="com.microsoft.azure.servicebus._queue_client" data-throw-if-not-resolved="false">QueueClient</xref> and <xref uid="com.microsoft.azure.servicebus._subscription_client" data-throw-if-not-resolved="false">SubscriptionClient</xref>.</span></span> </p>'
     syntax:
       content: public interface IMessageHandler
   - uid: 'com.microsoft.azure.servicebus._i_message_handler.notifyException(Throwable,ExceptionPhase)'
@@ -41,17 +41,17 @@ items:
       startLine: 26
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>渡された例外を受信メッセージの処理中にポンプによってです。</p>
+      <p><span data-ttu-id="c0375-102">渡された例外を受信メッセージの処理中にポンプによってです。</span><span class="sxs-lookup"><span data-stu-id="c0375-102">Receiving the exceptions that passed by pump during message processing.</span></span></p>
       <p></p>
     syntax:
       content: 'public void notifyException(Throwable exception, ExceptionPhase phase)'
       parameters:
         - id: exception
           type: a04fafd7
-          description: <p>ポンプ内で受信した例外。 </p>
+          description: <p><span data-ttu-id="c0375-103">ポンプ内で受信した例外。</span><span class="sxs-lookup"><span data-stu-id="c0375-103">Exception received in pump.</span></span> </p>
         - id: phase
           type: com.microsoft.azure.servicebus._exception_phase
-          description: <p>例外のフェーズです。 </p>
+          description: <p><span data-ttu-id="c0375-104">例外のフェーズです。</span><span class="sxs-lookup"><span data-stu-id="c0375-104">Exception phase.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_handler.onMessageAsync(IMessage)
     id: onMessageAsync(IMessage)
     parent: com.microsoft.azure.servicebus._i_message_handler
@@ -69,17 +69,17 @@ items:
       startLine: 18
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>コールバックに渡す受信したメッセージ ポンプを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>s。</p>
+      <p><span data-ttu-id="c0375-105">コールバックに渡す受信したメッセージ ポンプを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>s。</span><span class="sxs-lookup"><span data-stu-id="c0375-105">The callback for message pump to pass received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref>s.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> onMessageAsync(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p>受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。 </p>
+          description: <p><span data-ttu-id="c0375-106">受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。</span><span class="sxs-lookup"><span data-stu-id="c0375-106">The received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref>.</span></span> </p>
       return:
         type: db03ee24
-        description: <p>メッセージ ハンドラーの CompletableFuture します。 </p>
+        description: <p><span data-ttu-id="c0375-107">メッセージ ハンドラーの CompletableFuture します。</span><span class="sxs-lookup"><span data-stu-id="c0375-107">CompletableFuture for the message handler.</span></span> </p>
 references:
   - uid: db03ee24
     spec.java:
@@ -107,7 +107,7 @@ references:
     fullName: com.microsoft.azure.servicebus.IMessage
     type: Interface
     summary: |-
-      <p>Azure Service Bus とクライアント間で交換されるメッセージを表します。</p>
+      <p><span data-ttu-id="c0375-108">Azure Service Bus とクライアント間で交換されるメッセージを表します。</span><span class="sxs-lookup"><span data-stu-id="c0375-108">Represents a message that is exchanged between Azure Service Bus and clients.</span></span></p>
       <p></p>
     syntax:
       content: public interface IMessage
@@ -128,7 +128,7 @@ references:
     fullName: com.microsoft.azure.servicebus.ExceptionPhase
     type: Enum
     summary: |-
-      <p>メッセージ ポンプまたは例外が発生したセッション ポンプのフェーズを表す列挙体です。</p>
+      <p><span data-ttu-id="c0375-109">メッセージ ポンプまたは例外が発生したセッション ポンプのフェーズを表す列挙体です。</span><span class="sxs-lookup"><span data-stu-id="c0375-109">Enumeration to represent the phase in a message pump or session pump at which an exception occurred.</span></span></p>
       <p></p>
     syntax:
       content: public enum ExceptionPhase

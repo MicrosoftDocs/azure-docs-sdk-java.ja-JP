@@ -31,7 +31,7 @@ items:
       path: azure-keyvault-extensions/src/main/java/com/microsoft/azure/keyvault/extensions/KeyVaultKey.java
       startLine: 41
     package: com.microsoft.azure.keyvault.extensions
-    summary: <p>暗号化操作を実行する資格情報コンテナー キーです。 </p>
+    summary: <p><span data-ttu-id="584d2-101">暗号化操作を実行する資格情報コンテナー キーです。</span><span class="sxs-lookup"><span data-stu-id="584d2-101">The key vault key that performs cryptography operations.</span></span> </p>
     syntax:
       content: public class KeyVaultKey implements IKey
     inheritance:
@@ -73,33 +73,33 @@ items:
       startLine: 158
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>指定した暗号テキストを復号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p><span data-ttu-id="584d2-102">指定した暗号テキストを復号化します。</span><span class="sxs-lookup"><span data-stu-id="584d2-102">Decrypts the specified cipher text.</span></span> <span data-ttu-id="584d2-103">すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</span><span class="sxs-lookup"><span data-stu-id="584d2-103">Note that not all algorithms require, or support, all parameters.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<byte[]> decryptAsync(byte[] ciphertext, byte[] iv, byte[] authenticationData, byte[] authenticationTag, String algorithm)'
       parameters:
         - id: ciphertext
           type: ccd9418d
-          description: <p>暗号化を解除する暗号テキスト </p>
+          description: <p><span data-ttu-id="584d2-104">暗号化を解除する暗号テキスト</span><span class="sxs-lookup"><span data-stu-id="584d2-104">The cipher text to decrypt</span></span> </p>
         - id: iv
           type: ccd9418d
-          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-105">初期化ベクター (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-105">The initialization vector (optional with some algorithms)</span></span> </p>
         - id: authenticationData
           type: ccd9418d
-          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-106">追加の認証データ (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-106">Additional authentication data (optional with some algorithms)</span></span> </p>
         - id: authenticationTag
           type: ccd9418d
-          description: <p>(一部のアルゴリズムで省略可能)、encrypt 操作から認証タグ </p>
+          description: <p><span data-ttu-id="584d2-107">(一部のアルゴリズムで省略可能)、encrypt 操作から認証タグ</span><span class="sxs-lookup"><span data-stu-id="584d2-107">The authentication tag from the encrypt operation (optional with some algorithms)</span></span> </p>
         - id: algorithm
           type: '26831127'
-          description: <p>を使用する暗号化アルゴリズムを指定する必要があります </p>
+          description: '<p><span data-ttu-id="584d2-108">を使用する暗号化アルゴリズムを指定する必要があります</span><span class="sxs-lookup"><span data-stu-id="584d2-108">The encryption algorithm to use, must be supplied</span></span> </p>'
       return:
         type: dfd3b0c8
-        description: <p>プレーン テキストを含む ListenableFuture </p>
+        description: <p><span data-ttu-id="584d2-109">プレーン テキストを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-109">A ListenableFuture containing the plain text</span></span> </p>
     overridden: 'com.microsoft.azure.keyvault.core._i_key.decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
     exceptions:
       - type: 456eb9d1
-        description: <p>アルゴリズムが正しくありません。 </p>
+        description: <p><span data-ttu-id="584d2-110">アルゴリズムが正しくありません。</span><span class="sxs-lookup"><span data-stu-id="584d2-110">the algorithm is not valid</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.extensions._key_vault_key.encryptAsync(byte [],byte [],byte [],String)'
     id: 'encryptAsync(byte [],byte [],byte [],String)'
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key
@@ -117,30 +117,30 @@ items:
       startLine: 179
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>指定されたプレーン テキストを暗号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p><span data-ttu-id="584d2-111">指定されたプレーン テキストを暗号化します。</span><span class="sxs-lookup"><span data-stu-id="584d2-111">Encrypts the specified plain text.</span></span> <span data-ttu-id="584d2-112">すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</span><span class="sxs-lookup"><span data-stu-id="584d2-112">Note that not all algorithms require, or support, all parameters.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Triple<byte[], byte[], String>> encryptAsync(byte[] plaintext, byte[] iv, byte[] authenticationData, String algorithm)'
       parameters:
         - id: plaintext
           type: ccd9418d
-          description: <p>プレーン テキストを暗号化するには </p>
+          description: <p><span data-ttu-id="584d2-113">プレーン テキストを暗号化するには</span><span class="sxs-lookup"><span data-stu-id="584d2-113">The plain text to encrypt</span></span> </p>
         - id: iv
           type: ccd9418d
-          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-114">初期化ベクター (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-114">The initialization vector (optional with some algorithms)</span></span> </p>
         - id: authenticationData
           type: ccd9418d
-          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-115">追加の認証データ (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-115">Additional authentication data (optional with some algorithms)</span></span> </p>
         - id: algorithm
           type: '26831127'
-          description: <p>既定値は DefaultEncryptionAlgorithm キーを使用する暗号化アルゴリズム </p>
+          description: '<p><span data-ttu-id="584d2-116">既定値は DefaultEncryptionAlgorithm キーを使用する暗号化アルゴリズム</span><span class="sxs-lookup"><span data-stu-id="584d2-116">The encryption algorithm to use, defaults to the keys DefaultEncryptionAlgorithm</span></span> </p>'
       return:
         type: 7356d169
-        description: <p>暗号化テキスト、認証タグおよび使用されたアルゴリズムを含む ListenableFuture </p>
+        description: '<p><span data-ttu-id="584d2-117">暗号化テキスト、認証タグおよび使用されたアルゴリズムを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-117">A ListenableFuture containing the cipher text, the authentication tag and the algorithm that was used</span></span> </p>'
     overridden: 'com.microsoft.azure.keyvault.core._i_key.encryptAsync(final byte [],final byte [],final byte [],final String)'
     exceptions:
       - type: 456eb9d1
-        description: <p>アルゴリズムが正しくありません。 </p>
+        description: <p><span data-ttu-id="584d2-118">アルゴリズムが正しくありません。</span><span class="sxs-lookup"><span data-stu-id="584d2-118">the algorithm is not valid</span></span> </p>
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key.getDefaultEncryptionAlgorithm()
     id: getDefaultEncryptionAlgorithm()
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key
@@ -158,13 +158,13 @@ items:
       startLine: 119
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の暗号化アルゴリズムです。</p>
+      <p><span data-ttu-id="584d2-119">Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の暗号化アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-119">The default encryption algorithm for this key, using the representations from Json Web Key Algorithms, RFC7513.</span></span></p>
       <p></p>
     syntax:
       content: public String getDefaultEncryptionAlgorithm()
       return:
         type: '26831127'
-        description: <p>このキーの既定の暗号化アルゴリズムです。 </p>
+        description: <p><span data-ttu-id="584d2-120">このキーの既定の暗号化アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-120">The default encryption algorithm for this key.</span></span> </p>
     overridden: com.microsoft.azure.keyvault.core._i_key.getDefaultEncryptionAlgorithm()
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key.getDefaultKeyWrapAlgorithm()
     id: getDefaultKeyWrapAlgorithm()
@@ -183,13 +183,13 @@ items:
       startLine: 128
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定のキー ラップ アルゴリズムです。</p>
+      <p><span data-ttu-id="584d2-121">Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定のキー ラップ アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-121">The default key wrap algorithm for this key, using the representations from Json Web Key Algorithms, RFC7513.</span></span></p>
       <p></p>
     syntax:
       content: public String getDefaultKeyWrapAlgorithm()
       return:
         type: '26831127'
-        description: <p>既定のキーは、このキーのアルゴリズムをラップします。 </p>
+        description: <p><span data-ttu-id="584d2-122">既定のキーは、このキーのアルゴリズムをラップします。</span><span class="sxs-lookup"><span data-stu-id="584d2-122">The default key wrap algorithm for this key.</span></span> </p>
     overridden: com.microsoft.azure.keyvault.core._i_key.getDefaultKeyWrapAlgorithm()
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key.getDefaultSignatureAlgorithm()
     id: getDefaultSignatureAlgorithm()
@@ -208,13 +208,13 @@ items:
       startLine: 138
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の署名アルゴリズムです。</p>
+      <p><span data-ttu-id="584d2-123">Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の署名アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-123">The default signature algorithm for this key, using the representations from Json Web Key Algorithms, RFC7513.</span></span></p>
       <p></p>
     syntax:
       content: public String getDefaultSignatureAlgorithm()
       return:
         type: '26831127'
-        description: <p>このキーの既定の署名アルゴリズムです。 </p>
+        description: <p><span data-ttu-id="584d2-124">このキーの既定の署名アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-124">The default signature algorithm for this key.</span></span> </p>
     overridden: com.microsoft.azure.keyvault.core._i_key.getDefaultSignatureAlgorithm()
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key.getKid()
     id: getKid()
@@ -233,13 +233,13 @@ items:
       startLine: 148
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>このキーの一意のキー識別子。</p>
+      <p><span data-ttu-id="584d2-125">このキーの一意のキー識別子。</span><span class="sxs-lookup"><span data-stu-id="584d2-125">The unique key identifier for this key.</span></span></p>
       <p></p>
     syntax:
       content: public String getKid()
       return:
         type: '26831127'
-        description: <p>キー識別子 </p>
+        description: <p><span data-ttu-id="584d2-126">キー識別子</span><span class="sxs-lookup"><span data-stu-id="584d2-126">The key identifier</span></span> </p>
     overridden: com.microsoft.azure.keyvault.core._i_key.getKid()
   - uid: 'com.microsoft.azure.keyvault.extensions._key_vault_key.KeyVaultKey(KeyVaultClient,KeyBundle)'
     id: 'KeyVaultKey(KeyVaultClient,KeyBundle)'
@@ -281,24 +281,24 @@ items:
       startLine: 217
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>指定したアルゴリズムが指定されていない場合は、指定したアルゴリズムまたはキー DefaultSignatureAlgorithm を使用してダイジェストに署名します。</p>
+      <p><span data-ttu-id="584d2-127">指定したアルゴリズムが指定されていない場合は、指定したアルゴリズムまたはキー DefaultSignatureAlgorithm を使用してダイジェストに署名します。</span><span class="sxs-lookup"><span data-stu-id="584d2-127">Signs the specified digest using the specified algorithm, or the keys DefaultSignatureAlgorithm if no algorithm is specified.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Pair<byte[], String>> signAsync(byte[] digest, String algorithm)'
       parameters:
         - id: digest
           type: ccd9418d
-          description: <p>署名するダイジェスト </p>
+          description: <p><span data-ttu-id="584d2-128">署名するダイジェスト</span><span class="sxs-lookup"><span data-stu-id="584d2-128">The digest to sign</span></span> </p>
         - id: algorithm
           type: '26831127'
-          description: <p>使用する署名アルゴリズム </p>
+          description: <p><span data-ttu-id="584d2-129">使用する署名アルゴリズム</span><span class="sxs-lookup"><span data-stu-id="584d2-129">The signature algorithm to use</span></span> </p>
       return:
         type: 32be89a6
-        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+        description: <p><span data-ttu-id="584d2-130">署名と使用されるアルゴリズムを含む ListenableFuture です。</span><span class="sxs-lookup"><span data-stu-id="584d2-130">A ListenableFuture containing the signature and the algorithm used.</span></span> </p>
     overridden: 'com.microsoft.azure.keyvault.core._i_key.signAsync(final byte [],final String)'
     exceptions:
       - type: 456eb9d1
-        description: <p>アルゴリズムが正しくありません。 </p>
+        description: <p><span data-ttu-id="584d2-131">アルゴリズムが正しくありません。</span><span class="sxs-lookup"><span data-stu-id="584d2-131">the algorithm is not valid</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.extensions._key_vault_key.unwrapKeyAsync(byte [],String)'
     id: 'unwrapKeyAsync(byte [],String)'
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key
@@ -316,24 +316,24 @@ items:
       startLine: 197
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>(復号化)、指定した暗号化されたキー マテリアルのラップを解除します。</p>
+      <p><span data-ttu-id="584d2-132">(復号化)、指定した暗号化されたキー マテリアルのラップを解除します。</span><span class="sxs-lookup"><span data-stu-id="584d2-132">Unwraps (decrypts) the specified encryped key material.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<byte[]> unwrapKeyAsync(byte[] ciphertext, String algorithm)'
       parameters:
         - id: encryptedKey
           type: ccd9418d
-          description: <p>暗号化されたキーの暗号化を解除するには </p>
+          description: <p><span data-ttu-id="584d2-133">暗号化されたキーの暗号化を解除するには</span><span class="sxs-lookup"><span data-stu-id="584d2-133">The encrypted key to decrypt</span></span> </p>
         - id: algorithm
           type: '26831127'
-          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+          description: '<p><span data-ttu-id="584d2-134">を使用するアルゴリズムを指定する必要があります</span><span class="sxs-lookup"><span data-stu-id="584d2-134">The algorithm to use, must be supplied</span></span> </p>'
       return:
         type: dfd3b0c8
-        description: <p>ラップ解除されたキーを含む ListenableFuture </p>
+        description: <p><span data-ttu-id="584d2-135">ラップ解除されたキーを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-135">A ListenableFuture containing the unwrapped key</span></span> </p>
     overridden: 'com.microsoft.azure.keyvault.core._i_key.unwrapKeyAsync(final byte [],final String)'
     exceptions:
       - type: 456eb9d1
-        description: <p>アルゴリズムが正しくありません。 </p>
+        description: <p><span data-ttu-id="584d2-136">アルゴリズムが正しくありません。</span><span class="sxs-lookup"><span data-stu-id="584d2-136">the algorithm is not valid</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.extensions._key_vault_key.verifyAsync(byte [],byte [],String)'
     id: 'verifyAsync(byte [],byte [],String)'
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key
@@ -351,27 +351,27 @@ items:
       startLine: 237
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>指定されたダイジェストとアルゴリズムを使用して指定された署名の値を確認します。</p>
+      <p><span data-ttu-id="584d2-137">指定されたダイジェストとアルゴリズムを使用して指定された署名の値を確認します。</span><span class="sxs-lookup"><span data-stu-id="584d2-137">Verifies the supplied signature value using the supplied digest and algorithm.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Boolean> verifyAsync(byte[] digest, byte[] signature, String algorithm)'
       parameters:
         - id: digest
           type: ccd9418d
-          description: <p>入力ダイジェスト </p>
+          description: <p><span data-ttu-id="584d2-138">入力ダイジェスト</span><span class="sxs-lookup"><span data-stu-id="584d2-138">The digest input</span></span> </p>
         - id: signature
           type: ccd9418d
-          description: <p>署名を検証します </p>
+          description: <p><span data-ttu-id="584d2-139">署名を検証します</span><span class="sxs-lookup"><span data-stu-id="584d2-139">The signature to verify</span></span> </p>
         - id: algorithm
           type: '26831127'
-          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+          description: '<p><span data-ttu-id="584d2-140">を使用するアルゴリズムを指定する必要があります</span><span class="sxs-lookup"><span data-stu-id="584d2-140">The algorithm to use, must be provided</span></span> </p>'
       return:
         type: 8779baad
-        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+        description: <p><span data-ttu-id="584d2-141">署名と使用されるアルゴリズムを含む ListenableFuture です。</span><span class="sxs-lookup"><span data-stu-id="584d2-141">A ListenableFuture containing the signature and the algorithm used.</span></span> </p>
     overridden: 'com.microsoft.azure.keyvault.core._i_key.verifyAsync(final byte [],final byte [],final String)'
     exceptions:
       - type: 456eb9d1
-        description: <p>アルゴリズムが正しくありません。 </p>
+        description: <p><span data-ttu-id="584d2-142">アルゴリズムが正しくありません。</span><span class="sxs-lookup"><span data-stu-id="584d2-142">the algorithm is not valid</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.extensions._key_vault_key.wrapKeyAsync(byte [],String)'
     id: 'wrapKeyAsync(byte [],String)'
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key
@@ -389,24 +389,24 @@ items:
       startLine: 188
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>ラップ (暗号化)、指定した対称キー マテリアルが指定されていない場合、指定したアルゴリズムまたはキー DefaultKeyWrapAlgorithm を使用します。</p>
+      <p><span data-ttu-id="584d2-143">ラップ (暗号化)、指定した対称キー マテリアルが指定されていない場合、指定したアルゴリズムまたはキー DefaultKeyWrapAlgorithm を使用します。</span><span class="sxs-lookup"><span data-stu-id="584d2-143">Wraps (encrypts) the specified symmetric key material using the specified algorithm, or the keys DefaultKeyWrapAlgorithm if none is specified.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Pair<byte[], String>> wrapKeyAsync(byte[] plaintext, String algorithm)'
       parameters:
         - id: key
           type: ccd9418d
-          description: <p>ラップする対称キー </p>
+          description: <p><span data-ttu-id="584d2-144">ラップする対称キー</span><span class="sxs-lookup"><span data-stu-id="584d2-144">The symmetric key to wrap</span></span> </p>
         - id: algorithm
           type: '26831127'
-          description: <p>使用するには既定値は DefaultKeyWrapAlgorithm キー ラップのアルゴリズム </p>
+          description: '<p><span data-ttu-id="584d2-145">使用するには既定値は DefaultKeyWrapAlgorithm キー ラップのアルゴリズム</span><span class="sxs-lookup"><span data-stu-id="584d2-145">The wrapping algorithm to use, defaults to the keys DefaultKeyWrapAlgorithm</span></span> </p>'
       return:
         type: 32be89a6
-        description: <p>暗号化されたキーと使用されたアルゴリズムを含む ListenableFuture </p>
+        description: <p><span data-ttu-id="584d2-146">暗号化されたキーと使用されたアルゴリズムを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-146">ListenableFuture containing the encrypted key and the algorithm that was used</span></span> </p>
     overridden: 'com.microsoft.azure.keyvault.core._i_key.wrapKeyAsync(final byte [],final String)'
     exceptions:
       - type: 456eb9d1
-        description: <p>アルゴリズムが正しくありません。 </p>
+        description: <p><span data-ttu-id="584d2-147">アルゴリズムが正しくありません。</span><span class="sxs-lookup"><span data-stu-id="584d2-147">the algorithm is not valid</span></span> </p>
 references:
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key.KeyVaultKey*
     name: KeyVaultKey
@@ -503,7 +503,7 @@ references:
     nameWithType: IKey
     fullName: com.microsoft.azure.keyvault.core.IKey
     type: Interface
-    summary: <p>Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。 </p>
+    summary: <p><span data-ttu-id="584d2-148">Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。</span><span class="sxs-lookup"><span data-stu-id="584d2-148">Interface for representing cryptographic keys with the Microsoft Azure Key Vault libraries.</span></span> </p>
     syntax:
       content: public interface IKey
   - uid: com.microsoft.azure.keyvault._key_vault_client
@@ -513,7 +513,7 @@ references:
     nameWithType: KeyVaultClient
     fullName: com.microsoft.azure.keyvault.KeyVaultClient
     type: Class
-    summary: <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.keyvault._key_vault_client" data-throw-if-not-resolved="false">KeyVaultClient</xref>クラスです。 </p>
+    summary: <p><span data-ttu-id="584d2-149">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.keyvault._key_vault_client" data-throw-if-not-resolved="false">KeyVaultClient</xref>クラスです。</span><span class="sxs-lookup"><span data-stu-id="584d2-149">Initializes a new instance of the <xref uid="com.microsoft.azure.keyvault._key_vault_client" data-throw-if-not-resolved="false">KeyVaultClient</xref> class.</span></span> </p>
     syntax:
       content: public class KeyVaultClient
   - uid: com.microsoft.azure.keyvault.models._key_bundle
@@ -523,7 +523,7 @@ references:
     nameWithType: KeyBundle
     fullName: com.microsoft.azure.keyvault.models.KeyBundle
     type: Class
-    summary: <p>A <xref uid="com.microsoft.azure.keyvault.models._key_bundle" data-throw-if-not-resolved="false">KeyBundle</xref> WebKey とその属性で構成されます。 </p>
+    summary: <p><span data-ttu-id="584d2-150">A <xref uid="com.microsoft.azure.keyvault.models._key_bundle" data-throw-if-not-resolved="false">KeyBundle</xref> WebKey とその属性で構成されます。</span><span class="sxs-lookup"><span data-stu-id="584d2-150">A <xref uid="com.microsoft.azure.keyvault.models._key_bundle" data-throw-if-not-resolved="false">KeyBundle</xref> consisting of a WebKey plus its attributes.</span></span> </p>
     syntax:
       content: public class KeyBundle
   - uid: com.microsoft.azure.keyvault.core._i_key.getDefaultEncryptionAlgorithm()
@@ -534,13 +534,13 @@ references:
     fullName: String com.microsoft.azure.keyvault.core.IKey.getDefaultEncryptionAlgorithm()
     type: Method
     summary: |-
-      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の暗号化アルゴリズムです。</p>
+      <p><span data-ttu-id="584d2-151">Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の暗号化アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-151">The default encryption algorithm for this key, using the representations from Json Web Key Algorithms, RFC7513.</span></span></p>
       <p></p>
     syntax:
       content: public String getDefaultEncryptionAlgorithm()
       return:
         type: '26831127'
-        description: <p>このキーの既定の暗号化アルゴリズムです。 </p>
+        description: <p><span data-ttu-id="584d2-152">このキーの既定の暗号化アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-152">The default encryption algorithm for this key.</span></span> </p>
   - uid: com.microsoft.azure.keyvault.core._i_key.getDefaultKeyWrapAlgorithm()
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -549,13 +549,13 @@ references:
     fullName: String com.microsoft.azure.keyvault.core.IKey.getDefaultKeyWrapAlgorithm()
     type: Method
     summary: |-
-      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定のキー ラップ アルゴリズムです。</p>
+      <p><span data-ttu-id="584d2-153">Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定のキー ラップ アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-153">The default key wrap algorithm for this key, using the representations from Json Web Key Algorithms, RFC7513.</span></span></p>
       <p></p>
     syntax:
       content: public String getDefaultKeyWrapAlgorithm()
       return:
         type: '26831127'
-        description: <p>既定のキーは、このキーのアルゴリズムをラップします。 </p>
+        description: <p><span data-ttu-id="584d2-154">既定のキーは、このキーのアルゴリズムをラップします。</span><span class="sxs-lookup"><span data-stu-id="584d2-154">The default key wrap algorithm for this key.</span></span> </p>
   - uid: com.microsoft.azure.keyvault.core._i_key.getDefaultSignatureAlgorithm()
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -564,13 +564,13 @@ references:
     fullName: String com.microsoft.azure.keyvault.core.IKey.getDefaultSignatureAlgorithm()
     type: Method
     summary: |-
-      <p>Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の署名アルゴリズムです。</p>
+      <p><span data-ttu-id="584d2-155">Json Web キー アルゴリズム、RFC7513 からの形式を使用して、このキーの既定の署名アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-155">The default signature algorithm for this key, using the representations from Json Web Key Algorithms, RFC7513.</span></span></p>
       <p></p>
     syntax:
       content: public String getDefaultSignatureAlgorithm()
       return:
         type: '26831127'
-        description: <p>このキーの既定の署名アルゴリズムです。 </p>
+        description: <p><span data-ttu-id="584d2-156">このキーの既定の署名アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="584d2-156">The default signature algorithm for this key.</span></span> </p>
   - uid: com.microsoft.azure.keyvault.core._i_key.getKid()
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -579,13 +579,13 @@ references:
     fullName: String com.microsoft.azure.keyvault.core.IKey.getKid()
     type: Method
     summary: |-
-      <p>このキーの一意のキー識別子。</p>
+      <p><span data-ttu-id="584d2-157">このキーの一意のキー識別子。</span><span class="sxs-lookup"><span data-stu-id="584d2-157">The unique key identifier for this key.</span></span></p>
       <p></p>
     syntax:
       content: public String getKid()
       return:
         type: '26831127'
-        description: <p>キー識別子 </p>
+        description: <p><span data-ttu-id="584d2-158">キー識別子</span><span class="sxs-lookup"><span data-stu-id="584d2-158">The key identifier</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.core._i_key.decryptAsync(final byte [],final byte [],final byte [],final byte [],final String)'
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -594,29 +594,29 @@ references:
     fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.core.IKey.decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
     type: Method
     summary: |-
-      <p>指定した暗号テキストを復号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p><span data-ttu-id="584d2-159">指定した暗号テキストを復号化します。</span><span class="sxs-lookup"><span data-stu-id="584d2-159">Decrypts the specified cipher text.</span></span> <span data-ttu-id="584d2-160">すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</span><span class="sxs-lookup"><span data-stu-id="584d2-160">Note that not all algorithms require, or support, all parameters.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<byte[]> decryptAsync(final byte[] ciphertext, final byte[] iv, final byte[] authenticationData, final byte[] authenticationTag, final String algorithm)'
       parameters:
         - id: ciphertext
           type: f549433f
-          description: <p>暗号化を解除する暗号テキスト </p>
+          description: <p><span data-ttu-id="584d2-161">暗号化を解除する暗号テキスト</span><span class="sxs-lookup"><span data-stu-id="584d2-161">The cipher text to decrypt</span></span> </p>
         - id: iv
           type: f549433f
-          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-162">初期化ベクター (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-162">The initialization vector (optional with some algorithms)</span></span> </p>
         - id: authenticationData
           type: f549433f
-          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-163">追加の認証データ (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-163">Additional authentication data (optional with some algorithms)</span></span> </p>
         - id: authenticationTag
           type: f549433f
-          description: <p>(一部のアルゴリズムで省略可能)、encrypt 操作から認証タグ </p>
+          description: <p><span data-ttu-id="584d2-164">(一部のアルゴリズムで省略可能)、encrypt 操作から認証タグ</span><span class="sxs-lookup"><span data-stu-id="584d2-164">The authentication tag from the encrypt operation (optional with some algorithms)</span></span> </p>
         - id: algorithm
           type: 3d93591e
-          description: <p>を使用する暗号化アルゴリズムを指定する必要があります </p>
+          description: '<p><span data-ttu-id="584d2-165">を使用する暗号化アルゴリズムを指定する必要があります</span><span class="sxs-lookup"><span data-stu-id="584d2-165">The encryption algorithm to use, must be supplied</span></span> </p>'
       return:
         type: dfd3b0c8
-        description: <p>プレーン テキストを含む ListenableFuture </p>
+        description: <p><span data-ttu-id="584d2-166">プレーン テキストを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-166">A ListenableFuture containing the plain text</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.core._i_key.encryptAsync(final byte [],final byte [],final byte [],final String)'
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -625,26 +625,26 @@ references:
     fullName: 'ListenableFuture<Triple<byte[], byte[], String>> com.microsoft.azure.keyvault.core.IKey.encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
     type: Method
     summary: |-
-      <p>指定されたプレーン テキストを暗号化します。 すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</p>
+      <p><span data-ttu-id="584d2-167">指定されたプレーン テキストを暗号化します。</span><span class="sxs-lookup"><span data-stu-id="584d2-167">Encrypts the specified plain text.</span></span> <span data-ttu-id="584d2-168">すべてのアルゴリズムが必要なまたは、すべてのパラメーターをサポートします。 注意してください。</span><span class="sxs-lookup"><span data-stu-id="584d2-168">Note that not all algorithms require, or support, all parameters.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Triple<byte[], byte[], String>> encryptAsync(final byte[] plaintext, final byte[] iv, final byte[] authenticationData, final String algorithm)'
       parameters:
         - id: plaintext
           type: f549433f
-          description: <p>プレーン テキストを暗号化するには </p>
+          description: <p><span data-ttu-id="584d2-169">プレーン テキストを暗号化するには</span><span class="sxs-lookup"><span data-stu-id="584d2-169">The plain text to encrypt</span></span> </p>
         - id: iv
           type: f549433f
-          description: <p>初期化ベクター (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-170">初期化ベクター (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-170">The initialization vector (optional with some algorithms)</span></span> </p>
         - id: authenticationData
           type: f549433f
-          description: <p>追加の認証データ (一部のアルゴリズムで省略可能) </p>
+          description: <p><span data-ttu-id="584d2-171">追加の認証データ (一部のアルゴリズムで省略可能)</span><span class="sxs-lookup"><span data-stu-id="584d2-171">Additional authentication data (optional with some algorithms)</span></span> </p>
         - id: algorithm
           type: 3d93591e
-          description: <p>既定値は DefaultEncryptionAlgorithm キーを使用する暗号化アルゴリズム </p>
+          description: '<p><span data-ttu-id="584d2-172">既定値は DefaultEncryptionAlgorithm キーを使用する暗号化アルゴリズム</span><span class="sxs-lookup"><span data-stu-id="584d2-172">The encryption algorithm to use, defaults to the keys DefaultEncryptionAlgorithm</span></span> </p>'
       return:
         type: 7356d169
-        description: <p>暗号化テキスト、認証タグおよび使用されたアルゴリズムを含む ListenableFuture </p>
+        description: '<p><span data-ttu-id="584d2-173">暗号化テキスト、認証タグおよび使用されたアルゴリズムを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-173">A ListenableFuture containing the cipher text, the authentication tag and the algorithm that was used</span></span> </p>'
   - uid: 'com.microsoft.azure.keyvault.core._i_key.wrapKeyAsync(final byte [],final String)'
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -653,20 +653,20 @@ references:
     fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.core.IKey.wrapKeyAsync(final byte[] key, final String algorithm)'
     type: Method
     summary: |-
-      <p>ラップ (暗号化)、指定した対称キー マテリアルが指定されていない場合、指定したアルゴリズムまたはキー DefaultKeyWrapAlgorithm を使用します。</p>
+      <p><span data-ttu-id="584d2-174">ラップ (暗号化)、指定した対称キー マテリアルが指定されていない場合、指定したアルゴリズムまたはキー DefaultKeyWrapAlgorithm を使用します。</span><span class="sxs-lookup"><span data-stu-id="584d2-174">Wraps (encrypts) the specified symmetric key material using the specified algorithm, or the keys DefaultKeyWrapAlgorithm if none is specified.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Pair<byte[], String>> wrapKeyAsync(final byte[] key, final String algorithm)'
       parameters:
         - id: key
           type: f549433f
-          description: <p>ラップする対称キー </p>
+          description: <p><span data-ttu-id="584d2-175">ラップする対称キー</span><span class="sxs-lookup"><span data-stu-id="584d2-175">The symmetric key to wrap</span></span> </p>
         - id: algorithm
           type: 3d93591e
-          description: <p>使用するには既定値は DefaultKeyWrapAlgorithm キー ラップのアルゴリズム </p>
+          description: '<p><span data-ttu-id="584d2-176">使用するには既定値は DefaultKeyWrapAlgorithm キー ラップのアルゴリズム</span><span class="sxs-lookup"><span data-stu-id="584d2-176">The wrapping algorithm to use, defaults to the keys DefaultKeyWrapAlgorithm</span></span> </p>'
       return:
         type: 32be89a6
-        description: <p>暗号化されたキーと使用されたアルゴリズムを含む ListenableFuture </p>
+        description: <p><span data-ttu-id="584d2-177">暗号化されたキーと使用されたアルゴリズムを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-177">ListenableFuture containing the encrypted key and the algorithm that was used</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.core._i_key.unwrapKeyAsync(final byte [],final String)'
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -675,20 +675,20 @@ references:
     fullName: 'ListenableFuture<byte[]> com.microsoft.azure.keyvault.core.IKey.unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
     type: Method
     summary: |-
-      <p>(復号化)、指定した暗号化されたキー マテリアルのラップを解除します。</p>
+      <p><span data-ttu-id="584d2-178">(復号化)、指定した暗号化されたキー マテリアルのラップを解除します。</span><span class="sxs-lookup"><span data-stu-id="584d2-178">Unwraps (decrypts) the specified encryped key material.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<byte[]> unwrapKeyAsync(final byte[] encryptedKey, final String algorithm)'
       parameters:
         - id: encryptedKey
           type: f549433f
-          description: <p>暗号化されたキーの暗号化を解除するには </p>
+          description: <p><span data-ttu-id="584d2-179">暗号化されたキーの暗号化を解除するには</span><span class="sxs-lookup"><span data-stu-id="584d2-179">The encrypted key to decrypt</span></span> </p>
         - id: algorithm
           type: 3d93591e
-          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+          description: '<p><span data-ttu-id="584d2-180">を使用するアルゴリズムを指定する必要があります</span><span class="sxs-lookup"><span data-stu-id="584d2-180">The algorithm to use, must be supplied</span></span> </p>'
       return:
         type: dfd3b0c8
-        description: <p>ラップ解除されたキーを含む ListenableFuture </p>
+        description: <p><span data-ttu-id="584d2-181">ラップ解除されたキーを含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="584d2-181">A ListenableFuture containing the unwrapped key</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.core._i_key.signAsync(final byte [],final String)'
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -697,20 +697,20 @@ references:
     fullName: 'ListenableFuture<Pair<byte[], String>> com.microsoft.azure.keyvault.core.IKey.signAsync(final byte[] digest, final String algorithm)'
     type: Method
     summary: |-
-      <p>指定したアルゴリズムが指定されていない場合は、指定したアルゴリズムまたはキー DefaultSignatureAlgorithm を使用してダイジェストに署名します。</p>
+      <p><span data-ttu-id="584d2-182">指定したアルゴリズムが指定されていない場合は、指定したアルゴリズムまたはキー DefaultSignatureAlgorithm を使用してダイジェストに署名します。</span><span class="sxs-lookup"><span data-stu-id="584d2-182">Signs the specified digest using the specified algorithm, or the keys DefaultSignatureAlgorithm if no algorithm is specified.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Pair<byte[], String>> signAsync(final byte[] digest, final String algorithm)'
       parameters:
         - id: digest
           type: f549433f
-          description: <p>署名するダイジェスト </p>
+          description: <p><span data-ttu-id="584d2-183">署名するダイジェスト</span><span class="sxs-lookup"><span data-stu-id="584d2-183">The digest to sign</span></span> </p>
         - id: algorithm
           type: 3d93591e
-          description: <p>使用する署名アルゴリズム </p>
+          description: <p><span data-ttu-id="584d2-184">使用する署名アルゴリズム</span><span class="sxs-lookup"><span data-stu-id="584d2-184">The signature algorithm to use</span></span> </p>
       return:
         type: 32be89a6
-        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+        description: <p><span data-ttu-id="584d2-185">署名と使用されるアルゴリズムを含む ListenableFuture です。</span><span class="sxs-lookup"><span data-stu-id="584d2-185">A ListenableFuture containing the signature and the algorithm used.</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.core._i_key.verifyAsync(final byte [],final byte [],final String)'
     parent: com.microsoft.azure.keyvault.core._i_key
     href: com.microsoft.azure.keyvault.core._i_key.yml
@@ -719,20 +719,20 @@ references:
     fullName: 'ListenableFuture<Boolean> com.microsoft.azure.keyvault.core.IKey.verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
     type: Method
     summary: |-
-      <p>指定されたダイジェストとアルゴリズムを使用して指定された署名の値を確認します。</p>
+      <p><span data-ttu-id="584d2-186">指定されたダイジェストとアルゴリズムを使用して指定された署名の値を確認します。</span><span class="sxs-lookup"><span data-stu-id="584d2-186">Verifies the supplied signature value using the supplied digest and algorithm.</span></span></p>
       <p></p>
     syntax:
       content: 'public ListenableFuture<Boolean> verifyAsync(final byte[] digest, final byte[] signature, final String algorithm)'
       parameters:
         - id: digest
           type: f549433f
-          description: <p>入力ダイジェスト </p>
+          description: <p><span data-ttu-id="584d2-187">入力ダイジェスト</span><span class="sxs-lookup"><span data-stu-id="584d2-187">The digest input</span></span> </p>
         - id: signature
           type: f549433f
-          description: <p>署名を検証します </p>
+          description: <p><span data-ttu-id="584d2-188">署名を検証します</span><span class="sxs-lookup"><span data-stu-id="584d2-188">The signature to verify</span></span> </p>
         - id: algorithm
           type: 3d93591e
-          description: <p>を使用するアルゴリズムを指定する必要があります </p>
+          description: '<p><span data-ttu-id="584d2-189">を使用するアルゴリズムを指定する必要があります</span><span class="sxs-lookup"><span data-stu-id="584d2-189">The algorithm to use, must be provided</span></span> </p>'
       return:
         type: 8779baad
-        description: <p>署名と使用されるアルゴリズムを含む ListenableFuture です。 </p>
+        description: <p><span data-ttu-id="584d2-190">署名と使用されるアルゴリズムを含む ListenableFuture です。</span><span class="sxs-lookup"><span data-stu-id="584d2-190">A ListenableFuture containing the signature and the algorithm used.</span></span> </p>

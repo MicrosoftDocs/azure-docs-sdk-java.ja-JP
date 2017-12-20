@@ -24,7 +24,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
       startLine: 9
     package: microsoft.servicefabric.actors
-    summary: <p>論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。 このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。 </p>
+    summary: <p><span data-ttu-id="38b5c-101">論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-101">The method calls on an actor dispatched via in turn with support for logical call context based reentrancy.</span></span> <span data-ttu-id="38b5c-102">このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-102">This class provides the settings to configure the turn based concurrency lock for actors.</span></span> </p>
     syntax: &ref_1
       content: public class ActorConcurrencySettings
     inheritance:
@@ -45,7 +45,7 @@ items:
       path: src/prod/src/java/microsoft.servicefabric.actors/src/microsoft/servicefabric/actors/ActorConcurrencySettings.java
       startLine: 18
     package: microsoft.servicefabric.actors
-    summary: <p>新しいインスタンスを初期化、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_settings" data-throw-if-not-resolved="false">ActorConcurrencySettings</xref>クラスです。 </p>
+    summary: <p><span data-ttu-id="38b5c-103">新しいインスタンスを初期化、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_settings" data-throw-if-not-resolved="false">ActorConcurrencySettings</xref>クラスです。</span><span class="sxs-lookup"><span data-stu-id="38b5c-103">Initializes a new instance of the <xref uid="microsoft.servicefabric.actors._actor_concurrency_settings" data-throw-if-not-resolved="false">ActorConcurrencySettings</xref> class.</span></span> </p>
     syntax:
       content: public ActorConcurrencySettings()
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings.getLockTimeout()
@@ -65,13 +65,13 @@ items:
       startLine: 57
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>セットのタイムアウトを有効にするには、同時実行のロックが基づいています。 スローする場合は、ランタイムは、メソッドの呼び出しをディスパッチするロックを取得できません、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref>例外。 この例外は、論理呼び出しチェーンをアンワインドし、呼び出しは、時間の場合は、構成された最大時間を再試行します。 同時実行のロックの実際のタイムアウト値は、上位のように、ランタイムは、指定された値をランダムな間隔を追加できます。</p>
+      <p><span data-ttu-id="38b5c-104">セットのタイムアウトを有効にするには、同時実行のロックが基づいています。</span><span class="sxs-lookup"><span data-stu-id="38b5c-104">sets timeout for the turn based concurrency lock.</span></span> <span data-ttu-id="38b5c-105">スローする場合は、ランタイムは、メソッドの呼び出しをディスパッチするロックを取得できません、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref>例外。</span><span class="sxs-lookup"><span data-stu-id="38b5c-105">If the runtime cannot acquire the lock to dispatch the method call, it will throw <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref> exception.</span></span> <span data-ttu-id="38b5c-106">この例外は、論理呼び出しチェーンをアンワインドし、呼び出しは、時間の場合は、構成された最大時間を再試行します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-106">This exception will unwind the logical call chain and the call will retried up to a configured maximum amount of times.</span></span> <span data-ttu-id="38b5c-107">同時実行のロックの実際のタイムアウト値は、上位のように、ランタイムは、指定された値をランダムな間隔を追加できます。</span><span class="sxs-lookup"><span data-stu-id="38b5c-107">The actual timeout value for the concurrency lock can be higher as the runtime will add a random interval to the supplied value.</span></span></p>
       <p></p>
     syntax:
       content: public Duration getLockTimeout()
       return:
         type: e02a2de0
-        description: <p>同時実行のロックを有効にするためのタイムアウトに基づいています。 </p>
+        description: <p><span data-ttu-id="38b5c-108">同時実行のロックを有効にするためのタイムアウトに基づいています。</span><span class="sxs-lookup"><span data-stu-id="38b5c-108">Timeout for the turn based concurrency lock.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings.getReentrancyMode()
     id: getReentrancyMode()
     parent: microsoft.servicefabric.actors._actor_concurrency_settings
@@ -89,13 +89,13 @@ items:
       startLine: 33
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>アクター メソッド呼び出しの再入モードを取得します。</p>
+      <p><span data-ttu-id="38b5c-109">アクター メソッド呼び出しの再入モードを取得します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-109">gets Reentrancy mode for actor method calls.</span></span></p>
       <p></p>
     syntax:
       content: public ActorReentrancyMode getReentrancyMode()
       return:
         type: microsoft.servicefabric.actors._actor_reentrancy_mode
-        description: "<p>\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_reentrancy_mode\" data-throw-if-not-resolved=\"false\">ActorReentrancyMode</xref>アクター メソッドの呼び出しです。 </p>"
+        description: "<p><span data-ttu-id=\"38b5c-110\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_reentrancy_mode\" data-throw-if-not-resolved=\"false\">ActorReentrancyMode</xref>アクター メソッドの呼び出しです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"38b5c-110\">\r\n\r\n  <xref uid=\"microsoft.servicefabric.actors._actor_reentrancy_mode\" data-throw-if-not-resolved=\"false\">ActorReentrancyMode</xref> for the actor method calls.</span></span> </p>"
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings.setLockTimeout(Duration)
     id: setLockTimeout(Duration)
     parent: microsoft.servicefabric.actors._actor_concurrency_settings
@@ -113,14 +113,14 @@ items:
       startLine: 71
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>セットのタイムアウトを有効にするには、同時実行のロックが基づいています。 スローする場合は、ランタイムは、メソッドの呼び出しをディスパッチするロックを取得できません、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref>例外。</p>
+      <p><span data-ttu-id="38b5c-111">セットのタイムアウトを有効にするには、同時実行のロックが基づいています。</span><span class="sxs-lookup"><span data-stu-id="38b5c-111">sets timeout for the turn based concurrency lock.</span></span> <span data-ttu-id="38b5c-112">スローする場合は、ランタイムは、メソッドの呼び出しをディスパッチするロックを取得できません、 <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref>例外。</span><span class="sxs-lookup"><span data-stu-id="38b5c-112">If the runtime cannot acquire the lock to dispatch the method call, it will throw <xref uid="microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception" data-throw-if-not-resolved="false">microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException</xref> exception.</span></span></p>
       <p></p>
     syntax:
       content: public void setLockTimeout(Duration timeout)
       parameters:
         - id: timeout
           type: e02a2de0
-          description: <p>この例外は、論理呼び出しチェーンをアンワインドし、呼び出しは、時間の場合は、構成された最大時間を再試行します。 同時実行のロックの実際のタイムアウト値は、上位のように、ランタイムは、指定された値をランダムな間隔を追加できます。 </p>
+          description: <p><span data-ttu-id="38b5c-113">この例外は、論理呼び出しチェーンをアンワインドし、呼び出しは、時間の場合は、構成された最大時間を再試行します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-113">This exception will unwind the logical call chain and the call will retried up to a configured maximum amount of times.</span></span> <span data-ttu-id="38b5c-114">同時実行のロックの実際のタイムアウト値は、上位のように、ランタイムは、指定された値をランダムな間隔を追加できます。</span><span class="sxs-lookup"><span data-stu-id="38b5c-114">The actual timeout value for the concurrency lock can be higher as the runtime will add a random interval to the supplied value.</span></span> </p>
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings.setReentrancyMode(ActorReentrancyMode)
     id: setReentrancyMode(ActorReentrancyMode)
     parent: microsoft.servicefabric.actors._actor_concurrency_settings
@@ -138,14 +138,14 @@ items:
       startLine: 43
     package: microsoft.servicefabric.actors
     summary: |-
-      <p>メソッドの呼び出しをアクターの再入モードに設定します。</p>
+      <p><span data-ttu-id="38b5c-115">メソッドの呼び出しをアクターの再入モードに設定します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-115">sets Reentrancy mode for actor method calls.</span></span></p>
       <p></p>
     syntax:
       content: public void setReentrancyMode(ActorReentrancyMode mode)
       parameters:
         - id: mode
           type: microsoft.servicefabric.actors._actor_reentrancy_mode
-          description: <p>再入モードです。 <xref uid="microsoft.servicefabric.actors._actor_reentrancy_mode" data-throw-if-not-resolved="false">ActorReentrancyMode</xref>アクター メソッドの呼び出しです。 </p>
+          description: <p><span data-ttu-id="38b5c-116">再入モードです。</span><span class="sxs-lookup"><span data-stu-id="38b5c-116">reentrancy mode.</span></span> <span data-ttu-id="38b5c-117"><xref uid="microsoft.servicefabric.actors._actor_reentrancy_mode" data-throw-if-not-resolved="false">ActorReentrancyMode</xref>アクター メソッドの呼び出しです。</span><span class="sxs-lookup"><span data-stu-id="38b5c-117"><xref uid="microsoft.servicefabric.actors._actor_reentrancy_mode" data-throw-if-not-resolved="false">ActorReentrancyMode</xref> for the actor method calls.</span></span> </p>
 references:
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings.ActorConcurrencySettings*
     name: ActorConcurrencySettings
@@ -183,7 +183,7 @@ references:
     nameWithType: ActorReentrancyMode
     fullName: microsoft.servicefabric.actors.ActorReentrancyMode
     type: Enum
-    summary: <p>アクター メソッドの呼び出しのための再入モードを指定します。 </p>
+    summary: <p><span data-ttu-id="38b5c-118">アクター メソッドの呼び出しのための再入モードを指定します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-118">Specifies Reentrancy mode for actor method calls.</span></span> </p>
     syntax:
       content: public enum ActorReentrancyMode
   - uid: microsoft.servicefabric.actors._actor_concurrency_settings
@@ -193,7 +193,7 @@ references:
     nameWithType: ActorConcurrencySettings
     fullName: microsoft.servicefabric.actors.ActorConcurrencySettings
     type: Class
-    summary: <p>論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。 このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。 </p>
+    summary: <p><span data-ttu-id="38b5c-119">論理呼び出しコンテキスト ベースの再入のサポートの順番でディスパッチ アクター メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-119">The method calls on an actor dispatched via in turn with support for logical call context based reentrancy.</span></span> <span data-ttu-id="38b5c-120">このクラスは、アクターをベースにする同時実行のロックを構成する設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="38b5c-120">This class provides the settings to configure the turn based concurrency lock for actors.</span></span> </p>
     syntax: *ref_1
   - uid: microsoft.servicefabric.actors._actor_concurrency_lock_timeout_exception
     parent: microsoft.servicefabric.actors
@@ -202,6 +202,6 @@ references:
     nameWithType: ActorConcurrencyLockTimeoutException
     fullName: microsoft.servicefabric.actors.ActorConcurrencyLockTimeoutException
     type: Class
-    summary: <p>メソッドをディスパッチする同時実行のロックをランタイムが有効にするを取得できない場合に、アクター ランタイムによってスローされる例外に基づいています。 </p>
+    summary: <p><span data-ttu-id="38b5c-121">メソッドをディスパッチする同時実行のロックをランタイムが有効にするを取得できない場合に、アクター ランタイムによってスローされる例外に基づいています。</span><span class="sxs-lookup"><span data-stu-id="38b5c-121">Exception thrown by actor runtime when runtime cannot acquire the turn based concurrency lock to dispatch the method.</span></span> </p>
     syntax:
       content: public class ActorConcurrencyLockTimeoutException extends FabricException

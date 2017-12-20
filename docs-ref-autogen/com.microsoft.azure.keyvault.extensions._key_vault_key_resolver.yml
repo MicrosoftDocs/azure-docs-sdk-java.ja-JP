@@ -22,7 +22,7 @@ items:
       path: azure-keyvault-extensions/src/main/java/com/microsoft/azure/keyvault/extensions/KeyVaultKeyResolver.java
       startLine: 39
     package: com.microsoft.azure.keyvault.extensions
-    summary: <p>入力するキーの id の解決を処理するキーの競合回避モジュール クラス<xref uid="" data-throw-if-not-resolved="false">IKey</xref>暗号化操作に使用します。 </p>
+    summary: <p><span data-ttu-id="2b36b-101">入力するキーの id の解決を処理するキーの競合回避モジュール クラス<xref uid="" data-throw-if-not-resolved="false">IKey</xref>暗号化操作に使用します。</span><span class="sxs-lookup"><span data-stu-id="2b36b-101">The key resolver class that handles resolving key id to type <xref uid="" data-throw-if-not-resolved="false">IKey</xref> to be used for cryptography operations.</span></span> </p>
     syntax:
       content: public class KeyVaultKeyResolver implements IKeyResolver
     inheritance:
@@ -44,13 +44,13 @@ items:
       path: azure-keyvault-extensions/src/main/java/com/microsoft/azure/keyvault/extensions/KeyVaultKeyResolver.java
       startLine: 94
     package: com.microsoft.azure.keyvault.extensions
-    summary: <p>コンス トラクターです。 </p>
+    summary: <p><span data-ttu-id="2b36b-102">コンス トラクターです。</span><span class="sxs-lookup"><span data-stu-id="2b36b-102">Constructor.</span></span> </p>
     syntax:
       content: public KeyVaultKeyResolver(KeyVaultClient client)
       parameters:
         - id: client
           type: com.microsoft.azure.keyvault._key_vault_client
-          description: <p>資格情報コンテナーのクライアント </p>
+          description: <p><span data-ttu-id="2b36b-103">資格情報コンテナーのクライアント</span><span class="sxs-lookup"><span data-stu-id="2b36b-103">the key vault client</span></span> </p>
   - uid: 'com.microsoft.azure.keyvault.extensions._key_vault_key_resolver.KeyVaultKeyResolver(KeyVaultClient,Provider)'
     id: 'KeyVaultKeyResolver(KeyVaultClient,Provider)'
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver
@@ -67,16 +67,16 @@ items:
       path: azure-keyvault-extensions/src/main/java/com/microsoft/azure/keyvault/extensions/KeyVaultKeyResolver.java
       startLine: 104
     package: com.microsoft.azure.keyvault.extensions
-    summary: <p>コンス トラクターです。 </p>
+    summary: <p><span data-ttu-id="2b36b-104">コンス トラクターです。</span><span class="sxs-lookup"><span data-stu-id="2b36b-104">Constructor.</span></span> </p>
     syntax:
       content: 'public KeyVaultKeyResolver(KeyVaultClient client, Provider provider)'
       parameters:
         - id: client
           type: com.microsoft.azure.keyvault._key_vault_client
-          description: <p>資格情報コンテナーのクライアント </p>
+          description: <p><span data-ttu-id="2b36b-105">資格情報コンテナーのクライアント</span><span class="sxs-lookup"><span data-stu-id="2b36b-105">the key vault client</span></span> </p>
         - id: provider
           type: 8f3c7027
-          description: <p>java のセキュリティ プロバイダー </p>
+          description: <p><span data-ttu-id="2b36b-106">java のセキュリティ プロバイダー</span><span class="sxs-lookup"><span data-stu-id="2b36b-106">the java security provider</span></span> </p>
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver.resolveKeyAsync(String)
     id: resolveKeyAsync(String)
     parent: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver
@@ -94,17 +94,17 @@ items:
       startLine: 122
     package: com.microsoft.azure.keyvault.extensions
     summary: |-
-      <p>指定したキー識別子に対して IKey 実装を取得します。 実装では、認識されていることを確認する kid の形式を確認する必要があります。 キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</p>
+      <p><span data-ttu-id="2b36b-107">指定したキー識別子に対して IKey 実装を取得します。</span><span class="sxs-lookup"><span data-stu-id="2b36b-107">Retrieves an IKey implementation for the specified key identifier.</span></span> <span data-ttu-id="2b36b-108">実装では、認識されていることを確認する kid の形式を確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2b36b-108">Implementations should check the format of the kid to ensure that it is recognized.</span></span> <span data-ttu-id="2b36b-109">キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</span><span class="sxs-lookup"><span data-stu-id="2b36b-109">Null, rather than an exception, should be returned for unrecognized key identifiers to enable chaining of key resolvers.</span></span></p>
       <p></p>
     syntax:
       content: public ListenableFuture<IKey> resolveKeyAsync(String kid)
       parameters:
         - id: kid
           type: '26831127'
-          description: <p>解決するのにはキーの識別子。 </p>
+          description: <p><span data-ttu-id="2b36b-110">解決するのにはキーの識別子。</span><span class="sxs-lookup"><span data-stu-id="2b36b-110">The key identifier to resolve.</span></span> </p>
       return:
         type: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
-        description: <p>解決 IKey を含む ListenableFuture </p>
+        description: <p><span data-ttu-id="2b36b-111">解決 IKey を含む ListenableFuture</span><span class="sxs-lookup"><span data-stu-id="2b36b-111">A ListenableFuture containing the resolved IKey</span></span> </p>
     overridden: com.microsoft.azure.keyvault.core._i_key_resolver.resolveKeyAsync(String)
 references:
   - uid: com.microsoft.azure.keyvault.extensions._key_vault_key_resolver.KeyVaultKeyResolver*
@@ -142,7 +142,7 @@ references:
     nameWithType: IKeyResolver
     fullName: com.microsoft.azure.keyvault.core.IKeyResolver
     type: Interface
-    summary: <p>Microsoft Azure Key Vault のライブラリを含むキーの解決操作を表すためのインターフェイスします。 </p>
+    summary: <p><span data-ttu-id="2b36b-112">Microsoft Azure Key Vault のライブラリを含むキーの解決操作を表すためのインターフェイスします。</span><span class="sxs-lookup"><span data-stu-id="2b36b-112">Interface for representing key resolving operations with the Microsoft Azure Key Vault libraries.</span></span> </p>
     syntax:
       content: public interface IKeyResolver
   - uid: com.microsoft.azure.keyvault._key_vault_client
@@ -152,7 +152,7 @@ references:
     nameWithType: KeyVaultClient
     fullName: com.microsoft.azure.keyvault.KeyVaultClient
     type: Class
-    summary: <p>新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.keyvault._key_vault_client" data-throw-if-not-resolved="false">KeyVaultClient</xref>クラスです。 </p>
+    summary: <p><span data-ttu-id="2b36b-113">新しいインスタンスを初期化、 <xref uid="com.microsoft.azure.keyvault._key_vault_client" data-throw-if-not-resolved="false">KeyVaultClient</xref>クラスです。</span><span class="sxs-lookup"><span data-stu-id="2b36b-113">Initializes a new instance of the <xref uid="com.microsoft.azure.keyvault._key_vault_client" data-throw-if-not-resolved="false">KeyVaultClient</xref> class.</span></span> </p>
     syntax:
       content: public class KeyVaultClient
   - uid: com.microsoft.azure.keyvault.core._i_key
@@ -162,7 +162,7 @@ references:
     nameWithType: IKey
     fullName: com.microsoft.azure.keyvault.core.IKey
     type: Interface
-    summary: <p>Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。 </p>
+    summary: <p><span data-ttu-id="2b36b-114">Microsoft Azure Key Vault ライブラリと暗号化キーを表すためのインターフェイスします。</span><span class="sxs-lookup"><span data-stu-id="2b36b-114">Interface for representing cryptographic keys with the Microsoft Azure Key Vault libraries.</span></span> </p>
     syntax:
       content: public interface IKey
   - uid: com.microsoft.azure.keyvault.core._i_key_resolver.resolveKeyAsync(String)
@@ -173,14 +173,14 @@ references:
     fullName: ListenableFuture<IKey> com.microsoft.azure.keyvault.core.IKeyResolver.resolveKeyAsync(String kid)
     type: Method
     summary: |-
-      <p>取得、 <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref>指定したキー識別子の実装です。 実装では、認識されていることを確認する kid の形式を確認する必要があります。 キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</p>
+      <p><span data-ttu-id="2b36b-115">取得、 <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref>指定したキー識別子の実装です。</span><span class="sxs-lookup"><span data-stu-id="2b36b-115">Retrieves an <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref> implementation for the specified key identifier.</span></span> <span data-ttu-id="2b36b-116">実装では、認識されていることを確認する kid の形式を確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2b36b-116">Implementations should check the format of the kid to ensure that it is recognized.</span></span> <span data-ttu-id="2b36b-117">キーの競合回避モジュールのチェーンを有効にするキー識別子の認識されない例外ではなく、null の場合が返されます。</span><span class="sxs-lookup"><span data-stu-id="2b36b-117">Null, rather than an exception, should be returned for unrecognized key identifiers to enable chaining of key resolvers.</span></span></p>
       <p></p>
     syntax:
       content: public ListenableFuture<IKey> resolveKeyAsync(String kid)
       parameters:
         - id: kid
           type: '26831127'
-          description: <p>解決するのにはキーの識別子。 </p>
+          description: <p><span data-ttu-id="2b36b-118">解決するのにはキーの識別子。</span><span class="sxs-lookup"><span data-stu-id="2b36b-118">The key identifier to resolve.</span></span> </p>
       return:
         type: 76185cf1com.microsoft.azure.keyvault.core._i_keya08ddfce
-        description: <p>解決されたを含む ListenableFuture <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref></p>
+        description: <p><span data-ttu-id="2b36b-119">解決されたを含む ListenableFuture <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref></span><span class="sxs-lookup"><span data-stu-id="2b36b-119">A ListenableFuture containing the resolved <xref uid="com.microsoft.azure.keyvault.core._i_key" data-throw-if-not-resolved="false">IKey</xref></span></span></p>

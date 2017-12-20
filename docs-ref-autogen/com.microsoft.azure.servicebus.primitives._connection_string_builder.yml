@@ -38,8 +38,8 @@ items:
       startLine: 39
     package: com.microsoft.azure.servicebus.primitives
     summary: |-
-      <p>このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。 既存の接続文字列で基本的な検証を実行するも使用できます。 </p>
-      <p>サンプル コードに示します。 <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
+      <p><span data-ttu-id="348e4-101">このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="348e4-101">This class can be used to construct a connection string which can establish communication with ServiceBus entities.</span></span> <span data-ttu-id="348e4-102">既存の接続文字列で基本的な検証を実行するも使用できます。</span><span class="sxs-lookup"><span data-stu-id="348e4-102">It can also be used to perform basic validation on an existing connection string.</span></span> </p>
+      <p><span data-ttu-id="348e4-103">サンプル コードに示します。</span><span class="sxs-lookup"><span data-stu-id="348e4-103">Sample Code:</span></span> <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
 
                                                    "ServiceBusNamespaceName", 
 
@@ -55,7 +55,7 @@ items:
 
           </code></pre></p>
 
-      <p>接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。 基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem><p>エンドポイントで servicebus 名前空間を指す URL </p></listitem><listitem><p>EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。 キューおよびトピックでは、エンティティの名前だけです。 サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p></listitem><listitem><p>SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。 </p></listitem><listitem><p>SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。 </p></listitem><listitem><p>SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。 </p></listitem><listitem><p>OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。 </p></listitem><listitem><p><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。 </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="348e4-104">接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。</span><span class="sxs-lookup"><span data-stu-id="348e4-104">A connection string is basically a string consisted of key-value pair separated by ";".</span></span> <span data-ttu-id="348e4-105">基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="348e4-105">Basic format is {{ &lt;}key{&gt;}={ &lt;}value{&gt;}[;{ &lt;}key{&gt;}={ &lt;}value{&gt;}]} where supported key name are as follow: <itemizedlist><listitem></span></span><p><span data-ttu-id="348e4-106">エンドポイントで servicebus 名前空間を指す URL</span><span class="sxs-lookup"><span data-stu-id="348e4-106">Endpoint - URL that points to the servicebus namespace</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-107">EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。</span><span class="sxs-lookup"><span data-stu-id="348e4-107">EntityPath - Path to the service bus entity (queue/topic/subscription/).</span></span> <span data-ttu-id="348e4-108">キューおよびトピックでは、エンティティの名前だけです。</span><span class="sxs-lookup"><span data-stu-id="348e4-108">For queues and topics, it is just the entity name.</span></span> <span data-ttu-id="348e4-109">サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="348e4-109">For subscriptions, path is &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-110">SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。</span><span class="sxs-lookup"><span data-stu-id="348e4-110">SharedAccessKeyName - Key name to the corresponding shared access policy rule for the namespace, or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-111">SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。</span><span class="sxs-lookup"><span data-stu-id="348e4-111">SharedAccessKey - Key value for the corresponding shared access policy rule of the namespace or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-112">SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。</span><span class="sxs-lookup"><span data-stu-id="348e4-112">SharedAccessSignatureToken - Instead of a key name and key value, clients can provide an already generated SAS Token.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-113">OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="348e4-113">OperationTimeout - Default timeout to be used for all senders, receiver and clients created from this connection string.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-114"><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。</span><span class="sxs-lookup"><span data-stu-id="348e4-114"><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> - Name of the retry policy.</span></span> </p></listitem></itemizedlist></p>
     syntax: &ref_2
       content: public class ConnectionStringBuilder
     inheritance:
@@ -76,22 +76,22 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 139
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>名前空間、エンティティのパスと SAS キーの名前と値から新しいインスタンスを作成します。 </p>
+    summary: '<p><span data-ttu-id="348e4-115">名前空間、エンティティのパスと SAS キーの名前と値から新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="348e4-115">Creates a new instance from namespace, entity path and SAS Key name and value.</span></span> </p>'
     syntax:
       content: 'public ConnectionStringBuilder(final String namespaceName, final String entityPath, final String sharedAccessKeyName, final String sharedAccessKey)'
       parameters:
         - id: namespaceName
           type: 3d93591e
-          description: '<p>Namespace 名 (dns サフィックスの ex:. *.servicebus.windows.net は必要ありません) </p>'
+          description: '<p><span data-ttu-id="348e4-116">Namespace 名 (dns サフィックスの ex:. *.servicebus.windows.net は必要ありません)</span><span class="sxs-lookup"><span data-stu-id="348e4-116">Namespace name (dns suffix - ex: .servicebus.windows.net is not required)</span></span> </p>'
         - id: entityPath
           type: 3d93591e
-          description: <p>エンティティのパスです。 キューまたはトピックでは、名前を使用します。 サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p>
+          description: '<p><span data-ttu-id="348e4-117">エンティティのパスです。</span><span class="sxs-lookup"><span data-stu-id="348e4-117">Entity path.</span></span> <span data-ttu-id="348e4-118">キューまたはトピックでは、名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="348e4-118">For queue or topic, use name.</span></span> <span data-ttu-id="348e4-119">サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="348e4-119">For subscription use &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p>'
         - id: sharedAccessKeyName
           type: 3d93591e
-          description: <p>共有アクセス キーの名前 </p>
+          description: <p><span data-ttu-id="348e4-120">共有アクセス キーの名前</span><span class="sxs-lookup"><span data-stu-id="348e4-120">Shared Access Key name</span></span> </p>
         - id: sharedAccessKey
           type: 3d93591e
-          description: <p>共有アクセス キー </p>
+          description: <p><span data-ttu-id="348e4-121">共有アクセス キー</span><span class="sxs-lookup"><span data-stu-id="348e4-121">Shared Access Key</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus.primitives._connection_string_builder.ConnectionStringBuilder(final String,final String,final String)'
     id: 'ConnectionStringBuilder(final String,final String,final String)'
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -108,19 +108,19 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 154
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>名前空間、エンティティのパス、および既に生成された SAS トークンからの新しいインスタンスを作成します。 </p>
+    summary: '<p><span data-ttu-id="348e4-122">名前空間、エンティティのパス、および既に生成された SAS トークンからの新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="348e4-122">Creates a new instance from namespace, entity path and already generated SAS token.</span></span> </p>'
     syntax:
       content: 'public ConnectionStringBuilder(final String namespaceName, final String entityPath, final String sharedAccessSingature)'
       parameters:
         - id: namespaceName
           type: 3d93591e
-          description: '<p>Namespace 名 (dns サフィックスの ex:. *.servicebus.windows.net は必要ありません) </p>'
+          description: '<p><span data-ttu-id="348e4-123">Namespace 名 (dns サフィックスの ex:. *.servicebus.windows.net は必要ありません)</span><span class="sxs-lookup"><span data-stu-id="348e4-123">Namespace name (dns suffix - ex: .servicebus.windows.net is not required)</span></span> </p>'
         - id: entityPath
           type: 3d93591e
-          description: <p>エンティティのパスです。 キューまたはトピックでは、名前を使用します。 サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p>
+          description: '<p><span data-ttu-id="348e4-124">エンティティのパスです。</span><span class="sxs-lookup"><span data-stu-id="348e4-124">Entity path.</span></span> <span data-ttu-id="348e4-125">キューまたはトピックでは、名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="348e4-125">For queue or topic, use name.</span></span> <span data-ttu-id="348e4-126">サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="348e4-126">For subscription use &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p>'
         - id: sharedAccessSingature
           type: 3d93591e
-          description: <p>Shared Access Signature が既に生成 </p>
+          description: <p><span data-ttu-id="348e4-127">Shared Access Signature が既に生成</span><span class="sxs-lookup"><span data-stu-id="348e4-127">Shared Access Signature already generated</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus.primitives._connection_string_builder.ConnectionStringBuilder(final URI,final String,final String,final String)'
     id: 'ConnectionStringBuilder(final URI,final String,final String,final String)'
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -137,22 +137,22 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 170
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>新しいインスタンスを作成する名前空間、エンティティのパスと SAS キーの名前と値のエンドポイント アドレスから </p>
+    summary: '<p><span data-ttu-id="348e4-128">新しいインスタンスを作成する名前空間、エンティティのパスと SAS キーの名前と値のエンドポイント アドレスから</span><span class="sxs-lookup"><span data-stu-id="348e4-128">Creates a new instance from endpoint address of the namesapce, entity path and SAS Key name and value</span></span> </p>'
     syntax:
       content: 'public ConnectionStringBuilder(final URI endpointAddress, final String entityPath, final String sharedAccessKeyName, final String sharedAccessKey)'
       parameters:
         - id: endpointAddress
           type: bac42120
-          description: '<p>名前空間レベルのエンドポイントです。 これには、scheme://fullyQualifiedServiceBusNamespaceEndpointName の形式にする必要があります。 </p>'
+          description: '<p><span data-ttu-id="348e4-129">名前空間レベルのエンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="348e4-129">namespace level endpoint.</span></span> <span data-ttu-id="348e4-130">これには、scheme://fullyQualifiedServiceBusNamespaceEndpointName の形式にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="348e4-130">This needs to be in the format of scheme://fullyQualifiedServiceBusNamespaceEndpointName</span></span> </p>'
         - id: entityPath
           type: 3d93591e
-          description: <p>エンティティのパスです。 キューまたはトピックでは、名前を使用します。 サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p>
+          description: '<p><span data-ttu-id="348e4-131">エンティティのパスです。</span><span class="sxs-lookup"><span data-stu-id="348e4-131">Entity path.</span></span> <span data-ttu-id="348e4-132">キューまたはトピックでは、名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="348e4-132">For queue or topic, use name.</span></span> <span data-ttu-id="348e4-133">サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="348e4-133">For subscription use &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p>'
         - id: sharedAccessKeyName
           type: 3d93591e
-          description: <p>共有アクセス キーの名前 </p>
+          description: <p><span data-ttu-id="348e4-134">共有アクセス キーの名前</span><span class="sxs-lookup"><span data-stu-id="348e4-134">Shared Access Key name</span></span> </p>
         - id: sharedAccessKey
           type: 3d93591e
-          description: <p>共有アクセス キー </p>
+          description: <p><span data-ttu-id="348e4-135">共有アクセス キー</span><span class="sxs-lookup"><span data-stu-id="348e4-135">Shared Access Key</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus.primitives._connection_string_builder.ConnectionStringBuilder(final URI,final String,final String)'
     id: 'ConnectionStringBuilder(final URI,final String,final String)'
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -169,19 +169,19 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 185
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>名前空間、エンティティのパスと既に生成された SAS トークンのエンドポイント アドレスからの新しいインスタンスを作成します。 </p>
+    summary: '<p><span data-ttu-id="348e4-136">名前空間、エンティティのパスと既に生成された SAS トークンのエンドポイント アドレスからの新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="348e4-136">Creates a new instance from endpoint address of the namesapce, entity path and already generated SAS token.</span></span> </p>'
     syntax:
       content: 'public ConnectionStringBuilder(final URI endpointAddress, final String entityPath, final String sharedAccessSingature)'
       parameters:
         - id: endpointAddress
           type: bac42120
-          description: '<p>名前空間レベルのエンドポイントです。 これには、scheme://fullyQualifiedServiceBusNamespaceEndpointName の形式にする必要があります。 </p>'
+          description: '<p><span data-ttu-id="348e4-137">名前空間レベルのエンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="348e4-137">namespace level endpoint.</span></span> <span data-ttu-id="348e4-138">これには、scheme://fullyQualifiedServiceBusNamespaceEndpointName の形式にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="348e4-138">This needs to be in the format of scheme://fullyQualifiedServiceBusNamespaceEndpointName</span></span> </p>'
         - id: entityPath
           type: 3d93591e
-          description: <p>エンティティのパスです。 キューまたはトピックでは、名前を使用します。 サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p>
+          description: '<p><span data-ttu-id="348e4-139">エンティティのパスです。</span><span class="sxs-lookup"><span data-stu-id="348e4-139">Entity path.</span></span> <span data-ttu-id="348e4-140">キューまたはトピックでは、名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="348e4-140">For queue or topic, use name.</span></span> <span data-ttu-id="348e4-141">サブスクリプションを使用して&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="348e4-141">For subscription use &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p>'
         - id: sharedAccessSingature
           type: 3d93591e
-          description: <p>Shared Access Signature が既に生成 </p>
+          description: <p><span data-ttu-id="348e4-142">Shared Access Signature が既に生成</span><span class="sxs-lookup"><span data-stu-id="348e4-142">Shared Access Signature already generated</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.ConnectionStringBuilder(String)
     id: ConnectionStringBuilder(String)
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -198,16 +198,16 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 201
     package: com.microsoft.azure.servicebus.primitives
-    summary: '<p>指定された接続文字列から新しいインスタンスを作成します。 ConnectionString の形式: エンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessKeyName = SHARED_ACCESS_KEY_NAME です。SharedAccessKey = SHARED_ACCESS_KEY またはエンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessSignatureToken SHARED_ACCESS_SIGNATURE_TOKEN を = </p>'
+    summary: '<p><span data-ttu-id="348e4-143">指定された接続文字列から新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="348e4-143">Creates a new instance from the given connection string.</span></span> <span data-ttu-id="348e4-144">ConnectionString の形式: エンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessKeyName = SHARED_ACCESS_KEY_NAME です。SharedAccessKey = SHARED_ACCESS_KEY またはエンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessSignatureToken SHARED_ACCESS_SIGNATURE_TOKEN を =</span><span class="sxs-lookup"><span data-stu-id="348e4-144">ConnectionString format: Endpoint=sb://namespace_DNS_Name;EntityPath=EVENT_HUB_NAME;SharedAccessKeyName=SHARED_ACCESS_KEY_NAME;SharedAccessKey=SHARED_ACCESS_KEY or Endpoint=sb://namespace_DNS_Name;EntityPath=EVENT_HUB_NAME;SharedAccessSignatureToken=SHARED_ACCESS_SIGNATURE_TOKEN</span></span> </p>'
     syntax:
       content: public ConnectionStringBuilder(String connectionString)
       parameters:
         - id: connectionString
           type: '26831127'
-          description: <p>ServiceBus 接続文字列 </p>
+          description: <p><span data-ttu-id="348e4-145">ServiceBus 接続文字列</span><span class="sxs-lookup"><span data-stu-id="348e4-145">ServiceBus ConnectionString</span></span> </p>
     exceptions:
       - type: com.microsoft.azure.servicebus.primitives._illegal_connection_string_format_exception
-        description: <p>ConnectionString の形式が有効な場合 </p>
+        description: <p><span data-ttu-id="348e4-146">ConnectionString の形式が有効な場合</span><span class="sxs-lookup"><span data-stu-id="348e4-146">when the format of the ConnectionString is not valid</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus.primitives._connection_string_builder.ConnectionStringBuilder(String,String)'
     id: 'ConnectionStringBuilder(String,String)'
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -224,16 +224,16 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 214
     package: com.microsoft.azure.servicebus.primitives
-    summary: '<p>指定された接続文字列およびエンティティ パスから新しいインスタンスを作成します。 接続文字列は、可能性があります。 またはエンティティのパスを含まない場合があります。 ConnectionString の形式: エンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessKeyName = SHARED_ACCESS_KEY_NAME です。SharedAccessKey = SHARED_ACCESS_KEY またはエンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessSignatureToken SHARED_ACCESS_SIGNATURE_TOKEN を = </p>'
+    summary: '<p><span data-ttu-id="348e4-147">指定された接続文字列およびエンティティ パスから新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="348e4-147">Creates a new instance from the given connection string and entity path.</span></span> <span data-ttu-id="348e4-148">接続文字列は、可能性があります。 またはエンティティのパスを含まない場合があります。</span><span class="sxs-lookup"><span data-stu-id="348e4-148">A connection string may or may not include the entity path.</span></span> <span data-ttu-id="348e4-149">ConnectionString の形式: エンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessKeyName = SHARED_ACCESS_KEY_NAME です。SharedAccessKey = SHARED_ACCESS_KEY またはエンドポイント = sb://namespace_DNS_Name です。EntityPath EVENT_HUB_NAME; を =SharedAccessSignatureToken SHARED_ACCESS_SIGNATURE_TOKEN を =</span><span class="sxs-lookup"><span data-stu-id="348e4-149">ConnectionString format: Endpoint=sb://namespace_DNS_Name;EntityPath=EVENT_HUB_NAME;SharedAccessKeyName=SHARED_ACCESS_KEY_NAME;SharedAccessKey=SHARED_ACCESS_KEY or Endpoint=sb://namespace_DNS_Name;EntityPath=EVENT_HUB_NAME;SharedAccessSignatureToken=SHARED_ACCESS_SIGNATURE_TOKEN</span></span> </p>'
     syntax:
       content: 'public ConnectionStringBuilder(String namespaceConnectionString, String entityPath)'
       parameters:
         - id: namespaceConnectionString
           type: '26831127'
-          description: <p>ServiceBus 名前空間の接続文字列。 これにより、エンティティのパスが含まれません。 </p>
+          description: <p><span data-ttu-id="348e4-150">ServiceBus 名前空間の接続文字列。</span><span class="sxs-lookup"><span data-stu-id="348e4-150">connections string of the ServiceBus namespace.</span></span> <span data-ttu-id="348e4-151">これにより、エンティティのパスが含まれません。</span><span class="sxs-lookup"><span data-stu-id="348e4-151">This doesn't include the entity path.</span></span> </p>
         - id: entityPath
           type: '26831127'
-          description: <p>名前空間内のエンティティへのパス </p>
+          description: <p><span data-ttu-id="348e4-152">名前空間内のエンティティへのパス</span><span class="sxs-lookup"><span data-stu-id="348e4-152">path to the entity within the namespace</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.DefaultOperationTimeout
     id: DefaultOperationTimeout
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -249,7 +249,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 73
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>既定の操作のタイムアウト、接続文字列にタイムアウトが指定されていない場合。 30 秒です。 </p>
+    summary: <p><span data-ttu-id="348e4-153">既定の操作のタイムアウト、接続文字列にタイムアウトが指定されていない場合。</span><span class="sxs-lookup"><span data-stu-id="348e4-153">Default operation timeout if timeout is not specified in the connection string.</span></span> <span data-ttu-id="348e4-154">30 秒です。</span><span class="sxs-lookup"><span data-stu-id="348e4-154">30 seconds.</span></span> </p>
     syntax: &ref_1
       content: public static final Duration DefaultOperationTimeout= Duration.ofSeconds(30)
       return:
@@ -270,12 +270,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 224
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>ServiceBus Namespace への接続に使用できるエンドポイントを取得します。 </p>
+    summary: <p><span data-ttu-id="348e4-155">ServiceBus Namespace への接続に使用できるエンドポイントを取得します。</span><span class="sxs-lookup"><span data-stu-id="348e4-155">Get the endpoint which can be used to connect to the ServiceBus Namespace</span></span> </p>
     syntax:
       content: public URI getEndpoint()
       return:
         type: '62304784'
-        description: <p>Service bus 名前空間を表すエンドポイント </p>
+        description: <p><span data-ttu-id="348e4-156">Service bus 名前空間を表すエンドポイント</span><span class="sxs-lookup"><span data-stu-id="348e4-156">Endpoint representing the service bus namespace</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.getEntityPath()
     id: getEntityPath()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -292,12 +292,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 260
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>接続文字列からエンティティ path の値を取得します。 </p>
+    summary: <p><span data-ttu-id="348e4-157">接続文字列からエンティティ path の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="348e4-157">Get the entity path value from the connection string</span></span> </p>
     syntax:
       content: public String getEntityPath()
       return:
         type: '26831127'
-        description: <p>エンティティのパス </p>
+        description: <p><span data-ttu-id="348e4-158">エンティティのパス</span><span class="sxs-lookup"><span data-stu-id="348e4-158">Entity Path</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.getOperationTimeout()
     id: getOperationTimeout()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -314,12 +314,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 270
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>その後送信や受信などの保留中の操作がタイムアウト期間を取得します。タイムアウトが指定されていない場合は、既定値は<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder.DefaultOperationTimeout" data-throw-if-not-resolved="false">DefaultOperationTimeout</xref>これを使用するすべての操作でこの値が使用されます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>がない限り、明示的に無効になります。 </p>
+    summary: '<p><span data-ttu-id="348e4-159">その後送信や受信などの保留中の操作がタイムアウト期間を取得します。タイムアウトが指定されていない場合は、既定値は<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder.DefaultOperationTimeout" data-throw-if-not-resolved="false">DefaultOperationTimeout</xref>これを使用するすべての操作でこの値が使用されます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>がない限り、明示的に無効になります。</span><span class="sxs-lookup"><span data-stu-id="348e4-159">Gets the duration after which a pending operation like SEND or RECEIVE will time out. If a timeout is not specified, it defaults to <xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder.DefaultOperationTimeout" data-throw-if-not-resolved="false">DefaultOperationTimeout</xref> This value will be used by all operations which uses this <xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>, unless explicitly over-ridden.</span></span> </p>'
     syntax:
       content: public Duration getOperationTimeout()
       return:
         type: e02a2de0
-        description: <p>operationTimeout </p>
+        description: <p><span data-ttu-id="348e4-160">operationTimeout</span><span class="sxs-lookup"><span data-stu-id="348e4-160">operationTimeout</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.getRetryPolicy()
     id: getRetryPolicy()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -336,12 +336,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 289
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>このビルダーの作成の一環として作成された再試行ポリシー インスタンスを取得します。 </p>
+    summary: <p><span data-ttu-id="348e4-161">このビルダーの作成の一環として作成された再試行ポリシー インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="348e4-161">Get the retry policy instance that was created as part of this builder's creation.</span></span> </p>
     syntax:
       content: public RetryPolicy getRetryPolicy()
       return:
         type: com.microsoft.azure.servicebus.primitives._retry_policy
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>この ConnectionString を使用して実行するすべての操作の適用 </p>"
+        description: "<p><span data-ttu-id=\"348e4-162\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>この ConnectionString を使用して実行するすべての操作の適用</span><span class=\"sxs-lookup\"><span data-stu-id=\"348e4-162\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> applied for any operation performed using this ConnectionString</span></span> </p>"
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.getSasKey()
     id: getSasKey()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -358,12 +358,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 233
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>接続文字列または null には、共有アクセス ポリシー キーの値を取得します。 </p>
+    summary: <p><span data-ttu-id="348e4-163">接続文字列または null には、共有アクセス ポリシー キーの値を取得します。</span><span class="sxs-lookup"><span data-stu-id="348e4-163">Get the shared access policy key value from the connection string or null.</span></span> </p>
     syntax:
       content: public String getSasKey()
       return:
         type: '26831127'
-        description: <p>共有アクセス署名キーの値 </p>
+        description: <p><span data-ttu-id="348e4-164">共有アクセス署名キーの値</span><span class="sxs-lookup"><span data-stu-id="348e4-164">Shared Access Signature key value</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.getSasKeyName()
     id: getSasKeyName()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -380,12 +380,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 242
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>接続文字列から名前または null は、共有アクセス ポリシーの所有者を取得します。 </p>
+    summary: <p><span data-ttu-id="348e4-165">接続文字列から名前または null は、共有アクセス ポリシーの所有者を取得します。</span><span class="sxs-lookup"><span data-stu-id="348e4-165">Get the shared access policy owner name from the connection string or null.</span></span> </p>
     syntax:
       content: public String getSasKeyName()
       return:
         type: '26831127'
-        description: <p>共有アクセス署名キー名 </p>
+        description: <p><span data-ttu-id="348e4-166">共有アクセス署名キー名</span><span class="sxs-lookup"><span data-stu-id="348e4-166">Shared Access Signature key name</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.getSharedAccessSignatureToken()
     id: getSharedAccessSignatureToken()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -402,12 +402,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 251
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>共有アクセス署名は、接続文字列からトークンまたは null を返します。 </p>
+    summary: <p><span data-ttu-id="348e4-167">共有アクセス署名は、接続文字列からトークンまたは null を返します。</span><span class="sxs-lookup"><span data-stu-id="348e4-167">Returns the shared access signature token from the connection string or null.</span></span> </p>
     syntax:
       content: public String getSharedAccessSignatureToken()
       return:
         type: '26831127'
-        description: <p>共有アクセス署名トークン </p>
+        description: <p><span data-ttu-id="348e4-168">共有アクセス署名トークン</span><span class="sxs-lookup"><span data-stu-id="348e4-168">Shared Access Signature Token</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.setOperationTimeout(final Duration)
     id: setOperationTimeout(final Duration)
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -425,14 +425,14 @@ items:
       startLine: 280
     package: com.microsoft.azure.servicebus.primitives
     summary: |-
-      <p>接続文字列で OperationTimeout 値を設定します。 この値は、これを使用するすべての操作で使用されます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>がない限り、明示的に無効になります。 </p>
-      <p>OperationTimeout の ConnectionString は java と他のプラットフォームでクライアントの間で相互操作可能なは。 </p>
+      <p><span data-ttu-id="348e4-169">接続文字列で OperationTimeout 値を設定します。</span><span class="sxs-lookup"><span data-stu-id="348e4-169">Set the OperationTimeout value in the Connection String.</span></span> <span data-ttu-id="348e4-170">この値は、これを使用するすべての操作で使用されます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>がない限り、明示的に無効になります。</span><span class="sxs-lookup"><span data-stu-id="348e4-170">This value will be used by all operations which uses this <xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>, unless explicitly over-ridden.</span></span> </p>
+      <p><span data-ttu-id="348e4-171">OperationTimeout の ConnectionString は java と他のプラットフォームでクライアントの間で相互操作可能なは。</span><span class="sxs-lookup"><span data-stu-id="348e4-171">ConnectionString with operationTimeout is not inter-operable between java and clients in other platforms.</span></span> </p>
     syntax:
       content: public void setOperationTimeout(final Duration operationTimeout)
       parameters:
         - id: operationTimeout
           type: 89ac7c4d
-          description: <p>操作のタイムアウト </p>
+          description: <p><span data-ttu-id="348e4-172">操作のタイムアウト</span><span class="sxs-lookup"><span data-stu-id="348e4-172">Operation Timeout</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.setRetryPolicy(final RetryPolicy)
     id: setRetryPolicy(final RetryPolicy)
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -449,13 +449,13 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 299
     package: com.microsoft.azure.servicebus.primitives
-    summary: "<p>再試行ポリシーを設定します。 </p>\n<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>の一部としてシリアル化されない<xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder.toString()\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder#toString()</xref>し、他のプラットフォームで ServiceBus クライアントと相互運用はできません。 </p>"
+    summary: "<p><span data-ttu-id=\"348e4-173\">再試行ポリシーを設定します。</span><span class=\"sxs-lookup\"><span data-stu-id=\"348e4-173\">Set the retry policy.</span></span> </p>\n<p><span data-ttu-id=\"348e4-174\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>の一部としてシリアル化されない<xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder.toString()\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder#toString()</xref>し、他のプラットフォームで ServiceBus クライアントと相互運用はできません。</span><span class=\"sxs-lookup\"><span data-stu-id=\"348e4-174\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> is not Serialized as part of <xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder.toString()\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder#toString()</xref> and is not interoperable with ServiceBus clients in other platforms.</span></span> </p>"
     syntax:
       content: public void setRetryPolicy(final RetryPolicy retryPolicy)
       parameters:
         - id: retryPolicy
           type: 93de0ef9com.microsoft.azure.servicebus.primitives._retry_policy
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>この ConnectionString を使用して実行するすべての操作の適用 </p>"
+          description: "<p><span data-ttu-id=\"348e4-175\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>この ConnectionString を使用して実行するすべての操作の適用</span><span class=\"sxs-lookup\"><span data-stu-id=\"348e4-175\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> applied for any operation performed using this ConnectionString</span></span> </p>"
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.toLoggableString()
     id: toLoggableString()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -492,12 +492,12 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/ConnectionStringBuilder.java
       startLine: 309
     package: com.microsoft.azure.servicebus.primitives
-    summary: <p>ServiceBus Namespace への接続に使用できる相互操作可能な接続文字列を返します </p>
+    summary: <p><span data-ttu-id="348e4-176">ServiceBus Namespace への接続に使用できる相互操作可能な接続文字列を返します</span><span class="sxs-lookup"><span data-stu-id="348e4-176">Returns an inter-operable connection string that can be used to connect to ServiceBus Namespace</span></span> </p>
     syntax: &ref_3
       content: public String toString()
       return:
         type: '26831127'
-        description: <p>接続文字列 </p>
+        description: <p><span data-ttu-id="348e4-177">接続文字列</span><span class="sxs-lookup"><span data-stu-id="348e4-177">connection string</span></span> </p>
 references:
   - uid: 89ac7c4d
     spec.java:
@@ -598,7 +598,7 @@ references:
     nameWithType: RetryPolicy
     fullName: com.microsoft.azure.servicebus.primitives.RetryPolicy
     type: Class
-    summary: <p>例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。 送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。 クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。 ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。 </p>
+    summary: '<p><span data-ttu-id="348e4-178">例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。</span><span class="sxs-lookup"><span data-stu-id="348e4-178">Represents an abstraction of a policy for retrying messaging operations when an exception is encountered.</span></span> <span data-ttu-id="348e4-179">送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。</span><span class="sxs-lookup"><span data-stu-id="348e4-179">Some exceptions encountered by a sender or receiver can be transient like ServerBusy and the operation will succeed if retried.</span></span> <span data-ttu-id="348e4-180">クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。</span><span class="sxs-lookup"><span data-stu-id="348e4-180">Clients can specify a retry policy using <xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref> which guides senders and receivers to automatically retry the failed operation before throwing the exception to the client application.</span></span> <span data-ttu-id="348e4-181">ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。</span><span class="sxs-lookup"><span data-stu-id="348e4-181">Users should not implement this class, instead should use one of the provided implementations through <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref> or <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>.</span></span> </p>'
     syntax:
       content: public class RetryPolicy
   - uid: com.microsoft.azure.servicebus.primitives._illegal_connection_string_format_exception
@@ -608,7 +608,7 @@ references:
     nameWithType: IllegalConnectionStringFormatException
     fullName: com.microsoft.azure.servicebus.primitives.IllegalConnectionStringFormatException
     type: Class
-    summary: <p>指定した接続文字列は接続の要件を満たしていない場合、この例外がスローされます。 </p>
+    summary: <p><span data-ttu-id="348e4-182">指定した接続文字列は接続の要件を満たしていない場合、この例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="348e4-182">This exception is thrown when the connection string provided does not meet the requirement for connection.</span></span> </p>
     syntax:
       content: public class IllegalConnectionStringFormatException
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.DefaultOperationTimeout
@@ -618,7 +618,7 @@ references:
     nameWithType: ConnectionStringBuilder.DefaultOperationTimeout
     fullName: final Duration com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder.DefaultOperationTimeout
     type: Field
-    summary: <p>既定の操作のタイムアウト、接続文字列にタイムアウトが指定されていない場合。 30 秒です。 </p>
+    summary: <p><span data-ttu-id="348e4-183">既定の操作のタイムアウト、接続文字列にタイムアウトが指定されていない場合。</span><span class="sxs-lookup"><span data-stu-id="348e4-183">Default operation timeout if timeout is not specified in the connection string.</span></span> <span data-ttu-id="348e4-184">30 秒です。</span><span class="sxs-lookup"><span data-stu-id="348e4-184">30 seconds.</span></span> </p>
     syntax: *ref_1
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder
     parent: com.microsoft.azure.servicebus.primitives
@@ -628,8 +628,8 @@ references:
     fullName: com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder
     type: Class
     summary: |-
-      <p>このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。 既存の接続文字列で基本的な検証を実行するも使用できます。 </p>
-      <p>サンプル コードに示します。 <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
+      <p><span data-ttu-id="348e4-185">このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="348e4-185">This class can be used to construct a connection string which can establish communication with ServiceBus entities.</span></span> <span data-ttu-id="348e4-186">既存の接続文字列で基本的な検証を実行するも使用できます。</span><span class="sxs-lookup"><span data-stu-id="348e4-186">It can also be used to perform basic validation on an existing connection string.</span></span> </p>
+      <p><span data-ttu-id="348e4-187">サンプル コードに示します。</span><span class="sxs-lookup"><span data-stu-id="348e4-187">Sample Code:</span></span> <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
 
                                                    "ServiceBusNamespaceName", 
 
@@ -645,7 +645,7 @@ references:
 
           </code></pre></p>
 
-      <p>接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。 基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem><p>エンドポイントで servicebus 名前空間を指す URL </p></listitem><listitem><p>EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。 キューおよびトピックでは、エンティティの名前だけです。 サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p></listitem><listitem><p>SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。 </p></listitem><listitem><p>SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。 </p></listitem><listitem><p>SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。 </p></listitem><listitem><p>OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。 </p></listitem><listitem><p><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。 </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="348e4-188">接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。</span><span class="sxs-lookup"><span data-stu-id="348e4-188">A connection string is basically a string consisted of key-value pair separated by ";".</span></span> <span data-ttu-id="348e4-189">基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="348e4-189">Basic format is {{ &lt;}key{&gt;}={ &lt;}value{&gt;}[;{ &lt;}key{&gt;}={ &lt;}value{&gt;}]} where supported key name are as follow: <itemizedlist><listitem></span></span><p><span data-ttu-id="348e4-190">エンドポイントで servicebus 名前空間を指す URL</span><span class="sxs-lookup"><span data-stu-id="348e4-190">Endpoint - URL that points to the servicebus namespace</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-191">EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。</span><span class="sxs-lookup"><span data-stu-id="348e4-191">EntityPath - Path to the service bus entity (queue/topic/subscription/).</span></span> <span data-ttu-id="348e4-192">キューおよびトピックでは、エンティティの名前だけです。</span><span class="sxs-lookup"><span data-stu-id="348e4-192">For queues and topics, it is just the entity name.</span></span> <span data-ttu-id="348e4-193">サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="348e4-193">For subscriptions, path is &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-194">SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。</span><span class="sxs-lookup"><span data-stu-id="348e4-194">SharedAccessKeyName - Key name to the corresponding shared access policy rule for the namespace, or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-195">SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。</span><span class="sxs-lookup"><span data-stu-id="348e4-195">SharedAccessKey - Key value for the corresponding shared access policy rule of the namespace or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-196">SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。</span><span class="sxs-lookup"><span data-stu-id="348e4-196">SharedAccessSignatureToken - Instead of a key name and key value, clients can provide an already generated SAS Token.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-197">OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="348e4-197">OperationTimeout - Default timeout to be used for all senders, receiver and clients created from this connection string.</span></span> </p></listitem><listitem><p><span data-ttu-id="348e4-198"><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。</span><span class="sxs-lookup"><span data-stu-id="348e4-198"><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> - Name of the retry policy.</span></span> </p></listitem></itemizedlist></p>
     syntax: *ref_2
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder.toString()
     parent: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -654,5 +654,5 @@ references:
     nameWithType: ConnectionStringBuilder.toString()
     fullName: String com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder.toString()
     type: Method
-    summary: <p>ServiceBus Namespace への接続に使用できる相互操作可能な接続文字列を返します </p>
+    summary: <p><span data-ttu-id="348e4-199">ServiceBus Namespace への接続に使用できる相互操作可能な接続文字列を返します</span><span class="sxs-lookup"><span data-stu-id="348e4-199">Returns an inter-operable connection string that can be used to connect to ServiceBus Namespace</span></span> </p>
     syntax: *ref_3

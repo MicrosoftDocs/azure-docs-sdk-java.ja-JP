@@ -21,7 +21,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/primitives/RetryExponential.java
       startLine: 14
     package: com.microsoft.azure.servicebus.primitives
-    summary: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>実装の再試行の間の遅延が指数の方法で拡張されます。 <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>を使用して、クライアントの操作に対して設定できる<xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>です。 DeltaBackOff (MaximumBackoff - MinimumBackoff) の関数である retryFactor を使用して計算されます RetryIntervals と MaximumRetryCount </p>"
+    summary: "<p><span data-ttu-id=\"f902e-101\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>実装の再試行の間の遅延が指数の方法で拡張されます。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f902e-101\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> implementation where the delay between retries will grow in an exponential manner.</span></span> <span data-ttu-id=\"f902e-102\"><xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref>を使用して、クライアントの操作に対して設定できる<xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>です。</span><span class=\"sxs-lookup\"><span data-stu-id=\"f902e-102\"><xref uid=\"com.microsoft.azure.servicebus.primitives._retry_policy\" data-throw-if-not-resolved=\"false\">RetryPolicy</xref> can be set on the client operations using <xref uid=\"com.microsoft.azure.servicebus.primitives._connection_string_builder\" data-throw-if-not-resolved=\"false\">ConnectionStringBuilder</xref>.</span></span> <span data-ttu-id=\"f902e-103\">DeltaBackOff (MaximumBackoff - MinimumBackoff) の関数である retryFactor を使用して計算されます RetryIntervals と MaximumRetryCount</span><span class=\"sxs-lookup\"><span data-stu-id=\"f902e-103\">RetryIntervals will be computed using a retryFactor which is a function of deltaBackOff (MaximumBackoff - MinimumBackoff) and MaximumRetryCount</span></span> </p>"
     syntax:
       content: public class RetryExponential extends RetryPolicy
     inheritance:
@@ -131,12 +131,12 @@ references:
     nameWithType: RetryPolicy.getDefault()
     fullName: static RetryPolicy com.microsoft.azure.servicebus.primitives.RetryPolicy.getDefault()
     type: Method
-    summary: <p>連続する各エラーに指数関数的に増加する再試行の間隔を提供するポリシーを再試行してください。 このポリシーは、ほとんどのクライアント アプリケーションを使用して使用するのに適したし、再試行ポリシーが指定されていない場合、既定のポリシーもします。 </p>
+    summary: <p><span data-ttu-id="f902e-104">連続する各エラーに指数関数的に増加する再試行の間隔を提供するポリシーを再試行してください。</span><span class="sxs-lookup"><span data-stu-id="f902e-104">Retry policy that provides exponentially increasing retry intervals with each successive failure.</span></span> <span data-ttu-id="f902e-105">このポリシーは、ほとんどのクライアント アプリケーションを使用して使用するのに適したし、再試行ポリシーが指定されていない場合、既定のポリシーもします。</span><span class="sxs-lookup"><span data-stu-id="f902e-105">This policy is suitable for use by use most client applications and is also the default policy if no retry policy is specified.</span></span> </p>
     syntax:
       content: public static RetryPolicy getDefault()
       return:
         type: com.microsoft.azure.servicebus.primitives._retry_policy
-        description: <p>再試行の間隔が指数関数的に増加を提供する再試行ポリシー </p>
+        description: <p><span data-ttu-id="f902e-106">再試行の間隔が指数関数的に増加を提供する再試行ポリシー</span><span class="sxs-lookup"><span data-stu-id="f902e-106">a retry policy that provides exponentially increasing retry intervals</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus.primitives._retry_policy.getNextRetryInterval(String,Exception,Duration)'
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -145,23 +145,23 @@ references:
     fullName: 'Duration com.microsoft.azure.servicebus.primitives.RetryPolicy.getNextRetryInterval(String clientId, Exception lastException, Duration remainingTime)'
     type: Method
     summary: |-
-      <p>その後 nextRetry を実行し、最後の例外が発生しましたに基づく間隔と、操作がタイムアウトするまでの残り時間を取得します。</p>
+      <p><span data-ttu-id="f902e-107">その後 nextRetry を実行し、最後の例外が発生しましたに基づく間隔と、操作がタイムアウトするまでの残り時間を取得します。</span><span class="sxs-lookup"><span data-stu-id="f902e-107">Gets the interval after which nextRetry should be attempted, based on the last exception encountered and the remaining time before the operation times out.</span></span></p>
       <p></p>
     syntax:
       content: 'public Duration getNextRetryInterval(String clientId, Exception lastException, Duration remainingTime)'
       parameters:
         - id: clientId
           type: '26831127'
-          description: <p>例外が発生した送信者または受信者またはクライアント オブジェクトの id。 </p>
+          description: <p><span data-ttu-id="f902e-108">例外が発生した送信者または受信者またはクライアント オブジェクトの id。</span><span class="sxs-lookup"><span data-stu-id="f902e-108">id of the sender or receiver or client object that encountered the exception.</span></span> </p>
         - id: lastException
           type: 8a99d4b0
-          description: <p>最後の例外が発生しました </p>
+          description: <p><span data-ttu-id="f902e-109">最後の例外が発生しました</span><span class="sxs-lookup"><span data-stu-id="f902e-109">last exception encountered</span></span> </p>
         - id: remainingTime
           type: e02a2de0
-          description: <p>操作がタイムアウトする前に再試行する remainingTime </p>
+          description: <p><span data-ttu-id="f902e-110">操作がタイムアウトする前に再試行する remainingTime</span><span class="sxs-lookup"><span data-stu-id="f902e-110">remainingTime to retry before the operation times out</span></span> </p>
       return:
         type: e02a2de0
-        description: <p>操作は再試行するまでの期間です。 操作はいけないとき、null を返しますが再試行されます。 </p>
+        description: <p><span data-ttu-id="f902e-111">操作は再試行するまでの期間です。</span><span class="sxs-lookup"><span data-stu-id="f902e-111">duration after which the operation will be retried.</span></span> <span data-ttu-id="f902e-112">操作はいけないとき、null を返しますが再試行されます。</span><span class="sxs-lookup"><span data-stu-id="f902e-112">Returns null when the operation should not retried.</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -169,12 +169,12 @@ references:
     nameWithType: RetryPolicy.getNoRetry()
     fullName: static RetryPolicy com.microsoft.azure.servicebus.primitives.RetryPolicy.getNoRetry()
     type: Method
-    summary: <p>再試行を効果的に無効にすると、すべての操作を再試行しない再試行ポリシーを取得します。 クライアントは、すべての操作を自動的に再試行したくない場合に、この再試行ポリシーを使用できます。 </p>
+    summary: '<p><span data-ttu-id="f902e-113">再試行を効果的に無効にすると、すべての操作を再試行しない再試行ポリシーを取得します。</span><span class="sxs-lookup"><span data-stu-id="f902e-113">Gets a retry policy that doesn''t retry any operations, effectively disabling retries.</span></span> <span data-ttu-id="f902e-114">クライアントは、すべての操作を自動的に再試行したくない場合に、この再試行ポリシーを使用できます。</span><span class="sxs-lookup"><span data-stu-id="f902e-114">Clients can use this retry policy in case they do not want any operation automatically retried.</span></span> </p>'
     syntax:
       content: public static RetryPolicy getNoRetry()
       return:
         type: com.microsoft.azure.servicebus.primitives._retry_policy
-        description: <p>すべての操作を再試行しない再試行ポリシー </p>
+        description: <p><span data-ttu-id="f902e-115">すべての操作を再試行しない再試行ポリシー</span><span class="sxs-lookup"><span data-stu-id="f902e-115">a retry policy that doesn't retry any operations</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy.getRetryCount(String)
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -196,13 +196,13 @@ references:
     nameWithType: RetryPolicy.incrementRetryCount(String clientId)
     fullName: void com.microsoft.azure.servicebus.primitives.RetryPolicy.incrementRetryCount(String clientId)
     type: Method
-    summary: <p>インクリメントの連続する数値では、クライアントによって試行を再試行してください。 </p>
+    summary: <p><span data-ttu-id="f902e-116">インクリメントの連続する数値では、クライアントによって試行を再試行してください。</span><span class="sxs-lookup"><span data-stu-id="f902e-116">Increments the number of successive retry attempts made by a client.</span></span> </p>
     syntax:
       content: public void incrementRetryCount(String clientId)
       parameters:
         - id: clientId
           type: '26831127'
-          description: <p>失敗した操作を再試行して、クライアントの id </p>
+          description: <p><span data-ttu-id="f902e-117">失敗した操作を再試行して、クライアントの id</span><span class="sxs-lookup"><span data-stu-id="f902e-117">id of the client retrying a failed operation</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy.isRetryableException(Exception)
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -210,16 +210,16 @@ references:
     nameWithType: RetryPolicy.isRetryableException(Exception exception)
     fullName: static boolean com.microsoft.azure.servicebus.primitives.RetryPolicy.isRetryableException(Exception exception)
     type: Method
-    summary: <p>例外が再試行可能かどうかを決定します。 一時的な例外のみを再試行する必要があります。 </p>
+    summary: <p><span data-ttu-id="f902e-118">例外が再試行可能かどうかを決定します。</span><span class="sxs-lookup"><span data-stu-id="f902e-118">Determines if an exception is retry-able or not.</span></span> <span data-ttu-id="f902e-119">一時的な例外のみを再試行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f902e-119">Only transient exceptions should be retried.</span></span> </p>
     syntax:
       content: public static boolean isRetryableException(Exception exception)
       parameters:
         - id: exception
           type: 8a99d4b0
-          description: <p>指定するかどうかは、再試行可能な操作によって発生した例外。 </p>
+          description: '<p><span data-ttu-id="f902e-120">指定するかどうかは、再試行可能な操作によって発生した例外。</span><span class="sxs-lookup"><span data-stu-id="f902e-120">exception encountered by an operation, to be determined if it is retry-able.</span></span> </p>'
       return:
         type: 4fc6e284
-        description: <p>true は、例外が再試行可能の (ServerBusy やなどの他の一時的な例外)、それ以外の場合は false を返します </p>
+        description: '<p><span data-ttu-id="f902e-121">true は、例外が再試行可能の (ServerBusy やなどの他の一時的な例外)、それ以外の場合は false を返します</span><span class="sxs-lookup"><span data-stu-id="f902e-121">true if the exception is retry-able (like ServerBusy or other transient exception), else returns false</span></span> </p>'
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy.resetRetryCount(String)
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -227,13 +227,13 @@ references:
     nameWithType: RetryPolicy.resetRetryCount(String clientId)
     fullName: void com.microsoft.azure.servicebus.primitives.RetryPolicy.resetRetryCount(String clientId)
     type: Method
-    summary: <p>クライアントによって行われた再試行の回数をリセットします。 再試行の操作が成功したときに、クライアントがこのメソッドが呼び出されます。 </p>
+    summary: <p><span data-ttu-id="f902e-122">クライアントによって行われた再試行の回数をリセットします。</span><span class="sxs-lookup"><span data-stu-id="f902e-122">Resets the number of retry attempts made by a client.</span></span> <span data-ttu-id="f902e-123">再試行の操作が成功したときに、クライアントがこのメソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="f902e-123">This method is called by the client when retried operation succeeds.</span></span> </p>
     syntax:
       content: public void resetRetryCount(String clientId)
       parameters:
         - id: clientId
           type: '26831127'
-          description: <p>だけで、クライアントの id は、失敗した操作を再試行され、成功しました。 </p>
+          description: <p><span data-ttu-id="f902e-124">だけで、クライアントの id は、失敗した操作を再試行され、成功しました。</span><span class="sxs-lookup"><span data-stu-id="f902e-124">id of the client that just retried a failed operation and succeeded.</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy.RetryPolicy(final String)
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -241,13 +241,13 @@ references:
     nameWithType: RetryPolicy.RetryPolicy(final String name)
     fullName: com.microsoft.azure.servicebus.primitives.RetryPolicy.RetryPolicy(final String name)
     type: Constructor
-    summary: <p>インスタンスを作成<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定した名前です。 </p>
+    summary: <p><span data-ttu-id="f902e-125">インスタンスを作成<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref>指定した名前です。</span><span class="sxs-lookup"><span data-stu-id="f902e-125">Creates an instance of <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> with the given name.</span></span> </p>
     syntax:
       content: protected RetryPolicy(final String name)
       parameters:
         - id: name
           type: 3d93591e
-          description: <p>ポリシーの名前 </p>
+          description: <p><span data-ttu-id="f902e-126">ポリシーの名前</span><span class="sxs-lookup"><span data-stu-id="f902e-126">name of the policy</span></span> </p>
   - uid: com.microsoft.azure.servicebus.primitives._retry_policy.toString()
     parent: com.microsoft.azure.servicebus.primitives._retry_policy
     href: com.microsoft.azure.servicebus.primitives._retry_policy.yml
@@ -266,7 +266,7 @@ references:
     nameWithType: RetryPolicy
     fullName: com.microsoft.azure.servicebus.primitives.RetryPolicy
     type: Class
-    summary: <p>例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。 送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。 クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。 ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。 </p>
+    summary: '<p><span data-ttu-id="f902e-127">例外が発生したときに、メッセージング操作を再試行するためのポリシーの抽象化を表します。</span><span class="sxs-lookup"><span data-stu-id="f902e-127">Represents an abstraction of a policy for retrying messaging operations when an exception is encountered.</span></span> <span data-ttu-id="f902e-128">送信者または受信者によって検出されたいくつかの例外は ServerBusy と操作は成功しますが再試行された場合と同じように一時的なものにできます。</span><span class="sxs-lookup"><span data-stu-id="f902e-128">Some exceptions encountered by a sender or receiver can be transient like ServerBusy and the operation will succeed if retried.</span></span> <span data-ttu-id="f902e-129">クライアントでは、使用して、再試行ポリシーを指定できます<xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref>を自動的にクライアント アプリケーションに例外をスローする前に、失敗した操作を再試行するには、送信者と受信者をガイドします。</span><span class="sxs-lookup"><span data-stu-id="f902e-129">Clients can specify a retry policy using <xref uid="com.microsoft.azure.servicebus.primitives._connection_string_builder" data-throw-if-not-resolved="false">ConnectionStringBuilder</xref> which guides senders and receivers to automatically retry the failed operation before throwing the exception to the client application.</span></span> <span data-ttu-id="f902e-130">ユーザーがこのクラスを実装しないように、代わりに使用を指定した実装の 1 つ<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref>または<xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>です。</span><span class="sxs-lookup"><span data-stu-id="f902e-130">Users should not implement this class, instead should use one of the provided implementations through <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getDefault()" data-throw-if-not-resolved="false">getDefault</xref> or <xref uid="com.microsoft.azure.servicebus.primitives._retry_policy.getNoRetry()" data-throw-if-not-resolved="false">getNoRetry</xref>.</span></span> </p>'
     syntax:
       content: public class RetryPolicy
   - uid: com.microsoft.azure.servicebus.primitives._connection_string_builder
@@ -277,8 +277,8 @@ references:
     fullName: com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder
     type: Class
     summary: |-
-      <p>このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。 既存の接続文字列で基本的な検証を実行するも使用できます。 </p>
-      <p>サンプル コードに示します。 <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
+      <p><span data-ttu-id="f902e-131">このクラスは、ServiceBus エンティティとの通信を確立できる接続文字列を構築するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="f902e-131">This class can be used to construct a connection string which can establish communication with ServiceBus entities.</span></span> <span data-ttu-id="f902e-132">既存の接続文字列で基本的な検証を実行するも使用できます。</span><span class="sxs-lookup"><span data-stu-id="f902e-132">It can also be used to perform basic validation on an existing connection string.</span></span> </p>
+      <p><span data-ttu-id="f902e-133">サンプル コードに示します。</span><span class="sxs-lookup"><span data-stu-id="f902e-133">Sample Code:</span></span> <pre><code>ConnectionStringBuilder connectionStringBuilder = new ConnectionStringBuilder(
 
                                                    "ServiceBusNamespaceName", 
 
@@ -294,6 +294,6 @@ references:
 
           </code></pre></p>
 
-      <p>接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。 基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem><p>エンドポイントで servicebus 名前空間を指す URL </p></listitem><listitem><p>EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。 キューおよびトピックでは、エンティティの名前だけです。 サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt; </p></listitem><listitem><p>SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。 </p></listitem><listitem><p>SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。 </p></listitem><listitem><p>SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。 </p></listitem><listitem><p>OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。 </p></listitem><listitem><p><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。 </p></listitem></itemizedlist></p>
+      <p><span data-ttu-id="f902e-134">接続文字列は、基本的に、文字列で区切られたキーと値のペアで構成されている「;」です。</span><span class="sxs-lookup"><span data-stu-id="f902e-134">A connection string is basically a string consisted of key-value pair separated by ";".</span></span> <span data-ttu-id="f902e-135">基本形式は {{ &lt;} キー {&gt;} = { &lt;} 値 {&gt;} [; {&lt;} キー {&gt;} = { &lt;} 値 {&gt;}]。 サポートされているキー名が次のような場所。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="f902e-135">Basic format is {{ &lt;}key{&gt;}={ &lt;}value{&gt;}[;{ &lt;}key{&gt;}={ &lt;}value{&gt;}]} where supported key name are as follow: <itemizedlist><listitem></span></span><p><span data-ttu-id="f902e-136">エンドポイントで servicebus 名前空間を指す URL</span><span class="sxs-lookup"><span data-stu-id="f902e-136">Endpoint - URL that points to the servicebus namespace</span></span> </p></listitem><listitem><p><span data-ttu-id="f902e-137">EntityPath の service bus エンティティへのパス (キュー/トピック/サブスクリプション/)。</span><span class="sxs-lookup"><span data-stu-id="f902e-137">EntityPath - Path to the service bus entity (queue/topic/subscription/).</span></span> <span data-ttu-id="f902e-138">キューおよびトピックでは、エンティティの名前だけです。</span><span class="sxs-lookup"><span data-stu-id="f902e-138">For queues and topics, it is just the entity name.</span></span> <span data-ttu-id="f902e-139">サブスクリプションの場合、パスは&lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span><span class="sxs-lookup"><span data-stu-id="f902e-139">For subscriptions, path is &lt;topicName&gt;/subscriptions/&lt;subscriptionName&gt;</span></span> </p></listitem><listitem><p><span data-ttu-id="f902e-140">SharedAccessKeyName - 名前空間、またはエンティティの対応する共有アクセス ポリシーのルールにキー名。</span><span class="sxs-lookup"><span data-stu-id="f902e-140">SharedAccessKeyName - Key name to the corresponding shared access policy rule for the namespace, or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id="f902e-141">SharedAccessKey - 名前空間またはエンティティの対応する共有アクセス ポリシー規則のキー値。</span><span class="sxs-lookup"><span data-stu-id="f902e-141">SharedAccessKey - Key value for the corresponding shared access policy rule of the namespace or entity.</span></span> </p></listitem><listitem><p><span data-ttu-id="f902e-142">SharedAccessSignatureToken - キー名とキーの値の代わりにクライアントを提供できます、既に生成された SAS トークン。</span><span class="sxs-lookup"><span data-stu-id="f902e-142">SharedAccessSignatureToken - Instead of a key name and key value, clients can provide an already generated SAS Token.</span></span> </p></listitem><listitem><p><span data-ttu-id="f902e-143">OperationTimeout - すべての送信者、受信者およびこの接続文字列から作成されたクライアントに使用する既定のタイムアウト。</span><span class="sxs-lookup"><span data-stu-id="f902e-143">OperationTimeout - Default timeout to be used for all senders, receiver and clients created from this connection string.</span></span> </p></listitem><listitem><p><span data-ttu-id="f902e-144"><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> -再試行ポリシーの名前。</span><span class="sxs-lookup"><span data-stu-id="f902e-144"><xref uid="com.microsoft.azure.servicebus.primitives._retry_policy" data-throw-if-not-resolved="false">RetryPolicy</xref> - Name of the retry policy.</span></span> </p></listitem></itemizedlist></p>
     syntax:
       content: public class ConnectionStringBuilder

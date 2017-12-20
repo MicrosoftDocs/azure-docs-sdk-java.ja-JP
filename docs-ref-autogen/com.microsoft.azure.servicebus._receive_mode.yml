@@ -22,7 +22,7 @@ items:
       startLine: 10
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>2 つを表す列挙体は、Azure Service Bus をサポートしているモードを受信します。</p>
+      <p><span data-ttu-id="7aeba-101">2 つを表す列挙体は、Azure Service Bus をサポートしているモードを受信します。</span><span class="sxs-lookup"><span data-stu-id="7aeba-101">Enumeration to represent the two receive modes Azure Service Bus supports.</span></span></p>
       <p></p>
     syntax:
       content: public enum ReceiveMode
@@ -44,7 +44,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ReceiveMode.java
       startLine: 21
     package: com.microsoft.azure.servicebus
-    summary: <p>このモードでは、キューまたはサブスクリプションから受信したメッセージは削除されません、代わりに一時的にロックされている、受信者は、他の受信者を非表示にすることにします。 3 つのイベントのいずれかのサービスが待機します。<itemizedlist><listitem><p>受信側では、メッセージを正常に処理する場合を呼び出すし、メッセージは削除されます。 </p></listitem><listitem><p>場合は、受信側は、メッセージを正常に処理できないことを決定したらを呼び出すと、メッセージがロックを解除し、他の受信者に使用可能です。 </p></listitem><listitem><p>受信側は、時間で、後の時点へのメッセージの処理を遅延する場合、呼び出しし、メッセージを延期します。 遅延実行だけが受信できる、シーケンス番号。 </p></listitem><listitem><p>受信側は、メッセージを配信不能メッセージを希望する場合を呼び出すし、メッセージは配信不能キューと呼ばれる特別なサブキューに移動されます。 </p></listitem><listitem><p>受信側のこれらのメソッドも構成可能な期間内 (既定では、60 秒) を呼び出す場合、受信側が失敗したサービスが前提とします。 この場合、ように動作、受信側が呼び出されると、他の受信者にメッセージを使用できるようにします。 </p></listitem></itemizedlist></p>
+    summary: '<p><span data-ttu-id="7aeba-102">このモードでは、キューまたはサブスクリプションから受信したメッセージは削除されません、代わりに一時的にロックされている、受信者は、他の受信者を非表示にすることにします。</span><span class="sxs-lookup"><span data-stu-id="7aeba-102">In this mode, received message is not deleted from the queue or subscription, instead it is temporarily locked to the receiver, making it invisible to other receivers.</span></span> <span data-ttu-id="7aeba-103">3 つのイベントのいずれかのサービスが待機します。<itemizedlist><listitem></span><span class="sxs-lookup"><span data-stu-id="7aeba-103">Then the service waits for one of the three events <itemizedlist><listitem></span></span><p><span data-ttu-id="7aeba-104">受信側では、メッセージを正常に処理する場合を呼び出すし、メッセージは削除されます。</span><span class="sxs-lookup"><span data-stu-id="7aeba-104">If the receiver processes the message successfully, it calls  and the message will be deleted.</span></span> </p></listitem><listitem><p><span data-ttu-id="7aeba-105">場合は、受信側は、メッセージを正常に処理できないことを決定したらを呼び出すと、メッセージがロックを解除し、他の受信者に使用可能です。</span><span class="sxs-lookup"><span data-stu-id="7aeba-105">If the receiver decides that it can''t process the message successfully, it calls  and the message will be unlocked and made available to other receivers.</span></span> </p></listitem><listitem><p><span data-ttu-id="7aeba-106">受信側は、時間で、後の時点へのメッセージの処理を遅延する場合、呼び出しし、メッセージを延期します。</span><span class="sxs-lookup"><span data-stu-id="7aeba-106">If the receiver wants to defer the processing of the message to a later point in time, it calls  and the message will be deferred.</span></span> <span data-ttu-id="7aeba-107">遅延実行だけが受信できる、シーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="7aeba-107">A deferred can only be received by its sequence number.</span></span> </p></listitem><listitem><p><span data-ttu-id="7aeba-108">受信側は、メッセージを配信不能メッセージを希望する場合を呼び出すし、メッセージは配信不能キューと呼ばれる特別なサブキューに移動されます。</span><span class="sxs-lookup"><span data-stu-id="7aeba-108">If the receiver wants to dead-letter the message, it calls  and the message will be moved to a special sub-queue called deadletter queue.</span></span> </p></listitem><listitem><p><span data-ttu-id="7aeba-109">受信側のこれらのメソッドも構成可能な期間内 (既定では、60 秒) を呼び出す場合、受信側が失敗したサービスが前提とします。</span><span class="sxs-lookup"><span data-stu-id="7aeba-109">If the receiver calls neither of these methods within a configurable period of time (by default, 60 seconds), the service assumes the receiver has failed.</span></span> <span data-ttu-id="7aeba-110">この場合、ように動作、受信側が呼び出されると、他の受信者にメッセージを使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="7aeba-110">In this case, it behaves as if the receiver had called , making the message available to other receivers</span></span> </p></listitem></itemizedlist></p>'
     syntax:
       content: public PEEKLOCK
   - uid: com.microsoft.azure.servicebus._receive_mode.RECEIVEANDDELETE
@@ -62,7 +62,7 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/ReceiveMode.java
       startLine: 26
     package: com.microsoft.azure.servicebus
-    summary: <p>このモードでは、受信したメッセージがキューまたはサブスクリプションから削除され、直後に削除されました。 このオプションは単純ですが、メッセージを処理する前に受信者がクラッシュした場合はメッセージが失われます。 メッセージはキューから削除されているため、他の受信者がメッセージにアクセスすることもできません。 </p>
+    summary: '<p><span data-ttu-id="7aeba-111">このモードでは、受信したメッセージがキューまたはサブスクリプションから削除され、直後に削除されました。</span><span class="sxs-lookup"><span data-stu-id="7aeba-111">In this mode, received message is removed from the queue or subscription and immediately deleted.</span></span> <span data-ttu-id="7aeba-112">このオプションは単純ですが、メッセージを処理する前に受信者がクラッシュした場合はメッセージが失われます。</span><span class="sxs-lookup"><span data-stu-id="7aeba-112">This option is simple, but if the receiver crashes before it finishes processing the message, the message is lost.</span></span> <span data-ttu-id="7aeba-113">メッセージはキューから削除されているため、他の受信者がメッセージにアクセスすることもできません。</span><span class="sxs-lookup"><span data-stu-id="7aeba-113">Because it''s been removed from the queue, no other receiver can access it.</span></span> </p>'
     syntax:
       content: public RECEIVEANDDELETE
 references: []

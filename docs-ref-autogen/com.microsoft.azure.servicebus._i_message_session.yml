@@ -28,10 +28,10 @@ items:
       startLine: 19
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>セッション オブジェクトを表します。 <xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref>セッションでの操作を実行するために使用できます。 </p>
-      <p>サービス バス セッション、AMQP 1.0 プロトコルでは"Groups"とも呼ばれますとは、一連の関連メッセージをバインド解除済みです。 ServiceBus では、セッションでメッセージの順序を保証します。 </p>
-      <p>センダは、セッションを作成することができますを設定してトピックまたはキューにメッセージを送信するときに、 <xref uid="" data-throw-if-not-resolved="false">#sessionId をメッセージ</xref>プロパティを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>一部のアプリケーションに一意の識別子を定義します。 AMQP 1.0 プロトコル レベルでは、この値は、グループ id プロパティにマップされます。 </p>
-      <p>セッションは、キューまたはトピックのサブスクリプションで、セッションのセッション Id で、少なくとも 1 つのメッセージが表示される時に存在するようになります。 セッションが存在する場合は定義されている時点、またはセッションの有効期限が切れる場合または非表示のジェスチャです。 </p>
+      <p><span data-ttu-id="76e72-101">セッション オブジェクトを表します。</span><span class="sxs-lookup"><span data-stu-id="76e72-101">Describes a Session object.</span></span> <span data-ttu-id="76e72-102"><xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref>セッションでの操作を実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-102"><xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref> can be used to perform operations on sessions.</span></span> </p>
+      <p><span data-ttu-id="76e72-103">サービス バス セッション、AMQP 1.0 プロトコルでは"Groups"とも呼ばれますとは、一連の関連メッセージをバインド解除済みです。</span><span class="sxs-lookup"><span data-stu-id="76e72-103">Service Bus Sessions, also called 'Groups' in the AMQP 1.0 protocol, are unbounded sequences of related messages.</span></span> <span data-ttu-id="76e72-104">ServiceBus では、セッションでメッセージの順序を保証します。</span><span class="sxs-lookup"><span data-stu-id="76e72-104">ServiceBus guarantees ordering of messages in a session.</span></span> </p>
+      <p><span data-ttu-id="76e72-105">センダは、セッションを作成することができますを設定してトピックまたはキューにメッセージを送信するときに、 <xref uid="" data-throw-if-not-resolved="false">#sessionId をメッセージ</xref>プロパティを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>一部のアプリケーションに一意の識別子を定義します。</span><span class="sxs-lookup"><span data-stu-id="76e72-105">Any sender can create a session when submitting messages into a Topic or Queue by setting the <xref uid="" data-throw-if-not-resolved="false">Message#sessionId</xref> property on <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to some application defined unique identifier.</span></span> <span data-ttu-id="76e72-106">AMQP 1.0 プロトコル レベルでは、この値は、グループ id プロパティにマップされます。</span><span class="sxs-lookup"><span data-stu-id="76e72-106">At the AMQP 1.0 protocol level, this value maps to the group-id property.</span></span> </p>
+      <p><span data-ttu-id="76e72-107">セッションは、キューまたはトピックのサブスクリプションで、セッションのセッション Id で、少なくとも 1 つのメッセージが表示される時に存在するようになります。</span><span class="sxs-lookup"><span data-stu-id="76e72-107">Sessions come into existence when there is at least one message with the session's SessionId in the Queue or Topic subscription.</span></span> <span data-ttu-id="76e72-108">セッションが存在する場合は定義されている時点、またはセッションの有効期限が切れる場合または非表示のジェスチャです。</span><span class="sxs-lookup"><span data-stu-id="76e72-108">Once a Session exists, there is no defined moment or gesture for when the session expires or disappears.</span></span> </p>
     syntax: &ref_5
       content: public interface IMessageSession extends IMessageReceiver
     inheritedMembers:
@@ -101,7 +101,7 @@ items:
       content: public Instant getLockedUntilUtc()
       return:
         type: 328f8254
-        description: '<p>時刻を取得するセッションで識別される<xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>はこのクライアント用になるまでにロックします。 </p>'
+        description: '<p><span data-ttu-id="76e72-109">時刻を取得するセッションで識別される<xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>はこのクライアント用になるまでにロックします。</span><span class="sxs-lookup"><span data-stu-id="76e72-109">Gets the time that the session identified by <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref> is locked until for this client.</span></span> </p>'
   - uid: com.microsoft.azure.servicebus._i_message_session.getSessionId()
     id: getSessionId()
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -122,7 +122,7 @@ items:
       content: public String getSessionId()
       return:
         type: '26831127'
-        description: <p>セッション Id を取得します。 </p>
+        description: <p><span data-ttu-id="76e72-110">セッション Id を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-110">Gets the SessionId.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_session.getState()
     id: getState()
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -140,18 +140,18 @@ items:
       startLine: 78
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>セッション状態を取得します。</p>
+      <p><span data-ttu-id="76e72-111">セッション状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-111">Gets the session state.</span></span></p>
       <p></p>
     syntax: &ref_3
       content: 'public byte [] getState()'
       return:
         type: ccd9418d
-        description: <p>セッションの状態 </p>
+        description: <p><span data-ttu-id="76e72-112">セッションの状態</span><span class="sxs-lookup"><span data-stu-id="76e72-112">The session state</span></span> </p>
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="76e72-113">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="76e72-113">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>場合は失敗の状態を取得します。 </p>
+        description: <p><span data-ttu-id="76e72-114">場合は失敗の状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-114">if get state failed.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_session.getStateAsync()
     id: getStateAsync()
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -168,15 +168,15 @@ items:
       path: azure-servicebus/src/main/java/com/microsoft/azure/servicebus/IMessageSession.java
       startLine: 85
     package: com.microsoft.azure.servicebus
-    summary: <p>非同期的に、セッションの状態を取得します。 </p>
+    summary: <p><span data-ttu-id="76e72-115">非同期的に、セッションの状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-115">Asynchronously gets the session state.</span></span> </p>
     syntax:
       content: 'public CompletableFuture<byte[]> getStateAsync()'
       return:
         type: 5fe2dfa4
-        description: <p>保留中のセッション状態の取得を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-116">保留中のセッション状態の取得を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-116">a CompletableFuture representing the pending session state retrieving.</span></span> </p>
     see:
       - type: com.microsoft.azure.servicebus._i_message_session.getState()
-        description: 'IMessageSession::getState'
+        description: '<span data-ttu-id="76e72-117">IMessageSession::getState</span><span class="sxs-lookup"><span data-stu-id="76e72-117">IMessageSession::getState</span></span>'
   - uid: com.microsoft.azure.servicebus._i_message_session.renewSessionLock()
     id: renewSessionLock()
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -194,17 +194,17 @@ items:
       startLine: 43
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。 ロックは、エンティティに指定された設定に基づいて更新されます。 </p>
-      <p>セッションを承諾すると、セッションによってロックされてクライアントのインスタンスの指定された期間、サービス キュー/サブスクリプションの作成中に。 セッションの処理は、この期間を超える必要がある場合、セッション ロックを更新する必要があります。 各更新のセッションのロックは、エンティティの LockDuration によって更新されます。 </p>
-      <p>セッションの更新は、同様のセッションですべてのメッセージを更新します。 各メッセージを更新することがない必要があります。</p>
+      <p><span data-ttu-id="76e72-118">指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-118">Renews the lock on the session specified by the <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>.</span></span> <span data-ttu-id="76e72-119">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-119">The lock will be renewed based on the setting specified on the entity.</span></span> </p>
+      <p><span data-ttu-id="76e72-120">セッションを承諾すると、セッションによってロックされてクライアントのインスタンスの指定された期間、サービス キュー/サブスクリプションの作成中に。</span><span class="sxs-lookup"><span data-stu-id="76e72-120">When you accept a session, the session is locked for this client instance by the service for a duration as specified during the Queue/Subscription creation.</span></span> <span data-ttu-id="76e72-121">セッションの処理は、この期間を超える必要がある場合、セッション ロックを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-121">If processing of the session requires longer than this duration, the session-lock needs to be renewed.</span></span> <span data-ttu-id="76e72-122">各更新のセッションのロックは、エンティティの LockDuration によって更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-122">For each renewal, the session-lock is renewed by the entity's LockDuration.</span></span> </p>
+      <p><span data-ttu-id="76e72-123">セッションの更新は、同様のセッションですべてのメッセージを更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-123">Renewal of session renews all the messages in the session as well.</span></span> <span data-ttu-id="76e72-124">各メッセージを更新することがない必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-124">Each individual message need not be renewed.</span></span></p>
       <p></p>
     syntax: &ref_2
       content: public void renewSessionLock()
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="76e72-125">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="76e72-125">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>場合は、更新に失敗しました。 </p>
+        description: <p><span data-ttu-id="76e72-126">場合は、更新に失敗しました。</span><span class="sxs-lookup"><span data-stu-id="76e72-126">if the renew failed.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_session.renewSessionLockAsync()
     id: renewSessionLockAsync()
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -222,16 +222,16 @@ items:
       startLine: 51
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。 ロックは、エンティティに指定された設定に基づいて更新されます。</p>
+      <p><span data-ttu-id="76e72-127">指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-127">Renews the lock on the session specified by the <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>.</span></span> <span data-ttu-id="76e72-128">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-128">The lock will be renewed based on the setting specified on the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> renewSessionLockAsync()
       return:
         type: db03ee24
-        description: <p>保留中の更新を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-129">保留中の更新を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-129">a CompletableFuture representing the pending renew.</span></span> </p>
     see:
       - type: com.microsoft.azure.servicebus._i_message_session.renewSessionLock()
-        description: 'IMessageSession::renewSessionLock()'
+        description: '<span data-ttu-id="76e72-130">IMessageSession::renewSessionLock()</span><span class="sxs-lookup"><span data-stu-id="76e72-130">IMessageSession::renewSessionLock()</span></span>'
   - uid: 'com.microsoft.azure.servicebus._i_message_session.setState(byte [])'
     id: 'setState(byte [])'
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -249,19 +249,19 @@ items:
       startLine: 60
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>使用して後で取得できるセッションでカスタムの状態を設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</p>
+      <p><span data-ttu-id="76e72-131">使用して後で取得できるセッションでカスタムの状態を設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-131">Set a custom state on the session which can be later retrieved using <xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>.</span></span></p>
       <p></p>
     syntax: &ref_4
       content: 'public void setState(byte[] state)'
       parameters:
         - id: state
           type: ccd9418d
-          description: <p>セッション状態。 </p>
+          description: <p><span data-ttu-id="76e72-132">セッション状態。</span><span class="sxs-lookup"><span data-stu-id="76e72-132">The session state.</span></span> </p>
     exceptions:
       - type: 8256ba40
-        description: <p>現在のスレッドが待機中に中断された場合 </p>
+        description: <p><span data-ttu-id="76e72-133">現在のスレッドが待機中に中断された場合</span><span class="sxs-lookup"><span data-stu-id="76e72-133">if the current thread was interrupted while waiting</span></span> </p>
       - type: 73fec9fb
-        description: <p>場合は、状態を設定できませんでした。 </p>
+        description: <p><span data-ttu-id="76e72-134">場合は、状態を設定できませんでした。</span><span class="sxs-lookup"><span data-stu-id="76e72-134">if the set state failed.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_session.setStateAsync(byte [])'
     id: 'setStateAsync(byte [])'
     parent: com.microsoft.azure.servicebus._i_message_session
@@ -279,20 +279,20 @@ items:
       startLine: 69
     package: com.microsoft.azure.servicebus
     summary: |-
-      <p>使用して後で取得できるセッションでカスタムの状態を非同期的に設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</p>
+      <p><span data-ttu-id="76e72-135">使用して後で取得できるセッションでカスタムの状態を非同期的に設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-135">Asynchronously set a custom state on the session which can be later retrieved using <xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> setStateAsync(byte[] state)'
       parameters:
         - id: state
           type: ccd9418d
-          description: <p>セッション状態。 </p>
+          description: <p><span data-ttu-id="76e72-136">セッション状態。</span><span class="sxs-lookup"><span data-stu-id="76e72-136">The session state.</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中のセッション状態の設定を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-137">保留中のセッション状態の設定を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-137">a CompletableFuture representing the pending session state setting.</span></span> </p>
     see:
       - type: 'com.microsoft.azure.servicebus._i_message_session.setState(byte [])'
-        description: 'IMessageSession::setState'
+        description: '<span data-ttu-id="76e72-138">IMessageSession::setState</span><span class="sxs-lookup"><span data-stu-id="76e72-138">IMessageSession::setState</span></span>'
 references:
   - uid: '26831127'
     spec.java:
@@ -370,14 +370,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.IMessageReceiver.abandon(UUID lockToken)
     type: Method
     summary: |-
-      <p>電話放棄呼<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。 これにより、メッセージ処理用にもう一度使用できます。 メッセージの配信数の増加は、メッセージの破棄</p>
+      <p><span data-ttu-id="76e72-139">電話放棄呼<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-139">Abandon <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> with lock token.</span></span> <span data-ttu-id="76e72-140">これにより、メッセージ処理用にもう一度使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-140">This will make the message available again for processing.</span></span> <span data-ttu-id="76e72-141">メッセージの配信数の増加は、メッセージの破棄</span><span class="sxs-lookup"><span data-stu-id="76e72-141">Abandoning a message will increase the delivery count on the message</span></span></p>
       <p></p>
     syntax:
       content: public void abandon(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-142\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-142\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.abandon(UUID,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -386,17 +386,17 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.IMessageReceiver.abandon(UUID lockToken, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>電話放棄呼<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ロック トークンと更新されたメッセージ プロパティを使用しています。 これにより、メッセージ処理用にもう一度使用できます。 メッセージの配信数の増加は、メッセージの破棄</p>
+      <p><span data-ttu-id="76e72-143">電話放棄呼<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ロック トークンと更新されたメッセージ プロパティを使用しています。</span><span class="sxs-lookup"><span data-stu-id="76e72-143">Abandon <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> with lock token and updated message property.</span></span> <span data-ttu-id="76e72-144">これにより、メッセージ処理用にもう一度使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-144">This will make the message available again for processing.</span></span> <span data-ttu-id="76e72-145">メッセージの配信数の増加は、メッセージの破棄</span><span class="sxs-lookup"><span data-stu-id="76e72-145">Abandoning a message will increase the delivery count on the message</span></span></p>
       <p></p>
     syntax:
       content: 'public void abandon(UUID lockToken, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-146\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-146\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-147\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-147\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
   - uid: com.microsoft.azure.servicebus._i_message_receiver.abandonAsync(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -405,17 +405,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.abandonAsync(UUID lockToken)
     type: Method
     summary: |-
-      <p>非同期的に中止<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。 これにより、メッセージ処理用にもう一度使用できます。 メッセージを破棄すると、メッセージの配信回数が増加します。</p>
+      <p><span data-ttu-id="76e72-148">非同期的に中止<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-148">Asynchronously abandon <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> with lock token.</span></span> <span data-ttu-id="76e72-149">これにより、メッセージ処理用にもう一度使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-149">This will make the message available again for processing.</span></span> <span data-ttu-id="76e72-150">メッセージを破棄すると、メッセージの配信回数が増加します。</span><span class="sxs-lookup"><span data-stu-id="76e72-150">Abandoning a message will increase the delivery count on the message.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> abandonAsync(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-151\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-151\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
       return:
         type: db03ee24
-        description: <p>保留中の破棄を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-152">保留中の破棄を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-152">a CompletableFuture representing the pending abandon.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.abandonAsync(UUID,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -424,20 +424,20 @@ references:
     fullName: 'CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.abandonAsync(UUID lockToken, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>非同期的に中止<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ロック トークンと更新されたメッセージ プロパティを使用しています。 これにより、メッセージ処理用にもう一度使用できます。 メッセージを破棄すると、メッセージの配信回数が増加します。</p>
+      <p><span data-ttu-id="76e72-153">非同期的に中止<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ロック トークンと更新されたメッセージ プロパティを使用しています。</span><span class="sxs-lookup"><span data-stu-id="76e72-153">Asynchronously abandon <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> with lock token and updated message property.</span></span> <span data-ttu-id="76e72-154">これにより、メッセージ処理用にもう一度使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-154">This will make the message available again for processing.</span></span> <span data-ttu-id="76e72-155">メッセージを破棄すると、メッセージの配信回数が増加します。</span><span class="sxs-lookup"><span data-stu-id="76e72-155">Abandoning a message will increase the delivery count on the message.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> abandonAsync(UUID lockToken, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-156\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-156\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-157\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-157\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
       return:
         type: db03ee24
-        description: <p>保留中の破棄を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-158">保留中の破棄を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-158">a CompletableFuture representing the pending abandon.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_closeable.close()
     parent: com.microsoft.azure.servicebus._i_closeable
     href: com.microsoft.azure.servicebus._i_closeable.yml
@@ -445,7 +445,7 @@ references:
     nameWithType: ICloseable.close()
     fullName: void com.microsoft.azure.servicebus.ICloseable.close()
     type: Method
-    summary: <p>同期的に終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。 このメソッドを呼び出すことは、呼び出し元のと同じです。 このメソッドはブロックされるまでオブジェクトが閉じられます。 </p>
+    summary: <p><span data-ttu-id="76e72-159">同期的に終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="76e72-159">Synchronously closes and disposes any resources associated with this object.</span></span> <span data-ttu-id="76e72-160">このメソッドを呼び出すことは、呼び出し元のと同じです。</span><span class="sxs-lookup"><span data-stu-id="76e72-160">Calling this method is equivalent of calling .</span></span> <span data-ttu-id="76e72-161">このメソッドはブロックされるまでオブジェクトが閉じられます。</span><span class="sxs-lookup"><span data-stu-id="76e72-161">This method blocks until this object is closed.</span></span> </p>
     syntax:
       content: public void close()
   - uid: com.microsoft.azure.servicebus._i_closeable.closeAsync()
@@ -455,12 +455,12 @@ references:
     nameWithType: ICloseable.closeAsync()
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.ICloseable.closeAsync()
     type: Method
-    summary: <p>終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。 閉じられた後、オブジェクトを使用できません。 これは、すぐに、CompletableFuture を返す非同期メソッドです。 このオブジェクトは、返された CompletableFuture が完了したときに完全に閉じられます。 </p>
+    summary: <p><span data-ttu-id="76e72-162">終了し、このオブジェクトに関連付けられているすべてのリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="76e72-162">Closes and disposes any resources associated with this object.</span></span> <span data-ttu-id="76e72-163">閉じられた後、オブジェクトを使用できません。</span><span class="sxs-lookup"><span data-stu-id="76e72-163">An object cannot be used after it is closed.</span></span> <span data-ttu-id="76e72-164">これは、すぐに、CompletableFuture を返す非同期メソッドです。</span><span class="sxs-lookup"><span data-stu-id="76e72-164">This is an asynchronous method that returns a CompletableFuture immediately.</span></span> <span data-ttu-id="76e72-165">このオブジェクトは、返された CompletableFuture が完了したときに完全に閉じられます。</span><span class="sxs-lookup"><span data-stu-id="76e72-165">This object is completely closed when the returned CompletableFuture is completed.</span></span> </p>
     syntax:
       content: public CompletableFuture<Void> closeAsync()
       return:
         type: db03ee24
-        description: <p>このオブジェクトの終了を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-166">このオブジェクトの終了を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-166">a CompletableFuture representing the closing of this object.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.complete(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -469,14 +469,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.IMessageReceiver.complete(UUID lockToken)
     type: Method
     summary: |-
-      <p>完了、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。 これにより、サービスからのメッセージが削除されます。</p>
+      <p><span data-ttu-id="76e72-167">完了、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-167">Completes a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> using its lock token.</span></span> <span data-ttu-id="76e72-168">これにより、サービスからのメッセージが削除されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-168">This will delete the message from the service.</span></span></p>
       <p></p>
     syntax:
       content: public void complete(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-169\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-169\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
   - uid: com.microsoft.azure.servicebus._i_message_receiver.completeAsync(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -485,17 +485,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.completeAsync(UUID lockToken)
     type: Method
     summary: |-
-      <p>非同期で完了、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。 これにより、サービスからのメッセージが削除されます。</p>
+      <p><span data-ttu-id="76e72-170">非同期で完了、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-170">Asynchronously completes a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> using its lock token.</span></span> <span data-ttu-id="76e72-171">これにより、サービスからのメッセージが削除されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-171">This will delete the message from the service.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> completeAsync(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-172\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-172\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
       return:
         type: db03ee24
-        description: <p>表す CompletableFuture、保留中の完了します。 </p>
+        description: <p><span data-ttu-id="76e72-173">表す CompletableFuture、保留中の完了します。</span><span class="sxs-lookup"><span data-stu-id="76e72-173">a CompletableFuture representing the pending complete.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.deadLetter(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -504,14 +504,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.IMessageReceiver.deadLetter(UUID lockToken)
     type: Method
     summary: |-
-      <p>移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューにします。</p>
+      <p><span data-ttu-id="76e72-174">移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューにします。</span><span class="sxs-lookup"><span data-stu-id="76e72-174">Moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue.</span></span></p>
       <p></p>
     syntax:
       content: public void deadLetter(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-175\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-175\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deadLetter(UUID,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -520,17 +520,17 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.IMessageReceiver.deadLetter(UUID lockToken, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに変更されたメッセージのプロパティを持つ。</p>
+      <p><span data-ttu-id="76e72-176">移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに変更されたメッセージのプロパティを持つ。</span><span class="sxs-lookup"><span data-stu-id="76e72-176">Moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with modified message properties.</span></span></p>
       <p></p>
     syntax:
       content: 'public void deadLetter(UUID lockToken, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-177\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-177\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-178\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-178\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deadLetter(UUID,String,String)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -539,20 +539,20 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.IMessageReceiver.deadLetter(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription)'
     type: Method
     summary: |-
-      <p>移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明を使用します。</p>
+      <p><span data-ttu-id="76e72-179">移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明を使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-179">Moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with deadletter reason and error description.</span></span></p>
       <p></p>
     syntax:
       content: 'public void deadLetter(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-180\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-180\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: deadLetterReason
           type: '26831127'
-          description: <p>配信不能理由です。 </p>
+          description: <p><span data-ttu-id="76e72-181">配信不能理由です。</span><span class="sxs-lookup"><span data-stu-id="76e72-181">The deadletter reason.</span></span> </p>
         - id: deadLetterErrorDescription
           type: '26831127'
-          description: <p>配信不能エラーの説明。 </p>
+          description: <p><span data-ttu-id="76e72-182">配信不能エラーの説明。</span><span class="sxs-lookup"><span data-stu-id="76e72-182">The deadletter error description.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deadLetter(UUID,String,String,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -561,23 +561,23 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.IMessageReceiver.deadLetter(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明および変更されたプロパティを使用します。</p>
+      <p><span data-ttu-id="76e72-183">移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明および変更されたプロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-183">Moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with deadletter reason and error description and modified properties.</span></span></p>
       <p></p>
     syntax:
       content: 'public void deadLetter(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-184\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-184\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: deadLetterReason
           type: '26831127'
-          description: <p>配信不能理由です。 </p>
+          description: <p><span data-ttu-id="76e72-185">配信不能理由です。</span><span class="sxs-lookup"><span data-stu-id="76e72-185">The deadletter reason.</span></span> </p>
         - id: deadLetterErrorDescription
           type: '26831127'
-          description: <p>配信不能エラーの説明。 </p>
+          description: <p><span data-ttu-id="76e72-186">配信不能エラーの説明。</span><span class="sxs-lookup"><span data-stu-id="76e72-186">The deadletter error description.</span></span> </p>
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-187\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-187\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
   - uid: com.microsoft.azure.servicebus._i_message_receiver.deadLetterAsync(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -586,17 +586,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.deadLetterAsync(UUID lockToken)
     type: Method
     summary: |-
-      <p>非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能にします。</p>
+      <p><span data-ttu-id="76e72-188">非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能にします。</span><span class="sxs-lookup"><span data-stu-id="76e72-188">Asynchronously moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with deadletter.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> deadLetterAsync(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-189\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-189\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
       return:
         type: db03ee24
-        description: <p>保留中の配信不能を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-190">保留中の配信不能を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-190">a CompletableFuture representing the pending deadletter.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deadLetterAsync(UUID,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -605,20 +605,20 @@ references:
     fullName: 'CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.deadLetterAsync(UUID lockToken, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに変更されたプロパティとします。</p>
+      <p><span data-ttu-id="76e72-191">非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに変更されたプロパティとします。</span><span class="sxs-lookup"><span data-stu-id="76e72-191">Asynchronously moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with modified properties.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> deadLetterAsync(UUID lockToken, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-192\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-192\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-193\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-193\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
       return:
         type: db03ee24
-        description: <p>保留中の配信不能を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-194">保留中の配信不能を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-194">a CompletableFuture representing the pending deadletter.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deadLetterAsync(UUID,String,String)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -627,23 +627,23 @@ references:
     fullName: 'CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.deadLetterAsync(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription)'
     type: Method
     summary: |-
-      <p>非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明を使用します。</p>
+      <p><span data-ttu-id="76e72-195">非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明を使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-195">Asynchronously moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with deadletter reason and error description.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> deadLetterAsync(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-196\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-196\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: deadLetterReason
           type: '26831127'
-          description: <p>配信不能理由です。 </p>
+          description: <p><span data-ttu-id="76e72-197">配信不能理由です。</span><span class="sxs-lookup"><span data-stu-id="76e72-197">The deadletter reason.</span></span> </p>
         - id: deadLetterErrorDescription
           type: '26831127'
-          description: <p>配信不能エラーの説明。 </p>
+          description: <p><span data-ttu-id="76e72-198">配信不能エラーの説明。</span><span class="sxs-lookup"><span data-stu-id="76e72-198">The deadletter error description.</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中の配信不能を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-199">保留中の配信不能を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-199">a CompletableFuture representing the pending deadletter.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deadLetterAsync(UUID,String,String,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -652,26 +652,26 @@ references:
     fullName: 'CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.deadLetterAsync(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明および変更されたプロパティを使用します。</p>
+      <p><span data-ttu-id="76e72-200">非同期的に移動、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>配信不能サブキューに配信不能の理由とエラーの説明および変更されたプロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-200">Asynchronously moves a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to the deadletter sub-queue with deadletter reason and error description and modified properties.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> deadLetterAsync(UUID lockToken, String deadLetterReason, String deadLetterErrorDescription, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-201\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-201\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: deadLetterReason
           type: '26831127'
-          description: <p>配信不能理由です。 </p>
+          description: <p><span data-ttu-id="76e72-202">配信不能理由です。</span><span class="sxs-lookup"><span data-stu-id="76e72-202">The deadletter reason.</span></span> </p>
         - id: deadLetterErrorDescription
           type: '26831127'
-          description: <p>配信不能エラーの説明。 </p>
+          description: <p><span data-ttu-id="76e72-203">配信不能エラーの説明。</span><span class="sxs-lookup"><span data-stu-id="76e72-203">The deadletter error description.</span></span> </p>
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-204\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-204\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
       return:
         type: db03ee24
-        description: <p>保留中の配信不能を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-205">保留中の配信不能を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-205">a CompletableFuture representing the pending deadletter.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.defer(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -680,14 +680,14 @@ references:
     fullName: void com.microsoft.azure.servicebus.IMessageReceiver.defer(UUID lockToken)
     type: Method
     summary: |-
-      <p>延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。 これは、遅延のサブキューにメッセージを移動します。</p>
+      <p><span data-ttu-id="76e72-206">延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-206">Defers a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> using its lock token.</span></span> <span data-ttu-id="76e72-207">これは、遅延のサブキューにメッセージを移動します。</span><span class="sxs-lookup"><span data-stu-id="76e72-207">This will move message into deferred subqueue.</span></span></p>
       <p></p>
     syntax:
       content: public void defer(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-208\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-208\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.defer(UUID,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -696,17 +696,17 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.IMessageReceiver.defer(UUID lockToken, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>とそのロック トークンを使用してメッセージ プロパティを変更します。 これは、遅延のサブキューにメッセージを移動します。</p>
+      <p><span data-ttu-id="76e72-209">延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>とそのロック トークンを使用してメッセージ プロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="76e72-209">Defers a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> using its lock token with modified message property.</span></span> <span data-ttu-id="76e72-210">これは、遅延のサブキューにメッセージを移動します。</span><span class="sxs-lookup"><span data-stu-id="76e72-210">This will move message into deferred subqueue.</span></span></p>
       <p></p>
     syntax:
       content: 'public void defer(UUID lockToken, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-211\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-211\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-212\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-212\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
   - uid: com.microsoft.azure.servicebus._i_message_receiver.deferAsync(UUID)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -715,17 +715,17 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.deferAsync(UUID lockToken)
     type: Method
     summary: |-
-      <p>非同期的に延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。 これは、遅延のサブキューにメッセージを移動します。</p>
+      <p><span data-ttu-id="76e72-213">非同期的に延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>のロック トークンを使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-213">Asynchronously defers a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> using its lock token.</span></span> <span data-ttu-id="76e72-214">これは、遅延のサブキューにメッセージを移動します。</span><span class="sxs-lookup"><span data-stu-id="76e72-214">This will move message into deferred subqueue.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> deferAsync(UUID lockToken)
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-215\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-215\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
       return:
         type: db03ee24
-        description: <p>保留中の遅延を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-216">保留中の遅延を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-216">a CompletableFuture representing the pending defer.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.deferAsync(UUID,Map<String, Object>)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -734,20 +734,20 @@ references:
     fullName: 'CompletableFuture<Void> com.microsoft.azure.servicebus.IMessageReceiver.deferAsync(UUID lockToken, Map<String, Object> propertiesToModify)'
     type: Method
     summary: |-
-      <p>非同期的に延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>とそのロック トークンを使用してメッセージ プロパティを変更します。 これは、遅延のサブキューにメッセージを移動します。</p>
+      <p><span data-ttu-id="76e72-217">非同期的に延期、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>とそのロック トークンを使用してメッセージ プロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="76e72-217">Asynchronously defers a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> using its lock token with modified message propert.</span></span> <span data-ttu-id="76e72-218">これは、遅延のサブキューにメッセージを移動します。</span><span class="sxs-lookup"><span data-stu-id="76e72-218">This will move message into deferred subqueue.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> deferAsync(UUID lockToken, Map<String, Object> propertiesToModify)'
       parameters:
         - id: lockToken
           type: add9545a
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></p>"
+          description: "<p><span data-ttu-id=\"76e72-219\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ロック トークン<xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-219\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> lock token <xref uid=\"com.microsoft.azure.servicebus._message.getLockToken()\" data-throw-if-not-resolved=\"false\">Message#getLockToken()</xref></span></span></p>"
         - id: propertiesToModify
           type: e7b06046
-          description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。 </p>"
+          description: "<p><span data-ttu-id=\"76e72-220\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>を変更するプロパティです。</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-220\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> properties to modify.</span></span> </p>"
       return:
         type: db03ee24
-        description: <p>保留中の遅延を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-221">保留中の遅延を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-221">a CompletableFuture representing the pending defer.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_entity_client.getEntityPath()
     parent: com.microsoft.azure.servicebus._i_message_entity_client
     href: com.microsoft.azure.servicebus._i_message_entity_client.yml
@@ -756,13 +756,13 @@ references:
     fullName: String com.microsoft.azure.servicebus.IMessageEntityClient.getEntityPath()
     type: Method
     summary: |-
-      <p>メッセージが送信または受信側のメッセージをこのクライアントは、エンティティのパスを取得します。</p>
+      <p><span data-ttu-id="76e72-222">メッセージが送信または受信側のメッセージをこのクライアントは、エンティティのパスを取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-222">Gets the path of the entity this client is sending messages to or receiving messages from.</span></span></p>
       <p></p>
     syntax:
       content: public String getEntityPath()
       return:
         type: '26831127'
-        description: <p>このクライアントが接続するエンティティのパス </p>
+        description: <p><span data-ttu-id="76e72-223">このクライアントが接続するエンティティのパス</span><span class="sxs-lookup"><span data-stu-id="76e72-223">path of the entity this client is connecting to</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.getPrefetchCount()
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -771,13 +771,13 @@ references:
     fullName: int com.microsoft.azure.servicebus.IMessageReceiver.getPrefetchCount()
     type: Method
     summary: |-
-      <p>プリフェッチ値セットを取得します。</p>
+      <p><span data-ttu-id="76e72-224">プリフェッチ値セットを取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-224">Get the prefetch value set.</span></span></p>
       <p></p>
     syntax:
       content: public int getPrefetchCount()
       return:
         type: f75371fa
-        description: <p>セットのプリフェッチ数の値。 </p>
+        description: <p><span data-ttu-id="76e72-225">セットのプリフェッチ数の値。</span><span class="sxs-lookup"><span data-stu-id="76e72-225">The set prefetch count value.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.getReceiveMode()
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -786,13 +786,13 @@ references:
     fullName: ReceiveMode com.microsoft.azure.servicebus.IMessageReceiver.getReceiveMode()
     type: Method
     summary: |-
-      <p>現在の受信者を取得<xref uid="com.microsoft.azure.servicebus._receive_mode" data-throw-if-not-resolved="false">ReceiveMode</xref>です。</p>
+      <p><span data-ttu-id="76e72-226">現在の受信者を取得<xref uid="com.microsoft.azure.servicebus._receive_mode" data-throw-if-not-resolved="false">ReceiveMode</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-226">Get current receiver's <xref uid="com.microsoft.azure.servicebus._receive_mode" data-throw-if-not-resolved="false">ReceiveMode</xref>.</span></span></p>
       <p></p>
     syntax:
       content: public ReceiveMode getReceiveMode()
       return:
         type: com.microsoft.azure.servicebus._receive_mode
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._receive_mode\" data-throw-if-not-resolved=\"false\">ReceiveMode</xref>\r\n\r\n</p>"
+        description: "<p><span data-ttu-id=\"76e72-227\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._receive_mode\" data-throw-if-not-resolved=\"false\">ReceiveMode</xref>\r\n\r\n</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-227\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._receive_mode\" data-throw-if-not-resolved=\"false\">ReceiveMode</xref>\r\n\r\n</span></span></p>"
   - uid: com.microsoft.azure.servicebus._i_message_browser.peek()
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -801,13 +801,13 @@ references:
     fullName: IMessage com.microsoft.azure.servicebus.IMessageBrowser.peek()
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。 最初に呼び出す<xref uid="com.microsoft.azure.servicebus._i_message_browser.peek()" data-throw-if-not-resolved="false">IMessageBrowser#peek()</xref>この受信者の最初の作業中のメッセージをフェッチします。 後続の各呼び出しは、エンティティの後続のメッセージをフェッチします。</p>
+      <p><span data-ttu-id="76e72-228">受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-228">reads next the active message without changing the state of the receiver or the message source.</span></span> <span data-ttu-id="76e72-229">最初に呼び出す<xref uid="com.microsoft.azure.servicebus._i_message_browser.peek()" data-throw-if-not-resolved="false">IMessageBrowser#peek()</xref>この受信者の最初の作業中のメッセージをフェッチします。</span><span class="sxs-lookup"><span data-stu-id="76e72-229">The first call to <xref uid="com.microsoft.azure.servicebus._i_message_browser.peek()" data-throw-if-not-resolved="false">IMessageBrowser#peek()</xref> fetches the first active message for this receiver.</span></span> <span data-ttu-id="76e72-230">後続の各呼び出しは、エンティティの後続のメッセージをフェッチします。</span><span class="sxs-lookup"><span data-stu-id="76e72-230">Each subsequent call fetches the subsequent message in the entity.</span></span></p>
       <p></p>
     syntax:
       content: public IMessage peek()
       return:
         type: com.microsoft.azure.servicebus._i_message
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+        description: "<p><span data-ttu-id=\"76e72-231\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-231\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> peeked</span></span> </p>"
   - uid: com.microsoft.azure.servicebus._i_message_browser.peek(long)
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -816,17 +816,17 @@ references:
     fullName: IMessage com.microsoft.azure.servicebus.IMessageBrowser.peek(long fromSequenceNumber)
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。</p>
+      <p><span data-ttu-id="76e72-232">受信側またはメッセージの送信元の状態を変更することがなく次にアクティブなメッセージを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-232">Reads next the active message without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: public IMessage peek(long fromSequenceNumber)
       parameters:
         - id: fromSequenceNumber
           type: 0364520f
-          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-233">メッセージを読み取る場所からシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-233">The sequence number from where to read the message.</span></span> </p>
       return:
         type: com.microsoft.azure.servicebus._i_message
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+        description: "<p><span data-ttu-id=\"76e72-234\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-234\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> peeked</span></span> </p>"
   - uid: com.microsoft.azure.servicebus._i_message_browser.peekAsync()
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -835,13 +835,13 @@ references:
     fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekAsync()
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージを非同期に読み取ります。</p>
+      <p><span data-ttu-id="76e72-235">受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージを非同期に読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-235">Asynchronously reads the active messages without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<IMessage> peekAsync()
       return:
         type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
-        description: "<p>\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク </p>"
+        description: "<p><span data-ttu-id=\"76e72-236\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">メッセージ</xref>ピーク</span><span class=\"sxs-lookup\"><span data-stu-id=\"76e72-236\">\r\n\r\n  <xref uid=\"com.microsoft.azure.servicebus._message\" data-throw-if-not-resolved=\"false\">Message</xref> peeked</span></span> </p>"
   - uid: com.microsoft.azure.servicebus._i_message_browser.peekAsync(long)
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -850,17 +850,17 @@ references:
     fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekAsync(long fromSequenceNumber)
     type: Method
     summary: |-
-      <p>非同期的にメッセージを読み取ります次にアクティブな受信側またはメッセージの送信元の状態を変更することがなく。</p>
+      <p><span data-ttu-id="76e72-237">非同期的にメッセージを読み取ります次にアクティブな受信側またはメッセージの送信元の状態を変更することがなく。</span><span class="sxs-lookup"><span data-stu-id="76e72-237">Asynchronously reads next the active message without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<IMessage> peekAsync(long fromSequenceNumber)
       parameters:
         - id: fromSequenceNumber
           type: 0364520f
-          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-238">メッセージを読み取る場所からシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-238">The sequence number from where to read the message.</span></span> </p>
       return:
         type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+        description: <p><span data-ttu-id="76e72-239">返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。</span><span class="sxs-lookup"><span data-stu-id="76e72-239">CompletableFuture that returns <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> peeked.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_browser.peekBatch(int)
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -869,17 +869,17 @@ references:
     fullName: Collection<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekBatch(int messageCount)
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</p>
+      <p><span data-ttu-id="76e72-240">受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-240">Reads next batch of the active messages without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: public Collection<IMessage> peekBatch(int messageCount)
       parameters:
         - id: messageCount
           type: f75371fa
-          description: <p>メッセージの数。 </p>
+          description: <p><span data-ttu-id="76e72-241">メッセージの数。</span><span class="sxs-lookup"><span data-stu-id="76e72-241">The number of messages.</span></span> </p>
       return:
         type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク </p>
+        description: <p><span data-ttu-id="76e72-242">バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク</span><span class="sxs-lookup"><span data-stu-id="76e72-242">Batch of <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> peeked</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_browser.peekBatch(long,int)'
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -888,20 +888,20 @@ references:
     fullName: 'Collection<IMessage> com.microsoft.azure.servicebus.IMessageBrowser.peekBatch(long fromSequenceNumber, int messageCount)'
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</p>
+      <p><span data-ttu-id="76e72-243">受信側またはメッセージの送信元の状態を変更することがなく次のバッチのアクティブなメッセージを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-243">Reads next batch of the active messages without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: 'public Collection<IMessage> peekBatch(long fromSequenceNumber, int messageCount)'
       parameters:
         - id: fromSequenceNumber
           type: 0364520f
-          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-244">メッセージを読み取る場所からシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-244">The sequence number from where to read the message.</span></span> </p>
         - id: messageCount
           type: f75371fa
-          description: <p>メッセージの数。 </p>
+          description: <p><span data-ttu-id="76e72-245">メッセージの数。</span><span class="sxs-lookup"><span data-stu-id="76e72-245">The number of messages.</span></span> </p>
       return:
         type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク </p>
+        description: <p><span data-ttu-id="76e72-246">バッチの<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピーク</span><span class="sxs-lookup"><span data-stu-id="76e72-246">Batch of <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> peeked</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_browser.peekBatchAsync(int)
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -910,17 +910,17 @@ references:
     fullName: CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageBrowser.peekBatchAsync(int messageCount)
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</p>
+      <p><span data-ttu-id="76e72-247">受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-247">Asynchronously reads the next batch of active messages without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Collection<IMessage>> peekBatchAsync(int messageCount)
       parameters:
         - id: messageCount
           type: f75371fa
-          description: <p>メッセージの数。 </p>
+          description: <p><span data-ttu-id="76e72-248">メッセージの数。</span><span class="sxs-lookup"><span data-stu-id="76e72-248">The number of messages.</span></span> </p>
       return:
         type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
-        description: <p>バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+        description: <p><span data-ttu-id="76e72-249">バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。</span><span class="sxs-lookup"><span data-stu-id="76e72-249">CompletableFuture that returns batch of <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> peeked.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_browser.peekBatchAsync(long,int)'
     parent: com.microsoft.azure.servicebus._i_message_browser
     href: com.microsoft.azure.servicebus._i_message_browser.yml
@@ -929,20 +929,20 @@ references:
     fullName: 'CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageBrowser.peekBatchAsync(long fromSequenceNumber, int messageCount)'
     type: Method
     summary: |-
-      <p>受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</p>
+      <p><span data-ttu-id="76e72-250">受信側またはメッセージの送信元の状態を変更することがなく、アクティブなメッセージの次のバッチを非同期に読み取ります。</span><span class="sxs-lookup"><span data-stu-id="76e72-250">Asynchronously reads the next batch of active messages without changing the state of the receiver or the message source.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Collection<IMessage>> peekBatchAsync(long fromSequenceNumber, int messageCount)'
       parameters:
         - id: fromSequenceNumber
           type: 0364520f
-          description: <p>メッセージを読み取る場所からシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-251">メッセージを読み取る場所からシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-251">The sequence number from where to read the message.</span></span> </p>
         - id: messageCount
           type: f75371fa
-          description: <p>メッセージの数。 </p>
+          description: <p><span data-ttu-id="76e72-252">メッセージの数。</span><span class="sxs-lookup"><span data-stu-id="76e72-252">The number of messages.</span></span> </p>
       return:
         type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
-        description: <p>バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。 </p>
+        description: <p><span data-ttu-id="76e72-253">バッチを返す CompletableFuture<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>ピークします。</span><span class="sxs-lookup"><span data-stu-id="76e72-253">CompletableFuture that returns batch of <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> peeked.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receive()
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -951,13 +951,13 @@ references:
     fullName: IMessage com.microsoft.azure.servicebus.IMessageReceiver.receive()
     type: Method
     summary: |-
-      <p>受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間の既定のサーバーにします。</p>
+      <p><span data-ttu-id="76e72-254">受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間の既定のサーバーにします。</span><span class="sxs-lookup"><span data-stu-id="76e72-254">Receives a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> with default server wait time.</span></span></p>
       <p></p>
     syntax:
       content: public IMessage receive()
       return:
         type: com.microsoft.azure.servicebus._i_message
-        description: <p>受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>またはメッセージが表示されない場合は null です。 </p>
+        description: <p><span data-ttu-id="76e72-255">受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>またはメッセージが表示されない場合は null です。</span><span class="sxs-lookup"><span data-stu-id="76e72-255">The received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> or null if there is no message.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receive(Duration)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -966,17 +966,17 @@ references:
     fullName: IMessage com.microsoft.azure.servicebus.IMessageReceiver.receive(Duration serverWaitTime)
     type: Method
     summary: |-
-      <p>受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間の指定したサーバーとします。</p>
+      <p><span data-ttu-id="76e72-256">受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間の指定したサーバーとします。</span><span class="sxs-lookup"><span data-stu-id="76e72-256">Receives a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> with specified server wait time.</span></span></p>
       <p></p>
     syntax:
       content: public IMessage receive(Duration serverWaitTime)
       parameters:
         - id: serverWaitTime
           type: e02a2de0
-          description: <p>サーバーの待機時間 </p>
+          description: <p><span data-ttu-id="76e72-257">サーバーの待機時間</span><span class="sxs-lookup"><span data-stu-id="76e72-257">The server wait time</span></span> </p>
       return:
         type: com.microsoft.azure.servicebus._i_message
-        description: <p>受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>またはメッセージが表示されない場合は null です。 </p>
+        description: <p><span data-ttu-id="76e72-258">受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>またはメッセージが表示されない場合は null です。</span><span class="sxs-lookup"><span data-stu-id="76e72-258">The received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> or null if there is no message.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveAsync()
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -985,13 +985,13 @@ references:
     fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageReceiver.receiveAsync()
     type: Method
     summary: |-
-      <p>受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>Azure Service Bus からです。</p>
+      <p><span data-ttu-id="76e72-259">受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>Azure Service Bus からです。</span><span class="sxs-lookup"><span data-stu-id="76e72-259">Receives a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from Azure Service Bus.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<IMessage> receiveAsync()
       return:
         type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>受信したメッセージ。 メッセージがない場合は null を返します </p>
+        description: <p><span data-ttu-id="76e72-260">受信したメッセージ。</span><span class="sxs-lookup"><span data-stu-id="76e72-260">The message received.</span></span> <span data-ttu-id="76e72-261">メッセージがない場合は null を返します</span><span class="sxs-lookup"><span data-stu-id="76e72-261">Returns null if no message is found</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveAsync(Duration)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1000,17 +1000,17 @@ references:
     fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageReceiver.receiveAsync(Duration serverWaitTime)
     type: Method
     summary: |-
-      <p>受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間のサーバーと Azure Service Bus からです。</p>
+      <p><span data-ttu-id="76e72-262">受信、<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間のサーバーと Azure Service Bus からです。</span><span class="sxs-lookup"><span data-stu-id="76e72-262">Receives a <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from Azure Service Bus with server wait time.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<IMessage> receiveAsync(Duration serverWaitTime)
       parameters:
         - id: serverWaitTime
           type: e02a2de0
-          description: <p>時間、クライアントは、タイムアウトになる前に、メッセージの受信を待機します。 </p>
+          description: <p><span data-ttu-id="76e72-263">時間、クライアントは、タイムアウトになる前に、メッセージの受信を待機します。</span><span class="sxs-lookup"><span data-stu-id="76e72-263">The time the client waits for receiving a message before it times out.</span></span> </p>
       return:
         type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>受信したメッセージ。 メッセージがない場合は null を返します </p>
+        description: <p><span data-ttu-id="76e72-264">受信したメッセージ。</span><span class="sxs-lookup"><span data-stu-id="76e72-264">The message received.</span></span> <span data-ttu-id="76e72-265">メッセージがない場合は null を返します</span><span class="sxs-lookup"><span data-stu-id="76e72-265">Returns null if no message is found</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveBatch(int)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1019,17 +1019,17 @@ references:
     fullName: Collection<IMessage> com.microsoft.azure.servicebus.IMessageReceiver.receiveBatch(int maxMessageCount)
     type: Method
     summary: |-
-      <p>MaxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>Azure Service Bus からです。</p>
+      <p><span data-ttu-id="76e72-266">MaxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>Azure Service Bus からです。</span><span class="sxs-lookup"><span data-stu-id="76e72-266">Receives a maximum of maxMessageCount <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from Azure Service Bus.</span></span></p>
       <p></p>
     syntax:
       content: public Collection<IMessage> receiveBatch(int maxMessageCount)
       parameters:
         - id: maxMessageCount
           type: f75371fa
-          description: <p>受信するメッセージの最大数。 </p>
+          description: <p><span data-ttu-id="76e72-267">受信するメッセージの最大数。</span><span class="sxs-lookup"><span data-stu-id="76e72-267">The maximum number of messages that will be received.</span></span> </p>
       return:
         type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>受信したメッセージの一覧です。 メッセージがない場合は null を返します。 </p>
+        description: <p><span data-ttu-id="76e72-268">受信したメッセージの一覧です。</span><span class="sxs-lookup"><span data-stu-id="76e72-268">List of messages received.</span></span> <span data-ttu-id="76e72-269">メッセージがない場合は null を返します。</span><span class="sxs-lookup"><span data-stu-id="76e72-269">Returns null if no message is found.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.receiveBatch(int,Duration)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1038,20 +1038,20 @@ references:
     fullName: 'Collection<IMessage> com.microsoft.azure.servicebus.IMessageReceiver.receiveBatch(int maxMessageCount, Duration serverWaitTime)'
     type: Method
     summary: |-
-      <p>MaxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間のサーバーと Azure Service Bus からです。</p>
+      <p><span data-ttu-id="76e72-270">MaxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間のサーバーと Azure Service Bus からです。</span><span class="sxs-lookup"><span data-stu-id="76e72-270">Receives a maximum of maxMessageCount <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from Azure Service Bus with server wait time.</span></span></p>
       <p></p>
     syntax:
       content: 'public Collection<IMessage> receiveBatch(int maxMessageCount, Duration serverWaitTime)'
       parameters:
         - id: maxMessageCount
           type: f75371fa
-          description: <p>受信するメッセージの最大数。 </p>
+          description: <p><span data-ttu-id="76e72-271">受信するメッセージの最大数。</span><span class="sxs-lookup"><span data-stu-id="76e72-271">The maximum number of messages that will be received.</span></span> </p>
         - id: serverWaitTime
           type: e02a2de0
-          description: <p>時間、クライアントは、タイムアウトになる前に、メッセージの受信を待機します。 </p>
+          description: <p><span data-ttu-id="76e72-272">時間、クライアントは、タイムアウトになる前に、メッセージの受信を待機します。</span><span class="sxs-lookup"><span data-stu-id="76e72-272">The time the client waits for receiving a message before it times out.</span></span> </p>
       return:
         type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>受信したメッセージの一覧です。 メッセージがない場合は null を返します。 </p>
+        description: <p><span data-ttu-id="76e72-273">受信したメッセージの一覧です。</span><span class="sxs-lookup"><span data-stu-id="76e72-273">List of messages received.</span></span> <span data-ttu-id="76e72-274">メッセージがない場合は null を返します。</span><span class="sxs-lookup"><span data-stu-id="76e72-274">Returns null if no message is found.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveBatchAsync(int)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1060,17 +1060,17 @@ references:
     fullName: CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageReceiver.receiveBatchAsync(int maxMessageCount)
     type: Method
     summary: |-
-      <p>非同期的に maxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>エンティティからです。</p>
+      <p><span data-ttu-id="76e72-275">非同期的に maxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>エンティティからです。</span><span class="sxs-lookup"><span data-stu-id="76e72-275">Asynchronously receives a maximum of maxMessageCount <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Collection<IMessage>> receiveBatchAsync(int maxMessageCount)
       parameters:
         - id: maxMessageCount
           type: f75371fa
-          description: <p>受信するメッセージの最大数。 </p>
+          description: <p><span data-ttu-id="76e72-276">受信するメッセージの最大数。</span><span class="sxs-lookup"><span data-stu-id="76e72-276">The maximum number of messages that will be received.</span></span> </p>
       return:
         type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
-        description: <p>保留中の受信を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-277">保留中の受信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-277">a CompletableFuture representing the pending receive.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_receiver.receiveBatchAsync(int,Duration)'
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1079,20 +1079,20 @@ references:
     fullName: 'CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageReceiver.receiveBatchAsync(int maxMessageCount, Duration serverWaitTime)'
     type: Method
     summary: |-
-      <p>非同期的に maxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間のサーバーと Azure Service Bus からです。</p>
+      <p><span data-ttu-id="76e72-278">非同期的に maxMessageCount の最大値を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>待機時間のサーバーと Azure Service Bus からです。</span><span class="sxs-lookup"><span data-stu-id="76e72-278">Asynchronously receives a maximum of maxMessageCount <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from Azure Service Bus with server wait time.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Collection<IMessage>> receiveBatchAsync(int maxMessageCount, Duration serverWaitTime)'
       parameters:
         - id: maxMessageCount
           type: f75371fa
-          description: <p>受信するメッセージの最大数。 </p>
+          description: <p><span data-ttu-id="76e72-279">受信するメッセージの最大数。</span><span class="sxs-lookup"><span data-stu-id="76e72-279">The maximum number of messages that will be received.</span></span> </p>
         - id: serverWaitTime
           type: e02a2de0
-          description: <p>時間、クライアントは、タイムアウトになる前に、メッセージの受信を待機します。 </p>
+          description: <p><span data-ttu-id="76e72-280">時間、クライアントは、タイムアウトになる前に、メッセージの受信を待機します。</span><span class="sxs-lookup"><span data-stu-id="76e72-280">The time the client waits for receiving a message before it times out.</span></span> </p>
       return:
         type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
-        description: <p>保留中の受信を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-281">保留中の受信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-281">a CompletableFuture representing the pending receive.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveDeferredMessage(long)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1101,17 +1101,17 @@ references:
     fullName: IMessage com.microsoft.azure.servicebus.IMessageReceiver.receiveDeferredMessage(long sequenceNumber)
     type: Method
     summary: |-
-      <p>遅延実行を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。 シーケンス番号を使用して、遅延メッセージを受信のみできます。</p>
+      <p><span data-ttu-id="76e72-282">遅延実行を受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-282">Receives a deferred <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref>.</span></span> <span data-ttu-id="76e72-283">シーケンス番号を使用して、遅延メッセージを受信のみできます。</span><span class="sxs-lookup"><span data-stu-id="76e72-283">Deferred messages can only be received by using sequence number.</span></span></p>
       <p></p>
     syntax:
       content: public IMessage receiveDeferredMessage(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: '<p><xref uid="com.microsoft.azure.servicebus._message.getSequenceNumber()" data-throw-if-not-resolved="false">Message#getSequenceNumber()</xref>です。 </p>'
+          description: '<p><span data-ttu-id="76e72-284"><xref uid="com.microsoft.azure.servicebus._message.getSequenceNumber()" data-throw-if-not-resolved="false">Message#getSequenceNumber()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-284">The <xref uid="com.microsoft.azure.servicebus._message.getSequenceNumber()" data-throw-if-not-resolved="false">Message#getSequenceNumber()</xref>.</span></span> </p>'
       return:
         type: com.microsoft.azure.servicebus._i_message
-        description: <p>受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>指定された、メッセージがない場合は null またはシーケンス番号。 </p>
+        description: <p><span data-ttu-id="76e72-285">受信した<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>指定された、メッセージがない場合は null またはシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-285">The received <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> or null if there is no message for given sequence number.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveDeferredMessageAsync(long)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1120,17 +1120,17 @@ references:
     fullName: CompletableFuture<IMessage> com.microsoft.azure.servicebus.IMessageReceiver.receiveDeferredMessageAsync(long sequenceNumber)
     type: Method
     summary: |-
-      <p>特定の遅延を非同期的に受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>シーケンス番号によって識別されます。</p>
+      <p><span data-ttu-id="76e72-286">特定の遅延を非同期的に受け取る<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>シーケンス番号によって識別されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-286">Asynchronously receives a specific deferred <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> identified by sequence number.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<IMessage> receiveDeferredMessageAsync(long sequenceNumber)
       parameters:
         - id: sequenceNumber
           type: 0364520f
-          description: <p>受信するメッセージのシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-287">受信するメッセージのシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-287">The sequence number of the message that will be received.</span></span> </p>
       return:
         type: 9cdf14d0com.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>保留中の受信を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-288">保留中の受信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-288">a CompletableFuture representing the pending receive.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveDeferredMessageBatch(Collection<Long>)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1139,17 +1139,17 @@ references:
     fullName: Collection<IMessage> com.microsoft.azure.servicebus.IMessageReceiver.receiveDeferredMessageBatch(Collection<Long> sequenceNumbers)
     type: Method
     summary: |-
-      <p>バッチで受け取る遅延<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。</p>
+      <p><span data-ttu-id="76e72-289">バッチで受け取る遅延<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-289">Receives a batch of deferred <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref>.</span></span></p>
       <p></p>
     syntax:
       content: public Collection<IMessage> receiveDeferredMessageBatch(Collection<Long> sequenceNumbers)
       parameters:
         - id: sequenceNumbers
           type: f936a554
-          description: <p>目的の遅延メッセージのシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-290">目的の遅延メッセージのシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-290">The sequence numbers of desired deferred messages.</span></span> </p>
       return:
         type: 12ebb11acom.microsoft.azure.servicebus._i_messagea08ddfce
-        description: <p>受信したメッセージの一覧です。 メッセージがない場合は null を返します。 </p>
+        description: <p><span data-ttu-id="76e72-291">受信したメッセージの一覧です。</span><span class="sxs-lookup"><span data-stu-id="76e72-291">List of messages received.</span></span> <span data-ttu-id="76e72-292">メッセージがない場合は null を返します。</span><span class="sxs-lookup"><span data-stu-id="76e72-292">Returns null if no message is found.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.receiveDeferredMessageBatchAsync(Collection<Long>)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1158,17 +1158,17 @@ references:
     fullName: CompletableFuture<Collection<IMessage>> com.microsoft.azure.servicebus.IMessageReceiver.receiveDeferredMessageBatchAsync(Collection<Long> sequenceNumbers)
     type: Method
     summary: |-
-      <p>セットを非同期的に受信遅延<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>エンティティからです。</p>
+      <p><span data-ttu-id="76e72-293">セットを非同期的に受信遅延<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>エンティティからです。</span><span class="sxs-lookup"><span data-stu-id="76e72-293">Asynchronously receives a set of deferred <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> from the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Collection<IMessage>> receiveDeferredMessageBatchAsync(Collection<Long> sequenceNumbers)
       parameters:
         - id: sequenceNumbers
           type: f936a554
-          description: <p>受信するメッセージのシーケンス番号。 </p>
+          description: <p><span data-ttu-id="76e72-294">受信するメッセージのシーケンス番号。</span><span class="sxs-lookup"><span data-stu-id="76e72-294">The sequence numbers of the message that will be received.</span></span> </p>
       return:
         type: 9161dfdccom.microsoft.azure.servicebus._i_messagee7daa122
-        description: <p>保留中の受信を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-295">保留中の受信を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-295">a CompletableFuture representing the pending receive.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.renewMessageLock(IMessage)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1177,17 +1177,17 @@ references:
     fullName: Instant com.microsoft.azure.servicebus.IMessageReceiver.renewMessageLock(IMessage message)
     type: Method
     summary: |-
-      <p>ロック トークンで指定されたメッセージのロックを更新します。 ロックは、エンティティに指定された設定に基づいて更新されます。 メッセージを受信する<xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode #PEEKLOCK</xref>モードでは、メッセージがロックされているこの受信者インスタンス用のサーバーに指定された期間中 (LockDuration) キュー/サブスクリプションの作成中にします。 メッセージの処理は、この期間を超える必要がある場合、ロックを更新する必要があります。 各更新のロックは、エンティティの LockDuration によって更新されます。</p>
+      <p><span data-ttu-id="76e72-296">ロック トークンで指定されたメッセージのロックを更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-296">Renews the lock on the message specified by the lock token.</span></span> <span data-ttu-id="76e72-297">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-297">The lock will be renewed based on the setting specified on the entity.</span></span> <span data-ttu-id="76e72-298">メッセージを受信する<xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode #PEEKLOCK</xref>モードでは、メッセージがロックされているこの受信者インスタンス用のサーバーに指定された期間中 (LockDuration) キュー/サブスクリプションの作成中にします。</span><span class="sxs-lookup"><span data-stu-id="76e72-298">When a message is received in <xref uid="com.microsoft.azure.servicebus._receive_mode.PEEKLOCK" data-throw-if-not-resolved="false">ReceiveMode#PEEKLOCK</xref> mode, the message is locked on the server for this receiver instance for a duration as specified during the Queue/Subscription creation (LockDuration).</span></span> <span data-ttu-id="76e72-299">メッセージの処理は、この期間を超える必要がある場合、ロックを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-299">If processing of the message requires longer than this duration, the lock needs to be renewed.</span></span> <span data-ttu-id="76e72-300">各更新のロックは、エンティティの LockDuration によって更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-300">For each renewal, the lock is renewed by the entity's LockDuration.</span></span></p>
       <p></p>
     syntax:
       content: public Instant renewMessageLock(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p><xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>を更新します。 </p>
+          description: <p><span data-ttu-id="76e72-301"><xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>を更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-301">The <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to be renewed</span></span> </p>
       return:
         type: 328f8254
-        description: <p>UTC 時刻まで、新しいロックされています。 </p>
+        description: <p><span data-ttu-id="76e72-302">UTC 時刻まで、新しいロックされています。</span><span class="sxs-lookup"><span data-stu-id="76e72-302">The new locked until UTC time.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.renewMessageLockAsync(IMessage)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1196,17 +1196,17 @@ references:
     fullName: CompletableFuture<Instant> com.microsoft.azure.servicebus.IMessageReceiver.renewMessageLockAsync(IMessage message)
     type: Method
     summary: |-
-      <p>ロック トークンで指定されたメッセージのロックを非同期的に更新します。 ロックは、エンティティに指定された設定に基づいて更新されます。</p>
+      <p><span data-ttu-id="76e72-303">ロック トークンで指定されたメッセージのロックを非同期的に更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-303">Asynchronously renews the lock on the message specified by the lock token.</span></span> <span data-ttu-id="76e72-304">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-304">The lock will be renewed based on the setting specified on the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Instant> renewMessageLockAsync(IMessage message)
       parameters:
         - id: message
           type: com.microsoft.azure.servicebus._i_message
-          description: <p><xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>を更新します。 </p>
+          description: <p><span data-ttu-id="76e72-305"><xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>を更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-305">The <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to be renewed</span></span> </p>
       return:
         type: 6666b360
-        description: <p>保留中の更新を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-306">保留中の更新を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-306">a CompletableFuture representing the pending renew.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver.setPrefetchCount(int)
     parent: com.microsoft.azure.servicebus._i_message_receiver
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1215,15 +1215,15 @@ references:
     fullName: void com.microsoft.azure.servicebus.IMessageReceiver.setPrefetchCount(int prefetchCount)
     type: Method
     summary: |-
-      <p>受信側のプリフェッチ数を設定します。 メッセージ フローと、1 つのアプリケーションが要求する前にローカルの取得のためすぐに使用できるメッセージがあることを目指していますによってプリフェッチ速度では、受信を使用します。 メッセージ数の PrefetchCount をプリフェッチする 0 以外の値を設定します。 プリフェッチをオフに値を 0 に設定します。 RECEIVEANDDELETE モードの場合は、既定値は 0 です。 PEEKLOCK モードの場合は、既定値は 100 です。 </p>
-      <p>受信側が作成されるまで、値を設定できません。</p>
+      <p><span data-ttu-id="76e72-307">受信側のプリフェッチ数を設定します。</span><span class="sxs-lookup"><span data-stu-id="76e72-307">Set the prefetch count of the receiver.</span></span> <span data-ttu-id="76e72-308">メッセージ フローと、1 つのアプリケーションが要求する前にローカルの取得のためすぐに使用できるメッセージがあることを目指していますによってプリフェッチ速度では、受信を使用します。</span><span class="sxs-lookup"><span data-stu-id="76e72-308">Prefetch speeds up the message flow by aiming to have a message readily available for local retrieval when and before the application asks for one using Receive.</span></span> <span data-ttu-id="76e72-309">メッセージ数の PrefetchCount をプリフェッチする 0 以外の値を設定します。</span><span class="sxs-lookup"><span data-stu-id="76e72-309">Setting a non-zero value prefetches PrefetchCount number of messages.</span></span> <span data-ttu-id="76e72-310">プリフェッチをオフに値を 0 に設定します。</span><span class="sxs-lookup"><span data-stu-id="76e72-310">Setting the value to zero turns prefetch off.</span></span> <span data-ttu-id="76e72-311">RECEIVEANDDELETE モードの場合は、既定値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="76e72-311">For RECEIVEANDDELETE mode, the default value is 0.</span></span> <span data-ttu-id="76e72-312">PEEKLOCK モードの場合は、既定値は 100 です。</span><span class="sxs-lookup"><span data-stu-id="76e72-312">For PEEKLOCK mode, the default value is 100.</span></span> </p>
+      <p><span data-ttu-id="76e72-313">受信側が作成されるまで、値を設定できません。</span><span class="sxs-lookup"><span data-stu-id="76e72-313">The value cannot be set until the receiver is created.</span></span></p>
       <p></p>
     syntax:
       content: public void setPrefetchCount(int prefetchCount)
       parameters:
         - id: prefetchCount
           type: f75371fa
-          description: <p>目的のプリフェッチ数。 </p>
+          description: <p><span data-ttu-id="76e72-314">目的のプリフェッチ数。</span><span class="sxs-lookup"><span data-stu-id="76e72-314">The desired prefetch count.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_receiver
     parent: com.microsoft.azure.servicebus
     href: com.microsoft.azure.servicebus._i_message_receiver.yml
@@ -1231,7 +1231,7 @@ references:
     nameWithType: IMessageReceiver
     fullName: com.microsoft.azure.servicebus.IMessageReceiver
     type: Interface
-    summary: <p>メッセージ受信側のインターフェイスを定義します。 キューとサブスクリプションからメッセージを受信し、それらを認識する、MessageReceiver を使用できます。 </p>
+    summary: <p><span data-ttu-id="76e72-315">メッセージ受信側のインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="76e72-315">Defines message receiver interface.</span></span> <span data-ttu-id="76e72-316">キューとサブスクリプションからメッセージを受信し、それらを認識する、MessageReceiver を使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-316">The MessageReceiver can be used to receive messages from Queues and Subscriptions and acknowledge them.</span></span> </p>
     syntax:
       content: 'public interface IMessageReceiver extends IMessageEntityClient,IMessageBrowser'
   - uid: com.microsoft.azure.servicebus._message_session
@@ -1254,7 +1254,7 @@ references:
       content: public String getSessionId()
       return:
         type: '26831127'
-        description: <p>セッション Id を取得します。 </p>
+        description: <p><span data-ttu-id="76e72-317">セッション Id を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-317">Gets the SessionId.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._message_session.getLockedUntilUtc()
     parent: com.microsoft.azure.servicebus._message_session
     href: com.microsoft.azure.servicebus._message_session.yml
@@ -1266,7 +1266,7 @@ references:
       content: public Instant getLockedUntilUtc()
       return:
         type: 328f8254
-        description: '<p>時刻を取得するセッションで識別される<xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>はこのクライアント用になるまでにロックします。 </p>'
+        description: '<p><span data-ttu-id="76e72-318">時刻を取得するセッションで識別される<xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>はこのクライアント用になるまでにロックします。</span><span class="sxs-lookup"><span data-stu-id="76e72-318">Gets the time that the session identified by <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref> is locked until for this client.</span></span> </p>'
   - uid: com.microsoft.azure.servicebus._i_message_session.getSessionId()
     parent: com.microsoft.azure.servicebus._i_message_session
     href: com.microsoft.azure.servicebus._i_message_session.yml
@@ -1283,9 +1283,9 @@ references:
     fullName: void com.microsoft.azure.servicebus.MessageSession.renewSessionLock()
     type: Method
     summary: |-
-      <p>指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。 ロックは、エンティティに指定された設定に基づいて更新されます。 </p>
-      <p>セッションを承諾すると、セッションによってロックされてクライアントのインスタンスの指定された期間、サービス キュー/サブスクリプションの作成中に。 セッションの処理は、この期間を超える必要がある場合、セッション ロックを更新する必要があります。 各更新のセッションのロックは、エンティティの LockDuration によって更新されます。 </p>
-      <p>セッションの更新は、同様のセッションですべてのメッセージを更新します。 各メッセージを更新することがない必要があります。</p>
+      <p><span data-ttu-id="76e72-319">指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-319">Renews the lock on the session specified by the <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>.</span></span> <span data-ttu-id="76e72-320">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-320">The lock will be renewed based on the setting specified on the entity.</span></span> </p>
+      <p><span data-ttu-id="76e72-321">セッションを承諾すると、セッションによってロックされてクライアントのインスタンスの指定された期間、サービス キュー/サブスクリプションの作成中に。</span><span class="sxs-lookup"><span data-stu-id="76e72-321">When you accept a session, the session is locked for this client instance by the service for a duration as specified during the Queue/Subscription creation.</span></span> <span data-ttu-id="76e72-322">セッションの処理は、この期間を超える必要がある場合、セッション ロックを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-322">If processing of the session requires longer than this duration, the session-lock needs to be renewed.</span></span> <span data-ttu-id="76e72-323">各更新のセッションのロックは、エンティティの LockDuration によって更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-323">For each renewal, the session-lock is renewed by the entity's LockDuration.</span></span> </p>
+      <p><span data-ttu-id="76e72-324">セッションの更新は、同様のセッションですべてのメッセージを更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-324">Renewal of session renews all the messages in the session as well.</span></span> <span data-ttu-id="76e72-325">各メッセージを更新することがない必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-325">Each individual message need not be renewed.</span></span></p>
       <p></p>
     syntax:
       content: public void renewSessionLock()
@@ -1296,7 +1296,7 @@ references:
     nameWithType: ServiceBusException
     fullName: com.microsoft.azure.servicebus.primitives.ServiceBusException
     type: Class
-    summary: <p>これは、すべてのエラーの場合のサービス バスを生成する基本例外です。 </p>
+    summary: <p><span data-ttu-id="76e72-326">これは、すべてのエラーの場合のサービス バスを生成する基本例外です。</span><span class="sxs-lookup"><span data-stu-id="76e72-326">This is the base exception that service bus will generate for all error cases.</span></span> </p>
     syntax:
       content: public class ServiceBusException
   - uid: com.microsoft.azure.servicebus._message_session.renewSessionLockAsync()
@@ -1307,13 +1307,13 @@ references:
     fullName: CompletableFuture<Void> com.microsoft.azure.servicebus.MessageSession.renewSessionLockAsync()
     type: Method
     summary: |-
-      <p>指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。 ロックは、エンティティに指定された設定に基づいて更新されます。</p>
+      <p><span data-ttu-id="76e72-327">指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-327">Renews the lock on the session specified by the <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>.</span></span> <span data-ttu-id="76e72-328">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-328">The lock will be renewed based on the setting specified on the entity.</span></span></p>
       <p></p>
     syntax:
       content: public CompletableFuture<Void> renewSessionLockAsync()
       return:
         type: db03ee24
-        description: <p>保留中の更新を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-329">保留中の更新を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-329">a CompletableFuture representing the pending renew.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_session.renewSessionLock()
     parent: com.microsoft.azure.servicebus._i_message_session
     href: com.microsoft.azure.servicebus._i_message_session.yml
@@ -1322,9 +1322,9 @@ references:
     fullName: void com.microsoft.azure.servicebus.IMessageSession.renewSessionLock()
     type: Method
     summary: |-
-      <p>指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。 ロックは、エンティティに指定された設定に基づいて更新されます。 </p>
-      <p>セッションを承諾すると、セッションによってロックされてクライアントのインスタンスの指定された期間、サービス キュー/サブスクリプションの作成中に。 セッションの処理は、この期間を超える必要がある場合、セッション ロックを更新する必要があります。 各更新のセッションのロックは、エンティティの LockDuration によって更新されます。 </p>
-      <p>セッションの更新は、同様のセッションですべてのメッセージを更新します。 各メッセージを更新することがない必要があります。</p>
+      <p><span data-ttu-id="76e72-330">指定されたセッションで、ロックの更新、 <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-330">Renews the lock on the session specified by the <xref uid="com.microsoft.azure.servicebus._i_message_session.getSessionId()" data-throw-if-not-resolved="false">IMessageSession#getSessionId()</xref>.</span></span> <span data-ttu-id="76e72-331">ロックは、エンティティに指定された設定に基づいて更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-331">The lock will be renewed based on the setting specified on the entity.</span></span> </p>
+      <p><span data-ttu-id="76e72-332">セッションを承諾すると、セッションによってロックされてクライアントのインスタンスの指定された期間、サービス キュー/サブスクリプションの作成中に。</span><span class="sxs-lookup"><span data-stu-id="76e72-332">When you accept a session, the session is locked for this client instance by the service for a duration as specified during the Queue/Subscription creation.</span></span> <span data-ttu-id="76e72-333">セッションの処理は、この期間を超える必要がある場合、セッション ロックを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-333">If processing of the session requires longer than this duration, the session-lock needs to be renewed.</span></span> <span data-ttu-id="76e72-334">各更新のセッションのロックは、エンティティの LockDuration によって更新されます。</span><span class="sxs-lookup"><span data-stu-id="76e72-334">For each renewal, the session-lock is renewed by the entity's LockDuration.</span></span> </p>
+      <p><span data-ttu-id="76e72-335">セッションの更新は、同様のセッションですべてのメッセージを更新します。</span><span class="sxs-lookup"><span data-stu-id="76e72-335">Renewal of session renews all the messages in the session as well.</span></span> <span data-ttu-id="76e72-336">各メッセージを更新することがない必要があります。</span><span class="sxs-lookup"><span data-stu-id="76e72-336">Each individual message need not be renewed.</span></span></p>
       <p></p>
     syntax: *ref_2
   - uid: 'com.microsoft.azure.servicebus._message_session.setState(byte [])'
@@ -1335,14 +1335,14 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.MessageSession.setState(byte[] sessionState)'
     type: Method
     summary: |-
-      <p>使用して後で取得できるセッションでカスタムの状態を設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</p>
+      <p><span data-ttu-id="76e72-337">使用して後で取得できるセッションでカスタムの状態を設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-337">Set a custom state on the session which can be later retrieved using <xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>.</span></span></p>
       <p></p>
     syntax:
       content: 'public void setState(byte[] sessionState)'
       parameters:
         - id: state
           type: ccd9418d
-          description: <p>セッション状態。 </p>
+          description: <p><span data-ttu-id="76e72-338">セッション状態。</span><span class="sxs-lookup"><span data-stu-id="76e72-338">The session state.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_session.getState()
     parent: com.microsoft.azure.servicebus._i_message_session
     href: com.microsoft.azure.servicebus._i_message_session.yml
@@ -1351,7 +1351,7 @@ references:
     fullName: 'byte [] com.microsoft.azure.servicebus.IMessageSession.getState()'
     type: Method
     summary: |-
-      <p>セッション状態を取得します。</p>
+      <p><span data-ttu-id="76e72-339">セッション状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-339">Gets the session state.</span></span></p>
       <p></p>
     syntax: *ref_3
   - uid: 'com.microsoft.azure.servicebus._message_session.setStateAsync(byte [])'
@@ -1362,17 +1362,17 @@ references:
     fullName: 'CompletableFuture<Void> com.microsoft.azure.servicebus.MessageSession.setStateAsync(byte[] sessionState)'
     type: Method
     summary: |-
-      <p>使用して後で取得できるセッションでカスタムの状態を非同期的に設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</p>
+      <p><span data-ttu-id="76e72-340">使用して後で取得できるセッションでカスタムの状態を非同期的に設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-340">Asynchronously set a custom state on the session which can be later retrieved using <xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>.</span></span></p>
       <p></p>
     syntax:
       content: 'public CompletableFuture<Void> setStateAsync(byte[] sessionState)'
       parameters:
         - id: state
           type: ccd9418d
-          description: <p>セッション状態。 </p>
+          description: <p><span data-ttu-id="76e72-341">セッション状態。</span><span class="sxs-lookup"><span data-stu-id="76e72-341">The session state.</span></span> </p>
       return:
         type: db03ee24
-        description: <p>保留中のセッション状態の設定を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-342">保留中のセッション状態の設定を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-342">a CompletableFuture representing the pending session state setting.</span></span> </p>
   - uid: 'com.microsoft.azure.servicebus._i_message_session.setState(byte [])'
     parent: com.microsoft.azure.servicebus._i_message_session
     href: com.microsoft.azure.servicebus._i_message_session.yml
@@ -1381,7 +1381,7 @@ references:
     fullName: 'void com.microsoft.azure.servicebus.IMessageSession.setState(byte[] state)'
     type: Method
     summary: |-
-      <p>使用して後で取得できるセッションでカスタムの状態を設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</p>
+      <p><span data-ttu-id="76e72-343">使用して後で取得できるセッションでカスタムの状態を設定<xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>です。</span><span class="sxs-lookup"><span data-stu-id="76e72-343">Set a custom state on the session which can be later retrieved using <xref uid="com.microsoft.azure.servicebus._i_message_session.getState()" data-throw-if-not-resolved="false">IMessageSession#getState()</xref>.</span></span></p>
       <p></p>
     syntax: *ref_4
   - uid: com.microsoft.azure.servicebus._message_session.getState()
@@ -1392,13 +1392,13 @@ references:
     fullName: 'byte [] com.microsoft.azure.servicebus.MessageSession.getState()'
     type: Method
     summary: |-
-      <p>セッション状態を取得します。</p>
+      <p><span data-ttu-id="76e72-344">セッション状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-344">Gets the session state.</span></span></p>
       <p></p>
     syntax:
       content: 'public byte [] getState()'
       return:
         type: ccd9418d
-        description: <p>セッションの状態 </p>
+        description: <p><span data-ttu-id="76e72-345">セッションの状態</span><span class="sxs-lookup"><span data-stu-id="76e72-345">The session state</span></span> </p>
   - uid: com.microsoft.azure.servicebus._message_session.getStateAsync()
     parent: com.microsoft.azure.servicebus._message_session
     href: com.microsoft.azure.servicebus._message_session.yml
@@ -1406,12 +1406,12 @@ references:
     nameWithType: MessageSession.getStateAsync()
     fullName: 'CompletableFuture<byte[]> com.microsoft.azure.servicebus.MessageSession.getStateAsync()'
     type: Method
-    summary: <p>非同期的に、セッションの状態を取得します。 </p>
+    summary: <p><span data-ttu-id="76e72-346">非同期的に、セッションの状態を取得します。</span><span class="sxs-lookup"><span data-stu-id="76e72-346">Asynchronously gets the session state.</span></span> </p>
     syntax:
       content: 'public CompletableFuture<byte[]> getStateAsync()'
       return:
         type: 5fe2dfa4
-        description: <p>保留中のセッション状態の取得を表す CompletableFuture です。 </p>
+        description: <p><span data-ttu-id="76e72-347">保留中のセッション状態の取得を表す CompletableFuture です。</span><span class="sxs-lookup"><span data-stu-id="76e72-347">a CompletableFuture representing the pending session state retrieving.</span></span> </p>
   - uid: com.microsoft.azure.servicebus._i_message_session
     parent: com.microsoft.azure.servicebus
     href: com.microsoft.azure.servicebus._i_message_session.yml
@@ -1420,10 +1420,10 @@ references:
     fullName: com.microsoft.azure.servicebus.IMessageSession
     type: Interface
     summary: |-
-      <p>セッション オブジェクトを表します。 <xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref>セッションでの操作を実行するために使用できます。 </p>
-      <p>サービス バス セッション、AMQP 1.0 プロトコルでは"Groups"とも呼ばれますとは、一連の関連メッセージをバインド解除済みです。 ServiceBus では、セッションでメッセージの順序を保証します。 </p>
-      <p>センダは、セッションを作成することができますを設定してトピックまたはキューにメッセージを送信するときに、 <xref uid="" data-throw-if-not-resolved="false">#sessionId をメッセージ</xref>プロパティを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>一部のアプリケーションに一意の識別子を定義します。 AMQP 1.0 プロトコル レベルでは、この値は、グループ id プロパティにマップされます。 </p>
-      <p>セッションは、キューまたはトピックのサブスクリプションで、セッションのセッション Id で、少なくとも 1 つのメッセージが表示される時に存在するようになります。 セッションが存在する場合は定義されている時点、またはセッションの有効期限が切れる場合または非表示のジェスチャです。 </p>
+      <p><span data-ttu-id="76e72-348">セッション オブジェクトを表します。</span><span class="sxs-lookup"><span data-stu-id="76e72-348">Describes a Session object.</span></span> <span data-ttu-id="76e72-349"><xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref>セッションでの操作を実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="76e72-349"><xref uid="com.microsoft.azure.servicebus._i_message_session" data-throw-if-not-resolved="false">IMessageSession</xref> can be used to perform operations on sessions.</span></span> </p>
+      <p><span data-ttu-id="76e72-350">サービス バス セッション、AMQP 1.0 プロトコルでは"Groups"とも呼ばれますとは、一連の関連メッセージをバインド解除済みです。</span><span class="sxs-lookup"><span data-stu-id="76e72-350">Service Bus Sessions, also called 'Groups' in the AMQP 1.0 protocol, are unbounded sequences of related messages.</span></span> <span data-ttu-id="76e72-351">ServiceBus では、セッションでメッセージの順序を保証します。</span><span class="sxs-lookup"><span data-stu-id="76e72-351">ServiceBus guarantees ordering of messages in a session.</span></span> </p>
+      <p><span data-ttu-id="76e72-352">センダは、セッションを作成することができますを設定してトピックまたはキューにメッセージを送信するときに、 <xref uid="" data-throw-if-not-resolved="false">#sessionId をメッセージ</xref>プロパティを<xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">メッセージ</xref>一部のアプリケーションに一意の識別子を定義します。</span><span class="sxs-lookup"><span data-stu-id="76e72-352">Any sender can create a session when submitting messages into a Topic or Queue by setting the <xref uid="" data-throw-if-not-resolved="false">Message#sessionId</xref> property on <xref uid="com.microsoft.azure.servicebus._message" data-throw-if-not-resolved="false">Message</xref> to some application defined unique identifier.</span></span> <span data-ttu-id="76e72-353">AMQP 1.0 プロトコル レベルでは、この値は、グループ id プロパティにマップされます。</span><span class="sxs-lookup"><span data-stu-id="76e72-353">At the AMQP 1.0 protocol level, this value maps to the group-id property.</span></span> </p>
+      <p><span data-ttu-id="76e72-354">セッションは、キューまたはトピックのサブスクリプションで、セッションのセッション Id で、少なくとも 1 つのメッセージが表示される時に存在するようになります。</span><span class="sxs-lookup"><span data-stu-id="76e72-354">Sessions come into existence when there is at least one message with the session's SessionId in the Queue or Topic subscription.</span></span> <span data-ttu-id="76e72-355">セッションが存在する場合は定義されている時点、またはセッションの有効期限が切れる場合または非表示のジェスチャです。</span><span class="sxs-lookup"><span data-stu-id="76e72-355">Once a Session exists, there is no defined moment or gesture for when the session expires or disappears.</span></span> </p>
     syntax: *ref_5
   - uid: com.microsoft.azure.servicebus._message
     parent: com.microsoft.azure.servicebus
