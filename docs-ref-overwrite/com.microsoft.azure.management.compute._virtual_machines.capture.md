@@ -1,6 +1,7 @@
 ---
-uid: com.microsoft.azure.management.compute._virtual_machines.capture(String,String,String,boolean)
-example: [*content]
+uid: 'com.microsoft.azure.management.compute._virtual_machines.capture(String,String,String,boolean)'
+example:
+  - *content
 ---
 
 ```java
