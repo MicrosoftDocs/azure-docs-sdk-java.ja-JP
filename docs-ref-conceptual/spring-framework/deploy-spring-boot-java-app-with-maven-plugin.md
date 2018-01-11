@@ -1,6 +1,6 @@
 ---
-title: "Azure Web Apps 用の Maven プラグインを使用して、Spring Boot アプリを Azure にデプロイする方法"
-description: "Azure Web Apps 用の Maven プラグインを使って、Spring Boot アプリを Azure にデプロイする方法について説明します。"
+title: "Maven と Azure を使用して Spring Boot アプリをクラウドにデプロイする"
+description: "Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする方法について説明します。"
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 8e5ad501f5c00ee1265878a643793f6e9754bb68
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 656e4dcc5b2510bb14fd79ed5da8a3dfd7fc08da
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-to-azure"></a>Azure Web Apps 用の Maven プラグインを使用して、Spring Boot アプリを Azure にデプロイする方法
+# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a>Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする
 
 この記事では、Azure Web Apps 用の Maven プラグインを使って、Spring Boot アプリケーションのサンプルを Azure App Service にデプロイする方法について説明します。
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/06/2017
 
 このセクションでは、Azure サービス プリンシパルの値を使って、Web アプリを Azure にデプロイするときに Maven が使う認証を構成します。
 
-1. Maven の `settings.xml` ファイルをテキスト エディターで開くと、次の例のようにパスが記載されていることがあります。
+1. Maven の `settings.xml` ファイルをテキスト エディターで開きます。このファイルは次の例のようなパスに存在していることがあります。
    * `/etc/maven/settings.xml`
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
@@ -143,7 +143,7 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
    各値の説明:
-   要素 | Description
+   要素 | [説明]
    ---|---|---
    `<id>` | Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。
    `<client>` | サービス プリンシパルの `appId` 値が含まれています。
@@ -193,7 +193,7 @@ Spring Boot アプリケーションの `pom.xml` ファイルをテキスト �
 
 Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載されています。 この記事でも、次のように重要な値については説明します。
 
-要素 | Description
+要素 | [説明]
 ---|---|---
 `<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。
 `<authentication>` | Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。
@@ -251,7 +251,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 

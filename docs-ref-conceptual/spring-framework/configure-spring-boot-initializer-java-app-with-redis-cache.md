@@ -1,6 +1,6 @@
 ---
-title: "Redis Cache を使用するように Spring Boot Initializer アプリを構成する方法"
-description: "Spring Initializer で作成された Spring Boot アプリケーションを、Azure Redis Cache を使用するように構成する方法について説明します。"
+title: "Azure Redis Cache を使用するように Spring Boot Initializer アプリを構成する"
+description: "Spring Initializer で作成された Spring Boot アプリケーションを、Azure Redis Cache によってクラウドで Redis を使用するように構成します。"
 services: redis-cache
 documentationcenter: java
 author: rmcmurray
@@ -14,17 +14,15 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: e46a90413321845cb94d72fff893e42aa2353491
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="how-to-configure-a-spring-boot-initializer-app-to-use-redis-cache"></a>Redis Cache を使用するように Spring Boot Initializer アプリを構成する方法
+# <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache によってクラウドで Redis を使用するように Spring Boot Initializer アプリを構成する
 
-## <a name="overview"></a>概要
-
-この記事では、Azure Portal を使用した Redis Cache の作成、**[Spring Initializr]** を使用したカスタム アプリケーションの作成、Redis Cache を使用してデータを保存および取得する Java Web アプリケーションの作成について説明します。
+この記事では、Azure Portal を使用したクラウドでの Redis Cache の作成、**[Spring Initializr]** を使用したカスタム アプリケーションの作成、Redis Cache を使用してデータを保存および取得する Java Web アプリケーションの作成について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/06/2017
 
 1. <https://portal.azure.com/> で Azure Portal を開き、**[+ 新規]** の項目をクリックします。
 
-   ![Azure Portal][AZ01]
+   ![Azure ポータル][AZ01]
 
 1. **[データベース]** をクリックし、**[Redis Cache]** をクリックします。
 
@@ -86,11 +84,11 @@ ms.lasthandoff: 12/06/2017
 
 1. キャッシュが作成されると、Azure の**ダッシュボード**のほか、**[すべてのリソース]** ブレードと **[Redis Cach]** ページにも作成したキャッシュが表示されます。 これらのいずれかの場所でキャッシュをクリックすると、そのキャッシュのプロパティ ページを開くことができます。
 
-   ![Azure Portal][AZ04]
+   ![Azure ポータル][AZ04]
 
 1. キャッシュのプロパティの一覧が含まれているページが表示されたら、**[アクセス キー]** をクリックし、キャッシュのアクセス キーをコピーします。
 
-   ![Azure Portal][AZ05]
+   ![Azure ポータル][AZ05]
 
 ## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a>Redis Cache を使用するようにカスタム Spring Boot を構成する
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 12/06/2017
 
    > [!NOTE] 
    > 
-   > SSL を有効にする Jedis のような異なる Redis クライアントを使用している場合は、*application.properties* ファイルでポート 6380 を指定します。 For example:
+   > SSL を有効にする Jedis のような異なる Redis クライアントを使用している場合は、*application.properties* ファイルでポート 6380 を指定します。 例: 
    > 
    > ```yaml
    > spring.redis.host=myspringbootcache.redis.cache.windows.net
@@ -193,7 +191,7 @@ ms.lasthandoff: 12/06/2017
 
    "Hello World!"  というメッセージがサンプル コントローラーから表示されることがわかります。これは、Redis cache から動的に取得されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 

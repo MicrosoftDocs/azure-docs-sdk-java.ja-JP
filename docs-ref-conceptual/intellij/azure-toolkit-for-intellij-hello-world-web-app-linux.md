@@ -1,6 +1,6 @@
 ---
-title: "Azure Toolkit for IntelliJ を使用して Linux コンテナーで Hello World Web アプリを実行する"
-description: "Linux コンテナーに基本的な Hello World Web アプリを作成し、IntelliJ の Azure Toolkit を使用して Azure に発行する方法を説明します。"
+title: "Azure Toolkit for IntelliJ を使用して Linux コンテナーで実行されている Hello World Web アプリをクラウドでデプロイする"
+description: "Linux コンテナーで基本的な Hello World Web アプリを実行し、Azure Toolkit for IntelliJ を使用してクラウドにデプロイします。"
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 421241b12d8bd9027d4bef8564e1c1ab5a01993a
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: fdf41d6e8b23a6b7d6217ec626480e6c72e13969
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="run-a-hello-world-web-app-in-a-linux-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Linux コンテナーで Hello World Web アプリを実行する
+# <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Hello World Web アプリをクラウドの Linux コンテナーにデプロイする
 
 [Docker] コンテナーは、Web アプリケーションをデプロイするために広く使用されている方法です。 Docker コンテナーを使用すると、開発者は、すべてのプロジェクト ファイルと依存関係を、サーバーにデプロイするために 1 つのパッケージに統合できます。 Azure Toolkit for IntelliJ には、Microsoft Azure にデプロイする機能が追加されているため、Java 開発者はプロセスを簡略化できます。
 
@@ -44,7 +44,8 @@ ms.lasthandoff: 12/06/2017
    
    ![新しいプロジェクトの作成][file-new-project]
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、 **maven-archetype-webapp** の順に選択し、 **[次へ]** をクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、
+ **maven-archetype-webapp** の順に選択し、**[次へ]** をクリックします。
    
    ![Maven アーキタイプ Web アプリの選択][maven-archetype-webapp]
    
@@ -131,7 +132,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
    ![[構成の編集] ダイアログ ボックス][edit-configuration-dialog]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Docker の他のリソースについては、公式の [Docker の Web サイト]の [Docker] を参照してください。
 

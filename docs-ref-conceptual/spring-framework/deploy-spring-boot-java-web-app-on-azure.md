@@ -1,6 +1,6 @@
 ---
-title: "Spring Boot アプリケーションを Azure App Service にデプロイする"
-description: "このチュートリアルは、開発者に Spring Boot Getting Started Web アプリを Azure App Service にデプロイする手順について説明します。"
+title: "Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする"
+description: "このチュートリアルでは、Azure App Service を使用して Spring Boot Getting Started Web アプリをクラウドにデプロイする手順について説明します。"
 services: app-service
 documentationcenter: java
 author: rmcmurray
@@ -14,13 +14,13 @@ ms.devlang: java
 ms.topic: article
 ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: b520cc80360f8162c929bb2cc88c24311a7e20f8
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="deploy-a-spring-boot-application-to-the-azure-app-service"></a>Spring Boot アプリケーションを Azure App Service にデプロイする
+# <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする
 
 このチュートリアルでは、サンプルの [Spring Boot] Getting Started Web アプリを作成し、それを [Azure App Service] にデプロイする方法について説明します。
 
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/06/2017
 
 1. Azure Portal で自分のアカウントにログインしたら、**[App Services]** のメニュー アイコンをクリックします。
    
-   ![Azure Portal][AZ01]
+   ![Azure ポータル][AZ01]
 
 1. **[App Services]** ページが表示されたら、**[+ 追加]** をクリックして新しい App Service を作成します。
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/06/2017
 
 1. Web アプリが表示されたら、次の手順を使用して Java バージョンを指定します。
 
-   a. **[アプリケーションの設定]** メニュー項目をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが Pluralsight アプリケーションへのサインオンに使用する次の URL を入力します。 **[アプリケーションの設定]** メニュー項目をクリックします。
 
    b. Java バージョンとして **[Java 8]** を選択します。
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/06/2017
 
 1. 次の手順を使用して FTP デプロイ資格情報を指定します。
 
-   a. **[デプロイ資格情報]** メニュー項目をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが Pluralsight アプリケーションへのサインオンに使用する次の URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
 
    b. ユーザー名とパスワードを指定します。
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 12/06/2017
 
 1. 次の手順を使用して FTP 接続情報を取得します。
 
-   a. **[デプロイ資格情報]** メニュー項目をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが Pluralsight アプリケーションへのサインオンに使用する次の URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
 
    b. 完全な FTP ユーザー名と URL をコピーし、それらをこのチュートリアルの次のセクションのために保存します。
 
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
    </configuration>
    ```
 
-1. *web.config* ファイルをシステムに保存した後、このチュートリアルの前のセクションの URL、ユーザー名、およびパスワードを使用して FTP 経由で Web アプリに接続します。 For example:
+1. *web.config* ファイルをシステムに保存した後、このチュートリアルの前のセクションの URL、ユーザー名、およびパスワードを使用して FTP 経由で Web アプリに接続します。 例: 
    ```
    ftp
    open waws-prod-sn0-000.ftp.azurewebsites.windows.net
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/06/2017
    pass ********
    ```
 
-1. リモート ディレクトリを Web アプリのルート フォルダー (*/site/wwwroot*) に変更してから、Spring Boot アプリケーションの JAR ファイルと前の *web.config* をコピーします。 For example:
+1. リモート ディレクトリを Web アプリのルート フォルダー (*/site/wwwroot*) に変更してから、Spring Boot アプリケーションの JAR ファイルと前の *web.config* をコピーします。 例: 
    ```
    cd site/wwwroot
    put gs-spring-boot-0.1.0.jar
@@ -188,7 +188,7 @@ ms.lasthandoff: 12/06/2017
 
    ![サンプル アプリを見る][SB02]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 

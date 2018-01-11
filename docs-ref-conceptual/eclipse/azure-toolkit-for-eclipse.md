@@ -1,6 +1,6 @@
 ---
 title: Azure Toolkit for Eclipse
-description: "Azure Toolkit for Eclipse の概要について説明します。"
+description: "Azure Toolkit for Eclipse プラグインが、クラウド アプリケーションの作成と Azure へのデプロイにどのように役立つかを説明します。"
 services: 
 documentationcenter: java
 author: rmcmurray
@@ -14,14 +14,15 @@ ms.devlang: Java
 ms.topic: article
 ms.date: 11/01/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 1cd0430a6649b1c979da5650b4d817bfb35b5f8c
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 21b757f961096970b7560beac9f15f216f072516
+ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse
-Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) を使って Azure アプリケーションを簡単に作成、開発、テスト、またデプロイできるテンプレートと機能を提供します。
+
+Azure Toolkit for Eclipse は、クラウド アプリケーションを簡単に作成、開発、およびテストし、Eclipse 統合開発環境 (IDE) の内部から Azure にデプロイできるテンプレートと機能を提供します。
 
 > [!NOTE]
 > 
@@ -57,7 +58,7 @@ Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) を使って Az
 
 * [Azure Explorer for Eclipse を使用して仮想マシンを管理する](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Toolkit for Eclipse の詳細については、以下のページを参照してください。
 
