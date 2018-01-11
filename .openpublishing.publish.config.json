@@ -45,7 +45,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.ja-JP",
       "branch": "master",
       "branch_mapping": {}
-    }
+    },
+     {
+         "path_to_root": "_themes.pdf",
+         "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+         "branch": "master"
+     }
   ],
   "dependent_packages": [
     {
@@ -90,11 +95,20 @@
   ],
   "toc_path_need_to_split": "docs-ref-autogen/toc.yml",
   "need_generate_pdf_url_template": true,
-	  "branch_target_mapping": { 
-    "live": [ 
-      "Publish", 
-      "Pdf" 
-    ] 
-  },
+"branch_target_mapping": {
+     "live-sxs": [
+           "Publish",
+           "Pdf" 
+    ],
+    "live": [
+           "Publish",
+           "Pdf"
+    ]
+},
+"Targets": {
+     "Pdf": {
+               "template_folder": "_themes.pdf"
+     }
+},
   "enable_incremental_build": false
 }
