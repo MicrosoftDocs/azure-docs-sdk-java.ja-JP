@@ -3,7 +3,7 @@ uid: com.microsoft.azure.management.compute._virtual_machine
 summary: *content
 ---
 
-<span data-ttu-id="34f39-101">次のコードが構文を使用する Java SDK の fluent を新規作成する方法を示します[標準 D3](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-sizes/#d-series)米国東部データ センター内の Linux 仮想マシン実行中の Ubuntu 16.04 サーバー。</span><span class="sxs-lookup"><span data-stu-id="34f39-101">The code below demonstrates how to use the Java SDK's fluent syntax to create a new [Standard D3](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-sizes/#d-series) Linux Virtual Machine running Ubuntu 16.04 server in the Eastern US data center.</span></span>
+<span data-ttu-id="afc13-102">次のコードが構文を使用する Java SDK の fluent を新規作成する方法を示します[標準 D3](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-sizes/#d-series)米国東部データ センター内の Linux 仮想マシン実行中の Ubuntu 16.04 サーバー。</span><span class="sxs-lookup"><span data-stu-id="afc13-102">The code below demonstrates how to use the Java SDK's fluent syntax to create a new [Standard D3](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-sizes/#d-series) Linux Virtual Machine running Ubuntu 16.04 server in the Eastern US data center.</span></span>
 
 ```java
 Azure azure = Azure.authenticate(propertiesFile).withDefaultSubscription();
@@ -26,70 +26,70 @@ System.out.println("Created a Linux VM: " + linuxVM.id());
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.computerName()
-summary: Gets the name of the virtual machine.
+summary: 仮想マシンの名前を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.dataDisks()
-summary: Gets the list of data disks that are attached to the virtual machine.
+summary: 仮想マシンにアタッチされているデータ ディスクの一覧を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.extensions()
-summary: Gets the extensions that are installed on the virtual machine.
+summary: 仮想マシンにインストールされている拡張機能を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.getPrimaryPublicIpAddressId()
-summary: Gets the identifier of the public IP address associated with this virtual machine's primary network interface.
+summary: この仮想マシンのプライマリ ネットワーク インターフェイスに関連付けられているパブリック IP アドレスの識別子を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.licenseType()
-summary: Gets the license type of the virtual machine.
+summary: 仮想マシンのライセンスの種類を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.osDiskCachingType()
-summary: Gets the caching type of the operating system disk.
+summary: オペレーティング システム ディスクのキャッシュの種類を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.osDiskSize()
-summary: Gets the size of the operating system disk.
+summary: オペレーティング システム ディスクのサイズを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.osDiskVhdUri()
-summary: Gets the URI of the virtual hard disk that contains the operating system.
+summary: オペレーティング システムを含むバーチャル ハード ディスクの URI を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.osType()
-summary: Gets the type of the operating system.
+summary: オペレーティング システムの種類を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.plan()
-summary: Gets the plan for the virtual machine image.
+summary: バーチャル マシンのイメージのプランを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.powerState()
-summary: Gets the power state of the virtual machine.
+summary: 仮想マシンの電源の状態を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.provisioningState()
-summary: Gets the prrovisioning state of the virtual machine.
+summary: 仮想マシンの prrovisioning 状態を取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.size()
-summary: Gets the size of the virtual machine.
+summary: 仮想マシンのサイズを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute._virtual_machine.vmId()
-summary: Gets the identifier of the virtual machine.
+summary: 仮想マシンの識別子を取得します。
 ---

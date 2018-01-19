@@ -1,34 +1,34 @@
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.availabilitySets()
-summary: Gets the API entry point for managing availability sets in the subscription.
+summary: サブスクリプションでの可用性を管理するための API エントリ ポイントのセットを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.usages()
-summary: Gets the API entry point for resource usage information in the subscription.
+summary: サブスクリプションのリソース使用状況情報の API エントリ ポイントを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.virtualMachineImages()
-summary: Gets the API entry point for managing virtual machine extension images in the subscription.
+summary: サブスクリプションの仮想マシン拡張機能のイメージを管理するためには、API エントリ ポイントを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.virtualMachineExtensionImages()
-summary: Gets the API entry point for managing virtual machine extension images in the subscription.
+summary: サブスクリプションの仮想マシン拡張機能のイメージを管理するためには、API エントリ ポイントを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.virtualMachineImages()
-summary: Gets the API entry point for managing virtual machine images in the subscription.
+summary: サブスクリプションの仮想マシン イメージを管理するためには、API エントリ ポイントを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.virtualMachines()
-summary: Gets the API entry point for managing virtual machines in the subscription.
+summary: サブスクリプションの仮想マシンを管理するためには、API エントリ ポイントを取得します。
 ---
 
 ---
 uid: com.microsoft.azure.management.compute.implementation._compute_manager.virtualMachineScaleSets()
-summary: Gets the API entry point for managing virtual machine scale sets in the subscription.
+summary: サブスクリプションで仮想マシンのスケールを管理するための API エントリ ポイントのセットを取得します。
 ---
