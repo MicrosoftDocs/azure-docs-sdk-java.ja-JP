@@ -14,17 +14,17 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 8b35a972a00c995730dfa59b1b6a47fab7716b76
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
+ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault 用の Spring Boot Starter の使用方法
 
 ## <a name="overview"></a>概要
 
-この記事では、**[Spring Initializr]** の Azure Key Vault 用 Spring Boot Starter を使用して、キー コンテナーにシークレットとして格納されている接続文字列を取得するアプリを作成する方法について説明します。
+この記事では、Azure Key Vault 用 Spring Boot Starter を使用した **[Spring Initializr]** を用いて、キー コンテナーにシークレットとして格納されている接続文字列を取得するアプリを作成する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -85,8 +85,9 @@ ms.lasthandoff: 12/06/2017
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. Azure で使用するアカウントの GUID を指定します。例を次に示します。
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
