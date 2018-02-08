@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 75ce7b36-e3ae-491d-8305-4b42ce37db4e
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: 900e64667bcc2eed79fe80954c118d54a9ef957f
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: cc68e16a6940a1f0f2b08f0b63c90c58ec6dbc4e
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>IntelliJ を使用して Azure 用の Hello World Web アプリを作成する
 
@@ -48,7 +48,8 @@ ms.lasthandoff: 11/18/2017
    
    ![新しいプロジェクトの作成][file-new-project]
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、 **maven-archetype-webapp** の順に選択し、 **[次へ]** をクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、
+ **maven-archetype-webapp** の順に選択し、**[次へ]** をクリックします。
    
    ![Maven アーキタイプ Web アプリの選択][maven-archetype-webapp]
    
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/18/2017
 
    ![[構成の編集] ダイアログ ボックス][edit-configuration-dialog]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 

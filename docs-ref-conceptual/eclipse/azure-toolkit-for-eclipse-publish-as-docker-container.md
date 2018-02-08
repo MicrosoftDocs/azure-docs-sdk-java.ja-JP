@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 38185b6a53cd0b83b63f68fc672bfe12b3db6db0
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: aec3682cc14204ca2b395d4b851db7bb68cb8728
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse を使用して Web アプリを Docker コンテナーとして発行する
 
@@ -50,7 +50,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 1. **[Type image name, select artifact's path and check Docker host to be used] \(イメージ名を入力し、アーティファクトのパスを選択して、使用される Docker ホストを確認する)** ウィンドウで、以下の手順を実行します。
 
-   a. **[Docker image name] \(Docker イメージ名)** ボックスに、Docker ホストの一意の名前を入力します。 (このウィザードでは名前が自動的に作成されますが、それは変更できます)。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Docker image name] \(Docker イメージ名)** ボックスに、Docker ホストの一意の名前を入力します。 (このウィザードでは名前が自動的に作成されますが、それは変更できます)。
 
    b. **[ホスト]** 領域には、既に作成しているすべての Docker ホストが表示されます。 次のいずれかを実行します。
 
@@ -63,7 +63,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 1. **[Configure the new virtual machine] \(新しい仮想マシンの構成)** ウィンドウで、Docker ホストの次のオプションを指定します。 (このウィザードではほとんどのオプションが自動的に生成されますが、いずれのオプションも変更できます)。
 
-   a. **[名前]**: Docker ホストの一意の名前を入力します。 (これは、前に指定した Docker イメージ名と同じではありません)。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[名前]**: Docker ホストの一意の名前を入力します。 (これは、前に指定した Docker イメージ名と同じではありません)。
 
    b. **[サブスクリプション]**: ホストに使用する Azure サブスクリプションを入力します。
 
@@ -77,7 +77,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
    * **[新しいリソース グループ]**: ホストの新しいリソース グループを作成します。
    * **[Existing resource group] \(既存のリソース グループ)**: Azure アカウントの既存のリソース グループを入力します。
 
-   f.SAML 属性の属性名またはスキーマ リファレンスを入力します。 **[ネットワーク]** タブ: 
+   f. **[ネットワーク]** タブ: 
    * **[新しい仮想ネットワーク]**: ホストの新しい仮想ネットワークを作成します。
    * **[既存の仮想ネットワーク]**: Azure アカウントの既存の仮想ネットワークを入力します。
 
@@ -131,7 +131,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 1. **[Configure the Docker container to be created] \(作成される Docker コンテナーの構成)** ウィンドウで、以下の手順を実行します。
 
-   a. **[Docker container name] \(Docker コンテナー名)** ボックスに、Docker コンテナーの一意の名前を入力します。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Docker container name] \(Docker コンテナー名)** ボックスに、Docker コンテナーの一意の名前を入力します。
 
    b. 次のいずれかの Docker イメージを選びます。 
 
@@ -155,7 +155,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 Azure Toolkit が Docker コンテナーでの Azure への Web アプリのデプロイを開始します。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Docker の他のリソースについては、公式の [Docker の Web サイト]を参照してください。
 

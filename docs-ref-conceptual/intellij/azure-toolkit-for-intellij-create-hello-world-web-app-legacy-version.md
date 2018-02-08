@@ -7,18 +7,18 @@ author: selvasingh
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/15/2017
 ms.author: robmcm;asirveda
-ms.openlocfilehash: aa0db81ffc9ff3fe44cf3d58a5b77ee447cdb1d1
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -84,7 +84,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
 2. [プロジェクト構造] ダイアログが表示されます。
 
-   a. **[プロジェクト設定]** の一覧で、**[Artifacts (アーティファクト)]** をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[プロジェクト設定]** の一覧で、**[Artifacts (アーティファクト)]** をクリックします。
 
    b. **[名前]** ボックスのアーティファクトの名前を、空白または特殊文字が含まれないように変更します。この名前が Uniform Resource Identifier (URI) で使用されるため、変更が必要になります。
 
@@ -114,7 +114,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
 5. 以前に Azure Web アプリ コンテナーを作成していない場合、またはアプリケーションを新しいコンテナーに発行する場合は、次の手順を実行します。 作成済みの場合は、既存の Web アプリ コンテナーを選択し、以下の手順 6. に進みます。
    
-   a. **+** 記号をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **+** 記号をクリックします。
       
       ![アプリ コンテナーの追加][10]
 
@@ -130,7 +130,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
    e. **[サブスクリプション]** ドロップダウン メニューで、このデプロイに使用するサブスクリプションを選択します。
 
-   f.SAML 属性の属性名またはスキーマ リファレンスを入力します。 **[Resource Group (リソース グループ)]** ドロップダウン メニューで、Web アプリに関連付けるリソース グループを選択します。 (Azure リソース グループを使用すると、関連リソースをグループ化できるため、たとえば、リソースをまとめて削除できます。)
+   f. **[Resource Group (リソース グループ)]** ドロップダウン メニューで、Web アプリに関連付けるリソース グループを選択します。 (Azure リソース グループを使用すると、関連リソースをグループ化できるため、たとえば、リソースをまとめて削除できます。)
       
       (所有している場合は) 既存のリソース グループを選択して、下記のステップ g にスキップするか、以下のステップに従って、新しいリソース グループを作成します。
       
@@ -141,7 +141,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
       * **[Name]\(名前\)** テキスト ボックスに、新しいリソース グループの名前を入力します。
       * **[Region]\(リージョン\)** ドロップダウン メニューで、リソース グループに適した Azure データ センターの場所を選択します。
-      * **[OK]**をクリックします。
+      * Click **OK**.
 
    g. **[App Service Plan (App Service プラン)]** ドロップダウン メニューには、選択したリソース グループに関連付けられた App Service プランが表示されます。 (App Service プランでは、Web アプリの場所、価格レベル、およびコンピューティング インスタンス サイズなどの情報を指定します。 単一の App Service プランを複数の Web Apps に使用できます。そのため、App Service プランは、特定の Web アプリのデプロイとは別に保持されます。)
       
@@ -156,7 +156,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
       * **[Location]\(場所\)** ドロップダウン メニューで、プランに適した Azure データ センターの場所を選択します。
       * **[Pricing Tier]\(価格レベル\)** ドロップダウン メニューで、プランに適した価格を選択します。 テスト目的の場合は、 **[Free]**を選択できます。
       * **[Instance Size]\(インスタンス サイズ\)** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。 テスト目的の場合は、 **[Small]**を選択できます。
-      * **[OK]**をクリックします。
+      * Click **OK**.
 
    h. (オプション) 既定では、Java 8 の最新のディストリビューションは、Azure によって Web アプリ コンテナーに JVM として自動的にデプロイされます。 ただし、JVM の別のバージョンおよびディストリビューションを選択することができます。 そのためには、次の手順を実行してください。
       
@@ -232,7 +232,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
    
    ![Web アプリの停止][18]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 

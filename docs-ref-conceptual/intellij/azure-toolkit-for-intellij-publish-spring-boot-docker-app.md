@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 65fbdc32824c2b6312929f4888844d1673101ac8
-ms.sourcegitcommit: 062e07cbd42cda74f02c82b933ce90da646a50a0
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Spring Boot アプリを Docker コンテナーとして発行する
 
@@ -134,7 +134,7 @@ Spring Boot アプリを発行するには、デプロイの準備ができた�
 
 1. アーティファクトのマニフェストを作成します (省略可能)。
 
-   a. **[Create Manifest]\(マニフェストの作成\)** をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Create Manifest]\(マニフェストの作成\)** をクリックします。
 
       ![[マニフェストの作成] ボタンをクリック][ART04a]
 
@@ -150,7 +150,7 @@ Spring Boot アプリを発行するには、デプロイの準備ができた�
 
       ![メイン クラスの指定][ART04d]
 
-1. **[OK]**をクリックします。
+1. Click **OK**.
 
    ![[プロジェクト構造] ダイアログ ボックスを閉じる][ART05]
 
@@ -182,7 +182,7 @@ IntelliJ でプロジェクト ツール ウィンドウに、Spring Boot アプ
 
 1. **[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスが表示され、既存の Docker ホストが表示されます。 既存のホストへのデプロイを選択する場合は、スキップして手順 4 に進みます。 そうでない場合は、次の手順に従ってホストを作成します。
 
-   a. 緑色のプラス ("**+**") 記号をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 緑色のプラス ("**+**") 記号をクリックします。
 
       ![新しい Docker ホストの追加][PU02]
 
@@ -200,7 +200,7 @@ IntelliJ でプロジェクト ツール ウィンドウに、Spring Boot アプ
 
 1. **[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスの最後のページで、次のオプションを指定します。
 
-   a. Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。
 
    b. "*[外部ポート]*:*[内部ポート]*" という構文で、Docker ホストの TCP ポートを入力します。 たとえば "**80:8080**" では、外部ポート "80" と既定の内部 Spring Boot ポート "8080" が指定されます。
    
@@ -214,7 +214,7 @@ IntelliJ でプロジェクト ツール ウィンドウに、Spring Boot アプ
 
    ![正常にデプロイされた Docker ホスト][PU06]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 IntelliJ を使用して Spring Boot アプリを作成するための他の方法については、JetBrains Web サイトの [Spring Boot プロジェクトの作成](https://www.jetbrains.com/help/idea/creating-spring-boot-projects.html)に関する記事を参照してください。
 

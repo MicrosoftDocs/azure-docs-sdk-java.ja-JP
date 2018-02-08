@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: container-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: container-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 65e127e43c457b0ff92478f002065bb9d928f270
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.openlocfilehash: c3a10a0d6029ba31b13f82907311d9182f98acb6
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする
 
@@ -142,7 +142,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
    </properties>
    ```
 
-1. `<plugin>` にこのチュートリアルの前のセクションにあった Azure Container Registry のログイン サーバー アドレスとレジストリ名が含まれるように、*pom.xml* ファイル内の `<plugins>` コレクションを更新します。 For example:
+1. `<plugin>` にこのチュートリアルの前のセクションにあった Azure Container Registry のログイン サーバー アドレスとレジストリ名が含まれるように、*pom.xml* ファイル内の `<plugins>` コレクションを更新します。 例: 
 
    ```xml
    <plugin>
@@ -198,7 +198,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
 1. **[Web App on Linux]** ページが表示されたら、次の情報を入力します。
 
-   a. **[App name]\(アプリ名\)** に一意の名前 (例: "*wingtiptoyslinux*") を入力します。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[App name]\(アプリ名\)** に一意の名前 (例: "*wingtiptoyslinux*") を入力します。
 
    b. **[サブスクリプション]** ボックスの一覧で、サブスクリプションを選択します。
 
@@ -230,7 +230,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 >
 > 3. 一覧から Web アプリを選択します。 (下の図の項目 #2 を参照。)
 >
-> 4. **[アプリケーションの設定]**をクリックします。 (下の図の項目 #3 を参照。)
+> 4. **[アプリケーションの設定]**をクリックします (下の図の項目 #3 を参照。)
 >
 > 5. **[App settings]\(アプリ設定\)** セクションで、**PORT** という名前の新しい環境変数を追加して、この値にカスタム ポート番号を入力します。 (下の図の項目 #4 を参照。)
 >
@@ -260,14 +260,14 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
@@ -289,7 +289,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

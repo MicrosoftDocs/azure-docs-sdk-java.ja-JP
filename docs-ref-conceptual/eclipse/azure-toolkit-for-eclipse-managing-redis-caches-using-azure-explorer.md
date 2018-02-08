@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 010f959b4a381fc625914620c282ef0452f525a9
-ms.sourcegitcommit: 613c1ffd2e0279fc7a96fca98aa1809563f52ee1
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 2d3f2363bd0b41808cd409417327b924cb86d85b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Azure Explorer for Eclipse を使用して Redis Cache を管理する
 
@@ -42,7 +42,7 @@ Azure Toolkit for Eclipse の一部である Azure Explorer は、Eclipse IDE �
 
    ![新規 Redis Cache 作成ダイアログ ボックス][CR02]
 
-   a. **[DNS 名]**: 新しい Redis Cache の DNS サブドメインを指定します。この名前は、".redis.cache.windows.net" の前に付加されます (例: *wingtiptoys.redis.cache.windows.net*)。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[DNS 名]**: 新しい Redis Cache の DNS サブドメインを指定します。この名前は、".redis.cache.windows.net" の前に付加されます (例: *wingtiptoys.redis.cache.windows.net*)。
 
    b. **[サブスクリプション]**: 新しい Redis Cache に使う Azure サブスクリプションを指定します。
 
@@ -54,7 +54,7 @@ Azure Toolkit for Eclipse の一部である Azure Explorer は、Eclipse IDE �
 
    e. **[価格レベル]**: Redis Cache が使う価格レベルを指定します。この設定により、クライアント接続の数が決まります。 詳しくは、「[Redis Cache の価格]」をご覧ください。
 
-   f.SAML 属性の属性名またはスキーマ リファレンスを入力します。 **[非 SSL ポート]**: Redis Cache が非 SSL 接続を許可するかどうかを指定します。既定では、SSL 接続のみが許可されます。
+   f. **[非 SSL ポート]**: Redis Cache が非 SSL 接続を許可するかどうかを指定します。既定では、SSL 接続のみが許可されます。
 
 1. Redis Cache のすべての設定を指定したら、**[OK]** をクリックします。
 
@@ -87,7 +87,7 @@ Redis Cache が作成されて、Azure Explorer に表示されます。
 
    ![Redis Cache 削除のプロンプト][DE02]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure Redis Cache、構成設定、および料金について詳しくは、次のリンクをご覧ください。
 

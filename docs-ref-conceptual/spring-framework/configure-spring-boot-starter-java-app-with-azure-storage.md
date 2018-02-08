@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: storage
-ms.workload: storage
-ms.tgt_pltfrm: na
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yungez;robmcm
-ms.openlocfilehash: 0979c810711a01464c0b2c6e12a582a3f5eefef1
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.workload: storage
+ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage 用の Spring Boot Starter の使用方法
 
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/06/2017
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    各値の説明:
-   | パラメーター | 説明 |
+   | パラメーター | [説明] |
    |---|---|
    | `name` | ストレージ アカウントの一意の名前を指定します。 |
    | `resource-group` | 前の手順で作成したリソース グループの名前を指定します。 |
@@ -161,7 +161,7 @@ ms.lasthandoff: 12/06/2017
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    各値の説明:
-   | パラメーター | 説明 |
+   | パラメーター | [説明] |
    | ---|---|
    | `name` | 前の手順で作成したストレージ アカウントの一意の名前を指定します。 |
    | `resource-group` | 前の手順で作成したリソース グループの名前を指定します。 |
@@ -176,7 +176,7 @@ ms.lasthandoff: 12/06/2017
 
 ## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot アプリケーションの構成とコンパイル
 
-1. ディレクトリにダウンロードしたプロジェクトのパッケージからファイルを抽出します。
+1. ダウンロードしたプロジェクトのアーカイブからディレクトリにファイルを抽出します。
 
 1. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
 
@@ -310,7 +310,7 @@ ms.lasthandoff: 12/06/2017
    > ```
    > 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Microsoft Azure で利用できるその他の Spring Boot Starter の詳細については、「[Azure 向けの Spring Boot Starter](spring-boot-starters-for-azure.md)」をご覧ください。
 

@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: asirveda;robmcm
-ms.openlocfilehash: 4dba6a6cbce2c8f6d4956717b3358c4e5b501e71
-ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/04/2018
 
 1. Web アプリが表示されたら、次の手順を使用して Java バージョンを指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが Pluralsight アプリケーションへのサインオンに使用する次の URL を入力します。 **[アプリケーションの設定]** メニュー項目をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[アプリケーションの設定]** メニュー項目をクリックします。
 
    b. Java バージョンとして **[Java 8]** を選択します。
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 01/04/2018
 
 1. 次の手順を使用して FTP デプロイ資格情報を指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが Pluralsight アプリケーションへのサインオンに使用する次の URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
 
    b. ユーザー名とパスワードを指定します。
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 01/04/2018
 
 1. 次の手順を使用して FTP 接続情報を取得します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが Pluralsight アプリケーションへのサインオンに使用する次の URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
 
    b. 完全な FTP ユーザー名と URL をコピーし、それらをこのチュートリアルの次のセクションのために保存します。
 
@@ -177,7 +177,7 @@ ms.lasthandoff: 01/04/2018
 
 1. JAR および *web.config* ファイルを Web アプリにデプロイした後、Azure Portal を使用して Web アプリを再起動する必要があります。
 
-   ![][AZ10]
+   ![Web アプリを再起動する][AZ10]
 
 1. Web ブラウザーを使用して Web アプリの URL を参照することによって Web アプリをテストするか、または curl が使用可能な場合は次の例のような構文を使用します。
    ```
@@ -196,7 +196,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 FTP を使用した Azure への Web アプリのデプロイの詳細については、「[FTP/S を使用した Azure App Service へのアプリのデプロイ]」を参照してください。
 
@@ -217,7 +217,7 @@ Web アプリの追加設定の構成の詳細については、「[Configure we
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

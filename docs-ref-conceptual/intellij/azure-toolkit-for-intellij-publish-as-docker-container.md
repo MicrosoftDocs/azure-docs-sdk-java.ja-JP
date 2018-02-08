@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: ed63d73e8a0c89af14613b1b1a880f1d40495b8d
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する
 
@@ -114,16 +114,16 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
             
         b. **[Docker Daemon Access]\(Docker デーモン アクセス\)** タブで、以下の情報を指定します。
 
-         ![[Create Docker Host] \(Docker ホストの作成)][PUB06]
+          ![Docker ホストを作成する][PUB06]
     
-           * **[Docker Daemon port] \(Docker デーモン ポート)**: Docker ホストの固有の TCP ポートを入力します。
-           * **[TLS Security] \(TLS セキュリティ)**: Docker ホストのトランスポート層セキュリティ設定を入力します。 次のオプションから選択できます。
-                * **[なし]**: 仮想マシンが TLS 接続を許可しないことを指定します。
-                * **[自動生成]**: TLS 経由で接続するために必要な設定を自動的に作成します。
-                * **[Import from directory] \(ディレクトリからのインポート)**: 以前に保存された一連の TLS 設定を含むディレクトリを指定します。 このディレクトリには、次の 6 つのファイルが含まれている必要があります。 
-                   * *ca.pem* と *ca-key.pem*: TLS 証明機関の証明書と公開キーが含まれています。
-                   * *cert.pem* と *key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
-                   * *server.pem* と *server-key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
+             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
+             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
+                * **None**: Specifies that your virtual machine does not allow TLS connections.
+                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
+                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
+                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
+                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
+                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
 
 7. 必要な情報を入力したら、**[完了]** をクリックします。  
     **Deploy Docker Container on Azure (Azure に Docker コンテナーをデプロイ)** ウィザードが再び表示されます。
