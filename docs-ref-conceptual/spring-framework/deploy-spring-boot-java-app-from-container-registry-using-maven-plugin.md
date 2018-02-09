@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 7fa375ca805ddd037173f9dbd26b6631021e60a3
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: 8e8e1b5d599f77edf227d2c187225f6ac530b62b
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps 用の Maven プラグインを使用して Azure Container Registry の Spring Boot アプリを Azure App Service にデプロイする方法
 
@@ -113,7 +113,11 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   ここでは `uuuuuuuu` がサービス プリンシパルのユーザー名で、`pppppppp` がパスワードです。
+   各値の説明:
+   | パラメーター | [説明] |
+   |---|---|
+   | `uuuuuuuu` | サービス プリンシパルのユーザー名を指定します。 |
+   | `pppppppp` | サービス プリンシパルのパスワードを指定します。 |
 
 1. Azure が次の例に類似する JSON で応答します。
    ```json
@@ -184,11 +188,11 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
    各値の説明:
-   要素 | Description
-   ---|---|---
-   `<id>` | プライベートな Azure コンテナー レジストリの名前が含まれています。
-   `<username>` | プライベートな Azure コンテナー レジストリの名前が含まれています。
-   `<password>` | この記事の前のセクションで取得したパスワードが含まれています。
+   | 要素 | [説明] |
+   |---|---|
+   | `<id>` | プライベートな Azure コンテナー レジストリの名前が含まれています。 |
+   | `<username>` | プライベートな Azure コンテナー レジストリの名前が含まれています。 |
+   | `<password>` | この記事の前のセクションで取得したパスワードが含まれています。 |
 
 1. この記事の前のセクションで説明した Azure サービス プリンシパル設定を、次の例のように *settings.xml* ファイルの `<servers>` コレクションに追加します。
 
@@ -206,13 +210,13 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
    各値の説明:
-   要素 | Description
-   ---|---|---
-   `<id>` | Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。
-   `<client>` | サービス プリンシパルの `appId` 値が含まれています。
-   `<tenant>` | サービス プリンシパルの `tenant` 値が含まれています。
-   `<key>` | サービス プリンシパルの `password` 値が含まれています。
-   `<environment>` | ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です  (環境の全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています)
+   | 要素 | [説明] |
+   |---|---|
+   | `<id>` | Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。 |
+   | `<client>` | サービス プリンシパルの `appId` 値が含まれています。 |
+   | `<tenant>` | サービス プリンシパルの `tenant` 値が含まれています。 |
+   | `<key>` | サービス プリンシパルの `password` 値が含まれています。 |
+   | `<environment>` | ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です  (環境の全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています) |
 
 1. *settings.xml* ファイルを保存して閉じます。
 
@@ -231,12 +235,12 @@ ms.lasthandoff: 12/06/2017
    </properties>
    ```
    各値の説明:
-   要素 | Description
-   ---|---|---
-   `<azure.containerRegistry>` | プライベートな Azure コンテナー レジストリの名前を指定します。
-   `<docker.image.prefix>` | プライベートな Azure コンテナー レジストリの URL (プライベートなコンテナー レジストリの名前に ".azurecr.io" が追加されたもの) を指定します。
+   | 要素 | [説明] |
+   |---|---|
+   | `<azure.containerRegistry>` | プライベートな Azure コンテナー レジストリの名前を指定します。 |
+   | `<docker.image.prefix>` | プライベートな Azure コンテナー レジストリの URL (プライベートなコンテナー レジストリの名前に ".azurecr.io" が追加されたもの) を指定します。 |
 
-1. *pom.xml* ファイル内の Docker プラグインの `<plugin>` に、このチュートリアルの前の手順で説明したログイン サーバー アドレスとレジストリ名の正しいプロパティが含まれていることを確認します。 For example:
+1. *pom.xml* ファイル内の Docker プラグインの `<plugin>` に、このチュートリアルの前の手順で説明したログイン サーバー アドレスとレジストリ名の正しいプロパティが含まれていることを確認します。 例: 
 
    ```xml
    <plugin>
@@ -259,10 +263,10 @@ ms.lasthandoff: 12/06/2017
    </plugin>
    ```
    各値の説明:
-   要素 | Description
-   ---|---|---
-   `<serverId>` | プライベートな Azure コンテナー レジストリの名前を含むプロパティを指定します。
-   `<registryUrl>` | プライベートな Azure コンテナー レジストリの URL を含むプロパティを指定します。
+   | 要素 | [説明] |
+   |---|---|
+   | `<serverId>` | プライベートな Azure コンテナー レジストリの名前を含むプロパティを指定します。 |
+   | `<registryUrl>` | プライベートな Azure コンテナー レジストリの URL を含むプロパティを指定します。 |
 
 1. Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次のコマンドを実行してアプリケーションをリビルドし、コンテナーを Azure コンテナー レジストリにプッシュします。
 
@@ -307,15 +311,15 @@ Spring Boot アプリケーションの `pom.xml` ファイルをテキスト �
 
 Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載されています。 この記事でも、次のように重要な値については説明します。
 
-要素 | Description
----|---|---
-`<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。
-`<authentication>` | Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。
-`<resourceGroup>` | ターゲット リソース グループを指定します。この例では `wingtiptoysresources` です。 リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。
-`<appName>` | Web アプリのターゲット名を指定します。 この例では、ターゲット名は `maven-linux-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています  (タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。
-`<region>` | ターゲット リージョンを指定します。この例では `westus` です  (全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています。)
-`<containerSettings>` | コンテナーの名前を含むプロパティと URL を含むプロパティを指定します。
-`<appSettings>` | Azure に Web アプリをデプロイするときに使用するために、Maven 用の一意の設定を指定します。 この例では、`<property>` 要素には、アプリのポートを指定する子要素の名前と値のペアが含まれています。
+| 要素 | [説明] |
+|---|---|
+| `<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。 |
+| `<authentication>` | Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。 |
+| `<resourceGroup>` | ターゲット リソース グループを指定します。この例では `wingtiptoysresources` です。 リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。 |
+| `<appName>` | Web アプリのターゲット名を指定します。 この例では、ターゲット名は `maven-linux-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています  (タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。 |
+| `<region>` | ターゲット リージョンを指定します。この例では `westus` です  (全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています。) |
+| `<containerSettings>` | コンテナーの名前を含むプロパティと URL を含むプロパティを指定します。 |
+| `<appSettings>` | Azure に Web アプリをデプロイするときに使用するために、Maven 用の一意の設定を指定します。 この例では、`<property>` 要素には、アプリのポートを指定する子要素の名前と値のペアが含まれています。 |
 
 > [!NOTE]
 >
@@ -364,7 +368,7 @@ Web アプリのデプロイが完了すると、[Azure Portal] を使用して 
 
    ![Web アプリの URL の決定][AP02]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 

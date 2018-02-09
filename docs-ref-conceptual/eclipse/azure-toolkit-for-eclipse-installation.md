@@ -7,22 +7,22 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: Java
-ms.topic: article
-ms.date: 11/01/2017
 ms.author: robmcm
-ms.openlocfilehash: 54f636f1291832702bfed2b49888b531d358cb73
-ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
+ms.date: 02/01/2018
+ms.devlang: Java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 81a784a09c07e0ace4d12989c745c80f55cd70cd
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse をインストールする
 
-Azure Toolkit for Eclipse は、クラウド アプリケーションを簡単に作成、開発、およびテストし、Eclipse 開発環境から Azure にデプロイできるテンプレートと機能を提供します。
+Azure Toolkit for Eclipse は、Eclipse 開発環境からクラウド アプリケーションを簡単に作成、開発、およびテストし、Azure にデプロイできるようにするテンプレートと機能を提供します。
 
 > [!NOTE] 
 > 
@@ -51,7 +51,7 @@ Azure Toolkit for Eclipse は、クラウド アプリケーションを簡単�
 
 1. **Azure Toolkit for Eclipse** を展開すると、インストールされるコンポーネントの一覧が表示されます。次に例を示します。
 
-   | 機能 | [説明] | 
+   | Feature | [説明] | 
    |---|---| 
    | **Application Insights Plugin for Java** | アプリケーションとサーバー インスタンスに対する Azure のテレメトリ ログと分析サービスを使用できるようにします。 | 
    | **Azure Common Plugin** | 他のツールキット コンポーネントで必要な一般的な機能を提供します。 | 

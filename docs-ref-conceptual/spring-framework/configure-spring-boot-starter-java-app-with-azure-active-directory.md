@@ -7,28 +7,28 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm
-ms.openlocfilehash: a999e33674ea01e776db10186e8af83ce157ef20
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: active-directory
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: cf1cad0b87626058f7204a6565d09fb8901b7ce4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory 用の Spring Boot Starter の使用方法
 
 ## <a name="overview"></a>概要
 
-この記事では、**[Spring Initializr]** の Azure Active Directory (Azure AD) 用 Spring Boot Starter を使用してアプリを作成する方法について説明します。
+この記事では、Azure Active Directory (Azure AD) 用 Spring Boot Starter を使用した **[Spring Initializr]** を用いてアプリを作成する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-この記事の手順に従うには、次の前提条件が必要です。
+この記事の手順を実行するには、次の前提条件を満たす必要があります。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/06/2017
 
    ![新しいアプリ登録を追加する][directory-04]
 
-1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの**名前**を指定し、**[サインオン URL]** に「 http://localhost:8080 」と入力して、**[作成]** をクリックします。
+1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの**名前**を指定し、**[サインオン URL]** に「http://localhost:8080 」と入力して、**[作成]** をクリックします。
 
    ![新しいアプリ登録を作成する][directory-05]
 
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/06/2017
 
 ## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot アプリケーションの構成とコンパイル
 
-1. ディレクトリにダウンロードしたプロジェクトのパッケージからファイルを抽出します。
+1. ダウンロードしたプロジェクトのアーカイブからディレクトリにファイルを抽出します。
 
 1. プロジェクトの親フォルダーに移動し、テキスト エディターで *pom.xml* ファイルを開きます。
 
@@ -144,11 +144,11 @@ ms.lasthandoff: 12/06/2017
    azure.activedirectory.activeDirectoryGroups=Users
    ```
    各値の説明:
-   パラメーター | 説明
-   ---|---|---
-   `azure.activedirectory.clientId` | 前の手順で取得した**アプリケーション ID** を指定します。
-   `azure.activedirectory.clientSecret` | 以前に完了したアプリ登録のキー値を指定します。
-   `azure.activedirectory.activeDirectoryGroups` | 認証に使用する Active Directory グループの一覧を指定します。
+   | パラメーター | 説明 |
+   |---|---|
+   | `azure.activedirectory.clientId` | 前の手順で取得した**アプリケーション ID** を指定します。 |
+   | `azure.activedirectory.clientSecret` | 以前に完了したアプリ登録のキー値を指定します。 |
+   | `azure.activedirectory.activeDirectoryGroups` | 認証に使用する Active Directory グループの一覧を指定します。 |
 
 
 1. *application.properties* ファイルを保存して閉じます。
@@ -214,7 +214,7 @@ ms.lasthandoff: 12/06/2017
 
 ## <a name="build-and-test-your-app"></a>アプリのビルドとテスト
 
-1. コマンド プロンプトを開き、ディレクトリを *pom.xml* ファイルがあるフォルダーに変更します。
+1. コマンド プロンプトを開き、ディレクトリをアプリの *pom.xml* ファイルがあるフォルダーに変更します。
 
 1. Spring Boot アプリケーションを Maven でビルドし、実行します。次に例を示します。
 
@@ -222,7 +222,7 @@ ms.lasthandoff: 12/06/2017
    mvn clean package
    ```
 
-   ![][build-application]
+   ![アプリをビルドする][build-application]
 
 1. Spring Boot アプリケーションを Maven でビルドし、実行します。次に例を示します。
 
@@ -230,8 +230,6 @@ ms.lasthandoff: 12/06/2017
    mvn clean package
    mvn spring-boot:run
    ```
-
-
 
 1. Maven でアプリケーションを ビルドし、起動したら、Web ブラウザーで <http://localhost:8080> を開きます。
 
@@ -247,7 +245,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 **[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
 
@@ -257,7 +255,7 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

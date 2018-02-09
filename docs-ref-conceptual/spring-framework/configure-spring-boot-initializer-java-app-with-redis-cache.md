@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: cache
-ms.workload: na
-ms.tgt_pltfrm: cache-redis
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;zhijzhao;yidon
-ms.openlocfilehash: c029a1518584a953c96870110f7ab3b79409f8ca
-ms.sourcegitcommit: 9c354a65b0f8ad49a528f40ddee647b091f7d246
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: cache
+ms.tgt_pltfrm: cache-redis
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 8bfe7c2ddd238e0e5a259de9078b831a97b1b1a4
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache によってクラウドで Redis を使用するように Spring Boot Initializer アプリを構成する
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="prerequisites"></a>前提条件
 
-この記事の手順に従うには、次の前提条件が必要です。
+この記事の手順を実行するには、次の前提条件を満たす必要があります。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="create-a-redis-cache-on-azure"></a>Azure で Redis Cache を作成する
 
-1. <https://portal.azure.com/> で Azure Portal を開き、**[+ 新規]** の項目をクリックします。
+1. <https://portal.azure.com/> で Azure Portal を参照し、**[+新規]** をクリックします。
 
    ![Azure ポータル][AZ01]
 
@@ -113,12 +113,16 @@ ms.lasthandoff: 01/04/2018
 
    > [!NOTE] 
    > 
-   > SSL を有効にする Jedis のような異なる Redis クライアントを使用している場合は、*application.properties* ファイルでポート 6380 を指定します。 例: 
+   > SSL を有効にする Jedis のような異なる Redis クライアントを使用している場合は、SSL 使用する旨を *application.properties* ファイルで指定し、ポート 6380 を使用します。 例: 
    > 
    > ```yaml
+   > # Specify the DNS URI of your Redis cache.
    > spring.redis.host=myspringbootcache.redis.cache.windows.net
+   > # Specify the access key for your Redis cache.
    > spring.redis.password=57686f6120447564652c2049495320526f636b73=
+   > # Specify that you want to use SSL.
    > spring.redis.ssl=true
+   > # Specify the SSL port for your Redis cache.
    > spring.redis.port=6380
    > ```
    > 
@@ -199,7 +203,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 Azure 上の Java での Redis Cache の使用開始の詳細については、「[Java で Azure Redis Cache を使用する方法][Redis Cache with Java]」を参照してください。
 
@@ -209,7 +213,7 @@ Azure 上の Java での Redis Cache の使用開始の詳細については、�
 
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

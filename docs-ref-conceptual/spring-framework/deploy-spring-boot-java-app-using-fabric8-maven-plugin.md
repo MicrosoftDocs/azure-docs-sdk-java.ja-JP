@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: multiple
-ms.workload: na
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: yuwzho;robmcm
-ms.openlocfilehash: 6e33c43d3fb4b63cff1f1c7c04cbf9523aa97770
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: multiple
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: na
+ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
 
@@ -253,10 +253,12 @@ ms.lasthandoff: 12/06/2017
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
-   各値の説明:  
-      * *wingtiptoys-kubernetes* は、この記事の前半のリソース グループの名前です  
-      * *wingtiptoysregistry* は、プライベート レジストリの一意な名前です
-      * *westeurope* は、アプリケーションの適切な地理的な場所です  
+   各値の説明:
+   | パラメーター | [説明] |
+   |---|---|
+   | `wingtiptoys-kubernetes` | この記事の前半のリソース グループの名前を指定します。 |
+   | `wingtiptoysregistry` | ご使用のプライベート レジストリの一意の名前を指定します。 |
+   | `westeurope` | アプリケーションの適切な地理的位置を指定します。 |
 
    次のように、Azure CLI にレジストリ作成の結果が表示されます。  
 
@@ -378,7 +380,7 @@ ms.lasthandoff: 12/06/2017
 
 1. 新しい *fabric8* フォルダー内に 3 つの YAML フラグメント ファイルを作成します。
 
-   a. **deployment.yml** という名前のファイルを作成し、内容を次のようにします。
+   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **deployment.yml** という名前のファイルを作成し、内容を次のようにします。
       ```yaml
       apiVersion: extensions/v1beta1
       kind: Deployment
@@ -501,7 +503,7 @@ Kubernetes クラスターが不要になったら、`az group delete` コマン
    az group delete --name wingtiptoys-kubernetes --yes --no-wait
    ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 
@@ -509,7 +511,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Spring Boot on Docker Getting Started]に関するページを参照してください。
 
@@ -532,7 +534,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

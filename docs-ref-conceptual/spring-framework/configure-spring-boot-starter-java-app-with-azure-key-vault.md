@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: key-vault
-ms.workload: identity
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 11/29/2017
 ms.author: robmcm
-ms.openlocfilehash: 165a108147ef5ef7575820bbb6c2ee526888f722
-ms.sourcegitcommit: 558d875e9a255deb5b83b3f1646bd1dd9eee0a0d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: key-vault
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: identity
+ms.openlocfilehash: 52e7dc3f84ea96f22d8e478a597452c76ed8bf22
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault 用の Spring Boot Starter の使用方法
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>前提条件
 
-この記事の手順に従うには、次の前提条件が必要です。
+この記事の手順を実行するには、次の前提条件を満たす必要があります。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
@@ -85,9 +85,8 @@ ms.lasthandoff: 02/01/2018
        }
      }
    ]
-   ```
 
-1. Azure で使用するアカウントの GUID を指定します。例を次に示します。
+1. Specify the GUID for the account you want to use with Azure; for example:
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
@@ -124,9 +123,10 @@ ms.lasthandoff: 02/01/2018
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
-   | パラメーター | 説明 |
+   各値の説明:
+   | パラメーター | [説明] |
    |---|---|
-   | `id` | アプリケーションの登録時に取得した GUID を指定します。 |
+   | `name` | Azure サービス プリンシパルの名前を指定します。 |
 
    Azure CLI から JSON ステータス メッセージが返されます。このメッセージに含まれている *appId* と *password* は、後でクライアント ID およびクライアント パスワードとして使用します。次に例を示します。
 
@@ -170,7 +170,7 @@ ms.lasthandoff: 02/01/2018
    |---|---|
    | `name` | 前の手順で作成したキー コンテナーの名前を指定します。 |
    | `secret-permission` | キー コンテナーの[セキュリティ ポリシー](https://docs.microsoft.com/en-us/cli/azure/keyvault)を指定します。 |
-   | `object-id` | アプリケーションの登録時に取得した GUID を指定します。 |
+   | `spn` | アプリケーションの登録時に取得した GUID を指定します。 |
 
    Azure CLI にセキュリティ ポリシー作成の結果が表示されます。次に例を示します。  
 

@@ -7,18 +7,18 @@ author: rmcmurray
 manager: routlaw
 editor: 
 ms.assetid: 
-ms.service: app-service
-ms.workload: web
-ms.tgt_pltfrm: multiple
-ms.devlang: java
-ms.topic: article
-ms.date: 12/01/2017
 ms.author: robmcm;kevinzha
-ms.openlocfilehash: 1ab19a4805884773239c4d99090b9e117b3859cd
-ms.sourcegitcommit: fc48e038721e6910cb8b1f8951df765d517e504d
+ms.date: 02/01/2018
+ms.devlang: java
+ms.service: app-service
+ms.tgt_pltfrm: multiple
+ms.topic: article
+ms.workload: web
+ms.openlocfilehash: 515cf350f32fc8252644e7022846cc2c9d264ed0
+ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps 用の Maven プラグインを使用して、コンテナー化された Spring Boot アプリを Azure にデプロイする方法
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/06/2017
 
 1. 次のメッセージが表示されるはずです。**Hello Docker World**
 
-## <a name="create-an-azure-service-principal"></a>Azure サービス プリンシパルの作成
+## <a name="create-an-azure-service-principal"></a>Azure サービス プリンシパルを作成する
 
 このセクションでは、Azure にコンテナーをデプロイするときに、Maven プラグインが使用する Azure サービス プリンシパルを作成します。
 
@@ -105,7 +105,11 @@ ms.lasthandoff: 12/06/2017
    ```shell
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   ここでは `uuuuuuuu` がサービス プリンシパルのユーザー名で、`pppppppp` がパスワードです。
+   各値の説明:
+   | パラメーター | [説明] |
+   |---|---|
+   | `uuuuuuuu` | サービス プリンシパルのユーザー名を指定します。 |
+   | `pppppppp` | サービス プリンシパルのパスワードを指定します。 |
 
 1. Azure が次の例に類似する JSON で応答します。
    ```json
@@ -120,7 +124,7 @@ ms.lasthandoff: 12/06/2017
 
    > [!NOTE]
    >
-   > Maven プラグインを構成して Azure にコンテナーをデプロイするときに、この JSON の応答にある値を使用します。 `aaaaaaaa``uuuuuuuu``pppppppp``tttttttt` はプレースホルダーの値であり、次のセクションで Maven の `settings.xml` ファイルを構成するときにこれらの値を値の各要素にマップしやすくするために、ここでこのように使用しています。
+   > Maven プラグインを構成して Azure にコンテナーをデプロイするときに、この JSON の応答にある値を使用します。 `aaaaaaaa``uuuuuuuu``pppppppp``tttttttt` はプレースホルダーの値であり、次のセクションで Maven の `settings.xml` ファイルを構成するときに、これらの値と値の各要素を簡単にマップできるよう使用されています。
    >
    >
 
@@ -149,13 +153,13 @@ ms.lasthandoff: 12/06/2017
    </servers>
    ```
    各値の説明:
-   要素 | Description
-   ---|---|---
-   `<id>` | Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。
-   `<client>` | サービス プリンシパルの `appId` 値が含まれています。
-   `<tenant>` | サービス プリンシパルの `tenant` 値が含まれています。
-   `<key>` | サービス プリンシパルの `password` 値が含まれています。
-   `<environment>` | ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です  (環境の全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています)
+   | 要素 | [説明] |
+   |---|---|
+   | `<id>` | Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。 |
+   | `<client>` | サービス プリンシパルの `appId` 値が含まれています。 |
+   | `<tenant>` | サービス プリンシパルの `tenant` 値が含まれています。 |
+   | `<key>` | サービス プリンシパルの `password` 値が含まれています。 |
+   | `<environment>` | ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です  (環境の全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています) |
 
 1. *settings.xml* ファイルを保存して閉じます。
 
@@ -218,14 +222,14 @@ Spring Boot アプリケーションの `pom.xml` ファイルをテキスト �
 
 Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載されています。 この記事でも、次のように重要な値については説明します。
 
-要素 | Description
----|---|---
-`<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。
-`<authentication>` | Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。
-`<resourceGroup>` | ターゲット リソース グループを指定します。この例では `maven-plugin` です。 リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。
-`<appName>` | Web アプリのターゲット名を指定します。 この例では、ターゲット名は `maven-linux-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています  (タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。
-`<region>` | ターゲット リージョンを指定します。この例では `westus` です  (全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています。)
-`<appSettings>` | Azure に Web アプリをデプロイするときに使用するために、Maven 用の一意の設定を指定します。 この例では、`<property>` 要素には、アプリのポートを指定する子要素の名前と値のペアが含まれています。
+| 要素 | [説明] |
+|---|---|
+| `<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。 |
+| `<authentication>` | Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。 |
+| `<resourceGroup>` | ターゲット リソース グループを指定します。この例では `maven-plugin` です。 リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。 |
+| `<appName>` | Web アプリのターゲット名を指定します。 この例では、ターゲット名は `maven-linux-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています  (タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。 |
+| `<region>` | ターゲット リージョンを指定します。この例では `westus` です  (全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています。) |
+| `<appSettings>` | Azure に Web アプリをデプロイするときに使用するために、Maven 用の一意の設定を指定します。 この例では、`<property>` 要素には、アプリのポートを指定する子要素の名前と値のペアが含まれています。 |
 
 > [!NOTE]
 >
@@ -299,7 +303,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 
