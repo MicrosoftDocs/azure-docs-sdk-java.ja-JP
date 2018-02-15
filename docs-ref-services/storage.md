@@ -5,17 +5,17 @@ keywords: Azure, Java, SDK, API, Storage
 author: douge
 ms.author: douge
 manager: douge
-ms.date: 05/17/2017
+ms.date: 02/07/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: 7ac746105d9add6c96f84389ba0016f4864247f3
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 3c7a3a1fcf2e97202e7f38f8df5acb6637fb4b47
+ms.sourcegitcommit: 2ae0d99c02f4ad7efa9e3d3fbd1db7e9de20c6e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-storage-libraries-for-java"></a>Azure Storage Libraries for Java
 
@@ -35,7 +35,7 @@ Azure Storage の概要については、「[Java から BLOB ストレージを
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-storage</artifactId>
-    <version>5.3.1</version>
+    <version>7.0.0</version>
 </dependency>
 ```   
 
@@ -61,7 +61,7 @@ blob.uploadFromFile("/Users/raisa/fabrikam.png");
 > [!div class="nextstepaction"]
 > [クライアント API を探す](/java/api/overview/azure/storage/clientlibrary)
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Azure ストレージ アカウントと接続キーの作成と管理は、Management API を使って行います。
 
