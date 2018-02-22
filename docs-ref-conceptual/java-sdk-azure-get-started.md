@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: 2f40fa22244e5ffa3be76d4de579959dcb5591d6
-ms.sourcegitcommit: 0676cbb530207544090c1fd051a2f09760873cd8
+ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使用したクラウド開発の開始
 
@@ -86,10 +86,10 @@ graphURL=https\://graph.windows.net/
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-Windows 環境で作業している場合は、システムのプロパティに変数を追加します。 PowerShell を開き、2 番目の変数をファイルのパスに置き換えた後、次のコマンドを入力します。
+Windows 環境で作業している場合は、システムのプロパティに変数を追加します。 管理者特権で PowerShell ウィンドウを開き、2 番目の変数をファイルのパスで置き換えた後、次のコマンドを入力します。
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>新しい Maven プロジェクトを作成する

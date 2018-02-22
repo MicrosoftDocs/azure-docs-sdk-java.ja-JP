@@ -15,11 +15,11 @@ ms.prod: azure
 ms.service: multiple
 ms.topic: get-started-article
 ms.technology: azure
-ms.openlocfilehash: 0a059366f7cdc139dcb5a8e7e9ca78254384d19e
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5c122b09d9d431ddcec667e61230eb53968c52e7
+ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a>Intellij を使用して Azure ライブラリの使用を開始する
 
@@ -88,10 +88,10 @@ graphURL=https\://graph.windows.net/
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-Windows 環境で作業している場合は、システムのプロパティに変数を追加します。 PowerShell を開き、2 番目の変数をファイルのパスに置き換えた後、次のコマンドを入力します。
+Windows 環境で作業している場合は、システムのプロパティに変数を追加します。 管理者特権で PowerShell ウィンドウを開き、2 番目の変数をファイルのパスで置き換えた後、次のコマンドを入力します。
 
 ```powershell
-[Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\<fullpath>\azureauth.properties", "Machine")
+setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
 ## <a name="create-a-new-maven-project"></a>新しい Maven プロジェクトを作成する
