@@ -1,7 +1,7 @@
 ---
 title: Azure Event Hub Libraries for Java
-description: "Java Event Hub ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, イベント ハブ, IoT, ストリーム処理"
+description: Java Event Hub ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, イベント ハブ, IoT, ストリーム処理
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: 8e5b032624862ffbef18c718abf4fa29359b3e67
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: 076906ff3cafcb4eba97b0a022e5214d7834517c
+ms.sourcegitcommit: 02b70b9f5d34415c337601f0b818f7e0985fd884
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>Azure Event Hub Libraries for Java
 
@@ -54,7 +54,7 @@ ehClient.sendSync(sendEvent);
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/eventhub/clientlibrary)
+> [クライアント API を探す](/java/api/overview/azure/eventhub/client)
 
 
 ## <a name="samples"></a>サンプル
