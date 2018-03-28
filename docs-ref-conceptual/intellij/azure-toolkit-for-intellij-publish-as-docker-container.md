@@ -1,12 +1,12 @@
 ---
-title: "Azure Toolkit for IntelliJ を使用して Docker コンテナーを発行する"
-description: "Azure Toolkit for IntelliJ を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。"
-services: 
+title: Azure Toolkit for IntelliJ を使用して Docker コンテナーを発行する
+description: Azure Toolkit for IntelliJ を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f92040b34b9897d9feea8d2ec5e8748e75fff7f7
-ms.sourcegitcommit: 381a865f2849be8e3044d24cd4b3b54e9bbb7abc
+ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
+ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する
 
@@ -103,27 +103,43 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
       * **[New log in credentials]\(新しいログイン資格情報\)**: ログイン資格情報の新しいセットを作成します。 このオプションを選択する場合は、次の操作を行います。
 
-        a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[VM Credentials]\(VM 資格情報)** タブで、Docker ホストの仮想マシン ログイン資格情報について、以下の情報を指定します。 * **[ユーザー名]**: 仮想マシン ログイン資格情報のユーザー名を入力します。
-             * **[パスワード]** および **[確認]** : 仮想マシン ログイン資格情報のパスワードを入力します。
-             * **[SSH]**: Docker ホストの Secure Shell (SSH) 設定を入力します。 以下のいずれかのオプションを選択できます。 * **[なし]**: 仮想マシンが SSH 接続を許可しないことを指定します。
-                * **[自動生成]**: SSH 経由で接続するために必要な設定を自動的に作成します。
-                * **[Import from directory]\(ディレクトリからインポート\)**: 以前に保存した SSH 設定のセットがあるディレクトリを指定できます。 このディレクトリには、次の 2 つのファイルが含まれている必要があります。
-                
-                  * *id_rsa*: Contains the RSA identification for a user.
-                  * *id_rsa.pub*: Contains the RSA public key that is used for authentication.
-            
-        b. **[Docker Daemon Access]\(Docker デーモン アクセス\)** タブで、以下の情報を指定します。
+    a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[VM Credentials]\(VM 資格情報\)** タブで、Docker ホストの仮想マシン ログイン資格情報に次の情報を入力します。
 
-          ![Docker ホストを作成する][PUB06]
+    * **[ユーザー名]**: 仮想マシン ログイン資格情報のユーザー名を入力します。
+
+    * **[パスワード]** および **[確認]** : 仮想マシン ログイン資格情報のパスワードを入力します。
+
+    * **[SSH]**: Docker ホストの Secure Shell (SSH) 設定を入力します。 次のいずれかを選択します。
+
+        * **[なし]**: 仮想マシンが SSH 接続を許可しないことを指定します。
+
+        * **[自動生成]**: SSH 経由で接続するために必要な設定を自動的に作成します。
+
+        * **[Import from directory]\(ディレクトリからインポート\)**: 以前 SSH 設定が保存されているディレクトリを指定できます。 このディレクトリには、次の 2 つのファイルが含まれている必要があります。
+
+            * *id_rsa*: ユーザーの RSA ID が含まれています。
+
+            * *id_rsa.pub*: 認証に使用される RSA 公開キーが含まれています。
+
+    b. **[Docker Daemon Access]\(Docker デーモン アクセス\)** タブで、以下の情報を指定します。
+
+    ![[Create Docker Host] \(Docker ホストの作成)][PUB06]
     
-             * **Docker Daemon port**: Enter the unique TCP port for your Docker host.
-             * **TLS Security**: Enter the Transport Layer Security settings for your Docker host. You can choose from the following options:
-                * **None**: Specifies that your virtual machine does not allow TLS connections.
-                * **Auto-generate**: Automatically creates the requisite settings for connecting via TLS.
-                * **Import from directory**: Specifies a directory that contains a set of previously saved TLS settings. The directory must contain the following six files: 
-                   * *ca.pem* and *ca-key.pem*: Contain the certificate and public key for the TLS Certificate Authority.
-                   * *cert.pem* and *key.pem*: Contain client certificate and public key which will be used for TLS authentication.
-                   * *server.pem* and *server-key.pem*: Contain the client certificate and public key that is used for TLS authentication.
+    * **[Docker Daemon port] \(Docker デーモン ポート)**: Docker ホストの固有の TCP ポートを入力します。
+    
+    * **[TLS Security] \(TLS セキュリティ)**: Docker ホストのトランスポート層セキュリティ設定を入力します。 次のオプションから選択できます。
+    
+        * **[なし]**: 仮想マシンが TLS 接続を許可しないことを指定します。
+        
+        * **[自動生成]**: TLS 経由で接続するために必要な設定を自動的に作成します。
+        
+        * **[Import from directory] \(ディレクトリからのインポート)**: 以前に保存された一連の TLS 設定を含むディレクトリを指定します。 このディレクトリには、次の 6 つのファイルが含まれている必要があります。
+        
+            * *ca.pem* と *ca-key.pem*: TLS 証明機関の証明書と公開キーが含まれています。
+            
+            * *cert.pem* と *key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
+            
+            * *server.pem* と *server-key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
 
 7. 必要な情報を入力したら、**[完了]** をクリックします。  
     **Deploy Docker Container on Azure (Azure に Docker コンテナーをデプロイ)** ウィザードが再び表示されます。
