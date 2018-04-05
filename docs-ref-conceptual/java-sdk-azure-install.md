@@ -1,7 +1,7 @@
 ---
-title: "Azure for Java 開発者向け Microsoft ドキュメント"
-description: "Azure 向けの Java SDK と API リファレンス"
-keywords: "Azure Java, Azure Java API リファレンス, Azure Java クラス ライブラリ, Azure SDK"
+title: Azure for Java 開発者向け Microsoft ドキュメント
+description: Azure 向けの Java SDK と API リファレンス
+keywords: Azure Java, Azure Java API リファレンス, Azure Java クラス ライブラリ, Azure SDK
 author: routlaw
 manager: douge
 ms.assetid: 7b92e776-959b-4632-8b1d-047ce1417616
@@ -10,11 +10,11 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 570f820e1349e1dfd01a6c7f323b5312c14c40c6
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 5c8bb4b81080461285551573eefc0d76b47b2d3d
+ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="azure-libraries-for-java"></a>Java 用 Azure ライブラリ
 
@@ -22,7 +22,7 @@ Azure のライブラリを使用すると、Java アプリでネイティブ �
 
 | | | | |
 |:-------------:|:----------:|:----:|:---:|
-| [Azure Storage](#azure-storage) | [SQL Database](#sql-database)  | [Redis Cache](#redis-cache)   | [DocumentDB](#documentdb) |
+| [Azure Storage](#azure-storage) | [SQL Database](#sql-database)  | [Redis Cache](#redis-cache)   | [Azure Cosmos DB](#cosmos-db) |
 | [Service Bus](#servicebus)  | [Azure Active Directory](#azuread) | [Key Vault](#keyvault)  | [イベント ハブ](#eventhub)
 | [IoT サービス](#iotservice) | [IoT デバイス](#iotdevice) | [Data Lake](#datalake)  | [AppInsights](#appinsights) | 
 | [Batch](#batch) | [Azure のリソースを管理する](#management) |
@@ -97,9 +97,9 @@ Azure SQL Database 用 JDBC ドライバー。
 
 [サンプル](/azure/redis-cache/cache-java-get-started) | [リファレンス](http://xetorthio.github.io/jedis)  | [GitHub](https://github.com/xetorthio/jedis)  | [リリース ノート](https://github.com/xetorthio/jedis/releases)  
 
-<a name="documentdb"></a>
+<a name="cosmos-db"></a>
 
-### <a name="cosmos-dbazuredocumentdbdocumentdb-introduction"></a>[Cosmos DB](/azure/documentdb/documentdb-introduction)
+### <a name="azure-cosmos-dbazurecosmos-dbintroduction"></a>[Azure Cosmos DB](/azure/cosmos-db/introduction)
 
 SQL または JavaScript のクエリ構文と JSON ドキュメントを使ったスケーラブルな NoSQL データベース。   
 
@@ -111,7 +111,7 @@ SQL または JavaScript のクエリ構文と JSON ドキュメントを使っ�
 </dependency>
 ```
 
-[サンプル](/azure/documentdb/documentdb-java-application) | [リファレンス](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [リリース ノート](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
+[サンプル](/azure/cosmos-db/sql-api-java-application) | [リファレンス](http://azure.github.io/azure-documentdb-java/) | [GitHub](https://github.com/Azure/azure-documentdb-java)   | [リリース ノート](https://github.com/Azure/azure-documentdb-java/blob/master/changelog.md)
 
 <a name="servicebus"></a>
  
