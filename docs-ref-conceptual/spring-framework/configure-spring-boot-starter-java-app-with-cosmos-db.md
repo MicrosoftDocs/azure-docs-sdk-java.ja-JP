@@ -1,12 +1,12 @@
 ---
-title: "Azure Cosmos DB DocumentDB API で Spring Boot Starter を使用する方法"
-description: "Spring Boot Initializer で作成されたアプリケーションを Azure Cosmos DB DocumentDB API で構成する方法について説明します。"
+title: Azure Cosmos DB SQL API で Spring Boot Starter を使用する方法
+description: Spring Boot Initializer で作成されたアプリケーションを Azure Cosmos DB SQL API で構成する方法について説明します。
 services: cosmos-db
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;yungez;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,19 +14,19 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 8190a7c45443ead9855d5a62194e02d7e9a919ee
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 85494fc310e2bb31cfe8636b5e866bb3f4856cd4
+ms.sourcegitcommit: 3a746e8ae9ef0e6e82fccf9aca54eae8c9c1cdca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/08/2018
 ---
-# <a name="how-to-use-the-spring-boot-starter-with-azure-cosmos-db-documentdb-api"></a>Azure Cosmos DB DocumentDB API で Spring Boot Starter を使用する方法
+# <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API で Spring Boot Starter を使用する方法
 
 ## <a name="overview"></a>概要
 
-Azure Cosmos DB は、開発者が DocumentDB、MongoDB、Graph、Table API などのさまざまな標準 API を使用してデータを操作できるようにするグローバル分散型データベース サービスです。 Microsoft の Spring Boot Starter を使用すると、開発者は、DocumentDB API を使用して Azure Cosmos DB と簡単に統合できる Spring Boot アプリケーションを使用できます。
+Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などのさまざまな標準 API を使用してデータを操作できるようにするグローバル分散型データベース サービスです。 Microsoft の Spring Boot Starter を使用すると、開発者は、SQL API を使用して Azure Cosmos DB と簡単に統合できる Spring Boot アプリケーションを使用できます。
 
-この記事では、Azure Portal を使用して Azure Cosmos DB を作成する方法、**[Spring Initializr]** を使用してカスタム Java アプリケーションを作成する方法、カスタム アプリケーションに Spring Boot Starter 機能を追加し、DocumentDB API を使用して Azure Cosmos DB にデータを格納またはデータを取得する方法を示します。
+この記事では、Azure Portal を使用して Azure Cosmos DB を作成する方法、**[Spring Initializr]** を使用してカスタム Java アプリケーションを作成する方法、カスタム アプリケーションに Spring Boot Starter 機能を追加し、SQL API を使用して Azure Cosmos DB にデータを格納またはデータを取得する方法を示します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -68,7 +68,7 @@ Azure Cosmos DB は、開発者が DocumentDB、MongoDB、Graph、Table API な�
 
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr でシンプルな Spring Boot アプリケーションを作成する
 
-1. <https://start.spring.io/> に移動します。
+1. <https://start.spring.io/> を参照します。
 
 1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[グループ]** と **[アーティファクト]** に名前を入力して、**[プロジェクトの生成]** のボタンをクリックします。
 
@@ -295,7 +295,7 @@ Azure Cosmos DB と Java の使用について詳しくは、次の記事をご�
 
 * [Azure Cosmos DB のドキュメント]。
 
-* [Azure Cosmos DB: Java と Azure Portal による DocumentDB API アプリの構築][Build a DocumentDB API app with Java]
+* [Azure Cosmos DB: ドキュメント データベースを Java と Azure Portal で作成する][Build a SQL API app with Java]
 
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 
@@ -313,7 +313,7 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 
 [Azure Cosmos DB のドキュメント]: /azure/cosmos-db/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
-[Build a DocumentDB API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-documentdb-java
+[Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
