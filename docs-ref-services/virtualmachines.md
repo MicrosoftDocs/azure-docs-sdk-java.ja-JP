@@ -1,6 +1,6 @@
 ---
 title: Azure Virtual Machine Libraries for Java
-description: 
+description: ''
 keywords: Azure, Java, SDK, API, Compute , Virtual Machines
 author: douge
 ms.author: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: compute
-ms.openlocfilehash: f9a816d5787e41a4ee4643b1bc66bf21192ea298
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: a54bc40e1d28ba6ee1d8b0638cb259adbb69d78d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 
@@ -25,7 +25,7 @@ Linux または Windows を実行するオンデマンドのスケーラブル�
 
 Azure 仮想マシンの概要については、「[Azure Portal で Linux 仮想マシンを作成する](/azure/virtual-machines/linux/quick-create-portal)」を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Azure の Windows 仮想マシンと Linux 仮想マシンは、コードから Management API を使って作成、構成、スケールアウトすることができます。
 
@@ -59,7 +59,7 @@ VirtualMachine newLinuxVm = azure.virtualMachines().define(linuxVmName)
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/virtualmachines/managementapi)
+> [Management API を探す](/java/api/overview/azure/virtualmachines/management)
 
 
 ## <a name="samples"></a>サンプル

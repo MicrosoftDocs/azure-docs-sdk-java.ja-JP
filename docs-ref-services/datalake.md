@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store Libraries for Java
-description: "Java Data Lake Store ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, ビッグ データ, Data Lake"
+description: Java Data Lake Store ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, ビッグ データ, Data Lake
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 66ff566e74203d3b5a8e9bcc170f4c21cf310645
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: bcd1fd17759f7d171006d7b2126019d00d06d1db
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-store-libraries-for-java"></a>Azure Data Lake Store Libraries for Java
 
@@ -63,10 +63,10 @@ out.close();
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/datalakestore/clientlibrary)
+> [クライアント API を探す](/java/api/overview/azure/datalakestore/client)
 
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Management API を使用して、Data Lake Store アカウント、ファイアウォール規則、信頼できる ID プロバイダーを管理します。
 
@@ -82,7 +82,7 @@ Management API を使用して、Data Lake Store アカウント、ファイア�
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/datalakestore/managementapi)
+> [Management API を探す](/java/api/overview/azure/datalakestore/management)
 
 ## <a name="samples"></a>サンプル
 

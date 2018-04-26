@@ -1,7 +1,7 @@
 ---
 title: Redis Cache Libraries for Java
-description: "Redis Cache 用 Java クライアント ライブラリと管理ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, キャッシュ, redis, Web キャッシュ, キー値, インメモリ"
+description: Redis Cache 用 Java クライアント ライブラリと管理ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, キャッシュ, redis, Web キャッシュ, キー値, インメモリ
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: 6d436c49124fd0a406486e0c7bac4d1605de5d32
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: dd03825d9ae7cba32087f92262d5ef213cf3af0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="redis-cache-libraries-for-java"></a>Redis Cache Libraries for Java
 
@@ -51,7 +51,7 @@ JedisShardInfo shardInfo = new JedisShardInfo("<name>.redis.cache.windows.net", 
     jedis.set("foo", "bar");
 ```
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Management API を使用して、Azure Redis リソースの作成とスケーリング、アクセス キーの管理を行います。
 
@@ -75,7 +75,7 @@ RedisCache cache = azure.redisCaches().define(redisCacheName1)
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/rediscache/managementapi)
+> [Management API を探す](/java/api/overview/azure/rediscache/management)
 
 ## <a name="samples"></a>サンプル
 

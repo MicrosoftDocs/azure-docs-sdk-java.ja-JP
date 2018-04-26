@@ -1,7 +1,7 @@
 ---
 title: Azure App Service Libraries for Java
-description: "Azure Management API を使用して Azure App Service への Web アプリのデプロイを自動化します。"
-keywords: "Azure, Java, SDK, API, Web アプリ, モバイル, App Service"
+description: Azure Management API を使用して Azure App Service への Web アプリのデプロイを自動化します。
+keywords: Azure, Java, SDK, API, Web アプリ, モバイル, App Service
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: appservice
-ms.openlocfilehash: 7e1d7eed9d8fa8d2f872f2902e2ce3f2b3dab7b6
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: adbb527666553ecc3039ce35c035d017f502c801
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-app-service-libraries-for-java"></a>Azure App Service Libraries for Java
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 10/09/2017
 
 Azure App Service の概要については、「[Azure で初めての Java Web アプリを作成する](/azure/app-service-web/app-service-web-get-started-java)」を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Azure App Service におけるアプリケーションのデプロイ、スケール、構成は、Management API を使って行います。
 
@@ -40,7 +40,7 @@ Azure App Service におけるアプリケーションのデプロイ、スケ�
 ```   
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure)
+> [Management API を探す](/java/api/overview/azure/appservice/management)
 
 ### <a name="example"></a>例
 

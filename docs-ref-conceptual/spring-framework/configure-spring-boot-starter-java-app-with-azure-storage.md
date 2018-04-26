@@ -1,12 +1,12 @@
 ---
-title: "Azure Storage 用の Spring Boot Starter の使用方法"
-description: "Azure Storage スターターを使用して、Spring Boot Initializer アプリを構成する方法について説明します。"
+title: Azure Storage 用の Spring Boot Starter の使用方法
+description: Azure Storage スターターを使用して、Spring Boot Initializer アプリを構成する方法について説明します。
 services: storage
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yungez;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,11 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 50c8475c66250c8e872849007349277fd3fe797b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage 用の Spring Boot Starter の使用方法
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
 
-1. <https://start.spring.io/> に移動します。
+1. <https://start.spring.io/> を参照します。
 
 1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
 
@@ -93,8 +93,9 @@ ms.lasthandoff: 02/03/2018
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. Azure で使用するアカウントの GUID を指定します。例を次に示します。
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss

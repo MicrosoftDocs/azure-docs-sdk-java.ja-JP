@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory Libraries for Java
-description: "Azure Active Directory 用 Java クライアントおよび管理ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, SQL, 認証, AAD, Active Directory, Graph, OAuth 2.0"
+description: Azure Active Directory 用 Java クライアントおよび管理ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, SQL, 認証, AAD, Active Directory, Graph, OAuth 2.0
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 081b8455a6cd8f26ce714328d10ce25ea6a07e3b
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: 28063a1a4299fd78ba76533d0ffdc0346434eea2
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Azure Active Directory Libraries for Java
 
@@ -55,7 +55,7 @@ System.out.println("Refresh Token - " + result.getRefreshToken());
 System.out.println("ID Token - " + result.getIdToken());
 ```
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Management API で、[ロール ベースのアクセス制御](/azure/active-directory/role-based-access-control-what-is)を構成し、それらのロールに ID (ユーザー、[サービス プリンシパル](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects)など) を割り当てます。 
 
@@ -86,7 +86,7 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/activedirectory/managementapi)
+> [Management API を探す](/java/api/overview/azure/activedirectory/management)
 
 
 ## <a name="samples"></a>サンプル

@@ -1,7 +1,7 @@
 ---
 title: Azure DNS Libraries for Java
-description: "Azure DNS Java 管理ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, ドメイン, DNS, ネーム, サービス, ドメイン ネーム サービス"
+description: Azure DNS Java 管理ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, ドメイン, DNS, ネーム, サービス, ドメイン ネーム サービス
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: adac8e21a401bc91490b92fc5ccf90443eea569f
-ms.sourcegitcommit: f6bf497d9b98f0608aefacf1e914d8be52964234
+ms.openlocfilehash: 2cd8fe7ee4d6a87da32a349fe8f1d2815d3fd36d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Azure Traffic Manager Libraries for Java
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/22/2017
 
 Azure DNS を導入するには、「[Azure CLI 2.0 で Azure DNS の使用を開始する](/azure/dns/dns-getstarted-cli)」を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 DNS ゾーンを作成し、Management API を使用してゾーンにレコードを追加します。
 
@@ -53,7 +53,7 @@ rootDnsZone = rootDnsZone.update()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/dns/managementapi)
+> [Management API を探す](/java/api/overview/azure/dns/management)
 
 ## <a name="samples"></a>サンプル
 

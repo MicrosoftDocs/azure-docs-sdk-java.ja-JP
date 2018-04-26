@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Analytics Libraries for Java
-description: "Java Data Lake Analytics ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, ビッグ データ, Data Lake"
+description: Java Data Lake Analytics ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, ビッグ データ, Data Lake
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 70cfe1417d460172df0cb753d2b719a635978ca8
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a>Azure Data Lake Analytics Libraries for Java
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 10/14/2017
 
 Azure Data Lake Analytics を導入するには、「[Java SDK で Azure Data Lake Analytics の使用を開始する](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk)」を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Management API を使用して、Data Lake Analytics のアカウント、ジョブ、ポリシー、カタログを管理します。
 
@@ -65,7 +65,7 @@ JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jo
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/datalakeanalytics/managementapi)
+> [Management API を探す](/java/api/overview/azure/datalakeanalytics/management)
 
 ## <a name="samples"></a>サンプル
 

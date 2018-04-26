@@ -1,7 +1,7 @@
 ---
 title: Azure Batch Libraries for Java
-description: "Java Batch ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, Batch, 処理, スケジューリング, 長時間実行"
+description: Java Batch ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, Batch, 処理, スケジューリング, 長時間実行
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: batch
-ms.openlocfilehash: 2c9fab2834ea6d9c906d9483aed839a0411aaa40
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 67381d68d23f98579a472aefbebaa929af622b8d
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-batch-libraries-for-java"></a>Azure Batch Libraries for Java
 
@@ -54,10 +54,10 @@ client.poolOperations().createPool(poolId, poolVMSize, configuration, poolVMCoun
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/batch/clientlibrary)
+> [クライアント API を探す](/java/api/overview/azure/batch/client)
 
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Batch アカウントの作成と削除、Batch アカウント キーの読み取りと再生成、Batch アカウントのストレージ管理は、Azure Batch 管理ライブラリを使って行います。
 
@@ -89,7 +89,7 @@ BatchAccount batchAccount = azure.batchAccounts().define("newBatchAcct")
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/batch/managementapi)
+> [Management API を探す](/java/api/overview/azure/batch/management)
 
 
 ## <a name="samples"></a>サンプル

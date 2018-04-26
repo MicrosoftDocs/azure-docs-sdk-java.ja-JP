@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault Libraries for Java
-description: "Azure Key Vault Libraries for Java の概要"
-keywords: "Azure, Java, SDK, API, keyvault, セキュア, キー, シークレット, vault"
+description: Azure Key Vault Libraries for Java の概要
+keywords: Azure, Java, SDK, API, keyvault, セキュア, キー, シークレット, vault
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 51ac51f5436397a0c9f1a4572dcf79a40f10b538
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 396d02b8bba5878ffb24f5f8994ae29aef36cfdc
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Azure Key Vault Libraries for Java
 
@@ -45,15 +45,15 @@ Azure Key Vault に格納されるキーとシークレットの作成、更新�
 
 ```java
 KeyVaultClient kvc = new KeyVaultClient(credentials);
-KeyBundle returnedKeyBundle = getKey(vaultUrl, keyName);
+KeyBundle returnedKeyBundle = kvc.getKey(vaultUrl, keyName);
 JsonWebKey jsonKey = returnedKeyBundle.key();
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/keyvault/clientlibrary)
+> [クライアント API を探す](/java/api/overview/azure/keyvault/client)
 
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 キー コンテナーの作成、アプリケーションの承認、アクセス許可の管理は、Azure Key Vault 管理ライブラリを使って行います。 
 
@@ -83,7 +83,7 @@ vault1 = vault1.update()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/keyvault/managementapi)
+> [Management API を探す](/java/api/overview/azure/keyvault/management)
 
 
 ## <a name="samples"></a>サンプル

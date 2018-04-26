@@ -1,6 +1,6 @@
 ---
 title: Azure Storage Libraries for Java
-description: 
+description: ''
 keywords: Azure, Java, SDK, API, Storage
 author: douge
 ms.author: douge
@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: 3c7a3a1fcf2e97202e7f38f8df5acb6637fb4b47
-ms.sourcegitcommit: 2ae0d99c02f4ad7efa9e3d3fbd1db7e9de20c6e7
+ms.openlocfilehash: ec06e79374176b5a4795d27c5fbbb2260e65cd8c
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-storage-libraries-for-java"></a>Azure Storage Libraries for Java
 
@@ -59,7 +59,7 @@ blob.uploadFromFile("/Users/raisa/fabrikam.png");
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/storage/clientlibrary)
+> [クライアント API を探す](/java/api/overview/azure/storage/client)
 
 ## <a name="management-api"></a>管理 API
 
@@ -93,7 +93,7 @@ for(StorageAccountKey key : storageAccountKeys)    {
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/storage/managementapi)
+> [Management API を探す](/java/api/overview/azure/storage/management)
 
 
 ## <a name="samples"></a>サンプル

@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: cosmosdb
-ms.openlocfilehash: 845106b773de03aba8dd5edb9a18c6b036cf3215
-ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
+ms.openlocfilehash: 6fc9f90cb3c8130aa82b20554a94a8b5ab78c083
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-cosmos-db-libraries-for-java"></a>Azure Cosmos DB Libraries for Java
 
@@ -58,7 +58,7 @@ List<Document> results = client.queryDocuments("dbs/" + DATABASE_ID + "/colls/" 
 ```
 
 > [!div class="nextstepaction"]
-> [クライアント API を探す](/java/api/overview/azure/cosmosdb/clientlibrary)
+> [クライアント API を探す](/java/api/overview/azure/cosmosdb/client)
 
 
 ## <a name="samples"></a>サンプル
