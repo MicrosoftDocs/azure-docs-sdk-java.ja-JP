@@ -1,7 +1,7 @@
 ---
 title: Azure SQL Database Libraries for Java
-description: "Azure SQL Database に接続するには、JDBC ドライバーまたは管理 Azure SQL Database インスタンスと Management API を使用します。"
-keywords: "Azure, Java, SDK, API, SQL, データベース , JDBC"
+description: Azure SQL Database に接続するには、JDBC ドライバーまたは管理 Azure SQL Database インスタンスと Management API を使用します。
+keywords: Azure, Java, SDK, API, SQL, データベース , JDBC
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 3ae4015ae57e5eac4dafb30f4a42881986501853
-ms.sourcegitcommit: 634ab7578c73a219f8f3a2a6d43999d9d372cb43
+ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="azure-sql-database-libraries-for-java"></a><span data-ttu-id="7cc82-104">Azure SQL Database Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="7cc82-104">Azure SQL Database libraries for Java</span></span>
+# <a name="azure-sql-database-libraries-for-java"></a><span data-ttu-id="4b83b-104">Azure SQL Database Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="4b83b-104">Azure SQL Database libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="7cc82-105">概要</span><span class="sxs-lookup"><span data-stu-id="7cc82-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="4b83b-105">概要</span><span class="sxs-lookup"><span data-stu-id="4b83b-105">Overview</span></span>
 
-<span data-ttu-id="7cc82-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) は、テーブル データ、JSON データ、空間データ、XML データに対応した Microsoft SQL Server エンジンを使用するリレーショナル データベース サービスです。</span><span class="sxs-lookup"><span data-stu-id="7cc82-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) is a relational database service using the Microsoft SQL Server engine that supports table, JSON, spatial, and XML data.</span></span> 
+<span data-ttu-id="4b83b-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) は、テーブル データ、JSON データ、空間データ、XML データに対応した Microsoft SQL Server エンジンを使用するリレーショナル データベース サービスです。</span><span class="sxs-lookup"><span data-stu-id="4b83b-106">[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) is a relational database service using the Microsoft SQL Server engine that supports table, JSON, spatial, and XML data.</span></span> 
 
-<span data-ttu-id="7cc82-107">Azure SQL Database の概要については、「[Azure SQL Database: Java を使用して Azure SQL Database に照会する](/azure/sql-database/sql-database-connect-query-java)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7cc82-107">To get started with Azure SQL Database, see [Azure SQL Database: Use Java to connect and query data](/azure/sql-database/sql-database-connect-query-java).</span></span>
+<span data-ttu-id="4b83b-107">Azure SQL Database の概要については、「[Azure SQL Database: Java を使用して Azure SQL Database に照会する](/azure/sql-database/sql-database-connect-query-java)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4b83b-107">To get started with Azure SQL Database, see [Azure SQL Database: Use Java to connect and query data](/azure/sql-database/sql-database-connect-query-java).</span></span>
 
-## <a name="client-jdbc-driver"></a><span data-ttu-id="7cc82-108">クライアント JDBC ドライバー</span><span class="sxs-lookup"><span data-stu-id="7cc82-108">Client JDBC driver</span></span>
+## <a name="client-jdbc-driver"></a><span data-ttu-id="4b83b-108">クライアント JDBC ドライバー</span><span class="sxs-lookup"><span data-stu-id="4b83b-108">Client JDBC driver</span></span>
 
-<span data-ttu-id="7cc82-109">アプリケーションから Azure SQL Database に接続するには、[SQL Database JDBC ドライバー](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server)を使用します。</span><span class="sxs-lookup"><span data-stu-id="7cc82-109">Connect to Azure SQL Database from your applications using the [SQL Database JDBC driver](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server).</span></span> <span data-ttu-id="7cc82-110">[Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) を使用してデータベースに直接接続できるほか、JDBC 経由でデータベースと対話するデータ アクセス フレームワーク ([Hibernate](http://hibernate.org/)) を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="7cc82-110">You can use the [Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) to directly connect with the database or use data access frameworks that interact with the database through JDBC such as [Hibernate](http://hibernate.org/).</span></span>
+<span data-ttu-id="4b83b-109">アプリケーションから Azure SQL Database に接続するには、[SQL Database JDBC ドライバー](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server)を使用します。</span><span class="sxs-lookup"><span data-stu-id="4b83b-109">Connect to Azure SQL Database from your applications using the [SQL Database JDBC driver](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server).</span></span> <span data-ttu-id="4b83b-110">[Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) を使用してデータベースに直接接続できるほか、JDBC 経由でデータベースと対話するデータ アクセス フレームワーク ([Hibernate](http://hibernate.org/)) を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="4b83b-110">You can use the [Java JDBC API](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) to directly connect with the database or use data access frameworks that interact with the database through JDBC such as [Hibernate](http://hibernate.org/).</span></span>
 
-<span data-ttu-id="7cc82-111">プロジェクトでクライアント JDBC ドライバーを使用するためには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="7cc82-111">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client JDBC driver in your project.</span></span>
+<span data-ttu-id="4b83b-111">プロジェクトでクライアント JDBC ドライバーを使用するためには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="4b83b-111">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client JDBC driver in your project.</span></span>
 
 
 ```XML
@@ -40,9 +40,9 @@ ms.lasthandoff: 10/09/2017
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="7cc82-112">例</span><span class="sxs-lookup"><span data-stu-id="7cc82-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="4b83b-112">例</span><span class="sxs-lookup"><span data-stu-id="4b83b-112">Example</span></span>
 
-<span data-ttu-id="7cc82-113">JDBC を使用し、SQL データベースに接続してテーブル内のすべてのレコードを選択します。</span><span class="sxs-lookup"><span data-stu-id="7cc82-113">Connect to SQL database and select all records in a table using JDBC.</span></span>
+<span data-ttu-id="4b83b-113">JDBC を使用し、SQL データベースに接続してテーブル内のすべてのレコードを選択します。</span><span class="sxs-lookup"><span data-stu-id="4b83b-113">Connect to SQL database and select all records in a table using JDBC.</span></span>
 
 ```java
 String connectionString = "jdbc:sqlserver://fabrikam.database.windows.net:1433;database=fiber;user=raisa;password=testpass;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
@@ -53,11 +53,11 @@ try {
 }  
 ```
 
-## <a name="management-api"></a><span data-ttu-id="7cc82-114">Management API</span><span class="sxs-lookup"><span data-stu-id="7cc82-114">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="4b83b-114">管理 API</span><span class="sxs-lookup"><span data-stu-id="4b83b-114">Management API</span></span>
 
-<span data-ttu-id="7cc82-115">Management API を使用すると、ご利用のサブスクリプションの Azure SQL Database リソースを作成したり管理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="7cc82-115">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span>   
+<span data-ttu-id="4b83b-115">Management API を使用すると、ご利用のサブスクリプションの Azure SQL Database リソースを作成したり管理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="4b83b-115">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span>   
 
-<span data-ttu-id="7cc82-116">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="7cc82-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="4b83b-116">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="4b83b-116">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 
 ```XML
@@ -69,11 +69,11 @@ try {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="7cc82-117">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="7cc82-117">Explore the Management APIs</span></span>](/java/api/overview/azure/sql/managementapi)
+> [<span data-ttu-id="4b83b-117">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="4b83b-117">Explore the Management APIs</span></span>](/java/api/overview/azure/sql/management)
 
-### <a name="example"></a><span data-ttu-id="7cc82-118">例</span><span class="sxs-lookup"><span data-stu-id="7cc82-118">Example</span></span>
+### <a name="example"></a><span data-ttu-id="4b83b-118">例</span><span class="sxs-lookup"><span data-stu-id="4b83b-118">Example</span></span>
 
-<span data-ttu-id="7cc82-119">SQL Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。</span><span class="sxs-lookup"><span data-stu-id="7cc82-119">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
+<span data-ttu-id="4b83b-119">SQL Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。</span><span class="sxs-lookup"><span data-stu-id="4b83b-119">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
 
 ```java
 SqlServer sqlServer = azure.sqlServers().define(sqlDbName)
@@ -85,8 +85,8 @@ SqlServer sqlServer = azure.sqlServers().define(sqlDbName)
                     .create();
 ```
 
-## <a name="samples"></a><span data-ttu-id="7cc82-120">サンプル</span><span class="sxs-lookup"><span data-stu-id="7cc82-120">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="4b83b-120">サンプル</span><span class="sxs-lookup"><span data-stu-id="4b83b-120">Samples</span></span>
 
 [!INCLUDE [java-sql-samples](../docs-ref-conceptual/includes/sql.md)]
 
-<span data-ttu-id="7cc82-121">アプリから利用できる [Azure SQL Database のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="7cc82-121">Explore more [sample Java code for Azure SQL Database](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL) you can use in your apps.</span></span>
+<span data-ttu-id="4b83b-121">アプリから利用できる [Azure SQL Database のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="4b83b-121">Explore more [sample Java code for Azure SQL Database](https://azure.microsoft.com/resources/samples/?platform=java&term=SQL) you can use in your apps.</span></span>

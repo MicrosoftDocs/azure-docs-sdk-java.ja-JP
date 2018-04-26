@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Analytics Libraries for Java
-description: "Java Data Lake Analytics ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, ビッグ データ, Data Lake"
+description: Java Data Lake Analytics ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, ビッグ データ, Data Lake
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 70cfe1417d460172df0cb753d2b719a635978ca8
-ms.sourcegitcommit: 4b63ecd2c92a9115dfae018618e4e4046b061b3e
+ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="azure-data-lake-analytics-libraries-for-java"></a><span data-ttu-id="9ff51-104">Azure Data Lake Analytics Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="9ff51-104">Azure Data Lake Analytics libraries for Java</span></span>
+# <a name="azure-data-lake-analytics-libraries-for-java"></a><span data-ttu-id="19c25-104">Azure Data Lake Analytics Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="19c25-104">Azure Data Lake Analytics libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="9ff51-105">概要</span><span class="sxs-lookup"><span data-stu-id="9ff51-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="19c25-105">概要</span><span class="sxs-lookup"><span data-stu-id="19c25-105">Overview</span></span>
 
-<span data-ttu-id="9ff51-106">[Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview) を使用して、大規模なデータ セットに対応するビッグ データ分析ジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="9ff51-106">Run big data analysis jobs that scale to massive data sets with [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).</span></span>
+<span data-ttu-id="19c25-106">[Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview) を使用して、大規模なデータ セットに対応するビッグ データ分析ジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="19c25-106">Run big data analysis jobs that scale to massive data sets with [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).</span></span>
 
-<span data-ttu-id="9ff51-107">Azure Data Lake Analytics を導入するには、「[Java SDK で Azure Data Lake Analytics の使用を開始する](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ff51-107">To get started with Azure Data Lake Analytics, see [Get started with Azure Data Lake Analytics using Java SDK](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk).</span></span>
+<span data-ttu-id="19c25-107">Azure Data Lake Analytics を導入するには、「[Java SDK で Azure Data Lake Analytics の使用を開始する](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="19c25-107">To get started with Azure Data Lake Analytics, see [Get started with Azure Data Lake Analytics using Java SDK](/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="9ff51-108">Management API</span><span class="sxs-lookup"><span data-stu-id="9ff51-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="19c25-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="19c25-108">Management API</span></span>
 
-<span data-ttu-id="9ff51-109">Management API を使用して、Data Lake Analytics のアカウント、ジョブ、ポリシー、カタログを管理します。</span><span class="sxs-lookup"><span data-stu-id="9ff51-109">Use the management API to manage Data Lake Analytics accounts, jobs, policies, and catalogs.</span></span>
+<span data-ttu-id="19c25-109">Management API を使用して、Data Lake Analytics のアカウント、ジョブ、ポリシー、カタログを管理します。</span><span class="sxs-lookup"><span data-stu-id="19c25-109">Use the management API to manage Data Lake Analytics accounts, jobs, policies, and catalogs.</span></span>
 
-<span data-ttu-id="9ff51-110">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="9ff51-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="19c25-110">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="19c25-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 
 ```XML
@@ -40,9 +40,9 @@ ms.lasthandoff: 10/14/2017
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="9ff51-111">例</span><span class="sxs-lookup"><span data-stu-id="9ff51-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="19c25-111">例</span><span class="sxs-lookup"><span data-stu-id="19c25-111">Example</span></span>
 
-<span data-ttu-id="9ff51-112">新しい U-SQL ジョブを Data Lake Analytics に送信します。</span><span class="sxs-lookup"><span data-stu-id="9ff51-112">Submit a new U-SQL job to Data Lake Analytics.</span></span>
+<span data-ttu-id="19c25-112">新しい U-SQL ジョブを Data Lake Analytics に送信します。</span><span class="sxs-lookup"><span data-stu-id="19c25-112">Submit a new U-SQL job to Data Lake Analytics.</span></span>
 
 ```java
 // authenticate with service principal credentials
@@ -65,12 +65,12 @@ JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jo
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9ff51-113">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="9ff51-113">Explore the Client APIs</span></span>](/java/api/overview/azure/datalakeanalytics/managementapi)
+> [<span data-ttu-id="19c25-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="19c25-113">Explore the Management APIs</span></span>](/java/api/overview/azure/datalakeanalytics/management)
 
-## <a name="samples"></a><span data-ttu-id="9ff51-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="9ff51-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="19c25-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="19c25-114">Samples</span></span>
 
-<span data-ttu-id="9ff51-115">[Java SDK を使用した Azure Data Lake Analytics][1]</span><span class="sxs-lookup"><span data-stu-id="9ff51-115">[Azure Data Lake Analytics using Java SDK][1]</span></span> 
+<span data-ttu-id="19c25-115">[Java SDK を使用した Azure Data Lake Analytics][1]</span><span class="sxs-lookup"><span data-stu-id="19c25-115">[Azure Data Lake Analytics using Java SDK][1]</span></span> 
 
 [1]: https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-get-started-java-sdk
 
-<span data-ttu-id="9ff51-116">Azure Data Lake Analytics のサンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ff51-116">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics) of Azure Data Lake Analytics samples.</span></span>
+<span data-ttu-id="19c25-116">Azure Data Lake Analytics のサンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="19c25-116">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=analytics) of Azure Data Lake Analytics samples.</span></span>
