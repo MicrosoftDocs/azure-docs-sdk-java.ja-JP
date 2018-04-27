@@ -14,11 +14,11 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 85494fc310e2bb31cfe8636b5e866bb3f4856cd4
-ms.sourcegitcommit: 3a746e8ae9ef0e6e82fccf9aca54eae8c9c1cdca
+ms.openlocfilehash: 6cf999f3db397760709476dae1f5c0fd83503725
+ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API で Spring Boot Starter を使用する方法
 
@@ -297,9 +297,11 @@ Azure Cosmos DB と Java の使用について詳しくは、次の記事をご�
 
 * [Azure Cosmos DB: ドキュメント データベースを Java と Azure Portal で作成する][Build a SQL API app with Java]
 
+* [Azure Cosmos DB SQL API の Spring Data]
+
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 
-* [Azure の Spring Boot DocumenDB Starter](https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample)
+* [Azure の Spring Boot DocumenDB Starter]
 
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 
@@ -314,6 +316,8 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [Azure Cosmos DB のドキュメント]: /azure/cosmos-db/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
+[Azure Cosmos DB SQL API の Spring Data]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
+[Azure の Spring Boot DocumenDB Starter]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
