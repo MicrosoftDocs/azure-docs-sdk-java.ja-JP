@@ -1,12 +1,12 @@
 ---
-title: "Azure Key Vault 用の Spring Boot Starter の使用方法"
-description: "Azure Key Vault スターターを使用して、Spring Boot Initializer アプリを構成する方法について説明します。"
+title: Azure Key Vault 用の Spring Boot Starter の使用方法
+description: Azure Key Vault スターターを使用して、Spring Boot Initializer アプリを構成する方法について説明します。
 services: key-vault
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,11 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 52e7dc3f84ea96f22d8e478a597452c76ed8bf22
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault 用の Spring Boot Starter の使用方法
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-an-app-using-the-spring-initialzr"></a>Spring Initialzr を使用したアプリの作成
 
-1. <https://start.spring.io/> に移動します。
+1. <https://start.spring.io/> を参照します。
 
 1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
 
@@ -85,8 +85,9 @@ ms.lasthandoff: 02/03/2018
        }
      }
    ]
+   ```
 
-1. Specify the GUID for the account you want to use with Azure; for example:
+1. Azure で使用するアカウントの GUID を指定します。例を次に示します。
 
    ```azurecli
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
