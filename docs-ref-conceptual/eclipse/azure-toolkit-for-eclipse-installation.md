@@ -1,11 +1,11 @@
 ---
-title: "Azure Toolkit for Eclipse をインストールする"
-description: "Azure Toolkit for Eclipse プラグインをインストールして、クラウド アプリケーションを作成し、Azure にデプロイする方法を説明します。"
-services: 
+title: Azure Toolkit for Eclipse をインストールする
+description: Azure Toolkit for Eclipse プラグインをインストールして、クラウド アプリケーションを作成し、Azure にデプロイする方法を説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 81a784a09c07e0ace4d12989c745c80f55cd70cd
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d5f685fa62ad74c8b8cd842b3667f8161e7c5760
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse をインストールする
 
@@ -45,7 +45,7 @@ Azure Toolkit for Eclipse は、Eclipse 開発環境からクラウド アプリ
 
 1. **[Available Software]\(利用可能なソフトウェア\)** ダイアログで、**[Work with]\(対象\)** テキスト ボックスに「`http://dl.microsoft.com/eclipse/`」と入力し、**Enter** キーを押します。
 
-1. **[Name]** ウィンドウで、**Azure Toolkit for Eclipse** をオンにし、**[Contact all update sites during install to find required software]** をオフにします。 画面は次のようになります。
+1. **[Name]\(名前\)** ウィンドウで、**[Azure Toolkit for Java]** をオンにし、**[Contact all update sites during install to find required software]\(インストール中にすべての更新サイトに接続して必要なソフトウェアを調べる\)** をオフにします。 画面は次のようになります。
    
    ![Azure Toolkit for Eclipse のインストール][02]
 
@@ -75,7 +75,7 @@ Azure Toolkit for Eclipse は、Eclipse 開発環境からクラウド アプリ
    
    ![Installation Progress][05]
 
-1. インストールを完了するために Eclipse を再起動することを求めるメッセージが表示されたら、 **[Yes]**をクリックします。
+1. インストールを完了するために Eclipse を再起動することを求めるメッセージが表示されたら、 **[Yes]** をクリックします。
    
    ![Restart Prompt][06]
 

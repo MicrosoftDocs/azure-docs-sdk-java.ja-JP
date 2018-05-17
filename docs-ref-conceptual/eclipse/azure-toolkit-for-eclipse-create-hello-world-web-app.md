@@ -1,11 +1,11 @@
 ---
-title: "Eclipse を使用して Azure 用の Hello World Web アプリを作成する"
-description: "このチュートリアルでは、Azure Toolkit for Eclipse を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。"
+title: Eclipse を使用して Azure 用の Hello World Web アプリを作成する
+description: このチュートリアルでは、Azure Toolkit for Eclipse を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -14,11 +14,11 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: bec94e65951330c933e0173fd580c3578e759c18
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse を使用して Azure 用の Hello World Web アプリを作成する
 
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
    
    ![新しい動的 Web プロジェクトのプロパティ][dynamic-web-project-properties]
 
-3. **[完了]**をクリックします。
+3. **[完了]** をクリックします。
 
-4. Eclipse の Project Explorer ビューで、 **[MyWebApp]**を展開します。 **WebContent** を右クリックし、**[新規]**、**[JSP ファイル]** の順にクリックします。
+4. Eclipse の Project Explorer ビューで、 **[MyWebApp]** を展開します。 **WebContent** を右クリックし、**[新規]**、**[JSP ファイル]** の順にクリックします。
 
    ![新しい JSP ファイルの作成][create-new-jsp-file]
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/03/2018
 
       ![アプリ サービスの選択][select-app-service]
 
-   * **[Create New Web App]\(新しい Web アプリを作成する\)**をクリックする。
+   * **[Create New Web App]\(新しい Web アプリを作成する\)** をクリックする。
 
       ![App Service を作成する][create-app-service]
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 02/03/2018
 
    ![アプリ サービスのデプロイ][deploy-app-service]
 
-1. ツールキットにより Web アプリが正常にデプロイされると、**Azure アクティビティ ログ**に **[発行済み]** 状態として表示され、デプロイされた Web アプリの URL へのハイパーリンクが設定されます。
+1. ツールキットにより Web アプリが正常にデプロイされると、**[Azure の活動ログ]** タブに **[発行済み]** 状態として表示され、デプロイされた Web アプリの URL へのハイパーリンクが設定されます。
 
    ![発行済み状態][publish-status]
 

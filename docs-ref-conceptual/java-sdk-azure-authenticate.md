@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: 3808c6d56b04f28c84a89a25219e4ec523f87964
-ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
+ms.openlocfilehash: 1d556955fcc5b73f1ba099a0b846b571ba64ccff
+ms.sourcegitcommit: 107c3c5ed8c6991c751f95bcaf3757220940df9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使った認証 
 
@@ -90,7 +90,7 @@ Azure azure = Azure
 
 `client`、`tenant`、`key` は、[ファイル ベースの認証](#mgmt-file)で使うサービス プリンシパルと同じ値です。 `AzureEnvironment.AZURE` の値は、Azure パブリック クラウドに対する資格情報を作成するものです。 別のクラウド (`AzureEnvironment.AZURE_GERMANY` など) にアクセスする必要がある場合は、異なる値に変更してください。  
 
- サービス プリンシパルの値は、環境変数から読み取るか、シークレット管理ストア ([Key Vault](/azure/key-vault/key-vault-whatis.md) など) から読み取ります。 バージョン コントロール履歴で意図せず資格情報が漏えいするのを防ぐため、これらの値をコード内でクリア テキスト文字列として設定することは避けてください。   
+ サービス プリンシパルの値は、環境変数から読み取るか、シークレット管理ストア ([Key Vault](/azure/key-vault/key-vault-whatis) など) から読み取ります。 バージョン コントロール履歴で意図せず資格情報が漏えいするのを防ぐため、これらの値をコード内でクリア テキスト文字列として設定することは避けてください。   
 
 <a name="mgmt-file"></a>
 

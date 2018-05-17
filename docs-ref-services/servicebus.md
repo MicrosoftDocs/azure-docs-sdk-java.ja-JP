@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: 7468d9b920debc778e7e3d298fbcb913add6afdd
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="service-bus-libraries-for-java"></a>Service Bus Libraries for Java
 
@@ -33,15 +33,18 @@ Service Bus の概念の詳細については、[メッセージングのドキ�
 
 Service Bus は Java 開発者に、Microsoft がサポートするネイティブ API を提供します。また、Service Bus は Apache Qpid Proton の JMS プロバイダーなどの AMQP 1.0 に準拠しているライブラリと共に使用することもできます。
 
-公式な Service Bus クライアントは [GitHub でソース コード形式](https://github.com/azure/azure-service-bus-java)で入手でき、バイナリとパッケージ化されたソースは [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22) で入手できます。 
-
-
 ## <a name="client-library"></a>クライアント ライブラリ
 
+公式な Service Bus クライアントは [GitHub でソース コード形式](https://github.com/azure/azure-service-bus-java)で入手でき、バイナリとパッケージ化されたソースは [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22) で入手できます。
+
+**[サンプル コード リポジトリ](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)には、次のサンプルが含まれます。**
+* [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java) を使用する方法
+* [TopicClient と SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java) を使用する方法
+* Service Bus の [MessageSender および MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) メッセージを使用する方法
 
 独自のプロジェクトでライブラリを使用するには、Maven プロジェクトの `pom.xml` ファイルに依存関係を追加します。 必要に応じてバージョンを指定します。
 
-プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。   
+プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。
 
 ```XML
 <dependency>
@@ -50,11 +53,6 @@ Service Bus は Java 開発者に、Microsoft がサポートするネイティ�
     <version>1.0.0</version>
 </dependency>
 ```
-
-## <a name="examples"></a>例
-
-[サンプル コード リポジトリ](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)には、Service Bus からのメッセージを [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java)、[TopicClient および SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java)、[MessageSender および MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) で処理する方法のサンプルが含まれています。
-
 
 ```java
 public class BasicSendReceiveWithQueueClient {
@@ -117,11 +115,18 @@ public class BasicSendReceiveWithQueueClient {
 
 > [!div class="nextstepaction"]
 > [クライアント API を探す](/java/api/overview/azure/servicebus/client)
+> [その他の例についてはこちらをご覧ください (詳細については上記も参照してください)](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)
 
 ## <a name="management-api"></a>管理 API
 
 Management API で名前空間、トピック、キュー、およびサブスクリプションを作成および管理します。
 
+**例については以下をご覧ください。**
+* [Service Bus キューの管理](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
+* [Service Bus トピックの作成とそのトピックのサブスクライブ](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
+
+**プロジェクトで管理 API を使用する方法:**
+\
 プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。  
 
 ```XML
@@ -134,11 +139,5 @@ Management API で名前空間、トピック、キュー、およびサブス�
 
 > [!div class="nextstepaction"]
 > [Management API を探す](/java/api/overview/azure/servicebus/management)
-
-
-## <a name="examples"></a>例
-
-[Service Bus キューの管理](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
-[Service Bus トピックの作成とそのトピックのサブスクライブ](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
 
 アプリから利用できる [Azure Service Bus のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=bus)を探しましょう。

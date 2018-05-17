@@ -1,12 +1,12 @@
 ---
-title: "Azure Toolkit for IntelliJ を使用して Linux コンテナーで実行されている Hello World Web アプリをクラウドでデプロイする"
-description: "Linux コンテナーで基本的な Hello World Web アプリを実行し、Azure Toolkit for IntelliJ を使用してクラウドにデプロイします。"
+title: Azure Toolkit for IntelliJ を使用して Linux コンテナーで実行されている Hello World Web アプリをクラウドでデプロイする
+description: Linux コンテナーで基本的な Hello World Web アプリを実行し、Azure Toolkit for IntelliJ を使用してクラウドにデプロイします。
 services: app-service\web
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c430581a9a67365430d87c1af925c1f4d27eca2b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Hello World Web アプリをクラウドの Linux コンテナーにデプロイする
 
@@ -38,14 +38,13 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-a-new-web-app-project"></a>新しい Web アプリ プロジェクトの作成
 
-1. 「Azure Toolkit for IntelliJ のサインイン手順」の記事に記載されている手順を使用して、IntelliJ を起動し Azure アカウントにサインインします。
+1. 「[Azure Toolkit for IntelliJ のサインイン手順](https://docs.microsoft.com/java/azure/intellij/azure-toolkit-for-intellij-sign-in-instructions)」の記事に記載されている手順を使用して、IntelliJ を起動し Azure アカウントにサインインします。
 
 1. **[ファイル]** メニューの **[New]\(新規\)** をクリックし、**[プロジェクト]** をクリックします。
    
    ![新しいプロジェクトの作成][file-new-project]
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、
- **maven-archetype-webapp** の順に選択し、**[次へ]** をクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、 **maven-archetype-webapp** の順に選択し、**[次へ]** をクリックします。
    
    ![Maven アーキタイプ Web アプリの選択][maven-archetype-webapp]
    
@@ -114,7 +113,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
       * *registry* は、この記事の前のセクションで説明されているコンテナー レジストリを指します。 
       * *appname* は、Web アプリの名前です。 
 
-   * **[Use Existing Web App]\(既存の Web アプリを使用\)** または**[Create New Web App]\(新しい Web アプリの作成\)**: 既存の Web アプリへコンテナーを展開するか、または新しい Web アプリを作成するかを指定します。 
+   * **[Use Existing Web App]\(既存の Web アプリを使用\)** または **[Create New Web App]\(新しい Web アプリの作成\)**: 既存の Web アプリへコンテナーを展開するか、または新しい Web アプリを作成するかを指定します。 
 
    * **[リソース グループ]** で、新しいリソース グループを作成するか、既存のリソース グループを使用するかを指定します。 
 
