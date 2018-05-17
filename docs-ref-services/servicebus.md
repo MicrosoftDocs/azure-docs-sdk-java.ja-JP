@@ -11,37 +11,40 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: 7468d9b920debc778e7e3d298fbcb913add6afdd
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
+ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="service-bus-libraries-for-java"></a><span data-ttu-id="40519-104">Service Bus Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="40519-104">Service Bus libraries for Java</span></span>
+# <a name="service-bus-libraries-for-java"></a><span data-ttu-id="23b7d-104">Service Bus Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="23b7d-104">Service Bus libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="40519-105">概要</span><span class="sxs-lookup"><span data-stu-id="40519-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="23b7d-105">概要</span><span class="sxs-lookup"><span data-stu-id="23b7d-105">Overview</span></span>
 
-<span data-ttu-id="40519-106">Service Bus は、エンタープライズ クラスのトランザクション型メッセージング プラットフォーム サービスであり、順次配信、セッション、パーティション分割、スケジューリング、複雑なサブスクリプションなどの高度な機能を持つ、信頼性の高いキューとパブリッシュ/サブスクライブ トピックや、ワークフローおよびトランザクションの処理を提供します。</span><span class="sxs-lookup"><span data-stu-id="40519-106">Service Bus is an enterprise-class, transactional messaging platform service that provides highly reliable queues and publish/subscribe topics with deep feature capabilities such as ordered delivery, sessions, partitioning, scheduling, complex subscriptions, as well as workflow and transaction handling.</span></span>
+<span data-ttu-id="23b7d-106">Service Bus は、エンタープライズ クラスのトランザクション型メッセージング プラットフォーム サービスであり、順次配信、セッション、パーティション分割、スケジューリング、複雑なサブスクリプションなどの高度な機能を持つ、信頼性の高いキューとパブリッシュ/サブスクライブ トピックや、ワークフローおよびトランザクションの処理を提供します。</span><span class="sxs-lookup"><span data-stu-id="23b7d-106">Service Bus is an enterprise-class, transactional messaging platform service that provides highly reliable queues and publish/subscribe topics with deep feature capabilities such as ordered delivery, sessions, partitioning, scheduling, complex subscriptions, as well as workflow and transaction handling.</span></span>
 
-<span data-ttu-id="40519-107">Service Bus の機能は、従来のハイエンドのオンプレミス メッセージ ブローカーの機能と同等か、多くの場合、それを上回っています。</span><span class="sxs-lookup"><span data-stu-id="40519-107">The Service Bus feature capabilities are comparable and often exceed those of high-end, on-premises legacy message brokers.</span></span> <span data-ttu-id="40519-108">Service Bus の機能は、AMQP 1.0 や HTTPS のような標準ベースのプロトコルを通じて利用でき、すべてのプロトコル ジェスチャは完全に文書化されているため、広範な相互運用が可能です。</span><span class="sxs-lookup"><span data-stu-id="40519-108">The Service Bus features are available via standards-based protocols like AMQP 1.0 and HTTPS and all protocol gestures are fully documented, allowing for broad interoperability.</span></span> 
+<span data-ttu-id="23b7d-107">Service Bus の機能は、従来のハイエンドのオンプレミス メッセージ ブローカーの機能と同等か、多くの場合、それを上回っています。</span><span class="sxs-lookup"><span data-stu-id="23b7d-107">The Service Bus feature capabilities are comparable and often exceed those of high-end, on-premises legacy message brokers.</span></span> <span data-ttu-id="23b7d-108">Service Bus の機能は、AMQP 1.0 や HTTPS のような標準ベースのプロトコルを通じて利用でき、すべてのプロトコル ジェスチャは完全に文書化されているため、広範な相互運用が可能です。</span><span class="sxs-lookup"><span data-stu-id="23b7d-108">The Service Bus features are available via standards-based protocols like AMQP 1.0 and HTTPS and all protocol gestures are fully documented, allowing for broad interoperability.</span></span> 
 
-<span data-ttu-id="40519-109">Service Bus Premium は、可用性と信頼性が高い、耐久性のあるメッセージングを重視し、充実したローカル データセンター デプロイでも競争力のあるスループット パフォーマンスを提供します。しかも、ハードウェアの選択と入手プロセス、デプロイの計画と実行、終わりのないパフォーマンス最適化セッションは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="40519-109">Focusing on highly available and reliable durable messaging, the Service Bus Premium provides competitive throughput performance even with substantial local datacenter deployments, but without hardware selection and acquisition processes, deployment planning and execution, and endless performance optimization sessions.</span></span> 
+<span data-ttu-id="23b7d-109">Service Bus Premium は、可用性と信頼性が高い、耐久性のあるメッセージングを重視し、充実したローカル データセンター デプロイでも競争力のあるスループット パフォーマンスを提供します。しかも、ハードウェアの選択と入手プロセス、デプロイの計画と実行、終わりのないパフォーマンス最適化セッションは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="23b7d-109">Focusing on highly available and reliable durable messaging, the Service Bus Premium provides competitive throughput performance even with substantial local datacenter deployments, but without hardware selection and acquisition processes, deployment planning and execution, and endless performance optimization sessions.</span></span> 
 
-<span data-ttu-id="40519-110">Service Bus Premium は、テナントごとに専用の容量が予約されている、完全に管理されたソリューションです。パフォーマンスを予測することができ、料金モデルは単純な容量ベースで、総コストは商用のオンプレミス ブローカーよりも大幅に低くなります。</span><span class="sxs-lookup"><span data-stu-id="40519-110">Service Bus Premium is a fully managed offering with dedicated capacity reserved for each tenant that yields predictable performance with a simple, capacity-oriented pricing model and at extremely lower overall cost than commercial on-premises brokers.</span></span> <span data-ttu-id="40519-111">多くの場合、Service Bus Premium は、付随するワークロードがクラウドで実行されない場合でも、現在の専用オンプレミス メッセージング クラスターの代わりとなります。</span><span class="sxs-lookup"><span data-stu-id="40519-111">For many customers, Service Bus Premium can replace dedicated on-premises messaging clusters today, even if the attached workloads do not run in the cloud.</span></span> 
+<span data-ttu-id="23b7d-110">Service Bus Premium は、テナントごとに専用の容量が予約されている、完全に管理されたソリューションです。パフォーマンスを予測することができ、料金モデルは単純な容量ベースで、総コストは商用のオンプレミス ブローカーよりも大幅に低くなります。</span><span class="sxs-lookup"><span data-stu-id="23b7d-110">Service Bus Premium is a fully managed offering with dedicated capacity reserved for each tenant that yields predictable performance with a simple, capacity-oriented pricing model and at extremely lower overall cost than commercial on-premises brokers.</span></span> <span data-ttu-id="23b7d-111">多くの場合、Service Bus Premium は、付随するワークロードがクラウドで実行されない場合でも、現在の専用オンプレミス メッセージング クラスターの代わりとなります。</span><span class="sxs-lookup"><span data-stu-id="23b7d-111">For many customers, Service Bus Premium can replace dedicated on-premises messaging clusters today, even if the attached workloads do not run in the cloud.</span></span> 
 
-<span data-ttu-id="40519-112">Service Bus の概念の詳細については、[メッセージングのドキュメントのセクション](https://docs.microsoft.com/azure/service-bus-messaging/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40519-112">Learn more about Service Bus concepts [in the messaging documentation section](https://docs.microsoft.com/azure/service-bus-messaging/)</span></span> 
+<span data-ttu-id="23b7d-112">Service Bus の概念の詳細については、[メッセージングのドキュメントのセクション](https://docs.microsoft.com/azure/service-bus-messaging/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="23b7d-112">Learn more about Service Bus concepts [in the messaging documentation section](https://docs.microsoft.com/azure/service-bus-messaging/)</span></span> 
 
-<span data-ttu-id="40519-113">Service Bus は Java 開発者に、Microsoft がサポートするネイティブ API を提供します。また、Service Bus は Apache Qpid Proton の JMS プロバイダーなどの AMQP 1.0 に準拠しているライブラリと共に使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="40519-113">For Java developers, Service Bus provides a Microsoft supported native API and Service Bus can also be used with AMQP 1.0 compliant libraries such as Apache Qpid Proton's JMS provider.</span></span>
+<span data-ttu-id="23b7d-113">Service Bus は Java 開発者に、Microsoft がサポートするネイティブ API を提供します。また、Service Bus は Apache Qpid Proton の JMS プロバイダーなどの AMQP 1.0 に準拠しているライブラリと共に使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="23b7d-113">For Java developers, Service Bus provides a Microsoft supported native API and Service Bus can also be used with AMQP 1.0 compliant libraries such as Apache Qpid Proton's JMS provider.</span></span>
 
-<span data-ttu-id="40519-114">公式な Service Bus クライアントは [GitHub でソース コード形式](https://github.com/azure/azure-service-bus-java)で入手でき、バイナリとパッケージ化されたソースは [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22) で入手できます。</span><span class="sxs-lookup"><span data-stu-id="40519-114">The official Service Bus client is available in [source code form on GitHub](https://github.com/azure/azure-service-bus-java) and binaries and packaged sources [are available on Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22).</span></span> 
+## <a name="client-library"></a><span data-ttu-id="23b7d-114">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="23b7d-114">Client library</span></span>
 
+<span data-ttu-id="23b7d-115">公式な Service Bus クライアントは [GitHub でソース コード形式](https://github.com/azure/azure-service-bus-java)で入手でき、バイナリとパッケージ化されたソースは [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22) で入手できます。</span><span class="sxs-lookup"><span data-stu-id="23b7d-115">The official Service Bus client is available in [source code form on GitHub](https://github.com/azure/azure-service-bus-java) and binaries and packaged sources [are available on Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-servicebus%22).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="40519-115">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="40519-115">Client library</span></span>
+<span data-ttu-id="23b7d-116">**[サンプル コード リポジトリ](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)には、次のサンプルが含まれます。**</span><span class="sxs-lookup"><span data-stu-id="23b7d-116">**The [sample code repository](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/) contains samples for:**</span></span>
+* <span data-ttu-id="23b7d-117">[QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java) を使用する方法</span><span class="sxs-lookup"><span data-stu-id="23b7d-117">How to use the [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java)</span></span>
+* <span data-ttu-id="23b7d-118">[TopicClient と SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java) を使用する方法</span><span class="sxs-lookup"><span data-stu-id="23b7d-118">How to use the [TopicClient and SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java)</span></span>
+* <span data-ttu-id="23b7d-119">Service Bus の [MessageSender および MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) メッセージを使用する方法</span><span class="sxs-lookup"><span data-stu-id="23b7d-119">How to use [MessageSender and MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) messages from Service Bus.</span></span>
 
+<span data-ttu-id="23b7d-120">独自のプロジェクトでライブラリを使用するには、Maven プロジェクトの `pom.xml` ファイルに依存関係を追加します。</span><span class="sxs-lookup"><span data-stu-id="23b7d-120">Add a dependency to your Maven project's `pom.xml` file to use the library in your own project.</span></span> <span data-ttu-id="23b7d-121">必要に応じてバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="23b7d-121">Specify the version as desired.</span></span>
 
-<span data-ttu-id="40519-116">独自のプロジェクトでライブラリを使用するには、Maven プロジェクトの `pom.xml` ファイルに依存関係を追加します。</span><span class="sxs-lookup"><span data-stu-id="40519-116">Add a dependency to your Maven project's `pom.xml` file to use the library in your own project.</span></span> <span data-ttu-id="40519-117">必要に応じてバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="40519-117">Specify the version as desired.</span></span>
-
-<span data-ttu-id="40519-118">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="40519-118">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
+<span data-ttu-id="23b7d-122">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="23b7d-122">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -50,11 +53,6 @@ ms.lasthandoff: 04/26/2018
     <version>1.0.0</version>
 </dependency>
 ```
-
-## <a name="examples"></a><span data-ttu-id="40519-119">例</span><span class="sxs-lookup"><span data-stu-id="40519-119">Examples</span></span>
-
-<span data-ttu-id="40519-120">[サンプル コード リポジトリ](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)には、Service Bus からのメッセージを [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java)、[TopicClient および SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java)、[MessageSender および MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) で処理する方法のサンプルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="40519-120">The [sample code repository](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/) contains samples for how to [QueueClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithQueueClient.java) and [TopicClient and SubscriptionClient](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/BasicSendReceiveWithTopicSubscriptionClient.java) and [MessageSender and MessageReceiver](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/src/com/microsoft/azure/servicebus/samples/SendReceiveWithMessageSenderReceiver.java) messages from Service Bus.</span></span>
-
 
 ```java
 public class BasicSendReceiveWithQueueClient {
@@ -116,13 +114,22 @@ public class BasicSendReceiveWithQueueClient {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="40519-121">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="40519-121">Explore the Client APIs</span></span>](/java/api/overview/azure/servicebus/client)
+> <span data-ttu-id="23b7d-123">[クライアント API を探す](/java/api/overview/azure/servicebus/client)
+> [その他の例についてはこちらをご覧ください (詳細については上記も参照してください)](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)</span><span class="sxs-lookup"><span data-stu-id="23b7d-123">[Explore the Client APIs](/java/api/overview/azure/servicebus/client)
+[Find more examples here (See also above for more details)](https://github.com/Azure/azure-service-bus/blob/master/samples/Java/)</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="40519-122">管理 API</span><span class="sxs-lookup"><span data-stu-id="40519-122">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="23b7d-124">管理 API</span><span class="sxs-lookup"><span data-stu-id="23b7d-124">Management API</span></span>
 
-<span data-ttu-id="40519-123">Management API で名前空間、トピック、キュー、およびサブスクリプションを作成および管理します。</span><span class="sxs-lookup"><span data-stu-id="40519-123">Create and manage namespaces, topics, queues, and subscriptions with the management API.</span></span>
+<span data-ttu-id="23b7d-125">Management API で名前空間、トピック、キュー、およびサブスクリプションを作成および管理します。</span><span class="sxs-lookup"><span data-stu-id="23b7d-125">Create and manage namespaces, topics, queues, and subscriptions with the management API.</span></span>
 
-<span data-ttu-id="40519-124">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="40519-124">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="23b7d-126">**例については以下をご覧ください。**</span><span class="sxs-lookup"><span data-stu-id="23b7d-126">**Please find some examples here:**</span></span>
+* [<span data-ttu-id="23b7d-127">Service Bus キューの管理</span><span class="sxs-lookup"><span data-stu-id="23b7d-127">Manage Service Bus queues</span></span>](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
+* [<span data-ttu-id="23b7d-128">Service Bus トピックの作成とそのトピックのサブスクライブ</span><span class="sxs-lookup"><span data-stu-id="23b7d-128">Create and subscribe to Service Bus topics</span></span>](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)
+
+<span data-ttu-id="23b7d-129">**プロジェクトで管理 API を使用する方法:**
+\\</span><span class="sxs-lookup"><span data-stu-id="23b7d-129">**Use the Management API in your project:**
+\\</span></span>
+<span data-ttu-id="23b7d-130">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="23b7d-130">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -133,13 +140,6 @@ public class BasicSendReceiveWithQueueClient {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="40519-125">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="40519-125">Explore the Management APIs</span></span>](/java/api/overview/azure/servicebus/management)
+> [<span data-ttu-id="23b7d-131">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="23b7d-131">Explore the Management APIs</span></span>](/java/api/overview/azure/servicebus/management)
 
-
-## <a name="examples"></a><span data-ttu-id="40519-126">例</span><span class="sxs-lookup"><span data-stu-id="40519-126">Examples</span></span>
-
-<span data-ttu-id="40519-127">[Service Bus キューの管理](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
-[Service Bus トピックの作成とそのトピックのサブスクライブ](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)</span><span class="sxs-lookup"><span data-stu-id="40519-127">[Manage Service Bus queues](https://github.com/Azure-Samples/service-bus-java-manage-queue-with-basic-features)
-[Create and subscribe to Service Bus topics](https://github.com/Azure-Samples/service-bus-java-manage-publish-subscribe-with-basic-features)</span></span>
-
-<span data-ttu-id="40519-128">アプリから利用できる [Azure Service Bus のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=bus)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="40519-128">Explore more [sample Java code for Azure Service Bus](https://azure.microsoft.com/resources/samples/?platform=java&term=bus) you can use in your apps.</span></span>
+<span data-ttu-id="23b7d-132">アプリから利用できる [Azure Service Bus のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=bus)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="23b7d-132">Explore more [sample Java code for Azure Service Bus](https://azure.microsoft.com/resources/samples/?platform=java&term=bus) you can use in your apps.</span></span>
