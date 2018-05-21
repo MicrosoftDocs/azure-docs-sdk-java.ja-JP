@@ -1,12 +1,12 @@
 ---
-title: "Azure Toolkit for Eclipse のサインイン手順"
-description: "Azure Toolkit for Eclipse を使用して Microsoft Azure にサインインする方法について説明します。"
-services: 
+title: Azure Toolkit for Eclipse のサインイン手順
+description: Azure Toolkit for Eclipse を使用して Microsoft Azure にサインインする方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,11 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 498a22c455e54b8038169cf4e9f6ac7d7287c0bb
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
+ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse の Azure サインイン手順
 
@@ -91,7 +91,7 @@ Eclipse を使用しているときに Azure からサインアウトする場�
 
    ![[サインイン] ダイアログ ボックス][A02]
 
-1. **[Select Authenticated File (認証ファイルの選択)**] ダイアログ ボックスが表示されたら、前に作成した資格情報ファイルを選び、**[選択]** をクリックします。
+1. **Select Authenticated File\(認証ファイルの選択\)** ダイアログ ボックスが表示されたら、前に作成した資格情報ファイルを選び、**Open\(開く)** をクリックします。
 
    ![[サインイン] ダイアログ ボックス][A08]
 
