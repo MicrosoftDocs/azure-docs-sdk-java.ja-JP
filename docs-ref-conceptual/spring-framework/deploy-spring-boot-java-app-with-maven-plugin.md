@@ -1,12 +1,12 @@
 ---
-title: "Maven と Azure を使用して Spring Boot アプリをクラウドにデプロイする"
-description: "Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする方法について説明します。"
+title: Maven と Azure を使用して Spring Boot アプリをクラウドにデプロイする
+description: Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする方法について説明します。
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;kevinzha
 ms.date: 02/01/2018
 ms.devlang: java
@@ -14,11 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 17c358317d1b96521de87f263a92fa2d7c0ff26c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 82cb0da3ce49fa77f888808af14455bf226d5cb0
+ms.sourcegitcommit: 024b3127daf396a17bd43d57642e3534ae87f120
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34462752"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a>Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする
 
@@ -26,14 +27,14 @@ ms.lasthandoff: 02/03/2018
 
 > [!NOTE]
 > 
-> [Apache Maven](http://maven.apache.org/) 用の [Azure Web Apps 用 Maven プラグイン](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイする作業を効率化します。
+> [Apache Maven](http://maven.apache.org/) 用の [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイする作業を効率化します。
 > 
 > Azure Web Apps の Maven プラグインは現在プレビューとして提供されています。 今後、機能が追加される予定ですが、現在は FTP 発行のみがサポートされています。
 > 
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルの手順を完了するには、次の前提条件を満たす必要があります。
+このチュートリアルの手順を実行するには、次の前提条件を満たしておく必要があります。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
@@ -43,9 +44,9 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="clone-the-sample-spring-boot-web-app"></a>Spring Boot Web アプリのサンプルを複製する
 
-このセクションでは、完成した Spring Boot アプリケーションを複製してローカルでテストします。
+このセクションでは、完成した Spring Boot アプリケーションを複製し、ローカルでテストします。
 
-1. コマンド プロンプトまたはターミナル ウィンドウを開き、Spring Boot アプリケーションを保持するためのローカル ディレクトリを作成して、次の例のようにそのディレクトリを変更します。
+1. コマンド プロンプトまたはターミナル ウィンドウを開き、Spring Boot アプリケーションを保持するためのローカル ディレクトリを作成して、次の例のようにそのディレクトリに移動します。
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
@@ -85,7 +86,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="create-an-azure-service-principal"></a>Azure サービス プリンシパルを作成する
 
-このセクションでは、Azure に Web アプリをデプロイするときに、Maven プラグインが使う Azure サービス プリンシパルを作成します。
+このセクションでは、Web アプリを Azure にデプロイするときに Maven プラグインで使用される Azure サービス プリンシパルを作成します。
 
 1. コマンド プロンプトを開きます。
 
@@ -120,9 +121,9 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="configure-maven-to-use-your-azure-service-principal"></a>Azure サービス プリンシパルを使用するように Maven を構成する
 
-このセクションでは、Azure サービス プリンシパルの値を使って、Web アプリを Azure にデプロイするときに Maven が使う認証を構成します。
+このセクションでは、Azure サービス プリンシパルの値を使用して、Web アプリを Azure にデプロイするときに Maven で使用される認証を構成します。
 
-1. Maven の `settings.xml` ファイルをテキスト エディターで開きます。このファイルは次の例のようなパスに存在していることがあります。
+1. テキスト エディターで Maven の `settings.xml` ファイルを開きます。 このファイルは、次の例のようなパスにあります。
    * `/etc/maven/settings.xml`
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
@@ -195,12 +196,12 @@ Maven プラグイン用に変更できる値は複数あります。これら�
 
 | 要素 | [説明] |
 |---|---|
-| `<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。 |
+| `<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) に表示されているバージョンを確認して、最新バージョンを使用していることを確認してください。 |
 | `<authentication>` | Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。 |
 | `<resourceGroup>` | ターゲット リソース グループを指定します。この例では `maven-plugin` です。 リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。 |
 | `<appName>` | Web アプリのターゲット名を指定します。 この例では、ターゲット名は `maven-web-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています  (タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。 |
-| `<region>` | ターゲット リージョンを指定します。この例では `westus` です  (完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」(Azure Web Apps 用の Maven プラグイン) をご覧ください)。 |
-| `<javaVersion>` | Web アプリの Java ランタイム バージョンを指定します  (完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」(Azure Web Apps 用の Maven プラグイン) をご覧ください)。 |
+| `<region>` | ターゲット リージョンを指定します。この例では `westus` です  (完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」 をご覧ください)。 |
+| `<javaVersion>` | Web アプリの Java ランタイム バージョンを指定します  (完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」 をご覧ください)。 |
 | `<deploymentType>` | Web アプリのデプロイの種類を指定します。 現時点では `ftp` のみがサポートされていますが、他のデプロイの種類のサポートも開発中です。 |
 | `<resources>` | Web アプリを Azure にデプロイするときに Maven が使うリソースとターゲットの場所を指定します。 この例では、2 つの `<resource>` 要素で、Maven が Web アプリの JAR ファイルと Spring Boot プロジェクトからの *web.config* ファイルをデプロイすることを指定しています。 |
 
