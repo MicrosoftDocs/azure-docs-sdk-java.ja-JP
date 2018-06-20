@@ -1,7 +1,7 @@
 ---
-title: "Azure Management Libraries for Java リリース ノート | Microsoft Docs"
-description: "Azure Management Libraries for Java の新機能や重大な変更が記載されています。"
-keywords: "Azure,  Java, API, リファレンス,  ノート,  更新, 非推奨"
+title: Azure Management Libraries for Java リリース ノート | Microsoft Docs
+description: Azure Management Libraries for Java の新機能や重大な変更が記載されています。
+keywords: Azure,  Java, API, リファレンス,  ノート,  更新, 非推奨
 author: routlaw
 manager: douge
 ms.assetid: 1f128cf9-f747-4344-84e1-f9964709deb8
@@ -15,6 +15,7 @@ ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/03/2017
+ms.locfileid: "23982164"
 ---
 # <a name="release-notes"></a>リリース ノート 
 

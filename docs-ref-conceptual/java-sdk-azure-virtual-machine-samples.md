@@ -1,7 +1,7 @@
 ---
-title: "Azure Management Libraries for Java 仮想マシン サンプル"
-description: "Azure Management Libraries for Java を使用して Azure 仮想マシンの作成と更新を行うサンプル コードを入手しましょう。"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 仮想マシン"
+title: Azure Management Libraries for Java 仮想マシン サンプル
+description: Azure Management Libraries for Java を使用して Azure 仮想マシンの作成と更新を行うサンプル コードを入手しましょう。
+keywords: Azure, Java, SDK, API, Maven, Gradle, 仮想マシン
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930808"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-virtual-machines"></a>Azure Management Libraries for Java の仮想マシン用サンプル
 

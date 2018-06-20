@@ -1,6 +1,6 @@
 ---
-title: "Azure Java 開発者のためのツール | Microsoft Docs"
-description: "Azure を使用する Java 開発者のための IDE 統合、エミュレーター、リソース エクスプローラー、コマンド ライン インターフェイスについて取り上げます。"
+title: Azure Java 開発者のためのツール | Microsoft Docs
+description: Azure を使用する Java 開発者のための IDE 統合、エミュレーター、リソース エクスプローラー、コマンド ライン インターフェイスについて取り上げます。
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: f0dadb22efb191182c3b79dcaa97a76cfcdcc324
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26288311"
 ---
 # <a name="azure-tools-for-java-developers"></a>Java 開発者のための Azure ツール
 

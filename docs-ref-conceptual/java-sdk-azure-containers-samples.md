@@ -1,7 +1,7 @@
 ---
-title: "Azure Container Service の Java サンプル"
-description: "Java アプリから Azure Container Service を操作するサンプル コードを入手しましょう。"
-keywords: "Azure, Java, SDK, API, Kubernetes, コンテナー, Docker, ACS, レジストリ, イメージ"
+title: Azure Container Service の Java サンプル
+description: Java アプリから Azure Container Service を操作するサンプル コードを入手しましょう。
+keywords: Azure, Java, SDK, API, Kubernetes, コンテナー, Docker, ACS, レジストリ, イメージ
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930828"
 ---
 # <a name="java-samples-for-azure-container-service"></a>Azure Container Service の Java サンプル
 

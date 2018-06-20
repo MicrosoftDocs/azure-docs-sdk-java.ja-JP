@@ -19,6 +19,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883649"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse を使用して Azure 用の Hello World Web アプリを作成する
 

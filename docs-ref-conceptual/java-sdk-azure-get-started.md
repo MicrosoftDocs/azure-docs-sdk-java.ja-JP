@@ -1,7 +1,7 @@
 ---
-title: "Java 用 Azure ライブラリの概要"
-description: "Azure クラウド リソースを作成し、それらのリソースに接続して Java アプリケーションで使用する方法について説明します。"
-keywords: "Azure, Java, SDK, API, 認証, 概要"
+title: Java 用 Azure ライブラリの概要
+description: Azure クラウド リソースを作成し、それらのリソースに接続して Java アプリケーションで使用する方法について説明します。
+keywords: Azure, Java, SDK, API, 認証, 概要
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065529"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使用したクラウド開発の開始
 

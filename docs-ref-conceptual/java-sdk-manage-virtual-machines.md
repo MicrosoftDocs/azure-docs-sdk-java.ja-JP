@@ -1,6 +1,6 @@
 ---
-title: "Azure 仮想マシンを Java で管理する | Microsoft Docs"
-description: "Azure SDK for Java を使って Azure 仮想マシンを管理するためのサンプル コード"
+title: Azure 仮想マシンを Java で管理する | Microsoft Docs
+description: Azure SDK for Java を使って Azure 仮想マシンを管理するためのサンプル コード
 author: rloutlaw
 manager: douge
 ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931168"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Azure 仮想マシンを Java アプリケーションから管理する
 

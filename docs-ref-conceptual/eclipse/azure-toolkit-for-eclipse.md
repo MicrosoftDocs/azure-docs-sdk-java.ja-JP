@@ -1,11 +1,11 @@
 ---
 title: Azure Toolkit for Eclipse
-description: "Azure Toolkit for Eclipse プラグインが、クラウド アプリケーションの作成と Azure へのデプロイにどのように役立つかを説明します。"
-services: 
+description: Azure Toolkit for Eclipse プラグインが、クラウド アプリケーションの作成と Azure へのデプロイにどのように役立つかを説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954213"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse
 

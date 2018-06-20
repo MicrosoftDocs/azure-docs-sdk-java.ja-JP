@@ -1,12 +1,12 @@
 ---
-title: "Azure Container Service で Spring Boot Web アプリを Linux にデプロイする"
-description: "このチュートリアルでは、Microsoft Azure の Linux Web アプリとして Spring Boot アプリケーションをデプロイする方法について説明します。"
+title: Azure Container Service で Spring Boot Web アプリを Linux にデプロイする
+description: このチュートリアルでは、Microsoft Azure の Linux Web アプリとして Spring Boot アプリケーションをデプロイする方法について説明します。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954753"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする
 
@@ -230,7 +231,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 >
 > 3. 一覧から Web アプリを選択します。 (下の図の項目 #2 を参照。)
 >
-> 4. **[アプリケーションの設定]**をクリックします (下の図の項目 #3 を参照。)
+> 4. **[アプリケーションの設定]** をクリックします (下の図の項目 #3 を参照。)
 >
 > 5. **[App settings]\(アプリ設定\)** セクションで、**PORT** という名前の新しい環境変数を追加して、この値にカスタム ポート番号を入力します。 (下の図の項目 #4 を参照。)
 >

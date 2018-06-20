@@ -1,6 +1,6 @@
 ---
-title: "複数リージョンに対して同時に VM を作成する | Microsoft Docs"
-description: "Azure SDK for Java を使って複数の Azure リージョンに対して同時に仮想マシンを作成するためのサンプル コード"
+title: 複数リージョンに対して同時に VM を作成する | Microsoft Docs
+description: Azure SDK for Java を使って複数の Azure リージョンに対して同時に仮想マシンを作成するためのサンプル コード
 author: rloutlaw
 manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931198"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java アプリケーションから複数のリージョンに対して仮想マシンを作成する
 

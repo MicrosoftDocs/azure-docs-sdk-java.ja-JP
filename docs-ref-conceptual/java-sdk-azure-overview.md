@@ -1,6 +1,6 @@
 ---
-title: "Java 用 Azure ライブラリ"
-description: "Java 用 Azure 管理/サービス ライブラリの概要"
+title: Java 用 Azure ライブラリ
+description: Java 用 Azure 管理/サービス ライブラリの概要
 keywords: Azure, Java, SDK, API
 author: rloutlaw
 ms.author: routlaw
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930878"
 ---
 # <a name="azure-libraries-for-java"></a>Java 用 Azure ライブラリ
 

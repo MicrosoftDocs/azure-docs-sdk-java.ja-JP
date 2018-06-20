@@ -1,12 +1,12 @@
 ---
-title: "Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする"
-description: "このチュートリアルでは、Azure App Service を使用して Spring Boot Getting Started Web アプリをクラウドにデプロイする手順について説明します。"
+title: Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする
+description: このチュートリアルでは、Azure App Service を使用して Spring Boot Getting Started Web アプリをクラウドにデプロイする手順について説明します。
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954525"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする
 

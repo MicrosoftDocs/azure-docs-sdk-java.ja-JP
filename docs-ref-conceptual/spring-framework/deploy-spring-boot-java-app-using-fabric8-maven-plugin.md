@@ -1,12 +1,12 @@
 ---
-title: "fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする"
-description: "このチュートリアルでは、Microsoft Azure で Apache Maven 用 Fabric8 プラグインを使用して Spring Boot アプリケーションをデプロイする方法について説明します。"
+title: fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
+description: このチュートリアルでは、Microsoft Azure で Apache Maven 用 Fabric8 プラグインを使用して Spring Boot アプリケーションをデプロイする方法について説明します。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: yuwzho;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954893"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
 

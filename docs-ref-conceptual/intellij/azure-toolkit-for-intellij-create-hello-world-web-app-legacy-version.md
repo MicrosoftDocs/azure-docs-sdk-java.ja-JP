@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する"
-description: "このチュートリアルでは、Azure Toolkit for IntelliJ バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。"
+title: IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
+description: このチュートリアルでは、Azure Toolkit for IntelliJ バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954783"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -104,7 +105,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
    
    ![Azure のログイン ダイアログ][07]
 
-3. Azure アカウントに正常にサインインすると、**[サブスクリプションの管理]** ダイアログ ボックスに、資格情報に関連付けられたサブスクリプションの一覧が表示されます。 (複数のサブスクリプションが表示された場合、その一部のみを使うには、使わないサブスクリプションのチェックボックスを必要に応じてオフにします)。サブスクリプションを選択したら、 **[閉じる]**をクリックします。
+3. Azure アカウントに正常にサインインすると、**[サブスクリプションの管理]** ダイアログ ボックスに、資格情報に関連付けられたサブスクリプションの一覧が表示されます。 (複数のサブスクリプションが表示された場合、その一部のみを使うには、使わないサブスクリプションのチェックボックスを必要に応じてオフにします)。サブスクリプションを選択したら、 **[閉じる]** をクリックします。
    
    ![サブスクリプションの管理][08]
 
@@ -154,8 +155,8 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
       * **[Name]\(名前\)** ボックスに、新しい App Service プランの名前を入力します。
       * **[Location]\(場所\)** ドロップダウン メニューで、プランに適した Azure データ センターの場所を選択します。
-      * **[Pricing Tier]\(価格レベル\)** ドロップダウン メニューで、プランに適した価格を選択します。 テスト目的の場合は、 **[Free]**を選択できます。
-      * **[Instance Size]\(インスタンス サイズ\)** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。 テスト目的の場合は、 **[Small]**を選択できます。
+      * **[Pricing Tier]\(価格レベル\)** ドロップダウン メニューで、プランに適した価格を選択します。 テスト目的の場合は、 **[Free]** を選択できます。
+      * **[Instance Size]\(インスタンス サイズ\)** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。 テスト目的の場合は、 **[Small]** を選択できます。
       * Click **OK**.
 
    h. (オプション) 既定では、Java 8 の最新のディストリビューションは、Azure によって Web アプリ コンテナーに JVM として自動的にデプロイされます。 ただし、JVM の別のバージョンおよびディストリビューションを選択することができます。 そのためには、次の手順を実行してください。
@@ -213,7 +214,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
 1. IntelliJ の Project Explorer で、更新する Java アプリケーションを右クリックするか、既存の Web アプリ コンテナーに追加します。
 2. コンテキスト メニューが表示されたら、**[Azure]**、**[Publish as Azure Web App (Azure Web アプリとして発行)]** の順に選択します。
-3. 既にログインしているので、既存の Web アプリ コンテナーの一覧が表示されます。 Java アプリケーションを発行または再発行するコンテナーを選択し、 **[OK]**をクリックします。
+3. 既にログインしているので、既存の Web アプリ コンテナーの一覧が表示されます。 Java アプリケーションを発行または再発行するコンテナーを選択し、 **[OK]** をクリックします。
 
 数秒後、**[Azure Activity Log (Azure アクティビティ ログ)]** ビューに更新されたデプロイが **[Published (発行済み)]** と表示され、Web ブラウザーで更新されたアプリケーションを確認できます。
 

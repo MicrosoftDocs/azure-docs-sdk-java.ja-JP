@@ -1,6 +1,6 @@
 ---
-title: "仮想マシン スケール セットを Java で管理する | Microsoft Docs"
-description: "Azure SDK for Java を使って Azure 仮想マシン スケール セットを管理するためのサンプル コード"
+title: 仮想マシン スケール セットを Java で管理する | Microsoft Docs
+description: Azure SDK for Java を使って Azure 仮想マシン スケール セットを管理するためのサンプル コード
 author: rloutlaw
 manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931158"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Azure 仮想マシン スケール セットを Java アプリケーションから管理する
 

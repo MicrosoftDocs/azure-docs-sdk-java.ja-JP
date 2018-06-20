@@ -1,7 +1,7 @@
 ---
 title: Azure Database for PostgreSQL Libraries for Java
-description: "Azure Database for PostgreSQL 用 Java クライアント ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, SQL, データベース, PostGres, PostgreSQL"
+description: Azure Database for PostgreSQL 用 Java クライアント ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, SQL, データベース, PostGres, PostgreSQL
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930978"
 ---
 # <a name="azure-database-for-postgresql-libraries-for-java"></a>Azure Database for PostgreSQL Libraries for Java
 

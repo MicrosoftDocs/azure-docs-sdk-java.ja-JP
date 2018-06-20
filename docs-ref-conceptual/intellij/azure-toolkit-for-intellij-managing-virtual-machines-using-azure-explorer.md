@@ -1,12 +1,12 @@
 ---
-title: "Azure Explorer for IntelliJ を使用して仮想マシンを管理する"
-description: "Azure Explorer for IntelliJ を使用して Azure 仮想マシンを管理する方法について説明します。"
-services: 
+title: Azure Explorer for IntelliJ を使用して仮想マシンを管理する
+description: Azure Explorer for IntelliJ を使用して Azure 仮想マシンを管理する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954873"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Azure Explorer for IntelliJ を使用して仮想マシンを管理する
 
@@ -99,7 +100,7 @@ Azure Explorer を使用して仮想マシンを作成するには、以下の�
 
    * **[可用性セット]**: 仮想マシンが属することができる可用性セットを指定します (省略可能)。 既存の可用性セットを指定するか、新しい可用性セットを作成できます。仮想マシンが可用性セットに属さない場合は、**[(なし)]** を選択します。
 
-9. **[完了]**をクリックします。  
+9. **[完了]** をクリックします。  
     新しい仮想マシンが Azure エクスプローラーのツール ウィンドウに表示されます。 
 
    ![Azure エクスプローラー ビューの新しい仮想マシン][CR08]

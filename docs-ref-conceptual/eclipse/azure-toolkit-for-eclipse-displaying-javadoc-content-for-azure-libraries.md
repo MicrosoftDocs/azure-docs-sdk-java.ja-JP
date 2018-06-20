@@ -1,11 +1,11 @@
 ---
-title: "Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示"
-description: "Azure ライブラリの Javadoc コンテンツを Eclipse で表示する方法"
-services: 
+title: Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示
+description: Azure ライブラリの Javadoc コンテンツを Eclipse で表示する方法
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 30f8b6a1-1d76-4d1c-861b-1db478c46e6b
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954503"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示
 
@@ -30,7 +31,7 @@ Java 用 Azure ライブラリの Javadoc コンテンツは、Javadoc コンテ
 
 1. Eclipse の [Project Explorer (プロジェクト エクスプローラー)] で、プロジェクトの **[Referenced Libraries (参照ライブラリ)]** セクションにある Java JAR 用 Azure ライブラリ (例: **microsoft-windowsazure-api-0.1.0.jar** (インストールされているバージョンによって、バージョン番号が異なることがあります)) のコンテキスト メニューを開きます。
 
-1. **[プロパティ]**をクリックします。
+1. **[プロパティ]** をクリックします。
 
 1. **[Properties (プロパティ)]** ダイアログの左側のウィンドウで、**[Javadoc Location (Javadoc の場所)]** をクリックします。 **[Javadoc Location]** ダイアログが表示されます。
 
@@ -38,13 +39,13 @@ Java 用 Azure ライブラリの Javadoc コンテンツは、Javadoc コンテ
 
    * **[Javadoc URL (Javadoc の URL)]** を選択した場合は、**http://dl.windowsazure.com/javadoc** または **http://dl.windowsazure.com/storage/javadoc** などの URL を使用します。
 
-   * **[Javadoc in archive]**を使用する場合は、外部ファイルまたはワークスペース ファイルを指定できます。
+   * **[Javadoc in archive]** を使用する場合は、外部ファイルまたはワークスペース ファイルを指定できます。
 
    選択したら、必要に応じて参照または検証します。 次の例では、Java 用 Azure ライブラリを、**c:\MyAzureJARs** という名前のローカル フォルダーにダウンロードされている対応する Javadoc JAR に関連付けています。
 
    ![Javadoc コンテンツの表示][ic553487]
 
-1. "*省略可能な手順*": **[検証]**をクリックします。 Javadoc JAR に関する潜在的な問題があれば、ここに表示されます。
+1. "*省略可能な手順*": **[検証]** をクリックします。 Javadoc JAR に関する潜在的な問題があれば、ここに表示されます。
 
 1. Click **OK**.
 

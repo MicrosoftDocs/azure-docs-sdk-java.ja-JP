@@ -1,12 +1,12 @@
 ---
-title: "Azure Container Service で Spring Boot アプリケーションを Kubernetes にデプロイする"
-description: "このチュートリアルでは、Microsoft Azure の Kubernetes クラスターに Spring Boot アプリケーションをデプロイする方法について説明します。"
+title: Azure Container Service で Spring Boot アプリケーションを Kubernetes にデプロイする
+description: このチュートリアルでは、Microsoft Azure の Kubernetes クラスターに Spring Boot アプリケーションをデプロイする方法について説明します。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954643"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
@@ -231,7 +232,7 @@ ms.lasthandoff: 02/03/2018
 
    c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)\** で**[External]\(外部)\** を選択します。
+   d. **[Service]\(サービス)\** で **[External]\(外部)\** を選択します。
 
    e. 外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
 
