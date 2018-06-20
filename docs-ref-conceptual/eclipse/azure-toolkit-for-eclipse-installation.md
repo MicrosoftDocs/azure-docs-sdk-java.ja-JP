@@ -19,6 +19,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887752"
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="4097b-103">Azure Toolkit for Eclipse をインストールする</span><span class="sxs-lookup"><span data-stu-id="4097b-103">Install the Azure Toolkit for Eclipse</span></span>
 

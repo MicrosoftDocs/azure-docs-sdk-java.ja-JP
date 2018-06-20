@@ -1,7 +1,7 @@
 ---
-title: "Java 用 Azure 管理ライブラリ開発者ガイド"
-description: "Java 用管理ライブラリを使用して Azure でクラウド リソースを管理する際のパターンと概念。"
-keywords: "Azure, Java, SDK, API, Maven, Gradle, 認証, active directory, サービス プリンシパル"
+title: Java 用 Azure 管理ライブラリ開発者ガイド
+description: Java 用管理ライブラリを使用して Azure でクラウド リソースを管理する際のパターンと概念。
+keywords: Azure, Java, SDK, API, Maven, Gradle, 認証, active directory, サービス プリンシパル
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1f6a80e067a8bdbbb4b2da2e2145fda73d5fe65a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26184646"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a><span data-ttu-id="fcc5b-104">Java 用 Azure ライブラリを使用した開発のパターンとベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="fcc5b-104">Patterns and best practices for development with the Azure libraries for Java</span></span> 
 

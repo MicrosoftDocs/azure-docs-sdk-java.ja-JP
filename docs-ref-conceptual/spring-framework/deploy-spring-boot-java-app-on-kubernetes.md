@@ -1,12 +1,12 @@
 ---
-title: "Azure Container Service で Spring Boot アプリケーションを Kubernetes にデプロイする"
-description: "このチュートリアルでは、Microsoft Azure の Kubernetes クラスターに Spring Boot アプリケーションをデプロイする方法について説明します。"
+title: Azure Container Service で Spring Boot アプリケーションを Kubernetes にデプロイする
+description: このチュートリアルでは、Microsoft Azure の Kubernetes クラスターに Spring Boot アプリケーションをデプロイする方法について説明します。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954643"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a><span data-ttu-id="53700-103">Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする</span><span class="sxs-lookup"><span data-stu-id="53700-103">Deploy a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>
 
@@ -231,7 +232,7 @@ ms.lasthandoff: 02/03/2018
 
    <span data-ttu-id="53700-164">c.</span><span class="sxs-lookup"><span data-stu-id="53700-164">c.</span></span> <span data-ttu-id="53700-165">ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。</span><span class="sxs-lookup"><span data-stu-id="53700-165">Enter your login server and container image from earlier for the **Container image**; for example: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*".</span></span>
 
-   <span data-ttu-id="53700-166">d.</span><span class="sxs-lookup"><span data-stu-id="53700-166">d.</span></span> <span data-ttu-id="53700-167">**[Service]\(サービス)\** で**[External]\(外部)\** を選択します。</span><span class="sxs-lookup"><span data-stu-id="53700-167">Choose **External** for the **Service**.</span></span>
+   <span data-ttu-id="53700-166">d.</span><span class="sxs-lookup"><span data-stu-id="53700-166">d.</span></span> <span data-ttu-id="53700-167">**[Service]\(サービス)\** で **[External]\(外部)\** を選択します。</span><span class="sxs-lookup"><span data-stu-id="53700-167">Choose **External** for the **Service**.</span></span>
 
    <span data-ttu-id="53700-168">e.</span><span class="sxs-lookup"><span data-stu-id="53700-168">e.</span></span> <span data-ttu-id="53700-169">外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。</span><span class="sxs-lookup"><span data-stu-id="53700-169">Specify your external and internal ports in the **Port** and **Target port** text boxes.</span></span>
 
@@ -323,26 +324,35 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
+[Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Using a custom Docker image for Azure Web App on Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 [Pods のサービス アカウントの構成]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+[Configuring Service Accounts for Pods]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [名前空間]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+[Namespaces]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 [プライベート レジストリからのイメージのプル]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+[Pulling an Image from a Private Registry]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
 <!-- IMG List -->
 

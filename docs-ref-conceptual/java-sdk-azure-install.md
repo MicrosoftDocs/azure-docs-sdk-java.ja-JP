@@ -15,6 +15,7 @@ ms.sourcegitcommit: 61030d025614b084e897809e603b2ec79900ec8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/03/2018
+ms.locfileid: "30302550"
 ---
 # <a name="azure-libraries-for-java"></a><span data-ttu-id="aaed4-104">Java 用 Azure ライブラリ</span><span class="sxs-lookup"><span data-stu-id="aaed4-104">Azure libraries for Java</span></span>
 

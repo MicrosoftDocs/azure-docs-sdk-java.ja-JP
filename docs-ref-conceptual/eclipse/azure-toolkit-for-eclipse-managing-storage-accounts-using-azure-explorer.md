@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d3460289ab6b9165c2cf6a3dd56eafd0692501e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283016"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a><span data-ttu-id="388a1-103">Azure Explorer for Eclipse を使用してストレージ アカウントを管理する</span><span class="sxs-lookup"><span data-stu-id="388a1-103">Manage storage accounts by using the Azure Explorer for Eclipse</span></span>
 

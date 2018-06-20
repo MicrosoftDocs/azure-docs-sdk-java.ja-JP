@@ -1,12 +1,12 @@
 ---
-title: "Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する"
-description: "Azure Explorer for IntelliJ を使用して Azure ストレージ アカウントを管理する方法について説明します。"
-services: 
+title: Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する
+description: Azure Explorer for IntelliJ を使用して Azure ストレージ アカウントを管理する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954843"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="deddc-103">Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する</span><span class="sxs-lookup"><span data-stu-id="deddc-103">Manage storage accounts by using the Azure Explorer for IntelliJ</span></span>
 
@@ -114,16 +115,26 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure Toolkit for IntelliJ のサインイン手順]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Microsoft Azure Storage の概要]: /azure/storage/storage-introduction
+[Introduction to Microsoft Azure Storage]: /azure/storage/storage-introduction
 [Azure ストレージ アカウントについて]: /azure/storage/storage-create-storage-account
+[About Azure storage accounts]: /azure/storage/storage-create-storage-account
 [Azure Storage のレプリケーション]: /azure/storage/storage-redundancy
+[Azure storage replication]: /azure/storage/storage-redundancy
 [Azure Storage のスケーラビリティおよびパフォーマンスのターゲット]: /azure/storage/storage-scalability-targets
+[Azure storage scalability and Performance Targets]: /azure/storage/storage-scalability-targets
 [コンテナー、BLOB、メタデータの名前付けと参照]: http://go.microsoft.com/fwlink/?LinkId=255555
+[Naming and referencing containers, blobs, and metadata]: http://go.microsoft.com/fwlink/?LinkId=255555
 
 [Azure の Windows ストレージ アカウントのサイズ]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows storage accounts in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure の Linux ストレージ アカウントのサイズ]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux storage accounts in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Windows ストレージ アカウントの料金]: /pricing/details/virtual-machines/windows/
+[Windows storage-account pricing]: /pricing/details/virtual-machines/windows/
 [Linux ストレージ アカウントの料金]: /pricing/details/virtual-machines/linux/
+[Linux storage-account pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

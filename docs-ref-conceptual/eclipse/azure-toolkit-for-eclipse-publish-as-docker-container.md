@@ -1,12 +1,12 @@
 ---
-title: "Azure Toolkit for Eclipse を使用して Docker コンテナーを発行する"
-description: "Azure Toolkit for Eclipse を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。"
-services: 
+title: Azure Toolkit for Eclipse を使用して Docker コンテナーを発行する
+description: Azure Toolkit for Eclipse を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954773"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="a27f7-103">Azure Toolkit for Eclipse を使用して Web アプリを Docker コンテナーとして発行する</span><span class="sxs-lookup"><span data-stu-id="a27f7-103">Publish a web app as a Docker container by using the Azure Toolkit for Eclipse</span></span>
 
@@ -164,6 +165,7 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Docker の Web サイト]: https://www.docker.com/
+[Docker website]: https://www.docker.com/
 
 <!-- IMG List -->
 

@@ -1,6 +1,6 @@
 ---
-title: "Java を使って Web アプリのデプロイを構成する | Microsoft Docs"
-description: "Azure SDK for Java を使って Git または FTP による Azure App Service デプロイを構成するサンプル Java コード。"
+title: Java を使って Web アプリのデプロイを構成する | Microsoft Docs
+description: Azure SDK for Java を使って Git または FTP による Azure App Service デプロイを構成するサンプル Java コード。
 author: rloutlaw
 manager: douge
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931188"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a><span data-ttu-id="e6244-103">Java アプリケーションから Azure App Service のデプロイ ソースを構成する</span><span class="sxs-lookup"><span data-stu-id="e6244-103">Configure Azure App Service deployment sources from your Java applications</span></span>
 

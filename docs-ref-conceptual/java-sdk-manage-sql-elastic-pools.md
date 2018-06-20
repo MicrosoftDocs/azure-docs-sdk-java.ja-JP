@@ -1,6 +1,6 @@
 ---
-title: "SQL データベースのエラスティック プールを Java で管理する | Microsoft Docs"
-description: "Azure SDK for Java を使って Azure SQL データベースを作成して構成するためのサンプル コード"
+title: SQL データベースのエラスティック プールを Java で管理する | Microsoft Docs
+description: Azure SDK for Java を使って Azure SQL データベースを作成して構成するためのサンプル コード
 author: rloutlaw
 manager: douge
 ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931118"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a><span data-ttu-id="391e8-103">Java アプリケーションからエラスティック プールの Azure SQL データベースを管理する</span><span class="sxs-lookup"><span data-stu-id="391e8-103">Manage Azure SQL databases in elastic pools from your Java applications</span></span>
 

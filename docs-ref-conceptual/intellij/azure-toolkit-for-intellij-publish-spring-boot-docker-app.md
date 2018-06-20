@@ -1,12 +1,12 @@
 ---
-title: "Azure Toolkit for IntelliJ を使用して Spring Boot アプリを Docker コンテナーとして発行する"
-description: "Azure Toolkit for IntelliJ を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。"
-services: 
+title: Azure Toolkit for IntelliJ を使用して Spring Boot アプリを Docker コンテナーとして発行する
+description: Azure Toolkit for IntelliJ を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954733"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a><span data-ttu-id="49272-103">Azure Toolkit for IntelliJ を使用して Spring Boot アプリを Docker コンテナーとして発行する</span><span class="sxs-lookup"><span data-stu-id="49272-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for IntelliJ</span></span>
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 
       ![GitHub トークンを入力するためのダイアログ ボックス][CL02b]
 
-1. <span data-ttu-id="49272-119">リポジトリ URL に「**https://github.com/spring-guides/gs-spring-boot-docker.git**」と入力し、ローカル パスとフォルダー情報を指定して、**[複製]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="49272-119">Enter **https://github.com/spring-guides/gs-spring-boot-docker.git** for the repo URL, specify your local path and folder information, and then click **Clone**.</span></span>
+1. <span data-ttu-id="49272-119">リポジトリ URL に「**https://github.com/spring-guides/gs-spring-boot-docker.git**」と入力し、ローカル パスとフォルダー情報を指定して、**[複製]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="49272-119">Enter **https://github.com/spring-guides/gs-spring-boot-docker.git** for the repo URL, specify your local path and folder information, and then click **Clone**.</span></span>
 
    ![リポジトリの複製ダイアログ ボックス][CL03]
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/03/2018
 
    ![JDK の指定][CL12]
 
-1. <span data-ttu-id="49272-139">**[完了]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="49272-139">Click **Finish**.</span></span>
+1. <span data-ttu-id="49272-139">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="49272-139">Click **Finish**.</span></span>
 
    ![[完了] ボタン][CL13]
 
@@ -225,6 +226,7 @@ ms.lasthandoff: 02/03/2018
 [Azure Management Portal]: http://go.microsoft.com/fwlink/?LinkID=512959
 [Azure Sign In for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Configuring Artifacts (アーティファクトの構成)]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
+[Configuring Artifacts]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 [Deploy Spring Boot on Linux in AKS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: ./azure-toolkit-for-intellij-publish-as-docker-container.md

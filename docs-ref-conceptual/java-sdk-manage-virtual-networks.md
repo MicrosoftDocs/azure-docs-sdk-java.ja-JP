@@ -1,6 +1,6 @@
 ---
-title: "Azure 仮想ネットワークを Java で管理する | Microsoft Docs"
-description: "Java コードで Azure 仮想ネットワークを管理するためのサンプル コード"
+title: Azure 仮想ネットワークを Java で管理する | Microsoft Docs
+description: Java コードで Azure 仮想ネットワークを管理するためのサンプル コード
 author: rloutlaw
 manager: douge
 ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931088"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a><span data-ttu-id="04450-103">Java アプリによる Azure 仮想ネットワークの作成と管理</span><span class="sxs-lookup"><span data-stu-id="04450-103">Create and manage Azure virtual networks from your Java apps</span></span>
 

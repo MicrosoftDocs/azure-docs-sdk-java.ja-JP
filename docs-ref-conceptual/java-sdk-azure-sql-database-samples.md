@@ -1,6 +1,6 @@
 ---
-title: "Azure Management Libraries for Java の SQL Database サンプル"
-description: "Azure Management Libraries for Java を使用して Azure SQL Database の作成と更新を行うサンプル コードを入手しましょう。"
+title: Azure Management Libraries for Java の SQL Database サンプル
+description: Azure Management Libraries for Java を使用して Azure SQL Database の作成と更新を行うサンプル コードを入手しましょう。
 keywords: Azure, Java, SDK, API, Maven, Gradle, SQL Database
 author: rloutlaw
 ms.author: routlaw
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21930778"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-sql-database"></a><span data-ttu-id="d403d-104">Azure Management Libraries for Java の SQL Database 用サンプル</span><span class="sxs-lookup"><span data-stu-id="d403d-104">Azure management libraries for Java samples for SQL Database</span></span>
 

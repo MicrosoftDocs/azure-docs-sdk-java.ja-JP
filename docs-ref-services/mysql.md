@@ -1,7 +1,7 @@
 ---
 title: Azure Database for MySQL Libraries for Java
-description: "Azure Database for MySQL 用 Java クライアント ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Java, SDK, API, SQL, データベース, PostGres, MySQL"
+description: Azure Database for MySQL 用 Java クライアント ライブラリのリファレンス ドキュメント
+keywords: Azure, Java, SDK, API, SQL, データベース, PostGres, MySQL
 author: rloutlaw
 ms.author: routlaw
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2017
+ms.locfileid: "21931018"
 ---
 # <a name="azure-database-for-mysql-libraries-for-java"></a><span data-ttu-id="87c6c-104">Azure Database for MySQL Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="87c6c-104">Azure Database for MySQL libraries for Java</span></span>
 

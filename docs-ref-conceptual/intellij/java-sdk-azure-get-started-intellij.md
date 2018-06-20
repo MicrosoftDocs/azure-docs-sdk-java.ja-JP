@@ -1,13 +1,13 @@
 ---
-title: "Intellij を使用して Java 用 Azure ライブラリの使用を開始する"
-description: "ご利用の Azure サブスクリプションで Java 用 Azure ライブラリを使用するための基本的な事柄について説明します。"
-keywords: "Azure, Java, SDK, API, 認証, 概要"
-services: 
+title: Intellij を使用して Java 用 Azure ライブラリの使用を開始する
+description: ご利用の Azure サブスクリプションで Java 用 Azure ライブラリを使用するための基本的な事柄について説明します。
+keywords: Azure, Java, SDK, API, 認証, 概要
+services: ''
 documentationcenter: java
 author: roygara
 manager: timlt
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: v-rogara
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "29065499"
 ---
 # <a name="get-started-with-the-azure-libraries-using-intellij"></a><span data-ttu-id="54d24-104">Intellij を使用して Azure ライブラリの使用を開始する</span><span class="sxs-lookup"><span data-stu-id="54d24-104">Get started with the Azure libraries using Intellij</span></span>
 

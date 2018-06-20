@@ -1,12 +1,12 @@
 ---
-title: 
-description: "このチュートリアルでは、Azure Toolkit for Eclipse バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。"
+title: ''
+description: このチュートリアルでは、Azure Toolkit for Eclipse バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954743"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a><span data-ttu-id="a4b9e-102">Eclipse 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="a4b9e-102">Create a Hello World web app for Azure using the legacy toolkit for Eclipse</span></span>
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/03/2018
    
    ![新しい動的 Web プロジェクトの作成][02]
 
-3. <span data-ttu-id="a4b9e-117">**[完了]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-117">Click **Finish**.</span></span>
+3. <span data-ttu-id="a4b9e-117">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-117">Click **Finish**.</span></span>
 
 4. <span data-ttu-id="a4b9e-118">Eclipse の**プロジェクト エクスプローラー** ビューで、**MyWebApp** を展開します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-118">Within Eclipse's **Project Explorer** view, expand **MyWebApp**.</span></span> <span data-ttu-id="a4b9e-119">**WebContent** を右クリックし、**[新規]**、**[JSP ファイル]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-119">Right-click **WebContent**, click **New**, and then click **JSP File**.</span></span>
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 02/03/2018
 
 <span data-ttu-id="a4b9e-127">Java Web アプリケーションを Azure にデプロイする方法はいくつかあります。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-127">There are several ways by which you can deploy a Java web application to Azure.</span></span> <span data-ttu-id="a4b9e-128">このチュートリアルでは、アプリケーションを Azure Web アプリ コンテナーにデプロイするという最も簡単な方法について説明します。特殊なプロジェクトの種類や追加のツールは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-128">This tutorial describes one of the simplest: your application will be deployed to an Azure Web App Container - no special project type nor additional tools are needed.</span></span> <span data-ttu-id="a4b9e-129">JDK と Web コンテナー ソフトウェアは Azure から提供されるので、自分でアップロードする必要はありません。必要なものは Java Web アプリのみです。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-129">The JDK and the web container software will be provided for you by Azure, so there is no need to upload your own; all you need is your Java Web App.</span></span> <span data-ttu-id="a4b9e-130">結果として、アプリケーションの発行プロセスにかかる時間は分単位ではなく、秒単位になります。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-130">As a result, the publishing process for your application will take seconds, not minutes.</span></span>
 
-1. <span data-ttu-id="a4b9e-131">Eclipse の Project Explorer で **[MyWebApp]**を右クリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-131">In Eclipse's Project Explorer, right-click **MyWebApp**.</span></span>
+1. <span data-ttu-id="a4b9e-131">Eclipse の Project Explorer で **[MyWebApp]** を右クリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-131">In Eclipse's Project Explorer, right-click **MyWebApp**.</span></span>
 
 2. <span data-ttu-id="a4b9e-132">コンテキスト メニューの **[Azure]**、**[Publish as Azure Web App (Azure Web アプリとして発行)]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-132">In the context menu, select **Azure**, then click **Publish as Azure Web App...**</span></span>
    
@@ -86,7 +87,7 @@ ms.lasthandoff: 02/03/2018
    
    <span data-ttu-id="a4b9e-138">複数の Azure アカウントがある場合、サインイン プロセス中に同じようなプロンプトが何度も表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-138">If you have multiple Azure accounts, some of the prompts during the sign in process may be shown more than once, even if they appear to be the same.</span></span> <span data-ttu-id="a4b9e-139">このような状況の場合、次のサインイン手順を続行します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-139">When this happens, continue following the sign in instructions.</span></span>
 
-4. <span data-ttu-id="a4b9e-140">Azure アカウントに正常にサインインすると、 **[サブスクリプションの管理]** ダイアログ ボックスに、資格情報に関連付けられたサブスクリプションの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-140">After you have successfully signed into your Azure account, the **Manage Subscriptions** dialog box will display a list of subscriptions that are associated with your credentials.</span></span> <span data-ttu-id="a4b9e-141">複数のサブスクリプションが表示された場合、その一部のみを使用するには、使用しないサブスクリプションのチェックボックスを必要に応じてオフにします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-141">If there are multiple subscriptions listed and you want to work with only a specific subset of them, you may optionally uncheck the ones you do want to use.</span></span> <span data-ttu-id="a4b9e-142">サブスクリプションを選択したら、 **[閉じる]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-142">When you have selected your subscriptions, click **Close**.</span></span>
+4. <span data-ttu-id="a4b9e-140">Azure アカウントに正常にサインインすると、 **[サブスクリプションの管理]** ダイアログ ボックスに、資格情報に関連付けられたサブスクリプションの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-140">After you have successfully signed into your Azure account, the **Manage Subscriptions** dialog box will display a list of subscriptions that are associated with your credentials.</span></span> <span data-ttu-id="a4b9e-141">複数のサブスクリプションが表示された場合、その一部のみを使用するには、使用しないサブスクリプションのチェックボックスを必要に応じてオフにします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-141">If there are multiple subscriptions listed and you want to work with only a specific subset of them, you may optionally uncheck the ones you do want to use.</span></span> <span data-ttu-id="a4b9e-142">サブスクリプションを選択したら、 **[閉じる]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-142">When you have selected your subscriptions, click **Close**.</span></span>
    
    ![[サブスクリプションの管理] ダイアログ ボックス][05]
 
@@ -141,8 +142,8 @@ ms.lasthandoff: 02/03/2018
           ![[新しい App Service プラン] ダイアログ ボックス][09]
       * <span data-ttu-id="a4b9e-188">**[Name (名前)]** ボックスに、新しい App Service プランの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-188">In the the **Name** textbox, specify a name for your new App Service Plan.</span></span>
       * <span data-ttu-id="a4b9e-189">**[Location (場所)]** ドロップダウン メニューで、プランに適した Azure データ センターの場所を選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-189">In the the **Location** drop-down menu, select the appropriate Azure data center location for the plan.</span></span>
-      * <span data-ttu-id="a4b9e-190">**[Pricing Tier (価格レベル)]** ドロップダウン メニューで、プランに適した価格を選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-190">In the the **Pricing Tier** drop-down menu, select the appropriate pricing for the plan.</span></span> <span data-ttu-id="a4b9e-191">テスト目的の場合は、 **[Free]**を選択できます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-191">For testing purposes you can choose **Free**.</span></span>
-      * <span data-ttu-id="a4b9e-192">**[Instance Size (インスタンス サイズ)]** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-192">In the the **Instance Size** drop-down menu, select the appropriate instance size for the plan.</span></span> <span data-ttu-id="a4b9e-193">テスト目的の場合は、 **[Small]**を選択できます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-193">For testing purposes you can choose **Small**.</span></span>
+      * <span data-ttu-id="a4b9e-190">**[Pricing Tier (価格レベル)]** ドロップダウン メニューで、プランに適した価格を選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-190">In the the **Pricing Tier** drop-down menu, select the appropriate pricing for the plan.</span></span> <span data-ttu-id="a4b9e-191">テスト目的の場合は、 **[Free]** を選択できます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-191">For testing purposes you can choose **Free**.</span></span>
+      * <span data-ttu-id="a4b9e-192">**[Instance Size (インスタンス サイズ)]** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-192">In the the **Instance Size** drop-down menu, select the appropriate instance size for the plan.</span></span> <span data-ttu-id="a4b9e-193">テスト目的の場合は、 **[Small]** を選択できます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-193">For testing purposes you can choose **Small**.</span></span>
 
    <span data-ttu-id="a4b9e-194">i.</span><span class="sxs-lookup"><span data-stu-id="a4b9e-194">i.</span></span> <span data-ttu-id="a4b9e-195">これらの手順をすべて完了すると、[New Web App Container] \(新しい Web アプリ コンテナー) ダイアログ ボックスは次の図のようになります。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-195">Once you have completed all of the above steps, the New Web App Container dialog box should resemble the following illustration:</span></span>
       
@@ -179,7 +180,7 @@ ms.lasthandoff: 02/03/2018
 
 2. <span data-ttu-id="a4b9e-216">コンテキスト メニューが表示されたら、**[Azure]**、**[Publish as Azure Web App (Azure Web アプリとして発行)]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-216">When the context menu appears, select **Azure** and then **Publish as Azure Web App...**</span></span>
 
-3. <span data-ttu-id="a4b9e-217">既にログインしているので、既存の Web アプリ コンテナーの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-217">Since you have already logged in previously, you will see a list of your existing Web App containers.</span></span> <span data-ttu-id="a4b9e-218">Java アプリケーションを発行または再発行するコンテナーを選択し、 **[OK]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-218">Select the one you want to publish or re-publish your Java application to and click **OK**.</span></span>
+3. <span data-ttu-id="a4b9e-217">既にログインしているので、既存の Web アプリ コンテナーの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-217">Since you have already logged in previously, you will see a list of your existing Web App containers.</span></span> <span data-ttu-id="a4b9e-218">Java アプリケーションを発行または再発行するコンテナーを選択し、 **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-218">Select the one you want to publish or re-publish your Java application to and click **OK**.</span></span>
 
 <span data-ttu-id="a4b9e-219">数秒後、**[Azure Activity Log (Azure アクティビティ ログ)]** ビューに更新されたデプロイが **[Published (発行済み)]** と表示され、Web ブラウザーで更新されたアプリケーションを確認できます。</span><span class="sxs-lookup"><span data-stu-id="a4b9e-219">A few seconds later, the **Azure Activity Log** view will show your updated deployment as **Published** and you will be able to verify your updated application in a web browser.</span></span>
 
@@ -213,6 +214,7 @@ ms.lasthandoff: 02/03/2018
 [Azure Toolkit for IntelliJ]: ../intellij/azure-toolkit-for-intellij.md
 [intellij-hello-world]: ../intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md
 [Web Apps の概要]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Updated Version]: azure-toolkit-for-eclipse-create-hello-world-web-app.md

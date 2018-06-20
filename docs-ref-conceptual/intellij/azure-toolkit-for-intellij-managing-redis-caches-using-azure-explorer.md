@@ -1,12 +1,12 @@
 ---
-title: "Azure Explorer for IntelliJ を使用して Redis Cache を管理する"
-description: "Azure Explorer for IntelliJ を使って Azure Redis Cache を管理する方法について説明します。"
-services: 
+title: Azure Explorer for IntelliJ を使用して Redis Cache を管理する
+description: Azure Explorer for IntelliJ を使って Azure Redis Cache を管理する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954183"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="0cce5-103">Azure Explorer for IntelliJ を使用して Redis Cache を管理する</span><span class="sxs-lookup"><span data-stu-id="0cce5-103">Managing Redis Caches using the Azure Explorer for IntelliJ</span></span>
 
@@ -101,10 +102,14 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Redis Cache の価格]: https://azure.microsoft.com/pricing/details/cache/
+[Redis Cache Pricing]: https://azure.microsoft.com/pricing/details/cache/
 [Azure Redis Cache]: https://azure.microsoft.com/services/cache/
 [Redis Cache のドキュメント]: /azure/redis-cache
+[Redis Cache Documentation]: /azure/redis-cache
 [Azure Redis Cache の構成方法]: /azure/redis-cache/cache-configure
+[How to configure Azure Redis Cache]: /azure/redis-cache/cache-configure
 [Azure Toolkit for IntelliJ のサインイン手順]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign In Instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 
 <!-- IMG List -->
 

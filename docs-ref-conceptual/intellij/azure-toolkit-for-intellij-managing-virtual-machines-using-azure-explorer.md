@@ -1,12 +1,12 @@
 ---
-title: "Azure Explorer for IntelliJ を使用して仮想マシンを管理する"
-description: "Azure Explorer for IntelliJ を使用して Azure 仮想マシンを管理する方法について説明します。"
-services: 
+title: Azure Explorer for IntelliJ を使用して仮想マシンを管理する
+description: Azure Explorer for IntelliJ を使用して Azure 仮想マシンを管理する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954873"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="d8fa7-103">Azure Explorer for IntelliJ を使用して仮想マシンを管理する</span><span class="sxs-lookup"><span data-stu-id="d8fa7-103">Manage virtual machines by using the Azure Explorer for IntelliJ</span></span>
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/03/2018
 
    * <span data-ttu-id="d8fa7-148">**[可用性セット]**: 仮想マシンが属することができる可用性セットを指定します (省略可能)。</span><span class="sxs-lookup"><span data-stu-id="d8fa7-148">**Availability set**: Specifies an optional availability set that your virtual machine can belong to.</span></span> <span data-ttu-id="d8fa7-149">既存の可用性セットを指定するか、新しい可用性セットを作成できます。仮想マシンが可用性セットに属さない場合は、**[(なし)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="d8fa7-149">You can select an existing availability set, create a new availability set or, if your virtual machine will not belong to an availability set, select **(None)**.</span></span>
 
-9. <span data-ttu-id="d8fa7-150">**[完了]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="d8fa7-150">Click **Finish**.</span></span>  
+9. <span data-ttu-id="d8fa7-150">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="d8fa7-150">Click **Finish**.</span></span>  
     <span data-ttu-id="d8fa7-151">新しい仮想マシンが Azure エクスプローラーのツール ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="d8fa7-151">Your new virtual machine appears in the Azure Explorer tool window.</span></span> 
 
    ![Azure エクスプローラー ビューの新しい仮想マシン][CR08]
@@ -156,10 +157,15 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure Toolkit for IntelliJ のサインイン手順]: ./azure-toolkit-for-intellij-sign-in-instructions.md
+[Sign-in instructions for the Azure Toolkit for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [Azure の Windows 仮想マシンのサイズ]: /azure/virtual-machines/virtual-machines-windows-sizes
+[Sizes for Windows virtual machines in Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure の Linux 仮想マシンのサイズ]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Sizes for Linux virtual machines in Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
 [Windows 仮想マシンの料金]: /pricing/details/virtual-machines/windows/
+[Windows virtual-machine pricing]: /pricing/details/virtual-machines/windows/
 [Linux 仮想マシンの料金]: /pricing/details/virtual-machines/linux/
+[Linux virtual-machine pricing]: /pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31823685"
 ---
 # <a name="azure-resource-manager-libraries-for-java"></a><span data-ttu-id="c01b0-104">Azure Resource Manager Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="c01b0-104">Azure Resource Manager libraries for Java</span></span>
 

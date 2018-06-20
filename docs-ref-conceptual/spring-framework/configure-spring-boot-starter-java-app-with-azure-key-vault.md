@@ -19,6 +19,7 @@ ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883685"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a><span data-ttu-id="fdde4-103">Azure Key Vault 用の Spring Boot Starter の使用方法</span><span class="sxs-lookup"><span data-stu-id="fdde4-103">How to use the Spring Boot Starter for Azure Key Vault</span></span>
 

@@ -1,12 +1,12 @@
 ---
-title: "IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する"
-description: "このチュートリアルでは、Azure Toolkit for IntelliJ バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。"
+title: IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
+description: このチュートリアルでは、Azure Toolkit for IntelliJ バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954783"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a><span data-ttu-id="02dd1-103">IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="02dd1-103">Create a Hello World web app for Azure using the legacy toolkit for IntelliJ</span></span>
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 02/03/2018
    
    ![Azure のログイン ダイアログ][07]
 
-3. <span data-ttu-id="02dd1-156">Azure アカウントに正常にサインインすると、**[サブスクリプションの管理]** ダイアログ ボックスに、資格情報に関連付けられたサブスクリプションの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-156">After you have successfully signed in to your Azure account, the **Manage Subscriptions** dialog box will display a list of subscriptions that are associated with your credentials.</span></span> <span data-ttu-id="02dd1-157">(複数のサブスクリプションが表示された場合、その一部のみを使うには、使わないサブスクリプションのチェックボックスを必要に応じてオフにします)。サブスクリプションを選択したら、 **[閉じる]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="02dd1-157">(If there are multiple subscriptions listed and you want to work with only a specific subset of them, you may optionally uncheck the subscriptions you don't want to use.) When you have selected your subscriptions, click **Close**.</span></span>
+3. <span data-ttu-id="02dd1-156">Azure アカウントに正常にサインインすると、**[サブスクリプションの管理]** ダイアログ ボックスに、資格情報に関連付けられたサブスクリプションの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-156">After you have successfully signed in to your Azure account, the **Manage Subscriptions** dialog box will display a list of subscriptions that are associated with your credentials.</span></span> <span data-ttu-id="02dd1-157">(複数のサブスクリプションが表示された場合、その一部のみを使うには、使わないサブスクリプションのチェックボックスを必要に応じてオフにします)。サブスクリプションを選択したら、 **[閉じる]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="02dd1-157">(If there are multiple subscriptions listed and you want to work with only a specific subset of them, you may optionally uncheck the subscriptions you don't want to use.) When you have selected your subscriptions, click **Close**.</span></span>
    
    ![サブスクリプションの管理][08]
 
@@ -154,8 +155,8 @@ ms.lasthandoff: 02/03/2018
 
       * <span data-ttu-id="02dd1-196">**[Name]\(名前\)** ボックスに、新しい App Service プランの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-196">In the **Name** textbox, specify a name for your new App Service Plan.</span></span>
       * <span data-ttu-id="02dd1-197">**[Location]\(場所\)** ドロップダウン メニューで、プランに適した Azure データ センターの場所を選択します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-197">In the **Location** drop-down menu, select the appropriate Azure data center location for the plan.</span></span>
-      * <span data-ttu-id="02dd1-198">**[Pricing Tier]\(価格レベル\)** ドロップダウン メニューで、プランに適した価格を選択します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-198">In the **Pricing Tier** drop-down menu, select the appropriate pricing for the plan.</span></span> <span data-ttu-id="02dd1-199">テスト目的の場合は、 **[Free]**を選択できます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-199">For testing purposes you can choose **Free**.</span></span>
-      * <span data-ttu-id="02dd1-200">**[Instance Size]\(インスタンス サイズ\)** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-200">In the **Instance Size** drop-down menu, select the appropriate instance size for the plan.</span></span> <span data-ttu-id="02dd1-201">テスト目的の場合は、 **[Small]**を選択できます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-201">For testing purposes you can choose **Small**.</span></span>
+      * <span data-ttu-id="02dd1-198">**[Pricing Tier]\(価格レベル\)** ドロップダウン メニューで、プランに適した価格を選択します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-198">In the **Pricing Tier** drop-down menu, select the appropriate pricing for the plan.</span></span> <span data-ttu-id="02dd1-199">テスト目的の場合は、 **[Free]** を選択できます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-199">For testing purposes you can choose **Free**.</span></span>
+      * <span data-ttu-id="02dd1-200">**[Instance Size]\(インスタンス サイズ\)** ドロップダウン メニューで、プランに適したインスタンス サイズを選択します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-200">In the **Instance Size** drop-down menu, select the appropriate instance size for the plan.</span></span> <span data-ttu-id="02dd1-201">テスト目的の場合は、 **[Small]** を選択できます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-201">For testing purposes you can choose **Small**.</span></span>
       * <span data-ttu-id="02dd1-202">Click **OK**.</span><span class="sxs-lookup"><span data-stu-id="02dd1-202">Click **OK**.</span></span>
 
    <span data-ttu-id="02dd1-203">h.</span><span class="sxs-lookup"><span data-stu-id="02dd1-203">h.</span></span> <span data-ttu-id="02dd1-204">(オプション) 既定では、Java 8 の最新のディストリビューションは、Azure によって Web アプリ コンテナーに JVM として自動的にデプロイされます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-204">(Optional) By default, a recent distribution of Java 8 will be automatically deployed as your JVM by Azure to your web app container.</span></span> <span data-ttu-id="02dd1-205">ただし、JVM の別のバージョンおよびディストリビューションを選択することができます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-205">However, you can select a different version and distribution of the JVM.</span></span> <span data-ttu-id="02dd1-206">そのためには、次の手順を実行してください。</span><span class="sxs-lookup"><span data-stu-id="02dd1-206">To do so, use the following steps:</span></span>
@@ -213,7 +214,7 @@ ms.lasthandoff: 02/03/2018
 
 1. <span data-ttu-id="02dd1-243">IntelliJ の Project Explorer で、更新する Java アプリケーションを右クリックするか、既存の Web アプリ コンテナーに追加します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-243">In the IntelliJ project explorer, right-click the Java application you want to update or add to an existing Web App Container.</span></span>
 2. <span data-ttu-id="02dd1-244">コンテキスト メニューが表示されたら、**[Azure]**、**[Publish as Azure Web App (Azure Web アプリとして発行)]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="02dd1-244">When the context menu appears, select **Azure** and then **Publish as Azure Web App...**</span></span>
-3. <span data-ttu-id="02dd1-245">既にログインしているので、既存の Web アプリ コンテナーの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-245">Since you have already logged in previously, you will see a list of your existing Web App containers.</span></span> <span data-ttu-id="02dd1-246">Java アプリケーションを発行または再発行するコンテナーを選択し、 **[OK]**をクリックします。</span><span class="sxs-lookup"><span data-stu-id="02dd1-246">Select the one you want to publish or re-publish your Java application to and click **OK**.</span></span>
+3. <span data-ttu-id="02dd1-245">既にログインしているので、既存の Web アプリ コンテナーの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-245">Since you have already logged in previously, you will see a list of your existing Web App containers.</span></span> <span data-ttu-id="02dd1-246">Java アプリケーションを発行または再発行するコンテナーを選択し、 **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="02dd1-246">Select the one you want to publish or re-publish your Java application to and click **OK**.</span></span>
 
 <span data-ttu-id="02dd1-247">数秒後、**[Azure Activity Log (Azure アクティビティ ログ)]** ビューに更新されたデプロイが **[Published (発行済み)]** と表示され、Web ブラウザーで更新されたアプリケーションを確認できます。</span><span class="sxs-lookup"><span data-stu-id="02dd1-247">A few seconds later, the **Azure Activity Log** view will show your updated deployment as **Published** and you will be able to verify your updated application in a web browser.</span></span>
 
@@ -244,6 +245,7 @@ ms.lasthandoff: 02/03/2018
 [Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Web Apps の概要]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Updated Version]: azure-toolkit-for-intellij-create-hello-world-web-app.md

@@ -1,12 +1,12 @@
 ---
-title: "Azure Container Service で Spring Boot Web アプリを Linux にデプロイする"
-description: "このチュートリアルでは、Microsoft Azure の Linux Web アプリとして Spring Boot アプリケーションをデプロイする方法について説明します。"
+title: Azure Container Service で Spring Boot Web アプリを Linux にデプロイする
+description: このチュートリアルでは、Microsoft Azure の Linux Web アプリとして Spring Boot アプリケーションをデプロイする方法について説明します。
 services: container-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: asirveda;robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -20,6 +20,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954753"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a><span data-ttu-id="07b15-103">Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする</span><span class="sxs-lookup"><span data-stu-id="07b15-103">Deploy a Spring Boot application on Linux in the Azure Container Service</span></span>
 
@@ -230,7 +231,7 @@ ms.lasthandoff: 02/03/2018
 >
 > 3. <span data-ttu-id="07b15-178">一覧から Web アプリを選択します。</span><span class="sxs-lookup"><span data-stu-id="07b15-178">Select your web app from the list.</span></span> <span data-ttu-id="07b15-179">(下の図の項目 #2 を参照。)</span><span class="sxs-lookup"><span data-stu-id="07b15-179">(Item #2 in the image below.)</span></span>
 >
-> 4. <span data-ttu-id="07b15-180">**[アプリケーションの設定]**をクリックします</span><span class="sxs-lookup"><span data-stu-id="07b15-180">Click **Application Settings**.</span></span> <span data-ttu-id="07b15-181">(下の図の項目 #3 を参照。)</span><span class="sxs-lookup"><span data-stu-id="07b15-181">(Item #3 in the image below.)</span></span>
+> 4. <span data-ttu-id="07b15-180">**[アプリケーションの設定]** をクリックします</span><span class="sxs-lookup"><span data-stu-id="07b15-180">Click **Application Settings**.</span></span> <span data-ttu-id="07b15-181">(下の図の項目 #3 を参照。)</span><span class="sxs-lookup"><span data-stu-id="07b15-181">(Item #3 in the image below.)</span></span>
 >
 > 5. <span data-ttu-id="07b15-182">**[App settings]\(アプリ設定\)** セクションで、**PORT** という名前の新しい環境変数を追加して、この値にカスタム ポート番号を入力します。</span><span class="sxs-lookup"><span data-stu-id="07b15-182">In the **App settings** section, add a new environment variable named **PORT** and enter your custom port number for the value.</span></span> <span data-ttu-id="07b15-183">(下の図の項目 #4 を参照。)</span><span class="sxs-lookup"><span data-stu-id="07b15-183">(Item #4 in the image below.)</span></span>
 >
@@ -280,20 +281,29 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
+[Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure ポータル]: https://portal.azure.com/
+[Azure portal]: https://portal.azure.com/
 [Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
+[Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Using a custom Docker image for Azure Web App on Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Docker での Spring Boot の使用開始]: https://github.com/spring-guides/gs-spring-boot-docker
+[Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->

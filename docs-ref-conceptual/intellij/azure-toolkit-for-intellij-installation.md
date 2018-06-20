@@ -1,11 +1,11 @@
 ---
-title: "Azure Toolkit for IntelliJ のインストール"
-description: "Azure Toolkit for IntelliJ プラグインをインストールして、クラウド アプリケーションを作成し、Azure にデプロイする方法を説明します。"
-services: 
+title: Azure Toolkit for IntelliJ のインストール
+description: Azure Toolkit for IntelliJ プラグインをインストールして、クラウド アプリケーションを作成し、Azure にデプロイする方法を説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: c6817c7b-f28c-4c06-8216-41c7a8117de3
 ms.author: robmcm
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954173"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a><span data-ttu-id="178ed-103">Azure Toolkit for IntelliJ のインストール</span><span class="sxs-lookup"><span data-stu-id="178ed-103">Installing the Azure Toolkit for IntelliJ</span></span>
 

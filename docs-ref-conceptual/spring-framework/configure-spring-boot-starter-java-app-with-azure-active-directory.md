@@ -1,12 +1,12 @@
 ---
-title: "Azure Active Directory 用の Spring Boot Starter の使用方法"
-description: "Azure Active Directory スターターを使用して、Spring Boot Initializer アプリを構成する方法について説明します。"
+title: Azure Active Directory 用の Spring Boot Starter の使用方法
+description: Azure Active Directory スターターを使用して、Spring Boot Initializer アプリを構成する方法について説明します。
 services: active-directory
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: java
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954683"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a><span data-ttu-id="2b37f-103">Azure Active Directory 用の Spring Boot Starter の使用方法</span><span class="sxs-lookup"><span data-stu-id="2b37f-103">How to use the Spring Boot Starter for Azure Active Directory</span></span>
 
@@ -252,11 +253,16 @@ ms.lasthandoff: 02/03/2018
 <!-- URL List -->
 
 [Azure Active Directory のドキュメント]: /azure/active-directory/
+[Azure Active Directory Documentation]: /azure/active-directory/
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/

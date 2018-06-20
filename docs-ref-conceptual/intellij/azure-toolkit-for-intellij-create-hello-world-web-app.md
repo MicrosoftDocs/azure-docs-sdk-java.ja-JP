@@ -1,11 +1,11 @@
 ---
-title: "IntelliJ を使用して Azure 用の Hello World Web アプリを作成する"
-description: "このチュートリアルでは、Azure Toolkit for IntelliJ を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。"
+title: IntelliJ を使用して Azure 用の Hello World Web アプリを作成する
+description: このチュートリアルでは、Azure Toolkit for IntelliJ を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
 author: selvasingh
 manager: routlaw
-editor: 
+editor: ''
 ms.assetid: 75ce7b36-e3ae-491d-8305-4b42ce37db4e
 ms.author: robmcm;asirveda
 ms.date: 02/01/2018
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
+ms.locfileid: "28954193"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a><span data-ttu-id="55428-103">IntelliJ を使用して Azure 用の Hello World Web アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="55428-103">Create a Hello World web app for Azure using IntelliJ</span></span>
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 02/03/2018
 
       ![[Run on Web App]\(Web アプリで実行\) ダイアログ ボックス][run-on-web-app-dialog]
 
-   * <span data-ttu-id="55428-136">**[Create New Web App]\(新しい Web アプリを作成する\)**をクリックする。</span><span class="sxs-lookup"><span data-stu-id="55428-136">Click **Create New Web App**.</span></span> <span data-ttu-id="55428-137">新しい Web アプリを作成する場合は、Web アプリに必要な情報を指定し、**[Run]\(実行\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="55428-137">If you choose to create a new web app, specify the requisite information for your web app, and then click **Run**.</span></span>
+   * <span data-ttu-id="55428-136">**[Create New Web App]\(新しい Web アプリを作成する\)** をクリックする。</span><span class="sxs-lookup"><span data-stu-id="55428-136">Click **Create New Web App**.</span></span> <span data-ttu-id="55428-137">新しい Web アプリを作成する場合は、Web アプリに必要な情報を指定し、**[Run]\(実行\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="55428-137">If you choose to create a new web app, specify the requisite information for your web app, and then click **Run**.</span></span>
 
       ![新しい Web アプリの作成][create-new-web-app-dialog]
 
@@ -123,6 +124,7 @@ ms.lasthandoff: 02/03/2018
 [Azure Toolkit for Eclipse]: ../eclipse/azure-toolkit-for-eclipse.md
 [eclipse-hello-world]: ../eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md
 [Web Apps の概要]: /azure/app-service/app-service-web-overview
+[Web Apps Overview]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
 [Legacy Version]: azure-toolkit-for-intellij-create-hello-world-web-app-legacy-version.md
