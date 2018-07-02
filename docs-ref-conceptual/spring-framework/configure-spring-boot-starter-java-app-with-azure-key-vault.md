@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1dda697cac80a6cad3ebbbbf8a5a4f18b515dfd8
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883685"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090715"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault 用の Spring Boot Starter の使用方法
 
@@ -101,6 +101,7 @@ ms.locfileid: "33883685"
    az group create --name wingtiptoysresources --location westus
    ```
    各値の説明:
+
    | パラメーター | 説明 |
    |---|---|
    | `name` | リソース グループの一意の名前を指定します。 |
@@ -121,12 +122,13 @@ ms.locfileid: "33883685"
    }
    ```
 
-1. アプリケーション登録から Azure サービス プリンシパルを作成します。次に例を示します。
+2. アプリケーション登録から Azure サービス プリンシパルを作成します。次に例を示します。
    ```shell
    az ad sp create-for-rbac --name "wingtiptoysuser"
    ```
    各値の説明:
-   | パラメーター | [説明] |
+
+   | パラメーター | 説明 |
    |---|---|
    | `name` | Azure サービス プリンシパルの名前を指定します。 |
 
@@ -142,11 +144,12 @@ ms.locfileid: "33883685"
    }
    ```
 
-1. リソース グループに新しいキー コンテナーを作成します。次に例を示します。
+3. リソース グループに新しいキー コンテナーを作成します。次に例を示します。
    ```azurecli
    az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
    各値の説明:
+
    | パラメーター | 説明 |
    |---|---|
    | `name` | キー コンテナーの一意の名前を指定します。 |
@@ -163,11 +166,12 @@ ms.locfileid: "33883685"
    "https://wingtiptoyskeyvault.vault.azure.net"
    ```
 
-1. 前の手順で作成した Azure サービス プリンシパルのアクセス ポリシーを設定します。次に例を示します。
+4. 前の手順で作成した Azure サービス プリンシパルのアクセス ポリシーを設定します。次に例を示します。
    ```azurecli
    az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
    各値の説明:
+
    | パラメーター | 説明 |
    |---|---|
    | `name` | 前の手順で作成したキー コンテナーの名前を指定します。 |
@@ -192,11 +196,12 @@ ms.locfileid: "33883685"
    }
    ```
 
-1. 新しいキー コンテナーにシークレットを格納します。次に例を示します。
+5. 新しいキー コンテナーにシークレットを格納します。次に例を示します。
    ```azurecli
    az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
    各値の説明:
+
    | パラメーター | 説明 |
    |---|---|
    | `vault-name` | 前の手順で作成したキー コンテナーの名前を指定します。 |
@@ -230,24 +235,26 @@ ms.locfileid: "33883685"
 
 1. 以前にディレクトリにダウンロードした Spring Boot プロジェクトのパッケージ ファイルからファイルを抽出します。
 
-1. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
+2. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
 
-1. このチュートリアルで既に完了した手順で取得した値を使用して、キー コンテナーの値を追加します。次に例を示します。
+3. このチュートリアルで既に完了した手順で取得した値を使用して、キー コンテナーの値を追加します。次に例を示します。
    ```yaml
    azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
    各値の説明:
-   | パラメーター | 説明 |
-   |---|---|
-   | `azure.keyvault.uri` | キー コンテナーの作成時に取得した URI を指定します。 |
-   | `azure.keyvault.client-id` | サービス プリンシパルの作成時に取得した *appId* GUID を指定します。 |
+
+   |          パラメーター          |                                 説明                                 |
+   |-----------------------------|-----------------------------------------------------------------------------|
+   |    `azure.keyvault.uri`     |           キー コンテナーの作成時に取得した URI を指定します。           |
+   | `azure.keyvault.client-id`  |  サービス プリンシパルの作成時に取得した *appId* GUID を指定します。   |
    | `azure.keyvault.client-key` | サービス プリンシパルの作成時に取得した *password* GUID を指定します。 |
 
-1. プロジェクトのメイン ソース コード ファイルに移動します (例: */src/main/java/com/wingtiptoys/secrets*)。
 
-1. テキスト エディターでアプリケーションのメイン Java ファイル (例: *SecretsApplication.java*) を開き、ファイルに次の行を追加します。
+4. プロジェクトのメイン ソース コード ファイルに移動します (例: */src/main/java/com/wingtiptoys/secrets*)。
+
+5. テキスト エディターでアプリケーションのメイン Java ファイル (例: *SecretsApplication.java*) を開き、ファイルに次の行を追加します。
 
    ```java
    package com.wingtiptoys.secrets;
@@ -274,7 +281,7 @@ ms.locfileid: "33883685"
    ```
    このコード例では、キー コンテナーから接続文字列を取得し、コマンド ラインに表示します。
 
-1. Java ファイルを保存して閉じます。
+6. Java ファイルを保存して閉じます。
 
 ## <a name="build-and-test-your-app"></a>アプリのビルドとテスト
 

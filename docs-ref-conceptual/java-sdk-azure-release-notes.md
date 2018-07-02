@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 924ccf9bdaad4bc635f133adbcfcc8f797d06644
-ms.sourcegitcommit: acc83bb537d77568b2a5427479d6354d6ae30885
+ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2017
-ms.locfileid: "23982164"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090685"
 ---
 # <a name="release-notes"></a>リリース ノート 
 
@@ -35,12 +35,12 @@ ms.locfileid: "23982164"
 - これまで Beta 版であった CDN のすべてのメソッド
 - これまで Beta 版であった Application Gateway のすべてのメソッドおよびインターフェイス
 
- ライブラリの一部については引き続きプレビューとなります。 現在のライブラリの状態については、次の表を参照してください。
+  ライブラリの一部については引き続きプレビューとなります。 現在のライブラリの状態については、次の表を参照してください。
 
 サービスまたは機能 | GA として利用可能 | プレビューとして利用可能 
 ---------|---------|---------|-
 コンピューティング  | 仮想マシンと VM の拡張機能、仮想マシン スケール セット、管理ディスク   | Azure Container Service、Azure Container Registry 
-ストレージ   |  ストレージ アカウント       |    暗号化     
+Storage   |  ストレージ アカウント       |    暗号化     
 SQL Database  | データベース、ファイアウォール、エラスティック プール              
 ネットワーク    |  仮想ネットワーク、ネットワーク インターフェイス、IP アドレス、ルーティング テーブル、ネットワーク セキュリティ グループ、DNS、Traffic Manager、Application Gateway  |    ロード バランサー、ネットワーク ピアリング、仮想ネットワーク ゲートウェイ、ネットワーク ウォッチャー 
 その他のサービス    |  リソース マネージャー、Key Vault、Redis、CDN、Batch       |  Web アプリ、関数アプリ、Service Bus、Graph RBAC、Cosmos DB、検索  
