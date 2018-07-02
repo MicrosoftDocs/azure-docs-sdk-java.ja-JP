@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: ebe98a604b52dc9a4b5a47cbf65a4c68a5c86fe3
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954783"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090785"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -161,14 +161,14 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
    h. (オプション) 既定では、Java 8 の最新のディストリビューションは、Azure によって Web アプリ コンテナーに JVM として自動的にデプロイされます。 ただし、JVM の別のバージョンおよびディストリビューションを選択することができます。 そのためには、次の手順を実行してください。
       
-      * **[New Web App Container (新しい Web アプリ コンテナー)]** ダイアログ ボックスの **[JDK]** タブをクリックします。
-      * 次のオプションのいずれかを選択できます。
+   * **[New Web App Container (新しい Web アプリ コンテナー)]** ダイアログ ボックスの **[JDK]** タブをクリックします。
+   * 次のオプションのいずれかを選択できます。
         
-         * Azure によって提供される既定の JDK をデプロイする
-         * Azure で利用可能な追加の JDK のドロップダウン リストからサード パーティの JDK をデプロイする
-         * カスタム JDK をデプロイする。カスタム JDK は、ZIP ファイルとしてパッケージ化され、一般に入手可能であるか、Azure ストレージ アカウントに格納されている必要があります。
+      * Azure によって提供される既定の JDK をデプロイする
+      * Azure で利用可能な追加の JDK のドロップダウン リストからサード パーティの JDK をデプロイする
+      * カスタム JDK をデプロイする。カスタム JDK は、ZIP ファイルとしてパッケージ化され、一般に入手可能であるか、Azure ストレージ アカウントに格納されている必要があります。
         
-      ![[New Web App Container (新しい Web アプリ コンテナー)] の [JDK] タブ][11b]
+     ![[New Web App Container (新しい Web アプリ コンテナー)] の [JDK] タブ][11b]
 
    i. これらの手順をすべて完了すると、[New Web App Container] \(新しい Web アプリ コンテナー) ダイアログ ボックスは次の図のようになります。
       
