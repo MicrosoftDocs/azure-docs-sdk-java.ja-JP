@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 64cefc1ace5d0377dea25fdbdc83d8dada31ddf7
-ms.sourcegitcommit: ed130145f9e5c2d803791d96bb118023175e644a
+ms.openlocfilehash: 05fb81466202547cb1bad34caae0f94f16a9d21b
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30223379"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090674"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する
 
@@ -60,11 +60,11 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
    a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Docker image name] \(Docker イメージ名)** ボックスに、Docker ホストの一意の名前を入力します。 (このウィザードでは名前が自動的に作成されますが、それは変更できます)。 
 
    b. **[ホスト]** 領域には、既に作成しているすべての Docker ホストが表示されます。 次のいずれかを実行します。 
-      * 既存の Docker ホストがある場合は、それに Web アプリをデプロイできます。
-      * Docker ホストを作成するには、緑色のプラス記号 (**+**) をクリックします。  
-       **[Create Docker Host]\(Docker ホストの作成\)** ダイアログ ボックスが表示されます。 
+   * 既存の Docker ホストがある場合は、それに Web アプリをデプロイできます。
+   * Docker ホストを作成するには、緑色のプラス記号 (**+**) をクリックします。  
+     **[Create Docker Host]\(Docker ホストの作成\)** ダイアログ ボックスが表示されます。 
 
-      ![[Deploy Docker Container on Azure] \(Azure への Docker コンテナーのデプロイ) ウィザード][PUB04a]
+     ![[Deploy Docker Container on Azure] \(Azure への Docker コンテナーのデプロイ) ウィザード][PUB04a]
 
 4. **[Configure the new virtual machine]\(新しい仮想マシンの構成\)** ウィンドウで、Docker ホストについての以下の情報を指定します  (ほとんどの情報はウィザードによって自動的に生成されますが、どの情報も変更することができます)。 
 
@@ -97,50 +97,50 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 6. 次のいずれかのオプションを選択します。
 
-      * **[Import credentials from Azure Key Vault]\(Azure Key Vault から資格情報をインポート\)**: 以前に保存した、Azure サブスクリプションに格納されている資格情報のセットを指定します。
+   * **[Import credentials from Azure Key Vault]\(Azure Key Vault から資格情報をインポート\)**: 以前に保存した、Azure サブスクリプションに格納されている資格情報のセットを指定します。
 
-          > [!NOTE]
-          > 特定のアカウントまたはサービス プリンシパルで作成された Azure Key Vault は、サブスクリプションを共有する別のアカウントまたはサービス プリンシパルから自動的にアクセスできるようにはなりません。 別のアカウントまたはサービス プリンシパルが Key Vault を使用できるようにするには、Azure Portal を使用して、アカウントまたはサービス プリンシパルを追加する必要があります。
+       > [!NOTE]
+       > 特定のアカウントまたはサービス プリンシパルで作成された Azure Key Vault は、サブスクリプションを共有する別のアカウントまたはサービス プリンシパルから自動的にアクセスできるようにはなりません。 別のアカウントまたはサービス プリンシパルが Key Vault を使用できるようにするには、Azure Portal を使用して、アカウントまたはサービス プリンシパルを追加する必要があります。
 
-      * **[New log in credentials]\(新しいログイン資格情報\)**: ログイン資格情報の新しいセットを作成します。 このオプションを選択する場合は、次の操作を行います。
+   * **[New log in credentials]\(新しいログイン資格情報\)**: ログイン資格情報の新しいセットを作成します。 このオプションを選択する場合は、次の操作を行います。
 
-    a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[VM Credentials]\(VM 資格情報\)** タブで、Docker ホストの仮想マシン ログイン資格情報に次の情報を入力します。
+     a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[VM Credentials]\(VM 資格情報\)** タブで、Docker ホストの仮想マシン ログイン資格情報に次の情報を入力します。
 
-    * **[ユーザー名]**: 仮想マシン ログイン資格情報のユーザー名を入力します。
+     * **[ユーザー名]**: 仮想マシン ログイン資格情報のユーザー名を入力します。
 
-    * **[パスワード]** および **[確認]** : 仮想マシン ログイン資格情報のパスワードを入力します。
+     * **[パスワード]** および **[確認]** : 仮想マシン ログイン資格情報のパスワードを入力します。
 
-    * **[SSH]**: Docker ホストの Secure Shell (SSH) 設定を入力します。 次のいずれかを選択します。
+     * **[SSH]**: Docker ホストの Secure Shell (SSH) 設定を入力します。 次のいずれかを選択します。
 
-        * **[なし]**: 仮想マシンが SSH 接続を許可しないことを指定します。
+     * **[なし]**: 仮想マシンが SSH 接続を許可しないことを指定します。
 
-        * **[自動生成]**: SSH 経由で接続するために必要な設定を自動的に作成します。
+     * **[自動生成]**: SSH 経由で接続するために必要な設定を自動的に作成します。
 
-        * **[Import from directory]\(ディレクトリからインポート\)**: 以前 SSH 設定が保存されているディレクトリを指定できます。 このディレクトリには、次の 2 つのファイルが含まれている必要があります。
+     * **[Import from directory]\(ディレクトリからインポート\)**: 以前 SSH 設定が保存されているディレクトリを指定できます。 このディレクトリには、次の 2 つのファイルが含まれている必要があります。
 
-            * *id_rsa*: ユーザーの RSA ID が含まれています。
+         * *id_rsa*: ユーザーの RSA ID が含まれています。
 
-            * *id_rsa.pub*: 認証に使用される RSA 公開キーが含まれています。
+         * *id_rsa.pub*: 認証に使用される RSA 公開キーが含まれています。
 
-    b. **[Docker Daemon Access]\(Docker デーモン アクセス\)** タブで、以下の情報を指定します。
+     b. **[Docker Daemon Access]\(Docker デーモン アクセス\)** タブで、以下の情報を指定します。
 
-    ![[Create Docker Host] \(Docker ホストの作成)][PUB06]
+     ![[Create Docker Host] \(Docker ホストの作成)][PUB06]
     
-    * **[Docker Daemon port] \(Docker デーモン ポート)**: Docker ホストの固有の TCP ポートを入力します。
+     * **[Docker Daemon port] \(Docker デーモン ポート)**: Docker ホストの固有の TCP ポートを入力します。
     
-    * **[TLS Security] \(TLS セキュリティ)**: Docker ホストのトランスポート層セキュリティ設定を入力します。 次のオプションから選択できます。
+     * **[TLS Security] \(TLS セキュリティ)**: Docker ホストのトランスポート層セキュリティ設定を入力します。 次のオプションから選択できます。
     
-        * **[なし]**: 仮想マシンが TLS 接続を許可しないことを指定します。
+     * **[なし]**: 仮想マシンが TLS 接続を許可しないことを指定します。
         
-        * **[自動生成]**: TLS 経由で接続するために必要な設定を自動的に作成します。
+     * **[自動生成]**: TLS 経由で接続するために必要な設定を自動的に作成します。
         
-        * **[Import from directory] \(ディレクトリからのインポート)**: 以前に保存された一連の TLS 設定を含むディレクトリを指定します。 このディレクトリには、次の 6 つのファイルが含まれている必要があります。
+     * **[Import from directory] \(ディレクトリからのインポート)**: 以前に保存された一連の TLS 設定を含むディレクトリを指定します。 このディレクトリには、次の 6 つのファイルが含まれている必要があります。
         
-            * *ca.pem* と *ca-key.pem*: TLS 証明機関の証明書と公開キーが含まれています。
+         * *ca.pem* と *ca-key.pem*: TLS 証明機関の証明書と公開キーが含まれています。
             
-            * *cert.pem* と *key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
+         * *cert.pem* と *key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
             
-            * *server.pem* と *server-key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
+         * *server.pem* と *server-key.pem*: TLS 認証に使用されるクライアント証明書と公開キーが含まれています。
 
 7. 必要な情報を入力したら、**[完了]** をクリックします。  
     **Deploy Docker Container on Azure (Azure に Docker コンテナーをデプロイ)** ウィザードが再び表示されます。
