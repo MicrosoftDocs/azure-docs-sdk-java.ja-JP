@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: active-directory
-ms.openlocfilehash: 28063a1a4299fd78ba76533d0ffdc0346434eea2
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 4a610e2f0d9fb2e219c42155e2b0cb76fc78b09a
+ms.sourcegitcommit: 5bfb3af5778167500a061157cbd0ad1cede8f90e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823785"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37799700"
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Azure Active Directory Libraries for Java
 
@@ -87,14 +87,14 @@ RoleAssignment roleAssignment2 = authenticated.roleAssignments()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/java/api/overview/azure/activedirectory/management)
+> [Management API を探す](/java/api/activedirectory/management)
 
 
 ## <a name="samples"></a>サンプル
 
-[グループ、ユーザー、およびロールを管理する](https://github.com/Azure-Samples/aad-java-browse-graph-and-manage-roles)    
+[グループ、ユーザー、およびロールを管理する](https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles)    
 [Java Web アプリでユーザーのサインインとサインアウトを行う](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)    
 [コマンド ライン アプリを使用して Azure AD で API にアクセスする](https://github.com/Azure-Samples/active-directory-java-native-headless)   
-[Java Web アプリから Active AD Graph API を呼び出す](https://github.com/Azure-Samples/active-directory-java-graphapi-web/)  
+[Java Web アプリから Active AD Graph API を呼び出す](https://github.com/Azure-Samples/active-directory-java-webapp-openidconnect)  
 
 アプリで使用できる [Azure AD 用の Java コードのサンプル](https://azure.microsoft.com/en-us/resources/samples/?term=active+directory&platform=java)を参照してください。
