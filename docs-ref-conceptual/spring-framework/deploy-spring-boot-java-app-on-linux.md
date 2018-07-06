@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: c3a10a0d6029ba31b13f82907311d9182f98acb6
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: 49d94d11ad6a4e103ded849e477d99f01955c693
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954753"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090865"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする
 
@@ -96,9 +96,9 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 > Azure Portal ではなく Azure CLI を使用する場合は、「[Azure CLI 2.0 を使用したプライベート Docker コンテナー レジストリの作成](/azure/container-registry/container-registry-get-started-azure-cli)」の手順に従います。
 >
 
-1. [Azure ポータル]を参照して、サインインします。
+1. [Azure Portal]を参照して、サインインします。
 
-   Azure Portal のアカウントにサインインしたら、「[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
+   Azure Portal のアカウントにサインインしたら、「[Azure ポータルを使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
 
 1. **[+ 新規]** のメニュー アイコン、**[コンテナー]**、**[Azure Container Registry]** の順にクリックします。
    
@@ -191,13 +191,13 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>コンテナー イメージを使用して Azure App Service で Linux に Web アプリを作成する
 
-1. [Azure ポータル]を参照して、サインインします。
+1. [Azure Portal]を参照して、サインインします。
 
-1. **[+ 新規]** のメニュー アイコン、**[Web + Mobile]**、**[Web App on Linux]** の順にクリックします。
+2. **[+ 新規]** のメニュー アイコン、**[Web + Mobile]**、**[Web App on Linux]** の順にクリックします。
    
    ![Azure ポータルで Web アプリを新しく作成する][LX01]
 
-1. **[Web App on Linux]** ページが表示されたら、次の情報を入力します。
+3. **[Web App on Linux]** ページが表示されたら、次の情報を入力します。
 
    a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[App name]\(アプリ名\)** に一意の名前 (例: "*wingtiptoyslinux*") を入力します。
 
@@ -207,25 +207,25 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
    d. **[コンテナーの構成]** をクリックして、次の情報を入力します。
 
-      * **[プライベート レジストリ]** を選択します。
+   * **[プライベート レジストリ]** を選択します。
 
-      * **[イメージとオプションのタグ]**: 先に設定したコンテナー名 ("*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*" など) を指定します。
+   * **[イメージとオプションのタグ]**: 先に設定したコンテナー名 ("*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*" など) を指定します。
 
-      * **[サーバーの URL]**: 先に設定したレジストリの URL ("*https://wingtiptoysregistry.azurecr.io*" など) を指定します。
+   * **[サーバーの URL]**: 先に設定したレジストリの URL ("*<https://wingtiptoysregistry.azurecr.io>*" など) を指定します。
 
-      * **[ログイン ユーザー名]** と **[パスワード]**: 前の手順で使用した**アクセス キー**から、ログイン資格情報を指定します。
+   * **[ログイン ユーザー名]** と **[パスワード]**: 前の手順で使用した**アクセス キー**から、ログイン資格情報を指定します。
    
    e. 上記の情報をすべて入力したら、**[OK]** をクリックします。
 
    ![Web アプリの設定を構成する][LX02]
 
-1. **Create** をクリックしてください。
+4. **Create** をクリックしてください。
 
 > [!NOTE]
 >
 > Azure は、80 または 8080 の標準のポートで実行されている埋め込みの Tomcat サーバーにインターネットの要求を自動的にマップします。 ただし、埋め込みの Tomcat サーバーをカスタム ポートで実行するように構成している場合は、埋め込みの Tomcat サーバーのポートを定義する環境変数を Web アプリに追加する必要があります。 そのためには、次の手順を実行してください。
 >
-> 1. [Azure ポータル]を参照して、サインインします。
+> 1. [Azure Portal]を参照して、サインインします。
 > 
 > 2. **[App Services]** のアイコンをクリックします。 (下の図の項目 #1 を参照。)
 >
@@ -268,7 +268,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
@@ -283,14 +283,14 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
-[Azure ポータル]: https://portal.azure.com/
-[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
+[Azure Portal]: https://portal.azure.com/
+[Azure ポータルを使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

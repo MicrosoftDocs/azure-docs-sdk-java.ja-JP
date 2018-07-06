@@ -4,22 +4,22 @@ description: Azure Active Directory スターターを使用して、Spring Boot
 services: active-directory
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 06/20/2018
 ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: cf1cad0b87626058f7204a6565d09fb8901b7ce4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: adcbc78cc129daf589bf070741308e4024432e5d
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954683"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090835"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory 用の Spring Boot Starter の使用方法
 
@@ -37,7 +37,7 @@ ms.locfileid: "28954683"
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
 
-1. <https://start.spring.io/> に移動します。
+1. <https://start.spring.io/> を参照します。
 
 1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
 
@@ -75,13 +75,17 @@ ms.locfileid: "28954683"
 
    ![Azure Active Directory を選択する][directory-03]
 
+1. ポータル メニューから **[Azure Active Directory]** を選択し、**[プロパティ]** をクリックして **[ディレクトリ ID]** をコピーします。これはこの記事で後ほど使用します。
+
+   ![Azure Active Directory ID をコピーする][directory-13]
+
 ### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Spring Boot アプリのアプリケーション登録を追加する
 
 1. ポータルのメニューで **[Azure Active Directory]** を選択し、**[概要]** をクリックして、**[アプリの登録]** をクリックします。
 
    ![新しいアプリ登録を追加する][directory-04]
 
-1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの**名前**を指定し、**[サインオン URL]** に「http://localhost:8080 」と入力して、**[作成]** をクリックします。
+1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの **名前** を指定し、**[サインオン URL]** に「http://localhost:8080」と入力して、**[作成]** をクリックします。
 
    ![新しいアプリ登録を作成する][directory-05]
 
@@ -89,7 +93,7 @@ ms.locfileid: "28954683"
 
    ![アプリ登録を選択する][directory-06]
 
-1. アプリ登録のページで、後で使用できるように**アプリケーション ID** をコピーし、**[キー]** をクリックします。
+1. アプリ登録のページで、後で使用できるように**アプリケーション ID** をコピーし、**[設定]**、**[キー]** の順にクリックします。
 
    ![アプリの登録キーを作成する][directory-07]
 
@@ -97,7 +101,7 @@ ms.locfileid: "28954683"
 
    ![アプリの登録キーのパラメーターを指定する][directory-08]
 
-1. アプリ登録のメイン ページで、**[必要なアクセス許可]** をクリックします。
+1. アプリ登録のメイン ページで、**[設定]**、**[必要なアクセス許可]** の順にクリックします。
 
    ![アプリ登録の必要なアクセス許可][directory-09]
 
@@ -113,105 +117,162 @@ ms.locfileid: "28954683"
 
    ![アクセス許可を付与する][directory-12]
 
+1. アプリ登録のメイン ページで、**[設定]**、**[応答 URL]** の順にクリックします。
+
+   ![応答 URL を編集する][directory-14]
+
+1. 新しい応答 URL として「http://localhost:8080/login/oauth2/code/azure」と入力し、**[保存]** をクリックします。
+
+   ![新しい応答 URL を追加する][directory-15]
+
 ## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot アプリケーションの構成とコンパイル
 
 1. ダウンロードしたプロジェクトのアーカイブからディレクトリにファイルを抽出します。
 
-1. プロジェクトの親フォルダーに移動し、テキスト エディターで *pom.xml* ファイルを開きます。
+2. プロジェクトの親フォルダーに移動し、テキスト エディターで *pom.xml* ファイルを開きます。
 
-1. Spring OAuth2 セキュリティの依存関係を追加します。次に例を示します。
+3. Spring OAuth2 セキュリティの依存関係を追加します。次に例を示します。
 
    ```xml
    <dependency>
-      <groupId>org.springframework.security.oauth</groupId>
-      <artifactId>spring-security-oauth2</artifactId>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-client</artifactId>
+   </dependency>
+   <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-jose</artifactId>
    </dependency>
    ```
 
-1. *pom.xml* ファイルを保存して閉じます。
+4. *pom.xml* ファイルを保存して閉じます。
 
-1. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
+5. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
 
-1. 前の手順で取得した値を使用して、ストレージ アカウントのキーを追加します。次に例を示します。
+6. 前の手順で取得した値を使用して、ストレージ アカウントのキーを追加します。次に例を示します。
 
    ```yaml
-   # Specifies your Active Directory Application ID:
-   azure.activedirectory.clientId=11111111-1111-1111-1111-1111111111111111
+   # Specifies your Active Directory ID:
+   azure.activedirectory.tenant-id=22222222-2222-2222-2222-222222222222
 
-   # Specifies your secret key:
-   azure.activedirectory.clientSecret=AbCdEfGhIjKlMnOpQrStUvWxYz==
+   # Specifies your App Registration's Application ID:
+   spring.security.oauth2.client.registration.azure.client-id=11111111-1111-1111-1111-1111111111111111
+
+   # Specifies your App Registration's secret key:
+   spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
 
    # Specifies the list of Active Directory groups to use for authentication:
-   azure.activedirectory.activeDirectoryGroups=Users
+   azure.activedirectory.active-directory-groups=Users
    ```
    各値の説明:
+
    | パラメーター | 説明 |
    |---|---|
-   | `azure.activedirectory.clientId` | 前の手順で取得した**アプリケーション ID** を指定します。 |
-   | `azure.activedirectory.clientSecret` | 以前に完了したアプリ登録のキー値を指定します。 |
-   | `azure.activedirectory.activeDirectoryGroups` | 認証に使用する Active Directory グループの一覧を指定します。 |
+   | `azure.activedirectory.tenant-id` | 前の Active Directory の **ディレクトリ ID** を指定します。 |
+   | `spring.security.oauth2.client.registration.azure.client-id` | 以前に完了したアプリ登録の**アプリケーション ID** を指定します。 |
+   | `spring.security.oauth2.client.registration.azure.client-secret` | 以前に完了したアプリ登録キーの**値** を指定します。 |
+   | `azure.activedirectory.active-directory-groups` | 認証に使用する Active Directory グループの一覧を指定します。 |
 
+   > [!NOTE]
+   > 
+   > *application.properties* ファイルで使用できる値の完全な一覧については、GitHub の「[Azure Active Directory Spring Boot Sample (Azure Active Directory Spring Boot のサンプル)][AAD Spring Boot Sample]」を参照してください。
+   >
 
-1. *application.properties* ファイルを保存して閉じます。
+7. *application.properties* ファイルを保存して閉じます。
 
-1. アプリケーションの Java ソース フォルダーに、"*controller*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/controller*)。
+8. アプリケーションの Java ソース フォルダーに、"*controller*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/controller*)。
 
-1. *controller* フォルダーに "*HelloController.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
+9. *controller* フォルダーに "*HelloController.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
 
-1. 次のコードを入力し、ファイルを保存して閉じます。
+10. 次のコードを入力し、ファイルを保存して閉じます。
 
    ```java
    package com.wingtiptoys.security;
-   
+
    import org.springframework.web.bind.annotation.RequestMapping;
    import org.springframework.web.bind.annotation.RestController;
-   import org.springframework.boot.SpringApplication;
-   import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+   import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.security.access.prepost.PreAuthorize;
-   import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
-   
+   import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+   import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+   import org.springframework.ui.Model;
+
    @RestController
    public class HelloController {
+      @Autowired
       @PreAuthorize("hasRole('Users')")
       @RequestMapping("/")
-      public String hello() {
+      public String helloWorld() {
          return "Hello World!";
       }
    }
    ```
+   > [!NOTE]
+   > 
+   > `@PreAuthorize("hasRole('')")` メソッドに指定するグループ名には、*application.properties* ファイルの `azure.activedirectory.active-directory-groups` フィールドに指定したグループのいずれかが含まれている必要があります。
+   >
 
-1. アプリケーションの Java ソース フォルダーに、"*security*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/security*)。
+   > [!NOTE]
+   > 
+   > 異なる要求マッピングには異なる承認設定を指定できます。次に例を示します。
+   >
+   > ``` java
+   > public class HelloController {
+   >    @Autowired
+   >    @PreAuthorize("hasRole('Users')")
+   >    @RequestMapping("/")
+   >    public String helloWorld() {
+   >       return "Hello Users!";
+   >    }
+   >    @PreAuthorize("hasRole('Group1')")
+   >    @RequestMapping("/Group1")
+   >    public String groupOne() {
+   >       return "Hello Group 1 Users!";
+   >    }
+   >    @PreAuthorize("hasRole('Group2')")
+   >    @RequestMapping("/Group2")
+   >    public String groupTwo() {
+   >       return "Hello Group 2 Users!";
+   >    }
+   > }
+   > ```
+   >    
 
-1. *security* フォルダーに "*WebSecurityConfig.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
+11. アプリケーションの Java ソース フォルダーに、"*security*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/security*)。
 
-1. 次のコードを入力し、ファイルを保存して閉じます。
+12. *security* フォルダーに "*WebSecurityConfig.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
 
-   ```java
-   package com.wingtiptoys.security;
+13. 次のコードを入力し、ファイルを保存して閉じます。
 
-   import com.microsoft.azure.spring.autoconfigure.aad.AADAuthenticationFilter;
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-   import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
-   import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-   import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-   import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-   import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
-   
-   @EnableOAuth2Sso
-   @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
-   
-   public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-      @Autowired
-      private AADAuthenticationFilter aadAuthFilter;
-      @Override
-      protected void configure(HttpSecurity http) throws Exception {
-         http.authorizeRequests().anyRequest().permitAll();
-         http.addFilterBefore(aadAuthFilter, UsernamePasswordAuthenticationFilter.class);
-      }
-   }
-   ```
+    ```java
+    package com.wingtiptoys.security;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+    import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+    import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+    import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+    import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
+    import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
+    import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+
+    @EnableWebSecurity
+    @EnableGlobalMethodSecurity(prePostEnabled = true)
+    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+        @Autowired
+        private OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService;
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http
+                .authorizeRequests()
+                .anyRequest().authenticated()
+                .and()
+                .oauth2Login()
+                .userInfoEndpoint()
+                .oidcUserService(oidcUserService);
+        }
+    }
+    ```
 
 ## <a name="build-and-test-your-app"></a>アプリのビルドとテスト
 
@@ -221,20 +282,25 @@ ms.locfileid: "28954683"
 
    ```shell
    mvn clean package
+   mvn spring-boot:run
    ```
 
    ![アプリをビルドする][build-application]
 
-1. Spring Boot アプリケーションを Maven でビルドし、実行します。次に例を示します。
+1. Maven によってアプリケーションがビルドされ、起動したら、Web ブラウザーで <http://localhost:8080> を開きます。ユーザー名とパスワードを入力するように求めるメッセージが表示されます。
 
-   ```shell
-   mvn clean package
-   mvn spring-boot:run
-   ```
+   ![アプリケーションへのログイン][application-login]
 
-1. Maven でアプリケーションを ビルドし、起動したら、Web ブラウザーで <http://localhost:8080> を開きます。
+1. 正常にログインしたら、コントローラーにサンプルの "Hello World" テキストが表示されます。
 
-## <a name="next-steps"></a>次のステップ
+   ![正常なログイン][hello-world]
+
+   > [!NOTE]
+   > 
+   > 承認されていないユーザー アカウントには、**HTTP 403 Unauthorized** メッセージが表示されます。
+   >
+
+## <a name="next-steps"></a>次の手順
 
 Azure Active Directory の使用方法の詳細については、次の記事をご覧ください。
 
@@ -246,9 +312,11 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
 **[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
+
+より詳細なサンプルについては、GitHub の「[Azure Active Directory Spring Boot Sample (Azure Active Directory Spring Boot のサンプル)][AAD Spring Boot Sample]」を参照してください。
 
 <!-- URL List -->
 
@@ -256,11 +324,12 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
+[AAD Spring Boot Sample]: https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-backend-sample
 
 <!-- IMG List -->
 
@@ -281,5 +350,10 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [directory-10]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-10.png
 [directory-11]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-11.png
 [directory-12]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-12.png
+[directory-13]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-13.png
+[directory-14]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-14.png
+[directory-15]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-15.png
 
 [build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
+[application-login]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/application-login.png
+[hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png

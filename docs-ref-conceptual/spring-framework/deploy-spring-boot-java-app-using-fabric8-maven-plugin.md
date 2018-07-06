@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 396d0ecfb051109924f09ae8b5d9b8074e49c404
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954893"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090815"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
 
@@ -58,7 +58,7 @@ ms.locfileid: "28954893"
    cd C:\SpringBoot
    ```
 
-1. [Spring Boot on Docker Getting Started] サンプル プロジェクトを、ディレクトリに複製します。
+1. [Docker での Spring Boot の使用開始] サンプル プロジェクトを、ディレクトリに複製します。
    ```shell
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
@@ -77,7 +77,7 @@ ms.locfileid: "28954893"
    mvn clean package spring-boot:run
    ```
 
-1. http://localhost:8080 を参照するか次の `curl` コマンドを使用して、Web アプリをテストします。
+1. http://localhost:8080 を参照するか、次の `curl` コマンドを使用して、Web アプリをテストします。
    ```shell
    curl http://localhost:8080
    ```
@@ -96,7 +96,7 @@ ms.locfileid: "28954893"
    az login
    ```
    指示に従って、ログインを完了します
-   
+
    次のように、Azure CLI にアカウントの一覧が表示されます。
 
    ```json
@@ -255,7 +255,8 @@ ms.locfileid: "28954893"
    az acr create --admin-enabled --resource-group wingtiptoys-kubernetes --location westeurope --name wingtiptoysregistry --sku Basic
    ```
    各値の説明:
-   | パラメーター | [説明] |
+
+   | パラメーター | 説明 |
    |---|---|
    | `wingtiptoys-kubernetes` | この記事の前半のリソース グループの名前を指定します。 |
    | `wingtiptoysregistry` | ご使用のプライベート レジストリの一意の名前を指定します。 |
@@ -285,7 +286,7 @@ ms.locfileid: "28954893"
    }
    ```
 
-1. Azure CLI からコンテナー レジストリのパスワードを取得します。
+2. Azure CLI からコンテナー レジストリのパスワードを取得します。
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
@@ -299,10 +300,10 @@ ms.locfileid: "28954893"
    }
    ```
 
-1. Maven インストールの構成ディレクトリ (既定では ~/.m2/ または C:\Users\username\.m2) に移動し、*settings.xml* ファイルをテキスト エディターで開きます。
+3. Maven インストールの構成ディレクトリ (既定では ~/.m2/ または C:\Users\username\.m2) に移動し、*settings.xml* ファイルをテキスト エディターで開きます。
 
-1. *settings.xml* ファイルの新しい `<server>` コレクションに Azure Container Registry の URL、ユーザー名、およびパスワードを追加します。
-`id` と `username` がレジストリの名前になります。 前のコマンドで取得した `password` の値を (引用符なしで) 使用します。
+4. *settings.xml* ファイルの新しい `<server>` コレクションに Azure Container Registry の URL、ユーザー名、およびパスワードを追加します。
+   `id` と `username` がレジストリの名前になります。 前のコマンドで取得した `password` の値を (引用符なしで) 使用します。
 
    ```xml
    <servers>
@@ -314,9 +315,9 @@ ms.locfileid: "28954893"
    </servers>
    ```
 
-1. Spring Boot アプリケーションの完了プロジェクト ディレクトリ ("*C:\SpringBoot\gs-spring-boot-docker\complete*" や "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*" など) に移動し、*pom.xml* ファイルをテキスト エディターで開きます。
+5. Spring Boot アプリケーションの完了プロジェクト ディレクトリ ("*C:\SpringBoot\gs-spring-boot-docker\complete*" や "*/home/GenaSoto/SpringBoot/gs-spring-boot-docker/complete*" など) に移動し、*pom.xml* ファイルをテキスト エディターで開きます。
 
-1. *pom.xml*ファイル内の `<properties>` コレクションを、Azure Container Registry のログイン サーバーの値で更新します。
+6. *pom.xml*ファイル内の `<properties>` コレクションを、Azure Container Registry のログイン サーバーの値で更新します。
 
    ```xml
    <properties>
@@ -325,7 +326,7 @@ ms.locfileid: "28954893"
    </properties>
    ```
 
-1. *pom.xml*ファイル内の `<plugins>` コレクションを、`<plugin>` にログイン サーバーのアドレスと Azure Container Registry のレジストリ名が含まれるように更新します。
+7. *pom.xml*ファイル内の `<plugins>` コレクションを、`<plugin>` にログイン サーバーのアドレスと Azure Container Registry のレジストリ名が含まれるように更新します。
 
    ```xml
    <plugin>
@@ -340,7 +341,7 @@ ms.locfileid: "28954893"
    </plugin>
    ```
 
-1. Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次の Maven コマンドを実行して Docker コンテナーを作成し、そのイメージをレジストリにプッシュします。
+8. Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次の Maven コマンドを実行して Docker コンテナーを作成し、そのイメージをレジストリにプッシュします。
 
    ```shell
    mvn package dockerfile:build -DpushImage
@@ -485,13 +486,13 @@ ms.locfileid: "28954893"
    ```
 
    次のように、内部および外部の IP アドレスが `kubectl` に表示されます。
-   
+
    ```shell
    NAME                    CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
    kubernetes              10.0.0.1     <none>        443/TCP        19h
    gs-spring-boot-docker   10.0.242.8   13.65.196.3   80:31215/TCP   3m
    ```
-   
+
    外部 IP アドレスを使用して、Web ブラウザーでアプリケーションを開くことができます。
 
    ![サンプル アプリケーションを外部で参照する][SB02]
@@ -512,13 +513,13 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
-Docker サンプル プロジェクトでの Spring Boot の詳細については、[Spring Boot on Docker Getting Started]に関するページを参照してください。
+Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
 独自の Spring Boot アプリケーションの使用開始に関するヘルプについては、「**Spring Initializr**」(<https://start.spring.io/>) を参照してください。
 
-単純な Spring Boot アプリケーションの作成の詳細については、「Spring Initializr」(<https://start.spring.io/>) を参照してください。
+単純な Spring Boot アプリケーションの作成開始の詳細については、「Spring Initializr」(<https://start.spring.io/>) を参照してください。
 
 Azure でカスタム Docker イメージを使用する方法に関するその他の例については、「[Azure Web App on Linux 向けのカスタム Docker イメージを使用する]」を参照してください。
 
@@ -535,12 +536,12 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
+[Docker での Spring Boot の使用開始]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->
