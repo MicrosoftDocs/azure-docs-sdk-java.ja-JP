@@ -10,16 +10,19 @@
   * [Mac OS X](http://www.apple.com/osx) バージョン "Yosemite" 以降
   * [Ubuntu Linux](http://www.ubuntu.com) バージョン 14、15、16
 
-詳細については、JetBrains Plugin Repository の [Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053) のページを参照してください。
+> [!NOTE]
+> 
+> JetBrains Plugin Repository の [Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053) に関するページに、このツールキットと互換性のあるビルドが一覧表示されています。
+> 
 
 <!--
 > [!IMPORTANT]
-> If you are using the Azure Toolkit for Eclipse on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
+> 
+> If you are using the Azure Toolkit for IntelliJ on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
 > 
 > * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
 > * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
 > 
 > Note that the Azure SDK is only required on Windows.
-> 
 > 
 -->

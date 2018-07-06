@@ -14,11 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: e10ecfb7f6d705aa3ccffc49d354d1019f7f1a0b
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 2f9381fce2fee207360287c57443b56eb5128e42
+ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090695"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage 用の Spring Boot Starter の使用方法
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 04/26/2018
 
 1. <https://start.spring.io/> を参照します。
 
-1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
+1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Artifact]\(アーティファクト)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
 
    ![基本的な Spring Initializr オプション](media/configure-spring-boot-starter-java-app-with-azure-storage/spring-initializr-basic.png)
 
    > [!NOTE]
    >
-   > Spring Initializr では、**[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** の名前を使用してパッケージ名を作成します (例: *com.contoso.wingtiptoysdem*)。
+   > Spring Initializr では、**[Group]\(グループ\)** と **[Artifact]\(アーティファクト\)** の名前を使用してパッケージ名を作成します (例: *com.contoso.wingtiptoysdem*)。
    >
 
 1. 下へスクロールして **[Azure]** セクションを表示し、**[Azure Storage]** チェック ボックスをオンにします。
@@ -108,6 +109,7 @@ ms.lasthandoff: 04/26/2018
    az group create --name wingtiptoysresources --location westus
    ```
    各値の説明:
+
    | パラメーター | 説明 |
    |---|---|
    | `name` | リソース グループの一意の名前を指定します。 |
@@ -128,12 +130,13 @@ ms.lasthandoff: 04/26/2018
    }
    ```
 
-1. Spring Boot アプリのリソース グループに Azure ストレージ アカウントを作成します。次に例を示します。
+2. Spring Boot アプリのリソース グループに Azure ストレージ アカウントを作成します。次に例を示します。
    ```azurecli
    az storage account create --name wingtiptoysstorage --resource-group wingtiptoysresources --location westus --sku Standard_LRS
    ```
    各値の説明:
-   | パラメーター | [説明] |
+
+   | パラメーター | 説明 |
    |---|---|
    | `name` | ストレージ アカウントの一意の名前を指定します。 |
    | `resource-group` | 前の手順で作成したリソース グループの名前を指定します。 |
@@ -141,7 +144,7 @@ ms.lasthandoff: 04/26/2018
    | `sku` | `Premium_LRS`、`Standard_GRS`、`Standard_LRS`、`Standard_RAGRS`、`Standard_ZRS` のいずれかを指定します。 |
 
    Azure から、プロビジョニングの状態を含む長い JSON 文字列が返されます。次に例を示します。
-   
+
    ```json
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
@@ -157,12 +160,13 @@ ms.lasthandoff: 04/26/2018
    }
    ```
 
-1. ストレージ アカウントの接続文字列を取得します。次に例を示します。
+3. ストレージ アカウントの接続文字列を取得します。次に例を示します。
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
    各値の説明:
-   | パラメーター | [説明] |
+
+   | パラメーター | 説明 |
    | ---|---|
    | `name` | 前の手順で作成したストレージ アカウントの一意の名前を指定します。 |
    | `resource-group` | 前の手順で作成したリソース グループの名前を指定します。 |
@@ -270,7 +274,7 @@ ms.lasthandoff: 04/26/2018
    ```shell
    mvn clean package spring-boot:run
    ```
-   
+
    アプリケーションによってコンテナーが作成され、テキスト ファイルが BLOB としてコンテナーにアップロードされます。BLOB は、[Azure Portal](https://portal.azure.com) でストレージ アカウントの下に表示されます。
 
    ![Azure Portal での BLOB の表示](media/configure-spring-boot-starter-java-app-with-azure-storage/list-blobs-in-portal.png)
