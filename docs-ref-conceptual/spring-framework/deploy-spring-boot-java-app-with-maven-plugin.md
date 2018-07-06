@@ -5,229 +5,225 @@ services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: ''
+editor: brborges
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm;kevinzha;brborges
+ms.date: 06/01/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 82cb0da3ce49fa77f888808af14455bf226d5cb0
-ms.sourcegitcommit: 024b3127daf396a17bd43d57642e3534ae87f120
+ms.openlocfilehash: 3610312ed17301131967bd2c047c86656de070e7
+ms.sourcegitcommit: f313c14e92f38c54a3a583270ee85cc928cd39d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34462752"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689425"
 ---
-# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-web-apps"></a><span data-ttu-id="9448c-103">Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする</span><span class="sxs-lookup"><span data-stu-id="9448c-103">Deploy a Spring Boot app to the cloud using the Maven Plugin for Azure Web Apps</span></span>
+# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a><span data-ttu-id="dd1dc-103">Azure App Service 用の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする</span><span class="sxs-lookup"><span data-stu-id="dd1dc-103">Deploy a Spring Boot app to the cloud using the Maven Plugin for Azure App Service</span></span>
 
-<span data-ttu-id="9448c-104">この記事では、Azure Web Apps 用の Maven プラグインを使って、Spring Boot アプリケーションのサンプルを Azure App Service にデプロイする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9448c-104">This article demonstrates using the Maven Plugin for Azure Web Apps to deploy a sample Spring Boot application to Azure App Services.</span></span>
+<span data-ttu-id="dd1dc-104">この記事では、Azure App Service Web Apps 用の Maven プラグインを使って、Spring Boot アプリケーションのサンプルをデプロイする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-104">This article demonstrates using the Maven Plugin for Azure App Service Web Apps to deploy a sample Spring Boot application.</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="9448c-105">[Apache Maven](http://maven.apache.org/) 用の [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイする作業を効率化します。</span><span class="sxs-lookup"><span data-stu-id="9448c-105">The [Maven Plugin for Azure Web Apps](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin) for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
-> 
-> <span data-ttu-id="9448c-106">Azure Web Apps の Maven プラグインは現在プレビューとして提供されています。</span><span class="sxs-lookup"><span data-stu-id="9448c-106">The Maven Plugin for Azure Web Apps is currently available as a preview.</span></span> <span data-ttu-id="9448c-107">今後、機能が追加される予定ですが、現在は FTP 発行のみがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="9448c-107">For now, only FTP publishing is supported, although additional features are planned for the future.</span></span>
-> 
+> <span data-ttu-id="dd1dc-105">[Apache Maven](http://maven.apache.org/) の [Azure App Service Web Apps 用 Maven プラグイン](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイするプロセスを効率化します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-105">The [Maven Plugin for Azure App Service Web Apps](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme) for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="9448c-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="9448c-108">Prerequisites</span></span>
+<span data-ttu-id="dd1dc-106">Maven プラグインを使用する前に、利用可能なプラグインの最新バージョンを Maven Central で確認してください: [![Maven Central](https://img.shields.io/maven-central/v/com.microsoft.azure/azure-webapp-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.microsoft.azure%22%20AND%20a%3A%22azure-webapp-maven-plugin%22)</span><span class="sxs-lookup"><span data-stu-id="dd1dc-106">Before using the Maven plugin, check on Maven Central for the latest available version of the plugin: [![Maven Central](https://img.shields.io/maven-central/v/com.microsoft.azure/azure-webapp-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.microsoft.azure%22%20AND%20a%3A%22azure-webapp-maven-plugin%22)</span></span> 
 
-<span data-ttu-id="9448c-109">このチュートリアルの手順を実行するには、次の前提条件を満たしておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="9448c-109">In order to complete the steps in this tutorial, you will need to have the following prerequisites:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="dd1dc-107">前提条件</span><span class="sxs-lookup"><span data-stu-id="dd1dc-107">Prerequisites</span></span>
 
-* <span data-ttu-id="9448c-110">Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。</span><span class="sxs-lookup"><span data-stu-id="9448c-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="9448c-111">[Azure コマンド ライン インターフェイス (CLI)]。</span><span class="sxs-lookup"><span data-stu-id="9448c-111">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="9448c-112">最新の Java Development Kit (JDK) (バージョン 1.7 以降)。</span><span class="sxs-lookup"><span data-stu-id="9448c-112">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
-* <span data-ttu-id="9448c-113">Apache の [Maven] 構築ツール (バージョン 3)。</span><span class="sxs-lookup"><span data-stu-id="9448c-113">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="9448c-114">[Git] クライアント。</span><span class="sxs-lookup"><span data-stu-id="9448c-114">A [Git] client.</span></span>
+<span data-ttu-id="dd1dc-108">このチュートリアルの手順を実行するには、次の前提条件を満たしておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-108">In order to complete the steps in this tutorial, you will need to have the following prerequisites:</span></span>
 
-## <a name="clone-the-sample-spring-boot-web-app"></a><span data-ttu-id="9448c-115">Spring Boot Web アプリのサンプルを複製する</span><span class="sxs-lookup"><span data-stu-id="9448c-115">Clone the sample Spring Boot web app</span></span>
+* <span data-ttu-id="dd1dc-109">Azure サブスクリプション: Azure サブスクリプションをまだ取得していない場合は、[無料の Azure アカウント]にサインアップできます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-109">An Azure subscription; if you don't already have an Azure subscription, you can sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="dd1dc-110">[Azure コマンド ライン インターフェイス (CLI)]。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-110">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="dd1dc-111">最新の Java Development Kit (JDK) (バージョン 1.7 以降)。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-111">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
+* <span data-ttu-id="dd1dc-112">Apache の [Maven] 構築ツール (バージョン 3)。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-112">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="dd1dc-113">[Git] クライアント。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-113">A [Git] client.</span></span>
 
-<span data-ttu-id="9448c-116">このセクションでは、完成した Spring Boot アプリケーションを複製し、ローカルでテストします。</span><span class="sxs-lookup"><span data-stu-id="9448c-116">In this section, you will clone a completed Spring Boot application and test it locally.</span></span>
+## <a name="clone-the-sample-spring-boot-web-app"></a><span data-ttu-id="dd1dc-114">Spring Boot Web アプリのサンプルを複製する</span><span class="sxs-lookup"><span data-stu-id="dd1dc-114">Clone the sample Spring Boot web app</span></span>
 
-1. <span data-ttu-id="9448c-117">コマンド プロンプトまたはターミナル ウィンドウを開き、Spring Boot アプリケーションを保持するためのローカル ディレクトリを作成して、次の例のようにそのディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="9448c-117">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
+<span data-ttu-id="dd1dc-115">このセクションでは、完成した Spring Boot アプリケーションを複製し、ローカルでテストします。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-115">In this section, you will clone a completed Spring Boot application and test it locally.</span></span>
+
+1. <span data-ttu-id="dd1dc-116">コマンド プロンプトまたはターミナル ウィンドウを開き、Spring Boot アプリケーションを保持するためのローカル ディレクトリを作成して、次の例のようにそのディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-116">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   <span data-ttu-id="9448c-118">-- または --</span><span class="sxs-lookup"><span data-stu-id="9448c-118">-- or --</span></span>
+   <span data-ttu-id="dd1dc-117">-- または --</span><span class="sxs-lookup"><span data-stu-id="dd1dc-117">-- or --</span></span>
    ```shell
-   md /users/robert/SpringBoot
-   cd /users/robert/SpringBoot
+   md ~/SpringBoot
+   cd ~/SpringBoot
    ```
 
-1. <span data-ttu-id="9448c-119">[Spring Boot Getting Started] サンプル プロジェクトを作成したディレクトリに複製します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="9448c-119">Clone the [Spring Boot Getting Started] sample project into the directory you created; for example:</span></span>
+1. <span data-ttu-id="dd1dc-118">[Spring Boot Getting Started] サンプル プロジェクトを作成したディレクトリに複製します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-118">Clone the [Spring Boot Getting Started] sample project into the directory you created; for example:</span></span>
    ```shell
-   git clone https://github.com/microsoft/gs-spring-boot
+   git clone https://github.com/spring-guides/gs-spring-boot
    ```
 
-1. <span data-ttu-id="9448c-120">完成したプロジェクトにディレクトリを変更します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="9448c-120">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="dd1dc-119">完成したプロジェクトにディレクトリを変更します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-119">Change directory to the completed project; for example:</span></span>
    ```shell
    cd gs-spring-boot/complete
    ```
 
-1. <span data-ttu-id="9448c-121">Maven を使用して JAR ファイルを構築します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="9448c-121">Build the JAR file using Maven; for example:</span></span>
+1. <span data-ttu-id="dd1dc-120">Maven を使用して JAR ファイルを構築します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-120">Build the JAR file using Maven; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="9448c-122">Web アプリを作成したら、次の例のように Maven を使って Web アプリを起動します。</span><span class="sxs-lookup"><span data-stu-id="9448c-122">When the web app has been created, start the web app using Maven; for example:</span></span>
+1. <span data-ttu-id="dd1dc-121">Web アプリを作成したら、次の例のように Maven を使って Web アプリを起動します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-121">When the web app has been created, start the web app using Maven; for example:</span></span>
    ```shell
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="9448c-123">Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。</span><span class="sxs-lookup"><span data-stu-id="9448c-123">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="9448c-124">たとえば、curl を使うことができる場合は次のようなコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="9448c-124">For example, you could use the following command if you have curl available:</span></span>
+1. <span data-ttu-id="dd1dc-122">Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-122">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="dd1dc-123">たとえば、curl を使うことができる場合は次のようなコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-123">For example, you could use the following command if you have curl available:</span></span>
    ```shell
    curl http://localhost:8080
    ```
 
-1. <span data-ttu-id="9448c-125">**Greetings from Spring Boot! (Spring Boot からのあいさつ)** というメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9448c-125">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
+1. <span data-ttu-id="dd1dc-124">**Greetings from Spring Boot! (Spring Boot からのあいさつ)** というメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-124">You should see the following message displayed: **Greetings from Spring Boot!**</span></span>
 
-## <a name="create-an-azure-service-principal"></a><span data-ttu-id="9448c-126">Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="9448c-126">Create an Azure service principal</span></span>
+## <a name="adjust-project-for-war-based-deployment-on-azure-app-service"></a><span data-ttu-id="dd1dc-125">Azure App Service への WAR ベースのデプロイ用にプロジェクトを調整する</span><span class="sxs-lookup"><span data-stu-id="dd1dc-125">Adjust project for WAR-based deployment on Azure App Service</span></span>
 
-<span data-ttu-id="9448c-127">このセクションでは、Web アプリを Azure にデプロイするときに Maven プラグインで使用される Azure サービス プリンシパルを作成します。</span><span class="sxs-lookup"><span data-stu-id="9448c-127">In this section, you will create an Azure service principal that the Maven plugin uses when deploying your web app to Azure.</span></span>
+<span data-ttu-id="dd1dc-126">このセクションでは、Spring Boot プロジェクトを、既定ではランタイムとして Tomcat が提供されている Azure App Service に、WAR ファイルとしてデプロイできるようにすばやく調整します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-126">In this section we will quickly adjust the Spring Boot project to be deployed as a WAR file on Azure App Service, which provides Tomcat as the runtime by default.</span></span> <span data-ttu-id="dd1dc-127">そのためには、2 つのファイルを変更します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-127">For this to work, there are two files to be modified:</span></span>
 
-1. <span data-ttu-id="9448c-128">コマンド プロンプトを開きます。</span><span class="sxs-lookup"><span data-stu-id="9448c-128">Open a command prompt.</span></span>
+- <span data-ttu-id="dd1dc-128">Maven の `pom.xml` ファイル</span><span class="sxs-lookup"><span data-stu-id="dd1dc-128">The Maven `pom.xml` file</span></span>
+- <span data-ttu-id="dd1dc-129">`Application` Java クラス</span><span class="sxs-lookup"><span data-stu-id="dd1dc-129">The `Application` Java class</span></span>
 
-1. <span data-ttu-id="9448c-129">Azure CLI を使って、Azure アカウントにサインインします。</span><span class="sxs-lookup"><span data-stu-id="9448c-129">Sign into your Azure account by using the Azure CLI:</span></span>
-   ```shell
-   az login
+<span data-ttu-id="dd1dc-130">Maven の設定から着手しましょう。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-130">Let's start with the Maven settings:</span></span>
+
+1. <span data-ttu-id="dd1dc-131">`pom.xml` を開きます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-131">Open `pom.xml`</span></span>
+
+1. <span data-ttu-id="dd1dc-132">先頭の `<artifactId>` 定義の直後に `<packaging>war</packaging>` を追加します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-132">Add `<packaging>war</packaging>` right after the `<artifactId>` definition at the top:</span></span>
+   ```xml
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.springframework</groupId>
+    <artifactId>gs-spring-boot</artifactId>
+
+    <packaging>war</packaging>
    ```
-   <span data-ttu-id="9448c-130">指示に従って、サインインを完了します。</span><span class="sxs-lookup"><span data-stu-id="9448c-130">Follow the instructions to complete the sign-in process.</span></span>
 
-1. <span data-ttu-id="9448c-131">Azure サービス プリンシパルを作成します。</span><span class="sxs-lookup"><span data-stu-id="9448c-131">Create an Azure service principal:</span></span>
-   ```shell
-   az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
+1. <span data-ttu-id="dd1dc-133">次の依存関係を追加します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-133">Add the following dependency:</span></span>
+   ```xml
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
    ```
-   <span data-ttu-id="9448c-132">ここでは `uuuuuuuu` がサービス プリンシパルのユーザー名で、`pppppppp` がパスワードです。</span><span class="sxs-lookup"><span data-stu-id="9448c-132">Where `uuuuuuuu` is the user name and `pppppppp` is the password for the service principal.</span></span>
 
-1. <span data-ttu-id="9448c-133">Azure が次の例のような JSON で応答します。</span><span class="sxs-lookup"><span data-stu-id="9448c-133">Azure responds with JSON that resembles the following example:</span></span>
-   ```json
-   {
-      "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
-      "displayName": "uuuuuuuu",
-      "name": "http://uuuuuuuu",
-      "password": "pppppppp",
-      "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
+<span data-ttu-id="dd1dc-134">`Application` クラスを開き、期待どおりに IDE によって新しい依存関係が選択されていたら、次の変更に進みます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-134">Now open the class `Application`, hopefully after your IDE has already picked up the new dependencies, and proceed with the following modifications:</span></span>
+
+1. <span data-ttu-id="dd1dc-135">Application クラスを `SpringBootServletInitializer` のサブクラスにします。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-135">Make class Application a subclass of `SpringBootServletInitializer`:</span></span>
+   ```java
+   @SpringBootApplication
+   public class Application extends SpringBootServletInitializer {
+     // ...
    }
    ```
 
-   > [!NOTE]
-   >
-   > <span data-ttu-id="9448c-134">Maven プラグインを構成して Azure に Web アプリをデプロイするときに、この JSON の応答にある値を使います。</span><span class="sxs-lookup"><span data-stu-id="9448c-134">You will use the values from this JSON response when you configure the Maven plugin to deploy your web app to Azure.</span></span> <span data-ttu-id="9448c-135">`aaaaaaaa`、`uuuuuuuu`、`pppppppp`、`tttttttt` はプレースホルダーの値であり、次のセクションで Maven の `settings.xml` ファイルを構成するときにこれらの値を値の各要素にマップしやすくするために、ここでこのように使います。</span><span class="sxs-lookup"><span data-stu-id="9448c-135">The `aaaaaaaa`, `uuuuuuuu`, `pppppppp`, and `tttttttt` are placeholder values, which are used in this example to make it easier to map these values to their respective elements when you configure your Maven `settings.xml` file in the next section.</span></span>
-   >
-   >
-
-## <a name="configure-maven-to-use-your-azure-service-principal"></a><span data-ttu-id="9448c-136">Azure サービス プリンシパルを使用するように Maven を構成する</span><span class="sxs-lookup"><span data-stu-id="9448c-136">Configure Maven to use your Azure service principal</span></span>
-
-<span data-ttu-id="9448c-137">このセクションでは、Azure サービス プリンシパルの値を使用して、Web アプリを Azure にデプロイするときに Maven で使用される認証を構成します。</span><span class="sxs-lookup"><span data-stu-id="9448c-137">In this section, you will use the values from your Azure service principal to configure the authentication that Maven uses when deploying your web app to Azure.</span></span>
-
-1. <span data-ttu-id="9448c-138">テキスト エディターで Maven の `settings.xml` ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="9448c-138">Open your Maven `settings.xml` file in a text editor.</span></span> <span data-ttu-id="9448c-139">このファイルは、次の例のようなパスにあります。</span><span class="sxs-lookup"><span data-stu-id="9448c-139">This file may be in a path similar to the following examples:</span></span>
-   * `/etc/maven/settings.xml`
-   * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
-   * `$HOME/.m2/settings.xml`
-
-1. <span data-ttu-id="9448c-140">このチュートリアルの前のセクションで説明した Azure サービス プリンシパルの設定を、次の例のように *settings.xml* ファイルの `<servers>` コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="9448c-140">Add your Azure service principal settings from the previous section of this tutorial to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
-
-   ```xml
-   <servers>
-      <server>
-        <id>azure-auth</id>
-         <configuration>
-            <client>aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa</client>
-            <tenant>tttttttt-tttt-tttt-tttt-tttttttttttt</tenant>
-            <key>pppppppp</key>
-            <environment>AZURE</environment>
-         </configuration>
-      </server>
-   </servers>
+1. <span data-ttu-id="dd1dc-136">Application クラスに次のメソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-136">Add the following method to the Application class:</span></span>
+   ```java
+       @Override
+       protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+           return application.sources(Application.class);
+       }
    ```
-   <span data-ttu-id="9448c-141">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="9448c-141">Where:</span></span>
-   | <span data-ttu-id="9448c-142">要素</span><span class="sxs-lookup"><span data-stu-id="9448c-142">Element</span></span> | <span data-ttu-id="9448c-143">[説明]</span><span class="sxs-lookup"><span data-stu-id="9448c-143">Description</span></span> |
-   |---|---|
-   | `<id>` | <span data-ttu-id="9448c-144">Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="9448c-144">Specifies a unique name which Maven uses to look up your security settings when you deploy your web app to Azure.</span></span> |
-   | `<client>` | <span data-ttu-id="9448c-145">サービス プリンシパルの `appId` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9448c-145">Contains the `appId` value from your service principal.</span></span> |
-   | `<tenant>` | <span data-ttu-id="9448c-146">サービス プリンシパルの `tenant` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9448c-146">Contains the `tenant` value from your service principal.</span></span> |
-   | `<key>` | <span data-ttu-id="9448c-147">サービス プリンシパルの `password` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9448c-147">Contains the `password` value from your service principal.</span></span> |
-   | `<environment>` | <span data-ttu-id="9448c-148">ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です </span><span class="sxs-lookup"><span data-stu-id="9448c-148">Defines the target Azure cloud environment, which is `AZURE` in this example.</span></span> <span data-ttu-id="9448c-149">(環境の全リストは、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載しています)。</span><span class="sxs-lookup"><span data-stu-id="9448c-149">(A full list of environments is available in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
 
-1. <span data-ttu-id="9448c-150">*settings.xml* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="9448c-150">Save and close the *settings.xml* file.</span></span>
+<span data-ttu-id="dd1dc-137">これで、ご自身のアプリケーションを Tomcat その他の任意の Servlet ランタイム (例: Jetty) にデプロイする準備が整いました。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-137">Your application is now ready to be deployed to Tomcat and any other Servlet runtime (e.g. Jetty).</span></span>
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-web-app-to-azure"></a><span data-ttu-id="9448c-151">省略可能: Web アプリを Azure にデプロイする前に pom.xml をカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="9448c-151">OPTIONAL: Customize your pom.xml before deploying your web app to Azure</span></span>
+## <a name="add-the-maven-plugin-for-azure-app-service-web-apps"></a><span data-ttu-id="dd1dc-138">Azure App Service Web Apps 用の Maven プラグインを追加する</span><span class="sxs-lookup"><span data-stu-id="dd1dc-138">Add the Maven Plugin for Azure App Service Web Apps</span></span>
 
-<span data-ttu-id="9448c-152">Spring Boot アプリケーションの `pom.xml` ファイルをテキスト エディターで開き、`azure-webapp-maven-plugin` の `<plugin>` 要素を見つけます。</span><span class="sxs-lookup"><span data-stu-id="9448c-152">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="9448c-153">この要素は次の例のようになっています。</span><span class="sxs-lookup"><span data-stu-id="9448c-153">This element should resemble the following example:</span></span>
+<span data-ttu-id="dd1dc-139">このセクションでは、Azure App Service Web Apps への、このアプリケーションのデプロイ全体を自動化する Maven プラグインを追加します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-139">In this section, we will add a Maven plugin that will automate the entire deployment of this application into Azure App Service Web Apps.</span></span>
 
+1. <span data-ttu-id="dd1dc-140">もう一度 `pom.xml` を開きます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-140">Open `pom.xml` once again.</span></span>
+
+1. <span data-ttu-id="dd1dc-141">`<properties>` の内部で、`maven.build.timestamp.format` プロパティを使用してカスタムのタイムスタンプ形式を設定します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-141">Inside `<properties>`, set a custom timestamp format with the property `maven.build.timestamp.format`.</span></span> <span data-ttu-id="dd1dc-142">Azure App Service によってご自身のアプリケーションのパブリック URL が作成されるため、この設定を使用してデプロイの名前が生成されることで、他のユーザーのライブ デプロイとの競合を回避できます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-142">Because Azure App Service creates a public URL for your application, this setting will be used to generate the name of your deployment, and avoid conflict with other users' live deployments.</span></span>
    ```xml
-   <plugin>
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
+    </properties>
+   ```
+
+1. <span data-ttu-id="dd1dc-143">`<plugins>` 要素に、次を追加します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-143">In the `<plugins>` element, add the following:</span></span>
+   ```xml
+    <plugin>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>azure-webapp-maven-plugin</artifactId>
-      <version>0.1.3</version>
-      <configuration>
-         <authentication>
-            <serverId>azure-auth</serverId>
-         </authentication>
-         <resourceGroup>maven-plugin</resourceGroup>
-         <appName>maven-web-app-${maven.build.timestamp}</appName>
-         <region>westus</region>
-         <javaVersion>1.8</javaVersion>
-         <deploymentType>ftp</deploymentType>
-         <resources>
-            <resource>
-               <directory>${project.basedir}/target</directory>
-               <targetPath>/</targetPath>
-               <includes>
-                  <include>*.jar</include>
-               </includes>
-            </resource>
-            <resource>
-               <directory>${project.basedir}</directory>
-               <targetPath>/</targetPath>
-               <includes>
-                  <include>web.config</include>
-               </includes>
-            </resource>
-         </resources>
-      </configuration>
-   </plugin>
+      <!-- Check latest version on Maven Central -->
+      <version>1.1.0</version>
+    </plugin>
    ```
 
-<span data-ttu-id="9448c-154">Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載されています。</span><span class="sxs-lookup"><span data-stu-id="9448c-154">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="9448c-155">この記事でも、次のように重要な値については説明します。</span><span class="sxs-lookup"><span data-stu-id="9448c-155">That being said, there are several values that are worth highlighting in this article:</span></span>
+<span data-ttu-id="dd1dc-144">これらの設定によって、Maven プロジェクトを Azure App Service Web App にライブ デプロイする準備が整いました。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-144">With these settings, your Maven project is now ready for live deployment to Azure App Service Web App.</span></span>
 
-| <span data-ttu-id="9448c-156">要素</span><span class="sxs-lookup"><span data-stu-id="9448c-156">Element</span></span> | <span data-ttu-id="9448c-157">[説明]</span><span class="sxs-lookup"><span data-stu-id="9448c-157">Description</span></span> |
+## <a name="install-and-log-in-to-azure-cli"></a><span data-ttu-id="dd1dc-145">Azure CLI のインストールとログイン</span><span class="sxs-lookup"><span data-stu-id="dd1dc-145">Install and log in to Azure CLI</span></span>
+
+<span data-ttu-id="dd1dc-146">Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-146">The simplest and easiest way to get the Maven Plugin deploying your Spring Boot application is by using [Azure CLI](https://docs.microsoft.com/cli/azure/).</span></span> <span data-ttu-id="dd1dc-147">これがインストールされていることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-147">Make sure you have it installed.</span></span>
+
+1. <span data-ttu-id="dd1dc-148">Azure CLI を使って、Azure アカウントにサインインします。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-148">Sign into your Azure account by using the Azure CLI:</span></span>
+   ```shell
+   az login
+   ```
+   <span data-ttu-id="dd1dc-149">指示に従って、サインインを完了します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-149">Follow the instructions to complete the sign-in process.</span></span>
+
+## <a name="optionally-customize-pomxml-before-deploying"></a><span data-ttu-id="dd1dc-150">必要に応じて、デプロイの前に pom.xml をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="dd1dc-150">Optionally, customize pom.xml before deploying</span></span>
+
+<span data-ttu-id="dd1dc-151">Spring Boot アプリケーションの `pom.xml` ファイルをテキスト エディターで開き、`azure-webapp-maven-plugin` の `<plugin>` 要素を見つけます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-151">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="dd1dc-152">この要素は次の例のようになっています。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-152">This element should resemble the following example:</span></span>
+
+   ```xml
+  <plugins>
+    <plugin>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>azure-webapp-maven-plugin</artifactId>
+      <!-- Check latest version on Maven Central -->
+      <version>1.1.0</version>
+      <configuration>
+         <resourceGroup>maven-projects</resourceGroup>
+         <appName>${project.artifactId}-${maven.build.timestamp}</appName>
+         <region>westus</region>
+         <javaVersion>1.8</javaVersion>
+         <deploymentType>war</deploymentType>
+      </configuration>
+    </plugin>
+  </plugins>
+   ```
+
+<span data-ttu-id="dd1dc-153">Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載されています。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-153">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="dd1dc-154">この記事でも、次のように重要な値については説明します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-154">That being said, there are several values that are worth highlighting in this article:</span></span>
+
+| <span data-ttu-id="dd1dc-155">要素</span><span class="sxs-lookup"><span data-stu-id="dd1dc-155">Element</span></span> | <span data-ttu-id="dd1dc-156">説明</span><span class="sxs-lookup"><span data-stu-id="dd1dc-156">Description</span></span> |
 |---|---|
-| `<version>` | <span data-ttu-id="9448c-158">[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="9448c-158">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="9448c-159">[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) に表示されているバージョンを確認して、最新バージョンを使用していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="9448c-159">Verify the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
-| `<authentication>` | <span data-ttu-id="9448c-160">Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。</span><span class="sxs-lookup"><span data-stu-id="9448c-160">Specifies the authentication information for Azure, which in this example contains a `<serverId>` element that contains `azure-auth`; Maven uses that value to look up the Azure service principal values in your Maven *settings.xml* file, which you defined in an earlier section of this article.</span></span> |
-| `<resourceGroup>` | <span data-ttu-id="9448c-161">ターゲット リソース グループを指定します。この例では `maven-plugin` です。</span><span class="sxs-lookup"><span data-stu-id="9448c-161">Specifies the target resource group, which is `maven-plugin` in this example.</span></span> <span data-ttu-id="9448c-162">リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。</span><span class="sxs-lookup"><span data-stu-id="9448c-162">The resource group is created during deployment if it does not already exist.</span></span> |
-| `<appName>` | <span data-ttu-id="9448c-163">Web アプリのターゲット名を指定します。</span><span class="sxs-lookup"><span data-stu-id="9448c-163">Specifies the target name for your web app.</span></span> <span data-ttu-id="9448c-164">この例では、ターゲット名は `maven-web-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています </span><span class="sxs-lookup"><span data-stu-id="9448c-164">In this example, the target name is `maven-web-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="9448c-165">(タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。</span><span class="sxs-lookup"><span data-stu-id="9448c-165">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
-| `<region>` | <span data-ttu-id="9448c-166">ターゲット リージョンを指定します。この例では `westus` です </span><span class="sxs-lookup"><span data-stu-id="9448c-166">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="9448c-167">(完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」 をご覧ください)。</span><span class="sxs-lookup"><span data-stu-id="9448c-167">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
-| `<javaVersion>` | <span data-ttu-id="9448c-168">Web アプリの Java ランタイム バージョンを指定します </span><span class="sxs-lookup"><span data-stu-id="9448c-168">Specifies the Java runtime version for your web app.</span></span> <span data-ttu-id="9448c-169">(完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」 をご覧ください)。</span><span class="sxs-lookup"><span data-stu-id="9448c-169">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
-| `<deploymentType>` | <span data-ttu-id="9448c-170">Web アプリのデプロイの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="9448c-170">Specifies deployment type for your web app.</span></span> <span data-ttu-id="9448c-171">現時点では `ftp` のみがサポートされていますが、他のデプロイの種類のサポートも開発中です。</span><span class="sxs-lookup"><span data-stu-id="9448c-171">For now, only `ftp` is supported, although support for other deployment types is in development.</span></span> |
-| `<resources>` | <span data-ttu-id="9448c-172">Web アプリを Azure にデプロイするときに Maven が使うリソースとターゲットの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="9448c-172">Specifies resources and target destinations which Maven uses when deploying your web app to Azure.</span></span> <span data-ttu-id="9448c-173">この例では、2 つの `<resource>` 要素で、Maven が Web アプリの JAR ファイルと Spring Boot プロジェクトからの *web.config* ファイルをデプロイすることを指定しています。</span><span class="sxs-lookup"><span data-stu-id="9448c-173">In this example, two `<resource>` elements specify that Maven will deploy the JAR file for your web app and the *web.config* file from the Spring Boot project.</span></span> |
+| `<version>` | <span data-ttu-id="dd1dc-157">[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-157">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="dd1dc-158">[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) に表示されているバージョンを確認して、最新バージョンを使用していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-158">Verify the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
+| `<resourceGroup>` | <span data-ttu-id="dd1dc-159">ターゲット リソース グループを指定します。この例では `maven-plugin` です。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-159">Specifies the target resource group, which is `maven-plugin` in this example.</span></span> <span data-ttu-id="dd1dc-160">リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-160">The resource group is created during deployment if it does not already exist.</span></span> |
+| `<appName>` | <span data-ttu-id="dd1dc-161">Web アプリのターゲット名を指定します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-161">Specifies the target name for your web app.</span></span> <span data-ttu-id="dd1dc-162">この例では、ターゲット名は `maven-web-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています </span><span class="sxs-lookup"><span data-stu-id="dd1dc-162">In this example, the target name is `maven-web-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="dd1dc-163">(タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-163">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
+| `<region>` | <span data-ttu-id="dd1dc-164">ターゲット リージョンを指定します。この例では `westus` です </span><span class="sxs-lookup"><span data-stu-id="dd1dc-164">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="dd1dc-165">(完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」 をご覧ください)。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-165">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
+| `<javaVersion>` | <span data-ttu-id="dd1dc-166">Web アプリの Java ランタイム バージョンを指定します </span><span class="sxs-lookup"><span data-stu-id="dd1dc-166">Specifies the Java runtime version for your web app.</span></span> <span data-ttu-id="dd1dc-167">(完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」(Azure Web Apps 用の Maven プラグイン) をご覧ください)。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-167">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
+| `<deploymentType>` | <span data-ttu-id="dd1dc-168">Web アプリのデプロイの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-168">Specifies deployment type for your web app.</span></span> <span data-ttu-id="dd1dc-169">既定値は `war` です。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-169">Default is `war`.</span></span> |
 
-## <a name="build-and-deploy-your-web-app-to-azure"></a><span data-ttu-id="9448c-174">Web アプリをビルドして Azure にデプロイする</span><span class="sxs-lookup"><span data-stu-id="9448c-174">Build and deploy your web app to Azure</span></span>
+## <a name="build-and-deploy-your-web-app-to-azure"></a><span data-ttu-id="dd1dc-170">Web アプリをビルドして Azure にデプロイする</span><span class="sxs-lookup"><span data-stu-id="dd1dc-170">Build and deploy your web app to Azure</span></span>
 
-<span data-ttu-id="9448c-175">この記事の前のセクションで説明した設定をすべて構成した後、Azure に Web アプリをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="9448c-175">Once you have configured all of the settings in the preceding sections of this article, you are ready to deploy your web app to Azure.</span></span> <span data-ttu-id="9448c-176">そのためには、次の手順を実行してください。</span><span class="sxs-lookup"><span data-stu-id="9448c-176">To do so, use the following steps:</span></span>
+<span data-ttu-id="dd1dc-171">この記事の前のセクションで説明した設定をすべて構成した後、Azure に Web アプリをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-171">Once you have configured all of the settings in the preceding sections of this article, you are ready to deploy your web app to Azure.</span></span> <span data-ttu-id="dd1dc-172">そのためには、次の手順を実行してください。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-172">To do so, use the following steps:</span></span>
 
-1. <span data-ttu-id="9448c-177">*pom.xml* ファイルを変更する場合は、以前使っていたコマンド プロンプトまたはターミナル ウィンドウで、次の例のように Maven を使って JAR ファイルをリビルドします。</span><span class="sxs-lookup"><span data-stu-id="9448c-177">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
+1. <span data-ttu-id="dd1dc-173">*pom.xml* ファイルを変更する場合は、以前使っていたコマンド プロンプトまたはターミナル ウィンドウで、次の例のように Maven を使って JAR ファイルをリビルドします。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-173">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="9448c-178">Maven を使って次の例のように Azure に Web アプリをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="9448c-178">Deploy your web app to Azure by using Maven; for example:</span></span>
+1. <span data-ttu-id="dd1dc-174">Maven を使って次の例のように Azure に Web アプリをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-174">Deploy your web app to Azure by using Maven; for example:</span></span>
    ```shell
    mvn azure-webapp:deploy
    ```
 
-<span data-ttu-id="9448c-179">Maven が Web アプリを Azure にデプロイします。Web アプリが存在しない場合は新たに作成されます。</span><span class="sxs-lookup"><span data-stu-id="9448c-179">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
+<span data-ttu-id="dd1dc-175">Maven が Web アプリを Azure にデプロイします。Web アプリが存在しない場合は新たに作成されます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-175">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
 
-<span data-ttu-id="9448c-180">Web アプリのデプロイが完了すると、[Azure Portal] を使って Web アプリを管理できるようになります。</span><span class="sxs-lookup"><span data-stu-id="9448c-180">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
+<span data-ttu-id="dd1dc-176">Web アプリのデプロイが完了すると、[Azure Portal] を使って Web アプリを管理できるようになります。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-176">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
 
-* <span data-ttu-id="9448c-181">Web アプリは **App Services** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="9448c-181">Your web app will be listed in **App Services**:</span></span>
+* <span data-ttu-id="dd1dc-177">Web アプリは **App Services** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-177">Your web app will be listed in **App Services**:</span></span>
 
    ![Azure Portal の App Services に一覧表示される Web アプリ][AP01]
 
-* <span data-ttu-id="9448c-183">Web アプリの URL は、Web アプリの **[概要]** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="9448c-183">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
+* <span data-ttu-id="dd1dc-179">Web アプリの URL は、Web アプリの **[概要]** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-179">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
 
    ![Web アプリの URL の決定][AP02]
 
@@ -252,19 +248,19 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 1. Save and close the *application.yml* file.
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="9448c-185">次の手順</span><span class="sxs-lookup"><span data-stu-id="9448c-185">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="dd1dc-181">次の手順</span><span class="sxs-lookup"><span data-stu-id="dd1dc-181">Next steps</span></span>
 
-<span data-ttu-id="9448c-186">この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="9448c-186">For more information about the various technologies discussed in this article, see the following articles:</span></span>
+<span data-ttu-id="dd1dc-182">この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="dd1dc-182">For more information about the various technologies discussed in this article, see the following articles:</span></span>
 
-* <span data-ttu-id="9448c-187">[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]</span><span class="sxs-lookup"><span data-stu-id="9448c-187">[Maven Plugin for Azure Web Apps]</span></span>
+* <span data-ttu-id="dd1dc-183">[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]</span><span class="sxs-lookup"><span data-stu-id="dd1dc-183">[Maven Plugin for Azure Web Apps]</span></span>
 
-* [<span data-ttu-id="9448c-188">Azure CLI から Azure へのログイン</span><span class="sxs-lookup"><span data-stu-id="9448c-188">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
+* [<span data-ttu-id="dd1dc-184">Azure CLI から Azure へのログイン</span><span class="sxs-lookup"><span data-stu-id="dd1dc-184">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
 
-* [<span data-ttu-id="9448c-189">Azure Web Apps 用の Maven プラグインを使用して、コンテナー化された Spring Boot アプリを Azure にデプロイする方法</span><span class="sxs-lookup"><span data-stu-id="9448c-189">How to use the Maven Plugin for Azure Web Apps to deploy a containerized Spring Boot app to Azure</span></span>](deploy-containerized-spring-boot-java-app-with-maven-plugin.md)
+* [<span data-ttu-id="dd1dc-185">Azure Web Apps 用の Maven プラグインを使用して、コンテナー化された Spring Boot アプリを Azure にデプロイする方法</span><span class="sxs-lookup"><span data-stu-id="dd1dc-185">How to use the Maven Plugin for Azure Web Apps to deploy a containerized Spring Boot app to Azure</span></span>](deploy-containerized-spring-boot-java-app-with-maven-plugin.md)
 
-* [<span data-ttu-id="9448c-190">Azure CLI 2.0 で Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="9448c-190">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
+* [<span data-ttu-id="dd1dc-186">Azure CLI 2.0 で Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="dd1dc-186">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-* [<span data-ttu-id="9448c-191">Maven の設定リファレンス</span><span class="sxs-lookup"><span data-stu-id="9448c-191">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
+* [<span data-ttu-id="dd1dc-187">Maven の設定リファレンス</span><span class="sxs-lookup"><span data-stu-id="dd1dc-187">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
 
 <!-- URL List -->
 
@@ -279,13 +275,12 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
-[MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot Getting Started]: https://github.com/microsoft/gs-spring-boot
+[Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
-[Maven Plugin for Azure Web Apps]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[Maven Plugin for Azure Web Apps]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
 
 <!-- IMG List -->
 
