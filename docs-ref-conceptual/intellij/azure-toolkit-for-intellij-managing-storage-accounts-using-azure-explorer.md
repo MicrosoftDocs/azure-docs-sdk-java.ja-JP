@@ -15,100 +15,101 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954843"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075431"
 ---
-# <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="deddc-103">Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する</span><span class="sxs-lookup"><span data-stu-id="deddc-103">Manage storage accounts by using the Azure Explorer for IntelliJ</span></span>
+# <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a><span data-ttu-id="bee6a-103">Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する</span><span class="sxs-lookup"><span data-stu-id="bee6a-103">Manage storage accounts by using the Azure Explorer for IntelliJ</span></span>
 
-<span data-ttu-id="deddc-104">Azure Toolkit for IntelliJ の一部である Azure Explorer は、IntelliJ 統合開発環境 (IDE) 内から Azure アカウントのストレージ アカウントを管理するための使いやすいソリューションを Java 開発者に提供します。</span><span class="sxs-lookup"><span data-stu-id="deddc-104">The Azure Explorer, which is part of the Azure Toolkit for IntelliJ, provides Java developers with an easy-to-use solution for managing storage accounts in their Azure account from inside the IntelliJ integrated development environment (IDE).</span></span>
+<span data-ttu-id="bee6a-104">Azure Toolkit for IntelliJ の一部である Azure Explorer は、IntelliJ 統合開発環境 (IDE) 内から Azure アカウントのストレージ アカウントを管理するための使いやすいソリューションを Java 開発者に提供します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-104">The Azure Explorer, which is part of the Azure Toolkit for IntelliJ, provides Java developers with an easy-to-use solution for managing storage accounts in their Azure account from inside the IntelliJ integrated development environment (IDE).</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
 
 [!INCLUDE [azure-toolkit-for-intellij-show-azure-explorer](../includes/azure-toolkit-for-intellij-show-azure-explorer.md)]
 
-## <a name="create-a-storage-account-in-intellij"></a><span data-ttu-id="deddc-105">IntelliJ でストレージ アカウントを作成する</span><span class="sxs-lookup"><span data-stu-id="deddc-105">Create a storage account in IntelliJ</span></span>
+## <a name="create-a-storage-account-in-intellij"></a><span data-ttu-id="bee6a-105">IntelliJ でストレージ アカウントを作成する</span><span class="sxs-lookup"><span data-stu-id="bee6a-105">Create a storage account in IntelliJ</span></span>
 
-<span data-ttu-id="deddc-106">Azure Explorer を使用してストレージ アカウントを作成するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="deddc-106">To create a storage account by using the Azure Explorer, do the following:</span></span>
+<span data-ttu-id="bee6a-106">Azure Explorer を使用してストレージ アカウントを作成するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-106">To create a storage account by using the Azure Explorer, do the following:</span></span>
 
-1. <span data-ttu-id="deddc-107">「[Azure Toolkit for IntelliJ のサインイン手順]」を使用して Azure アカウントにサインインします。</span><span class="sxs-lookup"><span data-stu-id="deddc-107">Sign in to your Azure account by using the [Sign-in instructions for the Azure Toolkit for IntelliJ].</span></span> 
+1. <span data-ttu-id="bee6a-107">「[Azure Toolkit for IntelliJ のサインイン手順]」を使用して Azure アカウントにサインインします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-107">Sign in to your Azure account by using the [Sign-in instructions for the Azure Toolkit for IntelliJ].</span></span> 
 
-2. <span data-ttu-id="deddc-108">**Azure Explorer** ビューで、**[Azure]** ノードを展開し、**[ストレージ アカウント]** を右クリックし、**[ストレージ アカウントの作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-108">In the **Azure Explorer** view, expand the **Azure** node, right-click **Storage Accounts**, and then click **Create Storage Account**.</span></span>
+2. <span data-ttu-id="bee6a-108">**Azure Explorer** ビューで、**[Azure]** ノードを展開し、**[ストレージ アカウント]** を右クリックし、**[ストレージ アカウントの作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-108">In the **Azure Explorer** view, expand the **Azure** node, right-click **Storage Accounts**, and then click **Create Storage Account**.</span></span>
 
    ![[ストレージ アカウントの作成] コマンド][CS01]
 
-3. <span data-ttu-id="deddc-110">**[ストレージ アカウントの作成]** ダイアログ ボックスで、次のオプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-110">In the **Create Storage Account** dialog box, specify the following options:</span></span>
+3. <span data-ttu-id="bee6a-110">**[ストレージ アカウントの作成]** ダイアログ ボックスで、次のオプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-110">In the **Create Storage Account** dialog box, specify the following options:</span></span>
 
    ![[新しいストレージ アカウントの作成] ダイアログ ボックス][CS02]
 
-   * <span data-ttu-id="deddc-112">**[名前]**: 新しいストレージ アカウントの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-112">**Name**: Specifies the name for the new storage account.</span></span>
+   * <span data-ttu-id="bee6a-112">**[名前]**: 新しいストレージ アカウントの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-112">**Name**: Specifies the name for the new storage account.</span></span>
 
-   * <span data-ttu-id="deddc-113">**[アカウントの種類]**: 作成するストレージ アカウントの種類 ("Blob Storage" など) を指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-113">**Account kind**: Specifies the type of storage account to create (for example, "Blob storage").</span></span> <span data-ttu-id="deddc-114">詳細については、「[Azure ストレージ アカウントについて]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="deddc-114">For more information, see [About Azure storage accounts].</span></span> 
+   * <span data-ttu-id="bee6a-113">**[アカウントの種類]**: 作成するストレージ アカウントの種類 ("Blob Storage" など) を指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-113">**Account kind**: Specifies the type of storage account to create (for example, "Blob storage").</span></span> <span data-ttu-id="bee6a-114">詳細については、「[Azure ストレージ アカウントについて]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bee6a-114">For more information, see [About Azure storage accounts].</span></span> 
 
-   * <span data-ttu-id="deddc-115">**[パフォーマンス]**: 選択された発行元からどのストレージ アカウント サービスを使用するかを指定します ("Premium" など)。</span><span class="sxs-lookup"><span data-stu-id="deddc-115">**Performance**: Specifies which storage account offering to use from the selected publisher (for example, "Premium").</span></span> <span data-ttu-id="deddc-116">詳細については、「[Azure Storage のスケーラビリティおよびパフォーマンスのターゲット]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="deddc-116">For more information, see [Azure storage scalability and performance targets].</span></span> 
+   * <span data-ttu-id="bee6a-115">
+  **[パフォーマンス]**: 選択された発行元からどのストレージ アカウント サービスを使用するかを指定します ("Premium" など)。</span><span class="sxs-lookup"><span data-stu-id="bee6a-115">**Performance**: Specifies which storage account offering to use from the selected publisher (for example, "Premium").</span></span> <span data-ttu-id="bee6a-116">詳細については、「[Azure Storage のスケーラビリティおよびパフォーマンスのターゲット]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bee6a-116">For more information, see [Azure storage scalability and performance targets].</span></span> 
 
-   * <span data-ttu-id="deddc-117">**[レプリケーション]**: ストレージ アカウントのレプリケーション ("ゾーン冗長" など) を指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-117">**Replication**: Specifies the replication for the storage account (for example, "Zone-Redundant").</span></span> <span data-ttu-id="deddc-118">詳細については、「[Azure Storage のレプリケーション]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="deddc-118">For more information, see [Azure storage replication].</span></span> 
+   * <span data-ttu-id="bee6a-117">**[レプリケーション]**: ストレージ アカウントのレプリケーション ("ゾーン冗長" など) を指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-117">**Replication**: Specifies the replication for the storage account (for example, "Zone-Redundant").</span></span> <span data-ttu-id="bee6a-118">詳細については、「[Azure Storage のレプリケーション]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bee6a-118">For more information, see [Azure storage replication].</span></span> 
 
-   * <span data-ttu-id="deddc-119">**[サブスクリプション]**: 新しいストレージ アカウントに使用する Azure サブスクリプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-119">**Subscription**: Specifies the Azure subscription that you want to use for the new storage account.</span></span>
+   * <span data-ttu-id="bee6a-119">**[サブスクリプション]**: 新しいストレージ アカウントに使用する Azure サブスクリプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-119">**Subscription**: Specifies the Azure subscription that you want to use for the new storage account.</span></span>
 
-   * <span data-ttu-id="deddc-120">**[場所]**: ストレージ アカウントを作成する場所を指定します ("米国西部" など)。</span><span class="sxs-lookup"><span data-stu-id="deddc-120">**Location**: Specifies the location where your storage account will be created (for example, "West US").</span></span>
+   * <span data-ttu-id="bee6a-120">**[場所]**: ストレージ アカウントを作成する場所を指定します ("米国西部" など)。</span><span class="sxs-lookup"><span data-stu-id="bee6a-120">**Location**: Specifies the location where your storage account will be created (for example, "West US").</span></span>
 
-   * <span data-ttu-id="deddc-121">**[リソース グループ]**: 仮想マシン用のリソース グループを指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-121">**Resource Group**: Specifies the resource group for your virtual machine.</span></span> <span data-ttu-id="deddc-122">次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="deddc-122">Select one of the following options:</span></span>
-      * <span data-ttu-id="deddc-123">**[新規作成]**: 新しいリソース グループを作成することを指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-123">**Create new**: Specifies that you want to create a new resource group.</span></span>
-      * <span data-ttu-id="deddc-124">**[Use Existing\(既存の使用\)]**: Azure アカウントに関連付けられているリソース グループの一覧から選択することを指定します。</span><span class="sxs-lookup"><span data-stu-id="deddc-124">**Use existing**: Specifies that you will select from a list of resource groups that are associated with your Azure account.</span></span>
+   * <span data-ttu-id="bee6a-121">**[リソース グループ]**: 仮想マシン用のリソース グループを指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-121">**Resource Group**: Specifies the resource group for your virtual machine.</span></span> <span data-ttu-id="bee6a-122">次のいずれかのオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-122">Select one of the following options:</span></span>
+      * <span data-ttu-id="bee6a-123">**[新規作成]**: 新しいリソース グループを作成することを指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-123">**Create new**: Specifies that you want to create a new resource group.</span></span>
+      * <span data-ttu-id="bee6a-124">**[Use Existing\(既存の使用\)]**: Azure アカウントに関連付けられているリソース グループの一覧から選択することを指定します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-124">**Use existing**: Specifies that you will select from a list of resource groups that are associated with your Azure account.</span></span>
 
-4. <span data-ttu-id="deddc-125">上記のオプションをすべて指定したら、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-125">When you have specified all of the preceding options, click **OK**.</span></span>
+4. <span data-ttu-id="bee6a-125">上記のオプションをすべて指定したら、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-125">When you have specified all of the preceding options, click **OK**.</span></span>
 
-## <a name="create-a-storage-container-in-intellij"></a><span data-ttu-id="deddc-126">IntelliJ にストレージ コンテナーを作成する</span><span class="sxs-lookup"><span data-stu-id="deddc-126">Create a storage container in IntelliJ</span></span>
+## <a name="create-a-storage-container-in-intellij"></a><span data-ttu-id="bee6a-126">IntelliJ にストレージ コンテナーを作成する</span><span class="sxs-lookup"><span data-stu-id="bee6a-126">Create a storage container in IntelliJ</span></span>
 
-<span data-ttu-id="deddc-127">Azure Explorer を使用してストレージ コンテナーを作成するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="deddc-127">To create a storage container by using the Azure Explorer, do the following:</span></span>
+<span data-ttu-id="bee6a-127">Azure Explorer を使用してストレージ コンテナーを作成するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-127">To create a storage container by using the Azure Explorer, do the following:</span></span>
 
-1. <span data-ttu-id="deddc-128">Azure Explorer ビューで、コンテナーを作成するストレージ アカウントを右クリックし、**[BLOB コンテナーの作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-128">In the Azure Explorer view, right-click the storage account where you want to create a container, and then click **Create blob container**.</span></span>
+1. <span data-ttu-id="bee6a-128">Azure Explorer ビューで、コンテナーを作成するストレージ アカウントを右クリックし、**[BLOB コンテナーの作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-128">In the Azure Explorer view, right-click the storage account where you want to create a container, and then click **Create blob container**.</span></span>
 
    ![[BLOB コンテナーの作成] コマンド][CC01]
 
-2. <span data-ttu-id="deddc-130">**[BLOB コンテナーを作成する]** ダイアログ ボックスで、コンテナーの名前を指定し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-130">In the **Create blob container** dialog box, specify the name for your container, and then click **OK**.</span></span> <span data-ttu-id="deddc-131">ストレージ コンテナーの名前付けについて詳しくは、「[コンテナー、BLOB、メタデータの名前付けと参照]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="deddc-131">For more information about naming storage containers, see [Naming and referencing containers, blobs, and metadata].</span></span>
+2. <span data-ttu-id="bee6a-130">**[BLOB コンテナーを作成する]** ダイアログ ボックスで、コンテナーの名前を指定し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-130">In the **Create blob container** dialog box, specify the name for your container, and then click **OK**.</span></span> <span data-ttu-id="bee6a-131">ストレージ コンテナーの名前付けについて詳しくは、「[コンテナー、BLOB、メタデータの名前付けと参照]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="bee6a-131">For more information about naming storage containers, see [Naming and referencing containers, blobs, and metadata].</span></span>
 
    ![[BLOB コンテナーの作成] ダイアログ ボックス][CC02]
 
-## <a name="delete-a-storage-container-in-intellij"></a><span data-ttu-id="deddc-133">IntelliJ でストレージ コンテナーを削除する</span><span class="sxs-lookup"><span data-stu-id="deddc-133">Delete a storage container in IntelliJ</span></span>
+## <a name="delete-a-storage-container-in-intellij"></a><span data-ttu-id="bee6a-133">IntelliJ でストレージ コンテナーを削除する</span><span class="sxs-lookup"><span data-stu-id="bee6a-133">Delete a storage container in IntelliJ</span></span>
 
-<span data-ttu-id="deddc-134">Azure Explorer を使用してストレージ コンテナーを削除するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="deddc-134">To delete a storage container by using the Azure Explorer, do the following:</span></span>
+<span data-ttu-id="bee6a-134">Azure Explorer を使用してストレージ コンテナーを削除するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-134">To delete a storage container by using the Azure Explorer, do the following:</span></span>
 
-1. <span data-ttu-id="deddc-135">Azure Explorer ビューで、ストレージ コンテナーを右クリックし、**[削除]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-135">In the Azure Explorer view, right-click the storage container, and then click **Delete**.</span></span>
+1. <span data-ttu-id="bee6a-135">Azure Explorer ビューで、ストレージ コンテナーを右クリックし、**[削除]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-135">In the Azure Explorer view, right-click the storage container, and then click **Delete**.</span></span>
 
    ![[ストレージ コンテナーの削除] コマンド][DC01]
 
-2. <span data-ttu-id="deddc-137">確認ウィンドウで **[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-137">In the confirmation window, click **Yes**.</span></span>
+2. <span data-ttu-id="bee6a-137">確認ウィンドウで **[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-137">In the confirmation window, click **Yes**.</span></span>
 
    ![ストレージ コンテナー削除確認ウィンドウ][DC02]
 
-## <a name="delete-a-storage-account-in-intellij"></a><span data-ttu-id="deddc-139">IntelliJ でストレージ アカウントを削除する</span><span class="sxs-lookup"><span data-stu-id="deddc-139">Delete a storage account in IntelliJ</span></span>
+## <a name="delete-a-storage-account-in-intellij"></a><span data-ttu-id="bee6a-139">IntelliJ でストレージ アカウントを削除する</span><span class="sxs-lookup"><span data-stu-id="bee6a-139">Delete a storage account in IntelliJ</span></span>
 
-<span data-ttu-id="deddc-140">Azure Explorer を使用してストレージ アカウントを削除するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="deddc-140">To delete a storage account by using the Azure Explorer, do the following:</span></span>
+<span data-ttu-id="bee6a-140">Azure Explorer を使用してストレージ アカウントを削除するには、以下の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-140">To delete a storage account by using the Azure Explorer, do the following:</span></span>
 
-1. <span data-ttu-id="deddc-141">**Azure Explorer** ビューで、ストレージ アカウントを右クリックし、**[削除]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="deddc-141">In the **Azure Explorer** view, right-click the storage account, and then select **Delete**.</span></span>
+1. <span data-ttu-id="bee6a-141">**Azure Explorer** ビューで、ストレージ アカウントを右クリックし、**[削除]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="bee6a-141">In the **Azure Explorer** view, right-click the storage account, and then select **Delete**.</span></span>
 
    ![ストレージ アカウントの [削除] メニュー][DS01]
 
-2. <span data-ttu-id="deddc-143">確認ウィンドウで **[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="deddc-143">In the confirmation window, click **Yes**.</span></span>
+2. <span data-ttu-id="bee6a-143">確認ウィンドウで **[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee6a-143">In the confirmation window, click **Yes**.</span></span>
 
    ![ストレージ アカウント削除確認ウィンドウ][DS02]
 
-## <a name="next-steps"></a><span data-ttu-id="deddc-145">次の手順</span><span class="sxs-lookup"><span data-stu-id="deddc-145">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="bee6a-145">次の手順</span><span class="sxs-lookup"><span data-stu-id="bee6a-145">Next steps</span></span>
 
-<span data-ttu-id="deddc-146">Azure ストレージ アカウント、サイズ、および料金の詳細については、次のリソースを参照してください。</span><span class="sxs-lookup"><span data-stu-id="deddc-146">For more information about Azure storage accounts, sizes, and pricing, see the following resources:</span></span>
+<span data-ttu-id="bee6a-146">Azure ストレージ アカウント、サイズ、および料金の詳細については、次のリソースを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bee6a-146">For more information about Azure storage accounts, sizes, and pricing, see the following resources:</span></span>
 
-* <span data-ttu-id="deddc-147">[Microsoft Azure Storage の概要]</span><span class="sxs-lookup"><span data-stu-id="deddc-147">[Introduction to Microsoft Azure Storage]</span></span>
-* <span data-ttu-id="deddc-148">[Azure ストレージ アカウントについて]</span><span class="sxs-lookup"><span data-stu-id="deddc-148">[About Azure storage accounts]</span></span>
-* <span data-ttu-id="deddc-149">Azure ストレージ アカウントのサイズ</span><span class="sxs-lookup"><span data-stu-id="deddc-149">Azure storage-account sizes</span></span>
-  * <span data-ttu-id="deddc-150">[Azure の Windows ストレージ アカウントのサイズ]</span><span class="sxs-lookup"><span data-stu-id="deddc-150">[Sizes for Windows storage accounts in Azure]</span></span>
-  * <span data-ttu-id="deddc-151">[Azure の Linux ストレージ アカウントのサイズ]</span><span class="sxs-lookup"><span data-stu-id="deddc-151">[Sizes for Linux storage accounts in Azure]</span></span>
-* <span data-ttu-id="deddc-152">Azure ストレージ アカウントの料金</span><span class="sxs-lookup"><span data-stu-id="deddc-152">Azure storage-account pricing</span></span>
-  * <span data-ttu-id="deddc-153">[Windows ストレージ アカウントの料金]</span><span class="sxs-lookup"><span data-stu-id="deddc-153">[Windows storage-account pricing]</span></span>
-  * <span data-ttu-id="deddc-154">[Linux ストレージ アカウントの料金]</span><span class="sxs-lookup"><span data-stu-id="deddc-154">[Linux storage-account pricing]</span></span>
+* <span data-ttu-id="bee6a-147">[Microsoft Azure Storage の概要]</span><span class="sxs-lookup"><span data-stu-id="bee6a-147">[Introduction to Microsoft Azure Storage]</span></span>
+* <span data-ttu-id="bee6a-148">[Azure ストレージ アカウントについて]</span><span class="sxs-lookup"><span data-stu-id="bee6a-148">[About Azure storage accounts]</span></span>
+* <span data-ttu-id="bee6a-149">Azure ストレージ アカウントのサイズ</span><span class="sxs-lookup"><span data-stu-id="bee6a-149">Azure storage-account sizes</span></span>
+  * <span data-ttu-id="bee6a-150">[Azure の Windows ストレージ アカウントのサイズ]</span><span class="sxs-lookup"><span data-stu-id="bee6a-150">[Sizes for Windows storage accounts in Azure]</span></span>
+  * <span data-ttu-id="bee6a-151">[Azure の Linux ストレージ アカウントのサイズ]</span><span class="sxs-lookup"><span data-stu-id="bee6a-151">[Sizes for Linux storage accounts in Azure]</span></span>
+* <span data-ttu-id="bee6a-152">Azure ストレージ アカウントの料金</span><span class="sxs-lookup"><span data-stu-id="bee6a-152">Azure storage-account pricing</span></span>
+  * <span data-ttu-id="bee6a-153">[Windows ストレージ アカウントの料金]</span><span class="sxs-lookup"><span data-stu-id="bee6a-153">[Windows storage-account pricing]</span></span>
+  * <span data-ttu-id="bee6a-154">[Linux ストレージ アカウントの料金]</span><span class="sxs-lookup"><span data-stu-id="bee6a-154">[Linux storage-account pricing]</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 
