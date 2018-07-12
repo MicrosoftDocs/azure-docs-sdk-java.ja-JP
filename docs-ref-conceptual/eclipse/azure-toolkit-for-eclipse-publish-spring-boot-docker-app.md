@@ -1,12 +1,12 @@
 ---
-title: "Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する"
-description: "Azure Toolkit for Eclipse を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。"
-services: 
+title: Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する
+description: Azure Toolkit for Eclipse を使用して、Web アプリを Docker コンテナーとして Microsoft Azure に発行する方法について説明します。
+services: ''
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
-editor: 
-ms.assetid: 
+editor: ''
+ms.assetid: ''
 ms.author: robmcm
 ms.date: 02/01/2018
 ms.devlang: Java
@@ -14,11 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: b54c10dc33324d902a0e778770df8ec4d71dc9a1
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: c116e0712afd8e48983f946f43eddfd0c79c0ba8
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075474"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 
 1. **[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Git]** を展開します。
+   a. **[Git]** を展開します。
 
    b. **[Projects from Git]\(Git のプロジェクト\)** を選択します。
    
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 
 1. **[Select Repository Source]\(リポジトリ ソースの選択\)** ページで次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Clone URI]\(URI の複製\)** を選択します。
+   a. **[Clone URI]\(URI の複製\)** を選択します。
    
    b. **[次へ]** をクリックします。
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 02/03/2018
 
 1. **[Source Git Repository]\(ソース Git リポジトリ\)** ページで次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[URI]** に「`https://github.com/spring-guides/gs-spring-boot-docker.git`」と入力します。 これで **[Host]\(ホスト\)** と **[Repository path]\(リポジトリ パス\)** の各フィールドに正しい値が設定されます。
+   a. **[URI]** に「`https://github.com/spring-guides/gs-spring-boot-docker.git`」と入力します。 これで **[Host]\(ホスト\)** と **[Repository path]\(リポジトリ パス\)** の各フィールドに正しい値が設定されます。
    
    b. Spring Boot リポジトリは公開されるため、Git のユーザー名とパスワードを入力する必要はありません。
    
@@ -76,7 +77,7 @@ ms.lasthandoff: 02/03/2018
 
 1. **[Local Destination]\(ローカルの保存先\)** ページで次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 ローカル リポジトリを保存するローカル フォルダーを指定します。
+   a. ローカル リポジトリを保存するローカル フォルダーを指定します。
    
    b. **[次へ]** をクリックします。
 
@@ -84,7 +85,7 @@ ms.lasthandoff: 02/03/2018
 
 1. **[Select a wizard to use for importing projects]\(プロジェクトのインポートに使用するウィザードの選択\)** ページで次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Import as a general project]\(一般的なプロジェクトのインポート\)** を選択します。
+   a. **[Import as a general project]\(一般的なプロジェクトのインポート\)** を選択します。
    
    b. **[次へ]** をクリックします。
 
@@ -92,9 +93,9 @@ ms.lasthandoff: 02/03/2018
 
 1. **[Import Projects]\(プロジェクトのインポート\)** ページで次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 プロジェクト名を指定します。
+   a. プロジェクト名を指定します。
    
-   b. **[完了]**をクリックします。
+   b. **[完了]** をクリックします。
 
    ![[Import Projects]\(プロジェクトのインポート\) ページ][CL08]
 
@@ -112,7 +113,7 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 1. **[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Maven]** を展開します。
+   a. **[Maven]** を展開します。
    
    b. **[Existing Maven Projects]\(既存の Maven プロジェクト\)** を選択します。
    
@@ -122,13 +123,13 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 1. **[Maven Projects]\(Maven プロジェクト\)** ページで次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Root Directory]\(ルート ディレクトリ\)** に、ローカル リポジトリの **complete** フォルダーを指定します。
+   a. **[Root Directory]\(ルート ディレクトリ\)** に、ローカル リポジトリの **complete** フォルダーを指定します。
    
    b. **[Advanced]\(詳細\)** セクションを展開し、**[Name template]\(テンプレートの名前\)** にカスタムの名前を入力します。
    
    c. プロジェクトの **pom.xml** ファイルのボックスを選択します。
    
-   d. **[完了]**をクリックします。
+   d. **[完了]** をクリックします。
 
    ![[Maven Projects]\(Maven プロジェクト\) ページ][MV02]
 
@@ -140,7 +141,7 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 1. Eclipse Project Explorer で、Maven プロジェクトを選択します。
 
-1. **[実行]** > **[Run As]\(プログラム名を指定して実行\)** > **[Maven build]\(Maven ビルド\)**をクリックします。
+1. **[実行]** > **[Run As]\(プログラム名を指定して実行\)** > **[Maven build]\(Maven ビルド\)** をクリックします。
 
    ![[Run As]\(プログラム名を指定して実行\) の [Maven build]\(Maven ビルド\) コマンド][BU01]
 
@@ -158,7 +159,7 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 1. **[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスが表示されたら、次の手順を実行します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 カスタムの Docker イメージ名を入力します。
+   a. カスタムの Docker イメージ名を入力します。
    
    b. **[Artifact to deploy]\(デプロイするアーティファクト\)** に、ビルドした **gs-spring-boot-docker-0.1.0.jar** ファイルのパスを指定します。
 
@@ -168,7 +169,7 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 1. 既存のホストへのデプロイを選択する場合は、スキップして手順 5 に進みます。 そうでない場合は、次の手順に従ってホストを作成します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[追加]**をクリックします。
+   a. **[追加]** をクリックします。
 
       ![新しい Docker ホストの追加][PU03]
 
@@ -186,7 +187,7 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 1. **[Deploying Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスの最後のページで、次のオプションを指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。
+   a. Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。
 
    b. "*[外部ポート]*:*[内部ポート]*" という構文で、Docker ホストの TCP ポートを入力します。 たとえば "**80:8080**" では、外部ポート "80" と既定の内部 Spring Boot ポート "8080" が指定されます。
    
@@ -202,7 +203,7 @@ Spring Boot Docker リポジトリには、このチュートリアルで使用�
 
 ## <a name="next-steps"></a>次の手順
 
-Docker の他のリソースについては、公式の Docker Web サイトを参照してください。
+Docker の他のリソースについては、公式の [Docker の Web サイト](https://www.docker.com/)を参照してください。
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

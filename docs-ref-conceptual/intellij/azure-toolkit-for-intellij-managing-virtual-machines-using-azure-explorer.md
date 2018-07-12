@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 213efa7fc31705b0ffcba6f2fe40e7186a365fae
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38074532"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Azure Explorer for IntelliJ を使用して仮想マシンを管理する
 
@@ -54,9 +54,11 @@ Azure Explorer を使用して仮想マシンを作成するには、以下の�
 
       * **[発行者]**: 仮想マシンを作成するために使用するイメージを作成した発行元を指定します (*Microsoft* など)。
 
-      * **[プラン]**: 選択した発行元の、仮想マシンで使用するプランを指定します (*JDK* など)。
+      * 
+  **[プラン]**: 選択した発行元の、仮想マシンで使用するプランを指定します (*JDK* など)。
 
-      * **[SKU]**: 選択したプランで使用する在庫保管単位 (SKU) を指定します (*JDK_8* など)。
+      * 
+  **[SKU]**: 選択したプランで使用する在庫保管単位 (SKU) を指定します (*JDK_8* など)。
 
       * **[Version #]\(バージョン番号\)**: 選択した SKU で使用するバージョンを指定します。
 

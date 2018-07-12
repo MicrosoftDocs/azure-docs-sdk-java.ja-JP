@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 2d3f2363bd0b41808cd409417327b924cb86d85b
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38075421"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Azure Explorer for Eclipse を使用して Redis Cache を管理する
 
@@ -43,7 +43,7 @@ Azure Toolkit for Eclipse の一部である Azure Explorer は、Eclipse IDE �
 
    ![新規 Redis Cache 作成ダイアログ ボックス][CR02]
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[DNS 名]**: 新しい Redis Cache の DNS サブドメインを指定します。この名前は、".redis.cache.windows.net" の前に付加されます (例: *wingtiptoys.redis.cache.windows.net*)。
+   a. **[DNS 名]**: 新しい Redis Cache の DNS サブドメインを指定します。この名前は、".redis.cache.windows.net" の前に付加されます (例: *wingtiptoys.redis.cache.windows.net*)。
 
    b. **[サブスクリプション]**: 新しい Redis Cache に使う Azure サブスクリプションを指定します。
 
