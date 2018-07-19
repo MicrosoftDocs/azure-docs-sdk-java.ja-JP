@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 06/20/2018
+ms.date: 07/02/2018
 ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: adcbc78cc129daf589bf070741308e4024432e5d
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 6d20593620c7fb73f8481be8705bdc42d4e9ce32
+ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090835"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37864052"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory 用の Spring Boot Starter の使用方法
 
@@ -67,7 +67,7 @@ ms.locfileid: "37090835"
 
    ![新しい Azure Active Directory インスタンスを作成する][directory-01]
 
-1. **組織名**と**初期ドメイン名**を入力し、**[作成]** をクリックします。
+1. **組織名**と**初期ドメイン名**を入力します。 ディレクトリの完全な URL をコピーします。このチュートリアルでは後ほど、これを使用してユーザー アカウントを追加します  (例: `wingtiptoysdirectory.onmicrosoft.com`)。操作が完了したら、**[作成]** をクリックします。
 
    ![Azure Active Directory の名前を指定する][directory-02]
 
@@ -75,7 +75,7 @@ ms.locfileid: "37090835"
 
    ![Azure Active Directory を選択する][directory-03]
 
-1. ポータル メニューから **[Azure Active Directory]** を選択し、**[プロパティ]** をクリックして **[ディレクトリ ID]** をコピーします。これはこの記事で後ほど使用します。
+1. ポータル メニューから **[Azure Active Directory]** を選択し、**[プロパティ]** をクリックして **[ディレクトリ ID]** をコピーします。このチュートリアルでは後ほど、この値を使用して *application.properties* ファイルを構成します。
 
    ![Azure Active Directory ID をコピーする][directory-13]
 
@@ -93,11 +93,11 @@ ms.locfileid: "37090835"
 
    ![アプリ登録を選択する][directory-06]
 
-1. アプリ登録のページで、後で使用できるように**アプリケーション ID** をコピーし、**[設定]**、**[キー]** の順にクリックします。
+1. アプリ登録のページが表示されたら、**アプリケーション ID** をコピーします。このチュートリアルでは後ほど、この値を使用して *application.properties* ファイルを構成します。 **[設定]** をクリックし、**[キー]** をクリックします。
 
    ![アプリの登録キーを作成する][directory-07]
 
-1. **説明**を追加し、新しいキーの**期間**を指定して、**[保存]** をクリックします。**[保存]** アイコンをクリックすると、キーの値が自動的に入力されます。後で使用できるように、キーの値をコピーする必要があります  (この値は後で取得することはできません)。
+1. **説明**を追加し、新しいキーの**期間**を指定して、**[保存]** をクリックします。**[保存]** アイコンをクリックすると、キーの値が自動的に入力されます。このチュートリアルで後ほど *application.properties* ファイルを構成できるように、キーの値をコピーする必要があります。 (この値は後で取得することはできません)。
 
    ![アプリの登録キーのパラメーターを指定する][directory-08]
 
@@ -125,13 +125,55 @@ ms.locfileid: "37090835"
 
    ![新しい応答 URL を追加する][directory-15]
 
+1. アプリ登録のメイン ページで、**[マニフェスト]** をクリックして `oauth2AllowImplicitFlow` パラメーターの値を `true` に設定し、**[保存]** をクリックします。
+
+   ![アプリケーション マニフェストの構成][directory-16]
+
+   > [!NOTE]
+   > 
+   > `oauth2AllowImplicitFlow` パラメーターとその他のアプリケーション設定の詳細については、「[Azure Active Directory アプリケーション マニフェスト][AAD app manifest]」をご覧ください。 
+   >
+
+### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>ディレクトリにユーザー アカウントを追加し、そのアカウントをグループに追加する
+
+1. Active Directory の **[概要]** ページで、**[ユーザー]** をクリックします。
+
+   ![ユーザー パネルを開く][directory-17]
+
+1. **[ユーザー]** パネルが表示されたら、**[新しいユーザー]** をクリックします。
+
+   ![新しいユーザー アカウントを追加する][directory-18]
+
+1. **[ユーザー]** パネルが表示されたら、**[名前]** と **[ユーザー名]** に入力します。
+
+   ![ユーザー アカウント情報を入力する][directory-19]
+
+   > [!NOTE]
+   > 
+   > ユーザー名を入力するときに、以下のように、このチュートリアルで先に出てきたディレクトリの URL を指定する必要があります。
+   >
+   > `wingtipuser@wingtiptoysdirectory.onmicrosoft.com`
+   > 
+
+1. **[グループ]** をクリックして、アプリケーションの承認で使用するグループを選択し、**[選択]** をクリックします  (このチュートリアルの目的では、アカウントを _Users_ グループに追加します)。
+
+   ![ユーザーのグループを選択する][directory-20]
+
+1. **[パスワードの表示]** をクリックしてパスワードをコピーします。このチュートリアルで後ほどアプリケーションにログインするときに、これを使用します。
+
+   ![パスワードを表示する][directory-21]
+
+1. **[作成]** をクリックして、新しいユーザー アカウントをディレクトリに追加します。
+
+   ![新しいユーザー アカウントを作成する][directory-22]
+
 ## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot アプリケーションの構成とコンパイル
 
-1. ダウンロードしたプロジェクトのアーカイブからディレクトリにファイルを抽出します。
+1. このチュートリアルで先ほど作成しダウンロードしたプロジェクト アーカイブからディレクトリにファイルを抽出します。
 
-2. プロジェクトの親フォルダーに移動し、テキスト エディターで *pom.xml* ファイルを開きます。
+1. プロジェクトの親フォルダーに移動し、テキスト エディターで *pom.xml* ファイルを開きます。
 
-3. Spring OAuth2 セキュリティの依存関係を追加します。次に例を示します。
+1. Spring OAuth2 セキュリティの依存関係を追加します。次に例を示します。
 
    ```xml
    <dependency>
@@ -144,11 +186,11 @@ ms.locfileid: "37090835"
    </dependency>
    ```
 
-4. *pom.xml* ファイルを保存して閉じます。
+1. *pom.xml* ファイルを保存して閉じます。
 
-5. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
+1. プロジェクトの *src/main/resources* フォルダーに移動し、テキスト エディターで *application.properties* ファイルを開きます。
 
-6. 前の手順で取得した値を使用して、ストレージ アカウントのキーを追加します。次に例を示します。
+1. 前に作成した値を使用して、アプリ登録の設定を指定します。たとえば、以下のとおりです。
 
    ```yaml
    # Specifies your Active Directory ID:
@@ -160,7 +202,7 @@ ms.locfileid: "37090835"
    # Specifies your App Registration's secret key:
    spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
 
-   # Specifies the list of Active Directory groups to use for authentication:
+   # Specifies the list of Active Directory groups to use for authorization:
    azure.activedirectory.active-directory-groups=Users
    ```
    各値の説明:
@@ -170,20 +212,20 @@ ms.locfileid: "37090835"
    | `azure.activedirectory.tenant-id` | 前の Active Directory の **ディレクトリ ID** を指定します。 |
    | `spring.security.oauth2.client.registration.azure.client-id` | 以前に完了したアプリ登録の**アプリケーション ID** を指定します。 |
    | `spring.security.oauth2.client.registration.azure.client-secret` | 以前に完了したアプリ登録キーの**値** を指定します。 |
-   | `azure.activedirectory.active-directory-groups` | 認証に使用する Active Directory グループの一覧を指定します。 |
+   | `azure.activedirectory.active-directory-groups` | 承認に使用する Active Directory グループの一覧を指定します。 |
 
    > [!NOTE]
    > 
    > *application.properties* ファイルで使用できる値の完全な一覧については、GitHub の「[Azure Active Directory Spring Boot Sample (Azure Active Directory Spring Boot のサンプル)][AAD Spring Boot Sample]」を参照してください。
    >
 
-7. *application.properties* ファイルを保存して閉じます。
+1. *application.properties* ファイルを保存して閉じます。
 
-8. アプリケーションの Java ソース フォルダーに、"*controller*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/controller*)。
+1. アプリケーションの Java ソース フォルダーに、"*controller*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/controller*)。
 
-9. *controller* フォルダーに "*HelloController.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
+1. *controller* フォルダーに "*HelloController.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
 
-10. 次のコードを入力し、ファイルを保存して閉じます。
+1. 次のコードを入力し、ファイルを保存して閉じます。
 
    ```java
    package com.wingtiptoys.security;
@@ -237,11 +279,11 @@ ms.locfileid: "37090835"
    > ```
    >    
 
-11. アプリケーションの Java ソース フォルダーに、"*security*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/security*)。
+1. アプリケーションの Java ソース フォルダーに、"*security*" という名前のフォルダーを作成します (例: *src/main/java/com/wingtiptoys/security/security*)。
 
-12. *security* フォルダーに "*WebSecurityConfig.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
+1. *security* フォルダーに "*WebSecurityConfig.java*" という名前の新しい Java ファイルを作成し、テキスト エディターで開きます。
 
-13. 次のコードを入力し、ファイルを保存して閉じます。
+1. 次のコードを入力し、ファイルを保存して閉じます。
 
     ```java
     package com.wingtiptoys.security;
@@ -291,6 +333,13 @@ ms.locfileid: "37090835"
 
    ![アプリケーションへのログイン][application-login]
 
+   > [!NOTE]
+   > 
+   > 新しいユーザー アカウントに初めてログインする場合、パスワードの変更を求められることがあります。
+   > 
+   > ![パスワードの変更][update-password]
+   > 
+
 1. 正常にログインしたら、コントローラーにサンプルの "Hello World" テキストが表示されます。
 
    ![正常なログイン][hello-world]
@@ -321,8 +370,9 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 <!-- URL List -->
 
 [Azure Active Directory のドキュメント]: /azure/active-directory/
+[AAD app manifest]: /azure/active-directory/develop/active-directory-application-manifest
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
-[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Java 開発者向けの Azure]: /java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
@@ -353,7 +403,15 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [directory-13]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-13.png
 [directory-14]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-14.png
 [directory-15]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-15.png
+[directory-16]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-16.png
+[directory-17]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-17.png
+[directory-18]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-18.png
+[directory-19]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-19.png
+[directory-20]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-20.png
+[directory-21]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-21.png
+[directory-22]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/directory-22.png
 
-[build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
 [application-login]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/application-login.png
+[build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
 [hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png
+[update-password]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/update-password.png
