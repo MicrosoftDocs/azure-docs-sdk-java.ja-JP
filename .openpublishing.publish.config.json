@@ -1,7 +1,5 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "AzureJava",
@@ -18,10 +16,10 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-	  "customized_template_paths": [
-         "_dependentPackages/memberpage.plugins/content"
+      "customized_template_paths": [
+        "_dependentPackages/memberpage.plugins/content"
       ],
-	  "customized_tasks": {
+      "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/splitToc/tools/run.ps1",
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
@@ -36,8 +34,10 @@
     "live"
   ],
   "continue_with_document_error": true,
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
+  "enable_incremental_build": false,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -73,6 +73,9 @@
       }
     }	  
   ],
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
@@ -104,9 +107,10 @@
       "ReferenceTOCUrl": "/java/api/azure-java-sdk/toc.json?view=azure-java-stable",
       "ConceptualTOCUrl": "/java/azure/toc.json?view=azure-java-stable",
       "HideEmptyNode": false,
-      "OutputFolder": "docs-ref-autogen/overview/azure",
       "ContainerPageMetadata": {
-        "langs": ["java"],
+        "langs": [
+          "java"
+        ],
         "open_to_public_contributors": false
       }
     },
@@ -118,7 +122,9 @@
       "ConceptualTOCUrl": "/java/azure/toc.json?view=azure-java-preview",
       "HideEmptyNode": false,
       "ContainerPageMetadata": {
-        "langs": ["java"],
+        "langs": [
+          "java"
+        ],
         "open_to_public_contributors": false
       }
     }
@@ -126,8 +132,5 @@
   "DiffFolder": [
     "docs-ref-autogen/overview/azure"
   ],
-  "toc_path_need_to_split": "docs-ref-autogen/toc.yml",
-  "git_repository_branch_open_to_public_contributors": "master",
-  "need_generate_pdf_url_template": false,
-  "enable_incremental_build": false
+  "toc_path_need_to_split": "docs-ref-autogen/toc.yml"
 }
