@@ -64,7 +64,7 @@ ms.locfileid: "37090775"
 
    ![Azure ポータル][AZ01]
 
-1. **[管理ツール]**、**[Application Insights]** の順にクリックします。
+1. **管理ツール** 、 **Application Insights**  の順にクリックします。
 
    ![Azure ポータル][AZ02]
 

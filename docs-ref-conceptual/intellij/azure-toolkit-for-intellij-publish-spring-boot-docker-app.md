@@ -51,7 +51,7 @@ ms.locfileid: "28954733"
 
       ![GitHub トークンを入力するためのダイアログ ボックス][CL02b]
 
-1. リポジトリ URL に「**https://github.com/spring-guides/gs-spring-boot-docker.git**」と入力し、ローカル パスとフォルダー情報を指定して、**[複製]** をクリックします。
+1. リポジトリ URL に「 **https://github.com/spring-guides/gs-spring-boot-docker.git** 」と入力し、ローカル パスとフォルダー情報を指定して、 **[複製]** をクリックします。
 
    ![リポジトリの複製ダイアログ ボックス][CL03]
 
