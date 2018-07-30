@@ -8,18 +8,18 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm;yungez;kevinzha
-ms.date: 02/01/2018
+ms.date: 07/05/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 6cf999f3db397760709476dae1f5c0fd83503725
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 3306f3ef66ec1b53ab004765b8fb7aef04de9077
+ms.sourcegitcommit: 1ff4654193404415841252a130b87a8b53b7c6d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823805"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39235976"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API で Spring Boot Starter を使用する方法
 
@@ -39,7 +39,7 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 
 ## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a>Azure Portal を使用して Azure Cosmos DB を作成する
 
-1. <https://portal.azure.com/> で Azure Portal を参照し、**[+新規]** をクリックします。
+1. Azure portal (<https://portal.azure.com/>) を参照し、**[+リソースの作成]** をクリックします。
 
    ![Azure ポータル][AZ01]
 
@@ -50,7 +50,7 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 1. **[Azure Cosmos DB]** ページで、次の情報を入力します。
 
    * データベースの URI として使用する一意の **ID** を入力します。 例: *wingtiptoysdata.documents.azure.com*。
-   * API として **[SQL (Document DB)]\(SQL (Document DB)\)** を選択します。
+   * API の **[SQL]** を選択します。
    * データベースに使用する**サブスクリプション**を選択します。
    * データベースに対して新しい**リソース グループ**を作成するか、既存のリソース グループを選択するかを指定します。
    * データベースの**場所**を指定します。
@@ -71,13 +71,18 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 
 1. <https://start.spring.io/> を参照します。
 
-1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[グループ]** と **[アーティファクト]** に名前を入力して、**[プロジェクトの生成]** のボタンをクリックします。
+1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[グループ]** と **[アーティファクト]** に名前を入力します。**Spring Boot** のバージョンを指定し、**[プロジェクトの生成]** をクリックします。
+
+   > [!IMPORTANT]
+   >
+   > Spring Boot バージョン 2.0.n では、API にいくつかの破壊的変更が加えられているため、このチュートリアルの手順を実行するには、Spring Boot 1.5.n バージョンのいずれかが必要になります。
+   >
 
    ![基本的な Spring Initializr オプション][SI01]
 
    > [!NOTE]
    >
-   > Spring Initializr では、**[グループ]** と **[アーティファクト]** の名前を使用してパッケージ名を作成します (例: *com.example.wintiptoys*)。
+   > Spring Initializr では、**[グループ]** と **[アーティファクト]** の名前を使用してパッケージ名を作成します (例: *com.example.wintiptoysdata*)。
    >
 
 1. メッセージが表示されたら、ローカル コンピューター上のパスにプロジェクトをダウンロードします。
@@ -92,11 +97,11 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 
 1. アプリのディレクトリで *pom.xml* ファイルを探します。次に例を示します。
 
-   `C:\SpringBoot\wingtiptoys\pom.xml`
+   `C:\SpringBoot\wingtiptoysdata\pom.xml`
 
    または
 
-   `/users/example/home/wingtiptoys/pom.xml`
+   `/users/example/home/wingtiptoysdata/pom.xml`
 
    ![pom.xml ファイルを探す][PM01]
 
@@ -112,17 +117,28 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 
    ![pom.xml ファイルの編集][PM02]
 
+1. Spring Boot のバージョンが 1.5.n バージョンのいずれかであることを確認します。次に例を示します。
+
+   ```xml
+   <parent>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId>
+      <version>1.5.14.RELEASE</version>
+      <relativePath/>
+   </parent>
+   ```
+
 1. *pom.xml* ファイルを保存して閉じます。
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a>Azure Cosmos DB を使用するように Spring Boot アプリを構成する
 
 1. アプリの *resources* ディレクトリ内で *application.properties* ファイルを探します。次に例を示します。
 
-   `C:\SpringBoot\wingtiptoys\src\main\resources\application.properties`
+   `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.properties`
 
    または
 
-   `/users/example/home/wingtiptoys/src/main/resources/application.properties`
+   `/users/example/home/wingtiptoysdata/src/main/resources/application.properties`
 
    ![application.properties ファイルを探す][RE01]
 
@@ -154,13 +170,14 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 1. テキスト エディターで *User.java* ファイルを開き、次の行をファイルに追加して、データベースの値を格納および取得する汎用ユーザー クラスを定義します。
 
    ```java
-   package com.example.wingtiptoys;
+   package com.example.wingtiptoysdata;
 
+   // Define a generic User class.
    public class User {
       private String id;
       private String firstName;
       private String lastName;
- 
+   
       public User(String id, String firstName, String lastName) {
          this.id = id;
          this.firstName = firstName;
@@ -170,30 +187,30 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
       public String getId() {
          return this.id;
       }
-
+   
       public void setId(String id) {
          this.id = id;
       }
-
+   
       public String getFirstName() {
          return firstName;
       }
-
+   
       public void setFirstName(String firstName) {
          this.firstName = firstName;
       }
-
+   
       public String getLastName() {
          return lastName;
       }
-
+   
       public void setLastName(String lastName) {
          this.lastName = lastName;
       }
-
+   
       @Override
       public String toString() {
-         return String.format("User: %s %s", firstName, lastName);
+         return String.format("User: %s %s %s", id, firstName, lastName);
       }
    }
    ```
@@ -207,13 +224,13 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 1. テキスト エディターで *UserRepository.java* ファイルを開き、既定の DocumentDB リポジトリ インターフェイスを拡張するユーザー リポジトリ インターフェイスを定義する次の行をファイルに追加します。
 
    ```java
-   package com.example.wingtiptoys;
-
+   package com.example.wingtiptoysdata;
+   
    import com.microsoft.azure.spring.data.documentdb.repository.DocumentDbRepository;
    import org.springframework.stereotype.Repository;
-
+   
    @Repository
-   public interface UserRepository extends DocumentDbRepository<User, String> {}   
+   public interface UserRepository extends DocumentDbRepository<User, String> { } 
    ```
 
 1. *UserRepository.java* ファイルを保存して閉じます。
@@ -222,42 +239,58 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 
 1. アプリのパッケージ ディレクトリでメイン アプリケーションの Java ファイルを探します。次に例を示します。
 
-   `C:\SpringBoot\wingtiptoys\src\main\java\com\example\wingtiptoys\WingtiptoysApplication.java`
+   `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\WingtiptoysdataApplication.java`
 
    または
 
-   `/users/example/home/wingtiptoys/src/main/java/com/example/wingtiptoys/WingtiptoysApplication.java`
+   `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/WingtiptoysdataApplication.java`
 
    ![アプリケーションの Java ファイルを探す][JV01]
 
 1. テキスト エディターでメイン アプリケーションの Java ファイルを開き、ファイルに次の行を追加します。
 
    ```java
-   package com.example.wingtiptoys;
-
+   package com.example.wingtiptoysdata;
+   
+   // These imports are required for the application.
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.boot.CommandLineRunner;
-
+   
+   // These imports are only used to create an ID for this example.
+   import java.util.Date;
+   import java.text.SimpleDateFormat;
+   
    @SpringBootApplication
-   public class WingtiptoysApplication implements CommandLineRunner {
-
+   public class wingtiptoysdataApplication implements CommandLineRunner {
+   
       @Autowired
       private UserRepository repository;
-    
+   
       public static void main(String[] args) {
-         SpringApplication.run(WingtiptoysApplication.class, args);
+         // Execute the command line runner.
+         SpringApplication.run(wingtiptoysdataApplication.class, args);
       }
-
-      public void run(String... var1) throws Exception {
-         final User testUser = new User("testId", "testFirstName", "testLastName");
-
+   
+      public void run(String... args) throws Exception {
+         // Create a simple date/time ID.
+         SimpleDateFormat userId = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+         Date currentDate = new Date();
+   
+         // Create a new User class.
+         final User testUser = new User(userId.format(currentDate), "Gena", "Soto");
+   
+         // For this example, remove all of the existing records.
          repository.deleteAll();
+   
+         // Save the User class to the Azure database.
          repository.save(testUser);
-
+         
+         // Retrieve the database record for the User class you just saved by ID.
          final User result = repository.findOne(testUser.getId());
-
+   
+         // Display the results of the database record retrieval.
          System.out.printf("\n\n%s\n\n",result.toString());
       }
    }
@@ -269,24 +302,24 @@ Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などの�
 
 1. コマンド プロンプトを開き、ディレクトリを *pom.xml* ファイルが置かれているフォルダーに変更します。次に例を示します。
 
-   `cd C:\SpringBoot\wingtiptoys`
+   `cd C:\SpringBoot\wingtiptoysdata`
 
    または
 
-   `cd /users/example/home/wingtiptoys`
+   `cd /users/example/home/wingtiptoysdata`
 
 1. Spring Boot アプリケーションを Maven でビルドし、実行します。次に例を示します。
 
    ```shell
-   mvn package
-   java -jar target/wingtiptoys-0.0.1-SNAPSHOT.jar
+   mvn clean package
+   mvn spring-boot:run
    ```
 
 1. アプリケーションによっていくつかのランタイム メッセージが表示されます。値が正常に格納され、データベースから取得されたことを示すメッセージ `User: testFirstName testLastName` が表示されます。
 
    ![アプリケーションからの正常な出力][JV02]
 
-1. 省略可能: Azure ポータルで **[ドキュメント エクスプローラー]** をクリックし、表示されたリストから項目を選んで内容を表示することで、データベースのプロパティ ページから Azure Cosmos DB の内容を表示できます。
+1. 省略可能: Azure portal で **[データ エクスプローラー]** をクリックし、表示されたリストから項目を選択して内容を表示することで、データベースのプロパティ ページから Azure Cosmos DB の内容を表示できます。
 
    ![ドキュメント エクスプローラーを使用してデータを表示する][JV03]
 
@@ -302,13 +335,13 @@ Azure Cosmos DB と Java の使用について詳しくは、次の記事をご�
 
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 
-* [Azure の Spring Boot DocumenDB Starter]
+* [Azure の Spring Boot DocumentDB Starter]
 
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
 **[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
 
@@ -318,9 +351,9 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Build a SQL API app with Java]: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-java 
 [Azure Cosmos DB SQL API の Spring Data]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
-[Azure の Spring Boot DocumenDB Starter]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
+[Azure の Spring Boot DocumentDB Starter]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

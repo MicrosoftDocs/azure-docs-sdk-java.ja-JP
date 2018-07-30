@@ -1,5 +1,5 @@
 ---
-title: Azure Container Service で Spring Boot アプリケーションを Kubernetes にデプロイする
+title: Azure Kubernetes Service で Spring Boot アプリを Kubernetes にデプロイする
 description: このチュートリアルでは、Microsoft Azure の Kubernetes クラスターに Spring Boot アプリケーションをデプロイする方法について説明します。
 services: container-service
 documentationcenter: java
@@ -8,25 +8,25 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: asirveda;robmcm
-ms.date: 02/01/2018
+ms.date: 07/05/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 9eb37f302835ea40e92b5212d5bbc305d1311bc4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.openlocfilehash: cb83a7d6ec3a9a83fbfd3b2e34e5a4e498aa36d3
+ms.sourcegitcommit: 51dc05a96a8cbc8a6c9b45e094d8f3cfec16a607
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954643"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189672"
 ---
-# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
+# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
-**[Kubernetes]** と **[Docker]** は、開発者が、コンテナーで実行されるアプリケーションのデプロイ、スケーリング、および管理を自動化することを支援するオープン ソース ソリューションです。
+**[Kubernetes]** と **[Docker]** は、開発者が、コンテナーで実行されるアプリケーションのデプロイ、スケーリング、管理を自動化することを支援するオープン ソース ソリューションです。
 
-このチュートリアルでは、これら 2 つの一般的なオープンソース テクノロジを組み合わせて Spring Boot アプリケーションを開発し、Microsoft Azure にデプロイする方法について説明します。 具体的には、アプリケーション開発で *[Spring Boot]* を、コンテナーのデプロイで *[Kubernetes]* を、アプリケーションのホストとして [Azure Container Service (AKS)] を使用します。
+このチュートリアルでは、この 2 つの一般的なオープンソース テクノロジを組み合わせて Spring Boot アプリケーションを開発し、Microsoft Azure にデプロイする方法について説明します。 具体的には、アプリケーション開発に *[Spring Boot]* を、コンテナーのデプロイに *[Kubernetes]* を、アプリケーションのホストとして [Azure Kubernetes Service (AKS)] をそれぞれ使用します。
 
 ### <a name="prerequisites"></a>前提条件
 
@@ -57,7 +57,7 @@ ms.locfileid: "28954643"
    cd /users/robert/SpringBoot
    ```
 
-1. [Spring Boot on Docker Getting Started] サンプル プロジェクトを、ディレクトリに複製します。
+1. [Docker での Spring Boot の使用開始] サンプル プロジェクトを、ディレクトリに複製します。
    ```
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
@@ -73,7 +73,7 @@ ms.locfileid: "28954643"
    mvn package spring-boot:run
    ```
 
-1. http://localhost:8080 を参照するか次の `curl` コマンドを使用して、Web アプリをテストします。
+1. http://localhost:8080 を参照するか、次の `curl` コマンドを使用して、Web アプリをテストします。
    ```
    curl http://localhost:8080
    ```
@@ -89,6 +89,11 @@ ms.locfileid: "28954643"
 1. Azure アカウントにログインします。
    ```azurecli
    az login
+   ```
+
+1. Azure サブスクリプションを選択します。
+   ```azurecli
+   az account set -s <YourSubscriptionID>
    ```
 
 1. このチュートリアルで使用する Azure リソースのリソース グループを作成します。
@@ -151,7 +156,11 @@ ms.locfileid: "28954643"
       <version>0.4.11</version>
       <configuration>
          <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-         <dockerDirectory>src/main/docker</dockerDirectory>
+         <buildArgs>
+            <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+         </buildArgs>
+         <baseImage>java</baseImage>
+         <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
          <resources>
             <resource>
                <targetPath>/</targetPath>
@@ -189,22 +198,24 @@ ms.locfileid: "28954643"
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Azure CLI を使用して AKS で Kubernetes クラスターを作成する
 
-1. Azure Container Service で Kubernetes クラスターを作成します。 次のコマンドは、*kubernetes* クラスターを *wingtiptoys-kubernetes* リソース グループ内に作成します。クラスター名として *wingtiptoys-containerservice* を、DNS プレフィックスとして *wingtiptoys-kubernetes* を使用します。
+1. Azure Kubernetes Service で Kubernetes クラスターを作成します。 次のコマンドでは、*kubernetes* クラスターを *wingtiptoys-kubernetes* リソース グループに作成します。クラスター名として *wingtiptoys-akscluster* を、DNS プレフィックスとして *wingtiptoys-kubernetes* を使用します。
    ```azurecli
-   az acs create --orchestrator-type=kubernetes --resource-group=wingtiptoys-kubernetes \ 
-    --name=wingtiptoys-containerservice --dns-prefix=wingtiptoys-kubernetes
+   az aks create --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster \ 
+    --dns-name-prefix=wingtiptoys-kubernetes --generate-ssh-keys
    ```
    このコマンドは、完了するまで時間がかかる場合があります。
 
+1. Azure Kubernetes Service (AKS) で Azure Container Registry (ACR) を使用する場合は、認証メカニズムを確立する必要があります。 「[Azure Kubernetes Service から Azure Container Registry の認証を受ける]」に記載された手順に従って、ACR へのアクセス許可を AKS に付与します。
+
+
 1. Azure CLI を使用して `kubectl` をインストールします。 Kubernetes CLI は `/usr/local/bin` にデプロイされるため、Linux ユーザーはこのコマンドの前に `sudo` を付けなければならない場合があります。
    ```azurecli
-   az acs kubernetes install-cli
+   az aks install-cli
    ```
 
 1. クラスター構成情報をダウンロードして、Kubernetes Web インターフェイスと `kubectl` からクラスターを管理できるようにします。 
    ```azurecli
-   az acs kubernetes get-credentials --resource-group=wingtiptoys-kubernetes  \ 
-    --name=wingtiptoys-containerservice
+   az aks get-credentials --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
 
 ## <a name="deploy-the-image-to-your-kubernetes-cluster"></a>イメージを Kubernetes クラスターにデプロイする
@@ -217,16 +228,16 @@ ms.locfileid: "28954643"
 
 1. Kubernetes クラスターの構成 Web サイトを既定のブラウザーで開きます。
    ```
-   az acs kubernetes browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-containerservice
+   az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
 
 1. Kubernetes 構成 Web サイトがブラウザーで開いたら、**コンテナー化されたアプリをデプロイする**ためのリンクをクリックします。
 
    ![Kubernetes 構成 Web サイト][KB01]
 
-1. **[Deploy a containerized app]\(コンテナー化されたアプリのデプロイ\)** ページが表示されたら、次のオプションを指定します。
+1. **[Resource Creation]\(リソースの作成\)** ページが表示されたら、次のオプションを指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Specify app details below]\(アプリの詳細を指定する\)** を選択します。
+   a. **[CREATE AN APP]\(アプリの作成\)** を選択します。
 
    b. Spring Boot アプリケーション名を **[App name]\(アプリ名\)** に入力します (例: "*gs-spring-boot-docker*")。
 
@@ -241,7 +252,7 @@ ms.locfileid: "28954643"
 
 1. **[Deploy]\(デプロイ)\** をクリックしてコンテナーをデプロイします。
 
-   ![コンテナーをデプロイする][KB05]
+   ![Kubernetes デプロイ][KB05]
 
 1. アプリケーションがデプロイされると、**[Services]\(サービス)\** の下に Spring Boot アプリケーションが表示されます。
 
@@ -298,20 +309,21 @@ Azure での Spring Boot の使用の詳細については、次の記事を参�
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
 
-Docker サンプル プロジェクトでの Spring Boot の詳細については、[Spring Boot on Docker Getting Started]に関するページを参照してください。
+<!-- Newly added --> Visual Studio Code を使用して Java アプリケーションを Kubernetes にデプロイする方法の詳細については、[Visual Studio Code Java チュートリアル]を参照してください。
+
+Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
 次のリンクは、Spring Boot アプリケーションの作成に関する追加情報を提供します。
 
-* 単純な Spring Boot アプリケーションの作成の詳細については、Spring Initializr を参照してください (https://start.spring.io/)。
+* 単純な Spring Boot アプリケーションの作成の詳細については、Spring Initializr (https://start.spring.io/) を参照してください。
 
 次のリンクは、Azure での Kubernetes の使用に関する追加情報を提供します。
 
-* [Container Service で Kubernetes クラスターを使用する](https://docs.microsoft.com/azure/container-service/container-service-kubernetes-walkthrough)
-* [Azure Container Service で Kubernetes Web UI を使用する](https://docs.microsoft.com/azure/container-service/container-service-kubernetes-ui)
+* [Azure Kubernetes Service で Kubernetes クラスターを使用する](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
 
-Kubernetes コマンド ライン インターフェイスの使用の詳細については、**kubectl** ユーザー ガイド (<https://kubernetes.io/docs/user-guide/kubectl/>) を参照してください。
+Kubernetes コマンド ライン インターフェイスの使用方法の詳細については、**kubectl** ユーザー ガイド (<https://kubernetes.io/docs/user-guide/kubectl/>) を参照してください。
 
 Kubernetes web サイトには、プライベート レジストリでのイメージの使用に関するさまざまな記事があります。
 
@@ -324,7 +336,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
-[Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
+[Azure Kubernetes Service (AKS)]: https://azure.microsoft.com/services/kubernetes-service/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -333,17 +345,21 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
+[Docker での Spring Boot の使用開始]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 [Pods のサービス アカウントの構成]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 [名前空間]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 [プライベート レジストリからのイメージのプル]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+
+<!-- Newly added -->
+[Azure Kubernetes Service から Azure Container Registry の認証を受ける]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks/
+[Visual Studio Code Java チュートリアル]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->
 
