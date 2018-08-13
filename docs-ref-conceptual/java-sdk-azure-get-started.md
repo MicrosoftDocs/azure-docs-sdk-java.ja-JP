@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: f069183c96cdc42d590d2e58a5a6a500be5ab69a
-ms.sourcegitcommit: 720c2eaf66532d277015610ec375c71e934d9ee6
+ms.openlocfilehash: dee41f08dc303fc95fcfa6a585a5d1a06726f2ef
+ms.sourcegitcommit: dad28b332346dfa9af249b5a64e042cbb1eb90d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "29065529"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625038"
 ---
 # <a name="get-started-with-cloud-development-using-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使用したクラウド開発の開始
 
@@ -93,7 +93,9 @@ Windows 環境で作業している場合は、システムのプロパティに
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="create-a-new-maven-project"></a>新しい Maven プロジェクトを作成する
+## <a name="tooling"></a>ツール
+
+### <a name="create-a-new-maven-project"></a>新しい Maven プロジェクトを作成する
 
 > [!NOTE]
 > このガイドでは、Maven ビルド ツールを使って、サンプル コードをビルドして実行していますが、Java 用 Azure ライブラリは他のビルド ツール (Gradle など) で使用することもできます。 
@@ -142,7 +144,27 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
     </plugins>
 </build>
  ```
-   
+
+### <a name="install-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ をインストールする
+
+Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) が必要です。 インストール プロセスの概要を次に示します。 詳しい手順については、「[Azure Toolkit for IntelliJ のインストール](intellij/azure-toolkit-for-intellij-installation.md)」をご覧ください。
+
+**[File]\(ファイル\)** メニューを選択し、**[Settings...]\(設定...\)** を選択します。 
+
+**[Browse repositories...]\(リポジトリを参照...\)** を選択し、"Azure" を検索して、**Azure Toolkit for Intellij** をインストールします。
+
+Intellij を再起動します。
+
+### <a name="install-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse をインストールする
+
+Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) が必要です。 インストール プロセスの概要を次に示します。 詳しい手順については、「[Azure Toolkit for Eclipse のインストール](eclipse/azure-toolkit-for-eclipse.md)」をご覧ください。
+
+**[Help]\(ヘルプ\)** メニューを選択し、**[Install New software]\(新しいソフトウェアのインストール\)** を選択します。
+
+**[Work with:]\(処理:\)** フィールドに「`http://dl.microsoft.com/eclipse`」と入力し、Enter キーを押します。
+
+次に、**[Azure Toolkit for Java]** の横のチェック ボックスをオンにし、**[Contact all update sites during install to find required software]\(インストール中にすべての更新サイトに接続して必要なソフトウェアを見つける\)** のチェック ボックスをオフにします。 [Next]\(次へ\) をクリックします。
+
 ## <a name="create-a-linux-virtual-machine"></a>Linux 仮想マシンの作成
 
 プロジェクトの `src/main/java/com/fabirkam` ディレクトリに `AzureApp.java` という名前の新しいファイルを作成し、次のコード ブロックを貼り付けます。 `userName` 変数と `sshKey` 変数は、ご利用のマシンの実際の値に置き換えてください。 このコードによって、米国東部 Azure リージョンで実行されるリソース グループ `sampleResourceGroup` に、`testLinuxVM` という名前の新しい Linux VM が作成されます。
