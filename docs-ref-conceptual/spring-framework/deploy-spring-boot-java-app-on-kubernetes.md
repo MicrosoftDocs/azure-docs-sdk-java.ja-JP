@@ -243,22 +243,22 @@ ms.locfileid: "39189672"
 
    c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)\** で **[External]\(外部)\** を選択します。
+   d. **[Service]\(サービス)** で **[External]\(外部)** を選択します。
 
-   e. 外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
+   e. 外部ポートと内部ポートを **[Port]\(ポート)** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
 
    ![Kubernetes 構成 Web サイト][KB02]
 
 
-1. **[Deploy]\(デプロイ)\** をクリックしてコンテナーをデプロイします。
+1. **[Deploy]\(デプロイ)** をクリックしてコンテナーをデプロイします。
 
    ![Kubernetes デプロイ][KB05]
 
-1. アプリケーションがデプロイされると、**[Services]\(サービス)\** の下に Spring Boot アプリケーションが表示されます。
+1. アプリケーションがデプロイされると、**[Services]\(サービス)** の下に Spring Boot アプリケーションが表示されます。
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 
