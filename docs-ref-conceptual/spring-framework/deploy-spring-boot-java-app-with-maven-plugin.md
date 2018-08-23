@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 3610312ed17301131967bd2c047c86656de070e7
-ms.sourcegitcommit: f313c14e92f38c54a3a583270ee85cc928cd39d7
+ms.openlocfilehash: d58cafe3456150069ec8572c101c62d1b2c29c5d
+ms.sourcegitcommit: e1a5d9687e006e8bf12d11747d45cf130a2c82af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689425"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "42703338"
 ---
 # <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>Azure App Service 用の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする
 
@@ -163,9 +163,11 @@ Maven の設定から着手しましょう。
 Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。 これがインストールされていることを確認してください。
 
 1. Azure CLI を使って、Azure アカウントにサインインします。
+   
    ```shell
    az login
    ```
+   
    指示に従って、サインインを完了します。
 
 ## <a name="optionally-customize-pomxml-before-deploying"></a>必要に応じて、デプロイの前に pom.xml をカスタマイズする
