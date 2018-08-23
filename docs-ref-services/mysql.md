@@ -7,16 +7,14 @@ ms.author: routlaw
 manager: douge
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: mysql
-ms.openlocfilehash: 72c94ef4bdad7adeae63da2efda93b52a9afef53
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.openlocfilehash: f3c0b84a8c6577e5a844c4084b3d9cfaf3a52323
+ms.sourcegitcommit: 1b22376e4ceb3d2f2734c8fc80823a44cc5fe8fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931018"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42703341"
 ---
 # <a name="azure-database-for-mysql-libraries-for-java"></a>Azure Database for MySQL Libraries for Java
 
