@@ -13,12 +13,12 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 03/17/2017
 ms.author: routlaw
-ms.openlocfilehash: 1adc0a104ba22bcd353664e68323165890e46c64
-ms.sourcegitcommit: 30d502b3150fa14bcc1251f5f88c7c0dd83e531e
+ms.openlocfilehash: 70b508118c50b75693e2d746dc1e2919c827cb29
+ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2017
-ms.locfileid: "22033634"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703545"
 ---
 # <a name="create-and-deploy-a-java-app-to-azure-with-maven"></a>Maven で Java アプリを作成して Azure にデプロイする
 
@@ -53,11 +53,11 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-Web ブラウザーを開き、http://localhost:8080 にアクセスしてアプリをプレビューします。
+Web ブラウザーを開き、http://localhost:8080 に移動してアプリをプレビューします。
 
   ![サンプル Java アプリからの Hello World 出力](media/maven-quickstart/java-app-hello-world-output.png)
 
-## <a name="log-in-to-azure"></a>Azure へのログイン
+## <a name="log-in-to-azure"></a>Azure にログインする
 
 `az login` で Azure CLI にログインします。 このクイック スタートでは、アプリをホストするために必要な Azure リソースを CLI で照会し、作成します。
    
@@ -236,7 +236,7 @@ mvn install -s az-settings.xml
 
 Azure Portal に移動し、作成したばかりの Web アプリを表示します。
 
-そのためには、[https://portal.azure.com](https://portal.azure.com) にサインインします。
+これを行うには、[https://portal.azure.com](https://portal.azure.com) にサインインします。
 
 左側のメニューで **[App Service]** をクリックした後、Azure Web アプリの名前をクリックします。
 
@@ -260,6 +260,6 @@ curl http://<appname>.azurewebsites.net/?[1-30]
 az group delete --name myResrouceGroup
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 こちらで [Azure Java のサンプル](https://azure.microsoft.com/resources/samples/?term=java)をすべてご覧いただけます。
