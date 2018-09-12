@@ -3,9 +3,9 @@ title: Docker と Azure を使用して MicroProfile アプリをクラウドに
 description: Docker および Azure Container Instances を使用して MicroProfile アプリをクラウドにデプロイする方法について説明します。
 services: container-instances;container-retistry
 documentationcenter: java
-author: brborges
+author: brunoborges
 manager: routlaw
-editor: brborges
+editor: brunoborges
 ms.assetid: ''
 ms.author: brborges
 ms.date: 07/30/2018
@@ -14,12 +14,12 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c6254d11ee1596a23076931c9a2a2370b5f52409
-ms.sourcegitcommit: 3d0896f821907278547c283c54b53fbd7f4f30f0
+ms.openlocfilehash: 336af51bbdf5d2f843c3868ebc2358e128daaeaa
+ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43153847"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43324328"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Docker と Azure を使用して MicroProfile アプリケーションをクラウドにデプロイする
 
@@ -157,7 +157,7 @@ curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 
 <!-- URL List -->
 
-[Azure Container Registry Build]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-build-overview
+[Azure Container Registry Build]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [MicroProfile.io]: https://microprofile.io
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
@@ -165,3 +165,6 @@ curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Maven]: http://maven.apache.org/
+[Java Development Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Azure Container Instances]: https://docs.microsoft.com/azure/container-instances/
+[Azure Container Registry]:  https://docs.microsoft.com/azure/container-registry
