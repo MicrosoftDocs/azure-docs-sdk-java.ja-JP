@@ -14,12 +14,12 @@ ms.service: container-registry;app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 323ae247c3df8c7d7b180d9d60b9014e4e2d7382
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 1eb0e7d7a718a1c106adebbf89011f6e3fa1504e
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240962"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040250"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Java ベースの MicroProfile サービスを Web App for Containers にデプロイする
 
@@ -137,7 +137,7 @@ MicroProfile を使用してマイクロサービスを作成するのに必要�
 MicroProfile アプリケーションが正常に作成され、ローカル コンピューターで実行されました。次は、このコンテナーをコンテナー レジストリにプッシュします。 このチュートリアルでは Azure Container Registry を使用していますが、(関連する場所をポイントするように `pom.xml` ファイルを編集できれば) 任意のコンテナー レジストリを使用できます。
 
 1. `mvn clean package` を実行して、ローカル Docker イメージをクリーニング、コンパイル、および作成します。
-2. `mvn dockerfile:push` を実行して、Azure Container Repository にプッシュします。
+2. `mvn dockerfile:push` を実行して Azure Container Registry にプッシュします。
 
 この時点で、ご自身の Docker コンテナー イメージは Azure Container Registry にアップロードされていますが、Azure Web App for Containers インスタンスにデプロイする必要があるため、まだ実行されていません。 次は、この操作を行います。
 

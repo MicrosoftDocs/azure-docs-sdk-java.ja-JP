@@ -7,19 +7,18 @@ author: rmcmurray
 manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm
 ms.date: 08/20/2018
 ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 0976f4b0c13ce5c577458f2974f5dce123bf7e59
-ms.sourcegitcommit: 77dc6c03a2e6264df688d91a04fc6b40950779ef
+ms.openlocfilehash: 4e0138e3cc474b4c47d3bf492e696ec49ea3ef37
+ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43241045"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040270"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API で Spring Data Gremlin Starter を使用する方法
 
@@ -85,7 +84,7 @@ Spring Data Gremlin Starter は、Apache の Gremlin クエリ言語に Spring D
    * お使いのデータベースの一意の**データベース ID** を指定します。
    * お使いのグラフの一意の**グラフ ID** を指定します。
    * **ストレージ容量**は、指定することも、既定値をそのまま使用することもできます。
-   * **スループット**を指定します。この例では、400 要求ユニット (RU) を選択します。
+   * **スループット**を指定します。この例では、400 要求ユニット (RU) を選択できます。
    
    これらのオプションの指定後、**[OK]** をクリックして、グラフを作成します。
 
