@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: cb83a7d6ec3a9a83fbfd3b2e34e5a4e498aa36d3
-ms.sourcegitcommit: 51dc05a96a8cbc8a6c9b45e094d8f3cfec16a607
+ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39189672"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639725"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
@@ -243,9 +243,9 @@ ms.locfileid: "39189672"
 
    c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)** で **[External]\(外部)** を選択します。
+   d. **[Service]\(サービス)\** で **[External]\(外部)\** を選択します。
 
-   e. 外部ポートと内部ポートを **[Port]\(ポート)** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
+   e. 外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
 
    ![Kubernetes 構成 Web サイト][KB02]
 
@@ -258,7 +258,7 @@ ms.locfileid: "39189672"
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 
@@ -309,7 +309,7 @@ Azure での Spring Boot の使用の詳細については、次の記事を参�
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 <!-- Newly added --> Visual Studio Code を使用して Java アプリケーションを Kubernetes にデプロイする方法の詳細については、[Visual Studio Code Java チュートリアル]を参照してください。
 
@@ -321,7 +321,7 @@ Docker サンプル プロジェクトでの Spring Boot の詳細について�
 
 次のリンクは、Azure での Kubernetes の使用に関する追加情報を提供します。
 
-* [Azure Kubernetes Service で Kubernetes クラスターを使用する](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+* [Azure Kubernetes Service で Kubernetes クラスターを使用する](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 Kubernetes コマンド ライン インターフェイスの使用方法の詳細については、**kubectl** ユーザー ガイド (<https://kubernetes.io/docs/user-guide/kubectl/>) を参照してください。
 
@@ -345,7 +345,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
@@ -358,7 +358,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [プライベート レジストリからのイメージのプル]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
 <!-- Newly added -->
-[Azure Kubernetes Service から Azure Container Registry の認証を受ける]: https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-aks/
+[Azure Kubernetes Service から Azure Container Registry の認証を受ける]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java チュートリアル]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

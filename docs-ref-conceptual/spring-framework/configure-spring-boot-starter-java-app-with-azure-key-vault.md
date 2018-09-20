@@ -14,12 +14,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a2734fc08f2f59f64ba6c6c20ff18d75070b68d5
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
+ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090715"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639775"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault 用の Spring Boot Starter の使用方法
 
@@ -154,10 +154,10 @@ ms.locfileid: "37090715"
    |---|---|
    | `name` | キー コンテナーの一意の名前を指定します。 |
    | `location` | リソース グループをホストする [Azure リージョン](https://azure.microsoft.com/regions/)を指定します。 |
-   | `enabled-for-deployment` | [キー コンテナーのデプロイ オプション](https://docs.microsoft.com/en-us/cli/azure/keyvault)を指定します。 |
-   | `enabled-for-disk-encryption` | [キー コンテナーの暗号化オプション](https://docs.microsoft.com/en-us/cli/azure/keyvault)を指定します。 |
-   | `enabled-for-template-deployment` | [キー コンテナーの暗号化オプション](https://docs.microsoft.com/en-us/cli/azure/keyvault)を指定します。 |
-   | `sku` | [キー コンテナーの SKU オプション](https://docs.microsoft.com/en-us/cli/azure/keyvault)を指定します。 |
+   | `enabled-for-deployment` | [キー コンテナーのデプロイ オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
+   | `enabled-for-disk-encryption` | [キー コンテナーの暗号化オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
+   | `enabled-for-template-deployment` | [キー コンテナーの暗号化オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
+   | `sku` | [キー コンテナーの SKU オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
    | `query` | 応答から取得する値を指定します。これは、このチュートリアルを完了するために必要なキー コンテナーの URI です。 |
 
    Azure CLI にキー コンテナーの URI が表示されます。この URI は後で使用します。次に例を示します。  
@@ -175,7 +175,7 @@ ms.locfileid: "37090715"
    | パラメーター | 説明 |
    |---|---|
    | `name` | 前の手順で作成したキー コンテナーの名前を指定します。 |
-   | `secret-permission` | キー コンテナーの[セキュリティ ポリシー](https://docs.microsoft.com/en-us/cli/azure/keyvault)を指定します。 |
+   | `secret-permission` | キー コンテナーの[セキュリティ ポリシー](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
    | `spn` | アプリケーションの登録時に取得した GUID を指定します。 |
 
    Azure CLI にセキュリティ ポリシー作成の結果が表示されます。次に例を示します。  
@@ -319,7 +319,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 <!-- URL List -->
 
@@ -327,7 +327,7 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [Azure Key Vault の概要]: /azure/key-vault/key-vault-get-started
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
