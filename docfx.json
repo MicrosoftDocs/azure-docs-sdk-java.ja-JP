@@ -8,7 +8,7 @@
         ],
         "src": "docs-ref-autogen/overview",
         "dest": "api/overview/azure",
-        "version": "azure-java-stable"
+        "group": "stable"
       },
       {
         "files": [
@@ -16,7 +16,7 @@
         ],
         "src": "preview/docs-ref-autogen/overview",
         "dest": "api/overview/azure",
-        "version": "azure-java-preview"
+        "group": "preview"
       },
       {
         "files": [
@@ -24,15 +24,15 @@
         ],
         "src": "_mavenref",
         "dest": "api/overview/azure/maven",
-        "version": "azure-java-stable"
+        "group": "stable"
       },
       {
         "files": [
           "**/*.md"
         ],
-        "src": "preview/_mavenref",
+        "src": "_mavenref",
         "dest": "api/overview/azure/maven",
-        "version": "azure-java-preview"
+        "group": "preview"
       },
       {
         "files": [
@@ -40,15 +40,15 @@
         ],
         "src": "docs-ref-services",
         "dest": "api/overview/azure",
-        "version": "azure-java-stable"
+        "group": "stable"
       },
       {
         "files": [
           "**/*.md"
         ],
-        "src": "preview/docs-ref-services",
+        "src": "docs-ref-services",
         "dest": "api/overview/azure",
-        "version": "azure-java-preview"
+        "group": "preview"
       },
       {
         "files": [
@@ -57,7 +57,7 @@
         ],
         "src": "docs-ref-autogen",
         "dest": "api",
-        "version": "azure-java-stable",
+        "group": "stable",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -71,7 +71,7 @@
         ],
         "src": "preview/docs-ref-autogen",
         "dest": "api",
-        "version": "azure-java-preview",
+        "group": "preview",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -84,7 +84,7 @@
         ],
         "src": "docs-ref-autogen",
         "dest": "api/azure-java-sdk",
-        "version": "azure-java-stable",
+        "group": "stable",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -96,7 +96,7 @@
         ],
         "src": "preview/docs-ref-autogen",
         "dest": "api/azure-java-sdk",
-        "version": "azure-java-preview",
+        "group": "preview",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -107,16 +107,16 @@
           "toc.yml"
         ],
         "src": "breadcrumb",
-        "dest": "breadcrumb",
-        "version": "azure-java-stable"
+        "dest": "java_sdk_breadcrumb",
+        "group": "stable"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "preview/breadcrumb",
-        "dest": "breadcrumb",
-        "version": "azure-java-preview"
+        "src": "breadcrumb",
+        "dest": "java_sdk_breadcrumb",
+        "group": "preview"
       },
       {
         "files": [
@@ -125,16 +125,16 @@
         ],
         "src": "docs-ref-conceptual",
         "dest": "azure",
-        "version": "azure-java-stable"
+        "group": "stable"
       },
       {
         "files": [
           "**/*.md",
           "**/*.yml"
         ],
-        "src": "preview/docs-ref-conceptual",
+        "src": "docs-ref-conceptual",
         "dest": "azure",
-        "version": "azure-java-preview"
+        "group": "preview"
       }
     ],
     "resource": [
@@ -151,7 +151,7 @@
           "**/includes/**"
         ],
         "src": "docs-ref-conceptual",
-        "version": "azure-java-stable"
+        "group": "stable"
       },
       {
         "files": [
@@ -165,16 +165,18 @@
           "azure/sdk/java/**",
           "**/includes/**"
         ],
-        "src": "preview/docs-ref-conceptual",
-        "version": "azure-java-preview"
+        "src": "docs-ref-conceptual",
+        "group": "preview"
       }
     ],
-    "versions": {
-      "azure-java-stable": {
-        "dest": "azure-java-stable"
+    "groups": {
+      "preview": {
+        "dest": "preview",
+        "moniker_range": "azure-java-preview"
       },
-      "azure-java-preview": {
-        "dest": "azure-java-preview"
+      "stable": {
+        "dest": "stable",
+        "moniker_range": "azure-java-stable"
       }
     },
     "overwrite": "docs-ref-overwrite/*.md",
@@ -189,8 +191,8 @@
       "ms.topic": "reference",
       "ms.devlang": "java",
       "ms.date": "07/17/2018",
-      "breadcrumb_path": "/java/breadcrumb/toc.json",
-      "brand": "azure",      
+      "breadcrumb_path": "/java/java_sdk_breadcrumb/toc.json",
+      "brand": "azure",
       "bilingual_type": "hover over",
       "apiPlatform": "java",
       "_gitContribute": {
@@ -200,20 +202,6 @@
       }
     },
     "fileMetadata": {
-      "monikers": {
-        "docs-ref-autogen/**": [
-          "azure-java-stable"
-        ],
-        "preview/docs-ref-autogen/**": [
-          "azure-java-preview"
-        ],
-        "docs-ref-services/**": [
-          "azure-java-stable"
-        ],
-        "preview/docs-ref-services/**": [
-          "azure-java-preview"
-        ]
-      },
       "feedback_system": {
         "docs-ref-autogen/**/*": "None",
         "preview/docs-ref-autogen/**/*": "None"
