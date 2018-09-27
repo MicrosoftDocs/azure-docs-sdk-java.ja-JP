@@ -10,13 +10,12 @@ ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: java
-ms.service: active-directory
-ms.openlocfilehash: e51334b4f13ffc457d4dec1785257dcff1b56b08
-ms.sourcegitcommit: c4238cffdf6c6f7ac8725673260a34a38c566f58
+ms.openlocfilehash: 36758977a64600d5ac11a0c5ac59bed981e8fa33
+ms.sourcegitcommit: 7c6a15f574fb85ee22f6ccdb7864627b73a6c1f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39418977"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398164"
 ---
 # <a name="azure-active-directory-libraries-for-java"></a>Azure Active Directory Libraries for Java
 
