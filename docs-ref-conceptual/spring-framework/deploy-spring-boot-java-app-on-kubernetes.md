@@ -235,17 +235,17 @@ ms.locfileid: "45639725"
 
    ![Kubernetes 構成 Web サイト][KB01]
 
-1. **[Resource Creation]\(リソースの作成\)** ページが表示されたら、次のオプションを指定します。
+1. **[Resource Creation]\(リソースの作成)** ページが表示されたら、次のオプションを指定します。
 
-   a. **[CREATE AN APP]\(アプリの作成\)** を選択します。
+   a. **[CREATE AN APP]\(アプリの作成)** を選択します。
 
-   b. Spring Boot アプリケーション名を **[App name]\(アプリ名\)** に入力します (例: "*gs-spring-boot-docker*")。
+   b. Spring Boot アプリケーション名を **[App name]\(アプリ名)** に入力します (例: "*gs-spring-boot-docker*")。
 
-   c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
+   c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)\** で **[External]\(外部)\** を選択します。
+   d. **[Service]\(サービス)** で **[External]\(外部)** を選択します。
 
-   e. 外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
+   e. 外部ポートと内部ポートを **[Port]\(ポート)** テキスト ボックスと **[Target port]\(ターゲット ポート)** テキスト ボックスに指定します。
 
    ![Kubernetes 構成 Web サイト][KB02]
 
@@ -258,7 +258,7 @@ ms.locfileid: "45639725"
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 

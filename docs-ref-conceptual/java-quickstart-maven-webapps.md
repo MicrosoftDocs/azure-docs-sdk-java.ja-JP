@@ -53,7 +53,7 @@ mvn package
 mvn tomcat7:run-war
 ```
 
-Web ブラウザーを開き、http://localhost:8080 に移動してアプリをプレビューします。
+Web ブラウザーを開き、 http://localhost:8080 に移動してアプリをプレビューします。
 
   ![サンプル Java アプリからの Hello World 出力](media/maven-quickstart/java-app-hello-world-output.png)
 
