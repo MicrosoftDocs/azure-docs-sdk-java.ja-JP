@@ -32,7 +32,7 @@ ms.locfileid: "45639725"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の [Java Developer Kit (JDK)]。
+* 最新の [Java Developer Kit (JDK)] 。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
