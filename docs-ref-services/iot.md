@@ -7,16 +7,15 @@ ms.author: routlaw
 manager: douge
 ms.date: 07/20/2017
 ms.topic: article
-ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: iot-hub
-ms.openlocfilehash: 5e6a102b062b2fff6b297c7e3dda423d1448bcb0
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.openlocfilehash: 497b2a72d851b8e43a48384c6f1a160e8a38cbe6
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047149"
 ---
 # <a name="azure-iot-libraries-for-java"></a>Azure IoT Libraries for Java
 

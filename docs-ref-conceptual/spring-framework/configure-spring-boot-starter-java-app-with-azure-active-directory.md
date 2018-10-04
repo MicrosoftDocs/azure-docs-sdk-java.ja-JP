@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 6d20593620c7fb73f8481be8705bdc42d4e9ce32
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37864052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047182"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory 用の Spring Boot Starter の使用方法
 
@@ -39,7 +39,7 @@ ms.locfileid: "37864052"
 
 1. <https://start.spring.io/> を参照します。
 
-1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
+1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Artifact]\(アーティファクト)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
 
    ![グループとアーティファクトの名前を指定する][security-01]
 
@@ -85,7 +85,7 @@ ms.locfileid: "37864052"
 
    ![新しいアプリ登録を追加する][directory-04]
 
-1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの **名前** を指定し、**[サインオン URL]** に「http://localhost:8080」と入力して、**[作成]** をクリックします。
+1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの **名前** を指定し、**[サインオン URL]** に「 http://localhost:8080」と入力して、**[作成]** をクリックします。
 
    ![新しいアプリ登録を作成する][directory-05]
 
@@ -121,7 +121,7 @@ ms.locfileid: "37864052"
 
    ![応答 URL を編集する][directory-14]
 
-1. 新しい応答 URL として「http://localhost:8080/login/oauth2/code/azure」と入力し、**[保存]** をクリックします。
+1. 新しい応答 URL として「 http://localhost:8080/login/oauth2/code/azure」と入力し、**[保存]** をクリックします。
 
    ![新しい応答 URL を追加する][directory-15]
 
@@ -361,7 +361,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 **[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
 
@@ -374,7 +374,7 @@ Java での Azure の使用の詳細については、「[Java 開発者向け�
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
 [Java 開発者向けの Azure]: /java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

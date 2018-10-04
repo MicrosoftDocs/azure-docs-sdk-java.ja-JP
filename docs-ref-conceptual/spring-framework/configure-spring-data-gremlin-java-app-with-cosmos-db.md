@@ -13,12 +13,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 3e7ec1a2f6b15ec9444dc6ee8d8f2d0f779b1f10
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 561dba84b0c1662fa6575e1816ff3dd2f0c6093b
+ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639795"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047169"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API で Spring Data Gremlin Starter を使用する方法
 
@@ -153,7 +153,7 @@ Spring Data Gremlin Starter は、Apache の Gremlin クエリ言語に Spring D
 
    ![application.yml ファイルの作成][RE01]
 
-1.  テキスト エディターで *application.yml* ファイルを開き、そのファイルに次の行を追加して、サンプルの値をご自身のデータベース用の適切なプロパティで置き換えます。
+1. テキスト エディターで *application.yml* ファイルを開き、そのファイルに次の行を追加して、サンプルの値をご自身のデータベース用の適切なプロパティで置き換えます。
 
    ```yaml
    gremlin:
