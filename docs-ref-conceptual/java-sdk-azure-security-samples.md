@@ -12,14 +12,14 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.openlocfilehash: d6d3c358ade14af535a6afb26710f73dd15886fd
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930798"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893183"
 ---
-# <a name="java-samples-for-azure-active-directory"></a><span data-ttu-id="79059-104">Azure Active Directory の Java サンプル</span><span class="sxs-lookup"><span data-stu-id="79059-104">Java samples for Azure Active Directory</span></span>
+# <a name="java-samples-for-azure-active-directory"></a><span data-ttu-id="e47da-104">Azure Active Directory の Java サンプル</span><span class="sxs-lookup"><span data-stu-id="e47da-104">Java samples for Azure Active Directory</span></span>
 
-<span data-ttu-id="79059-105">次の表は、Azure Active Directory (AD) にアプリからアクセスして操作する目的で利用できる Java ソースへのリンク集です。</span><span class="sxs-lookup"><span data-stu-id="79059-105">The following table links to Java source you can use to access and work with Azure Active Directory(AD) in your apps.</span></span>
+<span data-ttu-id="e47da-105">次の表は、Azure Active Directory (AD) にアプリからアクセスして操作する目的で利用できる Java ソースへのリンク集です。</span><span class="sxs-lookup"><span data-stu-id="e47da-105">The following table links to Java source you can use to access and work with Azure Active Directory(AD) in your apps.</span></span>
 
 [!INCLUDE [java-vm-samples](includes/java-aad-samples.md)]

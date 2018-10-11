@@ -12,25 +12,25 @@ ms.technology: azure
 ms.devlang: java
 ms.service: cosmosdb
 ms.openlocfilehash: 6fc9f90cb3c8130aa82b20554a94a8b5ab78c083
-ms.sourcegitcommit: 33c70f921f1524c8bdb69ad5a1a3c1b4b1de97ba
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37026794"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899261"
 ---
-# <a name="azure-cosmos-db-libraries-for-java"></a><span data-ttu-id="e4af7-104">Azure Cosmos DB Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="e4af7-104">Azure Cosmos DB libraries for Java</span></span>
+# <a name="azure-cosmos-db-libraries-for-java"></a><span data-ttu-id="f8a0c-104">Azure Cosmos DB Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="f8a0c-104">Azure Cosmos DB libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="e4af7-105">概要</span><span class="sxs-lookup"><span data-stu-id="e4af7-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="f8a0c-105">概要</span><span class="sxs-lookup"><span data-stu-id="f8a0c-105">Overview</span></span>
 
-<span data-ttu-id="e4af7-106">[Azure Cosmos DB](/azure/cosmos-db/introduction) を使用して、キーと値、JSON ドキュメント、グラフ、列指向データを、グローバル分散データベースに格納し、照会します。</span><span class="sxs-lookup"><span data-stu-id="e4af7-106">Store and query key-value, JSON document, graph, and columnar data in a globally distributed database with [Azure Cosmos DB](/azure/cosmos-db/introduction).</span></span>
+<span data-ttu-id="f8a0c-106">[Azure Cosmos DB](/azure/cosmos-db/introduction) を使用して、キーと値、JSON ドキュメント、グラフ、列指向データを、グローバル分散データベースに格納し、照会します。</span><span class="sxs-lookup"><span data-stu-id="f8a0c-106">Store and query key-value, JSON document, graph, and columnar data in a globally distributed database with [Azure Cosmos DB](/azure/cosmos-db/introduction).</span></span>
 
-<span data-ttu-id="e4af7-107">Azure Cosmos DB を使い始めるには、Azure Cosmos DB の [Java と Azure Portal を使用した API アプリの構築](/azure/cosmos-db/create-sql-api-java)に関する記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="e4af7-107">To get started with Azure Cosmos DB, see [Azure Cosmos DB: Build an API app with Java and the Azure portal](/azure/cosmos-db/create-sql-api-java).</span></span>
+<span data-ttu-id="f8a0c-107">Azure Cosmos DB を使い始めるには、Azure Cosmos DB の [Java と Azure Portal を使用した API アプリの構築](/azure/cosmos-db/create-sql-api-java)に関する記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="f8a0c-107">To get started with Azure Cosmos DB, see [Azure Cosmos DB: Build an API app with Java and the Azure portal](/azure/cosmos-db/create-sql-api-java).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="e4af7-108">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="e4af7-108">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="f8a0c-108">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="f8a0c-108">Client library</span></span>
 
-<span data-ttu-id="e4af7-109">[SQL クエリ構文](/azure/cosmos-db/sql-api-sql-query)で JSON データを操作するには、[SQL API](/azure/cosmos-db/sql-api-introduction) クライアント ライブラリを使用して Azure Cosmos DB に接続します。</span><span class="sxs-lookup"><span data-stu-id="e4af7-109">Connect to Azure Cosmos DB using the [SQL API](/azure/cosmos-db/sql-api-introduction) client library to work with JSON data with [SQL query syntax](/azure/cosmos-db/sql-api-sql-query).</span></span>
+<span data-ttu-id="f8a0c-109">[SQL クエリ構文](/azure/cosmos-db/sql-api-sql-query)で JSON データを操作するには、[SQL API](/azure/cosmos-db/sql-api-introduction) クライアント ライブラリを使用して Azure Cosmos DB に接続します。</span><span class="sxs-lookup"><span data-stu-id="f8a0c-109">Connect to Azure Cosmos DB using the [SQL API](/azure/cosmos-db/sql-api-introduction) client library to work with JSON data with [SQL query syntax](/azure/cosmos-db/sql-api-sql-query).</span></span>
 
-<span data-ttu-id="e4af7-110">プロジェクトで Cosmos DB クライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="e4af7-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the Cosmos DB client library in your project.</span></span>
+<span data-ttu-id="f8a0c-110">プロジェクトで Cosmos DB クライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="f8a0c-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the Cosmos DB client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -40,9 +40,9 @@ ms.locfileid: "37026794"
 </dependency>
 ```
 
-### <a name="example"></a><span data-ttu-id="e4af7-111">例</span><span class="sxs-lookup"><span data-stu-id="e4af7-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="f8a0c-111">例</span><span class="sxs-lookup"><span data-stu-id="f8a0c-111">Example</span></span>
 
-<span data-ttu-id="e4af7-112">SQL クエリ構文を使用して、Cosmos DB 内で一致する JSON ドキュメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="e4af7-112">Select matching JSON documents in Cosmos DB using SQL query syntax.</span></span>
+<span data-ttu-id="f8a0c-112">SQL クエリ構文を使用して、Cosmos DB 内で一致する JSON ドキュメントを選択します。</span><span class="sxs-lookup"><span data-stu-id="f8a0c-112">Select matching JSON documents in Cosmos DB using SQL query syntax.</span></span>
 
 ```java
 DocumentClient client = new DocumentClient("https://contoso.documents.azure.com:443",
@@ -59,16 +59,16 @@ List<Document> results = client.queryDocuments("dbs/" + DATABASE_ID + "/colls/" 
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e4af7-113">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="e4af7-113">Explore the Client APIs</span></span>](/java/api/overview/azure/cosmosdb/client)
+> [<span data-ttu-id="f8a0c-113">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="f8a0c-113">Explore the Client APIs</span></span>](/java/api/overview/azure/cosmosdb/client)
 
 
-## <a name="samples"></a><span data-ttu-id="e4af7-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="e4af7-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="f8a0c-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="f8a0c-114">Samples</span></span>
 
-<span data-ttu-id="e4af7-115">[Azure Cosmos DB MongoDB API を使用して Java アプリを開発する][2] </span><span class="sxs-lookup"><span data-stu-id="e4af7-115">[Develop a Java app using Azure Cosmos DB MongoDB API][2] </span></span>  
-<span data-ttu-id="e4af7-116">[Azure Cosmos DB Graph API を使用して Java アプリを開発する][3] </span><span class="sxs-lookup"><span data-stu-id="e4af7-116">[Develop a Java app using Azure Cosmos DB Graph API][3] </span></span>  
-<span data-ttu-id="e4af7-117">[Azure Cosmos DB SQL API を使用して Java アプリを開発する][4]</span><span class="sxs-lookup"><span data-stu-id="e4af7-117">[Develop a Java app using Azure Cosmos DB SQL API][4]</span></span>        
+<span data-ttu-id="f8a0c-115">[Azure Cosmos DB MongoDB API を使用して Java アプリを開発する][2] </span><span class="sxs-lookup"><span data-stu-id="f8a0c-115">[Develop a Java app using Azure Cosmos DB MongoDB API][2] </span></span>  
+<span data-ttu-id="f8a0c-116">[Azure Cosmos DB Graph API を使用して Java アプリを開発する][3] </span><span class="sxs-lookup"><span data-stu-id="f8a0c-116">[Develop a Java app using Azure Cosmos DB Graph API][3] </span></span>  
+<span data-ttu-id="f8a0c-117">[Azure Cosmos DB SQL API を使用して Java アプリを開発する][4]</span><span class="sxs-lookup"><span data-stu-id="f8a0c-117">[Develop a Java app using Azure Cosmos DB SQL API][4]</span></span>        
 
-<span data-ttu-id="e4af7-118">アプリで使用できる [Azure Cosmos DB 用の Java コードのサンプル](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e4af7-118">Explore more [sample Java code for Azure Cosmos DB](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos) you can use in your apps.</span></span>
+<span data-ttu-id="f8a0c-118">アプリで使用できる [Azure Cosmos DB 用の Java コードのサンプル](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f8a0c-118">Explore more [sample Java code for Azure Cosmos DB](https://azure.microsoft.com/resources/samples/?platform=java&term=cosmos) you can use in your apps.</span></span>
 
 [2]: https://github.com/Azure-Samples/azure-cosmos-db-mongodb-java-getting-started
 [3]: https://github.com/Azure-Samples/azure-cosmos-db-graph-java-getting-started

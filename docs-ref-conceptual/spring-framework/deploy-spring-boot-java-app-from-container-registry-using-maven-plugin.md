@@ -15,114 +15,114 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 88eb64c07ad4f480dc2d2c2869e710c0ae910c4d
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090795"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892683"
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a><span data-ttu-id="6c62a-103">Azure Web Apps 用の Maven プラグインを使用して Azure Container Registry の Spring Boot アプリを Azure App Service にデプロイする方法</span><span class="sxs-lookup"><span data-stu-id="6c62a-103">How to use the Maven Plugin for Azure Web Apps to deploy a Spring Boot app in Azure Container Registry to Azure App Service</span></span>
+# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a><span data-ttu-id="f1329-103">Azure Web Apps 用の Maven プラグインを使用して Azure Container Registry の Spring Boot アプリを Azure App Service にデプロイする方法</span><span class="sxs-lookup"><span data-stu-id="f1329-103">How to use the Maven Plugin for Azure Web Apps to deploy a Spring Boot app in Azure Container Registry to Azure App Service</span></span>
 
-<span data-ttu-id="6c62a-104">この記事では、[Spring Boot] サンプル アプリケーションを Azure Container Registry にデプロイし、Azure Web Apps 用の Maven プラグインを使用して、アプリケーションを Azure App Service にデプロイする方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-104">This article demonstrates how to deploy a sample [Spring Boot] application to Azure Container Registry, and then use the Maven Plugin for Azure Web Apps to deploy your application to Azure App Service.</span></span>
+<span data-ttu-id="f1329-104">この記事では、[Spring Boot] サンプル アプリケーションを Azure Container Registry にデプロイし、Azure Web Apps 用の Maven プラグインを使用して、アプリケーションを Azure App Service にデプロイする方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="f1329-104">This article demonstrates how to deploy a sample [Spring Boot] application to Azure Container Registry, and then use the Maven Plugin for Azure Web Apps to deploy your application to Azure App Service.</span></span>
 
 > [!NOTE]
 > 
-> <span data-ttu-id="6c62a-105">[Apache Maven](http://maven.apache.org/) 用の Azure Web Apps 用 Maven プラグイン は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイするプロセスを効率化します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-105">The Maven Plugin for Azure Web Apps for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service  into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
+> <span data-ttu-id="f1329-105">[Apache Maven](http://maven.apache.org/) 用の Azure Web Apps 用 Maven プラグイン は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイするプロセスを効率化します。</span><span class="sxs-lookup"><span data-stu-id="f1329-105">The Maven Plugin for Azure Web Apps for [Apache Maven](http://maven.apache.org/) provides seamless integration of Azure App Service  into Maven projects, and streamlines the process for developers to deploy web apps to Azure App Service.</span></span>
 > 
-> <span data-ttu-id="6c62a-106">Azure Web Apps の Maven プラグインは現在プレビューとして提供されています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-106">The Maven Plugin for Azure Web Apps is currently available as a preview.</span></span> <span data-ttu-id="6c62a-107">今後、機能が追加される予定ですが、現在は FTP 発行のみがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-107">For now, only FTP publishing is supported, although additional features are planned for the future.</span></span>
+> <span data-ttu-id="f1329-106">Azure Web Apps の Maven プラグインは現在プレビューとして提供されています。</span><span class="sxs-lookup"><span data-stu-id="f1329-106">The Maven Plugin for Azure Web Apps is currently available as a preview.</span></span> <span data-ttu-id="f1329-107">今後、機能が追加される予定ですが、現在は FTP 発行のみがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="f1329-107">For now, only FTP publishing is supported, although additional features are planned for the future.</span></span>
 > 
 
-## <a name="prerequisites"></a><span data-ttu-id="6c62a-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="6c62a-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f1329-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="f1329-108">Prerequisites</span></span>
 
-<span data-ttu-id="6c62a-109">このチュートリアルの手順を完了するには、次の前提条件を満たす必要があります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-109">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
+<span data-ttu-id="f1329-109">このチュートリアルの手順を完了するには、次の前提条件を満たす必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1329-109">In order to complete the steps in this tutorial, you need to have the following prerequisites:</span></span>
 
-* <span data-ttu-id="6c62a-110">Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="6c62a-111">[Azure コマンド ライン インターフェイス (CLI)]。</span><span class="sxs-lookup"><span data-stu-id="6c62a-111">The [Azure Command-Line Interface (CLI)].</span></span>
-* <span data-ttu-id="6c62a-112">最新の Java Development Kit (JDK) (バージョン 1.7 以降)。</span><span class="sxs-lookup"><span data-stu-id="6c62a-112">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
-* <span data-ttu-id="6c62a-113">Apache の [Maven] 構築ツール (バージョン 3)。</span><span class="sxs-lookup"><span data-stu-id="6c62a-113">Apache's [Maven] build tool (Version 3).</span></span>
-* <span data-ttu-id="6c62a-114">[Git] クライアント。</span><span class="sxs-lookup"><span data-stu-id="6c62a-114">A [Git] client.</span></span>
-* <span data-ttu-id="6c62a-115">[Docker] クライアント。</span><span class="sxs-lookup"><span data-stu-id="6c62a-115">A [Docker] client.</span></span>
+* <span data-ttu-id="f1329-110">Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。</span><span class="sxs-lookup"><span data-stu-id="f1329-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="f1329-111">[Azure コマンド ライン インターフェイス (CLI)]。</span><span class="sxs-lookup"><span data-stu-id="f1329-111">The [Azure Command-Line Interface (CLI)].</span></span>
+* <span data-ttu-id="f1329-112">最新の Java Development Kit (JDK) (バージョン 1.7 以降)。</span><span class="sxs-lookup"><span data-stu-id="f1329-112">An up-to-date [Java Development Kit (JDK)], version 1.7 or later.</span></span>
+* <span data-ttu-id="f1329-113">Apache の [Maven] 構築ツール (バージョン 3)。</span><span class="sxs-lookup"><span data-stu-id="f1329-113">Apache's [Maven] build tool (Version 3).</span></span>
+* <span data-ttu-id="f1329-114">[Git] クライアント。</span><span class="sxs-lookup"><span data-stu-id="f1329-114">A [Git] client.</span></span>
+* <span data-ttu-id="f1329-115">[Docker] クライアント。</span><span class="sxs-lookup"><span data-stu-id="f1329-115">A [Docker] client.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="6c62a-116">このチュートリアルには仮想化要件があるため、仮想マシンでこの記事の手順を実行することはできません。仮想化機能を有効にした物理コンピューターを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-116">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
+> <span data-ttu-id="f1329-116">このチュートリアルには仮想化要件があるため、仮想マシンでこの記事の手順を実行することはできません。仮想化機能を有効にした物理コンピューターを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1329-116">Due to the virtualization requirements of this tutorial, you cannot follow the steps in this article on a virtual machine; you must use a physical computer with virtualization features enabled.</span></span>
 >
 
-## <a name="clone-the-sample-spring-boot-on-docker-web-app"></a><span data-ttu-id="6c62a-117">Docker Web アプリの Spring Boot サンプルの複製</span><span class="sxs-lookup"><span data-stu-id="6c62a-117">Clone the sample Spring Boot on Docker web app</span></span>
+## <a name="clone-the-sample-spring-boot-on-docker-web-app"></a><span data-ttu-id="f1329-117">Docker Web アプリの Spring Boot サンプルの複製</span><span class="sxs-lookup"><span data-stu-id="f1329-117">Clone the sample Spring Boot on Docker web app</span></span>
 
-<span data-ttu-id="6c62a-118">このセクションでは、コンテナー化された Spring Boot アプリケーションを複製してローカルでテストします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-118">In this section, you clone a containerized Spring Boot application and test it locally.</span></span>
+<span data-ttu-id="f1329-118">このセクションでは、コンテナー化された Spring Boot アプリケーションを複製してローカルでテストします。</span><span class="sxs-lookup"><span data-stu-id="f1329-118">In this section, you clone a containerized Spring Boot application and test it locally.</span></span>
 
-1. <span data-ttu-id="6c62a-119">コマンド プロンプトまたはターミナル ウィンドウを開き、Spring Boot アプリケーションを保持するためのローカル ディレクトリを作成して、次の例のようにそのディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-119">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
+1. <span data-ttu-id="f1329-119">コマンド プロンプトまたはターミナル ウィンドウを開き、Spring Boot アプリケーションを保持するためのローカル ディレクトリを作成して、次の例のようにそのディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="f1329-119">Open a command prompt or terminal window and create a local directory to hold your Spring Boot application, and change to that directory; for example:</span></span>
    ```shell
    md C:\SpringBoot
    cd C:\SpringBoot
    ```
-   <span data-ttu-id="6c62a-120">-- または --</span><span class="sxs-lookup"><span data-stu-id="6c62a-120">-- or --</span></span>
+   <span data-ttu-id="f1329-120">-- または --</span><span class="sxs-lookup"><span data-stu-id="f1329-120">-- or --</span></span>
    ```shell
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
-1. <span data-ttu-id="6c62a-121">[Docker での Spring Boot の使用開始]のサンプル プロジェクトを今作成したディレクトリに複製します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-121">Clone the [Spring Boot on Docker Getting Started] sample project into the directory you created; for example:</span></span>
+1. <span data-ttu-id="f1329-121">[Docker での Spring Boot の使用開始]のサンプル プロジェクトを今作成したディレクトリに複製します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="f1329-121">Clone the [Spring Boot on Docker Getting Started] sample project into the directory you created; for example:</span></span>
    ```shell
    git clone -b private-registry https://github.com/spring-guides/gs-spring-boot-docker
    ```
 
-1. <span data-ttu-id="6c62a-122">完成したプロジェクトにディレクトリを変更します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-122">Change directory to the completed project; for example:</span></span>
+1. <span data-ttu-id="f1329-122">完成したプロジェクトにディレクトリを変更します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="f1329-122">Change directory to the completed project; for example:</span></span>
    ```shell
    cd gs-spring-boot-docker/complete
    ```
 
-1. <span data-ttu-id="6c62a-123">Maven を使用して JAR ファイルを構築します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-123">Build the JAR file using Maven; for example:</span></span>
+1. <span data-ttu-id="f1329-123">Maven を使用して JAR ファイルを構築します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="f1329-123">Build the JAR file using Maven; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="6c62a-124">Web アプリを作成したら、次の例のように Maven を使って Web アプリを起動します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-124">When the web app has been created, start the web app using Maven; for example:</span></span>
+1. <span data-ttu-id="f1329-124">Web アプリを作成したら、次の例のように Maven を使って Web アプリを起動します。</span><span class="sxs-lookup"><span data-stu-id="f1329-124">When the web app has been created, start the web app using Maven; for example:</span></span>
    ```shell
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="6c62a-125">Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。</span><span class="sxs-lookup"><span data-stu-id="6c62a-125">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="6c62a-126">たとえば、curl を使用できる場合は次のようなコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-126">For example, you could use the following command if you have curl available:</span></span>
+1. <span data-ttu-id="f1329-125">Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。</span><span class="sxs-lookup"><span data-stu-id="f1329-125">Test the web app by browsing to it locally using a web browser.</span></span> <span data-ttu-id="f1329-126">たとえば、curl を使用できる場合は次のようなコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="f1329-126">For example, you could use the following command if you have curl available:</span></span>
    ```shell
    curl http://localhost:8080
    ```
 
-1. <span data-ttu-id="6c62a-127">次のメッセージが表示されるはずです。**Hello Docker World**</span><span class="sxs-lookup"><span data-stu-id="6c62a-127">You should see the following message displayed: **Hello Docker World**</span></span>
+1. <span data-ttu-id="f1329-127">次のメッセージが表示されるはずです。**Hello Docker World**</span><span class="sxs-lookup"><span data-stu-id="f1329-127">You should see the following message displayed: **Hello Docker World**</span></span>
 
    ![サンプル アプリをローカルに参照する][SB01]
 
 > [!NOTE]
 >
-> <span data-ttu-id="6c62a-129">ローカルで Docker を使用していると、ポート 2375 で localhost に接続できないことを示すエラーが表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-129">When you are using Docker locally, you may see an error which states that you cannot connect to localhost on port 2375.</span></span> <span data-ttu-id="6c62a-130">これが発生した場合は、TLS を使用せずにローカルでの Docker の使用を有効にすることが必要になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-130">If this happens, you may need to enable using Docker locally without TLS.</span></span> <span data-ttu-id="6c62a-131">これを行うには、Docker の設定を開き、**[Expose daemon on TCP://localhost:2375 without TLS]\(TLS を使用せずに TCP://localhost:2375 でデーモンを公開する\)** チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-131">To do so, open your Docker settings and check the option to **Expose daemon on TCP://localhost:2375 without TLS**.</span></span>
+> <span data-ttu-id="f1329-129">ローカルで Docker を使用していると、ポート 2375 で localhost に接続できないことを示すエラーが表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="f1329-129">When you are using Docker locally, you may see an error which states that you cannot connect to localhost on port 2375.</span></span> <span data-ttu-id="f1329-130">これが発生した場合は、TLS を使用せずにローカルでの Docker の使用を有効にすることが必要になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="f1329-130">If this happens, you may need to enable using Docker locally without TLS.</span></span> <span data-ttu-id="f1329-131">これを行うには、Docker の設定を開き、**[Expose daemon on TCP://localhost:2375 without TLS]\(TLS を使用せずに TCP://localhost:2375 でデーモンを公開する\)** チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="f1329-131">To do so, open your Docker settings and check the option to **Expose daemon on TCP://localhost:2375 without TLS**.</span></span>
 >
 > ![ローカルの TCP ポート 2375 で Docker デーモンを公開する][TL01]
 
-## <a name="create-an-azure-service-principal"></a><span data-ttu-id="6c62a-133">Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="6c62a-133">Create an Azure service principal</span></span>
+## <a name="create-an-azure-service-principal"></a><span data-ttu-id="f1329-133">Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="f1329-133">Create an Azure service principal</span></span>
 
-<span data-ttu-id="6c62a-134">このセクションでは、Azure にコンテナーをデプロイするときに、Maven プラグインが使用する Azure サービス プリンシパルを作成します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-134">In this section, you create an Azure service principal that the Maven plugin uses when deploying your container to Azure.</span></span>
+<span data-ttu-id="f1329-134">このセクションでは、Azure にコンテナーをデプロイするときに、Maven プラグインが使用する Azure サービス プリンシパルを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1329-134">In this section, you create an Azure service principal that the Maven plugin uses when deploying your container to Azure.</span></span>
 
-1. <span data-ttu-id="6c62a-135">コマンド プロンプトを開きます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-135">Open a command prompt.</span></span>
+1. <span data-ttu-id="f1329-135">コマンド プロンプトを開きます。</span><span class="sxs-lookup"><span data-stu-id="f1329-135">Open a command prompt.</span></span>
 
-2. <span data-ttu-id="6c62a-136">Azure CLI を使って、Azure アカウントにサインインします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-136">Sign into your Azure account by using the Azure CLI:</span></span>
+2. <span data-ttu-id="f1329-136">Azure CLI を使って、Azure アカウントにサインインします。</span><span class="sxs-lookup"><span data-stu-id="f1329-136">Sign into your Azure account by using the Azure CLI:</span></span>
    ```azurecli
    az login
    ```
-   <span data-ttu-id="6c62a-137">指示に従って、サインインを完了します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-137">Follow the instructions to complete the sign-in process.</span></span>
+   <span data-ttu-id="f1329-137">指示に従って、サインインを完了します。</span><span class="sxs-lookup"><span data-stu-id="f1329-137">Follow the instructions to complete the sign-in process.</span></span>
 
-3. <span data-ttu-id="6c62a-138">Azure サービス プリンシパルを作成します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-138">Create an Azure service principal:</span></span>
+3. <span data-ttu-id="f1329-138">Azure サービス プリンシパルを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1329-138">Create an Azure service principal:</span></span>
    ```azurecli
    az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
    ```
-   <span data-ttu-id="6c62a-139">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="6c62a-139">Where:</span></span>
+   <span data-ttu-id="f1329-139">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="f1329-139">Where:</span></span>
 
-   | <span data-ttu-id="6c62a-140">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6c62a-140">Parameter</span></span>  |                    <span data-ttu-id="6c62a-141">説明</span><span class="sxs-lookup"><span data-stu-id="6c62a-141">Description</span></span>                     |
+   | <span data-ttu-id="f1329-140">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1329-140">Parameter</span></span>  |                    <span data-ttu-id="f1329-141">説明</span><span class="sxs-lookup"><span data-stu-id="f1329-141">Description</span></span>                     |
    |------------|----------------------------------------------------|
-   | `uuuuuuuu` | <span data-ttu-id="6c62a-142">サービス プリンシパルのユーザー名を指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-142">Specifies the user name for the service principal.</span></span> |
-   | `pppppppp` | <span data-ttu-id="6c62a-143">サービス プリンシパルのパスワードを指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-143">Specifies the password for the service principal.</span></span>  |
+   | `uuuuuuuu` | <span data-ttu-id="f1329-142">サービス プリンシパルのユーザー名を指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-142">Specifies the user name for the service principal.</span></span> |
+   | `pppppppp` | <span data-ttu-id="f1329-143">サービス プリンシパルのパスワードを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-143">Specifies the password for the service principal.</span></span>  |
 
 
-4. <span data-ttu-id="6c62a-144">Azure が次の例に類似する JSON で応答します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-144">Azure responds with JSON that resembles the following example:</span></span>
+4. <span data-ttu-id="f1329-144">Azure が次の例に類似する JSON で応答します。</span><span class="sxs-lookup"><span data-stu-id="f1329-144">Azure responds with JSON that resembles the following example:</span></span>
    ```json
    {
       "appId": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
@@ -135,36 +135,36 @@ ms.locfileid: "37090795"
 
    > [!NOTE]
    >
-   > <span data-ttu-id="6c62a-145">Maven プラグインを構成して Azure にコンテナーをデプロイするときに、この JSON の応答にある値を使用します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-145">You will use the values from this JSON response when you configure the Maven plugin to deploy your container to Azure.</span></span> <span data-ttu-id="6c62a-146">`aaaaaaaa``uuuuuuuu``pppppppp``tttttttt` はプレースホルダーの値であり、次のセクションで Maven の `settings.xml` ファイルを構成するときに、これらの値と値の各要素を簡単にマップできるよう使用されています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-146">The `aaaaaaaa`, `uuuuuuuu`, `pppppppp`, and `tttttttt` are placeholder values, which are used in this example to make it easier to map these values to their respective elements when you configure your Maven `settings.xml` file in the next section.</span></span>
+   > <span data-ttu-id="f1329-145">Maven プラグインを構成して Azure にコンテナーをデプロイするときに、この JSON の応答にある値を使用します。</span><span class="sxs-lookup"><span data-stu-id="f1329-145">You will use the values from this JSON response when you configure the Maven plugin to deploy your container to Azure.</span></span> <span data-ttu-id="f1329-146">`aaaaaaaa``uuuuuuuu``pppppppp``tttttttt` はプレースホルダーの値であり、次のセクションで Maven の `settings.xml` ファイルを構成するときに、これらの値と値の各要素を簡単にマップできるよう使用されています。</span><span class="sxs-lookup"><span data-stu-id="f1329-146">The `aaaaaaaa`, `uuuuuuuu`, `pppppppp`, and `tttttttt` are placeholder values, which are used in this example to make it easier to map these values to their respective elements when you configure your Maven `settings.xml` file in the next section.</span></span>
    >
    >
 
-## <a name="create-an-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="6c62a-147">Azure CLI を使用して Azure Container Registry を作成する</span><span class="sxs-lookup"><span data-stu-id="6c62a-147">Create an Azure Container Registry using the Azure CLI</span></span>
+## <a name="create-an-azure-container-registry-using-the-azure-cli"></a><span data-ttu-id="f1329-147">Azure CLI を使用して Azure Container Registry を作成する</span><span class="sxs-lookup"><span data-stu-id="f1329-147">Create an Azure Container Registry using the Azure CLI</span></span>
 
-1. <span data-ttu-id="6c62a-148">コマンド プロンプトを開きます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-148">Open a command prompt.</span></span>
+1. <span data-ttu-id="f1329-148">コマンド プロンプトを開きます。</span><span class="sxs-lookup"><span data-stu-id="f1329-148">Open a command prompt.</span></span>
 
-1. <span data-ttu-id="6c62a-149">Azure アカウントにログインします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-149">Log in to your Azure account:</span></span>
+1. <span data-ttu-id="f1329-149">Azure アカウントにログインします。</span><span class="sxs-lookup"><span data-stu-id="f1329-149">Log in to your Azure account:</span></span>
    ```azurecli
    az login
    ```
 
-1. <span data-ttu-id="6c62a-150">この記事で使用する Azure リソースのリソース グループを作成します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-150">Create a resource group for the Azure resources you will use in this article:</span></span>
+1. <span data-ttu-id="f1329-150">この記事で使用する Azure リソースのリソース グループを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1329-150">Create a resource group for the Azure resources you will use in this article:</span></span>
    ```azurecli
    az group create --name=wingtiptoysresources --location=westus
    ```
-   <span data-ttu-id="6c62a-151">この例の `wingtiptoysresources` をご利用のリソース グループの一意の名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-151">Replace `wingtiptoysresources` in this example with a unique name for your resource group.</span></span>
+   <span data-ttu-id="f1329-151">この例の `wingtiptoysresources` をご利用のリソース グループの一意の名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="f1329-151">Replace `wingtiptoysresources` in this example with a unique name for your resource group.</span></span>
 
-1. <span data-ttu-id="6c62a-152">リソース グループ内に、ご利用の Spring Boot アプリ用のプライベートな Azure コンテナー レジストリを作成します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-152">Create a private Azure container registry in the resource group for your Spring Boot app:</span></span> 
+1. <span data-ttu-id="f1329-152">リソース グループ内に、ご利用の Spring Boot アプリ用のプライベートな Azure コンテナー レジストリを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1329-152">Create a private Azure container registry in the resource group for your Spring Boot app:</span></span> 
    ```azurecli
    az acr create --admin-enabled --resource-group wingtiptoysresources --location westus --name wingtiptoysregistry --sku Basic
    ```
-   <span data-ttu-id="6c62a-153">この例の `wingtiptoysregistry` をコンテナー レジストリの一意の名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-153">Replace `wingtiptoysregistry` in this example with a unique name for your container registry.</span></span>
+   <span data-ttu-id="f1329-153">この例の `wingtiptoysregistry` をコンテナー レジストリの一意の名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="f1329-153">Replace `wingtiptoysregistry` in this example with a unique name for your container registry.</span></span>
 
-1. <span data-ttu-id="6c62a-154">コンテナー レジストリのパスワードを取得します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-154">Retrieve the password for your container registry:</span></span>
+1. <span data-ttu-id="f1329-154">コンテナー レジストリのパスワードを取得します。</span><span class="sxs-lookup"><span data-stu-id="f1329-154">Retrieve the password for your container registry:</span></span>
    ```azurecli
    az acr credential show --name wingtiptoysregistry --query passwords[0]
    ```
-   <span data-ttu-id="6c62a-155">Azure が次の例のようにパスワードを返します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-155">Azure will respond with your password; for example:</span></span>
+   <span data-ttu-id="f1329-155">Azure が次の例のようにパスワードを返します。</span><span class="sxs-lookup"><span data-stu-id="f1329-155">Azure will respond with your password; for example:</span></span>
    ```json
    {
       "name": "password",
@@ -172,14 +172,14 @@ ms.locfileid: "37090795"
    }
    ```
 
-## <a name="add-your-azure-container-registry-and-azure-service-principal-to-your-maven-settings"></a><span data-ttu-id="6c62a-156">Maven の設定に Azure コンテナー レジストリと Azure サービス プリンシパルを追加する</span><span class="sxs-lookup"><span data-stu-id="6c62a-156">Add your Azure container registry and Azure service principal to your Maven settings</span></span>
+## <a name="add-your-azure-container-registry-and-azure-service-principal-to-your-maven-settings"></a><span data-ttu-id="f1329-156">Maven の設定に Azure コンテナー レジストリと Azure サービス プリンシパルを追加する</span><span class="sxs-lookup"><span data-stu-id="f1329-156">Add your Azure container registry and Azure service principal to your Maven settings</span></span>
 
-1. <span data-ttu-id="6c62a-157">Maven の `settings.xml` ファイルをテキスト エディターで開きます。このファイルは次の例のようなパスに存在していることがあります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-157">Open your Maven `settings.xml` file in a text editor; this file might be in a path like the following examples:</span></span>
+1. <span data-ttu-id="f1329-157">Maven の `settings.xml` ファイルをテキスト エディターで開きます。このファイルは次の例のようなパスに存在していることがあります。</span><span class="sxs-lookup"><span data-stu-id="f1329-157">Open your Maven `settings.xml` file in a text editor; this file might be in a path like the following examples:</span></span>
    * `/etc/maven/settings.xml`
    * `%ProgramFiles%\apache-maven\3.5.0\conf\settings.xml`
    * `$HOME/.m2/settings.xml`
 
-2. <span data-ttu-id="6c62a-158">この記事の前のセクションで説明した Azure Container Registry のアクセス設定を、次の例のように *settings.xml* ファイルの `<servers>` コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-158">Add your Azure Container Registry access settings from the previous section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
+2. <span data-ttu-id="f1329-158">この記事の前のセクションで説明した Azure Container Registry のアクセス設定を、次の例のように *settings.xml* ファイルの `<servers>` コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="f1329-158">Add your Azure Container Registry access settings from the previous section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
 
    ```xml
    <servers>
@@ -190,16 +190,16 @@ ms.locfileid: "37090795"
       </server>
    </servers>
    ```
-   <span data-ttu-id="6c62a-159">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="6c62a-159">Where:</span></span>
+   <span data-ttu-id="f1329-159">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="f1329-159">Where:</span></span>
 
-   |   <span data-ttu-id="6c62a-160">要素</span><span class="sxs-lookup"><span data-stu-id="6c62a-160">Element</span></span>    |                                 <span data-ttu-id="6c62a-161">説明</span><span class="sxs-lookup"><span data-stu-id="6c62a-161">Description</span></span>                                  |
+   |   <span data-ttu-id="f1329-160">要素</span><span class="sxs-lookup"><span data-stu-id="f1329-160">Element</span></span>    |                                 <span data-ttu-id="f1329-161">説明</span><span class="sxs-lookup"><span data-stu-id="f1329-161">Description</span></span>                                  |
    |--------------|------------------------------------------------------------------------------|
-   |    `<id>`    |         <span data-ttu-id="6c62a-162">プライベートな Azure コンテナー レジストリの名前が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-162">Contains the name of your private Azure container registry.</span></span>          |
-   | `<username>` |         <span data-ttu-id="6c62a-163">プライベートな Azure コンテナー レジストリの名前が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-163">Contains the name of your private Azure container registry.</span></span>          |
-   | `<password>` | <span data-ttu-id="6c62a-164">この記事の前のセクションで取得したパスワードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-164">Contains the password you retrieved in the previous section of this article.</span></span> |
+   |    `<id>`    |         <span data-ttu-id="f1329-162">プライベートな Azure コンテナー レジストリの名前が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-162">Contains the name of your private Azure container registry.</span></span>          |
+   | `<username>` |         <span data-ttu-id="f1329-163">プライベートな Azure コンテナー レジストリの名前が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-163">Contains the name of your private Azure container registry.</span></span>          |
+   | `<password>` | <span data-ttu-id="f1329-164">この記事の前のセクションで取得したパスワードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-164">Contains the password you retrieved in the previous section of this article.</span></span> |
 
 
-3. <span data-ttu-id="6c62a-165">この記事の前のセクションで説明した Azure サービス プリンシパル設定を、次の例のように *settings.xml* ファイルの `<servers>` コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-165">Add your Azure service principal settings from an earlier section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
+3. <span data-ttu-id="f1329-165">この記事の前のセクションで説明した Azure サービス プリンシパル設定を、次の例のように *settings.xml* ファイルの `<servers>` コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="f1329-165">Add your Azure service principal settings from an earlier section of this article to the `<servers>` collection in the *settings.xml* file; for example:</span></span>
 
    ```xml
    <servers>
@@ -214,24 +214,24 @@ ms.locfileid: "37090795"
       </server>
    </servers>
    ```
-   <span data-ttu-id="6c62a-166">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="6c62a-166">Where:</span></span>
+   <span data-ttu-id="f1329-166">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="f1329-166">Where:</span></span>
 
-   |     <span data-ttu-id="6c62a-167">要素</span><span class="sxs-lookup"><span data-stu-id="6c62a-167">Element</span></span>     |                                                                                   <span data-ttu-id="6c62a-168">説明</span><span class="sxs-lookup"><span data-stu-id="6c62a-168">Description</span></span>                                                                                   |
+   |     <span data-ttu-id="f1329-167">要素</span><span class="sxs-lookup"><span data-stu-id="f1329-167">Element</span></span>     |                                                                                   <span data-ttu-id="f1329-168">説明</span><span class="sxs-lookup"><span data-stu-id="f1329-168">Description</span></span>                                                                                   |
    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |     `<id>`      |                                <span data-ttu-id="6c62a-169">Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-169">Specifies a unique name which Maven uses to look up your security settings when you deploy your web app to Azure.</span></span>                                |
-   |   `<client>`    |                                                             <span data-ttu-id="6c62a-170">サービス プリンシパルの `appId` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-170">Contains the `appId` value from your service principal.</span></span>                                                             |
-   |   `<tenant>`    |                                                            <span data-ttu-id="6c62a-171">サービス プリンシパルの `tenant` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-171">Contains the `tenant` value from your service principal.</span></span>                                                             |
-   |     `<key>`     |                                                           <span data-ttu-id="6c62a-172">サービス プリンシパルの `password` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-172">Contains the `password` value from your service principal.</span></span>                                                            |
-   | `<environment>` | <span data-ttu-id="6c62a-173">ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です </span><span class="sxs-lookup"><span data-stu-id="6c62a-173">Defines the target Azure cloud environment, which is `AZURE` in this example.</span></span> <span data-ttu-id="6c62a-174">(環境の全リストは、「[Azure Web Apps 用の Maven プラグイン]」のドキュメントに記載しています)</span><span class="sxs-lookup"><span data-stu-id="6c62a-174">(A full list of environments is available in the [Maven Plugin for Azure Web Apps] documentation)</span></span> |
+   |     `<id>`      |                                <span data-ttu-id="f1329-169">Web アプリを Azure にデプロイするとき、セキュリティ設定を検索するために Maven が使う一意の名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-169">Specifies a unique name which Maven uses to look up your security settings when you deploy your web app to Azure.</span></span>                                |
+   |   `<client>`    |                                                             <span data-ttu-id="f1329-170">サービス プリンシパルの `appId` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-170">Contains the `appId` value from your service principal.</span></span>                                                             |
+   |   `<tenant>`    |                                                            <span data-ttu-id="f1329-171">サービス プリンシパルの `tenant` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-171">Contains the `tenant` value from your service principal.</span></span>                                                             |
+   |     `<key>`     |                                                           <span data-ttu-id="f1329-172">サービス プリンシパルの `password` 値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-172">Contains the `password` value from your service principal.</span></span>                                                            |
+   | `<environment>` | <span data-ttu-id="f1329-173">ターゲットの Azure クラウド環境を定義します。この例では `AZURE` です </span><span class="sxs-lookup"><span data-stu-id="f1329-173">Defines the target Azure cloud environment, which is `AZURE` in this example.</span></span> <span data-ttu-id="f1329-174">(環境の全リストは、「[Azure Web Apps 用の Maven プラグイン]」のドキュメントに記載しています)</span><span class="sxs-lookup"><span data-stu-id="f1329-174">(A full list of environments is available in the [Maven Plugin for Azure Web Apps] documentation)</span></span> |
 
 
-4. <span data-ttu-id="6c62a-175">*settings.xml* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-175">Save and close the *settings.xml* file.</span></span>
+4. <span data-ttu-id="f1329-175">*settings.xml* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="f1329-175">Save and close the *settings.xml* file.</span></span>
 
-## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a><span data-ttu-id="6c62a-176">Docker コンテナー イメージを構築し、Azure コンテナー レジストリにプッシュする</span><span class="sxs-lookup"><span data-stu-id="6c62a-176">Build your Docker container image and push it to your Azure container registry</span></span>
+## <a name="build-your-docker-container-image-and-push-it-to-your-azure-container-registry"></a><span data-ttu-id="f1329-176">Docker コンテナー イメージを構築し、Azure コンテナー レジストリにプッシュする</span><span class="sxs-lookup"><span data-stu-id="f1329-176">Build your Docker container image and push it to your Azure container registry</span></span>
 
-1. <span data-ttu-id="6c62a-177">Spring Boot アプリケーションの完了プロジェクトディレクトリ ("*C:\SpringBoot\gs-spring-boot-docker\complete*" や "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*" など) に移動し、*pom.xml* ファイルをテキスト エディターで開きます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-177">Navigate to the completed project directory for your Spring Boot application, (e.g. "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
+1. <span data-ttu-id="f1329-177">Spring Boot アプリケーションの完了プロジェクトディレクトリ ("*C:\SpringBoot\gs-spring-boot-docker\complete*" や "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*" など) に移動し、*pom.xml* ファイルをテキスト エディターで開きます。</span><span class="sxs-lookup"><span data-stu-id="f1329-177">Navigate to the completed project directory for your Spring Boot application, (e.g. "*C:\SpringBoot\gs-spring-boot-docker\complete*" or "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*"), and open the *pom.xml* file with a text editor.</span></span>
 
-2. <span data-ttu-id="6c62a-178">*pom.xml* ファイル内の `<properties>` コレクションを、このチュートリアルの前のセクションにあった Azure Container Registry のログイン サーバー値で更新します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-178">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry from the previous section of this tutorial; for example:</span></span>
+2. <span data-ttu-id="f1329-178">*pom.xml* ファイル内の `<properties>` コレクションを、このチュートリアルの前のセクションにあった Azure Container Registry のログイン サーバー値で更新します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="f1329-178">Update the `<properties>` collection in the *pom.xml* file with the login server value for your Azure Container Registry from the previous section of this tutorial; for example:</span></span>
 
    ```xml
    <properties>
@@ -241,15 +241,15 @@ ms.locfileid: "37090795"
       <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
    </properties>
    ```
-   <span data-ttu-id="6c62a-179">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="6c62a-179">Where:</span></span>
+   <span data-ttu-id="f1329-179">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="f1329-179">Where:</span></span>
 
-   |           <span data-ttu-id="6c62a-180">要素</span><span class="sxs-lookup"><span data-stu-id="6c62a-180">Element</span></span>           |                                                                       <span data-ttu-id="6c62a-181">説明</span><span class="sxs-lookup"><span data-stu-id="6c62a-181">Description</span></span>                                                                       |
+   |           <span data-ttu-id="f1329-180">要素</span><span class="sxs-lookup"><span data-stu-id="f1329-180">Element</span></span>           |                                                                       <span data-ttu-id="f1329-181">説明</span><span class="sxs-lookup"><span data-stu-id="f1329-181">Description</span></span>                                                                       |
    |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | `<azure.containerRegistry>` |                                              <span data-ttu-id="6c62a-182">プライベートな Azure コンテナー レジストリの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-182">Specifies the name of your private Azure container registry.</span></span>                                               |
-   |   `<docker.image.prefix>`   | <span data-ttu-id="6c62a-183">プライベートな Azure コンテナー レジストリの URL (プライベートなコンテナー レジストリの名前に ".azurecr.io" が追加されたもの) を指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-183">Specifies the URL of your private Azure container registry, which is derived by appending ".azurecr.io" to the name of your private container registry.</span></span> |
+   | `<azure.containerRegistry>` |                                              <span data-ttu-id="f1329-182">プライベートな Azure コンテナー レジストリの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-182">Specifies the name of your private Azure container registry.</span></span>                                               |
+   |   `<docker.image.prefix>`   | <span data-ttu-id="f1329-183">プライベートな Azure コンテナー レジストリの URL (プライベートなコンテナー レジストリの名前に ".azurecr.io" が追加されたもの) を指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-183">Specifies the URL of your private Azure container registry, which is derived by appending ".azurecr.io" to the name of your private container registry.</span></span> |
 
 
-3. <span data-ttu-id="6c62a-184">*pom.xml* ファイル内の Docker プラグインの `<plugin>` に、このチュートリアルの前の手順で説明したログイン サーバー アドレスとレジストリ名の正しいプロパティが含まれていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-184">Verify that `<plugin>` for the Docker plugin in your *pom.xml* file contains the correct properties for the login server address and registry name from the previous step in this tutorial.</span></span> <span data-ttu-id="6c62a-185">例: </span><span class="sxs-lookup"><span data-stu-id="6c62a-185">For example:</span></span>
+3. <span data-ttu-id="f1329-184">*pom.xml* ファイル内の Docker プラグインの `<plugin>` に、このチュートリアルの前の手順で説明したログイン サーバー アドレスとレジストリ名の正しいプロパティが含まれていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f1329-184">Verify that `<plugin>` for the Docker plugin in your *pom.xml* file contains the correct properties for the login server address and registry name from the previous step in this tutorial.</span></span> <span data-ttu-id="f1329-185">例: </span><span class="sxs-lookup"><span data-stu-id="f1329-185">For example:</span></span>
 
    ```xml
    <plugin>
@@ -271,27 +271,27 @@ ms.locfileid: "37090795"
       </configuration>
    </plugin>
    ```
-   <span data-ttu-id="6c62a-186">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="6c62a-186">Where:</span></span>
+   <span data-ttu-id="f1329-186">各値の説明:</span><span class="sxs-lookup"><span data-stu-id="f1329-186">Where:</span></span>
 
-   |     <span data-ttu-id="6c62a-187">要素</span><span class="sxs-lookup"><span data-stu-id="6c62a-187">Element</span></span>     |                                       <span data-ttu-id="6c62a-188">説明</span><span class="sxs-lookup"><span data-stu-id="6c62a-188">Description</span></span>                                       |
+   |     <span data-ttu-id="f1329-187">要素</span><span class="sxs-lookup"><span data-stu-id="f1329-187">Element</span></span>     |                                       <span data-ttu-id="f1329-188">説明</span><span class="sxs-lookup"><span data-stu-id="f1329-188">Description</span></span>                                       |
    |-----------------|-----------------------------------------------------------------------------------------|
-   |  `<serverId>`   |  <span data-ttu-id="6c62a-189">プライベートな Azure コンテナー レジストリの名前を含むプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-189">Specifies the property which contains name of your private Azure container registry.</span></span>   |
-   | `<registryUrl>` | <span data-ttu-id="6c62a-190">プライベートな Azure コンテナー レジストリの URL を含むプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-190">Specifies the property which contains the URL of your private Azure container registry.</span></span> |
+   |  `<serverId>`   |  <span data-ttu-id="f1329-189">プライベートな Azure コンテナー レジストリの名前を含むプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-189">Specifies the property which contains name of your private Azure container registry.</span></span>   |
+   | `<registryUrl>` | <span data-ttu-id="f1329-190">プライベートな Azure コンテナー レジストリの URL を含むプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-190">Specifies the property which contains the URL of your private Azure container registry.</span></span> |
 
 
-4. <span data-ttu-id="6c62a-191">Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次のコマンドを実行してアプリケーションをリビルドし、コンテナーを Azure コンテナー レジストリにプッシュします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-191">Navigate to the completed project directory for your Spring Boot application and run the following command to rebuild the application and push the container to your Azure container registry:</span></span>
+4. <span data-ttu-id="f1329-191">Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次のコマンドを実行してアプリケーションをリビルドし、コンテナーを Azure コンテナー レジストリにプッシュします。</span><span class="sxs-lookup"><span data-stu-id="f1329-191">Navigate to the completed project directory for your Spring Boot application and run the following command to rebuild the application and push the container to your Azure container registry:</span></span>
 
    ```
    mvn package docker:build -DpushImage 
    ```
 
-5. <span data-ttu-id="6c62a-192">省略可能: [Azure Portal] を参照して、コンテナー レジストリに **gs-spring-boot-docker** という名前の Docker コンテナー イメージがあることを確認します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-192">OPTIONAL: Browse to the [Azure portal] and verify that there is Docker container image named **gs-spring-boot-docker** in your container registry.</span></span>
+5. <span data-ttu-id="f1329-192">省略可能: [Azure Portal] を参照して、コンテナー レジストリに **gs-spring-boot-docker** という名前の Docker コンテナー イメージがあることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f1329-192">OPTIONAL: Browse to the [Azure portal] and verify that there is Docker container image named **gs-spring-boot-docker** in your container registry.</span></span>
 
    ![Azure Portal でコンテナーを確認][CR01]
 
-## <a name="customize-your-pomxml-then-build-and-deploy-your-container-to-azure"></a><span data-ttu-id="6c62a-194">pom.xml をカスタマイズしてコンテナーを構築し Azure にデプロイする</span><span class="sxs-lookup"><span data-stu-id="6c62a-194">Customize your pom.xml, then build and deploy your container to Azure</span></span>
+## <a name="customize-your-pomxml-then-build-and-deploy-your-container-to-azure"></a><span data-ttu-id="f1329-194">pom.xml をカスタマイズしてコンテナーを構築し Azure にデプロイする</span><span class="sxs-lookup"><span data-stu-id="f1329-194">Customize your pom.xml, then build and deploy your container to Azure</span></span>
 
-<span data-ttu-id="6c62a-195">Spring Boot アプリケーションの `pom.xml` ファイルをテキスト エディターで開き、`azure-webapp-maven-plugin` の `<plugin>` 要素を見つけます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-195">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="6c62a-196">この要素は次の例のようになっています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-196">This element should resemble the following example:</span></span>
+<span data-ttu-id="f1329-195">Spring Boot アプリケーションの `pom.xml` ファイルをテキスト エディターで開き、`azure-webapp-maven-plugin` の `<plugin>` 要素を見つけます。</span><span class="sxs-lookup"><span data-stu-id="f1329-195">Open the `pom.xml` file for your Spring Boot application in a text editor, and then locate the `<plugin>` element for `azure-webapp-maven-plugin`.</span></span> <span data-ttu-id="f1329-196">この要素は次の例のようになっています。</span><span class="sxs-lookup"><span data-stu-id="f1329-196">This element should resemble the following example:</span></span>
 
    ```xml
    <plugin>
@@ -320,38 +320,38 @@ ms.locfileid: "37090795"
    </plugin>
    ```
 
-<span data-ttu-id="6c62a-197">Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Azure Web Apps 用の Maven プラグイン]」のドキュメントに記載されています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-197">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="6c62a-198">この記事でも、次のように重要な値については説明します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-198">That being said, there are several values that are worth highlighting in this article:</span></span>
+<span data-ttu-id="f1329-197">Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Azure Web Apps 用の Maven プラグイン]」のドキュメントに記載されています。</span><span class="sxs-lookup"><span data-stu-id="f1329-197">There are several values that you can modify for the Maven plugin, and a detailed description for each of these elements is available in the [Maven Plugin for Azure Web Apps] documentation.</span></span> <span data-ttu-id="f1329-198">この記事でも、次のように重要な値については説明します。</span><span class="sxs-lookup"><span data-stu-id="f1329-198">That being said, there are several values that are worth highlighting in this article:</span></span>
 
-| <span data-ttu-id="6c62a-199">要素</span><span class="sxs-lookup"><span data-stu-id="6c62a-199">Element</span></span> | <span data-ttu-id="6c62a-200">説明</span><span class="sxs-lookup"><span data-stu-id="6c62a-200">Description</span></span> |
+| <span data-ttu-id="f1329-199">要素</span><span class="sxs-lookup"><span data-stu-id="f1329-199">Element</span></span> | <span data-ttu-id="f1329-200">説明</span><span class="sxs-lookup"><span data-stu-id="f1329-200">Description</span></span> |
 |---|---|
-| `<version>` | <span data-ttu-id="6c62a-201">[Azure Web Apps 用の Maven プラグイン]のバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-201">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="6c62a-202">最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。</span><span class="sxs-lookup"><span data-stu-id="6c62a-202">You should check the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
-| `<authentication>` | <span data-ttu-id="6c62a-203">Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。</span><span class="sxs-lookup"><span data-stu-id="6c62a-203">Specifies the authentication information for Azure, which in this example contains a `<serverId>` element that contains `azure-auth`; Maven uses that value to look up the Azure service principal values in your Maven *settings.xml* file, which you defined in an earlier section of this article.</span></span> |
-| `<resourceGroup>` | <span data-ttu-id="6c62a-204">ターゲット リソース グループを指定します。この例では `wingtiptoysresources` です。</span><span class="sxs-lookup"><span data-stu-id="6c62a-204">Specifies the target resource group, which is `wingtiptoysresources` in this example.</span></span> <span data-ttu-id="6c62a-205">リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-205">The resource group will be created during deployment if it does not already exist.</span></span> |
-| `<appName>` | <span data-ttu-id="6c62a-206">Web アプリのターゲット名を指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-206">Specifies the target name for your web app.</span></span> <span data-ttu-id="6c62a-207">この例では、ターゲット名は `maven-linux-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています </span><span class="sxs-lookup"><span data-stu-id="6c62a-207">In this example, the target name is `maven-linux-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="6c62a-208">(タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。</span><span class="sxs-lookup"><span data-stu-id="6c62a-208">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
-| `<region>` | <span data-ttu-id="6c62a-209">ターゲット リージョンを指定します。この例では `westus` です </span><span class="sxs-lookup"><span data-stu-id="6c62a-209">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="6c62a-210">(全リストは、「[Azure Web Apps 用の Maven プラグイン]」のドキュメントに記載しています。)</span><span class="sxs-lookup"><span data-stu-id="6c62a-210">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
-| `<containerSettings>` | <span data-ttu-id="6c62a-211">コンテナーの名前を含むプロパティと URL を含むプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-211">Specifies the properties which contain the name and URL of your container.</span></span> |
-| `<appSettings>` | <span data-ttu-id="6c62a-212">Azure に Web アプリをデプロイするときに使用するために、Maven 用の一意の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="6c62a-212">Specifies any unique settings for Maven to use when deploying your web app to Azure.</span></span> <span data-ttu-id="6c62a-213">この例では、`<property>` 要素には、アプリのポートを指定する子要素の名前と値のペアが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c62a-213">In this example, a `<property>` element contains a name/value pair of child elements that specify the port for your app.</span></span> |
+| `<version>` | <span data-ttu-id="f1329-201">[Azure Web Apps 用の Maven プラグイン]のバージョンを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-201">Specifies the version of the [Maven Plugin for Azure Web Apps].</span></span> <span data-ttu-id="f1329-202">最新バージョンを使用していることを確認するために、[Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) で一覧表示されているバージョンを確認してください。</span><span class="sxs-lookup"><span data-stu-id="f1329-202">You should check the version listed in the [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) to ensure that you are using the latest version.</span></span> |
+| `<authentication>` | <span data-ttu-id="f1329-203">Azure の認証情報を指定します。この例では `azure-auth` を含む `<serverId>` 要素が認証情報です。Maven はこの値を、この記事の前のセクションで定義した Maven の*settings.xml* ファイル内にある Azure サービス プリンシパルを見つけるために使います。</span><span class="sxs-lookup"><span data-stu-id="f1329-203">Specifies the authentication information for Azure, which in this example contains a `<serverId>` element that contains `azure-auth`; Maven uses that value to look up the Azure service principal values in your Maven *settings.xml* file, which you defined in an earlier section of this article.</span></span> |
+| `<resourceGroup>` | <span data-ttu-id="f1329-204">ターゲット リソース グループを指定します。この例では `wingtiptoysresources` です。</span><span class="sxs-lookup"><span data-stu-id="f1329-204">Specifies the target resource group, which is `wingtiptoysresources` in this example.</span></span> <span data-ttu-id="f1329-205">リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f1329-205">The resource group will be created during deployment if it does not already exist.</span></span> |
+| `<appName>` | <span data-ttu-id="f1329-206">Web アプリのターゲット名を指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-206">Specifies the target name for your web app.</span></span> <span data-ttu-id="f1329-207">この例では、ターゲット名は `maven-linux-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています </span><span class="sxs-lookup"><span data-stu-id="f1329-207">In this example, the target name is `maven-linux-app-${maven.build.timestamp}`, where the `${maven.build.timestamp}` suffix is appended in this example to avoid conflict.</span></span> <span data-ttu-id="f1329-208">(タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。</span><span class="sxs-lookup"><span data-stu-id="f1329-208">(The timestamp is optional; you can specify any unique string for the app name.)</span></span> |
+| `<region>` | <span data-ttu-id="f1329-209">ターゲット リージョンを指定します。この例では `westus` です </span><span class="sxs-lookup"><span data-stu-id="f1329-209">Specifies the target region, which in this example is `westus`.</span></span> <span data-ttu-id="f1329-210">(全リストは、「[Azure Web Apps 用の Maven プラグイン]」のドキュメントに記載しています。)</span><span class="sxs-lookup"><span data-stu-id="f1329-210">(A full list is in the [Maven Plugin for Azure Web Apps] documentation.)</span></span> |
+| `<containerSettings>` | <span data-ttu-id="f1329-211">コンテナーの名前を含むプロパティと URL を含むプロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-211">Specifies the properties which contain the name and URL of your container.</span></span> |
+| `<appSettings>` | <span data-ttu-id="f1329-212">Azure に Web アプリをデプロイするときに使用するために、Maven 用の一意の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="f1329-212">Specifies any unique settings for Maven to use when deploying your web app to Azure.</span></span> <span data-ttu-id="f1329-213">この例では、`<property>` 要素には、アプリのポートを指定する子要素の名前と値のペアが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1329-213">In this example, a `<property>` element contains a name/value pair of child elements that specify the port for your app.</span></span> |
 
 > [!NOTE]
 >
-> <span data-ttu-id="6c62a-214">既定と異なるポートに変更する場合のみ、この例のポート番号を変更する設定が必要になります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-214">The settings to change the port number in this example are only necessary when you are changing the port from the default.</span></span>
+> <span data-ttu-id="f1329-214">既定と異なるポートに変更する場合のみ、この例のポート番号を変更する設定が必要になります。</span><span class="sxs-lookup"><span data-stu-id="f1329-214">The settings to change the port number in this example are only necessary when you are changing the port from the default.</span></span>
 >
 
-1. <span data-ttu-id="6c62a-215">*pom.xml* ファイルに変更を加える場合は、以前使用していたコマンド プロンプトまたはターミナル ウィンドウで、次の例のように Maven を使用して JAR ファイルをリビルドします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-215">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
+1. <span data-ttu-id="f1329-215">*pom.xml* ファイルに変更を加える場合は、以前使用していたコマンド プロンプトまたはターミナル ウィンドウで、次の例のように Maven を使用して JAR ファイルをリビルドします。</span><span class="sxs-lookup"><span data-stu-id="f1329-215">From the command prompt or terminal window that you were using earlier, rebuild the JAR file using Maven if you made any changes to the *pom.xml* file; for example:</span></span>
    ```shell
    mvn clean package
    ```
 
-1. <span data-ttu-id="6c62a-216">Maven を使って次の例のように Azure に Web アプリをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="6c62a-216">Deploy your web app to Azure by using Maven; for example:</span></span>
+1. <span data-ttu-id="f1329-216">Maven を使って次の例のように Azure に Web アプリをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="f1329-216">Deploy your web app to Azure by using Maven; for example:</span></span>
    ```shell
    mvn azure-webapp:deploy
    ```
 
-<span data-ttu-id="6c62a-217">Maven が Web アプリを Azure にデプロイします。Web アプリが存在しない場合は新たに作成されます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-217">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
+<span data-ttu-id="f1329-217">Maven が Web アプリを Azure にデプロイします。Web アプリが存在しない場合は新たに作成されます。</span><span class="sxs-lookup"><span data-stu-id="f1329-217">Maven will deploy your web app to Azure; if the web app does not already exist, it will be created.</span></span>
 
 > [!NOTE]
 >
-> <span data-ttu-id="6c62a-218">デプロイ開始時に、*pom.xml* ファイルの `<region>` 要素で指定したリージョンに十分な数の使用可能なサーバーがない場合は、次の例のようなエラーが表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-218">If the region which you specify in the `<region>` element of your *pom.xml* file does not have enough servers available when you start your deployment, you might see an error similar to the following example:</span></span>
+> <span data-ttu-id="f1329-218">デプロイ開始時に、*pom.xml* ファイルの `<region>` 要素で指定したリージョンに十分な数の使用可能なサーバーがない場合は、次の例のようなエラーが表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="f1329-218">If the region which you specify in the `<region>` element of your *pom.xml* file does not have enough servers available when you start your deployment, you might see an error similar to the following example:</span></span>
 >
 > ```
 > [INFO] Start deploying to Web App maven-linux-app-20170804...
@@ -365,33 +365,33 @@ ms.locfileid: "37090795"
 > [ERROR] Failed to execute goal com.microsoft.azure:azure-webapp-maven-plugin:0.1.3:deploy (default-cli) on project gs-spring-boot-docker: null: MojoExecutionException: CloudException: OnError while emitting onNext value: retrofit2.Response.class
 > ```
 >
-> <span data-ttu-id="6c62a-219">この場合、別のリージョンを指定し、Maven コマンドを再実行してアプリケーションをデプロイできます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-219">If this happens, you can specify another region and re-run the Maven command to deploy your application.</span></span>
+> <span data-ttu-id="f1329-219">この場合、別のリージョンを指定し、Maven コマンドを再実行してアプリケーションをデプロイできます。</span><span class="sxs-lookup"><span data-stu-id="f1329-219">If this happens, you can specify another region and re-run the Maven command to deploy your application.</span></span>
 >
 >
 
-<span data-ttu-id="6c62a-220">Web アプリのデプロイが完了すると、[Azure Portal] を使用して Web アプリを管理できるようになります。</span><span class="sxs-lookup"><span data-stu-id="6c62a-220">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
+<span data-ttu-id="f1329-220">Web アプリのデプロイが完了すると、[Azure Portal] を使用して Web アプリを管理できるようになります。</span><span class="sxs-lookup"><span data-stu-id="f1329-220">When your web has been deployed, you will be able to manage it by using the [Azure portal].</span></span>
 
-* <span data-ttu-id="6c62a-221">Web アプリは **App Services** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-221">Your web app will be listed in **App Services**:</span></span>
+* <span data-ttu-id="f1329-221">Web アプリは **App Services** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="f1329-221">Your web app will be listed in **App Services**:</span></span>
 
    ![Azure Portal の App Services に一覧表示される Web アプリ][AP01]
 
-* <span data-ttu-id="6c62a-223">Web アプリの URL は、Web アプリの **[概要]** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="6c62a-223">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
+* <span data-ttu-id="f1329-223">Web アプリの URL は、Web アプリの **[概要]** に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="f1329-223">And the URL for your web app will be listed in the **Overview** for your web app:</span></span>
 
    ![Web アプリの URL の決定][AP02]
 
-## <a name="next-steps"></a><span data-ttu-id="6c62a-225">次の手順</span><span class="sxs-lookup"><span data-stu-id="6c62a-225">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f1329-225">次の手順</span><span class="sxs-lookup"><span data-stu-id="f1329-225">Next steps</span></span>
 
-<span data-ttu-id="6c62a-226">この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="6c62a-226">For more information about the various technologies discussed in this article, see the following articles:</span></span>
+<span data-ttu-id="f1329-226">この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="f1329-226">For more information about the various technologies discussed in this article, see the following articles:</span></span>
 
-* <span data-ttu-id="6c62a-227">[Azure Web Apps 用の Maven プラグイン]</span><span class="sxs-lookup"><span data-stu-id="6c62a-227">[Maven Plugin for Azure Web Apps]</span></span>
+* <span data-ttu-id="f1329-227">[Azure Web Apps 用の Maven プラグイン]</span><span class="sxs-lookup"><span data-stu-id="f1329-227">[Maven Plugin for Azure Web Apps]</span></span>
 
-* [<span data-ttu-id="6c62a-228">Azure CLI から Azure へのログイン</span><span class="sxs-lookup"><span data-stu-id="6c62a-228">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
+* [<span data-ttu-id="f1329-228">Azure CLI から Azure へのログイン</span><span class="sxs-lookup"><span data-stu-id="f1329-228">Log in to Azure from the Azure CLI</span></span>](/azure/xplat-cli-connect)
 
-* [<span data-ttu-id="6c62a-229">Azure CLI 2.0 で Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="6c62a-229">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
+* [<span data-ttu-id="f1329-229">Azure CLI 2.0 で Azure サービス プリンシパルを作成する</span><span class="sxs-lookup"><span data-stu-id="f1329-229">Create an Azure service principal with Azure CLI 2.0</span></span>](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-* [<span data-ttu-id="6c62a-230">Maven の設定リファレンス</span><span class="sxs-lookup"><span data-stu-id="6c62a-230">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
+* [<span data-ttu-id="f1329-230">Maven の設定リファレンス</span><span class="sxs-lookup"><span data-stu-id="f1329-230">Maven Settings Reference</span></span>](https://maven.apache.org/settings.html)
 
-* <span data-ttu-id="6c62a-231">[Maven 用の Docker プラグイン]</span><span class="sxs-lookup"><span data-stu-id="6c62a-231">[Docker plugin for Maven]</span></span>
+* <span data-ttu-id="f1329-231">[Maven 用の Docker プラグイン]</span><span class="sxs-lookup"><span data-stu-id="f1329-231">[Docker plugin for Maven]</span></span>
 
 <!-- URL List -->
 

@@ -12,25 +12,25 @@ ms.technology: azure
 ms.devlang: java
 ms.service: dns
 ms.openlocfilehash: 2cd8fe7ee4d6a87da32a349fe8f1d2815d3fd36d
-ms.sourcegitcommit: 49b17bbf34732512f836ee634818f1058147ff5c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31823635"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892903"
 ---
-# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="9538d-104">Azure Traffic Manager Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="9538d-104">Azure Traffic Manager libraries for Java</span></span>
+# <a name="azure-traffic-manager-libraries-for-java"></a><span data-ttu-id="10cd6-104">Azure Traffic Manager Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="10cd6-104">Azure Traffic Manager libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="9538d-105">概要</span><span class="sxs-lookup"><span data-stu-id="9538d-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="10cd6-105">概要</span><span class="sxs-lookup"><span data-stu-id="10cd6-105">Overview</span></span>
 
-<span data-ttu-id="9538d-106">ドメイン名を解決し、[Azure DNS](/azure/dns/dns-overview) を使用する他の Azure サービスと同じ資格情報、API、ツール、課金情報を使用して DNS レコードを管理します。</span><span class="sxs-lookup"><span data-stu-id="9538d-106">Provide domain name resolution and manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services with [Azure DNS](/azure/dns/dns-overview).</span></span>
+<span data-ttu-id="10cd6-106">ドメイン名を解決し、[Azure DNS](/azure/dns/dns-overview) を使用する他の Azure サービスと同じ資格情報、API、ツール、課金情報を使用して DNS レコードを管理します。</span><span class="sxs-lookup"><span data-stu-id="10cd6-106">Provide domain name resolution and manage your DNS records using the same credentials, APIs, tools, and billing as your other Azure services with [Azure DNS](/azure/dns/dns-overview).</span></span>
 
-<span data-ttu-id="9538d-107">Azure DNS を導入するには、「[Azure CLI 2.0 で Azure DNS の使用を開始する](/azure/dns/dns-getstarted-cli)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9538d-107">To get started with Azure DNS, see [Get started with Azure DNS using the Azure CLI 2.0](/azure/dns/dns-getstarted-cli).</span></span>
+<span data-ttu-id="10cd6-107">Azure DNS を導入するには、「[Azure CLI 2.0 で Azure DNS の使用を開始する](/azure/dns/dns-getstarted-cli)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="10cd6-107">To get started with Azure DNS, see [Get started with Azure DNS using the Azure CLI 2.0](/azure/dns/dns-getstarted-cli).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="9538d-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="9538d-108">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="10cd6-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="10cd6-108">Management API</span></span>
 
-<span data-ttu-id="9538d-109">DNS ゾーンを作成し、Management API を使用してゾーンにレコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="9538d-109">Create DNS zones and add records to zones with the management API.</span></span>
+<span data-ttu-id="10cd6-109">DNS ゾーンを作成し、Management API を使用してゾーンにレコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="10cd6-109">Create DNS zones and add records to zones with the management API.</span></span>
 
-<span data-ttu-id="9538d-110">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="9538d-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
+<span data-ttu-id="10cd6-110">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="10cd6-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>
 
 ```XML
 <dependency>
@@ -40,9 +40,9 @@ ms.locfileid: "31823635"
 </dependency>
 ```   
 
-### <a name="example"></a><span data-ttu-id="9538d-111">例</span><span class="sxs-lookup"><span data-stu-id="9538d-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="10cd6-111">例</span><span class="sxs-lookup"><span data-stu-id="10cd6-111">Example</span></span>
 
-<span data-ttu-id="9538d-112">ルート DNS ゾーンを作成し、既存のリソース グループ内の `www` CNAME レコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="9538d-112">Create a root DNS zone and add a `www` CNAME record in an existing resource group.</span></span>
+<span data-ttu-id="10cd6-112">ルート DNS ゾーンを作成し、既存のリソース グループ内の `www` CNAME レコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="10cd6-112">Create a root DNS zone and add a `www` CNAME record in an existing resource group.</span></span>
 
 ```java
 DnsZone rootDnsZone = azure.dnsZones().define("contoso.com")
@@ -54,12 +54,12 @@ rootDnsZone = rootDnsZone.update()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9538d-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="9538d-113">Explore the Management APIs</span></span>](/java/api/overview/azure/dns/management)
+> [<span data-ttu-id="10cd6-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="10cd6-113">Explore the Management APIs</span></span>](/java/api/overview/azure/dns/management)
 
-## <a name="samples"></a><span data-ttu-id="9538d-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="9538d-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="10cd6-114">サンプル</span><span class="sxs-lookup"><span data-stu-id="10cd6-114">Samples</span></span>
 
-[<span data-ttu-id="9538d-115">Azure DNS でドメインをホストして管理する</span><span class="sxs-lookup"><span data-stu-id="9538d-115">Host and manage your domains with Azure DNS</span></span>](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
+[<span data-ttu-id="10cd6-115">Azure DNS でドメインをホストして管理する</span><span class="sxs-lookup"><span data-stu-id="10cd6-115">Host and manage your domains with Azure DNS</span></span>](https://github.com/Azure-Samples/dns-java-host-and-manage-your-domains)
 
-<span data-ttu-id="9538d-116">アプリで利用できる [Azure DNS のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=dns)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="9538d-116">Explore more [sample Java code for Azure DNS](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) you can use in your apps.</span></span>
+<span data-ttu-id="10cd6-116">アプリで利用できる [Azure DNS のサンプル Java コード](https://azure.microsoft.com/resources/samples/?platform=java&term=dns)を探しましょう。</span><span class="sxs-lookup"><span data-stu-id="10cd6-116">Explore more [sample Java code for Azure DNS](https://azure.microsoft.com/resources/samples/?platform=java&term=dns) you can use in your apps.</span></span>
 
 <!---Loc Comment: Please, refer to conversation section to check the issue. Thanks.--->
