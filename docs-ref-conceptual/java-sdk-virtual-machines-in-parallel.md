@@ -10,11 +10,11 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e20feb555c3a360eceae60c1569af9a00a5cd027
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931198"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893213"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java アプリケーションから複数のリージョンに対して仮想マシンを作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "21931198"
 > [!IMPORTANT]
 > 4 つのリージョンに対し、[STANDARD_DS3_V2 サイズ](http://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)の Ubuntu 16.04 LTS を実行する合計 48 の VM を作成します。 これらの仮想マシンは、終了前にサンプル コードによって削除されます。 このサンプルを既定の VM 数で実行する前に必ず、[サービスの制限とクォータをチェック](http://docs.microsoft.com/azure/azure-subscription-service-limits)してください。
 
-## <a name="run-the-sample"></a>サンプルの実行
+## <a name="run-the-sample"></a>サンプルを実行する
 
 [認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。 次に、以下を実行します。
 
@@ -194,6 +194,6 @@ finally {
 | [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | Linux 仮想マシンの一連のオプションです。仮想マシンを定義するときに、`withPopularLinuxImage()` メソッドに渡すパラメーターとして使用されます。
 | [ネットワーク](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | このサンプルでは、各リージョンにつき 1 つの仮想ネットワークを `azure.networks().define()` で定義しています。 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

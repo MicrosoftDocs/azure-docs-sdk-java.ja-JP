@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090785"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893395"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -85,7 +85,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
 2. [プロジェクト構造] ダイアログが表示されます。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[プロジェクト設定]** の一覧で、**[Artifacts (アーティファクト)]** をクリックします。
+   a. **[プロジェクト設定]** の一覧で、**[Artifacts (アーティファクト)]** をクリックします。
 
    b. **[名前]** ボックスのアーティファクトの名前を、空白または特殊文字が含まれないように変更します。この名前が Uniform Resource Identifier (URI) で使用されるため、変更が必要になります。
 
@@ -115,7 +115,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
 5. 以前に Azure Web アプリ コンテナーを作成していない場合、またはアプリケーションを新しいコンテナーに発行する場合は、次の手順を実行します。 作成済みの場合は、既存の Web アプリ コンテナーを選択し、以下の手順 6. に進みます。
    
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **+** 記号をクリックします。
+   a. **+** 記号をクリックします。
       
       ![アプリ コンテナーの追加][10]
 
@@ -229,7 +229,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 1. **[Azure]** ノードを展開します。
 2. **[Web Apps (Web アプリ)]** ノードを展開します。 
 3. 目的の Web App を右クリックします。
-4. コンテキスト メニューが表示されたら、**[Start (起動)]**, **[Stop (停止)]**、または **[Restart (再起動)]** をクリックします。 メニュー項目はコンテキストに依存します。つまり、Web アプリが実行しているときは停止操作のみ、Web アプリが現在実行されていないときは起動操作のみを行うことができます。
+4. コンテキスト メニューが表示されたら、**[Start (起動)]****[Stop (停止)]**、または **[Restart (再起動)]** をクリックします。 メニュー項目はコンテキストに依存します。つまり、Web アプリが実行しているときは停止操作のみ、Web アプリが現在実行されていないときは起動操作のみを行うことができます。
    
    ![Web アプリの停止][18]
 

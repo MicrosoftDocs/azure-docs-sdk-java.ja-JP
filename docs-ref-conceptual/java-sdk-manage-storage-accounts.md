@@ -11,17 +11,17 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 5945164b2b04e1fa9169590a71f6c5f9f45842d6
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931058"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893064"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java アプリケーションから Azure ストレージ アカウントを管理する
 
 [このサンプル](https://github.com/Azure-Samples/storage-java-manage-storage-accounts)では、[Java 管理ライブラリ](https://github.com/Azure/azure-sdk-for-java)を使用して、[Azure ストレージ](https://docs.microsoft.com/azure/storage/storage-introduction) アカウントを作成し、アカウント アクセス キーを操作します。 
 
-## <a name="run-the-sample"></a>サンプルの実行
+## <a name="run-the-sample"></a>サンプルを実行する
 
 [認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。 次に、以下を実行します。
 
@@ -81,7 +81,7 @@ for (StorageAccount sa : accounts) {
 
 [com.microsoft.azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account) には、ストレージ アカウントの構成を調べる際に利用できるさまざまなメソッドが掲載されています。
 
-## <a name="delete-a-storage-account"></a>ストレージ アカウントの削除
+## <a name="delete-a-storage-account"></a>ストレージ アカウントを削除する
 ```java
 // delete by ID when you already have a storage account object
 azure.storageAccounts().deleteById(storageAccount.id());
@@ -107,6 +107,6 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 | [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | Azure ストレージ アカウントを表します。 ストレージ アカウントに関する情報は、このクラスのメソッドを使って取得します。
 | [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | `StorageAccount.getKeys()` は、ストレージ アカウント キーを返します。 キーを更新するには、`StorageAccount` の `regenerateKey` メソッドを使用します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

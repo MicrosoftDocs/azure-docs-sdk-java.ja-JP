@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954403"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893423"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ の新機能
 

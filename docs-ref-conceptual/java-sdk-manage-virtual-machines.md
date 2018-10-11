@@ -11,17 +11,17 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: e3048b3317477f4b1fb8edf93e4bebad6b7fafce
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931168"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893613"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Azure 仮想マシンを Java アプリケーションから管理する
 
 [このサンプル](https://github.com/Azure-Samples/compute-java-manage-vm/)では、[Azure Management Libraries for Java](https://github.com/Azure/azure-sdk-for-java) を使って Azure 仮想マシンの作成と操作を行います。
 
-## <a name="run-the-sample"></a>サンプルの実行
+## <a name="run-the-sample"></a>サンプルを実行する
 
 [認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。 次に、以下を実行します。
 
@@ -163,6 +163,6 @@ azure.virtualMachines().deleteByResourceGroup(rgName,windowsVmName);
 | [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 仮想マシンを定義するときに `withPopularLinuxImage()` メソッドで使用する一連の Linux 仮想マシン オプションを保持するクラスです。
 | [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_windows_virtual_machine_image) | 仮想マシンを定義するときに `withPopularWindowsImage()` メソッドで使用する一連の Windows 仮想マシン イメージ オプションを保持するクラスです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

@@ -13,11 +13,11 @@ ms.devlang: java
 ms.service: multiple
 ms.assetid: 9aaf22a2-382a-4b13-a8e3-0e467d607207
 ms.openlocfilehash: 22a337e928085475e905a271f991147729d97671
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21930878"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892733"
 ---
 # <a name="azure-libraries-for-java"></a>Java 用 Azure ライブラリ
 

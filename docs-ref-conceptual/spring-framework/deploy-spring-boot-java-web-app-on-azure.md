@@ -15,15 +15,15 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: adf779e2ba6ca73ea3a2406613f9622cc9ecbf99
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954525"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893163"
 ---
 # <a name="deploy-a-spring-boot-application-to-the-cloud-with-azure-app-service"></a>Azure App Service で Spring Boot アプリケーションをクラウドにデプロイする
 
-このチュートリアルでは、サンプルの [Spring Boot] Getting Started Web アプリを作成し、それを [Azure App Service] にデプロイする方法について説明します。
+このチュートリアルでは、サンプルの [Spring Boot] Getting Started Web アプリを作成し、それを [Mobile Apps] にデプロイする方法について説明します。
 
 ### <a name="prerequisites"></a>前提条件
 
@@ -112,7 +112,7 @@ ms.locfileid: "28954525"
 
 1. Web アプリが表示されたら、次の手順を使用して Java バージョンを指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[アプリケーションの設定]** メニュー項目をクリックします。
+   a. **[アプリケーションの設定]** メニュー項目をクリックします。
 
    b. Java バージョンとして **[Java 8]** を選択します。
 
@@ -126,7 +126,7 @@ ms.locfileid: "28954525"
 
 1. 次の手順を使用して FTP デプロイ資格情報を指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
+   a. **[デプロイ資格情報]** メニュー項目をクリックします。
 
    b. ユーザー名とパスワードを指定します。
 
@@ -136,7 +136,7 @@ ms.locfileid: "28954525"
 
 1. 次の手順を使用して FTP 接続情報を取得します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[デプロイ資格情報]** メニュー項目をクリックします。
+   a. **[デプロイ資格情報]** メニュー項目をクリックします。
 
    b. 完全な FTP ユーザー名と URL をコピーし、それらをこのチュートリアルの次のセクションのために保存します。
 
@@ -205,15 +205,15 @@ Spring Boot サンプル プロジェクトの詳細については、「[Spring
 
 独自の Spring Boot アプリケーションの使用開始に関するヘルプについては、「**Spring Initializr**」(https://start.spring.io/) を参照してください。
 
-Web アプリの追加設定の構成の詳細については、「[Configure web apps in Azure App Service (Azure App Service で Web アプリを構成する)]」を参照してください。
+Web アプリの追加設定の構成の詳細については、「[Azure App Service での Web アプリの構成]」を参照してください。
 
 <!-- URL List -->
 
-[Azure App Service]: https://azure.microsoft.com/services/app-service/
+[Mobile Apps]: https://azure.microsoft.com/services/app-service/
 [Azure Container Service]: https://azure.microsoft.com/services/container-service/
 [Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
-[Configure web apps in Azure App Service (Azure App Service で Web アプリを構成する)]: /azure/app-service/web-sites-configure
+[Azure App Service での Web アプリの構成]: /azure/app-service/web-sites-configure
 [FTP/S を使用した Azure App Service へのアプリのデプロイ]: https://docs.microsoft.com/azure/app-service/app-service-deploy-ftp
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/

@@ -15,11 +15,11 @@ ms.tgt_pltfrm: cache-redis
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 8bfe7c2ddd238e0e5a259de9078b831a97b1b1a4
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954583"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892913"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache によってクラウドで Redis を使用するように Spring Boot Initializer アプリを構成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "28954583"
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
 
-1. <https://start.spring.io/> に移動します。
+1. <https://start.spring.io/> を参照します。
 
 1. **Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[Group]\(グループ\)** と **[Aritifact]\(アーティファクト\)** に名前を入力して、Spring Initializr の **[Switch to the full version]\(完全バージョンへの切り替え\)** のリンクをクリックします。
 

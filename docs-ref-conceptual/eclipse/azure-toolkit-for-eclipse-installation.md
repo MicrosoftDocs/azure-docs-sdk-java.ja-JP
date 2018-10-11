@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: d5f685fa62ad74c8b8cd842b3667f8161e7c5760
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887752"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893009"
 ---
 # <a name="install-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse をインストールする
 
@@ -52,7 +52,7 @@ Azure Toolkit for Eclipse は、Eclipse 開発環境からクラウド アプリ
 
 1. **Azure Toolkit for Eclipse** を展開すると、インストールされるコンポーネントの一覧が表示されます。次に例を示します。
 
-   | Feature | [説明] | 
+   | 機能 | 説明 | 
    |---|---| 
    | **Application Insights Plugin for Java** | アプリケーションとサーバー インスタンスに対する Azure のテレメトリ ログと分析サービスを使用できるようにします。 | 
    | **Azure Common Plugin** | 他のツールキット コンポーネントで必要な一般的な機能を提供します。 | 

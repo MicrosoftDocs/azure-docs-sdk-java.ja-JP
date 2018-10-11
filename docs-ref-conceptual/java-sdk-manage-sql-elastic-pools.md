@@ -11,17 +11,17 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 9ec0cf3083b8659fa850b798ca0ecf18b2757234
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931118"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893573"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java アプリケーションからエラスティック プールの Azure SQL データベースを管理する
 
 [このサンプル](https://github.com/Azure-Samples/sql-database-java-manage-sql-dbs-in-elastic-pool)では、1 つのプランで複数のデータベースのリソースを管理したりスケーリングしたりできる[エラスティック プール](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)を使って SQL データベース サーバーを作成します。
 
-## <a name="run-the-sample"></a>サンプルの実行
+## <a name="run-the-sample"></a>サンプルを実行する
 
 [認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。 次に、以下を実行します。
 
@@ -135,6 +135,6 @@ sqlServer.elasticPools().delete(elasticPoolName);
 | [ElasticPoolDatabaseActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_database_activity) | `SqlElasticPool.listDatabaseActivities()` から取得されます。 この型のオブジェクトはそれぞれ、エラスティック プール内のデータベースに対して実行されるアクティビティを表します。
 | [ElasticPoolActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_activity) | `SqlElasticPool.listActivities()` からリスト形式で取得されます。 リストに含まれる各オブジェクトは、(エラスティック プール内のデータベースではなく) エラスティック プールに対して実行されるアクティビティを表します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

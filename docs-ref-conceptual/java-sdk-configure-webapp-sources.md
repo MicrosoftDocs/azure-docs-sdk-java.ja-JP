@@ -10,17 +10,17 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 910d1e43c9942d6402aeccb8757ba819b7453dab
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931188"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893143"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java アプリケーションから Azure App Service のデプロイ ソースを構成する
 
 [このサンプル](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)では、1 つの [Azure App Service](https://docs.microsoft.com/azure/app-service/) プランの 4 つのアプリケーションに、それぞれ異なるデプロイ ソースを使ってコードをデプロイします。
 
-## <a name="run-the-sample"></a>サンプルの実行
+## <a name="run-the-sample"></a>サンプルを実行する
 
 [認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。 次に、以下を実行します。
 
@@ -164,6 +164,6 @@ WebApp app4 = azure.webApps()
 | [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_pricing_tier) | App Service のレベルを表す static public フィールドがあるクラス。 プランのレベルをアプリの作成時に `withPricingTier()` を使ってインラインで定義するとき、または `azure.appServices().appServicePlans().define()` によってプランを定義する際にそのレベルを直接定義するときに使用します。
 | [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._java_version) | App Service によってサポートされる Java のバージョンを表す static public フィールドがあるクラス。 新しい Web アプリを作成するときに `define()...create()` チェーンの中で `withJavaVersion()` と組み合わせて使用します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

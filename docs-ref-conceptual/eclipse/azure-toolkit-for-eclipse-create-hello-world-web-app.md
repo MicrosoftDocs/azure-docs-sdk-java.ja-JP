@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 5e025c90c2619ec72ffddf5815fd49c3ac59c00f
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883649"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893093"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse を使用して Azure 用の Hello World Web アプリを作成する
 

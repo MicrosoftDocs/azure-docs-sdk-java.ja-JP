@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887095"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892593"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Hello World Web アプリをクラウドの Linux コンテナーにデプロイする
 
@@ -70,7 +70,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 > Azure ポータルではなく Azure CLI を使用する場合は、「[Azure CLI 2.0 を使用したプライベート Docker コンテナー レジストリの作成][Create Docker Registry using Azure CLI]」の手順に従ってください。
 >
 
-1. [Azure ポータル]を参照して、サインインします。
+1. [Azure Portal]を参照して、サインインします。
 
    Azure Portal のアカウントにサインインしたら、「[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
 
@@ -140,7 +140,7 @@ Docker の他のリソースについては、公式の [Docker の Web サイ�
 
 <!-- URL List -->
 
-[Azure ポータル]: https://portal.azure.com/
+[Azure Portal]: https://portal.azure.com/
 [Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/

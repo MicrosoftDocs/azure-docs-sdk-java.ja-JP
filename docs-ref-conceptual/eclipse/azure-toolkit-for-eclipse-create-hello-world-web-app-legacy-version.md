@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090805"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892563"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Eclipse 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -97,7 +97,7 @@ Java Web アプリケーションを Azure にデプロイする方法はいく�
 
 6. 以前に Azure Web アプリ コンテナーを作成していない場合、またはアプリケーションを新しいコンテナーに発行する場合は、次の手順を実行します。 作成済みの場合は、既存の Web アプリ コンテナーを選択し、以下の手順 7 に進みます。
    
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[New (新規)]**
+   a. **[New (新規)]**
       
       ![[Deploy to Azure Web App Container (Azure Web アプリ コンテナーにデプロイ)] ダイアログ ボックス][15]
 

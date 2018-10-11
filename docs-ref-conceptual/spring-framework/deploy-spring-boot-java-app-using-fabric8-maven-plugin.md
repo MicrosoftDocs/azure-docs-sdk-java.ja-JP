@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090815"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899293"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
 
@@ -33,7 +33,7 @@ ms.locfileid: "37090815"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の [Java Developer Kit (JDK)]。
+* 最新の [Java Developer Kit (JDK)] 。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
@@ -382,7 +382,7 @@ ms.locfileid: "37090815"
 
 1. 新しい *fabric8* フォルダー内に 3 つの YAML フラグメント ファイルを作成します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **deployment.yml** という名前のファイルを作成し、内容を次のようにします。
+   a. **deployment.yml** という名前のファイルを作成し、内容を次のようにします。
       ```yaml
       apiVersion: extensions/v1beta1
       kind: Deployment
@@ -513,7 +513,7 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
@@ -536,7 +536,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 05fb81466202547cb1bad34caae0f94f16a9d21b
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090674"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893653"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する
 
@@ -57,7 +57,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 3. **[Type image name, select artifact's path and check Docker host to be used] \(イメージ名を入力し、アーティファクトのパスを選択して、使用される Docker ホストを確認する)** ウィンドウで、以下の手順を実行します。 
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Docker image name] \(Docker イメージ名)** ボックスに、Docker ホストの一意の名前を入力します。 (このウィザードでは名前が自動的に作成されますが、それは変更できます)。 
+   a. **[Docker image name] \(Docker イメージ名)** ボックスに、Docker ホストの一意の名前を入力します。 (このウィザードでは名前が自動的に作成されますが、それは変更できます)。 
 
    b. **[ホスト]** 領域には、既に作成しているすべての Docker ホストが表示されます。 次のいずれかを実行します。 
    * 既存の Docker ホストがある場合は、それに Web アプリをデプロイできます。
@@ -68,7 +68,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 4. **[Configure the new virtual machine]\(新しい仮想マシンの構成\)** ウィンドウで、Docker ホストについての以下の情報を指定します  (ほとんどの情報はウィザードによって自動的に生成されますが、どの情報も変更することができます)。 
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[名前]** ボックスに、Docker ホストの一意の名前を入力します  (これは前に指定した Docker イメージの名前と同じではありません)。 
+   a. **[名前]** ボックスに、Docker ホストの一意の名前を入力します  (これは前に指定した Docker イメージの名前と同じではありません)。 
     
    b. **[サブスクリプション]** ボックスで、ホストのために使用する Azure サブスクリプションを入力します。 
       
@@ -104,7 +104,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
    * **[New log in credentials]\(新しいログイン資格情報\)**: ログイン資格情報の新しいセットを作成します。 このオプションを選択する場合は、次の操作を行います。
 
-     a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[VM Credentials]\(VM 資格情報\)** タブで、Docker ホストの仮想マシン ログイン資格情報に次の情報を入力します。
+     a. **[VM Credentials]\(VM 資格情報\)** タブで、Docker ホストの仮想マシン ログイン資格情報に次の情報を入力します。
 
      * **[ユーザー名]**: 仮想マシン ログイン資格情報のユーザー名を入力します。
 
@@ -154,7 +154,7 @@ Docker コンテナーは、Web アプリケーションをデプロイするた
 
 9. **[Configure the Docker container to be created]\(作成される Docker コンテナーの構成\)** ウィンドウで、以下の情報を指定します。 
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Docker container name] \(Docker コンテナー名)** ボックスに、Docker コンテナーの一意の名前を入力します。
+   a. **[Docker container name] \(Docker コンテナー名)** ボックスに、Docker コンテナーの一意の名前を入力します。
 
    b. 次のいずれかの Docker イメージを選びます。 
 

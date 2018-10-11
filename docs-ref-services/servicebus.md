@@ -12,11 +12,11 @@ ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
 ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
-ms.sourcegitcommit: 798f4d4199d3be9fc5c9f8bf7a754d7393de31ae
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887762"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48892783"
 ---
 # <a name="service-bus-libraries-for-java"></a>Service Bus Libraries for Java
 
@@ -28,7 +28,7 @@ Service Bus の機能は、従来のハイエンドのオンプレミス メッ�
 
 Service Bus Premium は、可用性と信頼性が高い、耐久性のあるメッセージングを重視し、充実したローカル データセンター デプロイでも競争力のあるスループット パフォーマンスを提供します。しかも、ハードウェアの選択と入手プロセス、デプロイの計画と実行、終わりのないパフォーマンス最適化セッションは必要ありません。 
 
-Service Bus Premium は、テナントごとに専用の容量が予約されている、完全に管理されたソリューションです。パフォーマンスを予測することができ、料金モデルは単純な容量ベースで、総コストは商用のオンプレミス ブローカーよりも大幅に低くなります。 多くの場合、Service Bus Premium は、付随するワークロードがクラウドで実行されない場合でも、現在の専用オンプレミス メッセージング クラスターの代わりとなります。 
+Service Bus Premium は、テナントごとに専用の容量が予約されている、フル マネージドのソリューションです。パフォーマンスを予測することができ、料金モデルは単純な容量ベースで、総コストは商用のオンプレミス ブローカーよりも大幅に低くなります。 多くの場合、Service Bus Premium は、付随するワークロードがクラウドで実行されない場合でも、現在の専用オンプレミス メッセージング クラスターの代わりとなります。 
 
 Service Bus の概念の詳細については、[メッセージングのドキュメントのセクション](https://docs.microsoft.com/azure/service-bus-messaging/)を参照してください。 
 

@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 2d3f2363bd0b41808cd409417327b924cb86d85b
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38075421"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899557"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Azure Explorer for Eclipse を使用して Redis Cache を管理する
 

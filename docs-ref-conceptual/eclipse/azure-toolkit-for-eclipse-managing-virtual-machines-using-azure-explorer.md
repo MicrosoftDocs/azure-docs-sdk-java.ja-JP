@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: c04f5225f0bb99898f69b26a4782aa57d75c4f22
-ms.sourcegitcommit: 0ed7c5af0152125322ff1d265c179f35028f3c15
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38074567"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899367"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Azure Explorer for Eclipse を使用して仮想マシンを管理する
 
@@ -51,9 +51,9 @@ Azure Explorer を使用して仮想マシンを作成するには、以下の�
 
    * **[発行者]**: 仮想マシンの作成に使用するイメージを作成した発行元を指定します (*Microsoft* など)。
 
-   * **[プラン]**: 選択した発行元の、仮想マシンで使用するプランを指定します ( *JDK* など)。
+   * **[プラン]**: 選択した発行元の、仮想マシンで使用するプランを指定します (*JDK* など)。
 
-   * **[SKU]**: 選択したプランで使用する在庫保管単位 (SKU) を指定します ( *JDK_8* など)。
+   * **[SKU]**: 選択したプランで使用する在庫保管単位 (SKU) を指定します (*JDK_8* など)。
 
    * **[Version #]\(バージョン番号\)**: 選択した SKU で使用するバージョンを指定します。
 

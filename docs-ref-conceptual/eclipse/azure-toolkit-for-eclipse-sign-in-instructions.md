@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
-ms.sourcegitcommit: 8230cf6b15ac51a9f8a209e9b76411a0385029aa
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34216026"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893623"
 ---
 # <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse の Azure サインイン手順
 

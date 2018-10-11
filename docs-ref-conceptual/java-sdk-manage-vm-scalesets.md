@@ -11,17 +11,17 @@ ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
 ms.openlocfilehash: 4653726b387369c18942b6c11392f15b9f0351f3
-ms.sourcegitcommit: 1500f341a96d9da461c288abf4baf79f494ae662
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
-ms.locfileid: "21931158"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893493"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Azure 仮想マシン スケール セットを Java アプリケーションから管理する
 
 [このサンプル](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets)では、[Java 管理ライブラリ](https://github.com/Azure/azure-sdk-for-java)を使って[仮想マシン スケール セット](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)を作成します。 
 
-## <a name="run-the-sample"></a>サンプルの実行
+## <a name="run-the-sample"></a>サンプルを実行する
 
 [認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。 次に、以下を実行します。
 
@@ -236,6 +236,6 @@ virtualMachineScaleSet.update()
 | [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | スケール セットのメンバーが利用できるリソースの量を定義する[仮想マシン スケール セットのレベル](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)を設定するための静的フィールドのクラスです。
 | [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | スケール セットの仮想マシン上のネットワーク インターフェイスに関連付けられている IP 構成を照会する際に使用します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

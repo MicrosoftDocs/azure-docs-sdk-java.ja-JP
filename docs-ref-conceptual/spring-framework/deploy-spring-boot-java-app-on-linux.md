@@ -16,11 +16,11 @@ ms.topic: article
 ms.workload: web
 ms.custom: mvc
 ms.openlocfilehash: 49d94d11ad6a4e103ded849e477d99f01955c693
-ms.sourcegitcommit: 5282a51bf31771671df01af5814df1d2b8e4620c
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37090865"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48899205"
 ---
 # <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする
 
@@ -32,7 +32,7 @@ ms.locfileid: "37090865"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の [Java Developer Kit (JDK)]。
+* 最新の [Java Developer Kit (JDK)] 。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
@@ -199,7 +199,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
 3. **[Web App on Linux]** ページが表示されたら、次の情報を入力します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[App name]\(アプリ名\)** に一意の名前 (例: "*wingtiptoyslinux*") を入力します。
+   a. **[App name]\(アプリ名\)** に一意の名前 (例: "*wingtiptoyslinux*") を入力します。
 
    b. **[サブスクリプション]** ボックスの一覧で、サブスクリプションを選択します。
 
@@ -268,13 +268,13 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
 独自の Spring Boot アプリケーションの使用開始に関するヘルプについては、「**Spring Initializr**」(https://start.spring.io/) を参照してください。
 
-単純な Spring Boot アプリケーションの作成の詳細については、「Spring Initializr」(https://start.spring.io/) を参照してください。
+単純な Spring Boot アプリケーションの作成開始の詳細については、「Spring Initializr」(https://start.spring.io/) を参照してください。
 
 Azure でカスタム Docker イメージを使用する方法に関するその他の例については、「[Azure Web App on Linux 向けのカスタム Docker イメージを使用する]」を参照してください。
 
@@ -290,7 +290,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
