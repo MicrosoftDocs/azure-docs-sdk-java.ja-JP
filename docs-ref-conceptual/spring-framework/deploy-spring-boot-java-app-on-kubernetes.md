@@ -73,7 +73,7 @@ ms.locfileid: "45639725"
    mvn package spring-boot:run
    ```
 
-1. http://localhost:8080 を参照するか、次の `curl` コマンドを使用して、Web アプリをテストします。
+1.  http://localhost:8080 を参照するか、次の `curl` コマンドを使用して、Web アプリをテストします。
    ```
    curl http://localhost:8080
    ```
