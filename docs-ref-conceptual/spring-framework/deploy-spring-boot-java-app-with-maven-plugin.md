@@ -1,47 +1,40 @@
 ---
-title: Maven と Azure を使用して Spring Boot アプリをクラウドにデプロイする
-description: Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする方法について説明します。
+title: Maven と Azure を使用して Spring Boot JAR ファイルのアプリをクラウドにデプロイする
+description: Linux 用の Azure Web Apps の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする方法について説明します。
 services: app-service
 documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: brborges
-ms.assetid: ''
 ms.author: robmcm;kevinzha;brborges
-ms.date: 06/01/2018
+ms.date: 10/04/2018
 ms.devlang: java
 ms.service: app-service
-ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: web
-ms.openlocfilehash: ca788354d26964bd9f1e21a0d3a8005ff65ce4bc
-ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
+ms.openlocfilehash: 36afcc764c1cb984779518ddec004ecbfa1b7c57
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43324348"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48876396"
 ---
-# <a name="deploy-a-spring-boot-app-to-the-cloud-using-the-maven-plugin-for-azure-app-service"></a>Azure App Service 用の Maven プラグインを使って、Spring Boot アプリをクラウドにデプロイする
+# <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Spring Boot JAR ファイルの Web アプリを Linux 用の Azure App Service にデプロイする
 
-この記事では、Azure App Service Web Apps 用の Maven プラグインを使って、Spring Boot アプリケーションのサンプルをデプロイする方法について説明します。
+この記事では、[Azure App Service Web Apps 用の Maven プラグイン](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)を使用して、Java SE JAR としてパッケージ化された Spring Boot アプリケーションを [Linux の Azure App Services](https://docs.microsoft.com/en-us/azure/app-service/containers/) にデプロイする方法について説明します。 ご自身のアプリの依存関係、ランタイム、および構成を 1 つのデプロイ可能な成果物に統合する必要がある場合は、[Tomcat および WAR ファイル](/azure/app-service/containers/quickstart-java)での Java SE デプロイを選択してください。
 
-> [!NOTE]
-> 
-> [Apache Maven](http://maven.apache.org/) の [Azure App Service Web Apps 用 Maven プラグイン](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)は、Maven プロジェクトに Azure App Service をシームレスに統合し、開発者が Web アプリを Azure App Service にデプロイするプロセスを効率化します。
 
-Maven プラグインを使用する前に、利用可能なプラグインの最新バージョンを Maven Central で確認してください: [![Maven Central](https://img.shields.io/maven-central/v/com.microsoft.azure/azure-webapp-maven-plugin.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.microsoft.azure%22%20AND%20a%3A%22azure-webapp-maven-plugin%22) 
+Azure サブスクリプションがない場合は、開始する前に[無料アカウント](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)を作成してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルの手順を実行するには、次の前提条件を満たしておく必要があります。
+このチュートリアルの手順を完了するには、次をインストールして構成する必要があります。
 
-* Azure サブスクリプション: Azure サブスクリプションをまだ取得していない場合は、[無料の Azure アカウント]にサインアップできます。
-* [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の Java Development Kit (JDK) (バージョン 1.7 以降)。
-* Apache の [Maven] 構築ツール (バージョン 3)。
-* [Git] クライアント。
+* [Azure CLI](/cli/azure/)。ローカルで、または [Azure Cloud Shell](https://shell.azure.com) を介して使用。
+* [Java Development Kit (JDK)](https://www.azul.com/downloads/azure-only/zulu/) バージョン 1.7 以降。
+* Apache の [Maven](https://maven.apache.org/) バージョン 3。
+* [Git](https://git-scm.com/downloads) クライアント。
 
-## <a name="clone-the-sample-spring-boot-web-app"></a>Spring Boot Web アプリのサンプルを複製する
+## <a name="clone-the-sample-app"></a>サンプル アプリの複製
 
 このセクションでは、完成した Spring Boot アプリケーションを複製し、ローカルでテストします。
 
@@ -83,85 +76,54 @@ Maven プラグインを使用する前に、利用可能なプラグインの�
 
 1. **Greetings from Spring Boot! (Spring Boot からのあいさつ)** というメッセージが表示されます。
 
-## <a name="adjust-project-for-war-based-deployment-on-azure-app-service"></a>Azure App Service への WAR ベースのデプロイ用にプロジェクトを調整する
+## <a name="configure-maven-plugin-for-azure-app-service"></a>Azure App Service 用の Maven プラグインを構成する
 
-このセクションでは、Spring Boot プロジェクトを、既定ではランタイムとして Tomcat が提供されている Azure App Service に、WAR ファイルとしてデプロイできるようにすばやく調整します。 そのためには、2 つのファイルを変更します。
+このセクションでは、Maven でアプリを Linux の Azure App Service にデプロイできるように、Spring Boot プロジェクト `pom.xml` を構成します。
 
-- Maven の `pom.xml` ファイル
-- `Application` Java クラス
+1. コード エディターで `pom.xml` を開きます。
 
-Maven の設定から着手しましょう。
+1. pom.xml の `<build>` セクションで、`<plugins>` タグ内に次の `<plugin>` エントリを追加します。
 
-1. `pom.xml` を開きます。
-
-1. 先頭の `<artifactId>` 定義の直後に `<packaging>war</packaging>` を追加します。
    ```xml
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.springframework</groupId>
-    <artifactId>gs-spring-boot</artifactId>
+  <plugin>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-webapp-maven-plugin</artifactId>
+    <version>1.4.0</version>
+    <configuration>
+      <deploymentType>jar</deploymentType>
 
-    <packaging>war</packaging>
-   ```
+      <!-- configure app to run on port 80, required by App Service -->
+      <appSettings>
+        <property> 
+          <name>JAVA_OPTS</name> 
+          <value>-Dserver.port=80</value> 
+        </property> 
+      </appSettings>
 
-1. 次の依存関係を追加します。
-   ```xml
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
-   ```
+      <!-- Web App information -->
+      <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
+      <appName>${WEBAPP_NAME}</appName>
+      <region>${REGION}</region>  
 
-`Application` クラスを開き、期待どおりに IDE によって新しい依存関係が選択されていたら、次の変更に進みます。
+      <!-- Java Runtime Stack for Web App on Linux-->
+      <linuxRuntime>jre8</linuxRuntime>
+    </configuration>
+  </plugin>
+  ```
 
-1. Application クラスを `SpringBootServletInitializer` のサブクラスにします。
-   ```java
-   @SpringBootApplication
-   public class Application extends SpringBootServletInitializer {
-     // ...
-   }
-   ```
+1. プラグイン構成で、次のプレースホルダーを更新します。
 
-1. Application クラスに次のメソッドを追加します。
-   ```java
-       @Override
-       protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-           return application.sources(Application.class);
-       }
-   ```
-1. ご自身のインポートを整理して、`SpringApplicationBuilder` と `SpringBootServletInitializer` が正しくインポートされていることを確認します。
+| プレースホルダー | 説明 |
+| ----------- | ----------- |
+| `RESOURCEGROUP_NAME` | Web アプリの作成先となる新しいリソース グループの名前。 アプリのすべてのリソースを 1 つのグループ内に配置することで、それらを一緒に管理できます。 たとえば、リソース グループを削除すれば、そのアプリに関連付けられているすべてのリソースが削除されます。 この値を一意の新しいリソース グループ名 (たとえば、*TestResources*) で更新します。 このリソース グループ名を使用して、後のセクションですべての Azure リソースをクリーンアップします。 |
+| `WEBAPP_NAME` | Azure にデプロイされると、このアプリ名は Web アプリのホスト名の一部になります (WEBAPP_NAME.azurewebsites.net)。 この値を、Java アプリをホストする新しい Azure Web アプリの一意の名前 (たとえば、*contoso*) で更新します。 |
+| `REGION` | Web アプリがホストされている Azure リージョン (たとえば、`westus2`)。 リージョンの一覧は、`az account list-locations` コマンドを使用して Cloud Shell または CLI から取得できます。 |
 
-これで、ご自身のアプリケーションを Tomcat その他の任意の Servlet ランタイム (例: Jetty) にデプロイする準備が整いました。
-
-## <a name="add-the-maven-plugin-for-azure-app-service-web-apps"></a>Azure App Service Web Apps 用の Maven プラグインを追加する
-
-このセクションでは、Azure App Service Web Apps への、このアプリケーションのデプロイ全体を自動化する Maven プラグインを追加します。
-
-1. もう一度 `pom.xml` を開きます。
-
-1. `<properties>` の内部で、`maven.build.timestamp.format` プロパティを使用してカスタムのタイムスタンプ形式を設定します。 Azure App Service によってご自身のアプリケーションのパブリック URL が作成されるため、この設定を使用してデプロイの名前が生成されることで、他のユーザーのライブ デプロイとの競合を回避できます。
-   ```xml
-    <properties>
-        <java.version>1.8</java.version>
-        <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
-    </properties>
-   ```
-
-1. `<plugins>` 要素に、次を追加します。
-   ```xml
-    <plugin>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>azure-webapp-maven-plugin</artifactId>
-      <!-- Check latest version on Maven Central -->
-      <version>1.1.0</version>
-    </plugin>
-   ```
-
-これらの設定によって、Maven プロジェクトを Azure App Service Web App にライブ デプロイする準備が整いました。
+構成オプションの完全な一覧については、[GitHub の Maven プラグイン リファレンス](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)をご覧ください。
 
 ## <a name="install-and-log-in-to-azure-cli"></a>Azure CLI のインストールとログイン
 
-Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。 これがインストールされていることを確認してください。
+Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。
 
 1. Azure CLI を使って、Azure アカウントにサインインします。
    
@@ -171,40 +133,7 @@ Maven プラグインで最もシンプルかつ容易に Spring Boot アプリ�
    
    指示に従って、サインインを完了します。
 
-## <a name="optionally-customize-pomxml-before-deploying"></a>必要に応じて、デプロイの前に pom.xml をカスタマイズする
-
-Spring Boot アプリケーションの `pom.xml` ファイルをテキスト エディターで開き、`azure-webapp-maven-plugin` の `<plugin>` 要素を見つけます。 この要素は次の例のようになっています。
-
-   ```xml
-  <plugins>
-    <plugin>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>azure-webapp-maven-plugin</artifactId>
-      <!-- Check latest version on Maven Central -->
-      <version>1.1.0</version>
-      <configuration>
-         <resourceGroup>maven-projects</resourceGroup>
-         <appName>${project.artifactId}-${maven.build.timestamp}</appName>
-         <region>westus</region>
-         <javaVersion>1.8</javaVersion>
-         <deploymentType>war</deploymentType>
-      </configuration>
-    </plugin>
-  </plugins>
-   ```
-
-Maven プラグイン用に変更できる値は複数あります。これらの要素に関する詳しい説明はそれぞれ「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」のドキュメントに記載されています。 この記事でも、次のように重要な値については説明します。
-
-| 要素 | 説明 |
-|---|---|
-| `<version>` | [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]のバージョンを指定します。 [Maven Central Respository](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22) に表示されているバージョンを確認して、最新バージョンを使用していることを確認してください。 |
-| `<resourceGroup>` | ターゲット リソース グループを指定します。この例では `maven-plugin` です。 リソース グループが存在しない場合は、デプロイ中に新しいリソース グループが作成されます。 |
-| `<appName>` | Web アプリのターゲット名を指定します。 この例では、ターゲット名は `maven-web-app-${maven.build.timestamp}` です。混乱を避けるため、この例ではサフィックスの `${maven.build.timestamp}` を追加しています  (タイムスタンプは省略可能です。アプリ名には一意の文字列を指定できます)。 |
-| `<region>` | ターゲット リージョンを指定します。この例では `westus` です  (完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」 をご覧ください)。 |
-| `<javaVersion>` | Web アプリの Java ランタイム バージョンを指定します  (完全なリストについては、「[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]」(Azure Web Apps 用の Maven プラグイン) をご覧ください)。 |
-| `<deploymentType>` | Web アプリのデプロイの種類を指定します。 既定値は `war` です。 |
-
-## <a name="build-and-deploy-your-web-app-to-azure"></a>Web アプリをビルドして Azure にデプロイする
+## <a name="deploy-the-app-to-azure"></a>Azure にアプリケーションをデプロイする
 
 この記事の前のセクションで説明した設定をすべて構成した後、Azure に Web アプリをデプロイします。 そのためには、次の手順を実行してください。
 
@@ -218,9 +147,9 @@ Maven プラグイン用に変更できる値は複数あります。これら�
    mvn azure-webapp:deploy
    ```
 
-Maven が Web アプリを Azure にデプロイします。Web アプリが存在しない場合は新たに作成されます。
+Maven によって、ご自身の Web アプリが Azure にデプロイされます。Web アプリまたは Web アプリ プランが存在しない場合は、Maven によって新たに作成されます。
 
-Web アプリのデプロイが完了すると、[Azure Portal] を使って Web アプリを管理できるようになります。
+Web アプリのデプロイが完了すると、[Azure portal] で Web アプリを管理できるようになります。
 
 * Web アプリは **App Services** に一覧表示されます。
 
@@ -230,34 +159,13 @@ Web アプリのデプロイが完了すると、[Azure Portal] を使って Web
 
    ![Web アプリの URL の決定][AP02]
 
-<!--
-##  OPTIONAL: Configure the embedded Tomcat server to run on a different port
-
-The embedded Tomcat server in the sample Spring Boot application is configured to run on port 8080 by default. However, if you want to run the embedded Tomcat server to run on a different port, such as port 80 for local testing, you can configure the port by using the following steps.
-
-1. Go to the *resources* directory (or create the directory if it does not exist); for example:
-   ```shell
-   cd src/main/resources
-   ```
-
-1. Open the *application.yml* file in a text editor if it exists, or create a new YAML file if it does not exist.
-
-1. Modify the **server** setting so that the server runs on port 80; for example:
-   ```yaml
-   server:
-      port: 80
-   ```
-
-1. Save and close the *application.yml* file.
--->
+前と同じ cURL コマンドを使用して、`localhost` ではなくポータルからご自身の Web アプリ URL を使って、デプロイが適切に行われたことを確認します。 **Greetings from Spring Boot! (Spring Boot からのあいさつ)** というメッセージが表示されます。 
 
 ## <a name="next-steps"></a>次の手順
 
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 
 * [Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]
-
-* [Azure CLI から Azure へのログイン](/azure/xplat-cli-connect)
 
 * [Azure Web Apps 用の Maven プラグインを使用して、コンテナー化された Spring Boot アプリを Azure にデプロイする方法](deploy-containerized-spring-boot-java-app-with-maven-plugin.md)
 
@@ -267,10 +175,10 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 <!-- URL List -->
 
-[Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
+[Azure Command-Line Interface (CLI)]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure Portal]: https://portal.azure.com/
-[無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
 [Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
