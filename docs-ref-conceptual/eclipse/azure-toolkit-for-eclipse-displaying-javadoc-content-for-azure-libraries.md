@@ -15,45 +15,45 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 6f1edcc1411e8ec716dbfe41271d21d2397515c5
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954503"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893195"
 ---
-# <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a><span data-ttu-id="6bacc-103">Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示</span><span class="sxs-lookup"><span data-stu-id="6bacc-103">Displaying Javadoc Content in Eclipse for the Azure Libraries Package for Java</span></span>
+# <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a><span data-ttu-id="9431c-103">Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示</span><span class="sxs-lookup"><span data-stu-id="9431c-103">Displaying Javadoc Content in Eclipse for the Azure Libraries Package for Java</span></span>
 
-<span data-ttu-id="6bacc-104">Java 用 Azure ライブラリの Javadoc コンテンツは、Javadoc コンテンツを Java 用 Azure ライブラリに関連付けることで、Eclipse 環境内で表示できます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-104">The Javadoc content for the Azure Libraries for Java can be viewed within your Eclipse environment by associating the Javadoc content to the Azure Libraries for Java.</span></span> <span data-ttu-id="6bacc-105">次の手順は、Eclipse 内でこの機能を使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="6bacc-105">The following steps show you how to use this functionality within Eclipse.</span></span>
+<span data-ttu-id="9431c-104">Java 用 Azure ライブラリの Javadoc コンテンツは、Javadoc コンテンツを Java 用 Azure ライブラリに関連付けることで、Eclipse 環境内で表示できます。</span><span class="sxs-lookup"><span data-stu-id="9431c-104">The Javadoc content for the Azure Libraries for Java can be viewed within your Eclipse environment by associating the Javadoc content to the Azure Libraries for Java.</span></span> <span data-ttu-id="9431c-105">次の手順は、Eclipse 内でこの機能を使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="9431c-105">The following steps show you how to use this functionality within Eclipse.</span></span>
 
-<span data-ttu-id="6bacc-106">この手順は、Java 用 Azure ライブラリをビルド パスに既に追加していることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="6bacc-106">This procedure assumes you have already added the Azure Library for Java to your build path.</span></span>
+<span data-ttu-id="9431c-106">この手順は、Java 用 Azure ライブラリをビルド パスに既に追加していることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="9431c-106">This procedure assumes you have already added the Azure Library for Java to your build path.</span></span>
 
-## <a name="to-display-javadoc-content-in-eclipse-for-the-azure-libraries-for-java"></a><span data-ttu-id="6bacc-107">Java 用 Azure ライブラリの Javadoc コンテンツを Eclipse で表示するには</span><span class="sxs-lookup"><span data-stu-id="6bacc-107">To display Javadoc content in Eclipse for the Azure Libraries for Java</span></span>
+## <a name="to-display-javadoc-content-in-eclipse-for-the-azure-libraries-for-java"></a><span data-ttu-id="9431c-107">Java 用 Azure ライブラリの Javadoc コンテンツを Eclipse で表示するには</span><span class="sxs-lookup"><span data-stu-id="9431c-107">To display Javadoc content in Eclipse for the Azure Libraries for Java</span></span>
 
-1. <span data-ttu-id="6bacc-108">Eclipse の [Project Explorer (プロジェクト エクスプローラー)] で、プロジェクトの **[Referenced Libraries (参照ライブラリ)]** セクションにある Java JAR 用 Azure ライブラリ</span><span class="sxs-lookup"><span data-stu-id="6bacc-108">Within Eclipse's Project Explorer, in the **Referenced Libraries** section of your project, open the context menu for the Azure Library for Java JAR.</span></span> <span data-ttu-id="6bacc-109">(例: **microsoft-windowsazure-api-0.1.0.jar** (インストールされているバージョンによって、バージョン番号が異なることがあります)) のコンテキスト メニューを開きます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-109">For example, **microsoft-windowsazure-api-0.1.0.jar** (the version number may be different, dependent upon which version you have installed).</span></span>
+1. <span data-ttu-id="9431c-108">Eclipse の [Project Explorer (プロジェクト エクスプローラー)] で、プロジェクトの **[Referenced Libraries (参照ライブラリ)]** セクションにある Java JAR 用 Azure ライブラリ</span><span class="sxs-lookup"><span data-stu-id="9431c-108">Within Eclipse's Project Explorer, in the **Referenced Libraries** section of your project, open the context menu for the Azure Library for Java JAR.</span></span> <span data-ttu-id="9431c-109">(例: **microsoft-windowsazure-api-0.1.0.jar** (インストールされているバージョンによって、バージョン番号が異なることがあります)) のコンテキスト メニューを開きます。</span><span class="sxs-lookup"><span data-stu-id="9431c-109">For example, **microsoft-windowsazure-api-0.1.0.jar** (the version number may be different, dependent upon which version you have installed).</span></span>
 
-1. <span data-ttu-id="6bacc-110">**[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6bacc-110">Click **Properties**.</span></span>
+1. <span data-ttu-id="9431c-110">**[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="9431c-110">Click **Properties**.</span></span>
 
-1. <span data-ttu-id="6bacc-111">**[Properties (プロパティ)]** ダイアログの左側のウィンドウで、**[Javadoc Location (Javadoc の場所)]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6bacc-111">Within the **Properties** dialog, in the left-hand pane, click **Javadoc Location**.</span></span> <span data-ttu-id="6bacc-112">**[Javadoc Location]** ダイアログが表示されます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-112">The **Javadoc Location** dialog is displayed.</span></span>
+1. <span data-ttu-id="9431c-111">**[Properties (プロパティ)]** ダイアログの左側のウィンドウで、**[Javadoc Location (Javadoc の場所)]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="9431c-111">Within the **Properties** dialog, in the left-hand pane, click **Javadoc Location**.</span></span> <span data-ttu-id="9431c-112">**[Javadoc Location]** ダイアログが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9431c-112">The **Javadoc Location** dialog is displayed.</span></span>
 
-1. <span data-ttu-id="6bacc-113">**[Javadoc URL (Javadoc の URL)]** または **[Javadoc in archive (アーカイブの Javadoc)]** を指定できます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-113">You can specify a **Javadoc URL**, or a **Javadoc in archive**.</span></span>
+1. <span data-ttu-id="9431c-113">**[Javadoc URL (Javadoc の URL)]** または **[Javadoc in archive (アーカイブの Javadoc)]** を指定できます。</span><span class="sxs-lookup"><span data-stu-id="9431c-113">You can specify a **Javadoc URL**, or a **Javadoc in archive**.</span></span>
 
-   * <span data-ttu-id="6bacc-114">**[Javadoc URL (Javadoc の URL)]** を選択した場合は、**http://dl.windowsazure.com/javadoc** または **http://dl.windowsazure.com/storage/javadoc** などの URL を使用します。</span><span class="sxs-lookup"><span data-stu-id="6bacc-114">If you choose to specify a **Javadoc URL**, use the URLs such as **http://dl.windowsazure.com/javadoc** or **http://dl.windowsazure.com/storage/javadoc**.</span></span>
+   * <span data-ttu-id="9431c-114">**Javadoc URL** を指定する場合は、**http://dl.windowsazure.com/javadoc**、**http://dl.windowsazure.com/storage/javadoc** などの URL を使用します。</span><span class="sxs-lookup"><span data-stu-id="9431c-114">If you choose to specify a **Javadoc URL**, use the URLs such as **http://dl.windowsazure.com/javadoc** or **http://dl.windowsazure.com/storage/javadoc**.</span></span>
 
-   * <span data-ttu-id="6bacc-115">**[Javadoc in archive]** を使用する場合は、外部ファイルまたはワークスペース ファイルを指定できます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-115">If you choose to use **Javadoc in archive**, you can specify an external file, or a workspace file.</span></span>
+   * <span data-ttu-id="9431c-115">**[Javadoc in archive]** を使用する場合は、外部ファイルまたはワークスペース ファイルを指定できます。</span><span class="sxs-lookup"><span data-stu-id="9431c-115">If you choose to use **Javadoc in archive**, you can specify an external file, or a workspace file.</span></span>
 
-   <span data-ttu-id="6bacc-116">選択したら、必要に応じて参照または検証します。</span><span class="sxs-lookup"><span data-stu-id="6bacc-116">Make your choice and browse/validate as needed.</span></span> <span data-ttu-id="6bacc-117">次の例では、Java 用 Azure ライブラリを、**c:\MyAzureJARs** という名前のローカル フォルダーにダウンロードされている対応する Javadoc JAR に関連付けています。</span><span class="sxs-lookup"><span data-stu-id="6bacc-117">The following example associates the Azure Libraries for Java with the corresponding Javadoc JAR that has been downloaded locally to a folder named **c:\MyAzureJARs**.</span></span>
+   <span data-ttu-id="9431c-116">選択したら、必要に応じて参照または検証します。</span><span class="sxs-lookup"><span data-stu-id="9431c-116">Make your choice and browse/validate as needed.</span></span> <span data-ttu-id="9431c-117">次の例では、Java 用 Azure ライブラリを、**c:\MyAzureJARs** という名前のローカル フォルダーにダウンロードされている対応する Javadoc JAR に関連付けています。</span><span class="sxs-lookup"><span data-stu-id="9431c-117">The following example associates the Azure Libraries for Java with the corresponding Javadoc JAR that has been downloaded locally to a folder named **c:\MyAzureJARs**.</span></span>
 
    ![Javadoc コンテンツの表示][ic553487]
 
-1. <span data-ttu-id="6bacc-119">"*省略可能な手順*": **[検証]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6bacc-119">*Optional Step*: Click **Validate**.</span></span> <span data-ttu-id="6bacc-120">Javadoc JAR に関する潜在的な問題があれば、ここに表示されます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-120">Potential issues with the Javadoc JAR could be displayed here.</span></span>
+1. <span data-ttu-id="9431c-119">"*省略可能な手順*": **[検証]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="9431c-119">*Optional Step*: Click **Validate**.</span></span> <span data-ttu-id="9431c-120">Javadoc JAR に関する潜在的な問題があれば、ここに表示されます。</span><span class="sxs-lookup"><span data-stu-id="9431c-120">Potential issues with the Javadoc JAR could be displayed here.</span></span>
 
-1. <span data-ttu-id="6bacc-121">Click **OK**.</span><span class="sxs-lookup"><span data-stu-id="6bacc-121">Click **OK**.</span></span>
+1. <span data-ttu-id="9431c-121">Click **OK**.</span><span class="sxs-lookup"><span data-stu-id="9431c-121">Click **OK**.</span></span>
 
-<span data-ttu-id="6bacc-122">ライブラリに関連付けると、Javadoc コンテンツが Eclipse IDE 内で表示されます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-122">Once associated with the library, the Javadoc content should display within your Eclipse IDE.</span></span> <span data-ttu-id="6bacc-123">たとえば、コードで `CloudBlockBlob` 型の `blob` が定義されている場合、コードに「`blob.acquireLease`」と入力すると、次のような Javadoc コンテンツが表示されます。</span><span class="sxs-lookup"><span data-stu-id="6bacc-123">For example, if `blob` is defined of type `CloudBlockBlob` within your code, the following is an example of Javadoc content that appears when you type `blob.acquireLease` in code:</span></span>
+<span data-ttu-id="9431c-122">ライブラリに関連付けると、Javadoc コンテンツが Eclipse IDE 内で表示されます。</span><span class="sxs-lookup"><span data-stu-id="9431c-122">Once associated with the library, the Javadoc content should display within your Eclipse IDE.</span></span> <span data-ttu-id="9431c-123">たとえば、コードで `CloudBlockBlob` 型の `blob` が定義されている場合、コードに「`blob.acquireLease`」と入力すると、次のような Javadoc コンテンツが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9431c-123">For example, if `blob` is defined of type `CloudBlockBlob` within your code, the following is an example of Javadoc content that appears when you type `blob.acquireLease` in code:</span></span>
 
 ![Javadoc コンテンツの表示][ic553488]
 
-## <a name="next-steps"></a><span data-ttu-id="6bacc-125">次の手順</span><span class="sxs-lookup"><span data-stu-id="6bacc-125">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="9431c-125">次の手順</span><span class="sxs-lookup"><span data-stu-id="9431c-125">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
