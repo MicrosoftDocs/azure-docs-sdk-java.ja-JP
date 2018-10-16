@@ -15,11 +15,11 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 4228352efa4354bfe4969c1a5ecd3f3b40483f85
-ms.sourcegitcommit: 151aaa6ccc64d94ed67f03e846bab953bde15b4a
+ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "28954733"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48893583"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Spring Boot アプリを Docker コンテナーとして発行する
 
@@ -51,7 +51,7 @@ ms.locfileid: "28954733"
 
       ![GitHub トークンを入力するためのダイアログ ボックス][CL02b]
 
-1. リポジトリ URL に「 **https://github.com/spring-guides/gs-spring-boot-docker.git** 」と入力し、ローカル パスとフォルダー情報を指定して、 **[複製]** をクリックします。
+1. リポジトリの URL に「**https://github.com/spring-guides/gs-spring-boot-docker.git**」と入力し、ローカル パスとフォルダー情報を指定して、**[複製]** をクリックします。
 
    ![リポジトリの複製ダイアログ ボックス][CL03]
 
@@ -135,7 +135,7 @@ Spring Boot アプリを発行するには、デプロイの準備ができた�
 
 1. アーティファクトのマニフェストを作成します (省略可能)。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 **[Create Manifest]\(マニフェストの作成\)** をクリックします。
+   a. **[Create Manifest]\(マニフェストの作成\)** をクリックします。
 
       ![[マニフェストの作成] ボタンをクリック][ART04a]
 
@@ -183,7 +183,7 @@ IntelliJ でプロジェクト ツール ウィンドウに、Spring Boot アプ
 
 1. **[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスが表示され、既存の Docker ホストが表示されます。 既存のホストへのデプロイを選択する場合は、スキップして手順 4 に進みます。 そうでない場合は、次の手順に従ってホストを作成します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 緑色のプラス ("**+**") 記号をクリックします。
+   a. 緑色のプラス ("**+**") 記号をクリックします。
 
       ![新しい Docker ホストの追加][PU02]
 
@@ -201,7 +201,7 @@ IntelliJ でプロジェクト ツール ウィンドウに、Spring Boot アプ
 
 1. **[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスの最後のページで、次のオプションを指定します。
 
-   a.[サインオン URL] ボックスに、次のパターンを使用して、ユーザーが RightScale アプリケーションへのサインオンに使用する URL を入力します。 Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。
+   a. Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。
 
    b. "*[外部ポート]*:*[内部ポート]*" という構文で、Docker ホストの TCP ポートを入力します。 たとえば "**80:8080**" では、外部ポート "80" と既定の内部 Spring Boot ポート "8080" が指定されます。
    
