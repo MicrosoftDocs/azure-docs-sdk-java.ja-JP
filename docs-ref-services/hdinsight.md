@@ -8,18 +8,18 @@ ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
 ms.date: 9/20/2018
-ms.openlocfilehash: 5e3887341ddb2fdcab336f0a8a232e6e8bfbe0f2
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: 1271f70fff876f4d24c8afa81123c54735f2d522
+ms.sourcegitcommit: 788b49d0b37909c575c9e5176e484cba627e7921
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047159"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120540"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java Management SDK (プレビュー)
 
 ## <a name="overview"></a>概要
 
-HDInsight Java SDK に用意されているクラスとメソッドを使用すると、お使いの HDInsight クラスターを管理することができます。 これには、スクリプト アクションを作成、削除、更新、一覧表示、スケーリング、実行したり、HDInsight クラスターのプロパティを監視、取得したりする操作が含まれます。
+HDInsight Java SDK に用意されているクラスとメソッドを使用すると、お使いの HDInsight クラスターを管理することができます。 これには、スクリプト アクションを作成、削除、更新、一覧表示、サイズ変更、実行したり、HDInsight クラスターのプロパティを監視、取得したりする操作が含まれます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -340,9 +340,9 @@ client.clusters.delete("<Resource Group Name>", "<Cluster Name>");
 client.clusters.update("<Resource Group Name>", "<Cluster Name>", <Map<String,String> of Tags>);
 ```
 
-### <a name="scale-cluster"></a>クラスターのスケーリング
+### <a name="resize-cluster"></a>クラスターのサイズ変更
 
-特定のクラスターの worker ノード数を増減するには、次のように新しいサイズを指定します。
+特定のクラスターの worker ノード数をサイズ変更するには、次のように新しいサイズを指定します。
 
 ```java
 client.clusters.resize("<Resource Group Name>", "<Cluster Name>", <Num of Worker Nodes (int)>)
