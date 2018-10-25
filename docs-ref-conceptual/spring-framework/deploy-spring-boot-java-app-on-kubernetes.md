@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 546aa2dc18143ca173d72198ea8e6c30bda3c97f
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639725"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962506"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
@@ -73,7 +73,7 @@ ms.locfileid: "45639725"
    mvn package spring-boot:run
    ```
 
-1. Web アプリをテストするには、 http://localhost:8080 を参照するか、次の `curl` コマンドを使用します。
+1. Web アプリをテストするには、 `http://localhost:8080` を参照するか、次の `curl` コマンドを使用します。
    ```
    curl http://localhost:8080
    ```
@@ -239,13 +239,13 @@ ms.locfileid: "45639725"
 
    a. **[CREATE AN APP]\(アプリの作成)** を選択します。
 
-   b. Spring Boot アプリケーション名を **[App name]\(アプリ名)** に入力します (例: "*gs-spring-boot-docker*")。
+   b. Spring Boot アプリケーション名を **[App name]\(アプリ名\)** に入力します (例: "*gs-spring-boot-docker*")。
 
-   c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
+   c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)** で **[External]\(外部)** を選択します。
+   d. **[Service]\(サービス)\** で **[External]\(外部)\** を選択します。
 
-   e. 外部ポートと内部ポートを **[Port]\(ポート)** テキスト ボックスと **[Target port]\(ターゲット ポート)** テキスト ボックスに指定します。
+   e. 外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
 
    ![Kubernetes 構成 Web サイト][KB02]
 
@@ -258,7 +258,7 @@ ms.locfileid: "45639725"
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 

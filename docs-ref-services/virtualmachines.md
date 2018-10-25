@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: compute
-ms.openlocfilehash: a54bc40e1d28ba6ee1d8b0638cb259adbb69d78d
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ea71c556f32a83d59d76b5fed8f3be26229f0cb1
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893043"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799818"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 

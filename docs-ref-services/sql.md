@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: sql-database
-ms.openlocfilehash: 37f7d3caf10e6b709cee2452c63a543d49e0ead8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 75b31aa0ffd32707deb4b28f9912aa4c9d1e4d7c
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893313"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799788"
 ---
 # <a name="azure-sql-database-libraries-for-java"></a>Azure SQL Database Libraries for Java
 

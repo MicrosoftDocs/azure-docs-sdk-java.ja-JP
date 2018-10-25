@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: b3433d2da2054741015b9fa669753a8edb48cdf3
-ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
+ms.openlocfilehash: 84ea77a19c326409f453f62359cf46c90398daeb
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43324299"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799928"
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Azure Key Vault Libraries for Java
 

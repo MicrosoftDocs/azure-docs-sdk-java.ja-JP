@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: appservice
-ms.openlocfilehash: adbb527666553ecc3039ce35c035d017f502c801
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 49063e48ec739b912c418774f531f11b16a3ff1e
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893303"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799828"
 ---
 # <a name="azure-app-service-libraries-for-java"></a>Azure App Service Libraries for Java
 

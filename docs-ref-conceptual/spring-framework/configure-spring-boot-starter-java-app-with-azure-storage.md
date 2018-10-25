@@ -14,12 +14,12 @@ ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 1a219a066f0f89adbf3f541856b36b842520bfbb
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 4838b6dbd354ad941df12933dddfa7f3e7eef905
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46505920"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799968"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Azure Storage 用の Spring Boot Starter の使用方法
 
@@ -56,7 +56,7 @@ ms.locfileid: "46505920"
    * ストレージ アカウントの**場所**を指定します。
    * ストレージ アカウントに使用する**サブスクリプション**を選択します。
    * ストレージ アカウントの新しい**リソース グループ**を作成するか、既存のリソース グループを選択するかを指定します。
-   
+
    ![Azure ストレージ アカウントのオプションを指定する][IMG02]
 
 1. 上記のオプションを指定したら、**[作成]** をクリックしてストレージ アカウントを作成します。
@@ -207,7 +207,7 @@ ms.locfileid: "46505920"
 
    `/users/example/home/storage/src/main/resources/application.properties`
 
-1.  テキスト エディターで *application.properties* ファイルを開きます。次の行を追加し、サンプルの値をストレージ アカウントの適切なプロパティに置き換えます。
+2. テキスト エディターで *application.properties* ファイルを開きます。次の行を追加し、サンプルの値をストレージ アカウントの適切なプロパティに置き換えます。
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -216,14 +216,16 @@ ms.locfileid: "46505920"
    spring.cloud.azure.storage.account=wingtiptoysstorage
    ```
    各値の説明:
-   | フィールド | 説明 |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | このチュートリアルで作成した Azure 資格情報ファイルを指定します。 |
-   | `spring.cloud.azure.resource-group` | Azure ストレージ アカウントを含む Azure リソース グループを指定します。 |
-   | `spring.cloud.azure.region` | Azure ストレージ アカウントの作成時に指定した地理的リージョンを指定します。 |
-   | `spring.cloud.azure.storage.account` | このチュートリアルで作成した Azure ストレージ アカウントを指定します。
 
-1. *application.properties* ファイルを保存して閉じます。
+   |                   フィールド                   |                                            説明                                            |
+   |-------------------------------------------|---------------------------------------------------------------------------------------------------|
+   | `spring.cloud.azure.credential-file-path` |            このチュートリアルで作成した Azure 資格情報ファイルを指定します。             |
+   |    `spring.cloud.azure.resource-group`    |           Azure ストレージ アカウントを含む Azure リソース グループを指定します。            |
+   |        `spring.cloud.azure.region`        | Azure ストレージ アカウントの作成時に指定した地理的リージョンを指定します。 |
+   |   `spring.cloud.azure.storage.account`    |            このチュートリアルで作成した Azure ストレージ アカウントを指定します。             |
+
+
+3. *application.properties* ファイルを保存して閉じます。
 
 ## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>Azure Storage の基本的な機能を実装するサンプル コードを追加する
 
@@ -243,10 +245,10 @@ ms.locfileid: "46505920"
 
    ```java
    package com.wingtiptoys.storage;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class StorageApplication {
       public static void main(String[] args) {
@@ -271,7 +273,7 @@ ms.locfileid: "46505920"
 
    ```java
    package com.wingtiptoys.storage;
-   
+
    import org.springframework.beans.factory.annotation.Value;
    import org.springframework.core.io.Resource;
    import org.springframework.core.io.WritableResource;
@@ -280,14 +282,14 @@ ms.locfileid: "46505920"
    import org.springframework.web.bind.annotation.PostMapping;
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    import java.io.IOException;
    import java.io.OutputStream;
    import java.nio.charset.Charset;
-   
+
    @RestController
    public class WebController {
-   
+
       @Value("blob://test/myfile.txt")
       private Resource blobFile;
 
@@ -297,7 +299,7 @@ ms.locfileid: "46505920"
             this.blobFile.getInputStream(),
             Charset.defaultCharset()) + "\n";
       }
-   
+
       @PostMapping(value = "/")
       public String writeBlobFile(@RequestBody String data) throws IOException {
          try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
@@ -307,7 +309,7 @@ ms.locfileid: "46505920"
       }
    }
    ```
-   
+
    `@Value("blob://[container]/[blob]")` 構文では、データを格納するコンテナーと BLOB の名前をそれぞれ定義します。
 
 1. Web コントローラー Java ファイルを保存して閉じます。

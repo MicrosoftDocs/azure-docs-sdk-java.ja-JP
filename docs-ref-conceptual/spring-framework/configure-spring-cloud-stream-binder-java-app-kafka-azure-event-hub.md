@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 00062f5442e072af30036388f2f1f066221d7316
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 85fe1d9c56530b716a1f1750713f4c87d43dfad3
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506584"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799958"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Azure Event Hubs で Apache Kafka 用 Spring Boot Starter を使用する方法
 
@@ -58,7 +58,7 @@ ms.locfileid: "46506584"
    * 名前空間に使用する**サブスクリプション**を選択します。
    * 名前空間の新しい**リソース グループ**を作成するか、既存のリソース グループを選択するかを指定します。
    * イベント ハブの名前空間の**場所**を指定します。
-   
+
    ![Azure イベント ハブの名前空間のオプションを指定する][IMG02]
 
 1. 上記のオプションを指定したら、**[作成]** をクリックして名前空間を作成します。
@@ -222,7 +222,7 @@ ms.locfileid: "46506584"
 
    `/users/example/home/eventhub/src/main/resources/application.properties`
 
-1.  テキスト エディターで *application.properties* ファイルを開きます。次の行を追加し、サンプルの値をイベント ハブの適切なプロパティに置き換えます。
+2. テキスト エディターで *application.properties* ファイルを開きます。次の行を追加し、サンプルの値をイベント ハブの適切なプロパティに置き換えます。
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -235,17 +235,19 @@ ms.locfileid: "46506584"
    spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    各値の説明:
-   | フィールド | 説明 |
-   | ---|---|
-   | `spring.cloud.azure.credential-file-path` | このチュートリアルで作成した Azure 資格情報ファイルを指定します。 |
-   | `spring.cloud.azure.resource-group` | Azure イベント ハブを含む Azure リソース グループを指定します。 |
-   | `spring.cloud.azure.region` | Azure イベント ハブの作成時に指定した地理的リージョンを指定します。 |
-   | `spring.cloud.azure.eventhub.namespace` | Azure イベント ハブの名前空間の作成時に指定した一意の名前を指定します。 |
-   | `spring.cloud.stream.bindings.input.destination` | 入力先の Azure イベント ハブを指定します。ここでは、このチュートリアルで作成したハブを指定します。 |
-   | `spring.cloud.stream.bindings.input.group `| Azure イベント ハブのコンシューマー グループを指定します。Azure イベント ハブの作成時に作成された基本コンシューマー グループを使用するには、 "$ Default" に設定します。 |
-   | `spring.cloud.stream.bindings.output.destination` | 出力先の Azure イベント ハブを指定します。ここでは、入力先と同じものになります。 |
 
-1. *application.properties* ファイルを保存して閉じます。
+   |                       フィールド                       |                                                                                   説明                                                                                    |
+   |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   |     `spring.cloud.azure.credential-file-path`     |                                                    このチュートリアルで作成した Azure 資格情報ファイルを指定します。                                                    |
+   |        `spring.cloud.azure.resource-group`        |                                                      Azure イベント ハブを含む Azure リソース グループを指定します。                                                      |
+   |            `spring.cloud.azure.region`            |                                           Azure イベント ハブの作成時に指定した地理的リージョンを指定します。                                            |
+   |      `spring.cloud.azure.eventhub.namespace`      |                                          Azure イベント ハブの名前空間の作成時に指定した一意の名前を指定します。                                           |
+   | `spring.cloud.stream.bindings.input.destination`  |                            入力先の Azure イベント ハブを指定します。ここでは、このチュートリアルで作成したハブを指定します。                            |
+   |    `spring.cloud.stream.bindings.input.group `    | Azure イベント ハブのコンシューマー グループを指定します。Azure イベント ハブの作成時に作成された基本コンシューマー グループを使用するには、"$ Default" に設定します。 |
+   | `spring.cloud.stream.bindings.output.destination` |                               出力先の Azure イベント ハブを指定します。ここでは、入力先と同じものになります。                               |
+
+
+3. *application.properties* ファイルを保存して閉じます。
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>イベント ハブの基本的な機能を実装するサンプル コードを追加する
 
@@ -265,10 +267,10 @@ ms.locfileid: "46506584"
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
-   
+
    @SpringBootApplication
    public class KafkaApplication {
       public static void main(String[] args) {
@@ -286,7 +288,7 @@ ms.locfileid: "46506584"
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.messaging.Source;
@@ -295,7 +297,7 @@ ms.locfileid: "46506584"
    import org.springframework.web.bind.annotation.RequestBody;
    import org.springframework.web.bind.annotation.RequestParam;
    import org.springframework.web.bind.annotation.RestController;
-   
+
    @EnableBinding(Source.class)
    @RestController
    public class KafkaSource {
@@ -318,13 +320,13 @@ ms.locfileid: "46506584"
 
    ```java
    package com.wingtiptoys.kafka;
-   
+
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    import org.springframework.cloud.stream.annotation.EnableBinding;
    import org.springframework.cloud.stream.annotation.StreamListener;
    import org.springframework.cloud.stream.messaging.Sink;
-   
+
    @EnableBinding(Sink.class)
    public class KafkaSink {
       private static final Logger LOGGER = LoggerFactory.getLogger(KafkaSink.class);

@@ -14,12 +14,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: d3b6bdc4aaae79864d370c581585167cf3732160
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047182"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799908"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory 用の Spring Boot Starter の使用方法
 
@@ -85,54 +85,54 @@ ms.locfileid: "48047182"
 
    ![新しいアプリ登録を追加する][directory-04]
 
-1. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの **名前** を指定し、**[サインオン URL]** に「 http://localhost:8080」と入力して、**[作成]** をクリックします。
+2. **[新しいアプリケーションの登録]** をクリックします。アプリケーションの **名前** を指定し、**[サインオン URL]** に「 http://localhost:8080」と入力して、**[作成]** をクリックします。
 
    ![新しいアプリ登録を作成する][directory-05]
 
-1. アプリケーション登録が作成されたら、それをクリックします。
+3. アプリケーション登録が作成されたら、それをクリックします。
 
    ![アプリ登録を選択する][directory-06]
 
-1. アプリ登録のページが表示されたら、**アプリケーション ID** をコピーします。このチュートリアルでは後ほど、この値を使用して *application.properties* ファイルを構成します。 **[設定]** をクリックし、**[キー]** をクリックします。
+4. アプリ登録のページが表示されたら、**アプリケーション ID** をコピーします。このチュートリアルでは後ほど、この値を使用して *application.properties* ファイルを構成します。 **[設定]** をクリックし、**[キー]** をクリックします。
 
    ![アプリの登録キーを作成する][directory-07]
 
-1. **説明**を追加し、新しいキーの**期間**を指定して、**[保存]** をクリックします。**[保存]** アイコンをクリックすると、キーの値が自動的に入力されます。このチュートリアルで後ほど *application.properties* ファイルを構成できるように、キーの値をコピーする必要があります。 (この値は後で取得することはできません)。
+5. **説明**を追加し、新しいキーの**期間**を指定して、**[保存]** をクリックします。**[保存]** アイコンをクリックすると、キーの値が自動的に入力されます。このチュートリアルで後ほど *application.properties* ファイルを構成できるように、キーの値をコピーする必要があります。 (この値は後で取得することはできません)。
 
    ![アプリの登録キーのパラメーターを指定する][directory-08]
 
-1. アプリ登録のメイン ページで、**[設定]**、**[必要なアクセス許可]** の順にクリックします。
+6. アプリ登録のメイン ページで、**[設定]**、**[必要なアクセス許可]** の順にクリックします。
 
    ![アプリ登録の必要なアクセス許可][directory-09]
 
-1. **[Windows Azure Active Directory]** をクリックします。
+7. **[Windows Azure Active Directory]** をクリックします。
 
    ![[Windows Azure Active Directory] を選択する][directory-10]
 
-1. **[サインインしたユーザーとしてディレクトリにアクセスします]** と **[サインインとユーザー プロファイルの読み取り]** の各チェック ボックスをオンにし、**[保存]** をクリックします。
+8. **[サインインしたユーザーとしてディレクトリにアクセスします]** と **[サインインとユーザー プロファイルの読み取り]** の各チェック ボックスをオンにし、**[保存]** をクリックします。
 
    ![アクセス許可を有効にする][directory-11]
 
-1. **[必要なアクセス許可]** ページで **[アクセス許可の付与]** をクリックし、メッセージが表示されたら **[はい]** をクリックします。
+9. **[必要なアクセス許可]** ページで **[アクセス許可の付与]** をクリックし、メッセージが表示されたら **[はい]** をクリックします。
 
    ![アクセス許可を付与する][directory-12]
 
-1. アプリ登録のメイン ページで、**[設定]**、**[応答 URL]** の順にクリックします。
+10. アプリ登録のメイン ページで、**[設定]**、**[応答 URL]** の順にクリックします。
 
-   ![応答 URL を編集する][directory-14]
+    ![応答 URL を編集する][directory-14]
 
-1. 新しい応答 URL として「 http://localhost:8080/login/oauth2/code/azure」と入力し、**[保存]** をクリックします。
+11. 新しい応答 URL として「<http://localhost:8080/login/oauth2/code/azure>」と入力し、**[保存]** をクリックします。
 
-   ![新しい応答 URL を追加する][directory-15]
+    ![新しい応答 URL を追加する][directory-15]
 
-1. アプリ登録のメイン ページで、**[マニフェスト]** をクリックして `oauth2AllowImplicitFlow` パラメーターの値を `true` に設定し、**[保存]** をクリックします。
+12. アプリ登録のメイン ページで、**[マニフェスト]** をクリックして `oauth2AllowImplicitFlow` パラメーターの値を `true` に設定し、**[保存]** をクリックします。
 
-   ![アプリケーション マニフェストの構成][directory-16]
+    ![アプリケーション マニフェストの構成][directory-16]
 
-   > [!NOTE]
-   > 
-   > `oauth2AllowImplicitFlow` パラメーターとその他のアプリケーション設定の詳細については、「[Azure Active Directory アプリケーション マニフェスト][AAD app manifest]」をご覧ください。 
-   >
+    > [!NOTE]
+    > 
+    > `oauth2AllowImplicitFlow` パラメーターとその他のアプリケーション設定の詳細については、「[Azure Active Directory アプリケーション マニフェスト][AAD app manifest]」をご覧ください。 
+    >
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>ディレクトリにユーザー アカウントを追加し、そのアカウントをグループに追加する
 

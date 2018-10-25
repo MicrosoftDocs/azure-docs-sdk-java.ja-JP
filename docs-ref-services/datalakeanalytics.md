@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: c14c89f961951d114362adee4fec6239e78cffb3
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 0e97d2c53ca6b993a2240b37576e765009f81c51
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892743"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799858"
 ---
 # <a name="azure-data-lake-analytics-libraries-for-java"></a>Azure Data Lake Analytics Libraries for Java
 
@@ -62,7 +62,6 @@ parameters.setProperties(properties);
 
 // create the job
 JobInformation jobInfo = adlaJobClient.getJobOperations().create(accountName, jobId, parameters).getBody();
-
 ```
 
 > [!div class="nextstepaction"]

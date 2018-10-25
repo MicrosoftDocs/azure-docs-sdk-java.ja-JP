@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 326357e5b4667cc06a6058cb29e9685428174dee
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 7316c05e39bc88c50670dcb0f6331ce8440fd711
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893012"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799808"
 ---
 # <a name="azure-resource-manager-libraries-for-java"></a>Azure Resource Manager Libraries for Java
 
