@@ -11,24 +11,24 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: data-lake-store
-ms.openlocfilehash: 326357e5b4667cc06a6058cb29e9685428174dee
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 7316c05e39bc88c50670dcb0f6331ce8440fd711
+ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893012"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49799808"
 ---
-# <a name="azure-resource-manager-libraries-for-java"></a><span data-ttu-id="67d5b-104">Azure Resource Manager Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="67d5b-104">Azure Resource Manager libraries for Java</span></span>
+# <a name="azure-resource-manager-libraries-for-java"></a><span data-ttu-id="57c7f-104">Azure Resource Manager Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="57c7f-104">Azure Resource Manager libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="67d5b-105">概要</span><span class="sxs-lookup"><span data-stu-id="67d5b-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="57c7f-105">概要</span><span class="sxs-lookup"><span data-stu-id="57c7f-105">Overview</span></span>
 
-<span data-ttu-id="67d5b-106">[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) を使用して、グループ内のリソースをデプロイ、監視、管理します。</span><span class="sxs-lookup"><span data-stu-id="67d5b-106">Deploy, monitor, and manage resources in groups with [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).</span></span>
+<span data-ttu-id="57c7f-106">[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) を使用して、グループ内のリソースをデプロイ、監視、管理します。</span><span class="sxs-lookup"><span data-stu-id="57c7f-106">Deploy, monitor, and manage resources in groups with [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="67d5b-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="67d5b-107">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="57c7f-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="57c7f-107">Management API</span></span>
 
-<span data-ttu-id="67d5b-108">Management API を使用して、リソース グループを作成し、テンプレートからリソースをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="67d5b-108">Use the management API to create resource groups and deploy resources from templates.</span></span>
+<span data-ttu-id="57c7f-108">Management API を使用して、リソース グループを作成し、テンプレートからリソースをデプロイします。</span><span class="sxs-lookup"><span data-stu-id="57c7f-108">Use the management API to create resource groups and deploy resources from templates.</span></span>
 
-<span data-ttu-id="67d5b-109">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="67d5b-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
+<span data-ttu-id="57c7f-109">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="57c7f-109">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>
 
 
 ```XML
@@ -39,9 +39,9 @@ ms.locfileid: "48893012"
 </dependency>
 ```
 
-## <a name="example"></a><span data-ttu-id="67d5b-110">例</span><span class="sxs-lookup"><span data-stu-id="67d5b-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="57c7f-110">例</span><span class="sxs-lookup"><span data-stu-id="57c7f-110">Example</span></span>
 
-<span data-ttu-id="67d5b-111">米国東部の Azure リージョンに新しいリソース グループを作成します。</span><span class="sxs-lookup"><span data-stu-id="67d5b-111">Create a new resource group in the Azure Eastern US region.</span></span>
+<span data-ttu-id="57c7f-111">米国東部の Azure リージョンに新しいリソース グループを作成します。</span><span class="sxs-lookup"><span data-stu-id="57c7f-111">Create a new resource group in the Azure Eastern US region.</span></span>
 
 ```java
 ResourceGroup resourceGroup = azure.resourceGroups().define("myResourceGroup")
@@ -50,15 +50,15 @@ ResourceGroup resourceGroup = azure.resourceGroups().define("myResourceGroup")
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="67d5b-112">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="67d5b-112">Explore the Management APIs</span></span>](/java/api/overview/azure/resources/management)
+> [<span data-ttu-id="57c7f-112">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="57c7f-112">Explore the Management APIs</span></span>](/java/api/overview/azure/resources/management)
 
-## <a name="samples"></a><span data-ttu-id="67d5b-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="67d5b-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="57c7f-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="57c7f-113">Samples</span></span>
 
-<span data-ttu-id="67d5b-114">[Java を使用して Azure リソース グループを管理する][1] 
-[ARM テンプレートを使用してリソースをデプロイする][2]</span><span class="sxs-lookup"><span data-stu-id="67d5b-114">[Manage Azure Resource Groups with Java][1] 
+<span data-ttu-id="57c7f-114">[Java を使用して Azure リソース グループを管理する][1] 
+[ARM テンプレートを使用してリソースをデプロイする][2]</span><span class="sxs-lookup"><span data-stu-id="57c7f-114">[Manage Azure Resource Groups with Java][1] 
 [Deploy resources using an ARM template][2]</span></span>
 
 [1]: https://github.com/Azure-Samples/resources-java-manage-resource-group
 [2]: https://github.com/Azure-Samples/resources-java-deploy-using-arm-template
 
-<span data-ttu-id="67d5b-115">Azure Resource Manager のサンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=java&term=resource)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="67d5b-115">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=resource) of Azure Resource Manager samples.</span></span>
+<span data-ttu-id="57c7f-115">Azure Resource Manager のサンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=java&term=resource)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="57c7f-115">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=java&term=resource) of Azure Resource Manager samples.</span></span>
