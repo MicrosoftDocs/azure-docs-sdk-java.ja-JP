@@ -243,9 +243,9 @@ ms.locfileid: "49962506"
 
    c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)\** で **[External]\(外部)\** を選択します。
+   d. **[Service]\(サービス)** で **[External]\(外部)** を選択します。
 
-   e. 外部ポートと内部ポートを **[Port]\(ポート)\** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
+   e. 外部ポートと内部ポートを **[Port]\(ポート)** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
 
    ![Kubernetes 構成 Web サイト][KB02]
 
