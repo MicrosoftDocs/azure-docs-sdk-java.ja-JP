@@ -10,14 +10,20 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 4/10/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: fad860e19382fb320892dcc5eada95e6d663739e
-ms.sourcegitcommit: bb7286fad75a2bb43e6ce1a8f1b09e701147c9f9
+ms.openlocfilehash: dac0a1c576974a141950919292129890f4e15be4
+ms.sourcegitcommit: 19876d17fed0afd9af0cb8e161f5a463696e74cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047119"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49634455"
 ---
 # <a name="azure-tools-for-java-developers"></a>Java 開発者のための Azure ツール
+
+## <a name="supported-jdk-runtimes"></a>サポートされている JDK ランタイム
+
+Azure と Azure Stack を使用する Java 開発者は、[OpenJDK の Azul Systems Zulu Enterprise ビルド](https://www.azul.com/downloads/azure-only/zulu/)を使用して、運用 Java 7、8、11 アプリケーションを構築し、実行できます。追加のサポート コストは発生しません。 現在、他の JDK で Java アプリを実行している場合は、無料のサポートとメンテナンスを利用できるように、Azure 上の Zulu に移行することを検討してください。 
+
+Azure でサポートされる Java ランタイムの詳細については、[こちら](java-supported-jdk-runtime.md)をご覧ください。
 
 ## <a name="eclipse-and-intellij-plugins"></a>Eclipse と IntelliJ のプラグイン
 

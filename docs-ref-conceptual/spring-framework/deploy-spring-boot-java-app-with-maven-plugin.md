@@ -6,21 +6,21 @@ documentationcenter: java
 author: rmcmurray
 manager: routlaw
 editor: brborges
-ms.author: robmcm;kevinzha;brborges
-ms.date: 10/04/2018
+ms.author: robmcm
+ms.date: 10/18/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 36afcc764c1cb984779518ddec004ecbfa1b7c57
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: dc3038fed6859203f36e0c4dc9a9b01e81a7c4c5
+ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876396"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49962496"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Spring Boot JAR ファイルの Web アプリを Linux 用の Azure App Service にデプロイする
 
-この記事では、[Azure App Service Web Apps 用の Maven プラグイン](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)を使用して、Java SE JAR としてパッケージ化された Spring Boot アプリケーションを [Linux の Azure App Services](https://docs.microsoft.com/en-us/azure/app-service/containers/) にデプロイする方法について説明します。 ご自身のアプリの依存関係、ランタイム、および構成を 1 つのデプロイ可能な成果物に統合する必要がある場合は、[Tomcat および WAR ファイル](/azure/app-service/containers/quickstart-java)での Java SE デプロイを選択してください。
+この記事では、[Azure App Service Web Apps 用の Maven プラグイン](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)を使用して、Java SE JAR としてパッケージ化された Spring Boot アプリケーションを [Linux の Azure App Services](https://docs.microsoft.com/en-us/azure/app-service/containers/) にデプロイする方法について説明します。 アプリの依存関係、ランタイム、構成を 1 つのデプロイ可能な成果物に統合する必要がある場合は、[Tomcat および WAR ファイル](/azure/app-service/containers/quickstart-java)での Java SE デプロイを選択してください。
 
 
 Azure サブスクリプションがない場合は、開始する前に[無料アカウント](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)を作成してください。
@@ -33,6 +33,18 @@ Azure サブスクリプションがない場合は、開始する前に[無料�
 * [Java Development Kit (JDK)](https://www.azul.com/downloads/azure-only/zulu/) バージョン 1.7 以降。
 * Apache の [Maven](https://maven.apache.org/) バージョン 3。
 * [Git](https://git-scm.com/downloads) クライアント。
+
+## <a name="install-and-sign-in-to-azure-cli"></a>Azure CLI のインストールとサインイン
+
+Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。
+
+Azure CLI を使って、Azure アカウントにサインインします。
+   
+   ```shell
+   az login
+   ```
+   
+指示に従って、サインインを完了します。
 
 ## <a name="clone-the-sample-app"></a>サンプル アプリの複製
 
@@ -78,14 +90,14 @@ Azure サブスクリプションがない場合は、開始する前に[無料�
 
 ## <a name="configure-maven-plugin-for-azure-app-service"></a>Azure App Service 用の Maven プラグインを構成する
 
-このセクションでは、Maven でアプリを Linux の Azure App Service にデプロイできるように、Spring Boot プロジェクト `pom.xml` を構成します。
+このセクションでは、Maven でアプリを Linux 上の Azure App Service にデプロイできるように、Spring Boot プロジェクト `pom.xml` を構成します。
 
 1. コード エディターで `pom.xml` を開きます。
 
-1. pom.xml の `<build>` セクションで、`<plugins>` タグ内に次の `<plugin>` エントリを追加します。
+2. pom.xml の `<build>` セクションで、`<plugins>` タグ内に次の `<plugin>` エントリを追加します。
 
    ```xml
-  <plugin>
+   <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
     <version>1.4.0</version>
@@ -108,10 +120,10 @@ Azure サブスクリプションがない場合は、開始する前に[無料�
       <!-- Java Runtime Stack for Web App on Linux-->
       <linuxRuntime>jre8</linuxRuntime>
     </configuration>
-  </plugin>
-  ```
+   </plugin>
+   ```
 
-1. プラグイン構成で、次のプレースホルダーを更新します。
+3. プラグイン構成で、次のプレースホルダーを更新します。
 
 | プレースホルダー | 説明 |
 | ----------- | ----------- |
@@ -120,18 +132,6 @@ Azure サブスクリプションがない場合は、開始する前に[無料�
 | `REGION` | Web アプリがホストされている Azure リージョン (たとえば、`westus2`)。 リージョンの一覧は、`az account list-locations` コマンドを使用して Cloud Shell または CLI から取得できます。 |
 
 構成オプションの完全な一覧については、[GitHub の Maven プラグイン リファレンス](https://github.com/Microsoft/azure-maven-plugins/tree/develop/azure-webapp-maven-plugin)をご覧ください。
-
-## <a name="install-and-log-in-to-azure-cli"></a>Azure CLI のインストールとログイン
-
-Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。
-
-1. Azure CLI を使って、Azure アカウントにサインインします。
-   
-   ```shell
-   az login
-   ```
-   
-   指示に従って、サインインを完了します。
 
 ## <a name="deploy-the-app-to-azure"></a>Azure にアプリケーションをデプロイする
 
