@@ -14,98 +14,98 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: dcb5ef5f12cc1682175da147268eb4a6a89f820b
-ms.sourcegitcommit: 0f38ef9ad64cffdb7b2e9e966224dfd0af251b0f
+ms.openlocfilehash: aa753692b1a3f342a47a07d3bb0cd4e90558a0f8
+ms.sourcegitcommit: a168dc8c2396b6c4749abef03debb1f69298da38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703525"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50747013"
 ---
-# <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a><span data-ttu-id="7f6b4-103">Azure Cosmos DB SQL API で Spring Boot Starter を使用する方法</span><span class="sxs-lookup"><span data-stu-id="7f6b4-103">How to use the Spring Boot Starter with the Azure Cosmos DB SQL API</span></span>
+# <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a><span data-ttu-id="c54c4-103">Azure Cosmos DB SQL API で Spring Boot Starter を使用する方法</span><span class="sxs-lookup"><span data-stu-id="c54c4-103">How to use the Spring Boot Starter with the Azure Cosmos DB SQL API</span></span>
 
-## <a name="overview"></a><span data-ttu-id="7f6b4-104">概要</span><span class="sxs-lookup"><span data-stu-id="7f6b4-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c54c4-104">概要</span><span class="sxs-lookup"><span data-stu-id="c54c4-104">Overview</span></span>
 
-<span data-ttu-id="7f6b4-105">Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などのさまざまな標準 API を使用してデータを操作できるようにするグローバル分散型データベース サービスです。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-105">Azure Cosmos DB is a globally-distributed database service that allows developers to work with data using a variety of standard APIs, such as SQL, MongoDB, Graph, and Table APIs.</span></span> <span data-ttu-id="7f6b4-106">Microsoft の Spring Boot Starter を使用すると、開発者は、SQL API を使用して Azure Cosmos DB と簡単に統合できる Spring Boot アプリケーションを使用できます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-106">Microsoft's Spring Boot Starter enables developers to use Spring Boot applications that easily integrate with Azure Cosmos DB by using the SQL API.</span></span>
+<span data-ttu-id="c54c4-105">Azure Cosmos DB は、開発者が SQL、MongoDB、Graph、Table API などのさまざまな標準 API を使用してデータを操作できるようにするグローバル分散型データベース サービスです。</span><span class="sxs-lookup"><span data-stu-id="c54c4-105">Azure Cosmos DB is a globally-distributed database service that allows developers to work with data using a variety of standard APIs, such as SQL, MongoDB, Graph, and Table APIs.</span></span> <span data-ttu-id="c54c4-106">Microsoft の Spring Boot Starter を使用すると、開発者は、SQL API を使用して Azure Cosmos DB と簡単に統合できる Spring Boot アプリケーションを使用できます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-106">Microsoft's Spring Boot Starter enables developers to use Spring Boot applications that easily integrate with Azure Cosmos DB by using the SQL API.</span></span>
 
-<span data-ttu-id="7f6b4-107">この記事では、Azure Portal を使用して Azure Cosmos DB を作成する方法、**[Spring Initializr]** を使用してカスタム Java アプリケーションを作成する方法、カスタム アプリケーションに Spring Boot Starter 機能を追加し、SQL API を使用して Azure Cosmos DB にデータを格納またはデータを取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-107">This article demonstrates creating an Azure Cosmos DB using the Azure portal, then using the **[Spring Initializr]** to create a custom java application, and then add the Spring Boot Starter functionality to your custom application to store data in and retrieve data from your Azure Cosmos DB by using the SQL API.</span></span>
+<span data-ttu-id="c54c4-107">この記事では、Azure Portal を使用して Azure Cosmos DB を作成する方法、**[Spring Initializr]** を使用してカスタム Java アプリケーションを作成する方法、カスタム アプリケーションに Spring Boot Starter 機能を追加し、SQL API を使用して Azure Cosmos DB にデータを格納またはデータを取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-107">This article demonstrates creating an Azure Cosmos DB using the Azure portal, then using the **[Spring Initializr]** to create a custom java application, and then add the Spring Boot Starter functionality to your custom application to store data in and retrieve data from your Azure Cosmos DB by using the SQL API.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="7f6b4-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="7f6b4-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="c54c4-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="c54c4-108">Prerequisites</span></span>
 
-<span data-ttu-id="7f6b4-109">この記事の手順に従うには、次の前提条件が必要です。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-109">The following prerequisites are required in order to follow the steps in this article:</span></span>
+<span data-ttu-id="c54c4-109">この記事の手順に従うには、次の前提条件が必要です。</span><span class="sxs-lookup"><span data-stu-id="c54c4-109">The following prerequisites are required in order to follow the steps in this article:</span></span>
 
-* <span data-ttu-id="7f6b4-110">Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
-* <span data-ttu-id="7f6b4-111">[Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-111">A [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 or later.</span></span>
-* <span data-ttu-id="7f6b4-112">[Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-112">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
+* <span data-ttu-id="c54c4-110">Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-110">An Azure subscription; if you don't already have an Azure subscription, you can activate your [MSDN subscriber benefits] or sign up for a [free Azure account].</span></span>
+* <span data-ttu-id="c54c4-111">[Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。</span><span class="sxs-lookup"><span data-stu-id="c54c4-111">A [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/), version 1.7 or later.</span></span>
+* <span data-ttu-id="c54c4-112">[Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。</span><span class="sxs-lookup"><span data-stu-id="c54c4-112">[Apache Maven](http://maven.apache.org/), version 3.0 or later.</span></span>
 
-## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a><span data-ttu-id="7f6b4-113">Azure Portal を使用して Azure Cosmos DB を作成する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-113">Create an Azure Cosmos DB by using the Azure portal</span></span>
+## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a><span data-ttu-id="c54c4-113">Azure Portal を使用して Azure Cosmos DB を作成する</span><span class="sxs-lookup"><span data-stu-id="c54c4-113">Create an Azure Cosmos DB by using the Azure portal</span></span>
 
-1. <span data-ttu-id="7f6b4-114">Azure portal (<https://portal.azure.com/>) を参照し、**[+リソースの作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-114">Browse to the Azure portal at <https://portal.azure.com/> and click **+Create a resource**.</span></span>
+1. <span data-ttu-id="c54c4-114">Azure portal (<https://portal.azure.com/>) を参照し、**[+リソースの作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="c54c4-114">Browse to the Azure portal at <https://portal.azure.com/> and click **+Create a resource**.</span></span>
 
    ![Azure ポータル][AZ01]
 
-1. <span data-ttu-id="7f6b4-116">**[データベース]**、**[Azure Cosmos DB]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-116">Click **Databases**, and then click **Azure Cosmos DB**.</span></span>
+1. <span data-ttu-id="c54c4-116">**[データベース]**、**[Azure Cosmos DB]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="c54c4-116">Click **Databases**, and then click **Azure Cosmos DB**.</span></span>
 
    ![Azure ポータル][AZ02]
 
-1. <span data-ttu-id="7f6b4-118">**[Azure Cosmos DB]** ページで、次の情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-118">On the **Azure Cosmos DB** page, enter the following information:</span></span>
+1. <span data-ttu-id="c54c4-118">**[Azure Cosmos DB]** ページで、次の情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-118">On the **Azure Cosmos DB** page, enter the following information:</span></span>
 
-   * <span data-ttu-id="7f6b4-119">データベースの URI として使用する一意の **ID** を入力します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-119">Enter a unique **ID**, which you will use as the URI for your database.</span></span> <span data-ttu-id="7f6b4-120">例: *wingtiptoysdata.documents.azure.com*。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-120">For example: *wingtiptoysdata.documents.azure.com*.</span></span>
-   * <span data-ttu-id="7f6b4-121">API の **[SQL]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-121">Choose **SQL** for the API.</span></span>
-   * <span data-ttu-id="7f6b4-122">データベースに使用する**サブスクリプション**を選択します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-122">Choose the **Subscription** you want to use for your database.</span></span>
-   * <span data-ttu-id="7f6b4-123">データベースに対して新しい**リソース グループ**を作成するか、既存のリソース グループを選択するかを指定します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-123">Specify whether to create a new **Resource group** for your database, or choose an existing resource group.</span></span>
-   * <span data-ttu-id="7f6b4-124">データベースの**場所**を指定します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-124">Specify the **Location** for your database.</span></span>
+   * <span data-ttu-id="c54c4-119">データベースの URI として使用する一意の **ID** を入力します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-119">Enter a unique **ID**, which you will use as the URI for your database.</span></span> <span data-ttu-id="c54c4-120">例: *wingtiptoysdata.documents.azure.com*。</span><span class="sxs-lookup"><span data-stu-id="c54c4-120">For example: *wingtiptoysdata.documents.azure.com*.</span></span>
+   * <span data-ttu-id="c54c4-121">API の **[SQL]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-121">Choose **SQL** for the API.</span></span>
+   * <span data-ttu-id="c54c4-122">データベースに使用する**サブスクリプション**を選択します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-122">Choose the **Subscription** you want to use for your database.</span></span>
+   * <span data-ttu-id="c54c4-123">データベースに対して新しい**リソース グループ**を作成するか、既存のリソース グループを選択するかを指定します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-123">Specify whether to create a new **Resource group** for your database, or choose an existing resource group.</span></span>
+   * <span data-ttu-id="c54c4-124">データベースの**場所**を指定します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-124">Specify the **Location** for your database.</span></span>
    
-   <span data-ttu-id="7f6b4-125">これらのオプションの指定後、**[作成]** をクリックしてデータベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-125">When you have specified these options, click **Create** to create your database.</span></span>
+   <span data-ttu-id="c54c4-125">これらのオプションの指定後、**[作成]** をクリックしてデータベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-125">When you have specified these options, click **Create** to create your database.</span></span>
 
    ![Azure ポータル][AZ03]
 
-1. <span data-ttu-id="7f6b4-127">データベースが作成されると、それが Azure **ダッシュボード**に表示され、**[すべてのリソース]** ページと **[Azure Cosmos DB]** ページにも表示されます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-127">When your database has been created, it is listed on your Azure **Dashboard**, as well as under the **All Resources** and **Azure Cosmos DB** pages.</span></span> <span data-ttu-id="7f6b4-128">これらのいずれかの場所でデータベースをクリックすると、キャッシュのプロパティ ページを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-128">You can click on your database on any of those locations to open the properties page for your cache.</span></span>
+1. <span data-ttu-id="c54c4-127">データベースが作成されると、それが Azure **ダッシュボード**に表示され、**[すべてのリソース]** ページと **[Azure Cosmos DB]** ページにも表示されます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-127">When your database has been created, it is listed on your Azure **Dashboard**, as well as under the **All Resources** and **Azure Cosmos DB** pages.</span></span> <span data-ttu-id="c54c4-128">これらのいずれかの場所でデータベースをクリックすると、キャッシュのプロパティ ページを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-128">You can click on your database on any of those locations to open the properties page for your cache.</span></span>
 
    ![Azure ポータル][AZ04]
 
-1. <span data-ttu-id="7f6b4-130">データベースのプロパティ ページが表示されたら、**[アクセス キー]** をクリックし、データベースの URI とアクセス キーをコピーします。これらの値は Spring Boot アプリケーションで使用します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-130">When the properties page for your database is displayed, click **Access keys** and copy your URI and access keys for your database; you will use these values in your Spring Boot application.</span></span>
+1. <span data-ttu-id="c54c4-130">データベースのプロパティ ページが表示されたら、**[アクセス キー]** をクリックし、データベースの URI とアクセス キーをコピーします。これらの値は Spring Boot アプリケーションで使用します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-130">When the properties page for your database is displayed, click **Access keys** and copy your URI and access keys for your database; you will use these values in your Spring Boot application.</span></span>
 
    ![Azure ポータル][AZ05]
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="7f6b4-132">Spring Initializr でシンプルな Spring Boot アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-132">Create a simple Spring Boot application with the Spring Initializr</span></span>
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a><span data-ttu-id="c54c4-132">Spring Initializr でシンプルな Spring Boot アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="c54c4-132">Create a simple Spring Boot application with the Spring Initializr</span></span>
 
-1. <span data-ttu-id="7f6b4-133"><https://start.spring.io/> を参照します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-133">Browse to <https://start.spring.io/>.</span></span>
+1. <span data-ttu-id="c54c4-133"><https://start.spring.io/> を参照します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-133">Browse to <https://start.spring.io/>.</span></span>
 
-1. <span data-ttu-id="7f6b4-134">**Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[グループ]** と **[アーティファクト]** に名前を入力します。**Spring Boot** のバージョンを指定し、**[プロジェクトの生成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-134">Specify that you want to generate a **Maven** project with **Java**, enter the **Group** and **Artifact** names for your application, specify your **Spring Boot** version, and then click the button to **Generate Project**.</span></span>
+1. <span data-ttu-id="c54c4-134">**Java** で **Maven** プロジェクトを生成することを指定し、アプリケーションの **[グループ]** と **[アーティファクト]** に名前を入力します。**Spring Boot** のバージョンを指定し、**[プロジェクトの生成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="c54c4-134">Specify that you want to generate a **Maven** project with **Java**, enter the **Group** and **Artifact** names for your application, specify your **Spring Boot** version, and then click the button to **Generate Project**.</span></span>
 
    > [!IMPORTANT]
    >
-   > <span data-ttu-id="7f6b4-135">Spring Boot バージョン 2.0.n では API にいくつかの破壊的変更が加えられており、この記事の手順はこのバージョンを使用して実行します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-135">There were several breaking changes to the APIs in Spring Boot version 2.0.n, which will be used to complete the steps in this article.</span></span> <span data-ttu-id="7f6b4-136">このチュートリアルの手順の実行には、現在も Spring Boot 1.5.n バージョンのいずれかを使用することもできます。違いについては、必要に応じて強調します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-136">You can still use one of the Spring Boot 1.5.n versions to complete the steps in this tutorial, and the differences will be highlighted when necessary.</span></span>
+   > <span data-ttu-id="c54c4-135">Spring Boot バージョン 2.0.n では API にいくつかの破壊的変更が加えられており、この記事の手順はこのバージョンを使用して実行します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-135">There were several breaking changes to the APIs in Spring Boot version 2.0.n, which will be used to complete the steps in this article.</span></span> <span data-ttu-id="c54c4-136">このチュートリアルの手順の実行には、現在も Spring Boot 1.5.n バージョンのいずれかを使用することもできます。違いについては、必要に応じて強調します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-136">You can still use one of the Spring Boot 1.5.n versions to complete the steps in this tutorial, and the differences will be highlighted when necessary.</span></span>
    >
 
    ![基本的な Spring Initializr オプション][SI01]
 
    > [!NOTE]
    >
-   > <span data-ttu-id="7f6b4-138">Spring Initializr では、**[グループ]** と **[アーティファクト]** の名前を使用してパッケージ名を作成します (例: *com.example.wintiptoysdata*)。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-138">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: *com.example.wintiptoysdata*.</span></span>
+   > <span data-ttu-id="c54c4-138">Spring Initializr では、**[グループ]** と **[アーティファクト]** の名前を使用してパッケージ名を作成します (例: *com.example.wintiptoysdata*)。</span><span class="sxs-lookup"><span data-stu-id="c54c4-138">The Spring Initializr uses the **Group** and **Artifact** names to create the package name; for example: *com.example.wintiptoysdata*.</span></span>
    >
 
-1. <span data-ttu-id="7f6b4-139">メッセージが表示されたら、ローカル コンピューター上のパスにプロジェクトをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-139">When prompted, download the project to a path on your local computer.</span></span>
+1. <span data-ttu-id="c54c4-139">メッセージが表示されたら、ローカル コンピューター上のパスにプロジェクトをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="c54c4-139">When prompted, download the project to a path on your local computer.</span></span>
 
    ![カスタム Spring Boot プロジェクトのダウンロード][SI02]
 
-1. <span data-ttu-id="7f6b4-141">ファイルをローカル システム上に展開したら、シンプルな Spring Boot アプリケーションの編集を開始できます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-141">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
+1. <span data-ttu-id="c54c4-141">ファイルをローカル システム上に展開したら、シンプルな Spring Boot アプリケーションの編集を開始できます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-141">After you have extracted the files on your local system, your simple Spring Boot application will be ready for editing.</span></span>
 
    ![カスタム Spring Boot プロジェクト ファイル][SI03]
 
-## <a name="configure-your-spring-boot-app-to-use-the-azure-spring-boot-starter"></a><span data-ttu-id="7f6b4-143">Azure Spring Boot Starter を使用するように Spring Boot アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-143">Configure your Spring Boot app to use the Azure Spring Boot Starter</span></span>
+## <a name="configure-your-spring-boot-app-to-use-the-azure-spring-boot-starter"></a><span data-ttu-id="c54c4-143">Azure Spring Boot Starter を使用するように Spring Boot アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="c54c4-143">Configure your Spring Boot app to use the Azure Spring Boot Starter</span></span>
 
-1. <span data-ttu-id="7f6b4-144">アプリのディレクトリで *pom.xml* ファイルを探します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-144">Locate the *pom.xml* file in the directory of your app; for example:</span></span>
+1. <span data-ttu-id="c54c4-144">アプリのディレクトリで *pom.xml* ファイルを探します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-144">Locate the *pom.xml* file in the directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\pom.xml`
 
-   <span data-ttu-id="7f6b4-145">または</span><span class="sxs-lookup"><span data-stu-id="7f6b4-145">-or-</span></span>
+   <span data-ttu-id="c54c4-145">または</span><span class="sxs-lookup"><span data-stu-id="c54c4-145">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/pom.xml`
 
    ![pom.xml ファイルを探す][PM01]
 
-1. <span data-ttu-id="7f6b4-147">テキスト エディターで *pom.xml* ファイルを開き、`<dependencies>` の一覧に次の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-147">Open the *pom.xml* file in a text editor, and add the following lines to list of `<dependencies>`:</span></span>
+1. <span data-ttu-id="c54c4-147">テキスト エディターで *pom.xml* ファイルを開き、`<dependencies>` の一覧に次の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-147">Open the *pom.xml* file in a text editor, and add the following lines to list of `<dependencies>`:</span></span>
 
    ```xml
    <dependency>
@@ -119,7 +119,7 @@ ms.locfileid: "42703525"
 
    > [!IMPORTANT]
    >
-   > <span data-ttu-id="7f6b4-149">このチュートリアルの実行に Spring Boot 1.5.n バージョンのいずれかを使用している場合は、以前のバージョンの Azure Cosmos DB のスターターを指定する必要があります。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-149">If you are using one of Spring Boot 1.5.n versions to complete this tutorial, you will need to specify the older version of the Azure Cosmos DB starter; for example:</span></span>
+   > <span data-ttu-id="c54c4-149">このチュートリアルの実行に Spring Boot 1.5.n バージョンのいずれかを使用している場合は、以前のバージョンの Azure Cosmos DB のスターターを指定する必要があります。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-149">If you are using one of Spring Boot 1.5.n versions to complete this tutorial, you will need to specify the older version of the Azure Cosmos DB starter; for example:</span></span>
    >
    > ```xml
    > <dependency>
@@ -129,7 +129,7 @@ ms.locfileid: "42703525"
    > </dependency>
    > ```
 
-1. <span data-ttu-id="7f6b4-150">Spring Boot のバージョンが、Spring Initializr でアプリケーションを作成したときに選択したバージョンであることを確認します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-150">Verify that the Spring Boot version is the version that you chose when you created your application with the Spring Initializr; for example:</span></span>
+1. <span data-ttu-id="c54c4-150">Spring Boot のバージョンが、Spring Initializr でアプリケーションを作成したときに選択したバージョンであることを確認します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-150">Verify that the Spring Boot version is the version that you chose when you created your application with the Spring Initializr; for example:</span></span>
 
    ```xml
    <parent>
@@ -142,24 +142,24 @@ ms.locfileid: "42703525"
 
    > [!NOTE]
    >
-   > <span data-ttu-id="7f6b4-151">このチュートリアルの実行に Spring Boot 1.5.n バージョンのいずれかを使用している場合は、正しいバージョン (例: `<version>1.5.14.RELEASE</version>`) であることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-151">If you are using one of Spring Boot 1.5.n versions to complete this tutorial, you will need to verify the correct version; for example: `<version>1.5.14.RELEASE</version>`.</span></span>
+   > <span data-ttu-id="c54c4-151">このチュートリアルの実行に Spring Boot 1.5.n バージョンのいずれかを使用している場合は、正しいバージョン (例: `<version>1.5.14.RELEASE</version>`) であることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c54c4-151">If you are using one of Spring Boot 1.5.n versions to complete this tutorial, you will need to verify the correct version; for example: `<version>1.5.14.RELEASE</version>`.</span></span>
    >
 
-1. <span data-ttu-id="7f6b4-152">*pom.xml* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-152">Save and close the *pom.xml* file.</span></span>
+1. <span data-ttu-id="c54c4-152">*pom.xml* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-152">Save and close the *pom.xml* file.</span></span>
 
-## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a><span data-ttu-id="7f6b4-153">Azure Cosmos DB を使用するように Spring Boot アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-153">Configure your Spring Boot app to use your Azure Cosmos DB</span></span>
+## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a><span data-ttu-id="c54c4-153">Azure Cosmos DB を使用するように Spring Boot アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="c54c4-153">Configure your Spring Boot app to use your Azure Cosmos DB</span></span>
 
-1. <span data-ttu-id="7f6b4-154">アプリの *resources* ディレクトリ内で *application.properties* ファイルを探します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-154">Locate the *application.properties* file in the *resources* directory of your app; for example:</span></span>
+1. <span data-ttu-id="c54c4-154">アプリの *resources* ディレクトリ内で *application.properties* ファイルを探します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-154">Locate the *application.properties* file in the *resources* directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.properties`
 
-   <span data-ttu-id="7f6b4-155">または</span><span class="sxs-lookup"><span data-stu-id="7f6b4-155">-or-</span></span>
+   <span data-ttu-id="c54c4-155">または</span><span class="sxs-lookup"><span data-stu-id="c54c4-155">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/resources/application.properties`
 
    ![application.properties ファイルを探す][RE01]
 
-1. <span data-ttu-id="7f6b4-157">テキスト エディターで *application.properties* ファイルを開き、そのファイルに次の行を追加し、サンプルの値をデータベースの適切なプロパティに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-157">Open the *application.properties* file in a text editor, and add the following lines to the file, and replace the sample values with the appropriate properties for your database:</span></span>
+1. <span data-ttu-id="c54c4-157">テキスト エディターで *application.properties* ファイルを開き、そのファイルに次の行を追加し、サンプルの値をデータベースの適切なプロパティに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-157">Open the *application.properties* file in a text editor, and add the following lines to the file, and replace the sample values with the appropriate properties for your database:</span></span>
 
    ```yaml
    # Specify the DNS URI of your Azure Cosmos DB.
@@ -174,17 +174,17 @@ ms.locfileid: "42703525"
 
    ![application.properties ファイルの編集][RE02]
 
-1. <span data-ttu-id="7f6b4-159">*application.properties* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-159">Save and close the *application.properties* file.</span></span>
+1. <span data-ttu-id="c54c4-159">*application.properties* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-159">Save and close the *application.properties* file.</span></span>
 
-## <a name="add-sample-code-to-implement-basic-database-functionality"></a><span data-ttu-id="7f6b4-160">基本的なデータベース機能を実装するサンプル コードを追加する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-160">Add sample code to implement basic database functionality</span></span>
+## <a name="add-sample-code-to-implement-basic-database-functionality"></a><span data-ttu-id="c54c4-160">基本的なデータベース機能を実装するサンプル コードを追加する</span><span class="sxs-lookup"><span data-stu-id="c54c4-160">Add sample code to implement basic database functionality</span></span>
 
-<span data-ttu-id="7f6b4-161">このセクションでは、ユーザー データを格納するための 2 つの Java クラスを作成します。その後、アプリケーションのメイン クラスを変更してユーザー クラスのインスタンスを作成し、それをデータベースに保存します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-161">In this section you create two Java classes for storing user data, and then you modify your main application class to create an instance of the user class and save it to your database.</span></span>
+<span data-ttu-id="c54c4-161">このセクションでは、ユーザー データを格納するための 2 つの Java クラスを作成します。その後、アプリケーションのメイン クラスを変更してユーザー クラスのインスタンスを作成し、それをデータベースに保存します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-161">In this section you create two Java classes for storing user data, and then you modify your main application class to create an instance of the user class and save it to your database.</span></span>
 
-### <a name="define-a-basic-class-for-storing-user-data"></a><span data-ttu-id="7f6b4-162">ユーザー データを格納するための基本クラスを定義する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-162">Define a basic class for storing user data</span></span>
+### <a name="define-a-basic-class-for-storing-user-data"></a><span data-ttu-id="c54c4-162">ユーザー データを格納するための基本クラスを定義する</span><span class="sxs-lookup"><span data-stu-id="c54c4-162">Define a basic class for storing user data</span></span>
 
-1. <span data-ttu-id="7f6b4-163">*User.java* という名前の新しいファイルをメイン アプリケーションの Java ファイルと同じディレクトリに作成します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-163">Create a new file named *User.java* in the same directory as your main application Java file.</span></span>
+1. <span data-ttu-id="c54c4-163">*User.java* という名前の新しいファイルをメイン アプリケーションの Java ファイルと同じディレクトリに作成します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-163">Create a new file named *User.java* in the same directory as your main application Java file.</span></span>
 
-1. <span data-ttu-id="7f6b4-164">テキスト エディターで *User.java* ファイルを開き、次の行をファイルに追加して、データベースの値を格納および取得する汎用ユーザー クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-164">Open the *User.java* file in a text editor, and add the following lines to the file to define a generic user class that stores and retrieve values in your database:</span></span>
+1. <span data-ttu-id="c54c4-164">テキスト エディターで *User.java* ファイルを開き、次の行をファイルに追加して、データベースの値を格納および取得する汎用ユーザー クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-164">Open the *User.java* file in a text editor, and add the following lines to the file to define a generic user class that stores and retrieve values in your database:</span></span>
 
    ```java
    package com.example.wingtiptoysdata;
@@ -235,13 +235,13 @@ ms.locfileid: "42703525"
    }
    ```
 
-1. <span data-ttu-id="7f6b4-165">*User.java* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-165">Save and close the *User.java* file.</span></span>
+1. <span data-ttu-id="c54c4-165">*User.java* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-165">Save and close the *User.java* file.</span></span>
 
-### <a name="define-a-data-repository-interface"></a><span data-ttu-id="7f6b4-166">データ リポジトリ インターフェイスを定義する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-166">Define a data repository interface</span></span>
+### <a name="define-a-data-repository-interface"></a><span data-ttu-id="c54c4-166">データ リポジトリ インターフェイスを定義する</span><span class="sxs-lookup"><span data-stu-id="c54c4-166">Define a data repository interface</span></span>
 
-1. <span data-ttu-id="7f6b4-167">*UserRepository.java* という名前の新しいファイルをメイン アプリケーションの Java ファイルと同じディレクトリに作成します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-167">Create a new file named *UserRepository.java* in the same directory as your main application Java file.</span></span>
+1. <span data-ttu-id="c54c4-167">*UserRepository.java* という名前の新しいファイルをメイン アプリケーションの Java ファイルと同じディレクトリに作成します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-167">Create a new file named *UserRepository.java* in the same directory as your main application Java file.</span></span>
 
-1. <span data-ttu-id="7f6b4-168">テキスト エディターで *UserRepository.java* ファイルを開き、既定の DocumentDB リポジトリ インターフェイスを拡張するユーザー リポジトリ インターフェイスを定義する次の行をファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-168">Open the *UserRepository.java* file in a text editor, and add the following lines to the file to define a user repository interface that extends the default DocumentDB repository interface:</span></span>
+1. <span data-ttu-id="c54c4-168">テキスト エディターで *UserRepository.java* ファイルを開き、既定の DocumentDB リポジトリ インターフェイスを拡張するユーザー リポジトリ インターフェイスを定義する次の行をファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-168">Open the *UserRepository.java* file in a text editor, and add the following lines to the file to define a user repository interface that extends the default DocumentDB repository interface:</span></span>
 
    ```java
    package com.example.wingtiptoysdata;
@@ -253,21 +253,21 @@ ms.locfileid: "42703525"
    public interface UserRepository extends DocumentDbRepository<User, String> { } 
    ```
 
-1. <span data-ttu-id="7f6b4-169">*UserRepository.java* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-169">Save and close the *UserRepository.java* file.</span></span>
+1. <span data-ttu-id="c54c4-169">*UserRepository.java* ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-169">Save and close the *UserRepository.java* file.</span></span>
 
-### <a name="modify-the-main-application-class"></a><span data-ttu-id="7f6b4-170">アプリケーションのメイン クラスを変更する</span><span class="sxs-lookup"><span data-stu-id="7f6b4-170">Modify the main application class</span></span>
+### <a name="modify-the-main-application-class"></a><span data-ttu-id="c54c4-170">アプリケーションのメイン クラスを変更する</span><span class="sxs-lookup"><span data-stu-id="c54c4-170">Modify the main application class</span></span>
 
-1. <span data-ttu-id="7f6b4-171">アプリのパッケージ ディレクトリでメイン アプリケーションの Java ファイルを探します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-171">Locate the main application Java file in the package directory of your app; for example:</span></span>
+1. <span data-ttu-id="c54c4-171">アプリのパッケージ ディレクトリでメイン アプリケーションの Java ファイルを探します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-171">Locate the main application Java file in the package directory of your app; for example:</span></span>
 
    `C:\SpringBoot\wingtiptoysdata\src\main\java\com\example\wingtiptoysdata\WingtiptoysdataApplication.java`
 
-   <span data-ttu-id="7f6b4-172">または</span><span class="sxs-lookup"><span data-stu-id="7f6b4-172">-or-</span></span>
+   <span data-ttu-id="c54c4-172">または</span><span class="sxs-lookup"><span data-stu-id="c54c4-172">-or-</span></span>
 
    `/users/example/home/wingtiptoysdata/src/main/java/com/example/wingtiptoysdata/WingtiptoysdataApplication.java`
 
    ![アプリケーションの Java ファイルを探す][JV01]
 
-1. <span data-ttu-id="7f6b4-174">テキスト エディターでメイン アプリケーションの Java ファイルを開き、ファイルに次の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-174">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
+1. <span data-ttu-id="c54c4-174">テキスト エディターでメイン アプリケーションの Java ファイルを開き、ファイルに次の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-174">Open the main application Java file in a text editor, and add the following lines to the file:</span></span>
 
    ```java
    package com.example.wingtiptoysdata;
@@ -320,29 +320,29 @@ ms.locfileid: "42703525"
 
    > [!IMPORTANT]
    >
-   > <span data-ttu-id="7f6b4-175">このチュートリアルの実行に Spring Boot 1.5.n バージョンのいずれかを使用している場合は、`final User result = repository.findById(testUser.getId()).get();` 構文を `final User result = repository.findOne(testUser.getId());` で置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-175">If you are using one of Spring Boot 1.5.n versions to complete this tutorial, you will need to replace the `final User result = repository.findById(testUser.getId()).get();` syntax with `final User result = repository.findOne(testUser.getId());`.</span></span>
+   > <span data-ttu-id="c54c4-175">このチュートリアルの実行に Spring Boot 1.5.n バージョンのいずれかを使用している場合は、`final User result = repository.findById(testUser.getId()).get();` 構文を `final User result = repository.findOne(testUser.getId());` で置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="c54c4-175">If you are using one of Spring Boot 1.5.n versions to complete this tutorial, you will need to replace the `final User result = repository.findById(testUser.getId()).get();` syntax with `final User result = repository.findOne(testUser.getId());`.</span></span>
    >
 
-1. <span data-ttu-id="7f6b4-176">メイン アプリケーションの Java ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-176">Save and close the main application Java file.</span></span>
+1. <span data-ttu-id="c54c4-176">メイン アプリケーションの Java ファイルを保存して閉じます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-176">Save and close the main application Java file.</span></span>
 
-## <a name="build-and-test-your-app"></a><span data-ttu-id="7f6b4-177">アプリのビルドとテスト</span><span class="sxs-lookup"><span data-stu-id="7f6b4-177">Build and test your app</span></span>
+## <a name="build-and-test-your-app"></a><span data-ttu-id="c54c4-177">アプリのビルドとテスト</span><span class="sxs-lookup"><span data-stu-id="c54c4-177">Build and test your app</span></span>
 
-1. <span data-ttu-id="7f6b4-178">コマンド プロンプトを開き、ディレクトリを *pom.xml* ファイルが置かれているフォルダーに変更します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-178">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
+1. <span data-ttu-id="c54c4-178">コマンド プロンプトを開き、ディレクトリを *pom.xml* ファイルが置かれているフォルダーに変更します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-178">Open a command prompt and change directory to the folder where your *pom.xml* file is located; for example:</span></span>
 
    `cd C:\SpringBoot\wingtiptoysdata`
 
-   <span data-ttu-id="7f6b4-179">または</span><span class="sxs-lookup"><span data-stu-id="7f6b4-179">-or-</span></span>
+   <span data-ttu-id="c54c4-179">または</span><span class="sxs-lookup"><span data-stu-id="c54c4-179">-or-</span></span>
 
    `cd /users/example/home/wingtiptoysdata`
 
-1. <span data-ttu-id="7f6b4-180">Spring Boot アプリケーションを Maven でビルドし、実行します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-180">Build your Spring Boot application with Maven and run it; for example:</span></span>
+1. <span data-ttu-id="c54c4-180">Spring Boot アプリケーションを Maven でビルドし、実行します。次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-180">Build your Spring Boot application with Maven and run it; for example:</span></span>
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. <span data-ttu-id="7f6b4-181">アプリケーションによっていくつかのランタイム メッセージが表示されます。値が正常に格納され、データベースから取得されたことを示す、次の例のようなメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-181">Your application will display several runtime messages, and it will display a message like the following examples to indicate that values have been successfully stored and retrieved from your database.</span></span>
+1. <span data-ttu-id="c54c4-181">アプリケーションによっていくつかのランタイム メッセージが表示されます。値が正常に格納され、データベースから取得されたことを示す、次の例のようなメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-181">Your application will display several runtime messages, and it will display a message like the following examples to indicate that values have been successfully stored and retrieved from your database.</span></span>
 
    ```
    User: 20170724025215132 Gena Soto
@@ -350,31 +350,31 @@ ms.locfileid: "42703525"
 
    ![アプリケーションからの正常な出力][JV02]
 
-1. <span data-ttu-id="7f6b4-183">省略可能: Azure portal で **[データ エクスプローラー]** をクリックし、表示されたリストから項目を選択して内容を表示することで、データベースのプロパティ ページから Azure Cosmos DB の内容を表示できます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-183">OPTIONAL: You can use the Azure portal to view the contents of your Azure Cosmos DB from the properties page for your database by clicking  **Data Explorer**, and then selecting and item from the displayed list to view the contents.</span></span>
+1. <span data-ttu-id="c54c4-183">省略可能: Azure portal で **[データ エクスプローラー]** をクリックし、表示されたリストから項目を選択して内容を表示することで、データベースのプロパティ ページから Azure Cosmos DB の内容を表示できます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-183">OPTIONAL: You can use the Azure portal to view the contents of your Azure Cosmos DB from the properties page for your database by clicking  **Data Explorer**, and then selecting and item from the displayed list to view the contents.</span></span>
 
    ![ドキュメント エクスプローラーを使用してデータを表示する][JV03]
 
-## <a name="next-steps"></a><span data-ttu-id="7f6b4-185">次の手順</span><span class="sxs-lookup"><span data-stu-id="7f6b4-185">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="c54c4-185">次の手順</span><span class="sxs-lookup"><span data-stu-id="c54c4-185">Next steps</span></span>
 
-<span data-ttu-id="7f6b4-186">Azure Cosmos DB と Java の使用について詳しくは、次の記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-186">For more information about using Azure Cosmos DB and Java, see the following articles:</span></span>
+<span data-ttu-id="c54c4-186">Azure Cosmos DB と Java の使用について詳しくは、次の記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="c54c4-186">For more information about using Azure Cosmos DB and Java, see the following articles:</span></span>
 
-* <span data-ttu-id="7f6b4-187">[Azure Cosmos DB のドキュメント]。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-187">[Azure Cosmos DB Documentation].</span></span>
+* <span data-ttu-id="c54c4-187">[Azure Cosmos DB のドキュメント]。</span><span class="sxs-lookup"><span data-stu-id="c54c4-187">[Azure Cosmos DB Documentation].</span></span>
 
-* <span data-ttu-id="7f6b4-188">[Azure Cosmos DB: ドキュメント データベースを Java と Azure Portal で作成する][Build a SQL API app with Java]</span><span class="sxs-lookup"><span data-stu-id="7f6b4-188">[Azure Cosmos DB: Create a document database using Java and the Azure portal][Build a SQL API app with Java]</span></span>
+* <span data-ttu-id="c54c4-188">[Azure Cosmos DB: ドキュメント データベースを Java と Azure Portal で作成する][Build a SQL API app with Java]</span><span class="sxs-lookup"><span data-stu-id="c54c4-188">[Azure Cosmos DB: Create a document database using Java and the Azure portal][Build a SQL API app with Java]</span></span>
 
-* <span data-ttu-id="7f6b4-189">[Azure Cosmos DB SQL API の Spring Data]</span><span class="sxs-lookup"><span data-stu-id="7f6b4-189">[Spring Data for Azure Cosmos DB SQL API]</span></span>
+* <span data-ttu-id="c54c4-189">[Azure Cosmos DB SQL API の Spring Data]</span><span class="sxs-lookup"><span data-stu-id="c54c4-189">[Spring Data for Azure Cosmos DB SQL API]</span></span>
 
-<span data-ttu-id="7f6b4-190">Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-190">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
+<span data-ttu-id="c54c4-190">Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c54c4-190">For more information about using Spring Boot applications on Azure, see the following articles:</span></span>
 
-* <span data-ttu-id="7f6b4-191">[Azure の Spring Boot DocumentDB Starter]</span><span class="sxs-lookup"><span data-stu-id="7f6b4-191">[Spring Boot Document DB Starter for Azure]</span></span>
+* <span data-ttu-id="c54c4-191">[Azure の Spring Boot DocumentDB Starter]</span><span class="sxs-lookup"><span data-stu-id="c54c4-191">[Spring Boot Document DB Starter for Azure]</span></span>
 
-* [<span data-ttu-id="7f6b4-192">Spring Boot アプリケーションを Azure App Service にデプロイする</span><span class="sxs-lookup"><span data-stu-id="7f6b4-192">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
+* [<span data-ttu-id="c54c4-192">Spring Boot アプリケーションを Azure App Service にデプロイする</span><span class="sxs-lookup"><span data-stu-id="c54c4-192">Deploy a Spring Boot Application to the Azure App Service</span></span>](deploy-spring-boot-java-web-app-on-azure.md)
 
-* [<span data-ttu-id="7f6b4-193">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)</span><span class="sxs-lookup"><span data-stu-id="7f6b4-193">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
+* [<span data-ttu-id="c54c4-193">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)</span><span class="sxs-lookup"><span data-stu-id="c54c4-193">Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service</span></span>](deploy-spring-boot-java-app-on-kubernetes.md)
 
-<span data-ttu-id="7f6b4-194">Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Java Tools for Visual Studio Team Services] を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-194">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+<span data-ttu-id="c54c4-194">Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c54c4-194">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
 
-<span data-ttu-id="7f6b4-195">**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-195">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="7f6b4-196">このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-196">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="7f6b4-197">Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-197">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="7f6b4-198">基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。</span><span class="sxs-lookup"><span data-stu-id="7f6b4-198">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
+<span data-ttu-id="c54c4-195">**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。</span><span class="sxs-lookup"><span data-stu-id="c54c4-195">The **[Spring Framework]** is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="c54c4-196">このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。</span><span class="sxs-lookup"><span data-stu-id="c54c4-196">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating stand-alone Java applications.</span></span> <span data-ttu-id="c54c4-197">Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。</span><span class="sxs-lookup"><span data-stu-id="c54c4-197">To help developers get started with Spring Boot, several sample Spring Boot packages are available at <https://github.com/spring-guides/>.</span></span> <span data-ttu-id="c54c4-198">基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。</span><span class="sxs-lookup"><span data-stu-id="c54c4-198">In addition to choosing from the list of basic Spring Boot projects, the **[Spring Initializr]** helps developers get started with creating custom Spring Boot applications.</span></span>
 
 <!-- URL List -->
 
@@ -389,7 +389,8 @@ ms.locfileid: "42703525"
 [Spring Boot Document DB Starter for Azure]:https://github.com/Microsoft/azure-spring-boot-starters/tree/master/azure-documentdb-spring-boot-starter-sample
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Visual Studio Team Services 用の Java ツール]: https://azure.microsoft.com/services/devops/java/
+[Java Tools for Visual Studio Team Services]: https://azure.microsoft.com/services/devops/java/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
