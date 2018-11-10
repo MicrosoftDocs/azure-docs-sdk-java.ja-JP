@@ -5,18 +5,20 @@ author: rloutlaw
 manager: angerobe
 ms.devlang: java
 ms.topic: article
-ms.date: 10/15/2017
+ms.date: 10/26/2017
 ms.author: routlaw
-ms.openlocfilehash: 2865219f350990e8b07f7d2cd99f536168a6b8d4
-ms.sourcegitcommit: 7df2d442ad7cbdb235e5dd35302a9b73379c23d5
+ms.openlocfilehash: 7f75b26bffc02a161e8d58827970bd80a3a6c48a
+ms.sourcegitcommit: 66f3dd4bdb09712b73c9194e23028567c0c4ee3f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50026998"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235208"
 ---
 # <a name="get-java-jdk-downloads-and-support-when-developing-for-azure"></a>Azure 向けの開発時に Java JDK のダウンロードとサポートを入手する
 
-Azure と Azure Stack を使用する Java 開発者は、[OpenJDK の Azul Systems Zulu Enterprise ビルド](https://www.azul.com/downloads/azure-only/zulu/)を使用して、運用 Java アプリケーションを構築し、実行できます。追加のサポート コストは発生しません。 Azure 上で希望の Java ランタイムを使用できますが、Zulu を使用すると、無料のメンテナンス更新プログラムが提供され、[正規の Azure サポート プラン](https://azure.microsoft.com/support/plans/)を利用して、Microsoft によるサポート案件を作成できます。
+Azure と Azure Stack を使用する Java 開発者は、[Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/) を使用して、運用 Java アプリケーションを構築し、実行できます。追加のサポート コストは発生しません。 Azure 上で希望の Java ランタイムを使用できますが、Zulu を使用すると、無料のメンテナンス更新プログラムが提供され、[正規の Azure サポート プラン](https://azure.microsoft.com/support/plans/)を利用して、Microsoft によるサポート案件を作成できます。
+
+開発者は Oracle JDK、Red Hat JDK などの独自の Java ランタイムを使用して、自身のアプリを Azure で実行し、Azure のサービスと機能に接続できます。 Oracle Java SE の運用エディションは、Azure の Windows または Linux 仮想マシンでワークロードを実行している Java 開発者が引き続き利用できます。
 
 ## <a name="supported-java-versions-and-update-schedule"></a>サポートされている Java バージョンと更新スケジュール
 
@@ -31,9 +33,9 @@ Azul Systems では、これらのリリースの [Java SE ロードマップ](h
 
 ## <a name="use-for-local-development"></a>ローカル開発に使用 
 
-開発者は、[Azul Systems の Web サイト](https://www.azul.com/downloads/azure-only/zulu/)から、Azure および Azure Stack 用の Java JDK をダウンロードできます。 ダウンロードは、Windows、Linux、macOS で利用できます。 Linux を使用している開発者は、[yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) および [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo) パッケージ マネージャーを使ってパッケージを入手することもできます。
+開発者は、Azure および Azure Stack 用の Java JDK を[ダウンロード](https://www.azul.com/downloads/azure-only/zulu/)して、ローカル開発環境で使用できます。 ダウンロードは、Windows、Linux、macOS で利用できます。 Linux を使用している開発者は、[yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) および [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo) パッケージ マネージャーを使ってパッケージを入手することもできます。
 
-[正規の Azure サポート プラン](https://azure.microsoft.com/support/plans/)を利用して Azure または Azure Stack 用の開発を行うときには、Azure がサポートする Azul Zulu JDK の製品サポートを利用できます。
+Azure または Azure Stack 用の開発を行う際は、[正規の Azure サポート プラン](https://azure.microsoft.com/support/plans/)で JDK 用のローカル開発のサポートを利用できます。
 
 ## <a name="use-in-docker-containers"></a>Docker コンテナーでの使用
 
