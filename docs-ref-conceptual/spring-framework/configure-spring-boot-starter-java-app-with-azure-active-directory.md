@@ -14,28 +14,37 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 665768ffe7bec977d553ffa62e1dbd6b968eb9de
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: da44a40b7b52e75bb0a946b46ddfc033bfef54e9
+ms.sourcegitcommit: 473c3aec55f3e9b131dc87c62e2eac218ce9564e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799908"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51571719"
 ---
-# <a name="how-to-use-the-spring-boot-starter-for-azure-active-directory"></a>Azure Active Directory 用の Spring Boot Starter の使用方法
+# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>チュートリアル: Azure Active Directory 用の Spring Boot Starter を使用して Java Web アプリをセキュリティで保護する
 
 ## <a name="overview"></a>概要
 
 この記事では、Azure Active Directory (Azure AD) 用 Spring Boot Starter を使用した **[Spring Initializr]** を用いてアプリを作成する方法について説明します。
 
+このチュートリアルでは、以下の内容を学習します。
+
+> [!div class="checklist"]
+> * Spring Initializr を使用して Java アプリケーションを作成する
+> * Azure Active Directory を構成する
+> * Spring Boot クラスと注釈を使用してアプリケーションをセキュリティで保護する
+> * Java アプリケーションをビルドしてテストする
+
+Azure サブスクリプションがない場合は、開始する前に[無料アカウント](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)を作成してください。
+
 ## <a name="prerequisites"></a>前提条件
 
 この記事の手順を実行するには、次の前提条件を満たす必要があります。
 
-* Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
-* [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
+* [Java Development Kit (JDK)](https://aka.ms/azure-jdks) バージョン 1.7 以降。
 * [Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。
 
-## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
+## <a name="create-an-application-using-the-spring-initializr"></a>Spring Initializr を使用してアプリケーションを作成する
 
 1. <https://start.spring.io/> を参照します。
 
@@ -171,9 +180,9 @@ ms.locfileid: "49799908"
 
 1. このチュートリアルで先ほど作成しダウンロードしたプロジェクト アーカイブからディレクトリにファイルを抽出します。
 
-1. プロジェクトの親フォルダーに移動し、テキスト エディターで *pom.xml* ファイルを開きます。
+1. プロジェクトの親フォルダーに移動し、テキスト エディターで `pom.xml` Maven プロジェクト ファイルを開きます。
 
-1. Spring OAuth2 セキュリティの依存関係を追加します。次に例を示します。
+1. Spring OAuth2 セキュリティの依存関係を `pom.xml` に追加します。
 
    ```xml
    <dependency>
@@ -351,31 +360,20 @@ ms.locfileid: "49799908"
 
 ## <a name="next-steps"></a>次の手順
 
-Azure Active Directory の使用方法の詳細については、次の記事をご覧ください。
+このチュートリアルでは、Azure Active Directory スターターを使用した新しい Java Web アプリケーションの作成、新しい Azure AD テナントの構成とそのテナントへの新しいアプリケーションの登録を行いました。また、Spring の注釈とクラスを使用して Web を保護するようにアプリケーションを構成しました。 Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
 
-* [Azure Active Directory のドキュメント]
-
-Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
-
-* [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
-
-* [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
-
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
-
-**[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
-
-より詳細なサンプルについては、GitHub の「[Azure Active Directory Spring Boot Sample (Azure Active Directory Spring Boot のサンプル)][AAD Spring Boot Sample]」を参照してください。
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
 
 <!-- URL List -->
 
-[Azure Active Directory のドキュメント]: /azure/active-directory/
+[Azure Active Directory Documentation]: /azure/active-directory/
 [AAD app manifest]: /azure/active-directory/develop/active-directory-application-manifest
 [Get started with Azure AD]: /azure/active-directory/get-started-azure-ad
-[Java 開発者向けの Azure]: /java/azure/
-[無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
-[MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
+[Azure for Java Developers]: /java/azure/
+[free Azure account]: https://azure.microsoft.com/pricing/free-trial/
+[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
