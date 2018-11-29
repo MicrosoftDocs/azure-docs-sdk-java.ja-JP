@@ -4,31 +4,31 @@ description: Azure Toolkit for IntelliJ の最新の機能について説明し�
 services: ''
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: 46ed791f-df59-416a-809e-f52345ad973c
-ms.author: robmcm;asirveda;martinsawicki
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 6c9e79b7fc39a23c3768d93d60d35aace5cde6d1
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893423"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338826"
 ---
-# <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="a6aea-103">Azure Toolkit for IntelliJ の新機能</span><span class="sxs-lookup"><span data-stu-id="a6aea-103">What's New in the Azure Toolkit for IntelliJ</span></span>
+# <a name="whats-new-in-the-azure-toolkit-for-intellij"></a><span data-ttu-id="5bd28-103">Azure Toolkit for IntelliJ の新機能</span><span class="sxs-lookup"><span data-stu-id="5bd28-103">What's New in the Azure Toolkit for IntelliJ</span></span>
 
-<span data-ttu-id="a6aea-104">次の Web ページには、Azure Toolkit for IntelliJ の各種リリースと最新情報が記載されています。</span><span class="sxs-lookup"><span data-stu-id="a6aea-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for IntelliJ.</span></span>
+<span data-ttu-id="5bd28-104">次の Web ページには、Azure Toolkit for IntelliJ の各種リリースと最新情報が記載されています。</span><span class="sxs-lookup"><span data-stu-id="5bd28-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for IntelliJ.</span></span>
 
 <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> <span data-ttu-id="a6aea-105">Eclipse IDE 用の Azure Toolkit もあります。</span><span class="sxs-lookup"><span data-stu-id="a6aea-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="a6aea-106">詳細については、「 [Azure Toolkit for Eclipse]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a6aea-106">For more information, see [Azure Toolkit for Eclipse].</span></span> 
+> <span data-ttu-id="5bd28-105">Eclipse IDE 用の Azure Toolkit もあります。</span><span class="sxs-lookup"><span data-stu-id="5bd28-105">There is also an Azure Toolkit for the Eclipse IDE.</span></span> <span data-ttu-id="5bd28-106">詳細については、「 [Azure Toolkit for Eclipse]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="5bd28-106">For more information, see [Azure Toolkit for Eclipse].</span></span> 
 > 
 
 <!--
@@ -72,7 +72,7 @@ The Azure Toolkit for IntelliJ - April 2016 release includes the following enhan
 
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="a6aea-107">次の手順</span><span class="sxs-lookup"><span data-stu-id="a6aea-107">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="5bd28-107">次の手順</span><span class="sxs-lookup"><span data-stu-id="5bd28-107">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-intellij-additional-resources](../includes/azure-toolkit-for-intellij-additional-resources.md)]
 

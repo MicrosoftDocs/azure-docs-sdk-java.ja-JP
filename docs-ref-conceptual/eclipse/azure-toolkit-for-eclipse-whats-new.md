@@ -4,31 +4,31 @@ description: Azure Toolkit for Eclipse の最新の機能について説明し�
 services: ''
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: 16b066ea-aae7-4c30-9a12-fa0c3711b93e
-ms.author: robmcm;asirveda;martinsawicki
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: e993fd09e555274f51a500408efbffc4ac5df394
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 35947f4e5f02781f94c8d83cc06f730f6cf8bf3c
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892553"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338856"
 ---
-# <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="c3c84-103">Azure Toolkit for Eclipse の新機能</span><span class="sxs-lookup"><span data-stu-id="c3c84-103">What's new in the Azure Toolkit for Eclipse</span></span>
+# <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="7bec2-103">Azure Toolkit for Eclipse の新機能</span><span class="sxs-lookup"><span data-stu-id="7bec2-103">What's new in the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="c3c84-104">つぎの Web ページには、Azure Toolkit for Eclipse の各種リリースと最新情報が記載されています。</span><span class="sxs-lookup"><span data-stu-id="c3c84-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for Eclipse.</span></span>
+<span data-ttu-id="7bec2-104">つぎの Web ページには、Azure Toolkit for Eclipse の各種リリースと最新情報が記載されています。</span><span class="sxs-lookup"><span data-stu-id="7bec2-104">The following web page contains information on the various releases and latest updates to the Azure Toolkit for Eclipse.</span></span>
 
 <https://github.com/Microsoft/azure-tools-for-java/releases>
 
 > [!NOTE] 
-> <span data-ttu-id="c3c84-105">IntelliJ IDE 用の Azure Toolkit もあります。</span><span class="sxs-lookup"><span data-stu-id="c3c84-105">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="c3c84-106">詳細については、「 [Azure Toolkit for IntelliJ]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="c3c84-106">For more information, see [Azure Toolkit for IntelliJ].</span></span> 
+> <span data-ttu-id="7bec2-105">IntelliJ IDE 用の Azure Toolkit もあります。</span><span class="sxs-lookup"><span data-stu-id="7bec2-105">There is also an Azure Toolkit for the IntelliJ IDE.</span></span> <span data-ttu-id="7bec2-106">詳細については、「 [Azure Toolkit for IntelliJ]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7bec2-106">For more information, see [Azure Toolkit for IntelliJ].</span></span> 
 > 
 
 <!--
@@ -314,7 +314,7 @@ Azure Plugin for Eclipse - December 2011 CTP has released. New features include:
 
 -->
 
-## <a name="next-steps"></a><span data-ttu-id="c3c84-107">次の手順</span><span class="sxs-lookup"><span data-stu-id="c3c84-107">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="7bec2-107">次の手順</span><span class="sxs-lookup"><span data-stu-id="7bec2-107">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
