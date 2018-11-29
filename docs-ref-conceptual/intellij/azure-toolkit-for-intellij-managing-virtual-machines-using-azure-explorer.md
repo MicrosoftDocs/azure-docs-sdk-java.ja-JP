@@ -4,22 +4,22 @@ description: Azure Explorer for IntelliJ を使用して Azure 仮想マシン�
 services: ''
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 11/13/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 213efa7fc31705b0ffcba6f2fe40e7186a365fae
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 57441a9cbdf0805e08f303c1f05049ce7f668ac0
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893523"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338666"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Azure Explorer for IntelliJ を使用して仮想マシンを管理する
 
@@ -62,7 +62,7 @@ Azure Explorer を使用して仮想マシンを作成するには、以下の�
 
    ![[仮想マシン イメージの選択] ウィンドウ][CR03]
 
-5. **[次へ]** をクリックします。 
+5.  **[次へ]** をクリックします。 
 
 6. **[仮想マシンの基本設定]** ウィンドウで、次の情報を入力します。
 
@@ -76,7 +76,7 @@ Azure Explorer を使用して仮想マシンを作成するには、以下の�
 
    ![[仮想マシンの基本設定] ウィンドウ][CR04]
 
-7. **[次へ]** をクリックします。 
+7.  **[次へ]** をクリックします。 
 
 8. **[関連するリソース]** ウィンドウで、次の情報を入力します。
 

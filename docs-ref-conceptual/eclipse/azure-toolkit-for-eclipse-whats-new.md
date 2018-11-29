@@ -4,22 +4,22 @@ description: Azure Toolkit for Eclipse の最新の機能について説明し�
 services: ''
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: 16b066ea-aae7-4c30-9a12-fa0c3711b93e
-ms.author: robmcm;asirveda;martinsawicki
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: e993fd09e555274f51a500408efbffc4ac5df394
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 35947f4e5f02781f94c8d83cc06f730f6cf8bf3c
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892553"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338856"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse の新機能
 

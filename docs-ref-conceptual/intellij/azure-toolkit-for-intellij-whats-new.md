@@ -4,22 +4,22 @@ description: Azure Toolkit for IntelliJ の最新の機能について説明し�
 services: ''
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: 46ed791f-df59-416a-809e-f52345ad973c
-ms.author: robmcm;asirveda;martinsawicki
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dcbd7e8a78470df0ab3bc2d7c87137a97fc4665c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 6c9e79b7fc39a23c3768d93d60d35aace5cde6d1
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893423"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338826"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ の新機能
 

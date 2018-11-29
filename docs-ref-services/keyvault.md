@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: keyvault
-ms.openlocfilehash: 84ea77a19c326409f453f62359cf46c90398daeb
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: f025479301fd923b7620e8560e8586c8ab63c80b
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799928"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338986"
 ---
 # <a name="azure-key-vault-libraries-for-java"></a>Azure Key Vault Libraries for Java
 
@@ -36,7 +36,7 @@ Azure Key Vault に格納されるキーとシークレットの作成、更新�
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.2</version>
 </dependency>
 ```   
 

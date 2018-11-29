@@ -5,14 +5,14 @@ author: rloutlaw
 manager: angerobe
 ms.devlang: java
 ms.topic: article
-ms.date: 10/26/2017
+ms.date: 11/13/2018
 ms.author: routlaw
-ms.openlocfilehash: 7f75b26bffc02a161e8d58827970bd80a3a6c48a
-ms.sourcegitcommit: 66f3dd4bdb09712b73c9194e23028567c0c4ee3f
+ms.openlocfilehash: 0ced17eb17c9d2eda7b1fcc12ffff27b303e8d7e
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235208"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339036"
 ---
 # <a name="get-java-jdk-downloads-and-support-when-developing-for-azure"></a>Azure 向けの開発時に Java JDK のダウンロードとサポートを入手する
 
