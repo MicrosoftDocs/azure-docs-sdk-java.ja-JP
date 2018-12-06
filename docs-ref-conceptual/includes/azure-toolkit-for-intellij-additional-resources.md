@@ -9,5 +9,6 @@ Azure Toolkit for IntelliJ IDEA の詳細については、以下のリンクを
 Azure での Java の使用方法の詳細については、以下のリンクを参照してください。 
 
 * [Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/) 
-* [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) 
+* [Visual Studio Team Services 用の Java ツール](https://java.visualstudio.com/) 
+* [Azure 向けの開発時に Java JDK のダウンロードとサポートを入手する](https://aka.ms/azure-jdks)
 <!-- TODO: Add URLs for Java in VSCode here --> 
