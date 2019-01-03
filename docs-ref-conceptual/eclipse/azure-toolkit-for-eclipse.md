@@ -7,19 +7,19 @@ author: rmcmurray
 manager: routlaw
 editor: ''
 ms.assetid: ef2f3839-2549-4471-9b53-0deb7f4c128b
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/12/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: d8ab3de791d1a4893efb77a51418c437f81c86ff
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
+ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893463"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53638961"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse
 
@@ -67,7 +67,7 @@ Azure Toolkit for Eclipse の詳細については、以下のページを参照
 
 * [Eclipse Marketplace の Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
 
-Azure での Java の使用の詳細については、「[Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/)」および [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) を参照してください。
+Azure での Java の使用の詳細については、「[Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/)」および [Java Tools for Visual Studio Team Services](/azure/devops/java/) を参照してください。
 
 <!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
 
@@ -79,7 +79,6 @@ Azure での Java の使用の詳細については、「[Java 開発者向け�
 <!-- URL List -->
 
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 
 <!-- Temporarily Deprecated URLs -->
 

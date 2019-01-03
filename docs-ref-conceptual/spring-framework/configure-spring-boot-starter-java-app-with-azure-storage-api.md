@@ -4,22 +4,22 @@ description: Azure Storage API を使用して、Spring Boot Initializer アプ�
 services: storage
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 8ee985f28b7fa80548e13681089e0a5a9226851d
-ms.sourcegitcommit: fd67d4088be2cad01c642b9ecf3f9475d9cb4f3c
+ms.openlocfilehash: 984a3edb89608c806537f991b42e309f31130896
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46506623"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991446"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Azure Storage API で Spring Boot Starter を使用する方法
 
@@ -33,7 +33,7 @@ ms.locfileid: "46506623"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)を有効にするか、または[無料の Azure アカウント](https://azure.microsoft.com/pricing/free-trial/)にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)](http://docs.microsoft.com/cli/azure/overview)。
-* 最新の [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) (バージョン 1.7 以降)。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * Apache [Maven](http://maven.apache.org/) バージョン 3.0 以降。
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
@@ -316,6 +316,13 @@ ms.locfileid: "46506623"
    > 
 
 ## <a name="next-steps"></a>次の手順
+
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
 
 Microsoft Azure で利用できるその他の Spring Boot Starter の詳細については、「[Azure 向けの Spring Boot Starter](spring-boot-starters-for-azure.md)」をご覧ください。
 
