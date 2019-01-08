@@ -3,23 +3,23 @@ title: ''
 description: このチュートリアルでは、Azure Toolkit for Eclipse バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 896e7eff389bc7d3ac119d315c50aae505a381da
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: b05dcd52f36524ab17652f83c6ced4006f874365
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892563"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338716"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Eclipse 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -109,7 +109,7 @@ Java Web アプリケーションを Azure にデプロイする方法はいく�
 
    d. **[Web Container (Web コンテナー)]** ドロップダウン メニューで、アプリケーションに適したソフトウェアを選択します。
       
-      現在、Tomcat 8、Tomcat 7 または Jetty 9 から選択することができます。 選択したソフトウェアの最新の配信が Azure で提供されます。また、これは Oracle によって作成され、Azure で提供された JDK 8 の最新の配信で実行されます。
+      現在、Tomcat 8、Tomcat 7 または Jetty 9 から選択することができます。 選択したソフトウェアの最新ディストリビューションが Azure で提供され、Azure で提供される JDK の最新ディストリビューションで実行されます。
 
    e. **[サブスクリプション]** ドロップダウン メニューで、このデプロイに使用するサブスクリプションを選択します。
 
@@ -124,7 +124,7 @@ Java Web アプリケーションを Azure にデプロイする方法はいく�
    * **[Name (名前)]** テキスト ボックスに、新しいリソース グループの名前を入力します。
    * **[Region (リージョン)]** ドロップダウン メニューで、リソース グループに適した Azure データ センターの場所を選択します。
    * オプション: 既定では、Java 8 の最新の配布は、Azure によって Web アプリ コンテナーに JVM として自動的にデプロイされます。 ただし、Web アプリで必要な場合は、JVM の別のバージョンと配布を指定できます。 Web アプリの JDK を指定するには、 **[JDK]** タブをクリックし、次のオプションのいずれかを選択します。
-     * **[Deploy the default JDK offered by Azure Web Apps service (Azure Web Apps サービスによって提供される既定の JDK をデプロイする)]**: Java 8 の最新の配布がデプロイされます。
+     * **[Deploy the default JDK offered by Azure Web Apps service (Azure Web Apps サービスによって提供される既定の JDK をデプロイする)]**: Java の最新の配布がデプロイされます。
      * **[Deploy a 3rd party JDK available on Azure (Azure で利用できるサード パーティの JDK をデプロイする)]**: Microsoft Azure によって提供される JDK のリストから選択できます。
      * **[Deploy my own JDK from this download location (このダウンロード場所から独自の JDK をデプロイする)]**: 独自の JDK 配布を指定できます。JDK 配布は、ZIP ファイルとしてパッケージ化し、公開されているダウンロード場所またはアクセスできる Azure Storage アカウントにアップロードする必要があります。
           
