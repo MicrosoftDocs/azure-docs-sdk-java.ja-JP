@@ -4,22 +4,22 @@ description: このチュートリアルでは、Microsoft Azure で Apache Mave
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: yuwzho;robmcm
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f05dca50f84b27f157892d63cda02286c6755795
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 72eb49a764bdf15339e6cd17c6a7f997495dcf09
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899293"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991606"
 ---
 # <a name="deploy-a-spring-boot-app-using-the-fabric8-maven-plugin"></a>Fabric8 Maven プラグインを使用して Spring Boot アプリをデプロイする
 
@@ -33,7 +33,7 @@ ms.locfileid: "48899293"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の [Java Developer Kit (JDK)] 。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
@@ -77,7 +77,7 @@ ms.locfileid: "48899293"
    mvn clean package spring-boot:run
    ```
 
-1. http://localhost:8080 を参照するか、次の `curl` コマンドを使用して、Web アプリをテストします。
+1. Web アプリをテストするには、 http://localhost:8080 を参照するか、次の `curl` コマンドを使用します。
    ```shell
    curl http://localhost:8080
    ```
@@ -507,13 +507,20 @@ Kubernetes クラスターが不要になったら、`az group delete` コマン
 
 ## <a name="next-steps"></a>次の手順
 
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
+
 Azure での Spring Boot アプリケーションの使用の詳細については、次の記事を参照してください。
 
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 * [Azure Container Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
@@ -527,7 +534,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Java 開発者向けの Azure]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image
@@ -535,14 +542,16 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [Fabric8]: https://fabric8.io/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Azure DevOps と Java の操作]: /azure/devops/java/
 [Kubernetes]: https://kubernetes.io/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Docker での Spring Boot の使用開始]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

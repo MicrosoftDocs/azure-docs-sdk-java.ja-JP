@@ -4,23 +4,23 @@ description: このチュートリアルでは、Microsoft Azure の Kubernetes 
 services: container-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: asirveda;robmcm
-ms.date: 07/05/2018
+ms.author: robmcm
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 8e8f9088146af504ba2d9d45e2e82118c4081359
-ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
+ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49962506"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991476"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
@@ -32,7 +32,7 @@ ms.locfileid: "49962506"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の [Java Developer Kit (JDK)] 。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
@@ -78,7 +78,7 @@ ms.locfileid: "49962506"
    curl http://localhost:8080
    ```
 
-1. 次のメッセージが表示されるはずです。**Hello Docker World**
+1. 次のメッセージが表示されます。**Hello Docker World**
 
    ![サンプル アプリをローカルに参照する][SB01]
 
@@ -258,7 +258,7 @@ ms.locfileid: "49962506"
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 
@@ -304,14 +304,21 @@ ms.locfileid: "49962506"
 
 ## <a name="next-steps"></a>次の手順
 
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
+
 Azure での Spring Boot の使用の詳細については、次の記事を参照してください。
 
 * [Spring Boot アプリケーションを Azure App Service にデプロイする](deploy-spring-boot-java-web-app-on-azure.md)
 * [Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする](deploy-spring-boot-java-app-on-linux.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
 
-<!-- Newly added --> Visual Studio Code を使用して Java アプリケーションを Kubernetes にデプロイする方法の詳細については、[Visual Studio Code Java チュートリアル]を参照してください。
+Visual Studio Code を使用して Java アプリケーションを Kubernetes にデプロイする方法の詳細については、[Visual Studio Code Java チュートリアル]を参照してください。
 
 Docker サンプル プロジェクトでの Spring Boot の詳細については、[Docker での Spring Boot の使用開始]に関するページを参照してください。
 
@@ -321,7 +328,7 @@ Docker サンプル プロジェクトでの Spring Boot の詳細について�
 
 次のリンクは、Azure での Kubernetes の使用に関する追加情報を提供します。
 
-* [Azure Kubernetes Service で Kubernetes クラスターを使用する](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+* [Azure Kubernetes Service で Kubernetes クラスターを使用する](/azure/aks/intro-kubernetes)
 
 Kubernetes コマンド ライン インターフェイスの使用方法の詳細については、**kubectl** ユーザー ガイド (<https://kubernetes.io/docs/user-guide/kubectl/>) を参照してください。
 
@@ -337,15 +344,14 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
 [Azure Kubernetes Service (AKS)]: https://azure.microsoft.com/services/kubernetes-service/
-[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Java 開発者向けの Azure]: /java/azure/
 [Azure portal]: https://portal.azure.com/
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Azure DevOps と Java の操作]: /azure/devops/java/
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
 [Maven]: http://maven.apache.org/
@@ -357,8 +363,11 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [名前空間]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 [プライベート レジストリからのイメージのプル]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
+
 <!-- Newly added -->
-[Azure Kubernetes Service から Azure Container Registry の認証を受ける]: https://docs.microsoft.com/azure/container-registry/container-registry-auth-aks/
+[Azure Kubernetes Service から Azure Container Registry の認証を受ける]: /azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java チュートリアル]: https://code.visualstudio.com/docs/java/java-kubernetes/
 
 <!-- IMG List -->

@@ -8,18 +8,18 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 69c0381313994796af31d5301ceadb9f6f40dcb5
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893503"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991556"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Azure 向けの Spring Boot Starter
 
@@ -229,18 +229,25 @@ Azure では、次の Spring Boot Starter を現在利用できます。
 
 ## <a name="next-steps"></a>次の手順
 
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
+
 Azure での [Spring Boot] アプリケーションの使用の詳細については、「[Azure の Spring]」をご覧ください。
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
 
 独自の Spring Boot アプリケーションの使用開始に関するヘルプについては、「**Spring Initializr**」(https://start.spring.io/) を参照してください。
 
 <!-- URL List -->
 
-[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Java 開発者向けの Azure]: /java/azure/
+[Azure DevOps と Java の操作]: /azure/devops/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Azure の Spring]: https://docs.microsoft.com/java/azure/spring-framework/
+[Azure の Spring]: /java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 

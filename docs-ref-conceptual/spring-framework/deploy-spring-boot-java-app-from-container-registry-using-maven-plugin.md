@@ -4,22 +4,22 @@ description: このチュートリアルでは、Maven プラグインを使用�
 services: container-registry
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: e84960ebf79b89b2430924016a429518a935d086
-ms.sourcegitcommit: 9d9e2fa97ebd95a699adcb58e82c3fc0882f0a24
+ms.openlocfilehash: abe73f46e3b5a3b85a9f0272c12539d230c1a879
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49315936"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991376"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps 用の Maven プラグインを使用して Azure Container Registry の Spring Boot アプリを Azure App Service にデプロイする方法
 
@@ -38,7 +38,7 @@ ms.locfileid: "49315936"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の Java Development Kit (JDK) (バージョン 1.7 以降)。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
@@ -83,12 +83,12 @@ ms.locfileid: "49315936"
    mvn spring-boot:run
    ```
 
-1. Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。 たとえば、curl を使用できる場合は次のようなコマンドを実行できます。
+1. Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。 たとえば、curl を使うことができる場合は次のようなコマンドを実行できます。
    ```shell
    curl http://localhost:8080
    ```
 
-1. 次のメッセージが表示されるはずです。**Hello Docker World**
+1. 次のメッセージが表示されます。**Hello Docker World**
 
    ![サンプル アプリをローカルに参照する][SB01]
 
@@ -285,7 +285,7 @@ ms.locfileid: "49315936"
    mvn package docker:build -DpushImage 
    ```
 
-5. 省略可能: [Azure Portal] を参照して、コンテナー レジストリに **gs-spring-boot-docker** という名前の Docker コンテナー イメージがあることを確認します。
+5. 省略可能:[Azure portal] を参照して、コンテナー レジストリに **gs-spring-boot-docker** という名前の Docker コンテナー イメージがあることを確認します。
 
    ![Azure Portal でコンテナーを確認][CR01]
 
@@ -381,6 +381,13 @@ Web アプリのデプロイが完了すると、[Azure Portal] を使用して 
 
 ## <a name="next-steps"></a>次の手順
 
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
+
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 
 * [Azure Web Apps 用の Maven プラグイン]
@@ -393,11 +400,13 @@ Web アプリのデプロイが完了すると、[Azure Portal] を使用して 
 
 * [Maven 用の Docker プラグイン]
 
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
+
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Java 開発者向けの Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Azure Web Apps 用の Maven プラグイン]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
@@ -406,13 +415,15 @@ Web アプリのデプロイが完了すると、[Azure Portal] を使用して 
 [Maven 用の Docker プラグイン]: https://github.com/spotify/docker-maven-plugin
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Azure DevOps と Java の操作]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Docker での Spring Boot の使用開始]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

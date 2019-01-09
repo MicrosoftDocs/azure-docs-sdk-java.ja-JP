@@ -8,18 +8,18 @@ manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 09/10/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: dfc3b6121bddcb637735047e2e7bc7485da9a4fe
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.openlocfilehash: 98b3dc1243bf293ede121eafd51b041649d165db
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799948"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991426"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hubs を使用する Spring Cloud Stream Binder アプリケーションを作成する方法
 
@@ -32,7 +32,7 @@ ms.locfileid: "49799948"
 この記事の手順に従うには、次の前提条件が必要です。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
-* [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * [Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。
 
 > [!IMPORTANT]
@@ -196,8 +196,8 @@ ms.locfileid: "49799948"
        }
      }
    ]
-
-1. Specify the GUID for the subscription you want to use with Azure; for example:
+   ```
+1. Azure で使用するサブスクリプションの GUID を指定します。次に例を示します。
 
    ```azurecli
    az account set -s 11111111-1111-1111-1111-111111111111
@@ -395,6 +395,13 @@ ms.locfileid: "49799948"
 
 ## <a name="next-steps"></a>次の手順
 
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
+
 Azure による Event Hub Stream Binder のサポートの詳細については、次の記事をご覧ください。
 
 * [Azure Event Hubs とは](/azure/event-hubs/event-hubs-about)
@@ -403,14 +410,14 @@ Azure による Event Hub Stream Binder のサポートの詳細については�
 
 * [Azure Event Hubs で Apache Kafka 用 Spring Boot Starter を使用する方法](configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md)
 
-Java での Azure の使用の詳細については、「Java 開発者向けの Azure」および [Visual Studio Team Services 用の Java ツール]を参照してください。
+Java での Azure の使用の詳細については、「Java 開発者向けの Azure」および「[Azure DevOps と Java の操作]」を参照してください。
 
 **[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
 
 <!-- URL List -->
 
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Azure DevOps と Java の操作]: /azure/devops/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/

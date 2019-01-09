@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 4edb8c1ceef508dd251db693ccc3b98d77ec452b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: bf5d5ad1c4ccd24e3e0174e70bcbae568f0e839d
+ms.sourcegitcommit: 24f037d133875f86761ec893dfa74e723de040b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899407"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53636437"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Azure Explorer for IntelliJ を使用してストレージ アカウントを管理する
 
@@ -43,21 +43,21 @@ Azure Explorer を使用してストレージ アカウントを作成するに�
 
    ![[新しいストレージ アカウントの作成] ダイアログ ボックス][CS02]
 
-   * **[名前]**: 新しいストレージ アカウントの名前を指定します。
+   * **[名前]**:新しいストレージ アカウントの名前を指定します。
 
    * **[アカウントの種類]**: 作成するストレージ アカウントの種類 ("Blob Storage" など) を指定します。 詳細については、「[Azure ストレージ アカウントについて]」を参照してください。 
 
-   * **[パフォーマンス]**: 選択された発行元からどのストレージ アカウント サービスを使用するかを指定します ("Premium" など)。 詳細については、「[Azure Storage のスケーラビリティおよびパフォーマンスのターゲット]」を参照してください。 
+   * **パフォーマンス**:選択された発行元からどのストレージ アカウント サービスを使用するかを指定します ("Premium" など)。 詳細については、「[Azure Storage のスケーラビリティおよびパフォーマンスのターゲット]」を参照してください。 
 
-   * **[レプリケーション]**: ストレージ アカウントのレプリケーション ("ゾーン冗長" など) を指定します。 詳細については、「[Azure Storage のレプリケーション]」を参照してください。 
+   * **[Replication]\(レプリケーション\)**:ストレージ アカウントのレプリケーション ("ゾーン冗長" など) を指定します。 詳細については、「[Azure Storage のレプリケーション]」を参照してください。 
 
-   * **[サブスクリプション]**: 新しいストレージ アカウントに使用する Azure サブスクリプションを指定します。
+   * **サブスクリプション**:新しいストレージ アカウントに使用する Azure サブスクリプションを指定します。
 
-   * **[場所]**: ストレージ アカウントを作成する場所を指定します ("米国西部" など)。
+   * **場所**: ストレージ アカウントが作成される場所 ("米国西部" など) を指定します。
 
-   * **[リソース グループ]**: 仮想マシン用のリソース グループを指定します。 次のいずれかのオプションを選択します。
-      * **[新規作成]**: 新しいリソース グループを作成することを指定します。
-      * **[Use Existing\(既存の使用\)]**: Azure アカウントに関連付けられているリソース グループの一覧から選択することを指定します。
+   * **リソース グループ**:仮想マシン用のリソース グループを指定します。 次のいずれかのオプションを選択します。
+      * **新規作成**: 新しいリソース グループを作成することを指定します。
+      * **[Use Existing]\(既存の使用\)**: Azure アカウントに関連付けられているリソース グループの一覧から選択することを指定します。
 
 4. 上記のオプションをすべて指定したら、**[OK]** をクリックします。
 
@@ -123,8 +123,8 @@ Azure ストレージ アカウント、サイズ、および料金の詳細に�
 
 [Azure の Windows ストレージ アカウントのサイズ]: /azure/virtual-machines/virtual-machines-windows-sizes
 [Azure の Linux ストレージ アカウントのサイズ]: /azure/virtual-machines/virtual-machines-linux-sizes
-[Windows ストレージ アカウントの料金]: /pricing/details/virtual-machines/windows/
-[Linux ストレージ アカウントの料金]: /pricing/details/virtual-machines/linux/
+[Windows ストレージ アカウントの料金]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
+[Linux ストレージ アカウントの料金]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 
 <!-- IMG List -->
 

@@ -4,22 +4,22 @@ description: Azure Web Apps 用の Maven プラグインを使用して、Spring
 services: app-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;kevinzha
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d9f2cf5c15bb8f990c8e82fddd6455ecbf8cc02c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: bcc56a92e2fd6891cdccb92c5541787f227d828a
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892693"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991496"
 ---
 # <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps 用の Maven プラグインを使用して、コンテナー化された Spring Boot アプリを Azure にデプロイする方法
 
@@ -38,7 +38,7 @@ ms.locfileid: "48892693"
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の Java Development Kit (JDK) (バージョン 1.7 以降)。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * Apache の [Maven] 構築ツール (バージョン 3)。
 * [Git] クライアント。
 * [Docker] クライアント。
@@ -83,12 +83,12 @@ ms.locfileid: "48892693"
    mvn spring-boot:run
    ```
 
-1. Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。 たとえば、curl を使用できる場合は次のようなコマンドを実行できます。
+1. Web アプリのテストは、Web ブラウザーを使用してアプリをローカルで参照して行います。 たとえば、curl を使うことができる場合は次のようなコマンドを実行できます。
    ```shell
    curl http://localhost:8080
    ```
 
-1. 次のメッセージが表示されるはずです。**Hello Docker World**
+1. 次のメッセージが表示されます。**Hello Docker World**
 
 ## <a name="create-an-azure-service-principal"></a>Azure サービス プリンシパルを作成する
 
@@ -168,7 +168,7 @@ ms.locfileid: "48892693"
 
 3. *settings.xml* ファイルを保存して閉じます。
 
-## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>省略可能: ローカルの Docker ファイルを Docker Hub にデプロイします
+## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>省略可能:ローカルの Docker ファイルを Docker Hub にデプロイします
 
 Docker アカウントがあれば、Docker コンテナー イメージをローカルで構築して Docker Hub にプッシュできます。 そのためには、次の手順に従います。
 
@@ -196,7 +196,7 @@ Docker アカウントがあれば、Docker コンテナー イメージをロ�
       mvn clean package docker:build -DpushImage
       ```
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>省略可能: コンテナーを Azure にデプロイする前に pom.xml をカスタマイズします
+## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>省略可能:コンテナーを Azure にデプロイする前に pom.xml をカスタマイズします
 
 Spring Boot アプリケーションの `pom.xml` ファイルをテキスト エディターで開き、`azure-webapp-maven-plugin` の `<plugin>` 要素を見つけます。 この要素は次の例のようになっています。
 
@@ -310,6 +310,13 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 ## <a name="next-steps"></a>次の手順
 
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
+
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 
 * [Azure Web Apps 用の Maven プラグイン]
@@ -324,23 +331,27 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 * [Maven 用の Docker プラグイン]
 
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
+
 <!-- URL List -->
 
 [Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Java 開発者向けの Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
 [Docker]: https://www.docker.com/
 [Maven 用の Docker プラグイン]: https://github.com/spotify/docker-maven-plugin
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Azure DevOps と Java の操作]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Docker での Spring Boot の使用開始]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 [Azure Web Apps 用の Maven プラグイン]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

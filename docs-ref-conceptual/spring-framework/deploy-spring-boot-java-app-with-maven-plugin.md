@@ -4,23 +4,23 @@ description: Linux 用の Azure Web Apps の Maven プラグインを使って�
 services: app-service
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: brborges
 ms.author: robmcm
-ms.date: 10/18/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: dc3038fed6859203f36e0c4dc9a9b01e81a7c4c5
-ms.sourcegitcommit: dae7511a9d93ca7f388d5b0e05dc098e22c2f2f6
+ms.openlocfilehash: 950b360eb525b0c6b97daad0798c27ded0582b8b
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49962496"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991346"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Spring Boot JAR ファイルの Web アプリを Linux 用の Azure App Service にデプロイする
 
-この記事では、[Azure App Service Web Apps 用の Maven プラグイン](https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)を使用して、Java SE JAR としてパッケージ化された Spring Boot アプリケーションを [Linux の Azure App Services](https://docs.microsoft.com/en-us/azure/app-service/containers/) にデプロイする方法について説明します。 アプリの依存関係、ランタイム、構成を 1 つのデプロイ可能な成果物に統合する必要がある場合は、[Tomcat および WAR ファイル](/azure/app-service/containers/quickstart-java)での Java SE デプロイを選択してください。
+この記事では、[Azure App Service Web Apps 用の Maven プラグイン](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)を使用して、Java SE JAR としてパッケージ化された Spring Boot アプリケーションを [Linux の Azure App Services](/azure/app-service/containers/) にデプロイする方法について説明します。 アプリの依存関係、ランタイム、構成を 1 つのデプロイ可能な成果物に統合する必要がある場合は、[Tomcat および WAR ファイル](/azure/app-service/containers/quickstart-java)での Java SE デプロイを選択してください。
 
 
 Azure サブスクリプションがない場合は、開始する前に[無料アカウント](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)を作成してください。
@@ -30,13 +30,13 @@ Azure サブスクリプションがない場合は、開始する前に[無料�
 このチュートリアルの手順を完了するには、次をインストールして構成する必要があります。
 
 * [Azure CLI](/cli/azure/)。ローカルで、または [Azure Cloud Shell](https://shell.azure.com) を介して使用。
-* [Java Development Kit (JDK)](https://www.azul.com/downloads/azure-only/zulu/) バージョン 1.7 以降。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * Apache の [Maven](https://maven.apache.org/) バージョン 3。
 * [Git](https://git-scm.com/downloads) クライアント。
 
 ## <a name="install-and-sign-in-to-azure-cli"></a>Azure CLI のインストールとサインイン
 
-Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](https://docs.microsoft.com/cli/azure/) を使用します。
+Maven プラグインで最もシンプルかつ容易に Spring Boot アプリケーションをデプロイするには、[Azure CLI](/cli/azure/) を使用します。
 
 Azure CLI を使って、Azure アカウントにサインインします。
    
@@ -86,7 +86,7 @@ Azure CLI を使って、Azure アカウントにサインインします。
    curl http://localhost:8080
    ```
 
-1. **Greetings from Spring Boot! (Spring Boot からのあいさつ)** というメッセージが表示されます。
+1. 次のメッセージが表示されます。**Greetings from Spring Boot!**
 
 ## <a name="configure-maven-plugin-for-azure-app-service"></a>Azure App Service 用の Maven プラグインを構成する
 
@@ -159,9 +159,16 @@ Web アプリのデプロイが完了すると、[Azure portal] で Web アプ�
 
    ![Web アプリの URL の決定][AP02]
 
-前と同じ cURL コマンドを使用して、`localhost` ではなくポータルからご自身の Web アプリ URL を使って、デプロイが適切に行われたことを確認します。 **Greetings from Spring Boot! (Spring Boot からのあいさつ)** というメッセージが表示されます。 
+前と同じ cURL コマンドを使用して、`localhost` ではなくポータルからご自身の Web アプリ URL を使って、デプロイが適切に行われたことを確認します。 次のメッセージが表示されます。**Greetings from Spring Boot!** 
 
 ## <a name="next-steps"></a>次の手順
+
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
 
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 
@@ -176,18 +183,20 @@ Web アプリのデプロイが完了すると、[Azure portal] で Web アプ�
 <!-- URL List -->
 
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
+[Azure for Java Developers]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Java Developer Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Working with Azure DevOps and Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Boot Getting Started]: https://github.com/spring-guides/gs-spring-boot
 [Spring Framework]: https://spring.io/
-[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]: https://docs.microsoft.com/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[Maven Plugin for Azure Web Apps (Azure Web Apps 用の Maven プラグイン)]: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->
 

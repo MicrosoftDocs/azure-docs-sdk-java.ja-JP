@@ -4,22 +4,22 @@ description: Azure Key Vault スターターを使用して、Spring Boot Initia
 services: key-vault
 documentationcenter: java
 author: rmcmurray
-manager: routlaw
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 78b7a9a2e26168b19dc8a1d12e47456752b57ffc
-ms.sourcegitcommit: e017de4677c5bedd6ef88c8c1b6da279dc973efe
+ms.openlocfilehash: 78dadcf93bfc57ab669271495393fa9ba164c89d
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45639775"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991366"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault 用の Spring Boot Starter の使用方法
 
@@ -32,10 +32,10 @@ ms.locfileid: "45639775"
 この記事の手順を実行するには、次の前提条件を満たす必要があります。
 
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
-* [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/) バージョン 1.7 以降。
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * [Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。
 
-## <a name="create-an-app-using-the-spring-initialzr"></a>Spring Initialzr を使用したアプリの作成
+## <a name="create-an-app-using-spring-initializr"></a>Spring Initializr を使用したアプリの作成
 
 1. <https://start.spring.io/> を参照します。
 
@@ -53,7 +53,7 @@ ms.locfileid: "45639775"
 
 1. メッセージが表示されたら、ローカル コンピューター上のパスにプロジェクトをダウンロードします。
 
-## <a name="sign-into-azure-and-select-the-subscription-to-use"></a>Azure へのサインインと使用するサブスクリプションの選択
+## <a name="sign-into-azure"></a>Azure へのサインイン
 
 1. コマンド プロンプトを開きます。
 
@@ -94,7 +94,7 @@ ms.locfileid: "45639775"
    az account set -s ssssssss-ssss-ssss-ssss-ssssssssssss
    ```
 
-## <a name="create-and-configure-a-new-azure-key-vault-using-the-azure-cli"></a>Azure CLI を使用した新しい Azure Key Vault の作成と構成
+## <a name="create-a-new-azure-key-vault"></a>新しい Azure Key Vault の作成
 
 1. キー コンテナーに使用する Azure リソースのリソース グループを作成します。次に例を示します。
    ```azurecli
@@ -154,10 +154,10 @@ ms.locfileid: "45639775"
    |---|---|
    | `name` | キー コンテナーの一意の名前を指定します。 |
    | `location` | リソース グループをホストする [Azure リージョン](https://azure.microsoft.com/regions/)を指定します。 |
-   | `enabled-for-deployment` | [キー コンテナーのデプロイ オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
-   | `enabled-for-disk-encryption` | [キー コンテナーの暗号化オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
-   | `enabled-for-template-deployment` | [キー コンテナーの暗号化オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
-   | `sku` | [キー コンテナーの SKU オプション](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
+   | `enabled-for-deployment` | [キー コンテナーのデプロイ オプション](/cli/azure/keyvault)を指定します。 |
+   | `enabled-for-disk-encryption` | [キー コンテナーの暗号化オプション](/cli/azure/keyvault)を指定します。 |
+   | `enabled-for-template-deployment` | [キー コンテナーの暗号化オプション](/cli/azure/keyvault)を指定します。 |
+   | `sku` | [キー コンテナーの SKU オプション](/cli/azure/keyvault)を指定します。 |
    | `query` | 応答から取得する値を指定します。これは、このチュートリアルを完了するために必要なキー コンテナーの URI です。 |
 
    Azure CLI にキー コンテナーの URI が表示されます。この URI は後で使用します。次に例を示します。  
@@ -175,7 +175,7 @@ ms.locfileid: "45639775"
    | パラメーター | 説明 |
    |---|---|
    | `name` | 前の手順で作成したキー コンテナーの名前を指定します。 |
-   | `secret-permission` | キー コンテナーの[セキュリティ ポリシー](https://docs.microsoft.com/cli/azure/keyvault)を指定します。 |
+   | `secret-permission` | キー コンテナーの[セキュリティ ポリシー](/cli/azure/keyvault)を指定します。 |
    | `spn` | アプリケーションの登録時に取得した GUID を指定します。 |
 
    Azure CLI にセキュリティ ポリシー作成の結果が表示されます。次に例を示します。  
@@ -231,7 +231,7 @@ ms.locfileid: "45639775"
    }
    ```
 
-## <a name="configure-and-compile-your-spring-boot-application"></a>Spring Boot アプリケーションの構成とコンパイル
+## <a name="configure-and-compile-your-app"></a>アプリの構成およびコンパイル
 
 1. 以前にディレクトリにダウンロードした Spring Boot プロジェクトのパッケージ ファイルからファイルを抽出します。
 
@@ -254,7 +254,7 @@ ms.locfileid: "45639775"
 
 4. プロジェクトのメイン ソース コード ファイルに移動します (例: */src/main/java/com/wingtiptoys/secrets*)。
 
-5. テキスト エディターでアプリケーションのメイン Java ファイル (例: *SecretsApplication.java*) を開き、ファイルに次の行を追加します。
+5. テキスト エディターでアプリケーションのメイン Java ファイルを開き(例: *SecretsApplication.java*)、ファイルに次の行を追加します。
 
    ```java
    package com.wingtiptoys.secrets;
@@ -305,7 +305,18 @@ ms.locfileid: "45639775"
 
    ![Spring Boot の実行時メッセージ][build-application-02]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="summary"></a>まとめ
+
+このチュートリアルでは、**[Spring Initializr]** を使用して新しい Java Web アプリケーションを作成しました。次に、機密情報を格納する Azure Key Vault を作成し、キー コンテナーから情報を取得するようにアプリケーションを構成しました。
+
+## <a name="next-steps"></a>次の手順
+
+Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。
+
+> [!div class="nextstepaction"]
+> [Azure の Spring](/java/azure/spring-framework)
+
+### <a name="additional-resources"></a>その他のリソース
 
 Azure Key Vault の使用方法の詳細については、次の記事をご覧ください。
 
@@ -319,15 +330,15 @@ Azure での Spring Boot アプリケーションの使用の詳細について�
 
 * [Running a Spring Boot Application on a Kubernetes Cluster in the Azure Container Service (Azure Container Service での Kubernetes クラスター上の Spring Boot アプリケーションの実行)](deploy-spring-boot-java-app-on-kubernetes.md)
 
-Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
 
 <!-- URL List -->
 
 [Key Vault のドキュメント]: /azure/key-vault/
 [Azure Key Vault の概要]: /azure/key-vault/key-vault-get-started
-[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
+[Java 開発者向けの Azure]: /java/azure/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
+[Azure DevOps と Java の操作]: /azure/devops/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
