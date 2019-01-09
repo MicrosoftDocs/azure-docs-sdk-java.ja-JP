@@ -8,55 +8,55 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/19/2018
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 678d4b279cecb83c95b3bf0f6bcdf1581924aa62
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 69c0381313994796af31d5301ceadb9f6f40dcb5
+ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893503"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991556"
 ---
-# <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="936fd-103">Azure 向けの Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="936fd-103">Spring Boot Starters for Azure</span></span>
+# <a name="spring-boot-starters-for-azure"></a><span data-ttu-id="a0ab5-103">Azure 向けの Spring Boot Starter</span><span class="sxs-lookup"><span data-stu-id="a0ab5-103">Spring Boot Starters for Azure</span></span>
 
-<span data-ttu-id="936fd-104">この記事では、Java 開発者に Microsoft Azure で作業するための統合機能を提供する、[Spring Initializr] の各種 Spring Boot Starter について説明します。</span><span class="sxs-lookup"><span data-stu-id="936fd-104">This article describes the various Spring Boot Starters for the [Spring Initializr] that provide Java developers with integration features for working with Microsoft Azure.</span></span>
+<span data-ttu-id="a0ab5-104">この記事では、Java 開発者に Microsoft Azure で作業するための統合機能を提供する、[Spring Initializr] の各種 Spring Boot Starter について説明します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-104">This article describes the various Spring Boot Starters for the [Spring Initializr] that provide Java developers with integration features for working with Microsoft Azure.</span></span>
 
 ![Azure の Spring Boot Starter][spring-boot-starters]
 
-<span data-ttu-id="936fd-106">Azure では、次の Spring Boot Starter を現在利用できます。</span><span class="sxs-lookup"><span data-stu-id="936fd-106">The following Spring Boot Starters are currently available for Azure:</span></span>
+<span data-ttu-id="a0ab5-106">Azure では、次の Spring Boot Starter を現在利用できます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-106">The following Spring Boot Starters are currently available for Azure:</span></span>
 
-* <span data-ttu-id="936fd-107">**[Azure Support](#azure-support)**</span><span class="sxs-lookup"><span data-stu-id="936fd-107">**[Azure Support](#azure-support)**</span></span>
+* <span data-ttu-id="a0ab5-107">**[Azure Support](#azure-support)**</span><span class="sxs-lookup"><span data-stu-id="a0ab5-107">**[Azure Support](#azure-support)**</span></span>
 
-   <span data-ttu-id="936fd-108">Azure サービス (Service Bus、Storage、Active Directory など) の自動構成サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-108">Provides auto-configuration support for Azure Services; e.g. Service Bus, Storage, Active Directory, etc.</span></span>
+   <span data-ttu-id="a0ab5-108">Azure サービス (Service Bus、Storage、Active Directory など) の自動構成サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-108">Provides auto-configuration support for Azure Services; e.g. Service Bus, Storage, Active Directory, etc.</span></span>
 
-* <span data-ttu-id="936fd-109">**[Azure Active Directory](#azure-active-directory)**</span><span class="sxs-lookup"><span data-stu-id="936fd-109">**[Azure Active Directory](#azure-active-directory)**</span></span>
+* <span data-ttu-id="a0ab5-109">**[Azure Active Directory](#azure-active-directory)**</span><span class="sxs-lookup"><span data-stu-id="a0ab5-109">**[Azure Active Directory](#azure-active-directory)**</span></span>
 
-   <span data-ttu-id="936fd-110">認証用に Azure Active Directory と Spring Security の統合サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-110">Provides integration support for Spring Security with Azure Active Directory for authentication.</span></span>
+   <span data-ttu-id="a0ab5-110">認証用に Azure Active Directory と Spring Security の統合サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-110">Provides integration support for Spring Security with Azure Active Directory for authentication.</span></span>
 
-* <span data-ttu-id="936fd-111">**[Azure Key Vault](#azure-key-vault)**</span><span class="sxs-lookup"><span data-stu-id="936fd-111">**[Azure Key Vault](#azure-key-vault)**</span></span>
+* <span data-ttu-id="a0ab5-111">**[Azure Key Vault](#azure-key-vault)**</span><span class="sxs-lookup"><span data-stu-id="a0ab5-111">**[Azure Key Vault](#azure-key-vault)**</span></span>
 
-   <span data-ttu-id="936fd-112">Azure Key Vault のシークレットと統合するために、Spring の値アノテーション サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-112">Provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
+   <span data-ttu-id="a0ab5-112">Azure Key Vault のシークレットと統合するために、Spring の値アノテーション サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-112">Provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
 
-* <span data-ttu-id="936fd-113">**[Azure Storage](#azure-storage)**</span><span class="sxs-lookup"><span data-stu-id="936fd-113">**[Azure Storage](#azure-storage)**</span></span>
+* <span data-ttu-id="a0ab5-113">**[Azure Storage](#azure-storage)**</span><span class="sxs-lookup"><span data-stu-id="a0ab5-113">**[Azure Storage](#azure-storage)**</span></span>
 
-   <span data-ttu-id="936fd-114">Azure Storage サービスの Spring Boot サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-114">Provides Spring Boot support for Azure Storage services.</span></span>
+   <span data-ttu-id="a0ab5-114">Azure Storage サービスの Spring Boot サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-114">Provides Spring Boot support for Azure Storage services.</span></span>
 
 <a name="azure-support"></a>
-## <a name="azure-support"></a><span data-ttu-id="936fd-115">Azure Support</span><span class="sxs-lookup"><span data-stu-id="936fd-115">Azure Support</span></span>
+## <a name="azure-support"></a><span data-ttu-id="a0ab5-115">Azure Support</span><span class="sxs-lookup"><span data-stu-id="a0ab5-115">Azure Support</span></span>
 
-<span data-ttu-id="936fd-116">この Spring Boot Starter は、Azure サービス (Service Bus、Storage、Active Directory、Cosmos DB、Key Vault など) の自動構成サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-116">This Spring Boot Starter provides auto-configuration support for Azure Services; for example: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, etc.</span></span>
+<span data-ttu-id="a0ab5-116">この Spring Boot Starter は、Azure サービス (Service Bus、Storage、Active Directory、Cosmos DB、Key Vault など) の自動構成サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-116">This Spring Boot Starter provides auto-configuration support for Azure Services; for example: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault, etc.</span></span>
 
-<span data-ttu-id="936fd-117">このスターターが提供するさまざまな Azure 機能の使用方法の例については、次のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="936fd-117">For examples of how to use the various Azure features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="a0ab5-117">このスターターが提供するさまざまな Azure 機能の使用方法の例については、次のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-117">For examples of how to use the various Azure features that are provided by this starter, see the following:</span></span>
 
 * <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples>
 
-<span data-ttu-id="936fd-118">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-118">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="a0ab5-118">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-118">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="936fd-119">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-119">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="a0ab5-119">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-119">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -65,7 +65,7 @@ ms.locfileid: "48893503"
    </properties>
    ```
 
-* <span data-ttu-id="936fd-120">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="936fd-120">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="a0ab5-120">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-120">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -74,7 +74,7 @@ ms.locfileid: "48893503"
    </dependency>
    ```
 
-* <span data-ttu-id="936fd-121">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-121">The following section is added to the file:</span></span>
+* <span data-ttu-id="a0ab5-121">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-121">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -91,17 +91,17 @@ ms.locfileid: "48893503"
    ```
 
 <a name="azure-active-directory"></a>
-## <a name="azure-active-directory"></a><span data-ttu-id="936fd-122">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="936fd-122">Azure Active Directory</span></span>
+## <a name="azure-active-directory"></a><span data-ttu-id="a0ab5-122">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="a0ab5-122">Azure Active Directory</span></span>
 
-<span data-ttu-id="936fd-123">この Spring Boot Starter は、認証用に Azure Active Directory と統合するために、Spring Security の自動構成サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-123">This Spring Boot Starter provides auto-configuration support for Spring Security in order to provide integration with Azure Active Directory for authentication.</span></span>
+<span data-ttu-id="a0ab5-123">この Spring Boot Starter は、認証用に Azure Active Directory と統合するために、Spring Security の自動構成サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-123">This Spring Boot Starter provides auto-configuration support for Spring Security in order to provide integration with Azure Active Directory for authentication.</span></span>
 
-<span data-ttu-id="936fd-124">このスターターが提供する Azure Active Directory 機能の使用方法の例については、次のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="936fd-124">For examples of how to use the Azure Active Directory features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="a0ab5-124">このスターターが提供する Azure Active Directory 機能の使用方法の例については、次のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-124">For examples of how to use the Azure Active Directory features that are provided by this starter, see the following:</span></span>
 
 * <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-sample>
 
-<span data-ttu-id="936fd-125">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-125">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="a0ab5-125">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-125">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="936fd-126">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-126">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="a0ab5-126">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-126">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -110,7 +110,7 @@ ms.locfileid: "48893503"
    </properties>
    ```
 
-* <span data-ttu-id="936fd-127">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="936fd-127">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="a0ab5-127">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-127">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -119,7 +119,7 @@ ms.locfileid: "48893503"
    </dependency>
    ```
 
-* <span data-ttu-id="936fd-128">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-128">The following section is added to the file:</span></span>
+* <span data-ttu-id="a0ab5-128">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-128">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -136,17 +136,17 @@ ms.locfileid: "48893503"
    ```
 
 <a name="azure-key-vault"></a>
-## <a name="azure-key-vault"></a><span data-ttu-id="936fd-129">Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="936fd-129">Azure Key Vault</span></span>
+## <a name="azure-key-vault"></a><span data-ttu-id="a0ab5-129">Azure Key Vault</span><span class="sxs-lookup"><span data-stu-id="a0ab5-129">Azure Key Vault</span></span>
 
-<span data-ttu-id="936fd-130">この Spring Boot Starter は、Azure Key Vault のシークレットと統合するために、Spring の値アノテーション サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-130">This Spring Boot Starter provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
+<span data-ttu-id="a0ab5-130">この Spring Boot Starter は、Azure Key Vault のシークレットと統合するために、Spring の値アノテーション サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-130">This Spring Boot Starter provides Spring value annotation support for integration with Azure Key Vault Secrets.</span></span>
 
-<span data-ttu-id="936fd-131">このスターターが提供する Azure Key Vault 機能の使用方法の例については、次のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="936fd-131">For examples of how to use the Azure Key Vault features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="a0ab5-131">このスターターが提供する Azure Key Vault 機能の使用方法の例については、次のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-131">For examples of how to use the Azure Key Vault features that are provided by this starter, see the following:</span></span>
 
 * <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-keyvault-secrets-spring-boot-sample>
 
-<span data-ttu-id="936fd-132">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-132">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="a0ab5-132">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-132">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="936fd-133">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-133">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="a0ab5-133">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-133">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -155,7 +155,7 @@ ms.locfileid: "48893503"
    </properties>
    ```
 
-* <span data-ttu-id="936fd-134">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="936fd-134">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="a0ab5-134">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-134">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -164,7 +164,7 @@ ms.locfileid: "48893503"
    </dependency>
    ```
 
-* <span data-ttu-id="936fd-135">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-135">The following section is added to the file:</span></span>
+* <span data-ttu-id="a0ab5-135">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-135">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -181,19 +181,19 @@ ms.locfileid: "48893503"
    ```
 
 <a name="azure-storage"></a>
-## <a name="azure-storage"></a><span data-ttu-id="936fd-136">Azure Storage</span><span class="sxs-lookup"><span data-stu-id="936fd-136">Azure Storage</span></span>
+## <a name="azure-storage"></a><span data-ttu-id="a0ab5-136">Azure Storage</span><span class="sxs-lookup"><span data-stu-id="a0ab5-136">Azure Storage</span></span>
 
-<span data-ttu-id="936fd-137">この Spring Boot Starter は、Azure Storage サービスの Spring Boot 統合サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="936fd-137">This Spring Boot Starter provides Spring Boot integration support for Azure Storage services.</span></span>
+<span data-ttu-id="a0ab5-137">この Spring Boot Starter は、Azure Storage サービスの Spring Boot 統合サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-137">This Spring Boot Starter provides Spring Boot integration support for Azure Storage services.</span></span>
 
-<span data-ttu-id="936fd-138">このスターターが提供する Azure Storage 機能の使用方法の例については、次のページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="936fd-138">For examples of how to use the Azure Storage features that are provided by this starter, see the following:</span></span>
+<span data-ttu-id="a0ab5-138">このスターターが提供する Azure Storage 機能の使用方法の例については、次のページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-138">For examples of how to use the Azure Storage features that are provided by this starter, see the following:</span></span>
 
-* [<span data-ttu-id="936fd-139">Azure Storage 用の Spring Boot Starter の使用方法</span><span class="sxs-lookup"><span data-stu-id="936fd-139">How to use the Spring Boot Starter for Azure Storage</span></span>](configure-spring-boot-starter-java-app-with-azure-storage.md)
+* [<span data-ttu-id="a0ab5-139">Azure Storage 用の Spring Boot Starter の使用方法</span><span class="sxs-lookup"><span data-stu-id="a0ab5-139">How to use the Spring Boot Starter for Azure Storage</span></span>](configure-spring-boot-starter-java-app-with-azure-storage.md)
 
 * <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-storage-spring-boot-sample>
 
-<span data-ttu-id="936fd-140">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-140">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
+<span data-ttu-id="a0ab5-140">このスターターを Spring Boot プロジェクトに追加すると、*pom.xml* ファイルが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-140">When you add this starter to a Spring Boot project, the following changes are made to the *pom.xml* file:</span></span>
 
-* <span data-ttu-id="936fd-141">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-141">The following property is added to `<properties>` element:</span></span>
+* <span data-ttu-id="a0ab5-141">`<properties>` 要素に次のプロパティが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-141">The following property is added to `<properties>` element:</span></span>
 
    ```xml
    <properties>
@@ -202,7 +202,7 @@ ms.locfileid: "48893503"
    </properties>
    ```
 
-* <span data-ttu-id="936fd-142">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="936fd-142">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
+* <span data-ttu-id="a0ab5-142">`spring-boot-starter` の既定の依存関係が次のように置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-142">The default `spring-boot-starter` dependency is replaced with the following:</span></span>
 
    ```xml
    <dependency>
@@ -211,7 +211,7 @@ ms.locfileid: "48893503"
    </dependency>
    ```
 
-* <span data-ttu-id="936fd-143">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="936fd-143">The following section is added to the file:</span></span>
+* <span data-ttu-id="a0ab5-143">ファイルに次のセクションが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-143">The following section is added to the file:</span></span>
 
    ```xml
    <dependencyManagement>
@@ -227,23 +227,30 @@ ms.locfileid: "48893503"
    </dependencyManagement>
    ```
 
-## <a name="next-steps"></a><span data-ttu-id="936fd-144">次の手順</span><span class="sxs-lookup"><span data-stu-id="936fd-144">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a0ab5-144">次の手順</span><span class="sxs-lookup"><span data-stu-id="a0ab5-144">Next steps</span></span>
 
-<span data-ttu-id="936fd-145">Azure での [Spring Boot] アプリケーションの使用の詳細については、「[Azure の Spring]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="936fd-145">For more information about using [Spring Boot] applications on Azure, see [Spring on Azure].</span></span>
+<span data-ttu-id="a0ab5-145">Spring および Azure の詳細については、Azure ドキュメント センターで引き続き Spring に関するドキュメントをご確認ください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-145">To learn more about Spring and Azure, continue to the Spring on Azure documentation center.</span></span>
 
-<span data-ttu-id="936fd-146">Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および [Visual Studio Team Services 用の Java ツール] を参照してください。</span><span class="sxs-lookup"><span data-stu-id="936fd-146">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Java Tools for Visual Studio Team Services].</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="a0ab5-146">Azure の Spring</span><span class="sxs-lookup"><span data-stu-id="a0ab5-146">Spring on Azure</span></span>](/java/azure/spring-framework)
 
-<span data-ttu-id="936fd-147">独自の Spring Boot アプリケーションの使用開始に関するヘルプについては、「**Spring Initializr**」(https://start.spring.io/) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="936fd-147">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at https://start.spring.io/.</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="a0ab5-147">その他のリソース</span><span class="sxs-lookup"><span data-stu-id="a0ab5-147">Additional Resources</span></span>
+
+<span data-ttu-id="a0ab5-148">Azure での [Spring Boot] アプリケーションの使用の詳細については、「[Azure の Spring]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-148">For more information about using [Spring Boot] applications on Azure, see [Spring on Azure].</span></span>
+
+<span data-ttu-id="a0ab5-149">Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-149">For more information about using Azure with Java, see the [Azure for Java Developers] and the [Working with Azure DevOps and Java].</span></span>
+
+<span data-ttu-id="a0ab5-150">独自の Spring Boot アプリケーションの使用開始に関するヘルプについては、「**Spring Initializr**」(https://start.spring.io/) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0ab5-150">For help with getting started with your own Spring Boot applications, see the **Spring Initializr** at https://start.spring.io/.</span></span>
 
 <!-- URL List -->
 
-[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure/
-[Visual Studio Team Services 用の Java ツール]: https://java.visualstudio.com/
-[Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
+[Java 開発者向けの Azure]: /java/azure/
+[Azure for Java Developers]: /java/azure/
+[Azure DevOps と Java の操作]: /azure/devops/
+[Working with Azure DevOps and Java]: /azure/devops/
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Azure の Spring]: https://docs.microsoft.com/java/azure/spring-framework/
-[Spring on Azure]: https://docs.microsoft.com/java/azure/spring-framework/
+[Azure の Spring]: /java/azure/spring-framework/
+[Spring on Azure]: /java/azure/spring-framework/
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 
