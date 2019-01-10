@@ -3,23 +3,23 @@ title: IntelliJ 用のレガシ ツールキットを使用して Azure 用の H
 description: このチュートリアルでは、Azure Toolkit for IntelliJ バージョン 3.0.6 以前を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
 documentationcenter: java
-author: selvasingh
-manager: routlaw
+author: rmcmurray
+manager: mbaldwin
 editor: ''
 ms.assetid: ''
-ms.author: robmcm;asirveda
-ms.date: 02/01/2018
+ms.author: robmcm
+ms.date: 11/13/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: efc1dffa248987772827bbe7bc0caa9f10a0b4ef
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4a1d9ee79fdc4284dff65f6b026ec103b3d623ce
+ms.sourcegitcommit: 8d0c59ae7c91adbb9be3c3e6d4a3429ffe51519d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893395"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52338976"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>IntelliJ 用のレガシ ツールキットを使用して Azure 用の Hello World Web アプリを作成する
 
@@ -127,7 +127,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 
    d. **[Web Container (Web コンテナー)]** ドロップダウン メニューで、アプリケーションに適したソフトウェアを選択します。
       
-      現在、Tomcat 8、Tomcat 7 または Jetty 9 から選択することができます。 選択したソフトウェアの最新の配信が Azure で提供されます。また、これは Oracle によって作成され、Azure で提供された JDK 8 の最新の配信で実行されます。
+      現在、Tomcat 8、Tomcat 7 または Jetty 9 から選択することができます。 選択したソフトウェアの最新ディストリビューションが Azure で提供され、Azure で提供される JDK の最新ディストリビューションで実行されます。
 
    e. **[サブスクリプション]** ドロップダウン メニューで、このデプロイに使用するサブスクリプションを選択します。
 
@@ -229,7 +229,7 @@ Java Web アプリを Azure にデプロイする方法はいくつかありま�
 1. **[Azure]** ノードを展開します。
 2. **[Web Apps (Web アプリ)]** ノードを展開します。 
 3. 目的の Web App を右クリックします。
-4. コンテキスト メニューが表示されたら、**[Start (起動)]****[Stop (停止)]**、または **[Restart (再起動)]** をクリックします。 メニュー項目はコンテキストに依存します。つまり、Web アプリが実行しているときは停止操作のみ、Web アプリが現在実行されていないときは起動操作のみを行うことができます。
+4. コンテキスト メニューが表示されたら、**[Start (起動)]** **[Stop (停止)]**、または **[Restart (再起動)]** をクリックします。 メニュー項目はコンテキストに依存します。つまり、Web アプリが実行しているときは停止操作のみ、Web アプリが現在実行されていないときは起動操作のみを行うことができます。
    
    ![Web アプリの停止][18]
 
