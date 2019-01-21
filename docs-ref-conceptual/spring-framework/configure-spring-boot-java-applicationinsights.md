@@ -14,12 +14,12 @@ ms.service: Azure Monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: f69cdcc5b479e83b230f23a8a76f96284a1b785b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: bf4f7e51f3108d684503465050d69461240f17e3
+ms.sourcegitcommit: 9df42bd342ef2d25d56a6045f1ab1baf6f2c250e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991436"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54237293"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights を使用するように Spring Boot Initializer アプリを構成する
 
@@ -32,6 +32,7 @@ ms.locfileid: "53991436"
 * Azure サブスクリプション。Azure サブスクリプションをまだお持ちでない場合は、[MSDN サブスクライバーの特典]を有効にするか、または[無料の Azure アカウント]にサインアップできます。
 * サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * [Apache Maven](http://maven.apache.org/) バージョン 3.0 以降。
+* 現在、Application Insights Spring Boot スターターでは、Web Flux と Netty API は**サポートされていません**。
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr を使用してカスタム アプリケーションを作成する
 
