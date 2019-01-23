@@ -85,7 +85,7 @@ ms.locfileid: "53992402"
    git clone https://github.com/spring-guides/gs-accessing-data-mongodb.git
    ```
 
-1. サンプル プロジェクトの*&lt;プロジェクト ルート&gt; /complete/src/main* ディレクトリに *resources* ディレクトリを作成し、この *resources* ディレクトリに *application.properties* ファイルを作成します。
+1. サンプル プロジェクトの *&lt;プロジェクト ルート&gt;/complete/src/main* ディレクトリに *resources* ディレクトリを作成し、この *resources* ディレクトリに *application.properties* ファイルを作成します。
 
 1. テキスト エディターで *application.properties* ファイルを開き、このファイルに次の行を追加して、サンプルの値を前半の該当する値に置き換えます。
 
