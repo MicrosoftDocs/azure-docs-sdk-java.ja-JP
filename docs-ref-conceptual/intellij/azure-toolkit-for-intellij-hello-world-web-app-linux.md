@@ -8,18 +8,17 @@ manager: routlaw
 editor: ''
 ms.assetid: ''
 ms.author: robmcm
-ms.date: 02/01/2018
+ms.date: 12/20/2018
 ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: d281f37b027d4011ea2e3106990c5e45b69ebc88
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: fdff8dc2bd7a29473314d5c0bc99b7bcda369156
+ms.sourcegitcommit: 54e7f077d694a5b1dd7fa6c8870b7d476af9829c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892593"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55648726"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ を使用して Hello World Web アプリをクラウドの Linux コンテナーにデプロイする
 
@@ -70,25 +69,17 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 > Azure ポータルではなく Azure CLI を使用する場合は、「[Azure CLI 2.0 を使用したプライベート Docker コンテナー レジストリの作成][Create Docker Registry using Azure CLI]」の手順に従ってください。
 >
 
-1. [Azure Portal]を参照して、サインインします。
+1. [Azure ポータル]を参照して、サインインします。
 
    Azure Portal のアカウントにサインインしたら、「[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
 
-1. **[+ 新規]** のメニュー アイコン、**[コンテナー]**、**[Azure Container Registry]** の順にクリックします。
+1. **[+ リソースの作成]** のメニュー アイコンをクリックし、**[コンテナー]**、**[コンテナー レジストリ]** の順にクリックします。
    
-   ![Azure Container Registry を新しく作成する][AR01]
-
-1. Azure Container Registry テンプレートの情報ページが表示されたら、**[作成]** をクリックします。 
-
-   ![Azure Container Registry を新しく作成する][AR02]
+   ![Azure Container Registry を新しく作成する][create-container-registry-01]
 
 1. **[コンテナー レジストリの作成]** ページが表示されたら、**[レジストリ名]** と **[リソース グループ]** を入力し、**[管理ユーザー]** に対して **[有効化]** を選択した後、**[作成]** をクリックします。
 
-   ![Azure Container Registry 設定を構成する][AR03]
-
-1. コンテナー レジストリが作成されたら、Azure Portal でコンテナー レジストリに移動して、**[アクセス キー]** をクリックします。 次の手順で使用するため、ユーザー名とパスワードをメモします。
-
-   ![Azure Container Registry のアクセス キー][AR04]
+   ![Azure Container Registry 設定を構成する][create-container-registry-02]
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>Docker コンテナーに Web アプリを配置する
 
@@ -98,31 +89,37 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
    ![Docker サポートの追加][add-docker-support]
 
-1. Docker のサポートを追加したら、プロジェクト エクスプローラーでプロジェクトを右クリックし、**[Azure]** を選択し、**[Run on Web App (Linux)]\(Web App を (Linux 上で) 実行\)** をクリックします。
+1. Docker のサポートを追加したら、プロジェクト エクスプローラーでプロジェクトを右クリックし、**[Azure]** を選択して、**[Run on Web App for Containers]\(Web App for Containers で実行\)** をクリックします。
 
-   ![[Run on Web App]\(Web アプリで実行\)][run-on-web-app-linux]
+   ![[Run on Web App for Containers]\(Web App for Containers で実行\)][run-on-web-app-for-containers]
 
-1. **[Run on Web App]\(Web アプリで実行\)** ダイアログ ボックスが表示されたら、必要な情報を入力します。
+1. **[Run on Web App for Containers]\(Web App for Containers で実行\)** ダイアログ ボックスが表示されたら、必要な情報を入力します。
 
-   * **[名前]**: Azure Toolkit に表示されるフレンドリ名を指定します。 
+   * **[名前]**:Azure Toolkit に表示されるフレンドリ名を指定します。 
 
-   * **[サーバーの URL]**: この記事の前のセクションで説明されている、コンテナー レジストリの URL を指定します。通常、"*registry*.azurecr.io" の構文が使用されます。 
+   * **[コンテナー レジストリ]**:この記事の前のセクションで作成したコンテナー レジストリをドロップダウン メニューから選択します。 **[サーバーの URL]**、**[ユーザー名]**、**[パスワード]** の各フィールドには、値が自動的に入力されます。
 
-   * **[ユーザー名]** と **[パスワード]**: この記事の前のセクションで説明されている、コンテナー レジストリのアクセス キーを指定します。 
-
-   * **[Image and tag]\(イメージとタグ\)**: コンテナー イメージ名を指定します。通常、"*registry*.azurecr.io/*appname*: latest" の構文が使用されます。ここで、 
+   * **[Image and tag]\(イメージとタグ\)**:コンテナー イメージ名を指定します。通常は、"*registry*.azurecr.io/*appname*: latest" の構文が使用されます。 
       * *registry* は、この記事の前のセクションで説明されているコンテナー レジストリを指します。 
       * *appname* は、Web アプリの名前です。 
 
-   * **[Use Existing Web App]\(既存の Web アプリを使用\)** または **[Create New Web App]\(新しい Web アプリの作成\)**: 既存の Web アプリへコンテナーを展開するか、または新しい Web アプリを作成するかを指定します。 
+   * **[Use Existing Web App]\(既存の Web アプリを使用\)** または **[Create New Web App]\(新しい Web アプリの作成\)**:コンテナーを既存の Web アプリに展開するか、新しい Web アプリを作成するかを指定します。 指定した**アプリ名**を使用して Web アプリの URL が作成されます (例: *wingtiptoys.azurewebsites.net*)。
 
-   * **[リソース グループ]** で、新しいリソース グループを作成するか、既存のリソース グループを使用するかを指定します。 
+   * **リソース グループ**:既存のリソース グループを使用するか、新しいリソース グループを作成するかを指定します。 
 
-   * **[App Service プラン]** では、新しいリソース グループを作成するか、既存のリソース グループを使用するかを指定します。 
+   * **[App Service プラン]**:既存の App Service プランを使用するか、新しい App Service プランを作成するかを指定します。 
 
-1. 上記の設定の構成が完了したら、**[実行]** をクリックします。
+   ![[Run on Web App for Containers]\(Web App for Containers で実行\)][run-on-web-app-linux]
 
-   ![Create Web App][create-web-app]
+1. 上記の設定の構成が完了したら、**[実行]** をクリックします。 Web アプリが正常にデプロイされると、**[実行]** ウィンドウに状態が表示されます。
+
+   ![正常にデプロイされた Web アプリ][successfully-deployed]
+
+1. Web アプリが発行されたら、以前に指定した Web アプリの URL (例: *wingtiptoys.azurewebsites.net*) を参照できます。
+
+   ![Web アプリの参照][browsing-to-web-app]
+
+## <a name="optional-modify-your-web-app-publish-settings"></a>省略可能:Web アプリの発行設定を変更する
 
 1. Web アプリを発行すると、使用した設定が既定の設定として保存されます。ツール バーの緑色の矢印アイコンをクリックすると、Azure でアプリケーションを実行できます。 設定を変更するには、Web アプリのドロップダウン メニューをクリックし、**[構成の編集]** をクリックします。
 
@@ -140,7 +137,7 @@ Docker の他のリソースについては、公式の [Docker の Web サイ�
 
 <!-- URL List -->
 
-[Azure Portal]: https://portal.azure.com/
+[Azure ポータル]: https://portal.azure.com/
 [Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
@@ -151,20 +148,18 @@ Docker の他のリソースについては、公式の [Docker の Web サイ�
 
 <!-- IMG List -->
 
-[AR01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR01.png
-[AR02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR02.png
-[AR03]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR03.png
-[AR04]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/AR04.png
-
+[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[browsing-to-web-app]:  media/azure-toolkit-for-intellij-hello-world-web-app-linux/browsing-to-web-app.png
+[create-container-registry-01]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-01.png
+[create-container-registry-02]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-container-registry-02.png
 [docker-settings-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/docker-settings-menu.png
+[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
+[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
 [file-new-project]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/file-new-project.png
-[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [groupid-and-artifactid]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/groupid-and-artifactid.png
+[maven-archetype-webapp]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-archetype-webapp.png
 [maven-options]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/maven-options.png
 [project-name]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/project-name.png
-[add-docker-support]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/add-docker-support.png
+[run-on-web-app-for-containers]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-for-containers.png
 [run-on-web-app-linux]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/run-on-web-app-linux.png
-[create-web-app]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/create-web-app.png
-[edit-configuration-menu]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-menu.png
-[edit-configuration-dialog]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/edit-configuration-dialog.png
 [successfully-deployed]: media/azure-toolkit-for-intellij-hello-world-web-app-linux/successfully-deployed.png
