@@ -11,28 +11,28 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: fba48dfa04f223dce72a0ee54da967565ebd3687
-ms.sourcegitcommit: 67b3542b174e8448f9ca3e7c9506f1216ea6a8fe
+ms.openlocfilehash: ee54e92ee0084cd2fc5e827764cfe094434ea784
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285668"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335375"
 ---
-# <a name="azure-storage-libraries-for-java"></a><span data-ttu-id="107c9-103">Azure Storage Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="107c9-103">Azure Storage libraries for Java</span></span>
+# <a name="azure-storage-libraries-for-java"></a><span data-ttu-id="41f70-103">Azure Storage Libraries for Java</span><span class="sxs-lookup"><span data-stu-id="41f70-103">Azure Storage libraries for Java</span></span>
 
-## <a name="overview"></a><span data-ttu-id="107c9-104">概要</span><span class="sxs-lookup"><span data-stu-id="107c9-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="41f70-104">概要</span><span class="sxs-lookup"><span data-stu-id="41f70-104">Overview</span></span>
 
-<span data-ttu-id="107c9-105">[Azure Storage](/azure/storage/storage-introduction) を使用して、Java アプリケーションから BLOB (オブジェクト) データ、ファイル、メッセージの読み取りと書き込みを行います。</span><span class="sxs-lookup"><span data-stu-id="107c9-105">Read and write blob (object) data, files, and messages from your Java applications with [Azure Storage](/azure/storage/storage-introduction).</span></span>
+<span data-ttu-id="41f70-105">[Azure Storage](/azure/storage/storage-introduction) を使用して、Java アプリケーションから BLOB (オブジェクト) データ、ファイル、メッセージの読み取りと書き込みを行います。</span><span class="sxs-lookup"><span data-stu-id="41f70-105">Read and write blob (object) data, files, and messages from your Java applications with [Azure Storage](/azure/storage/storage-introduction).</span></span>
 
-<span data-ttu-id="107c9-106">Azure Storage の概要については、「[Java から BLOB ストレージを使用する方法](/azure/storage/blobs/storage-quickstart-blobs-java-v10)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="107c9-106">To get started with Azure Storage, see [How to use Blob storage from Java](/azure/storage/blobs/storage-quickstart-blobs-java-v10).</span></span>
+<span data-ttu-id="41f70-106">Azure Storage の概要については、「[Java から BLOB ストレージを使用する方法](/azure/storage/blobs/storage-quickstart-blobs-java-v10)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="41f70-106">To get started with Azure Storage, see [How to use Blob storage from Java](/azure/storage/blobs/storage-quickstart-blobs-java-v10).</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="107c9-107">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="107c9-107">Client library</span></span>
+## <a name="client-library"></a><span data-ttu-id="41f70-107">クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="41f70-107">Client library</span></span>
 
-<span data-ttu-id="107c9-108">Azure Active Directory から共有キー、SAS トークン、または OAuth トークンを使用して、Azure Storage サービスによる承認を行います。</span><span class="sxs-lookup"><span data-stu-id="107c9-108">Use a Shared Key, SAS token or an OAuth token from the Azure Active Directory to authorize with Azure Storage services.</span></span> <span data-ttu-id="107c9-109">次に、クライアント ライブラリのクラスとメソッドを使用して、Blob Storage、File Storage、または Queue Storage を操作します。</span><span class="sxs-lookup"><span data-stu-id="107c9-109">Then use the client libraries' classes and methods to work with blob, file, or queue storage.</span></span> 
+<span data-ttu-id="41f70-108">Azure Active Directory から共有キー、SAS トークン、または OAuth トークンを使用して、Azure Storage サービスによる承認を行います。</span><span class="sxs-lookup"><span data-stu-id="41f70-108">Use a Shared Key, SAS token or an OAuth token from the Azure Active Directory to authorize with Azure Storage services.</span></span> <span data-ttu-id="41f70-109">次に、クライアント ライブラリのクラスとメソッドを使用して、Blob Storage、File Storage、または Queue Storage を操作します。</span><span class="sxs-lookup"><span data-stu-id="41f70-109">Then use the client libraries' classes and methods to work with blob, file, or queue storage.</span></span> 
 
-<span data-ttu-id="107c9-110">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="107c9-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
+<span data-ttu-id="41f70-110">プロジェクトでクライアント ライブラリを使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="41f70-110">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the client library in your project.</span></span>   
 
-<span data-ttu-id="107c9-111">**Blob service の依存関係**</span><span class="sxs-lookup"><span data-stu-id="107c9-111">**Dependency for Blob service**:</span></span>
+<span data-ttu-id="41f70-111">**Blob service の依存関係**</span><span class="sxs-lookup"><span data-stu-id="41f70-111">**Dependency for Blob service**:</span></span>
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
@@ -41,7 +41,7 @@ ms.locfileid: "51285668"
 </dependency>
 ```
 
-<span data-ttu-id="107c9-112">**Queue サービスの依存関係**</span><span class="sxs-lookup"><span data-stu-id="107c9-112">**Dependency for Queue service**:</span></span>
+<span data-ttu-id="41f70-112">**Queue サービスの依存関係**</span><span class="sxs-lookup"><span data-stu-id="41f70-112">**Dependency for Queue service**:</span></span>
 ```XML
 <dependency>
     <groupId>com.microsoft.azure</groupId>
@@ -51,9 +51,9 @@ ms.locfileid: "51285668"
 ```
 
 
-### <a name="example"></a><span data-ttu-id="107c9-113">例</span><span class="sxs-lookup"><span data-stu-id="107c9-113">Example</span></span>
+### <a name="example"></a><span data-ttu-id="41f70-113">例</span><span class="sxs-lookup"><span data-stu-id="41f70-113">Example</span></span>
 
-<span data-ttu-id="107c9-114">ローカル ファイル システムから、既存の Azure Storage Blob コンテナー内の新しい BLOB に画像ファイルを書き込みます。</span><span class="sxs-lookup"><span data-stu-id="107c9-114">Write an image file from the local file system into a new blob in an existing Azure Storage blob container.</span></span>
+<span data-ttu-id="41f70-114">ローカル ファイル システムから、既存の Azure Storage Blob コンテナー内の新しい BLOB に画像ファイルを書き込みます。</span><span class="sxs-lookup"><span data-stu-id="41f70-114">Write an image file from the local file system into a new blob in an existing Azure Storage blob container.</span></span>
 
 
 ```java
@@ -75,13 +75,13 @@ TransferManager.uploadFileToBlockBlob(fileChannel, blobURL,0, null).blockingGet(
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="107c9-115">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="107c9-115">Explore the Client APIs</span></span>](/java/api/overview/azure/storage/client)
+> [<span data-ttu-id="41f70-115">クライアント API を探す</span><span class="sxs-lookup"><span data-stu-id="41f70-115">Explore the Client APIs</span></span>](/java/api/overview/azure/storage/client)
 
-## <a name="management-api"></a><span data-ttu-id="107c9-116">管理 API</span><span class="sxs-lookup"><span data-stu-id="107c9-116">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="41f70-116">管理 API</span><span class="sxs-lookup"><span data-stu-id="41f70-116">Management API</span></span>
 
-<span data-ttu-id="107c9-117">Azure ストレージ アカウントと接続キーの作成と管理は、Management API を使って行います。</span><span class="sxs-lookup"><span data-stu-id="107c9-117">Crete and manage Azure Storage accounts and connection keys with the management API.</span></span>
+<span data-ttu-id="41f70-117">Azure Storage アカウントと接続キーの作成と管理は、Management API を使って行います。</span><span class="sxs-lookup"><span data-stu-id="41f70-117">Create and manage Azure Storage accounts and connection keys with the management API.</span></span>
 
-<span data-ttu-id="107c9-118">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="107c9-118">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
+<span data-ttu-id="41f70-118">プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。</span><span class="sxs-lookup"><span data-stu-id="41f70-118">[Add a dependency](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies) to your Maven `pom.xml` file to use the management API in your project.</span></span>  
 
 ```XML
 <dependency>
@@ -91,9 +91,9 @@ TransferManager.uploadFileToBlockBlob(fileChannel, blobURL,0, null).blockingGet(
 </dependency
 ```   
 
-### <a name="example"></a><span data-ttu-id="107c9-119">例</span><span class="sxs-lookup"><span data-stu-id="107c9-119">Example</span></span>
+### <a name="example"></a><span data-ttu-id="41f70-119">例</span><span class="sxs-lookup"><span data-stu-id="41f70-119">Example</span></span>
 
-<span data-ttu-id="107c9-120">自分のサブスクリプションに新しい Azure ストレージ アカウントを作成して、そのアクセス キーを取得します。</span><span class="sxs-lookup"><span data-stu-id="107c9-120">Create a new Azure Storage account in your subscription and retrieve its access keys.</span></span>
+<span data-ttu-id="41f70-120">自分のサブスクリプションに新しい Azure ストレージ アカウントを作成して、そのアクセス キーを取得します。</span><span class="sxs-lookup"><span data-stu-id="41f70-120">Create a new Azure Storage account in your subscription and retrieve its access keys.</span></span>
 
 ```java
 StorageAccount storageAccount = azure.storageAccounts().define(storageAccountName)
@@ -109,12 +109,12 @@ for(StorageAccountKey key : storageAccountKeys)    {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="107c9-121">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="107c9-121">Explore the Management APIs</span></span>](/java/api/overview/azure/storage/management)
+> [<span data-ttu-id="41f70-121">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="41f70-121">Explore the Management APIs</span></span>](/java/api/overview/azure/storage/management)
 
 
-## <a name="samples"></a><span data-ttu-id="107c9-122">サンプル</span><span class="sxs-lookup"><span data-stu-id="107c9-122">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="41f70-122">サンプル</span><span class="sxs-lookup"><span data-stu-id="41f70-122">Samples</span></span>
 
-<span data-ttu-id="107c9-123">[Azure Storage SDK for Java](https://github.com/azure/azure-storage-java)
-[Blob Storage に対するオブジェクトの読み取りと書き込み](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart) </span><span class="sxs-lookup"><span data-stu-id="107c9-123">[Azure Storage SDK for Java](https://github.com/azure/azure-storage-java)
+<span data-ttu-id="41f70-123">[Azure Storage SDK for Java](https://github.com/azure/azure-storage-java)
+[Blob Storage に対するオブジェクトの読み取りと書き込み](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart) </span><span class="sxs-lookup"><span data-stu-id="41f70-123">[Azure Storage SDK for Java](https://github.com/azure/azure-storage-java)
 [Read and write objects to blob storage](https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart) </span></span>  
-[<span data-ttu-id="107c9-124">キューを使ったメッセージの読み取りと書き込み</span><span class="sxs-lookup"><span data-stu-id="107c9-124">Read and write messages with queues</span></span>](https://github.com/Azure-Samples/storage-queue-java-getting-started)   
+[<span data-ttu-id="41f70-124">キューを使ったメッセージの読み取りと書き込み</span><span class="sxs-lookup"><span data-stu-id="41f70-124">Read and write messages with queues</span></span>](https://github.com/Azure-Samples/storage-queue-java-getting-started)   
