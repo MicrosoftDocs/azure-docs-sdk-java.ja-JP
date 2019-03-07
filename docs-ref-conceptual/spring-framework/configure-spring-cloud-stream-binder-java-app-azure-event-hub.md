@@ -14,12 +14,12 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 98b3dc1243bf293ede121eafd51b041649d165db
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 9223cc425fcef28369431fa1c7a7b93062a210c2
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335405"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hubs を使用する Spring Cloud Stream Binder アプリケーションを作成する方法
 
@@ -143,12 +143,10 @@ ms.locfileid: "53991426"
    ```xml
    <dependency>
       <groupId>com.microsoft.azure</groupId>
-      <artifactId>spring-cloud-azure-eventhub-stream-binder</artifactId>
-      <version>1.0.0.M2</version>
+      <artifactId>spring-cloud-azure-eventhubs-stream-binder</artifactId>
+      <version>1.1.0.RC2</version>
    </dependency>
    ```
-
-   ![pom.xml ファイルを編集する][SI03]
 
 1. *pom.xml* ファイルを保存して閉じます。
 
@@ -197,6 +195,7 @@ ms.locfileid: "53991426"
      }
    ]
    ```
+   
 1. Azure で使用するサブスクリプションの GUID を指定します。次に例を示します。
 
    ```azurecli
@@ -410,13 +409,14 @@ Azure による Event Hub Stream Binder のサポートの詳細については�
 
 * [Azure Event Hubs で Apache Kafka 用 Spring Boot Starter を使用する方法](configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md)
 
-Java での Azure の使用の詳細については、「Java 開発者向けの Azure」および「[Azure DevOps と Java の操作]」を参照してください。
+Java での Azure の使用の詳細については、「[Java 開発者向けの Azure]」および「[Azure DevOps と Java の操作]」を参照してください。
 
 **[Spring Framework]** は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。 このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。 Spring Boot を使い始めた開発者を支援するために、<https://github.com/spring-guides/> では、サンプルの Spring Boot パッケージがいくつか用意されています。 基本的な Spring Boot プロジェクトの一覧から選択するだけでなく、**[Spring Initializr]** は、開発者がカスタム Spring Boot アプリケーションの作成を開始できるように支援します。
 
 <!-- URL List -->
 
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
+[Java 開発者向けの Azure]: https://docs.microsoft.com/java/azure/
 [Azure DevOps と Java の操作]: /azure/devops/
 [MSDN サブスクライバーの特典]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/

@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 89a7a6900e5e0a544b4dc3fde960f62aeab6ebef
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 87bbf46fe5b22c4a147d6010d3813334caa774fb
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991476"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335415"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service で Spring Boot アプリケーションを Kubernetes クラスターにデプロイする
 
@@ -177,7 +177,7 @@ ms.locfileid: "53991476"
 1. Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次のコマンドを実行して Docker コンテナーを作成し、そのイメージをレジストリにプッシュします。
 
    ```
-   mvn package docker:build -DpushImage
+   mvn package dockerfile:build -DpushImage
    ```
 
 > [!NOTE]
@@ -243,7 +243,7 @@ ms.locfileid: "53991476"
 
    c. ログイン サーバーとコンテナー イメージを **[Container image]\(コンテナー イメージ\)** に入力します (例: "*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*")。
 
-   d. **[Service]\(サービス)** で **[External]\(外部)** を選択します。
+   d.[Tableau Server return URL]: Tableau Server ユーザーがアクセスする URL。 **[Service]\(サービス)** で **[External]\(外部)** を選択します。
 
    e. 外部ポートと内部ポートを **[Port]\(ポート)** テキスト ボックスと **[Target port]\(ターゲット ポート\)** テキスト ボックスに指定します。
 
@@ -258,7 +258,7 @@ ms.locfileid: "53991476"
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 

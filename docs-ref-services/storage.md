@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: storage
-ms.openlocfilehash: fba48dfa04f223dce72a0ee54da967565ebd3687
-ms.sourcegitcommit: 67b3542b174e8448f9ca3e7c9506f1216ea6a8fe
+ms.openlocfilehash: ee54e92ee0084cd2fc5e827764cfe094434ea784
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285668"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335375"
 ---
 # <a name="azure-storage-libraries-for-java"></a>Azure Storage Libraries for Java
 
@@ -79,7 +79,7 @@ TransferManager.uploadFileToBlockBlob(fileChannel, blobURL,0, null).blockingGet(
 
 ## <a name="management-api"></a>管理 API
 
-Azure ストレージ アカウントと接続キーの作成と管理は、Management API を使って行います。
+Azure Storage アカウントと接続キーの作成と管理は、Management API を使って行います。
 
 プロジェクトで Management API を使用するには、Maven の `pom.xml` ファイルに[依存関係を追加](https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies)します。  
 
