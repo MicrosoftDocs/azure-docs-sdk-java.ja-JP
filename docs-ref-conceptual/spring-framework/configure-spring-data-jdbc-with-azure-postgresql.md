@@ -13,18 +13,18 @@ ms.devlang: java
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 371a8c686f7ad045443328d02a32a4e65af55981
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: 29f3c957dd0ccd754eedef12e3fc01c3484dddf3
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53992338"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335395"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Azure PostgreSQL で Spring Data JDBC を使用する方法
 
 ## <a name="overview"></a>概要
 
-この記事では、[Spring Data] を使用して、[Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) を使って Azure [PostgreSQL]https://www.postgresql.org/ データベース内の情報を格納および取得するサンプル アプリケーションを作成する方法を説明します。
+この記事では、[Spring Data] を使用して、[Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) を使って Azure [PostgreSQL](https://www.postgresql.org/) データベース内の情報を格納および取得するサンプル アプリケーションを作成する方法を説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -55,11 +55,11 @@ ms.locfileid: "53992338"
 
    - **サーバー名**: PostgreSQL サーバー用に一意の名前を選択します。この名前は、*wingtiptoyspostgresql.postgres.database.azure.com* のような完全修飾ドメイン名の作成に使用されます。
    - **サブスクリプション**:使用する Azure サブスクリプションを指定します。
-   - **[リソース グループ]**: 新しいリソース グループを作成するのか、既存のリソース グループを選択するのかを指定します。
+   - **[リソース グループ]**:新しいリソース グループを作成するのか、既存のリソース グループを選択するのかを指定します。
    - **ソースの選択**:このチュートリアルでは、`Blank` を選択して新しいデータベースを作成します。
    - **サーバー管理者ログイン**:データベース管理者名を指定します。
    - **[パスワード]** と **[パスワードの確認]**:データベース管理者のパスワードを指定します。
-   - **場所**: データベースに最も近い地理的リージョンを指定します。
+   - **[場所]**:データベースに最も近い地理的リージョンを指定します。
    - **バージョン**:最新のデータベース バージョンを指定します。
    - **価格レベル**:このチュートリアルでは、最も安い価格レベルを指定します。
 

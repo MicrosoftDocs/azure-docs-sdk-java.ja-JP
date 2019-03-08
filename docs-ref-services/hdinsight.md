@@ -7,13 +7,13 @@ ms.reviewer: jasonh
 ms.service: hdinsight
 ms.topic: reference
 ms.devlang: java
-ms.date: 9/20/2018
-ms.openlocfilehash: 9fd35d12e0aa864b5d23cf03547f7b76dc74c677
-ms.sourcegitcommit: 4d52e47073fb0b3ac40a2689daea186bad5b1ef5
+ms.date: 11/21/2018
+ms.openlocfilehash: 3827b5744a5d08c53cbbff1db29eca34194c1625
+ms.sourcegitcommit: 1c1412ad5d8960975c3fc7fd3d1948152ef651ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49799898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335435"
 ---
 # <a name="hdinsight-java-management-sdk-preview"></a>HDInsight Java Management SDK (プレビュー)
 
@@ -24,7 +24,7 @@ HDInsight Java SDK に用意されているクラスとメソッドを使用す�
 ## <a name="prerequisites"></a>前提条件
 
 * Azure アカウント。 所有していない場合は、[無料試用版を入手](https://azure.microsoft.com/free/)してください。
-* [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* サポートされている Java Development Kit (JDK)。 Azure での開発時に使用可能な JDK の詳細については、<https://aka.ms/azure-jdks> を参照してください。
 * [Maven](https://maven.apache.org/install.html)
 
 ## <a name="sdk-installation"></a>SDK のインストール
@@ -47,7 +47,6 @@ HDInsight Java SDK は、[こちら](https://mvnrepository.com/artifact/com.micr
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-client-authentication</artifactId>
     <version>1.6.2</version>
-    <scope>test</scope>
   </dependency>
   ```
 
@@ -65,7 +64,7 @@ HDInsight Java SDK は、[こちら](https://mvnrepository.com/artifact/com.micr
 SDK は最初に Azure サブスクリプションで認証する必要があります。  以下の例に従って、サービス プリンシパルを作成し、これを使用して認証します。 その後、`HDInsightManagementClientImpl` のインスタンスが生成されます。これには、管理操作の実行に使用できるメソッドが多数含まれています (以下のセクションで説明します)。
 
 > [!NOTE]
-> 認証方法は以下の例の他にもあり、そちらの方がご自身のニーズに適している可能性もあります。 すべての方法については、[Java 用 Azure 管理ライブラリを使った認証](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)に関するページをご覧ください
+> 認証方法は以下の例の他にもあり、そちらの方がご自身のニーズに適している可能性もあります。 すべてのメソッドの概要については、[Azure Management Libraries for Java を使って認証する](https://docs.microsoft.com/en-us/java/azure/java-sdk-azure-authenticate?view=azure-java-stable)
 
 ### <a name="authentication-example-using-a-service-principal"></a>サービス プリンシパルを使用した認証の例
 
@@ -150,7 +149,8 @@ public class Main {
                 CLIENT_SECRET,
                 AzureEnvironment.AZURE);
 
-        HDInsightManagementClientImpl client = new HDInsightManagementClientImpl(credentials);
+        HDInsightManagementClientImpl client = new HDInsightManagementClientImpl(credentials)
+                .withSubscriptionId(SUBSCRIPTION_ID);
 ```
 
 
@@ -355,7 +355,7 @@ HDInsight 管理 SDK を使用して、Operations Management Suite (OMS) でご�
 ### <a name="enable-oms-monitoring"></a>OMS 監視の有効化
 
 > [!NOTE]
-> OMS の監視を有効にするには、既存の Log Analytics ワークスペースが必要です。 まだ作成していない場合、その方法については、「[Azure ポータルで Log Analytics ワークスペースを作成する](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
+> OMS の監視を有効にするには、既存の Log Analytics ワークスペースが必要です。 まだ作成していない場合、その方法については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
 ご自身のクラスターで OMS 監視を有効にするには:
 
@@ -383,7 +383,7 @@ client.extensions().disableMonitoring("<Resource Group Name>", "<Cluster Name>")
 
 HDInsight には、クラスターをカスタマイズするためにカスタム スクリプトを呼び出すスクリプト アクションという構成方法があります。
 > [!NOTE]
-> スクリプト アクションを使用する方法の詳細については、「[スクリプト アクションを使用して Linux ベースの HDInsight クラスターをカスタマイズする](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)」を参照してください
+> スクリプト アクションの使用方法の詳細については、「[スクリプト アクションを使用して Linux ベースの HDInsight クラスターをカスタマイズする](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)」を参照してください
 
 ### <a name="execute-script-actions"></a>スクリプト アクションの実行
 
