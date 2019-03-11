@@ -258,7 +258,7 @@ ms.locfileid: "57335415"
 
    ![Kubernetes サービス][KB06]
 
-1. **[External endpoints]\(外部エンドポイント)\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
+1. **[External endpoints]\(外部エンドポイント)\\** のリンクをクリックすると、Spring Boot アプリケーションが Azure で実行されていることを確認できます。
 
    ![Kubernetes サービス][KB07]
 
