@@ -1,7 +1,7 @@
 ---
-title: Azure Container Service で Spring Boot Web アプリを Linux にデプロイする
+title: コンテナー用 Azure App Service で Spring Boot Web アプリをデプロイする
 description: このチュートリアルでは、Microsoft Azure の Linux Web アプリとして Spring Boot アプリケーションをデプロイする方法について説明します。
-services: container-service
+services: azure app service
 documentationcenter: java
 author: rmcmurray
 manager: mbaldwin
@@ -10,21 +10,21 @@ ms.assetid: ''
 ms.author: robmcm
 ms.date: 12/19/2018
 ms.devlang: java
-ms.service: container-service
+ms.service: azure app service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: aa8fa6d15d868e55b252483993d001d19746244b
-ms.sourcegitcommit: f0f140b0862ca5338b1b7e5c33cec3e58a70b8fd
+ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991506"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489660"
 ---
-# <a name="deploy-a-spring-boot-application-on-linux-in-the-azure-container-service"></a>Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする
+# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>コンテナー用 Azure App Service で Spring Boot アプリケーションをデプロイする
 
-このチュートリアルでは、[Docker] を使用して [Spring Boot] アプリケーションを開発し、[Azure Container Service (AKS)] の Linux ホストにデプロイする手順について説明します。
+このチュートリアルでは、[Docker] を使用してお使いの [Spring Boot] アプリケーションをコンテナー化し、ご自身の Docker イメージを [Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) の Linux ホストにデプロイする手順について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -98,7 +98,7 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
 1. [Azure Portal]を参照して、サインインします。
 
-   Azure Portal のアカウントにサインインしたら、「[Azure ポータルを使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
+   Azure Portal のアカウントにサインインしたら、「[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
 
 1. **[+ 新規]** のメニュー アイコン、**[コンテナー]**、**[Azure Container Registry]** の順にクリックします。
    
@@ -291,7 +291,7 @@ Azure でカスタム Docker イメージを使用する方法に関するその
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Java 開発者向けの Azure]: /java/azure/
 [Azure Portal]: https://portal.azure.com/
-[Azure ポータルを使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
+[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]: /azure/container-registry/container-registry-get-started-portal
 [Azure Web App on Linux 向けのカスタム Docker イメージを使用する]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
