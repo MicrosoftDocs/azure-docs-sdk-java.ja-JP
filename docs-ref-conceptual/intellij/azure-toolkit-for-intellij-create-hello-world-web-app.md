@@ -14,12 +14,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: cc68e16a6940a1f0f2b08f0b63c90c58ec6dbc4e
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 7055751d1b1c37e019ef4ed59f1710ce6905e9f8
+ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892863"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58489640"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>IntelliJ を使用して Azure 用の Hello World Web アプリを作成する
 
@@ -91,7 +91,7 @@ ms.locfileid: "48892863"
 
       ![[Run on Web App]\(Web アプリで実行\) ダイアログ ボックス][run-on-web-app-dialog]
 
-   * **[Create New Web App]\(新しい Web アプリを作成する\)** をクリックする。 新しい Web アプリを作成する場合は、Web アプリに必要な情報を指定し、**[Run]\(実行\)** をクリックします。
+   * WebApp ドロップダウンの **[新しい Web アプリを作成する]** をクリックします。 新しい Web アプリを作成する場合は、ご自身の Web アプリに必要な情報を指定し、Web アプリの作成後に **[実行]** をクリックします。
 
       ![新しい Web アプリの作成][create-new-web-app-dialog]
 
