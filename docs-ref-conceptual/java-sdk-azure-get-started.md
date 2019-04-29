@@ -19,34 +19,34 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2018
 ms.locfileid: "44040260"
 ---
-# <a name="get-started-with-cloud-development-using-java-on-azure"></a><span data-ttu-id="73b28-104">Azure での Java を使用したクラウド開発の開始</span><span class="sxs-lookup"><span data-stu-id="73b28-104">Get started with cloud development using Java on Azure</span></span>
+# <a name="get-started-with-cloud-development-using-java-on-azure"></a><span data-ttu-id="3facd-104">Azure での Java を使用したクラウド開発の開始</span><span class="sxs-lookup"><span data-stu-id="3facd-104">Get started with cloud development using Java on Azure</span></span>
 
-<span data-ttu-id="73b28-105">このガイドでは、Java での Azure 開発用の開発環境を設定する手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="73b28-105">This guide walks you through setting up a development environment for Azure development in Java.</span></span> <span data-ttu-id="73b28-106">Azure リソースをいくつか作成し、それらのリソースに接続して基本的なタスク (ファイルのアップロードや Web アプリケーションのデプロイなど) を実行します。</span><span class="sxs-lookup"><span data-stu-id="73b28-106">You'll then create some Azure resources and connect them to to perform some basic tasks, like uploading a file or deploying a web application.</span></span> <span data-ttu-id="73b28-107">作業が完了すると、独自の Java アプリケーションで Azure サービスの使用を開始できるようになります。</span><span class="sxs-lookup"><span data-stu-id="73b28-107">When you're done, you'll be ready to start using Azure services in your own Java applications.</span></span>
+<span data-ttu-id="3facd-105">このガイドでは、Java での Azure 開発用の開発環境を設定する手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="3facd-105">This guide walks you through setting up a development environment for Azure development in Java.</span></span> <span data-ttu-id="3facd-106">Azure リソースをいくつか作成し、それらのリソースに接続して基本的なタスク (ファイルのアップロードや Web アプリケーションのデプロイなど) を実行します。</span><span class="sxs-lookup"><span data-stu-id="3facd-106">You'll then create some Azure resources and connect them to to perform some basic tasks, like uploading a file or deploying a web application.</span></span> <span data-ttu-id="3facd-107">作業が完了すると、独自の Java アプリケーションで Azure サービスの使用を開始できるようになります。</span><span class="sxs-lookup"><span data-stu-id="3facd-107">When you're done, you'll be ready to start using Azure services in your own Java applications.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="73b28-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="73b28-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="3facd-108">前提条件</span><span class="sxs-lookup"><span data-stu-id="3facd-108">Prerequisites</span></span>
 
-- <span data-ttu-id="73b28-109">Azure アカウント。</span><span class="sxs-lookup"><span data-stu-id="73b28-109">An Azure account.</span></span> <span data-ttu-id="73b28-110">所有していない場合は、[無料試用版を入手](https://azure.microsoft.com/free/)してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-110">If you don't have one, [get a free trial](https://azure.microsoft.com/free/)</span></span>
-- <span data-ttu-id="73b28-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) または [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="73b28-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
-- <span data-ttu-id="73b28-112">[Java 8](https://www.azul.com/downloads/zulu/) (Azure Cloud Shell に付属)</span><span class="sxs-lookup"><span data-stu-id="73b28-112">[Java 8](https://www.azul.com/downloads/zulu/) (included in Azure Cloud Shell)</span></span>
-- <span data-ttu-id="73b28-113">[Maven 3](http://maven.apache.org/download.cgi) (Azure Cloud Shell に付属)</span><span class="sxs-lookup"><span data-stu-id="73b28-113">[Maven 3](http://maven.apache.org/download.cgi) (included in Azure Cloud Shell)</span></span>
+- <span data-ttu-id="3facd-109">Azure アカウント。</span><span class="sxs-lookup"><span data-stu-id="3facd-109">An Azure account.</span></span> <span data-ttu-id="3facd-110">所有していない場合は、[無料試用版を入手](https://azure.microsoft.com/free/)してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-110">If you don't have one, [get a free trial](https://azure.microsoft.com/free/)</span></span>
+- <span data-ttu-id="3facd-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) または [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。</span><span class="sxs-lookup"><span data-stu-id="3facd-111">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- <span data-ttu-id="3facd-112">[Java 8](https://www.azul.com/downloads/zulu/) (Azure Cloud Shell に付属)</span><span class="sxs-lookup"><span data-stu-id="3facd-112">[Java 8](https://www.azul.com/downloads/zulu/) (included in Azure Cloud Shell)</span></span>
+- <span data-ttu-id="3facd-113">[Maven 3](http://maven.apache.org/download.cgi) (Azure Cloud Shell に付属)</span><span class="sxs-lookup"><span data-stu-id="3facd-113">[Maven 3](http://maven.apache.org/download.cgi) (included in Azure Cloud Shell)</span></span>
 
-## <a name="set-up-authentication"></a><span data-ttu-id="73b28-114">認証の設定</span><span class="sxs-lookup"><span data-stu-id="73b28-114">Set up authentication</span></span>
+## <a name="set-up-authentication"></a><span data-ttu-id="3facd-114">認証の設定</span><span class="sxs-lookup"><span data-stu-id="3facd-114">Set up authentication</span></span>
 
-<span data-ttu-id="73b28-115">このチュートリアルのサンプル コードを実行する Java アプリケーションには、Azure サブスクリプションの読み取りと作成のアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="73b28-115">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="73b28-116">サービス プリンシパルを作成し、その資格情報で動作するようにアプリケーションを構成してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-116">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="73b28-117">サービス プリンシパルによって、自分の ID に関連付けられた非対話型のアカウントを作成し、アプリの実行に必要な権限だけを付与することができます。</span><span class="sxs-lookup"><span data-stu-id="73b28-117">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
+<span data-ttu-id="3facd-115">このチュートリアルのサンプル コードを実行する Java アプリケーションには、Azure サブスクリプションの読み取りと作成のアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="3facd-115">Your Java application needs read and create permissions in your Azure subscription to run the sample code in this tutorial.</span></span> <span data-ttu-id="3facd-116">サービス プリンシパルを作成し、その資格情報で動作するようにアプリケーションを構成してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-116">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="3facd-117">サービス プリンシパルによって、自分の ID に関連付けられた非対話型のアカウントを作成し、アプリの実行に必要な権限だけを付与することができます。</span><span class="sxs-lookup"><span data-stu-id="3facd-117">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-<span data-ttu-id="73b28-118">[Azure CLI 2.0 を使ってサービス プリンシパルを作成](/cli/azure/create-an-azure-service-principal-azure-cli)し、その出力をキャプチャしてください。</span><span class="sxs-lookup"><span data-stu-id="73b28-118">[Create a service principal using the Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="73b28-119">password 引数には、`MY_SECURE_PASSWORD` ではなく、[セキュリティで保護されたパスワード](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)を指定します。</span><span class="sxs-lookup"><span data-stu-id="73b28-119">Provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span> <span data-ttu-id="73b28-120">パスワードは 8 ～ 16 文字にし、次の 4 つの条件のうち少なくとも 3 つの条件に一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="73b28-120">Your password must be 8 to 16 characters and match at least 3 out of the 4 following criteria:</span></span>
+<span data-ttu-id="3facd-118">[Azure CLI 2.0 を使ってサービス プリンシパルを作成](/cli/azure/create-an-azure-service-principal-azure-cli)し、その出力をキャプチャしてください。</span><span class="sxs-lookup"><span data-stu-id="3facd-118">[Create a service principal using the Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="3facd-119">password 引数には、`MY_SECURE_PASSWORD` ではなく、[セキュリティで保護されたパスワード](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy)を指定します。</span><span class="sxs-lookup"><span data-stu-id="3facd-119">Provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span> <span data-ttu-id="3facd-120">パスワードは 8 ～ 16 文字にし、次の 4 つの条件のうち少なくとも 3 つの条件に一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3facd-120">Your password must be 8 to 16 characters and match at least 3 out of the 4 following criteria:</span></span>
 
-* <span data-ttu-id="73b28-121">小文字が含まれている</span><span class="sxs-lookup"><span data-stu-id="73b28-121">Include lowercase characters</span></span>
-* <span data-ttu-id="73b28-122">大文字が含まれている</span><span class="sxs-lookup"><span data-stu-id="73b28-122">Include uppercase characters</span></span>
-* <span data-ttu-id="73b28-123">数字が含まれている</span><span class="sxs-lookup"><span data-stu-id="73b28-123">Include numbers</span></span>
-* <span data-ttu-id="73b28-124">次の記号のいずれかが含まれている: @ # $ % ^ & \* - _ !</span><span class="sxs-lookup"><span data-stu-id="73b28-124">Include one of the following symbols: @ # $ % ^ & \* - _ !</span></span> <span data-ttu-id="73b28-125">+ = [ ] { } | \ : ‘ , .</span><span class="sxs-lookup"><span data-stu-id="73b28-125">+ = [ ] { } | \ : ‘ , .</span></span> <span data-ttu-id="73b28-126">?</span><span class="sxs-lookup"><span data-stu-id="73b28-126">?</span></span> <span data-ttu-id="73b28-127">/ \` ~ “ ( ) ;</span><span class="sxs-lookup"><span data-stu-id="73b28-127">/ \` ~ “ ( ) ;</span></span>
+* <span data-ttu-id="3facd-121">小文字が含まれている</span><span class="sxs-lookup"><span data-stu-id="3facd-121">Include lowercase characters</span></span>
+* <span data-ttu-id="3facd-122">大文字が含まれている</span><span class="sxs-lookup"><span data-stu-id="3facd-122">Include uppercase characters</span></span>
+* <span data-ttu-id="3facd-123">数字が含まれている</span><span class="sxs-lookup"><span data-stu-id="3facd-123">Include numbers</span></span>
+* <span data-ttu-id="3facd-124">次の記号のいずれかが含まれている: @ # $ % ^ & \* - _ !</span><span class="sxs-lookup"><span data-stu-id="3facd-124">Include one of the following symbols: @ # $ % ^ & \* - _ !</span></span> <span data-ttu-id="3facd-125">+ = [ ] { } | \ : ‘ , .</span><span class="sxs-lookup"><span data-stu-id="3facd-125">+ = [ ] { } | \ : ‘ , .</span></span> <span data-ttu-id="3facd-126">?</span><span class="sxs-lookup"><span data-stu-id="3facd-126">?</span></span> <span data-ttu-id="3facd-127">/ \` ~ “ ( ) ;</span><span class="sxs-lookup"><span data-stu-id="3facd-127">/ \` ~ “ ( ) ;</span></span>
 
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 ```
 
-<span data-ttu-id="73b28-128">次の形式で応答が返されます。</span><span class="sxs-lookup"><span data-stu-id="73b28-128">Which gives you a reply in the following format:</span></span>
+<span data-ttu-id="3facd-128">次の形式で応答が返されます。</span><span class="sxs-lookup"><span data-stu-id="3facd-128">Which gives you a reply in the following format:</span></span>
 
 ```json
 {
@@ -58,7 +58,7 @@ az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 }
 ```
 
-<span data-ttu-id="73b28-129">次に、ご利用のシステム上のテキスト ファイルに次のコードをコピーします。</span><span class="sxs-lookup"><span data-stu-id="73b28-129">Next, copy the following into a text file on your system:</span></span>
+<span data-ttu-id="3facd-129">次に、ご利用のシステム上のテキスト ファイルに次のコードをコピーします。</span><span class="sxs-lookup"><span data-stu-id="3facd-129">Next, copy the following into a text file on your system:</span></span>
 
 ```text
 # sample management library properties file
@@ -72,35 +72,35 @@ authURL=https\://login.windows.net/
 graphURL=https\://graph.windows.net/
 ```
 
-<span data-ttu-id="73b28-130">上から 4 つの値は、次の内容に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="73b28-130">Replace the top four values with the following:</span></span>
+<span data-ttu-id="3facd-130">上から 4 つの値は、次の内容に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="3facd-130">Replace the top four values with the following:</span></span>
 
-- <span data-ttu-id="73b28-131">subscription: Azure CLI 2.0 の `az account show` から得られる *id* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="73b28-131">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
-- <span data-ttu-id="73b28-132">client: サービス プリンシパルの出力から得られる *appId* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="73b28-132">client: use the *appId* value from the output taken from a service principal output.</span></span>
-- <span data-ttu-id="73b28-133">key: サービス プリンシパルの出力から得られる *password* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="73b28-133">key: use the *password* value from the service principal output.</span></span>
-- <span data-ttu-id="73b28-134">tenant: サービス プリンシパルの出力から得られる *tenant* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="73b28-134">tenant: use the *tenant* value from the service principal output.</span></span>
+- <span data-ttu-id="3facd-131">subscription: Azure CLI 2.0 の `az account show` から得られる *id* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="3facd-131">subscription: use the *id* value from `az account show` in the Azure CLI 2.0.</span></span>
+- <span data-ttu-id="3facd-132">client: サービス プリンシパルの出力から得られる *appId* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="3facd-132">client: use the *appId* value from the output taken from a service principal output.</span></span>
+- <span data-ttu-id="3facd-133">key: サービス プリンシパルの出力から得られる *password* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="3facd-133">key: use the *password* value from the service principal output.</span></span>
+- <span data-ttu-id="3facd-134">tenant: サービス プリンシパルの出力から得られる *tenant* 値を使用します。</span><span class="sxs-lookup"><span data-stu-id="3facd-134">tenant: use the *tenant* value from the service principal output.</span></span>
 
-<span data-ttu-id="73b28-135">このファイルは、コードで読み取ることができるシステム上の安全な場所に保存してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-135">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="73b28-136">このファイルは今後のコードに使用できるため、この記事のアプリケーションの外部の場所に保存することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="73b28-136">You may use this file for future code so it's recommended to store it somewhere external to the application in this article.</span></span>
+<span data-ttu-id="3facd-135">このファイルは、コードで読み取ることができるシステム上の安全な場所に保存してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-135">Save this file in a secure location on your system where your code can read it.</span></span> <span data-ttu-id="3facd-136">このファイルは今後のコードに使用できるため、この記事のアプリケーションの外部の場所に保存することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="3facd-136">You may use this file for future code so it's recommended to store it somewhere external to the application in this article.</span></span>
 
-<span data-ttu-id="73b28-137">ご利用のシェルから、認証ファイルの完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。</span><span class="sxs-lookup"><span data-stu-id="73b28-137">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>   
+<span data-ttu-id="3facd-137">ご利用のシェルから、認証ファイルの完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。</span><span class="sxs-lookup"><span data-stu-id="3facd-137">Set an environment variable `AZURE_AUTH_LOCATION` with the full path to the authentication file in your shell.</span></span>   
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 ```
 
-<span data-ttu-id="73b28-138">Windows 環境で作業している場合は、システムのプロパティに変数を追加します。</span><span class="sxs-lookup"><span data-stu-id="73b28-138">If you're working in a windows environment, add the variable to your system properties.</span></span> <span data-ttu-id="73b28-139">管理者特権で PowerShell ウィンドウを開き、2 番目の変数をファイルのパスで置き換えた後、次のコマンドを入力します。</span><span class="sxs-lookup"><span data-stu-id="73b28-139">Open a PowerShell window with administrator privledges and, after replacing the second variable with the path to your file, enter the following command:</span></span>
+<span data-ttu-id="3facd-138">Windows 環境で作業している場合は、システムのプロパティに変数を追加します。</span><span class="sxs-lookup"><span data-stu-id="3facd-138">If you're working in a windows environment, add the variable to your system properties.</span></span> <span data-ttu-id="3facd-139">管理者特権で PowerShell ウィンドウを開き、2 番目の変数をファイルのパスで置き換えた後、次のコマンドを入力します。</span><span class="sxs-lookup"><span data-stu-id="3facd-139">Open a PowerShell window with administrator privledges and, after replacing the second variable with the path to your file, enter the following command:</span></span>
 
 ```powershell
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="tooling"></a><span data-ttu-id="73b28-140">ツール</span><span class="sxs-lookup"><span data-stu-id="73b28-140">Tooling</span></span>
+## <a name="tooling"></a><span data-ttu-id="3facd-140">ツール</span><span class="sxs-lookup"><span data-stu-id="3facd-140">Tooling</span></span>
 
-### <a name="create-a-new-maven-project"></a><span data-ttu-id="73b28-141">新しい Maven プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="73b28-141">Create a new Maven project</span></span>
+### <a name="create-a-new-maven-project"></a><span data-ttu-id="3facd-141">新しい Maven プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="3facd-141">Create a new Maven project</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="73b28-142">このガイドでは、Maven ビルド ツールを使って、サンプル コードをビルドして実行していますが、Java 用 Azure ライブラリは他のビルド ツール (Gradle など) で使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="73b28-142">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
+> <span data-ttu-id="3facd-142">このガイドでは、Maven ビルド ツールを使って、サンプル コードをビルドして実行していますが、Java 用 Azure ライブラリは他のビルド ツール (Gradle など) で使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="3facd-142">This guide uses Maven build tool to build and run the sample code, but other build tools such as Gradle also work with the Azure libraries for Java.</span></span> 
 
-<span data-ttu-id="73b28-143">コマンド ラインを使って、ご利用のシステム上の新しいディレクトリに Maven プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="73b28-143">Create a Maven project from the command line in a new directory on your system:</span></span>
+<span data-ttu-id="3facd-143">コマンド ラインを使って、ご利用のシステム上の新しいディレクトリに Maven プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="3facd-143">Create a Maven project from the command line in a new directory on your system:</span></span>
 
 ```
 mkdir java-azure-test
@@ -109,7 +109,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-<span data-ttu-id="73b28-144">これにより、基本的な Maven プロジェクトが `testAzureApp` フォルダーに作成されます。</span><span class="sxs-lookup"><span data-stu-id="73b28-144">This creates a basic Maven project under the `testAzureApp` folder.</span></span> <span data-ttu-id="73b28-145">プロジェクトの `pom.xml` に次のエントリを追加して、このチュートリアルのサンプル コードで使用するライブラリをインポートします。</span><span class="sxs-lookup"><span data-stu-id="73b28-145">Add the following entries into the project `pom.xml` to import the libraries used in the sample code in this tutorial.</span></span>
+<span data-ttu-id="3facd-144">これにより、基本的な Maven プロジェクトが `testAzureApp` フォルダーに作成されます。</span><span class="sxs-lookup"><span data-stu-id="3facd-144">This creates a basic Maven project under the `testAzureApp` folder.</span></span> <span data-ttu-id="3facd-145">プロジェクトの `pom.xml` に次のエントリを追加して、このチュートリアルのサンプル コードで使用するライブラリをインポートします。</span><span class="sxs-lookup"><span data-stu-id="3facd-145">Add the following entries into the project `pom.xml` to import the libraries used in the sample code in this tutorial.</span></span>
 
 ```XML
 <dependency>
@@ -129,7 +129,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 </dependency>
 ```
 
-<span data-ttu-id="73b28-146">[maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) を使ってサンプルを実行するために、最上位の `project` 要素に `build` エントリを追加します。</span><span class="sxs-lookup"><span data-stu-id="73b28-146">Add a `build` entry under the top-level `project` element to use the [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) to run the samples:</span></span>
+<span data-ttu-id="3facd-146">[maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) を使ってサンプルを実行するために、最上位の `project` 要素に `build` エントリを追加します。</span><span class="sxs-lookup"><span data-stu-id="3facd-146">Add a `build` entry under the top-level `project` element to use the [maven-exec-plugin](http://www.mojohaus.org/exec-maven-plugin/) to run the samples:</span></span>
 
 ```XML
 <build>
@@ -145,29 +145,29 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 </build>
  ```
 
-### <a name="install-the-azure-toolkit-for-intellij"></a><span data-ttu-id="73b28-147">Azure Toolkit for IntelliJ をインストールする</span><span class="sxs-lookup"><span data-stu-id="73b28-147">Install the Azure Toolkit for Intellij</span></span>
+### <a name="install-the-azure-toolkit-for-intellij"></a><span data-ttu-id="3facd-147">Azure Toolkit for IntelliJ をインストールする</span><span class="sxs-lookup"><span data-stu-id="3facd-147">Install the Azure Toolkit for Intellij</span></span>
 
-<span data-ttu-id="73b28-148">Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) が必要です。</span><span class="sxs-lookup"><span data-stu-id="73b28-148">The [Azure toolkit](intellij/azure-toolkit-for-intellij-installation.md) is necessary if you're going to be deploying web apps or APIs programmatically but is not currently used for any other kinds of development.</span></span> <span data-ttu-id="73b28-149">インストール プロセスの概要を次に示します。</span><span class="sxs-lookup"><span data-stu-id="73b28-149">The following is a summary of the installation process.</span></span> <span data-ttu-id="73b28-150">詳しい手順については、「[Azure Toolkit for IntelliJ のインストール](intellij/azure-toolkit-for-intellij-installation.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="73b28-150">For detailed stpes, visit [Installing the Azure Toolkit for IntelliJ](intellij/azure-toolkit-for-intellij-installation.md).</span></span>
+<span data-ttu-id="3facd-148">Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) が必要です。</span><span class="sxs-lookup"><span data-stu-id="3facd-148">The [Azure toolkit](intellij/azure-toolkit-for-intellij-installation.md) is necessary if you're going to be deploying web apps or APIs programmatically but is not currently used for any other kinds of development.</span></span> <span data-ttu-id="3facd-149">インストール プロセスの概要を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3facd-149">The following is a summary of the installation process.</span></span> <span data-ttu-id="3facd-150">詳しい手順については、「[Azure Toolkit for IntelliJ のインストール](intellij/azure-toolkit-for-intellij-installation.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="3facd-150">For detailed stpes, visit [Installing the Azure Toolkit for IntelliJ](intellij/azure-toolkit-for-intellij-installation.md).</span></span>
 
-<span data-ttu-id="73b28-151">**[File]\(ファイル\)** メニューを選択し、**[Settings...]\(設定...\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="73b28-151">Select the **File** menu and then select **Settings...**.</span></span> 
+<span data-ttu-id="3facd-151">**[File]\(ファイル\)** メニューを選択し、**[Settings...]\(設定...\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3facd-151">Select the **File** menu and then select **Settings...**.</span></span> 
 
-<span data-ttu-id="73b28-152">**[Browse repositories...]\(リポジトリを参照...\)** を選択し、"Azure" を検索して、**Azure Toolkit for Intellij** をインストールします。</span><span class="sxs-lookup"><span data-stu-id="73b28-152">Select **Browse repositories...** and then search "Azure" and install the **Azure toolkit for Intellij**.</span></span>
+<span data-ttu-id="3facd-152">**[Browse repositories...]\(リポジトリを参照...\)** を選択し、"Azure" を検索して、**Azure Toolkit for Intellij** をインストールします。</span><span class="sxs-lookup"><span data-stu-id="3facd-152">Select **Browse repositories...** and then search "Azure" and install the **Azure toolkit for Intellij**.</span></span>
 
-<span data-ttu-id="73b28-153">Intellij を再起動します。</span><span class="sxs-lookup"><span data-stu-id="73b28-153">Restart Intellij.</span></span>
+<span data-ttu-id="3facd-153">Intellij を再起動します。</span><span class="sxs-lookup"><span data-stu-id="3facd-153">Restart Intellij.</span></span>
 
-### <a name="install-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="73b28-154">Azure Toolkit for Eclipse をインストールする</span><span class="sxs-lookup"><span data-stu-id="73b28-154">Install the Azure Toolkit for Eclipse</span></span>
+### <a name="install-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="3facd-154">Azure Toolkit for Eclipse をインストールする</span><span class="sxs-lookup"><span data-stu-id="3facd-154">Install the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="73b28-155">Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) が必要です。</span><span class="sxs-lookup"><span data-stu-id="73b28-155">The [Azure toolkit](eclipse/azure-toolkit-for-eclipse.md) is necessary if you're going to be deploying web apps or APIs programmatically but is not currently used for any other kinds of development.</span></span> <span data-ttu-id="73b28-156">インストール プロセスの概要を次に示します。</span><span class="sxs-lookup"><span data-stu-id="73b28-156">The following is a summary of the installation process.</span></span> <span data-ttu-id="73b28-157">詳しい手順については、「[Azure Toolkit for Eclipse のインストール](eclipse/azure-toolkit-for-eclipse.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="73b28-157">For detailed stpes, visit [Installing the Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse.md).</span></span>
+<span data-ttu-id="3facd-155">Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) が必要です。</span><span class="sxs-lookup"><span data-stu-id="3facd-155">The [Azure toolkit](eclipse/azure-toolkit-for-eclipse.md) is necessary if you're going to be deploying web apps or APIs programmatically but is not currently used for any other kinds of development.</span></span> <span data-ttu-id="3facd-156">インストール プロセスの概要を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3facd-156">The following is a summary of the installation process.</span></span> <span data-ttu-id="3facd-157">詳しい手順については、「[Azure Toolkit for Eclipse のインストール](eclipse/azure-toolkit-for-eclipse.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="3facd-157">For detailed stpes, visit [Installing the Azure Toolkit for Eclipse](eclipse/azure-toolkit-for-eclipse.md).</span></span>
 
-<span data-ttu-id="73b28-158">**[Help]\(ヘルプ\)** メニューを選択し、**[Install New software]\(新しいソフトウェアのインストール\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="73b28-158">Select the **Help** menu and then select **Install New software**.</span></span>
+<span data-ttu-id="3facd-158">**[Help]\(ヘルプ\)** メニューを選択し、**[Install New software]\(新しいソフトウェアのインストール\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3facd-158">Select the **Help** menu and then select **Install New software**.</span></span>
 
-<span data-ttu-id="73b28-159">**[Work with:]\(処理:\)** フィールドに「`http://dl.microsoft.com/eclipse`」と入力し、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="73b28-159">In the **Work with:** field enter `http://dl.microsoft.com/eclipse` and press enter.</span></span>
+<span data-ttu-id="3facd-159">**[Work with:]\(処理:\)** フィールドに「`http://dl.microsoft.com/eclipse`」と入力し、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="3facd-159">In the **Work with:** field enter `http://dl.microsoft.com/eclipse` and press enter.</span></span>
 
-<span data-ttu-id="73b28-160">次に、**[Azure Toolkit for Java]** の横のチェック ボックスをオンにし、**[Contact all update sites during install to find required software]\(インストール中にすべての更新サイトに接続して必要なソフトウェアを見つける\)** のチェック ボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="73b28-160">Then, select the checkbox next to **Azure toolkit for Java** and uncheck the checkbox for **Contact all update sites during install to find required software**.</span></span> <span data-ttu-id="73b28-161">[Next]\(次へ\) をクリックします。</span><span class="sxs-lookup"><span data-stu-id="73b28-161">Then select next.</span></span>
+<span data-ttu-id="3facd-160">次に、**[Azure Toolkit for Java]** の横のチェック ボックスをオンにし、**[Contact all update sites during install to find required software]\(インストール中にすべての更新サイトに接続して必要なソフトウェアを見つける\)** のチェック ボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="3facd-160">Then, select the checkbox next to **Azure toolkit for Java** and uncheck the checkbox for **Contact all update sites during install to find required software**.</span></span> <span data-ttu-id="3facd-161">[Next]\(次へ\) をクリックします。</span><span class="sxs-lookup"><span data-stu-id="3facd-161">Then select next.</span></span>
 
-## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="73b28-162">Linux 仮想マシンの作成</span><span class="sxs-lookup"><span data-stu-id="73b28-162">Create a Linux virtual machine</span></span>
+## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="3facd-162">Linux 仮想マシンの作成</span><span class="sxs-lookup"><span data-stu-id="3facd-162">Create a Linux virtual machine</span></span>
 
-<span data-ttu-id="73b28-163">プロジェクトの `src/main/java/com/fabirkam` ディレクトリに `AzureApp.java` という名前の新しいファイルを作成し、次のコード ブロックを貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="73b28-163">Create a new file named `AzureApp.java` in the project's `src/main/java/com/fabirkam` directory and paste in the following block of code.</span></span> <span data-ttu-id="73b28-164">`userName` 変数と `sshKey` 変数は、ご利用のマシンの実際の値に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="73b28-164">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="73b28-165">このコードによって、米国東部 Azure リージョンで実行されるリソース グループ `sampleResourceGroup` に、`testLinuxVM` という名前の新しい Linux VM が作成されます。</span><span class="sxs-lookup"><span data-stu-id="73b28-165">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
+<span data-ttu-id="3facd-163">プロジェクトの `src/main/java/com/fabirkam` ディレクトリに `AzureApp.java` という名前の新しいファイルを作成し、次のコード ブロックを貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="3facd-163">Create a new file named `AzureApp.java` in the project's `src/main/java/com/fabirkam` directory and paste in the following block of code.</span></span> <span data-ttu-id="3facd-164">`userName` 変数と `sshKey` 変数は、ご利用のマシンの実際の値に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="3facd-164">Update the `userName` and `sshKey` variables with real values for your machine.</span></span> <span data-ttu-id="3facd-165">このコードによって、米国東部 Azure リージョンで実行されるリソース グループ `sampleResourceGroup` に、`testLinuxVM` という名前の新しい Linux VM が作成されます。</span><span class="sxs-lookup"><span data-stu-id="3facd-165">The code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleResourceGroup` running in the US East Azure region.</span></span>
 
 ```java
 package com.fabrikam;
@@ -235,27 +235,27 @@ public class AzureApp {
 }
 ```
 
-<span data-ttu-id="73b28-166">コマンド ラインでサンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="73b28-166">Run the sample from the command line:</span></span>
+<span data-ttu-id="3facd-166">コマンド ラインでサンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="3facd-166">Run the sample from the command line:</span></span>
 
 ```
 mvn compile exec:java
 ```
 
-<span data-ttu-id="73b28-167">コンソールには、REST の要求と応答がいくつか表示されます。これは、SDK が内部的に Azure REST API を呼び出して、仮想マシンとそのリソースを構成しているためです。</span><span class="sxs-lookup"><span data-stu-id="73b28-167">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="73b28-168">プログラムの実行が完了したら、サブスクリプション内の仮想マシンを Azure CLI 2.0 で確認します。</span><span class="sxs-lookup"><span data-stu-id="73b28-168">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
+<span data-ttu-id="3facd-167">コンソールには、REST の要求と応答がいくつか表示されます。これは、SDK が内部的に Azure REST API を呼び出して、仮想マシンとそのリソースを構成しているためです。</span><span class="sxs-lookup"><span data-stu-id="3facd-167">You'll see some REST requests and responses in the console as the SDK makes the underlying calls to the Azure REST API to configure the virtual machine and its resources.</span></span> <span data-ttu-id="3facd-168">プログラムの実行が完了したら、サブスクリプション内の仮想マシンを Azure CLI 2.0 で確認します。</span><span class="sxs-lookup"><span data-stu-id="3facd-168">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
 ```
 
-<span data-ttu-id="73b28-169">コードが正しく動作したことを確認したら、CLI で VM とそのリソースを削除します。</span><span class="sxs-lookup"><span data-stu-id="73b28-169">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
+<span data-ttu-id="3facd-169">コードが正しく動作したことを確認したら、CLI で VM とそのリソースを削除します。</span><span class="sxs-lookup"><span data-stu-id="3facd-169">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleVmResourceGroup
 ```
 
-## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="73b28-170">GitHub リポジトリからの Web アプリのデプロイ</span><span class="sxs-lookup"><span data-stu-id="73b28-170">Deploy a web app from a GitHub repo</span></span>
+## <a name="deploy-a-web-app-from-a-github-repo"></a><span data-ttu-id="3facd-170">GitHub リポジトリからの Web アプリのデプロイ</span><span class="sxs-lookup"><span data-stu-id="3facd-170">Deploy a web app from a GitHub repo</span></span>
 
-<span data-ttu-id="73b28-171">`AzureApp.java` の main メソッドを以下のメソッドに差し替えます。`appName` 変数には、コードを実行する前に一意の値を指定してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-171">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="73b28-172">このコードは、無料の価格レベルで稼働する新しい [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) に、パブリック GitHub リポジトリの `master` ブランチから Web アプリケーションをデプロイするものです。</span><span class="sxs-lookup"><span data-stu-id="73b28-172">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
+<span data-ttu-id="3facd-171">`AzureApp.java` の main メソッドを以下のメソッドに差し替えます。`appName` 変数には、コードを実行する前に一意の値を指定してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-171">Replace the main method in `AzureApp.java` with the one below, updating the `appName` variable to a unique value before running the code.</span></span> <span data-ttu-id="3facd-172">このコードは、無料の価格レベルで稼働する新しい [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) に、パブリック GitHub リポジトリの `master` ブランチから Web アプリケーションをデプロイするものです。</span><span class="sxs-lookup"><span data-stu-id="3facd-172">This code deploys a web application from the `master` branch in a public GitHub repo into a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free pricing tier.</span></span>
 
 ```java
     public static void main(String[] args) {
@@ -287,28 +287,28 @@ az group delete --name sampleVmResourceGroup
     }
 ```
 
-<span data-ttu-id="73b28-173">先ほどと同様、このコードも Maven を使用して実行します。</span><span class="sxs-lookup"><span data-stu-id="73b28-173">Run the code as before using Maven:</span></span>
+<span data-ttu-id="3facd-173">先ほどと同様、このコードも Maven を使用して実行します。</span><span class="sxs-lookup"><span data-stu-id="3facd-173">Run the code as before using Maven:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="73b28-174">ブラウザーを開いてアプリケーションにアクセスします。CLI から次のコマンドを入力してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-174">Open a browser pointed to the application using the CLI:</span></span>
+<span data-ttu-id="3facd-174">ブラウザーを開いてアプリケーションにアクセスします。CLI から次のコマンドを入力してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-174">Open a browser pointed to the application using the CLI:</span></span>
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
 
-<span data-ttu-id="73b28-175">デプロイを検証したら、Web アプリとプランをサブスクリプションから削除します。</span><span class="sxs-lookup"><span data-stu-id="73b28-175">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
+<span data-ttu-id="3facd-175">デプロイを検証したら、Web アプリとプランをサブスクリプションから削除します。</span><span class="sxs-lookup"><span data-stu-id="3facd-175">Remove the web app and plan from your subscription once you've verified the deployment.</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a><span data-ttu-id="73b28-176">Azure SQL Database に接続する</span><span class="sxs-lookup"><span data-stu-id="73b28-176">Connect to an Azure SQL database</span></span>
+## <a name="connect-to-an-azure-sql-database"></a><span data-ttu-id="3facd-176">Azure SQL データベースに接続する</span><span class="sxs-lookup"><span data-stu-id="3facd-176">Connect to an Azure SQL database</span></span>
 
-<span data-ttu-id="73b28-177">`AzureApp.java` にある現行の main メソッドを以下のコードに差し替えます。`dbPassword` 変数には、実際の値を設定してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-177">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
-<span data-ttu-id="73b28-178">このコードは、リモート アクセスを許可するファイアウォール規則で新しい SQL データベースを作成し、SQL Database JDBC ドライバーを使ってそのデータベースに接続するものです。</span><span class="sxs-lookup"><span data-stu-id="73b28-178">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
+<span data-ttu-id="3facd-177">`AzureApp.java` にある現行の main メソッドを以下のコードに差し替えます。`dbPassword` 変数には、実際の値を設定してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-177">Replace the current main method in `AzureApp.java` with the code below, setting a real value for the `dbPassword` variable.</span></span>
+<span data-ttu-id="3facd-178">このコードは、リモート アクセスを許可するファイアウォール規則で新しい SQL データベースを作成し、SQL Database JDBC ドライバーを使ってそのデータベースに接続するものです。</span><span class="sxs-lookup"><span data-stu-id="3facd-178">This code creates a new SQL database with a firewall rule allowing remote access,  and then connects to it using the SQL Database JBDC driver.</span></span> 
 
 ```java
 
@@ -371,21 +371,21 @@ az group delete --name sampleWebResourceGroup
         }
     }
 ```
-<span data-ttu-id="73b28-179">コマンド ラインでサンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="73b28-179">Run the sample from the command line:</span></span>
+<span data-ttu-id="3facd-179">コマンド ラインでサンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="3facd-179">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="73b28-180">その後、CLI で次のコマンドを入力して、リソースをクリーンアップします。</span><span class="sxs-lookup"><span data-stu-id="73b28-180">Then clean up the resources using the CLI:</span></span>
+<span data-ttu-id="3facd-180">その後、CLI で次のコマンドを入力して、リソースをクリーンアップします。</span><span class="sxs-lookup"><span data-stu-id="3facd-180">Then clean up the resources using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleSqlResourceGroup
 ```
 
-## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="73b28-181">新しいストレージ アカウントへの BLOB の書き込み</span><span class="sxs-lookup"><span data-stu-id="73b28-181">Write a blob into a new storage account</span></span>
+## <a name="write-a-blob-into-a-new-storage-account"></a><span data-ttu-id="3facd-181">新しいストレージ アカウントへの BLOB の書き込み</span><span class="sxs-lookup"><span data-stu-id="3facd-181">Write a blob into a new storage account</span></span>
 
-<span data-ttu-id="73b28-182">`AzureApp.java` にある現行の main メソッドを以下のコードに差し替えます。</span><span class="sxs-lookup"><span data-stu-id="73b28-182">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="73b28-183">このコードは、[Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/storage-introduction)を作成し、Azure Storage Libraries for Java を使って新しいテキスト ファイルをクラウドに作成するものです。</span><span class="sxs-lookup"><span data-stu-id="73b28-183">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
+<span data-ttu-id="3facd-182">`AzureApp.java` にある現行の main メソッドを以下のコードに差し替えます。</span><span class="sxs-lookup"><span data-stu-id="3facd-182">Replace the current main method in `AzureApp.java` with the code below.</span></span> <span data-ttu-id="3facd-183">このコードは、[Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/storage-introduction)を作成し、Azure Storage Libraries for Java を使って新しいテキスト ファイルをクラウドに作成するものです。</span><span class="sxs-lookup"><span data-stu-id="3facd-183">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Java to create a new text file in the cloud.</span></span>
 
 ```java
 public static void main(String[] args) {
@@ -438,28 +438,28 @@ public static void main(String[] args) {
 }
 ```
 
-<span data-ttu-id="73b28-184">コマンド ラインでサンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="73b28-184">Run the sample from the command line:</span></span>
+<span data-ttu-id="3facd-184">コマンド ラインでサンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="3facd-184">Run the sample from the command line:</span></span>
 
 ```
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="73b28-185">ストレージ アカウント内の `helloazure.txt` ファイルは、Azure Portal または [Azure ストレージ エクスプローラー](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)から参照することができます。</span><span class="sxs-lookup"><span data-stu-id="73b28-185">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
+<span data-ttu-id="3facd-185">ストレージ アカウント内の `helloazure.txt` ファイルは、Azure Portal または [Azure ストレージ エクスプローラー](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs)から参照することができます。</span><span class="sxs-lookup"><span data-stu-id="3facd-185">You can browse for the `helloazure.txt` file in your storage account through the Azure portal or with [Azure Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-explorer-blobs).</span></span>
 
-<span data-ttu-id="73b28-186">CLI で次のコマンドを入力して、ストレージ アカウントをクリーンアップします。</span><span class="sxs-lookup"><span data-stu-id="73b28-186">Clean up the storage account using the CLI:</span></span>
+<span data-ttu-id="3facd-186">CLI で次のコマンドを入力して、ストレージ アカウントをクリーンアップします。</span><span class="sxs-lookup"><span data-stu-id="3facd-186">Clean up the storage account using the CLI:</span></span>
 
 ```azurecli-interactive
 az group delete --name sampleStorageResourceGroup
 ```
 
-## <a name="explore-more-samples"></a><span data-ttu-id="73b28-187">その他のサンプルを探す</span><span class="sxs-lookup"><span data-stu-id="73b28-187">Explore more samples</span></span>
+## <a name="explore-more-samples"></a><span data-ttu-id="3facd-187">その他のサンプルを探す</span><span class="sxs-lookup"><span data-stu-id="3facd-187">Explore more samples</span></span>
 
-<span data-ttu-id="73b28-188">Azure Management Libraries for Java を使ってリソースを管理したりタスクを自動化したりする方法をさらに詳しく知るには、[仮想マシン](java-sdk-azure-virtual-machine-samples.md)、[Web アプリ](java-sdk-azure-web-apps-samples.md)、[SQL データベース](java-sdk-azure-sql-database-samples.md)に関するサンプル コードを参照してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-188">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](java-sdk-azure-virtual-machine-samples.md), [web apps](java-sdk-azure-web-apps-samples.md) and [SQL database](java-sdk-azure-sql-database-samples.md).</span></span>
+<span data-ttu-id="3facd-188">Azure Management Libraries for Java を使ってリソースを管理したりタスクを自動化したりする方法をさらに詳しく知るには、[仮想マシン](java-sdk-azure-virtual-machine-samples.md)、[Web アプリ](java-sdk-azure-web-apps-samples.md)、[SQL データベース](java-sdk-azure-sql-database-samples.md)に関するサンプル コードを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-188">To learn more about how to use the Azure management libraries for Java to manage resources and automate tasks, see our sample code for [virtual machines](java-sdk-azure-virtual-machine-samples.md), [web apps](java-sdk-azure-web-apps-samples.md) and [SQL database](java-sdk-azure-sql-database-samples.md).</span></span>
 
-## <a name="reference-and-release-notes"></a><span data-ttu-id="73b28-189">リファレンスとリリース ノート</span><span class="sxs-lookup"><span data-stu-id="73b28-189">Reference and release notes</span></span>
+## <a name="reference-and-release-notes"></a><span data-ttu-id="3facd-189">リファレンスとリリース ノート</span><span class="sxs-lookup"><span data-stu-id="3facd-189">Reference and release notes</span></span>
 
-<span data-ttu-id="73b28-190">すべてのパッケージには、[リファレンス](http://docs.microsoft.com/java/api)が提供されています。</span><span class="sxs-lookup"><span data-stu-id="73b28-190">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
+<span data-ttu-id="3facd-190">すべてのパッケージには、[リファレンス](http://docs.microsoft.com/java/api)が提供されています。</span><span class="sxs-lookup"><span data-stu-id="3facd-190">A [reference](http://docs.microsoft.com/java/api) is available for all packages.</span></span>
 
-## <a name="get-help-and-give-feedback"></a><span data-ttu-id="73b28-191">質問とフィードバック</span><span class="sxs-lookup"><span data-stu-id="73b28-191">Get help and give feedback</span></span>
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="3facd-191">質問とフィードバック</span><span class="sxs-lookup"><span data-stu-id="3facd-191">Get help and give feedback</span></span>
 
-<span data-ttu-id="73b28-192">ご質問は、[Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java) のコミュニティに投稿してください。</span><span class="sxs-lookup"><span data-stu-id="73b28-192">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="73b28-193">Java 用 Azure ライブラリに関する未解決の問題やバグは、[プロジェクト GitHub](https://github.com/Azure/azure-sdk-for-java) にご報告ください。</span><span class="sxs-lookup"><span data-stu-id="73b28-193">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>
+<span data-ttu-id="3facd-192">ご質問は、[Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java) のコミュニティに投稿してください。</span><span class="sxs-lookup"><span data-stu-id="3facd-192">Post questions to the community on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure+java).</span></span> <span data-ttu-id="3facd-193">Java 用 Azure ライブラリに関する未解決の問題やバグは、[プロジェクト GitHub](https://github.com/Azure/azure-sdk-for-java) にご報告ください。</span><span class="sxs-lookup"><span data-stu-id="3facd-193">Report bugs and open issues against the Azure libraries for Java on the [project GitHub](https://github.com/Azure/azure-sdk-for-java).</span></span>
