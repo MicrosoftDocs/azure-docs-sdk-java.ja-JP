@@ -1,6 +1,6 @@
 ---
 title: Azure SQL Database で Spring Data JPA を使用する方法
-description: Azure SQL Database で Spring Data JPA を使用する方法を説明します。
+description: Azure SQL データベースで Spring Data JPA を使用する方法を説明します。
 services: sql-database
 documentationcenter: java
 author: rmcmurray

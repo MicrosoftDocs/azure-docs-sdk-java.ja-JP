@@ -305,7 +305,7 @@ az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP
 az group delete --name sampleWebResourceGroup
 ```
 
-## <a name="connect-to-an-azure-sql-database"></a>Azure SQL Database に接続する
+## <a name="connect-to-an-azure-sql-database"></a>Azure SQL データベースに接続する
 
 `AzureApp.java` にある現行の main メソッドを以下のコードに差し替えます。`dbPassword` 変数には、実際の値を設定してください。
 このコードは、リモート アクセスを許可するファイアウォール規則で新しい SQL データベースを作成し、SQL Database JDBC ドライバーを使ってそのデータベースに接続するものです。 
