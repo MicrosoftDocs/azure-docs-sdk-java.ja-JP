@@ -14,196 +14,196 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c116e0712afd8e48983f946f43eddfd0c79c0ba8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 5f70d8dd7e9b59c365d83c185f430a5a9c75e838
+ms.sourcegitcommit: 4f1acf05e3bbb7eb6bca9b65300c1c5b9772185a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899180"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456325"
 ---
-# <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="6a349-103">Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する</span><span class="sxs-lookup"><span data-stu-id="6a349-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for Eclipse</span></span>
+# <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="dc195-103">Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する</span><span class="sxs-lookup"><span data-stu-id="dc195-103">Publish a Spring Boot app as a Docker container by using the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="6a349-104">[Spring Framework] は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。</span><span class="sxs-lookup"><span data-stu-id="6a349-104">The [Spring Framework] is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="6a349-105">このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-105">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating standalone Java applications.</span></span>
+<span data-ttu-id="dc195-104">[Spring Framework] は Java 開発者のエンタープライズ レベルのアプリケーション作成を支援するオープンソース ソリューションです。</span><span class="sxs-lookup"><span data-stu-id="dc195-104">The [Spring Framework] is an open-source solution that helps Java developers create enterprise-level applications.</span></span> <span data-ttu-id="dc195-105">このプラットフォームで構築される特に知られたプロジェクトの 1 つが [Spring Boot] です。これによって、スタンドアロンの Java アプリケーションの作成方法が簡略化されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-105">One of the more-popular projects that is built on top of that platform is [Spring Boot], which provides a simplified approach for creating standalone Java applications.</span></span>
 
-<span data-ttu-id="6a349-106">[Docker] は、開発者が、コンテナーで実行されるアプリケーションのデプロイ、スケーリング、管理を自動化することを支援するオープン ソース ソリューションです。</span><span class="sxs-lookup"><span data-stu-id="6a349-106">[Docker] is an open-source solution that helps developers automate the deployment, scaling, and management of their applications that are running in containers.</span></span>
+<span data-ttu-id="dc195-106">[Docker] は、開発者が、コンテナーで実行されるアプリケーションのデプロイ、スケーリング、管理を自動化することを支援するオープン ソース ソリューションです。</span><span class="sxs-lookup"><span data-stu-id="dc195-106">[Docker] is an open-source solution that helps developers automate the deployment, scaling, and management of their applications that are running in containers.</span></span>
 
-<span data-ttu-id="6a349-107">このチュートリアルでは、Azure Toolkit for Eclipse を使用して Spring Boot アプリケーションを Docker コンテナーとして Microsoft Azure にデプロイする手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="6a349-107">This tutorial walks you through the steps to deploy a Spring Boot application as a Docker container to Microsoft Azure by using the Azure Toolkit for Eclipse.</span></span>
+<span data-ttu-id="dc195-107">このチュートリアルでは、Azure Toolkit for Eclipse を使用して Spring Boot アプリケーションを Docker コンテナーとして Microsoft Azure にデプロイする手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="dc195-107">This tutorial walks you through the steps to deploy a Spring Boot application as a Docker container to Microsoft Azure by using the Azure Toolkit for Eclipse.</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="clone-the-default-spring-boot-docker-repository"></a><span data-ttu-id="6a349-108">既定の Spring Boot Docker リポジトリの複製</span><span class="sxs-lookup"><span data-stu-id="6a349-108">Clone the default Spring Boot Docker repository</span></span>
+## <a name="clone-the-default-spring-boot-docker-repository"></a><span data-ttu-id="dc195-108">既定の Spring Boot Docker リポジトリの複製</span><span class="sxs-lookup"><span data-stu-id="dc195-108">Clone the default Spring Boot Docker repository</span></span>
 
-### <a name="import-the-public-repository"></a><span data-ttu-id="6a349-109">パブリック リポジトリのインポート</span><span class="sxs-lookup"><span data-stu-id="6a349-109">Import the public repository</span></span>
+### <a name="import-the-public-repository"></a><span data-ttu-id="dc195-109">パブリック リポジトリのインポート</span><span class="sxs-lookup"><span data-stu-id="dc195-109">Import the public repository</span></span>
 
-<span data-ttu-id="6a349-110">次の手順では、IntelliJ を使用して、ローカル コンピューターに Spring Boot Docker リポジトリを複製する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6a349-110">The following steps walk you through cloning the Spring Boot Docker repository to your local computer by using IntelliJ.</span></span> <span data-ttu-id="6a349-111">コマンド ラインの使用が適している場合は、「[Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする][Deploy Spring Boot on Linux in AKS]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="6a349-111">If you want to use a command line, see [Deploy a Spring Boot application on Linux in Azure Container Service][Deploy Spring Boot on Linux in AKS].</span></span>
+<span data-ttu-id="dc195-110">次の手順では、IntelliJ を使用して、ローカル コンピューターに Spring Boot Docker リポジトリを複製する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="dc195-110">The following steps walk you through cloning the Spring Boot Docker repository to your local computer by using IntelliJ.</span></span> <span data-ttu-id="dc195-111">コマンド ラインの使用が適している場合は、「[Azure Container Service で Spring Boot アプリケーションを Linux にデプロイする][Deploy Spring Boot on Linux in AKS]」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="dc195-111">If you want to use a command line, see [Deploy a Spring Boot application on Linux in Azure Container Service][Deploy Spring Boot on Linux in AKS].</span></span>
 
-1. <span data-ttu-id="6a349-112">Eclipse を開きます。</span><span class="sxs-lookup"><span data-stu-id="6a349-112">Open Eclipse.</span></span>
+1. <span data-ttu-id="dc195-112">Eclipse を開きます。</span><span class="sxs-lookup"><span data-stu-id="dc195-112">Open Eclipse.</span></span>
 
-1. <span data-ttu-id="6a349-113">**[ファイル]** > **[インポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-113">Click **File** > **Import**.</span></span>
+1. <span data-ttu-id="dc195-113">**[ファイル]** > **[インポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-113">Click **File** > **Import**.</span></span>
 
    ![[ファイル] の [インポート] メニュー][CL01]
 
-1. <span data-ttu-id="6a349-115">**[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-115">When the **Import** dialog box opens:</span></span>
+1. <span data-ttu-id="dc195-115">**[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-115">When the **Import** dialog box opens:</span></span>
 
-   <span data-ttu-id="6a349-116">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-116">a.</span></span> <span data-ttu-id="6a349-117">**[Git]** を展開します。</span><span class="sxs-lookup"><span data-stu-id="6a349-117">Expand **Git**.</span></span>
+   <span data-ttu-id="dc195-116">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-116">a.</span></span> <span data-ttu-id="dc195-117">**[Git]** を展開します。</span><span class="sxs-lookup"><span data-stu-id="dc195-117">Expand **Git**.</span></span>
 
-   <span data-ttu-id="6a349-118">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-118">b.</span></span> <span data-ttu-id="6a349-119">**[Projects from Git]\(Git のプロジェクト\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-119">Select **Projects from Git**.</span></span>
+   <span data-ttu-id="dc195-118">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-118">b.</span></span> <span data-ttu-id="dc195-119">**[Projects from Git]\(Git のプロジェクト\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-119">Select **Projects from Git**.</span></span>
    
-   <span data-ttu-id="6a349-120">c.</span><span class="sxs-lookup"><span data-stu-id="6a349-120">c.</span></span> <span data-ttu-id="6a349-121">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-121">Click **Next**.</span></span>
+   <span data-ttu-id="dc195-120">c.</span><span class="sxs-lookup"><span data-stu-id="dc195-120">c.</span></span> <span data-ttu-id="dc195-121">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-121">Click **Next**.</span></span>
 
    ![[インポート] ダイアログ ボックス][CL02]
 
-1. <span data-ttu-id="6a349-123">**[Select Repository Source]\(リポジトリ ソースの選択\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-123">On the **Select Repository Source** page:</span></span>
+1. <span data-ttu-id="dc195-123">**[Select Repository Source]\(リポジトリ ソースの選択\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-123">On the **Select Repository Source** page:</span></span>
 
-   <span data-ttu-id="6a349-124">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-124">a.</span></span> <span data-ttu-id="6a349-125">**[Clone URI]\(URI の複製\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-125">Select **Clone URI**.</span></span>
+   <span data-ttu-id="dc195-124">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-124">a.</span></span> <span data-ttu-id="dc195-125">**[Clone URI]\(URI の複製\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-125">Select **Clone URI**.</span></span>
    
-   <span data-ttu-id="6a349-126">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-126">b.</span></span> <span data-ttu-id="6a349-127">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-127">Click **Next**.</span></span>
+   <span data-ttu-id="dc195-126">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-126">b.</span></span> <span data-ttu-id="dc195-127">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-127">Click **Next**.</span></span>
 
    ![リポジトリ ソース ページの選択][CL03]
 
-1. <span data-ttu-id="6a349-129">**[Source Git Repository]\(ソース Git リポジトリ\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-129">On the **Source Git Repository** page:</span></span>
+1. <span data-ttu-id="dc195-129">**[Source Git Repository]\(ソース Git リポジトリ\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-129">On the **Source Git Repository** page:</span></span>
 
-   <span data-ttu-id="6a349-130">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-130">a.</span></span> <span data-ttu-id="6a349-131">**[URI]** に「`https://github.com/spring-guides/gs-spring-boot-docker.git`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="6a349-131">For **URI**, enter `https://github.com/spring-guides/gs-spring-boot-docker.git`.</span></span> <span data-ttu-id="6a349-132">これで **[Host]\(ホスト\)** と **[Repository path]\(リポジトリ パス\)** の各フィールドに正しい値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-132">This step should automatically populate the **Host** and **Repository path** fields with the correct values.</span></span>
+   <span data-ttu-id="dc195-130">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-130">a.</span></span> <span data-ttu-id="dc195-131">**[URI]** に「`https://github.com/spring-guides/gs-spring-boot-docker.git`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="dc195-131">For **URI**, enter `https://github.com/spring-guides/gs-spring-boot-docker.git`.</span></span> <span data-ttu-id="dc195-132">これで **[Host]\(ホスト\)** と **[Repository path]\(リポジトリ パス\)** の各フィールドに正しい値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-132">This step should automatically populate the **Host** and **Repository path** fields with the correct values.</span></span>
    
-   <span data-ttu-id="6a349-133">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-133">b.</span></span> <span data-ttu-id="6a349-134">Spring Boot リポジトリは公開されるため、Git のユーザー名とパスワードを入力する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="6a349-134">The Spring Boot repository is public, so you should not have to enter your Git username and password.</span></span>
+   <span data-ttu-id="dc195-133">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-133">b.</span></span> <span data-ttu-id="dc195-134">Spring Boot リポジトリは公開されるため、Git のユーザー名とパスワードを入力する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="dc195-134">The Spring Boot repository is public, so you should not have to enter your Git username and password.</span></span>
    
-   <span data-ttu-id="6a349-135">c.</span><span class="sxs-lookup"><span data-stu-id="6a349-135">c.</span></span> <span data-ttu-id="6a349-136">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-136">Click **Next**.</span></span>
+   <span data-ttu-id="dc195-135">c.</span><span class="sxs-lookup"><span data-stu-id="dc195-135">c.</span></span> <span data-ttu-id="dc195-136">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-136">Click **Next**.</span></span>
 
    ![[Source Git Repository]\(ソース Git リポジトリ\) ページ][CL04]
 
-1. <span data-ttu-id="6a349-138">**[Branch Selection]\(ブランチの選択\)** ページで **[Next]\(次へ\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-138">On the **Branch Selection** page, click **Next**.</span></span>
+1. <span data-ttu-id="dc195-138">**[Branch Selection]\(ブランチの選択\)** ページで **[Next]\(次へ\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-138">On the **Branch Selection** page, click **Next**.</span></span>
 
    ![[Branch Selection]\(ブランチの選択\) ページ][CL05]
 
-1. <span data-ttu-id="6a349-140">**[Local Destination]\(ローカルの保存先\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-140">On the **Local Destination** page:</span></span>
+1. <span data-ttu-id="dc195-140">**[Local Destination]\(ローカルの保存先\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-140">On the **Local Destination** page:</span></span>
 
-   <span data-ttu-id="6a349-141">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-141">a.</span></span> <span data-ttu-id="6a349-142">ローカル リポジトリを保存するローカル フォルダーを指定します。</span><span class="sxs-lookup"><span data-stu-id="6a349-142">Specify the local folder where you want your local repo.</span></span>
+   <span data-ttu-id="dc195-141">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-141">a.</span></span> <span data-ttu-id="dc195-142">ローカル リポジトリを保存するローカル フォルダーを指定します。</span><span class="sxs-lookup"><span data-stu-id="dc195-142">Specify the local folder where you want your local repo.</span></span>
    
-   <span data-ttu-id="6a349-143">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-143">b.</span></span> <span data-ttu-id="6a349-144">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-144">Click **Next**.</span></span>
+   <span data-ttu-id="dc195-143">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-143">b.</span></span> <span data-ttu-id="dc195-144">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-144">Click **Next**.</span></span>
 
    ![[Local Destination]\(ローカルの保存先\) ページ][CL06]
 
-1. <span data-ttu-id="6a349-146">**[Select a wizard to use for importing projects]\(プロジェクトのインポートに使用するウィザードの選択\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-146">On the **Select a wizard to use for importing projects** page:</span></span>
+1. <span data-ttu-id="dc195-146">**[Select a wizard to use for importing projects]\(プロジェクトのインポートに使用するウィザードの選択\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-146">On the **Select a wizard to use for importing projects** page:</span></span>
 
-   <span data-ttu-id="6a349-147">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-147">a.</span></span> <span data-ttu-id="6a349-148">**[Import as a general project]\(一般的なプロジェクトのインポート\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-148">Select **Import as a general project**.</span></span>
+   <span data-ttu-id="dc195-147">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-147">a.</span></span> <span data-ttu-id="dc195-148">**[Import as a general project]\(一般的なプロジェクトのインポート\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-148">Select **Import as a general project**.</span></span>
    
-   <span data-ttu-id="6a349-149">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-149">b.</span></span> <span data-ttu-id="6a349-150">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-150">Click **Next**.</span></span>
+   <span data-ttu-id="dc195-149">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-149">b.</span></span> <span data-ttu-id="dc195-150">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-150">Click **Next**.</span></span>
 
    ![[Select a wizard to use for importing projects]\(プロジェクトのインポートに使用するウィザードの選択\) ページ][CL07]
 
-1. <span data-ttu-id="6a349-152">**[Import Projects]\(プロジェクトのインポート\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-152">On the **Import Projects** page:</span></span>
+1. <span data-ttu-id="dc195-152">**[Import Projects]\(プロジェクトのインポート\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-152">On the **Import Projects** page:</span></span>
 
-   <span data-ttu-id="6a349-153">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-153">a.</span></span> <span data-ttu-id="6a349-154">プロジェクト名を指定します。</span><span class="sxs-lookup"><span data-stu-id="6a349-154">Specify your project name.</span></span>
+   <span data-ttu-id="dc195-153">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-153">a.</span></span> <span data-ttu-id="dc195-154">プロジェクト名を指定します。</span><span class="sxs-lookup"><span data-stu-id="dc195-154">Specify your project name.</span></span>
    
-   <span data-ttu-id="6a349-155">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-155">b.</span></span> <span data-ttu-id="6a349-156">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-156">Click **Finish**.</span></span>
+   <span data-ttu-id="dc195-155">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-155">b.</span></span> <span data-ttu-id="dc195-156">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-156">Click **Finish**.</span></span>
 
    ![[Import Projects]\(プロジェクトのインポート\) ページ][CL08]
 
-1. <span data-ttu-id="6a349-158">リポジトリの複製が完了すると、Eclipse にすべてのファイルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-158">When the repository is cloned successfully, you see all the files listed in Eclipse.</span></span>
+1. <span data-ttu-id="dc195-158">リポジトリの複製が完了すると、Eclipse にすべてのファイルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-158">When the repository is cloned successfully, you see all the files listed in Eclipse.</span></span>
 
    ![ローカル リポジトリ][CL09]
 
-### <a name="create-a-maven-project-from-your-local-repository"></a><span data-ttu-id="6a349-160">ローカル リポジトリからの Maven プロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="6a349-160">Create a Maven project from your local repository</span></span>
+### <a name="create-a-maven-project-from-your-local-repository"></a><span data-ttu-id="dc195-160">ローカル リポジトリからの Maven プロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="dc195-160">Create a Maven project from your local repository</span></span>
 
-<span data-ttu-id="6a349-161">Spring Boot Docker リポジトリには、このチュートリアルで使用する完成した Maven プロジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6a349-161">The Spring Boot Docker repository contains a completed Maven project, which you will use for this tutorial.</span></span> 
+<span data-ttu-id="dc195-161">Spring Boot Docker リポジトリには、このチュートリアルで使用する完成した Maven プロジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="dc195-161">The Spring Boot Docker repository contains a completed Maven project, which you will use for this tutorial.</span></span> 
 
-1. <span data-ttu-id="6a349-162">**[ファイル]** > **[インポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-162">Click **File** > **Import**.</span></span>
+1. <span data-ttu-id="dc195-162">**[ファイル]** > **[インポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-162">Click **File** > **Import**.</span></span>
 
    ![[ファイル] メニューの [インポート] コマンド][CL01]
 
-1. <span data-ttu-id="6a349-164">**[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-164">When the **Import** dialog box opens:</span></span>
+1. <span data-ttu-id="dc195-164">**[インポート]** ダイアログ ボックスが開いたら、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-164">When the **Import** dialog box opens:</span></span>
 
-   <span data-ttu-id="6a349-165">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-165">a.</span></span> <span data-ttu-id="6a349-166">**[Maven]** を展開します。</span><span class="sxs-lookup"><span data-stu-id="6a349-166">Expand **Maven**.</span></span>
+   <span data-ttu-id="dc195-165">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-165">a.</span></span> <span data-ttu-id="dc195-166">**[Maven]** を展開します。</span><span class="sxs-lookup"><span data-stu-id="dc195-166">Expand **Maven**.</span></span>
    
-   <span data-ttu-id="6a349-167">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-167">b.</span></span> <span data-ttu-id="6a349-168">**[Existing Maven Projects]\(既存の Maven プロジェクト\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-168">Select **Existing Maven Projects**.</span></span>
+   <span data-ttu-id="dc195-167">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-167">b.</span></span> <span data-ttu-id="dc195-168">**[Existing Maven Projects]\(既存の Maven プロジェクト\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-168">Select **Existing Maven Projects**.</span></span>
    
-   <span data-ttu-id="6a349-169">c.</span><span class="sxs-lookup"><span data-stu-id="6a349-169">c.</span></span> <span data-ttu-id="6a349-170">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-170">Click **Next**.</span></span>
+   <span data-ttu-id="dc195-169">c.</span><span class="sxs-lookup"><span data-stu-id="dc195-169">c.</span></span> <span data-ttu-id="dc195-170">**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-170">Click **Next**.</span></span>
 
    ![[インポート] ダイアログ ボックス][MV01]
 
-1. <span data-ttu-id="6a349-172">**[Maven Projects]\(Maven プロジェクト\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-172">On the **Maven Projects** page:</span></span>
+1. <span data-ttu-id="dc195-172">**[Maven Projects]\(Maven プロジェクト\)** ページで次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-172">On the **Maven Projects** page:</span></span>
 
-   <span data-ttu-id="6a349-173">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-173">a.</span></span> <span data-ttu-id="6a349-174">**[Root Directory]\(ルート ディレクトリ\)** に、ローカル リポジトリの **complete** フォルダーを指定します。</span><span class="sxs-lookup"><span data-stu-id="6a349-174">For **Root Directory**, specify the **complete** folder in your local repository.</span></span>
+   <span data-ttu-id="dc195-173">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-173">a.</span></span> <span data-ttu-id="dc195-174">**[Root Directory]\(ルート ディレクトリ\)** に、ローカル リポジトリの **complete** フォルダーを指定します。</span><span class="sxs-lookup"><span data-stu-id="dc195-174">For **Root Directory**, specify the **complete** folder in your local repository.</span></span>
    
-   <span data-ttu-id="6a349-175">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-175">b.</span></span> <span data-ttu-id="6a349-176">**[Advanced]\(詳細\)** セクションを展開し、**[Name template]\(テンプレートの名前\)** にカスタムの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="6a349-176">Expand the **Advanced** section, and enter a custom name for **Name template**.</span></span>
+   <span data-ttu-id="dc195-175">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-175">b.</span></span> <span data-ttu-id="dc195-176">**[Advanced]\(詳細\)** セクションを展開し、**[Name template]\(テンプレートの名前\)** にカスタムの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="dc195-176">Expand the **Advanced** section, and enter a custom name for **Name template**.</span></span>
    
-   <span data-ttu-id="6a349-177">c.</span><span class="sxs-lookup"><span data-stu-id="6a349-177">c.</span></span> <span data-ttu-id="6a349-178">プロジェクトの **pom.xml** ファイルのボックスを選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-178">Select the box for the **pom.xml** file in the project.</span></span>
+   <span data-ttu-id="dc195-177">c.</span><span class="sxs-lookup"><span data-stu-id="dc195-177">c.</span></span> <span data-ttu-id="dc195-178">プロジェクトの **pom.xml** ファイルのボックスを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-178">Select the box for the **pom.xml** file in the project.</span></span>
    
-   <span data-ttu-id="6a349-179">d.</span><span class="sxs-lookup"><span data-stu-id="6a349-179">d.</span></span> <span data-ttu-id="6a349-180">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-180">Click **Finish**.</span></span>
+   <span data-ttu-id="dc195-179">d.</span><span class="sxs-lookup"><span data-stu-id="dc195-179">d.</span></span> <span data-ttu-id="dc195-180">**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-180">Click **Finish**.</span></span>
 
    ![[Maven Projects]\(Maven プロジェクト\) ページ][MV02]
 
-1. <span data-ttu-id="6a349-182">Maven プロジェクトが正常に開くと、Eclipse に 2 つ目のプロジェクトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-182">When the Maven project is opened successfully, you see a second project listed in Eclipse.</span></span>
+1. <span data-ttu-id="dc195-182">Maven プロジェクトが正常に開くと、Eclipse に 2 つ目のプロジェクトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-182">When the Maven project is opened successfully, you see a second project listed in Eclipse.</span></span>
 
    ![ローカルの Maven プロジェクト][MV03]
 
-## <a name="build-your-spring-boot-app-by-using-maven"></a><span data-ttu-id="6a349-184">Maven での Spring Boot アプリのビルド</span><span class="sxs-lookup"><span data-stu-id="6a349-184">Build your Spring Boot app by using Maven</span></span>
+## <a name="build-your-spring-boot-app-by-using-maven"></a><span data-ttu-id="dc195-184">Maven での Spring Boot アプリのビルド</span><span class="sxs-lookup"><span data-stu-id="dc195-184">Build your Spring Boot app by using Maven</span></span>
 
-1. <span data-ttu-id="6a349-185">Eclipse Project Explorer で、Maven プロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-185">In the Eclipse Project Explorer, select the Maven project.</span></span>
+1. <span data-ttu-id="dc195-185">Eclipse Project Explorer で、Maven プロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-185">In the Eclipse Project Explorer, select the Maven project.</span></span>
 
-1. <span data-ttu-id="6a349-186">**[実行]** > **[Run As]\(プログラム名を指定して実行\)** > **[Maven build]\(Maven ビルド\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-186">Click **Run** > **Run As** > **Maven build**.</span></span>
+1. <span data-ttu-id="dc195-186">**[実行]** > **[Run As]\(プログラム名を指定して実行\)** > **[Maven build]\(Maven ビルド\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-186">Click **Run** > **Run As** > **Maven build**.</span></span>
 
    ![[Run As]\(プログラム名を指定して実行\) の [Maven build]\(Maven ビルド\) コマンド][BU01]
 
-1. <span data-ttu-id="6a349-188">アプリケーションが正常にビルドされると、コンソール ウィンドウに状態が表示されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-188">When your application is successfully built, the console window shows the status.</span></span>
+1. <span data-ttu-id="dc195-188">アプリケーションが正常にビルドされると、コンソール ウィンドウに状態が表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-188">When your application is successfully built, the console window shows the status.</span></span>
 
    ![Maven ビルドの成功][BU02]
 
-## <a name="publish-your-web-app-to-azure-by-using-a-docker-container"></a><span data-ttu-id="6a349-190">Docker コンテナーを使用して Web アプリを Azure に発行する</span><span class="sxs-lookup"><span data-stu-id="6a349-190">Publish your web app to Azure by using a Docker container</span></span>
+## <a name="publish-your-web-app-to-azure-by-using-a-docker-container"></a><span data-ttu-id="dc195-190">Docker コンテナーを使用して Web アプリを Azure に発行する</span><span class="sxs-lookup"><span data-stu-id="dc195-190">Publish your web app to Azure by using a Docker container</span></span>
 
-1. <span data-ttu-id="6a349-191">Eclipse Project Explorer で、Maven プロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="6a349-191">In the Eclipse Project Explorer, select the Maven project.</span></span>
+1. <span data-ttu-id="dc195-191">Eclipse Project Explorer で、Maven プロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="dc195-191">In the Eclipse Project Explorer, select the Maven project.</span></span>
 
-1. <span data-ttu-id="6a349-192">Azure の **[Publish]\(発行\)** メニューをクリックし、**[Publish as Docker container]\(Docker コンテナーとして発行\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-192">Click the Azure **Publish** menu, and then click **Publish as Docker Container**.</span></span>
+1. <span data-ttu-id="dc195-192">Azure の **[Publish]\(発行\)** メニューをクリックし、**[Publish as Docker container]\(Docker コンテナーとして発行\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-192">Click the Azure **Publish** menu, and then click **Publish as Docker Container**.</span></span>
 
    ![[Publish as Docker Container]\(Docker コンテナーとして発行\) コマンド][PU01]
 
-1. <span data-ttu-id="6a349-194">**[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスが表示されたら、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="6a349-194">When the **Deploying Docker Container on Azure** dialog box appears:</span></span>
+1. <span data-ttu-id="dc195-194">**[Deploy Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスが表示されたら、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="dc195-194">When the **Deploying Docker Container on Azure** dialog box appears:</span></span>
 
-   <span data-ttu-id="6a349-195">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-195">a.</span></span> <span data-ttu-id="6a349-196">カスタムの Docker イメージ名を入力します。</span><span class="sxs-lookup"><span data-stu-id="6a349-196">Enter a custom Docker image name.</span></span>
+   <span data-ttu-id="dc195-195">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-195">a.</span></span> <span data-ttu-id="dc195-196">カスタムの Docker イメージ名を入力します。</span><span class="sxs-lookup"><span data-stu-id="dc195-196">Enter a custom Docker image name.</span></span>
    
-   <span data-ttu-id="6a349-197">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-197">b.</span></span> <span data-ttu-id="6a349-198">**[Artifact to deploy]\(デプロイするアーティファクト\)** に、ビルドした **gs-spring-boot-docker-0.1.0.jar** ファイルのパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="6a349-198">For **Artifact to deploy**, specify the path to the **gs-spring-boot-docker-0.1.0.jar** file you just built.</span></span>
+   <span data-ttu-id="dc195-197">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-197">b.</span></span> <span data-ttu-id="dc195-198">**[Artifact to deploy]\(デプロイするアーティファクト\)** に、ビルドした **gs-spring-boot-docker-0.1.0.jar** ファイルのパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="dc195-198">For **Artifact to deploy**, specify the path to the **gs-spring-boot-docker-0.1.0.jar** file you just built.</span></span>
 
    ![Docker オプションの指定][PU02]
 
-   <span data-ttu-id="6a349-200">既存の Docker ホストがすべて表示されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-200">Any existing Docker hosts are displayed.</span></span> 
+   <span data-ttu-id="dc195-200">既存の Docker ホストがすべて表示されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-200">Any existing Docker hosts are displayed.</span></span> 
 
-1. <span data-ttu-id="6a349-201">既存のホストへのデプロイを選択する場合は、スキップして手順 5 に進みます。</span><span class="sxs-lookup"><span data-stu-id="6a349-201">If you choose to deploy to an existing host, you can skip to step 5.</span></span> <span data-ttu-id="6a349-202">そうでない場合は、次の手順に従ってホストを作成します。</span><span class="sxs-lookup"><span data-stu-id="6a349-202">Otherwise, use the following steps to create a host:</span></span>
+1. <span data-ttu-id="dc195-201">既存のホストへのデプロイを選択する場合は、スキップして手順 5 に進みます。</span><span class="sxs-lookup"><span data-stu-id="dc195-201">If you choose to deploy to an existing host, you can skip to step 5.</span></span> <span data-ttu-id="dc195-202">そうでない場合は、次の手順に従ってホストを作成します。</span><span class="sxs-lookup"><span data-stu-id="dc195-202">Otherwise, use the following steps to create a host:</span></span>
 
-   <span data-ttu-id="6a349-203">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-203">a.</span></span> <span data-ttu-id="6a349-204">**[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-204">Click **Add**.</span></span>
+   <span data-ttu-id="dc195-203">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-203">a.</span></span> <span data-ttu-id="dc195-204">**[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-204">Click **Add**.</span></span>
 
       ![新しい Docker ホストの追加][PU03]
 
-   <span data-ttu-id="6a349-206">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-206">b.</span></span> <span data-ttu-id="6a349-207">**[Create Docker Host]\(Docker ホストの作成\)** ダイアログ ボックスが表示されたら、新しい Docker ホストに既定値をそのまま使用するか、カスタム設定を指定できます </span><span class="sxs-lookup"><span data-stu-id="6a349-207">When the **Create Docker Host** dialog box appears, you can choose to accept the defaults, or you can specify any custom settings for your new Docker host.</span></span> <span data-ttu-id="6a349-208">(さまざまな設定について詳しくは、「[Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する][Publish Container with Azure Toolkit]」をご覧ください)。使用する設定を指定したら、**[Next]\(次へ\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-208">(For detailed descriptions of the various settings, see [Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ][Publish Container with Azure Toolkit].) Click **Next** when you have specified which settings to use.</span></span>
+   <span data-ttu-id="dc195-206">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-206">b.</span></span> <span data-ttu-id="dc195-207">**[Create Docker Host]\(Docker ホストの作成\)** ダイアログ ボックスが表示されたら、新しい Docker ホストに既定値をそのまま使用するか、カスタム設定を指定できます </span><span class="sxs-lookup"><span data-stu-id="dc195-207">When the **Create Docker Host** dialog box appears, you can choose to accept the defaults, or you can specify any custom settings for your new Docker host.</span></span> <span data-ttu-id="dc195-208">(さまざまな設定について詳しくは、「[Azure Toolkit for IntelliJ を使用して Web アプリを Docker コンテナーとして発行する][Publish Container with Azure Toolkit]」をご覧ください)。使用する設定を指定したら、**[Next]\(次へ\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-208">(For detailed descriptions of the various settings, see [Publish a web app as a Docker container by using the Azure Toolkit for IntelliJ][Publish Container with Azure Toolkit].) Click **Next** when you have specified which settings to use.</span></span>
 
       ![Docker ホスト オプションの指定][PU04]
 
-   <span data-ttu-id="6a349-210">c.</span><span class="sxs-lookup"><span data-stu-id="6a349-210">c.</span></span> <span data-ttu-id="6a349-211">Azure Key Vault の既存のログイン資格情報を使用することも、新しい Docker ログイン資格情報を入力することもできます。</span><span class="sxs-lookup"><span data-stu-id="6a349-211">You can choose to use existing login credentials from an Azure key vault, or you can choose to enter new Docker login credentials.</span></span> <span data-ttu-id="6a349-212">オプションを指定したら、**[Finish]\(完了\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-212">Click **Finish** when you have specified your options.</span></span>
+   <span data-ttu-id="dc195-210">c.</span><span class="sxs-lookup"><span data-stu-id="dc195-210">c.</span></span> <span data-ttu-id="dc195-211">Azure Key Vault の既存のログイン資格情報を使用することも、新しい Docker ログイン資格情報を入力することもできます。</span><span class="sxs-lookup"><span data-stu-id="dc195-211">You can choose to use existing login credentials from an Azure key vault, or you can choose to enter new Docker login credentials.</span></span> <span data-ttu-id="dc195-212">オプションを指定したら、**[Finish]\(完了\)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-212">Click **Finish** when you have specified your options.</span></span>
 
       ![Docker ホストの資格情報の指定][PU05]
 
-1. <span data-ttu-id="6a349-214">Docker ホストを選択し、**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-214">Select your Docker host, and then click **Next**.</span></span>
+1. <span data-ttu-id="dc195-214">Docker ホストを選択し、**[次へ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-214">Select your Docker host, and then click **Next**.</span></span>
 
    ![使用する Docker ホストの選択][PU06]
 
-1. <span data-ttu-id="6a349-216">**[Deploying Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスの最後のページで、次のオプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="6a349-216">On the last page of the **Deploying Docker Container on Azure** dialog box, specify the following options:</span></span>
+1. <span data-ttu-id="dc195-216">**[Deploying Docker Container on Azure]\(Azure への Docker コンテナーのデプロイ\)** ダイアログ ボックスの最後のページで、次のオプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="dc195-216">On the last page of the **Deploying Docker Container on Azure** dialog box, specify the following options:</span></span>
 
-   <span data-ttu-id="6a349-217">a.</span><span class="sxs-lookup"><span data-stu-id="6a349-217">a.</span></span> <span data-ttu-id="6a349-218">Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。</span><span class="sxs-lookup"><span data-stu-id="6a349-218">You can choose to specify a custom name for the container that will host your Docker container, or you can accept the default.</span></span>
+   <span data-ttu-id="dc195-217">a.</span><span class="sxs-lookup"><span data-stu-id="dc195-217">a.</span></span> <span data-ttu-id="dc195-218">Docker コンテナーをホストするコンテナーのカスタム名を指定するか、既定値をそのまま使用することができます。</span><span class="sxs-lookup"><span data-stu-id="dc195-218">You can choose to specify a custom name for the container that will host your Docker container, or you can accept the default.</span></span>
 
-   <span data-ttu-id="6a349-219">b.</span><span class="sxs-lookup"><span data-stu-id="6a349-219">b.</span></span> <span data-ttu-id="6a349-220">"*[外部ポート]*:*[内部ポート]*" という構文で、Docker ホストの TCP ポートを入力します。</span><span class="sxs-lookup"><span data-stu-id="6a349-220">Enter the TCP ports for your docker host by using the following syntax: *[external port]*:*[internal port]*.</span></span> <span data-ttu-id="6a349-221">たとえば "**80:8080**" では、外部ポート "80" と既定の内部 Spring Boot ポート "8080" が指定されます。</span><span class="sxs-lookup"><span data-stu-id="6a349-221">For example, **80:8080** specifies an external port of 80 and the default internal Spring Boot port of 8080.</span></span>
+   <span data-ttu-id="dc195-219">b.</span><span class="sxs-lookup"><span data-stu-id="dc195-219">b.</span></span> <span data-ttu-id="dc195-220">"*[外部ポート]*:*[内部ポート]*" という構文で、Docker ホストの TCP ポートを入力します。</span><span class="sxs-lookup"><span data-stu-id="dc195-220">Enter the TCP ports for your docker host by using the following syntax: *[external port]*:*[internal port]*.</span></span> <span data-ttu-id="dc195-221">たとえば "**80:8080**" では、外部ポート "80" と既定の内部 Spring Boot ポート "8080" が指定されます。</span><span class="sxs-lookup"><span data-stu-id="dc195-221">For example, **80:8080** specifies an external port of 80 and the default internal Spring Boot port of 8080.</span></span>
    
-      <span data-ttu-id="6a349-222">内部ポートをカスタマイズした場合 (application.yml ファイルを編集するなどして)、Azure で正しいルーティングが実現するようポート番号を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a349-222">If you have customized your internal port (for example, by editing the application.yml file), you need to specify the port number for the correct routing to occur in Azure.</span></span>
+      <span data-ttu-id="dc195-222">内部ポートをカスタマイズした場合 (application.yml ファイルを編集するなどして)、Azure で正しいルーティングが実現するようポート番号を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dc195-222">If you have customized your internal port (for example, by editing the application.yml file), you need to specify the port number for the correct routing to occur in Azure.</span></span>
 
-   <span data-ttu-id="6a349-223">c.</span><span class="sxs-lookup"><span data-stu-id="6a349-223">c.</span></span> <span data-ttu-id="6a349-224">これらのオプションを構成したら、**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6a349-224">After you configure these options, click **Finish**.</span></span>
+   <span data-ttu-id="dc195-223">c.</span><span class="sxs-lookup"><span data-stu-id="dc195-223">c.</span></span> <span data-ttu-id="dc195-224">これらのオプションを構成したら、**[完了]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dc195-224">After you configure these options, click **Finish**.</span></span>
 
    ![Azure への Docker コンテナーのデプロイ][PU07]
 
-1. <span data-ttu-id="6a349-226">Azure Toolkit による発行が完了したら、Azure Activity Log の状態が**発行済み**になります。</span><span class="sxs-lookup"><span data-stu-id="6a349-226">When the Azure Toolkit has finished publishing, the Azure Activity Log displays **Published** for the status.</span></span>
+1. <span data-ttu-id="dc195-226">Azure Toolkit による発行が完了したら、Azure Activity Log の状態が**発行済み**になります。</span><span class="sxs-lookup"><span data-stu-id="dc195-226">When the Azure Toolkit has finished publishing, the Azure Activity Log displays **Published** for the status.</span></span>
 
    ![正常にデプロイされた Docker ホスト][PU08]
 
-## <a name="next-steps"></a><span data-ttu-id="6a349-228">次の手順</span><span class="sxs-lookup"><span data-stu-id="6a349-228">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="dc195-228">次の手順</span><span class="sxs-lookup"><span data-stu-id="dc195-228">Next steps</span></span>
 
-<span data-ttu-id="6a349-229">Docker の他のリソースについては、公式の [Docker の Web サイト](https://www.docker.com/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6a349-229">For additional resources for Docker, see the official [Docker website](https://www.docker.com/).</span></span>
+<span data-ttu-id="dc195-229">Docker の他のリソースについては、公式の [Docker の Web サイト](https://www.docker.com/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dc195-229">For additional resources for Docker, see the official [Docker website](https://www.docker.com/).</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 

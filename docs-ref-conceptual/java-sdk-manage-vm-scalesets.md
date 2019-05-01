@@ -10,20 +10,20 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 4653726b387369c18942b6c11392f15b9f0351f3
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ebc9657f9f148b89d9a3178547c50d5b7bbc86e0
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593227"
 ---
-# <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a><span data-ttu-id="a440f-103">Azure 仮想マシン スケール セットを Java アプリケーションから管理する</span><span class="sxs-lookup"><span data-stu-id="a440f-103">Manage Azure virtual machine scale sets from your Java applications</span></span>
+# <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a><span data-ttu-id="3f186-103">Azure 仮想マシン スケール セットを Java アプリケーションから管理する</span><span class="sxs-lookup"><span data-stu-id="3f186-103">Manage Azure virtual machine scale sets from your Java applications</span></span>
 
-<span data-ttu-id="a440f-104">[このサンプル](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets)では、[Java 管理ライブラリ](https://github.com/Azure/azure-sdk-for-java)を使って[仮想マシン スケール セット](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)を作成します。</span><span class="sxs-lookup"><span data-stu-id="a440f-104">[This sample](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets) creates a  [virtual machine scale set](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview) using the [Java management libraries](https://github.com/Azure/azure-sdk-for-java).</span></span> 
+<span data-ttu-id="3f186-104">[このサンプル](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets)では、[Java 管理ライブラリ](https://github.com/Azure/azure-sdk-for-java)を使って[仮想マシン スケール セット](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview)を作成します。</span><span class="sxs-lookup"><span data-stu-id="3f186-104">[This sample](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets) creates a  [virtual machine scale set](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-overview) using the [Java management libraries](https://github.com/Azure/azure-sdk-for-java).</span></span> 
 
-## <a name="run-the-sample"></a><span data-ttu-id="a440f-105">サンプルを実行する</span><span class="sxs-lookup"><span data-stu-id="a440f-105">Run the sample</span></span>
+## <a name="run-the-sample"></a><span data-ttu-id="3f186-105">サンプルを実行する</span><span class="sxs-lookup"><span data-stu-id="3f186-105">Run the sample</span></span>
 
-<span data-ttu-id="a440f-106">[認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。</span><span class="sxs-lookup"><span data-stu-id="a440f-106">Create an [authentication file](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) and set an environment variable `AZURE_AUTH_LOCATION` with the full path to the file on your computer.</span></span> <span data-ttu-id="a440f-107">次に、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="a440f-107">Then run:</span></span>
+<span data-ttu-id="3f186-106">[認証ファイル](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)を作成し、そのファイルのコンピューター上における完全なパスを保持する環境変数 `AZURE_AUTH_LOCATION` を設定します。</span><span class="sxs-lookup"><span data-stu-id="3f186-106">Create an [authentication file](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md) and set an environment variable `AZURE_AUTH_LOCATION` with the full path to the file on your computer.</span></span> <span data-ttu-id="3f186-107">次に、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="3f186-107">Then run:</span></span>
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets.git
@@ -31,13 +31,13 @@ cd compute-java-manage-virtual-machine-scale-sets
 mvn clean compile exec:java
 ```
 
-<span data-ttu-id="a440f-108">[完全なコード サンプルについては GitHub](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a440f-108">View the [complete code sample on GitHub](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java).</span></span>
+<span data-ttu-id="3f186-108">[完全なコード サンプルについては GitHub](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f186-108">View the [complete code sample on GitHub](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java).</span></span>
 
-## <a name="authenticate-with-azure"></a><span data-ttu-id="a440f-109">Azure での認証</span><span class="sxs-lookup"><span data-stu-id="a440f-109">Authenticate with Azure</span></span>
+## <a name="authenticate-with-azure"></a><span data-ttu-id="3f186-109">Azure での認証</span><span class="sxs-lookup"><span data-stu-id="3f186-109">Authenticate with Azure</span></span>
 
 [!INCLUDE [auth-include](includes/java-auth-include.md)]
 
-## <a name="create-a-virtual-network-for-the-scale-set"></a><span data-ttu-id="a440f-110">スケール セットに使用する仮想ネットワークの作成</span><span class="sxs-lookup"><span data-stu-id="a440f-110">Create a virtual network for the scale set</span></span>
+## <a name="create-a-virtual-network-for-the-scale-set"></a><span data-ttu-id="3f186-110">スケール セットに使用する仮想ネットワークの作成</span><span class="sxs-lookup"><span data-stu-id="3f186-110">Create a virtual network for the scale set</span></span>
 
 ```java
 Network network = azure.networks().define(vnetName)
@@ -50,9 +50,9 @@ Network network = azure.networks().define(vnetName)
                     .create();
 ```
 
-<span data-ttu-id="a440f-111">仮想ネットワークとロード バランサーは、スケール セットの定義を作成する前に設定します。</span><span class="sxs-lookup"><span data-stu-id="a440f-111">Set up a virtual network and load balancer before creating the scale set definition.</span></span> <span data-ttu-id="a440f-112">スケール セットの初期構成に、これらのリソースが使用されます。</span><span class="sxs-lookup"><span data-stu-id="a440f-112">The scale set uses these resources for its initial configuration.</span></span>
+<span data-ttu-id="3f186-111">仮想ネットワークとロード バランサーは、スケール セットの定義を作成する前に設定します。</span><span class="sxs-lookup"><span data-stu-id="3f186-111">Set up a virtual network and load balancer before creating the scale set definition.</span></span> <span data-ttu-id="3f186-112">スケール セットの初期構成に、これらのリソースが使用されます。</span><span class="sxs-lookup"><span data-stu-id="3f186-112">The scale set uses these resources for its initial configuration.</span></span>
 
-## <a name="create-a-load-balancer-to-distribute-load-across-the-scale-set"></a><span data-ttu-id="a440f-113">スケール セット全体に負荷を分散するためのロード バランサーの作成</span><span class="sxs-lookup"><span data-stu-id="a440f-113">Create a load balancer to distribute load across the scale set</span></span>
+## <a name="create-a-load-balancer-to-distribute-load-across-the-scale-set"></a><span data-ttu-id="3f186-113">スケール セット全体に負荷を分散するためのロード バランサーの作成</span><span class="sxs-lookup"><span data-stu-id="3f186-113">Create a load balancer to distribute load across the scale set</span></span>
 
 ```java
 LoadBalancer loadBalancer1 = azure.loadBalancers().define(loadBalancerName1)
@@ -109,9 +109,9 @@ LoadBalancer loadBalancer1 = azure.loadBalancers().define(loadBalancerName1)
                     .create();
 ```
 
- <span data-ttu-id="a440f-114">このロード バランサーには、2 つのバックエンド ネットワーク アドレス プールが定義されています。1 つは HTTP の負荷を分散するためのプール (`backendPoolName1`)、もう 1 つは HTTPS の負荷を分散するためのプール (`backendPoolName2`) です。</span><span class="sxs-lookup"><span data-stu-id="a440f-114">The load balancer defines two backend network address pools-one to balance load across HTTP (`backendPoolName1`) and the other to balance load across HTTPS (`backendPoolName2`).</span></span>  <span data-ttu-id="a440f-115">ロード バランサーには、`defineHttpProbe()` メソッドによって[正常性プローブのエンドポイント](https://docs.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview)を設定します。</span><span class="sxs-lookup"><span data-stu-id="a440f-115">The `defineHttpProbe()` methods set up [health probe endpoints](https://docs.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview) on the load balancers.</span></span> <span data-ttu-id="a440f-116">スケール セットの仮想マシンのポート 22 とポート 23 は、telnet アクセスと SSH アクセス用に NAT ルールで公開しています。</span><span class="sxs-lookup"><span data-stu-id="a440f-116">NAT rules expose ports 22 and 23 on the scale set virtual machines for telnet and SSH access.</span></span>
+ <span data-ttu-id="3f186-114">このロード バランサーには、2 つのバックエンド ネットワーク アドレス プールが定義されています。1 つは HTTP の負荷を分散するためのプール (`backendPoolName1`)、もう 1 つは HTTPS の負荷を分散するためのプール (`backendPoolName2`) です。</span><span class="sxs-lookup"><span data-stu-id="3f186-114">The load balancer defines two backend network address pools-one to balance load across HTTP (`backendPoolName1`) and the other to balance load across HTTPS (`backendPoolName2`).</span></span>  <span data-ttu-id="3f186-115">ロード バランサーには、`defineHttpProbe()` メソッドによって[正常性プローブのエンドポイント](https://docs.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview)を設定します。</span><span class="sxs-lookup"><span data-stu-id="3f186-115">The `defineHttpProbe()` methods set up [health probe endpoints](https://docs.microsoft.com/azure/load-balancer/load-balancer-custom-probe-overview) on the load balancers.</span></span> <span data-ttu-id="3f186-116">スケール セットの仮想マシンのポート 22 とポート 23 は、telnet アクセスと SSH アクセス用に NAT ルールで公開しています。</span><span class="sxs-lookup"><span data-stu-id="3f186-116">NAT rules expose ports 22 and 23 on the scale set virtual machines for telnet and SSH access.</span></span>
 
-## <a name="create-a-scale-set"></a><span data-ttu-id="a440f-117">スケール セットを作成する</span><span class="sxs-lookup"><span data-stu-id="a440f-117">Create a scale set</span></span>
+## <a name="create-a-scale-set"></a><span data-ttu-id="3f186-117">スケール セットを作成する</span><span class="sxs-lookup"><span data-stu-id="3f186-117">Create a scale set</span></span>
  
 ```java
  // Create a virtual machine scale set with three virtual machines
@@ -146,9 +146,9 @@ VirtualMachineScaleSet virtualMachineScaleSet = azure.virtualMachineScaleSets()
                 .create();
 ```
 
-<span data-ttu-id="a440f-118">前の手順で作成した仮想ネットワークの定義とロード バランサーの定義を使用して、それぞれ 3 つの Linux インスタンス (`withCapacity(3)`) と 3 つの 100 GB データ ディスクから成るスケール セットを作成します。</span><span class="sxs-lookup"><span data-stu-id="a440f-118">Use the virtual network definition and load balancer definitions created in the previous step to create a scale set with three Linux instances (`withCapacity(3)`) and three 100GB data disks each.</span></span> <span data-ttu-id="a440f-119">それぞれの VM には、`defineNewExtension()` メソッド チェーンによって Apache Web サーバーがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="a440f-119">The `defineNewExtension()` method chain installs the Apache web server on each VM.</span></span>
+<span data-ttu-id="3f186-118">前の手順で作成した仮想ネットワークの定義とロード バランサーの定義を使用して、それぞれ 3 つの Linux インスタンス (`withCapacity(3)`) と 3 つの 100 GB データ ディスクから成るスケール セットを作成します。</span><span class="sxs-lookup"><span data-stu-id="3f186-118">Use the virtual network definition and load balancer definitions created in the previous step to create a scale set with three Linux instances (`withCapacity(3)`) and three 100GB data disks each.</span></span> <span data-ttu-id="3f186-119">それぞれの VM には、`defineNewExtension()` メソッド チェーンによって Apache Web サーバーがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="3f186-119">The `defineNewExtension()` method chain installs the Apache web server on each VM.</span></span>
 
-## <a name="list-virtual-machine-scale-set-network-interfaces"></a><span data-ttu-id="a440f-120">仮想マシン スケール セットに存在するネットワーク インターフェイスの列挙</span><span class="sxs-lookup"><span data-stu-id="a440f-120">List virtual machine scale set network interfaces</span></span>
+## <a name="list-virtual-machine-scale-set-network-interfaces"></a><span data-ttu-id="3f186-120">仮想マシン スケール セットに存在するネットワーク インターフェイスの列挙</span><span class="sxs-lookup"><span data-stu-id="3f186-120">List virtual machine scale set network interfaces</span></span>
 
 ```java
 // List network interfaces on the scale set and iterate through them
@@ -159,7 +159,7 @@ for (VirtualMachineScaleSetNetworkInterface vmssNic : vmssNics) {
 }
 ```
 
-## <a name="get-ssh-connection-strings-for-each-scale-set-virtual-machine"></a><span data-ttu-id="a440f-121">各スケール セット仮想マシンの SSH 接続文字列の取得</span><span class="sxs-lookup"><span data-stu-id="a440f-121">Get SSH connection strings for each scale set virtual machine</span></span>
+## <a name="get-ssh-connection-strings-for-each-scale-set-virtual-machine"></a><span data-ttu-id="3f186-121">各スケール セット仮想マシンの SSH 接続文字列の取得</span><span class="sxs-lookup"><span data-stu-id="3f186-121">Get SSH connection strings for each scale set virtual machine</span></span>
 
 ```java
 for (VirtualMachineScaleSetVM instance : virtualMachineScaleSet.virtualMachines().list()) {
@@ -187,34 +187,34 @@ for (VirtualMachineScaleSetVM instance : virtualMachineScaleSet.virtualMachines(
 }
 ```
 
-<span data-ttu-id="a440f-122">仮想マシンの SSH ポート (22) と telnet ポート (23) は、先に作成しておいた NAT プールによってロード バランサー上のポートにマップされます。</span><span class="sxs-lookup"><span data-stu-id="a440f-122">The NAT pool created earlier mapped the SSH and telnet ports (22 and 23, respectively) on the virtual machines to ports on the load balancer.</span></span> <span data-ttu-id="a440f-123">このコードによって、各仮想マシンの SSH 接続文字列が作成されます。</span><span class="sxs-lookup"><span data-stu-id="a440f-123">This code builds the SSH connection string for each virtual machine.</span></span>
+<span data-ttu-id="3f186-122">仮想マシンの SSH ポート (22) と telnet ポート (23) は、先に作成しておいた NAT プールによってロード バランサー上のポートにマップされます。</span><span class="sxs-lookup"><span data-stu-id="3f186-122">The NAT pool created earlier mapped the SSH and telnet ports (22 and 23, respectively) on the virtual machines to ports on the load balancer.</span></span> <span data-ttu-id="3f186-123">このコードによって、各仮想マシンの SSH 接続文字列が作成されます。</span><span class="sxs-lookup"><span data-stu-id="3f186-123">This code builds the SSH connection string for each virtual machine.</span></span>
 
-## <a name="stop-the-virtual-machine-scale-set"></a><span data-ttu-id="a440f-124">仮想マシン スケール セットの停止</span><span class="sxs-lookup"><span data-stu-id="a440f-124">Stop the virtual machine scale set</span></span>
+## <a name="stop-the-virtual-machine-scale-set"></a><span data-ttu-id="3f186-124">仮想マシン スケール セットの停止</span><span class="sxs-lookup"><span data-stu-id="3f186-124">Stop the virtual machine scale set</span></span>
 
 ```java
 // stop (not deallocate) all scale set instances
 virtualMachineScaleSet.powerOff();
 ```
 
-<span data-ttu-id="a440f-125">仮想マシンに予約されたリソースは、その仮想マシンを停止しても消費され続けます。</span><span class="sxs-lookup"><span data-stu-id="a440f-125">Stopped virtual machines continue to consume reserved resources.</span></span> <span data-ttu-id="a440f-126">仮想マシン上のオペレーティング システムを `deallocate()` で停止して、コンピューティング リソースを解放してください。</span><span class="sxs-lookup"><span data-stu-id="a440f-126">Use `deallocate()` to stop the operating system on the virtual machines and release their compute resources.</span></span>
+<span data-ttu-id="3f186-125">仮想マシンに予約されたリソースは、その仮想マシンを停止しても消費され続けます。</span><span class="sxs-lookup"><span data-stu-id="3f186-125">Stopped virtual machines continue to consume reserved resources.</span></span> <span data-ttu-id="3f186-126">仮想マシン上のオペレーティング システムを `deallocate()` で停止して、コンピューティング リソースを解放してください。</span><span class="sxs-lookup"><span data-stu-id="3f186-126">Use `deallocate()` to stop the operating system on the virtual machines and release their compute resources.</span></span>
 
-## <a name="deallocate-the-virtual-machine-scale-set"></a><span data-ttu-id="a440f-127">仮想マシン スケール セットの割り当て解除</span><span class="sxs-lookup"><span data-stu-id="a440f-127">Deallocate the virtual machine scale set</span></span>
+## <a name="deallocate-the-virtual-machine-scale-set"></a><span data-ttu-id="3f186-127">仮想マシン スケール セットの割り当て解除</span><span class="sxs-lookup"><span data-stu-id="3f186-127">Deallocate the virtual machine scale set</span></span>
 
 ```java
 // deallocate the virtual machine scale set
 virtualMachineScaleSet.deallocate();
 ```
 
-<span data-ttu-id="a440f-128">Deallocate() を実行すると、仮想マシン上のオペレーティング システムがシャットダウンされ、スケール セット インスタンスで使用されているコンピューティング リソースとネットワーク リソース (IP アドレスなど) が解放されます。</span><span class="sxs-lookup"><span data-stu-id="a440f-128">Deallocate() shuts down the operating system on the virtual machines and frees up the compute and network resources (such as IP addresses) used by the scale set instances.</span></span> <span data-ttu-id="a440f-129">その後も、仮想マシンにアタッチされているすべてのディスク (OS も含む) のストレージ料金が課金されます。</span><span class="sxs-lookup"><span data-stu-id="a440f-129">You continue to accrue storage charges for any disks (including the OS) attached to the virtual machines.</span></span>
+<span data-ttu-id="3f186-128">Deallocate() を実行すると、仮想マシン上のオペレーティング システムがシャットダウンされ、スケール セット インスタンスで使用されているコンピューティング リソースとネットワーク リソース (IP アドレスなど) が解放されます。</span><span class="sxs-lookup"><span data-stu-id="3f186-128">Deallocate() shuts down the operating system on the virtual machines and frees up the compute and network resources (such as IP addresses) used by the scale set instances.</span></span> <span data-ttu-id="3f186-129">その後も、仮想マシンにアタッチされているすべてのディスク (OS も含む) のストレージ料金が課金されます。</span><span class="sxs-lookup"><span data-stu-id="3f186-129">You continue to accrue storage charges for any disks (including the OS) attached to the virtual machines.</span></span>
 
-## <a name="start-a-virtual-machine-scale-set"></a><span data-ttu-id="a440f-130">仮想マシン スケール セットの起動</span><span class="sxs-lookup"><span data-stu-id="a440f-130">Start a virtual machine scale set</span></span>
+## <a name="start-a-virtual-machine-scale-set"></a><span data-ttu-id="3f186-130">仮想マシン スケール セットの起動</span><span class="sxs-lookup"><span data-stu-id="3f186-130">Start a virtual machine scale set</span></span>
 
 ```java
 // start a deallocated or stopped virtual machine scale set
 virtualMachineScaleSet.start();
 ```
 
-## <a name="update-the-number-of-virtual-machines-instances-in-the-scale-set"></a><span data-ttu-id="a440f-131">スケール セットに含まれる仮想マシンのインスタンス数の更新</span><span class="sxs-lookup"><span data-stu-id="a440f-131">Update the number of virtual machines instances in the scale set</span></span>
+## <a name="update-the-number-of-virtual-machines-instances-in-the-scale-set"></a><span data-ttu-id="3f186-131">スケール セットに含まれる仮想マシンのインスタンス数の更新</span><span class="sxs-lookup"><span data-stu-id="3f186-131">Update the number of virtual machines instances in the scale set</span></span>
 ```java
 // increase the number of virtual machine scale set instances from three to six
 virtualMachineScaleSet.update()
@@ -222,20 +222,20 @@ virtualMachineScaleSet.update()
                     .apply();
 ```
 
-<span data-ttu-id="a440f-132">スケール セットに含まれる仮想マシンの数をスケーリングするには `withCapacity()` を使用します。また、それぞれの仮想マシンのキャパシティをスケーリングするには、`withSku()` を使用します。</span><span class="sxs-lookup"><span data-stu-id="a440f-132">Scale the number of virtual machines in the scale set using `withCapacity()` and scale the capacity of each virtual machine using `withSku()`.</span></span>
+<span data-ttu-id="3f186-132">スケール セットに含まれる仮想マシンの数をスケーリングするには `withCapacity()` を使用します。また、それぞれの仮想マシンのキャパシティをスケーリングするには、`withSku()` を使用します。</span><span class="sxs-lookup"><span data-stu-id="3f186-132">Scale the number of virtual machines in the scale set using `withCapacity()` and scale the capacity of each virtual machine using `withSku()`.</span></span>
 
-## <a name="sample-explanation"></a><span data-ttu-id="a440f-133">サンプルの説明</span><span class="sxs-lookup"><span data-stu-id="a440f-133">Sample explanation</span></span>
+## <a name="sample-explanation"></a><span data-ttu-id="3f186-133">サンプルの説明</span><span class="sxs-lookup"><span data-stu-id="3f186-133">Sample explanation</span></span>
 
-<span data-ttu-id="a440f-134">[このサンプル コード](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java)ではまず、スケール セットの仮想マシン間の通信に使用する仮想ネットワークを作成し、トラフィックを仮想マシン間で分散するためのロード バランサーを作成します。</span><span class="sxs-lookup"><span data-stu-id="a440f-134">[The sample code](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java) first creates a virtual network for the scale set to communicate across and a load balancer to distribute traffic across the virtual machines.</span></span> <span data-ttu-id="a440f-135">Apache Web サーバーを実行する 3 つの Linux インスタンスから成るスケール セットが、`azure.virtualMachineScaleSets().define()...create()` メソッド チェーンによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="a440f-135">The `azure.virtualMachineScaleSets().define()...create()` method chain creates the scale set with three Linux instances running the Apache web server.</span></span>    
+<span data-ttu-id="3f186-134">[このサンプル コード](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java)ではまず、スケール セットの仮想マシン間の通信に使用する仮想ネットワークを作成し、トラフィックを仮想マシン間で分散するためのロード バランサーを作成します。</span><span class="sxs-lookup"><span data-stu-id="3f186-134">[The sample code](https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets/blob/master/src/main/java/com/microsoft/azure/management/compute/samples/ManageVirtualMachineScaleSet.java) first creates a virtual network for the scale set to communicate across and a load balancer to distribute traffic across the virtual machines.</span></span> <span data-ttu-id="3f186-135">Apache Web サーバーを実行する 3 つの Linux インスタンスから成るスケール セットが、`azure.virtualMachineScaleSets().define()...create()` メソッド チェーンによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="3f186-135">The `azure.virtualMachineScaleSets().define()...create()` method chain creates the scale set with three Linux instances running the Apache web server.</span></span>    
    
-| <span data-ttu-id="a440f-136">サンプルで使われているクラス</span><span class="sxs-lookup"><span data-stu-id="a440f-136">Class used in sample</span></span> | <span data-ttu-id="a440f-137">メモ</span><span class="sxs-lookup"><span data-stu-id="a440f-137">Notes</span></span>
+| <span data-ttu-id="3f186-136">サンプルで使われているクラス</span><span class="sxs-lookup"><span data-stu-id="3f186-136">Class used in sample</span></span> | <span data-ttu-id="3f186-137">メモ</span><span class="sxs-lookup"><span data-stu-id="3f186-137">Notes</span></span>
 |-------|-------|
-| [<span data-ttu-id="a440f-138">VirtualMachineScaleSet</span><span class="sxs-lookup"><span data-stu-id="a440f-138">VirtualMachineScaleSet</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | <span data-ttu-id="a440f-139">スケール セットに含まれるすべての仮想マシンを対象に、照会、起動、停止、更新、削除を実行します。</span><span class="sxs-lookup"><span data-stu-id="a440f-139">Query, start, stop, update and delete all virtual machines in the scale set.</span></span>
-| [<span data-ttu-id="a440f-140">VirtualMachineScaleSetVM</span><span class="sxs-lookup"><span data-stu-id="a440f-140">VirtualMachineScaleSetVM</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | <span data-ttu-id="a440f-141">`virtualMachineScaleSet.virtualMachines().get()` または `list()` から取得して、スケール セットの仮想マシンを対象に、照会、起動、停止、構成、削除を実行できます。</span><span class="sxs-lookup"><span data-stu-id="a440f-141">Retrieved from `virtualMachineScaleSet.virtualMachines().get()` or `list()`, allows you to query, start, stop, configure and delete virtual machines in the scale set.</span></span>
-| [<span data-ttu-id="a440f-142">VirtualMachineScaleSetNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="a440f-142">VirtualMachineScaleSetNetworkInterface</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | <span data-ttu-id="a440f-143">スケール セットに含まれる仮想マシンの読み取り専用のネットワーク インターフェイスを表します。`virtualMachineScaleSet.listNetworkInterfaces()` から返されます。</span><span class="sxs-lookup"><span data-stu-id="a440f-143">Returned from `virtualMachineScaleSet.listNetworkInterfaces()`, read-only representation of a network interface on a virtual machine in a scale set.</span></span>
-| [<span data-ttu-id="a440f-144">VirtualMachineScaleSetSkuTypes</span><span class="sxs-lookup"><span data-stu-id="a440f-144">VirtualMachineScaleSetSkuTypes</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | <span data-ttu-id="a440f-145">スケール セットのメンバーが利用できるリソースの量を定義する[仮想マシン スケール セットのレベル](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)を設定するための静的フィールドのクラスです。</span><span class="sxs-lookup"><span data-stu-id="a440f-145">Class of static fields used to set the [virtual machine scale set tier](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/) used to define how much resources scale set members can consume.</span></span>
-| [<span data-ttu-id="a440f-146">VirtualMachineScaleSetNicIpConfiguration</span><span class="sxs-lookup"><span data-stu-id="a440f-146">VirtualMachineScaleSetNicIpConfiguration</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | <span data-ttu-id="a440f-147">スケール セットの仮想マシン上のネットワーク インターフェイスに関連付けられている IP 構成を照会する際に使用します。</span><span class="sxs-lookup"><span data-stu-id="a440f-147">Used to query the IP configuration associated with a network interface on a scale set virtual machine.</span></span>
+| [<span data-ttu-id="3f186-138">VirtualMachineScaleSet</span><span class="sxs-lookup"><span data-stu-id="3f186-138">VirtualMachineScaleSet</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | <span data-ttu-id="3f186-139">スケール セットに含まれるすべての仮想マシンを対象に、照会、起動、停止、更新、削除を実行します。</span><span class="sxs-lookup"><span data-stu-id="3f186-139">Query, start, stop, update and delete all virtual machines in the scale set.</span></span>
+| [<span data-ttu-id="3f186-140">VirtualMachineScaleSetVM</span><span class="sxs-lookup"><span data-stu-id="3f186-140">VirtualMachineScaleSetVM</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | <span data-ttu-id="3f186-141">`virtualMachineScaleSet.virtualMachines().get()` または `list()` から取得して、スケール セットの仮想マシンを対象に、照会、起動、停止、構成、削除を実行できます。</span><span class="sxs-lookup"><span data-stu-id="3f186-141">Retrieved from `virtualMachineScaleSet.virtualMachines().get()` or `list()`, allows you to query, start, stop, configure and delete virtual machines in the scale set.</span></span>
+| [<span data-ttu-id="3f186-142">VirtualMachineScaleSetNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="3f186-142">VirtualMachineScaleSetNetworkInterface</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | <span data-ttu-id="3f186-143">スケール セットに含まれる仮想マシンの読み取り専用のネットワーク インターフェイスを表します。`virtualMachineScaleSet.listNetworkInterfaces()` から返されます。</span><span class="sxs-lookup"><span data-stu-id="3f186-143">Returned from `virtualMachineScaleSet.listNetworkInterfaces()`, read-only representation of a network interface on a virtual machine in a scale set.</span></span>
+| [<span data-ttu-id="3f186-144">VirtualMachineScaleSetSkuTypes</span><span class="sxs-lookup"><span data-stu-id="3f186-144">VirtualMachineScaleSetSkuTypes</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | <span data-ttu-id="3f186-145">スケール セットのメンバーが利用できるリソースの量を定義する[仮想マシン スケール セットのレベル](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)を設定するための静的フィールドのクラスです。</span><span class="sxs-lookup"><span data-stu-id="3f186-145">Class of static fields used to set the [virtual machine scale set tier](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/) used to define how much resources scale set members can consume.</span></span>
+| [<span data-ttu-id="3f186-146">VirtualMachineScaleSetNicIpConfiguration</span><span class="sxs-lookup"><span data-stu-id="3f186-146">VirtualMachineScaleSetNicIpConfiguration</span></span>](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | <span data-ttu-id="3f186-147">スケール セットの仮想マシン上のネットワーク インターフェイスに関連付けられている IP 構成を照会する際に使用します。</span><span class="sxs-lookup"><span data-stu-id="3f186-147">Used to query the IP configuration associated with a network interface on a scale set virtual machine.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="a440f-148">次の手順</span><span class="sxs-lookup"><span data-stu-id="a440f-148">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="3f186-148">次の手順</span><span class="sxs-lookup"><span data-stu-id="3f186-148">Next steps</span></span>
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

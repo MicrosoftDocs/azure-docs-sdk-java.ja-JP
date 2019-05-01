@@ -14,131 +14,131 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: eb6099ab0c19bf3588cb7fd668f070771e58fe74
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 79f6cfd3b21d68c131a3f0052d86e4bcb3254e55
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61591073"
 ---
-# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="fe7a9-103">Azure Toolkit for Eclipse の Azure サインイン手順</span><span class="sxs-lookup"><span data-stu-id="fe7a9-103">Azure Sign In Instructions for the Azure Toolkit for Eclipse</span></span>
+# <a name="azure-sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a><span data-ttu-id="a3a5f-103">Azure Toolkit for Eclipse の Azure サインイン手順</span><span class="sxs-lookup"><span data-stu-id="a3a5f-103">Azure Sign In Instructions for the Azure Toolkit for Eclipse</span></span>
 
-<span data-ttu-id="fe7a9-104">Azure Toolkit for Eclipse には、Azure アカウントにサインインするための 2 つの方法が用意されています。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
+<span data-ttu-id="a3a5f-104">Azure Toolkit for Eclipse には、Azure アカウントにサインインするための 2 つの方法が用意されています。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-104">The Azure Toolkit for Eclipse provides two methods for signing into your Azure account:</span></span>
 
-  * <span data-ttu-id="fe7a9-105">**自動** - この方法を使用する場合は、サービス プリンシパル データを含む資格情報ファイルを作成し、その後で、資格情報ファイルを使用して Azure アカウントに自動的にサインインできます。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-105">**Automated** - when you are using this method, you will create a credentials file which contains your service principal data, after which you can use the credentials file to automatically sign into your Azure account.</span></span>
-  * <span data-ttu-id="fe7a9-106">**対話型** - この方法を使用する場合は、Azure アカウントにサインインするたびに Azure 資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-106">**Interactive** - when you are using this method, you will enter your Azure credentials each time you sign into your Azure account.</span></span>
+  * <span data-ttu-id="a3a5f-105">**自動** - この方法を使用する場合は、サービス プリンシパル データを含む資格情報ファイルを作成し、その後で、資格情報ファイルを使用して Azure アカウントに自動的にサインインできます。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-105">**Automated** - when you are using this method, you will create a credentials file which contains your service principal data, after which you can use the credentials file to automatically sign into your Azure account.</span></span>
+  * <span data-ttu-id="a3a5f-106">**対話型** - この方法を使用する場合は、Azure アカウントにサインインするたびに Azure 資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-106">**Interactive** - when you are using this method, you will enter your Azure credentials each time you sign into your Azure account.</span></span>
 
-<span data-ttu-id="fe7a9-107">以下のセクションの手順では、各方法の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-107">The steps in the following sections will describe how to use each method.</span></span>
+<span data-ttu-id="a3a5f-107">以下のセクションの手順では、各方法の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-107">The steps in the following sections will describe how to use each method.</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
 
-## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a><span data-ttu-id="fe7a9-108">Azure アカウントに自動的にサインインし、今後使用する資格情報ファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="fe7a9-108">Signing into your Azure account automatically and creating a credentials file to use in the future</span></span>
+## <a name="signing-into-your-azure-account-automatically-and-creating-a-credentials-file-to-use-in-the-future"></a><span data-ttu-id="a3a5f-108">Azure アカウントに自動的にサインインし、今後使用する資格情報ファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="a3a5f-108">Signing into your Azure account automatically and creating a credentials file to use in the future</span></span>
 
-<span data-ttu-id="fe7a9-109">次の手順は、サービス プリンシパル データを格納する資格情報ファイルを作成する方法を説明しています。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-109">The following steps will walk you through creating a credentials file which contains your service principal data.</span></span> <span data-ttu-id="fe7a9-110">これらの手順を完了すると、Eclipse は自動的に資格情報ファイルを使用し、プロジェクトを開くたびに Azure に自動的にサインインします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-110">Once you have completed these steps, Eclipse will automatically use the credentials file to automatically sign you into Azure each time you open your project.</span></span>
+<span data-ttu-id="a3a5f-109">次の手順は、サービス プリンシパル データを格納する資格情報ファイルを作成する方法を説明しています。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-109">The following steps will walk you through creating a credentials file which contains your service principal data.</span></span> <span data-ttu-id="a3a5f-110">これらの手順を完了すると、Eclipse は自動的に資格情報ファイルを使用し、プロジェクトを開くたびに Azure に自動的にサインインします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-110">Once you have completed these steps, Eclipse will automatically use the credentials file to automatically sign you into Azure each time you open your project.</span></span>
 
-1. <span data-ttu-id="fe7a9-111">Eclipse でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-111">Open your project with Eclipse.</span></span>
+1. <span data-ttu-id="a3a5f-111">Eclipse でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-111">Open your project with Eclipse.</span></span>
 
-1. <span data-ttu-id="fe7a9-112">**[ツール]**、**[Azure]**、**[サインイン]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-112">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-112">**[ツール]**、**[Azure]**、**[サインイン]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-112">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
 
    ![Azure サインイン用の Eclipse メニュー][A01]
 
-1. <span data-ttu-id="fe7a9-114">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[自動]** を選択し、**[新規]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-114">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **New**.</span></span>
+1. <span data-ttu-id="a3a5f-114">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[自動]** を選択し、**[新規]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-114">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **New**.</span></span>
 
    ![[サインイン] ダイアログ ボックス][A02]
 
-1. <span data-ttu-id="fe7a9-116">**[Azure Log In (Azure ログイン)]** ダイアログ ボックスが表示されたら、Azure 資格情報を入力し、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-116">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-116">**[Azure Log In (Azure ログイン)]** ダイアログ ボックスが表示されたら、Azure 資格情報を入力し、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-116">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
 
    ![Azure のログイン ダイアログ ボックス][A03]
 
-1. <span data-ttu-id="fe7a9-118">**[Create authentication files (認証ファイルの作成)]**  ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、宛先ディレクトリを選んでから、**[開始]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-118">When the **Create authentication files** dialog box appears, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
+1. <span data-ttu-id="a3a5f-118">**[Create authentication files (認証ファイルの作成)]**  ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、宛先ディレクトリを選んでから、**[開始]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-118">When the **Create authentication files** dialog box appears, select the subscriptions that you want to use, choose your destination directory, and then click **Start**.</span></span>
 
    ![[Azure Log In (Azure ログイン)] ダイアログ ボックス][A04]
 
-1. <span data-ttu-id="fe7a9-120">**[Service Principal Creatation Status (サービス プリンシパル作成ステータス)]** ダイアログ ボックスが表示されます。ファイルが正常に作成されたら **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-120">The **Service Principal Creatation Status** dialog box will be displayed, and after your files have been created successfully, click **OK**.</span></span>
+1. <span data-ttu-id="a3a5f-120">**[Service Principal Creatation Status (サービス プリンシパル作成ステータス)]** ダイアログ ボックスが表示されます。ファイルが正常に作成されたら **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-120">The **Service Principal Creatation Status** dialog box will be displayed, and after your files have been created successfully, click **OK**.</span></span>
 
    ![[Service Principal Creatation Status (サービス プリンシパル作成ステータス)] ダイアログ ボックス][A05]
 
-1. <span data-ttu-id="fe7a9-122">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-122">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-122">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-122">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
 
    ![Azure のログイン ダイアログ ボックス][A06]
 
-1. <span data-ttu-id="fe7a9-124">**[サブスクリプションの選択]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-124">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+1. <span data-ttu-id="a3a5f-124">**[サブスクリプションの選択]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-124">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
 
    ![[サブスクリプションの選択] ダイアログ ボックス][A07]
 
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a><span data-ttu-id="fe7a9-126">自動的にサインインした場合に Azure アカウントからサインアウトする</span><span class="sxs-lookup"><span data-stu-id="fe7a9-126">Signing out of your Azure account when you signed in automatically</span></span>
+## <a name="signing-out-of-your-azure-account-when-you-signed-in-automatically"></a><span data-ttu-id="a3a5f-126">自動的にサインインした場合に Azure アカウントからサインアウトする</span><span class="sxs-lookup"><span data-stu-id="a3a5f-126">Signing out of your Azure account when you signed in automatically</span></span>
 
-<span data-ttu-id="fe7a9-127">前のセクションの手順を構成した後、Eclipse を再起動するたびに Azure Toolkit によって Azure アカウントに自動的にサインインします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-127">After you have configured the steps in the previous section, the Azure Toolkit will automatically sign you into your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="fe7a9-128">ただし、Azure アカウントからサインアウトし、Azure Toolkit が自動的にサインインしないようにするには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, use the following steps.</span></span>
+<span data-ttu-id="a3a5f-127">前のセクションの手順を構成した後、Eclipse を再起動するたびに Azure Toolkit によって Azure アカウントに自動的にサインインします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-127">After you have configured the steps in the previous section, the Azure Toolkit will automatically sign you into your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="a3a5f-128">ただし、Azure アカウントからサインアウトし、Azure Toolkit が自動的にサインインしないようにするには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-128">However, to sign out of your Azure account and prevent the Azure Toolkit from signing you in automatically, use the following steps.</span></span>
 
-1. <span data-ttu-id="fe7a9-129">Eclipse で、**[ツール]**、**[Azure]**、**[サインアウト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-129">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
+1. <span data-ttu-id="a3a5f-129">Eclipse で、**[ツール]**、**[Azure]**、**[サインアウト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-129">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
 
    ![Azure サインアウト用の Eclipse メニュー][L01]
 
-1. <span data-ttu-id="fe7a9-131">**[Azure Sign Out (Azure サインアウト)]** ダイアログ ボックスが表示されたら、**[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-131">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
+1. <span data-ttu-id="a3a5f-131">**[Azure Sign Out (Azure サインアウト)]** ダイアログ ボックスが表示されたら、**[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-131">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
 
    ![[サインアウト] ダイアログ ボックス][L03]
 
-## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a><span data-ttu-id="fe7a9-133">既に作成した資格情報ファイルを使用して Azure アカウントに自動的にサインインする</span><span class="sxs-lookup"><span data-stu-id="fe7a9-133">Signing into your Azure account automatically using a credentials file which you have already created</span></span>
+## <a name="signing-into-your-azure-account-automatically-using-a-credentials-file-which-you-have-already-created"></a><span data-ttu-id="a3a5f-133">既に作成した資格情報ファイルを使用して Azure アカウントに自動的にサインインする</span><span class="sxs-lookup"><span data-stu-id="a3a5f-133">Signing into your Azure account automatically using a credentials file which you have already created</span></span>
 
-<span data-ttu-id="fe7a9-134">Eclipse を使用しているときに Azure からサインアウトする場合、Azure アカウントに自動的にサインインするには、資格情報ファイルを使用するように Azure Toolkit for Eclipse を再構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-134">If you sign out of Azure when you are using Eclipse, you will need to reconfigure the Azure Toolkit for Eclipse to use a credentials file which have created before you can automatically sign into your Azure acccount.</span></span> <span data-ttu-id="fe7a9-135">次の手順は、既存の資格情報ファイルを使用するように Azure Toolkit を構成する方法を説明しています。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-135">The following steps will walk you through configuring the Azure Toolkit to use an existing credentials file.</span></span>
+<span data-ttu-id="a3a5f-134">Eclipse を使用しているときに Azure からサインアウトする場合、Azure アカウントに自動的にサインインするには、資格情報ファイルを使用するように Azure Toolkit for Eclipse を再構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-134">If you sign out of Azure when you are using Eclipse, you will need to reconfigure the Azure Toolkit for Eclipse to use a credentials file which have created before you can automatically sign into your Azure acccount.</span></span> <span data-ttu-id="a3a5f-135">次の手順は、既存の資格情報ファイルを使用するように Azure Toolkit を構成する方法を説明しています。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-135">The following steps will walk you through configuring the Azure Toolkit to use an existing credentials file.</span></span>
 
-1. <span data-ttu-id="fe7a9-136">Eclipse でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-136">Open your project with Eclipse.</span></span>
+1. <span data-ttu-id="a3a5f-136">Eclipse でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-136">Open your project with Eclipse.</span></span>
 
-1. <span data-ttu-id="fe7a9-137">**[ツール]**、**[Azure]**、**[サインイン]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-137">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-137">**[ツール]**、**[Azure]**、**[サインイン]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-137">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
 
    ![Azure サインイン用の Eclipse メニュー][A01]
 
-1. <span data-ttu-id="fe7a9-139">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[自動]** を選択し、**[参照]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-139">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **Browse**.</span></span>
+1. <span data-ttu-id="a3a5f-139">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[自動]** を選択し、**[参照]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-139">When the **Azure Sign In** dialog box appears, select **Automated**, and then click **Browse**.</span></span>
 
    ![[サインイン] ダイアログ ボックス][A02]
 
-1. <span data-ttu-id="fe7a9-141">**Select Authenticated File\(認証ファイルの選択\)** ダイアログ ボックスが表示されたら、前に作成した資格情報ファイルを選び、**Open\(開く)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-141">When the **Select Authenticated File** dialog box appears, select a credentials file which you created earlier, and then click **Open**.</span></span>
+1. <span data-ttu-id="a3a5f-141">**Select Authenticated File\(認証ファイルの選択\)** ダイアログ ボックスが表示されたら、前に作成した資格情報ファイルを選び、**Open\(開く)** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-141">When the **Select Authenticated File** dialog box appears, select a credentials file which you created earlier, and then click **Open**.</span></span>
 
    ![[サインイン] ダイアログ ボックス][A08]
 
-1. <span data-ttu-id="fe7a9-143">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-143">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-143">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-143">When the **Azure Sign In** dialog box appears, click **Sign In**.</span></span>
 
    ![Azure のログイン ダイアログ ボックス][A06]
 
-1. <span data-ttu-id="fe7a9-145">**[サブスクリプションの選択]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-145">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+1. <span data-ttu-id="a3a5f-145">**[サブスクリプションの選択]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-145">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
 
    ![[サブスクリプションの選択] ダイアログ ボックス][A07]
 
-## <a name="signing-into-your-azure-account-interactively"></a><span data-ttu-id="fe7a9-147">Azure アカウントに対話形式でサインインする</span><span class="sxs-lookup"><span data-stu-id="fe7a9-147">Signing into your Azure account interactively</span></span>
+## <a name="signing-into-your-azure-account-interactively"></a><span data-ttu-id="a3a5f-147">Azure アカウントに対話形式でサインインする</span><span class="sxs-lookup"><span data-stu-id="a3a5f-147">Signing into your Azure account interactively</span></span>
 
-<span data-ttu-id="fe7a9-148">次の手順は、Azure 資格情報を手動で入力して Azure にサインインする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-148">The following steps will illustrate how to sign into Azure by manually entering your Azure credentials.</span></span>
+<span data-ttu-id="a3a5f-148">次の手順は、Azure 資格情報を手動で入力して Azure にサインインする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-148">The following steps will illustrate how to sign into Azure by manually entering your Azure credentials.</span></span>
 
-1. <span data-ttu-id="fe7a9-149">Eclipse でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-149">Open your project with Eclipse.</span></span>
+1. <span data-ttu-id="a3a5f-149">Eclipse でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-149">Open your project with Eclipse.</span></span>
 
-1. <span data-ttu-id="fe7a9-150">**[ツール]**、**[Azure]**、**[サインイン]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-150">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-150">**[ツール]**、**[Azure]**、**[サインイン]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-150">Click **Tools**, then click **Azure**, and then click **Sign In**.</span></span>
 
    ![Azure サインイン用の Eclipse メニュー][I01]
 
-1. <span data-ttu-id="fe7a9-152">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[Interactive (対話型)]** を選択し、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-152">When the **Azure Sign In** dialog box appears, select **Interactive**, and then click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-152">**[Azure Sign In (Azure サインイン)]** ダイアログ ボックスが表示されたら、**[Interactive (対話型)]** を選択し、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-152">When the **Azure Sign In** dialog box appears, select **Interactive**, and then click **Sign In**.</span></span>
 
    ![[サインイン] ダイアログ ボックス][I02]
 
-1. <span data-ttu-id="fe7a9-154">**[Azure Log In (Azure ログイン)]** ダイアログ ボックスが表示されたら、Azure 資格情報を入力し、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-154">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
+1. <span data-ttu-id="a3a5f-154">**[Azure Log In (Azure ログイン)]** ダイアログ ボックスが表示されたら、Azure 資格情報を入力し、**[サインイン]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-154">When the **Azure Log In** dialog box appears, enter your Azure credentials, and then click **Sign In**.</span></span>
 
    ![Azure のログイン ダイアログ ボックス][I03]
 
-1. <span data-ttu-id="fe7a9-156">**[サブスクリプションの選択]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-156">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
+1. <span data-ttu-id="a3a5f-156">**[サブスクリプションの選択]** ダイアログ ボックスが表示されたら、使用するサブスクリプションを選び、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-156">When the **Select Subscriptions** dialog box appears, select the subscriptions that you want to use, and then click **OK**.</span></span>
 
    ![[サブスクリプションの選択] ダイアログ ボックス][I04]
 
-## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a><span data-ttu-id="fe7a9-158">対話形式でサインインした場合に Azure アカウントからサインアウトする</span><span class="sxs-lookup"><span data-stu-id="fe7a9-158">Signing out of your Azure account when you signed in interactively</span></span>
+## <a name="signing-out-of-your-azure-account-when-you-signed-in-interactively"></a><span data-ttu-id="a3a5f-158">対話形式でサインインした場合に Azure アカウントからサインアウトする</span><span class="sxs-lookup"><span data-stu-id="a3a5f-158">Signing out of your Azure account when you signed in interactively</span></span>
 
-<span data-ttu-id="fe7a9-159">前のセクションの手順を構成した後、Eclipse を再起動するたびに Azure アカウントから自動的にサインアウトします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-159">After you have configured the steps in the previous section, you will automatically signed out of your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="fe7a9-160">ただし、Eclipse を再起動せずに Azure アカウントからサインアウトするには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-160">However, if you want to sign out of your Azure account without restarting Eclipse, use the following steps.</span></span>
+<span data-ttu-id="a3a5f-159">前のセクションの手順を構成した後、Eclipse を再起動するたびに Azure アカウントから自動的にサインアウトします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-159">After you have configured the steps in the previous section, you will automatically signed out of your Azure account each time you restart Eclipse.</span></span> <span data-ttu-id="a3a5f-160">ただし、Eclipse を再起動せずに Azure アカウントからサインアウトするには、次の手順を使用します。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-160">However, if you want to sign out of your Azure account without restarting Eclipse, use the following steps.</span></span>
 
-1. <span data-ttu-id="fe7a9-161">Eclipse で、**[ツール]**、**[Azure]**、**[サインアウト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-161">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
+1. <span data-ttu-id="a3a5f-161">Eclipse で、**[ツール]**、**[Azure]**、**[サインアウト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-161">In Eclipse, click **Tools**, then click **Azure**, and then click **Sign Out**.</span></span>
 
    ![Azure サインアウト用の Eclipse メニュー][L01]
 
-1. <span data-ttu-id="fe7a9-163">**[Azure Sign Out (Azure サインアウト)]** ダイアログ ボックスが表示されたら、**[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe7a9-163">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
+1. <span data-ttu-id="a3a5f-163">**[Azure Sign Out (Azure サインアウト)]** ダイアログ ボックスが表示されたら、**[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3a5f-163">When the **Azure Sign Out** dialog box appears, click **Yes**.</span></span>
 
    ![[サインアウト] ダイアログ ボックス][L02]
 
-## <a name="next-steps"></a><span data-ttu-id="fe7a9-165">次の手順</span><span class="sxs-lookup"><span data-stu-id="fe7a9-165">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a3a5f-165">次の手順</span><span class="sxs-lookup"><span data-stu-id="a3a5f-165">Next steps</span></span>
 
 [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
