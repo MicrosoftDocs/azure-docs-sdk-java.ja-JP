@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: multiple
-ms.openlocfilehash: d6d3c358ade14af535a6afb26710f73dd15886fd
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 2711c502cfebc27ed1c62fb4276fab7c1e1774ff
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592675"
 ---
 # <a name="java-samples-for-azure-active-directory"></a>Azure Active Directory の Java サンプル
 

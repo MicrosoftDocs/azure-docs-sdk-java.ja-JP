@@ -9,12 +9,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 910d1e43c9942d6402aeccb8757ba819b7453dab
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: c416cb871ac8264cd6da2045d1ffdd50607fb092
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592627"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java アプリケーションから Azure App Service のデプロイ ソースを構成する
 

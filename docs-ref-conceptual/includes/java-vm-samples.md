@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ab31ee32ea940db2d7bcfa2fe36475d8a648bfc9
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592615"
+---
 | **仮想マシンの作成** || 
 |---|---|
 | [仮想マシンを管理する][1] | 仮想マシンを作成、変更、開始、停止、削除します。 |

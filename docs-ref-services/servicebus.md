@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: service-bus
-ms.openlocfilehash: ed830b4f7ffa104174205f75ea2923235029ea80
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 2099695784a59bf539aeae745df1fe38ec84f511
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593277"
 ---
 # <a name="service-bus-libraries-for-java"></a>Service Bus Libraries for Java
 

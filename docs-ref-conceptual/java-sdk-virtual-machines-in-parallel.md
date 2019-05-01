@@ -9,12 +9,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: e20feb555c3a360eceae60c1569af9a00a5cd027
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 497ea5c4e2efd73335f05f90b700fb70e2809de6
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592520"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java アプリケーションから複数のリージョンに対して仮想マシンを作成する
 

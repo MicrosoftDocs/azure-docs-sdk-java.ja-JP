@@ -10,12 +10,12 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 4653726b387369c18942b6c11392f15b9f0351f3
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: ebc9657f9f148b89d9a3178547c50d5b7bbc86e0
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593227"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Azure 仮想マシン スケール セットを Java アプリケーションから管理する
 

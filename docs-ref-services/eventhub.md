@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: event-hub
-ms.openlocfilehash: b6646ef27edace4247090e749c9a52cd6a33a82c
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 9e2ae18f98083cb35bb076a5f84726b669cbf81e
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593363"
 ---
 # <a name="azure-event-hub-libraries-for-java"></a>Azure Event Hub Libraries for Java
 

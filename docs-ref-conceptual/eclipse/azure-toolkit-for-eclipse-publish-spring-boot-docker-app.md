@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: c116e0712afd8e48983f946f43eddfd0c79c0ba8
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 5f70d8dd7e9b59c365d83c185f430a5a9c75e838
+ms.sourcegitcommit: 4f1acf05e3bbb7eb6bca9b65300c1c5b9772185a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899180"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456325"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する
 

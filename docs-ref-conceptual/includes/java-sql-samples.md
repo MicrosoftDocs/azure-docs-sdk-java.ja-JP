@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8d8ca00d6707927c0664908f1e79deddf63d80d7
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592650"
+---
 |  |  |
 |---------|---------|
 | [JDBC を使って Azure SQL Database に接続し、データを照会する][4] | サンプル データベースを構成した後、select、insert、update、delete の各コマンドを実行します。 |

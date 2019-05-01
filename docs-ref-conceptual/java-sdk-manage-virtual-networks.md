@@ -10,12 +10,12 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 3/30/2017
 ms.author: routlaw;asirveda
-ms.openlocfilehash: 3d21cdd890912c1fc58fc65a79ba972b8327edeb
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 6989c5184d09ac011cb39eb21ad8d96db3f0c107
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592557"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Java アプリによる Azure 仮想ネットワークの作成と管理
 

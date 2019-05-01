@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: networking
-ms.openlocfilehash: bb74ccd8826df7b627e0b5f4e4ffd2da44b2642d
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4eb4f583da686508db9fb0c4346f2525502f669d
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593327"
 ---
 # <a name="azure-network-libraries-for-java"></a>Azure Network Libraries for Java
 

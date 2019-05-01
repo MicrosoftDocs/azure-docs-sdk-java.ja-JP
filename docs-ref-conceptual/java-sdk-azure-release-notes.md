@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: reference
 ms.technology: Azure
 ms.date: 3/06/2016
-ms.openlocfilehash: 0aaa83ceb42192441decb5972baae56fed337fb2
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4681e07993e18344655f91e35148bbe956974e95
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48899457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592597"
 ---
 # <a name="release-notes"></a>リリース ノート 
 
@@ -39,7 +39,7 @@ ms.locfileid: "48899457"
 
 サービスまたは機能 | GA として利用可能 | プレビューとして利用可能 
 ---------|---------|---------|-
-コンピューティング  | 仮想マシンと VM の拡張機能、仮想マシン スケール セット、マネージド ディスク   | Azure Container Service、Azure Container Registry 
+Compute  | 仮想マシンと VM の拡張機能、仮想マシン スケール セット、マネージド ディスク   | Azure Container Service、Azure Container Registry 
 Storage   |  ストレージ アカウント       |    暗号化     
 SQL Database  | データベース、ファイアウォール、エラスティック プール              
 ネットワーク    |  仮想ネットワーク、ネットワーク インターフェイス、IP アドレス、ルーティング テーブル、ネットワーク セキュリティ グループ、DNS、Traffic Manager、Application Gateway  |    ロード バランサー、ネットワーク ピアリング、仮想ネットワーク ゲートウェイ、ネットワーク ウォッチャー 

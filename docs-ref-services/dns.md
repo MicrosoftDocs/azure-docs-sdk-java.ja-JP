@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: dns
-ms.openlocfilehash: 2cd8fe7ee4d6a87da32a349fe8f1d2815d3fd36d
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 364c51f985b7bf3a8c445cd7e03a5e91a8e589ba
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593437"
 ---
 # <a name="azure-traffic-manager-libraries-for-java"></a>Azure Traffic Manager Libraries for Java
 

@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: java
 ms.service: redis-cache
-ms.openlocfilehash: dd03825d9ae7cba32087f92262d5ef213cf3af0b
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 6f19587d3caeaccd2805007f60bd4ba96fee0bf7
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593307"
 ---
 # <a name="redis-cache-libraries-for-java"></a>Redis Cache Libraries for Java
 

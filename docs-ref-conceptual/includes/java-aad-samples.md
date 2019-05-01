@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8aef3852b3ce58957f08f1bc6219979eadda33cf
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61592670"
+---
 |  |  |
 |---------|---------|
 | [Java Web アプリケーションへの Azure AD の統合][1] | Java Web アプリで OAuth2 認証を設定します。
