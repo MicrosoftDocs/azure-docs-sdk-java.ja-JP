@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ebe035b7275083cf715f4b94be876fe49514e562
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61590410"
+---
 Eclipse および IntelliJ IDE 用の Azure ツールキットの詳細については、以下のリンクを参照してください。
 
 * [Azure Toolkit for Eclipse](../eclipse/azure-toolkit-for-eclipse.md) 
@@ -14,5 +22,5 @@ Eclipse および IntelliJ IDE 用の Azure ツールキットの詳細につい
 Azure での Java の使用方法の詳細については、以下のリンクを参照してください。 
 
 * [Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/) 
-* [Java Tools for Visual Studio Team Services](https://java.visualstudio.com/) 
+* [Visual Studio Team Services 用の Java ツール](https://java.visualstudio.com/) 
 <!-- TODO: Add URLs for Java in VSCode here --> 

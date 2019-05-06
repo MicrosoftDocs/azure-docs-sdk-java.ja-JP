@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.openlocfilehash: 8b52981ddfaadb7227cea4c7df014011196339cb
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 4e7d5ea8b796733ab9386ea5ee37f935a4347a18
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593215"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Java 用 Azure ライブラリを使用した開発のパターンとベスト プラクティス 
 
@@ -72,9 +72,9 @@ for (VirtualMachine vm : vms) {
 
 管理ライブラリは、クエリ結果の構造に基づく特定のコレクション型を返します。
 
-- `List<T>`: 順序付けされていないデータで、検索と反復処理を簡単に行うことができます。
-- `Map<T>`: Map はキー/値のペアです。一意のキーを持ちますが、値が一意であるとは限りません。 Map の例としては、App Service Web Apps のアプリケーション設定があります。
-- `Set<T>`: Set は、一意のキーと値を持ちます。 たとえば仮想マシンにアタッチされたネットワークは Set であり、一意の識別子 (キー) と一意のネットワーク構成 (値) の両方を持ちます。
+- `List<T>`:順序付けされていないデータで、検索と反復処理を簡単に行うことができます。
+- `Map<T>`:Map はキー/値のペアです。一意のキーを持ちますが、値が一意であるとは限りません。 Map の例としては、App Service Web Apps のアプリケーション設定があります。
+- `Set<T>`:Set は、一意のキーと値を持ちます。 たとえば仮想マシンにアタッチされたネットワークは Set であり、一意の識別子 (キー) と一意のネットワーク構成 (値) の両方を持ちます。
 
 ## <a name="actionable-verbs"></a>アクション可能な動詞
 
@@ -84,7 +84,7 @@ for (VirtualMachine vm : vms) {
 |--------|---------------|
 | create | `azure.virtualMachines().create(listOfVMCreatables)` |
 | apply  | `virtualMachineScaleSet.update().withCapacity(6).apply()` |
-| 削除 | `azure.disks().deleteById(id)` | 
+| delete | `azure.disks().deleteById(id)` | 
 | list   | `azure.sqlServers().list()` | 
 | get    | `VirtualMachine vm  = azure.virtualMachines().getByResourceGroup(group, vmName)` |
 

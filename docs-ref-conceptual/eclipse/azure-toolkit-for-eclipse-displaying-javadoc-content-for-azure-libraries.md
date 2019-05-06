@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 6f1edcc1411e8ec716dbfe41271d21d2397515c5
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: bfed1a879bacf82436b71654c0ceca2826381eed
+ms.sourcegitcommit: 115f4c8ad07a11f17d79e9d945d63917836b11c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48893195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61590620"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示
 
@@ -45,7 +45,7 @@ Java 用 Azure ライブラリの Javadoc コンテンツは、Javadoc コンテ
 
    ![Javadoc コンテンツの表示][ic553487]
 
-1. "*省略可能な手順*": **[検証]** をクリックします。 Javadoc JAR に関する潜在的な問題があれば、ここに表示されます。
+1. *省略可能な手順*:**[Validate (検証)]** をクリックします。 Javadoc JAR に関する潜在的な問題があれば、ここに表示されます。
 
 1. Click **OK**.
 
