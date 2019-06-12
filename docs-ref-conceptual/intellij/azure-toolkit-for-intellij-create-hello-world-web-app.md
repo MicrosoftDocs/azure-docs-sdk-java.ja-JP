@@ -1,7 +1,8 @@
 ---
-title: IntelliJ を使用して Azure 用の Hello World Web アプリを作成する
+title: IntelliJ を使用して Azure App Service 用の Hello World Web アプリを作成する
 description: このチュートリアルでは、Azure Toolkit for IntelliJ を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
+keywords: java, intellij, web アプリ, azure app service, hello world, クイック スタート
 documentationcenter: java
 author: selvasingh
 manager: routlaw
@@ -14,88 +15,108 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 7055751d1b1c37e019ef4ed59f1710ce6905e9f8
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.openlocfilehash: ae0749ce1ddab971f1a83e2e5e58492fd8ccb287
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489640"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626119"
 ---
-# <a name="create-a-hello-world-web-app-for-azure-using-intellij"></a>IntelliJ を使用して Azure 用の Hello World Web アプリを作成する
+# <a name="create-a-hello-world-web-app-for-azure-app-service-using-intellij"></a>IntelliJ を使用して Azure App Service 用の Hello World Web アプリを作成する
 
-このチュートリアルでは、[Azure Toolkit for IntelliJ] を使用して、Web アプリとして基本的な Hello World アプリケーションを作成し、Azure にデプロイする方法について説明します。
+オープンソースの [Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053) プラグインを使用すれば、数分で、基本的な Hello World アプリケーション作成して Web アプリとして Azure App Service にデプロイできます。
 
 > [!NOTE]
 >
-> この記事の [Azure Toolkit for Eclipse] 使用バージョンについては、「[Eclipse を使用して Azure 用の Hello World Web アプリを作成する][eclipse-hello-world]」を参照してください。
+> Eclipse を使用したい場合は、[Eclipse 用の同様のチュートリアル][eclipse-hello-world]をご覧ください。
+>
+>[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+>
+> このチュートリアルを完了したら、忘れずにリソースをクリーンアップしてください。 その場合、このガイドの実行によって無料アカウントのクォータが超過することはありません。
 >
 
-> [!IMPORTANT]
-> 
-> Azure Toolkit for IntelliJ は 2017 年 8 月に更新され、別のワークフローが導入されました。 この記事では、Azure Toolkit for IntelliJ バージョン 3.0.7 以降を使用して Hello World Web アプリを作成する方法を示します。 バージョン 3.0.6 以前のツールキットを使用している場合は、[レガシ ツールキットを使用した IntelliJ での Azure 用 Hello World Web アプリの作成][Legacy Version]に関するページの手順に従う必要があります。
-> 
+[!INCLUDE [azure-toolkit-for-intellij-basic-prerequisites](../includes/azure-toolkit-for-intellij-basic-prerequisites.md)]
 
-このチュートリアルを完了し、作成したアプリケーションを Web ブラウザーで開くと、次の図のようになります。
+## <a name="installation-and-sign-in"></a>インストールとサインイン
 
-![Hello World アプリのプレビュー][browse-web-app]
+1. IntelliJ IDEA の [設定/環境設定] ダイアログ (Ctrl+Alt+S) で、 **[プラグイン]** を選択します。 次に、 **[Marketplace]** で **[Azure Toolkit for IntelliJ]** を見つけ、 **[インストール]** をクリックします。 インストール後、 **[再起動]** をクリックしてプラグインをアクティブにします。 
 
-[!INCLUDE [azure-toolkit-for-intellij-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
+   ![Marketplace の Azure Toolkit for IntelliJ プラグイン][marketplace]
 
-## <a name="create-a-new-web-app-project"></a>新しい Web アプリ プロジェクトの作成
+2. Azure アカウントにサインインするには、サイドバーの **Azure Explorer** を開き、上部のバーにある **[Azure サインイン]** アイコンをクリックします (または [IDEA] メニューから **[ツール]/[Azure]/ [Azure サインイン]** をクリックします)。
 
-1. [Azure Toolkit for IntelliJ の Azure サインイン手順][intelliJ-sign-in-instructions]に関する記事の説明に従って、IntelliJ を起動し、Azure アカウントにサインインします。
+   ![IntelliJ Azure サインイン コマンド][I01]
 
-1. **[ファイル]** メニューの **[New]\(新規\)** をクリックし、**[プロジェクト]** をクリックします。
-   
+3. **[Azure サインイン]** ウィンドウで、 **[Device Login]\(デバイスのログイン\)** を選択し、次に **[サインイン]** をクリックします ([他のサインイン オプション](azure-toolkit-for-intellij-sign-in-instructions.md))。
+
+   ![[デバイスのログイン] が選択されている [Azure サインイン] ウィンドウ][I02]
+
+4. **[Azure Device Login]\(Azure デバイスのログイ\)** ダイアログで **[Copy&Open]\(コピーして開く\)** をクリックします。
+
+   ![[Azure ログイン] ダイアログ ウィンドウ][I03]
+
+5. ブラウザーで、該当のデバイス コード (前の手順で **[Copy&Open]\(コピーして開く\)** をクリックしたときにコピーされたもの) を貼り付け、 **[次へ]** をクリックします。
+
+   ![デバイスのログイン ブラウザー][I04]
+
+6. **[サブスクリプションの選択]** ダイアログ ボックスで、使用するサブスクリプションを選択し、 **[OK]** をクリックします。
+
+   ![[サブスクリプションの選択] ダイアログ ボックス][I05]
+
+## <a name="creating-web-app-project"></a>Web アプリ プロジェクトの作成
+
+1. IntelliJ で、 **[ファイル]** メニュー、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。
+
    ![新しいプロジェクトの作成][file-new-project]
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]**、 **maven-archetype-webapp** の順に選択し、**[次へ]** をクリックします。
-   
+2. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Maven]** 、 **maven-archetype-webapp** の順に選択し、 **[次へ]** をクリックします。
+
    ![Maven アーキタイプ Web アプリの選択][maven-archetype-webapp]
-   
-1. Web アプリの **[GroupId]** と **[ArtifactId]** を指定し、**[次へ]** をクリックします。
-   
+
+3. Web アプリの **[GroupId]** と **[ArtifactId]** を指定し、 **[次へ]** をクリックします。
+
    ![GroupId と ArtifactId の指定][groupid-and-artifactid]
 
-1. Maven 設定をカスタマイズするか、既定の設定をそのまま使用し、**[次へ]** をクリックします。
-   
+4. Maven 設定をカスタマイズするか、既定の設定をそのまま使用し、 **[次へ]** をクリックします。
+
    ![Maven 設定の指定][maven-options]
 
-1. プロジェクト名と場所を指定し、**[完了]** をクリックします。
-   
+5. プロジェクト名と場所を指定し、 **[完了]** をクリックします。
+
    ![プロジェクト名の指定][project-name]
 
-1. IntelliJ のプロジェクト エクスプローラー ビューで、**[src]**、**[main]**、**[webapp]** の順に展開し、**index.jsp** をダブルクリックします。
-   
-   ![インデックス ページを開く][open-index-page]
+6. Project Explorer ビューで、**src/main/webapp/index.jsp** ファイルを開き、次のように編集して**変更を保存します**。
 
-1. index.jsp ファイルが IntelliJ で開いたら、"**Hello World!**" を動的に表示するためのテキストを 既存の `<body>` 要素に追加します。 更新された `<body>` コンテンツは、次のようになります。
-   
-   ```java
-   <body><b><% out.println("Hello World!"); %></b></body>
-   ``` 
+   ```html
+   <html>
+    <body>
+      <b><% out.println("Hello World!"); %></b>
+    </body>
+   </html>
+   ```
 
    ![インデックス ページの編集][edit-index-page]
 
-1. index.jsp を保存します。
+## <a name="deploying-web-app-to-azure"></a>Azure への Web アプリのデプロイ
 
-## <a name="deploy-your-web-app-to-azure"></a>Azure への Web アプリのデプロイ
+1. Project Explorer ビューでプロジェクトを右クリックし、 **[Azure]** を展開して、次に **[Deploy to Azure]\(Azure へのデプロイ\)** をクリックします。
 
-1. IntelliJ のプロジェクト エクスプローラー ビューでプロジェクトを右クリックし、**[Azure]**、**[Run on Web App]\(Web アプリで実行\)** の順に選択します。
-   
-   ![[Run on Web App]\(Web アプリで実行\) メニュー][run-on-web-app-menu]
+   ![[Deploy to Azure]\(Azure へのデプロイ\) メニュー][deploy-to-azure-menu]
 
-1. [Run on Web App]\(Web アプリで実行\) ダイアログ ボックスで、次のいずれかのオプションを選択できます。
+1. [Deploy to Azure]\(Azure へのデプロイ\) ダイアログ ボックスで、既存の Tomcat Web アプリがある場合はそれにアプリケーションを直接デプロイできますが、それ以外の場合は、最初に新しいものを作成する必要があります。
+   1. **[No Available webapp, click to create a new one]\(使用可能な Web アプリがありません。クリックして新しいものを作成してください\)** リンクをクリックし、新しい Web アプリを作成します。お使いのサブスクリプションに既存の Web アプリがある場合は、WebApp ドロップダウンから **[新しい Web アプリを作成する]** を選択できます。
 
-   * 既存の Web アプリ (存在する場合) を選択して **[Run]\(実行\)** をクリックする。
+      ![[Deploy to Azure]\(Azure へのデプロイ\) ダイアログ ボックス][deploy-to-azure-dialog]
 
-      ![[Run on Web App]\(Web アプリで実行\) ダイアログ ボックス][run-on-web-app-dialog]
-
-   * WebApp ドロップダウンの **[新しい Web アプリを作成する]** をクリックします。 新しい Web アプリを作成する場合は、ご自身の Web アプリに必要な情報を指定し、Web アプリの作成後に **[実行]** をクリックします。
+   1. ポップアップ ダイアログ ボックスで、[Web コンテナー] として **TOMCAT 8.5-jre8** を選択し、その他の必要な情報を指定し、 **[OK]** をクリックして Web アプリを作成します。
 
       ![新しい Web アプリの作成][create-new-web-app-dialog]
 
-1. Web アプリが正常にデプロイされると、その Web アプリの URL を含むステータス メッセージがツールキットに表示されます。
+   1. WebApp ドロップダウンから Web アプリを選択し、 **[実行]** をクリックします。(既存の Web アプリにデプロイする場合は、ここから開始できます)
+
+      ![既存の Web アプリへのデプロイ][deploy-to-existing-webapp]
+
+1. ツールキットにより Web アプリが正常にデプロイされた場合、状態メッセージと、デプロイされた Web アプリの URL (成功した場合) が表示されます。
 
    ![デプロイに成功][successfully-deployed]
 
@@ -103,13 +124,21 @@ ms.locfileid: "58489640"
 
    ![Web アプリの参照][browse-web-app]
 
-1. Web アプリを発行した後、使用した設定が既定の設定として保存されます。ツール バーの緑色矢印のアイコンをクリックすることで、Azure でアプリケーションを実行できます。 設定を変更するには、Web アプリのドロップダウン メニューをクリックし、**[Edit Configurations]\(構成の編集\)** をクリックします。
+## <a name="managing-deploy-configurations"></a>デプロイ構成の管理
+
+1. Web アプリを発行すると、使用した設定が既定値として保存され、ツール バーの緑色の矢印アイコンをクリックすることでデプロイを実行できます。 設定を変更するには、Web アプリのドロップダウン メニューをクリックし、 **[Edit Configurations]\(構成の編集\)** をクリックします。
 
    ![[Edit Configurations]\(構成の編集\) メニュー][edit-configuration-menu]
 
-1. **[Run/Debug Configurations]\(構成の実行/デバッグ\)** ダイアログ ボックスが表示されたら、既定の設定を変更し、**[OK]** をクリックします。
+1. **[Run/Debug Configurations]\(構成の実行/デバッグ\)** ダイアログ ボックスが表示されたら、既定の設定を変更し、 **[OK]** をクリックします。
 
    ![[構成の編集] ダイアログ ボックス][edit-configuration-dialog]
+
+## <a name="cleaning-up-resources"></a>リソースのクリーンアップ
+
+1. Azure Explorer での Web アプリ の削除
+
+     ![リソースのクリーンアップ][clean-resources]
 
 ## <a name="next-steps"></a>次の手順
 
@@ -129,7 +158,7 @@ Azure Web Apps の作成の詳細については、「 [Web Apps の概要]」�
 [intelliJ-sign-in-instructions]: azure-toolkit-for-intellij-sign-in-instructions.md
 
 <!-- IMG List -->
-
+[marketplace]:./media/azure-toolkit-for-intellij-create-hello-world-web-app/marketplace.png
 [file-new-project]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/file-new-project.png
 [maven-archetype-webapp]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/maven-archetype-webapp.png
 [groupid-and-artifactid]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/groupid-and-artifactid.png
@@ -137,10 +166,17 @@ Azure Web Apps の作成の詳細については、「 [Web Apps の概要]」�
 [project-name]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/project-name.png
 [open-index-page]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/open-index-page.png
 [edit-index-page]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/edit-index-page.png
-[run-on-web-app-menu]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/run-on-web-app-menu.png
-[run-on-web-app-dialog]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/run-on-web-app-dialog.png
+[deploy-to-azure-menu]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/run-on-web-app-menu.png
+[deploy-to-azure-dialog]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/run-on-web-app-dialog.png
+[deploy-to-existing-webapp]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/deploy-to-existing-webapp.png
 [create-new-web-app-dialog]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/create-new-web-app-dialog.png
 [successfully-deployed]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/successfully-deployed.png
 [browse-web-app]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/browse-web-app.png
 [edit-configuration-menu]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/edit-configuration-menu.png
 [edit-configuration-dialog]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/edit-configuration-dialog.png
+[clean-resources]: ./media/azure-toolkit-for-intellij-create-hello-world-web-app/clean-resource.png
+[I01]: media/azure-toolkit-for-intellij-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-intellij-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-intellij-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-intellij-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-intellij-sign-in-instructions/I05.png

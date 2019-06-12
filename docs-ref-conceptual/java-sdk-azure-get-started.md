@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.openlocfilehash: fdf0334a8796d636a1968943cc34d7ae98d6361c
-ms.sourcegitcommit: c2019ba6da6c7c28b17b5a85f89e49bb5e570ba4
+ms.openlocfilehash: 22389ce7346a1d97c072dcc82162c9286f21f178
+ms.sourcegitcommit: 04d0d92c46399976b58a9dfa107ba644378bf171
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040260"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65986198"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Azure での Java を使用したクラウド開発の開始
 
@@ -147,23 +147,23 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp  \
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ をインストールする
 
-Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) が必要です。 インストール プロセスの概要を次に示します。 詳しい手順については、「[Azure Toolkit for IntelliJ のインストール](intellij/azure-toolkit-for-intellij-installation.md)」をご覧ください。
+Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](intellij/azure-toolkit-for-intellij-installation.md) が必要です。 インストール プロセスの概要を次に示します。 クイック スタートについては、[Azure Toolkit for IntelliJ のクイック スタート](intellij/azure-toolkit-for-intellij-create-hello-world-web-app.md)に関するページをご覧ください。
 
-**[File]\(ファイル\)** メニューを選択し、**[Settings...]\(設定...\)** を選択します。 
+- **[File]\(ファイル\)** メニューを選択し、 **[Settings...]\(設定...\)** を選択します。 
 
-**[Browse repositories...]\(リポジトリを参照...\)** を選択し、"Azure" を検索して、**Azure Toolkit for Intellij** をインストールします。
+- **[Browse repositories...]\(リポジトリを参照...\)** を選択し、"Azure" を検索して、**Azure Toolkit for Intellij** をインストールします。
 
-Intellij を再起動します。
+- Intellij を再起動します。
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse をインストールする
 
-Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) が必要です。 インストール プロセスの概要を次に示します。 詳しい手順については、「[Azure Toolkit for Eclipse のインストール](eclipse/azure-toolkit-for-eclipse.md)」をご覧ください。
+Web アプリや API をプログラムでデプロイする予定でも、その他の開発に現在使用していない場合は、[Azure Toolkit](eclipse/azure-toolkit-for-eclipse.md) が必要です。 インストール プロセスの概要を次に示します。 クイック スタートについては、[Azure Toolkit for Eclipse のクイック スタート](eclipse/azure-toolkit-for-eclipse-create-hello-world-web-app.md)に関するページをご覧ください。
 
-**[Help]\(ヘルプ\)** メニューを選択し、**[Install New software]\(新しいソフトウェアのインストール\)** を選択します。
+- **[Help]\(ヘルプ\)** メニューを選択し、 **[Install New software]\(新しいソフトウェアのインストール\)** を選択します。
 
-**[Work with:]\(処理:\)** フィールドに「`http://dl.microsoft.com/eclipse`」と入力し、Enter キーを押します。
+- **[Work with:]\(処理:\)** フィールドに「`http://dl.microsoft.com/eclipse`」と入力し、Enter キーを押します。
 
-次に、**[Azure Toolkit for Java]** の横のチェック ボックスをオンにし、**[Contact all update sites during install to find required software]\(インストール中にすべての更新サイトに接続して必要なソフトウェアを見つける\)** のチェック ボックスをオフにします。 [Next]\(次へ\) をクリックします。
+- 次に、 **[Azure Toolkit for Java]** の横のチェック ボックスをオンにし、 **[Contact all update sites during install to find required software]\(インストール中にすべての更新サイトに接続して必要なソフトウェアを見つける\)** のチェック ボックスをオフにします。 [Next]\(次へ\) をクリックします。
 
 ## <a name="create-a-linux-virtual-machine"></a>Linux 仮想マシンの作成
 

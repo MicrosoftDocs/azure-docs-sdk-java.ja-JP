@@ -14,12 +14,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 0f3df5c8cf3c83c1ce9a4ca32c753b5fc39ab1df
-ms.sourcegitcommit: b64017f119177f97da7a5930489874e67b09c0fc
+ms.openlocfilehash: 86cef07873ae7a2ba75aab1044fe4d241cd5b13e
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48892883"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270869"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>Azure Toolkit for IntelliJ のインストール
 
@@ -32,19 +32,42 @@ Azure Toolkit for IntelliJ は、IntelliJ IDEA 開発環境を使ってクラウ
 > <https://github.com/microsoft/azure-tools-for-java> 
 > 
 
-Azure Toolkit for IntelliJ には 2 とおりのインストール方法があります。**[設定]** ダイアログ ボックスを使用する方法と、スタート画面の **[構成]** メニューを使用する方法です。 以降の手順では、両方のインストール方法を説明します。
+Azure Toolkit for IntelliJ には 2 とおりのインストール方法があります。 **[設定]** ダイアログ ボックスを使用する方法と、スタート画面の **[構成]** メニューを使用する方法です。 以降の手順では、両方のインストール方法を説明します。
 
-[!INCLUDE [azure-toolkit-for-IntelliJ-prerequisites](../includes/azure-toolkit-for-intellij-prerequisites.md)]
+## <a name="prerequisites"></a>前提条件
+
+Azure Toolkit for IntelliJ には、以下のソフトウェア コンポーネントが必要です。
+
+* Java Development Kit (JDK) 8 以降がインストールされていること。例:[OpenJDK](https://openjdk.java.net/) または [Oracle JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Ultimate Edition または Community Edition がインストールされていること
+
+> [!NOTE]
+> 
+> JetBrains Plugin Repository の [Azure Toolkit for IntelliJ](https://plugins.jetbrains.com/plugin/8053) に関するページに、このツールキットと互換性のあるビルドが一覧表示されています。
+> 
+
+<!--
+> [!IMPORTANT]
+> 
+> If you are using the Azure Toolkit for IntelliJ on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
+> 
+> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
+> * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
+> 
+> Note that the Azure SDK is only required on Windows.
+> 
+-->
+
 
 ## <a name="to-install-the-azure-toolkit-for-intellij-from-the-settings-dialog-box"></a>Azure Toolkit for IntelliJ を [Settings]\(設定) ダイアログ ボックスからインストールするには
 
 1. IntelliJ IDEA を起動します。
 
-1. IntelliJ IDEA が起動したら **[File (ファイル)]** をクリックし、**[Settings (設定)]** をクリックします。
+1. IntelliJ IDEA が起動したら **[File (ファイル)]** をクリックし、 **[Settings (設定)]** をクリックします。
    
    ![Open the IntelliJ IDEA Settings Dialog Box][01a]
 
-1. [Settings (設定)] ダイアログ ボックスの **[Plugins (プラグイン)]** をクリックし、**[Browse repositories (リポジトリの参照)]** をクリックします。
+1. [Settings (設定)] ダイアログ ボックスの **[Plugins (プラグイン)]** をクリックし、 **[Browse repositories (リポジトリの参照)]** をクリックします。
    
    ![IntelliJ IDEA Settings Dialog Box][02a]
 
@@ -56,7 +79,7 @@ Azure Toolkit for IntelliJ には 2 とおりのインストール方法があ�
    
    ![Installation progress][04]
 
-1. インストールが完了したら、 **[Restart IntelliJ IDEA]**(IntelliJ IDEA の再起動) をクリックします。
+1. インストールが完了したら、 **[Restart IntelliJ IDEA]** (IntelliJ IDEA の再起動) をクリックします。
    
    ![[Restart IntelliJ IDEA]][05]
 
@@ -64,7 +87,7 @@ Azure Toolkit for IntelliJ には 2 とおりのインストール方法があ�
    
    ![Close IntelliJ IDEA Settings Dialog Box][06]
 
-1. IntelliJ IDEA をすぐに再起動するか、後から再起動するかを求められたら、 **[Restart]**(再起動) をクリックします。
+1. IntelliJ IDEA をすぐに再起動するか、後から再起動するかを求められたら、 **[Restart]** (再起動) をクリックします。
    
 1   ![[Restart IntelliJ IDEA]][07]
 
@@ -72,7 +95,7 @@ Azure Toolkit for IntelliJ には 2 とおりのインストール方法があ�
 
 1. IntelliJ IDEA を起動します。
 
-1. IntelliJ IDEA のスタート画面が表示されたら、**[Configure (構成)]** をクリックし、**[Plugins (プラグイン)]** をクリックします。
+1. IntelliJ IDEA のスタート画面が表示されたら、 **[Configure (構成)]** をクリックし、 **[Plugins (プラグイン)]** をクリックします。
    
    ![Install IntelliJ IDEA Plugins][01b]
 
@@ -88,11 +111,11 @@ Azure Toolkit for IntelliJ には 2 とおりのインストール方法があ�
    
    ![Installation progress][04]
 
-1. インストールが完了したら、 **[Restart IntelliJ IDEA]**(IntelliJ IDEA の再起動) をクリックします。
+1. インストールが完了したら、 **[Restart IntelliJ IDEA]** (IntelliJ IDEA の再起動) をクリックします。
    
    ![[Restart IntelliJ IDEA]][05]
 
-1. IntelliJ IDEA をすぐに再起動するか、後から再起動するかを求められたら、 **[Restart]**(再起動) をクリックします。
+1. IntelliJ IDEA をすぐに再起動するか、後から再起動するかを求められたら、 **[Restart]** (再起動) をクリックします。
    
    ![[Restart IntelliJ IDEA]][07]
 

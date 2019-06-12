@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a9d4bd5a1677078431b5502b276b17cd973cbea0
-ms.sourcegitcommit: a108a82414bd35be896e3c4e7047f5eb7b1518cb
+ms.openlocfilehash: 407b852e24ef88d2fb075bd064f1acf2b107ddc1
+ms.sourcegitcommit: 394521c47ac9895d00d9f97535cc9d1e27d08fe9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58489660"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270862"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>コンテナー用 Azure App Service で Spring Boot アプリケーションをデプロイする
 
@@ -100,122 +100,104 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 
    Azure Portal のアカウントにサインインしたら、「[Azure Portal を使用したプライベート Docker コンテナー レジストリの作成]」の記事の手順に従います。便宜上、この手順を改めて以下で説明します。
 
-1. **[+ 新規]** のメニュー アイコン、**[コンテナー]**、**[Azure Container Registry]** の順にクリックします。
+1. **[+ 新規]** のメニュー アイコン、 **[コンテナー]** 、 **[Azure Container Registry]** の順にクリックします。
    
    ![Azure Container Registry を新しく作成する][AR01]
 
-1. Azure Container Registry テンプレートの情報ページが表示されたら、**[作成]** をクリックします。 
+1. Azure Container Registry テンプレートの情報ページが表示されたら、 **[作成]** をクリックします。 
 
    ![Azure Container Registry を新しく作成する][AR02]
 
-1. **[コンテナー レジストリの作成]** ページが表示されたら、**[レジストリ名]** と **[リソース グループ]** を入力し、**[管理ユーザー]** に対して **[有効化]** を選択した後、**[作成]** をクリックします。
+1. **[コンテナー レジストリの作成]** ページが表示されたら、 **[レジストリ名]** と **[リソース グループ]** を入力し、 **[管理ユーザー]** に対して **[有効化]** を選択した後、 **[作成]** をクリックします。
 
    ![Azure Container Registry 設定を構成する][AR03]
 
-1. コンテナー レジストリが作成されたら、Azure Portal でコンテナー レジストリに移動して、**[アクセス キー]** をクリックします。 次の手順で使用するため、ユーザー名とパスワードをメモします。
+1. コンテナー レジストリが作成されたら、Azure Portal でコンテナー レジストリに移動して、 **[アクセス キー]** をクリックします。 次の手順で使用するため、ユーザー名とパスワードをメモします。
 
    ![Azure Container Registry のアクセス キー][AR04]
 
 ## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Azure Container Registry のアクセス キーを使用するために Maven を構成する
 
-1. Maven インストールの構成ディレクトリに移動し、*settings.xml* ファイルをテキスト エディターで開きます。
+1. Spring Boot アプリケーションの完了プロジェクト ディレクトリ ("*C:\SpringBoot\gs-spring-boot-docker\complete*" や " */users/robert/SpringBoot/gs-spring-boot-docker/complete*" など) に移動し、*pom.xml* ファイルをテキスト エディターで開きます。
 
-1. このチュートリアルの前のセクションから、Azure Container Registry のアクセス設定を *settings.xml* ファイルの `<servers>` コレクションに追加します。次に例を示します。
-
-   ```xml
-   <servers>
-      <server>
-         <id>wingtiptoysregistry</id>
-         <username>wingtiptoysregistry</username>
-         <password>AbCdEfGhIjKlMnOpQrStUvWxYz</password>
-      </server>
-   </servers>
-   ```
-
-1. Spring Boot アプリケーションの完了プロジェクト ディレクトリ ("*C:\SpringBoot\gs-spring-boot-docker\complete*" や "*/users/robert/SpringBoot/gs-spring-boot-docker/complete*" など) に移動し、*pom.xml* ファイルをテキスト エディターで開きます。
-
-1. *pom.xml* ファイル内の `<properties>` コレクションを、このチュートリアルの前のセクションにあった Azure Container Registry のログイン サーバー値で更新します。次に例を示します。
+1. *pom.xml* ファイル内の `<properties>` コレクションを、最新バージョンの [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) と、このチュートリアルの前のセクションにある Azure Container Registry のログイン サーバー値とアクセス設定で更新します。 例:
 
    ```xml
    <properties>
+      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
+      <username>wingtiptoysregistry</username>
+      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. `<plugin>` にこのチュートリアルの前のセクションにあった Azure Container Registry のログイン サーバー アドレスとレジストリ名が含まれるように、*pom.xml* ファイル内の `<plugins>` コレクションを更新します。 例: 
+1. *pom.xml* ファイル内の `<plugins>` コレクションに [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) を追加し、基本イメージを `<from>/<image>` で指定し、最終イメージ名を `<to>/<image>` で指定し、前のセクションにあるユーザー名とパスワードを `<to>/<auth>` で指定します。 例:
 
    ```xml
    <plugin>
-      <groupId>com.spotify</groupId>
-      <artifactId>docker-maven-plugin</artifactId>
-      <version>0.4.11</version>
-      <configuration>
-         <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-         <dockerDirectory>src/main/docker</dockerDirectory>
-         <resources>
-            <resource>
-               <targetPath>/</targetPath>
-               <directory>${project.build.directory}</directory>
-               <include>${project.build.finalName}.jar</include>
-            </resource>
-         </resources>
-         <serverId>wingtiptoysregistry</serverId>
-         <registryUrl>https://wingtiptoysregistry.azurecr.io</registryUrl>
-      </configuration>
+     <artifactId>jib-maven-plugin</artifactId>
+     <groupId>com.google.cloud.tools</groupId>
+     <version>${jib-maven-plugin.version}</version>
+     <configuration>
+        <from>
+            <image>openjdk:8-jre-alpine</image>
+        </from>
+        <to>
+            <image>${docker.image.prefix}/${project.artifactId}</image>
+            <auth>
+               <username>${username}</username>
+               <password>${password}</password>
+            </auth>
+        </to>
+     </configuration>
    </plugin>
    ```
 
 1. Spring Boot アプリケーション用の完了プロジェクト ディレクトリに移動し、次のコマンドを実行してアプリケーションをリビルドし、コンテナーを Azure Container Registry にプッシュします。
 
-   ```
-   mvn package docker:build -DpushImage 
+   ```cmd
+   mvn compile jib:build
    ```
 
 > [!NOTE]
 >
-> Docker コンテナーを Azure にプッシュすると、Docker コンテナーが正しく作成されていても、次のいずれかのようなエラー メッセージが表示される場合があります。
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: no basic auth credentials`
->
-> * `[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.4.11:build (default-cli) on project gs-spring-boot-docker: Exception caught: Incomplete Docker registry authorization credentials. Please provide all of username, password, and email or none.`
->
-> これが発生した場合は、Docker コマンド ラインから Azure アカウントにサインインしなければならない場合があります。次に例を示します。
->
-> `docker login -u wingtiptoysregistry -p "AbCdEfGhIjKlMnOpQrStUvWxYz" wingtiptoysregistry.azurecr.io`
->
-> これで、次のようにしてコマンド ラインからコンテナーをプッシュできるようになります。
->
-> `docker push wingtiptoysregistry.azurecr.io/gs-spring-boot-docker`
+> Jib を使ってイメージを Azure Container Registry にプッシュする場合、イメージは *Dockerfile* を受け付けません。詳細については、[こちら](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html)のドキュメントをご覧ください。
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>コンテナー イメージを使用して Azure App Service で Linux に Web アプリを作成する
 
 1. [Azure Portal]を参照して、サインインします。
 
-2. **[+ 新規]** のメニュー アイコン、**[Web + Mobile]**、**[Web App on Linux]** の順にクリックします。
+2. **[+ リソースの作成]** のメニュー アイコンをクリックし、 **[Web]** 、 **[Web App for Containers]** の順にクリックします。
    
    ![Azure ポータルで Web アプリを新しく作成する][LX01]
 
 3. **[Web App on Linux]** ページが表示されたら、次の情報を入力します。
 
-   a. **[App name]\(アプリ名\)** に一意の名前 (例: "*wingtiptoyslinux*") を入力します。
+   a. **[App name]\(アプリ名\)** に一意の名前 ("*wingtiptoyslinux*" など) を入力します。
 
    b. **[サブスクリプション]** ボックスの一覧で、サブスクリプションを選択します。
 
    c. **[リソース グループ]** ボックスの一覧で、既存のリソース グループを選択するか、新しいリソース グループの名前を指定して作成します。
 
-   d. **[コンテナーの構成]** をクリックして、次の情報を入力します。
+   d. **[OS]** として *[Linux]* を選択します。
 
-   * **[プライベート レジストリ]** を選択します。
+   e. **[App Service プラン/場所]** をクリックして既存の App Service プランを選択するか、 **[新規作成]** をクリックして新しい App Service プランを作成します。
 
-   * **[イメージとオプションのタグ]**:先に設定したコンテナー名 ("*wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*" など) を指定します。
+   f. **[コンテナーの構成]** をクリックして、次の情報を入力します。
 
-   * **サーバー URL**:先に設定したレジストリの URL ("*<https://wingtiptoysregistry.azurecr.io>*" など) を指定します。
+   * **[単一コンテナー]** と **[Azure Container Registry]** を選択します。
 
-   * **[ログイン ユーザー名]** と **[パスワード]**:前の手順で使用した**アクセス キー**から、ログイン資格情報を指定します。
+   * **レジストリ**:先に作成したコンテナー名 ("*wingtiptoysregistry*" など) を選択します。
+
+   * **イメージ**:イメージ名 ("*gs-spring-boot-docker*" など) を選択します。
    
-   e. 上記の情報をすべて入力したら、**[OK]** をクリックします。
+   * **タグ**: イメージのタグ ("*latest*" など) を選択します。
+   
+   * **スタートアップ ファイル**:イメージには既にスタートアップ コマンドがあるため、これは空白のままにしておきます
+   
+   e. 上記の情報をすべて入力したら、 **[適用]** をクリックします。
 
    ![Web アプリの設定を構成する][LX02]
 
@@ -227,13 +209,11 @@ Azure Portal を使用して Azure Container Registry を作成する手順を�
 >
 > 1. [Azure Portal]を参照して、サインインします。
 > 
-> 2. **[App Services]** のアイコンをクリックします。 (下の図の項目 #1 を参照。)
+> 2. **App Services** のアイコンをクリックし、一覧から Web アプリを選択します。
 >
-> 3. 一覧から Web アプリを選択します。 (下の図の項目 #2 を参照。)
+> 4. **[構成]** をクリックします。 (下の図の項目 #1 を参照。)
 >
-> 4. **[アプリケーションの設定]** をクリックします (下の図の項目 #3 を参照。)
->
-> 5. **[App settings]\(アプリ設定\)** セクションで、**PORT** という名前の新しい環境変数を追加して、この値にカスタム ポート番号を入力します。 (下の図の項目 #4 を参照。)
+> 5. **[アプリケーション設定]** セクションで、**PORT** という名前の新しい設定を追加して、この値にカスタム ポート番号を入力します。 (下の図の項目 #2、#3、#4 を参照。)
 >
 > 6. **[Save]** をクリックします。 (下の図の項目 #5 を参照。)
 >

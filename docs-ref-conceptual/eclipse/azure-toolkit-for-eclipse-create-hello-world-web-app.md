@@ -1,7 +1,8 @@
 ---
-title: Eclipse を使用して Azure 用の Hello World Web アプリを作成する
+title: Eclipse を使用して Azure App Service 用の Hello World Web アプリを作成する
 description: このチュートリアルでは、Azure Toolkit for Eclipse を使用して、Azure 用の Hello World Web アプリを作成する方法について説明します。
 services: app-service
+keywords: java, eclipse, web アプリ, azure app service, hello world, クイック スタート
 documentationcenter: java
 author: selvasingh
 manager: routlaw
@@ -14,38 +15,56 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c98f966eb17e3fbde877451c8f8fefb21e6bf686
-ms.sourcegitcommit: dca98b953fa3149fb2e6aa49e27e843b6df0c6c2
+ms.openlocfilehash: 7e88298afaf0b4601d85d6063b7096c79e677421
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57786891"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625841"
 ---
-# <a name="create-a-hello-world-web-app-for-azure-using-eclipse"></a>Eclipse を使用して Azure 用の Hello World Web アプリを作成する
+# <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Eclipse を使用して Azure App Service 用の Hello World Web アプリを作成する
 
-このチュートリアルでは、[Azure Toolkit for Eclipse] を使用して、Web アプリとして基本的な Hello World アプリケーションを作成し、Azure にデプロイする方法について説明します。
+オープンソースの [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse) プラグインを使用すれば、数分で、基本的な Hello World アプリケーション作成して Web アプリとして Azure App Service にデプロイできます。
 
 > [!NOTE]
 >
-> この記事の [Azure Toolkit for IntelliJ] 使用バージョンについては、「[IntelliJ を使用して Azure 用の Hello World Web アプリを作成する][intellij-hello-world]」を参照してください。
+> IntelliJ IDEA を使用したい場合は、[IntelliJ 用の同様のチュートリアル][intellij-hello-world]をご覧ください。
+>
+>[!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
+>
+> このチュートリアルを完了したら、忘れずにリソースをクリーンアップしてください。 その場合、このガイドの実行によって無料アカウントのクォータが超過することはありません。
 >
 
-> [!IMPORTANT]
-> 
-> Azure Toolkit for Eclipse は 2017 年 8 月に更新され、別のワークフローが導入されました。 この記事では、Azure Toolkit for Eclipse のバージョン 3.0.7 以降を使用して Hello World Web アプリを作成する方法を示します。 バージョン 3.0.6 以前のツールキットを使用している場合は、[レガシ ツールキットを使用した Eclipse での Azure 用 Hello World Web アプリの作成][Legacy Version]に関するページの手順に従う必要があります。
-> 
+[!INCLUDE [azure-toolkit-for-intellij-basic-prerequisites](../includes/azure-toolkit-for-eclipse-basic-prerequisites.md)]
 
-このチュートリアルを完了し、作成したアプリケーションを Web ブラウザーで開くと、次の図のようになります。
+## <a name="installation-and-sign-in"></a>インストールとサインイン
 
-![Hello World アプリのプレビュー][browse-web-app]
+1. 次のボタンを実行中の Eclipse ワークスペースにドラッグして、Azure Toolkit for Eclipse プラグインをインストールします ([他のインストール オプション](azure-toolkit-for-eclipse-installation.md))。
 
-[!INCLUDE [azure-toolkit-for-eclipse-prerequisites](../includes/azure-toolkit-for-eclipse-prerequisites.md)]
+    [![実行中の Eclipse* ワークスペースにドラッグします。*Eclipse Marketplace Client が必要](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "実行中の Eclipse* ワークスペースにドラッグします。*Eclipse Marketplace Client が必要")
 
-## <a name="create-a-new-web-app-project"></a>新しい Web アプリ プロジェクトの作成
+1. Azure アカウントにサインインするには、 **[ツール]** 、 **[Azure]** 、 **[サインイン]** の順にクリックします。
+   ![Azure サインイン用の Eclipse メニュー][I01]
 
-1. [Azure Toolkit for Eclipse の Azure サインイン手順][eclipse-sign-in-instructions] の説明に従って、Eclipse を起動し、Azure アカウントにサインインします。
+1. **[Azure サインイン]** ウィンドウで、 **[Device Login]\(デバイスのログイン\)** を選択し、次に **[サインイン]** をクリックします ([他のサインイン オプション](azure-toolkit-for-eclipse-sign-in-instructions.md))。
 
-1. **[ファイル]**、**[新規]**、**[Dynamic Web Project]\(動的 Web プロジェクト\)** の順にクリックします  (**[ファイル]** と **[新規]** のクリック後、使用可能なプロジェクトとして **[Dynamic Web Project (動的 Web プロジェクト)]** が表示されない場合は、**[ファイル]**、**[新規]**、**[プロジェクト]** の順にクリックし、**[Web]** を展開して、**[Dynamic Web Project (動的 Web プロジェクト)]**、**[次へ]** の順にクリックします)。
+   ![[デバイスのログイン] が選択されている [Azure サインイン] ウィンドウ][I02]
+
+1. **[Azure Device Login]\(Azure デバイスのログイ\)** ダイアログで **[Copy&Open]\(コピーして開く\)** をクリックします。
+
+   ![[Azure ログイン] ダイアログ ウィンドウ][I03]
+
+1. ブラウザーで、該当のデバイス コード (前の手順で **[Copy&Open]\(コピーして開く\)** をクリックしたときにコピーされたもの) を貼り付け、 **[次へ]** をクリックします。
+
+   ![デバイスのログイン ブラウザー][I04]
+
+1. 最後に、 **[サブスクリプションの選択]** ダイアログ ボックスで、使用するサブスクリプションを選択し、 **[OK]** をクリックします。
+
+   ![[サブスクリプションの選択] ダイアログ ボックス][I05]
+
+## <a name="creating-web-app-project"></a>Web アプリ プロジェクトの作成
+
+1. **[ファイル]** 、 **[新規]** 、 **[Dynamic Web Project]\(動的 Web プロジェクト\)** の順にクリックします ( **[ファイル]** と **[新規]** のクリック後、使用可能なプロジェクトとして **[Dynamic Web Project (動的 Web プロジェクト)]** が表示されない場合は、 **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順にクリックし、 **[Web]** を展開して、 **[Dynamic Web Project (動的 Web プロジェクト)]** 、 **[次へ]** の順にクリックします)。
 
    ![新しい動的 Web プロジェクトの作成][file-new-dynamic-web-project]
 
@@ -55,7 +74,7 @@ ms.locfileid: "57786891"
 
 3. **[完了]** をクリックします。
 
-4. Eclipse の Project Explorer ビューで、 **[MyWebApp]** を展開します。 **WebContent** を右クリックし、**[新規]**、**[JSP ファイル]** の順にクリックします。
+4. Eclipse の Project Explorer ビューで、 **[MyWebApp]** を展開します。 **WebContent** を右クリックし、 **[新規]** 、 **[JSP ファイル]** の順にクリックします。
 
    ![新しい JSP ファイルの作成][create-new-jsp-file]
 
@@ -63,11 +82,11 @@ ms.locfileid: "57786891"
 
    ![[New JSP File\(新しい JSP ファイル\)] ダイアログ ボックス][new-jsp-file-dialog]
 
-6. **[Select JSP Template (JSP テンプレートの選択)]** ダイアログ ボックスで、このチュートリアルのために **[New JSP File (html) (新しい JSP ファイル (html))]** を選択し、**[完了]** をクリックします。
+6. **[Select JSP Template (JSP テンプレートの選択)]** ダイアログ ボックスで、このチュートリアルのために **[New JSP File (html) (新しい JSP ファイル (html))]** を選択し、 **[完了]** をクリックします。
 
    ![JSP テンプレートの選択][select-jsp-template]
 
-7. index.jsp ファイルが Eclipse で開いたら、"**Hello World!**" を動的に表示するためのテキストを 既存の `<body>` 要素に追加します。 更新された `<body>` コンテンツは、次のようになります。
+7. index.jsp ファイルが Eclipse で開いたら、"**Hello World!** " を動的に表示するためのテキストを 既存の `<body>` 要素に追加します。 更新された `<body>` コンテンツは、次のようになります。
    
    ```jsp
    <body><b><% out.println("Hello World!"); %></b></body>
@@ -75,9 +94,9 @@ ms.locfileid: "57786891"
 
 8. index.jsp を保存します。
 
-## <a name="deploy-your-web-app-to-azure"></a>Azure への Web アプリのデプロイ
+## <a name="deploying-web-app-to-azure"></a>Azure への Web アプリのデプロイ
 
-1. Eclipse のプロジェクト エクスプローラー ビューでプロジェクトを右クリックし、**[Azure]**、**[Publish as Azure Web App]\(Azure Web アプリとして発行\)** の順に選択します。
+1. Eclipse のプロジェクト エクスプローラー ビューでプロジェクトを右クリックし、 **[Azure]** 、 **[Publish as Azure Web App]\(Azure Web アプリとして発行\)** の順に選択します。
    
    ![[Publish as Azure Web App (Azure Web アプリとして発行)]][publish-as-azure-web-app]
 
@@ -91,17 +110,17 @@ ms.locfileid: "57786891"
 
       ![App Service を作成する][create-app-service]
 
-      **[App Service の作成]** ダイアログ ボックスで Web アプリに必要な情報を指定し、**[作成]** をクリックします。
+      **[App Service の作成]** ダイアログ ボックスで Web アプリに必要な情報を指定し、 **[作成]** をクリックします。
 
       ここで、ランタイム環境、アプリ設定、サービス プラン、およびリソース グループを構成できます。
 
       ![[App Service の作成] ダイアログ ボックス][create-app-service-dialog]
 
-1. Web アプリを選択し、**[デプロイ]** をクリックします。
+1. Web アプリを選択し、 **[デプロイ]** をクリックします。
 
    ![アプリ サービスのデプロイ][deploy-app-service]
 
-1. ツールキットにより Web アプリが正常にデプロイされると、**[Azure の活動ログ]** タブに **[発行済み]** 状態として表示され、デプロイされた Web アプリの URL へのハイパーリンクが設定されます。
+1. ツールキットにより Web アプリが正常にデプロイされると、 **[Azure の活動ログ]** タブに **[発行済み]** 状態として表示され、デプロイされた Web アプリの URL へのハイパーリンクが設定されます。
 
    ![発行済み状態][publish-status]
 
@@ -109,7 +128,11 @@ ms.locfileid: "57786891"
 
    ![Web アプリの参照][browse-web-app]
 
-1. Web を Azure に発行した後、アプリを管理するには、それを右クリックし、コンテキスト メニューからオプションのいずれかを選択します。 たとえば、Web アプリを**開始**、**停止**、または**削除**できます。
+[!INCLUDE [azure-toolkit-for-eclipse-show-azure-explorer](../includes/azure-toolkit-for-eclipse-show-azure-explorer.md)]
+
+## <a name="cleaning-up-resources"></a>リソースのクリーンアップ
+
+1. Web アプリを Azure に発行した後、それを管理するには、Azure Explorer で右クリックし、コンテキスト メニューからオプションのいずれかを選択します。 たとえば、ここで Web アプリを **[削除]** して、このチュートリアルのリソースをクリーンアップできます。
 
    ![アプリ サービスの管理][manage-app-service]
 
@@ -130,6 +153,11 @@ Azure Web Apps の作成の詳細については、「 [Web Apps の概要]」�
 [Legacy Version]: azure-toolkit-for-eclipse-create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
+[I01]: media/azure-toolkit-for-eclipse-sign-in-instructions/I01.png
+[I02]: media/azure-toolkit-for-eclipse-sign-in-instructions/I02.png
+[I03]: media/azure-toolkit-for-eclipse-sign-in-instructions/I03.png
+[I04]: media/azure-toolkit-for-eclipse-sign-in-instructions/I04.png
+[I05]: media/azure-toolkit-for-eclipse-sign-in-instructions/I05.png
 
 [browse-web-app]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/browse-web-app.png
 [file-new-dynamic-web-project]: ./media/azure-toolkit-for-eclipse-create-hello-world-web-app/file-new-dynamic-web-project.png

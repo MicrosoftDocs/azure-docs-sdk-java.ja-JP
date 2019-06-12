@@ -14,73 +14,52 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 88d92cfd82244d5df2ad34304155d41c5aab0ee9
-ms.sourcegitcommit: 8e530a2ce58ea0e2bf5c136e427a9be863231a1b
+ms.openlocfilehash: 5bec0af1a17b87d24f29bc856691870d4d697888
+ms.sourcegitcommit: 733115fe0a7b5109b511b4a32490f8264cf91217
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53638961"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65625750"
 ---
 # <a name="azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse
 
-Azure Toolkit for Eclipse は、Eclipse 統合開発環境 (IDE) の内部からクラウド アプリケーションを簡単に作成、開発、テストし、Azure にデプロイするために使用できるテンプレートと機能を提供します。
+Azure Toolkit for Eclipse は、Eclipse IDE の内部からクラウド アプリケーションを簡単に作成、開発、テストし、Azure にデプロイするために使用できるテンプレートと機能を提供します。
 
 > [!NOTE]
 > 
-> IntelliJ IDE 用の Azure Toolkit もあります。 詳細については、「 [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md)」をご覧ください。
+> IntelliJ IDEA 用の Azure Toolkit もあります。 詳細については、「 [Azure Toolkit for IntelliJ](../intellij/azure-toolkit-for-intellij.md)」をご覧ください。
 > 
 
-## <a name="get-started-with-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse の概要
-次の記事では、Azure Toolkit for Eclipse の使用方法について説明します。
+## <a name="get-started-in-10-minutes"></a>10 分で開始する
 
-* [Azure Toolkit for Eclipse のインストール](azure-toolkit-for-eclipse-installation.md)
+* [Azure App Service 用の Hello World Web アプリを作成する](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
 
-* [Azure Toolkit for Eclipse のサインイン手順](azure-toolkit-for-eclipse-sign-in-instructions.md)
+## <a name="step-by-step-tutorials"></a>ステップバイステップのチュートリアル
 
-* [Eclipse で Azure 用の Hello World Web アプリを作成する](azure-toolkit-for-eclipse-create-hello-world-web-app.md)
+* [Spring Boot アプリを Docker コンテナーとして発行する](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
 
-## <a name="use-the-azure-toolkit-for-eclipse-with-your-java-projects"></a>Java プロジェクトでの Azure Toolkit for Eclipse の使用
-次の記事では、Azure Toolkit for Eclipse を使用して Azure 機能を Java プロジェクトに追加する方法について説明します。
-
-* [Azure Toolkit for Eclipse を使用して Spring Boot アプリを Docker コンテナーとして発行する](azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md)
-
-* [Azure Toolkit for Eclipse を使用して Web アプリを Docker コンテナーとして発行する](azure-toolkit-for-eclipse-publish-as-docker-container.md)
+* [Web アプリを Docker コンテナーとして発行する](azure-toolkit-for-eclipse-publish-as-docker-container.md)
 
 * [Eclipse 用の HDInsight Tools プラグインを使用して HDInsight Spark Linux クラスター向けの Spark アプリケーションを作成する](/azure/hdinsight/hdinsight-apache-spark-eclipse-tool-plugin)
 
 * [Java 用 Azure ライブラリ パッケージの Javadoc コンテンツの Eclipse での表示](azure-toolkit-for-eclipse-displaying-javadoc-content-for-azure-libraries.md)
 
-## <a name="manage-azure-resources-using-the-azure-toolkit-for-eclipse"></a>Azure Toolkit for Eclipse を使用した Azure リソースの管理
-次の記事では、Azure Toolkit for Eclipse を使用して Azure リソースを管理する方法について説明します。
+## <a name="managing-azure-resources"></a>Azure リソースの管理
 
-* [Azure Toolkit for Eclipse を使用して Redis Cache を管理する](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
+* [Redis Cache](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
 
-* [Azure Explorer for Eclipse を使用してストレージ アカウントを管理する](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
+* [ストレージ アカウント](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
 
-* [Azure Explorer for Eclipse を使用して仮想マシンを管理する](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
+* [仮想マシン](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="whats-more"></a>その他
 
-Azure Toolkit for Eclipse の詳細については、以下のページを参照してください。
-
-* [Azure Toolkit のリリース ノート](https://github.com/Microsoft/azure-tools-for-java/releases)
-
-* [Eclipse Marketplace の Azure Toolkit for Eclipse](http://marketplace.eclipse.org/content/azure-toolkit-eclipse)
-
-Azure での Java の使用の詳細については、「[Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/)」および [Java Tools for Visual Studio Team Services](/azure/devops/java/) を参照してください。
-
-<!-- [!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)] -->
+[!INCLUDE [azure-toolkit-for-eclipse-additional-resources](../includes/azure-toolkit-for-eclipse-additional-resources.md)]
 
 > [!NOTE]
 > 
 > Azure Toolkit for Eclipse はオープン ソース プロジェクトで、そのソース コードは、[プロジェクト サイトの MIT ライセンス](https://github.com/microsoft/azure-tools-for-java)で入手できます。
 > 
-
-<!-- URL List -->
-
-[Azure for Java Developers]: https://docs.microsoft.com/java/azure
-
-<!-- Temporarily Deprecated URLs -->
 
 <!-- [Deploying large deployments](azure-toolkit-for-eclipse-deploying-large-deployments.md) -->
 <!-- [How to Maintain Session Data with Session Affinity]: http://go.microsoft.com/fwlink/?LinkID=699539 -->
