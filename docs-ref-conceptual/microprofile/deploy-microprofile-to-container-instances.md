@@ -1,49 +1,46 @@
 ---
 title: Docker と Azure を使用して MicroProfile アプリをクラウドにデプロイする
 description: Docker および Azure Container Instances を使用して MicroProfile アプリをクラウドにデプロイする方法について説明します。
-services: container-instances;container-retistry
+services: container-instances;container-registry
 documentationcenter: java
 author: brunoborges
 manager: routlaw
 editor: brunoborges
 ms.assetid: ''
 ms.author: brborges
-ms.date: 07/30/2018
+ms.date: 11/21/2018
 ms.devlang: java
 ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 336af51bbdf5d2f843c3868ebc2358e128daaeaa
-ms.sourcegitcommit: 280d13b43cef94177d95e03879a5919da234a23c
+ms.openlocfilehash: 6ba12bb183969103676fa988199603df6cf36bba
+ms.sourcegitcommit: f8faa4a14c714e148c513fd46f119524f3897abf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43324328"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533604"
 ---
-# <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Docker と Azure を使用して MicroProfile アプリケーションをクラウドにデプロイする
+# <a name="deploy-a-microprofile-app-to-the-cloud-by-using-docker-and-azure"></a>Docker と Azure を使用して MicroProfile アプリをクラウドにデプロイする
 
 この記事では、[MicroProfile.io] アプリケーションを Docker コンテナーにパックし、Azure Container Instances で実行する方法について説明します。
 
 > [!NOTE]
->
-> この手順は、Docker コンテナー イメージが自己実行可能である場合 (つまり、ランタイムが含まれる場合) に、任意の MicroProfile.io の実装で機能します。
+> この手順は、Docker コンテナー イメージが自己実行可能である (つまり、イメージにランタイムが含まれている) 限り、任意の MicroProfile.io の実装で機能します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルの手順を実行するには、次の前提条件を満たしておく必要があります。
+このチュートリアルを完了するには、次の前提条件を用意しておく必要があります。
 
-* Azure サブスクリプション: Azure サブスクリプションをまだ取得していない場合は、[無料の Azure アカウント]にサインアップできます。
-* [Azure コマンド ライン インターフェイス (CLI)]。
-* 最新の [Java Development Kit (JDK)] (バージョン 1.8 以降)。
-* Apache の [Maven] ビルド ツール (バージョン 3 以上)。
+* Azure サブスクリプション。 Azure サブスクリプションをまだ取得していない場合は、[無料の Azure アカウント]にサインアップすることができます。
+* [Azure CLI] がインストールされていること。
+* サポートされている Java Development Kit (JDK)。 Azure で開発するときに使用可能な JDK の詳細については、「[Azure および Azure Stack の Java 長期サポート](https://aka.ms/azure-jdks)」を参照してください。
+* [Apache Maven] ビルド ツール (バージョン 3 以降)。
 * [Git] クライアント。
 
 ## <a name="microprofile-hello-azure-sample"></a>MicroProfile Hello Azure サンプル
 
-この記事では、[MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure) サンプルを使用します。
-
-### <a name="clone-build-and-run-locally"></a>ローカルで複製、ビルドし、および実行する
+この記事では、[MicroProfile Hello Azure](https://github.com/azure-samples/microprofile-hello-azure) サンプルを使用します。 それを次のコマンドを使用して複製、ビルドしてローカルに実行します。
 
 ```bash
 $ git clone https://github.com/Azure-Samples/microprofile-hello-azure.git
@@ -57,40 +54,40 @@ $ mvn payara-micro:start
 ...
 ```
 
-アプリケーションをテストするには、`curl` を呼び出すか、[ブラウザー](http://localhost:8080/api/hello)を使用してアクセスします。
+`curl` を呼び出すか、[ブラウザー](http://localhost:8080/api/hello)を使用してアプリケーションをテストできます。
 
 ```bash
 $ curl http://localhost:8080/api/hello
 Hello, Azure!
 ```
 
-## <a name="deploy-to-azure"></a>[Deploy to Azure (Azure へのデプロイ)]
+## <a name="deploy-the-app-to-azure"></a>Azure にアプリケーションをデプロイする
 
-ここで [Azure Container Instances] および [Azure Container Registry] サービスを使用して、このアプリケーションをクラウドに移行しましょう。
+ここで [Azure Container Instances] および [Azure Container Registry] サービスを使用して、このアプリケーションを Azure に移行しましょう。
 
 ### <a name="build-a-docker-image"></a>Docker イメージをビルドする
 
-サンプル プロジェクトには、使用できる Docker ファイルが既に用意されています。 ただし、クラウドでのイメージのビルドには Azure Container Registry Build 機能を使用するため、Docker をインストールする必要はありません。
+サンプル プロジェクトには、使用できる Dockerfile が用意されています。 ただし、クラウドでのイメージのビルドには Azure Container Registry Build 機能を使用するため、Docker をインストールする必要はありません。
 
-イメージをビルドして Azure で実行できるようにするには、次の手順に従う必要があります。
+イメージをビルドしてそれを Azure で実行するための準備をするには、次の操作を行います。
 
-1. Azure CLI でインストールおよびログインする
-1. Azure リソース グループを作成する
-1. Azure Container Registry (ACR) を作成する
-1. Docker イメージを構築する
-1. 前に作成した ACR に Docker イメージを発行する
-1. (省略可能) 1 つのコマンドでビルドして ACR に発行する
+1. Azure CLI をインストールしてサインインします。
+1. Azure リソース グループを作成します。
+1. Azure コンテナー レジストリ インスタンスを作成します。
+1. Docker イメージをビルドします。
+1. Docker イメージを以前に作成したコンテナー レジストリ インスタンスに発行します。
+1. (省略可能) 1 つのコマンドでイメージをビルドして、コンテナー レジストリ インスタンスに発行します。
 
 
-#### <a name="set-up-azure-cli"></a>Azure CLI をセットアップする
+#### <a name="set-up-the-azure-cli"></a>Azure CLI のセットアップ
 
-Azure のサブスクリプションを所有していること、[Azure CLI がインストールされている](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)こと、およびお使いのアカウントにご自身が認証されていることを確認します。
+Azure のサブスクリプションを所有していること、[Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) がインストールされていること、お使いのアカウントでご自身が認証されていることを確認します。
 
 ```bash
 az login
 ```
 
-#### <a name="create-a-resource-group"></a>リソース グループを作成します
+#### <a name="create-a-resource-group"></a>リソース グループの作成
 
 ```bash
 export ARG=microprofileRG
@@ -98,9 +95,9 @@ export ADCL=eastus
 az group create --name $ARG --location $ADCL
 ```
 
-#### <a name="create-an-azure-container-registry-instance"></a>Azure Container Registry インスタンスの作成
+#### <a name="create-a-container-registry-instance"></a>コンテナー レジストリ インスタンスの作成
 
-このコマンドによって、ランダムな数値を持つ基本的な名前を使用して、(うまくいけば) グローバルに一意のコンテナー レジストリが作成されます。
+このコマンドによって、基本的な名前とランダムな数値を使用して、グローバルに一意のコンテナー レジストリが作成されます。
 
 ```bash
 export RANDINT=`date +"%m%d%y$RANDOM"`
@@ -110,12 +107,12 @@ az acr create --name $ACR -g $ARG --sku Basic --admin-enabled
 
 #### <a name="build-the-docker-image"></a>Docker イメージを構築する
 
-Docker 自体を使用して Docker イメージをローカルで簡単にビルドできますが、クラウドでのビルドを検討する理由はいくつかあります。
+Docker イメージは、Docker そのものを使用してローカルで簡単にビルドできますが、クラウドでのビルドを検討する理由はいくつかあります。
 
-1. Docker をローカルにインストールする必要がない
-1. ビルドが別の場所で行われるため、はるかに高速 (コンテキストのアップロード時間を除く)
-1. クラウドのプロセスでより高速なインターネットにアクセスできるため、ダウンロードがさらに速くなる
-1. イメージが Container Registry に直接移動する
+* Docker をローカルにインストールする必要がない。
+* ビルドが別の場所で行われるため、はるかに高速 (コンテキストのアップロード時間を除く)。
+* クラウド内のプロセスはより高速にインターネットにアクセスできるため、ダウンロードがさらに速くなる。
+* イメージがコンテナー レジストリ インスタンスに直接移動する。
 
 これらの理由により、[Azure Container Registry Build] 機能を使用してイメージをビルドします。
 
@@ -127,9 +124,9 @@ Build complete
 Build ID: aa1 was successful after 1m2.674577892s
 ```
 
-#### <a name="deploy-docker-image-from-azure-container-registry-acr-into-container-instances-aci"></a>Docker イメージを Azure Container Registry (ACR) から Azure Container Instances (ACI) にデプロイする
+#### <a name="deploy-the-docker-image-from-the-azure-container-registry-instance-to-container-instances"></a>Docker イメージを Azure コンテナー レジストリ インスタンスから Container Instances にデプロイする
 
-ACR でイメージを使用できるようになったので、次はコンテナー インスタンスを ACI にプッシュしてインスタンス化してみましょう。 ただし、最初に、ACR に認証できることを確認する必要があります。
+これで、イメージがお使いのコンテナー レジストリ インスタンスで使用できるようになったので、Container Instances でコンテナー インスタンスをプッシュしてインスタンス化します。 しかし、まずコンテナー レジストリ インスタンスに認証できることを確認します。
 
 ```bash
 export ACR_REPO=`az acr show --name $ACR -g $ARG --query loginServer -o tsv`
@@ -139,32 +136,33 @@ export ACI_INSTANCE=myapp`date +"%m%d%y$RANDOM"`
 az container create --resource-group $ARG --name $ACR --image $ACR_REPO/$IMG_NAME --cpu 1 --memory 1 --registry-login-server $ACR_REPO --registry-username $ACR --registry-password $ACR_PASS --dns-name-label $ACI_INSTANCE --ports 8080
 ```
 
-#### <a name="test-your-deployed-microprofile-application"></a>デプロイされた MicroProfile アプリケーションをテストする
+#### <a name="test-your-deployed-microprofile-application"></a>デプロイされた MicroProfile アプリケーションのテスト
 
-これでご自身のアプリケーションが起動されて実行されます。 コマンド ラインからこれをテストするには、次のコマンドを実行してみます。
+これでご自身のアプリケーションが起動されて実行されます。 コマンド ライン インターフェイスからこれをテストするには、次のコマンドを使用します。
 
 ```bash
 curl http://$ACI_INSTANCE.$ADCL.azurecontainer.io:8080/api/hello
 ````
 
-お疲れさまでした。 MicroProfile アプリケーションを Docker コンテナーとして適切にビルドし、Microsoft Azure にデプロイできました。
+お疲れさまでした。 MicroProfile アプリケーションを Docker コンテナーとして適切にビルドし、Azure にデプロイできました。
 
 ## <a name="next-steps"></a>次の手順
 
 この記事で説明しているさまざまなテクノロジの詳細については、次の記事をご覧ください。
 
-* [Azure CLI から Azure へのログイン](/azure/xplat-cli-connect)
+* [Azure CLI を使用して Azure にサインインする](/azure/xplat-cli-connect)
 
 <!-- URL List -->
 
 [Azure Container Registry Build]: https://docs.microsoft.com/azure/container-registry/container-registry-build-overview
 [MicroProfile.io]: https://microprofile.io
-[Azure コマンド ライン インターフェイス (CLI)]: /cli/azure/overview
+[Azure CLI]: /cli/azure/overview
 [Azure for Java Developers]: https://docs.microsoft.com/java/azure/
 [Azure portal]: https://portal.azure.com/
 [無料の Azure アカウント]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
-[Maven]: http://maven.apache.org/
-[Java Development Kit (JDK)]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[Apache Maven]: http://maven.apache.org/
+[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+<!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 [Azure Container Instances]: https://docs.microsoft.com/azure/container-instances/
 [Azure Container Registry]:  https://docs.microsoft.com/azure/container-registry
