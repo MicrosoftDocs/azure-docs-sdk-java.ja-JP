@@ -1,6 +1,46 @@
 {
   "build_entry_point": "docs",
-  "docsets_to_publish": [],
+  "docsets_to_publish": [
+    {
+      "docset_name": "AzureJava",
+      "build_source_folder": ".",
+      "build_output_subfolder": "azure/sdk/java",
+      "locale": "ja-JP",
+      "monikers": [],
+      "moniker_ranges": [
+        "azure-java-stable",
+        "azure-java-preview",
+        "azure-java-legacy"
+      ],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "RestApi": "Content",
+        "LandingData": "Content",
+        "JavaMember": "Content",
+        "JavaType": "Content",
+        "JavaPackage": "Content",
+        "JavaEnum": "Content",
+        "ReferenceContainer": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "customized_template_paths": [
+        "_dependentPackages/memberpage.plugins/content"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      },
+      "DiffFolder": [
+        "api"
+      ],
+      "version": 0
+    }
+  ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [
@@ -9,13 +49,14 @@
   "git_repository_branch_open_to_public_contributors": "master",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
+  "need_preview_pull_request": true,
   "enable_incremental_build": false,
+  "enable_git_features": false,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ja-jp",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ja-JP",
       "branch": "master",
       "branch_mapping": {}
     },
@@ -26,15 +67,28 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "_functionsref",
+      "url": "https://github.com/Azure/azure-functions-java-library",
+      "branch": "master",
+      "branch_mapping": {},
+      "include_in_build": true
+    },
+    {
       "path_to_root": "preview/_mavenref",
       "url": "https://github.com/Microsoft/azure-maven-plugins/",
       "branch": "master",
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_sample",
-      "url": "https://github.com/rickle-msft/azure-storage-java",
-      "branch": "async-samplesInDocTest",
+      "path_to_root": "preview/azure-storage-java",
+      "url": "https://github.com/Azure/azure-storage-java",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-storage-java",
+      "url": "https://github.com/Azure/azure-storage-java",
+      "branch": "master",
       "branch_mapping": {}
     },
     {
@@ -43,19 +97,16 @@
       "branch": "live",
       "branch_mapping": {
         "live": "live",
-        "master": "master"
+        "main": "main"
       }
-    },
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ja-JP",
-      "branch": "master",
-      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
   "targets": {},
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  },
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "dependent_packages": [
@@ -80,6 +131,11 @@
       "target_framework": "net45",
       "version": "latest"
     }
+  ],
+  "SplitTOC": [
+    "docs-ref-autogen/toc.yml",
+    "preview/docs-ref-autogen/toc.yml",
+    "legacy/docs-ref-autogen/toc.yml"
   ],
   "JoinTOCPlugin": [
     {
